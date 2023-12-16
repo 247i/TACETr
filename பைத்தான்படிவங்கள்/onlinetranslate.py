@@ -30,25 +30,14 @@ def tr_file(filename):
     print("Errors:", errors)
 
 
-files = [ "calibre-plugins_ace_ta.po",
-          "calibre-plugins_manage-series_ta.po" ]
+files = [ "appinventor-odemessages-ta.po",
+          "appinventor-ai-blockly-messages-ta.po" ]
 
 for file in files:
     tr_file(file)
 
 
-#q_text = 'long live Tamil'
-#q_html = '''<!DOCTYPE html><html><head><title>《Tamil》</title></head><body><p>Tamil time</p></body></html>'''
 
-### usage
-# _ = ts.preaccelerate_and_speedtest()  # Optional. Caching sessions in advance, which can help improve access speed.
-
-# print(ts.translators_pool)
-# print(ts.translate_text(q_text, translator='google', from_language = 'auto', to_language = 'ta'))
-# print(ts.translate_html(q_html, translator='google', from_language = 'auto', to_language = 'ta'))
-
-### parameters
-# help(ts.translate_text)
 
 # Translators:
 # தமிழ்நேரம்<https://TamilNeram.github.io>,2023
