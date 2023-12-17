@@ -22,7 +22,7 @@ def tr_file(filename):
     print("After : ",po.percent_translated(),"%")
 
 
-files = [ "ta.po",
+files = [ "modules_org_openteacher_profileRunners_webGenerator_translations_org.openteacher.profileRunners.webGenerator-ta.po",
           ]
 
 for file in files:
