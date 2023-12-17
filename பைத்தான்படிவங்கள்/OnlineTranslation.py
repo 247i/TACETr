@@ -22,11 +22,18 @@ def tr_file(filename):
     print("After : ",po.percent_translated(),"%")
 
 
-files = [ "modules_org_openteacher_profileRunners_webGenerator_translations_org.openteacher.profileRunners.webGenerator-ta.po",
+files = [ "sphinx-1_sphinxcontrib-applehelp-pot_ta.po",
+          "sphinx-1_sphinxcontrib-devhelp-pot_ta.po",
+          "sphinx-1_sphinxcontrib-htmlhelp-pot_ta.po",
+          "sphinx-1_sphinxcontrib-jsmath-pot_ta.po",
+          "sphinx-1_sphinxcontrib-qthelp-pot_ta.po",
+          "sphinx-1_sphinxcontrib-serializinghtml-pot_ta.po",
           ]
 
 for file in files:
-    tr_file(file)
+    filepath = "./முடிவுபெறாத/"+file
+    print(filepath)
+    tr_file(filepath)
 
 
 
