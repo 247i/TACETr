@@ -9,8 +9,9 @@ def tr_file(filename):
     try:
         for entry in po.untranslated_entries():
             try:
+                print(entry.msgid)
                 entry.msgstr=ts.translate_text(entry.msgid, translator='google', from_language = 'en', to_language = 'ta')
-                print(entry.msgid, entry.msgstr)
+                print(entry.msgstr)
             except  Exception as e:
                 errors += str(e)
                 count += 1
@@ -30,8 +31,8 @@ def tr_file(filename):
     print("Errors:", errors)
 
 
-files = [ "appinventor-odemessages-ta.po",
-          "appinventor-ai-blockly-messages-ta.po" ]
+files = [ "ta-IN.po",
+          ]
 
 for file in files:
     tr_file(file)
