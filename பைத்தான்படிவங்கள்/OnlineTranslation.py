@@ -24,7 +24,7 @@ def tr_file(filename):
             if count == 5:
                 break 
         po.save(filename)
-        # po.save_as_mofile(filename+'.mo')
+        po.save_as_mofile(filename[:-2] + 'mo')
         print("After : ",po.percent_translated(),"%")
 
 files = glob.glob('./முடிவுபெறாத/*.po')
