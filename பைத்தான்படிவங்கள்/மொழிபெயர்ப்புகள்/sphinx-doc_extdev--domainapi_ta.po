@@ -1,0 +1,873 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2023, the Sphinx developers
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 7.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-15 00:35+0000\n"
+"PO-Revision-Date: 2018-02-12 13:48+0000\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/extdev/domainapi.rst:4
+msgid "Domain API"
+msgstr "டொமைன் ஏபிஐ"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain:1
+msgid ""
+"A Domain is meant to be a group of \"object\" description directives for "
+"objects of a similar nature, and corresponding roles to create references to"
+" them.  Examples would be Python modules, classes, functions etc., elements "
+"of a templating language, Sphinx roles and directives, etc."
+msgstr ""
+"ஒரு டொமைன் என்பது ஒத்த இயற்கையின் பொருள்களுக்கான \"பொருள்\" விளக்க "
+"வழிமுறைகளின் குழுவாகவும், அவற்றைப் பற்றிய குறிப்புகளை உருவாக்குவதற்கான "
+"தொடர்புடைய பாத்திரங்களாகவும் இருக்க வேண்டும். எடுத்துக்காட்டுகள் பைதான் "
+"தொகுதிகள், வகுப்புகள், செயல்பாடுகள் போன்றவை, ஒரு வார்ப்புரு மொழியின் "
+"கூறுகள், ஸ்பிங்க்ஸ் பாத்திரங்கள் மற்றும் வழிமுறைகள் போன்றவை."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain:6
+msgid ""
+"Each domain has a separate storage for information about existing objects "
+"and how to reference them in `self.data`, which must be a dictionary.  It "
+"also must implement several functions that expose the object information in "
+"a uniform way to parts of Sphinx that allow the user to reference or search "
+"for objects in a domain-agnostic way."
+msgstr ""
+"ஒவ்வொரு டொமைனுக்கும் இருக்கும் பொருள்களைப் பற்றிய தகவல்களுக்கும் அவற்றை "
+"`self.data` இல் எவ்வாறு குறிப்பிடுவது என்பதற்கும் ஒரு தனி சேமிப்பிடம் "
+"உள்ளது, இது ஒரு அகராதியாக இருக்க வேண்டும். இது ஒரு டொமைன்-அஞ்ஞான வழியில் "
+"பொருள்களைக் குறிப்பிடவோ அல்லது தேடவோ அனுமதிக்கும் SPHINX இன் சில "
+"பகுதிகளுக்கு ஒரே மாதிரியான வழியில் பொருள் தகவல்களை வெளிப்படுத்தும் பல "
+"செயல்பாடுகளையும் இது செயல்படுத்த வேண்டும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain:12
+msgid ""
+"About `self.data`: since all object and cross-referencing information is "
+"stored on a BuildEnvironment instance, the `domain.data` object is also "
+"stored in the `env.domaindata` dict under the key `domain.name`.  Before the"
+" build process starts, every active domain is instantiated and given the "
+"environment object; the `domaindata` dict must then either be nonexistent or"
+" a dictionary whose 'version' key is equal to the domain class' "
+":attr:`data_version` attribute.  Otherwise, `OSError` is raised and the "
+"pickled environment is discarded."
+msgstr ""
+"`Self.data`: அனைத்து பொருள் மற்றும் குறுக்கு-குறிப்பு தகவல்கள் ஒரு "
+"கட்டமைப்பின் சுற்றுச்சூழல் நிகழ்வில் சேமிக்கப்படுவதால்,` டொமைன்.டேட்டா` "
+"பொருளும் `env.domaindata` கட்டளையில்` டொமைன்.நாம்` இன் கீழ் "
+"சேமிக்கப்படுகிறது. உருவாக்க செயல்முறை தொடங்குவதற்கு முன், ஒவ்வொரு செயலில் "
+"உள்ள களமும் உடனடிப்படுத்தப்பட்டு சுற்றுச்சூழல் பொருளைக் கொடுக்கும்; `டொமைன் "
+"டேட்டா` கட்டளை பின்னர் இல்லாததாக இருக்க வேண்டும் அல்லது டொமைன் வகுப்பிற்கு "
+"சமமான 'பதிப்பு' விசை ': ATTR:` Data_version` பண்புக்கூறு. இல்லையெனில், "
+"`ஓஸ்ரர்` உயர்த்தப்பட்டு ஊறுகாய்களாக தயாரிக்கப்பட்ட சூழல் "
+"நிராகரிக்கப்படுகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.add_object_type:1
+msgid "Add an object type."
+msgstr "ஒரு பொருள் வகையைச் சேர்க்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.check_consistency:1
+msgid "Do consistency checks (**experimental**)."
+msgstr "நிலையான காசோலைகளைச் செய்யுங்கள் (** சோதனை **)."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.clear_doc:1
+msgid "Remove traces of a document in the domain-specific inventories."
+msgstr "டொமைன்-குறிப்பிட்ட சரக்குகளில் ஒரு ஆவணத்தின் தடயங்களை அகற்று."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.directive:1
+msgid ""
+"Return a directive adapter class that always gives the registered directive "
+"its full name ('domain:name') as ``self.name``."
+msgstr ""
+"பதிவுசெய்யப்பட்ட உத்தரவை எப்போதும் அதன் முழுப் பெயரை ('டொமைன்: பெயர்') `` "
+"சுய."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_enumerable_node_type:1
+msgid "Get type of enumerable nodes (experimental)."
+msgstr "கணக்கிடக்கூடிய முனைகளின் வகையைப் பெறுங்கள் (சோதனை)."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_full_qualified_name:1
+msgid "Return full qualified name for given node."
+msgstr "கொடுக்கப்பட்ட முனைக்கு முழு தகுதிவாய்ந்த பெயரைத் தரவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:1
+msgid "Return an iterable of \"object descriptions\"."
+msgstr "\"பொருள் விளக்கங்கள்\" என்பதற்கு ஒரு மறுபரிசீலனை செய்யவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:3
+msgid "Object descriptions are tuples with six items:"
+msgstr "பொருள் விளக்கங்கள் ஆறு உருப்படிகளைக் கொண்ட டூப்பிள்கள்:"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:6
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:20
+msgid "``name``"
+msgstr "`` பெயர்``"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:6
+msgid "Fully qualified name."
+msgstr "முழு தகுதி வாய்ந்த பெயர்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:9
+msgid "``dispname``"
+msgstr "`` dispname``"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:9
+msgid "Name to display when searching/linking."
+msgstr "தேடும்போது/இணைக்கும்போது காண்பிக்க பெயர்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:12
+msgid "``type``"
+msgstr "`` வகை``"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:12
+msgid "Object type, a key in ``self.object_types``."
+msgstr "பொருள் வகை, `` self.object_types`` இல் ஒரு விசை."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:15
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:33
+msgid "``docname``"
+msgstr "`` docname``"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:15
+msgid "The document where it is to be found."
+msgstr "அதைக் காண வேண்டிய ஆவணம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:18
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:36
+msgid "``anchor``"
+msgstr "`` நங்கூரம்``"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:18
+msgid "The anchor name for the object."
+msgstr "பொருளின் நங்கூர பெயர்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:30
+msgid "``priority``"
+msgstr "`` முன்னுரிமை``"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:21
+msgid ""
+"How \"important\" the object is (determines placement in search results). "
+"One of:"
+msgstr ""
+"பொருள் எவ்வளவு \"முக்கியமானது\" (தேடல் முடிவுகளில் இடம் பெறுவதை "
+"தீர்மானிக்கிறது). ஒன்று:"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:24
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:27
+msgid "``1``"
+msgstr "`` 1``"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:25
+msgid "Default priority (placed before full-text matches)."
+msgstr "இயல்புநிலை முன்னுரிமை (முழு உரை போட்டிகளுக்கு முன் வைக்கப்படுகிறது)."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:26
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:25
+msgid "``0``"
+msgstr "`` 0``"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:27
+msgid "Object is important (placed before default-priority objects)."
+msgstr ""
+"பொருள் முக்கியமானது (இயல்புநிலை முன்னுரிமை பொருள்களுக்கு முன் "
+"வைக்கப்படுகிறது)."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:28
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:30
+msgid "``2``"
+msgstr "`` 2``"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:29
+msgid "Object is unimportant (placed after full-text matches)."
+msgstr ""
+"பொருள் முக்கியமற்றது (முழு உரை போட்டிகளுக்குப் பிறகு வைக்கப்படுகிறது)."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:30
+msgid "``-1``"
+msgstr "`` -1``"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_objects:31
+msgid "Object should not show up in search at all."
+msgstr "பொருள் தேடலில் காட்டப்படக்கூடாது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.get_type_name:1
+msgid "Return full name for given ObjType."
+msgstr "கொடுக்கப்பட்ட OBJType க்கு முழு பெயரைத் தரவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.merge_domaindata:1
+msgid ""
+"Merge in data regarding *docnames* from a different domaindata inventory "
+"(coming from a subprocess in parallel builds)."
+msgstr ""
+"வேறு டொமைன் டேட்டா சரக்குகளிலிருந்து * டாக் பெயர்கள் * தொடர்பான தரவுகளில் "
+"ஒன்றிணைக்கவும் (இணையான கட்டமைப்பில் ஒரு துணை செயலாக்கத்திலிருந்து வருகிறது)."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.process_doc:1
+msgid "Process a document after it is read by the environment."
+msgstr "ஒரு ஆவணத்தை சுற்றுச்சூழலால் படித்த பிறகு செயலாக்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.process_field_xref:1
+msgid ""
+"Process a pending xref created in a doc field. For example, attach "
+"information about the current scope."
+msgstr ""
+"DOC துறையில் உருவாக்கப்பட்ட நிலுவையில் உள்ள XREF ஐ செயலாக்கவும். "
+"எடுத்துக்காட்டாக, தற்போதைய நோக்கம் பற்றிய தகவல்களை இணைக்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.resolve_any_xref:1
+msgid "Resolve the pending_xref *node* with the given *target*."
+msgstr ""
+"கொடுக்கப்பட்ட *இலக்கு *உடன் நிலுவையில் உள்ள_எக்ஸ்ரேஃப் *முனை *ஐ தீர்க்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.resolve_any_xref:3
+msgid ""
+"The reference comes from an \"any\" or similar role, which means that we "
+"don't know the type.  Otherwise, the arguments are the same as for "
+":meth:`resolve_xref`."
+msgstr ""
+"குறிப்பு ஒரு \"ஏதேனும்\" அல்லது ஒத்த பாத்திரத்திலிருந்து வருகிறது, அதாவது "
+"வகை நமக்குத் தெரியாது. இல்லையெனில், வாதங்கள் சமமானவை: மெத்: `Relorve_xref`."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.resolve_any_xref:7
+msgid ""
+"The method must return a list (potentially empty) of tuples "
+"``('domain:role', newnode)``, where ``'domain:role'`` is the name of a role "
+"that could have created the same reference, e.g. ``'py:func'``. ``newnode`` "
+"is what :meth:`resolve_xref` would return."
+msgstr ""
+"முறை `` ('டொமைன்: பங்கு', நியூனோட்) ``, அங்கு `` 'டொமைன்: ரோல்'`` என்பது அதே"
+" குறிப்பை உருவாக்கியிருக்கக்கூடிய ஒரு பாத்திரத்தின் பெயர் எ.கா. `` 'py: "
+"func'``. `` நியூனோட்`` என்ன: மெத்: `Relorve_xref` திரும்பும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.resolve_xref:1
+msgid "Resolve the pending_xref *node* with the given *typ* and *target*."
+msgstr ""
+"கொடுக்கப்பட்ட *வகை *மற்றும் *இலக்கு *உடன் நிலுவையில் உள்ள_எக்ஸ்ரேஃப் *முனை "
+"*ஐ தீர்க்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.resolve_xref:3
+msgid ""
+"This method should return a new node, to replace the xref node, containing "
+"the *contnode* which is the markup content of the cross-reference."
+msgstr ""
+"இந்த முறை ஒரு புதிய முனையைத் திருப்பித் தர வேண்டும், XREF முனையை மாற்ற "
+"வேண்டும், இது * contnode * ஐக் கொண்டுள்ளது, இது குறுக்கு-குறிப்பின் "
+"மார்க்அப் உள்ளடக்கமாகும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.resolve_xref:7
+msgid ""
+"If no resolution can be found, None can be returned; the xref node will then"
+" given to the :event:`missing-reference` event, and if that yields no "
+"resolution, replaced by *contnode*."
+msgstr ""
+"எந்தவொரு தீர்மானத்தையும் கண்டுபிடிக்க முடியவில்லை என்றால், எதையும் "
+"திருப்பித் தர முடியாது; XREF முனை பின்னர்: நிகழ்வு: `காணாமல் போன-குறிப்பு` "
+"நிகழ்வுக்கு வழங்கப்படும், மேலும் அது எந்த தீர்மானத்தையும் அளிக்கவில்லை "
+"என்றால், *contnode *ஆல் மாற்றப்படுகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.resolve_xref:11
+msgid ""
+"The method can also raise :exc:`sphinx.environment.NoUri` to suppress the "
+":event:`missing-reference` event being emitted."
+msgstr "முறையும் உயர்த்தலாம்: எக்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.role:1
+msgid ""
+"Return a role adapter function that always gives the registered role its "
+"full name ('domain:name') as the first argument."
+msgstr ""
+"பதிவுசெய்யப்பட்ட பாத்திரத்தை எப்போதும் அதன் முழு பெயரை ('டொமைன்: பெயர்') "
+"முதல் வாதமாக வழங்கும் ஒரு பங்கு அடாப்டர் செயல்பாட்டைத் தரவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Domain.setup:1
+msgid "Set up domain object."
+msgstr "டொமைன் பொருளை அமைக்கவும்."
+
+#: ../docstring of sphinx.domains.Domain.dangling_warnings:1
+msgid "role name -> a warning message if reference is missing"
+msgstr "பங்கு பெயர் -> குறிப்பு காணவில்லை என்றால் ஒரு எச்சரிக்கை செய்தி"
+
+#: ../docstring of sphinx.domains.Domain.data:1
+msgid "data value"
+msgstr "தரவு மதிப்பு"
+
+#: ../docstring of sphinx.domains.Domain.data_version:1
+msgid "data version, bump this when the format of `self.data` changes"
+msgstr "தரவு பதிப்பு, `self.data` இன் வடிவம் மாறும்போது இதை பம்ப் செய்யுங்கள்"
+
+#: ../docstring of sphinx.domains.Domain.directives:1
+msgid "directive name -> directive class"
+msgstr "உத்தரவு பெயர் -> உத்தரவு வகுப்பு"
+
+#: ../docstring of sphinx.domains.Domain.enumerable_nodes:1
+msgid "node_class -> (enum_node_type, title_getter)"
+msgstr "node_class -> (enum_node_type, title_getter)"
+
+#: ../docstring of sphinx.domains.Domain.indices:1
+msgid "a list of Index subclasses"
+msgstr "குறியீட்டு துணைப்பிரிவுகளின் பட்டியல்"
+
+#: ../docstring of sphinx.domains.Domain.initial_data:1
+msgid "data value for a fresh environment"
+msgstr "புதிய சூழலுக்கான தரவு மதிப்பு"
+
+#: ../docstring of sphinx.domains.Domain.label:1
+msgid "domain label: longer, more descriptive (used in messages)"
+msgstr ""
+"டொமைன் லேபிள்: நீண்ட, அதிக விளக்கமான (செய்திகளில் பயன்படுத்தப்படுகிறது)"
+
+#: ../docstring of sphinx.domains.Domain.name:1
+msgid "domain name: should be short, but unique"
+msgstr "டொமைன் பெயர்: குறுகியதாக இருக்க வேண்டும், ஆனால் தனித்துவமானது"
+
+#: ../docstring of sphinx.domains.Domain.object_types:1
+msgid "type (usually directive) name -> ObjType instance"
+msgstr "தட்டச்சு (வழக்கமாக டைரெக்டிவ்) பெயர் -> ஆப்ஜ்டைப் நிகழ்வு"
+
+#: ../docstring of sphinx.domains.Domain.roles:1
+msgid "role name -> role callable"
+msgstr "பங்கு பெயர் -> பங்கு அழைக்கக்கூடியது"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.ObjType:1
+msgid ""
+"An ObjType is the description for a type of object that a domain can "
+"document.  In the object_types attribute of Domain subclasses, object type "
+"names are mapped to instances of this class."
+msgstr ""
+"ஒரு டொமைன் ஆவணப்படுத்தக்கூடிய ஒரு வகை பொருளின் விளக்கம் ஒரு OBJTYPE ஆகும். "
+"டொமைன் துணைப்பிரிவுகளின் பொருள்_ வகை பண்புகளில், பொருள் வகை பெயர்கள் இந்த "
+"வகுப்பின் நிகழ்வுகளுக்கு மாற்றப்படுகின்றன."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.ObjType:5
+msgid "Constructor arguments:"
+msgstr "கட்டமைப்பாளர் வாதங்கள்:"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.ObjType:7
+msgid "*lname*: localized name of the type (do not include domain name)"
+msgstr ""
+"*lname*: வகையின் உள்ளூர்மயமாக்கப்பட்ட பெயர் (டொமைன் பெயரைச் சேர்க்க "
+"வேண்டாம்)"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.ObjType:8
+msgid "*roles*: all the roles that can refer to an object of this type"
+msgstr ""
+"*பாத்திரங்கள்*: இந்த வகை பொருளைக் குறிக்கக்கூடிய அனைத்து பாத்திரங்களும்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.ObjType:9
+msgid ""
+"*attrs*: object attributes -- currently only \"searchprio\" is known, which "
+"defines the object's priority in the full-text search index, see "
+":meth:`Domain.get_objects()`."
+msgstr "."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index:1
+msgid ""
+"An Index is the description for a domain-specific index.  To add an index to"
+" a domain, subclass Index, overriding the three name attributes:"
+msgstr ""
+"ஒரு குறியீட்டு என்பது ஒரு டொமைன்-குறிப்பிட்ட குறியீட்டுக்கான விளக்கம். ஒரு "
+"டொமைனில் ஒரு குறியீட்டைச் சேர்க்க, துணைப்பிரிவு குறியீடு, மூன்று பெயர் "
+"பண்புகளை மீறுகிறது:"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index:4
+msgid ""
+"`name` is an identifier used for generating file names. It is also used for "
+"a hyperlink target for the index. Therefore, users can refer the index page "
+"using ``ref`` role and a string which is combined domain name and ``name`` "
+"attribute (ex. ``:ref:`py-modindex```)."
+msgstr ""
+"`பெயர்` என்பது கோப்பு பெயர்களை உருவாக்கப் பயன்படுத்தப்படும் அடையாளங்காட்டி. "
+"இது குறியீட்டுக்கான ஹைப்பர்லிங்க் இலக்குக்கும் பயன்படுத்தப்படுகிறது. "
+"ஆகையால், பயனர்கள் குறியீட்டு பக்கத்தை `` ref`` பாத்திரத்தையும், ஒருங்கிணைந்த"
+" டொமைன் பெயர் மற்றும் `` பெயர்`` பண்புக்கூறு (எ.கா. `: குறிப்பு:` "
+"பை-மோடிண்டெக்ஸ்``` ஐப் பயன்படுத்தி குறிப்பிடலாம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index:8
+msgid "`localname` is the section title for the index."
+msgstr "`லோக்கல் பெயர்` என்பது குறியீட்டின் பிரிவு தலைப்பு."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index:9
+msgid ""
+"`shortname` is a short name for the index, for use in the relation bar in "
+"HTML output.  Can be empty to disable entries in the relation bar."
+msgstr ""
+"HTML வெளியீட்டில் உறவின் பட்டியில் பயன்படுத்த, `ஷார்ட்நேம்` குறியீட்டின் "
+"குறுகிய பெயர். உறவு பட்டியில் உள்ளீடுகளை முடக்க காலியாக இருக்கலாம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index:12
+msgid ""
+"and providing a :meth:`generate()` method.  Then, add the index class to "
+"your domain's `indices` list.  Extensions can add indices to existing "
+"domains using :meth:`~sphinx.application.Sphinx.add_index_to_domain()`."
+msgstr ""
+"மற்றும் ஒரு: meth: `உருவாக்கு ()` முறையை உருவாக்குங்கள். பின்னர், உங்கள் "
+"டொமைனின் `குறியீடுகள்` பட்டியலில் குறியீட்டு வகையைச் சேர்க்கவும். "
+"நீட்டிப்புகள் ஏற்கனவே இருக்கும் களங்களில் குறியீடுகளைச் சேர்க்கலாம்: METH: "
+"`~ sphinx.application.sphinx.add_index_to_domain ()`."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index:18
+msgid ""
+"Index pages can be referred by domain name and index name via "
+":rst:role:`ref` role."
+msgstr ""
+"குறியீட்டு பக்கங்களை டொமைன் பெயர் மற்றும் குறியீட்டு பெயர் மூலம் "
+"குறிப்பிடலாம்: rst: பங்கு: `ref` பங்கு."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:1
+msgid "Get entries for the index."
+msgstr "குறியீட்டுக்கான உள்ளீடுகளைப் பெறுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:3
+msgid ""
+"If ``docnames`` is given, restrict to entries referring to these docnames."
+msgstr ""
+"`` Docnames`` வழங்கப்பட்டால், இந்த ஆவணப் பெயர்களைக் குறிக்கும் "
+"உள்ளீடுகளுக்கு கட்டுப்படுத்தவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:6
+msgid "The return value is a tuple of ``(content, collapse)``:"
+msgstr "வருவாய் மதிப்பு `` (உள்ளடக்கம், சரிவு) ``:"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:10
+msgid "``collapse``"
+msgstr "`` சரிவு``"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:9
+msgid ""
+"A boolean that determines if sub-entries should start collapsed (for output "
+"formats that support collapsing sub-entries)."
+msgstr ""
+"துணை உள்ளீடுகள் சரிந்தால் தீர்மானிக்கும் ஒரு பூலியன் (வீழ்ச்சியடைந்த துணை "
+"மையங்களை ஆதரிக்கும் வெளியீட்டு வடிவங்களுக்கு)."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:45
+msgid "``content``:"
+msgstr "`` உள்ளடக்கம்``:"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:13
+msgid ""
+"A sequence of ``(letter, entries)`` tuples, where ``letter`` is the "
+"\"heading\" for the given ``entries``, usually the starting letter, and "
+"``entries`` is a sequence of single entries. Each entry is a sequence "
+"``[name, subtype, docname, anchor, extra, qualifier, descr]``. The items in "
+"this sequence have the following meaning:"
+msgstr ""
+"`` (கடிதம், உள்ளீடுகள்) `` டூப்பிள்களின் வரிசை, அங்கு `` கடிதம்`` என்பது "
+"கொடுக்கப்பட்ட `உள்ளீடுகள்`` என்பதற்கான\" தலைப்பு \"ஆகும், இது வழக்கமாக "
+"தொடக்க கடிதம், மற்றும்` `உள்ளீடுகள்`` என்பது ஒற்றை வரிசை உள்ளீடுகள். ஒவ்வொரு"
+" நுழைவும் ஒரு வரிசை `` [பெயர், துணை வகை, டாக்நேம், நங்கூரம், கூடுதல், தகுதி,"
+" டி.எஸ்.சி.ஆர்] ``. இந்த வரிசையில் உள்ள உருப்படிகள் பின்வரும் பொருளைக் "
+"கொண்டுள்ளன:"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:20
+msgid "The name of the index entry to be displayed."
+msgstr "காட்டப்பட வேண்டிய குறியீட்டு உள்ளீட்டின் பெயர்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:30
+msgid "``subtype``"
+msgstr "`` துணை வகை``"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:23
+msgid "The sub-entry related type. One of:"
+msgstr "துணை நுழைவு வகை. ஒன்று:"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:26
+msgid "A normal entry."
+msgstr "ஒரு சாதாரண நுழைவு."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:28
+msgid "An entry with sub-entries."
+msgstr "துணை உள்ளீடுகளுடன் ஒரு நுழைவு."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:30
+msgid "A sub-entry."
+msgstr "ஒரு துணை நுழைவு."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:33
+msgid "*docname* where the entry is located."
+msgstr "* docname* நுழைவு அமைந்துள்ள இடத்தில்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:36
+msgid "Anchor for the entry within ``docname``"
+msgstr "`` Docname`` க்குள் நுழைவதற்கு நங்கூரம்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:39
+msgid "``extra``"
+msgstr "`` கூடுதல்``"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:39
+msgid "Extra info for the entry."
+msgstr "நுழைவுக்கான கூடுதல் தகவல்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:42
+msgid "``qualifier``"
+msgstr "`` தகுதி`"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:42
+msgid "Qualifier for the description."
+msgstr "விளக்கத்திற்கான தகுதி."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:45
+msgid "``descr``"
+msgstr "`` டெஸ்கர்``"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:45
+msgid "Description for the entry."
+msgstr "நுழைவுக்கான விளக்கம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/__init__.pydocstring
+#: of sphinx.domains.Index.generate:47
+msgid ""
+"Qualifier and description are not rendered for some output formats such as "
+"LaTeX."
+msgstr ""
+"லேடெக்ஸ் போன்ற சில வெளியீட்டு வடிவங்களுக்கு தகுதி மற்றும் விளக்கம் "
+"வழங்கப்படவில்லை."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription:1
+msgid ""
+"Directive to describe a class, function or similar object.  Not used "
+"directly, but subclassed (in domain-specific directives) to add custom "
+"behavior."
+msgstr ""
+"ஒரு வகுப்பு, செயல்பாடு அல்லது ஒத்த பொருளை விவரிக்க உத்தரவு. நேரடியாகப் "
+"பயன்படுத்தப்படவில்லை, ஆனால் தனிப்பயன் நடத்தை சேர்க்க துணைப்பிரிவு "
+"(டொமைன்-குறிப்பிட்ட வழிமுறைகளில்)."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription._object_hierarchy_parts:1
+msgid ""
+"Returns a tuple of strings, one entry for each part of the object's "
+"hierarchy (e.g. ``('module', 'submodule', 'Class', 'method')``). The "
+"returned tuple is used to properly nest children within parents in the table"
+" of contents, and can also be used within the :py:meth:`_toc_entry_name` "
+"method."
+msgstr ""
+"ஒரு சரங்களை வழங்குகிறது, பொருளின் வரிசைக்கு ஒவ்வொரு பகுதிக்கும் ஒரு நுழைவு "
+"(எ.கா. `` ('தொகுதி', 'துணை', 'வகுப்பு', 'முறை') ``). திரும்பிய டூப்பிள் "
+"உள்ளடக்கங்களின் அட்டவணையில் பெற்றோருக்குள் குழந்தைகளை சரியாக கூடு கட்ட "
+"பயன்படுகிறது, மேலும்: py: meth: `_toc_entry_name` முறைக்குள்ளும் "
+"பயன்படுத்தலாம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription._object_hierarchy_parts:7
+msgid "This method must not be used outwith table of contents generation."
+msgstr "இந்த முறையை உள்ளடக்க தலைமுறையின் அட்டவணையுடன் பயன்படுத்தக்கூடாது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription._toc_entry_name:1
+msgid "Returns the text of the table of contents entry for the object."
+msgstr "பொருளுக்கான உள்ளடக்க அட்டவணையின் உரையை வழங்குகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription._toc_entry_name:3
+msgid ""
+"This function is called once, in :py:meth:`run`, to set the name for the "
+"table of contents entry (a special attribute ``_toc_name`` is set on the "
+"object node, later used in "
+"``environment.collectors.toctree.TocTreeCollector.process_doc().build_toc()``"
+" when the table of contents entries are collected)."
+msgstr ""
+"இந்த செயல்பாடு ஒரு முறை என அழைக்கப்படுகிறது: py: meth: `run`, உள்ளடக்க "
+"அட்டவணைக்கான பெயரை அமைக்க (ஒரு சிறப்பு பண்புக்கூறு` _toc_name`` பொருள் "
+"முனையில் அமைக்கப்பட்டுள்ளது, பின்னர் `` சுற்றுச்சூழல். கலெக்டர்களில் "
+"பயன்படுத்தப்படுகிறது .toctree.toctreeCollector.process_doc (). Build_toc () "
+"`` உள்ளடக்க அட்டவணைகள் சேகரிக்கப்படும்போது)."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription._toc_entry_name:9
+msgid ""
+"To support table of contents entries for their objects, domains must "
+"override this method, also respecting the configuration setting "
+"``toc_object_entries_show_parents``. Domains must also override "
+":py:meth:`_object_hierarchy_parts`, with one (string) entry for each part of"
+" the object's hierarchy. The result of this method is set on the signature "
+"node, and can be accessed as ``sig_node['_toc_parts']`` for use within this "
+"method. The resulting tuple is also used to properly nest children within "
+"parents in the table of contents."
+msgstr ""
+"உள்ளடக்க உள்ளீடுகளின் அட்டவணையை அவற்றின் பொருள்களுக்கான ஆதரிக்க, களங்கள் "
+"இந்த முறையை மேலெழுத வேண்டும், மேலும் உள்ளமைவு அமைப்பையும் மதிக்க வேண்டும் ``"
+" TOC_OBJECT_ENTRIES_SHOW_PARENTS``. களங்கள் மேலெழுத வேண்டும்: PY: METH: "
+"`_Object_hierarch_parts`, பொருளின் வரிசைக்கு ஒவ்வொரு பகுதிக்கும் ஒரு (சரம்) "
+"நுழைவு. இந்த முறையின் முடிவு கையொப்ப முனையில் அமைக்கப்பட்டுள்ளது, மேலும் "
+"இந்த முறைக்குள் பயன்படுத்த `` sig_node ['_ TOC_PARTS'] `` என அணுகலாம். இதன் "
+"விளைவாக வரும் டூப்பல் உள்ளடக்கங்களின் அட்டவணையில் பெற்றோருக்குள் குழந்தைகளை "
+"சரியாக கூடு கட்ட பயன்படுகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription._toc_entry_name:18
+msgid ""
+"An example implementations of this method is within the python domain "
+"(:meth:`!PyObject._toc_entry_name`). The python domain sets the "
+"``_toc_parts`` attribute within the :py:meth:`handle_signature()` method."
+msgstr ""
+"இந்த முறையின் எடுத்துக்காட்டு செயலாக்கங்கள் பைதான் களத்திற்குள் உள்ளன (: "
+"மெத்: `! பைதான் டொமைன்: py: meth: `gild_signature ()` முறைக்குள் "
+"`_TOC_PARTS`` பண்புகளை அமைக்கிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription.add_target_and_index:1
+msgid "Add cross-reference IDs and entries to self.indexnode, if applicable."
+msgstr ""
+"பொருந்தினால், குறுக்கு-குறிப்பு ஐடிகள் மற்றும் உள்ளீடுகளை self.indexnode இல்"
+" சேர்க்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription.add_target_and_index:3
+msgid "*name* is whatever :meth:`handle_signature()` returned."
+msgstr ""
+"* பெயர்* எதுவாக இருந்தாலும்: மெத்: `கைப்பிடி_சிக்னேச்சர் ()` திரும்பியது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription.after_content:1
+msgid ""
+"Called after parsing content. Used to reset information about the current "
+"directive context on the build environment."
+msgstr ""
+"உள்ளடக்கத்தை பாகுபடுத்திய பின் அழைக்கப்படுகிறது. உருவாக்க சூழலில் தற்போதைய "
+"வழிநடத்துதல் சூழல் பற்றிய தகவல்களை மீட்டமைக்க பயன்படுகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription.before_content:1
+msgid ""
+"Called before parsing content. Used to set information about the current "
+"directive context on the build environment."
+msgstr ""
+"உள்ளடக்கத்தை பாகுபடுத்துவதற்கு முன் அழைக்கப்படுகிறது. உருவாக்க சூழலில் "
+"தற்போதைய வழிநடத்துதல் சூழல் பற்றிய தகவல்களை அமைக்கப் பயன்படுகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription.get_signatures:1
+msgid ""
+"Retrieve the signatures to document from the directive arguments.  By "
+"default, signatures are given as arguments, one per line."
+msgstr ""
+"உத்தரவு வாதங்களிலிருந்து ஆவணப்படுத்த கையொப்பங்களை மீட்டெடுக்கவும். இயல்பாக, "
+"கையொப்பங்கள் வாதங்களாக வழங்கப்படுகின்றன, ஒரு வரிக்கு ஒன்று."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription.handle_signature:1
+msgid ""
+"Parse the signature *sig* into individual nodes and append them to "
+"*signode*. If ValueError is raised, parsing is aborted and the whole *sig* "
+"is put into a single desc_name node."
+msgstr ""
+"கையொப்பத்தை *சிக் *ஐ தனிப்பட்ட முனைகளாக அலசவும், அவற்றை *கையொப்பமிடல் *இல் "
+"சேர்க்கவும். மதிப்பு பிழை உயர்த்தப்பட்டால், பாகுபடுத்தல் கைவிடப்பட்டு, முழு "
+"* சிக் * ஒரு DESC_NAME முனையில் வைக்கப்படுகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription.handle_signature:5
+msgid ""
+"The return value should be a value that identifies the object.  It is passed"
+" to :meth:`add_target_and_index()` unchanged, and otherwise only used to "
+"skip duplicates."
+msgstr ""
+"வருவாய் மதிப்பு பொருளை அடையாளம் காணும் மதிப்பாக இருக்க வேண்டும். இது "
+"அனுப்பப்பட்டுள்ளது: மெத்: `add_target_and_index ()` மாறாதது, இல்லையெனில் "
+"நகல்களைத் தவிர்க்க மட்டுமே பயன்படுத்தப்படுகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription.run:1
+msgid ""
+"Main directive entry function, called by docutils upon encountering the "
+"directive."
+msgstr ""
+"பிரதான வழிநடத்தும் நுழைவு செயல்பாடு, உத்தரவை எதிர்கொண்டவுடன் ஆவணங்களால் "
+"அழைக்கப்படுகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription.run:4
+msgid ""
+"This directive is meant to be quite easily subclassable, so it delegates to "
+"several additional methods.  What it does:"
+msgstr ""
+"இந்த உத்தரவு மிக எளிதாக துணைப்பிரிவு செய்யக்கூடியதாக இருக்க வேண்டும், எனவே "
+"இது பல கூடுதல் முறைகளுக்கு பிரதிநிதித்துவப்படுத்துகிறது. அது என்ன செய்கிறது:"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription.run:7
+msgid "find out if called as a domain-specific directive, set self.domain"
+msgstr "டொமைன்-குறிப்பிட்ட உத்தரவாக அழைக்கப்பட்டால், self.domain ஐ அமைக்கவும்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription.run:8
+msgid "create a `desc` node to fit all description inside"
+msgstr ""
+"உள்ளே உள்ள அனைத்து விளக்கங்களுக்கும் பொருந்த ஒரு `டெஸ்க்` முனையை "
+"உருவாக்கவும்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription.run:9
+msgid "parse standard options, currently `no-index`"
+msgstr "நிலையான விருப்பங்களை பாகுபடுத்துங்கள், தற்போது `இல்லை-இன்டெக்ஸ்`"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription.run:10
+msgid "create an index node if needed as self.indexnode"
+msgstr "Self.indexnode ஆக தேவைப்பட்டால் ஒரு குறியீட்டு முனையை உருவாக்கவும்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription.run:11
+msgid ""
+"parse all given signatures (as returned by self.get_signatures()) using "
+"self.handle_signature(), which should either return a name or raise "
+"ValueError"
+msgstr "சுய."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription.run:14
+msgid "add index entries using self.add_target_and_index()"
+msgstr ""
+"Self.add_target_and_index () ஐப் பயன்படுத்தி குறியீட்டு உள்ளீடுகளைச் "
+"சேர்க்கவும்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription.run:15
+msgid "parse the content and handle doc fields in it"
+msgstr "உள்ளடக்கத்தை அலசவும், அதில் டாக் புலங்களைக் கையாளவும்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/directives/__init__.pydocstring
+#: of sphinx.directives.ObjectDescription.transform_content:1
+msgid ""
+"Called after creating the content through nested parsing, but before the "
+"``object-description-transform`` event is emitted, and before the info-"
+"fields are transformed. Can be used to manipulate the content."
+msgstr ""
+"உள்ளமைக்கப்பட்ட பாகுபடுத்தல் மூலம் உள்ளடக்கத்தை உருவாக்கிய பின் "
+"அழைக்கப்படுகிறது, ஆனால் `` பொருள்-விளக்கமளிக்கும்-உருமாற்றம்` நிகழ்வு "
+"வெளிப்படும் முன், மற்றும் தகவல் புலங்கள் மாற்றப்படுவதற்கு முன்பு. "
+"உள்ளடக்கத்தை கையாள பயன்படுத்தலாம்."
+
+#: ../docstring of
+#: sphinx.directives.ObjectDescription.final_argument_whitespace:1
+msgid "May the final argument contain whitespace?"
+msgstr "இறுதி வாதத்தில் இடைவெளி இருக்க முடியுமா?"
+
+#: ../docstring of sphinx.directives.ObjectDescription.has_content:1
+msgid "May the directive have content?"
+msgstr "உத்தரவுக்கு உள்ளடக்கம் இருக்க முடியுமா?"
+
+#: ../docstring of sphinx.directives.ObjectDescription.option_spec:1
+msgid "Mapping of option names to validator functions."
+msgstr "வேலிடேட்டர் செயல்பாடுகளுக்கு விருப்ப பெயர்களை மேப்பிங் செய்வது."
+
+#: ../docstring of sphinx.directives.ObjectDescription.optional_arguments:1
+msgid "Number of optional arguments after the required arguments."
+msgstr "தேவையான வாதங்களுக்குப் பிறகு விருப்ப வாதங்களின் எண்ணிக்கை."
+
+#: ../docstring of sphinx.directives.ObjectDescription.required_arguments:1
+msgid "Number of required directive arguments."
+msgstr "தேவையான வழிநடத்தும் வாதங்களின் எண்ணிக்கை."
+
+#: ../../sphinx/doc/extdev/domainapi.rst:23
+msgid "Python Domain"
+msgstr "பைதான் டொமைன்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/python.pydocstring
+#: of sphinx.domains.python.PythonDomain:1
+msgid "Python language domain."
+msgstr "பைதான் மொழி களம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/python.pydocstring
+#: of sphinx.domains.python.PythonDomain.note_object:1
+msgid "Note a python object for cross reference."
+msgstr "குறுக்கு குறிப்புக்கு பைதான் பொருளைக் கவனியுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/domains/python.pydocstring
+#: of sphinx.domains.python.PythonDomain.note_module:1
+msgid "Note a python module for cross reference."
+msgstr "குறுக்கு குறிப்புக்கு பைதான் தொகுதியைக் கவனியுங்கள்."

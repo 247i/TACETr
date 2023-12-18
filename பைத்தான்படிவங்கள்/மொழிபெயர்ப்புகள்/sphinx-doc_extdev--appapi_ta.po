@@ -1,0 +1,2230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2023, the Sphinx developers
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 7.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-15 00:35+0000\n"
+"PO-Revision-Date: 2018-02-12 13:48+0000\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/extdev/appapi.rst:4
+msgid "Application API"
+msgstr "பயன்பாட்டு API"
+
+#: ../../sphinx/doc/extdev/appapi.rst:10
+msgid ""
+"Each Sphinx extension is a Python module with at least a :func:`setup` "
+"function.  This function is called at initialization time with one argument,"
+" the application object representing the Sphinx process."
+msgstr ""
+"ஒவ்வொரு ஸ்பிங்க்ஸ் நீட்டிப்பும் குறைந்தபட்சம் ஒரு பைதான் தொகுதி ஆகும்: func:"
+" `அமைவு` செயல்பாடு. இந்த செயல்பாடு ஒரு வாதத்துடன் துவக்க நேரத்தில் "
+"அழைக்கப்படுகிறது, இது SPHINX செயல்முறையைக் குறிக்கும் பயன்பாட்டு பொருள்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:16
+msgid "This application object has the public API described in the following."
+msgstr ""
+"இந்த பயன்பாட்டு பொருள் பின்வருவனவற்றில் விவரிக்கப்பட்டுள்ள பொது ஏபிஐ உள்ளது."
+
+#: ../../sphinx/doc/extdev/appapi.rst:19
+msgid "Extension setup"
+msgstr "நீட்டிப்பு அமைப்பு"
+
+#: ../../sphinx/doc/extdev/appapi.rst:21
+msgid ""
+"These methods are usually called in an extension's ``setup()`` function."
+msgstr ""
+"இந்த முறைகள் வழக்கமாக நீட்டிப்பின் `` அமைவு () `` செயல்பாட்டில் "
+"அழைக்கப்படுகின்றன."
+
+#: ../../sphinx/doc/extdev/appapi.rst:23
+msgid ""
+"Examples of using the Sphinx extension API can be seen in the "
+":mod:`sphinx.ext` package."
+msgstr ""
+"SPHINX நீட்டிப்பு API ஐப் பயன்படுத்துவதற்கான எடுத்துக்காட்டுகளை: mod: "
+"`sphinx.ext` தொகுப்பில் காணலாம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.setup_extension:1
+msgid "Import and setup a Sphinx extension module."
+msgstr "ஸ்பிங்க்ஸ் நீட்டிப்பு தொகுதியை இறக்குமதி செய்து அமைக்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.setup_extension:3
+msgid ""
+"Load the extension given by the module *name*.  Use this if your extension "
+"needs the features provided by another extension.  No-op if called twice."
+msgstr ""
+"தொகுதி *பெயர் *வழங்கிய நீட்டிப்பை ஏற்றவும். உங்கள் நீட்டிப்புக்கு மற்றொரு "
+"நீட்டிப்பு வழங்கப்பட்ட அம்சங்கள் தேவைப்பட்டால் இதைப் பயன்படுத்தவும். இரண்டு "
+"முறை அழைக்கப்பட்டால் இல்லை."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.require_sphinx:1
+msgid "Check the Sphinx version if requested."
+msgstr "கோரப்பட்டால் ஸ்பிங்க்ஸ் பதிப்பை சரிபார்க்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.require_sphinx:3
+msgid ""
+"Compare *version* with the version of the running Sphinx, and abort the "
+"build when it is too old."
+msgstr ""
+"இயங்கும் ஸ்பிங்க்ஸின் பதிப்போடு * பதிப்பு * ஐ ஒப்பிட்டு, பழையதாக "
+"இருக்கும்போது கட்டியெழுப்பவும்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_builder:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_config_value:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_crossref_type:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive_to_domain:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_domain:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_enumerable_node:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_event:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_generic_role:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_index_to_domain:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_message_catalog:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_node:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_post_transform:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_role:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_role_to_domain:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_source_parser:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_source_suffix:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.connect:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.disconnect:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.emit:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.emit_firstresult:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.is_parallel_allowed:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.require_sphinx:0
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.set_translator:0
+msgid "Parameters"
+msgstr "அளவுருக்கள்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.require_sphinx:6
+msgid ""
+"The required version in the form of ``major.minor`` or ``(major, minor)``."
+msgstr ""
+"`` மேஜர்.மினோர்`` அல்லது `` (மேஜர், மைனர்) `` வடிவத்தில் தேவையான பதிப்பு."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.require_sphinx:10
+msgid "Type of *version* now allows ``(major, minor)`` form."
+msgstr "* பதிப்பு * வகை இப்போது `` (பெரிய, சிறிய) `` படிவத்தை அனுமதிக்கிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.connect:1
+msgid "Register *callback* to be called when *event* is emitted."
+msgstr ""
+"* நிகழ்வு * உமிழப்படும் போது அழைக்கப்பட வேண்டிய * கால்பேக் * ஐ பதிவு "
+"செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.connect:3
+msgid ""
+"For details on available core events and the arguments of callback "
+"functions, please see :ref:`events`."
+msgstr ""
+"கிடைக்கக்கூடிய முக்கிய நிகழ்வுகள் மற்றும் அழைப்பு செயல்பாடுகளின் வாதங்கள் "
+"பற்றிய விவரங்களுக்கு, தயவுசெய்து பார்க்கவும்: குறிப்பு: `நிகழ்வுகள்`."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.connect:6
+msgid "The name of target event"
+msgstr "இலக்கு நிகழ்வின் பெயர்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.connect:7
+msgid "Callback function for the event"
+msgstr "நிகழ்விற்கான திரும்பப்பெறுதல் செயல்பாடு"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.connect:8
+msgid ""
+"The priority of the callback.  The callbacks will be invoked in order of "
+"*priority* (ascending)."
+msgstr ""
+"அழைப்பின் முன்னுரிமை. கால்பேக்குகள் * முன்னுரிமை * (ஏறுதல்) வரிசையில் "
+"செயல்படுத்தப்படும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.connect:0
+msgid "Returns"
+msgstr "வருமானம்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.connect:10
+msgid "A listener ID.  It can be used for :meth:`disconnect`."
+msgstr "ஒரு கேட்பவர் ஐடி. இதைப் பயன்படுத்தலாம்: மெத்: `துண்டிக்கவும்`."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.connect:14
+msgid "Support *priority*"
+msgstr "ஆதரவு *முன்னுரிமை *"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.disconnect:1
+msgid "Unregister callback by *listener_id*."
+msgstr "*கேட்போர்_ஐடி *மூலம் பதிவு செய்யவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.disconnect:3
+msgid "A listener_id that :meth:`connect` returns"
+msgstr "ஒரு கேட்பவர்_ஐடி: மெத்: `இணைக்கவும்` திரும்பும்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_builder:1
+msgid "Register a new builder."
+msgstr "புதிய பில்டரை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_builder:3
+msgid "A builder class"
+msgstr "ஒரு பில்டர் வகுப்பு"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_builder:4
+msgid ""
+"If true, install the builder forcedly even if another builder is already "
+"installed as the same name"
+msgstr ""
+"உண்மை என்றால், மற்றொரு பில்டர் ஏற்கனவே அதே பெயராக நிறுவப்பட்டிருந்தாலும் "
+"பில்டரை கட்டாயமாக நிறுவவும்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_autodocumenter:15
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_builder:7
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_crossref_type:32
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive:39
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive_to_domain:14
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_domain:9
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_generic_role:11
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_index_to_domain:12
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_object_type:57
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_role:12
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_role_to_domain:14
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_source_parser:11
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.set_translator:13
+msgid "Add *override* keyword."
+msgstr "* மேலெழுத * முக்கிய சொல்லைச் சேர்க்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_config_value:1
+msgid "Register a configuration value."
+msgstr "உள்ளமைவு மதிப்பைப் பதிவுசெய்க."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_config_value:3
+msgid ""
+"This is necessary for Sphinx to recognize new values and set default values "
+"accordingly."
+msgstr ""
+"SPHINX க்கு புதிய மதிப்புகளை அடையாளம் காணவும், அதற்கேற்ப இயல்புநிலை "
+"மதிப்புகளை அமைக்கவும் இது அவசியம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_config_value:7
+msgid ""
+"The name of the configuration value.  It is recommended to be prefixed with "
+"the extension name (ex. ``html_logo``, ``epub_title``)"
+msgstr ""
+"உள்ளமைவு மதிப்பின் பெயர். நீட்டிப்பு பெயருடன் முன்னொட்டு (எ.கா. "
+"`html_logo``,` `epub_title``)"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_config_value:9
+msgid "The default value of the configuration."
+msgstr "உள்ளமைவின் இயல்புநிலை மதிப்பு."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_config_value:10
+msgid ""
+"The condition of rebuild.  It must be one of those values:  * ``'env'`` if a"
+" change in the setting only takes effect when a   document is parsed -- this"
+" means that the whole environment must be   rebuilt. * ``'html'`` if a "
+"change in the setting needs a full rebuild of HTML   documents. * ``''`` if "
+"a change in the setting will not need any special rebuild."
+msgstr ""
+"மறுகட்டமைப்பின் நிலை. அந்த மதிப்புகளில் ஒன்றாக இருக்க வேண்டும்: * `` '' '' "
+"'' '' ஒரு ஆவணம் பாகுபடுத்தப்படும்போது மட்டுமே அமைப்பில் மாற்றம் நடைமுறைக்கு "
+"வந்தால் - இதன் பொருள் முழு சூழலும் மீண்டும் கட்டப்பட வேண்டும். * `` "
+"'html'``` அமைப்பில் ஒரு மாற்றத்திற்கு HTML ஆவணங்களை முழுமையாக மீண்டும் "
+"கட்டியெழுப்ப வேண்டும் என்றால். * `` '' `` அமைப்பில் மாற்றத்திற்கு எந்த "
+"சிறப்பு மறுகட்டமைப்பும் தேவையில்லை என்றால்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_config_value:10
+msgid "The condition of rebuild.  It must be one of those values:"
+msgstr "மறுகட்டமைப்பின் நிலை. அது அந்த மதிப்புகளில் ஒன்றாக இருக்க வேண்டும்:"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_config_value:12
+msgid ""
+"``'env'`` if a change in the setting only takes effect when a document is "
+"parsed -- this means that the whole environment must be rebuilt."
+msgstr ""
+"ஒரு ஆவணம் பாகுபடுத்தப்படும்போது மட்டுமே அமைப்பில் மாற்றம் நடைமுறைக்கு "
+"வந்தால் - `'' env'`` - இதன் பொருள் முழு சூழலும் மீண்டும் கட்டப்பட வேண்டும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_config_value:15
+msgid ""
+"``'html'`` if a change in the setting needs a full rebuild of HTML "
+"documents."
+msgstr ""
+"`` 'html'``` அமைப்பில் ஒரு மாற்றத்திற்கு HTML ஆவணங்களை முழுமையாக மீண்டும் "
+"கட்டியெழுப்ப வேண்டும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_config_value:17
+msgid "``''`` if a change in the setting will not need any special rebuild."
+msgstr ""
+"`` '' `` அமைப்பில் மாற்றத்திற்கு எந்த சிறப்பு மறுகட்டமைப்பும் தேவையில்லை "
+"என்றால்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_config_value:18
+msgid ""
+"The type of configuration value.  A list of types can be specified.  For "
+"example, ``[str]`` is used to describe a configuration that takes string "
+"value."
+msgstr ""
+"உள்ளமைவு மதிப்பு வகை. வகைகளின் பட்டியலைக் குறிப்பிடலாம். எடுத்துக்காட்டாக, "
+"சரம் மதிப்பை எடுக்கும் உள்ளமைவை விவரிக்க `` [str] `` பயன்படுத்தப்படுகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_config_value:22
+msgid ""
+"If the *default* value is a callable, it will be called with the config "
+"object as its argument in order to get the default value. This can be used "
+"to implement config values whose default depends on other values."
+msgstr ""
+"* இயல்புநிலை * மதிப்பு அழைக்கக்கூடியதாக இருந்தால், இயல்புநிலை மதிப்பைப் "
+"பெறுவதற்காக அது கட்டமைப்பு பொருளுடன் அதன் வாதமாக அழைக்கப்படும். இயல்புநிலை "
+"மற்ற மதிப்புகளைப் பொறுத்து உள்ளமைவு மதிப்புகளை செயல்படுத்த இதைப் "
+"பயன்படுத்தலாம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_config_value:28
+msgid ""
+"Changed *rebuild* from a simple boolean (equivalent to ``''`` or ``'env'``) "
+"to a string.  However, booleans are still accepted and converted internally."
+msgstr ""
+"ஒரு எளிய பூலியனில் இருந்து (`` '' `` அல்லது `` '' என்வ்'``` க்கு சமம்) ஒரு "
+"சரத்திற்கு மாற்றப்பட்டது. இருப்பினும், பூலியர்கள் இன்னும் "
+"ஏற்றுக்கொள்ளப்பட்டு உள்நாட்டில் மாற்றப்படுகிறார்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_event:1
+msgid "Register an event called *name*."
+msgstr "*பெயர் *என்ற நிகழ்வைப் பதிவுசெய்க."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_event:3
+msgid "This is needed to be able to emit it."
+msgstr "அதை வெளியிடுவதற்கு இது தேவை."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_event:5
+msgid "The name of the event"
+msgstr "நிகழ்வின் பெயர்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.set_translator:1
+msgid "Register or override a Docutils translator class."
+msgstr ""
+"ஒரு ஆவண மொழிபெயர்ப்பாளர் வகுப்பை பதிவு செய்யுங்கள் அல்லது மேலெழுதவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.set_translator:3
+msgid ""
+"This is used to register a custom output translator or to replace a builtin "
+"translator.  This allows extensions to use a custom translator and define "
+"custom nodes for the translator (see :meth:`add_node`)."
+msgstr ""
+"தனிப்பயன் வெளியீட்டு மொழிபெயர்ப்பாளரை பதிவு செய்ய அல்லது பில்டின் "
+"மொழிபெயர்ப்பாளரை மாற்ற இது பயன்படுகிறது. இது தனிப்பயன் மொழிபெயர்ப்பாளரைப் "
+"பயன்படுத்தவும் மொழிபெயர்ப்பாளருக்கான தனிப்பயன் முனைகளை வரையறுக்கவும் "
+"நீட்டிப்புகளை அனுமதிக்கிறது (பார்க்க: மெத்: `கூடுதல்_நோட்`)."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.set_translator:7
+msgid "The name of the builder for the translator"
+msgstr "மொழிபெயர்ப்பாளருக்கான பில்டரின் பெயர்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.set_translator:8
+msgid "A translator class"
+msgstr "ஒரு மொழிபெயர்ப்பாளர் வகுப்பு"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.set_translator:9
+msgid ""
+"If true, install the translator forcedly even if another translator is "
+"already installed as the same name"
+msgstr ""
+"உண்மை என்றால், மற்றொரு மொழிபெயர்ப்பாளர் ஏற்கனவே அதே பெயராக "
+"நிறுவப்பட்டிருந்தாலும் மொழிபெயர்ப்பாளரை கட்டாயமாக நிறுவவும்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_node:1
+msgid "Register a Docutils node class."
+msgstr "ஒரு ஆவண முனை வகுப்பைப் பதிவுசெய்க."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_node:3
+msgid ""
+"This is necessary for Docutils internals.  It may also be used in the future"
+" to validate nodes in the parsed documents."
+msgstr ""
+"ஆவணங்கள் உட்புறங்களுக்கு இது அவசியம். பாகுபடுத்தப்பட்ட ஆவணங்களில் உள்ள "
+"முனைகளை சரிபார்க்க எதிர்காலத்தில் இது பயன்படுத்தப்படலாம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_enumerable_node:6
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_node:6
+msgid "A node class"
+msgstr "ஒரு முனை வகுப்பு"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_node:7
+msgid "Visitor functions for each builder (see below)"
+msgstr "ஒவ்வொரு பில்டருக்கும் பார்வையாளர் செயல்பாடுகள் (கீழே காண்க)"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_enumerable_node:19
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_node:8
+msgid ""
+"If true, install the node forcedly even if another node is already installed"
+" as the same name"
+msgstr ""
+"உண்மை என்றால், மற்றொரு முனை ஏற்கனவே அதே பெயராக நிறுவப்பட்டிருந்தாலும், "
+"முனையை கட்டாயமாக நிறுவவும்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_node:11
+msgid ""
+"Node visitor functions for the Sphinx HTML, LaTeX, text and manpage writers "
+"can be given as keyword arguments: the keyword should be one or more of "
+"``'html'``, ``'latex'``, ``'text'``, ``'man'``, ``'texinfo'`` or any other "
+"supported translators, the value a 2-tuple of ``(visit, depart)`` methods.  "
+"``depart`` can be ``None`` if the ``visit`` function raises "
+":exc:`docutils.nodes.SkipNode`.  Example:"
+msgstr ""
+"SPHINX HTML, Latex, Text மற்றும் Manpage எழுத்தாளர்களுக்கான முனை பார்வையாளர்"
+" செயல்பாடுகள் முக்கிய வாதங்களாக வழங்கப்படலாம்: முக்கிய சொல் ஒன்று அல்லது "
+"அதற்கு மேற்பட்டதாக இருக்க வேண்டும் `'' html'``,` `'Latex'``,` `உரை' . `` "
+"வருகை`` `` ஒன்றும் ஒன்றும் ஏற்படலாம் `` வருகை`` செயல்பாடு எழுப்பினால்: EXC: "
+"`docutils.nodes.skipnode`. உதாரணமாக:"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_node:29
+msgid ""
+"Obviously, translators for which you don't specify visitor methods will "
+"choke on the node when encountered in a document to translate."
+msgstr ""
+"வெளிப்படையாக, நீங்கள் பார்வையாளர் முறைகளைக் குறிப்பிடாத மொழிபெயர்ப்பாளர்கள் "
+"மொழிபெயர்க்க ஒரு ஆவணத்தில் எதிர்கொள்ளும்போது முனையில் மூச்சுத் திணறுவார்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_node:32
+msgid "Added the support for keyword arguments giving visit functions."
+msgstr "வருகை செயல்பாடுகளை வழங்கும் முக்கிய வாதங்களுக்கான ஆதரவைச் சேர்த்தது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_enumerable_node:1
+msgid "Register a Docutils node class as a numfig target."
+msgstr "ஒரு டாக்யூடில்ஸ் முனை வகுப்பை ஒரு எண்ஃபிக் இலக்காக பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_enumerable_node:3
+msgid ""
+"Sphinx numbers the node automatically. And then the users can refer it using"
+" :rst:role:`numref`."
+msgstr ""
+"ஸ்பின்க்ஸ் எண்கள் முனையை தானாகவே. பின்னர் பயனர்கள் இதைப் பயன்படுத்தி "
+"குறிப்பிடலாம்: rst: பங்கு: `numref`."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_enumerable_node:7
+msgid ""
+"The type of enumerable nodes.  Each figtype has individual numbering "
+"sequences.  As system figtypes, ``figure``, ``table`` and ``code-block`` are"
+" defined.  It is possible to add custom nodes to these default figtypes.  It"
+" is also possible to define new custom figtype if a new figtype is given."
+msgstr ""
+"கணக்கிட முடியாத முனைகளின் வகை. ஒவ்வொரு ஃபிக்டைப்பிலும் தனிப்பட்ட எண்ணும் "
+"காட்சிகள் உள்ளன. கணினி படம், `` படம்``, `` அட்டவணை`` மற்றும் `கோட்-பிளாக்`` "
+"வரையறுக்கப்பட்டுள்ளன. இந்த இயல்புநிலை படங்களுக்கு தனிப்பயன் முனைகளைச் "
+"சேர்க்க முடியும். ஒரு புதிய படம் வழங்கப்பட்டால் புதிய தனிப்பயன் படம் "
+"வரையறுக்கவும் முடியும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_enumerable_node:12
+msgid ""
+"A getter function to obtain the title of node.  It takes an instance of the "
+"enumerable node, and it must return its title as string.  The title is used "
+"to the default title of references for :rst:role:`ref`.  By default, Sphinx "
+"searches ``docutils.nodes.caption`` or ``docutils.nodes.title`` from the "
+"node as a title."
+msgstr ""
+"முனையின் தலைப்பைப் பெற ஒரு பெறுநர் செயல்பாடு. இது கணக்கிட முடியாத முனையின் "
+"ஒரு நிகழ்வை எடுக்கும், மேலும் அது அதன் தலைப்பை சரமாக திருப்பித் தர வேண்டும்."
+" இதற்கான குறிப்புகளின் இயல்புநிலை தலைப்புக்கு தலைப்பு பயன்படுத்தப்படுகிறது: "
+"rst: பங்கு: `ref`. இயல்பாக, ஸ்பின்க்ஸ் `` docutils.nodes.caption`` அல்லது ``"
+" docutils.nodes.title`` ஐ ஒரு தலைப்பாக தேடுகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_enumerable_node:18
+msgid "Visitor functions for each builder (same as :meth:`add_node`)"
+msgstr ""
+"ஒவ்வொரு பில்டருக்கும் பார்வையாளர் செயல்பாடுகள் (அதே: மெத்: `கூடுதல்_நோட்`)"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive:1
+msgid "Register a Docutils directive."
+msgstr "ஒரு ஆவண உத்தரவை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive:3
+msgid "The name of the directive"
+msgstr "உத்தரவின் பெயர்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive:4
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive_to_domain:8
+msgid "A directive class"
+msgstr "ஒரு உத்தரவு வகுப்பு"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive:5
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive_to_domain:9
+msgid ""
+"If false, do not install it if another directive is already installed as the"
+" same name If true, unconditionally install the directive."
+msgstr ""
+"தவறு என்றால், மற்றொரு உத்தரவு ஏற்கனவே அதே பெயராக நிறுவப்பட்டிருந்தால் அதை "
+"நிறுவ வேண்டாம், நிபந்தனையின்றி உத்தரவை நிறுவவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive:9
+msgid ""
+"For example, a custom directive named ``my-directive`` would be added like "
+"this:"
+msgstr ""
+"எடுத்துக்காட்டாக, `` என்-டைரெக்டிவ்`` என்ற தனிப்பயன் உத்தரவு இதுபோன்று "
+"சேர்க்கப்படும்:"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive:32
+msgid ""
+"For more details, see `the Docutils docs "
+"<https://docutils.sourceforge.io/docs/howto/rst-directives.html>`__ ."
+msgstr ""
+"மேலும் விவரங்களுக்கு, `டாக்யூடில்ஸ் டாக்ஸ் "
+"<https://docutils.sourceforge.io/docs/howto/rst-directives.html> __. __ ஐப் "
+"பார்க்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive:35
+msgid "Docutils 0.5-style directive classes are now supported."
+msgstr "ஆவணங்கள் 0.5-பாணி உத்தரவு வகுப்புகள் இப்போது ஆதரிக்கப்படுகின்றன."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive:37
+msgid "Docutils 0.4-style (function based) directives support is deprecated."
+msgstr ""
+"Docutils 0.4-பாணி (செயல்பாட்டு அடிப்படையிலான) வழிமுறைகள் ஆதரவு "
+"நீக்கப்பட்டது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_role:1
+msgid "Register a Docutils role."
+msgstr "ஒரு ஆவணப் பாத்திரத்தை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_role:3
+msgid "The name of role"
+msgstr "பாத்திரத்தின் பெயர்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_role:4
+msgid "A role function"
+msgstr "ஒரு பங்கு செயல்பாடு"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_generic_role:6
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_role:5
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_role_to_domain:9
+msgid ""
+"If false, do not install it if another role is already installed as the same"
+" name If true, unconditionally install the role."
+msgstr ""
+"தவறு என்றால், மற்றொரு பாத்திரம் ஏற்கனவே அதே பெயராக நிறுவப்பட்டிருந்தால் அதை "
+"நிறுவ வேண்டாம், நிபந்தனையின்றி பாத்திரத்தை நிறுவவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_role:9
+msgid ""
+"For more details about role functions, see `the Docutils docs "
+"<https://docutils.sourceforge.io/docs/howto/rst-roles.html>`__ ."
+msgstr ""
+"பங்கு செயல்பாடுகளைப் பற்றிய கூடுதல் விவரங்களுக்கு, `டாக்யூடில்ஸ் டாக்ஸ் "
+"<https://docutils.sourceforge.io/docs/howto/rst-roles.html> __."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_generic_role:1
+msgid "Register a generic Docutils role."
+msgstr "பொதுவான ஆவணப் பாத்திரத்தை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_generic_role:3
+msgid ""
+"Register a Docutils role that does nothing but wrap its contents in the node"
+" given by *nodeclass*."
+msgstr ""
+"*NodeClass *வழங்கிய முனையில் அதன் உள்ளடக்கங்களை மடிக்கத் தவிர வேறு எதுவும் "
+"செய்யாத ஒரு ஆவணப் பாத்திரத்தை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_domain:1
+msgid "Register a domain."
+msgstr "ஒரு களத்தை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_domain:3
+msgid "A domain class"
+msgstr "ஒரு டொமைன் வகுப்பு"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_domain:4
+msgid ""
+"If false, do not install it if another domain is already installed as the "
+"same name If true, unconditionally install the domain."
+msgstr ""
+"தவறு என்றால், மற்றொரு டொமைன் ஏற்கனவே அதே பெயராக நிறுவப்பட்டிருந்தால் அதை "
+"நிறுவ வேண்டாம், நிபந்தனையின்றி டொமைனை நிறுவவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive_to_domain:1
+msgid "Register a Docutils directive in a domain."
+msgstr "ஒரு களத்தில் ஒரு ஆவண உத்தரவை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive_to_domain:3
+msgid ""
+"Like :meth:`add_directive`, but the directive is added to the domain named "
+"*domain*."
+msgstr ""
+"இது: மெத்: `ADD_DIRECTIVE`, ஆனால் உத்தரவு *டொமைன் *என்ற டொமைனில் "
+"சேர்க்கப்படுகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive_to_domain:6
+msgid "The name of target domain"
+msgstr "இலக்கு களத்தின் பெயர்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_directive_to_domain:7
+msgid "A name of directive"
+msgstr "உத்தரவின் பெயர்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_role_to_domain:1
+msgid "Register a Docutils role in a domain."
+msgstr "ஒரு களத்தில் ஒரு ஆவணப் பாத்திரத்தை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_role_to_domain:3
+msgid ""
+"Like :meth:`add_role`, but the role is added to the domain named *domain*."
+msgstr ""
+"இது: மெத்: `கூடுதல்_ரோல்`, ஆனால் *டொமைன் *என்ற டொமைனில் பங்கு "
+"சேர்க்கப்படுகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_index_to_domain:5
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_role_to_domain:6
+msgid "The name of the target domain"
+msgstr "இலக்கு களத்தின் பெயர்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_role_to_domain:7
+msgid "The name of the role"
+msgstr "பாத்திரத்தின் பெயர்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_role_to_domain:8
+msgid "The role function"
+msgstr "பங்கு செயல்பாடு"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_index_to_domain:1
+msgid "Register a custom index for a domain."
+msgstr "ஒரு டொமைனுக்கான தனிப்பயன் குறியீட்டை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_index_to_domain:3
+msgid "Add a custom *index* class to the domain named *domain*."
+msgstr "*டொமைன் *என்ற டொமைனில் தனிப்பயன் *குறியீட்டு *வகுப்பைச் சேர்க்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_index_to_domain:6
+msgid "The index class"
+msgstr "குறியீட்டு வகுப்பு"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_index_to_domain:7
+msgid ""
+"If false, do not install it if another index is already installed as the "
+"same name If true, unconditionally install the index."
+msgstr ""
+"பொய்யானது என்றால், மற்றொரு குறியீடு ஏற்கனவே அதே பெயராக நிறுவப்பட்டிருந்தால் "
+"அதை நிறுவ வேண்டாம் உண்மையாக இருந்தால், நிபந்தனையின்றி குறியீட்டை நிறுவவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_object_type:1
+msgid "Register a new object type."
+msgstr "புதிய பொருள் வகையை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_object_type:3
+msgid ""
+"This method is a very convenient way to add a new :term:`object` type that "
+"can be cross-referenced.  It will do this:"
+msgstr ""
+"இந்த முறை புதியதைச் சேர்க்க மிகவும் வசதியான வழியாகும்: கால: `பொருள்` வகை "
+"குறுக்கு-குறிப்பிடக்கூடிய வகை. இது இதைச் செய்யும்:"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_object_type:6
+msgid ""
+"Create a new directive (called *directivename*) for documenting an object.  "
+"It will automatically add index entries if *indextemplate* is nonempty; if "
+"given, it must contain exactly one instance of ``%s``.  See the example "
+"below for how the template will be interpreted."
+msgstr ""
+"ஒரு பொருளை ஆவணப்படுத்த ஒரு புதிய உத்தரவை ( *டைரக்டிவேனேம் *என "
+"அழைக்கப்படுகிறது) உருவாக்கவும். * Indextemplate * nonempty என்றால் அது "
+"தானாகவே குறியீட்டு உள்ளீடுகளைச் சேர்க்கும்; வழங்கப்பட்டால், அதில் ``%s`` இன்"
+" ஒரு நிகழ்வு சரியாக இருக்க வேண்டும். வார்ப்புரு எவ்வாறு விளக்கப்படும் "
+"என்பதற்கான கீழே உள்ள உதாரணத்தைக் காண்க."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_object_type:11
+msgid ""
+"Create a new role (called *rolename*) to cross-reference to these object "
+"descriptions."
+msgstr ""
+"இந்த பொருள் விளக்கங்களுக்கு குறுக்கு குறிப்புக்கு ஒரு புதிய பாத்திரத்தை ( "
+"*ரோலேனேம் *என அழைக்கப்படுகிறது) உருவாக்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_object_type:13
+msgid ""
+"If you provide *parse_node*, it must be a function that takes a string and a"
+" docutils node, and it must populate the node with children parsed from the "
+"string.  It must then return the name of the item to be used in cross-"
+"referencing and index entries.  See the :file:`conf.py` file in the source "
+"for this documentation for an example."
+msgstr ""
+"நீங்கள் *parse_node *ஐ வழங்கினால், அது ஒரு சரம் மற்றும் ஒரு ஆவண முனையை "
+"எடுக்கும் செயல்பாடாக இருக்க வேண்டும், மேலும் இது சரத்திலிருந்து "
+"பாகுபடுத்தப்பட்ட குழந்தைகளுடன் முனையை விரிவுபடுத்த வேண்டும். அது "
+"குறுக்கு-குறிப்பு மற்றும் குறியீட்டு உள்ளீடுகளில் பயன்படுத்த வேண்டிய "
+"பொருளின் பெயரைத் தர வேண்டும். ஒரு எடுத்துக்காட்டுக்கு இந்த ஆவணத்திற்கான "
+"மூலத்தில் `conf.py` கோப்பைக் காண்க."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_object_type:19
+msgid ""
+"The *objname* (if not given, will default to *directivename*) names the type"
+" of object.  It is used when listing objects, e.g. in search results."
+msgstr ""
+"*Objname *(கொடுக்கப்படாவிட்டால், இயல்புநிலை *டைரக்டிவேனேமுக்கு *) பொருளின் "
+"வகையை பெயரிடுகிறது. பொருள்களை பட்டியலிடும்போது இது பயன்படுத்தப்படுகிறது, "
+"எ.கா. தேடல் முடிவுகளில்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_object_type:23
+msgid "For example, if you have this call in a custom Sphinx extension::"
+msgstr ""
+"எடுத்துக்காட்டாக, தனிப்பயன் ஸ்பிங்க்ஸ் நீட்டிப்பில் இந்த அழைப்பு இருந்தால் "
+"::"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_object_type:27
+msgid "you can use this markup in your documents::"
+msgstr "உங்கள் ஆவணங்களில் இந்த மார்க்அப்பைப் பயன்படுத்தலாம் ::"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_object_type:37
+msgid ""
+"For the directive, an index entry will be generated as if you had prepended "
+"::"
+msgstr ""
+"உத்தரவுக்கு, நீங்கள் தயாரித்ததைப் போல ஒரு குறியீட்டு நுழைவு உருவாக்கப்படும் "
+"::"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_object_type:41
+msgid ""
+"The reference node will be of class ``literal`` (so it will be rendered in a"
+" proportional font, as appropriate for code) unless you give the "
+"*ref_nodeclass* argument, which must be a docutils node class.  Most useful "
+"are ``docutils.nodes.emphasis`` or ``docutils.nodes.strong`` -- you can also"
+" use ``docutils.nodes.generated`` if you want no further text decoration.  "
+"If the text should be treated as literal (e.g. no smart quote replacement), "
+"but not have typewriter styling, use ``sphinx.addnodes.literal_emphasis`` or"
+" ``sphinx.addnodes.literal_strong``."
+msgstr ""
+"குறிப்பு முனை `` லிட்டரல்`` வகுப்பில் இருக்கும் (எனவே இது ஒரு விகிதாசார "
+"எழுத்துருவில் வழங்கப்படும், குறியீட்டிற்கு பொருத்தமானது) நீங்கள் * "
+"ref_nodeclass * வாதத்தை வழங்காவிட்டால், இது ஒரு ஆவண முனை வகுப்பாக இருக்க "
+"வேண்டும். மிகவும் பயனுள்ளதாக இருக்கும் `` docutils.nodes.emphiss`` அல்லது ``"
+" docutils.nodes.strong`` - நீங்கள் `` docutils.nodes.generated`` ஐப் "
+"பயன்படுத்தலாம். உரையை நேரடி என்று கருத வேண்டும் (எ.கா. ஸ்மார்ட் மேற்கோள் "
+"மாற்றீடு இல்லை), ஆனால் தட்டச்சுப்பொறி ஸ்டைலிங் இல்லை என்றால், `` "
+"sphinx.addnodes.literal_emphasis`` அல்லது `` "
+"sphinx.addnodes.literal_strong`` ஐப் பயன்படுத்தவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_object_type:51
+msgid ""
+"For the role content, you have the same syntactical possibilities as for "
+"standard Sphinx roles (see :ref:`xref-syntax`)."
+msgstr ""
+"பங்கு உள்ளடக்கத்தைப் பொறுத்தவரை, நிலையான ஸ்பிங்க்ஸ் பாத்திரங்களுக்கும் அதே "
+"செயற்கையான சாத்தியக்கூறுகள் உள்ளன (பார்க்க: குறிப்பு: `xref-syntax`)."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_object_type:54
+msgid ""
+"If *override* is True, the given object_type is forcedly installed even if "
+"an object_type having the same name is already installed."
+msgstr ""
+"* மேலெழுத * உண்மையாக இருந்தால், அதே பெயரைக் கொண்ட ஒரு பொருள்_ வகை ஏற்கனவே "
+"நிறுவப்பட்டிருந்தாலும் கூட கொடுக்கப்பட்ட பொருள்_ வகை கட்டாயமாக "
+"நிறுவப்படுகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_crossref_type:1
+msgid "Register a new crossref object type."
+msgstr "புதிய கிராஸ்ரெஃப் பொருள் வகையை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_crossref_type:3
+msgid ""
+"This method is very similar to :meth:`~Sphinx.add_object_type` except that "
+"the directive it generates must be empty, and will produce no output."
+msgstr ""
+"இந்த முறை மிகவும் ஒத்திருக்கிறது: மெத்: `~ sphinx.add_object_type` தவிர, அது"
+" உருவாக்கும் உத்தரவு காலியாக இருக்க வேண்டும், மேலும் வெளியீட்டை உருவாக்காது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_crossref_type:6
+msgid ""
+"That means that you can add semantic targets to your sources, and refer to "
+"them using custom roles instead of generic ones (like :rst:role:`ref`).  "
+"Example call::"
+msgstr ""
+"அதாவது உங்கள் ஆதாரங்களில் சொற்பொருள் இலக்குகளை நீங்கள் சேர்க்கலாம், மேலும் "
+"பொதுவானவற்றுக்கு பதிலாக தனிப்பயன் பாத்திரங்களைப் பயன்படுத்தி அவற்றைப் "
+"பார்க்கவும் (போன்றவை: rst: ref: `ref`). எடுத்துக்காட்டு அழைப்பு ::"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_crossref_type:13
+msgid "Example usage::"
+msgstr "எடுத்துக்காட்டு பயன்பாடு ::"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_crossref_type:24
+msgid ""
+"(Of course, the element following the ``topic`` directive needn't be a "
+"section.)"
+msgstr ""
+"(நிச்சயமாக, `` தலைப்பு`` உத்தரவைப் பின்பற்றும் உறுப்பு ஒரு பிரிவாக இருக்க "
+"தேவையில்லை.)"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_crossref_type:28
+msgid ""
+"If false, do not install it if another cross-reference type is already "
+"installed as the same name If true, unconditionally install the cross-"
+"reference type."
+msgstr ""
+"பொய்யானது என்றால், மற்றொரு குறுக்கு-குறிப்பு வகை ஏற்கனவே அதே பெயராக "
+"நிறுவப்பட்டிருந்தால் அதை நிறுவ வேண்டாம் உண்மையாக இருந்தால், நிபந்தனையின்றி "
+"குறுக்கு-குறிப்பு வகையை நிறுவவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:1
+msgid "Register a Docutils transform to be applied after parsing."
+msgstr ""
+"பாகுபடுத்தலுக்குப் பிறகு பயன்படுத்தப்படும் ஒரு ஆவண மாற்றங்களை பதிவு "
+"செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:3
+msgid ""
+"Add the standard docutils :class:`~docutils.transforms.Transform` subclass "
+"*transform* to the list of transforms that are applied after Sphinx parses a"
+" reST document."
+msgstr ""
+"நிலையான ஆவணங்களைச் சேர்க்கவும்: வகுப்பு: `~ docutils.transforms.transform` "
+"துணைப்பிரிவு * உருமாற்றம் * ஸ்பிங்க்ஸ் ஒரு ஓய்வு ஆவணத்தை பாகுபடுத்திய பிறகு "
+"பயன்படுத்தப்படும் மாற்றங்களின் பட்டியலுக்கு மாற்றவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_post_transform:7
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:7
+msgid "A transform class"
+msgstr "ஒரு உருமாற்ற வகுப்பு"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:9
+msgid "priority range categories for Sphinx transforms"
+msgstr "SPHINX உருமாற்றங்களுக்கான முன்னுரிமை வரம்பு பிரிவுகள்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:29
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:34
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:12
+msgid "Priority"
+msgstr "முன்னுரிமை"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:30
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:35
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:13
+msgid "Main purpose in Sphinx"
+msgstr "ஸ்பிங்க்ஸில் முக்கிய நோக்கம்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:14
+msgid "0-99"
+msgstr "0-99"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:15
+msgid "Fix invalid nodes by docutils. Translate a doctree."
+msgstr ""
+"ஆவணங்கள் மூலம் தவறான முனைகளை சரிசெய்யவும். ஒரு கோட்பாட்டை மொழிபெயர்க்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:16
+msgid "100-299"
+msgstr "100-299"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:17
+msgid "Preparation"
+msgstr "தயாரிப்பு"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:18
+msgid "300-399"
+msgstr "300-399"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:19
+msgid "early"
+msgstr "ஆரம்ப"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:20
+msgid "400-699"
+msgstr "400-699"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:21
+msgid "main"
+msgstr "முக்கிய"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:22
+msgid "700-799"
+msgstr "700-799"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:23
+msgid "Post processing. Deadline to modify text and referencing."
+msgstr "பின் செயலாக்க. உரை மற்றும் குறிப்புகளை மாற்றுவதற்கான காலக்கெடு."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:24
+msgid "800-899"
+msgstr "800-899"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:25
+msgid "Collect referencing and referenced nodes. Domain processing."
+msgstr ""
+"குறிப்பு மற்றும் குறிப்பிடப்பட்ட முனைகளை சேகரிக்கவும். டொமைன் செயலாக்கம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:26
+msgid "900-999"
+msgstr "900-999"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:27
+msgid "Finalize and clean up."
+msgstr "இறுதி செய்து சுத்தம் செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_transform:29
+msgid "refs: `Transform Priority Range Categories`__"
+msgstr "குறிப்புகள்: `முன்னுரிமை வரம்பு வகைகளை மாற்றவும்`__"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_post_transform:1
+msgid "Register a Docutils transform to be applied before writing."
+msgstr ""
+"எழுதுவதற்கு முன் பயன்படுத்தப்படும் ஒரு ஆவண மாற்றங்களை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_post_transform:3
+msgid ""
+"Add the standard docutils :class:`~docutils.transforms.Transform` subclass "
+"*transform* to the list of transforms that are applied before Sphinx writes "
+"a document."
+msgstr ""
+"நிலையான ஆவணங்களைச் சேர்க்கவும்: வகுப்பு: `~ docutils.transforms.transform` "
+"துணைப்பிரிவு * உருமாற்றம் * ஸ்பின்க்ஸ் ஒரு ஆவணத்தை எழுதுவதற்கு முன்பு "
+"பயன்படுத்தப்படும் மாற்றங்களின் பட்டியலுக்கு மாற்றவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:1
+msgid "Register a JavaScript file to include in the HTML output."
+msgstr "HTML வெளியீட்டில் சேர்க்க ஜாவாஸ்கிரிப்ட் கோப்பை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:3
+msgid ""
+"The name of a JavaScript file that the default HTML template will include. "
+"It must be relative to the HTML static path, or a full URI with scheme, or "
+"``None`` . The ``None`` value is used to create an inline ``<script>`` tag."
+"  See the description of *kwargs* below."
+msgstr ""
+"இயல்புநிலை HTML வார்ப்புருவில் இருக்கும் ஜாவாஸ்கிரிப்ட் கோப்பின் பெயர் "
+"அடங்கும். இது HTML நிலையான பாதையுடன் தொடர்புடையதாக இருக்க வேண்டும், அல்லது "
+"திட்டத்துடன் கூடிய முழு URI, அல்லது `` எதுவுமில்லை``. ஒரு இன்லைன் `` "
+"<script> `` குறிச்சொல் உருவாக்க `` எதுவுமில்லை` மதிப்பு "
+"பயன்படுத்தப்படுகிறது. * குவார்க்ஸ் * இன் விளக்கத்தை கீழே காண்க."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:9
+msgid ""
+"Files are included in ascending order of priority. If multiple JavaScript "
+"files have the same priority, those files will be included in order of "
+"registration. See list of \"priority range for JavaScript files\" below."
+msgstr ""
+"முன்னுரிமையின் ஏறுவரிசை வரிசையில் கோப்புகள் சேர்க்கப்பட்டுள்ளன. பல "
+"ஜாவாஸ்கிரிப்ட் கோப்புகளுக்கு ஒரே முன்னுரிமை இருந்தால், அந்த கோப்புகள் "
+"பதிவுசெய்தலில் சேர்க்கப்படும். கீழே உள்ள \"ஜாவாஸ்கிரிப்ட் கோப்புகளுக்கான "
+"முன்னுரிமை வரம்பு\" பட்டியலைக் காண்க."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:13
+msgid ""
+"The loading method for the JavaScript file. Either ``'async'`` or "
+"``'defer'`` are allowed."
+msgstr ""
+"ஜாவாஸ்கிரிப்ட் கோப்பிற்கான ஏற்றுதல் முறை. ஒன்று `` 'async'`` அல்லது ``' "
+"டெஃபர்'`` அனுமதிக்கப்படுகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:15
+msgid ""
+"Extra keyword arguments are included as attributes of the ``<script>`` tag."
+"  If the special keyword argument ``body`` is given, its value will be added"
+" as the content of the  ``<script>`` tag."
+msgstr ""
+"`` <ஸ்கிரிப்ட்> `` குறிச்சொல்லின் பண்புகளாக கூடுதல் முக்கிய வாதங்கள் "
+"சேர்க்கப்பட்டுள்ளன. சிறப்பு முக்கிய வாதம் `` உடல்`` வழங்கப்பட்டால், அதன் "
+"மதிப்பு `` <ஸ்கிரிப்ட்> `` குறிச்சொல்லின் உள்ளடக்கமாக சேர்க்கப்படும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:13
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:20
+msgid "Example::"
+msgstr "உதாரணமாக::"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:31
+msgid "priority range for JavaScript files"
+msgstr "ஜாவாஸ்கிரிப்ட் கோப்புகளுக்கான முன்னுரிமை வரம்பு"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:31
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:36
+msgid "200"
+msgstr "200"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:37
+msgid "default priority for built-in JavaScript files"
+msgstr "உள்ளமைக்கப்பட்ட ஜாவாஸ்கிரிப்ட் கோப்புகளுக்கான இயல்புநிலை முன்னுரிமை"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:33
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:38
+msgid "500"
+msgstr "500"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:34
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:39
+msgid "default priority for extensions"
+msgstr "நீட்டிப்புகளுக்கான இயல்புநிலை முன்னுரிமை"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:35
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:40
+msgid "800"
+msgstr "800"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:41
+msgid "default priority for :confval:`html_js_files`"
+msgstr "இதற்கான இயல்புநிலை முன்னுரிமை: confval: `html_js_files`"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:43
+msgid ""
+"A JavaScript file can be added to the specific HTML page when an extension "
+"calls this method on :event:`html-page-context` event."
+msgstr ""
+"ஒரு நீட்டிப்பு இந்த முறையை அழைக்கும்போது குறிப்பிட்ட HTML பக்கத்தில் ஒரு "
+"ஜாவாஸ்கிரிப்ட் கோப்பை சேர்க்கலாம்: நிகழ்வு: `HTML-PAGE-CONTEXT` நிகழ்வு."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:48
+msgid ""
+"Renamed from ``app.add_javascript()``. And it allows keyword arguments as "
+"attributes of script tag."
+msgstr ""
+"`` App.add_javascript () `` இலிருந்து மறுபெயரிடப்பட்டது. இது ஸ்கிரிப்ட் "
+"குறிச்சொல்லின் பண்புகளாக முக்கிய வாதங்களை அனுமதிக்கிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:52
+msgid ""
+"Take priority argument.  Allow to add a JavaScript file to the specific "
+"page."
+msgstr ""
+"முன்னுரிமை வாதத்தை எடுத்துக் கொள்ளுங்கள். குறிப்பிட்ட பக்கத்தில் "
+"ஜாவாஸ்கிரிப்ட் கோப்பைச் சேர்க்க அனுமதிக்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_js_file:54
+msgid ""
+"Take loading_method argument.  Allow to change the loading method of the "
+"JavaScript file."
+msgstr ""
+"ஏற்றுதல் முறை வாதங்களை எடுத்துக் கொள்ளுங்கள். ஜாவாஸ்கிரிப்ட் கோப்பின் "
+"ஏற்றுதல் முறையை மாற்ற அனுமதிக்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:1
+msgid "Register a stylesheet to include in the HTML output."
+msgstr "HTML வெளியீட்டில் சேர்க்க ஒரு நடைதாள் பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:3
+msgid ""
+"The name of a CSS file that the default HTML template will include. It must "
+"be relative to the HTML static path, or a full URI with scheme."
+msgstr ""
+"இயல்புநிலை HTML வார்ப்புருவில் உள்ள CSS கோப்பின் பெயர் அடங்கும். இது HTML "
+"நிலையான பாதையுடன் தொடர்புடையதாக இருக்க வேண்டும், அல்லது திட்டத்துடன் முழு "
+"URI."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:6
+msgid ""
+"Files are included in ascending order of priority. If multiple CSS files "
+"have the same priority, those files will be included in order of "
+"registration. See list of \"priority range for CSS files\" below."
+msgstr ""
+"முன்னுரிமையின் ஏறுவரிசை வரிசையில் கோப்புகள் சேர்க்கப்பட்டுள்ளன. பல CSS "
+"கோப்புகளுக்கு ஒரே முன்னுரிமை இருந்தால், அந்த கோப்புகள் பதிவுசெய்யும் "
+"வரிசையில் சேர்க்கப்படும். கீழே உள்ள \"CSS கோப்புகளுக்கான முன்னுரிமை வரம்பு\""
+" பட்டியலைக் காண்க."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:10
+msgid ""
+"Extra keyword arguments are included as attributes of the ``<link>`` tag."
+msgstr ""
+"கூடுதல் முக்கிய வாதங்கள் `` <இணைப்பு> `` குறிச்சொல்லின் பண்புகளாக "
+"சேர்க்கப்பட்டுள்ளன."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:26
+msgid "priority range for CSS files"
+msgstr "CSS கோப்புகளுக்கான முன்னுரிமை வரம்பு"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:32
+msgid "default priority for built-in CSS files"
+msgstr "உள்ளமைக்கப்பட்ட CSS கோப்புகளுக்கான இயல்புநிலை முன்னுரிமை"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:36
+msgid "default priority for :confval:`html_css_files`"
+msgstr "இதற்கான இயல்புநிலை முன்னுரிமை: confval: `html_css_files`"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:38
+msgid ""
+"A CSS file can be added to the specific HTML page when an extension calls "
+"this method on :event:`html-page-context` event."
+msgstr ""
+"நீட்டிப்பு இந்த முறையை அழைக்கும்போது குறிப்பிட்ட HTML பக்கத்தில் ஒரு CSS "
+"கோப்பை சேர்க்கலாம்: நிகழ்வு: `HTML-PAGE-CONTEXT` நிகழ்வு."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:43
+msgid ""
+"Optional ``alternate`` and/or ``title`` attributes can be supplied with the "
+"arguments *alternate* (a Boolean) and *title* (a string). The default is no "
+"title and *alternate* = ``False``. For more information, refer to the "
+"`documentation <https://mdn.io/Web/CSS/Alternative_style_sheets>`__."
+msgstr ""
+"விருப்ப `` மாற்று`` மற்றும்/அல்லது `` தலைப்பு`` பண்புகளை வாதங்களுடன் * "
+"மாற்று * (ஒரு பூலியன்) மற்றும் * தலைப்பு * (ஒரு சரம்) வழங்கலாம். இயல்புநிலை "
+"தலைப்பு இல்லை மற்றும் * மாற்று * = `` தவறு``. மேலும் தகவலுக்கு, `ஆவணங்கள் "
+"<https://mdn.io/web/css/alternative_style_sheets> __ __ ஐப் பார்க்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:50
+msgid ""
+"Renamed from ``app.add_stylesheet()``. And it allows keyword arguments as "
+"attributes of link tag."
+msgstr ""
+"`` App.add_stylesheet () `` இலிருந்து மறுபெயரிடப்பட்டது. இது இணைப்பு "
+"குறிச்சொல்லின் பண்புகளாக முக்கிய வாதங்களை அனுமதிக்கிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_css_file:54
+msgid "Take priority argument.  Allow to add a CSS file to the specific page."
+msgstr ""
+"முன்னுரிமை வாதத்தை எடுத்துக் கொள்ளுங்கள். குறிப்பிட்ட பக்கத்தில் CSS "
+"கோப்பைச் சேர்க்க அனுமதிக்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_latex_package:1
+msgid "Register a package to include in the LaTeX source code."
+msgstr "லேடெக்ஸ் மூலக் குறியீட்டில் சேர்க்க ஒரு தொகுப்பை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_latex_package:3
+msgid ""
+"Add *packagename* to the list of packages that LaTeX source code will "
+"include.  If you provide *options*, it will be taken to the `\\usepackage` "
+"declaration.  If you set *after_hyperref* truthy, the package will be loaded"
+" after ``hyperref`` package."
+msgstr ""
+"லேடெக்ஸ் மூலக் குறியீட்டை உள்ளடக்கிய தொகுப்புகளின் பட்டியலில் * பேக்கஜெனேம் "
+"* ஐச் சேர்க்கவும். நீங்கள் *விருப்பங்களை *வழங்கினால், அது `\\ UsePackage` "
+"அறிவிப்புக்கு கொண்டு செல்லப்படும். நீங்கள் * after_hyperref * உண்மையை "
+"அமைத்தால், தொகுப்பு `` ஹைப்பர்ரெஃப்`` தொகுப்புக்குப் பிறகு ஏற்றப்படும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_latex_package:18
+msgid "*after_hyperref* option."
+msgstr "* பிறகு_ஹைர்ரெஃப்* விருப்பம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_lexer:1
+msgid "Register a new lexer for source code."
+msgstr "மூலக் குறியீட்டிற்கு புதிய லெக்ஸரை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_lexer:3
+msgid "Use *lexer* to highlight code blocks with the given language *alias*."
+msgstr ""
+"கொடுக்கப்பட்ட மொழியுடன் குறியீடு தொகுதிகளை முன்னிலைப்படுத்த *லெக்ஸர் *ஐப் "
+"பயன்படுத்தவும் *மாற்றுப்பெயர் *."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_lexer:6
+msgid "Take a lexer class as an argument."
+msgstr "ஒரு வாதமாக ஒரு லெக்ஸர் வகுப்பை எடுத்துக் கொள்ளுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_lexer:8
+msgid "Removed support for lexer instances as an argument."
+msgstr "லெக்ஸர் நிகழ்வுகளுக்கான ஆதரவை ஒரு வாதமாக நீக்கியது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_autodocumenter:1
+msgid "Register a new documenter class for the autodoc extension."
+msgstr "ஆட்டோடோக் நீட்டிப்புக்கு புதிய ஆவணப்படுத்தல் வகுப்பைப் பதிவுசெய்க."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_autodocumenter:3
+msgid ""
+"Add *cls* as a new documenter class for the :mod:`sphinx.ext.autodoc` "
+"extension.  It must be a subclass of :class:`sphinx.ext.autodoc.Documenter`."
+"  This allows auto-documenting new types of objects.  See the source of the "
+"autodoc module for examples on how to subclass "
+":class:`~sphinx.ext.autodoc.Documenter`."
+msgstr ""
+"* CLS * ஐ ஒரு புதிய ஆவணக்காரர் வகுப்பாக சேர்க்கவும்: MOD: "
+"`sphinx.ext.autodoc` நீட்டிப்பு. இது ஒரு துணைப்பிரிவாக இருக்க வேண்டும்: "
+"வகுப்பு: `sphinx.ext.autodoc.documenter`. இது தானாக ஆவணப்படுத்த புதிய வகை "
+"பொருள்களை அனுமதிக்கிறது. துணைப்பிரிவு: வகுப்பு: `~ "
+"sphinx.ext.autodoc.documenter` என்பதற்கான எடுத்துக்காட்டுகளுக்கு ஆட்டோடோக் "
+"தொகுதியின் மூலத்தைக் காண்க."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_autodocumenter:9
+msgid ""
+"If *override* is True, the given *cls* is forcedly installed even if a "
+"documenter having the same name is already installed."
+msgstr ""
+"* மேலெழுத * உண்மை என்றால், அதே பெயரைக் கொண்ட ஒரு ஆவணப்படம் ஏற்கனவே "
+"நிறுவப்பட்டிருந்தாலும் கூட கொடுக்கப்பட்ட * CLS * கட்டாயமாக நிறுவப்படுகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_autodocumenter:12
+msgid "See :ref:`autodoc_ext_tutorial`."
+msgstr "காண்க: குறிப்பு: `AutoDoc_ext_tutorial`."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_autodoc_attrgetter:1
+msgid "Register a new ``getattr``-like function for the autodoc extension."
+msgstr ""
+"ஆட்டோடோக் நீட்டிப்புக்கு புதிய `` getattr`` போன்ற செயல்பாட்டைப் பதிவுசெய்க."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_autodoc_attrgetter:3
+msgid ""
+"Add *getter*, which must be a function with an interface compatible to the "
+":func:`getattr` builtin, as the autodoc attribute getter for objects that "
+"are instances of *typ*.  All cases where autodoc needs to get an attribute "
+"of a type are then handled by this function instead of :func:`getattr`."
+msgstr ""
+"*Getter *ஐச் சேர், இது: func: `getAttr` பில்டின் உடன் இணக்கமான இடைமுகத்துடன்"
+" ஒரு செயல்பாடாக இருக்க வேண்டும், ஏனெனில் *தட்டச்சு *நிகழ்வுகளுக்கான "
+"ஆட்டோடோக் பண்புக்கூறு பெறுநராக. ஆட்டோடாக் ஒரு வகையின் பண்புக்கூறைப் பெற "
+"வேண்டிய அனைத்து நிகழ்வுகளும் பின்னர் இந்த செயல்பாட்டால் கையாளப்படுகின்றன: "
+"func: `getattr`."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_search_language:1
+msgid "Register a new language for the HTML search index."
+msgstr "HTML தேடல் குறியீட்டுக்கு புதிய மொழியைப் பதிவுசெய்க."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_search_language:3
+msgid ""
+"Add *cls*, which must be a subclass of "
+":class:`sphinx.search.SearchLanguage`, as a support language for building "
+"the HTML full-text search index.  The class must have a *lang* attribute "
+"that indicates the language it should be used for.  See "
+":confval:`html_search_language`."
+msgstr ""
+"HTML முழு உரை தேடல் குறியீட்டை உருவாக்குவதற்கான ஒரு ஆதரவு மொழியாக: வகுப்பு: "
+"`sphinx.searchLanguage` இன் துணைப்பிரிவாக இருக்க வேண்டும் *Cls *ஐச் "
+"சேர்க்கவும். வகுப்பில் ஒரு * லாங் * பண்புக்கூறு இருக்க வேண்டும், அது "
+"பயன்படுத்தப்பட வேண்டிய மொழியைக் குறிக்கிறது. காண்க: confval: "
+"`html_search_language`."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_source_suffix:1
+msgid "Register a suffix of source files."
+msgstr "மூல கோப்புகளின் பின்னொட்டைப் பதிவுசெய்க."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_source_suffix:3
+msgid ""
+"Same as :confval:`source_suffix`.  The users can override this using the "
+"config setting."
+msgstr ""
+"அதே: confval: `source_suffix`. பயனர்கள் கட்டமைப்பு அமைப்பைப் பயன்படுத்தி இதை"
+" மேலெழுதலாம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_source_suffix:6
+msgid ""
+"If false, do not install it the same suffix is already installed. If true, "
+"unconditionally install the suffix."
+msgstr ""
+"தவறு என்றால், அதை நிறுவ வேண்டாம் அதே பின்னொட்டு ஏற்கனவே நிறுவப்பட்டுள்ளது. "
+"உண்மை என்றால், நிபந்தனையின்றி பின்னொட்டை நிறுவவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_source_parser:1
+msgid "Register a parser class."
+msgstr "ஒரு பாகுபடுத்தி வகுப்பை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_source_parser:3
+msgid ""
+"If false, do not install it if another parser is already installed for the "
+"same suffix. If true, unconditionally install the parser."
+msgstr ""
+"தவறு என்றால், அதே பின்னொட்டுக்கு மற்றொரு பாகுபடுத்தி ஏற்கனவே "
+"நிறுவப்பட்டிருந்தால் அதை நிறுவ வேண்டாம். உண்மை என்றால், நிபந்தனையின்றி "
+"பாகுபடுத்தி நிறுவவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_source_parser:8
+msgid ""
+"*suffix* argument is deprecated.  It only accepts *parser* argument. Use "
+":meth:`add_source_suffix` API to register suffix instead."
+msgstr ""
+"* பின்னொட்டு* வாதம் நீக்கப்பட்டது. இது * பாகுபடுத்தி * வாதத்தை மட்டுமே "
+"ஏற்றுக்கொள்கிறது. பயன்படுத்தவும்: METH: `add_source_suffix` அதற்கு பதிலாக "
+"பின்னொட்டைப் பதிவு செய்ய API."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_env_collector:1
+msgid "Register an environment collector class."
+msgstr "சுற்றுச்சூழல் சேகரிப்பான் வகுப்பைப் பதிவுசெய்க."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_env_collector:3
+msgid "Refer to :ref:`collector-api`."
+msgstr "பார்க்கவும்: ref: `கலெக்டர்-அபிஐ`."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_html_theme:1
+msgid "Register a HTML Theme."
+msgstr "ஒரு HTML கருப்பொருளை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_html_theme:3
+msgid ""
+"The *name* is a name of theme, and *theme_path* is a full path to the theme "
+"(refs: :ref:`distribute-your-theme`)."
+msgstr ""
+"* பெயர் * என்பது கருப்பொருளின் பெயர், மற்றும் * தீம்_பாத் * என்பது "
+"கருப்பொருளுக்கு முழு பாதையாகும் (refs :: ref: `உங்கள்-தீம் விநியோகிக்கவும்)."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_html_math_renderer:1
+msgid "Register a math renderer for HTML."
+msgstr "HTML க்கு கணித ரெண்டரரை பதிவு செய்யுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_html_math_renderer:3
+msgid ""
+"The *name* is a name of math renderer.  Both *inline_renderers* and "
+"*block_renderers* are used as visitor functions for the HTML writer: the "
+"former for inline math node (``nodes.math``), the latter for block math node"
+" (``nodes.math_block``).  Regarding visitor functions, see :meth:`add_node` "
+"for details."
+msgstr ""
+"* பெயர் * என்பது கணித ரெண்டரரின் பெயர். HTML எழுத்தாளருக்கான பார்வையாளர் "
+"செயல்பாடுகளாக * inline_renderers * மற்றும் * block_renderers * இரண்டும் "
+"பயன்படுத்தப்படுகின்றன: இன்லைன் கணித முனைக்கு முந்தையது (`` nodes.math``), "
+"தொகுதி கணித முனைக்கு (`` nodes.math_block``). பார்வையாளர் செயல்பாடுகள் "
+"குறித்து, காண்க: மெத்: `கூடுதல்_நோட்` விவரங்களுக்கு."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_message_catalog:1
+msgid "Register a message catalog."
+msgstr "செய்தி பட்டியலைப் பதிவுசெய்க."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_message_catalog:3
+msgid "The name of the catalog"
+msgstr "பட்டியலின் பெயர்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_message_catalog:4
+msgid "The base path of the message catalog"
+msgstr "செய்தி பட்டியலின் அடிப்படை பாதை"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.add_message_catalog:6
+msgid "For more details, see :func:`sphinx.locale.get_translation()`."
+msgstr ""
+"மேலும் விவரங்களுக்கு, காண்க: func: `sphinx.locale.get_translation ()`."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.is_parallel_allowed:1
+msgid "Check whether parallel processing is allowed or not."
+msgstr "இணையான செயலாக்கம் அனுமதிக்கப்பட்டதா இல்லையா என்பதைச் சரிபார்க்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.is_parallel_allowed:3
+msgid "A type of processing; ``'read'`` or ``'write'``."
+msgstr "ஒரு வகை செயலாக்கம்; `'' ``` அல்லது` `'எழுதுங்கள் .``."
+
+#: ../../sphinx/doc/extdev/appapi.rst:100
+msgid ""
+"All these methods raise this exception if something went wrong with the "
+"extension API."
+msgstr ""
+"நீட்டிப்பு API இல் ஏதேனும் தவறு நடந்தால் இந்த முறைகள் அனைத்தும் இந்த "
+"விதிவிலக்கை எழுப்புகின்றன."
+
+#: ../../sphinx/doc/extdev/appapi.rst:105
+msgid "Emitting events"
+msgstr "நிகழ்வுகளை வெளியிடுகிறது"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.emit:1
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.emit_firstresult:1
+msgid "Emit *event* and pass *arguments* to the callback functions."
+msgstr ""
+"கால்பேக் செயல்பாடுகளுக்கு * நிகழ்வு * மற்றும் * வாதங்களை * அனுப்பவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.emit:3
+msgid ""
+"Return the return values of all callbacks as a list.  Do not emit core "
+"Sphinx events in extensions!"
+msgstr ""
+"அனைத்து கால்பேக்குகளின் வருவாய் மதிப்புகளையும் ஒரு பட்டியலாக திருப்பி "
+"விடுங்கள். கோர் ஸ்பிங்க்ஸ் நிகழ்வுகளை நீட்டிப்புகளில் வெளியிட வேண்டாம்!"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.emit:6
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.emit_firstresult:5
+msgid "The name of event that will be emitted"
+msgstr "வெளிப்படும் நிகழ்வின் பெயர்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.emit:7
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.emit_firstresult:6
+msgid "The arguments for the event"
+msgstr "நிகழ்விற்கான வாதங்கள்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.emit:8
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.emit_firstresult:7
+msgid "The list of exceptions that are allowed in the callbacks"
+msgstr "கால்பேக்குகளில் அனுமதிக்கப்பட்ட விதிவிலக்குகளின் பட்டியல்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.emit:12
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.emit_firstresult:12
+msgid "Added *allowed_exceptions* to specify path-through exceptions"
+msgstr ""
+"பாத்-மூலம் விதிவிலக்குகளைக் குறிப்பிட * அனுமதிக்கப்பட்ட_ எக்ஸ்செப்சஸ் * "
+"சேர்க்கப்பட்டது"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.Sphinx.emit_firstresult:3
+msgid "Return the result of the first callback that doesn't return ``None``."
+msgstr "`` எதுவுமில்லை`` திரும்பப் பெறாத முதல் அழைப்பின் முடிவைத் தரவும்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:116
+msgid "Sphinx runtime information"
+msgstr "ஸ்பிங்க்ஸ் இயக்க நேர தகவல்"
+
+#: ../../sphinx/doc/extdev/appapi.rst:118
+msgid ""
+"The application object also provides runtime information as attributes."
+msgstr "பயன்பாட்டு பொருள் இயக்க நேர தகவல்களை பண்புகளாக வழங்குகிறது."
+
+#: ../../sphinx/doc/extdev/appapi.rst:122
+msgid "Target project.  See :class:`.Project`."
+msgstr "இலக்கு திட்டம். காண்க: வகுப்பு: `.பிரோஜெக்ட்`."
+
+#: ../../sphinx/doc/extdev/appapi.rst:126
+msgid "Source directory."
+msgstr "மூல அடைவு."
+
+#: ../../sphinx/doc/extdev/appapi.rst:130
+msgid "Directory containing ``conf.py``."
+msgstr "`` Conf.py`` கொண்ட அடைவு."
+
+#: ../../sphinx/doc/extdev/appapi.rst:134
+msgid "Directory for storing pickled doctrees."
+msgstr "ஊறுகாய் கோட்பாடுகளை சேமிப்பதற்கான அடைவு."
+
+#: ../../sphinx/doc/extdev/appapi.rst:138
+msgid "Directory for storing built document."
+msgstr "கட்டப்பட்ட ஆவணத்தை சேமிப்பதற்கான அடைவு."
+
+#: ../../sphinx/doc/extdev/appapi.rst:144
+msgid "Sphinx core events"
+msgstr "ஸ்பிங்க்ஸ் கோர் நிகழ்வுகள்"
+
+#: ../../sphinx/doc/extdev/appapi.rst:146
+msgid ""
+"These events are known to the core.  The arguments shown are given to the "
+"registered event handlers.  Use :meth:`.Sphinx.connect` in an extension's "
+"``setup`` function (note that ``conf.py`` can also have a ``setup`` "
+"function) to connect handlers to the events.  Example:"
+msgstr ""
+"இந்த நிகழ்வுகள் மையத்திற்கு அறியப்படுகின்றன. காட்டப்பட்ட வாதங்கள் "
+"பதிவுசெய்யப்பட்ட நிகழ்வு கையாளுபவர்களுக்கு வழங்கப்படுகின்றன. பயன்படுத்தவும்:"
+" `.sphinx.connect` ஒரு நீட்டிப்பின்` `அமைவு`` செயல்பாட்டில் (` `conf.py`` "
+"நிகழ்வுகளுடன் கையாளுபவர்களை இணைக்க` `அமைவு`` செயல்பாட்டையும் கொண்டிருக்கலாம்"
+" என்பதை நினைவில் கொள்க). உதாரணமாக:"
+
+#: ../../sphinx/doc/extdev/appapi.rst:160
+msgid ""
+"Below is an overview of each event that happens during a build. In the list "
+"below, we include the event name, its callback parameters, and the input and"
+" output type for that event:"
+msgstr ""
+"ஒரு கட்டமைப்பின் போது நடக்கும் ஒவ்வொரு நிகழ்வின் கண்ணோட்டமும் கீழே உள்ளது. "
+"கீழேயுள்ள பட்டியலில், நிகழ்வு பெயர், அதன் கால்பேக் அளவுருக்கள் மற்றும் அந்த "
+"நிகழ்விற்கான உள்ளீடு மற்றும் வெளியீட்டு வகை ஆகியவற்றை நாங்கள் சேர்த்துக் "
+"கொள்கிறோம்:"
+
+#: ../../sphinx/doc/extdev/appapi.rst:203
+msgid "Here is a more detailed list of these events."
+msgstr "இந்த நிகழ்வுகளின் விரிவான பட்டியல் இங்கே."
+
+#: ../../sphinx/doc/extdev/appapi.rst:207
+msgid ""
+"Emitted when the builder object has been created.  It is available as "
+"``app.builder``."
+msgstr ""
+"பில்டர் பொருள் உருவாக்கப்பட்டபோது உமிழப்படும். இது `` app.builder`` ஆகக் "
+"கிடைக்கிறது."
+
+#: ../../sphinx/doc/extdev/appapi.rst:212
+msgid "Emitted when the config object has been initialized."
+msgstr "கட்டமைப்பு பொருள் துவக்கப்படும்போது உமிழப்படும்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:218
+msgid ""
+"Emitted when the environment determines which source files have changed and "
+"should be re-read.  *added*, *changed* and *removed* are sets of docnames "
+"that the environment has determined.  You can return a list of docnames to "
+"re-read in addition to these."
+msgstr ""
+"எந்த மூல கோப்புகள் மாறிவிட்டன என்பதை சூழல் தீர்மானிக்கும் போது உமிழப்படும் "
+"மற்றும் மீண்டும் படிக்க வேண்டும். "
+"*சேர்க்கப்பட்டது*,*மாற்றப்பட்டது*மற்றும்*அகற்றப்பட்டது*என்பது சூழல் "
+"தீர்மானித்த ஆவண பெயர்களின் தொகுப்புகள். இவற்றுடன் கூடுதலாக மீண்டும் படிக்க "
+"டாக் பெயர்களின் பட்டியலை நீங்கள் திருப்பித் தரலாம்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:227
+msgid ""
+"Emitted when all traces of a source file should be cleaned from the "
+"environment, that is, if the source file is removed or before it is freshly "
+"read.  This is for extensions that keep their own caches in attributes of "
+"the environment."
+msgstr ""
+"ஒரு மூல கோப்பின் அனைத்து தடயங்களும் சூழலில் இருந்து சுத்தம் "
+"செய்யப்படும்போது, அதாவது மூல கோப்பு அகற்றப்பட்டால் அல்லது புதிதாக "
+"வாசிக்கப்படுவதற்கு முன்பு உமிழப்படும். இது சுற்றுச்சூழலின் பண்புகளில் தங்கள்"
+" சொந்த தற்காலிக சேமிப்புகளை வைத்திருக்கும் நீட்டிப்புகளுக்கானது."
+
+#: ../../sphinx/doc/extdev/appapi.rst:232
+msgid ""
+"For example, there is a cache of all modules on the environment.  When a "
+"source file has been changed, the cache's entries for the file are cleared, "
+"since the module declarations could have been removed from the file."
+msgstr ""
+"எடுத்துக்காட்டாக, சூழலில் அனைத்து தொகுதிகளின் தற்காலிக சேமிப்பு உள்ளது. ஒரு "
+"மூல கோப்பு மாற்றப்பட்டால், கோப்பிற்கான கேச் உள்ளீடுகள் அழிக்கப்படுகின்றன, "
+"ஏனெனில் தொகுதி அறிவிப்புகள் கோப்பிலிருந்து அகற்றப்பட்டிருக்கலாம்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:240
+msgid ""
+"Emitted after the environment has determined the list of all added and "
+"changed files and just before it reads them.  It allows extension authors to"
+" reorder the list of docnames (*inplace*) before processing, or add more "
+"docnames that Sphinx did not consider changed (but never add any docnames "
+"that are not in ``env.found_docs``)."
+msgstr ""
+"சூழல் சேர்க்கப்பட்ட மற்றும் மாற்றப்பட்ட அனைத்து கோப்புகளின் பட்டியலையும், "
+"அவற்றைப் படிப்பதற்கு சற்று முன்பு தீர்மானித்த பிறகு உமிழ்வது. "
+"செயலாக்கத்திற்கு முன் டாக் பெயர்களின் பட்டியலை (*inplace*) மறுவரிசைப்படுத்த "
+"நீட்டிப்பு ஆசிரியர்களை இது அனுமதிக்கிறது, அல்லது ஸ்பின்க்ஸ் மாற்றப்பட்டதாகக்"
+" கருதாத கூடுதல் ஆவணங்களைச் சேர்க்கவும் (ஆனால் `` env.found_docs``` இல் "
+"இல்லாத எந்த ஆவணப் பெயர்களையும் ஒருபோதும் சேர்க்க வேண்டாம்)."
+
+#: ../../sphinx/doc/extdev/appapi.rst:246
+msgid ""
+"You can also remove document names; do this with caution since it will make "
+"Sphinx treat changed files as unchanged."
+msgstr ""
+"ஆவண பெயர்களையும் அகற்றலாம்; இதை எச்சரிக்கையுடன் செய்யுங்கள், ஏனெனில் இது "
+"ஸ்பின்க்ஸ் சிகிச்சை மாற்றப்பட்ட கோப்புகளை மாற்றாமல் இருக்கும்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:253
+msgid ""
+"Emitted when a source file has been read.  The *source* argument is a list "
+"whose single element is the contents of the source file.  You can process "
+"the contents and replace this item to implement source-level "
+"transformations."
+msgstr ""
+"ஒரு மூல கோப்பு படிக்கப்படும்போது உமிழப்படும். * மூல * வாதம் என்பது மூலக் "
+"கோப்பின் உள்ளடக்கங்களாக இருக்கும் ஒரு பட்டியல். மூல-நிலை மாற்றங்களைச் "
+"செயல்படுத்த நீங்கள் உள்ளடக்கங்களை செயலாக்கலாம் மற்றும் இந்த உருப்படியை "
+"மாற்றலாம்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:257
+msgid ""
+"For example, if you want to use ``$`` signs to delimit inline math, like in "
+"LaTeX, you can use a regular expression to replace ``$...$`` by "
+"``:math:`...```."
+msgstr ""
+"எடுத்துக்காட்டாக, லேடெக்ஸைப் போலவே இன்லைன் கணிதத்தையும் வரையறுக்க `` $ `` "
+"அறிகுறிகளைப் பயன்படுத்த விரும்பினால், `` $ ... `` ஆல் ``: கணிதம்: `... `` `."
+
+#: ../../sphinx/doc/extdev/appapi.rst:265
+msgid ""
+"Emitted when a file has been read with the :dudir:`include` directive. The "
+"*relative_path* argument is a :py:class:`~pathlib.Path` object representing "
+"the relative path of the included file from the :term:`source directory`. "
+"The *parent_docname* argument is the name of the document that contains the "
+":dudir:`include` directive. The *source* argument is a list whose single "
+"element is the contents of the included file. You can process the contents "
+"and replace this item to transform the included content, as with the "
+":event:`source-read` event."
+msgstr ""
+"ஒரு கோப்பு படிக்கப்படும்போது உமிழப்படும்: tudir: `சேர்க்கவும்` உத்தரவு. * "
+"உறவினர்_பாத் * வாதம் ஒரு: py: வகுப்பு: `~ pathlib.path` பொருள்: கால:` மூல "
+"அடைவு` இலிருந்து சேர்க்கப்பட்ட கோப்பின் ஒப்பீட்டு பாதையை குறிக்கும் பொருள். "
+"* பெற்றோர்_டோக்னேம் * வாதம் என்பது ஆவணத்தின் பெயர்: tudir: `சேர்க்கவும்` "
+"உத்தரவு. * மூல * வாதம் என்பது ஒரு பட்டியல், அதன் ஒற்றை உறுப்பு சேர்க்கப்பட்ட"
+" கோப்பின் உள்ளடக்கங்கள். நீங்கள் உள்ளடக்கங்களை செயலாக்கலாம் மற்றும் "
+"சேர்க்கப்பட்ட உள்ளடக்கத்தை மாற்ற இந்த உருப்படியை மாற்றலாம்: நிகழ்வு: "
+"`மூல-வாசிப்பு` நிகழ்வு."
+
+#: ../../sphinx/doc/extdev/appapi.rst:278
+msgid "The :dudir:`include` directive and the :event:`source-read` event."
+msgstr "தி: டுடிர்: `அகரெட்டி மற்றும் தி: நிகழ்வு:` மூல-வாசிப்பு` நிகழ்வு."
+
+#: ../../sphinx/doc/extdev/appapi.rst:282
+msgid ""
+"Emitted when an object description directive has run.  The *domain* and "
+"*objtype* arguments are strings indicating object description of the object."
+" And *contentnode* is a content for the object.  It can be modified in-"
+"place."
+msgstr ""
+"ஒரு பொருள் விளக்க உத்தரவு இயங்கும் போது உமிழப்படும். * டொமைன் * மற்றும் * "
+"ஆப்ஜ்டைப் * வாதங்கள் பொருளின் பொருள் விளக்கத்தைக் குறிக்கும் சரங்கள். "
+"மற்றும் * ContentNode * என்பது பொருளின் உள்ளடக்கம். அதை இடத்தில் மாற்றலாம்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:290
+msgid ""
+"Emitted when a doctree has been parsed and read by the environment, and is "
+"about to be pickled.  The *doctree* can be modified in-place."
+msgstr ""
+"ஒரு கோட்பாடு சுற்றுச்சூழலால் பாகுபடுத்தப்பட்டு படிக்கப்பட்டதும், "
+"ஊறுகாய்களாகவும் இருக்கும் போது உமிழப்படும். * கோட்பாடு * இடத்தில் "
+"மாற்றப்படலாம்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:295
+msgid ""
+"Emitted when a cross-reference to an object cannot be resolved. If the event"
+" handler can resolve the reference, it should return a new docutils node to "
+"be inserted in the document tree in place of the node *node*.  Usually this "
+"node is a :class:`~nodes.reference` node containing *contnode* as a child. "
+"If the handler can not resolve the cross-reference, it can either return "
+"``None`` to let other handlers try, or raise :class:`~sphinx.errors.NoUri` "
+"to prevent other handlers in trying and suppress a warning about this cross-"
+"reference being unresolved."
+msgstr ""
+"ஒரு பொருளுக்கு குறுக்கு-குறிப்பை தீர்க்க முடியாது. நிகழ்வு கையாளுபவர் "
+"குறிப்பைத் தீர்க்க முடிந்தால், அது *முனை *க்கு பதிலாக ஆவண மரத்தில் செருக ஒரு"
+" புதிய ஆவண முனையை திருப்பித் தர வேண்டும். வழக்கமாக இந்த முனை ஒரு: வகுப்பு: "
+"`~ முனைகள். கையாளுபவர் குறுக்கு-குறிப்பைத் தீர்க்க முடியாவிட்டால், மற்ற "
+"கையாளுபவர்களை முயற்சி செய்ய அனுமதிக்க `` எதுவுமில்லை` `திரும்பலாம், அல்லது "
+"உயர்த்தலாம்: வகுப்பு:` ~ sphinx.errors.nouri` மற்ற கையாளுபவர்களைத் தடுக்க "
+"ஒரு எச்சரிக்கையை முயற்சித்து அடக்கவும் இந்த குறுக்கு குறிப்பு "
+"தீர்க்கப்படவில்லை."
+
+#: ../../sphinx/doc/extdev/appapi.rst:305
+msgid "The build environment (``app.builder.env``)."
+msgstr "உருவாக்க சூழல் (`` app.builder.env``)."
+
+#: ../../sphinx/doc/extdev/appapi.rst:306
+msgid ""
+"The :class:`~sphinx.addnodes.pending_xref` node to be resolved. Its "
+"``reftype``, ``reftarget``, ``modname`` and ``classname`` attributes "
+"determine the type and target of the reference."
+msgstr ""
+"தி: வகுப்பு: `~ sphinx.addnodes.pending_xref` முனை தீர்க்கப்பட வேண்டும். "
+"அதன் `` ரெஃப்டைப்``, `` ரீஃப்டார்ஜெட்``, `` மோட்நேம்`` மற்றும் `` வகுப்பு "
+"பெயர்`` பண்புக்கூறுகள் குறிப்பின் வகை மற்றும் இலக்கை தீர்மானிக்கின்றன."
+
+#: ../../sphinx/doc/extdev/appapi.rst:309
+msgid ""
+"The node that carries the text and formatting inside the future reference "
+"and should be a child of the returned reference node."
+msgstr ""
+"எதிர்கால குறிப்புக்குள் உரை மற்றும் வடிவமைப்பைக் கொண்டு செல்லும் முனை "
+"மற்றும் திரும்பிய குறிப்பு முனையின் குழந்தையாக இருக்க வேண்டும்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:316
+msgid ""
+"Emitted when a cross-reference to an object cannot be resolved even after "
+":event:`missing-reference`.  If the event handler can emit warnings for the "
+"missing reference, it should return ``True``. The configuration variables "
+":confval:`nitpick_ignore` and :confval:`nitpick_ignore_regex` prevent the "
+"event from being emitted for the corresponding nodes."
+msgstr ""
+"ஒரு பொருளுக்கு ஒரு குறுக்கு-குறிப்பை தீர்க்க முடியாதபோது உமிழப்படும்: "
+"நிகழ்வு: `காணாமல் போன-குறிப்பு`. நிகழ்வு கையாளுபவர் காணாமல் போன "
+"குறிப்புக்கான எச்சரிக்கைகளை வெளியிட முடிந்தால், அது `` உண்மை`` திரும்ப "
+"வேண்டும். உள்ளமைவு மாறிகள்: confval: `nitpick_ignore` மற்றும்: confval:` "
+"nitpick_ignore_regex` தொடர்புடைய முனைகளுக்கு நிகழ்வு வெளியேற்றப்படுவதைத் "
+"தடுக்கிறது."
+
+#: ../../sphinx/doc/extdev/appapi.rst:326
+msgid ""
+"Emitted when a doctree has been \"resolved\" by the environment, that is, "
+"all references have been resolved and TOCs have been inserted.  The "
+"*doctree* can be modified in place."
+msgstr ""
+"சுற்றுச்சூழலால் ஒரு கோட்பாட்டாளர் \"தீர்க்கப்படும்போது\" உமிழப்படும், "
+"அதாவது, அனைத்து குறிப்புகளும் தீர்க்கப்பட்டு TOC கள் செருகப்பட்டுள்ளன. * "
+"கோட்பாடு * இடத்தில் மாற்றப்படலாம்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:330
+msgid ""
+"Here is the place to replace custom nodes that don't have visitor methods in"
+" the writers, so that they don't cause errors when the writers encounter "
+"them."
+msgstr ""
+"எழுத்தாளர்களில் பார்வையாளர் முறைகள் இல்லாத தனிப்பயன் முனைகளை மாற்றுவதற்கான "
+"இடம் இங்கே, இதனால் எழுத்தாளர்கள் அவர்களை எதிர்கொள்ளும்போது அவை பிழைகளை "
+"ஏற்படுத்தாது."
+
+#: ../../sphinx/doc/extdev/appapi.rst:335
+msgid ""
+"This event is only emitted when parallel reading of documents is enabled.  "
+"It is emitted once for every subprocess that has read some documents."
+msgstr ""
+"ஆவணங்களின் இணையாக வாசிப்பு இயக்கப்பட்டால் மட்டுமே இந்த நிகழ்வு வெளிப்படும். "
+"சில ஆவணங்களைப் படித்த ஒவ்வொரு துணை செயலாக்கத்திற்கும் இது ஒரு முறை "
+"வெளியேற்றப்படுகிறது."
+
+#: ../../sphinx/doc/extdev/appapi.rst:338
+msgid ""
+"You must handle this event in an extension that stores data in the "
+"environment in a custom location.  Otherwise the environment in the main "
+"process will not be aware of the information stored in the subprocess."
+msgstr ""
+"தனிப்பயன் இடத்தில் சூழலில் தரவை சேமிக்கும் நீட்டிப்பில் இந்த நிகழ்வை நீங்கள்"
+" கையாள வேண்டும். இல்லையெனில், முக்கிய செயல்பாட்டில் உள்ள சூழல் துணை "
+"செயலாக்கத்தில் சேமிக்கப்பட்டுள்ள தகவல்களைப் பற்றி அறிந்திருக்காது."
+
+#: ../../sphinx/doc/extdev/appapi.rst:342
+msgid ""
+"*other* is the environment object from the subprocess, *env* is the "
+"environment from the main process.  *docnames* is a set of document names "
+"that have been read in the subprocess."
+msgstr ""
+"* மற்றவை* என்பது துணை செயலாக்கத்திலிருந்து வரும் சுற்றுச்சூழல் பொருள்,* env*"
+" என்பது முக்கிய செயல்முறையிலிருந்து வரும் சூழல். * டாக்நேம்ஸ்* என்பது துணை "
+"செயலாக்கத்தில் படிக்கப்பட்ட ஆவண பெயர்களின் தொகுப்பாகும்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:350
+msgid ""
+"Emitted after reading all documents, when the environment and all doctrees "
+"are now up-to-date."
+msgstr ""
+"எல்லா ஆவணங்களையும் படித்த பிறகு, சுற்றுச்சூழல் மற்றும் அனைத்து கோட்பாடுகளும்"
+" இப்போது புதுப்பித்த நிலையில் இருக்கும்போது."
+
+#: ../../sphinx/doc/extdev/appapi.rst:353
+msgid ""
+"You can return an iterable of docnames from the handler.  These documents "
+"will then be considered updated, and will be (re-)written during the writing"
+" phase."
+msgstr ""
+"நீங்கள் கையாளுபவரிடமிருந்து டாக் பெயர்களை மீண்டும் செய்ய முடியும். இந்த "
+"ஆவணங்கள் பின்னர் புதுப்பிக்கப்பட்டதாகக் கருதப்படும், மேலும் எழுதும் "
+"கட்டத்தின் போது எழுதப்படும் (மறு)."
+
+#: ../../sphinx/doc/extdev/appapi.rst:359
+msgid "The handlers' return value is now used."
+msgstr "கையாளுபவர்களின் வருவாய் மதிப்பு இப்போது பயன்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/extdev/appapi.rst:364
+msgid ""
+"Emitted when Consistency checks phase.  You can check consistency of "
+"metadata for whole of documents."
+msgstr ""
+"நிலைத்தன்மை காசோலைகள் கட்டம் போது உமிழப்படும். முழு ஆவணங்களுக்கும் "
+"மெட்டாடேட்டாவின் நிலைத்தன்மையை நீங்கள் சரிபார்க்கலாம்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:369
+msgid "As a **experimental** event"
+msgstr "ஒரு ** சோதனை ** நிகழ்வாக"
+
+#: ../../sphinx/doc/extdev/appapi.rst:373
+msgid ""
+"Emitted when the HTML builder is starting to write non-document pages.  You "
+"can add pages to write by returning an iterable from this event consisting "
+"of ``(pagename, context, templatename)``."
+msgstr ""
+"HTML பில்டர் ஆவணமற்ற பக்கங்களை எழுதத் தொடங்கும் போது உமிழப்படும். இந்த "
+"நிகழ்விலிருந்து `` (பேஜனேம், சூழல், டெம்ப்ளேட்நேம்) `` ஆகியவற்றைக் கொண்ட ஒரு"
+" மறுசீரமைப்பைத் திருப்புவதன் மூலம் எழுத பக்கங்களை நீங்கள் சேர்க்கலாம்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:381
+msgid ""
+"Emitted when the HTML builder has created a context dictionary to render a "
+"template with -- this can be used to add custom elements to the context."
+msgstr ""
+"ஒரு வார்ப்புருவை வழங்க HTML பில்டர் ஒரு சூழல் அகராதியை உருவாக்கியபோது "
+"உமிழப்படும் - இது சூழலில் தனிப்பயன் கூறுகளைச் சேர்க்க இது "
+"பயன்படுத்தப்படலாம்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:384
+msgid ""
+"The *pagename* argument is the canonical name of the page being rendered, "
+"that is, without ``.html`` suffix and using slashes as path separators.  The"
+" *templatename* is the name of the template to render, this will be "
+"``'page.html'`` for all pages from reST documents."
+msgstr ""
+"* பேஜனேம் * வாதம் என்பது பக்கத்தின் நியமன பெயர், அதாவது, `` .html`` "
+"பின்னொட்டு இல்லாமல் மற்றும் ஸ்லாஷ்களை பாதை பிரிப்பான்களாகப் "
+"பயன்படுத்துகிறது. * டெம்ப்ளேட்நேம் * என்பது வழங்குவதற்கான வார்ப்புருவின் "
+"பெயர், இது REST ஆவணங்களிலிருந்து அனைத்து பக்கங்களுக்கும் `` "
+"'பக்கம்.ஹெச்.டி.எம்.எல்'`` ஆக இருக்கும்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:389
+msgid ""
+"The *context* argument is a dictionary of values that are given to the "
+"template engine to render the page and can be modified to include custom "
+"values.  Keys must be strings."
+msgstr ""
+"* சூழல் * வாதம் என்பது பக்கத்தை வழங்க வார்ப்புரு இயந்திரத்திற்கு "
+"வழங்கப்படும் மதிப்புகளின் அகராதியாகும், மேலும் தனிப்பயன் மதிப்புகளைச் "
+"சேர்க்க மாற்றலாம். விசைகள் சரங்களாக இருக்க வேண்டும்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:393
+msgid ""
+"The *doctree* argument will be a doctree when the page is created from a "
+"reST documents; it will be ``None`` when the page is created from an HTML "
+"template alone."
+msgstr ""
+"REST ஆவணங்களிலிருந்து பக்கம் உருவாக்கப்படும் போது * கோட்பாடு * வாதம் ஒரு "
+"கோட்பாடாக இருக்கும்; ஒரு HTML வார்ப்புருவில் இருந்து மட்டும் பக்கம் "
+"உருவாக்கப்படும் போது அது `` எதுவுமில்லை."
+
+#: ../../sphinx/doc/extdev/appapi.rst:397
+msgid ""
+"You can return a string from the handler, it will then replace "
+"``'page.html'`` as the HTML template for this page."
+msgstr ""
+"நீங்கள் கையாளுபவரிடமிருந்து ஒரு சரத்தை திருப்பித் தரலாம், பின்னர் அது `` "
+"'பக்கம்.ஹெச்.டி.எம்.எல்'`` `இந்த பக்கத்திற்கான HTML வார்ப்புருவாக "
+"மாற்றப்படும்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:400
+msgid ""
+"You can install JS/CSS files for the specific page via "
+":meth:`Sphinx.add_js_file` and :meth:`Sphinx.add_css_file` since v3.5.0."
+msgstr ""
+"குறிப்பிட்ட பக்கத்திற்கு JS/CSS கோப்புகளை நீங்கள் நிறுவலாம்: val: "
+"`sphinx.add_js_file` மற்றும்: meth:` sphinx.add_css_file` v3.5.0 முதல்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:406
+msgid "The return value can now specify a template name."
+msgstr "வருவாய் மதிப்பு இப்போது ஒரு வார்ப்புரு பெயரைக் குறிப்பிடலாம்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:411
+msgid ""
+"Emitted when the linkcheck builder collects hyperlinks from document.  *uri*"
+" is a collected URI.  The event handlers can modify the URI by returning a "
+"string."
+msgstr ""
+"லிங்க்செக் பில்டர் ஆவணத்திலிருந்து ஹைப்பர்லிங்க்களை சேகரிக்கும் போது "
+"உமிழப்படும். * யூரி* சேகரிக்கப்பட்ட யூரி. நிகழ்வு கையாளுபவர்கள் ஒரு சரத்தை "
+"திருப்புவதன் மூலம் URI ஐ மாற்றலாம்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:419
+msgid ""
+"Emitted when a build has finished, before Sphinx exits, usually used for "
+"cleanup.  This event is emitted even when the build process raised an "
+"exception, given as the *exception* argument.  The exception is reraised in "
+"the application after the event handlers have run.  If the build process "
+"raised no exception, *exception* will be ``None``.  This allows to customize"
+" cleanup actions depending on the exception status."
+msgstr ""
+"ஒரு கட்டடம் முடிந்ததும் உமிழப்படும், ஸ்பிங்க்ஸ் வெளியேறுவதற்கு முன்பு, "
+"பொதுவாக தூய்மைப்படுத்த பயன்படுத்தப்படுகிறது. இந்த நிகழ்வு உருவாக்கும் "
+"செயல்முறை ஒரு விதிவிலக்கை உயர்த்தினாலும் கூட, * விதிவிலக்கு * வாதமாக "
+"வழங்கப்படுகிறது. நிகழ்வு கையாளுபவர்கள் ஓடிய பிறகு விதிவிலக்கு பயன்பாட்டில் "
+"மறுபரிசீலனை செய்யப்படுகிறது. உருவாக்க செயல்முறை விதிவிலக்கல்ல என்றால், * "
+"விதிவிலக்கு * `` எதுவுமில்லை`` இருக்கும். விதிவிலக்கு நிலையைப் பொறுத்து "
+"தூய்மைப்படுத்தும் செயல்களைத் தனிப்பயனாக்க இது அனுமதிக்கிறது."
+
+#: ../../sphinx/doc/extdev/appapi.rst:430
+msgid "Checking the Sphinx version"
+msgstr "ஸ்பிங்க்ஸ் பதிப்பை சரிபார்க்கிறது"
+
+#: ../../sphinx/doc/extdev/appapi.rst:434
+msgid "Use this to adapt your extension to API changes in Sphinx."
+msgstr ""
+"SPHINX இல் API மாற்றங்களுக்கு உங்கள் நீட்டிப்பை மாற்றியமைக்க இதைப் "
+"பயன்படுத்தவும்."
+
+#: ../docstring of sphinx.version_info:1
+msgid "Version info for better programmatic use."
+msgstr "சிறந்த நிரல் பயன்பாட்டிற்கான பதிப்பு தகவல்."
+
+#: ../docstring of sphinx.version_info:3
+msgid ""
+"A tuple of five elements; for Sphinx version 1.2.1 beta 3 this would be "
+"``(1, 2, 1, 'beta', 3)``. The fourth element can be one of: ``alpha``, "
+"``beta``, ``rc``, ``final``. ``final`` always has 0 as the last element."
+msgstr ""
+"ஐந்து கூறுகளின் ஒரு டூப்பிள்; ஸ்பிங்க்ஸ் பதிப்பு 1.2.1 பீட்டா 3 க்கு இது `` "
+"(1, 2, 1, 'பீட்டா', 3) ``. நான்காவது உறுப்பு ஒன்றாகும்: `` ஆல்பா``, `` "
+"பீட்டா``, `` rc``, `` இறுதி``. `` இறுதி`` எப்போதும் 0 ஐ கடைசி உறுப்பு எனக் "
+"கொண்டுள்ளது."
+
+#: ../docstring of sphinx.version_info:7
+msgid "Before version 1.2, check the string ``sphinx.__version__``."
+msgstr ""
+"பதிப்பு 1.2 க்கு முன், `` ஸ்பிங்க்ஸ் .__ பதிப்பு__`` என்ற சரத்தை "
+"சரிபார்க்கவும்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:440
+msgid "The Config object"
+msgstr "கட்டமைப்பு பொருள்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/config.pydocstring
+#: of sphinx.config.Config:1
+msgid "Configuration file abstraction."
+msgstr "உள்ளமைவு கோப்பு சுருக்கம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/config.pydocstring
+#: of sphinx.config.Config:3
+msgid ""
+"The config object makes the values of all config values available as "
+"attributes."
+msgstr ""
+"கட்டமைப்பு பொருள் அனைத்து கட்டமைப்பு மதிப்புகளின் மதிப்புகளையும் பண்புகளாகக்"
+" கிடைக்கச் செய்கிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/config.pydocstring
+#: of sphinx.config.Config:6
+msgid ""
+"It is exposed via the :py:class:`~sphinx.application.Sphinx`\\ ``.config`` "
+"and :py:class:`sphinx.environment.BuildEnvironment`\\ ``.config`` "
+"attributes. For example, to get the value of :confval:`language`, use either"
+" ``app.config.language`` or ``env.config.language``."
+msgstr ""
+"இது: py: class: `~ sphinx.application.sphinx` \\` `.config`` மற்றும்: py: "
+"class:` sphinx.enveronment.buildenveronment` \\ `` .config`` பண்புக்கூறுகள் "
+"வழியாக இது வெளிப்படும். எடுத்துக்காட்டாக, மதிப்பைப் பெற: confval: `மொழி`,` "
+"`app.config.language`` அல்லது` `env.config.language`` ஐப் பயன்படுத்தவும்."
+
+#: ../../sphinx/doc/extdev/appapi.rst:450
+msgid "The template bridge"
+msgstr "வார்ப்புரு பாலம்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.TemplateBridge:1
+msgid ""
+"This class defines the interface for a \"template bridge\", that is, a class"
+" that renders templates given a template name and a context."
+msgstr ""
+"இந்த வகுப்பு ஒரு \"வார்ப்புரு பாலம்\" க்கான இடைமுகத்தை வரையறுக்கிறது, "
+"அதாவது, வார்ப்புரு பெயர் மற்றும் சூழலைக் கொடுக்கப்பட்ட வார்ப்புருக்கள் "
+"வழங்கும் ஒரு வகுப்பு."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.TemplateBridge.init:1
+msgid "Called by the builder to initialize the template system."
+msgstr "வார்ப்புரு அமைப்பைத் தொடங்க பில்டரால் அழைக்கப்படுகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.TemplateBridge.init:3
+msgid ""
+"*builder* is the builder object; you'll probably want to look at the value "
+"of ``builder.config.templates_path``."
+msgstr ""
+"* பில்டர்* என்பது பில்டர் பொருள்; `` biolder.config.templates_path`` இன் "
+"மதிப்பைப் பார்க்க விரும்புவீர்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.TemplateBridge.init:6
+msgid ""
+"*theme* is a :class:`sphinx.theming.Theme` object or None; in the latter "
+"case, *dirs* can be list of fixed directories to look for templates."
+msgstr ""
+"* தீம்* ஒரு: வகுப்பு: `sphinx.theming.theme` பொருள் அல்லது எதுவுமில்லை; "
+"பிந்தைய வழக்கில், * dirs * வார்ப்புருக்களைத் தேடுவதற்கு நிலையான "
+"கோப்பகங்களின் பட்டியலாக இருக்கலாம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.TemplateBridge.newest_template_mtime:1
+msgid ""
+"Called by the builder to determine if output files are outdated because of "
+"template changes.  Return the mtime of the newest template file that was "
+"changed.  The default implementation returns ``0``."
+msgstr ""
+"வார்ப்புரு மாற்றங்கள் காரணமாக வெளியீட்டு கோப்புகள் காலாவதியானதா என்பதை "
+"தீர்மானிக்க பில்டரால் அழைக்கப்படுகிறது. மாற்றப்பட்ட புதிய வார்ப்புரு "
+"கோப்பின் MTIME ஐத் தரவும். இயல்புநிலை செயல்படுத்தல் `` 0`` ஐ வழங்குகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.TemplateBridge.render:1
+msgid ""
+"Called by the builder to render a template given as a filename with a "
+"specified context (a Python dictionary)."
+msgstr ""
+"ஒரு குறிப்பிட்ட சூழலுடன் (பைதான் அகராதி) கோப்பு பெயராக வழங்கப்பட்ட ஒரு "
+"வார்ப்புருவை வழங்க பில்டரால் அழைக்கப்படுகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/application.pydocstring
+#: of sphinx.application.TemplateBridge.render_string:1
+msgid ""
+"Called by the builder to render a template given as a string with a "
+"specified context (a Python dictionary)."
+msgstr ""
+"ஒரு குறிப்பிட்ட சூழலுடன் (பைதான் அகராதி) ஒரு சரமாக கொடுக்கப்பட்ட ஒரு "
+"வார்ப்புருவை வழங்க பில்டரால் அழைக்கப்படுகிறது."
+
+#: ../../sphinx/doc/extdev/appapi.rst:461
+msgid "Exceptions"
+msgstr "விதிவிலக்குகள்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/errors.pydocstring
+#: of sphinx.errors.SphinxError:1
+msgid "Base class for Sphinx errors."
+msgstr "ஸ்பின்க்ஸ் பிழைகளுக்கான அடிப்படை வகுப்பு."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/errors.pydocstring
+#: of sphinx.errors.SphinxError:3
+msgid ""
+"This is the base class for \"nice\" exceptions.  When such an exception is "
+"raised, Sphinx will abort the build and present the exception category and "
+"message to the user."
+msgstr ""
+"\"நல்ல\" விதிவிலக்குகளுக்கான அடிப்படை வகுப்பு இது. அத்தகைய விதிவிலக்கு "
+"எழுப்பப்படும்போது, ஸ்பிங்க்ஸ் கட்டமைப்பை நிறுத்தி, விதிவிலக்கு வகை மற்றும் "
+"செய்தியை பயனருக்கு வழங்கும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/errors.pydocstring
+#: of sphinx.errors.SphinxError:7
+msgid ""
+"Extensions are encouraged to derive from this exception for their custom "
+"errors."
+msgstr ""
+"நீட்டிப்புகள் அவற்றின் தனிப்பயன் பிழைகளுக்கு இந்த விதிவிலக்கிலிருந்து பெற "
+"ஊக்குவிக்கப்படுகின்றன."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/errors.pydocstring
+#: of sphinx.errors.SphinxError:10
+msgid ""
+"Exceptions *not* derived from :exc:`SphinxError` are treated as unexpected "
+"and shown to the user with a part of the traceback (and the full traceback "
+"saved in a temporary file)."
+msgstr ""
+"விதிவிலக்குகள் * இதிலிருந்து பெறப்படவில்லை: எக்ஸ்செர்: `ஸ்பின்க்செர்ர்` "
+"எதிர்பாராதது என்று கருதப்படுகிறது மற்றும் ட்ரேஸ்பேக்கின் ஒரு பகுதியைக் "
+"கொண்டு பயனருக்குக் காட்டப்படுகிறது (மற்றும் ஒரு தற்காலிக கோப்பில் "
+"சேமிக்கப்படுகிறது)."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/errors.pydocstring
+#: of sphinx.errors.SphinxError:16
+msgid ""
+"Description of the exception \"category\", used in converting the exception "
+"to a string (\"category: message\").  Should be set accordingly in "
+"subclasses."
+msgstr ""
+"விதிவிலக்கு விதிவிலக்கின் விளக்கம், விதிவிலக்கை ஒரு சரத்திற்கு மாற்றுவதற்கு "
+"பயன்படுத்தப்படுகிறது (\"வகை: செய்தி\"). அதற்கேற்ப துணைப்பிரிவுகளில் "
+"அமைக்கப்பட வேண்டும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/errors.pydocstring
+#: of sphinx.errors.ConfigError:1
+msgid "Configuration error."
+msgstr "உள்ளமைவு பிழை."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/errors.pydocstring
+#: of sphinx.errors.ExtensionError:1
+msgid "Extension error."
+msgstr "நீட்டிப்பு பிழை."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/errors.pydocstring
+#: of sphinx.errors.ThemeError:1
+msgid "Theme error."
+msgstr "தீம் பிழை."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/errors.pydocstring
+#: of sphinx.errors.VersionRequirementError:1
+msgid "Incompatible Sphinx version error."
+msgstr "பொருந்தாத ஸ்பிங்க்ஸ் பதிப்பு பிழை."

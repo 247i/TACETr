@@ -1,0 +1,618 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2023, the Sphinx developers
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 7.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-15 00:35+0000\n"
+"PO-Revision-Date: 2018-06-26 15:59+0000\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:2
+msgid ""
+":mod:`sphinx.ext.napoleon` -- Support for NumPy and Google style docstrings"
+msgstr "."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:12
+msgid "Overview"
+msgstr "கண்ணோட்டம்"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:16
+msgid "Are you tired of writing docstrings that look like this::"
+msgstr ""
+"இப்படி இருக்கும் ஆவணங்களை எழுதுவதில் நீங்கள் சோர்வாக இருக்கிறீர்களா ::"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:28
+msgid ""
+"`reStructuredText`_ is great, but it creates visually dense, hard to read "
+":pep:`docstrings <287>`. Compare the jumble above to the same thing "
+"rewritten according to the `Google Python Style Guide`_::"
+msgstr ""
+"`மறுசீரமைப்பு டெக்ஸ்ட்`_ சிறந்தது, ஆனால் அது பார்வைக்கு அடர்த்தியான, படிக்க "
+"கடினமாக உள்ளது: PEP:` டாக்ஸ்ட்ரிங்ஸ் <87> `. `கூகிள் பைதான் ஸ்டைல் கையேடு`_ "
+":: படி மீண்டும் எழுதப்பட்ட அதே விஷயத்துடன் மேலே உள்ள தடுமாற்றத்தை ஒப்பிடுக "
+"::"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:41
+msgid "Much more legible, no?"
+msgstr "மிகவும் தெளிவானது, இல்லையா?"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:43
+msgid ""
+"Napoleon is a :term:`extension` that enables Sphinx to parse both `NumPy`_ "
+"and `Google`_ style docstrings - the style recommended by `Khan Academy`_."
+msgstr ""
+"நெப்போலியன் என்பது ஒரு: சொல்: `நீட்டிப்பு` இது` நம்பி`_ மற்றும் `கூகிள்`_ "
+"ஸ்டைல் டாக்ஸ்ட்ரிங்ஸ் இரண்டையும் அலசுவதற்கு ஸ்பின்க்ஸை செயல்படுத்துகிறது -` "
+"கான் அகாடமி`_ பரிந்துரைத்த பாணி."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:46
+msgid ""
+"Napoleon is a pre-processor that parses `NumPy`_ and `Google`_ style "
+"docstrings and converts them to reStructuredText before Sphinx attempts to "
+"parse them. This happens in an intermediate step while Sphinx is processing "
+"the documentation, so it doesn't modify any of the docstrings in your actual"
+" source code files."
+msgstr ""
+"நெப்போலியன் என்பது ஒரு முன் செயலாக்கமாகும், இது `Numpy`_ மற்றும்` Google`_ "
+"ஸ்டைல் டாக்ஸ்ட்ரிங்ஸை பாகுபடுத்தி, அவற்றை அலசுவதற்கு முயற்சிக்கும் முன் "
+"அவற்றை மறுசீரமைப்பு டெக்ஸ்டுக்கு மாற்றுகிறது. இது ஒரு இடைநிலை கட்டத்தில் "
+"நிகழ்கிறது, அதே நேரத்தில் SPHINX ஆவணங்களை செயலாக்குகிறது, எனவே இது உங்கள் "
+"உண்மையான மூலக் குறியீடு கோப்புகளில் உள்ள எந்த ஆவணத்தையும் மாற்றாது."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:63
+msgid "Getting Started"
+msgstr "தொடங்குதல்"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:65
+msgid ""
+"After :doc:`setting up Sphinx </usage/quickstart>` to build your docs, "
+"enable napoleon in the Sphinx `conf.py` file::"
+msgstr ""
+"பிறகு: டாக்: `ஸ்பிங்க்ஸை அமைத்தல் </பயன்பாடு/குயிக்ஸ்டார்ட்>` உங்கள் "
+"ஆவணங்களை உருவாக்க, நெப்போலியனை ஸ்பின்க்ஸில் இயக்கவும் `conf.py` கோப்பில் ::"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:73
+msgid "Use `sphinx-apidoc` to build your API documentation::"
+msgstr "உங்கள் API ஆவணங்களை உருவாக்க `Sphinx-apidoc` ஐப் பயன்படுத்தவும் ::"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:79
+msgid "Docstrings"
+msgstr "ஆவணங்கள்"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:81
+msgid ""
+"Napoleon interprets every docstring that :mod:`autodoc <sphinx.ext.autodoc>`"
+" can find, including docstrings on: ``modules``, ``classes``, "
+"``attributes``, ``methods``, ``functions``, and ``variables``. Inside each "
+"docstring, specially formatted `Sections`_ are parsed and converted to "
+"reStructuredText."
+msgstr ""
+"நெப்போலியன் ஒவ்வொரு ஆவணத்தையும் விளக்குகிறார்: மோட்: `ஆட்டோடோக் "
+"<sphinx.ext.autodoc>` டாக்ஸ்ட்ரிங்ஸ் உட்பட: `` தொகுதிகள்``, `` வகுப்புகள்``,"
+" `` பண்புக்கூறுகள்`, `` முறைகள்``, ` `செயல்பாடுகள்``, மற்றும்` `மாறிகள்``. "
+"ஒவ்வொரு டாக்ஸ்ட்ரிங்கிலும், சிறப்பாக வடிவமைக்கப்பட்ட `பிரிவுகள்`_ "
+"பாகுபடுத்தப்பட்டு மறுசீரமைப்பு டெக்ஸ்டாக மாற்றப்படுகின்றன."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:87
+msgid "All standard reStructuredText formatting still works as expected."
+msgstr ""
+"அனைத்து நிலையான மறுசீரமைப்பு டெக்ஸ்ட் வடிவமைப்பும் எதிர்பார்த்தபடி இன்னும் "
+"செயல்படுகிறது."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:93
+msgid "Docstring Sections"
+msgstr "டாக்ஸ்ட்ரிங் பிரிவுகள்"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:95
+msgid "All of the following section headers are supported:"
+msgstr "பின்வரும் பிரிவு தலைப்புகள் அனைத்தும் ஆதரிக்கப்படுகின்றன:"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:97
+msgid "``Args`` *(alias of Parameters)*"
+msgstr "`` Args`` *(அளவுருக்களின் மாற்றுப்பெயர்) *"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:98
+msgid "``Arguments`` *(alias of Parameters)*"
+msgstr "`` வாதங்கள்`` *(அளவுருக்களின் மாற்றுப்பெயர்) *"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:99
+msgid "``Attention``"
+msgstr "`` கவனம்``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:100
+msgid "``Attributes``"
+msgstr "`` பண்புக்கூறுகள்``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:101
+msgid "``Caution``"
+msgstr "`` எச்சரிக்கை``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:102
+msgid "``Danger``"
+msgstr "`` ஆபத்து``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:103
+msgid "``Error``"
+msgstr "`` பிழை``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:104
+msgid "``Example``"
+msgstr "`` எடுத்துக்காட்டு``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:105
+msgid "``Examples``"
+msgstr "`` எடுத்துக்காட்டுகள்``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:106
+msgid "``Hint``"
+msgstr "`` குறிப்பு``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:107
+msgid "``Important``"
+msgstr "`` முக்கியமானது``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:108
+msgid "``Keyword Args`` *(alias of Keyword Arguments)*"
+msgstr "`` முக்கிய வாதங்கள்`` *(முக்கிய வாதங்களின் மாற்றுப்பெயர்) *"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:109
+msgid "``Keyword Arguments``"
+msgstr "`` முக்கிய வாதங்கள்``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:110
+msgid "``Methods``"
+msgstr "`` முறைகள்``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:111
+msgid "``Note``"
+msgstr "`` குறிப்பு``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:112
+msgid "``Notes``"
+msgstr "`` குறிப்புகள்``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:113
+msgid "``Other Parameters``"
+msgstr "`` பிற அளவுருக்கள்``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:114
+msgid "``Parameters``"
+msgstr "`` அளவுருக்கள்``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:115
+msgid "``Return`` *(alias of Returns)*"
+msgstr "`` திரும்ப`` *(வருமானத்தின் மாற்றுப்பெயர்) *"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:116
+msgid "``Returns``"
+msgstr "`` வருமானம்``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:117
+msgid "``Raise`` *(alias of Raises)*"
+msgstr "`` ரைஸ்`` *(உயர்வுகளின் மாற்றுப்பெயர்) *"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:118
+msgid "``Raises``"
+msgstr "`` எழுப்புகிறது``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:119
+msgid "``References``"
+msgstr "`` குறிப்புகள்``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:120
+msgid "``See Also``"
+msgstr "`` மேலும் காண்க``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:121
+msgid "``Tip``"
+msgstr "`` டிப்``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:122
+msgid "``Todo``"
+msgstr "`` டோடோ``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:123
+msgid "``Warning``"
+msgstr "`` எச்சரிக்கை``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:124
+msgid "``Warnings`` *(alias of Warning)*"
+msgstr "`` எச்சரிக்கைகள்`` *(எச்சரிக்கை மாற்றுப்பெயர்) *"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:125
+msgid "``Warn`` *(alias of Warns)*"
+msgstr "`` எச்சரிக்கை`` *(எச்சரிக்கைகள் அல்லது எச்சரிக்கைகள்) *"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:126
+msgid "``Warns``"
+msgstr "`` எச்சரிக்கிறது``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:127
+msgid "``Yield`` *(alias of Yields)*"
+msgstr "`` மகசூல்` *(விளைச்சலின் மாற்றுப்பெயர்) *"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:128
+msgid "``Yields``"
+msgstr "`` மகசூல்``"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:131
+msgid "Google vs NumPy"
+msgstr "கூகிள் Vs நம்பி"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:133
+msgid ""
+"Napoleon supports two styles of docstrings: `Google`_ and `NumPy`_. The main"
+" difference between the two styles is that Google uses indentation to "
+"separate sections, whereas NumPy uses underlines."
+msgstr ""
+"நெப்போலியன் இரண்டு பாணிகளை ஆவணங்களை ஆதரிக்கிறது: `Google`_ மற்றும்` Numpy`_."
+" இரண்டு பாணிகளுக்கும் இடையிலான முக்கிய வேறுபாடு என்னவென்றால், கூகிள் "
+"பிரிவுகளை பிரிக்க உள்தள்ளலைப் பயன்படுத்துகிறது, அதேசமயம் நம்பி பயன்பாடுகள் "
+"அடிக்கோடிட்டுக் காட்டுகின்றன."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:137
+msgid "Google style:"
+msgstr "கூகிள் பாணி:"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:156
+msgid "NumPy style:"
+msgstr "நம்பி ஸ்டைல்:"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:180
+msgid ""
+"NumPy style tends to require more vertical space, whereas Google style tends"
+" to use more horizontal space. Google style tends to be easier to read for "
+"short and simple docstrings, whereas NumPy style tends be easier to read for"
+" long and in-depth docstrings."
+msgstr ""
+"நம்பி பாணிக்கு அதிக செங்குத்து இடம் தேவைப்படுகிறது, அதேசமயம் கூகிள் பாணி "
+"அதிக கிடைமட்ட இடத்தைப் பயன்படுத்த முனைகிறது. கூகிள் ஸ்டைல் குறுகிய மற்றும் "
+"எளிய ஆவணங்களுக்கு படிக்க எளிதானது, அதேசமயம் நம்ப் பாணி நீண்ட மற்றும் ஆழமான "
+"ஆவணங்களுக்கு படிக்க எளிதாக இருக்கும்."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:185
+msgid ""
+"The choice between styles is largely aesthetic, but the two styles should "
+"not be mixed. Choose one style for your project and be consistent with it."
+msgstr ""
+"பாணிகளுக்கு இடையிலான தேர்வு பெரும்பாலும் அழகியல், ஆனால் இரண்டு பாணிகளையும் "
+"கலக்கக்கூடாது. உங்கள் திட்டத்திற்கு ஒரு பாணியைத் தேர்ந்தெடுத்து அதனுடன் "
+"ஒத்துப்போகிறது."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:190
+msgid "For complete examples:"
+msgstr "முழுமையான எடுத்துக்காட்டுகளுக்கு:"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:192
+msgid ":ref:`example_google`"
+msgstr ":ref:`example_google`"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:193
+msgid ":ref:`example_numpy`"
+msgstr ": ref: `example_numpy`"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:197
+msgid "Type Annotations"
+msgstr "சிறுகுறிப்புகளைத் தட்டச்சு செய்க"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:199
+msgid ""
+":pep:`484` introduced a standard way to express types in Python code. This "
+"is an alternative to expressing types directly in docstrings. One benefit of"
+" expressing types according to :pep:`484` is that type checkers and IDEs can"
+" take advantage of them for static code analysis. :pep:`484` was then "
+"extended by :pep:`526` which introduced a similar way to annotate variables "
+"(and attributes)."
+msgstr ""
+": PEP: `484` பைதான் குறியீட்டில் வகைகளை வெளிப்படுத்த ஒரு நிலையான வழியை "
+"அறிமுகப்படுத்தியது. டாக்ஸ்ட்ரிங்ஸில் நேரடியாக வகைகளை வெளிப்படுத்த இது ஒரு "
+"மாற்றாகும். இதன் படி வகைகளை வெளிப்படுத்துவதன் ஒரு நன்மை: PEP: `484` என்பது "
+"அந்த வகை செக்கர்கள் மற்றும் ஐடிஇக்கள் நிலையான குறியீடு பகுப்பாய்விற்கு "
+"அவற்றைப் பயன்படுத்திக் கொள்ளலாம். : PEP: `484` பின்னர் நீட்டிக்கப்பட்டது: "
+"PEP:` 526` இது மாறிகள் (மற்றும் பண்புகளை) சிறுகுறிப்பு செய்ய ஒத்த வழியை "
+"அறிமுகப்படுத்தியது."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:206
+msgid "Google style with Python 3 type annotations::"
+msgstr "பைதான் 3 வகை சிறுகுறிப்புகளுடன் கூகிள் பாணி ::"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:236
+msgid "Google style with types in docstrings::"
+msgstr "டாக்ஸ்ட்ரிங்ஸில் உள்ள வகைகளுடன் கூகிள் பாணி ::"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:264
+msgid ""
+"`Python 2/3 compatible annotations`_ aren't currently supported by Sphinx "
+"and won't show up in the docs."
+msgstr ""
+"`பைதான் 2/3 இணக்கமான சிறுகுறிப்புகள்`_ தற்போது ஸ்பிங்க்ஸால் "
+"ஆதரிக்கப்படவில்லை, மேலும் அவை டாக்ஸில் காண்பிக்கப்படாது."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:271
+msgid "Configuration"
+msgstr "உள்ளமைவு"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:273
+msgid ""
+"Listed below are all the settings used by napoleon and their default values."
+" These settings can be changed in the Sphinx `conf.py` file. Make sure that "
+"\"sphinx.ext.napoleon\" is enabled in `conf.py`::"
+msgstr ""
+"நெப்போலியன் பயன்படுத்தும் அனைத்து அமைப்புகளும் அவற்றின் இயல்புநிலை "
+"மதிப்புகளும் கீழே பட்டியலிடப்பட்டுள்ளன. இந்த அமைப்புகளை ஸ்பின்க்ஸ் `conf.py`"
+" கோப்பில் மாற்றலாம். `Conf.py` :: இல்\" sphinx.ext.napoleon "
+"\"இயக்கப்பட்டிருப்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:305
+msgid ""
+"True to parse `Google style`_ docstrings. False to disable support for "
+"Google style docstrings. *Defaults to True.*"
+msgstr ""
+"`கூகிள் ஸ்டைல்`_ டாக்ஸ்ட்ரிங்ஸை அலசுவது உண்மை. கூகிள் ஸ்டைல் "
+"டாக்ஸ்ட்ரிங்ஸிற்கான ஆதரவை முடக்க தவறானது. *உண்மைக்கு இயல்புநிலை.*"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:310
+msgid ""
+"True to parse `NumPy style`_ docstrings. False to disable support for NumPy "
+"style docstrings. *Defaults to True.*"
+msgstr ""
+"`நம்பி ஸ்டைல்`_ டாக்ஸ்ட்ரிங்ஸை அலசுவது உண்மை. நம்பி ஸ்டைல் "
+"டாக்ஸ்ட்ரிங்ஸுக்கு ஆதரவை முடக்க தவறு. *உண்மைக்கு இயல்புநிலை.*"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:315
+msgid ""
+"True to list ``__init___`` docstrings separately from the class docstring. "
+"False to fall back to Sphinx's default behavior, which considers the "
+"``__init___`` docstring as part of the class documentation. *Defaults to "
+"False.*"
+msgstr ""
+"`__Init ___` `டாக்ஸ்ட்ரிங்ஸ் வகுப்பு ஆவணத்திலிருந்து தனித்தனியாக "
+"பட்டியலிடுவது உண்மை. வகுப்பு ஆவணங்களின் ஒரு பகுதியாக `__init ___` "
+"`டாக்ஸ்ட்ரிங் என்று கருதும் ஸ்பிங்க்ஸின் இயல்புநிலை நடத்தைக்குத் திரும்புவது"
+" தவறானது. *பொய்யுக்கான இயல்புநிலை.*"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:320
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:336
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:354
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:379
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:425
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:453
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:495
+msgid "**If True**::"
+msgstr "**உண்மையாக இருந்தால்**::"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:332
+msgid ""
+"True to include private members (like ``_membername``) with docstrings in "
+"the documentation. False to fall back to Sphinx's default behavior. "
+"*Defaults to False.*"
+msgstr ""
+"ஆவணத்தில் டாக்ஸ்ட்ரிங்ஸுடன் தனியார் உறுப்பினர்களை (`_membername`` போன்றவை) "
+"சேர்க்க உண்மை. ஸ்பிங்க்ஸின் இயல்புநிலை நடத்தைக்கு திரும்புவது பொய். "
+"*பொய்யுக்கான இயல்புநிலை.*"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:350
+msgid ""
+"True to include special members (like ``__membername__``) with docstrings in"
+" the documentation. False to fall back to Sphinx's default behavior. "
+"*Defaults to True.*"
+msgstr ""
+"ஆவணத்தில் டாக்ஸ்ட்ரிங்ஸுடன் சிறப்பு உறுப்பினர்களை (`__membername__`` "
+"போன்றவை) சேர்ப்பது உண்மை. ஸ்பிங்க்ஸின் இயல்புநிலை நடத்தைக்கு திரும்புவது "
+"பொய். *உண்மைக்கு இயல்புநிலை.*"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:368
+msgid ""
+"True to use the ``.. admonition::`` directive for the **Example** and "
+"**Examples** sections. False to use the ``.. rubric::`` directive instead. "
+"One may look better than the other depending on what HTML theme is used. "
+"*Defaults to False.*"
+msgstr ""
+"** எடுத்துக்காட்டு ** மற்றும் ** எடுத்துக்காட்டுகள் ** பிரிவுகளுக்கான `` .. "
+"`` உத்தரவை பயன்படுத்துவது உண்மை. `` .. ரப்ரிக் :: `` அதற்கு பதிலாக உத்தரவை "
+"பயன்படுத்த தவறானது. HTML தீம் என்ன பயன்படுத்தப்படுகிறது என்பதைப் பொறுத்து "
+"ஒன்று மற்றொன்றை விட அழகாக இருக்கும். *பொய்யுக்கான இயல்புநிலை.*"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:373
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:418
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:444
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:488
+msgid "This `NumPy style`_ snippet will be converted as follows::"
+msgstr "இந்த `நம்பி ஸ்டைல்`_ துணுக்கை பின்வருமாறு மாற்றப்படும் ::"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:385
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:430
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:460
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:500
+msgid "**If False**::"
+msgstr "** தவறு என்றால் ** ::"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:393
+msgid ""
+"True to use the ``.. admonition::`` directive for **Notes** sections. False "
+"to use the ``.. rubric::`` directive instead. *Defaults to False.*"
+msgstr ""
+"** குறிப்புகள் ** பிரிவுகளுக்கு `` .. `` உத்தரவு பயன்படுத்துவது உண்மை. `` .."
+" ரப்ரிக் :: `` அதற்கு பதிலாக உத்தரவை பயன்படுத்த தவறானது. *பொய்யுக்கான "
+"இயல்புநிலை.*"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:396
+msgid ""
+"The singular **Note** section will always be converted to a ``.. note::`` "
+"directive."
+msgstr "ஒற்றை ** குறிப்பு ** பிரிவு எப்போதும் `` .. குறிப்பு :: `` உத்தரவு."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:401
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:411
+msgid ":confval:`napoleon_use_admonition_for_examples`"
+msgstr ":confval:`napoleon_use_admonition_for_examples`"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:405
+msgid ""
+"True to use the ``.. admonition::`` directive for **References** sections. "
+"False to use the ``.. rubric::`` directive instead. *Defaults to False.*"
+msgstr ""
+"`` .. அறிவுரை :: `` ** குறிப்புகள் ** பிரிவுகளுக்கான உத்தரவு பயன்படுத்துவது "
+"உண்மை. `` .. ரப்ரிக் :: `` அதற்கு பதிலாக உத்தரவை பயன்படுத்த தவறானது. "
+"*பொய்யுக்கான இயல்புநிலை.*"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:415
+msgid ""
+"True to use the ``:ivar:`` role for instance variables. False to use the "
+"``.. attribute::`` directive instead. *Defaults to False.*"
+msgstr ""
+"``: Ivar: `` உதாரணமாக மாறிகளுக்கு பாத்திரத்தைப் பயன்படுத்துவது உண்மை. `` .. "
+"பண்புக்கூறு :: `` அதற்கு பதிலாக உத்தரவை பயன்படுத்த தவறானது. *பொய்யுக்கான "
+"இயல்புநிலை.*"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:440
+msgid ""
+"True to use a ``:param:`` role for each function parameter. False to use a "
+"single ``:parameters:`` role for all the parameters. *Defaults to True.*"
+msgstr ""
+"ஒவ்வொரு செயல்பாட்டு அளவுருவுக்கும் ``: பரம: `` பாத்திரத்தைப் பயன்படுத்துவது "
+"உண்மை. ஒற்றை ``: அளவுருக்கள்: `` அனைத்து அளவுருக்களுக்கும் பங்கு "
+"பயன்படுத்துவது தவறானது. *உண்மைக்கு இயல்புநிலை.*"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:469
+msgid ""
+"True to use a ``:keyword:`` role for each function keyword argument. False "
+"to use a single ``:keyword arguments:`` role for all the keywords. *Defaults"
+" to True.*"
+msgstr ""
+"``: முக்கிய சொல்: `` ஒவ்வொரு செயல்பாட்டு முக்கிய வாதத்திற்கும் பாத்திரத்தைப்"
+" பயன்படுத்துவது உண்மை. ஒற்றை ``: முக்கிய வாதங்களை பயன்படுத்துவது தவறானது: ``"
+" அனைத்து முக்கிய வார்த்தைகளுக்கும் பங்கு. *உண்மைக்கு இயல்புநிலை.*"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:474
+msgid ""
+"This behaves similarly to :confval:`napoleon_use_param`. Note unlike "
+"docutils, ``:keyword:`` and ``:param:`` will not be treated the same way - "
+"there will be a separate \"Keyword Arguments\" section, rendered in the same"
+" fashion as \"Parameters\" section (type links created if possible)"
+msgstr ""
+"இது இதேபோல் செயல்படுகிறது: confval: `napoleon_use_param`. குறிப்பு "
+"ஆவணங்களைப் போலல்லாமல், ``: முக்கிய சொல்: `` மற்றும் ``: பரம்: `` ஒரே "
+"மாதிரியாக நடத்தப்படாது - ஒரு தனி \"முக்கிய வாதங்கள்\" பிரிவு இருக்கும், அதே "
+"பாணியில் \"அளவுருக்கள்\" பிரிவு (வகை முடிந்தால் உருவாக்கப்பட்ட இணைப்புகள்)"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:481
+msgid ":confval:`napoleon_use_param`"
+msgstr ": confval: `napoleon_use_param`"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:485
+msgid ""
+"True to use the ``:rtype:`` role for the return type. False to output the "
+"return type inline with the description. *Defaults to True.*"
+msgstr ""
+"``: Rtype: `` திரும்பும் வகைக்கு பாத்திரத்தைப் பயன்படுத்துவது உண்மை. "
+"விளக்கத்துடன் திரும்பும் வகை இன்லைனை வெளியிடுவது தவறானது. *உண்மைக்கு "
+"இயல்புநிலை.*"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:506
+msgid ""
+"True to convert the type definitions in the docstrings as references. "
+"Defaults to *False*."
+msgstr ""
+"டாக்ஸ்ட்ரிங்ஸில் உள்ள வகை வரையறைகளை குறிப்புகளாக மாற்றுவது உண்மை. இயல்புநிலை"
+" *பொய் *."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:512
+msgid "Do preprocess the Google style docstrings also."
+msgstr "கூகிள் ஸ்டைல் டாக்ஸ்ட்ரிங்ஸையும் முன் செயலாக்கச் செய்யுங்கள்."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:516
+msgid ""
+"A mapping to translate type names to other names or references. Works only "
+"when ``napoleon_use_param = True``. *Defaults to None.*"
+msgstr ""
+"வகை பெயர்களை பிற பெயர்கள் அல்லது குறிப்புகளுக்கு மொழிபெயர்க்க ஒரு மேப்பிங். "
+"`` நெப்போலியன்_யூஸ்_பராம் = உண்மை`` போது மட்டுமே செயல்படுகிறது. *இயல்புநிலை "
+"எதுவும் இல்லை.*"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:519
+msgid "With::"
+msgstr "உடன் ::"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:526
+msgid "This `NumPy style`_ snippet::"
+msgstr "இந்த `நம்பி ஸ்டைல்`_ துணுக்கை ::"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:535
+msgid "becomes::"
+msgstr "ஆகிறது ::"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:546
+msgid ""
+"True to allow using :pep:`526` attributes annotations in classes. If an "
+"attribute is documented in the docstring without a type and has an "
+"annotation in the class body, that type is used."
+msgstr ""
+"பயன்படுத்த அனுமதிப்பது உண்மை: PEP: `526` வகுப்புகளில் சிறுகுறிப்புகள். ஒரு "
+"வகை இல்லாமல் டாக்ஸ்ட்ரிங்கில் ஒரு பண்புக்கூறு ஆவணப்படுத்தப்பட்டு, வர்க்க "
+"உடலில் சிறுகுறிப்பு இருந்தால், அந்த வகை பயன்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:554
+msgid ""
+"Add a list of custom sections to include, expanding the list of parsed "
+"sections. *Defaults to None.*"
+msgstr ""
+"பார்சட் பிரிவுகளின் பட்டியலை விரிவுபடுத்தி, சேர்க்க தனிப்பயன் பிரிவுகளின் "
+"பட்டியலைச் சேர்க்கவும். *இயல்புநிலை எதுவும் இல்லை.*"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:557
+msgid ""
+"The entries can either be strings or tuples, depending on the intention:"
+msgstr ""
+"உள்ளீடுகள் நோக்கத்தைப் பொறுத்து சரங்கள் அல்லது டூப்பிள்களாக இருக்கலாம்:"
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:559
+msgid "To create a custom \"generic\" section, just pass a string."
+msgstr "தனிப்பயன் \"பொதுவான\" பகுதியை உருவாக்க, ஒரு சரத்தை அனுப்பவும்."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:560
+msgid ""
+"To create an alias for an existing section, pass a tuple containing the "
+"alias name and the original, in that order."
+msgstr ""
+"ஏற்கனவே உள்ள பிரிவுக்கு மாற்றுப்பெயரை உருவாக்க, அந்த வரிசையில் மாற்றுப்பெயர்"
+" பெயர் மற்றும் அசல் ஆகியவற்றைக் கொண்ட ஒரு டப்பிள் அனுப்பவும்."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:562
+msgid ""
+"To create a custom section that displays like the parameters or returns "
+"section, pass a tuple containing the custom section name and a string value,"
+" \"params_style\" or \"returns_style\"."
+msgstr ""
+"அளவுருக்கள் அல்லது வருவாய் பிரிவு போன்ற தனிப்பயன் பகுதியை உருவாக்க, "
+"தனிப்பயன் பிரிவு பெயர் மற்றும் சரம் மதிப்பு, \"params_style\" அல்லது "
+"\"returns_style\" ஆகியவற்றைக் கொண்ட ஒரு டப்பிள் அனுப்பவும்."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:566
+msgid ""
+"If an entry is just a string, it is interpreted as a header for a generic "
+"section. If the entry is a tuple/list/indexed container, the first entry is "
+"the name of the section, the second is the section key to emulate. If the "
+"second entry value is \"params_style\" or \"returns_style\", the custom "
+"section will be displayed like the parameters section or returns section."
+msgstr ""
+"ஒரு நுழைவு ஒரு சரம் என்றால், அது ஒரு பொதுவான பிரிவின் தலைப்பாக "
+"விளக்கப்படுகிறது. நுழைவு ஒரு டூப்பிள்/பட்டியல்/குறியீட்டு கொள்கலன் என்றால், "
+"முதல் நுழைவு பிரிவின் பெயர், இரண்டாவது பின்பற்றுவதற்கான பிரிவு விசை. "
+"இரண்டாவது நுழைவு மதிப்பு \"params_style\" அல்லது \"returns_style\" ஆக "
+"இருந்தால், தனிப்பயன் பிரிவு அளவுருக்கள் பிரிவு அல்லது வருவாய் பிரிவு போல "
+"காண்பிக்கப்படும்."
+
+#: ../../sphinx/doc/usage/extensions/napoleon.rst:573
+msgid "Support ``params_style`` and ``returns_style``"
+msgstr "`` Params_style`` மற்றும் `` returns_style`` ஐ ஆதரிக்கவும்"

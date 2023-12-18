@@ -1,0 +1,428 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2018, Georg Brandl and the Sphinx team
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 1.8.0+\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-25 15:55+0000\n"
+"PO-Revision-Date: 2018-02-12 13:47+0000\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/ext/doctest.rst:4
+msgid ":mod:`sphinx.ext.doctest` -- Test snippets in the documentation"
+msgstr "."
+
+#: ../../sphinx/doc/ext/doctest.rst:14
+msgid ""
+"This extension allows you to test snippets in the documentation in a natural"
+" way.  It works by collecting specially-marked up code blocks and running "
+"them as doctest tests."
+msgstr ""
+"இந்த நீட்டிப்பு ஆவணத்தில் துணுக்குகளை இயற்கையான வழியில் சோதிக்க உங்களை "
+"அனுமதிக்கிறது. சிறப்பாக குறிக்கப்பட்ட குறியீடு தொகுதிகளை சேகரித்து அவற்றை "
+"ஆவண சோதனைகளாக இயக்குவதன் மூலம் இது செயல்படுகிறது."
+
+#: ../../sphinx/doc/ext/doctest.rst:18
+msgid ""
+"Within one document, test code is partitioned in *groups*, where each group "
+"consists of:"
+msgstr ""
+"ஒரு ஆவணத்திற்குள், சோதனைக் குறியீடு *குழுக்களில் *பிரிக்கப்பட்டுள்ளது, அங்கு"
+" ஒவ்வொரு குழுவும் பின்வருமாறு:"
+
+#: ../../sphinx/doc/ext/doctest.rst:21
+msgid "zero or more *setup code* blocks (e.g. importing the module to test)"
+msgstr ""
+"பூஜ்ஜியம் அல்லது அதற்கு மேற்பட்ட * அமைவு குறியீடு * தொகுதிகள் (எ.கா. சோதிக்க"
+" தொகுதியை இறக்குமதி செய்தல்)"
+
+#: ../../sphinx/doc/ext/doctest.rst:22
+msgid "one or more *test* blocks"
+msgstr "ஒன்று அல்லது அதற்கு மேற்பட்ட * சோதனை * தொகுதிகள்"
+
+#: ../../sphinx/doc/ext/doctest.rst:24
+msgid ""
+"When building the docs with the ``doctest`` builder, groups are collected "
+"for each document and run one after the other, first executing setup code "
+"blocks, then the test blocks in the order they appear in the file."
+msgstr ""
+"`` டாக்ஸ்டெஸ்ட்`` பில்டருடன் டாக்ஸை உருவாக்கும்போது, ஒவ்வொரு ஆவணத்திற்கும் "
+"குழுக்கள் சேகரிக்கப்பட்டு ஒன்றன் பின் ஒன்றாக இயக்கப்படுகின்றன, முதலில் அமைவு"
+" குறியீடு தொகுதிகளை இயக்குகின்றன, பின்னர் அவை கோப்பில் தோன்றும் வரிசையில் "
+"சோதனைத் தொகுதிகள்."
+
+#: ../../sphinx/doc/ext/doctest.rst:28
+msgid "There are two kinds of test blocks:"
+msgstr "இரண்டு வகையான சோதனைத் தொகுதிகள் உள்ளன:"
+
+#: ../../sphinx/doc/ext/doctest.rst:30
+msgid ""
+"*doctest-style* blocks mimic interactive sessions by interleaving Python "
+"code (including the interpreter prompt) and output."
+msgstr "."
+
+#: ../../sphinx/doc/ext/doctest.rst:33
+msgid ""
+"*code-output-style* blocks consist of an ordinary piece of Python code, and "
+"optionally, a piece of output for that code."
+msgstr ""
+"* குறியீடு-வெளியீட்டு-பாணி* தொகுதிகள் ஒரு சாதாரண பைதான் குறியீட்டைக் "
+"கொண்டிருக்கின்றன, மேலும் விருப்பமாக, அந்த குறியீட்டிற்கான வெளியீட்டின் ஒரு "
+"பகுதி."
+
+#: ../../sphinx/doc/ext/doctest.rst:38
+msgid "Directives"
+msgstr "வழிமுறைகள்"
+
+#: ../../sphinx/doc/ext/doctest.rst:40
+msgid ""
+"The *group* argument below is interpreted as follows: if it is empty, the "
+"block is assigned to the group named ``default``.  If it is ``*``, the block"
+" is assigned to all groups (including the ``default`` group).  Otherwise, it"
+" must be a comma-separated list of group names."
+msgstr ""
+"கீழே உள்ள * குழு * வாதம் பின்வருமாறு விளக்கப்படுகிறது: அது காலியாக "
+"இருந்தால், தொகுதி `` இயல்புநிலை`` என்ற குழுவிற்கு ஒதுக்கப்படுகிறது. இது "
+"``*`` என்றால், தொகுதி அனைத்து குழுக்களுக்கும் ஒதுக்கப்படுகிறது (`` "
+"இயல்புநிலை` குழு உட்பட). இல்லையெனில், இது கமாவால் பிரிக்கப்பட்ட குழு "
+"பெயர்களின் பட்டியலாக இருக்க வேண்டும்."
+
+#: ../../sphinx/doc/ext/doctest.rst:47
+msgid ""
+"A setup code block.  This code is not shown in the output for other "
+"builders, but executed before the doctests of the group(s) it belongs to."
+msgstr ""
+"ஒரு அமைவு குறியீடு தொகுதி. இந்த குறியீடு மற்ற பில்டர்களுக்கான வெளியீட்டில் "
+"காட்டப்படவில்லை, ஆனால் அது சொந்தமான குழுவின் (கள்) ஆவணங்களுக்கு முன் "
+"செயல்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/ext/doctest.rst:53
+msgid ""
+"A cleanup code block.  This code is not shown in the output for other "
+"builders, but executed after the doctests of the group(s) it belongs to."
+msgstr ""
+"ஒரு தூய்மைப்படுத்தும் குறியீடு தொகுதி. இந்த குறியீடு மற்ற பில்டர்களுக்கான "
+"வெளியீட்டில் காட்டப்படவில்லை, ஆனால் அது சொந்தமான குழுவின் (கள்) "
+"ஆவணங்களுக்குப் பிறகு செயல்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/ext/doctest.rst:61
+msgid ""
+"A doctest-style code block.  You can use standard :mod:`doctest` flags for "
+"controlling how actual output is compared with what you give as output.  The"
+" default set of flags is specified by the :confval:`doctest_default_flags` "
+"configuration variable."
+msgstr ""
+"ஒரு ஆவண பாணி குறியீடு தொகுதி. நீங்கள் தரநிலையைப் பயன்படுத்தலாம்: MOD: "
+"`Doctest` கொடிகள் உண்மையான வெளியீடு எவ்வாறு வெளியீட்டாக நீங்கள் கொடுக்கிறது "
+"என்பதை ஒப்பிடுகிறது. கொடிகளின் இயல்புநிலை தொகுப்பு: confval: "
+"`doctest_default_flags` உள்ளமைவு மாறி மூலம் குறிப்பிடப்பட்டுள்ளது."
+
+#: ../../sphinx/doc/ext/doctest.rst:66
+msgid "This directive supports three options:"
+msgstr "இந்த உத்தரவு மூன்று விருப்பங்களை ஆதரிக்கிறது:"
+
+#: ../../sphinx/doc/ext/doctest.rst:68
+msgid ""
+"``hide``, a flag option, hides the doctest block in other builders.  By "
+"default it is shown as a highlighted doctest block."
+msgstr ""
+"`` மறை``, ஒரு கொடி விருப்பம், மற்ற பில்டர்களில் ஆவணத் தொகுதியை மறைக்கிறது. "
+"இயல்பாக இது ஒரு சிறப்பம்சமாக ஆவணத் தொகுதியாகக் காட்டப்படுகிறது."
+
+#: ../../sphinx/doc/ext/doctest.rst:71
+msgid ""
+"``options``, a string option, can be used to give a comma-separated list of "
+"doctest flags that apply to each example in the tests.  (You still can give "
+"explicit flags per example, with doctest comments, but they will show up in "
+"other builders too.)"
+msgstr ""
+"`` விருப்பங்கள்``, ஒரு சரம் விருப்பமான, சோதனைகளில் ஒவ்வொரு "
+"எடுத்துக்காட்டுக்கும் பொருந்தும் டொம்டெஸ்ட் கொடிகளின் கமாவால் பிரிக்கப்பட்ட "
+"பட்டியலைக் கொடுக்க பயன்படுத்தலாம். (நீங்கள் இன்னும் ஒரு எடுத்துக்காட்டுக்கு "
+"வெளிப்படையான கொடிகளை ஆவணக் கருத்துக்களைக் கொடுக்கலாம், ஆனால் அவை மற்ற "
+"பில்டர்களிடமும் காண்பிக்கப்படும்.)"
+
+#: ../../sphinx/doc/ext/doctest.rst:76
+msgid ""
+"``pyversion``, a string option, can be used to specify the required Python "
+"version for the example to be tested. For instance, in the following case "
+"the example will be tested only for Python versions greather than 3.3::"
+msgstr ""
+"`` pyversion``, ஒரு சரம் விருப்பம், சோதிக்கப்பட வேண்டிய எடுத்துக்காட்டுக்கு "
+"தேவையான பைதான் பதிப்பைக் குறிப்பிட பயன்படுத்தலாம். உதாரணமாக, பின்வரும் "
+"விஷயத்தில் எடுத்துக்காட்டு 3.3 :: ஐ விட பைதான் பதிப்புகளுக்கு மட்டுமே "
+"சோதிக்கப்படும்:"
+
+#: ../../sphinx/doc/ext/doctest.rst:83
+msgid "The following operands are supported:"
+msgstr "பின்வரும் செயல்பாடுகள் ஆதரிக்கப்படுகின்றன:"
+
+#: ../../sphinx/doc/ext/doctest.rst:85
+msgid "``~=``: Compatible release clause"
+msgstr "`` ~ = ``: இணக்கமான வெளியீட்டு பிரிவு"
+
+#: ../../sphinx/doc/ext/doctest.rst:86
+msgid "``==``: Version matching clause"
+msgstr "`` == ``: பதிப்பு பொருந்தும் பிரிவு"
+
+#: ../../sphinx/doc/ext/doctest.rst:87
+msgid "``!=``: Version exclusion clause"
+msgstr "``! = ``: பதிப்பு விலக்கு பிரிவு"
+
+#: ../../sphinx/doc/ext/doctest.rst:88
+msgid "``<=``, ``>=``: Inclusive ordered comparison clause"
+msgstr "`` <= ``, ``> = ``: உள்ளடக்கிய உத்தரவிடப்பட்ட ஒப்பீட்டு பிரிவு"
+
+#: ../../sphinx/doc/ext/doctest.rst:89
+msgid "``<``, ``>``: Exclusive ordered comparison clause"
+msgstr "`` <``, ``> ``: பிரத்யேக உத்தரவிடப்பட்ட ஒப்பீட்டு பிரிவு"
+
+#: ../../sphinx/doc/ext/doctest.rst:90
+msgid "``===``: Arbitrary equality clause."
+msgstr "`` === ``: தன்னிச்சையான சமத்துவ பிரிவு."
+
+#: ../../sphinx/doc/ext/doctest.rst:92
+msgid ""
+"``pyversion`` option is followed `PEP-440: Version Specifiers "
+"<https://www.python.org/dev/peps/pep-0440/#version-specifiers>`__."
+msgstr ""
+"`` pyversion`` விருப்பம் பின்பற்றப்படுகிறது `PEP-440: பதிப்பு "
+"விவரக்குறிப்புகள் <https://www.python.org/dev/peps/pep-0440/#version-"
+"specifiers>` __."
+
+#: ../../sphinx/doc/ext/doctest.rst:99
+msgid "Supported PEP-440 operands and notations"
+msgstr "ஆதரிக்கப்பட்ட PEP-440 செயல்பாடுகள் மற்றும் குறிப்புகள்"
+
+#: ../../sphinx/doc/ext/doctest.rst:101
+msgid ""
+"Note that like with standard doctests, you have to use ``<BLANKLINE>`` to "
+"signal a blank line in the expected output.  The ``<BLANKLINE>`` is removed "
+"when building presentation output (HTML, LaTeX etc.)."
+msgstr ""
+"நிலையான ஆவணங்களைப் போலவே, எதிர்பார்த்த வெளியீட்டில் ஒரு வெற்று வரியை சமிக்ஞை"
+" செய்ய `` <slankline> `` பயன்படுத்த வேண்டும் என்பதை நினைவில் கொள்க. "
+"விளக்கக்காட்சி வெளியீட்டை (HTML, Latex போன்றவை) கட்டும் போது `` <namalline> "
+"`` அகற்றப்படுகிறது."
+
+#: ../../sphinx/doc/ext/doctest.rst:105
+msgid "Also, you can give inline doctest options, like in doctest::"
+msgstr "மேலும், நீங்கள் டாக்ஸ்டெஸ்ட் ::"
+
+#: ../../sphinx/doc/ext/doctest.rst:110
+msgid ""
+"They will be respected when the test is run, but stripped from presentation "
+"output."
+msgstr ""
+"சோதனை இயங்கும்போது அவை மதிக்கப்படும், ஆனால் விளக்கக்காட்சி "
+"வெளியீட்டிலிருந்து அகற்றப்படும்."
+
+#: ../../sphinx/doc/ext/doctest.rst:116
+msgid "A code block for a code-output-style test."
+msgstr "குறியீடு-வெளியீட்டு பாணி சோதனைக்கான குறியீடு தொகுதி."
+
+#: ../../sphinx/doc/ext/doctest.rst:118
+msgid "This directive supports one option:"
+msgstr "இந்த உத்தரவு ஒரு விருப்பத்தை ஆதரிக்கிறது:"
+
+#: ../../sphinx/doc/ext/doctest.rst:120
+msgid ""
+"``hide``, a flag option, hides the code block in other builders.  By default"
+" it is shown as a highlighted code block."
+msgstr ""
+"`` மறை``, ஒரு கொடி விருப்பம், மற்ற பில்டர்களில் குறியீடு தொகுதியை "
+"மறைக்கிறது. இயல்பாகவே இது ஒரு சிறப்பம்சமாக குறியீடு தொகுதியாகக் "
+"காட்டப்படுகிறது."
+
+#: ../../sphinx/doc/ext/doctest.rst:125
+msgid ""
+"Code in a ``testcode`` block is always executed all at once, no matter how "
+"many statements it contains.  Therefore, output will *not* be generated for "
+"bare expressions -- use ``print``.  Example::"
+msgstr ""
+"`` டெஸ்ட்கோட்`` தொகுதியில் உள்ள குறியீடு எப்போதும் ஒரே நேரத்தில் "
+"செயல்படுத்தப்படுகிறது, அதில் எத்தனை அறிக்கைகள் இருந்தாலும். எனவே, வெற்று "
+"வெளிப்பாடுகளுக்கு வெளியீடு * உருவாக்கப்படாது - `` print`` ஐப் "
+"பயன்படுத்தவும். உதாரணமாக::"
+
+#: ../../sphinx/doc/ext/doctest.rst:138
+msgid ""
+"Also, please be aware that since the doctest module does not support mixing "
+"regular output and an exception message in the same snippet, this applies to"
+" testcode/testoutput as well."
+msgstr "மேலும்."
+
+#: ../../sphinx/doc/ext/doctest.rst:145
+msgid ""
+"The corresponding output, or the exception message, for the last "
+":rst:dir:`testcode` block."
+msgstr ""
+"தொடர்புடைய வெளியீடு அல்லது விதிவிலக்கு செய்தி, கடைசியாக: rst: dir: "
+"`testCode` தொகுதி."
+
+#: ../../sphinx/doc/ext/doctest.rst:148
+msgid "This directive supports two options:"
+msgstr "இந்த உத்தரவு இரண்டு விருப்பங்களை ஆதரிக்கிறது:"
+
+#: ../../sphinx/doc/ext/doctest.rst:150
+msgid ""
+"``hide``, a flag option, hides the output block in other builders.  By "
+"default it is shown as a literal block without highlighting."
+msgstr ""
+"`` மறை``, ஒரு கொடி விருப்பம், பிற பில்டர்களில் வெளியீட்டுத் தொகுதியை "
+"மறைக்கிறது. இயல்பாக இது சிறப்பம்சமாக இல்லாமல் ஒரு நேரடி தொகுதியாக "
+"காட்டப்படுகிறது."
+
+#: ../../sphinx/doc/ext/doctest.rst:153
+msgid ""
+"``options``, a string option, can be used to give doctest flags (comma-"
+"separated) just like in normal doctest blocks."
+msgstr ""
+"`` விருப்பங்கள்``, ஒரு சரம் விருப்பம், சாதாரண ஆவணத் தொகுதிகளைப் போலவே ஆவணக் "
+"கொடிகளை (கமாவால் பிரிக்கப்பட்ட) கொடுக்க பயன்படுத்தலாம்."
+
+#: ../../sphinx/doc/ext/doctest.rst:156
+msgid "Example::"
+msgstr "உதாரணமாக::"
+
+#: ../../sphinx/doc/ext/doctest.rst:169
+msgid ""
+"The following is an example for the usage of the directives.  The test via "
+":rst:dir:`doctest` and the test via :rst:dir:`testcode` and "
+":rst:dir:`testoutput` are equivalent. ::"
+msgstr ""
+"உத்தரவுகளின் பயன்பாட்டிற்கு பின்வருபவை ஒரு எடுத்துக்காட்டு. சோதனை: rst: dir:"
+" `doctest` மற்றும் சோதனை வழியாக: rst: dir:` testCode` மற்றும்: rst: dir: "
+"`testoutput` சமமானவை. ::"
+
+#: ../../sphinx/doc/ext/doctest.rst:203
+msgid "Configuration"
+msgstr "உள்ளமைவு"
+
+#: ../../sphinx/doc/ext/doctest.rst:205
+msgid "The doctest extension uses the following configuration values:"
+msgstr "ஆவண நீட்டிப்பு பின்வரும் உள்ளமைவு மதிப்புகளைப் பயன்படுத்துகிறது:"
+
+#: ../../sphinx/doc/ext/doctest.rst:209
+msgid "By default, these options are enabled:"
+msgstr "இயல்பாக, இந்த விருப்பங்கள் இயக்கப்பட்டுள்ளன:"
+
+#: ../../sphinx/doc/ext/doctest.rst:211
+msgid ""
+"``ELLIPSIS``, allowing you to put ellipses in the expected output that match"
+" anything in the actual output;"
+msgstr ""
+"`` எலிப்சிஸ்``, உண்மையான வெளியீட்டில் எதையும் பொருத்தும் எதிர்பார்க்கப்படும்"
+" வெளியீட்டில் நீள்வட்டங்களை வைக்க உங்களை அனுமதிக்கிறது;"
+
+#: ../../sphinx/doc/ext/doctest.rst:213
+msgid ""
+"``IGNORE_EXCEPTION_DETAIL``, causing everything following the leftmost colon"
+" and any module information in the exception name to be ignored;"
+msgstr ""
+"`` புறக்கணிப்பு_எக்ஸ்செப்சன்_டெயில்``, இது இடதுபுற பெருங்குடலைப் பின்பற்றி, "
+"விதிவிலக்கான பெயரில் உள்ள எந்த தொகுதி தகவல்களையும் புறக்கணிக்க வேண்டும்;"
+
+#: ../../sphinx/doc/ext/doctest.rst:215
+msgid ""
+"``DONT_ACCEPT_TRUE_FOR_1``, rejecting \"True\" in the output where \"1\" is "
+"given -- the default behavior of accepting this substitution is a relic of "
+"pre-Python 2.2 times."
+msgstr ""
+"`` Dont_accept_true_for_1``, \"1\" கொடுக்கப்பட்டுள்ள வெளியீட்டில் \"உண்மை\" "
+"என்பதை நிராகரிப்பது-இந்த மாற்றீட்டை ஏற்றுக்கொள்வதற்கான இயல்புநிலை நடத்தை 2.2"
+" முறை அரிக்கு முந்தைய நினைவுச்சின்னமாகும்."
+
+#: ../../sphinx/doc/ext/doctest.rst:223
+msgid ""
+"A list of directories that will be added to :data:`sys.path` when the "
+"doctest builder is used.  (Make sure it contains absolute paths.)"
+msgstr ""
+"இதில் சேர்க்கப்படும் கோப்பகங்களின் பட்டியல்: தரவு: `sys.bath` ஆவணக் கட்டடம் "
+"பயன்படுத்தப்படும்போது. (அதில் முழுமையான பாதைகள் உள்ளன என்பதை "
+"உறுதிப்படுத்திக் கொள்ளுங்கள்.)"
+
+#: ../../sphinx/doc/ext/doctest.rst:228
+msgid ""
+"Python code that is treated like it were put in a ``testsetup`` directive "
+"for *every* file that is tested, and for every group.  You can use this to "
+"e.g. import modules you will always need in your doctests."
+msgstr ""
+"இது போன்ற சிகிச்சையளிக்கப்பட்ட பைதான் குறியீடு சோதனை செய்யப்பட்ட ஒவ்வொரு * "
+"கோப்பிற்கும், ஒவ்வொரு குழுவிற்கும் * `` டெஸ்ட்செட்அப்`` உத்தரவில் "
+"வைக்கப்பட்டிருந்தது. இதை நீங்கள் எ.கா. உங்கள் ஆவணங்களில் உங்களுக்கு "
+"எப்போதும் தேவைப்படும் தொகுதிகளை இறக்குமதி செய்யுங்கள்."
+
+#: ../../sphinx/doc/ext/doctest.rst:236
+msgid ""
+"Python code that is treated like it were put in a ``testcleanup`` directive "
+"for *every* file that is tested, and for every group.  You can use this to "
+"e.g. remove any temporary files that the tests leave behind."
+msgstr ""
+"இது போன்ற சிகிச்சையளிக்கப்பட்ட பைதான் குறியீடு சோதனை செய்யப்பட்ட ஒவ்வொரு * "
+"கோப்பிற்கும், ஒவ்வொரு குழுவிற்கும் * `` டெஸ்ட் கிளீனப்`` உத்தரவில் "
+"வைக்கப்பட்டிருந்தது. இதை நீங்கள் எ.கா. சோதனைகள் விட்டுச்செல்லும் எந்த "
+"தற்காலிக கோப்புகளையும் அகற்றவும்."
+
+#: ../../sphinx/doc/ext/doctest.rst:244
+msgid ""
+"If this is a nonempty string (the default is ``'default'``), standard reST "
+"doctest blocks will be tested too.  They will be assigned to the group name "
+"given."
+msgstr ""
+"இது ஒரு இடைவிடாத சரம் என்றால் (இயல்புநிலை `` 'இயல்புநிலை'``), நிலையான ஓய்வு "
+"ஆவணத் தொகுதிகளும் சோதிக்கப்படும். கொடுக்கப்பட்ட குழு பெயருக்கு அவை "
+"ஒதுக்கப்படும்."
+
+#: ../../sphinx/doc/ext/doctest.rst:248
+msgid ""
+"reST doctest blocks are simply doctests put into a paragraph of their own, "
+"like so::"
+msgstr ""
+"ஓய்வு ஆவணத் தொகுதிகள் வெறுமனே தங்களது சொந்த பத்தியில் வைக்கப்பட்டுள்ளவை :: "
+"போன்றவை ::"
+
+#: ../../sphinx/doc/ext/doctest.rst:258
+msgid ""
+"(Note that no special ``::`` is used to introduce a doctest block; docutils "
+"recognizes them from the leading ``>>>``.  Also, no additional indentation "
+"is used, though it doesn't hurt.)"
+msgstr "."
+
+#: ../../sphinx/doc/ext/doctest.rst:262
+msgid ""
+"If this value is left at its default value, the above snippet is interpreted"
+" by the doctest builder exactly like the following::"
+msgstr ""
+"இந்த மதிப்பு அதன் இயல்புநிலை மதிப்பில் விடப்பட்டால், மேலே உள்ள துணுக்கை "
+"பின்வருவனவற்றைப் போலவே ஆவணக் கட்டுபவரால் விளக்கப்படுகிறது ::"
+
+#: ../../sphinx/doc/ext/doctest.rst:274
+msgid ""
+"This feature makes it easy for you to test doctests in docstrings included "
+"with the :mod:`~sphinx.ext.autodoc` extension without marking them up with a"
+" special directive."
+msgstr ""
+"இந்த அம்சம் டாக்ஸ்ட்ரிங்ஸில் ஆவணங்களை சோதிப்பதை எளிதாக்குகிறது: மோட்: `~ "
+"sphinx.ext.autodoc` நீட்டிப்பு ஒரு சிறப்பு உத்தரவைக் குறிக்காமல்."
+
+#: ../../sphinx/doc/ext/doctest.rst:278
+msgid ""
+"Note though that you can't have blank lines in reST doctest blocks.  They "
+"will be interpreted as one block ending and another one starting.  Also, "
+"removal of ``<BLANKLINE>`` and ``# doctest:`` options only works in "
+":rst:dir:`doctest` blocks, though you may set :confval:`trim_doctest_flags` "
+"to achieve that in all code blocks with Python console content."
+msgstr ""
+"ஓய்வு ஆவணத் தொகுதிகளில் நீங்கள் வெற்று கோடுகளை வைத்திருக்க முடியாது என்பதை "
+"நினைவில் கொள்க. அவை ஒரு தொகுதி முடிவாகவும், மற்றொரு தொடக்கமாகவும் "
+"விளக்கப்படும். மேலும். பைதான் கன்சோல் உள்ளடக்கத்துடன்."

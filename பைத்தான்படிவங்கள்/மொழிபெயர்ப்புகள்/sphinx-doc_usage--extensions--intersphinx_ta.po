@@ -1,0 +1,471 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2023, the Sphinx developers
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 7.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-15 00:35+0000\n"
+"PO-Revision-Date: 2018-06-26 15:59+0000\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:2
+msgid ":mod:`sphinx.ext.intersphinx` -- Link to other projects' documentation"
+msgstr ""
+": மோட்: `sphinx.ext.intersphinx` - பிற திட்டங்களுக்கான இணைப்பு 'ஆவணங்கள்"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:11
+msgid ""
+"This extension can generate links to the documentation of objects in "
+"external projects, either explicitly through the :rst:role:`external` role, "
+"or as a fallback resolution for any other cross-reference."
+msgstr ""
+"இந்த நீட்டிப்பு வெளிப்புற திட்டங்களில் உள்ள பொருள்களின் ஆவணங்களுக்கான "
+"இணைப்புகளை உருவாக்க முடியும், வெளிப்படையாக: rst: rew: `வெளிப்புற` பங்கு "
+"அல்லது வேறு எந்த குறுக்கு-குறிப்புக்கான குறைவடையும் தீர்மானமாக."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:15
+msgid ""
+"Usage for fallback resolution is simple: whenever Sphinx encounters a cross-"
+"reference that has no matching target in the current documentation set, it "
+"looks for targets in the external documentation sets configured in "
+":confval:`intersphinx_mapping`.  A reference like "
+"``:py:class:`zipfile.ZipFile``` can then link to the Python documentation "
+"for the ZipFile class, without you having to specify where it is located "
+"exactly."
+msgstr ""
+"குறைவடையும் தெளிவுத்திறனுக்கான பயன்பாடு எளிதானது: தற்போதைய ஆவணத் தொகுப்பில் "
+"பொருந்தக்கூடிய இலக்கை இல்லாத குறுக்கு-குறிப்பை SPHINX "
+"எதிர்கொள்ளும்போதெல்லாம், அது கட்டமைக்கப்பட்ட வெளிப்புற ஆவணங்கள் "
+"தொகுப்புகளில் இலக்குகளைத் தேடுகிறது: confval: `intersphinx_mapping`. ``: PY:"
+" வகுப்பு: `zipfile.zipfile`` போன்ற ஒரு குறிப்பு, ஜிப்ஃபைல் வகுப்பிற்கான "
+"பைதான் ஆவணங்களுடன் இணைக்கலாம், அது சரியாக அமைந்துள்ளது என்பதை நீங்கள் "
+"குறிப்பிடாமல்."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:23
+msgid ""
+"When using the :rst:role:`external` role, you can force lookup to any "
+"external projects, and optionally to a specific external project. A link "
+"like ``:external:ref:`comparison manual <comparisons>``` will then link to "
+"the label \"comparisons\" in whichever configured external project, if it "
+"exists, and a link like ``:external+python:ref:`comparison manual "
+"<comparisons>``` will link to the label \"comparisons\" only in the doc set "
+"\"python\", if it exists."
+msgstr ""
+": Rst: rew: `வெளிப்புற` பாத்திரத்தைப் பயன்படுத்தும் போது, நீங்கள் எந்தவொரு "
+"வெளிப்புற திட்டங்களுக்கும் தேடலை கட்டாயப்படுத்தலாம், மேலும் ஒரு குறிப்பிட்ட "
+"வெளிப்புற திட்டத்திற்கு விருப்பமாக. ``: வெளிப்புறம்: குறிப்பு: `ஒப்பீட்டு "
+"கையேடு <ஒப்பீடுகள்>` `` போன்ற ஒரு இணைப்பு \"ஒப்பீடுகள்\" என்ற லேபிளுடன் எந்த"
+" கட்டமைக்கப்பட்ட வெளிப்புறத் திட்டம் இருந்தால், அது இருந்தால், மற்றும் ``: "
+"வெளிப்புற+பைதான்: ref போன்ற இணைப்பு ."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:31
+msgid "Behind the scenes, this works as follows:"
+msgstr "திரைக்குப் பின்னால், இது பின்வருமாறு செயல்படுகிறது:"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:33
+msgid ""
+"Each Sphinx HTML build creates a file named :file:`objects.inv` that "
+"contains a mapping from object names to URIs relative to the HTML set's "
+"root."
+msgstr ""
+"ஒவ்வொரு SPHINX HTML கட்டமைப்பும் பெயரிடப்பட்ட ஒரு கோப்பை உருவாக்குகிறது: "
+"கோப்பு: `Objects.Inv` இது HTML தொகுப்பின் மூலத்துடன் தொடர்புடைய பொருள் "
+"பெயர்களிலிருந்து URI க்கு ஒரு மேப்பைக் கொண்டுள்ளது."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:36
+msgid ""
+"Projects using the Intersphinx extension can specify the location of such "
+"mapping files in the :confval:`intersphinx_mapping` config value.  The "
+"mapping will then be used to resolve both :rst:role:`external` references, "
+"and also otherwise missing references to objects into links to the other "
+"documentation."
+msgstr ""
+"இன்டர்ஸ்பின்க்ஸ் நீட்டிப்பைப் பயன்படுத்தும் திட்டங்கள் அத்தகைய மேப்பிங் "
+"கோப்புகளின் இருப்பிடத்தை: confval: `Intersphinx_mapping` கட்டமைப்பு "
+"மதிப்பில் குறிப்பிடலாம். இரண்டையும் தீர்க்க மேப்பிங் பயன்படுத்தப்படும்: rst:"
+" பங்கு: `வெளிப்புற` குறிப்புகள், மேலும் பிற ஆவணங்களுக்கான இணைப்புகளாக "
+"பொருள்களைப் பற்றிய குறிப்புகளைக் காணவில்லை."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:41
+msgid ""
+"By default, the mapping file is assumed to be at the same location as the "
+"rest of the documentation; however, the location of the mapping file can "
+"also be specified individually, e.g. if the docs should be buildable without"
+" Internet access."
+msgstr ""
+"இயல்பாக, மேப்பிங் கோப்பு மீதமுள்ள ஆவணங்களின் அதே இடத்தில் இருக்கும் என்று "
+"கருதப்படுகிறது; இருப்பினும், மேப்பிங் கோப்பின் இருப்பிடத்தையும் தனித்தனியாக "
+"குறிப்பிடலாம், எ.கா. டாக்ஸ் இணைய அணுகல் இல்லாமல் கட்டமைக்கப்பட வேண்டும் "
+"என்றால்."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:48
+msgid "Configuration"
+msgstr "உள்ளமைவு"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:50
+msgid ""
+"To use Intersphinx linking, add ``'sphinx.ext.intersphinx'`` to your "
+":confval:`extensions` config value, and use these config values to activate "
+"linking:"
+msgstr ""
+"இன்டர்ஸ்பின்க்ஸ் இணைப்பைப் பயன்படுத்த, உங்கள்: confval: `நீட்டிப்புகள்` "
+"கட்டமைப்பு மதிப்பைப் பயன்படுத்தி` `'sphinx.ext.intersphinx'``` ஐச் "
+"சேர்க்கவும், இந்த கட்டமைப்பு மதிப்புகளைப் பயன்படுத்தவும்:"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:56
+msgid ""
+"This config value contains the locations and names of other projects that "
+"should be linked to in this documentation."
+msgstr ""
+"இந்த கட்டமைப்பு மதிப்பில் இந்த ஆவணத்தில் இணைக்கப்பட வேண்டிய பிற திட்டங்களின்"
+" இருப்பிடங்கள் மற்றும் பெயர்கள் உள்ளன."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:59
+msgid ""
+"Relative local paths for target locations are taken as relative to the base "
+"of the built documentation, while relative local paths for inventory "
+"locations are taken as relative to the source directory."
+msgstr ""
+"இலக்கு இருப்பிடங்களுக்கான உறவினர் உள்ளூர் பாதைகள் கட்டப்பட்ட ஆவணங்களின் "
+"தளத்துடன் தொடர்புடையவை, அதே நேரத்தில் சரக்கு இடங்களுக்கான உள்ளூர் பாதைகள் "
+"மூல கோப்பகத்துடன் தொடர்புடையதாக எடுத்துக் கொள்ளப்படுகின்றன."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:63
+msgid ""
+"When fetching remote inventory files, proxy settings will be read from the "
+"``$HTTP_PROXY`` environment variable."
+msgstr ""
+"தொலை சரக்கு கோப்புகளைப் பெறும்போது, ப்ராக்ஸி அமைப்புகள் `` $ http_proxy`` "
+"சுற்றுச்சூழல் மாறியிலிருந்து படிக்கப்படும்."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:66
+msgid "**Format**"
+msgstr "** வடிவம் **"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:70
+msgid ""
+"A dictionary mapping unique identifiers to a tuple ``(target, inventory)``. "
+"Each ``target`` is the base URI of a foreign Sphinx documentation set and "
+"can be a local path or an HTTP URI.  The ``inventory`` indicates where the "
+"inventory file can be found: it can be ``None`` (an :file:`objects.inv` file"
+" at the same location as the base URI) or another local file path or a full "
+"HTTP URI to an inventory file."
+msgstr ""
+"ஒரு அகராதி ஒரு டூப்பிள் `` (இலக்கு, சரக்கு) `` க்கு தனித்துவமான "
+"அடையாளங்காட்டிகளை மேப்பிங் செய்கிறது. ஒவ்வொரு `` இலக்கு`` என்பது ஒரு "
+"வெளிநாட்டு ஸ்பிங்க்ஸ் ஆவணமாக்கல் தொகுப்பின் அடிப்படை யூரி ஆகும், மேலும் இது "
+"ஒரு உள்ளூர் பாதை அல்லது HTTP URI ஆக இருக்கலாம். `` சரக்கு`` சரக்குக் கோப்பை "
+"எங்கு காணலாம் என்பதைக் குறிக்கிறது: இது `` எதுவுமில்லை`` (ஒரு: கோப்பு: `` ``"
+" `` `` `` `` பொருள் URI இன் அதே இடத்தில்) அல்லது மற்றொரு உள்ளூர் கோப்பு பாதை"
+" அல்லது ஒரு ஒரு சரக்கு கோப்புக்கு முழு HTTP URI."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:77
+msgid ""
+"The unique identifier can be used in the :rst:role:`external` role, so that "
+"it is clear which intersphinx set the target belongs to.  A link like "
+"``external:python+ref:`comparison manual <comparisons>``` will link to the "
+"label \"comparisons\" in the doc set \"python\", if it exists."
+msgstr ""
+"தனித்துவமான அடையாளங்காட்டியை: rst: rew: `வெளிப்புற` பாத்திரத்தில் "
+"பயன்படுத்தலாம், இதனால் எந்த இன்டெர்ஸ்பின்க்ஸ் இலக்கு சொந்தமானது என்பது "
+"தெளிவாகிறது. `` வெளிப்புற: பைதான்+குறிப்பு போன்ற இணைப்பு: `ஒப்பீட்டு கையேடு "
+"<ஒப்பீடுகள்>` `` இது இருந்தால் \"பைதான்\" என்ற ஆவணத்தில் உள்ள \"ஒப்பீடுகள்\""
+" என்ற லேபிளுடன் இணைக்கும்."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:82
+msgid "**Example**"
+msgstr "**உதாரணமாக**"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:84
+msgid ""
+"To add links to modules and objects in the Python standard library "
+"documentation, use::"
+msgstr ""
+"பைதான் நிலையான நூலக ஆவணத்தில் தொகுதிகள் மற்றும் பொருள்களுக்கான இணைப்புகளைச் "
+"சேர்க்க, பயன்படுத்தவும் ::"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:89
+msgid ""
+"This will download the corresponding :file:`objects.inv` file from the "
+"Internet and generate links to the pages under the given URI.  The "
+"downloaded inventory is cached in the Sphinx environment, so it must be re-"
+"downloaded whenever you do a full rebuild."
+msgstr ""
+"இது தொடர்புடைய: கோப்பு: `Objects.INV` இணையத்திலிருந்து கோப்பை பதிவிறக்கம் "
+"செய்து, கொடுக்கப்பட்ட URI இன் கீழ் உள்ள பக்கங்களுக்கான இணைப்புகளை "
+"உருவாக்கும். பதிவிறக்கம் செய்யப்பட்ட சரக்கு ஸ்பிங்க்ஸ் சூழலில் தற்காலிகமாக "
+"சேமிக்கப்படுகிறது, எனவே நீங்கள் முழு மறுகட்டமைப்பைச் செய்யும்போதெல்லாம் அதை "
+"மீண்டும் ஏற்ற வேண்டும்."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:94
+msgid ""
+"A second example, showing the meaning of a non-``None`` value of the second "
+"tuple item::"
+msgstr ""
+"இரண்டாவது எடுத்துக்காட்டு, இரண்டாவது டூப்பிள் உருப்படியின் ``நோன்` மதிப்பின்"
+" பொருளைக் காட்டுகிறது ::"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:100
+msgid ""
+"This will read the inventory from :file:`python-inv.txt` in the source "
+"directory, but still generate links to the pages under "
+"``https://docs.python.org/3``.  It is up to you to update the inventory file"
+" as new objects are added to the Python documentation."
+msgstr ""
+"இது சரக்குகளை இதிலிருந்து படிக்கும்: கோப்பு: `python-inv.txt` மூல "
+"கோப்பகத்தில், ஆனால்` `https: // docs.python.org/3`` இன் கீழ் உள்ள "
+"பக்கங்களுக்கான இணைப்புகளை உருவாக்குகிறது. பைதான் ஆவணத்தில் புதிய பொருள்கள் "
+"சேர்க்கப்படுவதால் சரக்கு கோப்பைப் புதுப்பிக்க வேண்டியது உங்களுடையது."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:105
+msgid "**Multiple targets for the inventory**"
+msgstr "** சரக்குகளுக்கான பல இலக்குகள் **"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:109
+msgid ""
+"Alternative files can be specified for each inventory. One can give a tuple "
+"for the second inventory tuple item as shown in the following example. This "
+"will read the inventory iterating through the (second) tuple items until the"
+" first successful fetch. The primary use case for this to specify mirror "
+"sites for server downtime of the primary inventory::"
+msgstr ""
+"ஒவ்வொரு சரக்குகளுக்கும் மாற்று கோப்புகளைக் குறிப்பிடலாம். பின்வரும் "
+"எடுத்துக்காட்டில் காட்டப்பட்டுள்ளபடி இரண்டாவது சரக்கு டூப்பிள் உருப்படிக்கு "
+"ஒரு டப்பிள் கொடுக்க முடியும். இது முதல் வெற்றிகரமான பெறும் வரை (இரண்டாவது) "
+"டூப்பிள் உருப்படிகள் மூலம் சரக்குகளை மீண்டும் வாசிக்கும். முதன்மை "
+"சரக்குகளின் சேவையக வேலையில்லா நேரத்திற்கான கண்ணாடி தளங்களைக் "
+"குறிப்பிடுவதற்கான முதன்மை பயன்பாட்டு வழக்கு ::"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:119
+msgid ""
+"For a set of books edited and tested locally and then published together, it"
+" could be helpful to try a local inventory file first, to check references "
+"before publication::"
+msgstr ""
+"உள்நாட்டில் திருத்தப்பட்டு சோதிக்கப்பட்டு பின்னர் ஒன்றாக வெளியிடப்பட்ட "
+"புத்தகங்களின் தொகுப்பிற்கு, வெளியீட்டிற்கு முன் குறிப்புகளை சரிபார்க்க, "
+"உள்ளூர் சரக்கு கோப்பை முதலில் முயற்சிப்பது உதவியாக இருக்கும் ::"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:129
+msgid "**Old format for this config value**"
+msgstr "** இந்த கட்டமைப்பு மதிப்புக்கு பழைய வடிவம் **"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:135
+msgid ""
+"This is the format used before Sphinx 1.0. It is deprecated and will be "
+"removed in Sphinx 8.0."
+msgstr ""
+"இது ஸ்பிங்க்ஸ் 1.0 க்கு முன் பயன்படுத்தப்படும் வடிவம். இது நீக்கப்பட்டது "
+"மற்றும் ஸ்பிங்க்ஸ் 8.0 இல் அகற்றப்படும்."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:138
+msgid ""
+"A dictionary mapping URIs to either ``None`` or an URI.  The keys are the "
+"base URI of the foreign Sphinx documentation sets and can be local paths or "
+"HTTP URIs.  The values indicate where the inventory file can be found: they "
+"can be ``None`` (at the same location as the base URI) or another local or "
+"HTTP URI."
+msgstr ""
+"ஒரு அகராதி URI களை `` எதுவுமில்லை`` அல்லது ஒரு URI க்கு வரைபடமாக்குகிறது. "
+"விசைகள் வெளிநாட்டு ஸ்பிங்க்ஸ் ஆவணப்படுத்தல் தொகுப்புகளின் அடிப்படை யூரி "
+"மற்றும் உள்ளூர் பாதைகள் அல்லது HTTP URI களாக இருக்கலாம். சரக்குக் கோப்பை "
+"எங்கு காணலாம் என்று மதிப்புகள் குறிக்கின்றன: அவை `` எதுவுமில்லை`` (அடிப்படை "
+"யூரி போன்ற அதே இடத்தில்) அல்லது மற்றொரு உள்ளூர் அல்லது HTTP URI ஆக "
+"இருக்கலாம்."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:144
+msgid "Example:"
+msgstr "உதாரணமாக:"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:153
+msgid ""
+"The maximum number of days to cache remote inventories.  The default is "
+"``5``, meaning five days.  Set this to a negative value to cache inventories"
+" for unlimited time."
+msgstr ""
+"தொலைநிலை சரக்குகளை கேச் செய்ய அதிகபட்ச நாட்கள். இயல்புநிலை `` 5``, அதாவது "
+"ஐந்து நாட்கள். வரம்பற்ற நேரத்திற்கு சரக்குகளை கேச் செய்ய இதை எதிர்மறை "
+"மதிப்பாக அமைக்கவும்."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:159
+msgid ""
+"The number of seconds for timeout.  The default is ``None``, meaning do not "
+"timeout."
+msgstr ""
+"காலக்கெடுவுக்கான விநாடிகளின் எண்ணிக்கை. இயல்புநிலை `` எதுவுமில்லை``, அதாவது "
+"காலக்கெடு இல்லை."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:164
+msgid ""
+"timeout is not a time limit on the entire response download; rather, an "
+"exception is raised if the server has not issued a response for timeout "
+"seconds."
+msgstr ""
+"முழு மறுமொழி பதிவிறக்கத்திற்கான கால அவகாசம் அல்ல; மாறாக, காலக்கெடு "
+"விநாடிகளுக்கு சேவையகம் பதிலை வழங்கவில்லை என்றால் விதிவிலக்கு "
+"எழுப்பப்படுகிறது."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:174
+msgid "Changed default value from an empty list to ``['std:doc']``."
+msgstr ""
+"இயல்புநிலை மதிப்பை வெற்று பட்டியலிலிருந்து `` ['std: doc'] `` என மாற்றியது."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:176
+msgid "A list of strings being either:"
+msgstr "சரங்களின் பட்டியல்:"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:178
+msgid ""
+"the name of a specific reference type in a domain, e.g., ``std:doc``, "
+"``py:func``, or ``cpp:class``,"
+msgstr "ஒரு களத்தில் ஒரு குறிப்பிட்ட குறிப்பு வகையின் பெயர், எ.கா."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:180
+msgid ""
+"the name of a domain, and a wildcard, e.g., ``std:*``, ``py:*``, or "
+"``cpp:*``, or"
+msgstr "ஒரு களத்தின் பெயர், மற்றும் ஒரு வைல்ட் கார்டு, எ.கா."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:182
+msgid "simply a wildcard ``*``."
+msgstr "வெறுமனே ஒரு வைல்டு கார்டு ``*``."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:184
+msgid "The default value is ``['std:doc']``."
+msgstr "இயல்புநிலை மதிப்பு `` ['std: doc'] ``."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:186
+msgid ""
+"When a non-:rst:role:`external` cross-reference is being resolved by "
+"intersphinx, skip resolution if it matches one of the specifications in this"
+" list."
+msgstr ""
+"ஒரு அல்லாத: rst: பங்கு: `வெளிப்புற` குறுக்கு-குறிப்பு இன்டர்ஸ்பின்க்ஸால் "
+"தீர்க்கப்படும்போது, இந்த பட்டியலில் உள்ள விவரக்குறிப்புகளில் ஒன்றோடு "
+"பொருந்தினால் தெளிவுத்திறனைத் தவிர்க்கவும்."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:190
+msgid ""
+"For example, with ``intersphinx_disabled_reftypes = ['std:doc']`` a cross-"
+"reference ``:doc:`installation``` will not be attempted to be resolved by "
+"intersphinx, but ``:external+otherbook:doc:`installation``` will be "
+"attempted to be resolved in the inventory named ``otherbook`` in "
+":confval:`intersphinx_mapping`. At the same time, all cross-references "
+"generated in, e.g., Python, declarations will still be attempted to be "
+"resolved by intersphinx."
+msgstr ""
+"எடுத்துக்காட்டாக, `` இன்டர்ஸ்பின்க்ஸ்_டிசாபிள்ட்_ரெஃப்டைப்ஸ் = ['எஸ்.டி.டி: "
+"டாக்'] `` ஒரு குறுக்கு குறிப்பு ``: டாக்: `நிறுவல்``` இன்டெர்ஸ்பின்க்ஸால் "
+"தீர்க்க முயற்சிக்காது, ஆனால் ``: வெளிப்புற+பிற புத்தகம்: . அதே நேரத்தில், "
+"உருவாக்கப்பட்ட அனைத்து குறுக்கு குறிப்புகளும், எ.கா., பைதான், அறிவிப்புகள் "
+"இன்டர்ஸ்பின்க்ஸால் தீர்க்க முயற்சிக்கப்படும்."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:198
+msgid ""
+"If ``*`` is in the list of domains, then no non-:rst:role:`external` "
+"references will be resolved by intersphinx."
+msgstr ""
+"``*`` களங்களின் பட்டியலில் இருந்தால்,: rst அல்லாத: rst: rew: `வெளிப்புற` "
+"குறிப்புகள் இன்டர்ஸ்பின்க்ஸால் தீர்க்கப்படும்."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:202
+msgid "Explicitly Reference External Objects"
+msgstr "வெளிப்புற பொருள்களை வெளிப்படையாகக் குறிப்பிடவும்"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:204
+msgid "The Intersphinx extension provides the following role."
+msgstr "இன்டர்ஸ்பின்க்ஸ் நீட்டிப்பு பின்வரும் பாத்திரத்தை வழங்குகிறது."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:210
+msgid ""
+"Use Intersphinx to perform lookup only in external projects, and not the "
+"current project. Intersphinx still needs to know the type of object you "
+"would like to find, so the general form of this role is to write the cross-"
+"refererence as if the object is in the current project, but then prefix it "
+"with ``:external``. The two forms are then"
+msgstr ""
+"வெளிப்புற திட்டங்களில் மட்டுமே தேடலைச் செய்ய இன்டர்ஸ்பின்க்ஸைப் "
+"பயன்படுத்தவும், தற்போதைய திட்டத்தில் அல்ல. நீங்கள் கண்டுபிடிக்க விரும்பும் "
+"பொருளின் வகையை இன்டெர்ஸ்பின்க்ஸ் இன்னும் தெரிந்து கொள்ள வேண்டும், எனவே இந்த "
+"பாத்திரத்தின் பொதுவான வடிவம் பொருள் தற்போதைய திட்டத்தில் இருப்பதைப் போல "
+"குறுக்கு-மறுசீரமைப்பை எழுதுவதாகும், ஆனால் பின்னர் அதை ``: வெளிப்புற`` உடன் "
+"முன்னொட்டு . இரண்டு வடிவங்களும் பின்னர்"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:217
+msgid ""
+"``:external:domain:reftype:`target```, e.g., "
+"``:external:py:class:`zipfile.ZipFile```, or"
+msgstr "``: வெளிப்புற: டொமைன்: மறுவிற்பனை: `இலக்கு```, எ.கா."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:219
+msgid ""
+"``:external:reftype:`target```, e.g., ``:external:doc:`installation```."
+msgstr "."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:222
+msgid ""
+"If you would like to constrain the lookup to a specific external project, "
+"then the key of the project, as specified in :confval:`intersphinx_mapping`,"
+" is added as well to get the two forms"
+msgstr ""
+"ஒரு குறிப்பிட்ட வெளிப்புற திட்டத்திற்கு நீங்கள் தேடலை கட்டுப்படுத்த "
+"விரும்பினால், குறிப்பிடப்பட்டுள்ளபடி, திட்டத்தின் விசை: confval: "
+"`intersphinx_mapping`, இரண்டு படிவங்களையும் பெற சேர்க்கப்படுகிறது"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:226
+msgid ""
+"``:external+invname:domain:reftype:`target```, e.g., "
+"``:external+python:py:class:`zipfile.ZipFile```, or"
+msgstr "."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:228
+msgid ""
+"``:external+invname:reftype:`target```, e.g., "
+"``:external+python:doc:`installation```."
+msgstr "."
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:232
+msgid "Showing all links of an Intersphinx mapping file"
+msgstr "இன்டர்ஸ்பின்க்ஸ் மேப்பிங் கோப்பின் அனைத்து இணைப்புகளையும் காட்டுகிறது"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:234
+msgid ""
+"To show all Intersphinx links and their targets of an Intersphinx mapping "
+"file, run ``python -msphinx.ext.intersphinx url-or-path``.  This is helpful "
+"when searching for the root cause of a broken Intersphinx link in a "
+"documentation project. The following example prints the Intersphinx mapping "
+"of the Python 3 documentation::"
+msgstr ""
+"அனைத்து இன்டர்ஸ்பின்க்ஸ் இணைப்புகளையும் அவற்றின் இலக்குகளை ஒரு "
+"இன்டர்ஸ்பின்க்ஸ் மேப்பிங் கோப்பின் இலக்குகளையும் காட்ட, `` பைதான் "
+"-எம்ஸ்பின்எக்ஸ்.இஎக்ஸ்ட்.இண்டர்ஸ்பின்க்ஸ் url-அல்லது-பாத்`` ஐ இயக்கவும். "
+"ஆவணத் திட்டத்தில் உடைந்த இன்டர்ஸ்பின்க்ஸ் இணைப்பின் மூல காரணத்தைத் "
+"தேடும்போது இது உதவியாக இருக்கும். பின்வரும் எடுத்துக்காட்டு பைத்தானின் "
+"இன்டர்ஸ்பின்க்ஸ் மேப்பிங்கை அச்சிடுகிறது 3 ஆவணங்கள் ::"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:243
+msgid "Using Intersphinx with inventory file under Basic Authorization"
+msgstr ""
+"அடிப்படை அங்கீகாரத்தின் கீழ் சரக்கு கோப்புடன் இன்டர்ஸ்பின்க்ஸைப் "
+"பயன்படுத்துதல்"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:245
+msgid "Intersphinx supports Basic Authorization like this::"
+msgstr "இன்டெர்ஸ்பின்க்ஸ் இது போன்ற அடிப்படை அங்கீகாரத்தை ஆதரிக்கிறது ::"
+
+#: ../../sphinx/doc/usage/extensions/intersphinx.rst:250
+msgid ""
+"The user and password will be stripped from the URL when generating the "
+"links."
+msgstr ""
+"இணைப்புகளை உருவாக்கும் போது பயனர் மற்றும் கடவுச்சொல் URL இலிருந்து "
+"அகற்றப்படும்."

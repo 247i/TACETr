@@ -1,0 +1,477 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2018, Georg Brandl and the Sphinx team
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 1.8.0+\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-25 15:55+0000\n"
+"PO-Revision-Date: 2018-02-12 13:48+0000\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/ext/math.rst:6
+msgid "Math support in Sphinx"
+msgstr "ஸ்பிங்க்ஸில் கணித ஆதரவு"
+
+#: ../../sphinx/doc/ext/math.rst:13
+msgid ""
+"Since mathematical notation isn't natively supported by HTML in any way, "
+"Sphinx supports math in documentation with several extensions."
+msgstr ""
+"கணிதக் குறியீடு எந்த வகையிலும் HTML ஆல் சொந்தமாக ஆதரிக்கப்படவில்லை என்பதால்,"
+" SPHINX பல நீட்டிப்புகளுடன் ஆவணங்களில் கணிதத்தை ஆதரிக்கிறது."
+
+#: ../../sphinx/doc/ext/math.rst:16
+msgid ""
+"The basic math support is contained in :mod:`sphinx.ext.mathbase`. Other "
+"math support extensions should, if possible, reuse that support too."
+msgstr ""
+"அடிப்படை கணித ஆதரவு இதில் உள்ளது: மோட்: `sphinx.ext.mathbase`. பிற கணித "
+"ஆதரவு நீட்டிப்புகள் முடிந்தால், அந்த ஆதரவையும் மீண்டும் பயன்படுத்த வேண்டும்."
+
+#: ../../sphinx/doc/ext/math.rst:21
+msgid ""
+":mod:`.mathbase` is not meant to be added to the :confval:`extensions` "
+"config value, instead, use either :mod:`sphinx.ext.imgmath` or "
+":mod:`sphinx.ext.mathjax` as described below."
+msgstr ". கீழே விவரிக்கப்பட்டுள்ளது."
+
+#: ../../sphinx/doc/ext/math.rst:25
+msgid ""
+"The input language for mathematics is LaTeX markup.  This is the de-facto "
+"standard for plain-text math notation and has the added advantage that no "
+"further translation is necessary when building LaTeX output."
+msgstr ""
+"கணிதத்திற்கான உள்ளீட்டு மொழி லேடெக்ஸ் மார்க்அப் ஆகும். இது வெற்று-உரை கணித "
+"குறியீட்டிற்கான டி-ஃபாக்டோ தரநிலையாகும், மேலும் லேடெக்ஸ் வெளியீட்டை "
+"உருவாக்கும்போது மேலும் மொழிபெயர்ப்பு தேவையில்லை என்பதற்கு கூடுதல் நன்மை "
+"உண்டு."
+
+#: ../../sphinx/doc/ext/math.rst:29
+msgid ""
+"Keep in mind that when you put math markup in **Python docstrings** read by "
+":mod:`autodoc <sphinx.ext.autodoc>`, you either have to double all "
+"backslashes, or use Python raw strings (``r\"raw\"``)."
+msgstr ""
+"நீங்கள் கணித மார்க்அப்பை ** பைதான் டாக்ஸ்ட்ரிங்ஸில் வைக்கும்போது ** "
+"படித்தவர்: மோட்: `ஆட்டோடோக் <sphinx.ext.autodoc>`, நீங்கள் எல்லா "
+"பின்சாய்வுக்கோல்களையும் இரட்டிப்பாக்க வேண்டும், அல்லது பைதான் மூல சரங்களை "
+"பயன்படுத்த வேண்டும் (`` r \" மூல \"` `)."
+
+#: ../../sphinx/doc/ext/math.rst:33
+msgid ":mod:`.mathbase` provides the following config values:"
+msgstr ": மோட்: `.மாத்பேஸ்` பின்வரும் கட்டமைப்பு மதிப்புகளை வழங்குகிறது:"
+
+#: ../../sphinx/doc/ext/math.rst:37
+msgid ""
+"Set this option to ``True`` if you want all displayed math to be numbered. "
+"The default is ``False``."
+msgstr ""
+"காண்பிக்கப்படும் அனைத்து கணிதமும் எண்ணப்பட வேண்டும் எனில் இந்த விருப்பத்தை "
+"`` உண்மை`` என அமைக்கவும். இயல்புநிலை `` தவறு``."
+
+#: ../../sphinx/doc/ext/math.rst:42
+msgid ""
+"A string that are used for format of label of references to equations. As a "
+"special character, ``{number}`` will be replaced to equaition number."
+msgstr ""
+"சமன்பாடுகளுக்கான குறிப்புகளின் லேபிளின் வடிவத்திற்கு பயன்படுத்தப்படும் ஒரு "
+"சரம். ஒரு சிறப்பு எழுத்தாக, `` {எண்} `` சமநிலை எண்ணுக்கு மாற்றப்படும்."
+
+#: ../../sphinx/doc/ext/math.rst:45
+msgid "Example: ``'Eq.{number}'`` is rendered as ``Eq.10``"
+msgstr "எடுத்துக்காட்டு: `` 'எ.கா. {எண்}' `` `` eq.10``"
+
+#: ../../sphinx/doc/ext/math.rst:49
+msgid ""
+"If ``True``, displayed math equations are numbered across pages when "
+":confval:`numfig` is enabled.  The :confval:`numfig_secnum_depth` setting is"
+" respected.  The :rst:role:`eq`, not :rst:role:`numref`, role must be used "
+"to reference equation numbers.  Default is ``True``."
+msgstr ""
+"`` உண்மை`` என்றால், காட்டப்படும் கணித சமன்பாடுகள் பக்கங்களில் "
+"எண்ணப்படுகின்றன: confval: `numfig` இயக்கப்பட்டிருக்கும். தி: கான்ஃப்வால்: "
+"`numfig_secnum_depth` அமைப்பு மதிக்கப்படுகிறது. தி: rst: rew: `eq`, இல்லை: "
+"rst: rst:` numref`, சமன்பாடு எண்களைக் குறிப்பிடுவதற்கு பங்கு பயன்படுத்தப்பட "
+"வேண்டும். இயல்புநிலை `` உண்மை``."
+
+#: ../../sphinx/doc/ext/math.rst:56
+msgid ":mod:`.mathbase` defines these new markup elements:"
+msgstr ": மோட்: `.மாத்பேஸ்` இந்த புதிய மார்க்அப் கூறுகளை வரையறுக்கிறது:"
+
+#: ../../sphinx/doc/ext/math.rst:60
+msgid "Role for inline math.  Use like this::"
+msgstr "இன்லைன் கணிதத்திற்கான பங்கு. இதைப் பயன்படுத்தவும் ::"
+
+#: ../../sphinx/doc/ext/math.rst:66
+msgid ""
+"Directive for displayed math (math that takes the whole line for itself)."
+msgstr ""
+"காட்டப்படும் கணிதத்திற்கான உத்தரவு (கணிதம் முழு வரியையும் தனக்குத்தானே "
+"எடுக்கும்)."
+
+#: ../../sphinx/doc/ext/math.rst:68
+msgid ""
+"The directive supports multiple equations, which should be separated by a "
+"blank line::"
+msgstr ""
+"உத்தரவு பல சமன்பாடுகளை ஆதரிக்கிறது, இது ஒரு வெற்று வரியால் பிரிக்கப்பட "
+"வேண்டும் ::"
+
+#: ../../sphinx/doc/ext/math.rst:77
+msgid ""
+"In addition, each single equation is set within a ``split`` environment, "
+"which means that you can have multiple aligned lines in an equation, aligned"
+" at ``&`` and separated by ``\\\\``::"
+msgstr ""
+"கூடுதலாக, ஒவ்வொரு ஒற்றை சமன்பாடும் ஒரு `` பிளவு`` சூழலுக்குள் "
+"அமைக்கப்பட்டுள்ளது, அதாவது நீங்கள் ஒரு சமன்பாட்டில் பல சீரமைக்கப்பட்ட "
+"வரிகளைக் கொண்டிருக்கலாம், `` & `` இல் சீரமைக்கப்பட்டு `` \\\\ `` ::"
+
+#: ../../sphinx/doc/ext/math.rst:86
+msgid ""
+"For more details, look into the documentation of the `AmSMath LaTeX "
+"package`_."
+msgstr ""
+"மேலும் விவரங்களுக்கு, `அம்ஸ்மாத் லேடெக்ஸ் தொகுப்பு`_ இன் ஆவணங்களைப் "
+"பாருங்கள்."
+
+#: ../../sphinx/doc/ext/math.rst:89
+msgid ""
+"When the math is only one line of text, it can also be given as a directive "
+"argument::"
+msgstr ""
+"கணிதம் உரையின் ஒரே ஒரு வரியாக இருக்கும்போது, அதை ஒரு உத்தரவு வாதமாகவும் "
+"வழங்கலாம் ::"
+
+#: ../../sphinx/doc/ext/math.rst:94
+msgid ""
+"Normally, equations are not numbered.  If you want your equation to get a "
+"number, use the ``label`` option.  When given, it selects an internal label "
+"for the equation, by which it can be cross-referenced, and causes an "
+"equation number to be issued.  See :rst:role:`eq` for an example.  The "
+"numbering style depends on the output format."
+msgstr ""
+"பொதுவாக, சமன்பாடுகள் எண்ணப்படவில்லை. உங்கள் சமன்பாடு ஒரு எண்ணைப் பெற "
+"விரும்பினால், `` லேபிள்`` விருப்பத்தைப் பயன்படுத்தவும். வழங்கப்படும்போது, "
+"இது சமன்பாட்டிற்கான ஒரு உள் லேபிளைத் தேர்ந்தெடுக்கிறது, இதன் மூலம் அதை "
+"குறுக்கு-குறிப்பிடலாம், மேலும் ஒரு சமன்பாடு எண்ணை வழங்குகிறது. காண்க: rst: "
+"பங்கு: `eq` ஒரு எடுத்துக்காட்டுக்கு. எண்ணும் பாணி வெளியீட்டு வடிவமைப்பைப் "
+"பொறுத்தது."
+
+#: ../../sphinx/doc/ext/math.rst:100
+msgid ""
+"There is also an option ``nowrap`` that prevents any wrapping of the given "
+"math in a math environment.  When you give this option, you must make sure "
+"yourself that the math is properly set up.  For example::"
+msgstr ""
+"ஒரு கணித சூழலில் கொடுக்கப்பட்ட கணிதத்தின் எந்தவொரு மடக்குதலையும் தடுக்கும் "
+"`` Nowrap`` ஒரு விருப்பமும் உள்ளது. இந்த விருப்பத்தை நீங்கள் கொடுக்கும்போது,"
+" கணிதம் சரியாக அமைக்கப்பட்டிருப்பதை நீங்களே உறுதிப்படுத்திக் கொள்ள வேண்டும்."
+" உதாரணத்திற்கு::"
+
+#: ../../sphinx/doc/ext/math.rst:114
+msgid "Role for cross-referencing equations via their label.  Example::"
+msgstr ""
+"அவற்றின் லேபிள் வழியாக குறுக்கு-குறிப்பு சமன்பாடுகளுக்கான பங்கு. உதாரணமாக::"
+
+#: ../../sphinx/doc/ext/math.rst:124
+msgid ":mod:`sphinx.ext.imgmath` -- Render math as images"
+msgstr ": மோட்: `sphinx.ext.imgmath` - கணிதத்தை படங்களாக வழங்கவும்"
+
+#: ../../sphinx/doc/ext/math.rst:131
+msgid ""
+"This extension renders math via LaTeX and dvipng_ or dvisvgm_ into PNG or "
+"SVG images. This of course means that the computer where the docs are built "
+"must have both programs available."
+msgstr ""
+"இந்த நீட்டிப்பு கணிதத்தை லேடெக்ஸ் மற்றும் டி.வி.ஐ.பி.என்.ஜி அல்லது "
+"டிஸ்விஜிஎம் பி.என்.ஜி அல்லது எஸ்.வி.ஜி படங்களுக்கு வழங்குகிறது. டாக்ஸ் "
+"கட்டப்பட்ட கணினியில் இரண்டு நிரல்களும் கிடைக்க வேண்டும் என்பதே இதன் பொருள்."
+
+#: ../../sphinx/doc/ext/math.rst:135
+msgid ""
+"There are various config values you can set to influence how the images are "
+"built:"
+msgstr ""
+"படங்கள் எவ்வாறு கட்டமைக்கப்படுகின்றன என்பதைப் பாதிக்க நீங்கள் அமைக்கக்கூடிய "
+"பல்வேறு கட்டமைப்பு மதிப்புகள் உள்ளன:"
+
+#: ../../sphinx/doc/ext/math.rst:140
+msgid ""
+"The output image format. The default is ``'png'``.  It should be either "
+"``'png'`` or ``'svg'``."
+msgstr ""
+"வெளியீட்டு பட வடிவம். இயல்புநிலை `` 'png'``. இது `` 'png'`` அல்லது ``' "
+"svg'`` ஆக இருக்க வேண்டும்."
+
+#: ../../sphinx/doc/ext/math.rst:145
+msgid ""
+"The command name with which to invoke LaTeX.  The default is ``'latex'``; "
+"you may need to set this to a full path if ``latex`` is not in the "
+"executable search path."
+msgstr ""
+"லேடெக்ஸை அழைக்க கட்டளை பெயர். இயல்புநிலை `` 'லேடெக்ஸ்'``; இயங்கக்கூடிய தேடல்"
+" பாதையில் இல்லாவிட்டால் இதை நீங்கள் முழு பாதையில் அமைக்க வேண்டியிருக்கலாம்."
+
+#: ../../sphinx/doc/ext/math.rst:149
+msgid ""
+"Since this setting is not portable from system to system, it is normally not"
+" useful to set it in ``conf.py``; rather, giving it on the :program:`sphinx-"
+"build` command line via the :option:`-D <sphinx-build -D>` option should be "
+"preferable, like this::"
+msgstr ""
+"இந்த அமைப்பு கணினியிலிருந்து கணினிக்கு சிறியதாக இல்லை என்பதால், அதை `` "
+"conf.py`` இல் அமைப்பது பொதுவாக பயனுள்ளதாக இருக்காது; மாறாக, அதை வழங்குதல்: "
+"நிரல்: `ஸ்பின்க்ஸ்-பில்ட்` கட்டளை வரி வழியாக: விருப்பம்:` -d <sphinx- கட்டளை"
+" -d> `விருப்பம் விரும்பத்தக்கதாக இருக்க வேண்டும், இது போன்றது ::"
+
+#: ../../sphinx/doc/ext/math.rst:156
+msgid ""
+"This value should only contain the path to the latex executable, not further"
+" arguments; use :confval:`imgmath_latex_args` for that purpose."
+msgstr ""
+"இந்த மதிப்பில் லேடெக்ஸ் இயங்கக்கூடிய பாதையை மட்டுமே கொண்டிருக்க வேண்டும், "
+"மேலும் வாதங்கள் அல்ல; பயன்படுத்தவும்: confval: `imgmath_latex_args` அந்த "
+"நோக்கத்திற்காக."
+
+#: ../../sphinx/doc/ext/math.rst:161
+msgid ""
+"The command name with which to invoke ``dvipng``.  The default is "
+"``'dvipng'``; you may need to set this to a full path if ``dvipng`` is not "
+"in the executable search path. This option is only used when "
+"``imgmath_image_format`` is set to ``'png'``."
+msgstr ""
+"`` Dvipng`` ஐ அழைக்கும் கட்டளை பெயர். இயல்புநிலை `` 'dvipng'``; இயங்கக்கூடிய"
+" தேடல் பாதையில் இல்லாவிட்டால் இதை நீங்கள் முழு பாதையில் அமைக்க "
+"வேண்டியிருக்கலாம். `` Imgmath_image_format``` `` 'png'`` `` `' '`' '`' "
+"'என்று அமைக்கப்பட்டால் மட்டுமே இந்த விருப்பம் பயன்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/ext/math.rst:168
+msgid ""
+"The command name with which to invoke ``dvisvgm``.  The default is "
+"``'dvisvgm'``; you may need to set this to a full path if ``dvisvgm`` is not"
+" in the executable search path.  This option is only used when "
+"``imgmath_image_format`` is ``'svg'``."
+msgstr ""
+"`` Dvisvgm`` ஐ அழைக்கும் கட்டளை பெயர். இயல்புநிலை `` 'dvisvgm'``; "
+"இயங்கக்கூடிய தேடல் பாதையில் இல்லாவிட்டால் இதை நீங்கள் முழு பாதையில் அமைக்க "
+"வேண்டியிருக்கலாம். `` Imgmath_image_format`` `` 'svg'``` ஆக இருக்கும்போது "
+"மட்டுமே இந்த விருப்பம் பயன்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/ext/math.rst:175
+msgid ""
+"Additional arguments to give to latex, as a list.  The default is an empty "
+"list."
+msgstr ""
+"ஒரு பட்டியலாக, லேடெக்ஸுக்கு வழங்க கூடுதல் வாதங்கள். இயல்புநிலை வெற்று "
+"பட்டியல்."
+
+#: ../../sphinx/doc/ext/math.rst:180
+msgid ""
+"Additional LaTeX code to put into the preamble of the short LaTeX files that"
+" are used to translate the math snippets.  This is empty by default.  Use it"
+" e.g. to add more packages whose commands you want to use in the math."
+msgstr ""
+"கணித துணுக்குகளை மொழிபெயர்க்கப் பயன்படும் குறுகிய லேடெக்ஸ் கோப்புகளின் "
+"முன்னுரையில் வைக்க கூடுதல் லேடெக்ஸ் குறியீடு. இது இயல்பாக காலியாக உள்ளது. "
+"இதைப் பயன்படுத்தவும் எ.கா. கணிதத்தில் நீங்கள் பயன்படுத்த விரும்பும் "
+"கட்டளைகளை மேலும் தொகுப்புகளைச் சேர்க்க."
+
+#: ../../sphinx/doc/ext/math.rst:186
+msgid ""
+"Additional arguments to give to dvipng, as a list.  The default value is "
+"``['-gamma', '1.5', '-D', '110', '-bg', 'Transparent']`` which makes the "
+"image a bit darker and larger then it is by default, and produces PNGs with "
+"a transparent background.  This option is used only when "
+"``imgmath_image_format`` is ``'png'``."
+msgstr ""
+"ஒரு பட்டியலாக, DVIPNG க்கு வழங்க கூடுதல் வாதங்கள். இயல்புநிலை மதிப்பு `` "
+"['-கம்மா', '1.5', '-d', '110', '-bg', 'வெளிப்படையான'] `` இது படத்தை சற்று "
+"இருண்டதாகவும் பெரியதாகவும் ஆக்குகிறது, பின்னர் அது இயல்பாகவே இருக்கும் , "
+"மற்றும் வெளிப்படையான பின்னணியுடன் PNG களை உருவாக்குகிறது. `` "
+"Imgmath_image_format`` `` 'png'``` ஆக இருக்கும்போது மட்டுமே இந்த விருப்பம் "
+"பயன்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/ext/math.rst:194
+msgid ""
+"Additional arguments to give to dvisvgm, as a list.  The default value is "
+"``['--no-fonts']``.  This option is used only when ``imgmath_image_format`` "
+"is ``'svg'``."
+msgstr ""
+"ஒரு பட்டியலாக, DVISVGM க்கு வழங்க கூடுதல் வாதங்கள். இயல்புநிலை மதிப்பு `` "
+"['-no-fonts'] ``. `` Imgmath_image_format`` `` 'svg'``` ஆக இருக்கும்போது "
+"மட்டுமே இந்த விருப்பம் பயன்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/ext/math.rst:200
+msgid ""
+"``dvipng`` has the ability to determine the \"depth\" of the rendered text: "
+"for example, when typesetting a fraction inline, the baseline of surrounding"
+" text should not be flush with the bottom of the image, rather the image "
+"should extend a bit below the baseline.  This is what TeX calls \"depth\".  "
+"When this is enabled, the images put into the HTML document will get a "
+"``vertical-align`` style that correctly aligns the baselines."
+msgstr ""
+"`` dvipng`` வழங்கப்பட்ட உரையின் \"ஆழத்தை\" தீர்மானிக்கும் திறனைக் "
+"கொண்டுள்ளது: எடுத்துக்காட்டாக, ஒரு பின்னம் இன்லைன் தட்டச்சு செய்யும் போது, "
+"சுற்றியுள்ள உரையின் அடிப்படை படத்தின் அடிப்பகுதியுடன் பறிக்கக்கூடாது, மாறாக "
+"படம் நீட்டப்பட வேண்டும் அடிப்படை கீழே பிட். இதைத்தான் டெக்ஸ் \"ஆழம்\" என்று "
+"அழைக்கிறார். இது இயக்கப்பட்டால், HTML ஆவணத்தில் வைக்கப்பட்டுள்ள படங்கள் `` "
+"செங்குத்து-சீரமை `` பாணியைப் பெறும், இது அடிப்படைகளை சரியாக "
+"ஒருங்கிணைக்கிறது."
+
+#: ../../sphinx/doc/ext/math.rst:207
+msgid ""
+"Unfortunately, this only works when the `preview-latex package`_ is "
+"installed. Therefore, the default for this option is ``False``."
+msgstr ""
+"துரதிர்ஷ்டவசமாக, `முன்னோட்டம்-லேடெக்ஸ் தொகுப்பு`_ நிறுவப்பட்டால் மட்டுமே இது"
+" செயல்படும். எனவே, இந்த விருப்பத்தின் இயல்புநிலை `` தவறு``."
+
+#: ../../sphinx/doc/ext/math.rst:210
+msgid ""
+"Currently this option is only used when ``imgmath_image_format`` is "
+"``'png'``."
+msgstr ""
+"தற்போது இந்த விருப்பம் `` imgmath_image_format`` `` 'png'``` ஆக "
+"இருக்கும்போது மட்டுமே பயன்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/ext/math.rst:215
+msgid ""
+"Default: ``True``.  If false, do not add the LaTeX code as an \"alt\" "
+"attribute for math images."
+msgstr ""
+"இயல்புநிலை: `` உண்மை``. தவறு என்றால், கணித படங்களுக்கான \"ALT\" பண்புக்கூறாக"
+" லேடெக்ஸ் குறியீட்டை சேர்க்க வேண்டாம்."
+
+#: ../../sphinx/doc/ext/math.rst:220
+msgid ""
+"The font size (in ``pt``) of the displayed math.  The default value is "
+"``12``.  It must be a positive integer."
+msgstr ""
+"காட்டப்பட்ட கணிதத்தின் எழுத்துரு அளவு (`` pt`` இல்). இயல்புநிலை மதிப்பு `` "
+"12``. இது ஒரு நேர்மறையான முழு எண்ணாக இருக்க வேண்டும்."
+
+#: ../../sphinx/doc/ext/math.rst:225
+msgid ":mod:`sphinx.ext.mathjax` -- Render math via JavaScript"
+msgstr ""
+": மோட்: `sphinx.ext.mathjax` - ஜாவாஸ்கிரிப்ட் வழியாக கணிதத்தை வழங்கவும்"
+
+#: ../../sphinx/doc/ext/math.rst:232
+msgid ""
+"This extension puts math as-is into the HTML files.  The JavaScript package "
+"MathJax_ is then loaded and transforms the LaTeX markup to readable math "
+"live in the browser."
+msgstr ""
+"இந்த நீட்டிப்பு கணிதத்தை HTML கோப்புகளில் வைக்கிறது. ஜாவாஸ்கிரிப்ட் தொகுப்பு"
+" MathJax_ பின்னர் ஏற்றப்பட்டு, லேடெக்ஸ் மார்க்அப்பை உலாவியில் படிக்கக்கூடிய "
+"கணிதத்தில் மாற்றுகிறது."
+
+#: ../../sphinx/doc/ext/math.rst:236
+msgid ""
+"Because MathJax (and the necessary fonts) is very large, it is not included "
+"in Sphinx."
+msgstr ""
+"MathJax (மற்றும் தேவையான எழுத்துருக்கள்) மிகப் பெரியதாக இருப்பதால், அது "
+"ஸ்பிங்க்ஸில் சேர்க்கப்படவில்லை."
+
+#: ../../sphinx/doc/ext/math.rst:241
+msgid ""
+"The path to the JavaScript file to include in the HTML files in order to "
+"load MathJax."
+msgstr ""
+"கணிதத்தை ஏற்றுவதற்காக HTML கோப்புகளில் சேர்க்க ஜாவாஸ்கிரிப்ட் கோப்பிற்கான "
+"பாதை."
+
+#: ../../sphinx/doc/ext/math.rst:244
+msgid ""
+"The default is the ``https://`` URL that loads the JS files from the "
+"`cdnjs`__ Content Delivery Network. See the `MathJax Getting Started page`__"
+" for details. If you want MathJax to be available offline, you have to "
+"download it and set this value to a different path."
+msgstr ""
+"இயல்புநிலை `` https: // `` url ஆகும், இது `CDNJS`__ உள்ளடக்க விநியோக "
+"நெட்வொர்க்கிலிருந்து JS கோப்புகளை ஏற்றும். விவரங்களுக்கு `மேத்ஜாக்ஸ் "
+"தொடங்குதல் பக்கம்`__ ஐப் பார்க்கவும். மேத்ஜாக்ஸ் ஆஃப்லைனில் கிடைக்க "
+"விரும்பினால், நீங்கள் அதை பதிவிறக்கம் செய்து இந்த மதிப்பை வேறு பாதையில் "
+"அமைக்க வேண்டும்."
+
+#: ../../sphinx/doc/ext/math.rst:253 ../../sphinx/doc/ext/math.rst:288
+msgid ""
+"The path can be absolute or relative; if it is relative, it is relative to "
+"the ``_static`` directory of the built docs."
+msgstr ""
+"பாதை முழுமையான அல்லது உறவினராக இருக்கலாம்; இது உறவினராக இருந்தால், அது "
+"கட்டப்பட்ட டாக்ஸின் `_ _static`` கோப்பகத்துடன் தொடர்புடையது."
+
+#: ../../sphinx/doc/ext/math.rst:256
+msgid ""
+"For example, if you put MathJax into the static path of the Sphinx docs, "
+"this value would be ``MathJax/MathJax.js``.  If you host more than one "
+"Sphinx documentation set on one server, it is advisable to install MathJax "
+"in a shared location."
+msgstr ""
+"எடுத்துக்காட்டாக, நீங்கள் SPHINX டாக்ஸின் நிலையான பாதையில் MathJax ஐ "
+"வைத்தால், இந்த மதிப்பு `` Mathjax/mathjax.js``. ஒரு சேவையகத்தில் "
+"அமைக்கப்பட்ட ஒன்றுக்கு மேற்பட்ட SPHINX ஆவணங்களை நீங்கள் ஹோஸ்ட் செய்தால், "
+"பகிரப்பட்ட இடத்தில் MathJax ஐ நிறுவுவது நல்லது."
+
+#: ../../sphinx/doc/ext/math.rst:261
+msgid "You can also give a full ``https://`` URL different from the CDN URL."
+msgstr ""
+"சி.டி.என் URL இலிருந்து வேறுபட்ட முழு `` https: // `` url ஐ நீங்கள் "
+"கொடுக்கலாம்."
+
+#: ../../sphinx/doc/ext/math.rst:265
+msgid ""
+"The options to script tag for mathjax.  For example, you can set integrity "
+"option with following setting::"
+msgstr ""
+"MathJax க்கான ஸ்கிரிப்ட் குறிச்சொல்லுக்கான விருப்பங்கள். எடுத்துக்காட்டாக, "
+"பின்வரும் அமைப்புடன் ஒருமைப்பாடு விருப்பத்தை அமைக்கலாம் ::"
+
+#: ../../sphinx/doc/ext/math.rst:272
+msgid "The default is empty (``{}``)."
+msgstr "இயல்புநிலை காலியாக உள்ளது (`` {} ``)."
+
+#: ../../sphinx/doc/ext/math.rst:275
+msgid ":mod:`sphinx.ext.jsmath` -- Render math via JavaScript"
+msgstr ""
+": மோட்: `sphinx.ext.jsmath` - ஜாவாஸ்கிரிப்ட் வழியாக கணிதத்தை வழங்கவும்"
+
+#: ../../sphinx/doc/ext/math.rst:280
+msgid ""
+"This extension works just as the MathJax extension does, but uses the older "
+"package jsMath_.  It provides this config value:"
+msgstr ""
+"இந்த நீட்டிப்பு மேத்ஜாக்ஸ் நீட்டிப்பு போலவே செயல்படுகிறது, ஆனால் பழைய "
+"தொகுப்பைப் பயன்படுத்துகிறது jsmath_. இது இந்த கட்டமைப்பு மதிப்பை "
+"வழங்குகிறது:"
+
+#: ../../sphinx/doc/ext/math.rst:285
+msgid ""
+"The path to the JavaScript file to include in the HTML files in order to "
+"load JSMath.  There is no default."
+msgstr ""
+"JSMATH ஐ ஏற்றுவதற்காக HTML கோப்புகளில் சேர்க்க ஜாவாஸ்கிரிப்ட் கோப்பிற்கான "
+"பாதை. இயல்புநிலை இல்லை."
+
+#: ../../sphinx/doc/ext/math.rst:291
+msgid ""
+"For example, if you put JSMath into the static path of the Sphinx docs, this"
+" value would be ``jsMath/easy/load.js``.  If you host more than one Sphinx "
+"documentation set on one server, it is advisable to install jsMath in a "
+"shared location."
+msgstr ""
+"எடுத்துக்காட்டாக, நீங்கள் JSMATH ஐ ஸ்பின்க்ஸ் டாக்ஸின் நிலையான பாதையில் "
+"வைத்தால், இந்த மதிப்பு `` jsmath/easy/load.js``. ஒரு சேவையகத்தில் "
+"அமைக்கப்பட்ட ஒன்றுக்கு மேற்பட்ட SPHINX ஆவணங்களை நீங்கள் ஹோஸ்ட் செய்தால், "
+"பகிரப்பட்ட இடத்தில் JSMATH ஐ நிறுவுவது நல்லது."

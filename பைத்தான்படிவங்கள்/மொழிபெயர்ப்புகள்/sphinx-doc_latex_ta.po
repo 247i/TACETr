@@ -1,0 +1,3589 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2023, the Sphinx developers
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 7.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-15 00:35+0000\n"
+"PO-Revision-Date: 2018-02-12 13:47+0000\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/latex.rst:2
+msgid "LaTeX customization"
+msgstr "லேடெக்ஸ் தனிப்பயனாக்கம்"
+
+#: ../../sphinx/doc/latex.rst:45
+msgid ""
+"Unlike :ref:`the HTML builders <html-themes>`, the ``latex`` builder does "
+"not benefit from prepared themes. The :ref:`latex-options`, and particularly"
+" the :ref:`latex_elements <latex_elements_confval>` variable, provides much "
+"of the interface for customization. For example:"
+msgstr ""
+"போலல்லாமல்: Ref: `HTML பில்டர்கள் <html- கருப்பொருள்கள்>`, `` லேடெக்ஸ்`` "
+"பில்டர் தயாரிக்கப்பட்ட கருப்பொருள்களிலிருந்து பயனடையாது. தி: ரெஃப்: "
+"`லேடெக்ஸ்-விருப்பங்கள்`, மற்றும் குறிப்பாக: குறிப்பு:` லேடெக்ஸ்_லெமென்ட்ஸ் "
+"<லேடெக்ஸ்_லெமென்ட்ஸ்_கான்ஃப்வால்> `மாறி, தனிப்பயனாக்கத்திற்கான இடைமுகத்தை "
+"வழங்குகிறது. உதாரணத்திற்கு:"
+
+#: ../../sphinx/doc/latex.rst:74
+msgid ""
+"Keep in mind that backslashes must be doubled in Python string literals to "
+"avoid interpretation as escape sequences. Alternatively, you may use raw "
+"strings as is done above."
+msgstr ""
+"தப்பிக்கும் காட்சிகளாக விளக்கத்தைத் தவிர்ப்பதற்காக பைதான் சரம் "
+"எழுத்தாளர்களில் பின்சாய்வுக்கோடுகள் இரட்டிப்பாக வேண்டும் என்பதை நினைவில் "
+"கொள்ளுங்கள். மாற்றாக, மேலே செய்யப்பட்டபடி மூல சரங்களை நீங்கள் "
+"பயன்படுத்தலாம்."
+
+#: ../../sphinx/doc/latex.rst:81
+msgid "The ``latex_elements`` configuration setting"
+msgstr "`` Latex_elements`` உள்ளமைவு அமைப்பு"
+
+#: ../../sphinx/doc/latex.rst:83
+msgid ""
+"A dictionary that contains LaTeX snippets overriding those Sphinx usually "
+"puts into the generated ``.tex`` files.  Its ``'sphinxsetup'`` key is "
+"described :ref:`separately <latexsphinxsetup>`.  It allows also local "
+"configurations inserted in generated files, via :dudir:`raw` directives.  "
+"For example, in the PDF documentation this chapter is styled especially, as "
+"will be described later."
+msgstr ""
+"அந்த ஸ்பிங்க்ஸை மீறும் லேடெக்ஸ் துணுக்குகளைக் கொண்ட ஒரு அகராதி வழக்கமாக "
+"உருவாக்கப்பட்ட `` .டெக்ஸ்`` கோப்புகளில் வைக்கிறது. அதன் `` "
+"'ஸ்பின்க்ஸ்செட்அப்'` விசையை விவரிக்கப்பட்டுள்ளது: குறிப்பு: `தனித்தனியாக "
+"<லேடெக்ஸ்ஸ்பின்க்ஸ்செட்அப்>`. உருவாக்கப்பட்ட கோப்புகளில் செருகப்பட்ட உள்ளூர்"
+" உள்ளமைவுகளையும் இது அனுமதிக்கிறது, வழியாக: டுடிர்: `ரா` வழிமுறைகள். "
+"எடுத்துக்காட்டாக, PDF ஆவணத்தில் இந்த அத்தியாயம் குறிப்பாக பாணியில் உள்ளது, "
+"பின்னர் விவரிக்கப்படும்."
+
+#: ../../sphinx/doc/latex.rst:90
+msgid "Keys that you may want to override include:"
+msgstr "நீங்கள் மேலெழுத விரும்பும் விசைகள் பின்வருமாறு:"
+
+#: ../../sphinx/doc/latex.rst:96
+msgid "``'papersize'``"
+msgstr "`` 'காகிதங்கள்'``"
+
+#: ../../sphinx/doc/latex.rst:93
+msgid ""
+"Paper size option of the document class (``'a4paper'`` or ``'letterpaper'``)"
+msgstr ""
+"ஆவண வகுப்பின் காகித அளவு விருப்பம் (`'' a4paper'`` அல்லது` "
+"`'லெட்டர்பேப்பர்'ஸ்``)"
+
+#: ../../sphinx/doc/latex.rst:96
+msgid "Default: ``'letterpaper'``"
+msgstr "இயல்புநிலை: `` 'லெட்டர்பேப்பர்'```"
+
+#: ../../sphinx/doc/latex.rst:102
+msgid "``'pointsize'``"
+msgstr "`` 'சுட்டிக்காட்டுங்கள்'``"
+
+#: ../../sphinx/doc/latex.rst:99
+msgid ""
+"Point size option of the document class (``'10pt'``, ``'11pt'`` or "
+"``'12pt'``)"
+msgstr ""
+"ஆவண வகுப்பின் புள்ளி அளவு விருப்பம் (`` '10pt'``, ``' 11pt'`` அல்லது `` "
+"'12pt'``)"
+
+#: ../../sphinx/doc/latex.rst:102
+msgid "Default: ``'10pt'``"
+msgstr "இயல்புநிலை: `` '10pt'``"
+
+#: ../../sphinx/doc/latex.rst:115
+msgid "``'pxunit'``"
+msgstr "`` 'pxunit'```"
+
+#: ../../sphinx/doc/latex.rst:105
+msgid ""
+"The value of the ``px`` when used in image attributes ``width`` and "
+"``height``. The default value is ``'0.75bp'`` which achieves ``96px=1in`` "
+"(in TeX ``1in = 72bp = 72.27pt``.) To obtain for example ``100px=1in`` use "
+"``'0.01in'`` or ``'0.7227pt'`` (the latter leads to TeX computing a more "
+"precise value, due to the smaller unit used in the specification); for "
+"``72px=1in``, simply use ``'1bp'``; for ``90px=1in``, use ``'0.8bp'`` or "
+"``'0.803pt'``."
+msgstr ""
+"பட பண்புகளில் `` அகலம்`` மற்றும் `` உயரம்`` ஆகியவற்றைப் பயன்படுத்தும்போது ``"
+" px`` இன் மதிப்பு. இயல்புநிலை மதிப்பு `` '0.75bp'``` இது `` 96px = 1in`` "
+"(டெக்ஸ் `1in = 72bp = 72.27pt``.) எடுத்துக்காட்டாக` `100px = 1in`` பயன்பாடு`"
+" `` '. `` 72px = 1in`` க்கு, வெறுமனே `` '1bp'``; `` 90px = 1in`` க்கு, `` "
+"0.8bp'`` அல்லது `` '0.803pt'`` ஐப் பயன்படுத்தவும்."
+
+#: ../../sphinx/doc/latex.rst:113
+msgid "Default: ``'0.75bp'``"
+msgstr "இயல்புநிலை: `` '0.75bp'```"
+
+#: ../../sphinx/doc/latex.rst:129
+msgid "``'passoptionstopackages'``"
+msgstr "`` 'passoptionstopackages'```"
+
+#: ../../sphinx/doc/latex.rst:118
+msgid ""
+"A string which will be positioned early in the preamble, designed to contain"
+" ``\\\\PassOptionsToPackage{options}{foo}`` commands."
+msgstr ""
+"முன்னுரிமையின் ஆரம்பத்தில் நிலைநிறுத்தப்படும் ஒரு சரம், `` \\\\ "
+"Passoptionstopackage {விருப்பங்கள்} {foo} `` `கட்டளைகளைக் கொண்டிருக்க "
+"வடிவமைக்கப்பட்டுள்ளது."
+
+#: ../../sphinx/doc/latex.rst:123
+msgid ""
+"It may be also used for loading LaTeX packages very early in the preamble.  "
+"For example package ``fancybox`` is incompatible with being loaded via the "
+"``'preamble'`` key, it must be loaded earlier."
+msgstr ""
+"முன்னுரையின் ஆரம்பத்தில் லேடெக்ஸ் தொகுப்புகளை ஏற்றுவதற்கும் இது "
+"பயன்படுத்தப்படலாம். எடுத்துக்காட்டாக, `` 'ஃபேன்ஸி பாக்ஸ்`` ``' முன்னுரை "
+"'விசையின் வழியாக ஏற்றப்படுவதற்கு பொருந்தாது, அதை முன்பு ஏற்ற வேண்டும்."
+
+#: ../../sphinx/doc/latex.rst:127 ../../sphinx/doc/latex.rst:225
+#: ../../sphinx/doc/latex.rst:241 ../../sphinx/doc/latex.rst:261
+#: ../../sphinx/doc/latex.rst:268 ../../sphinx/doc/latex.rst:280
+msgid "Default: ``''``"
+msgstr "இயல்புநிலை: `` '' ``"
+
+#: ../../sphinx/doc/latex.rst:162
+msgid "``'babel'``"
+msgstr "`` 'பாபல்'``"
+
+#: ../../sphinx/doc/latex.rst:132
+msgid ""
+"\"babel\" package inclusion, default ``'\\\\usepackage{babel}'`` (the "
+"suitable document language string is passed as class option, and ``english``"
+" is used if no language.) For Japanese documents, the default is the empty "
+"string."
+msgstr ""
+"\"பாபல்\" தொகுப்பு சேர்த்தல், இயல்புநிலை `` '\\\\ UsePackage {babel}' `` "
+"`(பொருத்தமான ஆவண மொழி சரம் வர்க்க விருப்பமாக அனுப்பப்படுகிறது, மற்றும் மொழி "
+"இல்லாவிட்டால்` `ஆங்கிலம்`` பயன்படுத்தப்படுகிறது.) ஜப்பானிய ஆவணங்களுக்கு, "
+"இயல்பு வெற்று சரம்."
+
+#: ../../sphinx/doc/latex.rst:137
+msgid ""
+"With XeLaTeX and LuaLaTeX, Sphinx configures the LaTeX document to use "
+"`polyglossia`_, but one should be aware that current `babel`_ has improved "
+"its support for Unicode engines in recent years and for some languages it "
+"may make sense to prefer ``babel`` over ``polyglossia``."
+msgstr ""
+"Xelatex மற்றும் lualatex உடன், ஸ்பின்க்ஸ் லேடெக்ஸ் ஆவணத்தை `பாலிக்ளோசியா`_ "
+"ஐப் பயன்படுத்த கட்டமைக்கிறது, ஆனால் தற்போதைய` பாபல்`_ சமீபத்திய ஆண்டுகளில் "
+"யூனிகோட் என்ஜின்களுக்கான ஆதரவை மேம்படுத்தியுள்ளது என்பதை அறிந்திருக்க "
+"வேண்டும், சில மொழிகளுக்கு `` பாபல்`` ஓவர் `` பாலிக்ளோசியா``."
+
+#: ../../sphinx/doc/latex.rst:147
+msgid ""
+"After modifying a core LaTeX key like this one, clean up the LaTeX build "
+"repertory before next PDF build, else left-over auxiliary files are likely "
+"to break the build."
+msgstr ""
+"இது போன்ற ஒரு கோர் லேடெக்ஸ் விசையை மாற்றியமைத்த பிறகு, அடுத்த PDF "
+"கட்டமைப்பிற்கு முன் லேடெக்ஸ் பில்ட் ரெபர்ட்டரியை சுத்தம் செய்யுங்கள், "
+"இல்லையெனில் இடது-ஓவர் துணை கோப்புகள் கட்டமைப்பை உடைக்க வாய்ப்புள்ளது."
+
+#: ../../sphinx/doc/latex.rst:151
+msgid "Default:  ``'\\\\usepackage{babel}'`` (``''`` for Japanese documents)"
+msgstr "இயல்புநிலை: `` '\\\\ UsePackage {babel}' `` (`` '' `` `` `)"
+
+#: ../../sphinx/doc/latex.rst:153
+msgid ""
+"For :confval:`latex_engine` set to ``'xelatex'``, the default is "
+"``'\\\\usepackage{polyglossia}\\n\\\\setmainlanguage{<language>}'``."
+msgstr ""
+"For: confval: `Latex_engine`` `'Xelatex'`` க்கு அமைக்கப்பட்டுள்ளது, "
+"இயல்புநிலை` `' \\\\ UsePackage {பாலிக்ளோசியா} \\ n \\\\ setMainLanguage "
+"{<nagnange>} '` `."
+
+#: ../../sphinx/doc/latex.rst:157
+msgid "``'lualatex'`` uses same default setting as ``'xelatex'``"
+msgstr ""
+"`` 'lualatex'``` அதே இயல்புநிலை அமைப்பைப் பயன்படுத்துகிறது ``' Xelatex'```"
+
+#: ../../sphinx/doc/latex.rst:160
+msgid ""
+"For French, ``xelatex`` and ``lualatex`` default to using ``babel``, not "
+"``polyglossia``."
+msgstr ""
+"பிரெஞ்சு மொழியைப் பொறுத்தவரை, `` பாபல்`` ஐப் பயன்படுத்துவதற்கு `` Xelatex`` "
+"மற்றும் `` lualatex`` இயல்புநிலை, `` பாலிக்ளோசியா`` அல்ல."
+
+#: ../../sphinx/doc/latex.rst:191
+msgid "``'fontpkg'``"
+msgstr "`` 'fontpkg'```"
+
+#: ../../sphinx/doc/latex.rst:165
+msgid "Font package inclusion. The default is::"
+msgstr "எழுத்துரு தொகுப்பு சேர்க்கை. இயல்புநிலை ::"
+
+#: ../../sphinx/doc/latex.rst:172
+msgid ""
+"For ``'xelatex'`` and ``'lualatex'`` however the default is to use the GNU "
+"FreeFont."
+msgstr ""
+"`` 'Xelatex'`` மற்றும் ``' lualatex'`` இருப்பினும் இயல்புநிலை குனு "
+"ஃப்ரீஃபோன்ட்டைப் பயன்படுத்துவதாகும்."
+
+#: ../../sphinx/doc/latex.rst:175
+msgid ""
+"Defaults to ``''`` when the :confval:`language` uses the Cyrillic script."
+msgstr ""
+"இயல்புநிலை `` '' `` `போது: confval:` மொழி` சிரிலிக் ஸ்கிரிப்டைப் "
+"பயன்படுத்துகிறது."
+
+#: ../../sphinx/doc/latex.rst:179
+msgid ""
+"Incorporates some font substitution commands to help support occasional "
+"Greek or Cyrillic in a document using ``'pdflatex'`` engine."
+msgstr ""
+"`` 'Pdflatex'`` இன்ஜினைப் பயன்படுத்தி ஒரு ஆவணத்தில் அவ்வப்போது கிரேக்க "
+"அல்லது சிரிலிக் ஆதரிக்க உதவும் சில எழுத்துரு மாற்று கட்டளைகளை "
+"ஒருங்கிணைக்கிறது."
+
+#: ../../sphinx/doc/latex.rst:185
+msgid ""
+"The font substitution commands added at ``2.0`` have been moved to the "
+"``'fontsubstitution'`` key, as their presence here made it complicated for "
+"user to customize the value of ``'fontpkg'``."
+msgstr ""
+"`` 2.0`` இல் சேர்க்கப்பட்ட எழுத்துரு மாற்று கட்டளைகள் `` 'எழுத்துரு "
+"அரிப்பு'`` விசைக்கு மாற்றப்பட்டுள்ளன, ஏனெனில் இங்கே அவர்களின் இருப்பு "
+"பயனருக்கு ``' 'fontpkg'``` இன் மதிப்பைத் தனிப்பயனாக்குவது சிக்கலானது."
+
+#: ../../sphinx/doc/latex.rst:188
+msgid ""
+"The default font setting has changed: it still uses Times and Helvetica "
+"clones for serif and sans serif, but via better, more complete TeX fonts and"
+" associated LaTeX packages.  The monospace font has been changed to better "
+"match the Times clone."
+msgstr ""
+"இயல்புநிலை எழுத்துரு அமைப்பு மாறிவிட்டது: இது இன்னும் செரிஃப் மற்றும் சான்ஸ்"
+" செஃப்பிற்கான நேரங்களையும் ஹெல்வெடிகா குளோன்களையும் பயன்படுத்துகிறது, ஆனால் "
+"சிறந்த, முழுமையான டெக்ஸ் எழுத்துருக்கள் மற்றும் அதனுடன் தொடர்புடைய லேடெக்ஸ் "
+"தொகுப்புகள் வழியாக. டைம்ஸ் குளோனை சிறப்பாக பொருத்த மோனோஸ்பேஸ் எழுத்துரு "
+"மாற்றப்பட்டுள்ளது."
+
+#: ../../sphinx/doc/latex.rst:204
+msgid "``'fncychap'``"
+msgstr "`` 'fncychap'```"
+
+#: ../../sphinx/doc/latex.rst:194
+msgid ""
+"Inclusion of the \"fncychap\" package (which makes fancy chapter titles), "
+"default ``'\\\\usepackage[Bjarne]{fncychap}'`` for English documentation "
+"(this option is slightly customized by Sphinx), "
+"``'\\\\usepackage[Sonny]{fncychap}'`` for internationalized docs (because "
+"the \"Bjarne\" style uses numbers spelled out in English).  Other "
+"\"fncychap\" styles you can try are \"Lenny\", \"Glenn\", \"Conny\", "
+"\"Rejne\" and \"Bjornstrup\".  You can also set this to ``''`` to disable "
+"fncychap."
+msgstr ""
+"\"Fncychap\" தொகுப்பைச் சேர்ப்பது (இது ஆடம்பரமான அத்தியாய தலைப்புகளை "
+"உருவாக்குகிறது), இயல்புநிலை `` '\\\\ UsePackage [bjarne] {fncychap} `` "
+"`ஆங்கில ஆவணங்களுக்காக (இந்த விருப்பம் SPHINX ஆல் சற்று "
+"தனிப்பயனாக்கப்பட்டுள்ளது),` `' \\\\ usepackage . நீங்கள் முயற்சிக்கக்கூடிய "
+"பிற \"FncyChap\" பாணிகள் \"லென்னி\", \"க்ளென்\", \"கோனி\", \"ரெக்னே\" "
+"மற்றும் \"ஜார்ன்ஸ்ட்ரப்\". Fncychap ஐ முடக்க இதை `` '' `` என்று அமைக்கலாம்."
+
+#: ../../sphinx/doc/latex.rst:202
+msgid ""
+"Default: ``'\\\\usepackage[Bjarne]{fncychap}'`` for English documents, "
+"``'\\\\usepackage[Sonny]{fncychap}'`` for internationalized documents, and "
+"``''`` for Japanese documents."
+msgstr ""
+"இயல்புநிலை: `` '\\\\ UsePackage [bjarne] {fncychap}' `` `` ஆங்கில "
+"ஆவணங்களுக்காக, `` '\\\\ UsePackage [sonny] {fncychap} `` `` `` `'` `` ` ."
+
+#: ../../sphinx/doc/latex.rst:225
+msgid "``'preamble'``"
+msgstr "`` 'முன்னுரை'``"
+
+#: ../../sphinx/doc/latex.rst:207
+msgid ""
+"Additional preamble content.  One may move all needed macros into some file "
+":file:`mystyle.tex.txt` of the project source repertory, and get LaTeX to "
+"import it at run time::"
+msgstr ""
+"கூடுதல் முன்னுரை உள்ளடக்கம். தேவையான அனைத்து மேக்ரோக்களையும் சில கோப்பில் "
+"நகர்த்தலாம்: கோப்பு: `mystyle.tex.txt` திட்ட மூல ரெபர்ட்டரியின்` "
+"mystyle.tex.txt`, மற்றும் லேடெக்ஸ் அதை ரன் நேரத்தில் இறக்குமதி செய்ய ::"
+
+#: ../../sphinx/doc/latex.rst:215
+msgid ""
+"It is then needed to set appropriately :confval:`latex_additional_files`, "
+"for example:"
+msgstr ""
+"சரியான முறையில் அமைக்க இது தேவைப்படுகிறது: confval: `latex_addisital_files`,"
+" எடுத்துக்காட்டாக:"
+
+#: ../../sphinx/doc/latex.rst:222
+msgid ""
+"Do not use ``.tex`` as suffix, else the file is submitted itself to the PDF "
+"build process, use ``.tex.txt`` or ``.sty`` as in the examples above."
+msgstr ""
+"`` .Tex`` ஐ பின்னொட்டாகப் பயன்படுத்த வேண்டாம், இல்லையெனில் கோப்பு PDF "
+"உருவாக்க செயல்முறைக்கு சமர்ப்பிக்கப்படுகிறது, மேலே உள்ள எடுத்துக்காட்டுகளைப்"
+" போல `` .tex.txt`` அல்லது `` .ஸ்டி`` ஐப் பயன்படுத்தவும்."
+
+#: ../../sphinx/doc/latex.rst:236
+msgid "``'figure_align'``"
+msgstr "`` 'FIGURE_ALIGN'```"
+
+#: ../../sphinx/doc/latex.rst:228
+msgid ""
+"Latex figure float alignment. Whenever an image doesn't fit into the current"
+" page, it will be 'floated' into the next page but may be preceded by any "
+"other text.  If you don't like this behavior, use 'H' which will disable "
+"floating and position figures strictly in the order they appear in the "
+"source."
+msgstr ""
+"லேடெக்ஸ் படம் மிதவை சீரமைப்பு. ஒரு படம் தற்போதைய பக்கத்தில் பொருந்தாத "
+"போதெல்லாம், அது அடுத்த பக்கத்திற்கு 'மிதக்கும்' ஆனால் வேறு எந்த உரைக்கும் "
+"முன்னதாக இருக்கலாம். இந்த நடத்தை உங்களுக்கு பிடிக்கவில்லை என்றால், 'H' ஐப் "
+"பயன்படுத்தவும், இது மிதக்கும் மற்றும் நிலை புள்ளிவிவரங்களை அவை மூலத்தில் "
+"தோன்றும் வரிசையில் கண்டிப்பாக முடக்கும்."
+
+#: ../../sphinx/doc/latex.rst:234
+msgid "Default: ``'htbp'`` (here, top, bottom, page)"
+msgstr "இயல்புநிலை: `` 'htbp'`` (இங்கே, மேல், கீழே, பக்கம்)"
+
+#: ../../sphinx/doc/latex.rst:243
+msgid "``'atendofbody'``"
+msgstr "`` 'atendofbody'```"
+
+#: ../../sphinx/doc/latex.rst:239
+msgid "Additional document content (right before the indices)."
+msgstr "கூடுதல் ஆவண உள்ளடக்கம் (குறியீடுகளுக்கு முன்பே)."
+
+#: ../../sphinx/doc/latex.rst:263
+msgid "``'extrapackages'``"
+msgstr "`` 'எக்ஸ்ட்ராபாகேஜ்கள்'``"
+
+#: ../../sphinx/doc/latex.rst:246
+msgid "Additional LaTeX packages.  For example:"
+msgstr "கூடுதல் லேடெக்ஸ் தொகுப்புகள். உதாரணத்திற்கு:"
+
+#: ../../sphinx/doc/latex.rst:254
+msgid ""
+"The specified LaTeX packages will be loaded before hyperref package and "
+"packages loaded from Sphinx extensions."
+msgstr ""
+"குறிப்பிட்ட லேடெக்ஸ் தொகுப்புகள் ஹைப்பர்ரெஃப் தொகுப்பு மற்றும் ஸ்பிங்க்ஸ் "
+"நீட்டிப்புகளிலிருந்து ஏற்றப்படும் தொகுப்புகளுக்கு முன் ஏற்றப்படும்."
+
+#: ../../sphinx/doc/latex.rst:258
+msgid ""
+"If you'd like to load additional LaTeX packages after hyperref, use "
+"``'preamble'`` key instead."
+msgstr ""
+"ஹைப்பர்ரெஃப் பிறகு கூடுதல் லேடெக்ஸ் தொகுப்புகளை ஏற்ற விரும்பினால், அதற்கு "
+"பதிலாக `` 'முன்னுரை' விசையைப் பயன்படுத்தவும்."
+
+#: ../../sphinx/doc/latex.rst:271
+msgid "``'footer'``"
+msgstr "`` 'அடிக்குறிப்பு'``"
+
+#: ../../sphinx/doc/latex.rst:266
+msgid "Additional footer content (before the indices)."
+msgstr "கூடுதல் அடிக்குறிப்பு உள்ளடக்கம் (குறியீடுகளுக்கு முன்)."
+
+#: ../../sphinx/doc/latex.rst:270
+msgid "Use ``'atendofbody'`` key instead."
+msgstr "அதற்கு பதிலாக `` 'atendofbody'` விசையைப் பயன்படுத்தவும்."
+
+#: ../../sphinx/doc/latex.rst:273
+msgid "Keys that don't need to be overridden unless in special cases are:"
+msgstr ""
+"சிறப்பு சந்தர்ப்பங்களில் இல்லாவிட்டால் மீறப்பட வேண்டிய தேவையில்லாத விசைகள்:"
+
+#: ../../sphinx/doc/latex.rst:285
+msgid "``'extraclassoptions'``"
+msgstr "`` 'எக்ஸ்ட்ராக்ளாசோப்ஷன்ஸ்'```"
+
+#: ../../sphinx/doc/latex.rst:276
+msgid ""
+"The default is the empty string. Example: ``'extraclassoptions': 'openany'``"
+" will allow chapters (for documents of the ``'manual'`` type) to start on "
+"any page."
+msgstr ""
+"இயல்புநிலை வெற்று சரம். எடுத்துக்காட்டு: `` 'எக்ஸ்ட்ராக்ளாசோப்ஷன்ஸ்': "
+"'ஓபன்அனி'`` அத்தியாயங்களை (``' கையேடு'` வகை ஆவணங்களுக்கு) எந்தப் "
+"பக்கத்திலும் தொடங்க அனுமதிக்கும்."
+
+#: ../../sphinx/doc/latex.rst:284
+msgid "Added this documentation."
+msgstr "இந்த ஆவணத்தைச் சேர்த்தது."
+
+#: ../../sphinx/doc/latex.rst:305
+msgid "``'maxlistdepth'``"
+msgstr "`` 'MaxListDepth'```"
+
+#: ../../sphinx/doc/latex.rst:288
+msgid ""
+"LaTeX allows by default at most 6 levels for nesting list and quote-like "
+"environments, with at most 4 enumerated lists, and 4 bullet lists. Setting "
+"this key for example to ``'10'`` (as a string) will allow up to 10 nested "
+"levels (of all sorts). Leaving it to the empty string means to obey the "
+"LaTeX default."
+msgstr ""
+"நெஸ்டிங் பட்டியல் மற்றும் மேற்கோள் போன்ற சூழல்களுக்கு லேடெக்ஸ் இயல்புநிலையாக"
+" 6 நிலைகளை அனுமதிக்கிறது, அதிகபட்சம் 4 கணக்கிடப்பட்ட பட்டியல்கள் மற்றும் 4 "
+"புல்லட் பட்டியல்களுடன். எடுத்துக்காட்டாக இந்த விசையை `` '10'`` (ஒரு சரமாக) "
+"அமைப்பது 10 உள்ளமைக்கப்பட்ட நிலைகள் (எல்லா வகையான) வரை அனுமதிக்கும். அதை "
+"வெற்று சரத்திற்கு விட்டுச் செல்வது என்பது லேடெக்ஸ் இயல்புநிலைக்குக் "
+"கீழ்ப்படிவது."
+
+#: ../../sphinx/doc/latex.rst:296
+msgid ""
+"Using this key may prove incompatible with some LaTeX packages or special "
+"document classes which do their own list customization."
+msgstr ""
+"இந்த விசையைப் பயன்படுத்துவது சில லேடெக்ஸ் தொகுப்புகள் அல்லது சிறப்பு ஆவண "
+"வகுப்புகளுடன் பொருந்தாது என்பதை நிரூபிக்கக்கூடும், அவை அவற்றின் சொந்த "
+"பட்டியல் தனிப்பயனாக்கலைச் செய்கின்றன."
+
+#: ../../sphinx/doc/latex.rst:299
+msgid ""
+"The key setting is silently *ignored* if ``\\usepackage{enumitem}`` is "
+"executed inside the document preamble. Use then rather the dedicated "
+"commands of this LaTeX package."
+msgstr ""
+"`` \\ Usepackage {enumitem} `` ஆவண முன்னுரைக்குள் செயல்படுத்தப்பட்டால், "
+"முக்கிய அமைப்பு அமைதியாக * புறக்கணிக்கப்படுகிறது *. இந்த லேடெக்ஸ் தொகுப்பின்"
+" அர்ப்பணிப்பு கட்டளைகளைப் பயன்படுத்தவும்."
+
+#: ../../sphinx/doc/latex.rst:303
+msgid "Default: ``6``"
+msgstr "இயல்புநிலை: `` 6``"
+
+#: ../../sphinx/doc/latex.rst:337
+msgid "``'inputenc'``"
+msgstr "`` 'inputenc'```"
+
+#: ../../sphinx/doc/latex.rst:308
+msgid "\"inputenc\" package inclusion."
+msgstr "\"உள்ளீட்டு\" தொகுப்பு சேர்த்தல்."
+
+#: ../../sphinx/doc/latex.rst:310
+msgid ""
+"Default: ``'\\\\usepackage[utf8]{inputenc}'`` when using pdflatex, else "
+"``''``."
+msgstr ""
+"இயல்புநிலை: `` '\\\\ UsePackage [UTF8] {inputenc}' `` pdflatex ஐப் "
+"பயன்படுத்தும் போது, இல்லையெனில் `` '' ``."
+
+#: ../../sphinx/doc/latex.rst:315
+msgid ""
+"If using ``utf8x`` in place of ``utf8`` it is mandatory to extend the LaTeX "
+"preamble with suitable ``\\PreloadUnicodePage{<number>}`` commands, as per "
+"the ``utf8x`` documentation (``texdoc ucs`` on a TeXLive based TeX "
+"installation).  Else, unexpected and possibly hard-to-spot problems (i.e. "
+"not causing a build crash) may arise in the PDF, in particular regarding "
+"hyperlinks."
+msgstr ""
+"`` Utf8x`` க்கு பதிலாக `` utf8x`` ஐப் பயன்படுத்தினால், லேடெக்ஸ் முன்னுரையை "
+"பொருத்தமான `` \\ preladunicodepage {<எண்>} `` கட்டளைகளின்படி நீட்டிப்பது "
+"கட்டாயமாகும், `` utf8x` ஆவணத்தின் படி (`` ` டெக்ஸ்டாக் அடிப்படையிலான டெக்ஸ் "
+"நிறுவலில் டெக்ஸ்டாக் யு.சி.எஸ் .``). வேறு, எதிர்பாராத மற்றும் சாத்தியமான "
+"கடினமான புள்ளிகள் (அதாவது உருவாக்க விபத்தை ஏற்படுத்தாதது) PDF இல், குறிப்பாக"
+" ஹைப்பர்லிங்க்கள் தொடர்பாக எழக்கூடும்."
+
+#: ../../sphinx/doc/latex.rst:322
+msgid ""
+"Even if these precautions are taken, PDF build via ``pdflatex`` engine may "
+"crash due to upstream LaTeX not being fully compatible with ``utf8x``.  For "
+"example, in certain circumstances related to code-blocks, or attempting to "
+"include images whose filenames contain Unicode characters.  Indeed, starting"
+" in 2015, upstream LaTeX with ``pdflatex`` engine has somewhat enhanced "
+"native support for Unicode and is becoming more and more incompatible with "
+"``utf8x``.  In particular, since the October 2019 LaTeX release, filenames "
+"can use Unicode characters, and even spaces.  At Sphinx level this means "
+"e.g. that the :dudir:`image` and :dudir:`figure` directives are now "
+"compatible with such filenames for PDF via LaTeX output.  But this is broken"
+" if ``utf8x`` is in use."
+msgstr ""
+"இந்த முன்னெச்சரிக்கைகள் எடுக்கப்பட்டாலும் கூட, `` Utf8x`` உடன் முழுமையாக "
+"பொருந்தாததால் `` PDFlatex`` இன்ஜின் வழியாக PDF கட்டமைப்பது "
+"செயலிழக்கக்கூடும். எடுத்துக்காட்டாக, குறியீடு-தடுப்புகள் தொடர்பான சில "
+"சூழ்நிலைகளில் அல்லது யூனிகோட் எழுத்துக்களைக் கொண்டிருக்கும் கோப்பு "
+"பெயர்களைக் கொண்ட படங்களை சேர்க்க முயற்சிக்கிறது. உண்மையில். குறிப்பாக, "
+"அக்டோபர் 2019 லேடெக்ஸ் வெளியீட்டிலிருந்து, கோப்பு பெயர்கள் யூனிகோட் "
+"எழுத்துக்கள் மற்றும் இடைவெளிகளைப் பயன்படுத்தலாம். ஸ்பின்க்ஸ் மட்டத்தில் இதன்"
+" பொருள் எ.கா. this: dudir: `image` மற்றும்: dudir:` FIGURE` வழிமுறைகள் "
+"இப்போது PDF க்கு லேடெக்ஸ் வெளியீடு வழியாக அத்தகைய கோப்பு பெயர்களுடன் "
+"பொருந்துகின்றன. `` Utf8x`` பயன்பாட்டில் இருந்தால் இது உடைக்கப்படுகிறது."
+
+#: ../../sphinx/doc/latex.rst:335
+msgid ""
+"Previously ``'\\\\usepackage[utf8]{inputenc}'`` was used for all compilers."
+msgstr ""
+"முன்னர் `` '\\\\ UsePackage [utf8] {inputenc}' `` அனைத்து கம்பைலர்களுக்கும் "
+"பயன்படுத்தப்பட்டது."
+
+#: ../../sphinx/doc/latex.rst:344
+msgid "``'cmappkg'``"
+msgstr "`` 'cmappkg'```"
+
+#: ../../sphinx/doc/latex.rst:340
+msgid "\"cmap\" package inclusion."
+msgstr "\"CMAP\" தொகுப்பு சேர்த்தல்."
+
+#: ../../sphinx/doc/latex.rst:342
+msgid "Default: ``'\\\\usepackage{cmap}'``"
+msgstr "இயல்புநிலை: `` '\\\\ UsePackage {cmap}' `` `"
+
+#: ../../sphinx/doc/latex.rst:392
+msgid "``'fontenc'``"
+msgstr "`` 'fontenc'```"
+
+#: ../../sphinx/doc/latex.rst:347
+msgid "Customize this from its default ``'\\\\usepackage[T1]{fontenc}'`` to:"
+msgstr "இதை அதன் இயல்புநிலையிலிருந்து தனிப்பயனாக்கு"
+
+#: ../../sphinx/doc/latex.rst:349
+msgid ""
+"``'\\\\usepackage[X2,T1]{fontenc}'`` if you need occasional Cyrillic letters"
+" (физика частиц),"
+msgstr "."
+
+#: ../../sphinx/doc/latex.rst:352
+msgid ""
+"``'\\\\usepackage[LGR,T1]{fontenc}'`` if you need occasional Greek letters "
+"(Σωματιδιακή φυσική)."
+msgstr ""
+"`` '\\\\ UsePackage [lgr, t1] {fontenc} `` `உங்களுக்கு அவ்வப்போது கிரேக்க "
+"எழுத்துக்கள் தேவைப்பட்டால் (σωματιδιακή φυσική)."
+
+#: ../../sphinx/doc/latex.rst:355
+msgid "Use ``[LGR,X2,T1]`` rather if both are needed."
+msgstr "இரண்டுமே தேவைப்பட்டால் `` [lgr, x2, t1] `` பயன்படுத்தவும்."
+
+#: ../../sphinx/doc/latex.rst:359
+msgid ""
+"Do not use this key for a :confval:`latex_engine` other than ``'pdflatex'``."
+msgstr ""
+"இந்த விசையை ஒரு: confval: `'' pdflatex'`` தவிர` Latex_engine` ஐப் பயன்படுத்த"
+" வேண்டாம்."
+
+#: ../../sphinx/doc/latex.rst:362
+msgid ""
+"If Greek is main language, do not use this key.  Since Sphinx 2.2.1, "
+"``xelatex`` will be used automatically as :confval:`latex_engine`."
+msgstr ""
+"கிரேக்கம் முக்கிய மொழியாக இருந்தால், இந்த விசையைப் பயன்படுத்த வேண்டாம். "
+"Sphinx 2.2.1 என்பதால், `` Xelatex`` தானாகவே பயன்படுத்தப்படும்: confval: "
+"`Latex_engine`."
+
+#: ../../sphinx/doc/latex.rst:365
+msgid ""
+"The TeX installation may need some extra packages. For example, on Ubuntu "
+"xenial, packages ``texlive-lang-greek`` and ``cm-super`` are needed for "
+"``LGR`` to work. And ``texlive-lang-cyrillic`` and ``cm-super`` are needed "
+"for support of Cyrillic."
+msgstr ""
+"டெக்ஸ் நிறுவலுக்கு சில கூடுதல் தொகுப்புகள் தேவைப்படலாம். எடுத்துக்காட்டாக, "
+"உபுண்டு ஜீனியலில், `` lgr`` வேலை செய்ய `` டெக்ஸ்லைவ்-லாங்-க்ரீக்`` மற்றும் "
+"`cm-சூப்பர்`` தொகுப்புகள் தேவை. மற்றும் `` டெக்ஸ்லைவ்-லாங்-சிரிலிக்`` "
+"மற்றும் `` செ.மீ-சூப்பர்`` ஆகியவை சிரிலிக் ஆதரவுக்கு தேவை."
+
+#: ../../sphinx/doc/latex.rst:370
+msgid ""
+"Defaults to ``'\\\\usepackage{fontspec}'`` when :confval:`latex_engine` is "
+"``'xelatex'``."
+msgstr ""
+"இயல்புநிலை `` '\\\\ UsePackage {fontspec}' `` எப்போது: confval: "
+"`Latex_engine` என்பது` `Xelatex'``."
+
+#: ../../sphinx/doc/latex.rst:374
+msgid "``'lualatex'`` uses ``fontspec`` per default like ``'xelatex'``."
+msgstr ""
+"`` 'lualatex'``` ``' 'Xelatex'`` போன்ற இயல்புநிலைக்கு `` fontspec`` ஐப் "
+"பயன்படுத்துகிறது."
+
+#: ../../sphinx/doc/latex.rst:377
+msgid ""
+"``'lualatex'`` executes ``\\defaultfontfeatures[\\rmfamily,\\sffamily]{}`` "
+"to disable TeX ligatures transforming `<<` and `>>` as escaping working with"
+" ``pdflatex/xelatex`` failed with ``lualatex``."
+msgstr ""
+"`` 'lualatex'`` `` \\ இயல்புநிலை ஃபோன்ட்ஃபேயர்கள் [\\ rmfamily, \\ sffamily]"
+" {} `` `` `` pdflatex/xelatex உடன் பணிபுரியும் போது தப்பிப்பது டெக்ஸ் "
+"லிகேட்டர்களை மாற்றியமைக்க முடக்குகிறது `` lualatex``."
+
+#: ../../sphinx/doc/latex.rst:383
+msgid ""
+"Detection of ``LGR``, ``T2A``, ``X2`` to trigger support of occasional Greek"
+" or Cyrillic letters (``'pdflatex'``)."
+msgstr ""
+"அவ்வப்போது கிரேக்க அல்லது சிரிலிக் கடிதங்களின் ஆதரவைத் தூண்டுவதற்கு `` "
+"lgr``, `` t2a``, `` x2`` கண்டறிதல் (`` 'pdflatex'````."
+
+#: ../../sphinx/doc/latex.rst:387
+msgid ""
+"``'xelatex'`` executes ``\\defaultfontfeatures[\\rmfamily,\\sffamily]{}`` in"
+" order to avoid contractions of ``--`` into en-dash or transforms of "
+"straight quotes into curly ones in PDF (in non-literal text paragraphs) "
+"despite :confval:`smartquotes` being set to ``False``."
+msgstr ""
+"`` 'Xelatex'``` `` \\ இயல்புநிலை ஃபோன்ட்ஃபீயர்கள் [\\ rmfamily, \\ sffamily]"
+" {} ``} `` லிட்டரல் அல்லாத உரை பத்திகளில்) இருந்தபோதிலும்: confval: "
+"`ஸ்மார்ட் குவோட்டுகள்`` `பொய்``."
+
+#: ../../sphinx/doc/latex.rst:402
+msgid "``'fontsubstitution'``"
+msgstr "`` 'எழுத்துரு அமைப்பு'``"
+
+#: ../../sphinx/doc/latex.rst:395
+msgid ""
+"Ignored if ``'fontenc'`` was not configured to use ``LGR`` or ``X2`` (or "
+"``T2A``).  In case ``'fontpkg'`` key is configured for usage with some TeX "
+"fonts known to be available in the ``LGR`` or ``X2`` encodings, set this one"
+" to be the empty string.  Else leave to its default."
+msgstr ""
+"`` Lgr`` அல்லது `x2`` (அல்லது` `t2a``) பயன்படுத்த` `'fontenc'`` "
+"கட்டமைக்கப்படவில்லை என்றால் புறக்கணிக்கப்பட்டது. `` Lgr`` அல்லது `` x2`` "
+"குறியாக்கங்களில் கிடைக்கக்கூடிய சில டெக்ஸ் எழுத்துருக்களுடன் பயன்பாட்டிற்காக"
+" `` '' '' 'fontpkg'` KEY கட்டமைக்கப்பட்டிருந்தால், இதை வெற்று சரமாக "
+"அமைக்கவும். வேறு அதன் இயல்புநிலைக்கு விடுங்கள்."
+
+#: ../../sphinx/doc/latex.rst:400
+msgid "Ignored with :confval:`latex_engine` other than ``'pdflatex'``."
+msgstr "புறக்கணிக்கப்பட்டது: confval: `` 'pdflatex'`` தவிர `Latex_engine`."
+
+#: ../../sphinx/doc/latex.rst:420
+msgid "``'textgreek'``"
+msgstr "`` 'textgreek'```"
+
+#: ../../sphinx/doc/latex.rst:405
+msgid "For the support of occasional Greek letters."
+msgstr "அவ்வப்போது கிரேக்க எழுத்துக்களின் ஆதரவுக்காக."
+
+#: ../../sphinx/doc/latex.rst:407
+msgid ""
+"It is ignored with ``'platex'``, ``'xelatex'`` or ``'lualatex'`` as "
+":confval:`latex_engine` and defaults to either the empty string or to "
+"``'\\\\usepackage{textalpha}'`` for ``'pdflatex'`` depending on whether the "
+"``'fontenc'`` key was used with ``LGR`` or not.  Only expert LaTeX users may"
+" want to customize this key."
+msgstr ""
+"இது `` 'பிளேட்டக்ஸ்'`, ``' Xelatex'`` அல்லது `` '' lualatex'`` உடன் "
+"புறக்கணிக்கப்படுகிறது: `latex_engine` மற்றும் வெற்று சரம் அல்லது` `'\\\\ "
+"UsePackage க்கு இயல்புநிலையாகும் `` 'fontenc'``` knolpha `` `' lgr`` உடன் "
+"பயன்படுத்தப்பட்டதா இல்லையா என்பதைப் பொறுத்து` `pdflatex'`` ``. நிபுணர் "
+"லேடெக்ஸ் பயனர்கள் மட்டுமே இந்த விசையைத் தனிப்பயனாக்க விரும்பலாம்."
+
+#: ../../sphinx/doc/latex.rst:413
+msgid ""
+"It can also be used as ``r'\\usepackage{textalpha,alphabeta}'`` to let "
+"``'pdflatex'`` support Greek Unicode input in :rst:dir:`math` context. For "
+"example ``:math:`α``` (U+03B1) will render as :math:`\\alpha`."
+msgstr ""
+"இதைப் பயன்படுத்தலாம் `` r '\\ UsePackage {டெக்ஸ்டல்பா, ஆல்பாபெட்டா} `` ``' "
+"'pdflatex'`` `கிரேக்க யூனிகோட் உள்ளீட்டை ஆதரிக்க அனுமதிக்க: rst: dir:` "
+"கணிதம்` சூழல். எடுத்துக்காட்டாக ``: கணிதம்: `α``` (u+03b1) இவ்வாறு "
+"வழங்கப்படும்: கணிதம்:` \\ ஆல்பா`."
+
+#: ../../sphinx/doc/latex.rst:417
+msgid ""
+"Default: ``'\\\\usepackage{textalpha}'`` or ``''`` if ``fontenc`` does not "
+"include the ``LGR`` option."
+msgstr ""
+"இயல்புநிலை: `` '\\\\ UsePackage {textalpha}' `` `அல்லது` `''` `` Fontenc`` "
+"`` lgr`` விருப்பத்தை சேர்க்கவில்லை என்றால்."
+
+#: ../../sphinx/doc/latex.rst:458
+msgid "``'geometry'``"
+msgstr "`` 'வடிவியல்'``"
+
+#: ../../sphinx/doc/latex.rst:423
+msgid "\"geometry\" package inclusion, the default definition is:"
+msgstr "\"வடிவியல்\" தொகுப்பு சேர்க்கை, இயல்புநிலை வரையறை:"
+
+#: ../../sphinx/doc/latex.rst:429
+msgid ""
+"with an additional ``[dvipdfm]`` for Japanese documents. The Sphinx LaTeX "
+"style file executes:"
+msgstr ""
+"ஜப்பானிய ஆவணங்களுக்கு கூடுதல் `` [dvipdfm] `` உடன். ஸ்பிங்க்ஸ் லேடெக்ஸ் பாணி"
+" கோப்பு செயல்படுத்துகிறது:"
+
+#: ../../sphinx/doc/latex.rst:436
+msgid ""
+"which can be customized via corresponding :ref:`'sphinxsetup' options "
+"<latexsphinxsetup>`."
+msgstr ""
+"இது தொடர்புடைய வழியாகத் தனிப்பயனாக்கப்படலாம்: ref: `'ஸ்பின்க்ஸ்செட்அப்' "
+"விருப்பங்கள் <லேடெக்ஸ்ஸ்பின்க்ஸ்செட்அப்>`."
+
+#: ../../sphinx/doc/latex.rst:439
+msgid ""
+"Default: ``'\\\\usepackage{geometry}'`` (or "
+"``'\\\\usepackage[dvipdfm]{geometry}'`` for Japanese documents)"
+msgstr ""
+"இயல்புநிலை: `` '\\\\ UsePackage {வடிவியல்}' `` (அல்லது `` 'Use UsePackage "
+"[dvipdfm] {வடிவியல்} `` `ஜப்பானிய ஆவணங்களுக்கு)"
+
+#: ../../sphinx/doc/latex.rst:444
+msgid "``dvipdfm`` option if :confval:`latex_engine` is ``'platex'``."
+msgstr ""
+"`` dvipdfm`` விருப்பம் if: confval: `latex_engine` என்பது` `'' "
+"பிளேட்டக்ஸ்```."
+
+#: ../../sphinx/doc/latex.rst:447
+msgid ""
+"The :ref:`'sphinxsetup' keys for the margins <latexsphinxsetuphmargin>`."
+msgstr ""
+"தி: ரெஃப்: `'ஸ்பின்க்ஸ்செட்அப்' விளிம்புகளுக்கான விசைகள் "
+"<லேடெக்ஸ்ஸ்பின்க்ஸ்செட்யூஃப்மார்ஜின்>`."
+
+#: ../../sphinx/doc/latex.rst:451
+msgid ""
+"The location in the LaTeX file has been moved to after "
+"``\\usepackage{sphinx}`` and ``\\sphinxsetup{..}``, hence also after "
+"insertion of ``'fontpkg'`` key. This is in order to handle the paper layout "
+"options in a special way for Japanese documents: the text width will be set "
+"to an integer multiple of the *zenkaku* width, and the text height to an "
+"integer multiple of the baseline. See the :ref:`hmargin "
+"<latexsphinxsetuphmargin>` documentation for more."
+msgstr ""
+"லேடெக்ஸ் கோப்பில் உள்ள இருப்பிடம் `` \\ UsePackage {sphinx} `` மற்றும் `\\ "
+"sphinxsetup {..}` `ஆகியவற்றுக்குப் பிறகு நகர்த்தப்பட்டுள்ளது. ஜப்பானிய "
+"ஆவணங்களுக்கான சிறப்பு வழியில் காகித தளவமைப்பு விருப்பங்களை கையாள இது உள்ளது:"
+" உரை அகலம் * ஜென்காகு * அகலத்தின் முழு எண்ணாக அமைக்கப்படும், மேலும் உரை "
+"உயரம் அடிப்படையின் முழு எண். பார்க்க: ref: `hmargin "
+"<latexsphinxsetuphmargin>` மேலும் ஆவணங்கள்."
+
+#: ../../sphinx/doc/latex.rst:470
+msgid "``'hyperref'``"
+msgstr "`` 'ஹைப்பர்ரெஃப்'```"
+
+#: ../../sphinx/doc/latex.rst:461
+msgid ""
+"\"hyperref\" package inclusion; also loads package \"hypcap\" and issues "
+"``\\urlstyle{same}``. This is done after :file:`sphinx.sty` file is loaded "
+"and before executing the contents of ``'preamble'`` key."
+msgstr ""
+"\"ஹைப்பர்ரெஃப்\" தொகுப்பு சேர்த்தல்; தொகுப்பு \"ஹைப்கேப்\" மற்றும் "
+"சிக்கல்கள் `` \\ urlstyle {அதே} ``. இது பின்னர் செய்யப்படுகிறது: கோப்பு: "
+"`sphinx.sty` கோப்பு ஏற்றப்பட்டு` `'முன்னுரை' விசையின் உள்ளடக்கங்களை "
+"செயல்படுத்துவதற்கு முன்."
+
+#: ../../sphinx/doc/latex.rst:467
+msgid "Loading of packages \"hyperref\" and \"hypcap\" is mandatory."
+msgstr "தொகுப்புகளை \"ஹைப்பர்ரெஃப்\" மற்றும் \"ஹைப்கேப்\" ஏற்றுவது கட்டாயமாகும்."
+
+#: ../../sphinx/doc/latex.rst:469
+msgid "Previously this was done from inside :file:`sphinx.sty`."
+msgstr "முன்னதாக இது உள்ளே இருந்து செய்யப்பட்டது: கோப்பு: `sphinx.sty`."
+
+#: ../../sphinx/doc/latex.rst:491
+msgid "``'maketitle'``"
+msgstr "`` 'மக்கெட்டிடில்'```"
+
+#: ../../sphinx/doc/latex.rst:473
+msgid ""
+"\"maketitle\" call. Override if you want to generate a differently styled "
+"title page."
+msgstr ""
+"\"மக்கெட்டிடில்\" அழைப்பு. நீங்கள் வித்தியாசமாக பாணியிலான தலைப்பு பக்கத்தை "
+"உருவாக்க விரும்பினால் மேலெழுதவும்."
+
+#: ../../sphinx/doc/latex.rst:478
+msgid ""
+"If the key value is set to ``r'\\newcommand\\sphinxbackoftitlepage{<Extra "
+"material>}\\sphinxmaketitle'``, then ``<Extra material>`` will be typeset on"
+" back of title page (``'manual'`` docclass only)."
+msgstr ""
+"முக்கிய மதிப்பு `` ஆர் '\\ நியூகோமண்ட் \\ ஸ்பின்எக்ஸ்பிகேஃப்டிபோர்டில்பேஜ் "
+"{<கூடுதல் பொருள்>} \\ sphinxmaketitle'`` என அமைக்கப்பட்டால், `` <கூடுதல் "
+"பொருள்> `` தலைப்பு பக்கத்தின் பின்புறத்தில் (``' கையேடு ' `` டாக்டர் கிளாஸ் "
+"மட்டும்)."
+
+#: ../../sphinx/doc/latex.rst:483
+msgid "Default: ``'\\\\sphinxmaketitle'``"
+msgstr "இயல்புநிலை: `` '\\\\ sphinxmaketitle'```"
+
+#: ../../sphinx/doc/latex.rst:485
+msgid ""
+"Original ``\\maketitle`` from document class is not overwritten, hence is "
+"re-usable as part of some custom setting for this key."
+msgstr ""
+"ஆவண வகுப்பிலிருந்து அசல் `` \\ மக்கெட்டிடில்`` மேலெழுதப்படவில்லை, எனவே இந்த "
+"விசைக்கான சில தனிப்பயன் அமைப்பின் ஒரு பகுதியாக மீண்டும் "
+"பயன்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/latex.rst:489
+msgid ""
+"``\\sphinxbackoftitlepage`` optional macro.  It can also be defined inside "
+"``'preamble'`` key rather than this one."
+msgstr ""
+"`` \\ sphinxbackoftitlepage`` விருப்ப மேக்ரோ. இதை விட `` 'முன்னுரை' "
+"விசையிலும் இது வரையறுக்கப்படலாம்."
+
+#: ../../sphinx/doc/latex.rst:498
+msgid "``'releasename'``"
+msgstr "`` 'releasename'```"
+
+#: ../../sphinx/doc/latex.rst:494
+msgid ""
+"Value that prefixes ``'release'`` element on title page.  As for *title* and"
+" *author* used in the tuples of :confval:`latex_documents`, it is inserted "
+"as LaTeX markup."
+msgstr ""
+"தலைப்புப் பக்கத்தில் `` '' வெளியீடு '`` முன்னொட்டுகள். * தலைப்பு * மற்றும் *"
+" ஆசிரியர் * ஐப் பொறுத்தவரை: confval: `Latex_documents`, இது லேடெக்ஸ் "
+"மார்க்அப் என செருகப்படுகிறது."
+
+#: ../../sphinx/doc/latex.rst:498
+msgid "Default: ``'Release'``"
+msgstr "இயல்புநிலை: `` 'வெளியீடு'``"
+
+#: ../../sphinx/doc/latex.rst:511
+msgid "``'tableofcontents'``"
+msgstr "`` 'அட்டவணை"
+
+#: ../../sphinx/doc/latex.rst:501
+msgid ""
+"\"tableofcontents\" call. The default of ``'\\\\sphinxtableofcontents'`` is "
+"a wrapper of unmodified ``\\tableofcontents``, which may itself be "
+"customized by user loaded packages. Override if you want to generate a "
+"different table of contents or put content between the title page and the "
+"TOC."
+msgstr ""
+"\"டேபிள்ஃப்கான்டெண்ட்ஸ்\" அழைப்பு. `` '\\\\ sphinxtableofcontents'`` இன் "
+"இயல்புநிலை மாற்றப்படாத `\\ டேபிள்ஓஃப்கான்ட்கள்`` இன் ரேப்பர் ஆகும், இது "
+"பயனர் ஏற்றப்பட்ட தொகுப்புகளால் தனிப்பயனாக்கப்படலாம். நீங்கள் வேறுபட்ட "
+"உள்ளடக்க அட்டவணையை உருவாக்க விரும்பினால் அல்லது தலைப்புப் பக்கத்திற்கும் TOC"
+" க்கும் இடையில் உள்ளடக்கத்தை வைக்க விரும்பினால்."
+
+#: ../../sphinx/doc/latex.rst:506
+msgid "Default: ``'\\\\sphinxtableofcontents'``"
+msgstr "இயல்புநிலை: `` '\\\\ sphinxtableofcontents'``"
+
+#: ../../sphinx/doc/latex.rst:508
+msgid ""
+"Previously the meaning of ``\\tableofcontents`` itself was modified by "
+"Sphinx. This created an incompatibility with dedicated packages modifying it"
+" also such as \"tocloft\" or \"etoc\"."
+msgstr ""
+"முன்னர் `` \\ அட்டவணைOFCONTENTS`` இன் பொருள் ஸ்பின்க்ஸால் மாற்றப்பட்டது. இது"
+" அர்ப்பணிப்பு தொகுப்புகளுடன் \"டோக்லோஃப்ட்\" அல்லது \"ETOC\" போன்றவற்றையும் "
+"மாற்றியமைக்கும் பொருந்தாத தன்மையை உருவாக்கியது."
+
+#: ../../sphinx/doc/latex.rst:522
+msgid "``'transition'``"
+msgstr "`` 'மாற்றம்'``"
+
+#: ../../sphinx/doc/latex.rst:514
+msgid ""
+"Commands used to display transitions. Override if you want to display "
+"transitions differently."
+msgstr ""
+"மாற்றங்களைக் காண்பிக்கப் பயன்படுத்தப்படும் கட்டளைகள். மாற்றங்களை "
+"வித்தியாசமாகக் காட்ட விரும்பினால் மேலெழுதவும்."
+
+#: ../../sphinx/doc/latex.rst:517
+msgid "Default: ``'\\n\\n\\\\bigskip\\\\hrule\\\\bigskip\\n\\n'``"
+msgstr "இயல்புநிலை: `` '\\ n \\ n \\\\ bigskip \\\\ hrule \\\\ bigskip \\ n \\ n'``"
+
+#: ../../sphinx/doc/latex.rst:521
+msgid "Remove unneeded ``{}`` after ``\\\\hrule``."
+msgstr "தேவையற்ற `{}` `க்குப் பிறகு` `\\\\ hrule`` க்குப் பிறகு அகற்றவும்."
+
+#: ../../sphinx/doc/latex.rst:529
+msgid "``'makeindex'``"
+msgstr "`` 'MakeIndex'```"
+
+#: ../../sphinx/doc/latex.rst:525
+msgid ""
+"\"makeindex\" call, the last thing before ``\\begin{document}``. With "
+"``'\\\\usepackage[columns=1]{idxlayout}\\\\makeindex'`` the index will use "
+"only one column. You may have to install ``idxlayout`` LaTeX package."
+msgstr ""
+"\"மேக்இண்டெக்ஸ்\" அழைப்பு, `` \\ தொடங்குவதற்கு முன் கடைசி விஷயம் {ஆவணம்} ``."
+" `` '\\\\ UsePackage [நெடுவரிசைகள் = 1] {idxLayout} \\\\ makeindex'``` உடன் "
+"குறியீட்டு ஒரு நெடுவரிசையை மட்டுமே பயன்படுத்தும். நீங்கள் `` idxlayout`` "
+"லேடெக்ஸ் தொகுப்பை நிறுவ வேண்டியிருக்கும்."
+
+#: ../../sphinx/doc/latex.rst:529
+msgid "Default: ``'\\\\makeindex'``"
+msgstr "இயல்புநிலை: `` '\\\\ MakeIndex'```"
+
+#: ../../sphinx/doc/latex.rst:541
+msgid "``'printindex'``"
+msgstr "`'' பிரிண்டிண்டெக்ஸ்'```"
+
+#: ../../sphinx/doc/latex.rst:532
+msgid ""
+"\"printindex\" call, the last thing in the file. Override if you want to "
+"generate the index differently, append some content after the index, or "
+"change the font. As LaTeX uses two-column mode for the index it is often "
+"advisable to set this key to "
+"``'\\\\footnotesize\\\\raggedright\\\\printindex'``. Or, to obtain a one-"
+"column index, use ``'\\\\def\\\\twocolumn[#1]{#1}\\\\printindex'`` (this "
+"trick may fail if using a custom document class; then try the ``idxlayout`` "
+"approach described in the documentation of the ``'makeindex'`` key)."
+msgstr ""
+"\"பிரிண்டிண்டெக்ஸ்\" அழைப்பு, கோப்பில் கடைசி விஷயம். மேலெழுதவும் நீங்கள் "
+"குறியீட்டை வித்தியாசமாக உருவாக்க விரும்பினால், குறியீட்டுக்குப் பிறகு சில "
+"உள்ளடக்கங்களைச் சேர்க்கவும் அல்லது எழுத்துருவை மாற்றவும். லேடெக்ஸ் "
+"குறியீட்டுக்கு இரண்டு நெடுவரிசை பயன்முறையைப் பயன்படுத்துவதால், இந்த விசையை "
+"`` '\\\\ foutnotesize \\\\ raggedRight \\\\ printindex'`` க்கு அமைப்பது "
+"பெரும்பாலும் அறிவுறுத்தப்படுகிறது. . `` 'MakeIndex'`` `விசையின் ஆவணங்களில் "
+"விவரிக்கப்பட்டுள்ள` idxlayout`` அணுகுமுறை)."
+
+#: ../../sphinx/doc/latex.rst:541
+msgid "Default: ``'\\\\printindex'``"
+msgstr "இயல்புநிலை: `` '\\\\ printindex'```"
+
+#: ../../sphinx/doc/latex.rst:566
+msgid "``'fvset'``"
+msgstr "`` 'fvset'```"
+
+#: ../../sphinx/doc/latex.rst:544
+msgid "Customization of ``fancyvrb`` LaTeX package."
+msgstr "`` Fancevrb`` லேடெக்ஸ் தொகுப்பின் தனிப்பயனாக்கம்."
+
+#: ../../sphinx/doc/latex.rst:546
+msgid ""
+"The default value is ``'\\\\fvset{fontsize=auto}'`` which means that the "
+"font size will adjust correctly if a code-block ends up in a footnote. You "
+"may need to modify this if you use custom fonts: "
+"``'\\\\fvset{fontsize=\\\\small}'`` if the monospace font is Courier-like."
+msgstr ""
+"இயல்புநிலை மதிப்பு `` '\\\\ fvset {fontsize = auto}' `` அதாவது ஒரு "
+"குறியீடு-தொகுதி ஒரு அடிக்குறிப்பில் முடிந்தால் எழுத்துரு அளவு சரியாக "
+"சரிசெய்யப்படும். நீங்கள் தனிப்பயன் எழுத்துருக்களைப் பயன்படுத்தினால் இதை "
+"மாற்ற வேண்டியிருக்கலாம்: `` '\\\\ fvset {fontsize = \\\\ small} `` "
+"`மோனோஸ்பேஸ் எழுத்துரு கூரியர் போன்றது என்றால்."
+
+#: ../../sphinx/doc/latex.rst:551
+msgid "Default: ``'\\\\fvset{fontsize=auto}'``"
+msgstr "இயல்புநிலை: `` '\\\\ fvset {fontsize = auto}' `` `"
+
+#: ../../sphinx/doc/latex.rst:555
+msgid ""
+"For ``'xelatex'`` and ``'lualatex'`` defaults to "
+"``'\\\\fvset{fontsize=\\\\small}'`` as this is adapted to the relative "
+"widths of the FreeFont family."
+msgstr ""
+"`` 'Xelatex'`` மற்றும் ``' லுவலேட்எக்ஸ்'`` `` '\\\\ fvset {fontsize = \\\\ "
+"small}' `` `` என்பதற்கு இயல்புநிலைக்கு இயல்புநிலைக்கு வருகிறது."
+
+#: ../../sphinx/doc/latex.rst:560
+msgid ""
+"Changed default for ``'pdflatex'``. Previously it was using "
+"``'\\\\fvset{fontsize=\\\\small}'``."
+msgstr ""
+"இயல்புநிலை `` 'pdflatex'``. முன்னதாக அது `` '\\\\ fvset {fontsize = \\\\ "
+"small}' `` `பயன்படுத்துகிறது."
+
+#: ../../sphinx/doc/latex.rst:564
+msgid ""
+"Changed default for Chinese documents to "
+"``'\\\\fvset{fontsize=\\\\small,formatcom=\\\\xeCJKVerbAddon}'``"
+msgstr ""
+"சீன ஆவணங்களுக்கான இயல்புநிலை `` '\\\\ fvset {fontsize = \\\\ சிறியது, "
+"formatcom = \\\\ xecjkverbaddon}' ``"
+
+#: ../../sphinx/doc/latex.rst:568
+msgid ""
+"Keys that are set by other options and therefore should not be overridden "
+"are:"
+msgstr "பிற விருப்பங்களால் அமைக்கப்பட்ட விசைகள், எனவே மீறப்படக்கூடாது:"
+
+#: ../../sphinx/doc/latex.rst:570
+msgid ""
+"``'docclass'`` ``'classoptions'`` ``'title'`` ``'release'`` ``'author'``"
+msgstr ""
+"`'' '' டாக் கிளாஸ்'`` `` 'கிளாசாப்ஷன்ஸ்'` ``' தலைப்பு'` `` '' `` `'``````` "
+"`` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `ைக "
+"செய்கிறார்கள்."
+
+#: ../../sphinx/doc/latex.rst:580
+msgid "The ``sphinxsetup`` configuration setting"
+msgstr "`` ஸ்பின்க்ஸ்செட்அப்` உள்ளமைவு அமைப்பு"
+
+#: ../../sphinx/doc/latex.rst:584
+msgid ""
+"The ``'sphinxsetup'`` key of :ref:`latex_elements <latex_elements_confval>` "
+"provides a LaTeX-type customization interface::"
+msgstr ""
+"`` 'ஸ்பின்க்ஸ்செட்அப்'` KEY: ref: `Latex_elements <atex_elements_confval>` "
+"ஒரு லேடெக்ஸ்-வகை தனிப்பயனாக்கம் இடைமுகத்தை வழங்குகிறது ::"
+
+#: ../../sphinx/doc/latex.rst:591
+msgid ""
+"It defaults to empty.  If non-empty, it will be passed as argument to the "
+"``\\sphinxsetup`` macro inside the document preamble, like this::"
+msgstr ""
+"இது இயல்புநிலைக்கு காலியாக உள்ளது. காலியாக இல்லாதிருந்தால், அது ஆவண "
+"முன்னுரையின் உள்ளே `` \\ ஸ்பின்க்ஸ்செட்அப்` மேக்ரோவுக்கு வாதமாக "
+"அனுப்பப்படும், இது போன்றது ::"
+
+#: ../../sphinx/doc/latex.rst:597
+msgid ""
+"The colors used in the above are provided by the ``svgnames`` option of the "
+"\"xcolor\" package::"
+msgstr ""
+"மேலே உள்ள வண்ணங்கள் \"xcolor\" தொகுப்பின் `` Svgnames`` விருப்பத்தால் "
+"வழங்கப்படுகின்றன ::"
+
+#: ../../sphinx/doc/latex.rst:604
+msgid ""
+"It is possible to insert uses of the ``\\sphinxsetup`` LaTeX macro directly "
+"into the body of the document, via the ``raw`` directive.  This chapter is "
+"styled in the PDF output using the following insertion at its start.  This "
+"uses keys described later in :ref:`additionalcss`."
+msgstr ""
+"`` ரா`` உத்தரவு வழியாக, `` \\ ஸ்பின்க்ஸ்செட்அப்`` லேடெக்ஸ் மேக்ரோவின் "
+"பயன்பாடுகளை நேரடியாக ஆவணத்தின் உடலில் செருக முடியும். இந்த அத்தியாயம் அதன் "
+"தொடக்கத்தில் பின்வரும் செருகலைப் பயன்படுத்தி PDF வெளியீட்டில் "
+"வடிவமைக்கப்பட்டுள்ளது. இது பின்னர் விவரிக்கப்பட்ட விசைகளைப் "
+"பயன்படுத்துகிறது: Ref: `attercss`."
+
+#: ../../sphinx/doc/latex.rst:677
+msgid ""
+"And this is placed at the end of the chapter source to end the scope of the "
+"configuration:"
+msgstr ""
+"இது உள்ளமைவின் நோக்கத்தை முடிவுக்குக் கொண்டுவர அத்தியாய மூலத்தின் முடிவில் "
+"வைக்கப்படுகிறது:"
+
+#: ../../sphinx/doc/latex.rst:686
+msgid ""
+"LaTeX syntax for boolean keys requires *lowercase* ``true`` or ``false`` e.g"
+" ``'sphinxsetup': \"verbatimwrapslines=false\"``.  If setting the boolean "
+"key to ``true``, ``=true`` is optional. Spaces around the commas and equal "
+"signs are ignored, spaces inside LaTeX macros may be significant. Do not use"
+" quotes to enclose values, whether numerical or strings."
+msgstr ""
+"பூலியன் விசைகளுக்கான லேடெக்ஸ் தொடரியல் * `` உண்மை`` அல்லது `` தவறு` எ.கா. "
+"`'' ஸ்பின்க்ஸ்செட்அப் ':\" சொற்களஞ்சியங்கள் = பொய் \"` `. பூலியன் விசையை `` "
+"உண்மை`` என அமைத்தால், `` = உண்மை`` விருப்பமானது. காற்புள்ளிகளைச் சுற்றியுள்ள"
+" இடங்களும் சம அறிகுறிகளும் புறக்கணிக்கப்படுகின்றன, லேடெக்ஸ் "
+"மேக்ரோக்களுக்குள் உள்ள இடங்கள் குறிப்பிடத்தக்கதாக இருக்கலாம். எண் அல்லது "
+"சரங்களாக இருந்தாலும் மதிப்புகளை இணைக்க மேற்கோள்களைப் பயன்படுத்த வேண்டாம்."
+
+#: ../../sphinx/doc/latex.rst:701
+msgid "``bookmarksdepth``"
+msgstr "`` புக்மார்க்ஸ்டெப்ட்``"
+
+#: ../../sphinx/doc/latex.rst:694
+msgid ""
+"Controls the depth of the collapsible bookmarks panel in the PDF. May be "
+"either a number (e.g. ``3``) or a LaTeX sectioning name (e.g. "
+"``subsubsection``, i.e. without backslash). For details, refer to the "
+"``hyperref`` LaTeX docs."
+msgstr ""
+"PDF இல் மடக்கு புக்மார்க்ஸ் குழுவின் ஆழத்தை கட்டுப்படுத்துகிறது. ஒரு எண் "
+"(எ.கா. `` 3``) அல்லது லேடெக்ஸ் பிரித்தல் பெயர் (எ.கா. `` துணை பிரிவு``, "
+"அதாவது பின்வாங்காமல் இருக்கலாம்). விவரங்களுக்கு, `` ஹைப்பர்ரெஃப்`` லேடெக்ஸ் "
+"டாக்ஸைப் பார்க்கவும்."
+
+#: ../../sphinx/doc/latex.rst:699
+msgid "Default: ``5``"
+msgstr "இயல்புநிலை: `` 5``"
+
+#: ../../sphinx/doc/latex.rst:729
+msgid "``hmargin, vmargin``"
+msgstr "`` hmargin, vmargin``"
+
+#: ../../sphinx/doc/latex.rst:706
+msgid ""
+"The dimensions of the horizontal (resp. vertical) margins, passed as "
+"``hmargin`` (resp. ``vmargin``) option to the ``geometry`` package. "
+"Example::"
+msgstr "கிடைமட்ட (ரெஸ்ப். உதாரணமாக::"
+
+#: ../../sphinx/doc/latex.rst:712
+msgid ""
+"Japanese documents currently accept only the one-dimension format for these "
+"parameters. The ``geometry`` package is then passed suitable options to get "
+"the text width set to an exact multiple of the *zenkaku* width, and the text"
+" height set to an integer multiple of the baselineskip, with the closest fit"
+" for the margins."
+msgstr ""
+"ஜப்பானிய ஆவணங்கள் தற்போது இந்த அளவுருக்களுக்கான ஒரு பரிமாண வடிவமைப்பை "
+"மட்டுமே ஏற்றுக்கொள்கின்றன. `` வடிவியல்`` தொகுப்பு பின்னர் உரை அகலத்தை * "
+"ஜென்காகு * அகலத்தின் சரியான பலவற்றிற்கு அமைக்க பொருத்தமான விருப்பங்கள், "
+"மற்றும் உரை உயரம் ஒரு முழு எண் பாஸ்லைன்ஸ்கிப்பிற்கு அமைக்கப்பட்டுள்ளது, "
+"விளிம்புகளுக்கு மிக நெருக்கமான பொருத்தம்."
+
+#: ../../sphinx/doc/latex.rst:718
+msgid "Default: ``1in`` (equivalent to ``{1in,1in}``)"
+msgstr "இயல்புநிலை: `` 1in`` (`` {1in, 1in} `` க்கு சமம்)"
+
+#: ../../sphinx/doc/latex.rst:722
+msgid ""
+"For Japanese ``'manual'`` docclass with pointsize ``11pt`` or ``12pt``, use "
+"the ``nomag`` extra document class option (cf. ``'extraclassoptions'`` key "
+"of :confval:`latex_elements`) or so-called TeX \"true\" units::"
+msgstr ""
+"`` 11pt`` அல்லது `` 12pt`` ஆகியவற்றைக் கொண்ட ஜப்பானிய `'' கையேடு'`` "
+"டாக்ளாஸுக்கு,` `நோமாக்`` கூடுதல் ஆவண வகுப்பு விருப்பத்தைப் பயன்படுத்தவும் "
+"(cf.` '' எக்ஸ்ட்ராக்ளாஸோப்ஷன்ஸ்'` `விசையை: confval: confval: "
+"`Latex_elements`) அல்லது டெக்ஸ்\" ட்ரூ \"அலகுகள் ::"
+
+#: ../../sphinx/doc/latex.rst:737
+msgid "``marginpar``"
+msgstr "`` விளிம்பு``"
+
+#: ../../sphinx/doc/latex.rst:732
+msgid ""
+"The ``\\marginparwidth`` LaTeX dimension. For Japanese documents, the value "
+"is modified to be the closest integer multiple of the *zenkaku* width."
+msgstr ""
+"`` \\ விளிம்புுவதில்லை`` லேடெக்ஸ் பரிமாணம். ஜப்பானிய ஆவணங்களைப் பொறுத்தவரை, "
+"மதிப்பு * ஜென்காகு * அகலத்தின் மிக நெருக்கமான முழு எண்ணாக "
+"மாற்றியமைக்கப்பட்டுள்ளது."
+
+#: ../../sphinx/doc/latex.rst:735
+msgid "Default: ``0.5in``"
+msgstr "இயல்புநிலை: `` 0.5in``"
+
+#: ../../sphinx/doc/latex.rst:744
+msgid "``verbatimwithframe``"
+msgstr "`` பிரேம் உடன் சொற்களஞ்சியம்``"
+
+#: ../../sphinx/doc/latex.rst:740
+msgid ""
+"Boolean to specify if :rst:dir:`code-block`\\ s and literal includes are "
+"framed. Setting it to ``false`` does not deactivate use of package "
+"\"framed\", because it is still in use for the optional background color."
+msgstr ""
+"IF ஐக் குறிப்பிட பூலியன்: rst: dir: `code-block` \\ கள் மற்றும் எளிமையானவை "
+"ஆகியவை கட்டமைக்கப்பட்டுள்ளன. அதை `` FALSE`` க்கு அமைப்பது "
+"\"கட்டமைக்கப்பட்ட\" தொகுப்பின் பயன்பாட்டை செயலிழக்காது, ஏனெனில் இது விருப்ப "
+"பின்னணி நிறத்திற்கு இன்னும் பயன்பாட்டில் உள்ளது."
+
+#: ../../sphinx/doc/latex.rst:744
+msgid "Default: ``true``."
+msgstr "இயல்புநிலை: `` உண்மை``."
+
+#: ../../sphinx/doc/latex.rst:756
+msgid "``verbatimwrapslines``"
+msgstr "`` சொற்களஞ்சியம்"
+
+#: ../../sphinx/doc/latex.rst:747
+msgid ""
+"Boolean to specify if long lines in :rst:dir:`code-block`\\ 's contents are "
+"wrapped."
+msgstr ""
+"நீண்ட கோடுகள் இருந்தால் குறிப்பிட பூலியன்: rst: dir: `code-block` of இன் "
+"உள்ளடக்கங்கள் மூடப்பட்டிருக்கும்."
+
+#: ../../sphinx/doc/latex.rst:750
+msgid ""
+"If ``true``, line breaks may happen at spaces (the last space before the "
+"line break will be rendered using a special symbol), and at ascii "
+"punctuation characters (i.e. not at letters or digits). Whenever a long "
+"string has no break points, it is moved to next line. If its length is "
+"longer than the line width it will overflow."
+msgstr ""
+"`` உண்மை`` என்றால், இடைவெளிகளில் வரி இடைவெளிகள் நிகழக்கூடும் (வரி "
+"இடைவெளிக்கு முன் கடைசி இடம் ஒரு சிறப்பு சின்னத்தைப் பயன்படுத்தி "
+"வழங்கப்படும்), மற்றும் ஆஸ்கி நிறுத்தற்குறி எழுத்துக்களில் (அதாவது கடிதங்கள் "
+"அல்லது இலக்கங்களில் அல்ல). ஒரு நீண்ட சரம் இடைவெளி புள்ளிகள் இல்லாத "
+"போதெல்லாம், அது அடுத்த வரிக்கு நகர்த்தப்படும். அதன் நீளம் வரி அகலத்தை விட "
+"நீளமாக இருந்தால் அது நிரம்பி வழியும்."
+
+#: ../../sphinx/doc/latex.rst:756 ../../sphinx/doc/latex.rst:817
+#: ../../sphinx/doc/latex.rst:835 ../../sphinx/doc/latex.rst:847
+msgid "Default: ``true``"
+msgstr "இயல்புநிலை: `` உண்மை``"
+
+#: ../../sphinx/doc/latex.rst:778
+msgid "``verbatimforcewraps``"
+msgstr "`` சொற்களஞ்சியம் படைகள் ``"
+
+#: ../../sphinx/doc/latex.rst:761
+msgid ""
+"Boolean to specify if long lines in :rst:dir:`code-block`\\ 's contents "
+"should be forcefully wrapped to never overflow due to long strings."
+msgstr ""
+"நீண்ட கோடுகள் இருந்தால் குறிப்பிட பூலியன்: rst: dir: `கோட்-பிளாக்` \\ இன் "
+"உள்ளடக்கங்கள் நீண்ட சரங்கள் காரணமாக ஒருபோதும் நிரம்பி வழிகிறது."
+
+#: ../../sphinx/doc/latex.rst:766
+msgid ""
+"It is assumed that the Pygments_ LaTeXFormatter has not been used with its "
+"``texcomments`` or similar options which allow additional (arbitrary) LaTeX "
+"mark-up."
+msgstr ""
+"பைக்மென்ட்ஸ்_ லேடெக்ஸ்ஃபார்மேட்டர் அதன் `` டெக்ஸாம்கள்`` அல்லது கூடுதல் "
+"(தன்னிச்சையான) லேடெக்ஸ் மார்க்-அப் அனுமதிக்கும் ஒத்த விருப்பங்களுடன் "
+"பயன்படுத்தப்படவில்லை என்று கருதப்படுகிறது."
+
+#: ../../sphinx/doc/latex.rst:770
+msgid ""
+"Also, in case of :confval:`latex_engine` set to ``'pdflatex'``, only the "
+"default LaTeX handling of Unicode code points, i.e. ``utf8`` not ``utf8x`` "
+"is allowed."
+msgstr ""
+"மேலும், விஷயத்தில்: confval: `Latex_engine`` `'pdflatex'`` க்கு "
+"அமைக்கப்பட்டுள்ளது, யூனிகோட் குறியீடு புள்ளிகளின் இயல்புநிலை லேடெக்ஸ் "
+"கையாளுதல் மட்டுமே, அதாவது` `utf8`` `utf8x`` அனுமதிக்கப்படுகிறது."
+
+#: ../../sphinx/doc/latex.rst:776
+msgid "Default: ``false``"
+msgstr "இயல்புநிலை: `` தவறு``"
+
+#: ../../sphinx/doc/latex.rst:788
+msgid "``verbatimmaxoverfull``"
+msgstr "`` verbatimmaxoverfull``"
+
+#: ../../sphinx/doc/latex.rst:781
+msgid ""
+"A number. If an unbreakable long string has length larger than the total "
+"linewidth plus this number of characters, and if ``verbatimforcewraps`` mode"
+" is on, the input line will be reset using the forceful algorithm which "
+"applies breakpoints at each character."
+msgstr ""
+"எண். உடைக்க முடியாத நீண்ட சரம் மொத்த வரி அகலத்தை விட பெரியதாக இருந்தால், "
+"இந்த எண்ணிக்கையிலான எழுத்துக்கள் இருந்தால், மற்றும் `` சொற்களஞ்சியம் "
+"`சொற்களஞ்சியம் `` பயன்முறை இயக்கத்தில் இருந்தால், ஒவ்வொரு எழுத்துக்களிலும் "
+"பிரேக் பாயிண்ட்ஸைப் பயன்படுத்தும் வலிமையான வழிமுறையைப் பயன்படுத்தி உள்ளீட்டு"
+" வரி மீட்டமைக்கப்படும்."
+
+#: ../../sphinx/doc/latex.rst:786
+msgid "Default: ``3``"
+msgstr "இயல்புநிலை: `` 3``"
+
+#: ../../sphinx/doc/latex.rst:811
+msgid "``verbatimmaxunderfull``"
+msgstr "`` சொற்களஞ்சியம்"
+
+#: ../../sphinx/doc/latex.rst:791
+msgid ""
+"A number. If ``verbatimforcewraps`` mode applies, and if after applying the "
+"line wrapping at spaces and punctuation, the first part of the split line is"
+" lacking at least that number of characters to fill the available width, "
+"then the input line will be reset using the forceful algorithm."
+msgstr ""
+"எண். `` சொற்களஞ்சியம் மற்றும் நிறுத்தற்குறிகளில் வரி மடக்குதலைப் "
+"பயன்படுத்திய பிறகு, பிளவு வரியின் முதல் பகுதி கிடைக்கக்கூடிய அகலத்தை நிரப்ப "
+"குறைந்தபட்சம் அந்த எண்ணிக்கையிலான எழுத்துக்கள் இல்லை என்றால், உள்ளீட்டு வரி "
+"மீட்டமைக்கப்படும் பலமான வழிமுறை."
+
+#: ../../sphinx/doc/latex.rst:796
+msgid ""
+"As the default is set to a high value, the forceful algorithm is triggered "
+"only in overfull case, i.e. in presence of a string longer than full "
+"linewidth. Set this to ``0`` to force all input lines to be hard wrapped at "
+"the current available linewidth::"
+msgstr ""
+"இயல்புநிலை அதிக மதிப்புக்கு அமைக்கப்பட்டிருப்பதால், பலமான வழிமுறை "
+"அதிகப்படியான வழக்கில் மட்டுமே தூண்டப்படுகிறது, அதாவது முழு வரி அகலத்தை விட "
+"நீண்ட சரம் முன்னிலையில். எல்லா உள்ளீட்டு வரிகளையும் தற்போதைய கிடைக்கக்கூடிய "
+"வரி அகலத்தில் கடினமாக்கும்படி கட்டாயப்படுத்த இதை `` 0`` என அமைக்கவும் ::"
+
+#: ../../sphinx/doc/latex.rst:805
+msgid ""
+"This can be done locally for a given code-block via the use of raw latex "
+"directives to insert suitable ``\\sphinxsetup`` (before and after) into the "
+"latex file."
+msgstr ""
+"லேடெக்ஸ் கோப்பில் பொருத்தமான `` \\ sphinxsetup`` (முன் மற்றும் பின்) "
+"செருகுவதற்கு மூல லேடெக்ஸ் வழிமுறைகளைப் பயன்படுத்துவதன் மூலம் கொடுக்கப்பட்ட "
+"குறியீடு-தொகுதிக்கு இதை உள்நாட்டில் செய்ய முடியும்."
+
+#: ../../sphinx/doc/latex.rst:809
+msgid "Default: ``100``"
+msgstr "இயல்புநிலை: `` 100``"
+
+#: ../../sphinx/doc/latex.rst:821
+msgid "``verbatimhintsturnover``"
+msgstr "`` சொற்களஞ்சியம் விற்றுமுதல்`"
+
+#: ../../sphinx/doc/latex.rst:814
+msgid ""
+"Boolean to specify if code-blocks display \"continued on next page\" and "
+"\"continued from previous page\" hints in case of page breaks."
+msgstr ""
+"கோட்-பிளாக்ஸ் காட்சி \"அடுத்த பக்கத்தில் தொடர்ந்தால்\" மற்றும் பக்க "
+"இடைவெளிகளின் விஷயத்தில் \"முந்தைய பக்கத்திலிருந்து தொடர்கிறது\" என்பதை "
+"குறிப்பிட பூலியன்."
+
+#: ../../sphinx/doc/latex.rst:820
+msgid "the default changed from ``false`` to ``true``."
+msgstr "இயல்புநிலை `` FALSE`` இலிருந்து `` உண்மை`` ஆக மாற்றப்பட்டது."
+
+#: ../../sphinx/doc/latex.rst:829
+msgid "``verbatimcontinuedalign``, ``verbatimcontinuesalign``"
+msgstr "`` verbatimcontinuedalign```, `` veryalimcontinusalign``"
+
+#: ../../sphinx/doc/latex.rst:824
+msgid ""
+"Horizontal position relative to the framed contents: either ``l`` (left "
+"aligned), ``r`` (right aligned) or ``c`` (centered)."
+msgstr ""
+"கட்டமைக்கப்பட்ட உள்ளடக்கங்களுடன் தொடர்புடைய கிடைமட்ட நிலை: `` l`` (இடது "
+"சீரமைக்கப்பட்ட), `` r`` (வலது சீரமைக்கப்பட்ட) அல்லது `` c`` "
+"(மையப்படுத்தப்பட்ட)."
+
+#: ../../sphinx/doc/latex.rst:827
+msgid "Default: ``r``"
+msgstr "இயல்புநிலை: `` r``"
+
+#: ../../sphinx/doc/latex.rst:838
+msgid "``parsedliteralwraps``"
+msgstr "`` பார்செட்லிட்டரபிராப்ஸ்``"
+
+#: ../../sphinx/doc/latex.rst:832
+msgid ""
+"Boolean to specify if long lines in :dudir:`parsed-literal`\\ 's contents "
+"should wrap."
+msgstr ""
+"நீண்ட கோடுகள் இருந்தால் குறிப்பிட பூலியன்: தாதர்: "
+"`பாகுபடுத்தப்பட்ட-லிட்டரல்ஸ் உள்ளடக்கம் போர்த்தப்பட வேண்டும்."
+
+#: ../../sphinx/doc/latex.rst:837 ../../sphinx/doc/latex.rst:849
+msgid "set this option value to ``false`` to recover former behavior."
+msgstr ""
+"முன்னாள் நடத்தையை மீட்டெடுக்க இந்த விருப்ப மதிப்பை `` தவறான`` என அமைக்கவும்."
+
+#: ../../sphinx/doc/latex.rst:853
+msgid "``inlineliteralwraps``"
+msgstr "`` இன்லைன் நேரடி மறைப்புகள்``"
+
+#: ../../sphinx/doc/latex.rst:841
+msgid ""
+"Boolean to specify if line breaks are allowed inside inline literals: but "
+"extra potential break-points (additionally to those allowed by LaTeX at "
+"spaces or for hyphenation) are currently inserted only after the characters "
+"``. , ; ? ! /`` and ``\\``. Due to TeX internals, white space in the line "
+"will be stretched (or shrunk) in order to accommodate the linebreak."
+msgstr ""
+"இன்லைன் லிட்டரர்களுக்குள் வரி இடைவெளிகள் அனுமதிக்கப்பட்டால் குறிப்பிட "
+"பூலியன்: ஆனால் கூடுதல் சாத்தியமான இடைவெளி புள்ளிகள் (கூடுதலாக இடைவெளிகளில் "
+"அல்லது ஹைபனேஷனுக்கு லேடெக்ஸ் அனுமதித்தவர்களுக்கு) தற்போது எழுத்துக்கள் `` "
+"க்குப் பிறகுதான் செருகப்படுகின்றன. ,; ? ! /`` மற்றும் `` \\ ``. டெக்ஸ் "
+"இன்டர்னல்கள் காரணமாக, லைன் பிரேக்கிற்கு இடமளிக்கும் பொருட்டு வரிசையில் "
+"வெள்ளை இடம் நீட்டப்படும் (அல்லது சுருங்குகிறது)."
+
+#: ../../sphinx/doc/latex.rst:852
+msgid "added potential breakpoint at ``\\`` characters."
+msgstr "`` \\ `` எழுத்துக்களில் சாத்தியமான இடைவெளியைச் சேர்த்தது."
+
+#: ../../sphinx/doc/latex.rst:859
+msgid "``verbatimvisiblespace``"
+msgstr "`` சொற்களஞ்சியம்"
+
+#: ../../sphinx/doc/latex.rst:856
+msgid ""
+"When a long code line is split, the last space character from the source "
+"code line right before the linebreak location is typeset using this."
+msgstr ""
+"ஒரு நீண்ட குறியீடு வரி பிரிக்கப்படும்போது, லைன் பிரேக் இருப்பிடத்திற்கு "
+"முன்பே மூலக் குறியீட்டிலிருந்து கடைசி விண்வெளி எழுத்து இதைப் பயன்படுத்தி "
+"தட்டச்சு செய்கிறது."
+
+#: ../../sphinx/doc/latex.rst:859
+msgid "Default: ``\\textcolor{red}{\\textvisiblespace}``"
+msgstr "இயல்புநிலை: `` \\ textColor {சிவப்பு} {\\ textVisibleSpace} `` `"
+
+#: ../../sphinx/doc/latex.rst:870
+msgid "``verbatimcontinued``"
+msgstr "`` சொற்களஞ்சியம்"
+
+#: ../../sphinx/doc/latex.rst:862
+msgid ""
+"A LaTeX macro inserted at start of continuation code lines. Its "
+"(complicated...) default typesets a small red hook pointing to the right::"
+msgstr ""
+"தொடர்ச்சியான குறியீடு வரிகளின் தொடக்கத்தில் ஒரு லேடெக்ஸ் மேக்ரோ "
+"செருகப்பட்டது. அதன் (சிக்கலானது ...) இயல்புநிலை ஒரு சிறிய சிவப்பு கொக்கி "
+"வலதுபுறம் சுட்டிக்காட்டுகிறது ::"
+
+#: ../../sphinx/doc/latex.rst:867
+msgid ""
+"The breaking of long code lines was added at 1.4.2. The default definition "
+"of the continuation symbol was changed at 1.5 to accommodate various font "
+"sizes (e.g. code-blocks can be in footnotes)."
+msgstr ""
+"நீண்ட குறியீடு கோடுகளை உடைத்தல் 1.4.2 இல் சேர்க்கப்பட்டது. தொடர்ச்சியான "
+"சின்னத்தின் இயல்புநிலை வரையறை பல்வேறு எழுத்துரு அளவுகளுக்கு இடமளிக்க 1.5 இல்"
+" மாற்றப்பட்டது (எ.கா. குறியீடு-தொகுதிகள் அடிக்குறிப்புகளில் இருக்கலாம்)."
+
+#: ../../sphinx/doc/latex.rst:874
+msgid "Values for color keys must either:"
+msgstr "வண்ண விசைகளுக்கான மதிப்புகளும் இருக்க வேண்டும்:"
+
+#: ../../sphinx/doc/latex.rst:876
+msgid ""
+"obey the syntax of the ``\\definecolor`` LaTeX command, e.g. something such "
+"as ``VerbatimColor={rgb}{0.2,0.3,0.5}`` or ``{RGB}{37,23,255}`` or "
+"``{gray}{0.75}`` or (only with package ``xcolor``) ``{HTML}{808080}`` or ..."
+msgstr ""
+"`` \\ வரையறுப்பு`` லேடெக்ஸ் கட்டளையின் தொடரியல், எ.கா. `` veryatimcolor = "
+"{rgb} {0.2,0.3,0.5} `` அல்லது `{rgb} {37,23,255}}` `அல்லது` {சாம்பல் {0.75}}"
+" ers `` `` `` `{ Xcolor``) `{html} {808080}}` அல்லது ..."
+
+#: ../../sphinx/doc/latex.rst:881
+msgid ""
+"or obey the syntax of the ``\\colorlet`` command from package ``xcolor`` "
+"(which then must exist in the LaTeX installation), e.g. "
+"``VerbatimColor=red!10`` or ``red!50!green`` or ``-red!75`` or "
+"``MyPreviouslyDefinedColor`` or... Refer to xcolor_ documentation for this "
+"syntax."
+msgstr ""
+"அல்லது தொகுப்பிலிருந்து `` \\ colorlet`` கட்டளையின் தொடரியல் `` xcolor`` "
+"(பின்னர் இது லேடெக்ஸ் நிறுவலில் இருக்க வேண்டும்), எ.கா. `` Verbatimcolor = "
+"சிவப்பு! 10`` அல்லது `` சிவப்பு! 50! பச்சை` அல்லது `` -red!"
+
+#: ../../sphinx/doc/latex.rst:889
+msgid "Formerly only the ``\\definecolor`` syntax was accepted."
+msgstr ""
+"முன்னர் `` \\ வரையறுக்கப்பட்ட தன்மை`.` தொடரியல் மட்டுமே "
+"ஏற்றுக்கொள்ளப்பட்டது."
+
+#: ../../sphinx/doc/latex.rst:895
+msgid "``TitleColor``"
+msgstr "`` Titlecolor``"
+
+#: ../../sphinx/doc/latex.rst:893
+msgid "The color for titles (as configured via use of package \"titlesec\".)"
+msgstr ""
+"தலைப்புகளுக்கான வண்ணம் (\"தலைப்புகள்\" என்ற தொகுப்பு பயன்பாட்டின் மூலம் "
+"கட்டமைக்கப்பட்டபடி.)"
+
+#: ../../sphinx/doc/latex.rst:895
+msgid "Default: ``{rgb}{0.126,0.263,0.361}``"
+msgstr "இயல்புநிலை: `` {rgb} {0.126,0.263,0.361} `` `"
+
+#: ../../sphinx/doc/latex.rst:901
+msgid "``InnerLinkColor``"
+msgstr "`` இன்னர்லிங்க் கலர்``"
+
+#: ../../sphinx/doc/latex.rst:898
+msgid ""
+"A color passed to ``hyperref`` as value of ``linkcolor``  and ``citecolor``."
+msgstr ""
+"ஒரு வண்ணம் `` ஹைப்பர்ரெஃப்`` க்கு `` லிங்க் கலர்`` மற்றும் `` சிட்ட்கோலர்`` "
+"ஆகியவற்றின் மதிப்பாக அனுப்பப்பட்டது."
+
+#: ../../sphinx/doc/latex.rst:901
+msgid "Default: ``{rgb}{0.208,0.374,0.486}``."
+msgstr "இயல்புநிலை: `{rgb} {0.208,0.374,0.486}` `."
+
+#: ../../sphinx/doc/latex.rst:907
+msgid "``OuterLinkColor``"
+msgstr "`` Outerlinkcolor``"
+
+#: ../../sphinx/doc/latex.rst:904
+msgid ""
+"A color passed to ``hyperref`` as value of ``filecolor``, ``menucolor``, and"
+" ``urlcolor``."
+msgstr ""
+"ஒரு வண்ணம் `` ஹைப்பர்ரெஃப்`` க்கு `` ஃபைல்கோலர்``, `` மெனுகோலர்``, மற்றும் "
+"`` urlcolor`` ஆகியவற்றின் மதிப்பாக அனுப்பப்பட்டது."
+
+#: ../../sphinx/doc/latex.rst:907
+msgid "Default: ``{rgb}{0.216,0.439,0.388}``"
+msgstr "இயல்புநிலை: `` {rgb} {0.216,0.439,0.388} `` `"
+
+#: ../../sphinx/doc/latex.rst:916
+msgid "``VerbatimColor``"
+msgstr "`` சொற்களஞ்சியம்`"
+
+#: ../../sphinx/doc/latex.rst:910
+msgid "The background color for :rst:dir:`code-block`\\ s."
+msgstr "இதற்கான பின்னணி நிறம்: rst: dir: `குறியீடு-தொகுதி` \\ s."
+
+#: ../../sphinx/doc/latex.rst:912
+msgid "Default: ``{gray}{0.95}``"
+msgstr "இயல்புநிலை: `` {சாம்பல் {0.95} `` `"
+
+#: ../../sphinx/doc/latex.rst:916
+msgid "Formerly, it was ``{rgb}{1,1,1}`` (white)."
+msgstr "முன்னர், அது `{rgb} 1,1,1}` `(வெள்ளை)."
+
+#: ../../sphinx/doc/latex.rst:925
+msgid "``VerbatimBorderColor``"
+msgstr "`` VerbatimborderColor``"
+
+#: ../../sphinx/doc/latex.rst:919
+msgid "The frame color."
+msgstr "பிரேம் நிறம்."
+
+#: ../../sphinx/doc/latex.rst:921
+msgid "Default: ``{RGB}{32,32,32}``"
+msgstr "இயல்புநிலை: `` {rgb} {32,32,32} `` `"
+
+#: ../../sphinx/doc/latex.rst:925
+msgid "Formerly it was ``{rgb}{0,0,0}`` (black)."
+msgstr "முன்னர் அது `{rgb} {0,0,0}` `(கருப்பு)."
+
+#: ../../sphinx/doc/latex.rst:932
+msgid "``VerbatimHighlightColor``"
+msgstr "`` சொற்களஞ்சியம் சிறப்பம்சமாக வண்ணம்`"
+
+#: ../../sphinx/doc/latex.rst:928
+msgid "The color for highlighted lines."
+msgstr "சிறப்பம்சமாக வரிகளுக்கான நிறம்."
+
+#: ../../sphinx/doc/latex.rst:930
+msgid "Default: ``{rgb}{0.878,1,1}``"
+msgstr "இயல்புநிலை: `{rgb} {0.878,1,1}` ``"
+
+#: ../../sphinx/doc/latex.rst:953
+msgid "``TableRowColorHeader``"
+msgstr "`` டேப்லரோவலோர்ஹெடர்``"
+
+#: ../../sphinx/doc/latex.rst:937
+msgid "Sets the background color for (all) the header rows of tables."
+msgstr ""
+"அட்டவணைகளின் தலைப்பு வரிசைகளுக்கு (அனைத்தும்) பின்னணி நிறத்தை அமைக்கிறது."
+
+#: ../../sphinx/doc/latex.rst:939
+msgid ""
+"It will have an effect only if either the :confval:`latex_table_style` "
+"contains ``'colorrows'`` or if the table is assigned the ``colorrows`` "
+"class.  It is ignored for tables with ``nocolorrows`` class."
+msgstr ""
+"ஒன்று: confval: `Latex_table_style` ஐக் கொண்டிருந்தால் மட்டுமே அது ஒரு "
+"விளைவைக் கொண்டிருக்கும்` '' கலரோஸ்'`` அல்லது அட்டவணை `` கலரோக்கள்`` "
+"வகுப்பில் ஒதுக்கப்பட்டால். `` நோகோலோரோஸ்`` வகுப்பைக் கொண்ட அட்டவணைகளுக்கு "
+"இது புறக்கணிக்கப்படுகிறது."
+
+#: ../../sphinx/doc/latex.rst:943
+msgid ""
+"As for the other ``'sphinxsetup'`` keys, it can also be set or modified from"
+" a ``\\sphinxsetup{...}`` LaTeX command inserted via the :dudir:`raw` "
+"directive, or also from a LaTeX environment associated to a `container class"
+" <latexcontainer_>`_ and using such ``\\sphinxsetup{...}``."
+msgstr ""
+"மற்ற `` '' ஸ்பின்க்ஸ்செட்அப்'` விசைகளைப் பொறுத்தவரை, அதை ஒரு `` \\ "
+"ஸ்பின்க்ஸ்செட்அப் {...} `` லேடெக்ஸ் கட்டளை மூலம் அமைக்கலாம் அல்லது "
+"மாற்றலாம்: டுடிர்: `ரா` டைரெக்டிவ், அல்லது ஒரு லேடெக்ஸ் சூழல் ஒரு `கொள்கலன் "
+"வகுப்போடு <லேடெக்ஸோன்டெய்ன்_>` _ மற்றும் அத்தகைய `` \\ sphinxsetup {...} `` "
+"ஆகியவற்றைப் பயன்படுத்துகிறது."
+
+#: ../../sphinx/doc/latex.rst:948
+msgid "Default: ``{gray}{0.86}``"
+msgstr "இயல்புநிலை: `` {கிரே} {0.86} `` `"
+
+#: ../../sphinx/doc/latex.rst:950
+msgid ""
+"There is also ``TableMergeColorHeader``.  If used, sets a specific color for"
+" merged single-row cells in the header."
+msgstr ""
+"`` Talbleargecolorheader``. பயன்படுத்தினால், தலைப்பில் இணைக்கப்பட்ட "
+"ஒற்றை-வரிசை கலங்களுக்கு ஒரு குறிப்பிட்ட வண்ணத்தை அமைக்கிறது."
+
+#: ../../sphinx/doc/latex.rst:965
+msgid "``TableRowColorOdd``"
+msgstr "`` டேப்லரோவலோரோட்``"
+
+#: ../../sphinx/doc/latex.rst:956
+msgid ""
+"Sets the background color for odd rows in tables (the row count starts at "
+"``1`` at the first non-header row).  Has an effect only if the "
+":confval:`latex_table_style` contains ``'colorrows'`` or for specific tables"
+" assigned the ``colorrows`` class."
+msgstr ""
+"ஒற்றைப்படை வரிசைகளுக்கான பின்னணி நிறத்தை அட்டவணையில் அமைக்கிறது (வரிசை "
+"எண்ணிக்கை முதல் தலைப்பு அல்லாத வரிசையில் `` 1`` இல் தொடங்குகிறது). : "
+"Confval: `latex_table_style` இன்` `'கலரோஸ்'`` அல்லது` `கலரோக்கள்`` வகுப்பில்"
+" ஒதுக்கப்பட்ட குறிப்பிட்ட அட்டவணைகளுக்கு மட்டுமே ஒரு விளைவைக் கொண்டுள்ளது."
+
+#: ../../sphinx/doc/latex.rst:961
+msgid "Default: ``{gray}{0.92}``"
+msgstr "இயல்புநிலை: `` {சாம்பல் {0.92} `` `"
+
+#: ../../sphinx/doc/latex.rst:963
+msgid "There is also ``TableMergeColorOdd``."
+msgstr "`` Talbleargecolorodd`` உள்ளது."
+
+#: ../../sphinx/doc/latex.rst:974
+msgid "``TableRowColorEven``"
+msgstr "`` டேப்லரோவலோர்வென்``"
+
+#: ../../sphinx/doc/latex.rst:968
+msgid "Sets the background color for even rows in tables."
+msgstr "அட்டவணையில் கூட வரிசைகளுக்கு பின்னணி நிறத்தை அமைக்கிறது."
+
+#: ../../sphinx/doc/latex.rst:970
+msgid "Default ``{gray}{0.98}``"
+msgstr "இயல்புநிலை `` {சாம்பல்} {0.98} `` `"
+
+#: ../../sphinx/doc/latex.rst:972
+msgid "There is also ``TableMergeColorEven``."
+msgstr "`` Talbleargecoloreven`` உள்ளது."
+
+#: ../../sphinx/doc/latex.rst:982
+msgid "``verbatimsep``"
+msgstr "`` Verbatimsep``"
+
+#: ../../sphinx/doc/latex.rst:977
+msgid "The separation between code lines and the frame."
+msgstr "குறியீடு கோடுகளுக்கும் சட்டத்திற்கும் இடையிலான பிரிப்பு."
+
+#: ../../sphinx/doc/latex.rst:979
+msgid ""
+"See :ref:`additionalcss` for its alias  ``pre_padding`` and additional keys."
+msgstr ""
+"காண்க: குறிப்பு: `` pre_padding`` மற்றும் கூடுதல் விசைகளுக்கு `கூடுதல் "
+"சி.எஸ்.எஸ்."
+
+#: ../../sphinx/doc/latex.rst:982
+msgid "Default: ``\\fboxsep``"
+msgstr "இயல்புநிலை: `` \\ fboxsep``"
+
+#: ../../sphinx/doc/latex.rst:988
+msgid "``verbatimborder``"
+msgstr "`` சொற்களஞ்சியம்`"
+
+#: ../../sphinx/doc/latex.rst:985
+msgid ""
+"The width of the frame around :rst:dir:`code-block`\\ s.  See also "
+":ref:`additionalcss` for ``pre_border-width``."
+msgstr ""
+"சுற்றியுள்ள சட்டத்தின் அகலம்: rst: dir: `code-block` \\ s. மேலும் காண்க: "
+"குறிப்பு: `` PRE_BORDER-WIDTH` `` கூடுதல் சி.எஸ்.எஸ்."
+
+#: ../../sphinx/doc/latex.rst:988 ../../sphinx/doc/latex.rst:1015
+msgid "Default: ``\\fboxrule``"
+msgstr "இயல்புநிலை: `` \\ fboxRule``"
+
+#: ../../sphinx/doc/latex.rst:996
+msgid "``shadowsep``"
+msgstr "`` நிழல் ``"
+
+#: ../../sphinx/doc/latex.rst:991
+msgid ""
+"The separation between contents and frame for contents_ and :dudir:`topic` "
+"boxes."
+msgstr ""
+"உள்ளடக்கங்களுக்கும் சட்டகங்களுக்கும் இடையில் பிரித்தல்_ மற்றும்: டுடிர்: "
+"`தலைப்பு` பெட்டிகள்."
+
+#: ../../sphinx/doc/latex.rst:994
+msgid "See :ref:`additionalcss` for the alias ``div.topic_padding``."
+msgstr ""
+"காண்க: ref: `` div.topic_padding`` என்ற மாற்றுக்கு `கூடுதல் சி.எஸ்.எஸ்."
+
+#: ../../sphinx/doc/latex.rst:996
+msgid "Default: ``5pt``"
+msgstr "இயல்புநிலை: `` 5pt``"
+
+#: ../../sphinx/doc/latex.rst:1009
+msgid "``shadowsize``"
+msgstr "`` நிழலாடுங்கள்``"
+
+#: ../../sphinx/doc/latex.rst:999
+msgid "The width of the lateral \"shadow\" to the right and bottom."
+msgstr "வலது மற்றும் கீழ் பக்கவாட்டு \"நிழலின்\" அகலம்."
+
+#: ../../sphinx/doc/latex.rst:1001
+msgid ""
+"See :ref:`additionalcss` for ``div.topic_box-shadow`` which allows to "
+"configure separately the widths of the vertical and horizontal shadows."
+msgstr "காண்க: குறிப்பு: `` div.topic_box-shadow` `` கூடுதல் சி.எஸ்.எஸ்."
+
+#: ../../sphinx/doc/latex.rst:1004
+msgid "Default: ``4pt``"
+msgstr "இயல்புநிலை: `` 4pt``"
+
+#: ../../sphinx/doc/latex.rst:1006
+msgid ""
+"Fixed a regression introduced at ``5.1.0`` which modified unintentionally "
+"the width of topic boxes and worse had made usage of this key break PDF "
+"builds."
+msgstr ""
+"`` 5.1.0`` இல் அறிமுகப்படுத்தப்பட்ட ஒரு பின்னடைவு சரி செய்யப்பட்டது, இது "
+"தற்செயலாக தலைப்பு பெட்டிகளின் அகலத்தை மாற்றியமைத்தது மற்றும் மோசமான இந்த "
+"முக்கிய இடைவெளியை PDF கட்டியெழுப்பியது."
+
+#: ../../sphinx/doc/latex.rst:1015
+msgid "``shadowrule``"
+msgstr "`` நிழல்``"
+
+#: ../../sphinx/doc/latex.rst:1012
+msgid ""
+"The width of the frame around :dudir:`topic` boxes.  See also "
+":ref:`additionalcss` for ``div.topic_border-width``."
+msgstr ""
+"சுற்றியுள்ள சட்டத்தின் அகலம்: டுடிர்: `தலைப்பு` பெட்டிகள். மேலும் காண்க: `` "
+"div.topic_border-Width`` க்கான `கூடுதல் சி.எஸ்.எஸ்."
+
+#: ../../sphinx/doc/latex.rst:1021
+msgid "|notebdcolors|"
+msgstr "| noteBdColors |"
+
+#: ../../sphinx/doc/latex.rst:1018
+msgid ""
+"The color for the two horizontal rules used by Sphinx in LaTeX for styling a"
+" :dudir:`note` type admonition."
+msgstr ""
+"A: Dudir: `குறிப்பு` வகை அறிவுரைக்கு லேடெக்ஸில் SPHINX ஆல் பயன்படுத்தப்படும்"
+" இரண்டு கிடைமட்ட விதிகளுக்கான நிறம்."
+
+#: ../../sphinx/doc/latex.rst:1021 ../../sphinx/doc/latex.rst:1073
+#: ../../sphinx/doc/latex.rst:1080
+msgid "Default: ``{rgb}{0,0,0}`` (black)"
+msgstr "இயல்புநிலை: `` {rgb} {0,0,0} `` (கருப்பு)"
+
+#: ../../sphinx/doc/latex.rst:1032
+msgid "|notebgcolors|"
+msgstr "| நோட்ப்கோலர்கள் |"
+
+#: ../../sphinx/doc/latex.rst:1024
+msgid ""
+"The optional color for the background.  It is a priori set to white, but is "
+"not used, unless it has been set explicitly, and doing this triggers Sphinx "
+"into switching to the more complex LaTeX code which is employed also for "
+"``warning`` type admonitions.  There are then additional options which are "
+"described in :ref:`additionalcss`."
+msgstr ""
+"பின்னணிக்கான விருப்ப நிறம். இது வெள்ளை நிறத்தில் அமைக்கப்பட்ட ஒரு ப்ரியோரி "
+"ஆகும், ஆனால் இது வெளிப்படையாக அமைக்கப்படாவிட்டால் பயன்படுத்தப்படாது, மேலும் "
+"இதைச் செய்வது ஸ்பின்க்ஸை மிகவும் சிக்கலான லேடெக்ஸ் குறியீட்டிற்கு மாறுவதைத் "
+"தூண்டுகிறது, இது `` எச்சரிக்கை` வகை அறிவுரைகளுக்கும் பயன்படுத்தப்படுகிறது. "
+"பின்னர் விவரிக்கப்பட்டுள்ள கூடுதல் விருப்பங்கள் உள்ளன: Ref: `attercss`."
+
+#: ../../sphinx/doc/latex.rst:1030 ../../sphinx/doc/latex.rst:1085
+msgid "Default: ``{rgb}{1,1,1}`` (white)"
+msgstr "இயல்புநிலை: `` {rgb} 1,1,1} `` (வெள்ளை)"
+
+#: ../../sphinx/doc/latex.rst:1044
+msgid "|notetextcolors|"
+msgstr "| notetextColors |"
+
+#: ../../sphinx/doc/latex.rst:1035
+msgid "The optional color for the contents."
+msgstr "உள்ளடக்கங்களுக்கான விருப்ப நிறம்."
+
+#: ../../sphinx/doc/latex.rst:1037
+msgid "Default: unset (uses ambient text color, a priori black)"
+msgstr ""
+"இயல்புநிலை: அமைக்கப்படாதது (சுற்றுப்புற உரை நிறத்தைப் பயன்படுத்துகிறது, ஒரு "
+"ப்ரியோரி கருப்பு)"
+
+#: ../../sphinx/doc/latex.rst:1041
+msgid ""
+"To be considered experimental until 7.0.0.  These options have aliases "
+"``div.note_TeXcolor`` (etc) described in :ref:`additionalcss`.  Using the "
+"latter will let Sphinx switch to a more complex LaTeX code, which supports "
+"the customizability described in :ref:`additionalcss`."
+msgstr ""
+"7.0.0 வரை சோதனை என்று கருதப்பட வேண்டும். இந்த விருப்பங்களில் "
+"மாற்றுப்பெயர்கள் உள்ளன `` div.note_texcolor`` (போன்றவை) "
+"விவரிக்கப்பட்டுள்ளது: ref: `கூடுதல் CSS`. பிந்தையதைப் பயன்படுத்துவது "
+"ஸ்பிங்க்ஸ் மிகவும் சிக்கலான லேடெக்ஸ் குறியீட்டிற்கு மாற அனுமதிக்கும், இது "
+"விவரிக்கப்பட்டுள்ள தனிப்பயனாக்கத்தை ஆதரிக்கிறது: குறிப்பு: `கூடுதல் "
+"சி.எஸ்.எஸ்."
+
+#: ../../sphinx/doc/latex.rst:1055
+msgid "|notetexextras|"
+msgstr "| notetexextras |"
+
+#: ../../sphinx/doc/latex.rst:1047
+msgid ""
+"Some extra LaTeX code (such as ``\\bfseries``  or ``\\footnotesize``) to be "
+"executed at start of the contents."
+msgstr ""
+"உள்ளடக்கங்களின் தொடக்கத்தில் செயல்படுத்தப்பட வேண்டிய சில கூடுதல் லேடெக்ஸ் "
+"குறியீடு (`` \\ bfseries` அல்லது `\\ foutnotesize`` போன்றவை)."
+
+#: ../../sphinx/doc/latex.rst:1050
+msgid "Default: empty"
+msgstr "இயல்புநிலை: வெற்று"
+
+#: ../../sphinx/doc/latex.rst:1054
+msgid ""
+"To be considered experimental until 7.0.0.  These options have aliases "
+"``div.note_TeXextras`` (etc) described in :ref:`additionalcss`."
+msgstr ""
+"7.0.0 வரை சோதனை என்று கருதப்பட வேண்டும். இந்த விருப்பங்களில் "
+"மாற்றுப்பெயர்கள் உள்ளன `` div.note_texextras``` (போன்றவை) "
+"விவரிக்கப்பட்டுள்ளவை: ref: `கூடுதல் சிஎஸ்எஸ்`."
+
+#: ../../sphinx/doc/latex.rst:1066
+msgid "``noteborder``, ``hintborder``, ``importantborder``, ``tipborder``"
+msgstr ""
+"`` நோட்போர்டர்``, `` ஹின்ட்போர்டர்``, `` SICESIONBORDER``, `` டிபோர்டர்``"
+
+#: ../../sphinx/doc/latex.rst:1058
+msgid "The width of the two horizontal rules."
+msgstr "இரண்டு கிடைமட்ட விதிகளின் அகலம்."
+
+#: ../../sphinx/doc/latex.rst:1060
+msgid ""
+"If the background color is set, or the alternative :ref:`additionalcss` "
+"syntax is used (e.g. ``div.note_border-width=1pt`` in place of "
+"``noteborder=1pt``), or *any* option with a CSS-alike name is used, then the"
+" border is a full frame and this parameter sets its width also for left and "
+"right."
+msgstr ""
+"பின்னணி வண்ணம் அமைக்கப்பட்டால், அல்லது மாற்று: ref: `கூடுதல் சி.எஸ்.எஸ்` "
+"தொடரியல் பயன்படுத்தப்படுகிறது (எ.கா. ஒரு CSS-ஒரே மாதிரியான பெயர் "
+"பயன்படுத்தப்படுகிறது, பின்னர் எல்லை ஒரு முழு சட்டகமாகும், மேலும் இந்த அளவுரு"
+" அதன் அகலத்தையும் இடது மற்றும் வலதுபுறமாகவும் அமைக்கிறது."
+
+#: ../../sphinx/doc/latex.rst:1066
+msgid "Default: ``0.5pt``"
+msgstr "இயல்புநிலை: `` 0.5pt``"
+
+#: ../../sphinx/doc/latex.rst:1071
+msgid "|warningbdcolors|"
+msgstr "| warningBdColors |"
+
+#: ../../sphinx/doc/latex.rst:1071 ../../sphinx/doc/latex.rst:1078
+msgid "The color for the admonition frame."
+msgstr "அறிவுரை சட்டத்திற்கான நிறம்."
+
+#: ../../sphinx/doc/latex.rst:1078
+msgid "|wgbdcolorslatex|"
+msgstr "| wgbdcolorslatex |"
+
+#: ../../sphinx/doc/latex.rst:1085
+msgid "|warningbgcolors|"
+msgstr "| warningbgcolors |"
+
+#: ../../sphinx/doc/latex.rst:1083
+msgid "The background colors for the respective admonitions."
+msgstr "அந்தந்த அறிவுரைகளுக்கான பின்னணி வண்ணங்கள்."
+
+#: ../../sphinx/doc/latex.rst:1092
+msgid "|warningborders|"
+msgstr "| எச்சரிக்கை போக்குவரத்துகள் |"
+
+#: ../../sphinx/doc/latex.rst:1088
+msgid ""
+"The width of the frame.  See :ref:`additionalcss` for keys allowing to "
+"configure separately each border width."
+msgstr ""
+"சட்டத்தின் அகலம். காண்க: குறிப்பு: ஒவ்வொரு எல்லை அகலத்தையும் தனித்தனியாக "
+"உள்ளமைக்க அனுமதிக்கும் விசைகளுக்கு `கூடுதல் சி.எஸ்.எஸ்."
+
+#: ../../sphinx/doc/latex.rst:1092
+msgid "Default: ``1pt``"
+msgstr "இயல்புநிலை: `` 1pt``"
+
+#: ../../sphinx/doc/latex.rst:1098
+msgid "``AtStartFootnote``"
+msgstr "`` Atstartfootnote``"
+
+#: ../../sphinx/doc/latex.rst:1095
+msgid ""
+"LaTeX macros inserted at the start of the footnote text at bottom of page, "
+"after the footnote number."
+msgstr ""
+"அடிக்குறிப்பு எண்ணுக்குப் பிறகு, பக்கத்தின் கீழே அடிக்குறிப்பு உரையின் "
+"தொடக்கத்தில் லேடெக்ஸ் மேக்ரோக்கள் செருகப்பட்டுள்ளன."
+
+#: ../../sphinx/doc/latex.rst:1098
+msgid "Default: ``\\mbox{ }``"
+msgstr "இயல்புநிலை: `` \\ mbox {} `` ``"
+
+#: ../../sphinx/doc/latex.rst:1106
+msgid "``BeforeFootnote``"
+msgstr "`` முன் ஃபுட்நோட்``"
+
+#: ../../sphinx/doc/latex.rst:1101
+msgid ""
+"LaTeX macros inserted before the footnote mark. The default removes possible"
+" space before it (else, TeX could insert a line break there)."
+msgstr ""
+"லேடெக்ஸ் மேக்ரோக்கள் அடிக்குறிப்பு அடையாளத்திற்கு முன் செருகப்பட்டுள்ளன. "
+"இயல்புநிலை அதற்கு முன் சாத்தியமான இடத்தை நீக்குகிறது (வேறு, டெக்ஸ் அங்கு ஒரு"
+" வரி இடைவெளியைச் செருக முடியும்)."
+
+#: ../../sphinx/doc/latex.rst:1104
+msgid "Default: ``\\leavevmode\\unskip``"
+msgstr "இயல்புநிலை: `` \\ விடுப்பு விடுப்பு \\ unskip``"
+
+#: ../../sphinx/doc/latex.rst:1110
+msgid "``HeaderFamily``"
+msgstr "`` HeaderFamily``"
+
+#: ../../sphinx/doc/latex.rst:1109
+msgid "default ``\\sffamily\\bfseries``. Sets the font used by headings."
+msgstr ""
+"இயல்புநிலை `` \\ sffamily \\ bfseries``. தலைப்புகளால் பயன்படுத்தப்படும் "
+"எழுத்துருவை அமைக்கிறது."
+
+#: ../../sphinx/doc/latex.rst:1144
+msgid "Additional  CSS-like ``'sphinxsetup'`` keys"
+msgstr "கூடுதல் CSS போன்ற `` 'SphinxSetup'` விசைகள்"
+
+#: ../../sphinx/doc/latex.rst:1148
+msgid ""
+"For :rst:dir:`code-block`, :dudir:`topic` and contents_ directive, and "
+"strong-type admonitions (:dudir:`warning`, :dudir:`error`, ...)."
+msgstr ""
+"For: rst: dir: `code-block`,: dudir:` தலைப்பு` மற்றும் பொருளடக்கம்_ "
+"வழிநடத்துதல், மற்றும் வலுவான வகை அறிவுரைகள் (: dudir: `எச்சரிக்கை`,: "
+"துடிர்:` பிழை`, ...)."
+
+#: ../../sphinx/doc/latex.rst:1153
+msgid ""
+"Also the :dudir:`note`, :dudir:`hint`, :dudir:`important` and :dudir:`tip` "
+"admonitions can be styled this way.  Using for them *any* of the listed "
+"options will trigger usage of a more complex LaTeX code than the one used "
+"per default (``sphinxheavybox`` vs ``sphinxlightbox``).  Setting the new "
+"``noteBgColor`` (or ``hintBgColor``, ...) also triggers usage of "
+"``sphinxheavybox`` for :dudir:`note` (or :dudir:`hint`, ...)."
+msgstr ""
+"மேலும்: dudir: `குறிப்பு`,: துடிர்:` ஹின்ட்`,: டுடிர்: `முக்கியமானது` "
+"மற்றும்: டுடிர்:` டிப்` அறிவுரைகளை இந்த வழியில் வடிவமைக்க முடியும். "
+"பட்டியலிடப்பட்ட விருப்பங்களில் ஏதேனும் * அவற்றைப் பயன்படுத்துவது "
+"இயல்புநிலைக்கு பயன்படுத்தப்பட்டதை விட மிகவும் சிக்கலான லேடெக்ஸ் குறியீட்டைப்"
+" பயன்படுத்துவதைத் தூண்டும் (`` sphinxheavybox`` `` sphinxlightbox``). புதிய "
+"`` நோட்ப்கோலர்`` (அல்லது `` hintbgcolor``, ...) ஐ அமைப்பது `` "
+"sphinxheavybox`` என்பதையும் தூண்டுகிறது: tudir: `குறிப்பு` (அல்லது: dudir:` "
+"hint`, ...)."
+
+#: ../../sphinx/doc/latex.rst:1160
+msgid ""
+"Perhaps in future these 5.1.0 (and 6.2.0) novel settings will be optionally "
+"imported from some genuine CSS external file, but currently they have to be "
+"used via the ``'sphinxsetup'`` interface (or the ``\\sphinxsetup`` LaTeX "
+"command inserted via the :dudir:`raw` directive) and the CSS syntax is only "
+"imitated."
+msgstr ""
+"எதிர்காலத்தில் இந்த 5.1.0 (மற்றும் 6.2.0) நாவல் அமைப்புகள் சில உண்மையான "
+"சிஎஸ்எஸ் வெளிப்புறக் கோப்பிலிருந்து விருப்பமாக இறக்குமதி செய்யப்படும், ஆனால்"
+" தற்போது அவை `'' ஸ்பின்க்ஸ்செட்அப்'`` இடைமுகம் (அல்லது` `\\ sphinxsetup "
+"வழியாக பயன்படுத்தப்பட வேண்டும் `` லேடெக்ஸ் கட்டளை: tudir: `raw` உத்தரவு) "
+"வழியாக செருகப்பட்டது மற்றும் CSS தொடரியல் மட்டுமே பின்பற்றப்படுகிறது."
+
+#: ../../sphinx/doc/latex.rst:1165
+msgid ""
+"Low-level LaTeX errors causing a build failure can happen if the input "
+"syntax is not respected."
+msgstr ""
+"உள்ளீட்டு தொடரியல் மதிக்கப்படாவிட்டால், கட்டட தோல்வியை ஏற்படுத்தும் குறைந்த "
+"அளவிலான லேடெக்ஸ் பிழைகள் ஏற்படலாம்."
+
+#: ../../sphinx/doc/latex.rst:1168
+msgid ""
+"In particular colors must be input as for the other color related options "
+"previously described, i.e. either in the ``\\definecolor`` syntax or, if "
+"package ``xcolor`` is available (it is then automatically used) also the "
+"``\\colorlet`` syntax::"
+msgstr ""
+"குறிப்பாக வண்ணங்கள் முன்னர் விவரிக்கப்பட்ட பிற வண்ணம் தொடர்பான "
+"விருப்பங்களைப் போலவே உள்ளீடாக இருக்க வேண்டும், அதாவது `` \\ வரையறுக்கப்பட்ட "
+"அளவிலான` தொடரியல் அல்லது, தொகுப்பு `` xcolor`` கிடைத்தால் (அது தானாகவே "
+"பயன்படுத்தப்படுகிறது) `` \\ colorlet`` தொடரியல் ::"
+
+#: ../../sphinx/doc/latex.rst:1178
+msgid "A colon in place of the equal sign will break LaTeX."
+msgstr "சம அடையாளத்திற்கு பதிலாக ஒரு பெருங்குடல் லேடெக்ஸை உடைக்கும்."
+
+#: ../../sphinx/doc/latex.rst:1180
+msgid ""
+"``...border-width`` or ``...padding`` expect a *single* dimension: they can "
+"not be used so far with space separated dimensions."
+msgstr ""
+"`` ... எல்லை அகலம்`` அல்லது `` ... திணிப்பு`` ஒரு * ஒற்றை * பரிமாணத்தை "
+"எதிர்பார்க்கலாம்: அவை விண்வெளி பிரிக்கப்பட்ட பரிமாணங்களுடன் இதுவரை "
+"பயன்படுத்த முடியாது."
+
+#: ../../sphinx/doc/latex.rst:1183
+msgid ""
+"``...top-right-radius`` et al. values may be either a single or *two* space "
+"separated dimensions."
+msgstr ""
+"`` ... சிறந்த-வலது-ரேடியஸ்`` மற்றும் பலர். மதிப்புகள் ஒற்றை அல்லது * இரண்டு "
+"* விண்வெளி பிரிக்கப்பட்ட பரிமாணங்களாக இருக்கலாம்."
+
+#: ../../sphinx/doc/latex.rst:1186
+msgid ""
+"Dimension specifications must use TeX units such as ``pt`` or ``cm`` or "
+"``in``.  The ``px`` unit is recognized by ``pdflatex`` and ``lualatex`` but "
+"not by ``xelatex`` or ``platex``."
+msgstr ""
+"பரிமாண விவரக்குறிப்புகள் `` pt`` அல்லது `cm`` அல்லது` `in`` போன்ற டெக்ஸ் "
+"அலகுகளைப் பயன்படுத்த வேண்டும். `` Px`` அலகு `` pdflatex` மற்றும் `` "
+"lualatex`` ஆல் அங்கீகரிக்கப்படுகிறது, ஆனால் `` Xelatex`` அல்லது `` "
+"பிளேட்டக்ஸ்`` ஆல் அல்ல."
+
+#: ../../sphinx/doc/latex.rst:1190
+msgid ""
+"It is allowed for such specifications to be so-called \"dimensional "
+"expressions\", e.g. ``\\fboxsep+2pt`` or ``0.5\\baselineskip`` are valid "
+"inputs.  The expressions will be evaluated only at the typesetting time. Be "
+"careful though if using as in these examples TeX control sequences to double"
+" the backslash or to employ a raw Python string for the value of the "
+":ref:`'sphinxsetup' <latexsphinxsetup>` key."
+msgstr ""
+"இத்தகைய விவரக்குறிப்புகள் \"பரிமாண வெளிப்பாடுகள்\" என்று அழைக்கப்படுவதற்கு "
+"இது அனுமதிக்கப்படுகிறது, எ.கா. `` \\ fboxsep+2pt`` அல்லது `` 0.5 \\ "
+"baselineskip`` செல்லுபடியாகும் உள்ளீடுகள். வெளிப்பாடுகள் தட்டச்சு நேரத்தில் "
+"மட்டுமே மதிப்பீடு செய்யப்படும். இந்த எடுத்துக்காட்டுகளில் உள்ளதைப் போல "
+"கவனமாக இருங்கள் டெக்ஸ் கண்ட்ரோல் காட்சிகளை பின்வாங்குவதற்கு இரட்டிப்பாக்க "
+"அல்லது ஒரு மூல பைதான் சரத்தை பயன்படுத்தினால்: yef: `'' ஸ்பின்க்ஸ்செட்அப் "
+"'<லேடெக்ஸ்ஸ்பின்க்ஸ்செட்அப்>` விசை."
+
+#: ../../sphinx/doc/latex.rst:1197
+msgid ""
+"As a rule, avoid inserting unneeded spaces in the key values: especially for"
+" the radii an input such  ``2 pt 3pt`` will break LaTeX.  Beware also that "
+"``\\fboxsep \\fboxsep`` will not be seen as space separated in LaTeX. You "
+"must use something such as ``{\\fboxsep} \\fboxsep``.  Or use directly ``3pt"
+" 3pt`` which is a priori equivalent and simpler."
+msgstr ""
+"ஒரு விதியாக, முக்கிய மதிப்புகளில் தேவையற்ற இடங்களைச் செருகுவதைத் "
+"தவிர்க்கவும்: குறிப்பாக ஆரத்திற்கு ஒரு உள்ளீடு `` 2 pt 3pt`` லேடெக்ஸை "
+"உடைக்கும். `` \\ Fboxsep \\ fboxsep`` லேடெக்ஸில் பிரிக்கப்பட்ட இடமாக "
+"பார்க்கப்படாது என்பதையும் ஜாக்கிரதை. `{\\ Fboxsep} \\ fboxsep`` போன்ற ஒன்றை "
+"நீங்கள் பயன்படுத்த வேண்டும். அல்லது நேரடியாக `` 3pt 3pt`` ஐப் "
+"பயன்படுத்தவும், இது ஒரு முன்னோடி சமமான மற்றும் எளிமையானது."
+
+#: ../../sphinx/doc/latex.rst:1203
+msgid ""
+"The options are all named in a similar pattern which depends on a "
+"``prefix``, which is then followed by an underscore, then the property name."
+msgstr ""
+"விருப்பங்கள் அனைத்தும் இதேபோன்ற வடிவத்தில் பெயரிடப்பட்டுள்ளன, இது `` "
+"முன்னொட்டு`` ஐப் பொறுத்தது, பின்னர் அதைத் தொடர்ந்து ஒரு அடிக்கோடிட்டு, "
+"பின்னர் சொத்து பெயர்."
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "Directive"
+msgstr "உத்தரவு"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "Option prefix"
+msgstr "விருப்ப முன்னொட்டு"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "LaTeX environment"
+msgstr "லேடெக்ஸ் சூழல்"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid ":rst:dir:`code-block`"
+msgstr ": rst: dir: `code-block`"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``pre``"
+msgstr "`` pre``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``sphinxVerbatim``"
+msgstr "`` Sphinxverbatim``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid ":dudir:`topic`"
+msgstr ": டுடிர்: `தலைப்பு`"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``div.topic``"
+msgstr "`` div.topic``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``sphinxShadowBox``"
+msgstr "`` ஸ்பின்க்ஸ் நிழல் பெட்டி``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "contents_"
+msgstr "உட்புறம்_"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid ":dudir:`note`"
+msgstr ": dudir: `குறிப்பு`"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``div.note``"
+msgstr "`` div.note``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``sphinxnote`` using ``sphinxheavybox``"
+msgstr "`` sphinxhewvybox`` ஐப் பயன்படுத்துதல் `` sphinxnote``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid ":dudir:`warning`"
+msgstr ": டுடிர்: `எச்சரிக்கை`"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``div.warning``"
+msgstr "`` div.warning``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``sphinxwarning`` (uses ``sphinxheavybox``)"
+msgstr "`` sphinxwarning`` (`` sphinxheavybox`` ஐப் பயன்படுத்துகிறது)"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "admonition type"
+msgstr "அறிவுரை வகை"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``div.<type>``"
+msgstr "`` div. <வகை> ``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``sphinx<type>`` (using ``sphinxheavybox``)"
+msgstr "`` Sphinx <type> `` (`` sphinxheavybox`` ஐப் பயன்படுத்துதல்)"
+
+#: ../../sphinx/doc/latex.rst:1216
+msgid ""
+"Here are now these options as well as their common defaults. Replace below "
+"``<prefix>`` by the actual prefix as explained above.  Don't forget the "
+"underscore separating the prefix from the property names."
+msgstr ""
+"இப்போது இந்த விருப்பங்கள் மற்றும் அவற்றின் பொதுவான இயல்புநிலைகள் உள்ளன. மேலே"
+" விளக்கப்பட்டுள்ளபடி உண்மையான முன்னொட்டால் `` <முன்னொட்டு> `` க்கு கீழே "
+"மாற்றவும். சொத்து பெயர்களிடமிருந்து முன்னொட்டைப் பிரிக்கும் அடிக்கோடிட்டுக் "
+"காட்டுவதை மறந்துவிடாதீர்கள்."
+
+#: ../../sphinx/doc/latex.rst:0
+msgid "``<prefix>_border-top-width``,"
+msgstr "`` <முன்னொட்டு> _போர்டர்-டாப் அகல``,"
+
+#: ../../sphinx/doc/latex.rst:0
+msgid "``<prefix>_border-right-width``,"
+msgstr "`` <முன்னொட்டு> _போர்டர்-வலது அகல``,"
+
+#: ../../sphinx/doc/latex.rst:0
+msgid "``<prefix>_border-bottom-width``,"
+msgstr "`` <முன்னொட்டு> _போர்டர்-கீழ்-அகல``,"
+
+#: ../../sphinx/doc/latex.rst:0
+msgid "``<prefix>_border-left-width``,"
+msgstr "`` <முன்னொட்டு> _போர்டர்-இடது-அகல``,"
+
+#: ../../sphinx/doc/latex.rst:0
+msgid ""
+"``<prefix>_border-width``.  The latter can (currently) be only a *single* "
+"dimension which then sets all four others."
+msgstr ""
+"`` <முன்னொட்டு> _ போர்ட்டர்-அகல``. பிந்தையது (தற்போது) ஒரு * ஒற்றை * "
+"பரிமாணமாக மட்டுமே இருக்க முடியும், பின்னர் அது நான்கு பேரையும் அமைக்கிறது."
+
+#: ../../sphinx/doc/latex.rst:1227 ../../sphinx/doc/latex.rst:1248
+msgid "The default is that all those dimensions are equal.  They are set to:"
+msgstr ""
+"இயல்புநிலை என்னவென்றால், அந்த பரிமாணங்கள் அனைத்தும் சமமானவை. அவை "
+"அமைக்கப்பட்டுள்ளன:"
+
+#: ../../sphinx/doc/latex.rst:1229
+msgid "``\\fboxrule`` (i.e. a priori ``0.4pt``) for :rst:dir:`code-block`,"
+msgstr "`` \\ fboxrule`` (அதாவது ஒரு ப்ரியோரி `` 0.4pt``)"
+
+#: ../../sphinx/doc/latex.rst:1230
+msgid "``\\fboxrule`` for :dudir:`topic` or contents_ directive,"
+msgstr "`` \\ fboxrule``` க்கு: dudir: `தலைப்பு` அல்லது உள்ளடக்கங்கள்_ உத்தரவு,"
+
+#: ../../sphinx/doc/latex.rst:1231
+msgid "``1pt`` for  :dudir:`warning` and other \"strong\" admonitions,"
+msgstr "`` 1pt`` for: dudir: `எச்சரிக்கை` மற்றும் பிற\" வலுவான \"அறிவுரைகள்,"
+
+#: ../../sphinx/doc/latex.rst:1232
+msgid ""
+"``0.5pt`` for :dudir:`note` and other \"light\" admonitions.  The framing "
+"style of the \"lighbox\" used for them in absence of usage of CSS-named "
+"options will be emulated by the richer \"heavybox\" if setting ``border-"
+"left-width`` and ``border-right-width`` both to ``0pt``."
+msgstr ""
+"`` 0.5pt`` for: dudir: `குறிப்பு` மற்றும் பிற\" ஒளி \"அறிவுரைகள். "
+"சி.எஸ்.எஸ்-பெயரிடப்பட்ட விருப்பங்களின் பயன்பாடு இல்லாத நிலையில் அவற்றுக்குப்"
+" பயன்படுத்தப்படும் \"லைக் பாக்ஸின்\" ஃப்ரேமிங் பாணி `` எல்லை-இடது-அகலத்தை "
+"ஏற்படுத்தினால், `` `` எல்லை-வலது அகலத்தை` `` `` எல்லை-வலது-அகலத்தை "
+"\"அமைத்தால் பணக்கார\" ஹெவ்பாக்ஸ் \"மூலம் பின்பற்றப்படும் இரண்டும் `` 0pt``."
+
+#: ../../sphinx/doc/latex.rst:1237
+msgid ""
+"``<prefix>_box-decoration-break`` can be set to either ``clone`` or "
+"``slice`` and configures the behavior at page breaks. It defaults to "
+"``slice`` for :rst:dir:`code-block` (i.e. for ``<prefix>=pre``) since 6.0.0."
+"  For other directives the default is ``clone``."
+msgstr ""
+"`` <முன்னொட்டு> _ பாக்ஸ்-டெகோஷன்-பிரேக்`` `` குளோன்`` அல்லது `` ஸ்லைஸ்`` என "
+"அமைக்கலாம் மற்றும் பக்க இடைவெளிகளில் நடத்தையை உள்ளமைக்கலாம். இது `` ஸ்லைஸ்``"
+" க்கு இயல்புநிலை: rst: dir: `குறியீடு-தொகுதி` (அதாவது 6.0.0 முதல்` "
+"`<முன்னொட்டு> = prefix> = prefil`` க்கு). பிற வழிமுறைகளுக்கு இயல்புநிலை `` "
+"குளோன்``."
+
+#: ../../sphinx/doc/latex.rst:0
+msgid "``<prefix>_padding-top``,"
+msgstr "`` <முன்னொட்டு> _padding-top``,"
+
+#: ../../sphinx/doc/latex.rst:0
+msgid "``<prefix>_padding-right``,"
+msgstr "`` <முன்னொட்டு> _padding-right``,"
+
+#: ../../sphinx/doc/latex.rst:0
+msgid "``<prefix>_padding-bottom``,"
+msgstr "`` <முன்னொட்டு> _padding-bottom``,"
+
+#: ../../sphinx/doc/latex.rst:0
+msgid "``<prefix>_padding-left``,"
+msgstr "`` <முன்னொட்டு> _padding-left``,"
+
+#: ../../sphinx/doc/latex.rst:0
+msgid ""
+"``<prefix>_padding``.  The latter can (currently) be only a *single* "
+"dimension which then sets all four others."
+msgstr ""
+"`` <முன்னொட்டு> _padding``. பிந்தையது (தற்போது) ஒரு * ஒற்றை * பரிமாணமாக "
+"மட்டுமே இருக்க முடியும், பின்னர் அது நான்கு பேரையும் அமைக்கிறது."
+
+#: ../../sphinx/doc/latex.rst:1250
+msgid "``\\fboxsep`` (i.e. a priori ``3pt``) for :rst:dir:`code-block`,"
+msgstr "`` \\ fboxsep`` (அதாவது ஒரு ப்ரியோரி `` 3pt``)"
+
+#: ../../sphinx/doc/latex.rst:1251
+msgid "``5pt`` for :dudir:`topic` or contents_ directive,"
+msgstr "`` 5pt`` க்கு: dudir: `தலைப்பு` அல்லது உள்ளடக்கங்கள்_ உத்தரவு,"
+
+#: ../../sphinx/doc/latex.rst:1252
+msgid ""
+"a special value for  :dudir:`warning` and other \"strong\" admonitions, "
+"which ensures a backward compatible behavior."
+msgstr ""
+"இதற்கான ஒரு சிறப்பு மதிப்பு: டுடிர்: `எச்சரிக்கை` மற்றும் பிற\" வலுவான "
+"\"அறிவுரைகள், இது பின்தங்கிய இணக்கமான நடத்தையை உறுதி செய்கிறது."
+
+#: ../../sphinx/doc/latex.rst:1257
+msgid ""
+"Prior to 5.1.0 there was no separate customizability of padding for warning-"
+"type boxes in PDF via LaTeX output.  The sum of padding and border-width (as"
+" set for example for :dudir:`warning` by ``warningborder``, now also named "
+"``div.warning_border-width``) was kept to a certain constant value.  This "
+"limited the border-width to small values else the border could overlap the "
+"text contents. This behavior is kept as default."
+msgstr ""
+"5.1.0 க்கு முன்னர், லேடெக்ஸ் வெளியீடு வழியாக PDF இல் எச்சரிக்கை வகை "
+"பெட்டிகளுக்கு திணிப்பின் தனித்தனி தனிப்பயனாக்கம் எதுவும் இல்லை. திணிப்பு "
+"மற்றும் எல்லை அகலத்தின் தொகை (எடுத்துக்காட்டாக: டுடிர்: `எச்சரிக்கை` எழுதிய`"
+" `வார்னிங்க்போர்டர்``, இப்போது` `டிவ்.வாரிங்_போர்டர்-அகல`` என்று "
+"பெயரிடப்பட்டது. இது எல்லை அகலத்தை சிறிய மதிப்புகளுக்கு மட்டுப்படுத்தியது, "
+"இல்லையெனில் எல்லை உரை உள்ளடக்கங்களை ஒன்றுடன் ஒன்று சேர்க்கக்கூடும். இந்த "
+"நடத்தை இயல்புநிலையாக வைக்கப்பட்டுள்ளது."
+
+#: ../../sphinx/doc/latex.rst:1265
+msgid ""
+"the same padding behavior is obeyed per default for :dudir:`note` or other "
+"\"light\" admonitions when using ``sphinxheavybox``."
+msgstr ""
+"இதற்காக அதே திணிப்பு நடத்தை கீழ்ப்படியப்படுகிறது: `` sphinxheavybox`` ஐப் "
+"பயன்படுத்தும் போது `குறிப்பு` அல்லது பிற\" ஒளி \"அறிவுரைகள்."
+
+#: ../../sphinx/doc/latex.rst:0
+msgid "``<prefix>_border-top-left-radius``,"
+msgstr "`` <முன்னொட்டு> _போர்டர்-டாப்-லெஃப்ட்-ரேடியஸ்``,"
+
+#: ../../sphinx/doc/latex.rst:0
+msgid "``<prefix>_border-top-right-radius``,"
+msgstr "`` <முன்னொட்டு> _போர்டர்-டாப்-ரைட்-ராடியஸ்``,"
+
+#: ../../sphinx/doc/latex.rst:0
+msgid "``<prefix>_border-bottom-right-radius``,"
+msgstr "`` <முன்னொட்டு> _போர்டர்-பாட்டம்-ரைட்-ராடியஸ்``,"
+
+#: ../../sphinx/doc/latex.rst:0
+msgid "``<prefix>_border-bottom-left-radius``,"
+msgstr "`` <முன்னொட்டு> _போர்ட்டர்-கீழ்-இடது-ரேடியஸ்``,"
+
+#: ../../sphinx/doc/latex.rst:0
+msgid ""
+"``<prefix>_border-radius``.  This last key sets the first four to its "
+"assigned value.  Each key value can be either a single, or *two*, dimensions"
+" which are then space separated."
+msgstr ""
+"`` <முன்னொட்டு> _போர்டர்-ராடியஸ்``. இந்த கடைசி விசை முதல் நான்கை அதன் "
+"ஒதுக்கப்பட்ட மதிப்புக்கு அமைக்கிறது. ஒவ்வொரு முக்கிய மதிப்பும் ஒற்றை, அல்லது"
+" *இரண்டு *, பரிமாணங்களாக இருக்கலாம், பின்னர் அவை இடம் பிரிக்கப்படுகின்றன."
+
+#: ../../sphinx/doc/latex.rst:1275
+msgid ""
+"The default is that all four corners are either circular or straight, with "
+"common radii:"
+msgstr ""
+"இயல்புநிலை என்னவென்றால், நான்கு மூலைகளும் வட்டமானவை அல்லது நேராக உள்ளன, "
+"பொதுவான கதிர்கள்:"
+
+#: ../../sphinx/doc/latex.rst:1278
+msgid ""
+"``\\fboxsep`` (i.e. a priori ``3pt``) for :rst:dir:`code-block` (since "
+"6.0.0)."
+msgstr ""
+"`` \\ fboxsep`` (அதாவது ஒரு ப்ரியோரி `3pt``) இதற்குப்: rst: dir:` code-"
+"block` (6.0.0 முதல்)."
+
+#: ../../sphinx/doc/latex.rst:1279
+msgid "``0pt`` for all other directives; this means to use straight corners."
+msgstr ""
+"மற்ற எல்லா வழிமுறைகளுக்கும் `0pt``; இதன் பொருள் நேராக மூலைகளைப் பயன்படுத்த "
+"வேண்டும்."
+
+#: ../../sphinx/doc/latex.rst:1281
+msgid "See a remark above about traps with spaces in LaTeX."
+msgstr ""
+"லேடெக்ஸில் உள்ள இடங்களைக் கொண்ட பொறிகளைப் பற்றி மேலே ஒரு கருத்தைக் காண்க."
+
+#: ../../sphinx/doc/latex.rst:1282
+msgid "``<prefix>_box-shadow`` is special in so far as it may be:"
+msgstr "`` <முன்னொட்டு> _ பாக்ஸ்-ஷாடோ`` இதுவரை இருக்கும் அளவுக்கு சிறப்பு:"
+
+#: ../../sphinx/doc/latex.rst:1284
+msgid "the ``none`` keyword,"
+msgstr "`` எதுவுமில்லை 'முக்கிய சொல்,"
+
+#: ../../sphinx/doc/latex.rst:1285
+msgid "or a single dimension (giving both x-offset and y-offset),"
+msgstr ""
+"அல்லது ஒரு பரிமாணம் (எக்ஸ்-ஆஃப்செட் மற்றும் ஒய்-ஆஃப்செட் இரண்டையும் "
+"கொடுக்கும்),"
+
+#: ../../sphinx/doc/latex.rst:1286
+msgid "or two dimensions (separated by a space),"
+msgstr "அல்லது இரண்டு பரிமாணங்கள் (ஒரு இடத்தால் பிரிக்கப்பட்டவை),"
+
+#: ../../sphinx/doc/latex.rst:1287
+msgid "or two dimensions followed by the keyword ``inset``."
+msgstr ""
+"அல்லது `` இன்செட்`` என்ற முக்கிய சொல்லைத் தொடர்ந்து இரண்டு பரிமாணங்கள்."
+
+#: ../../sphinx/doc/latex.rst:1289
+msgid ""
+"The x-offset and y-offset may be negative.  The default is ``none``, "
+"*except* for the :dudir:`topic` or contents_ directives, for which it is "
+"``4pt 4pt``, i.e. the shadow has a width of ``4pt`` and extends to the right"
+" and below the frame.  The lateral shadow then extends into the page right "
+"margin."
+msgstr ""
+"எக்ஸ்-ஆஃப்செட் மற்றும் ஒய்-ஆஃப்செட் எதிர்மறையாக இருக்கலாம். இயல்புநிலை `` "
+"எதுவுமில்லை`, * தவிர * தவிர: tudir: `தலைப்பு` அல்லது பொருளடக்கம்_ "
+"வழிமுறைகள், இதற்காக இது` `4pt 4pt``, அதாவது நிழலுக்கு` `4pt`` அகலம் உள்ளது "
+"மற்றும் நீண்டுள்ளது சட்டத்தின் வலது மற்றும் கீழே. பக்கவாட்டு நிழல் பின்னர் "
+"பக்க வலது விளிம்பில் நீண்டுள்ளது."
+
+#: ../../sphinx/doc/latex.rst:0
+msgid "``<prefix>_border-TeXcolor``,"
+msgstr "`` <முன்னொட்டு> _போர்டர்-டெக்ஸ் கலர்``,"
+
+#: ../../sphinx/doc/latex.rst:0
+msgid "``<prefix>_background-TeXcolor``,"
+msgstr "`` <முன்னொட்டு> _ பேக் மைதானம்-டெக்ஸ் கலர்``,"
+
+#: ../../sphinx/doc/latex.rst:0
+msgid "``<prefix>_box-shadow-TeXcolor``,"
+msgstr "`` <முன்னொட்டு> _ பெட்டி-நிழல்-உரை வண்ணம்``,"
+
+#: ../../sphinx/doc/latex.rst:0
+msgid "``<prefix>_TeXcolor``. These are colors."
+msgstr "`` <முன்னொட்டு> _texcolor``. இவை வண்ணங்கள்."
+
+#: ../../sphinx/doc/latex.rst:1300
+msgid ""
+"The shadow color defaults in all cases to ``{rgb}{0,0,0}`` i.e. to black."
+msgstr ""
+"எல்லா நிகழ்வுகளிலும் நிழல் வண்ணம் இயல்புநிலையாக `{rgb} {0,0,0}` `அதாவது "
+"கருப்பு வரை."
+
+#: ../../sphinx/doc/latex.rst:1302
+msgid ""
+"Since 6.0.0 the border color and background color of :rst:dir:`code-block`, "
+"i.e. ``pre`` prefix, default respectively to ``{RGB}{32,32,32}`` and "
+"``{gray}{0.95}``.  They previously defaulted to black, respectively white."
+msgstr ""
+"6.0.0 முதல் எல்லை நிறம் மற்றும் பின்னணி நிறம்: rst: dir: `குறியீடு-தொகுதி`, "
+"அதாவது` `` முன்`` முன்னொட்டு, முறையே `{rgb} {32,32,32}` `மற்றும்` `` "
+"{சாம்பல்} {0.95} ``. அவை முன்பு முறையே வெள்ளை நிறத்தில் இயல்புநிலையாக "
+"இருந்தன."
+
+#: ../../sphinx/doc/latex.rst:1306
+msgid ""
+"For all other types, the border color defaults to black and the background "
+"color to white."
+msgstr ""
+"மற்ற எல்லா வகைகளுக்கும், எல்லை வண்ணம் கருப்பு மற்றும் பின்னணி வண்ணம் வெள்ளை "
+"நிறத்தில் இயல்புநிலை."
+
+#: ../../sphinx/doc/latex.rst:1309
+msgid ""
+"The ``<prefix>_TeXcolor`` stands for the CSS property \"color\", i.e. it "
+"influences the text color of the contents.  As for the three other options, "
+"the naming ``TeXcolor`` is to stress that the input syntax is the TeX one "
+"for colors not an HTML/CSS one.  If package ``xcolor`` is available in the "
+"LaTeX installation, one can use directly named colors as key values. "
+"Consider passing options such as ``dvipsnames``, ``svgnames`` or "
+"``x11names`` to ``xcolor`` via ``'passoptionstopackages'`` key of "
+":confval:`latex_elements`."
+msgstr ""
+"`` <முன்னொட்டு> _texcolor`` என்பது CSS சொத்து \"வண்ணத்தை\" குறிக்கிறது, "
+"அதாவது இது உள்ளடக்கங்களின் உரை நிறத்தை பாதிக்கிறது. மற்ற மூன்று "
+"விருப்பங்களைப் பொறுத்தவரை, `` டெக்ஸ்கோலர்`` என்று பெயரிடுவது உள்ளீட்டு "
+"தொடரியல் ஒரு HTML/CSS ஒன்று அல்ல வண்ணங்களுக்கு டெக்ஸ் ஒன்றாகும் என்பதை "
+"வலியுறுத்துவதாகும். லேடெக்ஸ் நிறுவலில் தொகுப்பு `` xcolor`` கிடைத்தால், "
+"ஒருவர் நேரடியாக பெயரிடப்பட்ட வண்ணங்களை முக்கிய மதிப்புகளாகப் பயன்படுத்தலாம்."
+" `` Dvipsnames``, `` svgnames`` அல்லது `` x11names`` போன்ற விருப்பங்களை `` "
+"xcolor`` போன்ற விருப்பங்களை `` 'Passoptionstopackages'`` key: confval: "
+"`Latex_elements` போன்றவற்றைக் கவனியுங்கள்."
+
+#: ../../sphinx/doc/latex.rst:1317
+msgid ""
+"If ``<prefix>_TeXcolor`` is set, a ``\\color`` command is inserted at start "
+"of the directive contents; for admonitions, this happens after the heading "
+"which reproduces the admonition type."
+msgstr ""
+"`` <முன்னொட்டு> _texcolor`` அமைக்கப்பட்டால், உத்தரவு உள்ளடக்கங்களின் "
+"தொடக்கத்தில் ஒரு `` \\ வண்ணம்`` கட்டளை செருகப்படுகிறது; அறிவுறுத்தல்களுக்கு,"
+" இது அறிவுரை வகையை இனப்பெருக்கம் செய்யும் தலைப்புக்குப் பிறகு நிகழ்கிறது."
+
+#: ../../sphinx/doc/latex.rst:1321
+msgid ""
+"``<prefix>_TeXextras``: if set, its value must be some LaTeX command or "
+"commands, for example ``\\itshape``.  These commands will be inserted at the"
+" start of the contents; for admonitions, this happens after the heading "
+"which reproduces the admonition type."
+msgstr ""
+"`` <முன்னொட்டு> _texextras``: அமைக்கப்பட்டால், அதன் மதிப்பு சில லேடெக்ஸ் "
+"கட்டளை அல்லது கட்டளைகளாக இருக்க வேண்டும், எடுத்துக்காட்டாக `` \\ itshape``. "
+"இந்த கட்டளைகள் உள்ளடக்கங்களின் தொடக்கத்தில் செருகப்படும்; "
+"அறிவுறுத்தல்களுக்கு, இது அறிவுரை வகையை இனப்பெருக்கம் செய்யும் தலைப்புக்குப் "
+"பிறகு நிகழ்கிறது."
+
+#: ../../sphinx/doc/latex.rst:1328
+msgid ""
+"All directives support ``box-decoration-break`` to be set to ``slice``."
+msgstr ""
+"அனைத்து வழிமுறைகளும் `` ஸ்லைஸ்`` க்கு அமைக்க `` பாக்ஸ்-டெகோஷன்-பிரேக்`` ஐ "
+"ஆதரிக்கின்றன."
+
+#: ../../sphinx/doc/latex.rst:1332
+msgid ""
+"Formerly, only :rst:dir:`code-block` did.  The default remains ``clone`` for"
+" all other directives, but this will probably change at 7.0.0."
+msgstr ""
+"முன்னர், மட்டும்: rst: dir: `கோட்-பிளாக்` செய்தது. இயல்புநிலை மற்ற எல்லா "
+"வழிமுறைகளுக்கும் `` குளோன்`` ஆக உள்ளது, ஆனால் இது அநேகமாக 7.0.0 ஆக மாறும்."
+
+#: ../../sphinx/doc/latex.rst:1336
+msgid "The corners of rounded boxes may be elliptical."
+msgstr "வட்டமான பெட்டிகளின் மூலைகள் நீள்வட்டமாக இருக்கலாம்."
+
+#: ../../sphinx/doc/latex.rst:1340
+msgid ""
+"Formerly, only circular rounded corners were supported and a rounded corner "
+"forced the whole frame to use the same constant width from "
+"``<prefix>_border-width``."
+msgstr ""
+"முன்னர், வட்ட வட்டமான மூலைகள் மட்டுமே ஆதரிக்கப்பட்டன மற்றும் ஒரு வட்டமான "
+"மூலையில் முழு சட்டகத்தையும் `` <முன்னொட்டு> _ போர்ட்டர்-அகல`` இலிருந்து அதே "
+"நிலையான அகலத்தைப் பயன்படுத்த கட்டாயப்படுத்தியது."
+
+#: ../../sphinx/doc/latex.rst:1344
+msgid ""
+"Inset shadows are incompatible with rounded corners.  In case both are "
+"specified the inset shadow will simply be ignored."
+msgstr ""
+"இன்செட் நிழல்கள் வட்டமான மூலைகளுடன் பொருந்தாது. இரண்டும் குறிப்பிடப்பட்டால்,"
+" இன்செட் நிழல் வெறுமனே புறக்கணிக்கப்படும்."
+
+#: ../../sphinx/doc/latex.rst:1349
+msgid ""
+"Formerly it was to the contrary the rounded corners which were ignored in "
+"case an inset shadow was specified."
+msgstr ""
+"முன்னர் ஒரு இன்செட் நிழல் குறிப்பிடப்பட்டால் புறக்கணிக்கப்பட்ட வட்டமான "
+"மூலைகள் மாறாக இருந்தன."
+
+#: ../../sphinx/doc/latex.rst:1352
+msgid "``<prefix>_TeXcolor`` and ``<prefix>_TeXextras`` are new with 6.2.0."
+msgstr "."
+
+#: ../../sphinx/doc/latex.rst:1354
+msgid "Usefulness is doubtful in the case of :rst:dir:`code-block`:"
+msgstr "விஷயத்தில் பயன் சந்தேகத்திற்குரியது: rst: dir: `குறியீடு-தொகுதி`:"
+
+#: ../../sphinx/doc/latex.rst:1356
+msgid ""
+"``pre_TeXcolor`` will influence only the few non-Pygments highlighted "
+"tokens; it does color the line numbers, but if one wants to color *only* "
+"them one has to go through the ``fancyvrb`` interface."
+msgstr ""
+"`` pre_texcolor`` `சிறப்பம்சமாக இருக்கும் சில பைக்குகள் அல்லாத டோக்கன்களை "
+"மட்டுமே பாதிக்கும்; இது வரி எண்களை வண்ணமயமாக்குகிறது, ஆனால் ஒருவர் * வண்ணம் "
+"பூச விரும்பினால் * அவற்றை `` fancevrb`` இடைமுகம் வழியாக செல்ல வேண்டும்."
+
+#: ../../sphinx/doc/latex.rst:1360
+msgid ""
+"``pre_TeXextras=\\footnotesize`` for example may be replaced by usage of the"
+" :confval:`latex_elements` key ``'fvset'``.  For ``'lualatex'`` or "
+"``'xelatex'`` Sphinx includes in the preamble already "
+"``\\fvset{fontsize=\\small}`` and this induces ``fancyvrb`` into overriding "
+"a ``\\footnotesize`` coming from ``pre_TeXextras``.  One has to use "
+"``pre_TeXextras=\\fvset{fontsize=\\footnotesize}`` syntax. Simpler to set "
+"directly the :confval:`latex_elements` key ``'fvset'``..."
+msgstr ""
+"`` pre_texextras = \\ foutnotesize`` எடுத்துக்காட்டாக: confval: "
+"`Latex_elements` key` `'fvset'``` இன் பயன்பாட்டின் மூலம் மாற்றப்படலாம். `` "
+"'Lualatex'`` அல்லது ``' Xelatex'`` `\\ fvset {fontsize = \\ சிறிய}` `` `` "
+"fancevrb`` ஐ ஒரு `` `\\ folnosizede `` pre_texextras`` இலிருந்து வருகிறது. "
+"ஒருவர் `` pre_texextras = \\ fvset {fontsize = \\ foutnotesize} `` தொடரியல் "
+"ஆகியவற்றைப் பயன்படுத்த வேண்டும். நேரடியாக அமைக்க எளிதானது: confval: "
+"`Latex_elements` விசை` `'fvset'`` ..."
+
+#: ../../sphinx/doc/latex.rst:1369
+msgid ""
+"Consider these options experimental and that some implementation details may"
+" change.  For example if the ``pre_TeXextras`` LaTeX commands were put by "
+"Sphinx in another location it could override the ``'fvset'`` effect, perhaps"
+" this is what will be done in a future release."
+msgstr ""
+"இந்த விருப்பங்களை சோதனை மற்றும் சில செயல்படுத்தல் விவரங்கள் மாறக்கூடும் "
+"என்பதைக் கவனியுங்கள். எடுத்துக்காட்டாக, `` pre_texextras`` லேடெக்ஸ் "
+"கட்டளைகள் ஸ்பிங்க்ஸால் வேறொரு இடத்தில் வைக்கப்பட்டால், அது `` 'fvset'`` "
+"விளைவை மீறக்கூடும், ஒருவேளை இது எதிர்கால வெளியீட்டில் செய்யப்படும்."
+
+#: ../../sphinx/doc/latex.rst:1374
+msgid ""
+"Rounded boxes are done using the pict2e_ interface to some basic PDF "
+"graphics operations.  If this LaTeX package can not be found the build will "
+"proceed and render all boxes with straight corners."
+msgstr ""
+"சில அடிப்படை PDF கிராபிக்ஸ் செயல்பாடுகளுக்கு PICT2E_ இடைமுகத்தைப் "
+"பயன்படுத்தி வட்டமான பெட்டிகள் செய்யப்படுகின்றன. இந்த லேடெக்ஸ் தொகுப்பைக் "
+"கண்டுபிடிக்க முடியாவிட்டால், உருவாக்கம் தொடரும் மற்றும் அனைத்து "
+"பெட்டிகளையும் நேராக மூலைகளுடன் வழங்கும்."
+
+#: ../../sphinx/doc/latex.rst:1378
+msgid ""
+"Elliptic corners use the ellipse_ LaTeX package which extends pict2e_. If "
+"this LaTeX package can not be found rounded corners will be circular arcs "
+"(or straight if pict2e_ is not available)."
+msgstr ""
+"நீள்வட்ட மூலைகள் நீள்வட்ட_ லேடெக்ஸ் தொகுப்பைப் பயன்படுத்துகின்றன, இது "
+"Pict2e_ ஐ நீட்டிக்கிறது. இந்த லேடெக்ஸ் தொகுப்பைக் காண முடியாவிட்டால் வட்டமான"
+" மூலைகள் வட்ட வளைவுகளாக இருக்கும் (அல்லது படம் 2e_ கிடைக்கவில்லை என்றால் "
+"நேராக)."
+
+#: ../../sphinx/doc/latex.rst:1386
+msgid "The following legacy behavior is currently not customizable:"
+msgstr "பின்வரும் மரபு நடத்தை தற்போது தனிப்பயனாக்க முடியாதது:"
+
+#: ../../sphinx/doc/latex.rst:1388
+msgid ""
+"For :rst:dir:`code-block`, padding and border-width and shadow (if one adds "
+"one) will go into the margin; the code lines remain at the same place "
+"independently of the values of the padding and border-width, except for "
+"being shifted vertically of course to not overwrite other text due to the "
+"width of the border or external shadow."
+msgstr ""
+"க்கு: rst: dir: `கோட்-பிளாக்`, திணிப்பு மற்றும் எல்லை அகலம் மற்றும் நிழல் "
+"(ஒன்று சேர்த்தால்) விளிம்பில் செல்லும்; எல்லையின் அகலம் அல்லது வெளிப்புற "
+"நிழல் காரணமாக மற்ற உரையை மேலெழுதாதபடி, செங்குத்தாக மாற்றப்படுவதைத் தவிர, "
+"திணிப்பு மற்றும் எல்லை அகலத்தின் மதிப்புகளிலிருந்து சுயாதீனமாக குறியீடு "
+"கோடுகள் ஒரே இடத்தில் உள்ளன."
+
+#: ../../sphinx/doc/latex.rst:1394
+msgid ""
+"For :dudir:`topic` (and contents_) the shadow (if on right) goes into the "
+"page margin, but the border and the extra padding are kept within the text "
+"area.  Same for admonitions."
+msgstr ""
+"க்கு: டுடிர்: `தலைப்பு` (மற்றும் உள்ளடக்கங்கள்_) நிழல் (வலதுபுறத்தில் "
+"இருந்தால்) பக்க விளிம்பில் செல்கிறது, ஆனால் எல்லை மற்றும் கூடுதல் திணிப்பு "
+"உரை பகுதிக்குள் வைக்கப்படுகிறது. அறிவுரைகளுக்கு அதே."
+
+#: ../../sphinx/doc/latex.rst:1398
+msgid ""
+"The contents_ and :dudir:`topic` directives are governed by the same options"
+" with ``div.topic`` prefix: the Sphinx LaTeX mark-up uses for both "
+"directives the same ``sphinxShadowBox`` environment which has currently no "
+"additional branching, contrarily to the ``sphinxadmonition`` environment "
+"which branches according to the admonition directive name, e.g. either to "
+"``sphinxnote`` or ``sphinxwarning`` etc..."
+msgstr ""
+"பொருளடக்கம்_ மற்றும்: dudir: `தலைப்பு` வழிமுறைகள் ஒரே விருப்பங்களால்` "
+"`div.topic`` முன்னொட்டுடன் நிர்வகிக்கப்படுகின்றன: ஸ்பிங்க்ஸ் லேடெக்ஸ் "
+"மார்க்-அப் இரு வழிமுறைகளுக்கும் ஒரே மாதிரியான` `ஸ்பின்க்ஷடோப்ஸ்`` சூழலைப் "
+"பயன்படுத்துகிறது, இது தற்போது கூடுதல் கிளைகள் இல்லை . ஒன்று `` sphinxnote`` "
+"அல்லது `` sphinxwarning`` போன்றவை ..."
+
+#: ../../sphinx/doc/latex.rst:1407
+msgid "LaTeX macros and environments"
+msgstr "லேடெக்ஸ் மேக்ரோக்கள் மற்றும் சூழல்கள்"
+
+#: ../../sphinx/doc/latex.rst:1409
+msgid ""
+"The \"LaTeX package\" file :file:`sphinx.sty` loads various components "
+"providing support macros (aka commands), and environments, which are used in"
+" the mark-up produced on output from the ``latex`` builder, before "
+"conversion to ``pdf`` via the LaTeX toolchain.  Also the \"LaTeX class\" "
+"files :file:`sphinxhowto.cls` and :file:`sphinxmanual.cls` define or "
+"customize some environments.  All of these files can be found in the latex "
+"build repertory."
+msgstr ""
+"\"லேடெக்ஸ் தொகுப்பு\" கோப்பு: கோப்பு: `sphinx.sty` ஆதரவு மேக்ரோக்கள் (அக்கா "
+"கட்டளைகள்) மற்றும் சூழல்களை வழங்கும் பல்வேறு கூறுகளை ஏற்றுகிறது, அவை "
+"மாற்றத்திற்கு முன்` `லேடெக்ஸ்`` பில்டரிலிருந்து வெளியீட்டில் தயாரிக்கப்படும்"
+" மார்க்-அப் இல் பயன்படுத்தப்படுகின்றன லேடெக்ஸ் கருவித்தொகுதி வழியாக `` PDF``"
+" க்கு. \"லேடெக்ஸ் வகுப்பு\" கோப்புகள்: கோப்பு: `sphinxowhto.cls` மற்றும்: "
+"கோப்பு:` sphinxmanual.cls` சில சூழல்களை வரையறுக்கவும் அல்லது "
+"தனிப்பயனாக்கவும். இந்த கோப்புகள் அனைத்தையும் லேடெக்ஸ் பில்ட் ரெபர்ட்டரியில் "
+"காணலாம்."
+
+#: ../../sphinx/doc/latex.rst:1416
+msgid ""
+"Some of these provide facilities not available from pre-existing LaTeX "
+"packages and work around LaTeX limitations with lists, table cells, verbatim"
+" rendering, footnotes, etc..."
+msgstr ""
+"இவற்றில் சில முன்பே இருக்கும் லேடெக்ஸ் தொகுப்புகளிலிருந்து கிடைக்காத வசதிகளை"
+" வழங்குகின்றன மற்றும் பட்டியல்கள், டேபிள் செல்கள், சொற்களஞ்சியம் ரெண்டரிங், "
+"அடிக்குறிப்புகள் போன்றவற்றுடன் லேடெக்ஸ் வரம்புகளைச் சுற்றி வேலை செய்கின்றன "
+"..."
+
+#: ../../sphinx/doc/latex.rst:1420
+msgid ""
+"Others simply define macros with public names to make overwriting their "
+"defaults easy via user-added contents to the preamble.  We will survey most "
+"of those public names here, but defaults have to be looked at in their "
+"respective definition files."
+msgstr ""
+"மற்றவர்கள் பொது பெயர்களுடன் மேக்ரோக்களை வரையறுக்கிறார்கள், பயனர் கூட்டப்பட்ட"
+" உள்ளடக்கங்கள் வழியாக முன்னுரைக்கு தங்கள் இயல்புநிலைகளை எளிதாக்குவதை "
+"எளிதாக்குகிறார்கள். அந்த பொது பெயர்களில் பெரும்பாலானவற்றை நாங்கள் இங்கு "
+"ஆய்வு செய்வோம், ஆனால் இயல்புநிலைகள் அந்தந்த வரையறை கோப்புகளில் பார்க்கப்பட "
+"வேண்டும்."
+
+#: ../../sphinx/doc/latex.rst:1427
+msgid ""
+"Sphinx LaTeX support code is split across multiple smaller-sized files. "
+"Rather than adding code to the preamble via `latex_elements "
+"<latex_elements_confval_>`_\\ [``'preamble'``] it is also possible to "
+"replace entirely one of the component files of Sphinx LaTeX code with a "
+"custom version, simply by including a modified copy in the project source "
+"and adding the filename to the :confval:`latex_additional_files` list.  "
+"Check the LaTeX build repertory for the filenames and contents."
+msgstr ""
+"SPHINX லேடெக்ஸ் ஆதரவு குறியீடு பல சிறிய அளவிலான கோப்புகளில் "
+"பிரிக்கப்பட்டுள்ளது. `Latex_elements <atedx_elements_confval_>` _ \\ [`'' "
+"முன்னுரை'``] வழியாக முன்னுரையில் குறியீட்டைச் சேர்ப்பதற்குப் பதிலாக, "
+"தனிப்பயன் பதிப்பைக் கொண்டு ஸ்பின்க்ஸ் லேடெக்ஸ் குறியீட்டின் கூறு கோப்புகளில்"
+" ஒன்றை முழுவதுமாக மாற்றவும் முடியும், வெறுமனே ஒன்றைச் சேர்ப்பதன் மூலம் திட்ட"
+" மூலத்தில் மாற்றியமைக்கப்பட்ட நகல் மற்றும் கோப்பு பெயரைச் சேர்ப்பது: "
+"confval: `latex_addisital_files` பட்டியல். கோப்பு பெயர்கள் மற்றும் "
+"உள்ளடக்கங்களுக்கான லேடெக்ஸ் பில்ட் ரெபர்ட்டரியை சரிபார்க்கவும்."
+
+#: ../../sphinx/doc/latex.rst:1436
+msgid ""
+"split of :file:`sphinx.sty` into multiple smaller units, to facilitate "
+"customization of many aspects simultaneously."
+msgstr ""
+"பிளவு: கோப்பு: `sphinx.sty` பல சிறிய அலகுகளாக, ஒரே நேரத்தில் பல அம்சங்களைத் "
+"தனிப்பயனாக்குவதற்கு உதவுகிறது."
+
+#: ../../sphinx/doc/latex.rst:1443
+msgid "Macros"
+msgstr "மேக்ரோஸ்"
+
+#: ../../sphinx/doc/latex.rst:1445
+msgid "Text styling commands:"
+msgstr "உரை ஸ்டைலிங் கட்டளைகள்:"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "Name"
+msgstr "பெயர்"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``maps argument #1 to:``"
+msgstr "`` வரைபட வாதம் #1 க்கு: ``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstrong``"
+msgstr "`` \\ sphinxstrong``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\textbf{#1}``"
+msgstr "`` \\ textBf {#1} `` `"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxcode``"
+msgstr "`` \\ sphinxcode``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\texttt{#1}``"
+msgstr "`` \\ texttt {#1} `` `"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxbfcode``"
+msgstr "`` \\ sphinxbfcode``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\textbf{\\sphinxcode{#1}}``"
+msgstr "`` \\ textBf {\\ sphinxcode {#1}} `` `"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxemail``"
+msgstr "`` \\ sphinxemail``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\textsf{#1}``"
+msgstr "`` \\ textsf {#1} `` `"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxtablecontinued``"
+msgstr "`` \\ ஸ்பின்க்ஸ் அட்டவணை தொடர்ந்தது``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxtitleref``"
+msgstr "`` \\ sphinx தலைப்பு ref``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\emph{#1}``"
+msgstr "`` \\ enr {#1} `` `"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxmenuselection``"
+msgstr "`` \\ sphinx மெனு தேர்வு``"
+
+#: ../../sphinx/doc/latex.rst:1 ../../sphinx/doc/latex.rst:1474
+msgid "``\\sphinxguilabel``"
+msgstr "`` \\ sphinxguilabel``"
+
+#: ../../sphinx/doc/latex.rst:1 ../../sphinx/doc/latex.rst:1477
+msgid "``\\sphinxkeyboard``"
+msgstr "`` \\ sphinxkeyboard``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxcode{#1}``"
+msgstr "`` \\ sphinxcode {#1} `` `"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxaccelerator``"
+msgstr "`` \\ sphinxaccelerator``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\underline{#1}``"
+msgstr "`` \\ அடிக்கோடிட்டுக் காட்டுங்கள் {#1} `` `"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxcrossref``"
+msgstr "`` \\ sphinxcrossref``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxtermref``"
+msgstr "`` \\ sphinx term ref``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxsamedocref``"
+msgstr "`` \\ sphinx அதே டாக்ரெஃப்``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxparam``"
+msgstr "`` \\ sphinxparam``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxtypeparam``"
+msgstr "`` \\ sphinxtypeparam``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxoptional``"
+msgstr "`` \\ sphinxoptional``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``[#1]`` with larger brackets, see source"
+msgstr "`` [#1] `` பெரிய அடைப்புக்குறிகளுடன், மூலத்தைப் பார்க்கவும்"
+
+#: ../../sphinx/doc/latex.rst:1470
+msgid ""
+"Use of ``\\sphinx`` prefixed macro names to limit possibilities of conflict "
+"with LaTeX packages."
+msgstr ""
+"லேடெக்ஸ் தொகுப்புகளுடனான மோதலின் சாத்தியங்களை கட்டுப்படுத்த `` \\ sphinx` "
+"'முன்னொட்டு மேக்ரோ பெயர்களின் பயன்பாடு."
+
+#: ../../sphinx/doc/latex.rst:1480
+msgid "``\\sphinxparam``, ``\\sphinxsamedocref``"
+msgstr "`` \\ sphinxparam``, `` \\ sphinxsamedocref``"
+
+#: ../../sphinx/doc/latex.rst:1483
+msgid ""
+"``\\sphinxparamcomma`` which defaults to a comma followed by a space and "
+"``\\sphinxparamcommaoneperline`` which is used for one-parameter-per-line "
+"signatures (see :confval:`maximum_signature_line_length`).  It defaults to "
+"``\\texttt{,}`` to make these end-of-line separators more distinctive."
+msgstr ""
+"`` \\ sphinxparamcomma``` இது ஒரு கமாவிற்கு இயல்புநிலையாகும், அதைத் "
+"தொடர்ந்து ஒரு இடம் மற்றும் `` \\ sphinxparamcommaoneperline`` இது "
+"ஒரு-அளவுரு-ஒரு-வரி கையொப்பங்களுக்குப் பயன்படுத்தப்படுகிறது (பார்க்க: "
+"confval: `அதிகபட்சம்_சிக்னேச்சர்_்லைன்_லண்ட்`). இந்த இறுதி பிரிப்பான்களை "
+"மிகவும் தனித்துவமாக்குவதற்கு இது `` \\ texttt {,} `` இயல்புநிலையாகிறது."
+
+#: ../../sphinx/doc/latex.rst:1489
+msgid ""
+"Signatures of Python functions are rendered as ``name<space>(parameters)`` "
+"or ``name<space>[type parameters]<space>(parameters)`` (see :pep:`695`) "
+"where the length of ``<space>`` is set to ``0pt`` by default. This can be "
+"changed via ``\\setlength{\\sphinxsignaturelistskip}{1ex}`` for instance."
+msgstr ""
+"பைதான் செயல்பாடுகளின் கையொப்பங்கள் `` பெயர் <space> (அளவுருக்கள்) `அல்லது` "
+"`பெயர் <space> [வகை அளவுருக்கள்] <இடம்> (அளவுருக்கள்)` (பார்க்க: பெப்: "
+"`695`) என வழங்கப்படுகின்றன `` <space> `` இயல்பாக `` 0pt`` என "
+"அமைக்கப்பட்டுள்ளது. இதை `` \\ setLength {\\ sphinxsignaturelistskip} {1ex} "
+"`` உதாரணமாக மாற்றலாம்."
+
+#: ../../sphinx/doc/latex.rst:1495
+msgid "More text styling:"
+msgstr "மேலும் உரை ஸ்டைலிங்:"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyleindexentry``"
+msgstr "`` \\ ஸ்பின்க்ஸ் ஸ்டைலின்டெக்ஸ் நுழைவு``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyleindexextra``"
+msgstr "`` \\ ஸ்பின்க்ஸ் ஸ்டைலிண்டெக்ஸ் கூடுதல்``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``(\\emph{#1})`` (with a space upfront)"
+msgstr "`` (\\ entral {#1}) `` (ஒரு இடத்தை முன்பணத்துடன்)"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyleindexpageref``"
+msgstr "`` \\ sphinx பாணி குறியீட்டு பக்கம் ref``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``, \\pageref{#1}``"
+msgstr "``, \\ pageref {#1} `` `"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyleindexpagemain``"
+msgstr "`` \\ sphinxstyleindexpagemain``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyleindexlettergroup``"
+msgstr "`` \\ sphinxstyleindexlettergroup``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``{\\Large\\sffamily#1}\\nopagebreak\\vspace{1mm}``"
+msgstr "`{\\ பெரிய \\ sffamily#1} \\ nopagebreak \\ vspace {1mm}` `"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyleindexlettergroupDefault``"
+msgstr "`` \\ sphinxstyleindexlettergroupdefault``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "check source, too long for here"
+msgstr "மூலத்தை சரிபார்க்கவும், இங்கே மிக நீண்ட நேரம்"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyletopictitle``"
+msgstr "`` \\ sphinxstyletopictitle``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\textbf{#1}\\par\\medskip``"
+msgstr "`` \\ textBf {#1} \\ par \\ medskip``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstylesidebartitle``"
+msgstr "`` \\ sphinxstylesidebartitle``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyleothertitle``"
+msgstr "`` \\ sphinxstylethertitle``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstylesidebarsubtitle``"
+msgstr "`` \\ sphinxstylesidebarsubtitle``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``~\\\\\\textbf{#1} \\smallskip``"
+msgstr "`` ~ \\\\\\ textBf {#1} \\ smallskip``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyletheadfamily``"
+msgstr "`` \\ sphinxstyletheadfamily``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sffamily`` (*this one has no argument*)"
+msgstr "`` \\ sffamily`` (*இதற்கு எந்த வாதமும் இல்லை*)"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyleemphasis``"
+msgstr "`` \\ ஸ்பின்க்ஸ் பாணி வலியுறுத்தல்``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyleliteralemphasis``"
+msgstr "`` \\ sphinxstyleliteremphasis``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\emph{\\sphinxcode{#1}}``"
+msgstr "`` \\ enr {\\ sphinxcode {#1}} `` `"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstylestrong``"
+msgstr "`` \\ sphinxstylestrong``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyleliteralstrong``"
+msgstr "`` \\ sphinxstyleliteralstrong``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxbfcode{#1}``"
+msgstr "`` \\ sphinxbfcode {#1} `` `"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyleabbreviation``"
+msgstr "`` \\ sphinx style சுருக்கம்``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\textsc{#1}``"
+msgstr "`` \\ உரைகள் {#1} `` `"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyleliteralintitle``"
+msgstr "`` \\ sphinxstyleliteralintitle``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstylecodecontinued``"
+msgstr "`` \\ sphinxstylecodecontinued``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``{\\footnotesize(#1)}}``"
+msgstr "`` {\\ foutNoteSize (#1)}} `` `"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstylecodecontinues``"
+msgstr "`` \\ sphinxstylecodecontinues``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstylenotetitle``"
+msgstr "`` \\ sphinxstylenotetitle``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstrong{#1}<space>``"
+msgstr "`` \\ sphinxstrong {#1} <space> ``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstylehinttitle``"
+msgstr "`` \\ ஸ்பின்க்ஸ் ஸ்டைல்ஷீட் தலைப்பு``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "*idem*"
+msgstr "*idem*"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyleimportanttitle``"
+msgstr "`` \\ sphinxstyleimportanttitle``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyletiptitle``"
+msgstr "`` \\ sphinxstyletiptitile``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstylewarningtitle``"
+msgstr "`` \\ sphinxstylewarningtitle``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstylecautiontitle``"
+msgstr "`` \\ sphinxstylecautiontitle``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyleattentiontitle``"
+msgstr "`` \\ sphinxstyleattentiontitle``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyledangertitle``"
+msgstr "`` \\ sphinxstyledangertitle``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyleerrortitle``"
+msgstr "`` \\ sphinxstyleerrortitle``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstyleseealsotitle``"
+msgstr "`` \\ sphinxstylesealsotitle``"
+
+#: ../../sphinx/doc/latex.rst:1
+msgid "``\\sphinxstrong{#1}\\par\\nopagebreak``"
+msgstr "`` \\ sphinxstrong {#1} \\ par \\ nopagebreak``"
+
+#: ../../sphinx/doc/latex.rst:1533
+msgid ""
+"These macros were formerly hard-coded as non customizable ``\\texttt``, "
+"``\\emph``, etc..."
+msgstr ""
+"இந்த மேக்ரோக்கள் முன்னர் தனிப்பயனாக்க முடியாத `` \\ texttt``, `` \\ empr`` "
+"போன்றவற்றாக கடினமாக குறியிடப்பட்டன ..."
+
+#: ../../sphinx/doc/latex.rst:1537
+msgid ""
+"``\\sphinxstyletheadfamily`` which defaults to ``\\sffamily`` and allows "
+"multiple paragraphs in header cells of tables."
+msgstr ""
+"`` \\ sphinxstyletheadfamily`` இது இயல்புநிலையாக `` \\ sffamily`` மற்றும் "
+"அட்டவணைகளின் தலைப்பு கலங்களில் பல பத்திகளை அனுமதிக்கிறது."
+
+#: ../../sphinx/doc/latex.rst:1541
+msgid "``\\sphinxstylecodecontinued`` and ``\\sphinxstylecodecontinues``."
+msgstr "."
+
+#: ../../sphinx/doc/latex.rst:1544
+msgid ""
+"``\\sphinxstyleindexlettergroup``, ``\\sphinxstyleindexlettergroupDefault``."
+msgstr ""
+"`` \\ sphinxstyleindexlettergroup``, `` \\ "
+"sphinxstyleindexlettergroupdefault``."
+
+#: ../../sphinx/doc/latex.rst:1547
+msgid ""
+"``\\sphinxstylenotetitle`` et al.  The ``#1`` is the localized name of the "
+"directive, with a final colon.  Wrap it as ``\\sphinxremovefinalcolon{#1}`` "
+"if this final colon is to be removed.  Examples:"
+msgstr ""
+"`` \\ sphinxstylenotetitle`` மற்றும் al. ``#1`` என்பது இறுதி பெருங்குடலுடன் "
+"உத்தரவின் உள்ளூர்மயமாக்கப்பட்ட பெயர். இதை `` \\ sphinxremovefinalcolon {#1} "
+"`` `இந்த இறுதி பெருங்குடலை அகற்ற வேண்டுமானால். எடுத்துக்காட்டுகள்:"
+
+#: ../../sphinx/doc/latex.rst:1568
+msgid ""
+"``\\sphinxtableofcontents``: A wrapper (defined differently in "
+":file:`sphinxhowto.cls` and in :file:`sphinxmanual.cls`) of standard "
+"``\\tableofcontents``.  The macro ``\\sphinxtableofcontentshook`` is "
+"executed during its expansion right before ``\\tableofcontents`` itself."
+msgstr ""
+". மேக்ரோ `` \\ sphinxtableofconthentshook`` அதன் விரிவாக்கத்தின் போது `` \\ "
+"டேபிள்ஃப்கான்ட்கள்`` க்கு முன்பே செயல்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/latex.rst:1573
+msgid "Formerly, the meaning of ``\\tableofcontents`` was modified by Sphinx."
+msgstr ""
+"முன்னர், `` \\ டேபிள்ஓஃப்கான்ட்கள்` இன் பொருள் ஸ்பின்க்ஸால் மாற்றப்பட்டது."
+
+#: ../../sphinx/doc/latex.rst:1576
+msgid ""
+"Hard-coded redefinitions of ``\\l@section`` and ``\\l@subsection`` formerly "
+"done during loading of ``'manual'`` docclass are now executed later via "
+"``\\sphinxtableofcontentshook``.  This macro is also executed by the "
+"``'howto'`` docclass, but defaults to empty with it."
+msgstr ""
+"`` 'கையேடு'`` டாக்ளாஸை ஏற்றும்போது முன்பு செய்யப்பட்ட `` \\ l@பிரிவு`` "
+"மற்றும் `` \\ l@துணைப்பிரிவின் கடின குறியிடப்பட்ட மறுவரையறைகள் இப்போது "
+"பின்னர் `` \\ sphinxtableofcontentshook`` வழியாக செயல்படுத்தப்படுகின்றன. "
+"இந்த மேக்ரோ `` 'ஹோவ்டோ'``` டாக்ளாஸால் செயல்படுத்தப்படுகிறது, ஆனால் "
+"இயல்புநிலை அதனுடன் காலியாக உள்ளது."
+
+#: ../../sphinx/doc/latex.rst:1584
+msgid ""
+"If adding to preamble the loading of ``tocloft`` package, also add to "
+"preamble ``\\renewcommand\\sphinxtableofcontentshook{}`` else it will reset "
+"``\\l@section`` and ``\\l@subsection`` cancelling ``tocloft`` customization."
+msgstr ""
+"`` டோக்லோஃப்ட்`` தொகுப்பின் ஏற்றத்தை முன்னுரையில் சேர்த்தால், முன்னுரை `` \\"
+" புதுப்பித்தல் \\ ஸ்பின்ஸ்டெக்ஸ்டபிள்ஃப்கான்டெண்ட்ஷுக்}} `` இல்லையெனில் அது "
+"மீட்டமைக்கும் `` டோக்லாஃப்ட்` தனிப்பயனாக்கம்."
+
+#: ../../sphinx/doc/latex.rst:1588
+msgid ""
+"``\\sphinxmaketitle``: Used as the default setting of the ``'maketitle'`` "
+":confval:`latex_elements` key. Defined in the class files "
+":file:`sphinxmanual.cls` and :file:`sphinxhowto.cls`."
+msgstr ""
+"`` \\ sphinxmaketitle``: `'' '' '' '' மக்கெட்டிடில்'``: confval:` "
+"Latex_elements` விசையின் இயல்புநிலை அமைப்பாகப் பயன்படுத்தப்படுகிறது. வகுப்பு"
+" கோப்புகளில் வரையறுக்கப்பட்டுள்ளது: கோப்பு: `sphinxmanual.cls` மற்றும்: "
+"கோப்பு:` sphinxhowto.cls`."
+
+#: ../../sphinx/doc/latex.rst:1593
+msgid ""
+"Formerly, ``\\maketitle`` from LaTeX document class was modified by Sphinx."
+msgstr ""
+"முன்னர், லேடெக்ஸ் ஆவண வகுப்பிலிருந்து `` \\ மக்ககெட்டிடில்`` ஸ்பின்க்ஸால் "
+"மாற்றப்பட்டது."
+
+#: ../../sphinx/doc/latex.rst:1597
+msgid ""
+"``\\sphinxbackoftitlepage``: For ``'manual'`` docclass, and if it is "
+"defined, it gets executed at end of ``\\sphinxmaketitle``, before the final "
+"``\\clearpage``.  Use either the ``'maketitle'`` key or the ``'preamble'`` "
+"key of :confval:`latex_elements` to add a custom definition of "
+"``\\sphinxbackoftitlepage``."
+msgstr ""
+"`` \\ sphinxbackoftitlepage``: `` 'கையேடு'```` `டாக் கிளாஸுக்கு, அது "
+"வரையறுக்கப்பட்டால், அது` `\\ sphinxmaketitle`` இன் முடிவில் "
+"செயல்படுத்தப்படுகிறது. `` \\ Sphinxbackoftitlepage`` இன் தனிப்பயன் "
+"வரையறையைச் சேர்க்க `'' '' '' மக்ககெட்டிடில் '` விசையை அல்லது `' 'முன்னுரை:` "
+"Latex_elements` ஆகியவற்றைப் பயன்படுத்தவும்."
+
+#: ../../sphinx/doc/latex.rst:1605
+msgid ""
+"``\\sphinxcite``: A wrapper of standard ``\\cite`` for citation references."
+msgstr ""
+"`` \\ sphinxcite``: மேற்கோள் குறிப்புகளுக்காக `` \\ cite`` தரமான ஒரு "
+"ரேப்பர்."
+
+#: ../../sphinx/doc/latex.rst:1611
+msgid "The ``\\sphinxbox`` command"
+msgstr "`` \\ Sphinxbox`` கட்டளை"
+
+#: ../../sphinx/doc/latex.rst:1615
+msgid ""
+"The ``\\sphinxbox[key=value,...]{inline text}`` command can be used to "
+"\"box\" inline text elements with all the customizability which has been "
+"described in :ref:`additionalcss`.  It is a LaTeX command with one optional "
+"argument, which is a comma-separated list of key=value pairs, as for "
+":ref:`latexsphinxsetup`. Here is the complete list of keys.  They don't use "
+"any prefix."
+msgstr ""
+"`` \\ Sphinxbox [key = value, ...] {inline உரை} `` கட்டளை இன்லைன் உரை "
+"கூறுகளை \"பெட்டி\" செய்ய பயன்படுத்தப்படலாம்: குறிப்பு: ref: `attercsss`. இது"
+" ஒரு விருப்ப வாதத்துடன் ஒரு லேடெக்ஸ் கட்டளை, இது கமாவால் பிரிக்கப்பட்ட விசை "
+"= மதிப்பு ஜோடிகளின் பட்டியல், இதில்: குறிப்பு: `லேடெக்ஸ்ஸ்பின்க்ஸ்செட்அப்`. "
+"விசைகளின் முழுமையான பட்டியல் இங்கே. அவர்கள் எந்த முன்னொட்டையும் "
+"பயன்படுத்துவதில்லை."
+
+#: ../../sphinx/doc/latex.rst:1621
+msgid "``border-width``,"
+msgstr "`` எல்லை அகலம்``,"
+
+#: ../../sphinx/doc/latex.rst:1622
+msgid ""
+"``border-top-width``, ``border-right-width``, ``border-bottom-width``, "
+"``border-left-width``,"
+msgstr ""
+"`` எல்லை-மேல்-அகல```, `` எல்லை-வலது-அகல``, `` எல்லை-கீழ்-அகல``, `` "
+"எல்லை-இடது-அகலம்``,"
+
+#: ../../sphinx/doc/latex.rst:1624
+msgid "``padding``,"
+msgstr "`` திணிப்பு``,"
+
+#: ../../sphinx/doc/latex.rst:1625
+msgid ""
+"``padding-top``, ``padding-right``, ``padding-bottom``, ``padding-left``,"
+msgstr "."
+
+#: ../../sphinx/doc/latex.rst:1626
+msgid "``border-radius``,"
+msgstr "`` பார்டர்-ரேடியஸ்``,"
+
+#: ../../sphinx/doc/latex.rst:1627
+msgid ""
+"``border-top-left-radius``, ``border-top-right-radius``, ``border-bottom-"
+"right-radius``, ``border-bottom-left-radius``,"
+msgstr ""
+"`` எல்லை-மேல்-இடது-ரேடியஸ்``, `` `எல்லை-மேல்-வலது-ராடியஸ்``,` "
+"`பார்டர்-பாட்டம்-ரைட்-ராடியஸ்``,` `` பார்டர்-கீழ்-இடது-ரேடியஸ்``,"
+
+#: ../../sphinx/doc/latex.rst:1629
+msgid "``box-shadow``,"
+msgstr "`` பெட்டி-நிழல்``,"
+
+#: ../../sphinx/doc/latex.rst:1630
+msgid ""
+"``border-TeXcolor``, ``background-TeXcolor``, ``box-shadow-TeXcolor``, "
+"``TeXcolor``,"
+msgstr ""
+"`` எல்லை-உரை வண்ணம்``, `` பின்னணி-உரை நிறம்``, `` `பெட்டி-நிழல்-டெக்ஸ்ட் "
+"கலர்``,` `டெக்ஸ்கோலர்``,"
+
+#: ../../sphinx/doc/latex.rst:1632
+msgid "``TeXextras``,"
+msgstr "`` டெக்செக்ஸ்ட்ராஸ்``,"
+
+#: ../../sphinx/doc/latex.rst:1633
+msgid ""
+"and ``addstrut`` which is a boolean key, i.e. to be used as "
+"``addstrut=true``, or ``addstrut`` alone where ``=true`` is omitted, or "
+"``addstrut=false``."
+msgstr ""
+"மற்றும் `` addStrut`` இது ஒரு பூலியன் விசையாகும், அதாவது `` addStrut = "
+"true``, அல்லது `` addStrut`` தனியாகப் பயன்படுத்தப்பட வேண்டும், அங்கு `` = "
+"உண்மை`` தவிர்க்கப்பட்டது, அல்லது `` addstrut = பொய்``` ."
+
+#: ../../sphinx/doc/latex.rst:1636
+msgid ""
+"This last key is specific to ``\\sphinxbox`` and it means to add a "
+"``\\strut`` so that heights and depths are equalized across various "
+"instances on the same line with varying contents.  The default is "
+"``addstrut=false``."
+msgstr ""
+"இந்த கடைசி விசை `` \\ sphinxbox`` க்கு குறிப்பிட்டது, மேலும் இதன் பொருள் ஒரு"
+" `` \\ strut``` இதனால் ஒரே வரியில் பல்வேறு நிகழ்வுகளில் உயரங்களும் ஆழங்களும்"
+" மாறுபட்ட உள்ளடக்கங்களுடன் சமப்படுத்தப்படுகின்றன. இயல்புநிலை `` addStrut = "
+"false``."
+
+#: ../../sphinx/doc/latex.rst:1642
+msgid ""
+"Perhaps the default will turn into ``addstrut=true`` at 7.0.0 depending on "
+"feedback until then."
+msgstr ""
+"அதுவரை பின்னூட்டத்தைப் பொறுத்து இயல்புநிலை 7.0.0 இல் `` addStrut = true`` ஆக"
+" மாறும்."
+
+#: ../../sphinx/doc/latex.rst:1645
+msgid ""
+"The combination ``addstrut, padding-bottom=0pt, padding-top=1pt`` is often "
+"satisfactory."
+msgstr ""
+"`` AddStrut, padding-bottom = 0pt, padding-top = 1pt`` கலவையானது "
+"பெரும்பாலும் திருப்திகரமாக இருக்கும்."
+
+#: ../../sphinx/doc/latex.rst:1648
+msgid ""
+"Refer to :ref:`additionalcss` for important syntax information regarding the"
+" other keys.  The default configuration uses no shadow, a border-width of "
+"``\\fboxrule``, a padding of ``\\fboxsep``, circular corners with radii "
+"``\\fboxsep`` and background and border colors as for the default rendering "
+"of code-blocks."
+msgstr ""
+"பார்க்கவும்: குறிப்பு: மற்ற விசைகள் தொடர்பான முக்கியமான தொடரியல் "
+"தகவல்களுக்கு `கூடுதல் சி.எஸ்.எஸ். இயல்புநிலை உள்ளமைவு எந்த நிழலும், `\\ "
+"fboxrule`` இன் எல்லை அகலம்,` \\ foxsep``, ஆரம் `` \\ fboxsep``` மற்றும் "
+"பின்னணி மற்றும் எல்லை வண்ணங்கள் ஆகியவற்றைக் கொண்ட வட்ட மூலைகள், இயல்புநிலை "
+"ரெண்டரிங் ஆகியவற்றைப் பயன்படுத்துகின்றன குறியீடு-தொகுதிகள்."
+
+#: ../../sphinx/doc/latex.rst:1654
+msgid ""
+"When a ``\\sphinxbox`` usage is nested within another one, it will ignore "
+"the options of the outer one: it first resets all options to their default "
+"state as they were prior to applying the outer box options, then it applies "
+"its own specific ones."
+msgstr ""
+"ஒரு `` \\ sphinxbox`` பயன்பாடு இன்னொருவருக்குள் கூடு கட்டப்பட்டால், அது "
+"வெளிப்புறத்தின் விருப்பங்களை புறக்கணிக்கும்: இது முதலில் வெளிப்புற பெட்டி "
+"விருப்பங்களைப் பயன்படுத்துவதற்கு முன்பு இருந்ததால் அனைத்து விருப்பங்களையும் "
+"அவற்றின் இயல்புநிலை நிலைக்கு மீட்டமைக்கிறது, பின்னர் அது அதன் சொந்த "
+"பொருந்தும் குறிப்பிட்டவை."
+
+#: ../../sphinx/doc/latex.rst:1659
+msgid ""
+"One can modify these defaults via the command "
+"``\\sphinxboxsetup{key=value,...}``. The effect is cumulative, if one uses "
+"this command multiple times.  Here the options are a mandatory argument so "
+"are within curly braces, not square brackets."
+msgstr ""
+"இந்த இயல்புநிலைகளை `` \\ sphinxboxsetup {key = மதிப்பு, ...} `` என்ற கட்டளை "
+"வழியாக மாற்றலாம். இந்த கட்டளையை பல முறை பயன்படுத்தினால் விளைவு ஒட்டுமொத்தமாக"
+" உள்ளது. இங்கே விருப்பங்கள் ஒரு கட்டாய வாதமாகும், எனவே சுருள் "
+"பிரேஸ்களுக்குள் உள்ளன, சதுர அடைப்புக்குறிகள் அல்ல."
+
+#: ../../sphinx/doc/latex.rst:1664
+msgid "Here is some example of use:"
+msgstr "பயன்பாட்டிற்கு சில எடுத்துக்காட்டு இங்கே:"
+
+#: ../../sphinx/doc/latex.rst:1679
+msgid ""
+"A utility ``\\newsphinxbox`` is provided to create a new boxing macro, say "
+"``\\foo`` which will act exactly like ``\\sphinxbox`` but with a given extra"
+" configuration:"
+msgstr ""
+"ஒரு புதிய குத்துச்சண்டை மேக்ரோவை உருவாக்க ஒரு பயன்பாடு `\\ newsphinxbox`` "
+"வழங்கப்படுகிறது,` `\\ foo`` என்று சொல்லுங்கள், இது` \\ sphinxbox`` ஐப் போலவே"
+" செயல்படும், ஆனால் கொடுக்கப்பட்ட கூடுதல் உள்ளமைவுடன்:"
+
+#: ../../sphinx/doc/latex.rst:1691
+msgid ""
+"Boxes rendered with ``\\foo`` obey as the ones using directly "
+"``\\sphinxbox`` the current configuration as set possibly mid-way in "
+"document via ``\\sphinxboxsetup`` (from a :dudir:`raw` LaTeX mark-up), the "
+"only difference is that they have an initial additional set of default "
+"extras."
+msgstr ""
+"`` \\ Foo`` உடன் வழங்கப்பட்ட பெட்டிகள் `` \\ sphinxbox`` நேரடியாகப் "
+"பயன்படுத்துபவர்களாக கீழ்ப்படிந்து, தற்போதைய உள்ளமைவு `` \\ sphinxboxsetup`` "
+"வழியாக ஆவணத்தில் நடுத்தர வழியில் அமைக்கப்பட்டிருக்கும். -up), ஒரே "
+"வித்தியாசம் என்னவென்றால், அவை இயல்புநிலை கூடுதல் ஆரம்ப கூடுதல் தொகுப்பைக் "
+"கொண்டுள்ளன."
+
+#: ../../sphinx/doc/latex.rst:1696
+msgid ""
+"In the above examples, you can probably use ``\\renewcommand`` syntax if you"
+" prefer it to ``\\protected\\def`` (with ``[1]`` in place of ``#1`` then)."
+msgstr ""
+"மேலே உள்ள எடுத்துக்காட்டுகளில், நீங்கள் `` `[1]` ``#1`` பின்னர்) `` \\ "
+"பாதுகாக்கப்பட்ட `\\ பாதுகாக்கப்பட்டதை நீங்கள் விரும்பினால்` `\\ "
+"புதுப்பித்தல்` தொடரியல் பயன்படுத்தலாம்."
+
+#: ../../sphinx/doc/latex.rst:1701
+msgid "Environments"
+msgstr "சூழல்கள்"
+
+#: ../../sphinx/doc/latex.rst:1703
+msgid ""
+"A :dudir:`figure` may have an optional legend with arbitrary body elements: "
+"they are rendered in a ``sphinxlegend`` environment. The default definition "
+"issues ``\\small``, and ends with ``\\par``."
+msgstr ""
+"ப: டுடிர்: `படம்` தன்னிச்சையான உடல் கூறுகளுடன் விருப்பமான புராணக்கதைகளைக் "
+"கொண்டிருக்கலாம்: அவை` `ஸ்பின்எக்ஸ்லெஜெண்ட்`` சூழலில் வழங்கப்படுகின்றன. "
+"இயல்புநிலை வரையறை `` \\ சிறியது`` வெளியிடுகிறது, மேலும் `` \\ par`` உடன் "
+"முடிகிறது."
+
+#: ../../sphinx/doc/latex.rst:1707
+msgid ""
+"Formerly, the ``\\small`` was hardcoded in LaTeX writer and the ending "
+"``\\par`` was lacking."
+msgstr ""
+"முன்னர், `` \\ சிறியது`` லேடெக்ஸ் எழுத்தாளரில் ஹார்ட்கோட் செய்யப்பட்டது "
+"மற்றும் முடிவு `` \\ par`` இல்லை."
+
+#: ../../sphinx/doc/latex.rst:1711
+msgid "Environments associated with admonitions:"
+msgstr "அறிவுரைகளுடன் தொடர்புடைய சூழல்கள்:"
+
+#: ../../sphinx/doc/latex.rst:1713
+msgid "``sphinxnote``,"
+msgstr "`` sphinxnote``,"
+
+#: ../../sphinx/doc/latex.rst:1714
+msgid "``sphinxhint``,"
+msgstr "`` sphinxhint``,"
+
+#: ../../sphinx/doc/latex.rst:1715
+msgid "``sphinximportant``,"
+msgstr "`` ஸ்பின்க்ஸிமார்டண்ட்``,"
+
+#: ../../sphinx/doc/latex.rst:1716
+msgid "``sphinxtip``,"
+msgstr "`` sphinxtip``,"
+
+#: ../../sphinx/doc/latex.rst:1717
+msgid "``sphinxwarning``,"
+msgstr "`` ஸ்பின்க்ஸ்வர்னிங்``,"
+
+#: ../../sphinx/doc/latex.rst:1718
+msgid "``sphinxcaution``,"
+msgstr "`` sphinxcaution``,"
+
+#: ../../sphinx/doc/latex.rst:1719
+msgid "``sphinxattention``,"
+msgstr "`` ஸ்பின்சடென்ஷன்``,"
+
+#: ../../sphinx/doc/latex.rst:1720
+msgid "``sphinxdanger``,"
+msgstr "`` sphinxdanger``,"
+
+#: ../../sphinx/doc/latex.rst:1721
+msgid "``sphinxerror``."
+msgstr "`` ஸ்பின்செர்ர்``."
+
+#: ../../sphinx/doc/latex.rst:1723
+msgid ""
+"They may be ``\\renewenvironment`` 'd individually, and must then be defined"
+" with one argument (it is the heading of the notice, for example "
+"``Warning:`` for :dudir:`warning` directive, if English is the document "
+"language). Their default definitions use either the *sphinxheavybox* (for "
+"the last 5 ones) or the *sphinxlightbox* environments, configured to use the"
+" parameters (colors, border thickness) specific to each type, which can be "
+"set via ``'sphinxsetup'`` string."
+msgstr ""
+"அவை தனித்தனியாக `` \\ புதுப்பித்தல் சுற்றுச்சூழல்` 'ஆக இருக்கலாம், பின்னர் "
+"ஒரு வாதத்துடன் வரையறுக்கப்பட வேண்டும் (இது அறிவிப்பின் தலைப்பு, "
+"எடுத்துக்காட்டாக `` எச்சரிக்கை: `` க்கு: டுடிர்: `எச்சரிக்கை` உத்தரவு "
+"என்றால், ஆங்கிலம் ஆவண மொழி). அவற்றின் இயல்புநிலை வரையறைகள் * sphinxhevvybox "
+"* (கடைசி 5 க்கு) அல்லது * sphinxlightbox * சூழல்களைப் பயன்படுத்துகின்றன, "
+"ஒவ்வொரு வகைக்கும் குறிப்பிட்ட அளவுருக்கள் (வண்ணங்கள், எல்லை தடிமன்) "
+"பயன்படுத்த கட்டமைக்கப்பட்டுள்ளன, அவை `` 'ஸ்பின்க்ஸ்செட்அப்` வழியாக "
+"அமைக்கப்படலாம். `சரம்."
+
+#: ../../sphinx/doc/latex.rst:1731
+msgid ""
+"Use of public environment names, separate customizability of the parameters,"
+" such as ``noteBorderColor``, ``noteborder``, ``warningBgColor``, "
+"``warningBorderColor``, ``warningborder``, ..."
+msgstr ""
+"பொது சூழல் பெயர்களைப் பயன்படுத்துதல், `` நோட்போர்டர்கோலர்`, `` "
+"நோட்போர்டர்``, `` எச்சரிக்கை பிஜோலர்`` போன்ற அளவுருக்களின் தனித்தனி "
+"தனிப்பயனாக்கத்தன்மை, `` வார்னிங்ஸ்போர்டர்கோலர்``, `` வார்னிங்ஸ்போர்டர்`, ..."
+
+#: ../../sphinx/doc/latex.rst:1736
+msgid ""
+"Environment for the :rst:dir:`seealso` directive: ``sphinxseealso``. It "
+"takes one argument which will be the localized string ``See also`` followed "
+"with a colon."
+msgstr ""
+"சூழல்: rst: dir: `Seealso` உத்தரவு:` `sphinxseealso```. இது ஒரு வாதத்தை "
+"எடுக்கும், இது உள்ளூர்மயமாக்கப்பட்ட சரம் `` காண்க`` ஒரு பெருங்குடலுடன் "
+"பின்பற்றப்படும்."
+
+#: ../../sphinx/doc/latex.rst:1743
+msgid ""
+"Colon made part of the mark-up rather than being inserted by the environment"
+" for coherence with how admonitions are handled generally."
+msgstr ""
+"பொதுவாக அறிவுரைகள் எவ்வாறு கையாளப்படுகின்றன என்பதோடு ஒத்திசைவுக்காக "
+"சுற்றுச்சூழலால் செருகப்படுவதை விட, பெருங்குடல் மார்க்-அப் ஒரு பகுதியை "
+"உருவாக்கியது."
+
+#: ../../sphinx/doc/latex.rst:1746
+msgid ""
+"The contents_ directive (with ``:local:`` option) and the :dudir:`topic` "
+"directive are implemented by environment ``sphinxShadowBox``."
+msgstr ""
+"பொருளடக்கம்_ உத்தரவு (``: உள்ளூர்: `` விருப்பம்) மற்றும்: tudir: `தலைப்பு` "
+"உத்தரவு சுற்றுச்சூழலால் செயல்படுத்தப்படுகின்றன` `SphinxshadowBox``."
+
+#: ../../sphinx/doc/latex.rst:1749
+msgid "Former code refactored into an environment allowing page breaks."
+msgstr ""
+"முன்னாள் குறியீடு பக்க இடைவெளிகளை அனுமதிக்கும் சூழலில் மறுசீரமைக்கப்பட்டது."
+
+#: ../../sphinx/doc/latex.rst:1752
+msgid "Options ``shadowsep``, ``shadowsize``,  ``shadowrule``."
+msgstr "விருப்பங்கள் `` shadowsep``, `` நிழலாடுங்கள்``, `` நிழல் தன்மை`."
+
+#: ../../sphinx/doc/latex.rst:1755
+msgid ""
+"The literal blocks (via ``::`` or :rst:dir:`code-block`), are implemented "
+"using ``sphinxVerbatim`` environment which is a wrapper of ``Verbatim`` "
+"environment from package ``fancyvrb.sty``. It adds the handling of the top "
+"caption and the wrapping of long lines, and a frame which allows page "
+"breaks. Inside tables the used environment is ``sphinxVerbatimintable`` (it "
+"does not draw a frame, but allows a caption)."
+msgstr ""
+"நேரடி தொகுதிகள் (`` :: `` அல்லது: rst: dir: `குறியீடு-பிளாக்`),` `ஸ்பின் "
+"எக்ஸ்வெர்பாடிம்`` சூழலைப் பயன்படுத்தி செயல்படுத்தப்படுகின்றன, இது "
+"தொகுப்பிலிருந்து` `சொற்களஞ்சியம்` சூழலின் ரேப்பர் ஆகும். sty``. இது மேல் "
+"தலைப்பைக் கையாளுதல் மற்றும் நீண்ட கோடுகளின் மடக்குதல் மற்றும் பக்க "
+"இடைவெளிகளை அனுமதிக்கும் ஒரு சட்டகம் ஆகியவற்றைச் சேர்க்கிறது. "
+"பயன்படுத்தப்பட்ட சூழல் `` Sphinxverbatimintable`` (இது ஒரு சட்டகத்தை "
+"வரையவில்லை, ஆனால் ஒரு தலைப்பை அனுமதிக்கிறது)."
+
+#: ../../sphinx/doc/latex.rst:1763
+msgid ""
+"``Verbatim`` keeps exact same meaning as in ``fancyvrb.sty`` (also under the"
+" name ``OriginalVerbatim``); ``sphinxVerbatimintable`` is used inside "
+"tables."
+msgstr ""
+"`` Fancevrb.sty`` (`அசல் பெர்பாடிம்`` என்ற பெயரில்) இல் உள்ள அதே அர்த்தத்தை`"
+" `சொற்களஞ்சியம்`); `` Sphinxverbatimintable`` அட்டவணையில் "
+"பயன்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/latex.rst:1768
+msgid ""
+"Options ``verbatimwithframe``, ``verbatimwrapslines``, ``verbatimsep``, "
+"``verbatimborder``."
+msgstr ""
+"விருப்பங்கள் `` veryatimwithframe``, `` varbatimwrapslines``, `` "
+"verbatimsep``, `` verbatimborder``."
+
+#: ../../sphinx/doc/latex.rst:1772
+msgid "Support for ``:emphasize-lines:`` option"
+msgstr "``: கோடுகளை வலியுறுத்துங்கள்: `` விருப்பம்"
+
+#: ../../sphinx/doc/latex.rst:1775
+msgid ""
+"Easier customizability of the formatting via exposed to user LaTeX macros "
+"such as ``\\sphinxVerbatimHighlightLine``."
+msgstr ""
+"`` \\ Sphinxverbatimhighlightline`` போன்ற பயனர் லேடெக்ஸ் மேக்ரோக்களுக்கு "
+"வெளிப்படும் வழியாக வடிவமைப்பின் எளிதான தனிப்பயனாக்கம்."
+
+#: ../../sphinx/doc/latex.rst:1779
+msgid ""
+"The bibliography uses ``sphinxthebibliography`` and the Python Module index "
+"as well as the general index both use ``sphinxtheindex``; these environments"
+" are wrappers of the ``thebibliography`` and respectively ``theindex`` "
+"environments as provided by the document class (or packages)."
+msgstr ""
+"நூலியல் `` ஸ்பின்எக்ஸ்டெபிலியோகிராபி`` மற்றும் பைதான் தொகுதி குறியீட்டையும் "
+"பொது குறியீட்டையும் பயன்படுத்துகிறது `` ஸ்பிங்க்எக்ஸ்டீய்டெக்ஸ்`; இந்த "
+"சூழல்கள் ஆவண வகுப்பு (அல்லது தொகுப்புகள்) வழங்கியபடி முறையே `` "
+"thebibliography`` மற்றும் முறையே `தீண்டெக்ஸ்` சூழல்கள்."
+
+#: ../../sphinx/doc/latex.rst:1784
+msgid "Formerly, the original environments were modified by Sphinx."
+msgstr "முன்னர், அசல் சூழல்கள் ஸ்பின்க்ஸால் மாற்றப்பட்டன."
+
+#: ../../sphinx/doc/latex.rst:1788
+msgid "Miscellany"
+msgstr "இதர"
+
+#: ../../sphinx/doc/latex.rst:1790
+msgid ""
+"Every text paragraph in document body starts with ``\\sphinxAtStartPar``. "
+"Currently, this is used to insert a zero width horizontal skip which is a "
+"trick to allow TeX hyphenation of the first word of a paragraph in a narrow "
+"context (like a table cell). For ``'lualatex'`` which does not need the "
+"trick, the ``\\sphinxAtStartPar`` does nothing."
+msgstr ""
+"ஆவண உடலில் உள்ள ஒவ்வொரு உரை பத்தியும் `` \\ sphinxatstartpar`` உடன் "
+"தொடங்குகிறது. தற்போது, இது பூஜ்ஜிய அகல கிடைமட்ட ஸ்கிப்பைச் செருக "
+"பயன்படுகிறது, இது ஒரு பத்தியின் முதல் வார்த்தையின் டெக்ஸ் ஹைஃபெனேஷனை ஒரு "
+"குறுகிய சூழலில் (அட்டவணை செல் போன்றது) அனுமதிக்கும் ஒரு தந்திரமாகும். "
+"தந்திரம் தேவையில்லாத `` 'lualatex'`` க்கு, `` \\ sphinxatstartpar`` ஒன்றும் "
+"செய்யாது."
+
+#: ../../sphinx/doc/latex.rst:1798
+msgid ""
+"The section, subsection, ... headings are set using  *titlesec*'s "
+"``\\titleformat`` command."
+msgstr ""
+"பிரிவு, துணைப்பிரிவு, ... தலைப்புகள் *தலைப்புகள் *'s `\\ tithformat`` "
+"கட்டளையைப் பயன்படுத்தி அமைக்கப்படுகின்றன."
+
+#: ../../sphinx/doc/latex.rst:1801
+msgid ""
+"For the ``'manual'`` docclass, the chapter headings can be customized using "
+"*fncychap*'s commands ``\\ChNameVar``, ``\\ChNumVar``, ``\\ChTitleVar``. "
+"File :file:`sphinx.sty` has custom re-definitions in case of *fncychap* "
+"option ``Bjarne``."
+msgstr ""
+"`` '' கையேடு'`` டாக்ளாஸைப் பொறுத்தவரை, அத்தியாயத் தலைப்புகளை *fncychap *இன் "
+"கட்டளைகள் `` \\ chnamevar`` ஐப் பயன்படுத்தி தனிப்பயனாக்கலாம், `` \\ "
+"chnumvar``, `` \\ chtitlevar``. கோப்பு: கோப்பு: `sphinx.sty` * fncychap * "
+"விருப்பம்` `bjarne`` விஷயத்தில் தனிப்பயன் மறு வரையறைகளைக் கொண்டுள்ளது."
+
+#: ../../sphinx/doc/latex.rst:1806
+msgid ""
+"Formerly, use of *fncychap* with other styles than ``Bjarne`` was "
+"dysfunctional."
+msgstr ""
+"முன்னர், `` bjarne`` ஐத் தவிர மற்ற பாணிகளுடன் * fncychap * ஐப் "
+"பயன்படுத்துவது செயலற்றது."
+
+#: ../../sphinx/doc/latex.rst:1812
+msgid ""
+"Docutils :dudir:`container` directives are supported in LaTeX output: to let"
+" a container class with name ``foo`` influence the final PDF via LaTeX, it "
+"is only needed to define in the preamble an environment ``sphinxclassfoo``."
+"  A simple example would be:"
+msgstr ""
+"Docutils: dudir: லேடெக்ஸ் வெளியீட்டில் `கொள்கலன்` வழிமுறைகள் "
+"ஆதரிக்கப்படுகின்றன:` `ஃபூ`` என்ற பெயருடன் ஒரு கொள்கலன் வகுப்பை லேடெக்ஸ் "
+"வழியாக இறுதி PDF ஐ பாதிக்க, முன்னுரையில் ஒரு சூழலை வரையறுக்க மட்டுமே "
+"தேவைப்படுகிறது` `sphinxclassfoo```. ஒரு எளிய உதாரணம்:"
+
+#: ../../sphinx/doc/latex.rst:1821
+msgid ""
+"Currently the class names must contain only ascii characters and avoid "
+"characters special to LaTeX such as ``\\``."
+msgstr ""
+"தற்போது வர்க்கப் பெயர்களில் ASCII எழுத்துக்கள் மட்டுமே இருக்க வேண்டும் "
+"மற்றும் `` \\ `` போன்ற லேடெக்ஸுக்கு சிறப்பு எழுத்துக்களைத் தவிர்க்க "
+"வேண்டும்."
+
+#: ../../sphinx/doc/latex.rst:1828
+msgid ""
+"As an experimental feature, Sphinx can use user-defined template file for "
+"LaTeX source if you have a file named ``_templates/latex.tex_t`` in your "
+"project."
+msgstr ""
+"ஒரு சோதனை அம்சமாக, உங்கள் திட்டத்தில் `` _TEMPLATES/Latex.tex_t` என்ற கோப்பை"
+" நீங்கள் வைத்திருந்தால், லேடெக்ஸ் மூலத்திற்கான பயனர் வரையறுக்கப்பட்ட "
+"வார்ப்புரு கோப்பைப் பயன்படுத்தலாம்."
+
+#: ../../sphinx/doc/latex.rst:1832
+msgid ""
+"Additional files ``longtable.tex_t``, ``tabulary.tex_t`` and "
+"``tabular.tex_t`` can be added to ``_templates/`` to configure some aspects "
+"of table rendering (such as the caption position)."
+msgstr ""
+"கூடுதல் கோப்புகள் `` longtable.tex_t``, `` tabulary.tex_t`` மற்றும் `` "
+"tabular.tex_t`` அட்டவணை ஒழுங்கமைப்பின் சில அம்சங்களை உள்ளமைக்க (தலைப்பு நிலை"
+" போன்ற) `_Templates/` `ஆகியவற்றில் சேர்க்கலாம்."
+
+#: ../../sphinx/doc/latex.rst:1836
+msgid "currently all template variables are unstable and undocumented."
+msgstr ""
+"தற்போது அனைத்து வார்ப்புரு மாறிகள் நிலையற்றவை மற்றும் ஆவணப்படுத்தப்படாதவை."

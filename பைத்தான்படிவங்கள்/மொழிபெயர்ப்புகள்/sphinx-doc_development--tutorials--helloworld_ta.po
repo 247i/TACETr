@@ -1,0 +1,277 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2023, the Sphinx developers
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 7.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-15 00:35+0000\n"
+"PO-Revision-Date: 2018-12-23 17:28+0000\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:2
+msgid "Developing a \"Hello world\" extension"
+msgstr "\"ஹலோ வேர்ல்ட்\" நீட்டிப்பை உருவாக்குதல்"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:4
+msgid ""
+"The objective of this tutorial is to create a very basic extension that adds"
+" a new directive. This directive will output a paragraph containing \"hello "
+"world\"."
+msgstr ""
+"இந்த டுடோரியலின் நோக்கம் ஒரு புதிய உத்தரவை சேர்க்கும் மிக அடிப்படையான "
+"நீட்டிப்பை உருவாக்குவதாகும். இந்த உத்தரவு \"ஹலோ வேர்ல்ட்\" கொண்ட ஒரு பத்தியை"
+" வெளியிடும்."
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:7
+msgid ""
+"Only basic information is provided in this tutorial. For more information, "
+"refer to the :doc:`other tutorials <index>` that go into more details."
+msgstr ""
+"இந்த டுடோரியலில் அடிப்படை தகவல்கள் மட்டுமே வழங்கப்படுகின்றன. மேலும் "
+"தகவலுக்கு, டி.ஓ.சி: `பிற பயிற்சிகள் <index>` மேலும் விவரங்களுக்குச் "
+"செல்கின்றன."
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:12
+msgid ""
+"For this extension, you will need some basic understanding of docutils_ and "
+"Python."
+msgstr ""
+"இந்த நீட்டிப்புக்கு, டூக்யூட்டில்ஸ்_ மற்றும் பைதான் பற்றிய சில அடிப்படை "
+"புரிதல் உங்களுக்கு தேவைப்படும்."
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:17
+msgid "Overview"
+msgstr "கண்ணோட்டம்"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:19
+msgid "We want the extension to add the following to Sphinx:"
+msgstr ""
+"நீட்டிப்பு பின்வருவனவற்றைச் சேர்க்க வேண்டும் என்று நாங்கள் விரும்புகிறோம்:"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:21
+msgid ""
+"A ``helloworld`` directive, that will simply output the text \"hello "
+"world\"."
+msgstr ""
+"ஒரு `` ஹெலோவொர்ல்ட்`` உத்தரவு, இது \"ஹலோ வேர்ல்ட்\" என்ற உரையை வெறுமனே "
+"வெளியிடும்."
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:25
+msgid "Prerequisites"
+msgstr "முன்நிபந்தனைகள்"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:27
+msgid ""
+"We will not be distributing this plugin via `PyPI`_ and will instead include"
+" it as part of an existing project. This means you will need to use an "
+"existing project or create a new one using :program:`sphinx-quickstart`."
+msgstr ""
+"இந்த சொருகி `பைபி`_ வழியாக நாங்கள் விநியோகிக்க மாட்டோம், அதற்கு பதிலாக "
+"ஏற்கனவே இருக்கும் திட்டத்தின் ஒரு பகுதியாக அதை உள்ளடக்கும். இதன் பொருள் "
+"நீங்கள் ஏற்கனவே இருக்கும் திட்டத்தைப் பயன்படுத்த வேண்டும் அல்லது புதியதைப் "
+"பயன்படுத்த வேண்டும்: நிரல்: `ஸ்பின்க்ஸ்-க்யூக்ஸ்டார்ட்`."
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:31
+msgid ""
+"We assume you are using separate source (:file:`source`) and build "
+"(:file:`build`) folders. Your extension file could be in any folder of your "
+"project. In our case, let's do the following:"
+msgstr ""
+"நீங்கள் தனி மூலத்தை (: கோப்பு: `மூல`) பயன்படுத்துகிறீர்கள் என்று நாங்கள் "
+"கருதுகிறோம் (: கோப்பு:` பில்ட்`) கோப்புறைகள். உங்கள் நீட்டிப்பு கோப்பு "
+"உங்கள் திட்டத்தின் எந்த கோப்புறையிலும் இருக்கலாம். எங்கள் விஷயத்தில், "
+"பின்வருவனவற்றைச் செய்வோம்:"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:35
+msgid "Create an :file:`_ext` folder in :file:`source`"
+msgstr "ஒரு: கோப்பை உருவாக்கவும்: `_ext` கோப்புறை: கோப்பு:` மூல`"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:36
+msgid ""
+"Create a new Python file in the :file:`_ext` folder called "
+":file:`helloworld.py`"
+msgstr ""
+"புதிய பைதான் கோப்பை உருவாக்கவும்: கோப்பு: `_ext` கோப்புறை: கோப்பு:` "
+"helloworld.py`"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:39
+msgid "Here is an example of the folder structure you might obtain:"
+msgstr "நீங்கள் பெறக்கூடிய கோப்புறை கட்டமைப்பின் எடுத்துக்காட்டு இங்கே:"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:55
+msgid "Writing the extension"
+msgstr "நீட்டிப்பு எழுதுதல்"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:57
+msgid "Open :file:`helloworld.py` and paste the following code in it:"
+msgstr ""
+"திறந்த: கோப்பு: `helloworld.py` மற்றும் பின்வரும் குறியீட்டை அதில் ஒட்டவும்:"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:63
+msgid ""
+"Some essential things are happening in this example, and you will see them "
+"for all directives."
+msgstr ""
+"இந்த எடுத்துக்காட்டில் சில அத்தியாவசிய விஷயங்கள் நடக்கின்றன, மேலும் எல்லா "
+"வழிமுறைகளுக்கும் அவற்றை நீங்கள் காண்பீர்கள்."
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:67
+msgid "The directive class"
+msgstr "உத்தரவு வகுப்பு"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:68
+msgid "Our new directive is declared in the ``HelloWorld`` class."
+msgstr ""
+"எங்கள் புதிய உத்தரவு `` ஹெலோவொர்ல்ட்`` வகுப்பில் அறிவிக்கப்பட்டுள்ளது."
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:75
+msgid ""
+"This class extends the docutils_' ``Directive`` class. All extensions that "
+"create directives should extend this class."
+msgstr ""
+"இந்த வகுப்பு Docutils_ '`` டைரெக்டிவ்`` வகுப்பை நீட்டிக்கிறது. வழிமுறைகளை "
+"உருவாக்கும் அனைத்து நீட்டிப்புகளும் இந்த வகுப்பை நீட்டிக்க வேண்டும்."
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:80
+msgid ""
+"`The docutils documentation on creating directives <docutils directives_>`_"
+msgstr ""
+"`வழிமுறைகளை உருவாக்குவதற்கான ஆவணங்கள் ஆவணங்கள் <docutils உத்தரவுகள்_>` _"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:82
+msgid ""
+"This class contains a ``run`` method.  This method is a requirement and it "
+"is part of every directive.  It contains the main logic of the directive and"
+" it returns a list of docutils nodes to be processed by Sphinx. These nodes "
+"are docutils' way of representing the content of a document. There are many "
+"types of nodes available: text, paragraph, reference, table, etc."
+msgstr ""
+"இந்த வகுப்பில் `` ரன்`` முறை உள்ளது. இந்த முறை ஒரு தேவை மற்றும் இது ஒவ்வொரு "
+"உத்தரவின் ஒரு பகுதியாகும். இது உத்தரவின் முக்கிய தர்க்கத்தைக் கொண்டுள்ளது "
+"மற்றும் இது ஸ்பிங்க்ஸால் செயலாக்கப்பட வேண்டிய ஆவண முனைகளின் பட்டியலை "
+"வழங்குகிறது. இந்த முனைகள் ஆவணத்தின் உள்ளடக்கத்தை பிரதிநிதித்துவப்படுத்தும் "
+"ஆவணங்களின் வழி. உரை, பத்தி, குறிப்பு, அட்டவணை போன்ற பல வகையான முனைகள் உள்ளன."
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:90
+msgid "`The docutils documentation on nodes <docutils nodes_>`_"
+msgstr "`முனைகளில் உள்ள ஆவணங்கள் ஆவணங்கள் <docutils nodes_>` _"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:92
+msgid ""
+"The ``nodes.paragraph`` class creates a new paragraph node. A paragraph node"
+" typically contains some text that we can set during instantiation using the"
+" ``text`` parameter."
+msgstr ""
+"`` Nodes.paragraph`` வகுப்பு ஒரு புதிய பத்தி முனையை உருவாக்குகிறது. ஒரு "
+"பத்தி முனை பொதுவாக `` உரை`` அளவுருவைப் பயன்படுத்தி உடனடி போது நாம் "
+"அமைக்கக்கூடிய சில உரைகளைக் கொண்டுள்ளது."
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:97
+msgid "The ``setup`` function"
+msgstr "`` அமைவு`` செயல்பாடு"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:100
+msgid ""
+"This function is a requirement. We use it to plug our new directive into "
+"Sphinx."
+msgstr ""
+"இந்த செயல்பாடு ஒரு தேவை. எங்கள் புதிய உத்தரவை ஸ்பிங்க்ஸில் செருக இதைப் "
+"பயன்படுத்துகிறோம்."
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:108
+msgid ""
+"The simplest thing you can do is to call the :meth:`~Sphinx.add_directive` "
+"method, which is what we've done here. For this particular call, the first "
+"argument is the name of the directive itself as used in a reST file. In this"
+" case, we would use ``helloworld``. For example:"
+msgstr ""
+"நீங்கள் செய்யக்கூடிய எளிமையான விஷயம் என்னவென்றால்: மெத்: `~ "
+"sphinx.add_directive` முறை, இதுதான் நாங்கள் இங்கே செய்துள்ளோம். இந்த "
+"குறிப்பிட்ட அழைப்பிற்கு, முதல் வாதம் ஒரு ஓய்வு கோப்பில் பயன்படுத்தப்படும் "
+"உத்தரவின் பெயர். இந்த விஷயத்தில், நாங்கள் `` ஹெலோவொர்ல்ட்`` ஐப் "
+"பயன்படுத்துவோம். உதாரணத்திற்கு:"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:121
+msgid ""
+"We also return the :ref:`extension metadata <ext-metadata>` that indicates "
+"the version of our extension, along with the fact that it is safe to use the"
+" extension for both parallel reading and writing."
+msgstr ""
+"நாங்கள் திருப்பித் தருகிறோம்: ref: `நீட்டிப்பு மெட்டாடேட்டா <ext-metadata>` "
+"இது எங்கள் நீட்டிப்பின் பதிப்பைக் குறிக்கிறது, அதோடு இணையான வாசிப்பு மற்றும்"
+" எழுதுதல் ஆகிய இரண்டிற்கும் நீட்டிப்பைப் பயன்படுத்துவது பாதுகாப்பானது."
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:127
+msgid "Using the extension"
+msgstr "நீட்டிப்பைப் பயன்படுத்துதல்"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:129
+msgid ""
+"The extension has to be declared in your :file:`conf.py` file to make Sphinx"
+" aware of it. There are two steps necessary here:"
+msgstr ""
+"உங்கள்: கோப்பு: `conf.py` கோப்பில் நீட்டிப்பு அறிவிக்கப்பட வேண்டும். இங்கே "
+"இரண்டு படிகள் தேவை:"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:132
+msgid ""
+"Add the :file:`_ext` directory to the `Python path`_ using "
+"``sys.path.append``. This should be placed at the top of the file."
+msgstr ""
+"`` Sys.path.append`` ஐப் பயன்படுத்தி `பைதான் பாதை`_ க்கு` _ext` கோப்பகத்தைச்"
+" சேர்க்கவும். இது கோப்பின் மேற்புறத்தில் வைக்கப்பட வேண்டும்."
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:135
+msgid ""
+"Update or create the :confval:`extensions` list and add the extension file "
+"name to the list"
+msgstr ""
+"புதுப்பிக்கவும் அல்லது உருவாக்கவும்: confval: `நீட்டிப்புகள்` பட்டியல் "
+"மற்றும் நீட்டிப்பு கோப்பு பெயரை பட்டியலில் சேர்க்கவும்"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:138
+msgid "For example:"
+msgstr "உதாரணத்திற்கு:"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:151
+msgid ""
+"We're not distributing this extension as a `Python package`_, we need to "
+"modify the `Python path`_ so Sphinx can find our extension. This is why we "
+"need the call to ``sys.path.append``."
+msgstr ""
+"இந்த நீட்டிப்பை நாங்கள் `பைதான் தொகுப்பு`_ என விநியோகிக்கவில்லை,` பைதான் "
+"பாதையை`__ எனவே மாற்ற வேண்டும், எனவே ஸ்பின்க்ஸ் எங்கள் நீட்டிப்பைக் காணலாம். "
+"இதனால்தான் `` sys.path.append`` க்கு அழைப்பு தேவை."
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:155
+msgid "You can now use the extension in a file. For example:"
+msgstr ""
+"நீங்கள் இப்போது ஒரு கோப்பில் நீட்டிப்பைப் பயன்படுத்தலாம். உதாரணத்திற்கு:"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:165
+msgid "The sample above would generate:"
+msgstr "மேலே உள்ள மாதிரி உருவாக்கும்:"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:177
+msgid "Further reading"
+msgstr "மேலும் படிக்க"
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:179
+msgid ""
+"This is the very basic principle of an extension that creates a new "
+"directive."
+msgstr ""
+"இது ஒரு புதிய உத்தரவை உருவாக்கும் நீட்டிப்பின் மிக அடிப்படைக் கொள்கையாகும்."
+
+#: ../../sphinx/doc/development/tutorials/helloworld.rst:181
+msgid "For a more advanced example, refer to :doc:`todo`."
+msgstr "இன்னும் மேம்பட்ட எடுத்துக்காட்டுக்கு, பார்க்க: டாக்: `டோடோ`."

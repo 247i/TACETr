@@ -1,0 +1,220 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2023, the Sphinx developers
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 7.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-15 00:35+0000\n"
+"PO-Revision-Date: 2022-03-06 06:35+0000\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:2
+msgid "Automatic documentation generation from code"
+msgstr "குறியீட்டிலிருந்து தானியங்கி ஆவணங்கள் உருவாக்கம்"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:4
+msgid ""
+"In the :ref:`previous section <tutorial-describing-objects>` of the tutorial"
+" you manually documented a Python function in Sphinx. However, the "
+"description was out of sync with the code itself, since the function "
+"signature was not the same. Besides, it would be nice to reuse :pep:`Python "
+"docstrings <257#what-is-a-docstring>` in the documentation, rather than "
+"having to write the information in two places."
+msgstr ""
+"இல்: ref: `முந்தைய பிரிவு <டுடோரியல்-டெக்ரிபிங்-பொருள்கள்>` நீங்கள் ஒரு "
+"பைதான் செயல்பாட்டை கைமுறையாக ஆவணப்படுத்திய டுடோரியலின் ஸ்பிங்க்ஸில். "
+"இருப்பினும், செயல்பாடு கையொப்பம் ஒரே மாதிரியாக இல்லாததால், விளக்கம் "
+"குறியீட்டோடு ஒத்திசைக்கப்படவில்லை. தவிர, மறுபயன்பாடு செய்வது நன்றாக "
+"இருக்கும்: PEP: `பைதான் டாக்ஸ்ட்ரிங்ஸ் <257#என்ன-ஒரு-டோக்ஸ்ட்ரிங்>` இரண்டு "
+"இடங்களில் தகவல்களை எழுதுவதை விட, ஆவணங்களில்."
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:11
+msgid ""
+"Fortunately, :doc:`the autodoc extension </usage/extensions/autodoc>` "
+"provides this functionality."
+msgstr ""
+"அதிர்ஷ்டவசமாக,: டாக்: `ஆட்டோடோக் நீட்டிப்பு "
+"</பயன்பாடு/நீட்டிப்புகள்/ஆட்டோடோக்>` இந்த செயல்பாட்டை வழங்குகிறது."
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:15
+msgid "Reusing signatures and docstrings with autodoc"
+msgstr "ஆட்டோடாக் உடன் கையொப்பங்கள் மற்றும் ஆவணங்களை மீண்டும் பயன்படுத்துதல்"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:17
+msgid "To use autodoc, first add it to the list of enabled extensions:"
+msgstr ""
+"ஆட்டோடாக் பயன்படுத்த, முதலில் அதை இயக்கப்பட்ட நீட்டிப்புகளின் பட்டியலில் "
+"சேர்க்கவும்:"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:19
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:101
+msgid "docs/source/conf.py"
+msgstr "டாக்ஸ்/மூல/conf.py"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:29
+msgid ""
+"Next, move the content of the ``.. py:function`` directive to the function "
+"docstring in the original Python file, as follows:"
+msgstr ""
+"அடுத்து, அசல் பைதான் கோப்பில் உள்ள டாக்ஸ்ட்ரிங் செயல்பாட்டிற்கு `` .. py: "
+"செயல்பாடு` `கட்டளையை பின்வருமாறு நகர்த்தவும்:"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:32
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:68
+msgid "lumache.py"
+msgstr "lumache.py"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:49
+msgid ""
+"Finally, replace the ``.. py:function`` directive from the Sphinx "
+"documentation with :rst:dir:`autofunction`:"
+msgstr ""
+"இறுதியாக, ஸ்பின்க்ஸ் ஆவணங்களிலிருந்து `` .. PY: செயல்பாடு`` உத்தரவை "
+"மாற்றவும்: rst: dir: `Autofunction`:"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:52
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:78
+msgid "docs/source/usage.rst"
+msgstr "டாக்ஸ்/மூல/பயன்பாடு"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:60
+msgid ""
+"If you now build the HTML documentation, the output will be the same! With "
+"the advantage that it is generated from the code itself. Sphinx took the "
+"reStructuredText from the docstring and included it, also generating proper "
+"cross-references."
+msgstr ""
+"நீங்கள் இப்போது HTML ஆவணங்களை உருவாக்கினால், வெளியீடு ஒரே மாதிரியாக "
+"இருக்கும்! இது குறியீட்டிலிருந்து உருவாக்கப்படுகிறது என்ற நன்மையுடன். "
+"ஸ்பின்க்ஸ் டாக்ஸ்ட்ரிங்கிலிருந்து மறுசீரமைப்பு டெக்ஸ்டை எடுத்து அதைச் "
+"சேர்த்துக் கொண்டார், மேலும் சரியான குறுக்கு குறிப்புகளையும் உருவாக்குகிறார்."
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:65
+msgid ""
+"You can also autogenerate documentation from other objects. For example, add"
+" the code for the ``InvalidKindError`` exception:"
+msgstr ""
+"மற்ற பொருட்களிலிருந்து ஆவணங்களை தானாக உருவாக்கலாம். எடுத்துக்காட்டாக, `` "
+"தவறான கிண்டர்ரோர்` `விதிவிலக்குக்கான குறியீட்டைச் சேர்க்கவும்:"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:75
+msgid ""
+"And replace the ``.. py:exception`` directive with :rst:dir:`autoexception` "
+"as follows:"
+msgstr ""
+"மற்றும் `` .. PY: விதிவிலக்கு` `உடன் நியமனம்: rst: dir:` AutoException` "
+"பின்வருமாறு:"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:87
+msgid ""
+"And again, after running ``make html``, the output will be the same as "
+"before."
+msgstr ""
+"மீண்டும், `` Make html`` ஐ இயக்கிய பிறகு, வெளியீடு முன்பு போலவே இருக்கும்."
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:90
+msgid "Generating comprehensive API references"
+msgstr "விரிவான ஏபிஐ குறிப்புகளை உருவாக்குதல்"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:92
+msgid ""
+"While using ``sphinx.ext.autodoc`` makes keeping the code and the "
+"documentation in sync much easier, it still requires you to write an "
+"``auto*`` directive for every object you want to document. Sphinx provides "
+"yet another level of automation: the :doc:`autosummary "
+"</usage/extensions/autosummary>` extension."
+msgstr ""
+"`` Sphinx.ext.autodoc`` ஐப் பயன்படுத்தும்போது, குறியீட்டையும் ஆவணங்களையும் "
+"ஒத்திசைவாக வைத்திருப்பது மிகவும் எளிதானது, நீங்கள் ஆவணப்படுத்த விரும்பும் "
+"ஒவ்வொரு பொருளுக்கும் ஒரு `` ஆட்டோ*`` உத்தரவை எழுத வேண்டும். SPHINX "
+"ஆட்டோமேஷனின் மற்றொரு நிலை வழங்குகிறது: தி: டாக்: `தன்னியக்க "
+"</பயன்பாடு/நீட்டிப்புகள்/தன்னியக்க>` நீட்டிப்பு."
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:97
+msgid ""
+"The :rst:dir:`autosummary` directive generates documents that contain all "
+"the necessary ``autodoc`` directives. To use it, first enable the "
+"autosummary extension:"
+msgstr ""
+"தி: rst: dir: `தன்னியக்க` உத்தரவு தேவையான அனைத்து` `ஆட்டோடோக்`` உத்தரவுகளைக்"
+" கொண்ட ஆவணங்களை உருவாக்குகிறது. இதைப் பயன்படுத்த, முதலில் தன்னியக்க "
+"நீட்டிப்பை இயக்கவும்:"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:112
+msgid "Next, create a new ``api.rst`` file with these contents:"
+msgstr ""
+"அடுத்து, இந்த உள்ளடக்கங்களுடன் புதிய `` api.rst`` கோப்பை உருவாக்கவும்:"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:114
+msgid "docs/source/api.rst"
+msgstr "டாக்ஸ்/மூல/api.rst"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:125
+msgid "Remember to include the new document in the root toctree:"
+msgstr "ரூட் டோக்ட்ரீ என்ற புதிய ஆவணத்தை சேர்க்க நினைவில் கொள்ளுங்கள்:"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:127
+msgid "docs/source/index.rst"
+msgstr "docs/source/index.rst"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:139
+msgid ""
+"Finally, after you build the HTML documentation running ``make html``, it "
+"will contain two new pages:"
+msgstr "இறுதியாக, நீங்கள் HTML ஆவணங்களை உருவாக்கிய பிறகு `` Make html```"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:142
+msgid ""
+"``api.html``, corresponding to ``docs/source/api.rst`` and containing a "
+"table with the objects you included in the ``autosummary`` directive (in "
+"this case, only one)."
+msgstr ""
+"`` டாக்ஸ்/மூல/api.rst`` உடன் ஒத்த `` API.HTML`` மற்றும் `` தன்னியக்க` "
+"உத்தரவில் நீங்கள் சேர்த்த பொருள்களுடன் ஒரு அட்டவணையைக் கொண்டுள்ளது (இந்த "
+"விஷயத்தில், ஒன்று மட்டுமே)."
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:145
+msgid ""
+"``generated/lumache.html``, corresponding to a newly created reST file "
+"``generated/lumache.rst`` and containing a summary of members of the module,"
+" in this case one function and one exception."
+msgstr ""
+"`` உருவாக்கப்பட்ட/lumache.html``, இது புதிதாக உருவாக்கப்பட்ட ஓய்வு கோப்பு ``"
+" உருவாக்கப்பட்ட/lumache.rst`` உடன் தொடர்புடையது மற்றும் தொகுதியின் "
+"உறுப்பினர்களின் சுருக்கத்தைக் கொண்டுள்ளது, இந்த விஷயத்தில் ஒரு செயல்பாடு "
+"மற்றும் ஒரு விதிவிலக்கு."
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:154
+msgid "Summary page created by autosummary"
+msgstr "சுருக்கமான பக்கம் ஆட்டோசம்மரி உருவாக்கியது"
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:156
+msgid ""
+"Each of the links in the summary page will take you to the places where you "
+"originally used the corresponding ``autodoc`` directive, in this case in the"
+" ``usage.rst`` document."
+msgstr ""
+"சுருக்கம் பக்கத்தில் உள்ள ஒவ்வொரு இணைப்புகளும் உங்களை முதலில் தொடர்புடைய `` "
+"ஆட்டோடோக்`` உத்தரவை நீங்கள் முதலில் பயன்படுத்திய இடங்களுக்கு அழைத்துச் "
+"செல்லும், இந்த விஷயத்தில் `` useage.rst`` ஆவணத்தில்."
+
+#: ../../sphinx/doc/tutorial/automatic-doc-generation.rst:162
+msgid ""
+"The generated files are based on `Jinja2 templates "
+"<https://jinja2docs.readthedocs.io/>`_ that :ref:`can be customized "
+"<autosummary-customizing-templates>`, but that is out of scope for this "
+"tutorial."
+msgstr ""
+"உருவாக்கப்பட்ட கோப்புகள் `jinja2 வார்ப்புருக்கள் "
+"<https://jinja2docs.readthedocs.io/> _ _ _ _ இது: Ref:` தனிப்பயனாக்கலாம் "
+"<தன்னியக்க-தனிப்பயனாக்குதல்-டெம்ப்ளேட்டுகள்> `, ஆனால் இது இந்த "
+"டுடோரியலுக்கான நோக்கத்திற்கு அப்பாற்பட்டது."

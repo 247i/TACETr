@@ -1,0 +1,318 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2018, Georg Brandl and the Sphinx team
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 2.0.0+/f9414ea\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-19 17:10+0000\n"
+"PO-Revision-Date: 2018-02-12 13:49+0000\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/web/quickstart.rst:4
+msgid "Web Support Quick Start"
+msgstr "வலை ஆதரவு விரைவான தொடக்க"
+
+#: ../../sphinx/doc/web/quickstart.rst:7
+msgid "Building Documentation Data"
+msgstr "ஆவணப்படுத்தல் தரவை உருவாக்குதல்"
+
+#: ../../sphinx/doc/web/quickstart.rst:9
+msgid ""
+"To make use of the web support package in your application you'll need to "
+"build the data it uses.  This data includes pickle files representing "
+"documents, search indices, and node data that is used to track where "
+"comments and other things are in a document.  To do this you will need to "
+"create an instance of the :class:`~.WebSupport` class and call its "
+":meth:`~.WebSupport.build` method::"
+msgstr ""
+"உங்கள் பயன்பாட்டில் வலை ஆதரவு தொகுப்பைப் பயன்படுத்த நீங்கள் பயன்படுத்தும் "
+"தரவை உருவாக்க வேண்டும். இந்தத் தரவில் ஆவணங்கள், தேடல் குறியீடுகள் மற்றும் "
+"முனை தரவு ஆகியவற்றைக் குறிக்கும் ஊறுகாய் கோப்புகள் அடங்கும், அவை ஆவணத்தில் "
+"உள்ள கருத்துகள் மற்றும் பிற விஷயங்கள் எங்கு உள்ளன என்பதைக் கண்காணிக்கப் "
+"பயன்படுகின்றன. இதைச் செய்ய நீங்கள் ஒரு உதாரணத்தை உருவாக்க வேண்டும்: வகுப்பு:"
+" `~ .websupport` வகுப்பை அழைக்கவும்: மெத்:` ~ .websupport.build` முறை ::"
+
+#: ../../sphinx/doc/web/quickstart.rst:23
+msgid ""
+"This will read reStructuredText sources from `srcdir` and place the "
+"necessary data in `builddir`.  The `builddir` will contain two sub-"
+"directories: one named \"data\" that contains all the data needed to display"
+" documents, search through documents, and add comments to documents.  The "
+"other directory will be called \"static\" and contains static files that "
+"should be served from \"/static\"."
+msgstr ""
+"இது `Srcdir` இலிருந்து மறுசீரமைப்பு ஆதாரங்களை படித்து தேவையான தரவை` "
+"பில்டிரில்` வைக்கும். `பில்ட் டிர்` இல் இரண்டு துணை இயக்குநர்கள் இருக்கும்: "
+"ஆவணங்களைக் காண்பிப்பதற்கும், ஆவணங்கள் மூலம் தேடுவதற்கும், ஆவணங்களில் "
+"கருத்துகளைச் சேர்ப்பதற்கும் தேவையான அனைத்து தரவையும் கொண்ட\" தரவு \"என்று "
+"பெயரிடப்பட்டது. மற்ற அடைவு \"நிலையானது\" என்று அழைக்கப்படும் மற்றும் "
+"\"/நிலையான\" இலிருந்து வழங்கப்பட வேண்டிய நிலையான கோப்புகளைக் கொண்டுள்ளது."
+
+#: ../../sphinx/doc/web/quickstart.rst:31
+msgid ""
+"If you wish to serve static files from a path other than \"/static\", you "
+"can do so by providing the *staticdir* keyword argument when creating the "
+":class:`~.WebSupport` object."
+msgstr ""
+"\"/நிலையானது\" தவிர வேறு பாதையில் இருந்து நிலையான கோப்புகளை வழங்க "
+"விரும்பினால்,: `~ .websupport` பொருளை உருவாக்கும் போது * ஸ்டாடிக்டிர் * "
+"முக்கிய வாதத்தை வழங்குவதன் மூலம் நீங்கள் அவ்வாறு செய்யலாம்."
+
+#: ../../sphinx/doc/web/quickstart.rst:37
+msgid "Integrating Sphinx Documents Into Your Webapp"
+msgstr "உங்கள் வெப்ஆப்பில் SPHINX ஆவணங்களை ஒருங்கிணைத்தல்"
+
+#: ../../sphinx/doc/web/quickstart.rst:39
+msgid ""
+"Now that the data is built, it's time to do something useful with it.  Start"
+" off by creating a :class:`~.WebSupport` object for your application::"
+msgstr ""
+"இப்போது தரவு கட்டமைக்கப்பட்டுள்ளதால், அதனுடன் பயனுள்ள ஒன்றைச் செய்ய வேண்டிய "
+"நேரம் இது. ஒரு: வகுப்பு: `~ .websupport` உங்கள் பயன்பாட்டிற்கான பொருள் ::"
+
+#: ../../sphinx/doc/web/quickstart.rst:47
+msgid ""
+"You'll only need one of these for each set of documentation you will be "
+"working with.  You can then call its :meth:`~.WebSupport.get_document` "
+"method to access individual documents::"
+msgstr ""
+"நீங்கள் பணிபுரியும் ஒவ்வொரு ஆவணங்களுக்கும் இவற்றில் ஒன்று மட்டுமே "
+"தேவைப்படும். நீங்கள் அதை அழைக்கலாம்: மெத்: `~ .websupport.get_document` "
+"தனிப்பட்ட ஆவணங்களை அணுகுவதற்கான முறை ::"
+
+#: ../../sphinx/doc/web/quickstart.rst:53
+msgid "This will return a dictionary containing the following items:"
+msgstr "இது பின்வரும் உருப்படிகளைக் கொண்ட அகராதியை வழங்கும்:"
+
+#: ../../sphinx/doc/web/quickstart.rst:55
+msgid "**body**: The main body of the document as HTML"
+msgstr "** உடல் **: ஆவணத்தின் முக்கிய உடல் HTML ஆக"
+
+#: ../../sphinx/doc/web/quickstart.rst:56
+msgid "**sidebar**: The sidebar of the document as HTML"
+msgstr "** பக்கப்பட்டி **: ஆவணத்தின் பக்கப்பட்டி HTML"
+
+#: ../../sphinx/doc/web/quickstart.rst:57
+msgid "**relbar**: A div containing links to related documents"
+msgstr "** Relbar **: தொடர்புடைய ஆவணங்களுக்கான இணைப்புகளைக் கொண்ட ஒரு DIV"
+
+#: ../../sphinx/doc/web/quickstart.rst:58
+msgid "**title**: The title of the document"
+msgstr "** தலைப்பு **: ஆவணத்தின் தலைப்பு"
+
+#: ../../sphinx/doc/web/quickstart.rst:59
+msgid "**css**: Links to CSS files used by Sphinx"
+msgstr "** CSS **: SPHINX ஆல் பயன்படுத்தப்படும் CSS கோப்புகளுக்கான இணைப்புகள்"
+
+#: ../../sphinx/doc/web/quickstart.rst:60
+msgid "**script**: JavaScript containing comment options"
+msgstr "** ஸ்கிரிப்ட் **: கருத்து விருப்பங்களைக் கொண்ட ஜாவாஸ்கிரிப்ட்"
+
+#: ../../sphinx/doc/web/quickstart.rst:62
+msgid ""
+"This dict can then be used as context for templates.  The goal is to be easy"
+" to integrate with your existing templating system.  An example using "
+"`Jinja2 <http://jinja.pocoo.org/>`_ is:"
+msgstr ""
+"இந்த கட்டளை பின்னர் வார்ப்புருக்கள் சூழலாக பயன்படுத்தப்படலாம். உங்கள் "
+"இருக்கும் வார்ப்புரு அமைப்புடன் ஒருங்கிணைப்பது எளிதாக இருக்க வேண்டும். "
+"`Jinja2 <http://jinja.pocoo.org/> _ _ என்பது ஒரு எடுத்துக்காட்டு:"
+
+#: ../../sphinx/doc/web/quickstart.rst:99
+msgid "Authentication"
+msgstr "அங்கீகார"
+
+#: ../../sphinx/doc/web/quickstart.rst:101
+msgid ""
+"To use certain features such as voting, it must be possible to authenticate "
+"users.  The details of the authentication are left to your application.  "
+"Once a user has been authenticated you can pass the user's details to "
+"certain :class:`~.WebSupport` methods using the *username* and *moderator* "
+"keyword arguments.  The web support package will store the username with "
+"comments and votes.  The only caveat is that if you allow users to change "
+"their username you must update the websupport package's data::"
+msgstr ""
+"வாக்களிப்பு போன்ற சில அம்சங்களைப் பயன்படுத்த, பயனர்களை அங்கீகரிக்க முடியும்."
+" அங்கீகாரத்தின் விவரங்கள் உங்கள் பயன்பாட்டிற்கு விடப்பட்டுள்ளன. ஒரு பயனர் "
+"அங்கீகரிக்கப்பட்டவுடன், பயனரின் விவரங்களை சிலருக்கு அனுப்பலாம்: வகுப்பு: `~ "
+".websupport` முறைகள் * பயனர்பெயர் * மற்றும் * மதிப்பீட்டாளர் * முக்கிய "
+"வாதங்களைப் பயன்படுத்துகின்றன. வலை ஆதரவு தொகுப்பு பயனர்பெயரை கருத்துகள் "
+"மற்றும் வாக்குகளுடன் சேமிக்கும். ஒரே எச்சரிக்கை என்னவென்றால், பயனர்களின் "
+"பயனர்பெயரை மாற்ற நீங்கள் அனுமதித்தால், நீங்கள் வலை ஆதரவு தொகுப்பின் தரவைப் "
+"புதுப்பிக்க வேண்டும் ::"
+
+#: ../../sphinx/doc/web/quickstart.rst:111
+msgid ""
+"*username* should be a unique string which identifies a user, and "
+"*moderator* should be a boolean representing whether the user has moderation"
+" privileges. The default value for *moderator* is ``False``."
+msgstr ""
+"* பயனர்பெயர்* ஒரு பயனரை அடையாளம் காணும் ஒரு தனித்துவமான சரமாக இருக்க "
+"வேண்டும், மேலும்* மதிப்பீட்டாளர்* பயனருக்கு மிதமான சலுகைகள் உள்ளதா என்பதைக் "
+"குறிக்கும் பூலியனாக இருக்க வேண்டும். * மதிப்பீட்டாளர் * க்கான இயல்புநிலை "
+"மதிப்பு `` தவறு``."
+
+#: ../../sphinx/doc/web/quickstart.rst:115
+msgid ""
+"An example `Flask <http://flask.pocoo.org/>`_ function that checks whether a"
+" user is logged in and then retrieves a document is::"
+msgstr "ஒரு உதாரணம்"
+
+#: ../../sphinx/doc/web/quickstart.rst:130
+msgid ""
+"The first thing to notice is that the *docname* is just the request path.  "
+"This makes accessing the correct document easy from a single view.  If the "
+"user is authenticated, then the username and moderation status are passed "
+"along with the docname to :meth:`~.WebSupport.get_document`.  The web "
+"support package will then add this data to the ``COMMENT_OPTIONS`` that are "
+"used in the template."
+msgstr ""
+"கவனிக்க வேண்டிய முதல் விஷயம் என்னவென்றால், * டாக்நேம் * என்பது கோரிக்கை பாதை"
+" மட்டுமே. இது சரியான ஆவணத்தை அணுகுவதை ஒரு பார்வையில் இருந்து எளிதாக்குகிறது."
+" பயனர் அங்கீகரிக்கப்பட்டால், பயனர்பெயர் மற்றும் மிதமான நிலை டாக்நேமுடன் "
+"அனுப்பப்படும்: மெத்: `~ .websupport.get_document`. வலை ஆதரவு தொகுப்பு "
+"பின்னர் வார்ப்புருவில் பயன்படுத்தப்படும் `` கருத்து_ஓபிஷன்கள்` இல் இந்தத் "
+"தரவைச் சேர்க்கும்."
+
+#: ../../sphinx/doc/web/quickstart.rst:138
+msgid ""
+"This only works if your documentation is served from your document root. If "
+"it is served from another directory, you will need to prefix the url route "
+"with that directory, and give the `docroot` keyword argument when creating "
+"the web support object::"
+msgstr ""
+"உங்கள் ஆவணங்கள் உங்கள் ஆவண மூலத்திலிருந்து வழங்கப்பட்டால் மட்டுமே இது "
+"செயல்படும். இது வேறொரு கோப்பகத்திலிருந்து வழங்கப்பட்டால், நீங்கள் அந்த "
+"கோப்பகத்துடன் URL வழியை முன்னொட்ட வேண்டும், மேலும் வலை ஆதரவு பொருளை "
+"உருவாக்கும் போது `டாக்ரூட்` முக்கிய வாதத்தை வழங்க வேண்டும் ::"
+
+#: ../../sphinx/doc/web/quickstart.rst:149
+msgid "Performing Searches"
+msgstr "தேடல்களைச் செய்கிறது"
+
+#: ../../sphinx/doc/web/quickstart.rst:151
+msgid ""
+"To use the search form built-in to the Sphinx sidebar, create a function to "
+"handle requests to the url 'search' relative to the documentation root.  The"
+" user's search query will be in the GET parameters, with the key `q`.  Then "
+"use the :meth:`~sphinxcontrib.websupport.WebSupport.get_search_results` "
+"method to retrieve search results. In `Flask <http://flask.pocoo.org/>`_ "
+"that would be like this::"
+msgstr ""
+"SPHINX பக்கப்பட்டிக்கு உள்ளமைக்கப்பட்ட தேடல் படிவத்தைப் பயன்படுத்த, "
+"ஆவணப்படுத்தல் மூலத்துடன் தொடர்புடைய URL 'தேடல்' கோரிக்கைகளை கையாள ஒரு "
+"செயல்பாட்டை உருவாக்கவும். பயனரின் தேடல் வினவல் `Q` விசையுடன் GET "
+"அளவுருக்களில் இருக்கும். தேடல் முடிவுகளை மீட்டெடுக்க `~ "
+"sphinxcontrib.websupport.websupport.websupport.get_search_results இன் "
+"முறையைப் பயன்படுத்தவும். ;"
+
+#: ../../sphinx/doc/web/quickstart.rst:163
+msgid ""
+"Note that we used the same template to render our search results as we did "
+"to render our documents.  That's because "
+":meth:`~.WebSupport.get_search_results` returns a context dict in the same "
+"format that :meth:`~.WebSupport.get_document` does."
+msgstr ""
+"எங்கள் ஆவணங்களை வழங்க நாங்கள் செய்ததைப் போலவே எங்கள் தேடல் முடிவுகளையும் "
+"வழங்க அதே வார்ப்புருவைப் பயன்படுத்தினோம் என்பதை நினைவில் கொள்க. ஏனென்றால்: "
+"மெத்: `~ .websupport.get_search_results` அதே வடிவத்தில் ஒரு சூழல் கட்டளையை "
+"வழங்குகிறது: மெத்:` ~ .websupport.get_document` செய்கிறது."
+
+#: ../../sphinx/doc/web/quickstart.rst:170
+msgid "Comments & Proposals"
+msgstr "கருத்துகள் மற்றும் திட்டங்கள்"
+
+#: ../../sphinx/doc/web/quickstart.rst:172
+msgid ""
+"Now that this is done it's time to define the functions that handle the AJAX"
+" calls from the script.  You will need three functions.  The first function "
+"is used to add a new comment, and will call the web support method "
+":meth:`~.WebSupport.add_comment`::"
+msgstr ""
+"இப்போது இது முடிந்துவிட்டதால், ஸ்கிரிப்ட்டிலிருந்து அஜாக்ஸ் அழைப்புகளைக் "
+"கையாளும் செயல்பாடுகளை வரையறுக்க வேண்டிய நேரம் இது. உங்களுக்கு மூன்று "
+"செயல்பாடுகள் தேவைப்படும். முதல் செயல்பாடு புதிய கருத்தைச் சேர்க்கப் "
+"பயன்படுகிறது, மேலும் வலை ஆதரவு முறையை அழைக்கும்: `~ .websupport.add_comment`"
+" ::"
+
+#: ../../sphinx/doc/web/quickstart.rst:189
+msgid ""
+"You'll notice that both a `parent_id` and `node_id` are sent with the "
+"request. If the comment is being attached directly to a node, `parent_id` "
+"will be empty. If the comment is a child of another comment, then `node_id` "
+"will be empty. Then next function handles the retrieval of comments for a "
+"specific node, and is aptly named "
+":meth:`~sphinxcontrib.websupport.WebSupport.get_data`::"
+msgstr ""
+"`பெற்றோர்_ஐடி` மற்றும்` Node_id` இரண்டும் கோரிக்கையுடன் அனுப்பப்படுவதை "
+"நீங்கள் கவனிப்பீர்கள். கருத்து நேரடியாக ஒரு முனையுடன் இணைக்கப்பட்டிருந்தால்,"
+" `பெற்றோர்_ஐடி` காலியாக இருக்கும். கருத்து மற்றொரு கருத்தின் குழந்தை "
+"என்றால், `Node_id` காலியாக இருக்கும். அடுத்த செயல்பாடு ஒரு குறிப்பிட்ட "
+"முனைக்கு கருத்துகளை மீட்டெடுப்பதைக் கையாளுகிறது, மேலும் பொருத்தமாக "
+"பெயரிடப்பட்டது: மெத்: `~ sphinxcontrib.websupport.websupport.get_data` ::"
+
+#: ../../sphinx/doc/web/quickstart.rst:204
+msgid ""
+"The final function that is needed will call "
+":meth:`~.WebSupport.process_vote`, and will handle user votes on comments::"
+msgstr ""
+"தேவைப்படும் இறுதி செயல்பாடு அழைக்கப்படும்: மெத்: `~ "
+".websupport.process_vote`, மற்றும் கருத்துக்களில் பயனர் வாக்குகளை கையாளும் "
+"::"
+
+#: ../../sphinx/doc/web/quickstart.rst:220
+msgid "Comment Moderation"
+msgstr "கருத்து மிதமானது"
+
+#: ../../sphinx/doc/web/quickstart.rst:222
+msgid ""
+"By default, all comments added through :meth:`~.WebSupport.add_comment` are "
+"automatically displayed.  If you wish to have some form of moderation, you "
+"can pass the `displayed` keyword argument::"
+msgstr ""
+"இயல்பாக, அனைத்து கருத்துகளும் சேர்க்கப்பட்டுள்ளன: மெத்: `~ "
+".websupport.add_comment` தானாகவே காட்டப்படும். நீங்கள் ஒருவித மிதமான அளவைக் "
+"கொண்டிருக்க விரும்பினால், நீங்கள் `காட்டப்படும்` முக்கிய வாதத்தை அனுப்பலாம் "
+"::"
+
+#: ../../sphinx/doc/web/quickstart.rst:231
+msgid ""
+"You can then create a new view to handle the moderation of comments.  It "
+"will be called when a moderator decides a comment should be accepted and "
+"displayed::"
+msgstr ""
+"கருத்துகளின் மிதமான தன்மையைக் கையாள புதிய பார்வையை நீங்கள் உருவாக்கலாம். ஒரு"
+" மதிப்பீட்டாளர் ஒரு கருத்தை ஏற்றுக் கொள்ள வேண்டும் என்று தீர்மானிக்கும் போது"
+" அது அழைக்கப்படும் ::"
+
+#: ../../sphinx/doc/web/quickstart.rst:242
+msgid "Rejecting comments happens via comment deletion."
+msgstr "கருத்துகளை நிராகரிப்பது கருத்து நீக்குதல் மூலம் நிகழ்கிறது."
+
+#: ../../sphinx/doc/web/quickstart.rst:244
+msgid ""
+"To perform a custom action (such as emailing a moderator) when a new comment"
+" is added but not displayed, you can pass callable to the "
+":class:`~.WebSupport` class when instantiating your support object::"
+msgstr ""
+"ஒரு புதிய கருத்து சேர்க்கப்பட்டாலும் காண்பிக்கப்படாதபோது தனிப்பயன் செயலைச் "
+"செய்ய (ஒரு மதிப்பீட்டாளருக்கு மின்னஞ்சல் அனுப்புவது போன்றவை), நீங்கள் "
+"அழைக்கப்படலாம்: வகுப்பு: `~ .websupport` உங்கள் ஆதரவு பொருளை நிறுவும் போது "
+"::"
+
+#: ../../sphinx/doc/web/quickstart.rst:253
+msgid ""
+"The moderation callback must take one argument, which will be the same "
+"comment dict that is returned by :meth:`add_comment`."
+msgstr ""
+"மிதமான கால்பேக் ஒரு வாதத்தை எடுக்க வேண்டும், இது திரும்பிய அதே கருத்துத் "
+"கட்டளையாக இருக்கும்: மெத்: `கூடுதல்_மென்ட்`."

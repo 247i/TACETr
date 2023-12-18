@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2023, the Sphinx developers
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 7.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-15 00:35+0000\n"
+"PO-Revision-Date: 2018-02-12 13:48+0000\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/extdev/parserapi.rst:4
+msgid "Parser API"
+msgstr "பாகுபடுத்தி ஏபிஐ"
+
+#: ../../sphinx/doc/extdev/parserapi.rst:6
+msgid "`The docutils documentation describes`__ parsers as follows:"
+msgstr "`டாக்யூடில்ஸ் ஆவணங்கள் `__ பாகுபடுத்திகளை பின்வருமாறு விவரிக்கின்றன:"
+
+#: ../../sphinx/doc/extdev/parserapi.rst:8
+msgid ""
+"The Parser analyzes the input document and creates a node tree "
+"representation."
+msgstr ""
+"பாகுபடுத்தி உள்ளீட்டு ஆவணத்தை பகுப்பாய்வு செய்து ஒரு முனை மர "
+"பிரதிநிதித்துவத்தை உருவாக்குகிறது."
+
+#: ../../sphinx/doc/extdev/parserapi.rst:13
+msgid ""
+"In Sphinx, the parser modules works as same as docutils.  The parsers are "
+"registered to Sphinx by extensions using Application APIs; "
+":meth:`.Sphinx.add_source_suffix()` and :meth:`.Sphinx.add_source_parser()`."
+msgstr ""
+"ஸ்பிங்க்ஸில், பாகுபடுத்தி தொகுதிகள் ஆவணங்களைப் போலவே செயல்படுகின்றன. "
+"பயன்பாட்டு API களைப் பயன்படுத்தி நீட்டிப்புகள் மூலம் பாகுபடுத்திகள் SPHINX "
+"இல் பதிவு செய்யப்படுகின்றன; ."
+
+#: ../../sphinx/doc/extdev/parserapi.rst:17
+msgid ""
+"The *source suffix* is a mapping from file suffix to file type.  For "
+"example, ``.rst`` file is mapped to ``'restructuredtext'`` type.  Sphinx "
+"uses the file type to looking for parsers from registered list.  On "
+"searching, Sphinx refers to the ``Parser.supported`` attribute and picks up "
+"a parser which contains the file type in the attribute."
+msgstr ""
+"* மூல பின்னொட்டு * என்பது கோப்பு பின்னொட்டிலிருந்து கோப்பு வகைக்கு ஒரு "
+"மேப்பிங் ஆகும். எடுத்துக்காட்டாக, `` .ஆர்எஸ்டி`` கோப்பு `` "
+"'மறுசீரமைக்கப்பட்ட டெக்ஸ்ட்'`` வகைக்கு மாற்றப்பட்டுள்ளது. பதிவுசெய்யப்பட்ட "
+"பட்டியலிலிருந்து பாகுபடுத்திகளைத் தேடுவதற்கு SPHINX கோப்பு வகையைப் "
+"பயன்படுத்துகிறது. தேடும்போது, ஸ்பின்க்ஸ் `` பாகுபடுத்தி.அப்போர்ட்`` "
+"பண்புக்கூறைக் குறிக்கிறது மற்றும் பண்புக்கூறில் கோப்பு வகையைக் கொண்ட ஒரு "
+"பாகுபடுத்தி எடுக்கிறது."
+
+#: ../../sphinx/doc/extdev/parserapi.rst:23
+msgid ""
+"The users can override the source suffix mappings using "
+":confval:`source_suffix` like following::"
+msgstr ""
+"பயனர்கள் பயன்படுத்தும் மூல பின்னொட்டு வரைபடங்களை மேலெழுதலாம்: confval: "
+"`source_suffix` பின்வருமாறு ::"
+
+#: ../../sphinx/doc/extdev/parserapi.rst:32
+msgid ""
+"You should indicate file types your parser supports. This will allow users "
+"to configure their settings appropriately."
+msgstr ""
+"உங்கள் பாகுபடுத்தி ஆதரிக்கும் கோப்பு வகைகளை நீங்கள் குறிக்க வேண்டும். இது "
+"பயனர்கள் தங்கள் அமைப்புகளை சரியான முறையில் உள்ளமைக்க அனுமதிக்கும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/parsers.pydocstring
+#: of sphinx.parsers.Parser:1
+msgid ""
+"A base class of source parsers.  The additional parsers should inherit this "
+"class instead of ``docutils.parsers.Parser``.  Compared with "
+"``docutils.parsers.Parser``, this class improves accessibility to Sphinx "
+"APIs."
+msgstr ""
+"மூல பாகுபடுத்திகளின் அடிப்படை வகுப்பு. கூடுதல் பாகுபடுத்துபவர்கள் `` "
+"docutils.parsers.parser`` என்பதற்கு பதிலாக இந்த வகுப்பைப் பெற வேண்டும். `` "
+"Docutils.parsers.parser`` உடன் ஒப்பிடும்போது, இந்த வகுப்பு SPHINX API "
+"களுக்கான அணுகலை மேம்படுத்துகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/parsers.pydocstring
+#: of sphinx.parsers.Parser:5
+msgid ""
+"The subclasses can access sphinx core runtime objects (app, config and env)."
+msgstr ""
+"துணைப்பிரிவுகள் SPHINX கோர் இயக்க நேர பொருள்களை (APP, CONFIG மற்றும் ENV) "
+"அணுகலாம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/parsers.pydocstring
+#: of sphinx.parsers.Parser.set_application:1
+msgid ""
+"set_application will be called from Sphinx to set app and other instance "
+"variables"
+msgstr ""
+"பயன்பாடு மற்றும் பிற நிகழ்வு மாறிகள் அமைக்க SPHINX இலிருந்து Set_application"
+" அழைக்கப்படும்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/parsers.pydocstring
+#: of sphinx.parsers.Parser.set_application:0
+msgid "Parameters"
+msgstr "அளவுருக்கள்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/parsers.pydocstring
+#: of sphinx.parsers.Parser.set_application:3
+msgid "Sphinx application object"
+msgstr "SPHINX பயன்பாட்டு பொருள்"
+
+#: ../docstring of sphinx.parsers.Parser.config:1
+msgid "The config object"
+msgstr "கட்டமைப்பு பொருள்"
+
+#: ../docstring of sphinx.parsers.Parser.env:1
+msgid "The environment object"
+msgstr "சுற்றுச்சூழல் பொருள்"

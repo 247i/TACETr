@@ -1,0 +1,303 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2023, the Sphinx developers
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 7.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-15 00:35+0000\n"
+"PO-Revision-Date: 2020-06-03 21:56+0000\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/internals/release-process.rst:3
+msgid "Sphinx's release process"
+msgstr "ஸ்பிங்க்ஸின் வெளியீட்டு செயல்முறை"
+
+#: ../../sphinx/doc/internals/release-process.rst:6
+msgid "Versioning"
+msgstr "பதிப்பு"
+
+#: ../../sphinx/doc/internals/release-process.rst:8
+msgid ""
+"Sphinx adheres to :pep:`440` versions, with a ``major.minor.micro`` scheme "
+"for the *release segment* (e.g. 1.2.3). The major, minor, and micro version "
+"parts should be altered as follows:"
+msgstr ""
+"ஸ்பிங்க்ஸ் இதைக் கடைப்பிடிக்கிறது: PEP: `440` பதிப்புகள், * வெளியீட்டு "
+"பிரிவுக்கான` `mager.minor.micro`` திட்டத்துடன் * (எ.கா. 1.2.3). முக்கிய, "
+"சிறிய மற்றும் மைக்ரோ பதிப்பு பாகங்கள் பின்வருமாறு மாற்றப்பட வேண்டும்:"
+
+#: ../../sphinx/doc/internals/release-process.rst:12
+msgid ""
+"The major version part should be incremented for incompatible behavior "
+"change and public API updates."
+msgstr ""
+"பொருந்தாத நடத்தை மாற்றம் மற்றும் பொது API புதுப்பிப்புகளுக்கு முக்கிய "
+"பதிப்பு பகுதி அதிகரிக்கப்பட வேண்டும்."
+
+#: ../../sphinx/doc/internals/release-process.rst:15
+msgid ""
+"The minor version part should be incremented for most releases of Sphinx, "
+"where backwards-compatibility of API and features are preserves."
+msgstr ""
+"SPHINX இன் பெரும்பாலான வெளியீடுகளுக்கு சிறிய பதிப்பு பகுதி அதிகரிக்கப்பட "
+"வேண்டும், அங்கு API இன் பின்னோக்கி-இணக்கத்தன்மை மற்றும் அம்சங்கள் "
+"பாதுகாக்கப்படுகின்றன."
+
+#: ../../sphinx/doc/internals/release-process.rst:18
+msgid ""
+"The micro version part should only be incremented for urgent bugfix-only "
+"releases."
+msgstr ""
+"மைக்ரோ பதிப்பு பகுதி அவசர பிழைகள் மட்டும் வெளியீடுகளுக்கு மட்டுமே "
+"அதிகரிக்கப்பட வேண்டும்."
+
+#: ../../sphinx/doc/internals/release-process.rst:20
+msgid ""
+"When the major version part is incremented, the minor and micro version "
+"parts must be set to ``0``. When the minor version part is incremented, the "
+"micro version part must be set to ``0``."
+msgstr ""
+"முக்கிய பதிப்பு பகுதி அதிகரிக்கப்படும்போது, சிறிய மற்றும் மைக்ரோ பதிப்பு "
+"பாகங்கள் `` 0`` ஆக அமைக்கப்பட வேண்டும். சிறிய பதிப்பு பகுதி "
+"அதிகரிக்கப்படும்போது, மைக்ரோ பதிப்பு பகுதியை `` 0`` ஆக அமைக்க வேண்டும்."
+
+#: ../../sphinx/doc/internals/release-process.rst:25
+msgid ""
+"New major versions should come with a beta-testing period before the final "
+"release."
+msgstr ""
+"புதிய முக்கிய பதிப்புகள் இறுதி வெளியீட்டிற்கு முன் பீட்டா சோதனை காலத்துடன் "
+"வர வேண்டும்."
+
+#: ../../sphinx/doc/internals/release-process.rst:30
+msgid "Deprecating a feature"
+msgstr "ஒரு அம்சத்தை நீக்குகிறது"
+
+#: ../../sphinx/doc/internals/release-process.rst:32
+msgid "There are a couple reasons that code in Sphinx might be deprecated:"
+msgstr "Sphinx இல் குறியீடு நீக்கப்படலாம் என்று இரண்டு காரணங்கள் உள்ளன:"
+
+#: ../../sphinx/doc/internals/release-process.rst:34
+msgid ""
+"If a feature has been improved or modified in a backwards-incompatible way, "
+"the old feature or behavior will be deprecated."
+msgstr ""
+"ஒரு அம்சம் பின்னோக்கி-இணக்கமான வழியில் மேம்படுத்தப்பட்டிருந்தால் அல்லது "
+"மாற்றியமைக்கப்பட்டிருந்தால், பழைய அம்சம் அல்லது நடத்தை நீக்கப்படும்."
+
+#: ../../sphinx/doc/internals/release-process.rst:37
+msgid ""
+"Sometimes Sphinx will include a backport of a Python library that's not "
+"included in a version of Python that Sphinx currently supports. When Sphinx "
+"no longer needs to support the older version of Python that doesn't include "
+"the library, the library will be deprecated in Sphinx."
+msgstr ""
+"சில நேரங்களில் ஸ்பிங்க்ஸில் ஒரு பைதான் நூலகத்தின் பின்னணி அடங்கும், இது "
+"பைதனின் பதிப்பில் சேர்க்கப்படவில்லை, இது ஸ்பிங்க்ஸ் தற்போது ஆதரிக்கும். "
+"நூலகத்தை சேர்க்காத பைத்தானின் பழைய பதிப்பை ஸ்பிங்க்ஸ் இனி ஆதரிக்க "
+"வேண்டியதில்லை, நூலகம் ஸ்பிங்க்ஸில் நீக்கப்படும்."
+
+#: ../../sphinx/doc/internals/release-process.rst:42
+msgid ""
+"As the :ref:`deprecation-policy` describes, the first release of Sphinx that"
+" deprecates a feature (``A.B``) should raise a ``RemovedInSphinxXXWarning`` "
+"(where ``XX`` is the Sphinx version where the feature will be removed) when "
+"the deprecated feature is invoked. Assuming we have good test coverage, "
+"these warnings are converted to errors when running the test suite with "
+"warnings enabled::"
+msgstr ""
+"இது: ref: `டிப்ரெக்ஷன்-பாலிசி` விவரிக்கிறது, ஒரு அம்சத்தை (` a.b``) "
+"மதிப்பிடும் SPHINX இன் முதல் வெளியீடு `` `` `` `` `xx`` என்பது ஸ்பிங்க்ஸ் "
+"பதிப்பாகும் நீக்கப்படும்) நீக்கப்பட்ட அம்சம் செயல்படுத்தப்படும் போது. "
+"எங்களுக்கு நல்ல சோதனைக் கவரேஜ் இருப்பதாகக் கருதி, இந்த எச்சரிக்கைகள் சோதனை "
+"தொகுப்பை இயக்கும் போது பிழைகள் என மாற்றப்படுகின்றன ::"
+
+#: ../../sphinx/doc/internals/release-process.rst:51
+msgid ""
+"Thus, when adding a ``RemovedInSphinxXXWarning`` you need to eliminate or "
+"silence any warnings generated when running the tests."
+msgstr ""
+"ஆகவே, `` `` `` `Removedinsphinxxxwarning`` ஐச் சேர்க்கும்போது, சோதனைகளை "
+"இயக்கும் போது உருவாக்கப்பட்ட எந்த எச்சரிக்கைகளையும் அகற்ற வேண்டும் அல்லது ம "
+"silence னமாக்க வேண்டும்."
+
+#: ../../sphinx/doc/internals/release-process.rst:58
+msgid "Deprecation policy"
+msgstr "மதிப்பிழப்பு கொள்கை"
+
+#: ../../sphinx/doc/internals/release-process.rst:60
+msgid ""
+"MAJOR and MINOR releases may deprecate certain features from previous "
+"releases. If a feature is deprecated in a release A.x, it will continue to "
+"work in all A.x.x versions (for all versions of x). It will continue to work"
+" in all B.x.x versions but raise deprecation warnings. Deprecated features "
+"will be removed at the C.0.0. It means the deprecated feature will work "
+"during 2 MAJOR releases at least."
+msgstr ""
+"முக்கிய மற்றும் சிறிய வெளியீடுகள் முந்தைய வெளியீடுகளிலிருந்து சில அம்சங்களை "
+"குறைக்கக்கூடும். வெளியீட்டு A.x இல் ஒரு அம்சம் நீக்கப்பட்டால், அது அனைத்து "
+"A.x.x பதிப்புகளிலும் (X இன் அனைத்து பதிப்புகளுக்கும்) தொடர்ந்து செயல்படும். "
+"இது அனைத்து b.x.x பதிப்புகளிலும் தொடர்ந்து செயல்படும், ஆனால் தேய்மான "
+"எச்சரிக்கைகளை எழுப்புகிறது. நீக்கப்பட்ட அம்சங்கள் C.0.0 இல் அகற்றப்படும். "
+"இதன் பொருள் குறைந்தது 2 பெரிய வெளியீடுகளின் போது நீக்கப்பட்ட அம்சம் "
+"செயல்படும்."
+
+#: ../../sphinx/doc/internals/release-process.rst:67
+msgid ""
+"So, for example, if we decided to start the deprecation of a function in "
+"Sphinx 2.x:"
+msgstr ""
+"எனவே, எடுத்துக்காட்டாக, ஸ்பிங்க்ஸ் 2.x இல் ஒரு செயல்பாட்டின் மதிப்பிழப்பைத் "
+"தொடங்க முடிவு செய்தால்:"
+
+#: ../../sphinx/doc/internals/release-process.rst:70
+msgid ""
+"Sphinx 2.x will contain a backwards-compatible replica of the function which"
+" will raise a ``RemovedInSphinx40Warning``. This is a subclass of "
+":exc:`python:PendingDeprecationWarning`, i.e. it will not get displayed by "
+"default."
+msgstr ""
+"SPHINX 2.x செயல்பாட்டின் பின்னோக்கி-இணக்கமான பிரதி கொண்டிருக்கும், இது `` "
+"RemodedInsphinx40 Wwarning`` ஐ உயர்த்தும். இது ஒரு துணைப்பிரிவாகும்: EXC: "
+"`பைதான்: நிலுவையில் உள்ள டெப்ரெசேஷன் வார்னிங்`, அதாவது இது இயல்பாகவே "
+"காண்பிக்கப்படாது."
+
+#: ../../sphinx/doc/internals/release-process.rst:75
+msgid ""
+"Sphinx 3.x will still contain the backwards-compatible replica, but "
+"``RemovedInSphinx40Warning`` will be a subclass of "
+":exc:`python:DeprecationWarning` then, and gets displayed by default."
+msgstr ""
+"SPHINX 3.X இன்னும் பின்னோக்கி-இணக்கமான பிரதி கொண்டிருக்கும், ஆனால் `` `` `` "
+"`` RemodedInsphinx40 Warning`` ஒரு துணைப்பிரிவாக இருக்கும்: EXC: `பைதான்: "
+"டிபிரேஷன்வேரிங்` பின்னர் இயல்பாகவே காட்டப்படும்."
+
+#: ../../sphinx/doc/internals/release-process.rst:79
+msgid "Sphinx 4.0 will remove the feature outright."
+msgstr "SPHINX 4.0 அம்சத்தை முழுமையாக அகற்றும்."
+
+#: ../../sphinx/doc/internals/release-process.rst:82
+msgid "Deprecation warnings"
+msgstr "தேய்மான எச்சரிக்கைகள்"
+
+#: ../../sphinx/doc/internals/release-process.rst:84
+msgid ""
+"Sphinx will enable its ``RemovedInNextVersionWarning`` warnings by default, "
+"if :envvar:`python:PYTHONWARNINGS` is not set.  Therefore you can disable "
+"them using:"
+msgstr ""
+"ஸ்பின்க்ஸ் அதன் `` `` `` RemovedInnextversionWharning`` எச்சரிக்கைகளை "
+"இயல்புநிலையாக இயக்கும், if: envvar: `பைதான்: பைத்தான்வார்னிங்ஸ்` "
+"அமைக்கப்படவில்லை. எனவே நீங்கள் அவற்றைப் பயன்படுத்தி முடக்கலாம்:"
+
+#: ../../sphinx/doc/internals/release-process.rst:88
+msgid "``PYTHONWARNINGS= make html`` (Linux/Mac)"
+msgstr "`` பைதன்வார்னிங்ஸ் = html`` (லினக்ஸ்/மேக்) உருவாக்குங்கள்"
+
+#: ../../sphinx/doc/internals/release-process.rst:89
+msgid "``export PYTHONWARNINGS=`` and do ``make html`` (Linux/Mac)"
+msgstr ""
+"`` பைதன்வார்னிங்ஸ் = `` ஏற்றுமதி செய்து `` html` (லினக்ஸ்/மேக்) செய்யுங்கள்"
+
+#: ../../sphinx/doc/internals/release-process.rst:90
+msgid "``set PYTHONWARNINGS=`` and do ``make html`` (Windows)"
+msgstr "`` பைதன்வார்னிங்ஸ் = `` ஐ அமைத்து, `` html` (விண்டோஸ்) செய்யுங்கள்"
+
+#: ../../sphinx/doc/internals/release-process.rst:92
+msgid ""
+"But you can also explicitly enable the pending ones using e.g. "
+"``PYTHONWARNINGS=default`` (see the :ref:`Python docs on configuring "
+"warnings <python:describing-warning-filters>`) for more details."
+msgstr ""
+"ஆனால் எ.கா. பயன்படுத்தி நிலுவையில் உள்ளவர்களை நீங்கள் வெளிப்படையாக "
+"இயக்கலாம். `` பைதன்வார்னிங்ஸ் = இயல்புநிலை`` (பார்க்க: குறிப்பு: "
+"`எச்சரிக்கைகளை உள்ளமைக்கும் பைதான் டாக்ஸ் "
+"<பைதான்:-வேட்டையாடும்-வடிகட்டிகள்>`) மேலும் விவரங்களுக்கு."
+
+#: ../../sphinx/doc/internals/release-process.rst:97
+msgid "Python version support policy"
+msgstr "பைதான் பதிப்பு ஆதரவு கொள்கை"
+
+#: ../../sphinx/doc/internals/release-process.rst:99
+msgid ""
+"Sphinx supports at all minor versions of Python released in the past 42 "
+"months from the anticipated release date with a minimum of 3 minor versions "
+"of Python. This policy is derived from `NEP 29`_, a scientific Python domain"
+" standard."
+msgstr ""
+"கடந்த 42 மாதங்களில் எதிர்பார்க்கப்பட்ட வெளியீட்டு தேதியிலிருந்து "
+"குறைந்தபட்சம் 3 சிறிய பதிப்புகளுடன் பைத்தானின் அனைத்து சிறிய பதிப்புகளையும் "
+"ஸ்பின்க்ஸ் ஆதரிக்கிறது. இந்த கொள்கை ஒரு அறிவியல் பைதான் டொமைன் தரமான `NEP "
+"29`_ இலிருந்து பெறப்பட்டது."
+
+#: ../../sphinx/doc/internals/release-process.rst:105
+msgid ""
+"For example, a version of Sphinx released in May 2024 would support Python "
+"3.10, 3.11, and 3.12."
+msgstr ""
+"எடுத்துக்காட்டாக, மே 2024 இல் வெளியிடப்பட்ட ஸ்பிங்க்ஸின் பதிப்பு பைதான் "
+"3.10, 3.11 மற்றும் 3.12 ஐ ஆதரிக்கும்."
+
+#: ../../sphinx/doc/internals/release-process.rst:108
+msgid "This is a summary table with the current policy:"
+msgstr "இது தற்போதைய கொள்கையுடன் சுருக்கம் அட்டவணை:"
+
+#: ../../sphinx/doc/internals/release-process.rst:111
+msgid "Date"
+msgstr "தேதி"
+
+#: ../../sphinx/doc/internals/release-process.rst:111
+msgid "Python"
+msgstr "பைதான்"
+
+#: ../../sphinx/doc/internals/release-process.rst:113
+msgid "26 Dec 2021"
+msgstr "26 டிசம்பர் 2021"
+
+#: ../../sphinx/doc/internals/release-process.rst:113
+msgid "3.8+"
+msgstr "3.8+"
+
+#: ../../sphinx/doc/internals/release-process.rst:115
+msgid "14 Apr 2023"
+msgstr "14 ஏப்ரல் 2023"
+
+#: ../../sphinx/doc/internals/release-process.rst:115
+msgid "3.9+"
+msgstr "3.9+"
+
+#: ../../sphinx/doc/internals/release-process.rst:117
+msgid "05 Apr 2024"
+msgstr "05 ஏப்ரல் 2024"
+
+#: ../../sphinx/doc/internals/release-process.rst:117
+msgid "3.10+"
+msgstr "3.10+"
+
+#: ../../sphinx/doc/internals/release-process.rst:119
+msgid "04 Apr 2025"
+msgstr "04 ஏப்ரல் 2025"
+
+#: ../../sphinx/doc/internals/release-process.rst:119
+msgid "3.11+"
+msgstr "3.11+"
+
+#: ../../sphinx/doc/internals/release-process.rst:123
+msgid "Release procedures"
+msgstr "வெளியீட்டு நடைமுறைகள்"
+
+#: ../../sphinx/doc/internals/release-process.rst:125
+msgid ""
+"The release procedures are listed in :file:`utils/release-checklist.rst`."
+msgstr ""
+"வெளியீட்டு நடைமுறைகள் பட்டியலிடப்பட்டுள்ளன: கோப்பு: "
+"`பயன்பாடுகள்/வெளியீட்டு-செக்ளிஸ்ட்.ர்ஸ்ட்`."

@@ -1,0 +1,268 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2023, the Sphinx developers
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 7.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-15 00:35+0000\n"
+"PO-Revision-Date: 2018-02-12 13:48+0000\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:2
+msgid "Docutils markup API"
+msgstr "Docutils Markup API"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:4
+msgid ""
+"This section describes the API for adding ReST markup elements (roles and "
+"directives)."
+msgstr ""
+"இந்த பிரிவு REST மார்க்அப் கூறுகளை (பாத்திரங்கள் மற்றும் வழிமுறைகள்) "
+"சேர்ப்பதற்கான API ஐ விவரிக்கிறது."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:8
+msgid "Roles"
+msgstr "பாத்திரங்கள்"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:12
+msgid "Directives"
+msgstr "வழிமுறைகள்"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:14
+msgid ""
+"Directives are handled by classes derived from "
+"``docutils.parsers.rst.Directive``.  They have to be registered by an "
+"extension using :meth:`.Sphinx.add_directive` or "
+":meth:`.Sphinx.add_directive_to_domain`."
+msgstr ""
+"`` Docutils.parsers.rst.directive`` இலிருந்து பெறப்பட்ட வகுப்புகளால் "
+"வழிமுறைகள் கையாளப்படுகின்றன. அவை பயன்படுத்தி நீட்டிப்பு மூலம் பதிவு "
+"செய்யப்பட வேண்டும்: `.sphinx.add_directive` அல்லது: meth:` "
+".sphinx.add_directive_to_domain`."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:22
+msgid ""
+"The markup syntax of the new directive is determined by the follow five "
+"class attributes:"
+msgstr ""
+"புதிய உத்தரவின் மார்க்அப் தொடரியல் பின்தொடர் ஐந்து வகுப்பு பண்புகளால் "
+"தீர்மானிக்கப்படுகிறது:"
+
+#: ../docstring of docutils.parsers.rst.Directive.required_arguments:1
+msgid "Number of required directive arguments."
+msgstr "தேவையான வழிநடத்தும் வாதங்களின் எண்ணிக்கை."
+
+#: ../docstring of docutils.parsers.rst.Directive.optional_arguments:1
+msgid "Number of optional arguments after the required arguments."
+msgstr "தேவையான வாதங்களுக்குப் பிறகு விருப்ப வாதங்களின் எண்ணிக்கை."
+
+#: ../docstring of docutils.parsers.rst.Directive.final_argument_whitespace:1
+msgid "May the final argument contain whitespace?"
+msgstr "இறுதி வாதத்தில் இடைவெளி இருக்க முடியுமா?"
+
+#: ../docstring of docutils.parsers.rst.Directive.option_spec:1
+msgid "Mapping of option names to validator functions."
+msgstr "வேலிடேட்டர் செயல்பாடுகளுக்கு விருப்ப பெயர்களை மேப்பிங் செய்வது."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:30
+msgid ""
+"Option validator functions take a single parameter, the option argument (or "
+"``None`` if not given), and should validate it or convert it to the proper "
+"form.  They raise :exc:`ValueError` or :exc:`TypeError` to indicate failure."
+msgstr ""
+"விருப்ப வேலிடேட்டர் செயல்பாடுகள் ஒரு அளவுருவை, விருப்ப வாதம் (அல்லது `` "
+"எதுவுமில்லை` கொடுக்கப்படவில்லை என்றால்) எடுத்து, அதை சரிபார்க்க வேண்டும் "
+"அல்லது சரியான வடிவத்திற்கு மாற்ற வேண்டும். அவை எழுப்புகின்றன: எக்."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:35
+msgid ""
+"There are several predefined and possibly useful validators in the "
+":mod:`docutils.parsers.rst.directives` module."
+msgstr ""
+"பல முன் வரையறுக்கப்பட்ட மற்றும் பயனுள்ள வாலிடேட்டர்கள் உள்ளன: மோட்: "
+"`docutils.parsers.rst.directives` தொகுதி."
+
+#: ../docstring of docutils.parsers.rst.Directive.has_content:1
+msgid "May the directive have content?"
+msgstr "உத்தரவுக்கு உள்ளடக்கம் இருக்க முடியுமா?"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:40
+msgid "New directives must implement the :meth:`run` method:"
+msgstr "புதிய வழிமுறைகள் செயல்படுத்த வேண்டும்: மெத்: `ரன்` முறை:"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:44
+msgid ""
+"This method must process the directive arguments, options and content, and "
+"return a list of Docutils/Sphinx nodes that will be inserted into the "
+"document tree at the point where the directive was encountered."
+msgstr ""
+"இந்த முறை வழிநடத்தும் வாதங்கள், விருப்பங்கள் மற்றும் உள்ளடக்கத்தை செயலாக்க "
+"வேண்டும், மேலும் உத்தரவை எதிர்கொள்ளும் இடத்தில் ஆவண மரத்தில் செருகப்படும் "
+"ஆவணங்கள்/ஸ்பிங்க்ஸ் முனைகளின் பட்டியலை திருப்பித் தர வேண்டும்."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:48
+msgid "Instance attributes that are always set on the directive are:"
+msgstr "உத்தரவில் எப்போதும் அமைக்கப்பட்டிருக்கும் உதாரண பண்புகள்:"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:52
+msgid ""
+"The directive name (useful when registering the same directive class under "
+"multiple names)."
+msgstr ""
+"வழிநடத்தும் பெயர் (பல பெயர்களின் கீழ் ஒரே உத்தரவு வகுப்பை பதிவு செய்யும் "
+"போது பயனுள்ளதாக இருக்கும்)."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:57
+msgid "The arguments given to the directive, as a list."
+msgstr "உத்தரவுக்கு வழங்கப்பட்ட வாதங்கள், ஒரு பட்டியலாக."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:61
+msgid ""
+"The options given to the directive, as a dictionary mapping option names to "
+"validated/converted values."
+msgstr ""
+"ஒரு அகராதி மேப்பிங் விருப்பமாக சரிபார்க்கப்பட்ட/மாற்றப்பட்ட மதிப்புகளுக்கு "
+"பெயர்களாக உத்தரவுக்கு வழங்கப்பட்ட விருப்பங்கள்."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:66
+msgid "The directive content, if given, as a :class:`!ViewList`."
+msgstr ""
+"வழிநடத்தப்பட்ட உள்ளடக்கம், கொடுக்கப்பட்டால், ஒரு: வகுப்பாக: `! வியூலிஸ்ட்`."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:70
+msgid ""
+"The absolute line number on which the directive appeared.  This is not "
+"always a useful value; use :attr:`srcline` instead."
+msgstr ""
+"உத்தரவு தோன்றிய முழுமையான வரி எண். இது எப்போதும் ஒரு பயனுள்ள மதிப்பு அல்ல; "
+"பயன்படுத்தவும்: attr: `srcline` க்கு பதிலாக."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:75
+msgid ""
+"Internal offset of the directive content.  Used when calling "
+"``nested_parse`` (see below)."
+msgstr ""
+"உத்தரவு உள்ளடக்கத்தின் உள் ஆஃப்செட். `` Nested_Parse`` ஐ அழைக்கும்போது "
+"பயன்படுத்தப்படுகிறது (கீழே காண்க)."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:80
+msgid "The string containing the entire directive."
+msgstr "முழு உத்தரவையும் கொண்ட சரம்."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:85
+msgid ""
+"The state and state machine which controls the parsing.  Used for "
+"``nested_parse``."
+msgstr ""
+"பாகுபடுத்தலைக் கட்டுப்படுத்தும் மாநில மற்றும் மாநில இயந்திரம். `` "
+"Nested_parse`` க்கு பயன்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:90
+msgid "ViewLists"
+msgstr "வியூடிஸ்டுகள்"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:92
+msgid ""
+"Docutils represents document source lines in a class "
+"``docutils.statemachine.ViewList``.  This is a list with extended "
+"functionality -- for one, slicing creates views of the original list, and "
+"also the list contains information about the source line numbers."
+msgstr ""
+"Docutils ஒரு வகுப்பில் ஆவண மூல வரிகளைக் குறிக்கிறது `` "
+"docutils.statemachine.viewlist``. இது நீட்டிக்கப்பட்ட செயல்பாட்டைக் கொண்ட "
+"ஒரு பட்டியல் - ஒன்றுக்கு, துண்டுகள் அசல் பட்டியலின் காட்சிகளை "
+"உருவாக்குகின்றன, மேலும் பட்டியலில் மூல வரி எண்கள் பற்றிய தகவல்களும் உள்ளன."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:97
+msgid ""
+"The :attr:`Directive.content` attribute is a ViewList.  If you generate "
+"content to be parsed as ReST, you have to create a ViewList yourself.  "
+"Important for content generation are the following points:"
+msgstr ""
+"தி: அட்ரி: `டைரெக்டிவ்.சாண்டென்ட்` பண்புக்கூறு ஒரு வியூல்பிஸ்ட். ஓய்வாக "
+"பாகுபடுத்தப்பட வேண்டிய உள்ளடக்கத்தை நீங்கள் உருவாக்கினால், நீங்களே ஒரு "
+"பார்வை பட்டியலை உருவாக்க வேண்டும். உள்ளடக்க தலைமுறைக்கு முக்கியமானது "
+"பின்வரும் புள்ளிகள்:"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:101
+msgid ""
+"The constructor takes a list of strings (lines) and a source (document) "
+"name."
+msgstr ""
+"கட்டமைப்பாளர் சரங்களின் பட்டியலை (கோடுகள்) மற்றும் ஒரு மூல (ஆவணம்) பெயரை "
+"எடுத்துக்கொள்கிறார்."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:103
+msgid "The ``.append()`` method takes a line and a source name as well."
+msgstr "`."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:107
+msgid "Parsing directive content as ReST"
+msgstr "உத்தரவு உள்ளடக்கத்தை ஓய்வு என பாகுபடுத்துதல்"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:109
+msgid ""
+"Many directives will contain more markup that must be parsed.  To do this, "
+"use one of the following APIs from the :meth:`Directive.run` method:"
+msgstr ""
+"பல வழிமுறைகளில் பாகுபடுத்தப்பட வேண்டிய அதிக மார்க்அப் இருக்கும். இதைச் "
+"செய்ய, பின்வரும் API களில் ஒன்றைப் பயன்படுத்தவும்: meth: `Directive.run` "
+"முறை:"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:112
+msgid "``self.state.nested_parse``"
+msgstr "`` self.state.nested_parse``"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:113
+msgid ""
+":func:`sphinx.util.nodes.nested_parse_with_titles` -- this allows titles in "
+"the parsed content."
+msgstr "."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:116
+msgid ""
+"Both APIs parse the content into a given node. They are used like this::"
+msgstr ""
+"இரண்டு ஏபிஐகளும் உள்ளடக்கத்தை கொடுக்கப்பட்ட முனையில் அலசுகின்றன. அவை இப்படி "
+"பயன்படுத்தப்படுகின்றன ::"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:126
+msgid ""
+"``sphinx.util.docutils.switch_source_input()`` allows to change a target "
+"file during nested_parse.  It is useful to mixed contents.  For example, "
+"``sphinx. ext.autodoc`` uses it to parse docstrings::"
+msgstr ""
+"`` sphinx.util.docutils.switch_source_input () `` நெஸ்டட்_பார்ஸின் போது "
+"இலக்கு கோப்பை மாற்ற அனுமதிக்கிறது. கலப்பு உள்ளடக்கங்களுக்கு இது பயனுள்ளதாக "
+"இருக்கும். எடுத்துக்காட்டாக, `` ஸ்பிங்க்ஸ். docstrings ::"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:141
+msgid ""
+"Until Sphinx 1.6, ``sphinx.ext.autodoc.AutodocReporter`` was used for this "
+"purpose.  It is replaced by ``switch_source_input()``."
+msgstr ""
+"ஸ்பிங்க்ஸ் 1.6 வரை, `` sphinx.ext.autodoc.autodocreporter`` இந்த "
+"நோக்கத்திற்காக பயன்படுத்தப்பட்டது. இது `` Switch_source_input () `` ஆல் "
+"மாற்றப்படுகிறது."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:144
+msgid ""
+"If you don't need the wrapping node, you can use any concrete node type and "
+"return ``node.children`` from the Directive."
+msgstr ""
+"உங்களுக்கு மடக்குதல் முனை தேவையில்லை என்றால், நீங்கள் எந்த கான்கிரீட் முனை "
+"வகையைப் பயன்படுத்தலாம் மற்றும் உத்தரவிலிருந்து `` node.children`` ஐத் "
+"திருப்பித் தரலாம்."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:150
+msgid "`Creating directives`_ HOWTO of the Docutils documentation"
+msgstr "`டைரெக்டிவ்ஸை உருவாக்குதல்`_ ஆவண ஆவணங்களின் எப்படி"
