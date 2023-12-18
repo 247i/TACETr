@@ -1,0 +1,854 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2023, the Sphinx developers
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 6.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-06 01:42+0000\n"
+"PO-Revision-Date: 2018-02-12 13:47+0000\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/templating.rst:7
+msgid "Templating"
+msgstr "வார்ப்புரு"
+
+#: ../../sphinx/doc/templating.rst:9
+msgid ""
+"Sphinx uses the `Jinja <https://jinja.palletsprojects.com/>`_ templating "
+"engine for its HTML templates.  Jinja is a text-based engine, inspired by "
+"Django templates, so anyone having used Django will already be familiar with"
+" it. It also has excellent documentation for those who need to make "
+"themselves familiar with it."
+msgstr ""
+"ஸ்பின்க்ஸ் `ஜின்ஜா <https://jinja.palletsprojects.com/>` _ அதன் HTML "
+"வார்ப்புருக்களுக்கு வார்ப்புரு இயந்திரத்தைப் பயன்படுத்துகிறது. ஜின்ஜா ஒரு "
+"உரை அடிப்படையிலான இயந்திரமாகும், இது ஜாங்கோ வார்ப்புருக்களால் "
+"ஈர்க்கப்பட்டுள்ளது, எனவே ஜாங்கோவைப் பயன்படுத்திய எவரும் ஏற்கனவே அதை "
+"அறிந்திருப்பார்கள். இது தங்களை நன்கு தெரிந்திருக்க வேண்டியவர்களுக்கு சிறந்த "
+"ஆவணங்களையும் கொண்டுள்ளது."
+
+#: ../../sphinx/doc/templating.rst:17
+msgid "Do I need to use Sphinx's templates to produce HTML?"
+msgstr ""
+"HTML ஐ தயாரிக்க நான் SPHINX இன் வார்ப்புருக்களைப் பயன்படுத்த வேண்டுமா?"
+
+#: ../../sphinx/doc/templating.rst:19
+msgid "No.  You have several other options:"
+msgstr "இல்லை. உங்களுக்கு வேறு பல விருப்பங்கள் உள்ளன:"
+
+#: ../../sphinx/doc/templating.rst:21
+msgid ""
+"You can write a :class:`~sphinx.application.TemplateBridge` subclass that "
+"calls your template engine of choice, and set the :confval:`template_bridge`"
+" configuration value accordingly."
+msgstr ""
+"நீங்கள் ஒரு: வகுப்பு: `~ sphinx.application.templatebridge` உங்கள் "
+"வார்ப்புரு இயந்திரத்தை அழைக்கும் துணைப்பிரிவு, மற்றும் அதை அமைக்கவும்: "
+"confval:` template_bridge` உள்ளமைவு மதிப்பை அதற்கேற்ப அமைக்கவும்."
+
+#: ../../sphinx/doc/templating.rst:25
+msgid ""
+"You can :ref:`write a custom builder <writing-builders>` that derives from "
+":class:`~sphinx.builders.html.StandaloneHTMLBuilder` and calls your template"
+" engine of choice."
+msgstr ""
+"உங்களால் முடியும்: ref: `தனிப்பயன் பில்டர் <ரைட்டிங்-பில்டர்கள்>` "
+"இதிலிருந்து பெறப்பட்டவை: வகுப்பு: `~ "
+"sphinx.builders.html.standalonehtmlbuilder` மற்றும் உங்கள் வார்ப்புரு "
+"இயந்திரத்தை தேர்வுசெய்கிறது."
+
+#: ../../sphinx/doc/templating.rst:29
+msgid ""
+"You can use the :class:`~sphinx.builders.html.PickleHTMLBuilder` that "
+"produces pickle files with the page contents, and postprocess them using a "
+"custom tool, or use them in your Web application."
+msgstr ""
+"நீங்கள்: வகுப்பு: `~ sphinx.builders.html.picklehtmlbuilder` இது பக்க "
+"உள்ளடக்கங்களுடன் ஊறுகாய் கோப்புகளை உருவாக்குகிறது, மேலும் தனிப்பயன் "
+"கருவியைப் பயன்படுத்தி அவற்றை போஸ்ட்பிராஜஸ் அல்லது உங்கள் வலை பயன்பாட்டில் "
+"பயன்படுத்தலாம்."
+
+#: ../../sphinx/doc/templating.rst:35
+msgid "Jinja/Sphinx Templating Primer"
+msgstr "ஜின்ஜா/ஸ்பின்க்ஸ் வார்ப்புரு ப்ரைமர்"
+
+#: ../../sphinx/doc/templating.rst:37
+msgid ""
+"The default templating language in Sphinx is Jinja.  It's Django/Smarty "
+"inspired and easy to understand.  The most important concept in Jinja is "
+":dfn:`template inheritance`, which means that you can overwrite only "
+"specific blocks within a template, customizing it while also keeping the "
+"changes at a minimum."
+msgstr ""
+"ஸ்பிங்க்ஸில் இயல்புநிலை வார்ப்புரு மொழி ஜின்ஜா. இது ஜாங்கோ/ஸ்மார்டி "
+"ஈர்க்கப்பட்ட மற்றும் புரிந்துகொள்ள எளிதானது. ஜின்ஜாவில் மிக முக்கியமான "
+"கருத்து: டி.எஃப்.என்: `வார்ப்புரு பரம்பரை`, அதாவது ஒரு வார்ப்புருவுக்குள் "
+"குறிப்பிட்ட தொகுதிகளை மட்டுமே மேலெழுத முடியும், மாற்றங்களை குறைந்தபட்சம் "
+"வைத்திருக்கும் போது அதைத் தனிப்பயனாக்கலாம்."
+
+#: ../../sphinx/doc/templating.rst:42
+msgid ""
+"To customize the output of your documentation you can override all the "
+"templates (both the layout templates and the child templates) by adding "
+"files with the same name as the original filename into the template "
+"directory of the structure the Sphinx quickstart generated for you."
+msgstr ""
+"உங்கள் ஆவணங்களின் வெளியீட்டைத் தனிப்பயனாக்க, உங்களுக்காக உருவாக்கப்பட்ட "
+"ஸ்பின்க்ஸ் விரைவுஸ்டார்ட் கட்டமைப்பின் வார்ப்புரு கோப்பகத்தில் அசல் கோப்பு "
+"பெயருடன் அதே பெயருடன் கோப்புகளைச் சேர்ப்பதன் மூலம் அனைத்து வார்ப்புருக்கள் "
+"(தளவமைப்பு வார்ப்புருக்கள் மற்றும் குழந்தை வார்ப்புருக்கள் இரண்டையும்) "
+"மேலெழுதலாம்."
+
+#: ../../sphinx/doc/templating.rst:47
+msgid ""
+"Sphinx will look for templates in the folders of :confval:`templates_path` "
+"first, and if it can't find the template it's looking for there, it falls "
+"back to the selected theme's templates."
+msgstr ""
+"ஸ்பின்க்ஸ் கோப்புறைகளில் வார்ப்புருக்களைத் தேடும்: confval: "
+"`வார்ப்புருக்கள்_பாத்` முதலில், அது அங்கு தேடும் வார்ப்புருவைக் கண்டுபிடிக்க"
+" முடியாவிட்டால், அது தேர்ந்தெடுக்கப்பட்ட கருப்பொருளின் வார்ப்புருக்கள் "
+"திரும்பும்."
+
+#: ../../sphinx/doc/templating.rst:51
+msgid ""
+"A template contains **variables**, which are replaced with values when the "
+"template is evaluated, **tags**, which control the logic of the template and"
+" **blocks** which are used for template inheritance."
+msgstr ""
+"ஒரு வார்ப்புருவில் ** மாறிகள் ** உள்ளன, அவை வார்ப்புரு மதிப்பீடு "
+"செய்யப்படும்போது மதிப்புகளுடன் மாற்றப்படுகின்றன, ** குறிச்சொற்கள் **, அவை "
+"வார்ப்புருவின் தர்க்கத்தையும் ** தொகுதிகள் ** வார்ப்புரு பரம்பரை "
+"பயன்படுத்தப்படுகின்றன."
+
+#: ../../sphinx/doc/templating.rst:55
+msgid ""
+"Sphinx's *basic* theme provides base templates with a couple of blocks it "
+"will fill with data.  These are located in the :file:`themes/basic` "
+"subdirectory of the Sphinx installation directory, and used by all builtin "
+"Sphinx themes. Templates with the same name in the :confval:`templates_path`"
+" override templates supplied by the selected theme."
+msgstr ""
+"ஸ்பின்க்ஸின் * அடிப்படை * தீம் அடிப்படை வார்ப்புருக்களை இரண்டு தொகுதிகளுடன் "
+"வழங்குகிறது, அது தரவை நிரப்பும். இவை: கோப்பு: `தீம்கள்/அடிப்படை` SPHINX "
+"நிறுவல் கோப்பகத்தின் துணை அடைவு, மற்றும் அனைத்து பில்டின் ஸ்பிங்க்ஸ் "
+"கருப்பொருள்களால் பயன்படுத்தப்படுகின்றன. அதே பெயருடன் வார்ப்புருக்கள்: "
+"confval: `வார்ப்புருக்கள்_பாத்` தேர்ந்தெடுக்கப்பட்ட கருப்பொருளால் "
+"வழங்கப்பட்ட வார்ப்புருக்கள்."
+
+#: ../../sphinx/doc/templating.rst:61
+msgid ""
+"For example, to add a new link to the template area containing related links"
+" all you have to do is to add a new template called ``layout.html`` with the"
+" following contents::"
+msgstr ""
+"எடுத்துக்காட்டாக, தொடர்புடைய இணைப்புகளைக் கொண்ட வார்ப்புரு பகுதிக்கு புதிய "
+"இணைப்பைச் சேர்க்க நீங்கள் செய்ய வேண்டியதெல்லாம் `` Layout.html`` எனப்படும் "
+"புதிய வார்ப்புருவை பின்வரும் உள்ளடக்கங்களுடன் சேர்க்க வேண்டும் ::"
+
+#: ../../sphinx/doc/templating.rst:71
+msgid ""
+"By prefixing the name of the overridden template with an exclamation mark, "
+"Sphinx will load the layout template from the underlying HTML theme."
+msgstr ""
+"மேலெழுதப்பட்ட வார்ப்புருவின் பெயரை ஆச்சரியக் குறியுடன் முன்னொட்டுவதன் மூலம்,"
+" ஸ்பின்க்ஸ் தளவமைப்பு வார்ப்புருவை அடிப்படை HTML கருப்பொருளிலிருந்து "
+"ஏற்றும்."
+
+#: ../../sphinx/doc/templating.rst:75
+msgid ""
+"If you override a block, call ``{{ super() }}`` somewhere to render the "
+"block's original content in the extended template -- unless you don't want "
+"that content to show up."
+msgstr ""
+"நீங்கள் ஒரு தொகுதியை மேலெழுதினால், `{{சூப்பர் ()}}` `` `எங்காவது "
+"விரிவாக்கப்பட்ட வார்ப்புருவில் தொகுதியின் அசல் உள்ளடக்கத்தை வழங்க அழைக்கவும்"
+" - அந்த உள்ளடக்கம் காண்பிக்கப்படாவிட்டால்."
+
+#: ../../sphinx/doc/templating.rst:81
+msgid "Working with the builtin templates"
+msgstr "பில்டின் வார்ப்புருக்களுடன் பணிபுரிதல்"
+
+#: ../../sphinx/doc/templating.rst:83
+msgid ""
+"The builtin **basic** theme supplies the templates that all builtin Sphinx "
+"themes are based on.  It has the following elements you can override or use:"
+msgstr ""
+"பில்டின் ** அடிப்படை ** தீம் அனைத்து பில்டின் ஸ்பிங்க்ஸ் கருப்பொருள்களையும் "
+"அடிப்படையாகக் கொண்ட வார்ப்புருக்களை வழங்குகிறது. நீங்கள் மேலெழுதக்கூடிய "
+"அல்லது பயன்படுத்தக்கூடிய பின்வரும் கூறுகள் இதில் உள்ளன:"
+
+#: ../../sphinx/doc/templating.rst:87
+msgid "Blocks"
+msgstr "தொகுதிகள்"
+
+#: ../../sphinx/doc/templating.rst:89
+msgid "The following blocks exist in the ``layout.html`` template:"
+msgstr "பின்வரும் தொகுதிகள் `` layout.html`` வார்ப்புருவில் உள்ளன:"
+
+#: ../../sphinx/doc/templating.rst:95
+msgid "``doctype``"
+msgstr "`` டாக் டைப்``"
+
+#: ../../sphinx/doc/templating.rst:92
+msgid ""
+"The doctype of the output format.  By default this is XHTML 1.0 Transitional"
+" as this is the closest to what Sphinx and Docutils generate and it's a good"
+" idea not to change it unless you want to switch to HTML 5 or a different "
+"but compatible XHTML doctype."
+msgstr ""
+"வெளியீட்டு வடிவமைப்பின் டாக்டைப். இயல்பாக இது XHTML 1.0 இடைக்காலமாகும், "
+"ஏனெனில் இது ஸ்பின்க்ஸ் மற்றும் டொக்யூடில்கள் உருவாக்குவதற்கு மிக "
+"நெருக்கமானது, மேலும் நீங்கள் HTML 5 க்கு மாற விரும்பாவிட்டால் அதை "
+"மாற்றக்கூடாது அல்லது வேறுபட்ட ஆனால் இணக்கமான XHTML DOCTYPE."
+
+#: ../../sphinx/doc/templating.rst:99
+msgid "``linktags``"
+msgstr "`` லிங்க்டாக்ஸ்``"
+
+#: ../../sphinx/doc/templating.rst:98
+msgid ""
+"This block adds a couple of ``<link>`` tags to the head section of the "
+"template."
+msgstr ""
+"இந்த தொகுதி வார்ப்புருவின் தலை பகுதிக்கு இரண்டு `` <இணைப்பு> `` "
+"குறிச்சொற்களைச் சேர்க்கிறது."
+
+#: ../../sphinx/doc/templating.rst:104
+msgid "``extrahead``"
+msgstr "`` எக்ஸ்ட்ராஹெட்``"
+
+#: ../../sphinx/doc/templating.rst:102
+msgid ""
+"This block is empty by default and can be used to add extra contents into "
+"the ``<head>`` tag of the generated HTML file.  This is the right place to "
+"add references to JavaScript or extra CSS files."
+msgstr ""
+"இந்த தொகுதி முன்னிருப்பாக காலியாக உள்ளது மற்றும் உருவாக்கப்பட்ட HTML "
+"கோப்பின் `` <head> `` குறிச்சொல்லில் கூடுதல் உள்ளடக்கங்களைச் சேர்க்க "
+"பயன்படுத்தலாம். ஜாவாஸ்கிரிப்ட் அல்லது கூடுதல் CSS கோப்புகள் பற்றிய "
+"குறிப்புகளைச் சேர்க்க இது சரியான இடம்."
+
+#: ../../sphinx/doc/templating.rst:113
+msgid "``relbar1``, ``relbar2``"
+msgstr "`` relbar1``, `` relbar2``"
+
+#: ../../sphinx/doc/templating.rst:107
+msgid ""
+"This block contains the *relation bar*, the list of related links (the "
+"parent documents on the left, and the links to index, modules etc. on the "
+"right).  ``relbar1`` appears before the document, ``relbar2`` after the "
+"document.  By default, both blocks are filled; to show the relbar only "
+"before the document, you would override `relbar2` like this::"
+msgstr ""
+"இந்தத் தொகுதியில் *உறவு பட்டி *, தொடர்புடைய இணைப்புகளின் பட்டியல் "
+"(இடதுபுறத்தில் உள்ள பெற்றோர் ஆவணங்கள் மற்றும் வலதுபுறத்தில் குறியீட்டு, "
+"தொகுதிகள் போன்றவற்றுக்கான இணைப்புகள்) உள்ளன. `` relbar1`` ஆவணத்தின் முன் "
+"தோன்றும், ஆவணத்திற்குப் பிறகு `` `ரெல்ஃபார் 2``. இயல்பாக, இரண்டு தொகுதிகளும்"
+" நிரப்பப்படுகின்றன; ஆவணத்திற்கு முன்புதான் ரில்பாரைக் காட்ட, நீங்கள் "
+"இதுபோன்ற `relbar2` ஐ மேலெழுதலாம் ::"
+
+#: ../../sphinx/doc/templating.rst:121
+msgid "``rootrellink``, ``relbaritems``"
+msgstr "`` ரூட்ரெல்லிங்க்``, `` relbaritems``"
+
+#: ../../sphinx/doc/templating.rst:116
+msgid ""
+"Inside the relbar there are three sections: The ``rootrellink``, the links "
+"from the documentation and the custom ``relbaritems``.  The ``rootrellink`` "
+"is a block that by default contains a list item pointing to the root "
+"document by default, the ``relbaritems`` is an empty block.  If you override"
+" them to add extra links into the bar make sure that they are list items and"
+" end with the :data:`reldelim1`."
+msgstr ""
+"Relbar க்குள் மூன்று பிரிவுகள் உள்ளன: `` ரூட்ரெல்லிங்க்``, ஆவணங்களிலிருந்து "
+"வரும் இணைப்புகள் மற்றும் தனிப்பயன் `` relbaritems``. `` ரூட்ரெல்லிங்க்`` "
+"என்பது இயல்பாகவே ரூட் ஆவணத்தை சுட்டிக்காட்டும் பட்டியல் உருப்படியைக் "
+"கொண்டிருக்கும் ஒரு தொகுதி, `` ரில்பாரிடெம்கள்`` ஒரு வெற்று தொகுதி. பட்டியில்"
+" கூடுதல் இணைப்புகளைச் சேர்க்க நீங்கள் அவற்றை மேலெழுதினால், அவை பட்டியல் "
+"உருப்படிகள் என்பதை உறுதிசெய்து: தரவு: `reldelim1`."
+
+#: ../../sphinx/doc/templating.rst:134
+msgid "``document``"
+msgstr "`` ஆவணம்``"
+
+#: ../../sphinx/doc/templating.rst:124
+msgid ""
+"The contents of the document itself.  It contains the block \"body\" where "
+"the individual content is put by subtemplates like ``page.html``."
+msgstr ""
+"ஆவணத்தின் உள்ளடக்கங்கள். இதில் \"உடல்\" தொகுதி உள்ளது, அங்கு தனிப்பட்ட "
+"உள்ளடக்கம் `` page.html`` போன்ற துணைப்பகுதிகளால் வைக்கப்படுகிறது."
+
+#: ../../sphinx/doc/templating.rst:128
+msgid ""
+"In order for the built-in JavaScript search to show a page preview on the "
+"results page, the document or body content should be wrapped in an HTML "
+"element containing the ``role=\"main\"`` attribute. For example::"
+msgstr ""
+"முடிவுகள் பக்கத்தில் ஒரு பக்க முன்னோட்டத்தைக் காண்பிப்பதற்காக "
+"உள்ளமைக்கப்பட்ட ஜாவாஸ்கிரிப்ட் தேடலுக்கு, ஆவணம் அல்லது உடல் உள்ளடக்கம் `` "
+"ரோல் = \"பிரதான\" `` பண்புக்கூறு கொண்ட ஒரு HTML உறுப்பில் மூடப்பட வேண்டும். "
+"உதாரணத்திற்கு::"
+
+#: ../../sphinx/doc/templating.rst:146
+msgid "``sidebar1``, ``sidebar2``"
+msgstr "`` பக்கப்பட்டி 1``, `` பக்கப்பட்டி 2``"
+
+#: ../../sphinx/doc/templating.rst:137
+msgid ""
+"A possible location for a sidebar.  ``sidebar1`` appears before the document"
+" and is empty by default, ``sidebar2`` after the document and contains the "
+"default sidebar.  If you want to swap the sidebar location override this and"
+" call the ``sidebar`` helper::"
+msgstr ""
+"ஒரு பக்கப்பட்டிக்கு சாத்தியமான இடம். `` பக்கப்பட்டி 1`` ஆவணத்தின் முன் "
+"தோன்றி இயல்பாகவே காலியாக உள்ளது, ஆவணத்திற்குப் பிறகு `` பக்கப்பட்டி 2`` "
+"மற்றும் இயல்புநிலை பக்கப்பட்டியைக் கொண்டுள்ளது. நீங்கள் பக்கப்பட்டி "
+"இருப்பிடத்தை இடமாற்றம் செய்ய விரும்பினால் இதை மீறி `` பக்கப்பட்டி` உதவி ::"
+
+#: ../../sphinx/doc/templating.rst:145
+msgid ""
+"(The ``sidebar2`` location for the sidebar is needed by the "
+"``sphinxdoc.css`` stylesheet, for example.)"
+msgstr "."
+
+#: ../../sphinx/doc/templating.rst:150
+msgid "``sidebarlogo``"
+msgstr "`` சைடர்பார்லோகோ``"
+
+#: ../../sphinx/doc/templating.rst:149
+msgid ""
+"The logo location within the sidebar.  Override this if you want to place "
+"some content at the top of the sidebar."
+msgstr ""
+"பக்கப்பட்டிக்குள் லோகோ இடம். பக்கப்பட்டியின் மேற்புறத்தில் சில உள்ளடக்கங்களை"
+" வைக்க விரும்பினால் இதை மேலெழுதவும்."
+
+#: ../../sphinx/doc/templating.rst:154
+msgid "``footer``"
+msgstr "`` அடிக்குறிப்பு``"
+
+#: ../../sphinx/doc/templating.rst:153
+msgid ""
+"The block for the footer div.  If you want a custom footer or markup before "
+"or after it, override this one."
+msgstr ""
+"அடிக்குறிப்புக்கான தொகுதி. அதற்கு முன் அல்லது அதற்குப் பிறகு தனிப்பயன் "
+"அடிக்குறிப்பு அல்லது மார்க்அப்பை நீங்கள் விரும்பினால், இதை மேலெழுதவும்."
+
+#: ../../sphinx/doc/templating.rst:156
+msgid ""
+"The following four blocks are *only* used for pages that do not have "
+"assigned a list of custom sidebars in the :confval:`html_sidebars` config "
+"value.  Their use is deprecated in favor of separate sidebar templates, "
+"which can be included via :confval:`html_sidebars`."
+msgstr ""
+"பின்வரும் நான்கு தொகுதிகள் * மட்டுமே * பயன்படுத்தப்படாத பக்கங்களுக்கு "
+"மட்டுமே பயன்படுத்தப்படுகின்றன, அவை தனிப்பயன் பக்கப்பட்டிகளின் பட்டியலை "
+"ஒதுக்கவில்லை: confval: `html_sidebars` config value. அவற்றின் பயன்பாடு "
+"தனித்தனி பக்கப்பட்டி வார்ப்புருக்களுக்கு ஆதரவாக நீக்கப்படுகிறது, அவற்றை "
+"சேர்க்கலாம்: confval: `html_sidebars`."
+
+#: ../../sphinx/doc/templating.rst:164
+msgid "``sidebartoc``"
+msgstr "`` பக்கவாட்டு``"
+
+#: ../../sphinx/doc/templating.rst:162
+msgid "The table of contents within the sidebar."
+msgstr "பக்கப்பட்டியில் உள்ள உள்ளடக்க அட்டவணை."
+
+#: ../../sphinx/doc/templating.rst:169
+msgid "``sidebarrel``"
+msgstr "`` பக்கப்பட்டி``"
+
+#: ../../sphinx/doc/templating.rst:167
+msgid "The relation links (previous, next document) within the sidebar."
+msgstr "பக்கப்பட்டிக்குள் உறவு இணைப்புகள் (முந்தைய, அடுத்த ஆவணம்)."
+
+#: ../../sphinx/doc/templating.rst:175
+msgid "``sidebarsourcelink``"
+msgstr "`` பக்கப்பட்டிகள்"
+
+#: ../../sphinx/doc/templating.rst:172
+msgid ""
+"The \"Show source\" link within the sidebar (normally only shown if this is "
+"enabled by :confval:`html_show_sourcelink`)."
+msgstr ""
+"பக்கப்பட்டியில் உள்ள \"மூலத்தைக் காட்டு\" இணைப்பு (பொதுவாக இது "
+"இயக்கப்பட்டிருந்தால் மட்டுமே காட்டப்படும்: confval: `html_show_sourcelink`)."
+
+#: ../../sphinx/doc/templating.rst:182
+msgid "``sidebarsearch``"
+msgstr "`` பக்கப்பட்டி தேடல்``"
+
+#: ../../sphinx/doc/templating.rst:178
+msgid ""
+"The search box within the sidebar.  Override this if you want to place some "
+"content at the bottom of the sidebar."
+msgstr ""
+"பக்கப்பட்டிக்குள் தேடல் பெட்டி. பக்கப்பட்டியின் அடிப்பகுதியில் சில "
+"உள்ளடக்கங்களை வைக்க விரும்பினால் இதை மேலெழுதவும்."
+
+#: ../../sphinx/doc/templating.rst:185
+msgid "Configuration Variables"
+msgstr "உள்ளமைவு மாறிகள்"
+
+#: ../../sphinx/doc/templating.rst:187
+msgid ""
+"Inside templates you can set a couple of variables used by the layout "
+"template using the ``{% set %}`` tag:"
+msgstr ""
+"வார்ப்புருக்கள் உள்ளே `` { % செட் %} `` குறிச்சொல்லைப் பயன்படுத்தி தளவமைப்பு"
+" வார்ப்புருவால் பயன்படுத்தப்படும் இரண்டு மாறிகள் அமைக்கலாம்:"
+
+#: ../../sphinx/doc/templating.rst:192
+msgid ""
+"The delimiter for the items on the left side of the related bar.  This "
+"defaults to ``' &raquo;'`` Each item in the related bar ends with the value "
+"of this variable."
+msgstr ""
+"தொடர்புடைய பட்டியின் இடது பக்கத்தில் உள்ள பொருட்களுக்கான டிலிமிட்டர். இது "
+"இயல்புநிலையாக `` '& ராகோ;' `` `தொடர்புடைய பட்டியில் உள்ள ஒவ்வொரு "
+"உருப்படியும் இந்த மாறியின் மதிப்புடன் முடிவடைகிறது."
+
+#: ../../sphinx/doc/templating.rst:198
+msgid ""
+"The delimiter for the items on the right side of the related bar.  This "
+"defaults to ``' |'``.  Each item except of the last one in the related bar "
+"ends with the value of this variable."
+msgstr ""
+"தொடர்புடைய பட்டியின் வலது பக்கத்தில் உள்ள பொருட்களுக்கான டிலிமிட்டர். இது "
+"இயல்புநிலையாக `` '|' ``. தொடர்புடைய பட்டியில் கடைசி ஒன்றைத் தவிர ஒவ்வொரு "
+"உருப்படியும் இந்த மாறியின் மதிப்புடன் முடிவடைகிறது."
+
+#: ../../sphinx/doc/templating.rst:202
+msgid "Overriding works like this::"
+msgstr "இது போன்ற செயல்களை மீறுகிறது ::"
+
+#: ../../sphinx/doc/templating.rst:209
+msgid "Add additional script files here, like this::"
+msgstr "இது போன்ற கூடுதல் ஸ்கிரிப்ட் கோப்புகளை இங்கே சேர்க்கவும் ::"
+
+#: ../../sphinx/doc/templating.rst:215
+msgid "Please use ``.Sphinx.add_js_file()`` instead."
+msgstr "தயவுசெய்து `` .sphinx.add_js_file () `` க்கு பதிலாக பயன்படுத்தவும்."
+
+#: ../../sphinx/doc/templating.rst:218
+msgid "Helper Functions"
+msgstr "உதவி செயல்பாடுகள்"
+
+#: ../../sphinx/doc/templating.rst:220
+msgid ""
+"Sphinx provides various Jinja functions as helpers in the template.  You can"
+" use them to generate links or output multiply used elements."
+msgstr ""
+"வார்ப்புருவில் உதவியாளர்களாக பல்வேறு ஜின்ஜா செயல்பாடுகளை SPHINX வழங்குகிறது."
+" இணைப்புகள் அல்லது வெளியீடு பெருக்கப்பட்ட கூறுகளை உருவாக்க நீங்கள் அவற்றைப் "
+"பயன்படுத்தலாம்."
+
+#: ../../sphinx/doc/templating.rst:225
+msgid ""
+"Return the path to a Sphinx document as a URL.  Use this to refer to built "
+"documents."
+msgstr ""
+"ஒரு SPHINX ஆவணத்திற்கு பாதையை URL ஆக திருப்பி விடுங்கள். கட்டப்பட்ட "
+"ஆவணங்களைக் குறிக்க இதைப் பயன்படுத்தவும்."
+
+#: ../../sphinx/doc/templating.rst:231
+msgid ""
+"Return the path to a *file* which is a filename relative to the root of the "
+"generated output.  Use this to refer to static files."
+msgstr ""
+"உருவாக்கப்பட்ட வெளியீட்டின் மூலத்துடன் தொடர்புடைய ஒரு கோப்பு பெயராகும் ஒரு *"
+" கோப்பிற்கு * பாதையை திருப்பித் தரவும். நிலையான கோப்புகளைக் குறிக்க இதைப் "
+"பயன்படுத்தவும்."
+
+#: ../../sphinx/doc/templating.rst:236
+msgid "Check if a document with the name *document* exists."
+msgstr "* ஆவணம் * என்ற பெயருடன் ஒரு ஆவணம் இருக்கிறதா என்று சரிபார்க்கவும்."
+
+#: ../../sphinx/doc/templating.rst:240
+msgid "Return the rendered sidebar."
+msgstr "வழங்கப்பட்ட பக்கப்பட்டியைத் திருப்பி விடுங்கள்."
+
+#: ../../sphinx/doc/templating.rst:244
+msgid "Return the rendered relation bar."
+msgstr "வழங்கப்பட்ட உறவு பட்டியைத் திருப்பித் தரவும்."
+
+#: ../../sphinx/doc/templating.rst:248
+msgid "Emit a warning message."
+msgstr "ஒரு எச்சரிக்கை செய்தியை வெளியிடுங்கள்."
+
+#: ../../sphinx/doc/templating.rst:251
+msgid "Global Variables"
+msgstr "உலகளாவிய மாறிகள்"
+
+#: ../../sphinx/doc/templating.rst:253
+msgid ""
+"These global variables are available in every template and are safe to use. "
+"There are more, but most of them are an implementation detail and might "
+"change in the future."
+msgstr ""
+"இந்த உலகளாவிய மாறிகள் ஒவ்வொரு வார்ப்புருவிலும் கிடைக்கின்றன மற்றும் "
+"பயன்படுத்த பாதுகாப்பானவை. இன்னும் பல உள்ளன, ஆனால் அவற்றில் பெரும்பாலானவை "
+"செயல்படுத்தல் விவரம் மற்றும் எதிர்காலத்தில் மாறக்கூடும்."
+
+#: ../../sphinx/doc/templating.rst:259
+msgid "The name of the builder (e.g. ``html`` or ``htmlhelp``)."
+msgstr "பில்டரின் பெயர் (எ.கா. `` html`` அல்லது `` htmlhelp``)."
+
+#: ../../sphinx/doc/templating.rst:263
+msgid "The value of :confval:`copyright`."
+msgstr "இதன் மதிப்பு: confval: `பதிப்புரிமை`."
+
+#: ../../sphinx/doc/templating.rst:267
+msgid ""
+"The title of the documentation (the value of :confval:`html_title`), except "
+"when the \"single-file\" builder is used, when it is set to ``None``."
+msgstr ""
+"\"ஒற்றை கோப்பு\" பில்டர் பயன்படுத்தப்படும்போது தவிர, ஆவணத்தின் தலைப்பு (இதன்"
+" மதிப்பு: confval: `html_title`), அது` `எதுவுமில்லை`` என அமைக்கப்பட்டால் "
+"தவிர."
+
+#: ../../sphinx/doc/templating.rst:272
+msgid ""
+"True if the built HTML is meant to be embedded in some viewing application "
+"that handles navigation, not the web browser, such as for HTML help or Qt "
+"help formats.  In this case, the sidebar is not included."
+msgstr ""
+"கட்டமைக்கப்பட்ட HTML வழிசெலுத்தலைக் கையாளும் சில பார்வை பயன்பாட்டில் "
+"உட்பொதிக்கப்பட வேண்டும் என்றால் உண்மை, HTML உதவி அல்லது QT உதவி வடிவங்கள் "
+"போன்ற வலை உலாவி அல்ல. இந்த வழக்கில், பக்கப்பட்டி சேர்க்கப்படவில்லை."
+
+#: ../../sphinx/doc/templating.rst:278
+msgid ""
+"The relative path to the HTML favicon image from the current document, or "
+"URL to the favicon, or ``''``."
+msgstr ""
+"தற்போதைய ஆவணத்திலிருந்து HTML FAVICON படத்திற்கான ஒப்பீட்டு பாதை, அல்லது URL"
+" க்கு ஃபாவிகானுக்கு, அல்லது `` '' ``."
+
+#: ../../sphinx/doc/templating.rst:285
+msgid ""
+"The value of the builder's :attr:`~.SerializingHTMLBuilder.out_suffix` "
+"attribute, i.e. the file name extension that the output files will get.  For"
+" a standard HTML builder, this is usually ``.html``."
+msgstr ""
+"பில்டரின் மதிப்பு: ATTR: `~ .serialiginghtmlbuilder.out_suffix` பண்புக்கூறு,"
+" அதாவது வெளியீட்டு கோப்புகள் பெறும் கோப்பு பெயர் நீட்டிப்பு. ஒரு நிலையான "
+"HTML பில்டருக்கு, இது வழக்கமாக `` .html``."
+
+#: ../../sphinx/doc/templating.rst:291
+msgid ""
+"True if the reST document sources are copied (if :confval:`html_copy_source`"
+" is ``True``)."
+msgstr ""
+"REST ஆவண ஆதாரங்கள் நகலெடுக்கப்பட்டால் உண்மை (if: confval: `html_copy_source`"
+" என்பது` `உண்மை``)."
+
+#: ../../sphinx/doc/templating.rst:296
+msgid "The value of :confval:`language`."
+msgstr "இதன் மதிப்பு: confval: `மொழி`."
+
+#: ../../sphinx/doc/templating.rst:300
+msgid "The build date."
+msgstr "உருவாக்க தேதி."
+
+#: ../../sphinx/doc/templating.rst:304
+msgid ""
+"The relative path to the HTML logo image from the current document, or URL "
+"to the logo, or ``''``."
+msgstr ""
+"தற்போதைய ஆவணத்திலிருந்து HTML லோகோ படத்திற்கான ஒப்பீட்டு பாதை, அல்லது "
+"லோகோவுக்கு URL, அல்லது `` '' ``."
+
+#: ../../sphinx/doc/templating.rst:311
+msgid "Same as :data:`root_doc`."
+msgstr "அதே: தரவு: `ரூட்_டோக்`."
+
+#: ../../sphinx/doc/templating.rst:315
+msgid "Renamed to ``root_doc``."
+msgstr "`` ரூட்_டோக்`` என மறுபெயரிடப்பட்டது."
+
+#: ../../sphinx/doc/templating.rst:319
+msgid "The value of :confval:`root_doc`, for usage with :func:`pathto`."
+msgstr ""
+"இதன் மதிப்பு: கன்ஃபோகல்: `ரூட் டாக்`, இதனுடன் பயன்படுத்த: செயல்பாடு:` பாதை`."
+
+#: ../../sphinx/doc/templating.rst:323
+msgid "Renamed from ``master_doc``."
+msgstr "`` மாஸ்டர்_டோக்`` இலிருந்து மறுபெயரிடப்பட்டது."
+
+#: ../../sphinx/doc/templating.rst:327
+msgid ""
+"The \"page name\" of the current file, i.e. either the document name if the "
+"file is generated from a reST source, or the equivalent hierarchical name "
+"relative to the output directory "
+"(``[directory/]filename_without_extension``)."
+msgstr ""
+"தற்போதைய கோப்பின் \"பக்க பெயர்\", அதாவது ஆவணத்தின் பெயர் ஒரு ஓய்வு "
+"மூலத்திலிருந்து உருவாக்கப்பட்டால் அல்லது வெளியீட்டு கோப்பகத்துடன் தொடர்புடைய"
+" சமமான படிநிலை பெயர் (`` [அடைவு/] FileName_without_extension``)."
+
+#: ../../sphinx/doc/templating.rst:334
+msgid "The value of :confval:`project`."
+msgstr "இதன் மதிப்பு: confval: `திட்டம்`."
+
+#: ../../sphinx/doc/templating.rst:338
+msgid "The value of :confval:`release`."
+msgstr "இதன் மதிப்பு: confval: `வெளியீடு`."
+
+#: ../../sphinx/doc/templating.rst:342
+msgid ""
+"A list of links to put at the left side of the relbar, next to \"next\" and "
+"\"prev\".  This usually contains links to the general index and other "
+"indices, such as the Python module index.  If you add something yourself, it"
+" must be a tuple ``(pagename, link title, accesskey, link text)``."
+msgstr ""
+"\"அடுத்த\" மற்றும் \"முந்தைய\" க்கு அடுத்ததாக, ரில்பாரின் இடது பக்கத்தில் "
+"வைக்க இணைப்புகளின் பட்டியல். இது பொதுவாக பொது குறியீட்டு மற்றும் பைதான் "
+"தொகுதி குறியீட்டு போன்ற பிற குறியீடுகளுக்கான இணைப்புகளைக் கொண்டுள்ளது. "
+"நீங்களே எதையாவது சேர்த்தால், அது ஒரு டூப்பிள் `` (பேஜனேம், இணைப்பு தலைப்பு, "
+"அணுகல் கே, இணைப்பு உரை) `` ஆக இருக்க வேண்டும்."
+
+#: ../../sphinx/doc/templating.rst:349
+msgid "The value of :confval:`html_short_title`."
+msgstr "இதன் மதிப்பு: confval: `html_short_title`."
+
+#: ../../sphinx/doc/templating.rst:353
+msgid "True if :confval:`html_show_sourcelink` is ``True``."
+msgstr "உண்மை என்றால்: confval: `html_show_sourcelink` என்பது` `உண்மை``."
+
+#: ../../sphinx/doc/templating.rst:357
+msgid ""
+"The version of Sphinx used to build represented as a string for example "
+"\"3.5.1\"."
+msgstr "\"3.5.1\" க்கு ஒரு சரமாக குறிப்பிடப்பட்ட ஸ்பிங்க்ஸின் பதிப்பு."
+
+#: ../../sphinx/doc/templating.rst:361
+msgid ""
+"The version of Sphinx used to build represented as a tuple of five elements."
+" For Sphinx version 3.5.1 beta 3 this would be ``(3, 5, 1, 'beta', 3)``. The"
+" fourth element can be one of: ``alpha``, ``beta``, ``rc``, ``final``. "
+"``final`` always has 0 as the last element."
+msgstr ""
+"ஸ்பின்க்ஸின் பதிப்பு கட்டமைக்கப் பயன்படுத்தப்படும் ஐந்து கூறுகளின் டூப்பிள் "
+"எனக் குறிக்கிறது. ஸ்பிங்க்ஸ் பதிப்பு 3.5.1 பீட்டா 3 க்கு இது `` (3, 5, 1, "
+"'பீட்டா', 3) ``. நான்காவது உறுப்பு ஒன்றாகும்: `` ஆல்பா``, `` பீட்டா``, `` "
+"rc``, `` இறுதி``. `` இறுதி`` எப்போதும் 0 ஐ கடைசி உறுப்பு எனக் கொண்டுள்ளது."
+
+#: ../../sphinx/doc/templating.rst:370
+msgid ""
+"The version of Docutils used to build represented as a tuple of five "
+"elements. For Docutils version 0.16.1 beta 2 this would be ``(0, 16, 1, "
+"'beta', 2)``. The fourth element can be one of: ``alpha``, ``beta``, "
+"``candidate``, ``final``. ``final`` always has 0 as the last element."
+msgstr ""
+"கட்டமைக்கப் பயன்படுத்தப்படும் ஆவணங்களின் பதிப்பு ஐந்து கூறுகளின் டப்பிள் என "
+"குறிப்பிடப்படுகிறது. டாக்யூடில்ஸ் பதிப்பு 0.16.1 பீட்டா 2 க்கு இது `` (0, "
+"16, 1, 'பீட்டா', 2) ``. நான்காவது உறுப்பு ஒன்றாகும்: `` ஆல்பா``, `` "
+"பீட்டா``, `` வேட்பாளர்``, `` இறுதி``. `` இறுதி`` எப்போதும் 0 ஐ கடைசி உறுப்பு"
+" எனக் கொண்டுள்ளது."
+
+#: ../../sphinx/doc/templating.rst:379
+msgid ""
+"A list of the names of the main stylesheets as given by the theme or "
+":confval:`html_style`."
+msgstr ""
+"தீம் வழங்கியபடி முக்கிய ஸ்டைல்ஷீட்களின் பெயர்களின் பட்டியல் அல்லது: confval:"
+" `html_style`."
+
+#: ../../sphinx/doc/templating.rst:386
+msgid ""
+"The name of the main stylesheet, as given by the theme or "
+":confval:`html_style`."
+msgstr ""
+"தீம் வழங்கியபடி பிரதான ஸ்டைல்ஷீட்டின் பெயர் அல்லது: confval: `html_style`."
+
+#: ../../sphinx/doc/templating.rst:391
+msgid ""
+"The theme or :confval:`html_style` are now able to specify multiple "
+"stylesheets, the ``style`` key returns the last stylesheet when more than "
+"one is specified."
+msgstr ""
+"தீம் அல்லது: confval: `html_style` இப்போது பல ஸ்டைல்ஷீட்களைக் குறிப்பிட "
+"முடிகிறது, ஒன்றுக்கு மேற்பட்டவற்றைக் குறிப்பிடும்போது` `ஸ்டைல்`` விசை கடைசி "
+"ஸ்டைல்ஷீட்டை வழங்குகிறது."
+
+#: ../../sphinx/doc/templating.rst:397
+msgid ""
+"Use the :data:`styles` key instead, as there is no longer a single main "
+"stylesheet. The ``style`` key will be removed in Sphinx 7.0."
+msgstr ""
+"அதற்கு பதிலாக `ஸ்டைல்கள்` விசையைப் பயன்படுத்தவும், ஏனெனில் இனி ஒரு முக்கிய "
+"ஸ்டைல்ஷீட் இல்லை. `` ஸ்டைல்`` விசை ஸ்பிங்க்ஸ் 7.0 இல் அகற்றப்படும்."
+
+#: ../../sphinx/doc/templating.rst:402
+msgid "The title of the current document, as used in the ``<title>`` tag."
+msgstr ""
+"தற்போதைய ஆவணத்தின் தலைப்பு, `` <itat> `` குறிச்சொல்லில் "
+"பயன்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/templating.rst:406
+msgid "The value of :confval:`html_use_opensearch`."
+msgstr "இதன் மதிப்பு: confval: `html_use_opensearch`."
+
+#: ../../sphinx/doc/templating.rst:410
+msgid "The value of :confval:`version`."
+msgstr "இதன் மதிப்பு: confval: `பதிப்பு`."
+
+#: ../../sphinx/doc/templating.rst:413
+msgid ""
+"In addition to these values, there are also all **theme options** available "
+"(prefixed by ``theme_``), as well as the values given by the user in "
+":confval:`html_context`."
+msgstr ""
+"இந்த மதிப்புகளுக்கு மேலதிகமாக, அனைத்து ** தீம் விருப்பங்களும் ** உள்ளன (`` "
+"தீம்_`` ஆல் முன்னொட்டப்பட்டுள்ளன), அத்துடன் பயனர் வழங்கிய மதிப்புகள்: "
+"confval: `html_context`."
+
+#: ../../sphinx/doc/templating.rst:417
+msgid ""
+"In documents that are created from source files (as opposed to "
+"automatically-generated files like the module index, or documents that "
+"already are in HTML form), these variables are also available:"
+msgstr ""
+"மூல கோப்புகளிலிருந்து உருவாக்கப்பட்ட ஆவணங்களில் (தொகுதி குறியீட்டு போன்ற "
+"தானாக உருவாக்கப்பட்ட கோப்புகள் அல்லது ஏற்கனவே HTML வடிவத்தில் உள்ள "
+"ஆவணங்களுக்கு மாறாக), இந்த மாறிகள் கிடைக்கின்றன:"
+
+#: ../../sphinx/doc/templating.rst:423
+msgid ""
+"A string containing the content of the page in HTML form as produced by the "
+"HTML builder, before the theme is applied."
+msgstr ""
+"தீம் பயன்படுத்தப்படுவதற்கு முன்பு, HTML பில்டரால் தயாரிக்கப்பட்ட HTML "
+"வடிவத்தில் பக்கத்தின் உள்ளடக்கத்தைக் கொண்ட ஒரு சரம்."
+
+#: ../../sphinx/doc/templating.rst:428
+msgid "A boolean that is True if the toc contains more than one entry."
+msgstr "TOC க்கு ஒன்றுக்கு மேற்பட்ட நுழைவு இருந்தால் உண்மை என்று ஒரு பூலியன்."
+
+#: ../../sphinx/doc/templating.rst:432
+msgid "Document metadata (a dictionary), see :ref:`metadata`."
+msgstr "ஆவண மெட்டாடேட்டா (ஒரு அகராதி), காண்க: குறிப்பு: `மெட்டாடேட்டா`."
+
+#: ../../sphinx/doc/templating.rst:436
+msgid "A string containing the page's HTML :dudir:`meta` tags."
+msgstr "பக்கத்தின் HTML: DUDIR: `மெட்டா` குறிச்சொற்களைக் கொண்ட ஒரு சரம்."
+
+#: ../../sphinx/doc/templating.rst:440
+msgid ""
+"The next document for the navigation.  This variable is either false or has "
+"two attributes `link` and `title`.  The title contains HTML markup.  For "
+"example, to generate a link to the next page, you can use this snippet::"
+msgstr ""
+"வழிசெலுத்தலுக்கான அடுத்த ஆவணம். இந்த மாறி தவறானது அல்லது `இணைப்பு` மற்றும்` "
+"தலைப்பு` என்ற இரண்டு பண்புகளைக் கொண்டுள்ளது. தலைப்பில் HTML மார்க்அப் "
+"உள்ளது. எடுத்துக்காட்டாக, அடுத்த பக்கத்திற்கு ஒரு இணைப்பை உருவாக்க, இந்த "
+"துணுக்கைப் பயன்படுத்தலாம் ::"
+
+#: ../../sphinx/doc/templating.rst:450
+msgid ""
+"The suffix of the file that was rendered. Since we support a list of "
+":confval:`source_suffix`, this will allow you to properly link to the "
+"original source file."
+msgstr ""
+"வழங்கப்பட்ட கோப்பின் பின்னொட்டு. நாங்கள் ஒரு பட்டியலை ஆதரிப்பதால்: confval: "
+"`source_suffix`, இது அசல் மூல கோப்புடன் சரியாக இணைக்க உங்களை அனுமதிக்கும்."
+
+#: ../../sphinx/doc/templating.rst:456
+msgid ""
+"A list of parent documents for navigation, structured like the :data:`next` "
+"item."
+msgstr ""
+"வழிசெலுத்தலுக்கான பெற்றோர் ஆவணங்களின் பட்டியல், இது போன்ற "
+"கட்டமைக்கப்பட்டுள்ளது: தரவு: `அடுத்து` உருப்படி."
+
+#: ../../sphinx/doc/templating.rst:461
+msgid "Like :data:`next`, but for the previous page."
+msgstr "போன்றது: தரவு: `அடுத்து`, ஆனால் முந்தைய பக்கத்திற்கு."
+
+#: ../../sphinx/doc/templating.rst:465
+msgid ""
+"The name of the copied source file for the current document.  This is only "
+"nonempty if the :confval:`html_copy_source` value is ``True``. This has "
+"empty value on creating automatically-generated files."
+msgstr ""
+"தற்போதைய ஆவணத்திற்கான நகலெடுக்கப்பட்ட மூல கோப்பின் பெயர். : Confval: "
+"`html_copy_source` மதிப்பு` `உண்மை`` என்றால் இது வெறுக்கத்தக்கது. தானாக "
+"உருவாக்கப்பட்ட கோப்புகளை உருவாக்குவதில் இது வெற்று மதிப்பைக் கொண்டுள்ளது."
+
+#: ../../sphinx/doc/templating.rst:471
+msgid ""
+"The local table of contents for the current page, rendered as HTML bullet "
+"lists."
+msgstr ""
+"தற்போதைய பக்கத்திற்கான உள்ளூர் உள்ளடக்க அட்டவணை, HTML புல்லட் பட்டியல்களாக "
+"வழங்கப்படுகிறது."
+
+#: ../../sphinx/doc/templating.rst:476
+msgid ""
+"A callable yielding the global TOC tree containing the current page, "
+"rendered as HTML bullet lists.  Optional keyword arguments:"
+msgstr ""
+"தற்போதைய பக்கத்தைக் கொண்ட உலகளாவிய TOC மரத்தை அழைக்கும் அழைக்கக்கூடியது, இது"
+" HTML புல்லட் பட்டியல்களாக வழங்கப்படுகிறது. விருப்ப முக்கிய வாதங்கள்:"
+
+#: ../../sphinx/doc/templating.rst:482
+msgid "``collapse``"
+msgstr "`` சரிவு``"
+
+#: ../../sphinx/doc/templating.rst:480
+msgid ""
+"If true, all TOC entries that are not ancestors of the current page are "
+"collapsed. ``True`` by default."
+msgstr ""
+"உண்மை என்றால், தற்போதைய பக்கத்தின் மூதாதையர்கள் இல்லாத அனைத்து TOC "
+"உள்ளீடுகளும் சரிந்தன. இயல்பாக `` உண்மை``."
+
+#: ../../sphinx/doc/templating.rst:486
+msgid "``maxdepth``"
+msgstr "`` maxdepth``"
+
+#: ../../sphinx/doc/templating.rst:485
+msgid ""
+"The maximum depth of the tree. Set it to ``-1`` to allow unlimited depth. "
+"Defaults to the max depth selected in the toctree directive."
+msgstr ""
+"மரத்தின் அதிகபட்ச ஆழம். வரம்பற்ற ஆழத்தை அனுமதிக்க அதை `` -1`` என அமைக்கவும்."
+" டோக்ட்ரீ உத்தரவில் தேர்ந்தெடுக்கப்பட்ட அதிகபட்ச ஆழத்திற்கு இயல்புநிலை."
+
+#: ../../sphinx/doc/templating.rst:490
+msgid "``titles_only``"
+msgstr "`` தலைப்புகள்_ஓஎன்ஜி``"
+
+#: ../../sphinx/doc/templating.rst:489
+msgid ""
+"If true, put only top-level document titles in the tree. ``False`` by "
+"default."
+msgstr ""
+"உண்மை என்றால், மரத்தில் உயர்மட்ட ஆவண தலைப்புகளை மட்டுமே வைக்கவும். இயல்பாக "
+"`` தவறு``."
+
+#: ../../sphinx/doc/templating.rst:493
+msgid "``includehidden``"
+msgstr "`` சேர்க்கவும் .`"
+
+#: ../../sphinx/doc/templating.rst:493
+msgid ""
+"If true, the ToC tree will also contain hidden entries. ``False`` by "
+"default."
+msgstr ""
+"உண்மை என்றால், TOC மரத்தில் மறைக்கப்பட்ட உள்ளீடுகளும் இருக்கும். இயல்பாக `` "
+"தவறு``."

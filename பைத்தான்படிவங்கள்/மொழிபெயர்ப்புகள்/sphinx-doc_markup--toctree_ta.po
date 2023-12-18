@@ -1,0 +1,447 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2018, Georg Brandl and the Sphinx team
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 1.8.0+/b8e20ed\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-28 15:07+0000\n"
+"PO-Revision-Date: 2018-02-12 13:49+0000\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/markup/toctree.rst:5
+msgid "The TOC tree"
+msgstr "TOC மரம்"
+
+#: ../../sphinx/doc/markup/toctree.rst:9
+msgid ""
+"Since reST does not have facilities to interconnect several documents, or "
+"split documents into multiple output files, Sphinx uses a custom directive "
+"to add relations between the single files the documentation is made of, as "
+"well as tables of contents.  The ``toctree`` directive is the central "
+"element."
+msgstr ""
+"REST க்கு பல ஆவணங்களை ஒன்றோடொன்று இணைப்பதற்கான வசதிகள் இல்லை அல்லது ஆவணங்களை"
+" பல வெளியீட்டு கோப்புகளாகப் பிரிப்பதால், ஆவணங்கள் செய்யப்பட்ட ஒற்றை "
+"கோப்புகளுக்கு இடையில் உறவுகளைச் சேர்க்கவும், அதே போல் உள்ளடக்கங்களின் "
+"அட்டவணைகளுக்கும் இடையே உறவுகளைச் சேர்க்க SPHINX ஒரு தனிப்பயன் உத்தரவைப் "
+"பயன்படுத்துகிறது. `` Toctree`` உத்தரவு மைய உறுப்பு."
+
+#: ../../sphinx/doc/markup/toctree.rst:16
+msgid ""
+"Simple \"inclusion\" of one file in another can be done with the "
+":dudir:`include` directive."
+msgstr ""
+"ஒரு கோப்பின் எளிய \"சேர்த்தல்\" மற்றொன்றுடன் செய்யப்படலாம்: tudir: "
+"`சேர்க்கவும்` உத்தரவு."
+
+#: ../../sphinx/doc/markup/toctree.rst:21
+msgid ""
+"This directive inserts a \"TOC tree\" at the current location, using the "
+"individual TOCs (including \"sub-TOC trees\") of the documents given in the "
+"directive body.  Relative document names (not beginning with a slash) are "
+"relative to the document the directive occurs in, absolute names are "
+"relative to the source directory.  A numeric ``maxdepth`` option may be "
+"given to indicate the depth of the tree; by default, all levels are "
+"included. [#]_"
+msgstr ""
+"இந்த உத்தரவு தற்போதைய இடத்தில் \"TOC மரம்\" ஐ செருகுகிறது, டைரெக்டிவ் உடலில்"
+" கொடுக்கப்பட்ட ஆவணங்களின் தனிப்பட்ட TOC களை (\"துணை-டோக் மரங்கள்\" உட்பட) "
+"பயன்படுத்துகிறது. உறவினர் ஆவணப் பெயர்கள் (ஒரு ஸ்லாஷுடன் தொடங்கவில்லை) "
+"உத்தரவு ஏற்படும் ஆவணத்துடன் தொடர்புடையது, முழுமையான பெயர்கள் மூல "
+"கோப்பகத்துடன் தொடர்புடையவை. மரத்தின் ஆழத்தைக் குறிக்க ஒரு எண் `` maxdepth`` "
+"விருப்பம் வழங்கப்படலாம்; இயல்பாக, அனைத்து நிலைகளும் சேர்க்கப்பட்டுள்ளன. [#] "
+"_"
+
+#: ../../sphinx/doc/markup/toctree.rst:28
+msgid ""
+"Consider this example (taken from the Python docs' library reference "
+"index)::"
+msgstr ""
+"இந்த உதாரணத்தைக் கவனியுங்கள் (பைதான் டாக்ஸ் நூலக குறிப்பு குறியீட்டிலிருந்து"
+" எடுக்கப்பட்டது) ::"
+
+#: ../../sphinx/doc/markup/toctree.rst:39
+msgid "This accomplishes two things:"
+msgstr "இது இரண்டு விஷயங்களை நிறைவேற்றுகிறது:"
+
+#: ../../sphinx/doc/markup/toctree.rst:41
+msgid ""
+"Tables of contents from all those documents are inserted, with a maximum "
+"depth of two, that means one nested heading.  ``toctree`` directives in "
+"those documents are also taken into account."
+msgstr ""
+"அந்த எல்லா ஆவணங்களிலிருந்தும் உள்ளடக்கங்களின் அட்டவணைகள் செருகப்பட்டுள்ளன, "
+"அதிகபட்சம் இரண்டு ஆழம், அதாவது ஒரு உள்ளமைக்கப்பட்ட தலைப்பு. `` toctree`` "
+"அந்த ஆவணங்களில் உத்தரவுகளும் கணக்கில் எடுத்துக்கொள்ளப்படுகின்றன."
+
+#: ../../sphinx/doc/markup/toctree.rst:44
+msgid ""
+"Sphinx knows the relative order of the documents ``intro``, ``strings`` and "
+"so forth, and it knows that they are children of the shown document, the "
+"library index.  From this information it generates \"next chapter\", "
+"\"previous chapter\" and \"parent chapter\" links."
+msgstr ""
+"ஆவணங்களின் ஒப்பீட்டு வரிசையை ஸ்பின்க்ஸ் அறிவார் `` அறிமுகம்``, `` சரங்கள்`` "
+"மற்றும் பலவற்றில் அவர்கள் காட்டப்பட்ட ஆவணத்தின் குழந்தைகள், நூலகக் "
+"குறியீட்டின் குழந்தைகள் என்பதை இது அறிவது. இந்த தகவலிலிருந்து இது \"அடுத்த "
+"அத்தியாயம்\", \"முந்தைய அத்தியாயம்\" மற்றும் \"பெற்றோர் அத்தியாயம்\" "
+"இணைப்புகளை உருவாக்குகிறது."
+
+#: ../../sphinx/doc/markup/toctree.rst:49
+msgid "**Entries**"
+msgstr "** உள்ளீடுகள் **"
+
+#: ../../sphinx/doc/markup/toctree.rst:51
+msgid ""
+"Document titles in the :rst:dir:`toctree` will be automatically read from "
+"the title of the referenced document. If that isn't what you want, you can "
+"specify an explicit title and target using a similar syntax to reST "
+"hyperlinks (and Sphinx's :ref:`cross-referencing syntax <xref-syntax>`). "
+"This looks like::"
+msgstr ""
+"ஆவண தலைப்புகள்: rst: dir: `toctree` குறிப்பிடப்பட்ட ஆவணத்தின் "
+"தலைப்பிலிருந்து தானாகவே படிக்கப்படும். நீங்கள் விரும்பியதல்ல என்றால், "
+"ஹைப்பர்லிங்க்கள் (மற்றும் ஸ்பிங்க்ஸ்: குறிப்பு: `குறுக்கு-குறிப்பு தொடரியல் "
+"<xref-syntax>`) ஓய்வெடுக்க ஒத்த தொடரியல் பயன்படுத்தி வெளிப்படையான தலைப்பு "
+"மற்றும் இலக்கைக் குறிப்பிடலாம். இது போல் தெரிகிறது ::"
+
+#: ../../sphinx/doc/markup/toctree.rst:63
+msgid ""
+"The second line above will link to the ``strings`` document, but will use "
+"the title \"All about strings\" instead of the title of the ``strings`` "
+"document."
+msgstr ""
+"மேலே உள்ள இரண்டாவது வரி `` சரங்கள்` ஆவணத்துடன் இணைக்கும், ஆனால் `` சரங்கள்` "
+"ஆவணத்தின் தலைப்புக்கு பதிலாக \"சரம் பற்றி எல்லாம்\" என்ற தலைப்பைப் "
+"பயன்படுத்தும்."
+
+#: ../../sphinx/doc/markup/toctree.rst:66
+msgid ""
+"You can also add external links, by giving an HTTP URL instead of a document"
+" name."
+msgstr ""
+"ஆவண பெயருக்குப் பதிலாக HTTP URL கொடுப்பதன் மூலம் வெளிப்புற இணைப்புகளையும் "
+"சேர்க்கலாம்."
+
+#: ../../sphinx/doc/markup/toctree.rst:69
+msgid "**Section numbering**"
+msgstr "** பிரிவு எண் **"
+
+#: ../../sphinx/doc/markup/toctree.rst:71
+msgid ""
+"If you want to have section numbers even in HTML output, give the "
+"**toplevel** toctree a ``numbered`` option.  For example::"
+msgstr ""
+"HTML வெளியீட்டில் கூட நீங்கள் பிரிவு எண்களைக் கொண்டிருக்க விரும்பினால், ** "
+"டோப்ல்வெல் ** டோக்ரீக்கு ஒரு `` எண்ணற்ற`` விருப்பத்தைக் கொடுங்கள். "
+"உதாரணத்திற்கு::"
+
+#: ../../sphinx/doc/markup/toctree.rst:80
+msgid ""
+"Numbering then starts at the heading of ``foo``.  Sub-toctrees are "
+"automatically numbered (don't give the ``numbered`` flag to those)."
+msgstr ""
+"எண்ணும் பின்னர் `` ஃபூ`` என்ற தலைப்பில் தொடங்குகிறது. துணை-டோக் ட்ரீஸ் தானாக"
+" எண்ணப்படும் (அவற்றுக்கு `` எண்ணற்ற`` கொடியைக் கொடுக்க வேண்டாம்)."
+
+#: ../../sphinx/doc/markup/toctree.rst:83
+msgid ""
+"Numbering up to a specific depth is also possible, by giving the depth as a "
+"numeric argument to ``numbered``."
+msgstr ""
+"ஒரு குறிப்பிட்ட ஆழத்தை எண்ணுவதும் சாத்தியமாகும், ஆழத்தை ஒரு எண் வாதமாக `` "
+"எண்ணற்ற`` க்கு வழங்குவதன் மூலம்."
+
+#: ../../sphinx/doc/markup/toctree.rst:86
+msgid "**Additional options**"
+msgstr "** கூடுதல் விருப்பங்கள் **"
+
+#: ../../sphinx/doc/markup/toctree.rst:88
+msgid ""
+"You can use ``caption`` option to provide a toctree caption and you can use "
+"``name`` option to provide implicit target name that can be referenced by "
+"using :rst:role:`ref`::"
+msgstr ""
+"ஒரு டோக்ட்ரீ தலைப்பை வழங்க நீங்கள் `` தலைப்பு` விருப்பத்தைப் பயன்படுத்தலாம்,"
+" மேலும் பயன்படுத்துவதன் மூலம் குறிப்பிடக்கூடிய மறைமுக இலக்கு பெயரை வழங்க `` "
+"பெயர்`` விருப்பத்தைப் பயன்படுத்தலாம்: rst: rest: `ref` ::"
+
+#: ../../sphinx/doc/markup/toctree.rst:98
+msgid ""
+"If you want only the titles of documents in the tree to show up, not other "
+"headings of the same level, you can use the ``titlesonly`` option::"
+msgstr ""
+"மரத்தில் உள்ள ஆவணங்களின் தலைப்புகள் மட்டுமே காண்பிக்கப்பட விரும்பினால், அதே "
+"மட்டத்தின் பிற தலைப்புகள் அல்ல, நீங்கள் `` தலைப்பு மட்டும்` 'விருப்பத்தைப் "
+"பயன்படுத்தலாம் ::"
+
+#: ../../sphinx/doc/markup/toctree.rst:107
+msgid ""
+"You can use \"globbing\" in toctree directives, by giving the ``glob`` flag "
+"option.  All entries are then matched against the list of available "
+"documents, and matches are inserted into the list alphabetically.  Example::"
+msgstr ""
+"`` குளோப்`` கொடி விருப்பத்தை வழங்குவதன் மூலம், டோக்ட்ரீ வழிமுறைகளில் "
+"\"குளோபிங்கை\" பயன்படுத்தலாம். அனைத்து உள்ளீடுகளும் பின்னர் கிடைக்கக்கூடிய "
+"ஆவணங்களின் பட்டியலுடன் பொருந்துகின்றன, மேலும் போட்டிகள் எழுத்துக்களாக "
+"பட்டியலில் செருகப்படுகின்றன. உதாரணமாக::"
+
+#: ../../sphinx/doc/markup/toctree.rst:118
+msgid ""
+"This includes first all documents whose names start with ``intro``, then all"
+" documents in the ``recipe`` folder, then all remaining documents (except "
+"the one containing the directive, of course.) [#]_"
+msgstr ""
+"இதில் முதலில் அனைத்து ஆவணங்களும் அடங்கும், அதன் பெயர்கள் `` அறிமுகம்``, "
+"பின்னர் `` ரெசிபி` கோப்புறையில் உள்ள அனைத்து ஆவணங்களும், பின்னர் மீதமுள்ள "
+"அனைத்து ஆவணங்களும் (உத்தரவைக் கொண்ட ஒன்றைத் தவிர, நிச்சயமாக.) _ _"
+
+#: ../../sphinx/doc/markup/toctree.rst:122
+msgid ""
+"The special entry name ``self`` stands for the document containing the "
+"toctree directive.  This is useful if you want to generate a \"sitemap\" "
+"from the toctree."
+msgstr ""
+"சிறப்பு நுழைவு பெயர் `` சுய`` என்பது டோக்ட்ரீ டைரெக்டிவ் கொண்ட ஆவணத்தை "
+"குறிக்கிறது. டோக்ட்ரீயிடமிருந்து ஒரு \"தள வரைபடத்தை\" உருவாக்க விரும்பினால் "
+"இது பயனுள்ளதாக இருக்கும்."
+
+#: ../../sphinx/doc/markup/toctree.rst:126
+msgid ""
+"You can use the ``reversed`` flag option to reverse the order of the entries"
+" in the list. This can be useful when using the ``glob`` flag option to "
+"reverse the ordering of the files.  Example::"
+msgstr ""
+"பட்டியலில் உள்ளீடுகளின் வரிசையை மாற்றியமைக்க `` தலைகீழ்`` கொடி விருப்பத்தைப்"
+" பயன்படுத்தலாம். கோப்புகளின் வரிசைப்படுத்தலை மாற்றியமைக்க `` குளோப்` கொடி "
+"விருப்பத்தைப் பயன்படுத்தும் போது இது பயனுள்ளதாக இருக்கும். உதாரணமாக::"
+
+#: ../../sphinx/doc/markup/toctree.rst:136
+msgid "You can also give a \"hidden\" option to the directive, like this::"
+msgstr ""
+"இது போன்ற உத்தரவுக்கு நீங்கள் ஒரு \"மறைக்கப்பட்ட\" விருப்பத்தையும் "
+"கொடுக்கலாம் ::"
+
+#: ../../sphinx/doc/markup/toctree.rst:144
+msgid ""
+"This will still notify Sphinx of the document hierarchy, but not insert "
+"links into the document at the location of the directive -- this makes sense"
+" if you intend to insert these links yourself, in a different style, or in "
+"the HTML sidebar."
+msgstr ""
+"இது இன்னும் ஆவண வரிசைக்கு ஸ்பிங்க்ஸுக்கு அறிவிக்கும், ஆனால் உத்தரவின் "
+"இருப்பிடத்தில் ஆவணத்தில் இணைப்புகளைச் செருக முடியாது - இந்த இணைப்புகளை "
+"நீங்களே, வேறு பாணியில் அல்லது HTML பக்கப்பட்டியில் செருக விரும்பினால் இது "
+"அர்த்தமுள்ளதாக இருக்கும்."
+
+#: ../../sphinx/doc/markup/toctree.rst:149
+msgid ""
+"In cases where you want to have only one top-level toctree and hide all "
+"other lower level toctrees you can add the \"includehidden\" option to the "
+"top-level toctree entry::"
+msgstr ""
+"நீங்கள் ஒரே ஒரு உயர்மட்ட டோக்ட்ரீயை மட்டுமே வைத்திருக்க விரும்பும் "
+"சந்தர்ப்பங்களில் மற்றும் மற்ற அனைத்து கீழ் நிலை டோக்ட்ரீஸையும் மறைக்க "
+"நீங்கள் \"சேர்க்கப்பட்ட\" விருப்பத்தை உயர்மட்ட டோக்ட்ரீ நுழைவுக்கு "
+"சேர்க்கலாம் ::"
+
+#: ../../sphinx/doc/markup/toctree.rst:159
+msgid "All other toctree entries can then be eliminated by the \"hidden\" option."
+msgstr ""
+"மற்ற அனைத்து டோக்ட்ரீ உள்ளீடுகளையும் \"மறைக்கப்பட்ட\" விருப்பத்தால் "
+"அகற்றலாம்."
+
+#: ../../sphinx/doc/markup/toctree.rst:161
+msgid ""
+"In the end, all documents in the :term:`source directory` (or "
+"subdirectories) must occur in some ``toctree`` directive; Sphinx will emit a"
+" warning if it finds a file that is not included, because that means that "
+"this file will not be reachable through standard navigation."
+msgstr ""
+"முடிவில்,: கால: `மூல அடைவு` (அல்லது துணை அடைவுகள்) இல் உள்ள அனைத்து "
+"ஆவணங்களும் சில` `toctree`` உத்தரவில் ஏற்பட வேண்டும்; சேர்க்கப்படாத ஒரு "
+"கோப்பைக் கண்டறிந்தால், ஸ்பிங்க்ஸ் ஒரு எச்சரிக்கையை வெளியிடும், ஏனென்றால் "
+"நிலையான வழிசெலுத்தல் மூலம் இந்த கோப்பு அடையப்படாது."
+
+#: ../../sphinx/doc/markup/toctree.rst:166
+msgid ""
+"Use :confval:`exclude_patterns` to explicitly exclude documents or "
+"directories from building completely.  Use :ref:`the \"orphan\" metadata "
+"<metadata>` to let a document be built, but notify Sphinx that it is not "
+"reachable via a toctree."
+msgstr ""
+"பயன்படுத்தவும்: confval: ஆவணங்கள் அல்லது கோப்பகங்களை வெளிப்படையாக "
+"கட்டியெழுப்புவதிலிருந்து வெளிப்படையாக விலக்க `விலக்கு_பொட்டர்ஸ்`. "
+"பயன்படுத்தவும்: குறிப்பு: `\" அனாதை \"மெட்டாடேட்டா <மெட்டாடேட்டா>` ஒரு "
+"ஆவணத்தை உருவாக்க அனுமதிக்க, ஆனால் டோக்ட்ரீ வழியாக அதை அடைய முடியாது என்று "
+"ஸ்பிங்க்ஸுக்கு அறிவிக்கவும்."
+
+#: ../../sphinx/doc/markup/toctree.rst:171
+msgid ""
+"The \"master document\" (selected by :confval:`master_doc`) is the \"root\" "
+"of the TOC tree hierarchy.  It can be used as the documentation's main page,"
+" or as a \"full table of contents\" if you don't give a ``maxdepth`` option."
+msgstr ""
+"\"மாஸ்டர் ஆவணம்\" (தேர்ந்தெடுக்கப்பட்டது: confval: `master_doc`) என்பது TOC "
+"மர வரிசைக்கு\" ரூட் \"ஆகும். நீங்கள் ஒரு `` MaxDepth`` விருப்பத்தை "
+"வழங்காவிட்டால், இது ஆவணத்தின் பிரதான பக்கமாக அல்லது \"முழு உள்ளடக்க "
+"அட்டவணையாக\" பயன்படுத்தப்படலாம்."
+
+#: ../../sphinx/doc/markup/toctree.rst:175
+msgid "Added \"globbing\" option."
+msgstr "\"குளோபிங்\" விருப்பம் சேர்க்கப்பட்டது."
+
+#: ../../sphinx/doc/markup/toctree.rst:178
+msgid ""
+"Added \"numbered\" and \"hidden\" options as well as external links and "
+"support for \"self\" references."
+msgstr ""
+"\"எண்ணற்ற\" மற்றும் \"மறைக்கப்பட்ட\" விருப்பங்கள் மற்றும் வெளிப்புற "
+"இணைப்புகள் மற்றும் \"சுய\" குறிப்புகளுக்கான ஆதரவு ஆகியவற்றைச் "
+"சேர்க்கப்பட்டது."
+
+#: ../../sphinx/doc/markup/toctree.rst:182
+msgid "Added \"titlesonly\" option."
+msgstr "\"டைட்ட்லெஸ்லி\" விருப்பம் சேர்க்கப்பட்டது."
+
+#: ../../sphinx/doc/markup/toctree.rst:185
+msgid "Added numeric argument to \"numbered\"."
+msgstr "\"எண்ணுடன்\" எண் வாதத்தை சேர்க்கப்பட்டது."
+
+#: ../../sphinx/doc/markup/toctree.rst:188
+msgid "Added \"includehidden\" option."
+msgstr "\"சேர்க்கவும்\" விருப்பம் சேர்க்கப்பட்டது."
+
+#: ../../sphinx/doc/markup/toctree.rst:191
+msgid "Added \"caption\" and \"name\" option."
+msgstr "\"தலைப்பு\" மற்றும் \"பெயர்\" விருப்பம் சேர்க்கப்பட்டது."
+
+#: ../../sphinx/doc/markup/toctree.rst:195
+msgid "Special names"
+msgstr "சிறப்பு பெயர்கள்"
+
+#: ../../sphinx/doc/markup/toctree.rst:197
+msgid ""
+"Sphinx reserves some document names for its own use; you should not try to "
+"create documents with these names -- it will cause problems."
+msgstr ""
+"ஸ்பின்க்ஸ் அதன் சொந்த பயன்பாட்டிற்காக சில ஆவண பெயர்களை கொண்டுள்ளது; இந்த "
+"பெயர்களுடன் ஆவணங்களை உருவாக்க நீங்கள் முயற்சிக்கக்கூடாது - இது சிக்கல்களை "
+"ஏற்படுத்தும்."
+
+#: ../../sphinx/doc/markup/toctree.rst:200
+msgid "The special document names (and pages generated for them) are:"
+msgstr "சிறப்பு ஆவண பெயர்கள் (மற்றும் அவற்றுக்காக உருவாக்கப்பட்ட பக்கங்கள்):"
+
+#: ../../sphinx/doc/markup/toctree.rst:202
+msgid "``genindex``, ``modindex``, ``search``"
+msgstr "`` ஜெனின்டெக்ஸ்``, `` மோடிண்டெக்ஸ்``, `` தேடல்``"
+
+#: ../../sphinx/doc/markup/toctree.rst:204
+msgid ""
+"These are used for the general index, the Python module index, and the "
+"search page, respectively."
+msgstr ""
+"இவை முறையே பொது குறியீடு, பைதான் தொகுதி குறியீடு மற்றும் தேடல் பக்கத்திற்கு "
+"பயன்படுத்தப்படுகின்றன."
+
+#: ../../sphinx/doc/markup/toctree.rst:207
+msgid ""
+"The general index is populated with entries from modules, all index-"
+"generating :ref:`object descriptions <basic-domain-markup>`, and from "
+":rst:dir:`index` directives."
+msgstr ""
+"பொதுவான குறியீடு தொகுதிகளிலிருந்து உள்ளீடுகளுடன் உள்ளது, அனைத்து குறியீட்டு "
+"உருவாக்கும்: குறிப்பு: `பொருள் விளக்கங்கள் <அடிப்படை-டொமைன்-மார்க்கப்>`, "
+"மற்றும் இருந்து: rst: dir: `index` வழிமுறைகள்."
+
+#: ../../sphinx/doc/markup/toctree.rst:211
+msgid ""
+"The Python module index contains one entry per :rst:dir:`py:module` "
+"directive."
+msgstr ""
+"பைதான் தொகுதி குறியீட்டில் ஒரு நுழைவு உள்ளது: rst: dir: `py: தொகுதி` "
+"உத்தரவு."
+
+#: ../../sphinx/doc/markup/toctree.rst:213
+msgid ""
+"The search page contains a form that uses the generated JSON search index "
+"and JavaScript to full-text search the generated documents for search words;"
+" it should work on every major browser that supports modern JavaScript."
+msgstr ""
+"தேடல் பக்கத்தில் உருவாக்கப்பட்ட JSON தேடல் குறியீடு மற்றும் ஜாவாஸ்கிரிப்ட் "
+"ஆகியவற்றை முழு உரை தேடல் தேடல் சொற்களுக்கான உருவாக்கப்பட்ட ஆவணங்களை "
+"பயன்படுத்தும் ஒரு படிவம் உள்ளது; நவீன ஜாவாஸ்கிரிப்டை ஆதரிக்கும் ஒவ்வொரு "
+"பெரிய உலாவியிலும் இது செயல்பட வேண்டும்."
+
+#: ../../sphinx/doc/markup/toctree.rst:217
+msgid "every name beginning with ``_``"
+msgstr "ஒவ்வொரு பெயரும் `` _`` உடன் தொடங்குகிறது"
+
+#: ../../sphinx/doc/markup/toctree.rst:219
+msgid ""
+"Though only few such names are currently used by Sphinx, you should not "
+"create documents or document-containing directories with such names.  (Using"
+" ``_`` as a prefix for a custom template directory is fine.)"
+msgstr ""
+"இதுபோன்ற சில பெயர்கள் மட்டுமே தற்போது SPHINX ஆல் பயன்படுத்தப்பட்டாலும், "
+"அத்தகைய பெயர்களுடன் ஆவணங்கள் அல்லது ஆவணத்துடன் கூடிய கோப்பகங்களை நீங்கள் "
+"உருவாக்கக்கூடாது. (தனிப்பயன் வார்ப்புரு கோப்பகத்தின் முன்னொட்டாக `` _`` ஐப் "
+"பயன்படுத்துவது நல்லது.)"
+
+#: ../../sphinx/doc/markup/toctree.rst:225
+msgid ""
+"Be careful with unusual characters in filenames.  Some formats may interpret"
+" these characters in unexpected ways:"
+msgstr ""
+"கோப்பு பெயர்களில் அசாதாரண கதாபாத்திரங்களுடன் கவனமாக இருங்கள். சில வடிவங்கள் "
+"இந்த எழுத்துக்களை எதிர்பாராத வழிகளில் விளக்கலாம்:"
+
+#: ../../sphinx/doc/markup/toctree.rst:228
+msgid ""
+"Do not use the colon ``:`` for HTML based formats.  Links to other parts may"
+" not work."
+msgstr ""
+"HTML அடிப்படையிலான வடிவங்களுக்கு பெருங்குடலைப் பயன்படுத்த வேண்டாம் ``: ``. "
+"பிற பகுதிகளுக்கான இணைப்புகள் வேலை செய்யாது."
+
+#: ../../sphinx/doc/markup/toctree.rst:231
+msgid ""
+"Do not use the plus ``+`` for the ePub format.  Some resources may not be "
+"found."
+msgstr ""
+"EPUB வடிவமைப்பிற்கு பிளஸ் ``+`` ஐப் பயன்படுத்த வேண்டாம். சில வளங்கள் "
+"காணப்படாமல் இருக்கலாம்."
+
+#: ../../sphinx/doc/markup/toctree.rst:235
+msgid "Footnotes"
+msgstr "அடிக்குறிப்புகள்"
+
+#: ../../sphinx/doc/markup/toctree.rst:236
+msgid ""
+"The LaTeX writer only refers the ``maxdepth`` option of first toctree "
+"directive in the document."
+msgstr ""
+"லேடெக்ஸ் எழுத்தாளர் ஆவணத்தில் முதல் டோக்ட்ரீ உத்தரவின் `` மேக்ஸ்டெப்ட்`` "
+"விருப்பத்தை மட்டுமே குறிப்பிடுகிறார்."
+
+#: ../../sphinx/doc/markup/toctree.rst:239
+msgid ""
+"A note on available globbing syntax: you can use the standard shell "
+"constructs ``*``, ``?``, ``[...]`` and ``[!...]`` with the feature that "
+"these all don't match slashes.  A double star ``**`` can be used to match "
+"any sequence of characters *including* slashes."
+msgstr ""
+"கிடைக்கக்கூடிய குளோபிங் தொடரியல் பற்றிய குறிப்பு: நீங்கள் நிலையான ஷெல் "
+"கட்டமைப்பதைப் பயன்படுத்தலாம் ``*``, ``? இவை அனைத்தும் குறைப்புகளுடன் "
+"பொருந்தவில்லை. *ஸ்லாஷ்கள் உட்பட எழுத்துக்களின் எந்தவொரு வரிசையையும் பொருத்த "
+"இரட்டை நட்சத்திரம் `` ** `` பயன்படுத்தப்படலாம்."

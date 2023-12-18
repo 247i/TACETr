@@ -1,0 +1,409 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2023, the Sphinx developers
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 7.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-18 00:39+0000\n"
+"PO-Revision-Date: 2023-10-03 00:37+0000\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/usage/domains/index.rst:5
+msgid "Domains"
+msgstr "களங்கள்"
+
+#: ../../sphinx/doc/usage/domains/index.rst:9
+msgid ""
+"Originally, Sphinx was conceived for a single project, the documentation of "
+"the Python language.  Shortly afterwards, it was made available for everyone"
+" as a documentation tool, but the documentation of Python modules remained "
+"deeply built in -- the most fundamental directives, like ``function``, were "
+"designed for Python objects.  Since Sphinx has become somewhat popular, "
+"interest developed in using it for many different purposes: C/C++ projects, "
+"JavaScript, or even reStructuredText markup (like in this documentation)."
+msgstr ""
+"முதலில், ஸ்பின்க்ஸ் ஒரு திட்டத்திற்காக கருத்தரிக்கப்பட்டது, பைதான் மொழியின் "
+"ஆவணங்கள். சிறிது நேரத்திற்குப் பிறகு, இது அனைவருக்கும் ஒரு ஆவணக் கருவியாகக் "
+"கிடைத்தது, ஆனால் பைதான் தொகுதிகளின் ஆவணங்கள் ஆழமாக கட்டமைக்கப்பட்டுள்ளன - ``"
+" செயல்பாடு` போன்ற மிக அடிப்படையான வழிமுறைகள் பைத்தான் பொருள்களுக்காக "
+"வடிவமைக்கப்பட்டுள்ளன. SPHINX ஓரளவு பிரபலமாகிவிட்டதால், பல வேறுபட்ட "
+"நோக்கங்களுக்காக இதைப் பயன்படுத்துவதில் ஆர்வம் உருவானது: C/C ++ திட்டங்கள், "
+"ஜாவாஸ்கிரிப்ட் அல்லது மறுசீரமைப்பு டெக்ஸ்ட் மார்க்அப் கூட (இந்த ஆவணத்தைப் "
+"போல)."
+
+#: ../../sphinx/doc/usage/domains/index.rst:17
+msgid ""
+"While this was always possible, it is now much easier to easily support "
+"documentation of projects using different programming languages or even ones"
+" not supported by the main Sphinx distribution, by providing a **domain** "
+"for every such purpose."
+msgstr ""
+"இது எப்போதுமே சாத்தியமாக இருந்தாலும், இதுபோன்ற ஒவ்வொரு நோக்கத்திற்கும் ** "
+"டொமைன் ** ஐ வழங்குவதன் மூலம், வெவ்வேறு நிரலாக்க மொழிகளைப் பயன்படுத்தி அல்லது"
+" பிரதான ஸ்பிங்க்ஸ் விநியோகத்தால் ஆதரிக்கப்படாத திட்டங்களின் ஆவணங்களை எளிதில்"
+" ஆதரிப்பது இப்போது மிகவும் எளிதானது."
+
+#: ../../sphinx/doc/usage/domains/index.rst:22
+msgid ""
+"A domain is a collection of markup (reStructuredText :term:`directive`\\ s "
+"and :term:`role`\\ s) to describe and link to :term:`object`\\ s belonging "
+"together, e.g. elements of a programming language.  Directive and role names"
+" in a domain have names like ``domain:name``, e.g. ``py:function``.  Domains"
+" can also provide custom indices (like the Python Module Index)."
+msgstr ""
+"ஒரு டொமைன் என்பது மார்க்அப்பின் தொகுப்பாகும் (மறுசீரமைப்பு: சொல்: "
+"`டைரெக்டிவ்` \\ கள் மற்றும்: கால:` ரோல்` \\ கள்) விவரிக்கவும் இணைக்கவும்: "
+"கால: கால: `பொருள்` ஒன்றாகச் சேர்ந்தவர்கள், எ.கா. ஒரு நிரலாக்க மொழியின் "
+"கூறுகள். ஒரு டொமைனில் உள்ள உத்தரவு மற்றும் பங்கு பெயர்கள் `` டொமைன்: பெயர்``"
+" போன்ற பெயர்களைக் கொண்டுள்ளன, எ.கா. `` பை: செயல்பாடு``. களங்கள் தனிப்பயன் "
+"குறியீடுகளையும் வழங்க முடியும் (பைதான் தொகுதி குறியீடு போன்றவை)."
+
+#: ../../sphinx/doc/usage/domains/index.rst:28
+msgid ""
+"Having domains means that there are no naming problems when one set of "
+"documentation wants to refer to e.g. C++ and Python classes.  It also means "
+"that extensions that support the documentation of whole new languages are "
+"much easier to write."
+msgstr ""
+"களங்களைக் கொண்டிருப்பது என்பது ஒரு ஆவணத்தின் தொகுப்பு எ.கா. சி ++ மற்றும் "
+"பைதான் வகுப்புகள். முழு புதிய மொழிகளின் ஆவணங்களை ஆதரிக்கும் நீட்டிப்புகளை "
+"எழுதுவது மிகவும் எளிதானது என்பதும் இதன் பொருள்."
+
+#: ../../sphinx/doc/usage/domains/index.rst:33
+msgid ""
+"This section describes what the domains that are included with Sphinx "
+"provide. The domain API is documented as well, in the section :ref:`domain-"
+"api`."
+msgstr ""
+"இந்த பிரிவு SPHINX உடன் சேர்க்கப்பட்டுள்ள களங்கள் வழங்குவதை விவரிக்கிறது. "
+"டொமைன் ஏபிஐ ஆவணப்படுத்தப்பட்டுள்ளது, பிரிவில்: குறிப்பு: `டொமைன்-ஏபிஐ`."
+
+#: ../../sphinx/doc/usage/domains/index.rst:40
+msgid "Basic Markup"
+msgstr "அடிப்படை மார்க்அப்"
+
+#: ../../sphinx/doc/usage/domains/index.rst:42
+msgid ""
+"Most domains provide a number of :dfn:`object description directives`, used "
+"to describe specific objects provided by modules.  Each directive requires "
+"one or more signatures to provide basic information about what is being "
+"described, and the content should be the description."
+msgstr ""
+"பெரும்பாலான களங்கள் பலவற்றை வழங்குகின்றன: டி.எஃப்.என்: `பொருள் விளக்க "
+"வழிமுறைகள்`, தொகுதிகள் வழங்கிய குறிப்பிட்ட பொருள்களை விவரிக்கப் "
+"பயன்படுகிறது. ஒவ்வொரு உத்தரவுக்கும் விவரிக்கப்பட்டுள்ளதைப் பற்றிய அடிப்படை "
+"தகவல்களை வழங்க ஒன்று அல்லது அதற்கு மேற்பட்ட கையொப்பங்கள் தேவைப்படுகின்றன, "
+"மேலும் உள்ளடக்கம் விளக்கமாக இருக்க வேண்டும்."
+
+#: ../../sphinx/doc/usage/domains/index.rst:47
+msgid ""
+"A domain will typically keep an internal index of all entities to aid cross-"
+"referencing. Typically it will also add entries in the shown general index. "
+"If you want to suppress the addition of an entry in the shown index, you can"
+" give the directive option flag ``:no-index-entry:``. If you want to exclude"
+" the object description from the table of contents, you can give the "
+"directive option flag ``:no-contents-entry:``. If you want to typeset an "
+"object description, without even making it available for cross-referencing, "
+"you can give the directive option flag ``:no-index:`` (which implies ``:no-"
+"index-entry:``). If you do not want to typeset anything, you can give the "
+"directive option flag ``:no-typesetting:``.  This can for example be used to"
+" create only a target and index entry for later reference. Though, note that"
+" not every directive in every domain may support these options."
+msgstr ""
+"ஒரு டொமைன் பொதுவாக குறுக்கு-குறிப்புக்கு உதவ அனைத்து நிறுவனங்களின் உள் "
+"குறியீட்டை வைத்திருக்கும். பொதுவாக இது காட்டப்பட்ட பொது குறியீட்டில் "
+"உள்ளீடுகளையும் சேர்க்கும். காட்டப்பட்ட குறியீட்டில் ஒரு உள்ளீட்டைச் "
+"சேர்ப்பதை அடக்க விரும்பினால், நீங்கள் வழிநடத்தும் விருப்பக் கொடியை ``: "
+"குறியீட்டு-நுழைவு இல்லை: ``. பொருள் விளக்கத்தை உள்ளடக்க அட்டவணையில் இருந்து "
+"விலக்க விரும்பினால், நீங்கள் வழிநடத்தும் விருப்பக் கொடியை ``: உள்ளடக்கங்கள் "
+"இல்லை: `` கொடுக்கலாம். ஒரு பொருள் விளக்கத்தை நீங்கள் தட்டச்சு செய்ய "
+"விரும்பினால், குறுக்கு-குறிப்புக்கு கூட கிடைக்காமல், நீங்கள் வழிநடத்தும் "
+"விருப்பக் கொடியை ``: NO-INDEX: `` (இது ``: குறியீட்டு-நுழைவு இல்லை: ``) . "
+"நீங்கள் எதையும் தட்டச்சு செய்ய விரும்பவில்லை என்றால், நீங்கள் வழிநடத்தும் "
+"விருப்பக் கொடியைக் கொடுக்கலாம் ``: வகை வகை இல்லை: ``. எடுத்துக்காட்டாக, "
+"பின்னர் குறிப்புக்கு இலக்கு மற்றும் குறியீட்டு உள்ளீட்டை மட்டுமே உருவாக்க "
+"இது பயன்படுத்தப்படலாம். இருப்பினும், ஒவ்வொரு களத்திலும் உள்ள ஒவ்வொரு "
+"உத்தரவும் இந்த விருப்பங்களை ஆதரிக்காது என்பதை நினைவில் கொள்க."
+
+#: ../../sphinx/doc/usage/domains/index.rst:63
+msgid ""
+"The directive option ``noindexentry`` in the Python, C, C++, and Javascript "
+"domains."
+msgstr ""
+"பைதான், சி, சி ++ மற்றும் ஜாவாஸ்கிரிப்ட் களங்களில் `` noindexentry`` உத்தரவு"
+" விருப்பம்."
+
+#: ../../sphinx/doc/usage/domains/index.rst:67
+msgid ""
+"The directive option ``:nocontentsentry:`` in the Python, C, C++, "
+"Javascript, and reStructuredText domains."
+msgstr ""
+"டைரக்டிவ் விருப்பம் ``: nocontentsentry: `` பைதான், சி, சி ++, "
+"ஜாவாஸ்கிரிப்ட் மற்றும் மறுசீரமைப்பு களங்களில்."
+
+#: ../../sphinx/doc/usage/domains/index.rst:71
+msgid ""
+"The directive option ``no-typesetting`` in the Python, C, C++, Javascript, "
+"and reStructuredText domains."
+msgstr ""
+"பைதான், சி, சி ++, ஜாவாஸ்கிரிப்ட் மற்றும் மறுசீரமைக்கப்பட்ட டெக்ஸ்ட் "
+"களங்களில் `` நோ-டைபெட்டிங்``."
+
+#: ../../sphinx/doc/usage/domains/index.rst:77
+msgid "The directive option ``:noindex:`` was renamed to ``:no-index:``."
+msgstr ""
+"வழிநடத்தும் விருப்பம் ``: நொய்டெக்ஸ்: `` ``: நோ-இன்டெக்ஸ்: `` என "
+"மறுபெயரிடப்பட்டது."
+
+#: ../../sphinx/doc/usage/domains/index.rst:79
+msgid ""
+"The directive option ``:noindexentry:`` was renamed to ``:no-index-entry:``."
+msgstr ""
+"உத்தரவு விருப்பம் ``: noindexentry: `` ``: குறியீட்டு-நுழைவு இல்லை: `` என "
+"மறுபெயரிடப்பட்டது."
+
+#: ../../sphinx/doc/usage/domains/index.rst:81
+msgid ""
+"The directive option ``:nocontentsentry:`` was renamed to ``:no-contents-"
+"entry:``."
+msgstr ""
+"உத்தரவு விருப்பம் ``: nocontentsentry: `` ``: மறைமுகங்கள் இல்லாதது: `` என "
+"மறுபெயரிடப்பட்டது."
+
+#: ../../sphinx/doc/usage/domains/index.rst:84
+msgid ""
+"The previous names are retained as aliases, but will be deprecated and "
+"removed in a future version of Sphinx."
+msgstr ""
+"முந்தைய பெயர்கள் மாற்றுப்பெயர்களாக தக்கவைக்கப்படுகின்றன, ஆனால் ஸ்பிங்கின் "
+"எதிர்கால பதிப்பில் நீக்கப்பட்டு அகற்றப்படும்."
+
+#: ../../sphinx/doc/usage/domains/index.rst:88
+msgid "An example using a Python domain directive::"
+msgstr "பைதான் டொமைன் உத்தரவைப் பயன்படுத்தும் எடுத்துக்காட்டு ::"
+
+#: ../../sphinx/doc/usage/domains/index.rst:95
+msgid ""
+"This describes the two Python functions ``spam`` and ``ham``.  (Note that "
+"when signatures become too long, you can break them if you add a backslash "
+"to lines that are continued in the next line.  Example::"
+msgstr ""
+"இது இரண்டு பைதான் செயல்பாடுகளை `` ஸ்பேம்`` மற்றும் `` ஹாம்`` ஆகியவற்றை "
+"விவரிக்கிறது. (கையொப்பங்கள் மிக நீளமாக இருக்கும்போது, அடுத்த வரியில் தொடரும்"
+" வரிகளில் பின்சாய்வுக்கோடுகளைச் சேர்த்தால் அவற்றை உடைக்கலாம் என்பதை நினைவில்"
+" கொள்க. எடுத்துக்காட்டு ::"
+
+#: ../../sphinx/doc/usage/domains/index.rst:103
+msgid "(This example also shows how to use the ``:no-index:`` flag.)"
+msgstr ""
+"(இந்த எடுத்துக்காட்டு ``: NO-INDEX: `` கொடி.) எவ்வாறு பயன்படுத்துவது "
+"என்பதையும் காட்டுகிறது.)"
+
+#: ../../sphinx/doc/usage/domains/index.rst:105
+msgid ""
+"The domains also provide roles that link back to these object descriptions. "
+"For example, to link to one of the functions described in the example above,"
+" you could say ::"
+msgstr ""
+"இந்த பொருள் விளக்கங்களுடன் மீண்டும் இணைக்கும் பாத்திரங்களையும் களங்கள் "
+"வழங்குகின்றன. எடுத்துக்காட்டாக, மேலே உள்ள எடுத்துக்காட்டில் "
+"விவரிக்கப்பட்டுள்ள செயல்பாடுகளில் ஒன்றை இணைக்க, நீங்கள் சொல்லலாம் ::"
+
+#: ../../sphinx/doc/usage/domains/index.rst:111
+msgid ""
+"As you can see, both directive and role names contain the domain name and "
+"the directive name."
+msgstr ""
+"நீங்கள் பார்க்க முடியும் என, உத்தரவு மற்றும் பங்கு பெயர்கள் இரண்டும் டொமைன் "
+"பெயர் மற்றும் வழிநடத்தும் பெயரைக் கொண்டுள்ளன."
+
+#: ../../sphinx/doc/usage/domains/index.rst:114
+msgid ""
+"The directive option ``:no-typesetting:`` can be used to create a target "
+"(and index entry) which can later be referenced by the roles provided by the"
+" domain. This is particularly useful for literate programming:"
+msgstr ""
+"டைரக்டிவ் விருப்பம் ``: வகை-வகை: `` ஒரு இலக்கை உருவாக்க (மற்றும் குறியீட்டு "
+"நுழைவு) பயன்படுத்தலாம், இது பின்னர் டொமைனால் வழங்கப்பட்ட பாத்திரங்களால் "
+"குறிப்பிடப்படலாம். கல்வியறிவு நிரலாக்கத்திற்கு இது மிகவும் பயனுள்ளதாக "
+"இருக்கும்:"
+
+#: ../../sphinx/doc/usage/domains/index.rst:132
+msgid "Default Domain"
+msgstr "இயல்புநிலை களம்"
+
+#: ../../sphinx/doc/usage/domains/index.rst:133
+msgid ""
+"For documentation describing objects from solely one domain, authors will "
+"not have to state again its name at each directive, role, etc... after "
+"having specified a default. This can be done either via the config value "
+":confval:`primary_domain` or via this directive:"
+msgstr ""
+"ஒரு டொமைனில் இருந்து பொருள்களை விவரிக்கும் ஆவணங்களுக்கு, ஆசிரியர்கள் ஒவ்வொரு"
+" உத்தரவு, பங்கு போன்றவற்றிலும் அதன் பெயரைக் குறிப்பிட வேண்டியதில்லை ... "
+"இயல்புநிலையைக் குறிப்பிட்ட பிறகு. இதை உள்ளமைவு மதிப்பு வழியாகச் செய்யலாம்: "
+"confval: `primary_domain` அல்லது இந்த உத்தரவு வழியாக:"
+
+#: ../../sphinx/doc/usage/domains/index.rst:140
+msgid ""
+"Select a new default domain.  While the :confval:`primary_domain` selects a "
+"global default, this only has an effect within the same file."
+msgstr ""
+"புதிய இயல்புநிலை களத்தைத் தேர்ந்தெடுக்கவும். : Confval: `primary_domain` "
+"உலகளாவிய இயல்புநிலையைத் தேர்ந்தெடுக்கும் போது, இது ஒரே கோப்பில் மட்டுமே "
+"விளைவைக் கொண்டுள்ளது."
+
+#: ../../sphinx/doc/usage/domains/index.rst:143
+msgid ""
+"If no other default is selected, the Python domain (named ``py``) is the "
+"default one, mostly for compatibility with documentation written for older "
+"versions of Sphinx."
+msgstr ""
+"வேறு எந்த இயல்புநிலையும் தேர்ந்தெடுக்கப்படவில்லை என்றால், பைதான் டொமைன் (`` "
+"py`` என்று பெயரிடப்பட்டது) இயல்புநிலை ஒன்றாகும், பெரும்பாலும் ஸ்பிங்க்ஸின் "
+"பழைய பதிப்புகளுக்கு எழுதப்பட்ட ஆவணங்களுடன் பொருந்தக்கூடிய தன்மைக்காக."
+
+#: ../../sphinx/doc/usage/domains/index.rst:147
+msgid ""
+"Directives and roles that belong to the default domain can be mentioned "
+"without giving the domain name, i.e. ::"
+msgstr ""
+"டொமைன் பெயரைக் கொடுக்காமல் இயல்புநிலை களத்திற்கு சொந்தமான வழிமுறைகள் மற்றும்"
+" பாத்திரங்கள் குறிப்பிடப்படலாம், அதாவது ::"
+
+#: ../../sphinx/doc/usage/domains/index.rst:157
+msgid "Cross-referencing syntax"
+msgstr "குறுக்கு-குறிப்பு தொடரியல்"
+
+#: ../../sphinx/doc/usage/domains/index.rst:159
+msgid ""
+"For cross-reference roles provided by domains, the same facilities exist as "
+"for general cross-references.  See :ref:`xref-syntax`."
+msgstr ""
+"களங்களால் வழங்கப்பட்ட குறுக்கு-குறிப்பு பாத்திரங்களுக்கு, பொதுவான குறுக்கு "
+"குறிப்புகளுக்கும் அதே வசதிகள் உள்ளன. காண்க: குறிப்பு: `xref-syntax`."
+
+#: ../../sphinx/doc/usage/domains/index.rst:162
+msgid "In short:"
+msgstr "சுருக்கமாக:"
+
+#: ../../sphinx/doc/usage/domains/index.rst:164
+msgid ""
+"You may supply an explicit title and reference target: ``:role:`title "
+"<target>``` will refer to *target*, but the link text will be *title*."
+msgstr ""
+"நீங்கள் வெளிப்படையான தலைப்பு மற்றும் குறிப்பு இலக்கை வழங்கலாம்: ``: பங்கு: "
+"`தலைப்பு <இலக்கு>` `` *இலக்கு *ஐக் குறிக்கும், ஆனால் இணைப்பு உரை *தலைப்பு "
+"*ஆக இருக்கும்."
+
+#: ../../sphinx/doc/usage/domains/index.rst:167
+msgid ""
+"If you prefix the content with ``!``, no reference/hyperlink will be "
+"created."
+msgstr ""
+"உள்ளடக்கத்தை ``! `` உடன் முன்னொட்டினால், குறிப்பு/ஹைப்பர்லிங்க் "
+"உருவாக்கப்படாது."
+
+#: ../../sphinx/doc/usage/domains/index.rst:169
+msgid ""
+"If you prefix the content with ``~``, the link text will only be the last "
+"component of the target.  For example, ``:py:meth:`~Queue.Queue.get``` will "
+"refer to ``Queue.Queue.get`` but only display ``get`` as the link text."
+msgstr ""
+"உள்ளடக்கத்தை `` ~ `` உடன் முன்னொட்டினால், இணைப்பு உரை இலக்கின் கடைசி அங்கமாக"
+" மட்டுமே இருக்கும். எடுத்துக்காட்டாக, ``: py: meth: `~ queue.queue.get```` "
+"`queue.queue.get`` ஐக் குறிக்கும், ஆனால் இணைப்பு உரையாக` `பெறவும்` மட்டுமே "
+"காண்பிக்கும்."
+
+#: ../../sphinx/doc/usage/domains/index.rst:174
+msgid "Built-in domains"
+msgstr "உள்ளமைக்கப்பட்ட களங்கள்"
+
+#: ../../sphinx/doc/usage/domains/index.rst:176
+msgid "The following domains are included within Sphinx:"
+msgstr "பின்வரும் களங்கள் SPHINX க்குள் சேர்க்கப்பட்டுள்ளன:"
+
+#: ../../sphinx/doc/usage/domains/index.rst:190
+msgid "More domains"
+msgstr "மேலும் களங்கள்"
+
+#: ../../sphinx/doc/usage/domains/index.rst:192
+msgid ""
+"There are several third-party domains available as extensions, including:"
+msgstr "பல மூன்றாம் தரப்பு களங்கள் நீட்டிப்புகளாக கிடைக்கின்றன, அவற்றுள்:"
+
+#: ../../sphinx/doc/usage/domains/index.rst:194
+msgid "`Ada <https://pypi.org/project/sphinxcontrib-adadomain/>`__"
+msgstr "`அடா <https://pypi.org/project/sphinxcontrib-adadamain/> ____"
+
+#: ../../sphinx/doc/usage/domains/index.rst:195
+msgid "`Chapel <https://pypi.org/project/sphinxcontrib-chapeldomain/>`__"
+msgstr "`சேப்பல் <https://pypi.org/project/sphinxcontrib-chapeldomain/> ____"
+
+#: ../../sphinx/doc/usage/domains/index.rst:196
+msgid "`CoffeeScript <https://pypi.org/project/sphinxcontrib-coffee/>`__"
+msgstr ""
+"`காஃபிஸ்கிரிப்ட் <https://pypi.org/project/sphinxcontrib-coffee/> ____"
+
+#: ../../sphinx/doc/usage/domains/index.rst:197
+msgid "`Common Lisp <https://pypi.org/project/sphinxcontrib-cldomain/>`__"
+msgstr "`பொதுவான lisp <https://pypi.org/project/sphinxcontrib-cldomain/>` __"
+
+#: ../../sphinx/doc/usage/domains/index.rst:198
+msgid "`dqn <https://pypi.org/project/sphinxcontrib-dqndomain/>`__"
+msgstr "`dqn <https://pypi.org/project/sphinxcontrib-dqndomain/>` __"
+
+#: ../../sphinx/doc/usage/domains/index.rst:199
+msgid "`Erlang <https://pypi.org/project/sphinxcontrib-erlangdomain/>`__"
+msgstr ""
+"`Erlang <https://pypi.org/project/sphinxcontrib-erlangdomain/> ____ __ __"
+
+#: ../../sphinx/doc/usage/domains/index.rst:200
+msgid "`Go <https://pypi.org/project/sphinxcontrib-golangdomain/>`__"
+msgstr ""
+"`செல்லுங்கள் <https://pypi.org/project/sphinxcontrib-golangdomain/> ____"
+
+#: ../../sphinx/doc/usage/domains/index.rst:201
+msgid "`HTTP <https://pypi.org/project/sphinxcontrib-httpdomain/>`__"
+msgstr "`Http <https://pypi.org/project/sphinxcontrib-httpdomain/> __ __ __"
+
+#: ../../sphinx/doc/usage/domains/index.rst:202
+msgid "`Jinja <https://pypi.org/project/sphinxcontrib-jinjadomain/>`__"
+msgstr ""
+"`ஜின்ஜா <https://pypi.org/project/sphinxcontrib-jinjadomain/> __ __ __"
+
+#: ../../sphinx/doc/usage/domains/index.rst:203
+msgid "`Lasso <https://pypi.org/project/sphinxcontrib-lassodomain/>`__"
+msgstr "`Lasso <https://pypi.org/project/sphinxcontrib-lassodomain/>` __"
+
+#: ../../sphinx/doc/usage/domains/index.rst:204
+msgid "`MATLAB <https://pypi.org/project/sphinxcontrib-matlabdomain/>`__"
+msgstr ""
+"`Matlab <https://pypi.org/project/sphinxcontrib-matlabdomain/> ____ __ __"
+
+#: ../../sphinx/doc/usage/domains/index.rst:205
+msgid ""
+"`Operation <https://pypi.org/project/sphinxcontrib-operationdomain/>`__"
+msgstr ""
+"`செயல்பாடு <https://pypi.org/project/sphinxcontrib-operationdomain/> ____"
+
+#: ../../sphinx/doc/usage/domains/index.rst:206
+msgid "`PHP <https://pypi.org/project/sphinxcontrib-phpdomain/>`__"
+msgstr "`Php <https://pypi.org/project/sphinxcontrib-phpdomain/> ____"
+
+#: ../../sphinx/doc/usage/domains/index.rst:207
+msgid "`Ruby <https://pypi.org/project/sphinxcontrib-rubydomain/>`__"
+msgstr "`ரூபி <https://pypi.org/project/sphinxcontrib-rubydomain/>` __"
+
+#: ../../sphinx/doc/usage/domains/index.rst:208
+msgid "`Scala <https://pypi.org/project/sphinxcontrib-scaladomain/>`__"
+msgstr "`ஸ்கலா <https://pypi.org/project/sphinxcontrib-scaladomain/> ____"
