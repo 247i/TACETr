@@ -12,11 +12,22 @@ def tr_file(filename):
         print(filename)
         print("Before : ",pretrans,"%")
         count = 0
+        # for removing fuzzy entries 
+        for entry in po.fuzzy_entries():
+            entry.flags.remove("fuzzy")
+        
         for entry in po.untranslated_entries():
             try:
                 print(entry.msgid)
-                entry.msgstr=ts.translate_text(entry.msgid, translator='google', from_language = 'en', to_language = 'ta')
-                print(entry.msgstr)
+                if not entry.msgid_plural:
+                    entry.msgstr=ts.translate_text(entry.msgid, translator='google', from_language = 'en', to_language = 'ta')
+                    print(entry.msgstr)
+                else:
+                    entry.msgstr[0]=ts.translate_text(entry.msgid, translator='google', from_language = 'en', to_language = 'ta')
+                    # if 1 in entry.msgstr_plural:
+                    entry.msgstr[1]=ts.translate_text(entry.msgid_plural, translator='google', from_language = 'en', to_language = 'ta')
+                    # if 2 in entry.msgstr_plural:
+                    # To do for msgid with multiple entries
             except Exception as e:
                 print(e)
                 time.sleep(5*count)
