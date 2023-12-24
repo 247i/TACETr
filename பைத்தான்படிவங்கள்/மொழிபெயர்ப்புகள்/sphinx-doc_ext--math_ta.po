@@ -17,156 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/ext/math.rst:6
-msgid "Math support in Sphinx"
-msgstr "ஸ்பிங்க்ஸில் கணித ஆதரவு"
-
-#: ../../sphinx/doc/ext/math.rst:13
-msgid ""
-"Since mathematical notation isn't natively supported by HTML in any way, "
-"Sphinx supports math in documentation with several extensions."
-msgstr ""
-"கணிதக் குறியீடு எந்த வகையிலும் HTML ஆல் சொந்தமாக ஆதரிக்கப்படவில்லை என்பதால்,"
-" SPHINX பல நீட்டிப்புகளுடன் ஆவணங்களில் கணிதத்தை ஆதரிக்கிறது."
-
-#: ../../sphinx/doc/ext/math.rst:16
-msgid ""
-"The basic math support is contained in :mod:`sphinx.ext.mathbase`. Other "
-"math support extensions should, if possible, reuse that support too."
-msgstr ""
-"அடிப்படை கணித ஆதரவு இதில் உள்ளது: மோட்: `sphinx.ext.mathbase`. பிற கணித "
-"ஆதரவு நீட்டிப்புகள் முடிந்தால், அந்த ஆதரவையும் மீண்டும் பயன்படுத்த வேண்டும்."
-
-#: ../../sphinx/doc/ext/math.rst:21
-msgid ""
-":mod:`.mathbase` is not meant to be added to the :confval:`extensions` "
-"config value, instead, use either :mod:`sphinx.ext.imgmath` or "
-":mod:`sphinx.ext.mathjax` as described below."
-msgstr ". கீழே விவரிக்கப்பட்டுள்ளது."
-
-#: ../../sphinx/doc/ext/math.rst:25
-msgid ""
-"The input language for mathematics is LaTeX markup.  This is the de-facto "
-"standard for plain-text math notation and has the added advantage that no "
-"further translation is necessary when building LaTeX output."
-msgstr ""
-"கணிதத்திற்கான உள்ளீட்டு மொழி லேடெக்ஸ் மார்க்அப் ஆகும். இது வெற்று-உரை கணித "
-"குறியீட்டிற்கான டி-ஃபாக்டோ தரநிலையாகும், மேலும் லேடெக்ஸ் வெளியீட்டை "
-"உருவாக்கும்போது மேலும் மொழிபெயர்ப்பு தேவையில்லை என்பதற்கு கூடுதல் நன்மை "
-"உண்டு."
-
-#: ../../sphinx/doc/ext/math.rst:29
-msgid ""
-"Keep in mind that when you put math markup in **Python docstrings** read by "
-":mod:`autodoc <sphinx.ext.autodoc>`, you either have to double all "
-"backslashes, or use Python raw strings (``r\"raw\"``)."
-msgstr ""
-"நீங்கள் கணித மார்க்அப்பை ** பைதான் டாக்ஸ்ட்ரிங்ஸில் வைக்கும்போது ** "
-"படித்தவர்: மோட்: `ஆட்டோடோக் <sphinx.ext.autodoc>`, நீங்கள் எல்லா "
-"பின்சாய்வுக்கோல்களையும் இரட்டிப்பாக்க வேண்டும், அல்லது பைதான் மூல சரங்களை "
-"பயன்படுத்த வேண்டும் (`` r \" மூல \"` `)."
-
-#: ../../sphinx/doc/ext/math.rst:33
-msgid ":mod:`.mathbase` provides the following config values:"
-msgstr ": மோட்: `.மாத்பேஸ்` பின்வரும் கட்டமைப்பு மதிப்புகளை வழங்குகிறது:"
-
-#: ../../sphinx/doc/ext/math.rst:37
-msgid ""
-"Set this option to ``True`` if you want all displayed math to be numbered. "
-"The default is ``False``."
-msgstr ""
-"காண்பிக்கப்படும் அனைத்து கணிதமும் எண்ணப்பட வேண்டும் எனில் இந்த விருப்பத்தை "
-"`` உண்மை`` என அமைக்கவும். இயல்புநிலை `` தவறு``."
-
-#: ../../sphinx/doc/ext/math.rst:42
-msgid ""
-"A string that are used for format of label of references to equations. As a "
-"special character, ``{number}`` will be replaced to equaition number."
-msgstr ""
-"சமன்பாடுகளுக்கான குறிப்புகளின் லேபிளின் வடிவத்திற்கு பயன்படுத்தப்படும் ஒரு "
-"சரம். ஒரு சிறப்பு எழுத்தாக, `` {எண்} `` சமநிலை எண்ணுக்கு மாற்றப்படும்."
-
-#: ../../sphinx/doc/ext/math.rst:45
-msgid "Example: ``'Eq.{number}'`` is rendered as ``Eq.10``"
-msgstr "எடுத்துக்காட்டு: `` 'எ.கா. {எண்}' `` `` eq.10``"
-
-#: ../../sphinx/doc/ext/math.rst:49
-msgid ""
-"If ``True``, displayed math equations are numbered across pages when "
-":confval:`numfig` is enabled.  The :confval:`numfig_secnum_depth` setting is"
-" respected.  The :rst:role:`eq`, not :rst:role:`numref`, role must be used "
-"to reference equation numbers.  Default is ``True``."
-msgstr ""
-"`` உண்மை`` என்றால், காட்டப்படும் கணித சமன்பாடுகள் பக்கங்களில் "
-"எண்ணப்படுகின்றன: confval: `numfig` இயக்கப்பட்டிருக்கும். தி: கான்ஃப்வால்: "
-"`numfig_secnum_depth` அமைப்பு மதிக்கப்படுகிறது. தி: rst: rew: `eq`, இல்லை: "
-"rst: rst:` numref`, சமன்பாடு எண்களைக் குறிப்பிடுவதற்கு பங்கு பயன்படுத்தப்பட "
-"வேண்டும். இயல்புநிலை `` உண்மை``."
-
-#: ../../sphinx/doc/ext/math.rst:56
-msgid ":mod:`.mathbase` defines these new markup elements:"
-msgstr ": மோட்: `.மாத்பேஸ்` இந்த புதிய மார்க்அப் கூறுகளை வரையறுக்கிறது:"
-
-#: ../../sphinx/doc/ext/math.rst:60
-msgid "Role for inline math.  Use like this::"
-msgstr "இன்லைன் கணிதத்திற்கான பங்கு. இதைப் பயன்படுத்தவும் ::"
-
-#: ../../sphinx/doc/ext/math.rst:66
-msgid ""
-"Directive for displayed math (math that takes the whole line for itself)."
-msgstr ""
-"காட்டப்படும் கணிதத்திற்கான உத்தரவு (கணிதம் முழு வரியையும் தனக்குத்தானே "
-"எடுக்கும்)."
-
-#: ../../sphinx/doc/ext/math.rst:68
-msgid ""
-"The directive supports multiple equations, which should be separated by a "
-"blank line::"
-msgstr ""
-"உத்தரவு பல சமன்பாடுகளை ஆதரிக்கிறது, இது ஒரு வெற்று வரியால் பிரிக்கப்பட "
-"வேண்டும் ::"
-
-#: ../../sphinx/doc/ext/math.rst:77
-msgid ""
-"In addition, each single equation is set within a ``split`` environment, "
-"which means that you can have multiple aligned lines in an equation, aligned"
-" at ``&`` and separated by ``\\\\``::"
-msgstr ""
-"கூடுதலாக, ஒவ்வொரு ஒற்றை சமன்பாடும் ஒரு `` பிளவு`` சூழலுக்குள் "
-"அமைக்கப்பட்டுள்ளது, அதாவது நீங்கள் ஒரு சமன்பாட்டில் பல சீரமைக்கப்பட்ட "
-"வரிகளைக் கொண்டிருக்கலாம், `` & `` இல் சீரமைக்கப்பட்டு `` \\\\ `` ::"
-
-#: ../../sphinx/doc/ext/math.rst:86
-msgid ""
-"For more details, look into the documentation of the `AmSMath LaTeX "
-"package`_."
-msgstr ""
-"மேலும் விவரங்களுக்கு, `அம்ஸ்மாத் லேடெக்ஸ் தொகுப்பு`_ இன் ஆவணங்களைப் "
-"பாருங்கள்."
-
-#: ../../sphinx/doc/ext/math.rst:89
-msgid ""
-"When the math is only one line of text, it can also be given as a directive "
-"argument::"
-msgstr ""
-"கணிதம் உரையின் ஒரே ஒரு வரியாக இருக்கும்போது, அதை ஒரு உத்தரவு வாதமாகவும் "
-"வழங்கலாம் ::"
-
-#: ../../sphinx/doc/ext/math.rst:94
-msgid ""
-"Normally, equations are not numbered.  If you want your equation to get a "
-"number, use the ``label`` option.  When given, it selects an internal label "
-"for the equation, by which it can be cross-referenced, and causes an "
-"equation number to be issued.  See :rst:role:`eq` for an example.  The "
-"numbering style depends on the output format."
-msgstr ""
-"பொதுவாக, சமன்பாடுகள் எண்ணப்படவில்லை. உங்கள் சமன்பாடு ஒரு எண்ணைப் பெற "
-"விரும்பினால், `` லேபிள்`` விருப்பத்தைப் பயன்படுத்தவும். வழங்கப்படும்போது, "
-"இது சமன்பாட்டிற்கான ஒரு உள் லேபிளைத் தேர்ந்தெடுக்கிறது, இதன் மூலம் அதை "
-"குறுக்கு-குறிப்பிடலாம், மேலும் ஒரு சமன்பாடு எண்ணை வழங்குகிறது. காண்க: rst: "
-"பங்கு: `eq` ஒரு எடுத்துக்காட்டுக்கு. எண்ணும் பாணி வெளியீட்டு வடிவமைப்பைப் "
-"பொறுத்தது."
-
 #: ../../sphinx/doc/ext/math.rst:100
 msgid ""
 "There is also an option ``nowrap`` that prevents any wrapping of the given "
@@ -186,6 +36,14 @@ msgstr ""
 #: ../../sphinx/doc/ext/math.rst:124
 msgid ":mod:`sphinx.ext.imgmath` -- Render math as images"
 msgstr ": மோட்: `sphinx.ext.imgmath` - கணிதத்தை படங்களாக வழங்கவும்"
+
+#: ../../sphinx/doc/ext/math.rst:13
+msgid ""
+"Since mathematical notation isn't natively supported by HTML in any way, "
+"Sphinx supports math in documentation with several extensions."
+msgstr ""
+"கணிதக் குறியீடு எந்த வகையிலும் HTML ஆல் சொந்தமாக ஆதரிக்கப்படவில்லை என்பதால்,"
+" SPHINX பல நீட்டிப்புகளுடன் ஆவணங்களில் கணிதத்தை ஆதரிக்கிறது."
 
 #: ../../sphinx/doc/ext/math.rst:131
 msgid ""
@@ -242,6 +100,14 @@ msgstr ""
 "இந்த மதிப்பில் லேடெக்ஸ் இயங்கக்கூடிய பாதையை மட்டுமே கொண்டிருக்க வேண்டும், "
 "மேலும் வாதங்கள் அல்ல; பயன்படுத்தவும்: confval: `imgmath_latex_args` அந்த "
 "நோக்கத்திற்காக."
+
+#: ../../sphinx/doc/ext/math.rst:16
+msgid ""
+"The basic math support is contained in :mod:`sphinx.ext.mathbase`. Other "
+"math support extensions should, if possible, reuse that support too."
+msgstr ""
+"அடிப்படை கணித ஆதரவு இதில் உள்ளது: மோட்: `sphinx.ext.mathbase`. பிற கணித "
+"ஆதரவு நீட்டிப்புகள் முடிந்தால், அந்த ஆதரவையும் மீண்டும் பயன்படுத்த வேண்டும்."
 
 #: ../../sphinx/doc/ext/math.rst:161
 msgid ""
@@ -336,6 +202,13 @@ msgstr ""
 "துரதிர்ஷ்டவசமாக, `முன்னோட்டம்-லேடெக்ஸ் தொகுப்பு`_ நிறுவப்பட்டால் மட்டுமே இது"
 " செயல்படும். எனவே, இந்த விருப்பத்தின் இயல்புநிலை `` தவறு``."
 
+#: ../../sphinx/doc/ext/math.rst:21
+msgid ""
+":mod:`.mathbase` is not meant to be added to the :confval:`extensions` "
+"config value, instead, use either :mod:`sphinx.ext.imgmath` or "
+":mod:`sphinx.ext.mathjax` as described below."
+msgstr ". கீழே விவரிக்கப்பட்டுள்ளது."
+
 #: ../../sphinx/doc/ext/math.rst:210
 msgid ""
 "Currently this option is only used when ``imgmath_image_format`` is "
@@ -404,6 +277,17 @@ msgstr ""
 "விரும்பினால், நீங்கள் அதை பதிவிறக்கம் செய்து இந்த மதிப்பை வேறு பாதையில் "
 "அமைக்க வேண்டும்."
 
+#: ../../sphinx/doc/ext/math.rst:25
+msgid ""
+"The input language for mathematics is LaTeX markup.  This is the de-facto "
+"standard for plain-text math notation and has the added advantage that no "
+"further translation is necessary when building LaTeX output."
+msgstr ""
+"கணிதத்திற்கான உள்ளீட்டு மொழி லேடெக்ஸ் மார்க்அப் ஆகும். இது வெற்று-உரை கணித "
+"குறியீட்டிற்கான டி-ஃபாக்டோ தரநிலையாகும், மேலும் லேடெக்ஸ் வெளியீட்டை "
+"உருவாக்கும்போது மேலும் மொழிபெயர்ப்பு தேவையில்லை என்பதற்கு கூடுதல் நன்மை "
+"உண்டு."
+
 #: ../../sphinx/doc/ext/math.rst:253 ../../sphinx/doc/ext/math.rst:288
 msgid ""
 "The path can be absolute or relative; if it is relative, it is relative to "
@@ -464,6 +348,17 @@ msgstr ""
 "JSMATH ஐ ஏற்றுவதற்காக HTML கோப்புகளில் சேர்க்க ஜாவாஸ்கிரிப்ட் கோப்பிற்கான "
 "பாதை. இயல்புநிலை இல்லை."
 
+#: ../../sphinx/doc/ext/math.rst:29
+msgid ""
+"Keep in mind that when you put math markup in **Python docstrings** read by "
+":mod:`autodoc <sphinx.ext.autodoc>`, you either have to double all "
+"backslashes, or use Python raw strings (``r\"raw\"``)."
+msgstr ""
+"நீங்கள் கணித மார்க்அப்பை ** பைதான் டாக்ஸ்ட்ரிங்ஸில் வைக்கும்போது ** "
+"படித்தவர்: மோட்: `ஆட்டோடோக் <sphinx.ext.autodoc>`, நீங்கள் எல்லா "
+"பின்சாய்வுக்கோல்களையும் இரட்டிப்பாக்க வேண்டும், அல்லது பைதான் மூல சரங்களை "
+"பயன்படுத்த வேண்டும் (`` r \" மூல \"` `)."
+
 #: ../../sphinx/doc/ext/math.rst:291
 msgid ""
 "For example, if you put JSMath into the static path of the Sphinx docs, this"
@@ -475,3 +370,108 @@ msgstr ""
 "வைத்தால், இந்த மதிப்பு `` jsmath/easy/load.js``. ஒரு சேவையகத்தில் "
 "அமைக்கப்பட்ட ஒன்றுக்கு மேற்பட்ட SPHINX ஆவணங்களை நீங்கள் ஹோஸ்ட் செய்தால், "
 "பகிரப்பட்ட இடத்தில் JSMATH ஐ நிறுவுவது நல்லது."
+
+#: ../../sphinx/doc/ext/math.rst:33
+msgid ":mod:`.mathbase` provides the following config values:"
+msgstr ": மோட்: `.மாத்பேஸ்` பின்வரும் கட்டமைப்பு மதிப்புகளை வழங்குகிறது:"
+
+#: ../../sphinx/doc/ext/math.rst:37
+msgid ""
+"Set this option to ``True`` if you want all displayed math to be numbered. "
+"The default is ``False``."
+msgstr ""
+"காண்பிக்கப்படும் அனைத்து கணிதமும் எண்ணப்பட வேண்டும் எனில் இந்த விருப்பத்தை "
+"`` உண்மை`` என அமைக்கவும். இயல்புநிலை `` தவறு``."
+
+#: ../../sphinx/doc/ext/math.rst:42
+msgid ""
+"A string that are used for format of label of references to equations. As a "
+"special character, ``{number}`` will be replaced to equaition number."
+msgstr ""
+"சமன்பாடுகளுக்கான குறிப்புகளின் லேபிளின் வடிவத்திற்கு பயன்படுத்தப்படும் ஒரு "
+"சரம். ஒரு சிறப்பு எழுத்தாக, `` {எண்} `` சமநிலை எண்ணுக்கு மாற்றப்படும்."
+
+#: ../../sphinx/doc/ext/math.rst:45
+msgid "Example: ``'Eq.{number}'`` is rendered as ``Eq.10``"
+msgstr "எடுத்துக்காட்டு: `` 'எ.கா. {எண்}' `` `` eq.10``"
+
+#: ../../sphinx/doc/ext/math.rst:49
+msgid ""
+"If ``True``, displayed math equations are numbered across pages when "
+":confval:`numfig` is enabled.  The :confval:`numfig_secnum_depth` setting is"
+" respected.  The :rst:role:`eq`, not :rst:role:`numref`, role must be used "
+"to reference equation numbers.  Default is ``True``."
+msgstr ""
+"`` உண்மை`` என்றால், காட்டப்படும் கணித சமன்பாடுகள் பக்கங்களில் "
+"எண்ணப்படுகின்றன: confval: `numfig` இயக்கப்பட்டிருக்கும். தி: கான்ஃப்வால்: "
+"`numfig_secnum_depth` அமைப்பு மதிக்கப்படுகிறது. தி: rst: rew: `eq`, இல்லை: "
+"rst: rst:` numref`, சமன்பாடு எண்களைக் குறிப்பிடுவதற்கு பங்கு பயன்படுத்தப்பட "
+"வேண்டும். இயல்புநிலை `` உண்மை``."
+
+#: ../../sphinx/doc/ext/math.rst:56
+msgid ":mod:`.mathbase` defines these new markup elements:"
+msgstr ": மோட்: `.மாத்பேஸ்` இந்த புதிய மார்க்அப் கூறுகளை வரையறுக்கிறது:"
+
+#: ../../sphinx/doc/ext/math.rst:6
+msgid "Math support in Sphinx"
+msgstr "ஸ்பிங்க்ஸில் கணித ஆதரவு"
+
+#: ../../sphinx/doc/ext/math.rst:60
+msgid "Role for inline math.  Use like this::"
+msgstr "இன்லைன் கணிதத்திற்கான பங்கு. இதைப் பயன்படுத்தவும் ::"
+
+#: ../../sphinx/doc/ext/math.rst:66
+msgid ""
+"Directive for displayed math (math that takes the whole line for itself)."
+msgstr ""
+"காட்டப்படும் கணிதத்திற்கான உத்தரவு (கணிதம் முழு வரியையும் தனக்குத்தானே "
+"எடுக்கும்)."
+
+#: ../../sphinx/doc/ext/math.rst:68
+msgid ""
+"The directive supports multiple equations, which should be separated by a "
+"blank line::"
+msgstr ""
+"உத்தரவு பல சமன்பாடுகளை ஆதரிக்கிறது, இது ஒரு வெற்று வரியால் பிரிக்கப்பட "
+"வேண்டும் ::"
+
+#: ../../sphinx/doc/ext/math.rst:77
+msgid ""
+"In addition, each single equation is set within a ``split`` environment, "
+"which means that you can have multiple aligned lines in an equation, aligned"
+" at ``&`` and separated by ``\\\\``::"
+msgstr ""
+"கூடுதலாக, ஒவ்வொரு ஒற்றை சமன்பாடும் ஒரு `` பிளவு`` சூழலுக்குள் "
+"அமைக்கப்பட்டுள்ளது, அதாவது நீங்கள் ஒரு சமன்பாட்டில் பல சீரமைக்கப்பட்ட "
+"வரிகளைக் கொண்டிருக்கலாம், `` & `` இல் சீரமைக்கப்பட்டு `` \\\\ `` ::"
+
+#: ../../sphinx/doc/ext/math.rst:86
+msgid ""
+"For more details, look into the documentation of the `AmSMath LaTeX "
+"package`_."
+msgstr ""
+"மேலும் விவரங்களுக்கு, `அம்ஸ்மாத் லேடெக்ஸ் தொகுப்பு`_ இன் ஆவணங்களைப் "
+"பாருங்கள்."
+
+#: ../../sphinx/doc/ext/math.rst:89
+msgid ""
+"When the math is only one line of text, it can also be given as a directive "
+"argument::"
+msgstr ""
+"கணிதம் உரையின் ஒரே ஒரு வரியாக இருக்கும்போது, அதை ஒரு உத்தரவு வாதமாகவும் "
+"வழங்கலாம் ::"
+
+#: ../../sphinx/doc/ext/math.rst:94
+msgid ""
+"Normally, equations are not numbered.  If you want your equation to get a "
+"number, use the ``label`` option.  When given, it selects an internal label "
+"for the equation, by which it can be cross-referenced, and causes an "
+"equation number to be issued.  See :rst:role:`eq` for an example.  The "
+"numbering style depends on the output format."
+msgstr ""
+"பொதுவாக, சமன்பாடுகள் எண்ணப்படவில்லை. உங்கள் சமன்பாடு ஒரு எண்ணைப் பெற "
+"விரும்பினால், `` லேபிள்`` விருப்பத்தைப் பயன்படுத்தவும். வழங்கப்படும்போது, "
+"இது சமன்பாட்டிற்கான ஒரு உள் லேபிளைத் தேர்ந்தெடுக்கிறது, இதன் மூலம் அதை "
+"குறுக்கு-குறிப்பிடலாம், மேலும் ஒரு சமன்பாடு எண்ணை வழங்குகிறது. காண்க: rst: "
+"பங்கு: `eq` ஒரு எடுத்துக்காட்டுக்கு. எண்ணும் பாணி வெளியீட்டு வடிவமைப்பைப் "
+"பொறுத்தது."

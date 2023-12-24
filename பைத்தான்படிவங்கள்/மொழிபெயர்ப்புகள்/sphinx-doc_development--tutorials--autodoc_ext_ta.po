@@ -17,23 +17,72 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:4
-msgid "Developing autodoc extension for IntEnum"
-msgstr "இன்டெலம் க்கான ஆட்டோடோக் நீட்டிப்பை உருவாக்குதல்"
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:100
+msgid "**option_spec**"
+msgstr "** விருப்பம்_ஸ்பெக் **"
 
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:6
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:102
+msgid "Overridden members:"
+msgstr "மீறப்பட்ட உறுப்பினர்கள்:"
+
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:105
 msgid ""
-"The objective of this tutorial is to create an extension that adds support "
-"for new type for autodoc. This autodoc extension will format the ``IntEnum``"
-" class from Python standard library. (module ``enum``)"
+"This member is important to override. It should return *True* when the "
+"passed object can be documented by this class."
 msgstr ""
-"இந்த டுடோரியலின் நோக்கம் ஆட்டோடோக்கிற்கான புதிய வகைக்கு ஆதரவைச் சேர்க்கும் "
-"நீட்டிப்பை உருவாக்குவதாகும். இந்த ஆட்டோடோக் நீட்டிப்பு பைதான் நிலையான "
-"நூலகத்திலிருந்து `` இன்டெனம்`` வகுப்பை வடிவமைக்கும். (தொகுதி `` enum``)"
+"இந்த உறுப்பினர் மேலெழுத முக்கியம். கடந்து வந்த பொருளை இந்த வகுப்பால் "
+"ஆவணப்படுத்தும்போது அது * உண்மை * திரும்ப வேண்டும்."
+
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:106
+msgid "**can_document_member**"
+msgstr "** can_document_member **"
+
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:109
+msgid ""
+"This method generates the directive header. We add **:final:** directive "
+"option. Remember to call **super** or no directive will be generated."
+msgstr ""
+"இந்த முறை உத்தரவு தலைப்பை உருவாக்குகிறது. நாங்கள் **: இறுதி: ** உத்தரவு "
+"விருப்பம் சேர்க்கிறோம். ** சூப்பர் ** ஐ அழைக்க நினைவில் கொள்ளுங்கள் அல்லது "
+"எந்த உத்தரவும் உருவாக்கப்படாது."
 
 #: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:11
 msgid "Overview"
 msgstr "கண்ணோட்டம்"
+
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:111
+msgid "**add_directive_header**"
+msgstr "** add_directive_header **"
+
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:114
+msgid ""
+"This method generates the body of the class documentation. After calling the"
+" super method we generate lines for enum description."
+msgstr ""
+"இந்த முறை வர்க்க ஆவணத்தின் உடலை உருவாக்குகிறது. சூப்பர் முறையை அழைத்த பிறகு,"
+" ENUM விளக்கத்திற்கான வரிகளை உருவாக்குகிறோம்."
+
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:116
+msgid "**add_content**"
+msgstr "** add_content **"
+
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:119
+msgid "Using the extension"
+msgstr "நீட்டிப்பைப் பயன்படுத்துதல்"
+
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:121
+msgid "You can now use the new autodoc directive to document any ``IntEnum``."
+msgstr ""
+"எந்தவொரு `` இன்டெலம்`` ஐ ஆவணப்படுத்த நீங்கள் இப்போது புதிய ஆட்டோடோக் "
+"உத்தரவைப் பயன்படுத்தலாம்."
+
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:123
+msgid "For example, you have the following ``IntEnum``:"
+msgstr "எடுத்துக்காட்டாக, உங்களிடம் பின்வரும் `` இன்டெனம்`` உள்ளது:"
+
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:125
+msgid "my_enums.py"
+msgstr "my_enums.py"
 
 #: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:13
 msgid ""
@@ -43,6 +92,14 @@ msgstr ""
 "இன்டெனமுக்கு ஆட்டோ-ஆவணத்தை உருவாக்கும் நீட்டிப்பை நாங்கள் விரும்புகிறோம். ``"
 " இன்டெனம்`` என்பது நிலையான நூலகத்திலிருந்து முழு எண் வகுப்பாகும் `` enum`` "
 "தொகுதியாகும்."
+
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:136
+msgid "This will be the documentation file with auto-documentation directive:"
+msgstr "இது ஆட்டோ-ஆவணப்படுத்தல் உத்தரவுடன் ஆவணப்படுத்தல் கோப்பாக இருக்கும்:"
+
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:138
+msgid "index.rst"
+msgstr "Index.rst"
 
 #: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:16
 msgid "Currently this class has no special auto documentation behavior."
@@ -94,6 +151,10 @@ msgstr ""
 msgid "Here is an example of the folder structure you might obtain:"
 msgstr "நீங்கள் பெறக்கூடிய கோப்புறை கட்டமைப்பின் எடுத்துக்காட்டு இங்கே:"
 
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:4
+msgid "Developing autodoc extension for IntEnum"
+msgstr "இன்டெலம் க்கான ஆட்டோடோக் நீட்டிப்பை உருவாக்குதல்"
+
 #: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:47
 msgid "Writing the extension"
 msgstr "நீட்டிப்பு எழுதுதல்"
@@ -112,6 +173,16 @@ msgstr ""
 "தி: மெத்: `~ sphinx.application.sphinx.setup_extension` முறை ஆட்டோடோக் "
 "நீட்டிப்பை இழுக்கும், ஏனெனில் எங்கள் புதிய நீட்டிப்பு ஆட்டோடோக்கைப் "
 "பொறுத்தது. ."
+
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:6
+msgid ""
+"The objective of this tutorial is to create an extension that adds support "
+"for new type for autodoc. This autodoc extension will format the ``IntEnum``"
+" class from Python standard library. (module ``enum``)"
+msgstr ""
+"இந்த டுடோரியலின் நோக்கம் ஆட்டோடோக்கிற்கான புதிய வகைக்கு ஆதரவைச் சேர்க்கும் "
+"நீட்டிப்பை உருவாக்குவதாகும். இந்த ஆட்டோடோக் நீட்டிப்பு பைதான் நிலையான "
+"நூலகத்திலிருந்து `` இன்டெனம்`` வகுப்பை வடிவமைக்கும். (தொகுதி `` enum``)"
 
 #: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:62
 msgid "We want to import certain objects from the autodoc extension:"
@@ -139,10 +210,6 @@ msgstr "இது எங்கள் புதிய ஆட்டோ-ஆவண�
 msgid "Important attributes of the new class:"
 msgstr "புதிய வகுப்பின் முக்கியமான பண்புக்கூறுகள்:"
 
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:87
-msgid "**objtype**"
-msgstr "** objtype **"
-
 #: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:86
 msgid ""
 "This attribute determines the ``auto`` directive name. In this case the auto"
@@ -151,9 +218,9 @@ msgstr ""
 "இந்த பண்புக்கூறு `` ஆட்டோ`` உத்தரவு பெயரை தீர்மானிக்கிறது. இந்த விஷயத்தில் "
 "ஆட்டோ டைரெக்டிவ் `` Autointenum`` ஆக இருக்கும்."
 
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:91
-msgid "**directivetype**"
-msgstr "** DirectiveType **"
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:87
+msgid "**objtype**"
+msgstr "** objtype **"
 
 #: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:90
 msgid ""
@@ -163,9 +230,9 @@ msgstr ""
 "இந்த பண்புக்கூறு உருவாக்கப்பட்ட உத்தரவு பெயரை அமைக்கிறது. இந்த "
 "எடுத்துக்காட்டில் உருவாக்கப்பட்ட உத்தரவு `` ..: py: class :: ``."
 
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:95
-msgid "**priority**"
-msgstr "** முன்னுரிமை **"
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:91
+msgid "**directivetype**"
+msgstr "** DirectiveType **"
 
 #: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:94
 msgid ""
@@ -175,9 +242,9 @@ msgstr ""
 "பெரிய எண்ணிக்கையானது முன்னுரிமை. எங்கள் ஆவணப்படம் பெற்றோரை விட அதிக "
 "முன்னுரிமையாக இருக்க வேண்டும் என்று நாங்கள் விரும்புகிறோம்."
 
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:100
-msgid "**option_spec**"
-msgstr "** விருப்பம்_ஸ்பெக் **"
+#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:95
+msgid "**priority**"
+msgstr "** முன்னுரிமை **"
 
 #: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:98
 msgid ""
@@ -186,70 +253,3 @@ msgid ""
 msgstr ""
 "விருப்ப விவரக்குறிப்புகள். நாங்கள் பெற்றோர் வகுப்பு விருப்பங்களை நகலெடுத்து "
 "புதிய விருப்பத்தை *ஹெக்ஸ் *சேர்க்கிறோம்."
-
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:102
-msgid "Overridden members:"
-msgstr "மீறப்பட்ட உறுப்பினர்கள்:"
-
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:106
-msgid "**can_document_member**"
-msgstr "** can_document_member **"
-
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:105
-msgid ""
-"This member is important to override. It should return *True* when the "
-"passed object can be documented by this class."
-msgstr ""
-"இந்த உறுப்பினர் மேலெழுத முக்கியம். கடந்து வந்த பொருளை இந்த வகுப்பால் "
-"ஆவணப்படுத்தும்போது அது * உண்மை * திரும்ப வேண்டும்."
-
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:111
-msgid "**add_directive_header**"
-msgstr "** add_directive_header **"
-
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:109
-msgid ""
-"This method generates the directive header. We add **:final:** directive "
-"option. Remember to call **super** or no directive will be generated."
-msgstr ""
-"இந்த முறை உத்தரவு தலைப்பை உருவாக்குகிறது. நாங்கள் **: இறுதி: ** உத்தரவு "
-"விருப்பம் சேர்க்கிறோம். ** சூப்பர் ** ஐ அழைக்க நினைவில் கொள்ளுங்கள் அல்லது "
-"எந்த உத்தரவும் உருவாக்கப்படாது."
-
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:116
-msgid "**add_content**"
-msgstr "** add_content **"
-
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:114
-msgid ""
-"This method generates the body of the class documentation. After calling the"
-" super method we generate lines for enum description."
-msgstr ""
-"இந்த முறை வர்க்க ஆவணத்தின் உடலை உருவாக்குகிறது. சூப்பர் முறையை அழைத்த பிறகு,"
-" ENUM விளக்கத்திற்கான வரிகளை உருவாக்குகிறோம்."
-
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:119
-msgid "Using the extension"
-msgstr "நீட்டிப்பைப் பயன்படுத்துதல்"
-
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:121
-msgid "You can now use the new autodoc directive to document any ``IntEnum``."
-msgstr ""
-"எந்தவொரு `` இன்டெலம்`` ஐ ஆவணப்படுத்த நீங்கள் இப்போது புதிய ஆட்டோடோக் "
-"உத்தரவைப் பயன்படுத்தலாம்."
-
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:123
-msgid "For example, you have the following ``IntEnum``:"
-msgstr "எடுத்துக்காட்டாக, உங்களிடம் பின்வரும் `` இன்டெனம்`` உள்ளது:"
-
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:125
-msgid "my_enums.py"
-msgstr "my_enums.py"
-
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:136
-msgid "This will be the documentation file with auto-documentation directive:"
-msgstr "இது ஆட்டோ-ஆவணப்படுத்தல் உத்தரவுடன் ஆவணப்படுத்தல் கோப்பாக இருக்கும்:"
-
-#: ../../sphinx/doc/development/tutorials/autodoc_ext.rst:138
-msgid "index.rst"
-msgstr "Index.rst"

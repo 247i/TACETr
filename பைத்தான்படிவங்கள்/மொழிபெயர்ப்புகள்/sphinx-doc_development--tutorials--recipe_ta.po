@@ -17,20 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/development/tutorials/recipe.rst:2
-msgid "Developing a \"recipe\" extension"
-msgstr "\"செய்முறை\" நீட்டிப்பை உருவாக்குதல்"
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:4
-msgid ""
-"The objective of this tutorial is to illustrate roles, directives and "
-"domains. Once complete, we will be able to use this extension to describe a "
-"recipe and reference that recipe from elsewhere in our documentation."
-msgstr ""
-"இந்த டுடோரியலின் நோக்கம் பாத்திரங்கள், வழிமுறைகள் மற்றும் களங்களை "
-"விளக்குவதாகும். முடிந்ததும், எங்கள் ஆவணங்களில் வேறு இடங்களிலிருந்து ஒரு "
-"செய்முறையையும் குறிப்பையும் விவரிக்க இந்த நீட்டிப்பைப் பயன்படுத்த முடியும்."
-
 #: ../../sphinx/doc/development/tutorials/recipe.rst:10
 msgid ""
 "This tutorial is based on a guide first published on `opensource.com`_ and "
@@ -40,159 +26,13 @@ msgstr ""
 "அடிப்படையாகக் கொண்டது மற்றும் அசல் ஆசிரியரின் அனுமதியுடன் இங்கு "
 "வழங்கப்படுகிறது."
 
-#: ../../sphinx/doc/development/tutorials/recipe.rst:17
-msgid "Overview"
-msgstr "கண்ணோட்டம்"
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:19
-msgid "We want the extension to add the following to Sphinx:"
-msgstr ""
-"நீட்டிப்பு பின்வருவனவற்றைச் சேர்க்க வேண்டும் என்று நாங்கள் விரும்புகிறோம்:"
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:21
-msgid ""
-"A ``recipe`` :term:`directive`, containing some content describing the "
-"recipe steps, along with a ``:contains:`` option highlighting the main "
-"ingredients of the recipe."
-msgstr ""
-"ஒரு `` செய்முறை``: கால: `டைரெக்டிவ்`, செய்முறை படிகளை விவரிக்கும் சில "
-"உள்ளடக்கங்களைக் கொண்டுள்ளது, அதோடு` `: உள்ளது:` `செய்முறையின் முக்கிய "
-"பொருட்களை முன்னிலைப்படுத்தும் விருப்பம்."
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:25
-msgid ""
-"A ``ref`` :term:`role`, which provides a cross-reference to the recipe "
-"itself."
-msgstr ""
-"ஒரு `` ref``: சொல்: `பங்கு`, இது செய்முறைக்கு குறுக்கு குறிப்பை வழங்குகிறது."
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:28
-msgid ""
-"A ``recipe`` :term:`domain`, which allows us to tie together the above role "
-"and domain, along with things like indices."
-msgstr ""
-"ஒரு `` ரெசிபி``: கால: `டொமைன்`, இது குறியீடுகள் போன்ற விஷயங்களுடன் மேற்கண்ட "
-"பங்கு மற்றும் டொமைனை ஒன்றிணைக்க அனுமதிக்கிறது."
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:31
-msgid "For that, we will need to add the following elements to Sphinx:"
-msgstr "அதற்காக, பின்வரும் கூறுகளை SPHINX இல் சேர்க்க வேண்டும்:"
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:33
-msgid "A new directive called ``recipe``"
-msgstr "`` ரெசிபி`` எனப்படும் புதிய உத்தரவு"
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:35
-msgid "New indexes to allow us to reference ingredient and recipes"
-msgstr ""
-"மூலப்பொருள் மற்றும் சமையல் குறிப்புகளைக் குறிப்பிட அனுமதிக்க புதிய "
-"குறியீடுகள்"
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:37
-msgid ""
-"A new domain called ``recipe``, which will contain the ``recipe`` directive "
-"and ``ref`` role"
-msgstr ""
-"`` ரெசிபி`` உத்தரவு மற்றும் `` ரெஃப்`` பாத்திரம் ஆகியவற்றைக் கொண்டிருக்கும் "
-"`` ரெசிபி`` எனப்படும் புதிய டொமைன்"
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:42
-msgid "Prerequisites"
-msgstr "முன்நிபந்தனைகள்"
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:44
-msgid ""
-"We need the same setup as in :doc:`the previous extensions <todo>`. This "
-"time, we will be putting out extension in a file called :file:`recipe.py`."
-msgstr ""
-"உள்ள அதே அமைப்பு நமக்குத் தேவை: DOC: `முந்தைய நீட்டிப்புகள் <DOTO>`. இந்த "
-"நேரத்தில், நாங்கள் எனப்படும் கோப்பில் நீட்டிப்பை வெளியிடுவோம்: கோப்பு: "
-"`ரெசிபி.பை`."
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:47
-msgid "Here is an example of the folder structure you might obtain:"
-msgstr "நீங்கள் பெறக்கூடிய கோப்புறை கட்டமைப்பின் எடுத்துக்காட்டு இங்கே:"
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:59
-msgid "Writing the extension"
-msgstr "நீட்டிப்பு எழுதுதல்"
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:61
-msgid ""
-"Open :file:`recipe.py` and paste the following code in it, all of which we "
-"will explain in detail shortly:"
-msgstr ""
-"திறந்த: கோப்பு: `ரெசிபி.பை` மற்றும் பின்வரும் குறியீட்டை ஒட்டவும், இவை "
-"அனைத்தும் விரைவில் விரிவாக விளக்குவோம்:"
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:68
-msgid ""
-"Let's look at each piece of this extension step-by-step to explain what's "
-"going on."
-msgstr ""
-"என்ன நடக்கிறது என்பதை விளக்க இந்த நீட்டிப்பின் ஒவ்வொரு பகுதியையும் "
-"படிப்படியாகப் பார்ப்போம்."
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:72
-msgid "The directive class"
-msgstr "உத்தரவு வகுப்பு"
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:73
-msgid "The first thing to examine is the ``RecipeDirective`` directive:"
-msgstr "முதலில் ஆராய்வது `` ரெசிடிரெக்டிவ்`` உத்தரவு:"
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:80
-msgid ""
-"Unlike :doc:`helloworld` and :doc:`todo`, this directive doesn't derive from"
-" :class:`docutils.parsers.rst.Directive` and doesn't define a ``run`` "
-"method. Instead, it derives from "
-":class:`sphinx.directives.ObjectDescription` and defines  "
-"``handle_signature`` and ``add_target_and_index`` methods. This is because "
-"``ObjectDescription`` is a special-purpose directive that's intended for "
-"describing things like classes, functions, or, in our case, recipes. More "
-"specifically, ``handle_signature`` implements parsing the signature of the "
-"directive and passes on the object's name and type to its superclass, while "
-"``add_target_and_index`` adds a target (to link to) and an entry to the "
-"index for this node."
-msgstr ""
-"போலியானது: DOC: `Helloworld` மற்றும்: doc:` Todo`, இந்த உத்தரவு இதிலிருந்து "
-"பெறப்படவில்லை: வகுப்பு: `docutils.parsers.rst.directive` மற்றும் ஒரு` `ரன்``"
-" முறையை வரையறுக்கவில்லை. அதற்கு பதிலாக, இது பெறப்படுகிறது: வகுப்பு: "
-"`sphinx.directives.objectDescription` மற்றும்` `galls_signature`` மற்றும்` "
-"`add_target_and_index`` முறைகளை வரையறுக்கிறது. ஏனென்றால், `` ஆப்ஜெக்ட் "
-"டிஸ்கிரிப்ஷன்`` என்பது ஒரு சிறப்பு நோக்கத்திற்கான உத்தரவு, இது வகுப்புகள், "
-"செயல்பாடுகள் அல்லது எங்கள் விஷயத்தில், சமையல் போன்றவற்றை விவரிக்கும் நோக்கம்"
-" கொண்டது. மேலும் குறிப்பாக, `` கைப்பிடி_சிக்னேச்சர்`` உத்தரவை பாகுபடுத்துவதை"
-" செயல்படுத்துகிறது மற்றும் பொருளின் பெயர் மற்றும் அதன் சூப்பர் கிளாஸுக்கு "
-"தட்டச்சு செய்கிறது, அதே நேரத்தில் `` add_target_and_index`` ஒரு இலக்கை "
-"(இணைக்க) சேர்க்கிறது மற்றும் இந்த முனைக்கான குறியீட்டை சேர்க்கிறது ."
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:91
-msgid ""
-"We also see that this directive defines ``has_content``, "
-"``required_arguments`` and ``option_spec``. Unlike the ``TodoDirective`` "
-"directive added in the :doc:`previous tutorial <todo>`, this directive takes"
-" a single argument, the recipe name, and an option, ``contains``, in "
-"addition to the nested reStructuredText in the body."
-msgstr ""
-"இந்த உத்தரவு `` has_content``, `` தேவையான_ஆர்கேமென்ட்ஸ்`` மற்றும் `` "
-"விருப்பம்_ஸ்பெக்`` ஆகியவற்றை வரையறுக்கிறது என்பதையும் நாங்கள் காண்கிறோம். ``"
-" டோடிரெக்டிவ்`` உத்தரவு போலல்லாமல்: டாக்: `முந்தைய டுடோரியல் <டோடோ>`, இந்த "
-"உத்தரவு ஒரு வாதம், செய்முறை பெயர் மற்றும் ஒரு விருப்பத்தை எடுக்கிறது, `` "
-"உள்ளது ,`` உள்ளது, கூடுதலாக உள்ளமைக்கப்பட்ட மறுசீரமைப்பு டெக்ஸ்டுக்கு "
-"கூடுதலாக உடல்."
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:98
-msgid "The index classes"
-msgstr "குறியீட்டு வகுப்புகள்"
+#: ../../sphinx/doc/development/tutorials/recipe.rst:101
+msgid "Add brief overview of indices"
+msgstr "குறியீடுகளின் சுருக்கமான கண்ணோட்டத்தைச் சேர்க்கவும்"
 
 #: ../../sphinx/doc/development/tutorials/recipe.rst:101
 msgid "Todo"
 msgstr "டோடோ"
-
-#: ../../sphinx/doc/development/tutorials/recipe.rst:101
-msgid "Add brief overview of indices"
-msgstr "குறியீடுகளின் சுருக்கமான கண்ணோட்டத்தைச் சேர்க்கவும்"
 
 #: ../../sphinx/doc/development/tutorials/recipe.rst:113
 msgid ""
@@ -316,6 +156,10 @@ msgstr ""
 msgid "The ``setup`` function"
 msgstr "`` அமைவு`` செயல்பாடு"
 
+#: ../../sphinx/doc/development/tutorials/recipe.rst:17
+msgid "Overview"
+msgstr "கண்ணோட்டம்"
+
 #: ../../sphinx/doc/development/tutorials/recipe.rst:170
 msgid ""
 ":doc:`As always <todo>`, the ``setup`` function is a requirement and is used"
@@ -344,6 +188,11 @@ msgstr ""
 msgid "Using the extension"
 msgstr "நீட்டிப்பைப் பயன்படுத்துதல்"
 
+#: ../../sphinx/doc/development/tutorials/recipe.rst:19
+msgid "We want the extension to add the following to Sphinx:"
+msgstr ""
+"நீட்டிப்பு பின்வருவனவற்றைச் சேர்க்க வேண்டும் என்று நாங்கள் விரும்புகிறோம்:"
+
 #: ../../sphinx/doc/development/tutorials/recipe.rst:190
 msgid "You can now use the extension throughout your project. For example:"
 msgstr "உங்கள் திட்டம் முழுவதும் நீட்டிப்பைப் பயன்படுத்தலாம். உதாரணத்திற்கு:"
@@ -352,9 +201,23 @@ msgstr "உங்கள் திட்டம் முழுவதும் ந
 msgid "index.rst"
 msgstr "Index.rst"
 
+#: ../../sphinx/doc/development/tutorials/recipe.rst:2
+msgid "Developing a \"recipe\" extension"
+msgstr "\"செய்முறை\" நீட்டிப்பை உருவாக்குதல்"
+
 #: ../../sphinx/doc/development/tutorials/recipe.rst:205
 msgid "tomato-soup.rst"
 msgstr "தக்காளி-soup.rst"
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:21
+msgid ""
+"A ``recipe`` :term:`directive`, containing some content describing the "
+"recipe steps, along with a ``:contains:`` option highlighting the main "
+"ingredients of the recipe."
+msgstr ""
+"ஒரு `` செய்முறை``: கால: `டைரெக்டிவ்`, செய்முறை படிகளை விவரிக்கும் சில "
+"உள்ளடக்கங்களைக் கொண்டுள்ளது, அதோடு` `: உள்ளது:` `செய்முறையின் முக்கிய "
+"பொருட்களை முன்னிலைப்படுத்தும் விருப்பம்."
 
 #: ../../sphinx/doc/development/tutorials/recipe.rst:216
 msgid ""
@@ -377,3 +240,140 @@ msgid ""
 msgstr ""
 "மேலும் தகவலுக்கு, `டாக்யூடில்ஸ்`_ ஆவணங்கள் மற்றும்: டாக்:`/extdev/index` ஐப்"
 " பார்க்கவும்."
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:25
+msgid ""
+"A ``ref`` :term:`role`, which provides a cross-reference to the recipe "
+"itself."
+msgstr ""
+"ஒரு `` ref``: சொல்: `பங்கு`, இது செய்முறைக்கு குறுக்கு குறிப்பை வழங்குகிறது."
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:28
+msgid ""
+"A ``recipe`` :term:`domain`, which allows us to tie together the above role "
+"and domain, along with things like indices."
+msgstr ""
+"ஒரு `` ரெசிபி``: கால: `டொமைன்`, இது குறியீடுகள் போன்ற விஷயங்களுடன் மேற்கண்ட "
+"பங்கு மற்றும் டொமைனை ஒன்றிணைக்க அனுமதிக்கிறது."
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:31
+msgid "For that, we will need to add the following elements to Sphinx:"
+msgstr "அதற்காக, பின்வரும் கூறுகளை SPHINX இல் சேர்க்க வேண்டும்:"
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:33
+msgid "A new directive called ``recipe``"
+msgstr "`` ரெசிபி`` எனப்படும் புதிய உத்தரவு"
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:35
+msgid "New indexes to allow us to reference ingredient and recipes"
+msgstr ""
+"மூலப்பொருள் மற்றும் சமையல் குறிப்புகளைக் குறிப்பிட அனுமதிக்க புதிய "
+"குறியீடுகள்"
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:37
+msgid ""
+"A new domain called ``recipe``, which will contain the ``recipe`` directive "
+"and ``ref`` role"
+msgstr ""
+"`` ரெசிபி`` உத்தரவு மற்றும் `` ரெஃப்`` பாத்திரம் ஆகியவற்றைக் கொண்டிருக்கும் "
+"`` ரெசிபி`` எனப்படும் புதிய டொமைன்"
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:4
+msgid ""
+"The objective of this tutorial is to illustrate roles, directives and "
+"domains. Once complete, we will be able to use this extension to describe a "
+"recipe and reference that recipe from elsewhere in our documentation."
+msgstr ""
+"இந்த டுடோரியலின் நோக்கம் பாத்திரங்கள், வழிமுறைகள் மற்றும் களங்களை "
+"விளக்குவதாகும். முடிந்ததும், எங்கள் ஆவணங்களில் வேறு இடங்களிலிருந்து ஒரு "
+"செய்முறையையும் குறிப்பையும் விவரிக்க இந்த நீட்டிப்பைப் பயன்படுத்த முடியும்."
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:42
+msgid "Prerequisites"
+msgstr "முன்நிபந்தனைகள்"
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:44
+msgid ""
+"We need the same setup as in :doc:`the previous extensions <todo>`. This "
+"time, we will be putting out extension in a file called :file:`recipe.py`."
+msgstr ""
+"உள்ள அதே அமைப்பு நமக்குத் தேவை: DOC: `முந்தைய நீட்டிப்புகள் <DOTO>`. இந்த "
+"நேரத்தில், நாங்கள் எனப்படும் கோப்பில் நீட்டிப்பை வெளியிடுவோம்: கோப்பு: "
+"`ரெசிபி.பை`."
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:47
+msgid "Here is an example of the folder structure you might obtain:"
+msgstr "நீங்கள் பெறக்கூடிய கோப்புறை கட்டமைப்பின் எடுத்துக்காட்டு இங்கே:"
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:59
+msgid "Writing the extension"
+msgstr "நீட்டிப்பு எழுதுதல்"
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:61
+msgid ""
+"Open :file:`recipe.py` and paste the following code in it, all of which we "
+"will explain in detail shortly:"
+msgstr ""
+"திறந்த: கோப்பு: `ரெசிபி.பை` மற்றும் பின்வரும் குறியீட்டை ஒட்டவும், இவை "
+"அனைத்தும் விரைவில் விரிவாக விளக்குவோம்:"
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:68
+msgid ""
+"Let's look at each piece of this extension step-by-step to explain what's "
+"going on."
+msgstr ""
+"என்ன நடக்கிறது என்பதை விளக்க இந்த நீட்டிப்பின் ஒவ்வொரு பகுதியையும் "
+"படிப்படியாகப் பார்ப்போம்."
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:72
+msgid "The directive class"
+msgstr "உத்தரவு வகுப்பு"
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:73
+msgid "The first thing to examine is the ``RecipeDirective`` directive:"
+msgstr "முதலில் ஆராய்வது `` ரெசிடிரெக்டிவ்`` உத்தரவு:"
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:80
+msgid ""
+"Unlike :doc:`helloworld` and :doc:`todo`, this directive doesn't derive from"
+" :class:`docutils.parsers.rst.Directive` and doesn't define a ``run`` "
+"method. Instead, it derives from "
+":class:`sphinx.directives.ObjectDescription` and defines  "
+"``handle_signature`` and ``add_target_and_index`` methods. This is because "
+"``ObjectDescription`` is a special-purpose directive that's intended for "
+"describing things like classes, functions, or, in our case, recipes. More "
+"specifically, ``handle_signature`` implements parsing the signature of the "
+"directive and passes on the object's name and type to its superclass, while "
+"``add_target_and_index`` adds a target (to link to) and an entry to the "
+"index for this node."
+msgstr ""
+"போலியானது: DOC: `Helloworld` மற்றும்: doc:` Todo`, இந்த உத்தரவு இதிலிருந்து "
+"பெறப்படவில்லை: வகுப்பு: `docutils.parsers.rst.directive` மற்றும் ஒரு` `ரன்``"
+" முறையை வரையறுக்கவில்லை. அதற்கு பதிலாக, இது பெறப்படுகிறது: வகுப்பு: "
+"`sphinx.directives.objectDescription` மற்றும்` `galls_signature`` மற்றும்` "
+"`add_target_and_index`` முறைகளை வரையறுக்கிறது. ஏனென்றால், `` ஆப்ஜெக்ட் "
+"டிஸ்கிரிப்ஷன்`` என்பது ஒரு சிறப்பு நோக்கத்திற்கான உத்தரவு, இது வகுப்புகள், "
+"செயல்பாடுகள் அல்லது எங்கள் விஷயத்தில், சமையல் போன்றவற்றை விவரிக்கும் நோக்கம்"
+" கொண்டது. மேலும் குறிப்பாக, `` கைப்பிடி_சிக்னேச்சர்`` உத்தரவை பாகுபடுத்துவதை"
+" செயல்படுத்துகிறது மற்றும் பொருளின் பெயர் மற்றும் அதன் சூப்பர் கிளாஸுக்கு "
+"தட்டச்சு செய்கிறது, அதே நேரத்தில் `` add_target_and_index`` ஒரு இலக்கை "
+"(இணைக்க) சேர்க்கிறது மற்றும் இந்த முனைக்கான குறியீட்டை சேர்க்கிறது ."
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:91
+msgid ""
+"We also see that this directive defines ``has_content``, "
+"``required_arguments`` and ``option_spec``. Unlike the ``TodoDirective`` "
+"directive added in the :doc:`previous tutorial <todo>`, this directive takes"
+" a single argument, the recipe name, and an option, ``contains``, in "
+"addition to the nested reStructuredText in the body."
+msgstr ""
+"இந்த உத்தரவு `` has_content``, `` தேவையான_ஆர்கேமென்ட்ஸ்`` மற்றும் `` "
+"விருப்பம்_ஸ்பெக்`` ஆகியவற்றை வரையறுக்கிறது என்பதையும் நாங்கள் காண்கிறோம். ``"
+" டோடிரெக்டிவ்`` உத்தரவு போலல்லாமல்: டாக்: `முந்தைய டுடோரியல் <டோடோ>`, இந்த "
+"உத்தரவு ஒரு வாதம், செய்முறை பெயர் மற்றும் ஒரு விருப்பத்தை எடுக்கிறது, `` "
+"உள்ளது ,`` உள்ளது, கூடுதலாக உள்ளமைக்கப்பட்ட மறுசீரமைப்பு டெக்ஸ்டுக்கு "
+"கூடுதலாக உடல்."
+
+#: ../../sphinx/doc/development/tutorials/recipe.rst:98
+msgid "The index classes"
+msgstr "குறியீட்டு வகுப்புகள்"

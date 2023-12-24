@@ -19,278 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../__w/calibre/calibre/manual/develop.rst:4
-msgid "Setting up a calibre development environment"
-msgstr "காலிபர் மேம்பாட்டு சூழலை அமைத்தல்"
-
-#: ../../__w/calibre/calibre/manual/develop.rst:6
-msgid ""
-"calibre is completely open source, licensed under the `GNU GPL v3 "
-"<https://www.gnu.org/licenses/gpl.html>`_. This means that you are free to "
-"download and modify the program to your heart's content. In this section, "
-"you will learn how to get a calibre development environment set up on the "
-"operating system of your choice. calibre is written primarily in `Python "
-"<https://www.python.org>`_ with some C/C++ code for speed and system "
-"interfacing. Note that calibre requires at least Python 3.8."
-msgstr ""
-"காலிபர் முற்றிலும் திறந்த மூலமாகும், `குனு ஜிபிஎல் வி 3 "
-"<https://www.gnu.org/licenses/gpl.html> _ _ இன் கீழ் உரிமம் பெற்றது. இதன் "
-"பொருள் உங்கள் இதயத்தின் உள்ளடக்கத்திற்கு நிரலை பதிவிறக்கம் செய்து மாற்ற "
-"நீங்கள் இலவசம். இந்த பிரிவில், நீங்கள் விரும்பும் இயக்க முறைமையில் ஒரு "
-"காலிபர் மேம்பாட்டு சூழலை எவ்வாறு பெறுவது என்பதை நீங்கள் கற்றுக் கொள்வீர்கள்."
-" காலிபர் முதன்மையாக `பைதான் <https://www.python.org>` _ வேகம் மற்றும் கணினி "
-"இடைமுகத்திற்கான சில சி/சி ++ குறியீட்டில் எழுதப்பட்டுள்ளது. காலிபருக்கு "
-"குறைந்தது பைதான் 3.8 தேவை என்பதை நினைவில் கொள்க."
-
-#: ../../__w/calibre/calibre/manual/develop.rst:14
-msgid "Contents"
-msgstr "உள்ளடக்கங்கள்"
-
-#: ../../__w/calibre/calibre/manual/develop.rst:17
-msgid "Design philosophy"
-msgstr "வடிவமைப்பு தத்துவம்"
-
-#: ../../__w/calibre/calibre/manual/develop.rst:19
-msgid ""
-"calibre has its roots in the Unix world, which means that its design is "
-"highly modular. The modules interact with each other via well defined "
-"interfaces. This makes adding new features and fixing bugs in calibre very "
-"easy, resulting in a frenetic pace of development. Because of its roots, "
-"calibre has a comprehensive command line interface for all its functions, "
-"documented in :doc:`generated/en/cli-index`."
-msgstr ""
-"யூனிக்ஸ் உலகில் காலிபர் அதன் வேர்களைக் கொண்டுள்ளது, அதாவது அதன் வடிவமைப்பு "
-"மிகவும் மட்டு. தொகுதிகள் நன்கு வரையறுக்கப்பட்ட இடைமுகங்கள் வழியாக "
-"ஒருவருக்கொருவர் தொடர்பு கொள்கின்றன. இது புதிய அம்சங்களைச் சேர்ப்பது மற்றும் "
-"பிழைகளை காலிபரில் சரிசெய்வது மிகவும் எளிதானது, இதன் விளைவாக வளர்ச்சியின் "
-"வெறித்தனமான வேகத்தை ஏற்படுத்துகிறது. அதன் வேர்கள் காரணமாக, காலிபர் அதன் "
-"அனைத்து செயல்பாடுகளுக்கும் ஒரு விரிவான கட்டளை வரி இடைமுகத்தைக் கொண்டுள்ளது, "
-"இது ஆவணப்படுத்தப்பட்டுள்ளது: DOC: `உருவாக்கப்பட்ட/EN/CLI-Index`."
-
-#: ../../__w/calibre/calibre/manual/develop.rst:24
-msgid ""
-"The modular design of calibre is expressed via ``Plugins``. There is a "
-":ref:`tutorial <customize>` on writing calibre plugins. For example, adding "
-"support for a new device to calibre typically involves writing less than a "
-"100 lines of code in the form of a device driver plugin. You can browse the "
-"`built-in drivers "
-"<https://github.com/kovidgoyal/calibre/tree/master/src/calibre/devices>`_. "
-"Similarly, adding support for new conversion formats involves writing "
-"input/output format plugins. Another example of the modular design is the "
-":ref:`recipe system <news>` for fetching news. For more examples of plugins "
-"designed to add features to calibre, see the `Index of plugins "
-"<https://www.mobileread.com/forums/showthread.php?p=1362767#post1362767>`_."
-msgstr ""
-"காலிபரின் மட்டு வடிவமைப்பு `` செருகுநிரல்கள்`` வழியாக "
-"வெளிப்படுத்தப்படுகிறது. ஒரு: குறிப்பு உள்ளது: `டுடோரியல் <தனிப்பயனாக்கு>` "
-"காலிபர் செருகுநிரல்களை எழுதுவதில். எடுத்துக்காட்டாக, ஒரு புதிய சாதனத்திற்கான"
-" ஆதரவை காலிபரில் சேர்ப்பது பொதுவாக சாதன இயக்கி சொருகி வடிவத்தில் 100 "
-"வரிகளுக்கும் குறைவான குறியீட்டை எழுதுவதை உள்ளடக்குகிறது. நீங்கள் "
-"`உள்ளமைக்கப்பட்ட இயக்கிகள் "
-"<https://github.com/kovidgoyal/calibre/tree/master/src/calibre/devices>` _ "
-"ஆகியவற்றை உலாவலாம். இதேபோல், புதிய மாற்று வடிவங்களுக்கு ஆதரவைச் சேர்ப்பது "
-"உள்ளீடு/வெளியீட்டு வடிவமைப்பு செருகுநிரல்களை எழுதுவதை உள்ளடக்குகிறது. மட்டு "
-"வடிவமைப்பின் மற்றொரு எடுத்துக்காட்டு: ref: `செய்முறை அமைப்பு <செய்திகள்>` "
-"செய்திகளைப் பெறுவதற்கு. காலிபருக்கு அம்சங்களைச் சேர்க்க வடிவமைக்கப்பட்ட "
-"செருகுநிரல்களின் கூடுதல் எடுத்துக்காட்டுகளுக்கு, `செருகுநிரல்களின் "
-"குறியீட்டைப் பார்க்கவும் "
-"<https://www.mobileread.com/forums/showthread.php?p=1362767#post1362767>` _."
-
-#: ../../__w/calibre/calibre/manual/develop.rst:34
-msgid "Code layout"
-msgstr "குறியீடு தளவமைப்பு"
-
-#: ../../__w/calibre/calibre/manual/develop.rst:36
-msgid ""
-"All the calibre Python code is in the ``calibre`` package. This package "
-"contains the following main sub-packages"
-msgstr ""
-"அனைத்து காலிபர் பைதான் குறியீடும் `` காலிப்ரே`` தொகுப்பில் உள்ளது. இந்த "
-"தொகுப்பில் பின்வரும் முக்கிய துணை தொகுப்புகள் உள்ளன"
-
-#: ../../__w/calibre/calibre/manual/develop.rst:38
-msgid ""
-"devices - All the device drivers. Just look through some of the built-in "
-"drivers to get an idea for how they work."
-msgstr ""
-"சாதனங்கள் - அனைத்து சாதன இயக்கிகளும். அவர்கள் எவ்வாறு செயல்படுகிறார்கள் "
-"என்பதற்கான யோசனையைப் பெற சில உள்ளமைக்கப்பட்ட ஓட்டுனர்களைப் பாருங்கள்."
-
-#: ../../__w/calibre/calibre/manual/develop.rst:40
-msgid ""
-"For details, see: ``devices.interface`` which defines the interface "
-"supported by device drivers and ``devices.usbms`` which defines a generic "
-"driver that connects to a USBMS device. All USBMS based drivers in calibre "
-"inherit from it."
-msgstr ""
-"விவரங்களுக்கு, காண்க: `` சாதனங்கள். இன்டர்ஃபேஸ்`` இது சாதன இயக்கிகள் மற்றும்"
-" `` சாதனங்கள். USBMS`` ஆகியவற்றால் ஆதரிக்கப்படும் இடைமுகத்தை வரையறுக்கிறது, "
-"இது ஒரு யூ.எஸ்.பி.எம்.எஸ் சாதனத்துடன் இணைக்கும் பொதுவான இயக்கியை "
-"வரையறுக்கிறது. காலிபரில் உள்ள அனைத்து யூ.எஸ்.பி.எம்.எஸ் அடிப்படையிலான "
-"இயக்கிகளும் அதிலிருந்து பெறுகின்றன."
-
-#: ../../__w/calibre/calibre/manual/develop.rst:43
-msgid ""
-"e-books  - All the e-book conversion/metadata code. A good starting point is"
-" ``calibre.ebooks.conversion.cli`` which is the module powering the "
-":command:`ebook-convert` command. The conversion process is controlled via "
-"``conversion.plumber``. The format independent code is all in ``ebooks.oeb``"
-" and the format dependent code is in ``ebooks.format_name``."
-msgstr ""
-"மின்-புத்தகங்கள்-அனைத்து மின் புத்தக மாற்றம்/மெட்டாடேட்டா குறியீடு. ஒரு நல்ல"
-" தொடக்கப் புள்ளி `` calibre.ebooks.conversion.cli`` இது இயக்கும் தொகுதி: "
-"கட்டளை: `மின்புத்தக-கான்வர்ட்` கட்டளை. மாற்று செயல்முறை `` "
-"Converst.plumber`` வழியாக கட்டுப்படுத்தப்படுகிறது. வடிவமைப்பு சுயாதீன "
-"குறியீடு அனைத்தும் `` ebooks.oeb`` மற்றும் வடிவமைப்பு சார்ந்த குறியீடு `` "
-"ebooks.format_name`` இல் உள்ளது."
-
-#: ../../__w/calibre/calibre/manual/develop.rst:47
-msgid ""
-"Metadata reading, writing, and downloading is all in ``ebooks.metadata``"
-msgstr ""
-"மெட்டாடேட்டா வாசிப்பு, எழுதுதல் மற்றும் பதிவிறக்கம் அனைத்தும் `` "
-"ebooks.metadata``"
-
-#: ../../__w/calibre/calibre/manual/develop.rst:48
-msgid ""
-"Conversion happens in a pipeline, for the structure of the pipeline, see "
-":ref:`conversion-introduction`. The pipeline consists of an input plugin, "
-"various transforms and an output plugin. The code that constructs and drives"
-" the pipeline is in :file:`plumber.py`. The pipeline works on a "
-"representation of an e-book that is like an unzipped epub, with manifest, "
-"spine, toc, guide, html content, etc. The class that manages this "
-"representation is OEBBook in ``ebooks.oeb.base``. The various "
-"transformations that are applied to the book during conversions live in "
-":file:`oeb/transforms/*.py`. And the input and output plugins live in "
-":file:`conversion/plugins/*.py`."
-msgstr ""
-"மாற்றம் ஒரு குழாய்வழியில் நிகழ்கிறது, குழாய்த்திட்டத்தின் கட்டமைப்பிற்கு, "
-"காண்க: குறிப்பு: `மாற்று-அறிமுகம்`. குழாய் ஒரு உள்ளீட்டு சொருகி, பல்வேறு "
-"உருமாற்றங்கள் மற்றும் வெளியீட்டு சொருகி ஆகியவற்றைக் கொண்டுள்ளது. "
-"குழாய்த்திட்டத்தை உருவாக்கி இயக்கும் குறியீடு உள்ளது: கோப்பு: `plumber.py`. "
-"வெளிப்படையான, முதுகெலும்பு, TOC, வழிகாட்டி, HTML உள்ளடக்கம் போன்றவற்றைக் "
-"கொண்ட ஒரு மின் புத்தகத்தின் பிரதிநிதித்துவத்தில் இந்த குழாய் செயல்படுகிறது. "
-"இந்த பிரதிநிதித்துவத்தை நிர்வகிக்கும் வர்க்கம் `` ebooks.base`` . "
-"மாற்றங்களின் போது புத்தகத்திற்குப் பயன்படுத்தப்படும் பல்வேறு மாற்றங்கள் "
-"வாழ்க: கோப்பு: `OEB/உருமாற்றங்கள்/*. Py`. உள்ளீடு மற்றும் வெளியீட்டு "
-"செருகுநிரல்கள் வாழ்கின்றன: கோப்பு: `மாற்று/செருகுநிரல்கள்/*. Py`."
-
-#: ../../__w/calibre/calibre/manual/develop.rst:58
-msgid ""
-"E-book editing happens using a different container object. It is documented "
-"in :ref:`polish_api`."
-msgstr ""
-"மின் புத்தக எடிட்டிங் வேறு கொள்கலன் பொருளைப் பயன்படுத்தி நிகழ்கிறது. இது "
-"ஆவணப்படுத்தப்பட்டுள்ளது: ref: `Polish_api`."
-
-#: ../../__w/calibre/calibre/manual/develop.rst:61
-msgid ""
-"db - The database back-end. See :ref:`db_api` for the interface to the "
-"calibre library."
-msgstr ""
-"டி.பி. - தரவுத்தள பின் -இறுதி. காண்க: குறிப்பு: காலிபர் நூலகத்திற்கான "
-"இடைமுகத்திற்கு `db_api`."
-
-#: ../../__w/calibre/calibre/manual/develop.rst:63
-msgid "Content server: ``srv`` is the calibre Content server."
-msgstr "உள்ளடக்க சேவையகம்: `` எஸ்.ஆர்.வி`` என்பது காலிபர் உள்ளடக்க சேவையகம்."
-
-#: ../../__w/calibre/calibre/manual/develop.rst:65
-msgid ""
-"gui2 - The Graphical User Interface. GUI initialization happens in "
-"``gui2.main`` and ``gui2.ui``. The e-book-viewer is in ``gui2.viewer``. The "
-"e-book editor is in ``gui2.tweak_book``."
-msgstr ""
-"GUI2 - வரைகலை பயனர் இடைமுகம். GUI துவக்கம் `` gui2.main`` மற்றும் `` "
-"gui2.ui`` இல் நிகழ்கிறது. மின்-புத்தக-பார்வையாளர் `` gui2.viewer`` இல் "
-"உள்ளது. மின் புத்தக எடிட்டர் `` gui2.tweak_book`` இல் உள்ளது."
-
-#: ../../__w/calibre/calibre/manual/develop.rst:67
-msgid ""
-"If you want to locate the entry points for all the various calibre "
-"executables, look at the ``entry_points`` structure in `linux.py "
-"<https://github.com/kovidgoyal/calibre/blob/master/src/calibre/linux.py>`_."
-msgstr ""
-"அனைத்து பல்வேறு காலிபர் இயங்குதல்களுக்கான நுழைவு புள்ளிகளைக் கண்டுபிடிக்க "
-"விரும்பினால், `` Entry_Points`` கட்டமைப்பை `linux.py "
-"<https://github.com/kovidgoyal/calibre/blob/master/src/calibre/ இல் "
-"பாருங்கள் linux.py> `_."
-
-#: ../../__w/calibre/calibre/manual/develop.rst:71
-msgid ""
-"If you need help understanding the code, post in the `development forum "
-"<https://www.mobileread.com/forums/forumdisplay.php?f=240>`_ and you will "
-"most likely get help from one of calibre's many developers."
-msgstr ""
-"குறியீட்டைப் புரிந்துகொள்ள உங்களுக்கு உதவி தேவைப்பட்டால், `மேம்பாட்டு "
-"மன்றத்தில் <https://www.mobileered.com/forums/forumdisplay.php?f=240>` _ இல்"
-" இடுகையிடவும் ."
-
-#: ../../__w/calibre/calibre/manual/develop.rst:75
-msgid "Getting the code"
-msgstr "குறியீட்டைப் பெறுதல்"
-
-#: ../../__w/calibre/calibre/manual/develop.rst:77
-msgid ""
-"You can get the calibre source code in two ways, using a version control "
-"system or directly downloading a :website_base:`tarball <dist/src>`."
-msgstr ""
-"பதிப்பு கட்டுப்பாட்டு முறையைப் பயன்படுத்தி அல்லது நேரடியாக ஒரு: "
-"வலைத்தளம்_பேஸ்: `டார்பால் <dist/src>` என்ற காலிபர் மூலக் குறியீட்டை இரண்டு "
-"வழிகளில் பெறலாம்."
-
-#: ../../__w/calibre/calibre/manual/develop.rst:80
-msgid ""
-"calibre uses `Git <https://www.git-scm.com/>`_, a distributed version "
-"control system. Git is available on all the platforms calibre supports.  "
-"After installing Git, you can get the calibre source code with the command::"
-msgstr ""
-"காலிபர் `கிட் <https://www.git-scm.com/>` _, விநியோகிக்கப்பட்ட பதிப்பு "
-"கட்டுப்பாட்டு முறையைப் பயன்படுத்துகிறது. காலிபர் ஆதரவு அனைத்து தளங்களிலும் "
-"கிட் கிடைக்கிறது. கிட் நிறுவிய பிறகு, நீங்கள் கட்டளையுடன் காலிபர் மூலக் "
-"குறியீட்டைப் பெறலாம் ::"
-
-#: ../../__w/calibre/calibre/manual/develop.rst:86
-msgid ""
-"On Windows you will need the complete path name, that will be something like"
-" :file:`C:\\\\Program Files\\\\Git\\\\git.exe`."
-msgstr ""
-"விண்டோஸில் உங்களுக்கு முழுமையான பாதை பெயர் தேவைப்படும், அது போன்றதாக "
-"இருக்கும்: கோப்பு: `சி: \\\\ நிரல் கோப்புகள் \\\\ git \\\\ git.exe`."
-
-#: ../../__w/calibre/calibre/manual/develop.rst:88
-msgid ""
-"calibre is a very large project with a very long source control history, so "
-"the above can take a while (10 mins to an hour depending on your internet "
-"speed)."
-msgstr ""
-"காலிபர் என்பது மிக நீண்ட மூலக் கட்டுப்பாட்டு வரலாற்றைக் கொண்ட மிகப் பெரிய "
-"திட்டமாகும், எனவே மேற்கூறியவை சிறிது நேரம் ஆகலாம் (உங்கள் இணைய வேகத்தைப் "
-"பொறுத்து 10 நிமிடங்கள் முதல் ஒரு மணி நேரம் வரை)."
-
-#: ../../__w/calibre/calibre/manual/develop.rst:91
-msgid ""
-"If you want to get the code faster, the source code for the latest release "
-"is always available as an :website_base:`archive <dist/src>`."
-msgstr ""
-"நீங்கள் குறியீட்டை விரைவாகப் பெற விரும்பினால், சமீபத்திய வெளியீட்டிற்கான "
-"மூலக் குறியீடு எப்போதும் ஒரு: வலைத்தளம்_பேஸ்: `காப்பகம் <dist/src>` ஆகக் "
-"கிடைக்கும்."
-
-#: ../../__w/calibre/calibre/manual/develop.rst:94
-msgid "To update a branch to the latest code, use the command::"
-msgstr ""
-"சமீபத்திய குறியீட்டிற்கு ஒரு கிளையைப் புதுப்பிக்க, கட்டளையைப் பயன்படுத்தவும்"
-" ::"
-
-#: ../../__w/calibre/calibre/manual/develop.rst:98
-msgid ""
-"You can also browse the code at `GitHub "
-"<https://github.com/kovidgoyal/calibre>`_."
-msgstr ""
-"நீங்கள் `github <https://github.com/kovidgoyal/calibre> _ _ இல் குறியீட்டை "
-"உலாவலாம்."
-
 #: ../../__w/calibre/calibre/manual/develop.rst:101
 msgid "Submitting your changes to be included"
 msgstr "சேர்க்கப்பட வேண்டிய உங்கள் மாற்றங்களை சமர்ப்பித்தல்"
@@ -386,6 +114,10 @@ msgstr ""
 "மேலே <பயனர்பெயர்> ஐ உங்கள் கிதுப் பயனர்பெயருடன் மாற்றவும். அது உங்கள் "
 "முட்கரண்டி உள்நாட்டில் சரிபார்க்கப்படும்."
 
+#: ../../__w/calibre/calibre/manual/develop.rst:14
+msgid "Contents"
+msgstr "உள்ளடக்கங்கள்"
+
 #: ../../__w/calibre/calibre/manual/develop.rst:140
 msgid ""
 "You can make changes and commit them whenever you like. When you are ready "
@@ -470,6 +202,10 @@ msgstr ""
 "<https://docs.python.org/using/windows.html#excursus-setting- entronment-"
 "variables>` _ விண்டோஸில் சுற்றுச்சூழல் மாறிகளை அமைப்பதற்கு."
 
+#: ../../__w/calibre/calibre/manual/develop.rst:17
+msgid "Design philosophy"
+msgstr "வடிவமைப்பு தத்துவம்"
+
 #: ../../__w/calibre/calibre/manual/develop.rst:172
 msgid ""
 "Once you have set the environment variable, open a new command prompt and "
@@ -516,6 +252,23 @@ msgstr ""
 "இலவச மைக்ரோசாஃப்ட் விஷுவல் ஸ்டுடியோவுக்குள் ஒரு காலிபர் மேம்பாட்டு சூழலை "
 "நீங்கள் அமைக்கலாம், நீங்கள் விரும்பினால், இங்கே "
 "<https://www.mobileered.com/forums/showthread.php?t=251201> `_."
+
+#: ../../__w/calibre/calibre/manual/develop.rst:19
+msgid ""
+"calibre has its roots in the Unix world, which means that its design is "
+"highly modular. The modules interact with each other via well defined "
+"interfaces. This makes adding new features and fixing bugs in calibre very "
+"easy, resulting in a frenetic pace of development. Because of its roots, "
+"calibre has a comprehensive command line interface for all its functions, "
+"documented in :doc:`generated/en/cli-index`."
+msgstr ""
+"யூனிக்ஸ் உலகில் காலிபர் அதன் வேர்களைக் கொண்டுள்ளது, அதாவது அதன் வடிவமைப்பு "
+"மிகவும் மட்டு. தொகுதிகள் நன்கு வரையறுக்கப்பட்ட இடைமுகங்கள் வழியாக "
+"ஒருவருக்கொருவர் தொடர்பு கொள்கின்றன. இது புதிய அம்சங்களைச் சேர்ப்பது மற்றும் "
+"பிழைகளை காலிபரில் சரிசெய்வது மிகவும் எளிதானது, இதன் விளைவாக வளர்ச்சியின் "
+"வெறித்தனமான வேகத்தை ஏற்படுத்துகிறது. அதன் வேர்கள் காரணமாக, காலிபர் அதன் "
+"அனைத்து செயல்பாடுகளுக்கும் ஒரு விரிவான கட்டளை வரி இடைமுகத்தைக் கொண்டுள்ளது, "
+"இது ஆவணப்படுத்தப்பட்டுள்ளது: DOC: `உருவாக்கப்பட்ட/EN/CLI-Index`."
 
 #: ../../__w/calibre/calibre/manual/develop.rst:190
 msgid "macOS development environment"
@@ -616,6 +369,35 @@ msgstr ""
 " காலிபரை நிறுவவும். பின்னர் ஒரு முனையத்தைத் திறந்து, முன்னர் "
 "சரிபார்க்கப்பட்ட காலிபர் குறியீடு கோப்புறையில் மாற்றவும், எடுத்துக்காட்டாக "
 "::"
+
+#: ../../__w/calibre/calibre/manual/develop.rst:24
+msgid ""
+"The modular design of calibre is expressed via ``Plugins``. There is a "
+":ref:`tutorial <customize>` on writing calibre plugins. For example, adding "
+"support for a new device to calibre typically involves writing less than a "
+"100 lines of code in the form of a device driver plugin. You can browse the "
+"`built-in drivers "
+"<https://github.com/kovidgoyal/calibre/tree/master/src/calibre/devices>`_. "
+"Similarly, adding support for new conversion formats involves writing "
+"input/output format plugins. Another example of the modular design is the "
+":ref:`recipe system <news>` for fetching news. For more examples of plugins "
+"designed to add features to calibre, see the `Index of plugins "
+"<https://www.mobileread.com/forums/showthread.php?p=1362767#post1362767>`_."
+msgstr ""
+"காலிபரின் மட்டு வடிவமைப்பு `` செருகுநிரல்கள்`` வழியாக "
+"வெளிப்படுத்தப்படுகிறது. ஒரு: குறிப்பு உள்ளது: `டுடோரியல் <தனிப்பயனாக்கு>` "
+"காலிபர் செருகுநிரல்களை எழுதுவதில். எடுத்துக்காட்டாக, ஒரு புதிய சாதனத்திற்கான"
+" ஆதரவை காலிபரில் சேர்ப்பது பொதுவாக சாதன இயக்கி சொருகி வடிவத்தில் 100 "
+"வரிகளுக்கும் குறைவான குறியீட்டை எழுதுவதை உள்ளடக்குகிறது. நீங்கள் "
+"`உள்ளமைக்கப்பட்ட இயக்கிகள் "
+"<https://github.com/kovidgoyal/calibre/tree/master/src/calibre/devices>` _ "
+"ஆகியவற்றை உலாவலாம். இதேபோல், புதிய மாற்று வடிவங்களுக்கு ஆதரவைச் சேர்ப்பது "
+"உள்ளீடு/வெளியீட்டு வடிவமைப்பு செருகுநிரல்களை எழுதுவதை உள்ளடக்குகிறது. மட்டு "
+"வடிவமைப்பின் மற்றொரு எடுத்துக்காட்டு: ref: `செய்முறை அமைப்பு <செய்திகள்>` "
+"செய்திகளைப் பெறுவதற்கு. காலிபருக்கு அம்சங்களைச் சேர்க்க வடிவமைக்கப்பட்ட "
+"செருகுநிரல்களின் கூடுதல் எடுத்துக்காட்டுகளுக்கு, `செருகுநிரல்களின் "
+"குறியீட்டைப் பார்க்கவும் "
+"<https://www.mobileread.com/forums/showthread.php?p=1362767#post1362767>` _."
 
 #: ../../__w/calibre/calibre/manual/develop.rst:243
 msgid ""
@@ -793,6 +575,10 @@ msgstr ""
 "இப்போது ஒரு முனையம் அல்லது கட்டளை வரியில் திறந்து பிழைத்திருத்த அமர்வைத் "
 "தொடங்க பின்வரும் கட்டளையைப் பயன்படுத்தவும் ::"
 
+#: ../../__w/calibre/calibre/manual/develop.rst:34
+msgid "Code layout"
+msgstr "குறியீடு தளவமைப்பு"
+
 #: ../../__w/calibre/calibre/manual/develop.rst:341
 msgid ""
 "You can read about how to use the Python debugger in the `Python stdlib docs"
@@ -840,6 +626,14 @@ msgstr ""
 "வார்த்தைகளில் கூறுவதானால், மேலே உள்ள `` calibre_developer_from`` என நீங்கள் "
 "அமைத்த கோப்புறை, உங்கள் IDE இன் `` பைதன்பாத்`` இல் இருக்க வேண்டும்."
 
+#: ../../__w/calibre/calibre/manual/develop.rst:36
+msgid ""
+"All the calibre Python code is in the ``calibre`` package. This package "
+"contains the following main sub-packages"
+msgstr ""
+"அனைத்து காலிபர் பைதான் குறியீடும் `` காலிப்ரே`` தொகுப்பில் உள்ளது. இந்த "
+"தொகுப்பில் பின்வரும் முக்கிய துணை தொகுப்புகள் உள்ளன"
+
 #: ../../__w/calibre/calibre/manual/develop.rst:362
 msgid ""
 "Then place the IDE's remote debugger module into the :file:`src` sub-folder "
@@ -874,6 +668,14 @@ msgid ""
 msgstr ""
 "கட்டளை வரியில் குறியீட்டின் சிறிய துணுக்கை சோதிக்க சிறந்தது. இது -சி பைதான் "
 "மொழிபெயர்ப்பாளருக்கு மாறுவது போலவே செயல்படுகிறது ::"
+
+#: ../../__w/calibre/calibre/manual/develop.rst:38
+msgid ""
+"devices - All the device drivers. Just look through some of the built-in "
+"drivers to get an idea for how they work."
+msgstr ""
+"சாதனங்கள் - அனைத்து சாதன இயக்கிகளும். அவர்கள் எவ்வாறு செயல்படுகிறார்கள் "
+"என்பதற்கான யோசனையைப் பெற சில உள்ளமைக்கப்பட்ட ஓட்டுனர்களைப் பாருங்கள்."
 
 #: ../../__w/calibre/calibre/manual/develop.rst:380
 msgid ""
@@ -918,6 +720,23 @@ msgstr ""
 "உங்களிடம் காலிபரின் பைனரி நிறுவல் இருந்தால், இது போன்ற காலிபருடன் "
 "தொகுக்கப்பட்ட பைதான் மொழிபெயர்ப்பாளரைப் பயன்படுத்தலாம் ::"
 
+#: ../../__w/calibre/calibre/manual/develop.rst:4
+msgid "Setting up a calibre development environment"
+msgstr "காலிபர் மேம்பாட்டு சூழலை அமைத்தல்"
+
+#: ../../__w/calibre/calibre/manual/develop.rst:40
+msgid ""
+"For details, see: ``devices.interface`` which defines the interface "
+"supported by device drivers and ``devices.usbms`` which defines a generic "
+"driver that connects to a USBMS device. All USBMS based drivers in calibre "
+"inherit from it."
+msgstr ""
+"விவரங்களுக்கு, காண்க: `` சாதனங்கள். இன்டர்ஃபேஸ்`` இது சாதன இயக்கிகள் மற்றும்"
+" `` சாதனங்கள். USBMS`` ஆகியவற்றால் ஆதரிக்கப்படும் இடைமுகத்தை வரையறுக்கிறது, "
+"இது ஒரு யூ.எஸ்.பி.எம்.எஸ் சாதனத்துடன் இணைக்கும் பொதுவான இயக்கியை "
+"வரையறுக்கிறது. காலிபரில் உள்ள அனைத்து யூ.எஸ்.பி.எம்.எஸ் அடிப்படையிலான "
+"இயக்கிகளும் அதிலிருந்து பெறுகின்றன."
+
 #: ../../__w/calibre/calibre/manual/develop.rst:401
 msgid "Source install on Linux"
 msgstr "லினக்ஸில் மூல நிறுவல்"
@@ -942,3 +761,184 @@ msgstr ""
 #: ../../__w/calibre/calibre/manual/develop.rst:415
 msgid "API documentation for various parts of calibre"
 msgstr "காலிபரின் பல்வேறு பகுதிகளுக்கான ஏபிஐ ஆவணங்கள்"
+
+#: ../../__w/calibre/calibre/manual/develop.rst:43
+msgid ""
+"e-books  - All the e-book conversion/metadata code. A good starting point is"
+" ``calibre.ebooks.conversion.cli`` which is the module powering the "
+":command:`ebook-convert` command. The conversion process is controlled via "
+"``conversion.plumber``. The format independent code is all in ``ebooks.oeb``"
+" and the format dependent code is in ``ebooks.format_name``."
+msgstr ""
+"மின்-புத்தகங்கள்-அனைத்து மின் புத்தக மாற்றம்/மெட்டாடேட்டா குறியீடு. ஒரு நல்ல"
+" தொடக்கப் புள்ளி `` calibre.ebooks.conversion.cli`` இது இயக்கும் தொகுதி: "
+"கட்டளை: `மின்புத்தக-கான்வர்ட்` கட்டளை. மாற்று செயல்முறை `` "
+"Converst.plumber`` வழியாக கட்டுப்படுத்தப்படுகிறது. வடிவமைப்பு சுயாதீன "
+"குறியீடு அனைத்தும் `` ebooks.oeb`` மற்றும் வடிவமைப்பு சார்ந்த குறியீடு `` "
+"ebooks.format_name`` இல் உள்ளது."
+
+#: ../../__w/calibre/calibre/manual/develop.rst:47
+msgid ""
+"Metadata reading, writing, and downloading is all in ``ebooks.metadata``"
+msgstr ""
+"மெட்டாடேட்டா வாசிப்பு, எழுதுதல் மற்றும் பதிவிறக்கம் அனைத்தும் `` "
+"ebooks.metadata``"
+
+#: ../../__w/calibre/calibre/manual/develop.rst:48
+msgid ""
+"Conversion happens in a pipeline, for the structure of the pipeline, see "
+":ref:`conversion-introduction`. The pipeline consists of an input plugin, "
+"various transforms and an output plugin. The code that constructs and drives"
+" the pipeline is in :file:`plumber.py`. The pipeline works on a "
+"representation of an e-book that is like an unzipped epub, with manifest, "
+"spine, toc, guide, html content, etc. The class that manages this "
+"representation is OEBBook in ``ebooks.oeb.base``. The various "
+"transformations that are applied to the book during conversions live in "
+":file:`oeb/transforms/*.py`. And the input and output plugins live in "
+":file:`conversion/plugins/*.py`."
+msgstr ""
+"மாற்றம் ஒரு குழாய்வழியில் நிகழ்கிறது, குழாய்த்திட்டத்தின் கட்டமைப்பிற்கு, "
+"காண்க: குறிப்பு: `மாற்று-அறிமுகம்`. குழாய் ஒரு உள்ளீட்டு சொருகி, பல்வேறு "
+"உருமாற்றங்கள் மற்றும் வெளியீட்டு சொருகி ஆகியவற்றைக் கொண்டுள்ளது. "
+"குழாய்த்திட்டத்தை உருவாக்கி இயக்கும் குறியீடு உள்ளது: கோப்பு: `plumber.py`. "
+"வெளிப்படையான, முதுகெலும்பு, TOC, வழிகாட்டி, HTML உள்ளடக்கம் போன்றவற்றைக் "
+"கொண்ட ஒரு மின் புத்தகத்தின் பிரதிநிதித்துவத்தில் இந்த குழாய் செயல்படுகிறது. "
+"இந்த பிரதிநிதித்துவத்தை நிர்வகிக்கும் வர்க்கம் `` ebooks.base`` . "
+"மாற்றங்களின் போது புத்தகத்திற்குப் பயன்படுத்தப்படும் பல்வேறு மாற்றங்கள் "
+"வாழ்க: கோப்பு: `OEB/உருமாற்றங்கள்/*. Py`. உள்ளீடு மற்றும் வெளியீட்டு "
+"செருகுநிரல்கள் வாழ்கின்றன: கோப்பு: `மாற்று/செருகுநிரல்கள்/*. Py`."
+
+#: ../../__w/calibre/calibre/manual/develop.rst:58
+msgid ""
+"E-book editing happens using a different container object. It is documented "
+"in :ref:`polish_api`."
+msgstr ""
+"மின் புத்தக எடிட்டிங் வேறு கொள்கலன் பொருளைப் பயன்படுத்தி நிகழ்கிறது. இது "
+"ஆவணப்படுத்தப்பட்டுள்ளது: ref: `Polish_api`."
+
+#: ../../__w/calibre/calibre/manual/develop.rst:6
+msgid ""
+"calibre is completely open source, licensed under the `GNU GPL v3 "
+"<https://www.gnu.org/licenses/gpl.html>`_. This means that you are free to "
+"download and modify the program to your heart's content. In this section, "
+"you will learn how to get a calibre development environment set up on the "
+"operating system of your choice. calibre is written primarily in `Python "
+"<https://www.python.org>`_ with some C/C++ code for speed and system "
+"interfacing. Note that calibre requires at least Python 3.8."
+msgstr ""
+"காலிபர் முற்றிலும் திறந்த மூலமாகும், `குனு ஜிபிஎல் வி 3 "
+"<https://www.gnu.org/licenses/gpl.html> _ _ இன் கீழ் உரிமம் பெற்றது. இதன் "
+"பொருள் உங்கள் இதயத்தின் உள்ளடக்கத்திற்கு நிரலை பதிவிறக்கம் செய்து மாற்ற "
+"நீங்கள் இலவசம். இந்த பிரிவில், நீங்கள் விரும்பும் இயக்க முறைமையில் ஒரு "
+"காலிபர் மேம்பாட்டு சூழலை எவ்வாறு பெறுவது என்பதை நீங்கள் கற்றுக் கொள்வீர்கள்."
+" காலிபர் முதன்மையாக `பைதான் <https://www.python.org>` _ வேகம் மற்றும் கணினி "
+"இடைமுகத்திற்கான சில சி/சி ++ குறியீட்டில் எழுதப்பட்டுள்ளது. காலிபருக்கு "
+"குறைந்தது பைதான் 3.8 தேவை என்பதை நினைவில் கொள்க."
+
+#: ../../__w/calibre/calibre/manual/develop.rst:61
+msgid ""
+"db - The database back-end. See :ref:`db_api` for the interface to the "
+"calibre library."
+msgstr ""
+"டி.பி. - தரவுத்தள பின் -இறுதி. காண்க: குறிப்பு: காலிபர் நூலகத்திற்கான "
+"இடைமுகத்திற்கு `db_api`."
+
+#: ../../__w/calibre/calibre/manual/develop.rst:63
+msgid "Content server: ``srv`` is the calibre Content server."
+msgstr "உள்ளடக்க சேவையகம்: `` எஸ்.ஆர்.வி`` என்பது காலிபர் உள்ளடக்க சேவையகம்."
+
+#: ../../__w/calibre/calibre/manual/develop.rst:65
+msgid ""
+"gui2 - The Graphical User Interface. GUI initialization happens in "
+"``gui2.main`` and ``gui2.ui``. The e-book-viewer is in ``gui2.viewer``. The "
+"e-book editor is in ``gui2.tweak_book``."
+msgstr ""
+"GUI2 - வரைகலை பயனர் இடைமுகம். GUI துவக்கம் `` gui2.main`` மற்றும் `` "
+"gui2.ui`` இல் நிகழ்கிறது. மின்-புத்தக-பார்வையாளர் `` gui2.viewer`` இல் "
+"உள்ளது. மின் புத்தக எடிட்டர் `` gui2.tweak_book`` இல் உள்ளது."
+
+#: ../../__w/calibre/calibre/manual/develop.rst:67
+msgid ""
+"If you want to locate the entry points for all the various calibre "
+"executables, look at the ``entry_points`` structure in `linux.py "
+"<https://github.com/kovidgoyal/calibre/blob/master/src/calibre/linux.py>`_."
+msgstr ""
+"அனைத்து பல்வேறு காலிபர் இயங்குதல்களுக்கான நுழைவு புள்ளிகளைக் கண்டுபிடிக்க "
+"விரும்பினால், `` Entry_Points`` கட்டமைப்பை `linux.py "
+"<https://github.com/kovidgoyal/calibre/blob/master/src/calibre/ இல் "
+"பாருங்கள் linux.py> `_."
+
+#: ../../__w/calibre/calibre/manual/develop.rst:71
+msgid ""
+"If you need help understanding the code, post in the `development forum "
+"<https://www.mobileread.com/forums/forumdisplay.php?f=240>`_ and you will "
+"most likely get help from one of calibre's many developers."
+msgstr ""
+"குறியீட்டைப் புரிந்துகொள்ள உங்களுக்கு உதவி தேவைப்பட்டால், `மேம்பாட்டு "
+"மன்றத்தில் <https://www.mobileered.com/forums/forumdisplay.php?f=240>` _ இல்"
+" இடுகையிடவும் ."
+
+#: ../../__w/calibre/calibre/manual/develop.rst:75
+msgid "Getting the code"
+msgstr "குறியீட்டைப் பெறுதல்"
+
+#: ../../__w/calibre/calibre/manual/develop.rst:77
+msgid ""
+"You can get the calibre source code in two ways, using a version control "
+"system or directly downloading a :website_base:`tarball <dist/src>`."
+msgstr ""
+"பதிப்பு கட்டுப்பாட்டு முறையைப் பயன்படுத்தி அல்லது நேரடியாக ஒரு: "
+"வலைத்தளம்_பேஸ்: `டார்பால் <dist/src>` என்ற காலிபர் மூலக் குறியீட்டை இரண்டு "
+"வழிகளில் பெறலாம்."
+
+#: ../../__w/calibre/calibre/manual/develop.rst:80
+msgid ""
+"calibre uses `Git <https://www.git-scm.com/>`_, a distributed version "
+"control system. Git is available on all the platforms calibre supports.  "
+"After installing Git, you can get the calibre source code with the command::"
+msgstr ""
+"காலிபர் `கிட் <https://www.git-scm.com/>` _, விநியோகிக்கப்பட்ட பதிப்பு "
+"கட்டுப்பாட்டு முறையைப் பயன்படுத்துகிறது. காலிபர் ஆதரவு அனைத்து தளங்களிலும் "
+"கிட் கிடைக்கிறது. கிட் நிறுவிய பிறகு, நீங்கள் கட்டளையுடன் காலிபர் மூலக் "
+"குறியீட்டைப் பெறலாம் ::"
+
+#: ../../__w/calibre/calibre/manual/develop.rst:86
+msgid ""
+"On Windows you will need the complete path name, that will be something like"
+" :file:`C:\\\\Program Files\\\\Git\\\\git.exe`."
+msgstr ""
+"விண்டோஸில் உங்களுக்கு முழுமையான பாதை பெயர் தேவைப்படும், அது போன்றதாக "
+"இருக்கும்: கோப்பு: `சி: \\\\ நிரல் கோப்புகள் \\\\ git \\\\ git.exe`."
+
+#: ../../__w/calibre/calibre/manual/develop.rst:88
+msgid ""
+"calibre is a very large project with a very long source control history, so "
+"the above can take a while (10 mins to an hour depending on your internet "
+"speed)."
+msgstr ""
+"காலிபர் என்பது மிக நீண்ட மூலக் கட்டுப்பாட்டு வரலாற்றைக் கொண்ட மிகப் பெரிய "
+"திட்டமாகும், எனவே மேற்கூறியவை சிறிது நேரம் ஆகலாம் (உங்கள் இணைய வேகத்தைப் "
+"பொறுத்து 10 நிமிடங்கள் முதல் ஒரு மணி நேரம் வரை)."
+
+#: ../../__w/calibre/calibre/manual/develop.rst:91
+msgid ""
+"If you want to get the code faster, the source code for the latest release "
+"is always available as an :website_base:`archive <dist/src>`."
+msgstr ""
+"நீங்கள் குறியீட்டை விரைவாகப் பெற விரும்பினால், சமீபத்திய வெளியீட்டிற்கான "
+"மூலக் குறியீடு எப்போதும் ஒரு: வலைத்தளம்_பேஸ்: `காப்பகம் <dist/src>` ஆகக் "
+"கிடைக்கும்."
+
+#: ../../__w/calibre/calibre/manual/develop.rst:94
+msgid "To update a branch to the latest code, use the command::"
+msgstr ""
+"சமீபத்திய குறியீட்டிற்கு ஒரு கிளையைப் புதுப்பிக்க, கட்டளையைப் பயன்படுத்தவும்"
+" ::"
+
+#: ../../__w/calibre/calibre/manual/develop.rst:98
+msgid ""
+"You can also browse the code at `GitHub "
+"<https://github.com/kovidgoyal/calibre>`_."
+msgstr ""
+"நீங்கள் `github <https://github.com/kovidgoyal/calibre> _ _ இல் குறியீட்டை "
+"உலாவலாம்."

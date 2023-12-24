@@ -5,28 +5,28 @@ from os import listdir
 from os.path import isfile, join
 import glob
 
-def tr_file(filename):
-    po = polib.pofile(filename)
+def tr_file(கோப்பு):
+    po = polib.pofile(கோப்பு)
     pretrans = po.percent_translated()
     if pretrans != 100:
-        print(filename)
+        print(கோப்பு)
         print("Before : ",pretrans,"%")
         count = 0
         # for removing fuzzy entries 
-        for entry in po.fuzzy_entries():
-            entry.flags.remove("fuzzy")
+        for பதிவு in po.fuzzy_entries():
+            பதிவு.flags.remove("fuzzy")
         
-        for entry in po.untranslated_entries():
+        for பதிவு in po.untranslated_entries():
             try:
-                print(entry.msgid)
-                if not entry.msgid_plural:
-                    entry.msgstr=ts.translate_text(entry.msgid, translator='google', from_language = 'en', to_language = 'ta')
-                    print(entry.msgstr)
+                print(பதிவு.msgid)
+                if not பதிவு.msgid_plural:
+                    பதிவு.msgstr=ts.translate_text(பதிவு.msgid, translator='google', from_language = 'en', to_language = 'ta')
+                    print(பதிவு.msgstr)
                 else:
-                    entry.msgstr[0]=ts.translate_text(entry.msgid, translator='google', from_language = 'en', to_language = 'ta')
-                    # if 1 in entry.msgstr_plural:
-                    entry.msgstr[1]=ts.translate_text(entry.msgid_plural, translator='google', from_language = 'en', to_language = 'ta')
-                    # if 2 in entry.msgstr_plural:
+                    பதிவு.msgstr[0]=ts.translate_text(பதிவு.msgid, translator='google', from_language = 'en', to_language = 'ta')
+                    # if 1 in பதிவு.msgstr_plural:
+                    பதிவு.msgstr[1]=ts.translate_text(பதிவு.msgid_plural, translator='google', from_language = 'en', to_language = 'ta')
+                    # if 2 in பதிவு.msgstr_plural:
                     # To do for msgid with multiple entries
             except Exception as e:
                 print(e)
@@ -34,8 +34,8 @@ def tr_file(filename):
                 count += 1
             if count == 5:
                 break 
-        po.save(filename)
-        po.save_as_mofile(filename[:-2] + 'mo')
+        po.save(கோப்பு)
+        po.save_as_mofile(கோப்பு[:-2] + 'mo')
         print("After : ",po.percent_translated(),"%")
 
 files = glob.glob('./முடிவுபெறாத/*.po')

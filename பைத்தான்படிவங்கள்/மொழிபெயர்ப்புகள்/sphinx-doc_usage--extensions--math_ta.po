@@ -17,171 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/usage/extensions/math.rst:6
-msgid "Math support for HTML outputs in Sphinx"
-msgstr "SPHINX இல் HTML வெளியீடுகளுக்கான கணித ஆதரவு"
-
-#: ../../sphinx/doc/usage/extensions/math.rst:14
-msgid ""
-"Math support for non-HTML builders is integrated to sphinx-core. So mathbase"
-" extension is no longer needed."
-msgstr ""
-"எச்.டி.எம்.எல் அல்லாத பில்டர்களுக்கான கணித ஆதரவு ஸ்பின்க்ஸ் கோருடன் "
-"ஒருங்கிணைக்கப்பட்டுள்ளது. எனவே MATHBASE நீட்டிப்பு இனி தேவையில்லை."
-
-#: ../../sphinx/doc/usage/extensions/math.rst:17
-msgid ""
-"Since mathematical notation isn't natively supported by HTML in any way, "
-"Sphinx gives a math support to HTML document with several extensions.  These"
-" use the reStructuredText math :rst:dir:`directive <math>` and "
-":rst:role:`role <math>`."
-msgstr ""
-"கணிதக் குறியீடு எந்த வகையிலும் HTML ஆல் சொந்தமாக ஆதரிக்கப்படவில்லை என்பதால்,"
-" ஸ்பிங்க்ஸ் பல நீட்டிப்புகளுடன் HTML ஆவணத்திற்கு கணித ஆதரவை அளிக்கிறது. இவை "
-"மறுசீரமைப்பு கணிதத்தைப் பயன்படுத்துகின்றன: rst: dir: `டைரெக்டிவ் <athe>` "
-"மற்றும்: rst: பங்கு: `பங்கு <athem>`."
-
-#: ../../sphinx/doc/usage/extensions/math.rst:22
-msgid ":mod:`sphinx.ext.imgmath` -- Render math as images"
-msgstr ": மோட்: `sphinx.ext.imgmath` - கணிதத்தை படங்களாக வழங்கவும்"
-
-#: ../../sphinx/doc/usage/extensions/math.rst:29
-msgid ""
-"This extension renders math via LaTeX and dvipng_ or dvisvgm_ into PNG or "
-"SVG images. This of course means that the computer where the docs are built "
-"must have both programs available."
-msgstr ""
-"இந்த நீட்டிப்பு கணிதத்தை லேடெக்ஸ் மற்றும் டி.வி.ஐ.பி.என்.ஜி அல்லது "
-"டிஸ்விஜிஎம் பி.என்.ஜி அல்லது எஸ்.வி.ஜி படங்களுக்கு வழங்குகிறது. டாக்ஸ் "
-"கட்டப்பட்ட கணினியில் இரண்டு நிரல்களும் கிடைக்க வேண்டும் என்பதே இதன் பொருள்."
-
-#: ../../sphinx/doc/usage/extensions/math.rst:33
-msgid ""
-"There are various configuration values you can set to influence how the "
-"images are built:"
-msgstr ""
-"படங்கள் எவ்வாறு கட்டமைக்கப்படுகின்றன என்பதைப் பாதிக்க நீங்கள் அமைக்கக்கூடிய "
-"பல்வேறு உள்ளமைவு மதிப்புகள் உள்ளன:"
-
-#: ../../sphinx/doc/usage/extensions/math.rst:38
-msgid ""
-"The output image format. The default is ``'png'``. It should be either "
-"``'png'`` or ``'svg'``. The image is produced by first executing ``latex`` "
-"on the TeX mathematical mark-up then (depending on the requested format) "
-"either `dvipng`_ or `dvisvgm`_."
-msgstr ""
-"வெளியீட்டு பட வடிவம். இயல்புநிலை `` 'png'``. இது `` 'png'`` அல்லது ``' "
-"svg'`` ஆக இருக்க வேண்டும். டெக்ஸ் கணித மார்க்-அப் (கோரப்பட்ட வடிவமைப்பைப் "
-"பொறுத்து) `dvipng`_ அல்லது` dvisvgm`_ இல் முதலில் `` லேடெக்ஸ்`` ஐ இயக்குவதன்"
-" மூலம் படம் தயாரிக்கப்படுகிறது."
-
-#: ../../sphinx/doc/usage/extensions/math.rst:45
-msgid ""
-"``dvipng`` and ``dvisvgm`` both have the ability to collect from LaTeX the "
-"\"depth\" of the rendered math: an inline image should use this \"depth\" in"
-" a ``vertical-align`` style to get correctly aligned with surrounding text."
-msgstr ""
-"`` dvipng`` மற்றும் `` dvisvgm`` இரண்டும் லேடெக்ஸிலிருந்து சேகரிக்கும் "
-"திறனைக் கொண்டுள்ளன, வழங்கப்பட்ட கணிதத்தின் \"ஆழம்\": ஒரு இன்லைன் படம் இந்த "
-"\"ஆழத்தை\" சரியாகப் பெற ஒரு `` செங்குத்து-சீரம்` பாணியில் பயன்படுத்த "
-"வேண்டும் சுற்றியுள்ள உரையுடன் சீரமைக்கப்பட்டது."
-
-#: ../../sphinx/doc/usage/extensions/math.rst:49
-msgid ""
-"This mechanism requires the `LaTeX preview package`_ (available as "
-"``preview-latex-style`` on Ubuntu xenial).  Therefore, the default for this "
-"option is ``False`` but it is strongly recommended to set it to ``True``."
-msgstr ""
-"இந்த பொறிமுறைக்கு `லேடெக்ஸ் முன்னோட்டம் தொகுப்பு`_ தேவைப்படுகிறது (உபுண்டு "
-"ஜீனியலில்` `முன்னோட்டம்-லேடெக்ஸ்-ஸ்டைலமாக` ஆகக் கிடைக்கிறது). எனவே, இந்த "
-"விருப்பத்தின் இயல்புநிலை `` தவறு`` ஆனால் அதை `` உண்மை`` என்று அமைக்க "
-"கடுமையாக பரிந்துரைக்கப்படுகிறது."
-
-#: ../../sphinx/doc/usage/extensions/math.rst:55
-msgid ""
-"This option can be used with the ``'svg'`` :confval:`imgmath_image_format`."
-msgstr ""
-"இந்த விருப்பத்தை `` '' svg'``: confval: `imgmath_image_format` உடன் "
-"பயன்படுத்தலாம்."
-
-#: ../../sphinx/doc/usage/extensions/math.rst:59
-msgid ""
-"Default: ``True``.  If false, do not add the LaTeX code as an \"alt\" "
-"attribute for math images."
-msgstr ""
-"இயல்புநிலை: `` உண்மை``. தவறு என்றால், கணித படங்களுக்கான \"ALT\" பண்புக்கூறாக"
-" லேடெக்ஸ் குறியீட்டை சேர்க்க வேண்டாம்."
-
-#: ../../sphinx/doc/usage/extensions/math.rst:64
-msgid ""
-"The font size (in ``pt``) of the displayed math.  The default value is "
-"``12``.  It must be a positive integer."
-msgstr ""
-"காட்டப்பட்ட கணிதத்தின் எழுத்துரு அளவு (`` pt`` இல்). இயல்புநிலை மதிப்பு `` "
-"12``. இது ஒரு நேர்மறையான முழு எண்ணாக இருக்க வேண்டும்."
-
-#: ../../sphinx/doc/usage/extensions/math.rst:69
-msgid ""
-"The command name with which to invoke LaTeX.  The default is ``'latex'``; "
-"you may need to set this to a full path if ``latex`` is not in the "
-"executable search path."
-msgstr ""
-"லேடெக்ஸை அழைக்க கட்டளை பெயர். இயல்புநிலை `` 'லேடெக்ஸ்'``; இயங்கக்கூடிய தேடல்"
-" பாதையில் இல்லாவிட்டால் இதை நீங்கள் முழு பாதையில் அமைக்க வேண்டியிருக்கலாம்."
-
-#: ../../sphinx/doc/usage/extensions/math.rst:73
-msgid ""
-"Since this setting is not portable from system to system, it is normally not"
-" useful to set it in ``conf.py``; rather, giving it on the :program:`sphinx-"
-"build` command line via the :option:`-D <sphinx-build -D>` option should be "
-"preferable, like this::"
-msgstr ""
-"இந்த அமைப்பு கணினியிலிருந்து கணினிக்கு சிறியதாக இல்லை என்பதால், அதை `` "
-"conf.py`` இல் அமைப்பது பொதுவாக பயனுள்ளதாக இருக்காது; மாறாக, அதை வழங்குதல்: "
-"நிரல்: `ஸ்பின்க்ஸ்-பில்ட்` கட்டளை வரி வழியாக: விருப்பம்:` -d <sphinx- கட்டளை"
-" -d> `விருப்பம் விரும்பத்தக்கதாக இருக்க வேண்டும், இது போன்றது ::"
-
-#: ../../sphinx/doc/usage/extensions/math.rst:80
-msgid ""
-"This value should only contain the path to the latex executable, not further"
-" arguments; use :confval:`imgmath_latex_args` for that purpose."
-msgstr ""
-"இந்த மதிப்பில் லேடெக்ஸ் இயங்கக்கூடிய பாதையை மட்டுமே கொண்டிருக்க வேண்டும், "
-"மேலும் வாதங்கள் அல்ல; பயன்படுத்தவும்: confval: `imgmath_latex_args` அந்த "
-"நோக்கத்திற்காக."
-
-#: ../../sphinx/doc/usage/extensions/math.rst:85
-msgid ""
-"To use `OpenType Math fonts`__ with ``unicode-math``, via a custom "
-":confval:`imgmath_latex_preamble`, you can set :confval:`imgmath_latex` to "
-"``'dvilualatex'``, but must then set :confval:`imgmath_image_format` to "
-"``'svg'``.  Note: this has only been tested with ``dvisvgm 3.0.3``. It "
-"significantly increases image production duration compared to using standard"
-" ``'latex'`` with traditional TeX math fonts."
-msgstr ""
-"`` யூனிகோட்-மத்`` உடன் `ஓபன்டைப் கணித எழுத்துருக்களைப் பயன்படுத்த, ஒரு "
-"தனிப்பயன் வழியாக: confval:` imgmath_latex_preambel`, நீங்கள் அமைக்கலாம்: "
-"confval: `imgmath_latex` முதல்` '' dvilualatex'```, ஆனால் பின்னர் அமைக்க "
-"வேண்டும்: confval: `imgmath_image_format` to` `'svg'``. குறிப்பு: இது `` "
-"dvisvgm 3.0.3`` உடன் மட்டுமே சோதிக்கப்பட்டது. பாரம்பரிய டெக்ஸ் கணித "
-"எழுத்துருக்களுடன் நிலையான `` 'லேடெக்ஸ்'` பயன்படுத்துவதை ஒப்பிடும்போது இது பட"
-" உற்பத்தி காலத்தை கணிசமாக அதிகரிக்கிறது."
-
-#: ../../sphinx/doc/usage/extensions/math.rst:97
-msgid ""
-"Some fancy LaTeX mark-up (an example was reported which used TikZ to add "
-"various decorations to the equation) require multiple runs of the LaTeX "
-"executable.  To handle this, set this configuration setting to ``'latexmk'``"
-" (or a full path to it) as this Perl script reliably chooses dynamically how"
-" many latex runs are needed."
-msgstr ""
-"சில ஆடம்பரமான லேடெக்ஸ் மார்க்-அப் (சமன்பாட்டில் பல்வேறு அலங்காரங்களைச் "
-"சேர்க்க TIKZ ஐப் பயன்படுத்திய ஒரு எடுத்துக்காட்டு அறிவிக்கப்பட்டது) லேடெக்ஸ்"
-" இயங்கக்கூடிய பல ரன்கள் தேவை. இதைக் கையாள, இந்த உள்ளமைவு அமைப்பை `` '' "
-"லேடெக்ஸ்ம்க்'`` (அல்லது அதற்கு முழு பாதை) என அமைக்கவும், ஏனெனில் இந்த பெர்ல்"
-" ஸ்கிரிப்ட் எத்தனை லேடெக்ஸ் ரன்கள் தேவை என்பதை மாறும் வகையில் தேர்வு "
-"செய்கிறது."
-
 #: ../../sphinx/doc/usage/extensions/math.rst:105
 msgid ""
 "Using ``'xelatex'`` (or a full path to it) is now supported.  But you must "
@@ -244,6 +79,14 @@ msgstr ""
 "வேண்டியிருக்கலாம். `` Imgmath_image_format``` `` 'png'`` `` `' '`' '`' "
 "'என்று அமைக்கப்பட்டால் மட்டுமே இந்த விருப்பம் பயன்படுத்தப்படுகிறது."
 
+#: ../../sphinx/doc/usage/extensions/math.rst:14
+msgid ""
+"Math support for non-HTML builders is integrated to sphinx-core. So mathbase"
+" extension is no longer needed."
+msgstr ""
+"எச்.டி.எம்.எல் அல்லாத பில்டர்களுக்கான கணித ஆதரவு ஸ்பின்க்ஸ் கோருடன் "
+"ஒருங்கிணைக்கப்பட்டுள்ளது. எனவே MATHBASE நீட்டிப்பு இனி தேவையில்லை."
+
 #: ../../sphinx/doc/usage/extensions/math.rst:140
 msgid ""
 "Additional arguments to give to dvipng, as a list.  The default value is "
@@ -298,6 +141,18 @@ msgstr ""
 msgid ":mod:`sphinx.ext.mathjax` -- Render math via JavaScript"
 msgstr ""
 ": மோட்: `sphinx.ext.mathjax` - ஜாவாஸ்கிரிப்ட் வழியாக கணிதத்தை வழங்கவும்"
+
+#: ../../sphinx/doc/usage/extensions/math.rst:17
+msgid ""
+"Since mathematical notation isn't natively supported by HTML in any way, "
+"Sphinx gives a math support to HTML document with several extensions.  These"
+" use the reStructuredText math :rst:dir:`directive <math>` and "
+":rst:role:`role <math>`."
+msgstr ""
+"கணிதக் குறியீடு எந்த வகையிலும் HTML ஆல் சொந்தமாக ஆதரிக்கப்படவில்லை என்பதால்,"
+" ஸ்பிங்க்ஸ் பல நீட்டிப்புகளுடன் HTML ஆவணத்திற்கு கணித ஆதரவை அளிக்கிறது. இவை "
+"மறுசீரமைப்பு கணிதத்தைப் பயன்படுத்துகின்றன: rst: dir: `டைரெக்டிவ் <athe>` "
+"மற்றும்: rst: பங்கு: `பங்கு <athem>`."
 
 #: ../../sphinx/doc/usage/extensions/math.rst:175
 msgid ""
@@ -388,6 +243,10 @@ msgstr ""
 "சி.டி.என் URL இலிருந்து வேறுபட்ட முழு `` https: // `` url ஐ நீங்கள் "
 "கொடுக்கலாம்."
 
+#: ../../sphinx/doc/usage/extensions/math.rst:22
+msgid ":mod:`sphinx.ext.imgmath` -- Render math as images"
+msgstr ": மோட்: `sphinx.ext.imgmath` - கணிதத்தை படங்களாக வழங்கவும்"
+
 #: ../../sphinx/doc/usage/extensions/math.rst:223
 msgid ""
 "The options to script tag for mathjax.  For example, you can set integrity "
@@ -466,6 +325,16 @@ msgstr ""
 "`Mathjax_config` பின்னோக்கி பொருந்தக்கூடிய தன்மைக்கு இன்னும் "
 "ஆதரிக்கப்படுகிறது."
 
+#: ../../sphinx/doc/usage/extensions/math.rst:29
+msgid ""
+"This extension renders math via LaTeX and dvipng_ or dvisvgm_ into PNG or "
+"SVG images. This of course means that the computer where the docs are built "
+"must have both programs available."
+msgstr ""
+"இந்த நீட்டிப்பு கணிதத்தை லேடெக்ஸ் மற்றும் டி.வி.ஐ.பி.என்.ஜி அல்லது "
+"டிஸ்விஜிஎம் பி.என்.ஜி அல்லது எஸ்.வி.ஜி படங்களுக்கு வழங்குகிறது. டாக்ஸ் "
+"கட்டப்பட்ட கணினியில் இரண்டு நிரல்களும் கிடைக்க வேண்டும் என்பதே இதன் பொருள்."
+
 #: ../../sphinx/doc/usage/extensions/math.rst:293
 msgid ":mod:`sphinx.ext.jsmath` -- Render math via JavaScript"
 msgstr ""
@@ -499,3 +368,134 @@ msgstr ""
 "வைத்தால், இந்த மதிப்பு `` jsmath/easy/load.js``. ஒரு சேவையகத்தில் "
 "அமைக்கப்பட்ட ஒன்றுக்கு மேற்பட்ட SPHINX ஆவணங்களை நீங்கள் ஹோஸ்ட் செய்தால், "
 "பகிரப்பட்ட இடத்தில் JSMATH ஐ நிறுவுவது நல்லது."
+
+#: ../../sphinx/doc/usage/extensions/math.rst:33
+msgid ""
+"There are various configuration values you can set to influence how the "
+"images are built:"
+msgstr ""
+"படங்கள் எவ்வாறு கட்டமைக்கப்படுகின்றன என்பதைப் பாதிக்க நீங்கள் அமைக்கக்கூடிய "
+"பல்வேறு உள்ளமைவு மதிப்புகள் உள்ளன:"
+
+#: ../../sphinx/doc/usage/extensions/math.rst:38
+msgid ""
+"The output image format. The default is ``'png'``. It should be either "
+"``'png'`` or ``'svg'``. The image is produced by first executing ``latex`` "
+"on the TeX mathematical mark-up then (depending on the requested format) "
+"either `dvipng`_ or `dvisvgm`_."
+msgstr ""
+"வெளியீட்டு பட வடிவம். இயல்புநிலை `` 'png'``. இது `` 'png'`` அல்லது ``' "
+"svg'`` ஆக இருக்க வேண்டும். டெக்ஸ் கணித மார்க்-அப் (கோரப்பட்ட வடிவமைப்பைப் "
+"பொறுத்து) `dvipng`_ அல்லது` dvisvgm`_ இல் முதலில் `` லேடெக்ஸ்`` ஐ இயக்குவதன்"
+" மூலம் படம் தயாரிக்கப்படுகிறது."
+
+#: ../../sphinx/doc/usage/extensions/math.rst:45
+msgid ""
+"``dvipng`` and ``dvisvgm`` both have the ability to collect from LaTeX the "
+"\"depth\" of the rendered math: an inline image should use this \"depth\" in"
+" a ``vertical-align`` style to get correctly aligned with surrounding text."
+msgstr ""
+"`` dvipng`` மற்றும் `` dvisvgm`` இரண்டும் லேடெக்ஸிலிருந்து சேகரிக்கும் "
+"திறனைக் கொண்டுள்ளன, வழங்கப்பட்ட கணிதத்தின் \"ஆழம்\": ஒரு இன்லைன் படம் இந்த "
+"\"ஆழத்தை\" சரியாகப் பெற ஒரு `` செங்குத்து-சீரம்` பாணியில் பயன்படுத்த "
+"வேண்டும் சுற்றியுள்ள உரையுடன் சீரமைக்கப்பட்டது."
+
+#: ../../sphinx/doc/usage/extensions/math.rst:49
+msgid ""
+"This mechanism requires the `LaTeX preview package`_ (available as "
+"``preview-latex-style`` on Ubuntu xenial).  Therefore, the default for this "
+"option is ``False`` but it is strongly recommended to set it to ``True``."
+msgstr ""
+"இந்த பொறிமுறைக்கு `லேடெக்ஸ் முன்னோட்டம் தொகுப்பு`_ தேவைப்படுகிறது (உபுண்டு "
+"ஜீனியலில்` `முன்னோட்டம்-லேடெக்ஸ்-ஸ்டைலமாக` ஆகக் கிடைக்கிறது). எனவே, இந்த "
+"விருப்பத்தின் இயல்புநிலை `` தவறு`` ஆனால் அதை `` உண்மை`` என்று அமைக்க "
+"கடுமையாக பரிந்துரைக்கப்படுகிறது."
+
+#: ../../sphinx/doc/usage/extensions/math.rst:55
+msgid ""
+"This option can be used with the ``'svg'`` :confval:`imgmath_image_format`."
+msgstr ""
+"இந்த விருப்பத்தை `` '' svg'``: confval: `imgmath_image_format` உடன் "
+"பயன்படுத்தலாம்."
+
+#: ../../sphinx/doc/usage/extensions/math.rst:59
+msgid ""
+"Default: ``True``.  If false, do not add the LaTeX code as an \"alt\" "
+"attribute for math images."
+msgstr ""
+"இயல்புநிலை: `` உண்மை``. தவறு என்றால், கணித படங்களுக்கான \"ALT\" பண்புக்கூறாக"
+" லேடெக்ஸ் குறியீட்டை சேர்க்க வேண்டாம்."
+
+#: ../../sphinx/doc/usage/extensions/math.rst:6
+msgid "Math support for HTML outputs in Sphinx"
+msgstr "SPHINX இல் HTML வெளியீடுகளுக்கான கணித ஆதரவு"
+
+#: ../../sphinx/doc/usage/extensions/math.rst:64
+msgid ""
+"The font size (in ``pt``) of the displayed math.  The default value is "
+"``12``.  It must be a positive integer."
+msgstr ""
+"காட்டப்பட்ட கணிதத்தின் எழுத்துரு அளவு (`` pt`` இல்). இயல்புநிலை மதிப்பு `` "
+"12``. இது ஒரு நேர்மறையான முழு எண்ணாக இருக்க வேண்டும்."
+
+#: ../../sphinx/doc/usage/extensions/math.rst:69
+msgid ""
+"The command name with which to invoke LaTeX.  The default is ``'latex'``; "
+"you may need to set this to a full path if ``latex`` is not in the "
+"executable search path."
+msgstr ""
+"லேடெக்ஸை அழைக்க கட்டளை பெயர். இயல்புநிலை `` 'லேடெக்ஸ்'``; இயங்கக்கூடிய தேடல்"
+" பாதையில் இல்லாவிட்டால் இதை நீங்கள் முழு பாதையில் அமைக்க வேண்டியிருக்கலாம்."
+
+#: ../../sphinx/doc/usage/extensions/math.rst:73
+msgid ""
+"Since this setting is not portable from system to system, it is normally not"
+" useful to set it in ``conf.py``; rather, giving it on the :program:`sphinx-"
+"build` command line via the :option:`-D <sphinx-build -D>` option should be "
+"preferable, like this::"
+msgstr ""
+"இந்த அமைப்பு கணினியிலிருந்து கணினிக்கு சிறியதாக இல்லை என்பதால், அதை `` "
+"conf.py`` இல் அமைப்பது பொதுவாக பயனுள்ளதாக இருக்காது; மாறாக, அதை வழங்குதல்: "
+"நிரல்: `ஸ்பின்க்ஸ்-பில்ட்` கட்டளை வரி வழியாக: விருப்பம்:` -d <sphinx- கட்டளை"
+" -d> `விருப்பம் விரும்பத்தக்கதாக இருக்க வேண்டும், இது போன்றது ::"
+
+#: ../../sphinx/doc/usage/extensions/math.rst:80
+msgid ""
+"This value should only contain the path to the latex executable, not further"
+" arguments; use :confval:`imgmath_latex_args` for that purpose."
+msgstr ""
+"இந்த மதிப்பில் லேடெக்ஸ் இயங்கக்கூடிய பாதையை மட்டுமே கொண்டிருக்க வேண்டும், "
+"மேலும் வாதங்கள் அல்ல; பயன்படுத்தவும்: confval: `imgmath_latex_args` அந்த "
+"நோக்கத்திற்காக."
+
+#: ../../sphinx/doc/usage/extensions/math.rst:85
+msgid ""
+"To use `OpenType Math fonts`__ with ``unicode-math``, via a custom "
+":confval:`imgmath_latex_preamble`, you can set :confval:`imgmath_latex` to "
+"``'dvilualatex'``, but must then set :confval:`imgmath_image_format` to "
+"``'svg'``.  Note: this has only been tested with ``dvisvgm 3.0.3``. It "
+"significantly increases image production duration compared to using standard"
+" ``'latex'`` with traditional TeX math fonts."
+msgstr ""
+"`` யூனிகோட்-மத்`` உடன் `ஓபன்டைப் கணித எழுத்துருக்களைப் பயன்படுத்த, ஒரு "
+"தனிப்பயன் வழியாக: confval:` imgmath_latex_preambel`, நீங்கள் அமைக்கலாம்: "
+"confval: `imgmath_latex` முதல்` '' dvilualatex'```, ஆனால் பின்னர் அமைக்க "
+"வேண்டும்: confval: `imgmath_image_format` to` `'svg'``. குறிப்பு: இது `` "
+"dvisvgm 3.0.3`` உடன் மட்டுமே சோதிக்கப்பட்டது. பாரம்பரிய டெக்ஸ் கணித "
+"எழுத்துருக்களுடன் நிலையான `` 'லேடெக்ஸ்'` பயன்படுத்துவதை ஒப்பிடும்போது இது பட"
+" உற்பத்தி காலத்தை கணிசமாக அதிகரிக்கிறது."
+
+#: ../../sphinx/doc/usage/extensions/math.rst:97
+msgid ""
+"Some fancy LaTeX mark-up (an example was reported which used TikZ to add "
+"various decorations to the equation) require multiple runs of the LaTeX "
+"executable.  To handle this, set this configuration setting to ``'latexmk'``"
+" (or a full path to it) as this Perl script reliably chooses dynamically how"
+" many latex runs are needed."
+msgstr ""
+"சில ஆடம்பரமான லேடெக்ஸ் மார்க்-அப் (சமன்பாட்டில் பல்வேறு அலங்காரங்களைச் "
+"சேர்க்க TIKZ ஐப் பயன்படுத்திய ஒரு எடுத்துக்காட்டு அறிவிக்கப்பட்டது) லேடெக்ஸ்"
+" இயங்கக்கூடிய பல ரன்கள் தேவை. இதைக் கையாள, இந்த உள்ளமைவு அமைப்பை `` '' "
+"லேடெக்ஸ்ம்க்'`` (அல்லது அதற்கு முழு பாதை) என அமைக்கவும், ஏனெனில் இந்த பெர்ல்"
+" ஸ்கிரிப்ட் எத்தனை லேடெக்ஸ் ரன்கள் தேவை என்பதை மாறும் வகையில் தேர்வு "
+"செய்கிறது."

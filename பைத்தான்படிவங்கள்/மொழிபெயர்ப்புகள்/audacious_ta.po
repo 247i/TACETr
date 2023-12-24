@@ -10,7 +10,7 @@
 # Sivarajah Bagerathan <bagerathan@gmail.com>, 2013
 # Vanavarayan Vanthiyathevan <kanishkar2000@gmail.com>, 2019
 # தமிழ்நேரம்<https://TamilNeram.github.io>,2023
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Audacious\n"
@@ -24,6 +24,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/audacious/main.cc:152
+#, c-format
+msgid "Unknown option: %s\n"
+msgstr "தெரியாத விருப்பம்: %கள்"
+
+#: src/audacious/main.cc:174
+#, c-format
+msgid "Unknown option: -%c\n"
+msgstr "தெரியாத விருப்பம்: -%சி"
+
+#: src/audacious/main.cc:204
+msgid ""
+"Usage: audacious [OPTION] ... [FILE] ...\n"
+"\n"
+msgstr "பயன்பாடு: துணிச்சலான [விருப்பம்] ... [கோப்பு] ..."
+
+#: src/audacious/main.cc:206
+msgid "Select instance to run/control"
+msgstr "இயக்க/கட்டுப்படுத்த உதாரணத்தைத் தேர்ந்தெடுக்கவும்"
+
+#: src/audacious/main.cc:391 src/libaudqt/audqt.cc:134
+msgid "Audacious"
+msgstr "ஔடகிவஸ்"
 
 #: src/audacious/main.cc:72
 msgid "Show command-line help"
@@ -93,37 +117,6 @@ msgstr "ஜி.டி.கே பயன்முறையில் இயக்�
 msgid "Run in Qt mode"
 msgstr "QT பயன்முறையில் இயக்கவும்"
 
-#: src/audacious/main.cc:152
-#, c-format
-msgid "Unknown option: %s\n"
-msgstr "தெரியாத விருப்பம்: %கள்"
-
-#: src/audacious/main.cc:174
-#, c-format
-msgid "Unknown option: -%c\n"
-msgstr "தெரியாத விருப்பம்: -%சி"
-
-#: src/audacious/main.cc:204
-msgid ""
-"Usage: audacious [OPTION] ... [FILE] ...\n"
-"\n"
-msgstr "பயன்பாடு: துணிச்சலான [விருப்பம்] ... [கோப்பு] ..."
-
-#: src/audacious/main.cc:206
-msgid "Select instance to run/control"
-msgstr "இயக்க/கட்டுப்படுத்த உதாரணத்தைத் தேர்ந்தெடுக்கவும்"
-
-#: src/audacious/main.cc:391 src/libaudqt/audqt.cc:134
-msgid "Audacious"
-msgstr "ஔடகிவஸ்"
-
-#: src/libaudcore/adder.cc:96
-#, c-format
-msgid "%d file found"
-msgid_plural "%d files found"
-msgstr[0] "%d கோப்பு காணப்படவில்லை"
-msgstr[1] "%d கோப்புக்கள் காணப்படவில்லை"
-
 #: src/libaudcore/adder.cc:320 src/libaudcore/adder.cc:404
 #, c-format
 msgid ""
@@ -140,6 +133,13 @@ msgstr "கோப்புகள் எதுவும் கண்டறிய�
 #: src/libaudcore/adder.cc:478 src/libaudcore/playlist.cc:81
 msgid "New Playlist"
 msgstr "புதிய பாடல் பட்டியல்"
+
+#: src/libaudcore/adder.cc:96
+#, c-format
+msgid "%d file found"
+msgid_plural "%d files found"
+msgstr[0] "%d கோப்பு காணப்படவில்லை"
+msgstr[1] "%d கோப்புக்கள் காணப்படவில்லை"
 
 #: src/libaudcore/audstrings.cc:664 src/libaudcore/tuple.cc:532
 msgid "Standard input"
@@ -182,10 +182,6 @@ msgstr ""
 msgid "Invalid audio format"
 msgstr "தவறான ஆடியோ வடிவம்"
 
-#: src/libaudcore/playlist.cc:82
-msgid "Now Playing"
-msgstr "தற்போது இயக்கப்படுவது"
-
 #: src/libaudcore/playlist-files.cc:73 src/libaudcore/playlist-files.cc:153
 #: src/libaudgui/infowin.cc:537 src/libaudqt/infowin-qt.cc:182
 #, c-format
@@ -195,16 +191,6 @@ msgid ""
 msgstr ""
 "பிழை திறப்பது %s: \n"
 " %கள்"
-
-#: src/libaudcore/playlist-files.cc:87 src/libaudqt/eq-preset-qt.cc:282
-#, c-format
-msgid "Error loading %s."
-msgstr "பிழை ஏற்றுதல் %கள்."
-
-#: src/libaudcore/playlist-files.cc:89
-#, c-format
-msgid "Cannot load %s: unsupported file name extension."
-msgstr "%S ஐ ஏற்ற முடியாது: ஆதரிக்கப்படாத கோப்பு பெயர் நீட்டிப்பு."
 
 #: src/libaudcore/playlist-files.cc:161 src/libaudqt/eq-preset-qt.cc:317
 #, c-format
@@ -216,9 +202,19 @@ msgstr "%S சேமிப்பு."
 msgid "Cannot save %s: unsupported file name extension."
 msgstr "%S ஐ சேமிக்க முடியாது: ஆதரிக்கப்படாத கோப்பு பெயர் நீட்டிப்பு."
 
-#: src/libaudcore/probe.cc:54
-msgid "Error loading plugin"
-msgstr "சொருகி"
+#: src/libaudcore/playlist-files.cc:87 src/libaudqt/eq-preset-qt.cc:282
+#, c-format
+msgid "Error loading %s."
+msgstr "பிழை ஏற்றுதல் %கள்."
+
+#: src/libaudcore/playlist-files.cc:89
+#, c-format
+msgid "Cannot load %s: unsupported file name extension."
+msgstr "%S ஐ ஏற்ற முடியாது: ஆதரிக்கப்படாத கோப்பு பெயர் நீட்டிப்பு."
+
+#: src/libaudcore/playlist.cc:82
+msgid "Now Playing"
+msgstr "தற்போது இயக்கப்படுவது"
 
 #: src/libaudcore/probe.cc:179
 msgid "Seek error"
@@ -239,6 +235,10 @@ msgid ""
 msgstr ""
 "கோப்பை டிகோட் செய்ய முடியவில்லை. இது செல்லாது, ஊழல் நிறைந்ததாக இருக்கலாம் "
 "அல்லது ஆதரிக்கப்படாத வடிவத்தில் இருக்கலாம்."
+
+#: src/libaudcore/probe.cc:54
+msgid "Error loading plugin"
+msgstr "சொருகி"
 
 #: src/libaudcore/tuple.cc:566
 msgid "Mono"
@@ -272,14 +272,14 @@ msgstr "(அறியாத தலைப்பு)"
 msgid "Unknown URI scheme"
 msgstr "தெரியாத URI திட்டம்"
 
+#: src/libaudcore/vfs_local.cc:134
+msgid "Invalid access mode"
+msgstr "தவறான அணுகல் முறை"
+
 #: src/libaudcore/vfs_local.cc:86 src/libaudcore/vfs_local.cc:330
 #: src/libaudcore/vfs_local.cc:386
 msgid "Invalid file name"
 msgstr "ஏற்க முடியாத கோப்பு பெயர் "
-
-#: src/libaudcore/vfs_local.cc:134
-msgid "Invalid access mode"
-msgstr "தவறான அணுகல் முறை"
 
 #: src/libaudgui/about.cc:37 src/libaudqt/about-qt.cc:37
 msgid "Credits"
@@ -369,10 +369,6 @@ msgstr "தெரிவு செய்யப்பட்டவையை அழ�
 msgid "Revert Changes"
 msgstr "மாற்றங்களை மாற்றியமைத்தல்"
 
-#: src/libaudgui/equalizer.cc:46 src/libaudqt/equalizer-qt.cc:120
-msgid "_Enable"
-msgstr "_செயல்படுத்தவும்"
-
 #: src/libaudgui/equalizer.cc:128 src/libaudqt/equalizer-qt.cc:123
 msgid "31 Hz"
 msgstr "31 Hz"
@@ -402,16 +398,16 @@ msgid "2 kHz"
 msgstr "2 kHz"
 
 #: src/libaudgui/equalizer.cc:130 src/libaudqt/equalizer-qt.cc:124
+msgid "16 kHz"
+msgstr "16 kHz"
+
+#: src/libaudgui/equalizer.cc:130 src/libaudqt/equalizer-qt.cc:124
 msgid "4 kHz"
 msgstr "4 kHz"
 
 #: src/libaudgui/equalizer.cc:130 src/libaudqt/equalizer-qt.cc:124
 msgid "8 kHz"
 msgstr "8 kHz"
-
-#: src/libaudgui/equalizer.cc:130 src/libaudqt/equalizer-qt.cc:124
-msgid "16 kHz"
-msgstr "16 kHz"
 
 #: src/libaudgui/equalizer.cc:133 src/libaudqt/equalizer-qt.cc:206
 msgid "Equalizer"
@@ -428,6 +424,20 @@ msgstr "பூஜ்ஜியத்திற்கு மீட்டமைக�
 #: src/libaudgui/equalizer.cc:158 src/libaudqt/equalizer-qt.cc:129
 msgid "Preamp"
 msgstr "munperukki"
+
+#: src/libaudgui/equalizer.cc:46 src/libaudqt/equalizer-qt.cc:120
+msgid "_Enable"
+msgstr "_செயல்படுத்தவும்"
+
+#: src/libaudgui/file-opener.cc:138 src/libaudgui/infowin.cc:442
+#: src/libaudgui/jump-to-track.cc:315 src/libaudgui/plugin-prefs.cc:167
+#: src/libaudgui/prefs-window.cc:938 src/libaudgui/queue-manager.cc:194
+#: src/libaudgui/util.cc:355 src/libaudqt/audqt.cc:314
+#: src/libaudqt/infowin-qt.cc:92 src/libaudqt/log-inspector.cc:244
+#: src/libaudqt/prefs-plugin.cc:151 src/libaudqt/prefs-window-qt.cc:688
+#: src/libaudqt/song-window-qt.cc:360
+msgid "_Close"
+msgstr "_மூடவும்"
 
 #: src/libaudgui/file-opener.cc:79 src/libaudqt/fileopener.cc:104
 msgid "Open Files"
@@ -454,16 +464,6 @@ msgstr "_சேர் "
 #: src/libaudgui/file-opener.cc:90
 msgid "Close _dialog on add"
 msgstr "சேர்க்கையில் _ டியாலாக் மூடு"
-
-#: src/libaudgui/file-opener.cc:138 src/libaudgui/infowin.cc:442
-#: src/libaudgui/jump-to-track.cc:315 src/libaudgui/plugin-prefs.cc:167
-#: src/libaudgui/prefs-window.cc:938 src/libaudgui/queue-manager.cc:194
-#: src/libaudgui/util.cc:355 src/libaudqt/audqt.cc:314
-#: src/libaudqt/infowin-qt.cc:92 src/libaudqt/log-inspector.cc:244
-#: src/libaudqt/prefs-plugin.cc:151 src/libaudqt/prefs-window-qt.cc:688
-#: src/libaudqt/song-window-qt.cc:360
-msgid "_Close"
-msgstr "_மூடவும்"
 
 #: src/libaudgui/infopopup.cc:200 src/libaudgui/infowin.cc:401
 #: src/libaudgui/prefs-window.cc:105 src/libaudqt/infopopup-qt.cc:94
@@ -508,70 +508,6 @@ msgstr "paadal"
 #: src/libaudqt/info-widget.cc:65
 msgid "Length"
 msgstr "பாடலின் கால அளவிடை "
-
-#: src/libaudgui/infowin.cc:51
-msgid "Format:"
-msgstr "வடிவமைப்பு: "
-
-#: src/libaudgui/infowin.cc:52
-msgid "Quality:"
-msgstr "தரம்:"
-
-#: src/libaudgui/infowin.cc:53
-msgid "Bitrate:"
-msgstr "Bit வீதம் "
-
-#: src/libaudgui/infowin.cc:87
-msgid "Acid Jazz"
-msgstr "ஆசிட் ஜாஸ்"
-
-#: src/libaudgui/infowin.cc:88
-msgid "Acid Rock"
-msgstr "ஆசிட் ராக்"
-
-#: src/libaudgui/infowin.cc:89
-msgid "Ambient"
-msgstr "சுற்றுச்சூழல்"
-
-#: src/libaudgui/infowin.cc:90
-msgid "Bebop"
-msgstr "பெபாப்"
-
-#: src/libaudgui/infowin.cc:91
-msgid "Bluegrass"
-msgstr "ப்ளூகிராஸ்"
-
-#: src/libaudgui/infowin.cc:92
-msgid "Blues"
-msgstr "ப்ளூஸ்"
-
-#: src/libaudgui/infowin.cc:93
-msgid "Chamber Music"
-msgstr "சபை இசை"
-
-#: src/libaudgui/infowin.cc:94
-msgid "Classical"
-msgstr "பாரம்பரிய இசை"
-
-#: src/libaudgui/infowin.cc:95
-msgid "Country"
-msgstr "கிராமப்புறப்பாடல்கள் "
-
-#: src/libaudgui/infowin.cc:96
-msgid "Death Metal"
-msgstr "டெத் metal"
-
-#: src/libaudgui/infowin.cc:97
-msgid "Disco"
-msgstr "disco"
-
-#: src/libaudgui/infowin.cc:98
-msgid "Easy Listening"
-msgstr "எளிதாக கேட்கக் கூடியவை"
-
-#: src/libaudgui/infowin.cc:99
-msgid "Folk"
-msgstr "நாட்டுப்புறப் பாடல்கள்"
 
 #: src/libaudgui/infowin.cc:100
 msgid "Funk"
@@ -728,28 +664,92 @@ msgstr "%d kbit/s"
 msgid "N/A"
 msgstr "N/a"
 
+#: src/libaudgui/infowin.cc:51
+msgid "Format:"
+msgstr "வடிவமைப்பு: "
+
+#: src/libaudgui/infowin.cc:52
+msgid "Quality:"
+msgstr "தரம்:"
+
+#: src/libaudgui/infowin.cc:53
+msgid "Bitrate:"
+msgstr "Bit வீதம் "
+
+#: src/libaudgui/infowin.cc:87
+msgid "Acid Jazz"
+msgstr "ஆசிட் ஜாஸ்"
+
+#: src/libaudgui/infowin.cc:88
+msgid "Acid Rock"
+msgstr "ஆசிட் ராக்"
+
+#: src/libaudgui/infowin.cc:89
+msgid "Ambient"
+msgstr "சுற்றுச்சூழல்"
+
+#: src/libaudgui/infowin.cc:90
+msgid "Bebop"
+msgstr "பெபாப்"
+
+#: src/libaudgui/infowin.cc:91
+msgid "Bluegrass"
+msgstr "ப்ளூகிராஸ்"
+
+#: src/libaudgui/infowin.cc:92
+msgid "Blues"
+msgstr "ப்ளூஸ்"
+
+#: src/libaudgui/infowin.cc:93
+msgid "Chamber Music"
+msgstr "சபை இசை"
+
+#: src/libaudgui/infowin.cc:94
+msgid "Classical"
+msgstr "பாரம்பரிய இசை"
+
+#: src/libaudgui/infowin.cc:95
+msgid "Country"
+msgstr "கிராமப்புறப்பாடல்கள் "
+
+#: src/libaudgui/infowin.cc:96
+msgid "Death Metal"
+msgstr "டெத் metal"
+
+#: src/libaudgui/infowin.cc:97
+msgid "Disco"
+msgstr "disco"
+
+#: src/libaudgui/infowin.cc:98
+msgid "Easy Listening"
+msgstr "எளிதாக கேட்கக் கூடியவை"
+
+#: src/libaudgui/infowin.cc:99
+msgid "Folk"
+msgstr "நாட்டுப்புறப் பாடல்கள்"
+
 #: src/libaudgui/jump-to-time.cc:47 src/libaudgui/jump-to-track.cc:320
 #: src/libaudqt/song-window-qt.cc:358
 msgid "_Jump"
 msgstr "_ ஜம்ப்"
 
 #: src/libaudgui/jump-to-time.cc:51
+msgid "Enter time (minutes:seconds):"
+msgstr "நேரத்தை பதிவு செய்க (நிமிடங்கள்:வினாடிகள்)"
+
+#: src/libaudgui/jump-to-time.cc:51
 msgid "Jump to Time"
 msgstr "நேரத்திற்கு செல்லவும் "
 
-#: src/libaudgui/jump-to-time.cc:51
-msgid "Enter time (minutes:seconds):"
-msgstr "நேரத்தை பதிவு செய்க (நிமிடங்கள்:வினாடிகள்)"
+#: src/libaudgui/jump-to-track.cc:102 src/libaudqt/song-window-qt.cc:281
+msgid "Un_queue"
+msgstr "வரிசைகளை நீக்கு"
 
 #: src/libaudgui/jump-to-track.cc:96 src/libaudgui/jump-to-track.cc:104
 #: src/libaudgui/jump-to-track.cc:311 src/libaudqt/song-window-qt.cc:281
 #: src/libaudqt/song-window-qt.cc:357
 msgid "_Queue"
 msgstr "_வரிசை"
-
-#: src/libaudgui/jump-to-track.cc:102 src/libaudqt/song-window-qt.cc:281
-msgid "Un_queue"
-msgstr "வரிசைகளை நீக்கு"
 
 #: src/libaudgui/jump-to-track.cc:241 src/libaudqt/song-window-qt.cc:294
 msgid "Jump to Song"
@@ -766,19 +766,6 @@ msgstr "_வடிகட்டுக:"
 #: src/libaudgui/jump-to-track.cc:304 src/libaudqt/song-window-qt.cc:352
 msgid "C_lose on jump"
 msgstr "ஜம்ப் ஆன் சி_லோஸ்"
-
-#: src/libaudgui/playlists.cc:91
-msgid "_Overwrite"
-msgstr "_மேல் எழுது "
-
-#: src/libaudgui/playlists.cc:95
-msgid "Confirm Overwrite"
-msgstr "மேல் எழுதுதலை உறுதிப்படுத்து "
-
-#: src/libaudgui/playlists.cc:95
-#, c-format
-msgid "Overwrite %s?"
-msgstr "%s மேலெழுதுக ?"
 
 #: src/libaudgui/playlists.cc:121 src/libaudqt/fileopener.cc:63
 msgid ""
@@ -806,6 +793,19 @@ msgstr "பாடல் பட்டியலை இறக்குமதி ச
 #: src/libaudgui/playlists.cc:175
 msgid "_Import"
 msgstr "இறக்குமதி "
+
+#: src/libaudgui/playlists.cc:91
+msgid "_Overwrite"
+msgstr "_மேல் எழுது "
+
+#: src/libaudgui/playlists.cc:95
+msgid "Confirm Overwrite"
+msgstr "மேல் எழுதுதலை உறுதிப்படுத்து "
+
+#: src/libaudgui/playlists.cc:95
+#, c-format
+msgid "Overwrite %s?"
+msgstr "%s மேலெழுதுக ?"
 
 #: src/libaudgui/plugin-menu.cc:40 src/libaudqt/plugin-menu-qt.cc:44
 msgid "_Plugins ..."
@@ -844,52 +844,6 @@ msgstr "கோப்பை தெரிவு செய் "
 #: src/libaudgui/prefs-widget.cc:327 src/libaudqt/prefs-widget-qt.cc:238
 msgid "Choose Folder"
 msgstr "கோப்பகமொன்றை தேர்க "
-
-#: src/libaudgui/prefs-window.cc:83 src/libaudqt/prefs-window-qt.cc:160
-msgid "Appearance"
-msgstr "தோற்றம் "
-
-#: src/libaudgui/prefs-window.cc:84 src/libaudqt/prefs-window-qt.cc:161
-msgid "Audio"
-msgstr "ஒலி"
-
-#: src/libaudgui/prefs-window.cc:85 src/libaudqt/prefs-window-qt.cc:162
-msgid "Network"
-msgstr "வலையமைப்பு"
-
-#: src/libaudgui/prefs-window.cc:86 src/libaudgui/prefs-window.cc:97
-#: src/libaudqt/prefs-pluginlist-model.cc:43
-#: src/libaudqt/prefs-window-qt.cc:163
-msgid "Playlist"
-msgstr "பாடல் பட்டியல்"
-
-#: src/libaudgui/prefs-window.cc:88 src/libaudqt/prefs-window-qt.cc:165
-msgid "Plugins"
-msgstr "நீட்சிகள்"
-
-#: src/libaudgui/prefs-window.cc:89 src/libaudqt/prefs-window-qt.cc:166
-msgid "Advanced"
-msgstr "மேம்பட்ட "
-
-#: src/libaudgui/prefs-window.cc:93 src/libaudqt/prefs-pluginlist-model.cc:39
-msgid "General"
-msgstr "பொதுவானது"
-
-#: src/libaudgui/prefs-window.cc:94 src/libaudqt/prefs-pluginlist-model.cc:40
-msgid "Effect"
-msgstr "விளைவுகள் "
-
-#: src/libaudgui/prefs-window.cc:95 src/libaudqt/prefs-pluginlist-model.cc:41
-msgid "Visualization"
-msgstr "உருவக காட்சிப்படுத்தல் "
-
-#: src/libaudgui/prefs-window.cc:96 src/libaudqt/prefs-pluginlist-model.cc:42
-msgid "Input"
-msgstr "உள்ளீடு "
-
-#: src/libaudgui/prefs-window.cc:98 src/libaudqt/prefs-pluginlist-model.cc:44
-msgid "Transport"
-msgstr "போக்குவரத்து"
 
 #: src/libaudgui/prefs-window.cc:104 src/libaudqt/prefs-window-qt.cc:171
 msgid "Album artist"
@@ -1352,30 +1306,55 @@ msgstr "%S உடன் ஆடியோ ஸ்ட்ரீம் பதிவை
 msgid "No audio recording plugin available"
 msgstr "ஆடியோ பதிவு சொருகி எதுவும் கிடைக்கவில்லை"
 
+#: src/libaudgui/prefs-window.cc:83 src/libaudqt/prefs-window-qt.cc:160
+msgid "Appearance"
+msgstr "தோற்றம் "
+
+#: src/libaudgui/prefs-window.cc:84 src/libaudqt/prefs-window-qt.cc:161
+msgid "Audio"
+msgstr "ஒலி"
+
+#: src/libaudgui/prefs-window.cc:85 src/libaudqt/prefs-window-qt.cc:162
+msgid "Network"
+msgstr "வலையமைப்பு"
+
+#: src/libaudgui/prefs-window.cc:86 src/libaudgui/prefs-window.cc:97
+#: src/libaudqt/prefs-pluginlist-model.cc:43
+#: src/libaudqt/prefs-window-qt.cc:163
+msgid "Playlist"
+msgstr "பாடல் பட்டியல்"
+
+#: src/libaudgui/prefs-window.cc:88 src/libaudqt/prefs-window-qt.cc:165
+msgid "Plugins"
+msgstr "நீட்சிகள்"
+
 #: src/libaudgui/prefs-window.cc:887 src/libaudqt/prefs-window-qt.cc:647
 msgid "Audacious Settings"
 msgstr "துணிச்சலான அமைப்புகள்"
 
-#: src/libaudgui/preset-browser.cc:53 src/libaudgui/util.cc:201
-#: src/libaudqt/fileopener.cc:124
-msgid "Cancel"
-msgstr "ரத்து செய்க "
+#: src/libaudgui/prefs-window.cc:89 src/libaudqt/prefs-window-qt.cc:166
+msgid "Advanced"
+msgstr "மேம்பட்ட "
 
-#: src/libaudgui/preset-browser.cc:54 src/libaudqt/eq-preset-qt.cc:298
-msgid "Save"
-msgstr "சேமிக்குக "
+#: src/libaudgui/prefs-window.cc:93 src/libaudqt/prefs-pluginlist-model.cc:39
+msgid "General"
+msgstr "பொதுவானது"
 
-#: src/libaudgui/preset-browser.cc:54 src/libaudqt/eq-preset-qt.cc:261
-msgid "Load"
-msgstr "ஏற்றுக "
+#: src/libaudgui/prefs-window.cc:94 src/libaudqt/prefs-pluginlist-model.cc:40
+msgid "Effect"
+msgstr "விளைவுகள் "
 
-#: src/libaudgui/preset-browser.cc:85 src/libaudqt/eq-preset-qt.cc:257
-msgid "Load Preset File"
-msgstr "முன்னமைக்கப்பட்ட கோப்பை ஏற்றவும்"
+#: src/libaudgui/prefs-window.cc:95 src/libaudqt/prefs-pluginlist-model.cc:41
+msgid "Visualization"
+msgstr "உருவக காட்சிப்படுத்தல் "
 
-#: src/libaudgui/preset-browser.cc:99
-msgid "Load EQF File"
-msgstr "EQF கோப்பை ஏற்றவும்"
+#: src/libaudgui/prefs-window.cc:96 src/libaudqt/prefs-pluginlist-model.cc:42
+msgid "Input"
+msgstr "உள்ளீடு "
+
+#: src/libaudgui/prefs-window.cc:98 src/libaudqt/prefs-pluginlist-model.cc:44
+msgid "Transport"
+msgstr "போக்குவரத்து"
 
 #: src/libaudgui/preset-browser.cc:114 src/libaudqt/eq-preset-qt.cc:293
 msgid "Save Preset File"
@@ -1384,6 +1363,27 @@ msgstr "முன்னமைக்கப்பட்ட கோப்பை ச�
 #: src/libaudgui/preset-browser.cc:131
 msgid "Save EQF File"
 msgstr "EQF கோப்பைச் சேமிக்கவும்"
+
+#: src/libaudgui/preset-browser.cc:53 src/libaudgui/util.cc:201
+#: src/libaudqt/fileopener.cc:124
+msgid "Cancel"
+msgstr "ரத்து செய்க "
+
+#: src/libaudgui/preset-browser.cc:54 src/libaudqt/eq-preset-qt.cc:261
+msgid "Load"
+msgstr "ஏற்றுக "
+
+#: src/libaudgui/preset-browser.cc:54 src/libaudqt/eq-preset-qt.cc:298
+msgid "Save"
+msgstr "சேமிக்குக "
+
+#: src/libaudgui/preset-browser.cc:85 src/libaudqt/eq-preset-qt.cc:257
+msgid "Load Preset File"
+msgstr "முன்னமைக்கப்பட்ட கோப்பை ஏற்றவும்"
+
+#: src/libaudgui/preset-browser.cc:99
+msgid "Load EQF File"
+msgstr "EQF கோப்பை ஏற்றவும்"
 
 #: src/libaudgui/queue-manager.cc:175 src/libaudqt/queue-manager-qt.cc:263
 msgid "Queue Manager"
@@ -1405,6 +1405,10 @@ msgstr "தவறுகள் "
 msgid "Information"
 msgstr "தகவல் "
 
+#: src/libaudgui/url-opener.cc:105 src/libaudqt/url-opener-qt.cc:62
+msgid "Enter URL:"
+msgstr "முகவரியை உள்ளிடு:"
+
 #: src/libaudgui/url-opener.cc:56 src/libaudqt/url-opener-qt.cc:41
 msgid "_Save to history"
 msgstr "_வரலாற்றில் சேமி "
@@ -1420,10 +1424,6 @@ msgstr "முகவரியை சேர்"
 #: src/libaudgui/url-opener.cc:93 src/libaudqt/url-opener-qt.cc:69
 msgid "C_lear history"
 msgstr "சி_ரீதியான வரலாறு"
-
-#: src/libaudgui/url-opener.cc:105 src/libaudqt/url-opener-qt.cc:62
-msgid "Enter URL:"
-msgstr "முகவரியை உள்ளிடு:"
 
 #: src/libaudgui/util.cc:201 src/libaudqt/fileopener.cc:108
 msgid "Open"
@@ -1511,10 +1511,6 @@ msgstr "சேனல்கள்"
 msgid "MusicBrainz ID"
 msgstr "மியூசிக் பிரேன்ஸ் ஐடி"
 
-#: src/libaudqt/infowin-qt.cc:93
-msgid "_Revert"
-msgstr "_ திரும்பவும்"
-
 #: src/libaudqt/infowin-qt.cc:104
 msgid "Error writing tag(s)."
 msgstr "குறிச்சொல் (கள்) எழுதும் பிழை."
@@ -1526,6 +1522,10 @@ msgstr "%1 கோப்புகள் தேர்ந்தெடுக்க�
 #: src/libaudqt/infowin-qt.cc:130
 msgid "_Save %1 files"
 msgstr "_சேவ் %1 கோப்புகள்"
+
+#: src/libaudqt/infowin-qt.cc:93
+msgid "_Revert"
+msgstr "_ திரும்பவும்"
 
 #: src/libaudqt/log-inspector.cc:152
 msgid "Level"

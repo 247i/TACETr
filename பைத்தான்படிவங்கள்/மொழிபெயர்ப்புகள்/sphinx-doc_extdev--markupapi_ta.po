@@ -17,25 +17,61 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/extdev/markupapi.rst:2
-msgid "Docutils markup API"
-msgstr "Docutils Markup API"
-
-#: ../../sphinx/doc/extdev/markupapi.rst:4
+#: ../../sphinx/doc/extdev/markupapi.rst:101
 msgid ""
-"This section describes the API for adding ReST markup elements (roles and "
-"directives)."
+"The constructor takes a list of strings (lines) and a source (document) "
+"name."
 msgstr ""
-"இந்த பிரிவு REST மார்க்அப் கூறுகளை (பாத்திரங்கள் மற்றும் வழிமுறைகள்) "
-"சேர்ப்பதற்கான API ஐ விவரிக்கிறது."
+"கட்டமைப்பாளர் சரங்களின் பட்டியலை (கோடுகள்) மற்றும் ஒரு மூல (ஆவணம்) பெயரை "
+"எடுத்துக்கொள்கிறார்."
 
-#: ../../sphinx/doc/extdev/markupapi.rst:8
-msgid "Roles"
-msgstr "பாத்திரங்கள்"
+#: ../../sphinx/doc/extdev/markupapi.rst:103
+msgid "The ``.append()`` method takes a line and a source name as well."
+msgstr "`."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:107
+msgid "Parsing directive content as ReST"
+msgstr "உத்தரவு உள்ளடக்கத்தை ஓய்வு என பாகுபடுத்துதல்"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:109
+msgid ""
+"Many directives will contain more markup that must be parsed.  To do this, "
+"use one of the following APIs from the :meth:`Directive.run` method:"
+msgstr ""
+"பல வழிமுறைகளில் பாகுபடுத்தப்பட வேண்டிய அதிக மார்க்அப் இருக்கும். இதைச் "
+"செய்ய, பின்வரும் API களில் ஒன்றைப் பயன்படுத்தவும்: meth: `Directive.run` "
+"முறை:"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:112
+msgid "``self.state.nested_parse``"
+msgstr "`` self.state.nested_parse``"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:113
+msgid ""
+":func:`sphinx.util.nodes.nested_parse_with_titles` -- this allows titles in "
+"the parsed content."
+msgstr "."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:116
+msgid ""
+"Both APIs parse the content into a given node. They are used like this::"
+msgstr ""
+"இரண்டு ஏபிஐகளும் உள்ளடக்கத்தை கொடுக்கப்பட்ட முனையில் அலசுகின்றன. அவை இப்படி "
+"பயன்படுத்தப்படுகின்றன ::"
 
 #: ../../sphinx/doc/extdev/markupapi.rst:12
 msgid "Directives"
 msgstr "வழிமுறைகள்"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:126
+msgid ""
+"``sphinx.util.docutils.switch_source_input()`` allows to change a target "
+"file during nested_parse.  It is useful to mixed contents.  For example, "
+"``sphinx. ext.autodoc`` uses it to parse docstrings::"
+msgstr ""
+"`` sphinx.util.docutils.switch_source_input () `` நெஸ்டட்_பார்ஸின் போது "
+"இலக்கு கோப்பை மாற்ற அனுமதிக்கிறது. கலப்பு உள்ளடக்கங்களுக்கு இது பயனுள்ளதாக "
+"இருக்கும். எடுத்துக்காட்டாக, `` ஸ்பிங்க்ஸ். docstrings ::"
 
 #: ../../sphinx/doc/extdev/markupapi.rst:14
 msgid ""
@@ -49,6 +85,32 @@ msgstr ""
 "செய்யப்பட வேண்டும்: `.sphinx.add_directive` அல்லது: meth:` "
 ".sphinx.add_directive_to_domain`."
 
+#: ../../sphinx/doc/extdev/markupapi.rst:141
+msgid ""
+"Until Sphinx 1.6, ``sphinx.ext.autodoc.AutodocReporter`` was used for this "
+"purpose.  It is replaced by ``switch_source_input()``."
+msgstr ""
+"ஸ்பிங்க்ஸ் 1.6 வரை, `` sphinx.ext.autodoc.autodocreporter`` இந்த "
+"நோக்கத்திற்காக பயன்படுத்தப்பட்டது. இது `` Switch_source_input () `` ஆல் "
+"மாற்றப்படுகிறது."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:144
+msgid ""
+"If you don't need the wrapping node, you can use any concrete node type and "
+"return ``node.children`` from the Directive."
+msgstr ""
+"உங்களுக்கு மடக்குதல் முனை தேவையில்லை என்றால், நீங்கள் எந்த கான்கிரீட் முனை "
+"வகையைப் பயன்படுத்தலாம் மற்றும் உத்தரவிலிருந்து `` node.children`` ஐத் "
+"திருப்பித் தரலாம்."
+
+#: ../../sphinx/doc/extdev/markupapi.rst:150
+msgid "`Creating directives`_ HOWTO of the Docutils documentation"
+msgstr "`டைரெக்டிவ்ஸை உருவாக்குதல்`_ ஆவண ஆவணங்களின் எப்படி"
+
+#: ../../sphinx/doc/extdev/markupapi.rst:2
+msgid "Docutils markup API"
+msgstr "Docutils Markup API"
+
 #: ../../sphinx/doc/extdev/markupapi.rst:22
 msgid ""
 "The markup syntax of the new directive is determined by the follow five "
@@ -56,22 +118,6 @@ msgid ""
 msgstr ""
 "புதிய உத்தரவின் மார்க்அப் தொடரியல் பின்தொடர் ஐந்து வகுப்பு பண்புகளால் "
 "தீர்மானிக்கப்படுகிறது:"
-
-#: ../docstring of docutils.parsers.rst.Directive.required_arguments:1
-msgid "Number of required directive arguments."
-msgstr "தேவையான வழிநடத்தும் வாதங்களின் எண்ணிக்கை."
-
-#: ../docstring of docutils.parsers.rst.Directive.optional_arguments:1
-msgid "Number of optional arguments after the required arguments."
-msgstr "தேவையான வாதங்களுக்குப் பிறகு விருப்ப வாதங்களின் எண்ணிக்கை."
-
-#: ../docstring of docutils.parsers.rst.Directive.final_argument_whitespace:1
-msgid "May the final argument contain whitespace?"
-msgstr "இறுதி வாதத்தில் இடைவெளி இருக்க முடியுமா?"
-
-#: ../docstring of docutils.parsers.rst.Directive.option_spec:1
-msgid "Mapping of option names to validator functions."
-msgstr "வேலிடேட்டர் செயல்பாடுகளுக்கு விருப்ப பெயர்களை மேப்பிங் செய்வது."
 
 #: ../../sphinx/doc/extdev/markupapi.rst:30
 msgid ""
@@ -91,9 +137,13 @@ msgstr ""
 "பல முன் வரையறுக்கப்பட்ட மற்றும் பயனுள்ள வாலிடேட்டர்கள் உள்ளன: மோட்: "
 "`docutils.parsers.rst.directives` தொகுதி."
 
-#: ../docstring of docutils.parsers.rst.Directive.has_content:1
-msgid "May the directive have content?"
-msgstr "உத்தரவுக்கு உள்ளடக்கம் இருக்க முடியுமா?"
+#: ../../sphinx/doc/extdev/markupapi.rst:4
+msgid ""
+"This section describes the API for adding ReST markup elements (roles and "
+"directives)."
+msgstr ""
+"இந்த பிரிவு REST மார்க்அப் கூறுகளை (பாத்திரங்கள் மற்றும் வழிமுறைகள்) "
+"சேர்ப்பதற்கான API ஐ விவரிக்கிறது."
 
 #: ../../sphinx/doc/extdev/markupapi.rst:40
 msgid "New directives must implement the :meth:`run` method:"
@@ -154,6 +204,10 @@ msgstr ""
 "உத்தரவு உள்ளடக்கத்தின் உள் ஆஃப்செட். `` Nested_Parse`` ஐ அழைக்கும்போது "
 "பயன்படுத்தப்படுகிறது (கீழே காண்க)."
 
+#: ../../sphinx/doc/extdev/markupapi.rst:8
+msgid "Roles"
+msgstr "பாத்திரங்கள்"
+
 #: ../../sphinx/doc/extdev/markupapi.rst:80
 msgid "The string containing the entire directive."
 msgstr "முழு உத்தரவையும் கொண்ட சரம்."
@@ -193,76 +247,22 @@ msgstr ""
 "பார்வை பட்டியலை உருவாக்க வேண்டும். உள்ளடக்க தலைமுறைக்கு முக்கியமானது "
 "பின்வரும் புள்ளிகள்:"
 
-#: ../../sphinx/doc/extdev/markupapi.rst:101
-msgid ""
-"The constructor takes a list of strings (lines) and a source (document) "
-"name."
-msgstr ""
-"கட்டமைப்பாளர் சரங்களின் பட்டியலை (கோடுகள்) மற்றும் ஒரு மூல (ஆவணம்) பெயரை "
-"எடுத்துக்கொள்கிறார்."
+#: ../docstring of docutils.parsers.rst.Directive.final_argument_whitespace:1
+msgid "May the final argument contain whitespace?"
+msgstr "இறுதி வாதத்தில் இடைவெளி இருக்க முடியுமா?"
 
-#: ../../sphinx/doc/extdev/markupapi.rst:103
-msgid "The ``.append()`` method takes a line and a source name as well."
-msgstr "`."
+#: ../docstring of docutils.parsers.rst.Directive.has_content:1
+msgid "May the directive have content?"
+msgstr "உத்தரவுக்கு உள்ளடக்கம் இருக்க முடியுமா?"
 
-#: ../../sphinx/doc/extdev/markupapi.rst:107
-msgid "Parsing directive content as ReST"
-msgstr "உத்தரவு உள்ளடக்கத்தை ஓய்வு என பாகுபடுத்துதல்"
+#: ../docstring of docutils.parsers.rst.Directive.option_spec:1
+msgid "Mapping of option names to validator functions."
+msgstr "வேலிடேட்டர் செயல்பாடுகளுக்கு விருப்ப பெயர்களை மேப்பிங் செய்வது."
 
-#: ../../sphinx/doc/extdev/markupapi.rst:109
-msgid ""
-"Many directives will contain more markup that must be parsed.  To do this, "
-"use one of the following APIs from the :meth:`Directive.run` method:"
-msgstr ""
-"பல வழிமுறைகளில் பாகுபடுத்தப்பட வேண்டிய அதிக மார்க்அப் இருக்கும். இதைச் "
-"செய்ய, பின்வரும் API களில் ஒன்றைப் பயன்படுத்தவும்: meth: `Directive.run` "
-"முறை:"
+#: ../docstring of docutils.parsers.rst.Directive.optional_arguments:1
+msgid "Number of optional arguments after the required arguments."
+msgstr "தேவையான வாதங்களுக்குப் பிறகு விருப்ப வாதங்களின் எண்ணிக்கை."
 
-#: ../../sphinx/doc/extdev/markupapi.rst:112
-msgid "``self.state.nested_parse``"
-msgstr "`` self.state.nested_parse``"
-
-#: ../../sphinx/doc/extdev/markupapi.rst:113
-msgid ""
-":func:`sphinx.util.nodes.nested_parse_with_titles` -- this allows titles in "
-"the parsed content."
-msgstr "."
-
-#: ../../sphinx/doc/extdev/markupapi.rst:116
-msgid ""
-"Both APIs parse the content into a given node. They are used like this::"
-msgstr ""
-"இரண்டு ஏபிஐகளும் உள்ளடக்கத்தை கொடுக்கப்பட்ட முனையில் அலசுகின்றன. அவை இப்படி "
-"பயன்படுத்தப்படுகின்றன ::"
-
-#: ../../sphinx/doc/extdev/markupapi.rst:126
-msgid ""
-"``sphinx.util.docutils.switch_source_input()`` allows to change a target "
-"file during nested_parse.  It is useful to mixed contents.  For example, "
-"``sphinx. ext.autodoc`` uses it to parse docstrings::"
-msgstr ""
-"`` sphinx.util.docutils.switch_source_input () `` நெஸ்டட்_பார்ஸின் போது "
-"இலக்கு கோப்பை மாற்ற அனுமதிக்கிறது. கலப்பு உள்ளடக்கங்களுக்கு இது பயனுள்ளதாக "
-"இருக்கும். எடுத்துக்காட்டாக, `` ஸ்பிங்க்ஸ். docstrings ::"
-
-#: ../../sphinx/doc/extdev/markupapi.rst:141
-msgid ""
-"Until Sphinx 1.6, ``sphinx.ext.autodoc.AutodocReporter`` was used for this "
-"purpose.  It is replaced by ``switch_source_input()``."
-msgstr ""
-"ஸ்பிங்க்ஸ் 1.6 வரை, `` sphinx.ext.autodoc.autodocreporter`` இந்த "
-"நோக்கத்திற்காக பயன்படுத்தப்பட்டது. இது `` Switch_source_input () `` ஆல் "
-"மாற்றப்படுகிறது."
-
-#: ../../sphinx/doc/extdev/markupapi.rst:144
-msgid ""
-"If you don't need the wrapping node, you can use any concrete node type and "
-"return ``node.children`` from the Directive."
-msgstr ""
-"உங்களுக்கு மடக்குதல் முனை தேவையில்லை என்றால், நீங்கள் எந்த கான்கிரீட் முனை "
-"வகையைப் பயன்படுத்தலாம் மற்றும் உத்தரவிலிருந்து `` node.children`` ஐத் "
-"திருப்பித் தரலாம்."
-
-#: ../../sphinx/doc/extdev/markupapi.rst:150
-msgid "`Creating directives`_ HOWTO of the Docutils documentation"
-msgstr "`டைரெக்டிவ்ஸை உருவாக்குதல்`_ ஆவண ஆவணங்களின் எப்படி"
+#: ../docstring of docutils.parsers.rst.Directive.required_arguments:1
+msgid "Number of required directive arguments."
+msgstr "தேவையான வழிநடத்தும் வாதங்களின் எண்ணிக்கை."

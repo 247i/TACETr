@@ -17,147 +17,56 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:4
-msgid ":mod:`sphinx.ext.autodoc` -- Include documentation from docstrings"
-msgstr ""
-": மோட்: `sphinx.ext.autodoc` - டாக்ஸ்ட்ரிங்ஸிலிருந்து ஆவணங்களைச் சேர்க்கவும்"
-
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:12
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/ext/autodoc/__init__.pydocstring
+#: of sphinx.ext.autodoc.between:1
 msgid ""
-"This extension can import the modules you are documenting, and pull in "
-"documentation from docstrings in a semi-automatic way."
+"Return a listener that either keeps, or if *exclude* is True excludes, lines"
+" between lines that match the *marker* regular expression.  If no line "
+"matches, the resulting docstring would be empty, so no change will be made "
+"unless *keepempty* is true."
 msgstr ""
-"இந்த நீட்டிப்பு நீங்கள் ஆவணப்படுத்தும் தொகுதிகளை இறக்குமதி செய்யலாம், மேலும்"
-" டாக்ஸ்ட்ரிங்ஸிலிருந்து அரை தானியங்கி வழியில் ஆவணங்களை இழுக்கலாம்."
+"ஒரு கேட்பவரைத் திருப்பி விடுங்கள், அல்லது * விலக்குதல் * உண்மையாக இருந்தால்,"
+" * மார்க்கர் * வழக்கமான வெளிப்பாட்டுடன் பொருந்தக்கூடிய வரிகளுக்கு இடையிலான "
+"கோடுகள். வரி பொருந்தவில்லை என்றால், இதன் விளைவாக வரும் ஆவணங்கள் காலியாக "
+"இருக்கும், எனவே * தீவிரம் * உண்மையாக இல்லாவிட்டால் எந்த மாற்றமும் "
+"செய்யப்படாது."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:17
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/ext/autodoc/__init__.pydocstring
+#: of sphinx.ext.autodoc.between:6
 msgid ""
-"For Sphinx (actually, the Python interpreter that executes Sphinx) to find "
-"your module, it must be importable.  That means that the module or the "
-"package must be in one of the directories on :data:`sys.path` -- adapt your "
-":data:`sys.path` in the configuration file accordingly."
-msgstr ""
-"உங்கள் தொகுதியைக் கண்டுபிடிக்க ஸ்பிங்க்ஸைப் பொறுத்தவரை (உண்மையில், "
-"ஸ்பிங்க்ஸை இயக்கும் பைதான் மொழிபெயர்ப்பாளர்), அது இறக்குமதி செய்யப்பட "
-"வேண்டும். அதாவது தொகுதி அல்லது தொகுப்பு கோப்பகங்களில் ஒன்றில் இருக்க "
-"வேண்டும்: தரவு: `sys.path` - உங்கள்: தரவு:` sys.path` அதற்கேற்ப."
+"If *what* is a sequence of strings, only docstrings of a type in *what* will"
+" be processed."
+msgstr "* என்ன * என்பது சரங்களின் வரிசை என்றால், * என்ன * செயலாக்கப்படும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:24
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/ext/autodoc/__init__.pydocstring
+#: of sphinx.ext.autodoc.cut_lines:1
 msgid ""
-":mod:`~sphinx.ext.autodoc` **imports** the modules to be documented.  If any"
-" modules have side effects on import, these will be executed by ``autodoc`` "
-"when ``sphinx-build`` is run."
+"Return a listener that removes the first *pre* and last *post* lines of "
+"every docstring.  If *what* is a sequence of strings, only docstrings of a "
+"type in *what* will be processed."
 msgstr ""
-": மோட்: `~ sphinx.ext.autodoc` ** இறக்குமதி ** ஆவணப்படுத்தப்பட வேண்டிய "
-"தொகுதிகள். ஏதேனும் தொகுதிகள் இறக்குமதியில் பக்க விளைவுகளை ஏற்படுத்தினால், ``"
-" ஸ்பின்க்ஸ்-பில்ட்`` இயங்கும் போது இவை `` ஆட்டோடோக்`` ஆல் "
-"செயல்படுத்தப்படும்."
+"ஒவ்வொரு ஆவணத்தின் முதல் * முன் * மற்றும் கடைசி * இடுகை * வரிகளை அகற்றும் "
+"கேட்பவரைத் திருப்பி விடுங்கள். * என்ன * என்பது சரங்களின் வரிசை என்றால், * "
+"என்ன * செயலாக்கப்படும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:28
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/ext/autodoc/__init__.pydocstring
+#: of sphinx.ext.autodoc.cut_lines:10
 msgid ""
-"If you document scripts (as opposed to library modules), make sure their "
-"main routine is protected by a ``if __name__ == '__main__'`` condition."
+"This can (and should) be used in place of :confval:`automodule_skip_lines`."
 msgstr ""
-"நீங்கள் ஸ்கிரிப்ட்களை ஆவணப்படுத்தினால் (நூலக தொகுதிகளுக்கு மாறாக), அவற்றின் "
-"முக்கிய வழக்கம் `` என்றால் __name__ == '__main __' `` நிபந்தனையால் "
-"பாதுகாக்கப்படுவதை உறுதிசெய்க."
+"இதற்கு பதிலாக இது பயன்படுத்தப்படலாம் (மற்றும் வேண்டும்): confval: "
+"`autolodule_skip_lines`."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:31
-msgid ""
-"For this to work, the docstrings must of course be written in correct "
-"reStructuredText.  You can then use all of the usual Sphinx markup in the "
-"docstrings, and it will end up correctly in the documentation.  Together "
-"with hand-written documentation, this technique eases the pain of having to "
-"maintain two locations for documentation, while at the same time avoiding "
-"auto-generated-looking pure API documentation."
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/ext/autodoc/__init__.pydocstring
+#: of sphinx.ext.autodoc.cut_lines:5
+msgid "Use like this (e.g. in the ``setup()`` function of :file:`conf.py`)::"
 msgstr ""
-"இது வேலை செய்ய, ஆவணங்கள் நிச்சயமாக சரியான மறுசீரமைப்பில் எழுதப்பட வேண்டும். "
-"டாக்ஸ்ட்ரிங்ஸில் வழக்கமான ஸ்பிங்க்ஸ் மார்க்அப்பை நீங்கள் பயன்படுத்தலாம், "
-"மேலும் இது ஆவணங்களில் சரியாக முடிவடையும். கையால் எழுதப்பட்ட ஆவணங்களுடன் "
-"சேர்ந்து, இந்த நுட்பம் ஆவணங்களுக்காக இரண்டு இடங்களை பராமரிக்க வேண்டிய வலியை "
-"எளிதாக்குகிறது, அதே நேரத்தில் தானாக உருவாக்கப்பட்ட தோற்றமுடைய தூய ஏபிஐ "
-"ஆவணங்களைத் தவிர்க்கிறது."
+"இதைப் பயன்படுத்தவும் (எ.கா. `` அமைவு () `` செயல்பாட்டில்: கோப்பு: `conf.py`)"
+" ::"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:38
-msgid ""
-"If you prefer `NumPy`_ or `Google`_ style docstrings over reStructuredText, "
-"you can also enable the :mod:`napoleon <sphinx.ext.napoleon>` extension. "
-":mod:`napoleon <sphinx.ext.napoleon>` is a preprocessor that converts your "
-"docstrings to correct reStructuredText before :mod:`autodoc` processes them."
-msgstr ""
-"மறுசீரமைப்பின் மீது `Numpy`_ அல்லது` Google`_ ஸ்டைல் டாக்ஸ்ட்ரிங்ஸை நீங்கள் "
-"விரும்பினால், நீங்கள் இயக்கலாம்: Mod: `Napholeon <sphinx.ext.napoleon>` "
-"நீட்டிப்பு. ."
-
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:48
-msgid "Directives"
-msgstr "வழிமுறைகள்"
-
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:50
-msgid ""
-":mod:`autodoc` provides several directives that are versions of the usual "
-":rst:dir:`py:module`, :rst:dir:`py:class` and so forth.  On parsing time, "
-"they import the corresponding module and extract the docstring of the given "
-"objects, inserting them into the page source under a suitable "
-":rst:dir:`py:module`, :rst:dir:`py:class` etc.  directive."
-msgstr ""
-". பாகுபடுத்தும் நேரத்தில், அவை அதனுடன் தொடர்புடைய தொகுதியை இறக்குமதி செய்து,"
-" கொடுக்கப்பட்ட பொருள்களின் ஆவணத்தை பிரித்தெடுக்கின்றன, அவற்றை பொருத்தமான "
-"பக்க மூலத்தில் செருகுகின்றன: rst: dir: `py: தொகுதி`,: rst: dir:` py: class` "
-"போன்றவை. உத்தரவு."
-
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:58
-msgid ""
-"Just as :rst:dir:`py:class` respects the current :rst:dir:`py:module`, "
-":rst:dir:`autoclass` will also do so.  Likewise, :rst:dir:`automethod` will "
-"respect the current :rst:dir:`py:class`."
-msgstr ""
-"அதே போல்: rst: dir: `py: class` தற்போதையதை மதிக்கிறது: rst: dir:` py: "
-"தொகுதி`,: rst: dir: `AutoClass` அவ்வாறு செய்யும். அதேபோல்,: rst: dir: "
-"`automethod` மின்னோட்டத்தை மதிக்கும்: rst: dir:` py: class`."
-
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:67
-msgid ""
-"Document a module, class or exception.  All three directives will by default"
-" only insert the docstring of the object itself::"
-msgstr ""
-"ஒரு தொகுதி, வகுப்பு அல்லது விதிவிலக்கை ஆவணப்படுத்தவும். மூன்று வழிமுறைகளும் "
-"இயல்பாகவே பொருளின் ஆவணத்தை மட்டுமே செருகும் ::"
-
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:72
-msgid "will produce source like this::"
-msgstr "இது போன்ற மூலத்தை உருவாக்கும் ::"
-
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:78
-msgid ""
-"The \"auto\" directives can also contain content of their own, it will be "
-"inserted into the resulting non-auto directive source after the docstring "
-"(but before any automatic member documentation)."
-msgstr ""
-"\"ஆட்டோ\" வழிமுறைகள் அவற்றின் சொந்த உள்ளடக்கத்தையும் கொண்டிருக்கலாம், இது "
-"டாக்ஸ்ட்ரிங்கிற்குப் பிறகு (ஆனால் எந்தவொரு தானியங்கி உறுப்பினர் "
-"ஆவணங்களுக்கும் முன்) அதன் விளைவாக ஆட்டோ அல்லாத உத்தரவு மூலத்தில் "
-"செருகப்படும்."
-
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:82
-msgid ""
-"Therefore, you can also mix automatic and non-automatic member "
-"documentation, like so::"
-msgstr ""
-"எனவே, நீங்கள் தானியங்கி மற்றும் தானியங்கி அல்லாத உறுப்பினர் ஆவணங்களையும் "
-"கலக்கலாம் ::"
-
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:93
-msgid "Options"
-msgstr "விருப்பங்கள்"
-
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:97
-msgid ""
-"If set, autodoc will generate document for the members of the target module,"
-" class or exception."
-msgstr ""
-"அமைக்கப்பட்டால், இலக்கு தொகுதி, வகுப்பு அல்லது விதிவிலக்கு "
-"உறுப்பினர்களுக்கான ஆவணத்தை ஆட்டோடாக் உருவாக்கும்."
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:0
+msgid "Parameters"
+msgstr "அளவுருக்கள்"
 
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:100
 msgid "For example::"
@@ -192,6 +101,14 @@ msgstr ""
 "கொடுக்காவிட்டால், உறுப்பினர்களைத் தேடும்போது `__all__`. `` "
 "புறக்கணிப்பு-தொகுதி-அனைத்தையும் `இல்லாமல், உறுப்பினர்களின் உத்தரவு` "
 "`__all__`` இல் இருக்கும்."
+
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:12
+msgid ""
+"This extension can import the modules you are documenting, and pull in "
+"documentation from docstrings in a semi-automatic way."
+msgstr ""
+"இந்த நீட்டிப்பு நீங்கள் ஆவணப்படுத்தும் தொகுதிகளை இறக்குமதி செய்யலாம், மேலும்"
+" டாக்ஸ்ட்ரிங்ஸிலிருந்து அரை தானியங்கி வழியில் ஆவணங்களை இழுக்கலாம்."
 
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:121
 msgid ""
@@ -238,6 +155,18 @@ msgid ""
 msgstr ""
 "அமைக்கப்பட்டால், ஆட்டோடோக் சிறப்பு உறுப்பினர்களுக்கான ஆவணத்தையும் "
 "உருவாக்கும் (அதாவது, பெயரிடப்பட்டவர்கள் `__ __pecial__``) :: ::"
+
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:17
+msgid ""
+"For Sphinx (actually, the Python interpreter that executes Sphinx) to find "
+"your module, it must be importable.  That means that the module or the "
+"package must be in one of the directories on :data:`sys.path` -- adapt your "
+":data:`sys.path` in the configuration file accordingly."
+msgstr ""
+"உங்கள் தொகுதியைக் கண்டுபிடிக்க ஸ்பிங்க்ஸைப் பொறுத்தவரை (உண்மையில், "
+"ஸ்பிங்க்ஸை இயக்கும் பைதான் மொழிபெயர்ப்பாளர்), அது இறக்குமதி செய்யப்பட "
+"வேண்டும். அதாவது தொகுதி அல்லது தொகுப்பு கோப்பகங்களில் ஒன்றில் இருக்க "
+"வேண்டும்: தரவு: `sys.path` - உங்கள்: தரவு:` sys.path` அதற்கேற்ப."
 
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:177
 msgid "The option can now take arguments"
@@ -304,6 +233,17 @@ msgstr ""
 "ஒரு மாறி உறுப்பினருக்கு அதன் டாக்ஸ்ட்ரிங்கில் ``: மெட்டா மறைவிடம்-மதிப்பு: "
 "`` அதன்: re: `தகவல்-புல-பட்டியல்கள்` என்றால் எந்த இயல்புநிலை மதிப்பும் இல்லை"
 " என்று ஆட்டோடோக் கருதுகிறது. உதாரணமாக:"
+
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:24
+msgid ""
+":mod:`~sphinx.ext.autodoc` **imports** the modules to be documented.  If any"
+" modules have side effects on import, these will be executed by ``autodoc`` "
+"when ``sphinx-build`` is run."
+msgstr ""
+": மோட்: `~ sphinx.ext.autodoc` ** இறக்குமதி ** ஆவணப்படுத்தப்பட வேண்டிய "
+"தொகுதிகள். ஏதேனும் தொகுதிகள் இறக்குமதியில் பக்க விளைவுகளை ஏற்படுத்தினால், ``"
+" ஸ்பின்க்ஸ்-பில்ட்`` இயங்கும் போது இவை `` ஆட்டோடோக்`` ஆல் "
+"செயல்படுத்தப்படும்."
 
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:244
 msgid ""
@@ -377,6 +317,15 @@ msgstr ""
 "குறிப்பு: பரம்பரை உறுப்பினர்கள் ஒரு தொகுதியிலிருந்து வந்தால் இது மார்க்அப் "
 "பிழைகளுக்கு வழிவகுக்கும், அதன் ஆவணங்கள் ஓய்வு வடிவமைக்கப்படவில்லை."
 
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:28
+msgid ""
+"If you document scripts (as opposed to library modules), make sure their "
+"main routine is protected by a ``if __name__ == '__main__'`` condition."
+msgstr ""
+"நீங்கள் ஸ்கிரிப்ட்களை ஆவணப்படுத்தினால் (நூலக தொகுதிகளுக்கு மாறாக), அவற்றின் "
+"முக்கிய வழக்கம் `` என்றால் __name__ == '__main __' `` நிபந்தனையால் "
+"பாதுகாக்கப்படுவதை உறுதிசெய்க."
+
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:280
 msgid "It takes an ancestor class name as an argument."
 msgstr "இது ஒரு மூதாதையர் வர்க்கப் பெயரை ஒரு வாதமாக எடுக்கும்."
@@ -428,6 +377,22 @@ msgstr ""
 "அனைத்து ஆட்டோடோக் வழிமுறைகளும் `` நோ-இன்டெக்ஸ்` கொடி விருப்பத்தை "
 "ஆதரிக்கின்றன, இது தரநிலைக்கு அதே விளைவைக் கொண்டுள்ளது: rst: dir: `py: "
 "செயல்பாடு` போன்றவை. )."
+
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:31
+msgid ""
+"For this to work, the docstrings must of course be written in correct "
+"reStructuredText.  You can then use all of the usual Sphinx markup in the "
+"docstrings, and it will end up correctly in the documentation.  Together "
+"with hand-written documentation, this technique eases the pain of having to "
+"maintain two locations for documentation, while at the same time avoiding "
+"auto-generated-looking pure API documentation."
+msgstr ""
+"இது வேலை செய்ய, ஆவணங்கள் நிச்சயமாக சரியான மறுசீரமைப்பில் எழுதப்பட வேண்டும். "
+"டாக்ஸ்ட்ரிங்ஸில் வழக்கமான ஸ்பிங்க்ஸ் மார்க்அப்பை நீங்கள் பயன்படுத்தலாம், "
+"மேலும் இது ஆவணங்களில் சரியாக முடிவடையும். கையால் எழுதப்பட்ட ஆவணங்களுடன் "
+"சேர்ந்து, இந்த நுட்பம் ஆவணங்களுக்காக இரண்டு இடங்களை பராமரிக்க வேண்டிய வலியை "
+"எளிதாக்குகிறது, அதே நேரத்தில் தானாக உருவாக்கப்பட்ட தோற்றமுடைய தூய ஏபிஐ "
+"ஆவணங்களைத் தவிர்க்கிறது."
 
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:313
 msgid ""
@@ -528,6 +493,17 @@ msgstr ""
 "வாதங்களுடன் குறிப்பிடப்பட்ட விருப்பம் என்றால், அது பெயருக்குப் பிறகு "
 "மாறியின் மதிப்பாக அச்சிடப்படுகிறது ::"
 
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:38
+msgid ""
+"If you prefer `NumPy`_ or `Google`_ style docstrings over reStructuredText, "
+"you can also enable the :mod:`napoleon <sphinx.ext.napoleon>` extension. "
+":mod:`napoleon <sphinx.ext.napoleon>` is a preprocessor that converts your "
+"docstrings to correct reStructuredText before :mod:`autodoc` processes them."
+msgstr ""
+"மறுசீரமைப்பின் மீது `Numpy`_ அல்லது` Google`_ ஸ்டைல் டாக்ஸ்ட்ரிங்ஸை நீங்கள் "
+"விரும்பினால், நீங்கள் இயக்கலாம்: Mod: `Napholeon <sphinx.ext.napoleon>` "
+"நீட்டிப்பு. ."
+
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:383
 msgid ""
 "By default, without ``annotation`` option, Sphinx tries to obtain the value "
@@ -566,6 +542,11 @@ msgstr ""
 " அல்லது ஒரு ஆவணத்தில் * பின்னர் * வரையறை. கருத்துகள் வரையறைக்கு முன் "
 "*அவற்றின் சொந்த வரியில் இருக்க வேண்டும், அல்லது அதே வரியில் *ஒதுக்கப்பட்ட "
 "உடனேயே *. பிந்தைய வடிவம் ஒரு வரிக்கு மட்டுமே கட்டுப்படுத்தப்பட்டுள்ளது."
+
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:4
+msgid ":mod:`sphinx.ext.autodoc` -- Include documentation from docstrings"
+msgstr ""
+": மோட்: `sphinx.ext.autodoc` - டாக்ஸ்ட்ரிங்ஸிலிருந்து ஆவணங்களைச் சேர்க்கவும்"
 
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:402
 msgid ""
@@ -637,10 +618,6 @@ msgstr ""
 "இந்த மதிப்பு AN: RST: DIR: `AutoClass` உத்தரவின் முக்கிய உடலில் எந்த "
 "உள்ளடக்கம் செருகப்படும் என்பதைத் தேர்ந்தெடுக்கிறது. சாத்தியமான மதிப்புகள்:"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:461
-msgid "``\"class\"``"
-msgstr "`` \"வகுப்பு\" ``"
-
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:460
 msgid ""
 "Only the class' docstring is inserted.  This is the default.  You can still "
@@ -651,9 +628,9 @@ msgstr ""
 "இன்னும் `__init__`` ஐப் பயன்படுத்தி ஒரு தனி முறையாக ஆவணப்படுத்தலாம்: rst: "
 "dir:` தானியங்கி அல்லது `உறுப்பினர்கள்` விருப்பம்: rst: dir:` AutoClass`."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:464
-msgid "``\"both\"``"
-msgstr "`` \"இரண்டும்\" ``"
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:461
+msgid "``\"class\"``"
+msgstr "`` \"வகுப்பு\" ``"
 
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:464
 msgid ""
@@ -663,13 +640,17 @@ msgstr ""
 "வர்க்கம் 'மற்றும் `__init__`` முறையின் ஆவணப்படம் இரண்டுமே ஒன்றிணைக்கப்பட்டு "
 "செருகப்படுகின்றன."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:467
-msgid "``\"init\"``"
-msgstr "`` \"init\" ``"
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:464
+msgid "``\"both\"``"
+msgstr "`` \"இரண்டும்\" ``"
 
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:467
 msgid "Only the ``__init__`` method's docstring is inserted."
 msgstr "`__Init__`` முறையின் ஆவணப்படம் மட்டுமே செருகப்படுகிறது."
+
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:467
+msgid "``\"init\"``"
+msgstr "`` \"init\" ``"
 
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:471
 msgid ""
@@ -690,6 +671,10 @@ msgstr ""
 "என்பதைத் தேர்ந்தெடுக்கிறது: rst: dir: `AutoClass` உத்தரவு. சாத்தியமான "
 "மதிப்புகள்:"
 
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:48
+msgid "Directives"
+msgstr "வழிமுறைகள்"
+
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:482
 msgid "``\"mixed\"``"
 msgstr "`` \"கலப்பு\" ``"
@@ -699,12 +684,12 @@ msgid "Display the signature with the class name."
 msgstr "கையொப்பத்தை வகுப்பு பெயருடன் காண்பி."
 
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:485
-msgid "``\"separated\"``"
-msgstr "`` \"பிரிக்கப்பட்டது\" ``"
-
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:485
 msgid "Display the signature as a method."
 msgstr "கையொப்பத்தை ஒரு முறையாகக் காண்பி."
+
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:485
+msgid "``\"separated\"``"
+msgstr "`` \"பிரிக்கப்பட்டது\" ``"
 
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:487
 msgid "The default is ``\"mixed\"``."
@@ -729,6 +714,19 @@ msgid ""
 msgstr ""
 "மூல வரிசையைப் பொறுத்தவரை, தொகுதி கிடைக்கக்கூடிய மூலக் குறியீட்டைக் கொண்ட "
 "பைதான் தொகுதியாக இருக்க வேண்டும் என்பதை நினைவில் கொள்க."
+
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:50
+msgid ""
+":mod:`autodoc` provides several directives that are versions of the usual "
+":rst:dir:`py:module`, :rst:dir:`py:class` and so forth.  On parsing time, "
+"they import the corresponding module and extract the docstring of the given "
+"objects, inserting them into the page source under a suitable "
+":rst:dir:`py:module`, :rst:dir:`py:class` etc.  directive."
+msgstr ""
+". பாகுபடுத்தும் நேரத்தில், அவை அதனுடன் தொடர்புடைய தொகுதியை இறக்குமதி செய்து,"
+" கொடுக்கப்பட்ட பொருள்களின் ஆவணத்தை பிரித்தெடுக்கின்றன, அவற்றை பொருத்தமான "
+"பக்க மூலத்தில் செருகுகின்றன: rst: dir: `py: தொகுதி`,: rst: dir:` py: class` "
+"போன்றவை. உத்தரவு."
 
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:502
 msgid "Support for ``'bysource'``."
@@ -844,6 +842,16 @@ msgid "Overloaded signatures do not need to be separated by a backslash"
 msgstr ""
 "அதிக சுமை கொண்ட கையொப்பங்கள் பின்சாய்வுக்குறிப்பால் பிரிக்கப்பட வேண்டிய "
 "அவசியமில்லை"
+
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:58
+msgid ""
+"Just as :rst:dir:`py:class` respects the current :rst:dir:`py:module`, "
+":rst:dir:`autoclass` will also do so.  Likewise, :rst:dir:`automethod` will "
+"respect the current :rst:dir:`py:class`."
+msgstr ""
+"அதே போல்: rst: dir: `py: class` தற்போதையதை மதிக்கிறது: rst: dir:` py: "
+"தொகுதி`,: rst: dir: `AutoClass` அவ்வாறு செய்யும். அதேபோல்,: rst: dir: "
+"`automethod` மின்னோட்டத்தை மதிக்கும்: rst: dir:` py: class`."
 
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:583
 msgid ""
@@ -997,6 +1005,14 @@ msgstr ""
 "`` Autodoc_type_aliases`` அமைக்கப்படாவிட்டால், ஆட்டோடோக் இந்த "
 "குறியீட்டிலிருந்து உள் மார்க்-அப் பின்வருவனவற்றை உருவாக்கும் ::"
 
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:67
+msgid ""
+"Document a module, class or exception.  All three directives will by default"
+" only insert the docstring of the object itself::"
+msgstr ""
+"ஒரு தொகுதி, வகுப்பு அல்லது விதிவிலக்கை ஆவணப்படுத்தவும். மூன்று வழிமுறைகளும் "
+"இயல்பாகவே பொருளின் ஆவணத்தை மட்டுமே செருகும் ::"
+
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:673
 msgid ""
 "If you set ``autodoc_type_aliases`` as ``{'AliasType': "
@@ -1068,6 +1084,10 @@ msgstr ""
 "முறைகளுக்கான டாக்ஸ்ட்ரிங்கை உண்மையாக அமைத்தால், வெளிப்படையாக "
 "அமைக்கப்படாவிட்டால், பெற்றோரிடமிருந்து பெறப்படுகிறது."
 
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:72
+msgid "will produce source like this::"
+msgstr "இது போன்ற மூலத்தை உருவாக்கும் ::"
+
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:722
 msgid "The default is ``True``."
 msgstr "இயல்புநிலை `` உண்மை``."
@@ -1104,10 +1124,6 @@ msgstr ""
 "ஆட்டோடோக் ஒரு டாக்ஸ்ட்ரிங்கைப் படித்து செயலாக்கும்போது உமிழப்படும். "
 "*கோடுகள்*என்பது சரங்களின் பட்டியல் - பதப்படுத்தப்பட்ட ஆவணத்தின் கோடுகள் - "
 "நிகழ்வு கையாளுபவர் ** இடத்தில் ** ஐ மாற்ற முடியும் **"
-
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:0
-msgid "Parameters"
-msgstr "அளவுருக்கள்"
 
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:750
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:769
@@ -1184,6 +1200,17 @@ msgstr ""
 "கையாளுபவர் ஒரு புதிய டூப்பிள் `` (கையொப்பம், திரும்ப_ஆனோடேஷன்) `` "
 "வெளியீட்டில் ஸ்பிங்க்ஸ் வைப்பதை மாற்ற முடியும்."
 
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:78
+msgid ""
+"The \"auto\" directives can also contain content of their own, it will be "
+"inserted into the resulting non-auto directive source after the docstring "
+"(but before any automatic member documentation)."
+msgstr ""
+"\"ஆட்டோ\" வழிமுறைகள் அவற்றின் சொந்த உள்ளடக்கத்தையும் கொண்டிருக்கலாம், இது "
+"டாக்ஸ்ட்ரிங்கிற்குப் பிறகு (ஆனால் எந்தவொரு தானியங்கி உறுப்பினர் "
+"ஆவணங்களுக்கும் முன்) அதன் விளைவாக ஆட்டோ அல்லாத உத்தரவு மூலத்தில் "
+"செருகப்படும்."
+
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:791
 msgid ""
 "function signature, as a string of the form ``\"(parameter_1, "
@@ -1210,53 +1237,6 @@ msgstr ""
 "தி: மோட்: `sphinx.ext.autodoc` தொகுதி நிகழ்வில் பொதுவாக தேவைப்படும் "
 "டாக்ஸ்ட்ரிங் செயலாக்கத்திற்கான தொழிற்சாலை செயல்பாடுகளை வழங்குகிறது: "
 "நிகழ்வு:` ஆட்டோடோக்-செயல்முறை-டோக்ஸ்ட்ரிங்`:"
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/ext/autodoc/__init__.pydocstring
-#: of sphinx.ext.autodoc.cut_lines:1
-msgid ""
-"Return a listener that removes the first *pre* and last *post* lines of "
-"every docstring.  If *what* is a sequence of strings, only docstrings of a "
-"type in *what* will be processed."
-msgstr ""
-"ஒவ்வொரு ஆவணத்தின் முதல் * முன் * மற்றும் கடைசி * இடுகை * வரிகளை அகற்றும் "
-"கேட்பவரைத் திருப்பி விடுங்கள். * என்ன * என்பது சரங்களின் வரிசை என்றால், * "
-"என்ன * செயலாக்கப்படும்."
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/ext/autodoc/__init__.pydocstring
-#: of sphinx.ext.autodoc.cut_lines:5
-msgid "Use like this (e.g. in the ``setup()`` function of :file:`conf.py`)::"
-msgstr ""
-"இதைப் பயன்படுத்தவும் (எ.கா. `` அமைவு () `` செயல்பாட்டில்: கோப்பு: `conf.py`)"
-" ::"
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/ext/autodoc/__init__.pydocstring
-#: of sphinx.ext.autodoc.cut_lines:10
-msgid ""
-"This can (and should) be used in place of :confval:`automodule_skip_lines`."
-msgstr ""
-"இதற்கு பதிலாக இது பயன்படுத்தப்படலாம் (மற்றும் வேண்டும்): confval: "
-"`autolodule_skip_lines`."
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/ext/autodoc/__init__.pydocstring
-#: of sphinx.ext.autodoc.between:1
-msgid ""
-"Return a listener that either keeps, or if *exclude* is True excludes, lines"
-" between lines that match the *marker* regular expression.  If no line "
-"matches, the resulting docstring would be empty, so no change will be made "
-"unless *keepempty* is true."
-msgstr ""
-"ஒரு கேட்பவரைத் திருப்பி விடுங்கள், அல்லது * விலக்குதல் * உண்மையாக இருந்தால்,"
-" * மார்க்கர் * வழக்கமான வெளிப்பாட்டுடன் பொருந்தக்கூடிய வரிகளுக்கு இடையிலான "
-"கோடுகள். வரி பொருந்தவில்லை என்றால், இதன் விளைவாக வரும் ஆவணங்கள் காலியாக "
-"இருக்கும், எனவே * தீவிரம் * உண்மையாக இல்லாவிட்டால் எந்த மாற்றமும் "
-"செய்யப்படாது."
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/ext/autodoc/__init__.pydocstring
-#: of sphinx.ext.autodoc.between:6
-msgid ""
-"If *what* is a sequence of strings, only docstrings of a type in *what* will"
-" be processed."
-msgstr "* என்ன * என்பது சரங்களின் வரிசை என்றால், * என்ன * செயலாக்கப்படும்."
 
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:805
 msgid ""
@@ -1285,6 +1265,14 @@ msgid ""
 msgstr ""
 "`` தளங்கள்`` ஒரு அடிப்படை வகுப்பு பெயராக ஒரு சரம் இருக்கலாம். இது ஓய்வு "
 "மார்க்-அப் உரையாக செயலாக்கப்படும்."
+
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:82
+msgid ""
+"Therefore, you can also mix automatic and non-automatic member "
+"documentation, like so::"
+msgstr ""
+"எனவே, நீங்கள் தானியங்கி மற்றும் தானியங்கி அல்லாத உறுப்பினர் ஆவணங்களையும் "
+"கலக்கலாம் ::"
 
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:824
 msgid "Skipping members"
@@ -1329,3 +1317,15 @@ msgid ""
 msgstr ""
 "பயனர் கையாளுபவர் முடிவை மீறாவிட்டால் ஆட்டோடோக் இந்த உறுப்பினரைத் தவிர்ப்பதா "
 "என்பதைக் குறிக்கும் ஒரு பூலியன்"
+
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:93
+msgid "Options"
+msgstr "விருப்பங்கள்"
+
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:97
+msgid ""
+"If set, autodoc will generate document for the members of the target module,"
+" class or exception."
+msgstr ""
+"அமைக்கப்பட்டால், இலக்கு தொகுதி, வகுப்பு அல்லது விதிவிலக்கு "
+"உறுப்பினர்களுக்கான ஆவணத்தை ஆட்டோடாக் உருவாக்கும்."

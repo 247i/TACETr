@@ -19,25 +19,68 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../__w/calibre/calibre/manual/polish.rst:4
-msgid "API documentation for the e-book editing tools"
-msgstr "மின் புத்தக எடிட்டிங் கருவிகளுக்கான API ஆவணங்கள்"
-
-#: ../../__w/calibre/calibre/manual/polish.rst:6
-msgid ""
-"The e-book editing tools consist of a "
-":class:`calibre.ebooks.oeb.polish.container.Container` object that "
-"represents a book as a collection of HTML + resource files, and various "
-"tools that can be used to perform operations on the container. All the tools"
-" are in the form of module level functions in the various "
-"``calibre.ebooks.oeb.polish.*`` modules."
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.ebooks.oeb.polish.container.Container.book_type:1
+msgid "The type of book (epub for EPUB files and azw3 for AZW3 files)"
 msgstr ""
-"மின்-புத்தக எடிட்டிங் கருவிகள் ஒரு: வகுப்பு: "
-"`calibre.ebooks.ob.polish.container.container` பொருள் HTML + வள கோப்புகளின் "
-"தொகுப்பாகவும், செயல்பாடுகளைச் செய்ய பயன்படுத்தக்கூடிய பல்வேறு கருவிகளாகவும் "
-"இருக்கும் பொருள் கொள்கலன். அனைத்து கருவிகளும் பல்வேறு `` "
-"calibre.ebooks.oeb.polish இல் உள்ள தொகுதி நிலை செயல்பாடுகளின் வடிவத்தில் "
-"உள்ளன.*`` தொகுதிகள்."
+"புத்தகத்தின் வகை (EPUB கோப்புகளுக்கான EPUB மற்றும் AZW3 கோப்புகளுக்கான AZW3)"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.ebooks.oeb.polish.container.Container.is_dir:1
+msgid "If this container represents an unzipped book (a directory)"
+msgstr ""
+"இந்த கொள்கலன் ஒரு அவிழ்க்கப்பட்ட புத்தகத்தை (ஒரு அடைவு) குறிக்கிறது என்றால்"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.gui2.tweak_book.plugin.Tool.allowed_in_menu:1
+msgid "If True the user can choose to place this tool in the plugins menu"
+msgstr ""
+"உண்மை என்றால் பயனர் இந்த கருவியை செருகுநிரல்கள் மெனுவில் வைக்க தேர்வு "
+"செய்யலாம்"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.gui2.tweak_book.plugin.Tool.allowed_in_toolbar:1
+msgid "If True the user can choose to place this tool in the plugins toolbar"
+msgstr ""
+"உண்மை என்றால் பயனர் இந்த கருவியை செருகுநிரல்கள் கருவிப்பட்டியில் வைக்க "
+"தேர்வு செய்யலாம்"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.gui2.tweak_book.plugin.Tool.name:1
+msgid "Set this to a unique name it will be used as a key"
+msgstr ""
+"இதை ஒரு தனித்துவமான பெயராக அமைக்கவும், இது ஒரு விசையாகப் பயன்படுத்தப்படும்"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.gui2.tweak_book.plugin.Tool.toolbar_button_popup_mode:1
+msgid ""
+"The popup mode for the menu (if any) of the toolbar button. Possible values "
+"are 'delayed', 'instant', 'button'"
+msgstr ""
+"கருவிப்பட்டி பொத்தானின் மெனுவுக்கான பாப்அப் பயன்முறை (ஏதேனும் இருந்தால்). "
+"சாத்தியமான மதிப்புகள் 'தாமதமானது', 'உடனடி', 'பொத்தான்'"
+
+#: ../../__w/calibre/calibre/manual/polish.rst:108
+msgid "Working with the Table of Contents"
+msgstr "உள்ளடக்க அட்டவணையுடன் பணிபுரிதல்"
+
+#: ../../__w/calibre/calibre/manual/polish.rst:122
+msgid "Edit book tool"
+msgstr "புத்தக திருத்த கருவி"
+
+#: ../../__w/calibre/calibre/manual/polish.rst:131
+msgid "Controlling the editor's user interface"
+msgstr "எடிட்டரின் பயனர் இடைமுகத்தை கட்டுப்படுத்துதல்"
+
+#: ../../__w/calibre/calibre/manual/polish.rst:133
+msgid ""
+"The e-book editor's user interface is controlled by a single global *Boss* "
+"object. This has many useful methods that can be used in plugin code to "
+"perform common tasks."
+msgstr ""
+"மின் புத்தக எடிட்டரின் பயனர் இடைமுகம் ஒற்றை உலகளாவிய * முதலாளி * பொருளால் "
+"கட்டுப்படுத்தப்படுகிறது. இது பொதுவான பணிகளைச் செய்ய சொருகி குறியீட்டில் "
+"பயன்படுத்தக்கூடிய பல பயனுள்ள முறைகளைக் கொண்டுள்ளது."
 
 #: ../../__w/calibre/calibre/manual/polish.rst:15
 msgid "You obtain a container object for a book at a path like this::"
@@ -57,68 +100,49 @@ msgstr ""
 msgid "The Container object"
 msgstr "கொள்கலன் பொருள்"
 
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/container.pydocstring
-#: of calibre.ebooks.oeb.polish.container.Container:1
-msgid ""
-"A container represents an open e-book as a folder full of files and an OPF "
-"file. There are two important concepts:"
-msgstr ""
-"ஒரு கொள்கலன் ஒரு திறந்த மின் புத்தகத்தை கோப்புகள் நிறைந்த கோப்புறையாகவும், "
-"OPF கோப்பாகவும் குறிக்கிறது. இரண்டு முக்கியமான கருத்துக்கள் உள்ளன:"
+#: ../../__w/calibre/calibre/manual/polish.rst:36
+msgid "Managing component files in a container"
+msgstr "ஒரு கொள்கலனில் கூறு கோப்புகளை நிர்வகித்தல்"
 
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/container.pydocstring
-#: of calibre.ebooks.oeb.polish.container.Container:4
-msgid ""
-"The root folder. This is the base of the e-book. All the e-books files are "
-"inside this folder or in its sub-folders."
-msgstr ""
-"ரூட் கோப்புறை. இது மின் புத்தகத்தின் அடிப்படை. அனைத்து மின் புத்தகக் "
-"கோப்புகளும் இந்த கோப்புறையில் அல்லது அதன் துணை கோப்புறைகளில் உள்ளன."
+#: ../../__w/calibre/calibre/manual/polish.rst:4
+msgid "API documentation for the e-book editing tools"
+msgstr "மின் புத்தக எடிட்டிங் கருவிகளுக்கான API ஆவணங்கள்"
 
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/container.pydocstring
-#: of calibre.ebooks.oeb.polish.container.Container:7
-msgid ""
-"Names: These are paths to the books' files relative to the root folder. They"
-" always contain POSIX separators and are unquoted. They can be thought of as"
-" canonical identifiers for files in the book. Most methods on the container "
-"object work with names. Names are always in the NFC Unicode normal form."
-msgstr ""
-"பெயர்கள்: இவை ரூட் கோப்புறையுடன் தொடர்புடைய புத்தகங்களின் கோப்புகளுக்கான "
-"பாதைகள். அவை எப்போதும் POSIX பிரிப்பான்களைக் கொண்டிருக்கின்றன மற்றும் அவை "
-"அறியப்படாதவை. புத்தகத்தில் உள்ள கோப்புகளுக்கான நியமன அடையாளங்காட்டிகளாக அவை "
-"கருதப்படலாம். கொள்கலன் பொருளின் பெரும்பாலான முறைகள் பெயர்களுடன் வேலை "
-"செய்கின்றன. பெயர்கள் எப்போதும் NFC யூனிகோட் இயல்பான வடிவத்தில் இருக்கும்."
+#: ../../__w/calibre/calibre/manual/polish.rst:47
+msgid "Pretty printing and auto fixing parse errors"
+msgstr "அழகான அச்சிடுதல் மற்றும் ஆட்டோ சரிசெய்தல் பாகுபடுத்தும் பிழைகள்"
 
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/container.pydocstring
-#: of calibre.ebooks.oeb.polish.container.Container:13
+#: ../../__w/calibre/calibre/manual/polish.rst:6
 msgid ""
-"Clones: the container object supports efficient on-disk cloning, which is "
-"used to implement checkpoints in the e-book editor. In order to make this "
-"work, you should never access files on the filesystem directly. Instead, use"
-" :meth:`raw_data` or :meth:`open` to read/write to component files in the "
-"book."
+"The e-book editing tools consist of a "
+":class:`calibre.ebooks.oeb.polish.container.Container` object that "
+"represents a book as a collection of HTML + resource files, and various "
+"tools that can be used to perform operations on the container. All the tools"
+" are in the form of module level functions in the various "
+"``calibre.ebooks.oeb.polish.*`` modules."
 msgstr ""
-"குளோன்கள்: கொள்கலன் பொருள் திறமையான ஆன் வட்டு குளோனிங்கை ஆதரிக்கிறது, இது "
-"மின் புத்தக எடிட்டரில் சோதனைச் சாவடிகளை செயல்படுத்த பயன்படுகிறது. இந்த "
-"வேலையைச் செய்ய, நீங்கள் ஒருபோதும் கோப்பு முறைமையில் கோப்புகளை நேரடியாக "
-"அணுகக்கூடாது. அதற்கு பதிலாக, பயன்படுத்தவும்: METH: `RAW_DATA` அல்லது: மெத்:`"
-" திறந்திருக்கும்` புத்தகத்தில் உள்ள கூறு கோப்புகளைப் படிக்க/எழுத."
+"மின்-புத்தக எடிட்டிங் கருவிகள் ஒரு: வகுப்பு: "
+"`calibre.ebooks.ob.polish.container.container` பொருள் HTML + வள கோப்புகளின் "
+"தொகுப்பாகவும், செயல்பாடுகளைச் செய்ய பயன்படுத்தக்கூடிய பல்வேறு கருவிகளாகவும் "
+"இருக்கும் பொருள் கொள்கலன். அனைத்து கருவிகளும் பல்வேறு `` "
+"calibre.ebooks.oeb.polish இல் உள்ள தொகுதி நிலை செயல்பாடுகளின் வடிவத்தில் "
+"உள்ளன.*`` தொகுதிகள்."
 
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/container.pydocstring
-#: of calibre.ebooks.oeb.polish.container.Container:18
-msgid ""
-"When converting between hrefs and names use the methods provided by this "
-"class, they assume all hrefs are quoted."
-msgstr ""
-"HREF மற்றும் பெயருக்கு இடையில் மாற்றும்போது இந்த வகுப்பு வழங்கிய முறைகளைப் "
-"பயன்படுத்துங்கள், அனைத்து HREF களும் மேற்கோள் காட்டப்பட்டுள்ளன என்று அவர்கள்"
-" கருதுகிறார்கள்."
+#: ../../__w/calibre/calibre/manual/polish.rst:65
+msgid "Managing book jackets"
+msgstr "புத்தக ஜாக்கெட்டுகளை நிர்வகித்தல்"
 
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/container.pydocstring
-#: of calibre.ebooks.oeb.polish.container.Container.abspath_to_name:1
-msgid "Convert an absolute path to a canonical name relative to :attr:`root`"
-msgstr ""
-"ஒரு முழுமையான பாதையை தொடர்புடைய நியமன பெயருக்கு மாற்றவும்: ATTR: `ரூட்`"
+#: ../../__w/calibre/calibre/manual/polish.rst:74
+msgid "Splitting and merging of files"
+msgstr "கோப்புகளைப் பிரித்தல் மற்றும் ஒன்றிணைத்தல்"
+
+#: ../../__w/calibre/calibre/manual/polish.rst:85
+msgid "Managing covers"
+msgstr "மேலாண்மை கவர்கள்"
+
+#: ../../__w/calibre/calibre/manual/polish.rst:96
+msgid "Working with CSS"
+msgstr "CSS உடன் பணிபுரிதல்"
 
 #: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/container.pydocstring
 #: of calibre.ebooks.oeb.polish.container.Container.abspath_to_name:0
@@ -158,6 +182,69 @@ msgstr ""
 #: calibre.gui2.tweak_book.plugin.Tool.register_shortcut:0
 msgid "Parameters"
 msgstr "அளவுருக்கள்"
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/container.pydocstring
+#: of calibre.ebooks.oeb.polish.container.Container:1
+msgid ""
+"A container represents an open e-book as a folder full of files and an OPF "
+"file. There are two important concepts:"
+msgstr ""
+"ஒரு கொள்கலன் ஒரு திறந்த மின் புத்தகத்தை கோப்புகள் நிறைந்த கோப்புறையாகவும், "
+"OPF கோப்பாகவும் குறிக்கிறது. இரண்டு முக்கியமான கருத்துக்கள் உள்ளன:"
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/container.pydocstring
+#: of calibre.ebooks.oeb.polish.container.Container:13
+msgid ""
+"Clones: the container object supports efficient on-disk cloning, which is "
+"used to implement checkpoints in the e-book editor. In order to make this "
+"work, you should never access files on the filesystem directly. Instead, use"
+" :meth:`raw_data` or :meth:`open` to read/write to component files in the "
+"book."
+msgstr ""
+"குளோன்கள்: கொள்கலன் பொருள் திறமையான ஆன் வட்டு குளோனிங்கை ஆதரிக்கிறது, இது "
+"மின் புத்தக எடிட்டரில் சோதனைச் சாவடிகளை செயல்படுத்த பயன்படுகிறது. இந்த "
+"வேலையைச் செய்ய, நீங்கள் ஒருபோதும் கோப்பு முறைமையில் கோப்புகளை நேரடியாக "
+"அணுகக்கூடாது. அதற்கு பதிலாக, பயன்படுத்தவும்: METH: `RAW_DATA` அல்லது: மெத்:`"
+" திறந்திருக்கும்` புத்தகத்தில் உள்ள கூறு கோப்புகளைப் படிக்க/எழுத."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/container.pydocstring
+#: of calibre.ebooks.oeb.polish.container.Container:18
+msgid ""
+"When converting between hrefs and names use the methods provided by this "
+"class, they assume all hrefs are quoted."
+msgstr ""
+"HREF மற்றும் பெயருக்கு இடையில் மாற்றும்போது இந்த வகுப்பு வழங்கிய முறைகளைப் "
+"பயன்படுத்துங்கள், அனைத்து HREF களும் மேற்கோள் காட்டப்பட்டுள்ளன என்று அவர்கள்"
+" கருதுகிறார்கள்."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/container.pydocstring
+#: of calibre.ebooks.oeb.polish.container.Container:4
+msgid ""
+"The root folder. This is the base of the e-book. All the e-books files are "
+"inside this folder or in its sub-folders."
+msgstr ""
+"ரூட் கோப்புறை. இது மின் புத்தகத்தின் அடிப்படை. அனைத்து மின் புத்தகக் "
+"கோப்புகளும் இந்த கோப்புறையில் அல்லது அதன் துணை கோப்புறைகளில் உள்ளன."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/container.pydocstring
+#: of calibre.ebooks.oeb.polish.container.Container:7
+msgid ""
+"Names: These are paths to the books' files relative to the root folder. They"
+" always contain POSIX separators and are unquoted. They can be thought of as"
+" canonical identifiers for files in the book. Most methods on the container "
+"object work with names. Names are always in the NFC Unicode normal form."
+msgstr ""
+"பெயர்கள்: இவை ரூட் கோப்புறையுடன் தொடர்புடைய புத்தகங்களின் கோப்புகளுக்கான "
+"பாதைகள். அவை எப்போதும் POSIX பிரிப்பான்களைக் கொண்டிருக்கின்றன மற்றும் அவை "
+"அறியப்படாதவை. புத்தகத்தில் உள்ள கோப்புகளுக்கான நியமன அடையாளங்காட்டிகளாக அவை "
+"கருதப்படலாம். கொள்கலன் பொருளின் பெரும்பாலான முறைகள் பெயர்களுடன் வேலை "
+"செய்கின்றன. பெயர்கள் எப்போதும் NFC யூனிகோட் இயல்பான வடிவத்தில் இருக்கும்."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/container.pydocstring
+#: of calibre.ebooks.oeb.polish.container.Container.abspath_to_name:1
+msgid "Convert an absolute path to a canonical name relative to :attr:`root`"
+msgstr ""
+"ஒரு முழுமையான பாதையை தொடர்புடைய நியமன பெயருக்கு மாற்றவும்: ATTR: `ரூட்`"
 
 #: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/container.pydocstring
 #: of calibre.ebooks.oeb.polish.container.Container.abspath_to_name:3
@@ -203,12 +290,6 @@ msgstr ""
 "பெயரால் அடையாளம் காணப்பட்ட வெளிப்படையான உருப்படியில் மட்டுமே குறிப்பிட்ட "
 "பண்புகள் அமைக்கப்பட்டிருப்பதை உறுதிசெய்க. எல்லா பொருட்களிலிருந்தும் சொத்தை "
 "அகற்ற நீங்கள் பெயராக எதையும் கடந்து செல்ல முடியாது."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.ebooks.oeb.polish.container.Container.book_type:1
-msgid "The type of book (epub for EPUB files and azw3 for AZW3 files)"
-msgstr ""
-"புத்தகத்தின் வகை (EPUB கோப்புகளுக்கான EPUB மற்றும் AZW3 கோப்புகளுக்கான AZW3)"
 
 #: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/container.pydocstring
 #: of calibre.ebooks.oeb.polish.container.Container.commit:1
@@ -336,12 +417,6 @@ msgstr ""
 "உருப்படியை பெற்றோரில் செருகவும் (அல்லது குறியீட்டு எதுவுமில்லை என்றால் "
 "சேர்க்கவும்), உள்தள்ளலை சரிசெய்தல். சுய நிறைவு பொருட்களுடன் மட்டுமே வேலை "
 "செய்கிறது."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.ebooks.oeb.polish.container.Container.is_dir:1
-msgid "If this container represents an unzipped book (a directory)"
-msgstr ""
-"இந்த கொள்கலன் ஒரு அவிழ்க்கப்பட்ட புத்தகத்தை (ஒரு அடைவு) குறிக்கிறது என்றால்"
 
 #: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/container.pydocstring
 #: of calibre.ebooks.oeb.polish.container.Container.iterlinks:1
@@ -686,236 +761,21 @@ msgstr ""
 "பெயர் மற்றும் IS_Linear. மேலும் காண்க:: attr: `ஸ்பைன்_ஐடிஆர்` மற்றும்: "
 "attr:` முதுகெலும்பு_இடெம்ஸ்`."
 
-#: ../../__w/calibre/calibre/manual/polish.rst:36
-msgid "Managing component files in a container"
-msgstr "ஒரு கொள்கலனில் கூறு கோப்புகளை நிர்வகித்தல்"
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/cover.pydocstring
+#: of calibre.ebooks.oeb.polish.cover.mark_as_cover:1
+msgid "Mark the specified image as the cover image."
+msgstr "குறிப்பிட்ட படத்தை கவர் படமாகக் குறிக்கவும்."
 
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/replace.pydocstring
-#: of calibre.ebooks.oeb.polish.replace.replace_links:1
-msgid ""
-"Replace links to files in the container. Will iterate over all files in the "
-"container and change the specified links in them."
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/cover.pydocstring
+#: of calibre.ebooks.oeb.polish.cover.mark_as_titlepage:1
+msgid "Mark the specified HTML file as the titlepage of the EPUB."
+msgstr "குறிப்பிட்ட HTML கோப்பை EPUB இன் தலைப்புப் பெட்டியாகக் குறிக்கவும்."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/cover.pydocstring
+#: of calibre.ebooks.oeb.polish.cover.mark_as_titlepage:3
+msgid "If True the HTML file is moved to the start of the spine"
 msgstr ""
-"கொள்கலனில் உள்ள கோப்புகளுக்கான இணைப்புகளை மாற்றவும். கொள்கலனில் உள்ள எல்லா "
-"கோப்புகளையும் மீண்டும் கூறி அவற்றில் உள்ள குறிப்பிட்ட இணைப்புகளை மாற்றும்."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/replace.pydocstring
-#: of calibre.ebooks.oeb.polish.replace.replace_links:3
-msgid ""
-"A mapping of old canonical name to new canonical name. For example: "
-":code:`{'images/old.png': 'images/new.png'}`"
-msgstr ""
-"புதிய நியமன பெயருக்கு பழைய நியமன பெயரை வரைபடம். எடுத்துக்காட்டாக :: "
-"குறியீடு: `{'படங்கள்/old.png': 'படங்கள்/new.png'}`"
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/replace.pydocstring
-#: of calibre.ebooks.oeb.polish.replace.replace_links:4
-msgid ""
-"A callable that takes two arguments ``(name, anchor)`` and returns a new "
-"anchor. This is useful if you need to change the anchors in HTML files. By "
-"default, it does nothing."
-msgstr ""
-"அழைக்கக்கூடிய இரண்டு வாதங்களை எடுத்து `(பெயர், நங்கூரம்)` `மற்றும் ஒரு புதிய"
-" நங்கூரத்தை வழங்குகிறது. HTML கோப்புகளில் உள்ள நங்கூரங்களை மாற்ற "
-"வேண்டியிருந்தால் இது பயனுள்ளதாக இருக்கும். இயல்பாக, இது எதுவும் செய்யாது."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/replace.pydocstring
-#: of calibre.ebooks.oeb.polish.replace.replace_links:7
-msgid "If False, links are not replaced in the OPF file."
-msgstr "தவறு என்றால், OPF கோப்பில் இணைப்புகள் மாற்றப்படாது."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/replace.pydocstring
-#: of calibre.ebooks.oeb.polish.replace.rename_files:1
-msgid ""
-"Rename files in the container, automatically updating all links to them."
-msgstr ""
-"கொள்கலனில் உள்ள கோப்புகளை மறுபெயரிட்டு, அவற்றுக்கான அனைத்து இணைப்புகளையும் "
-"தானாகவே புதுப்பிக்கவும்."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/replace.pydocstring
-#: of calibre.ebooks.oeb.polish.replace.rename_files:3
-msgid ""
-"A mapping of old canonical name to new canonical name, for example: "
-":code:`{'text/chapter1.html': 'chapter1.html'}`."
-msgstr ""
-"புதிய நியமன பெயருக்கு பழைய நியமனப் பெயரின் மேப்பிங், எடுத்துக்காட்டாக :: "
-"குறியீடு: {'உரை/அத்தியாயம் 1.html': 'பாடம் 1.html'} `."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/replace.pydocstring
-#: of calibre.ebooks.oeb.polish.replace.get_recommended_folders:1
-msgid ""
-"Return the folders that are recommended for the given filenames. The "
-"recommendation is based on where the majority of files of the same type are "
-"located in the container. If no files of a particular type are present, the "
-"recommended folder is assumed to be the folder containing the OPF file."
-msgstr ""
-"கொடுக்கப்பட்ட கோப்பு பெயர்களுக்கு பரிந்துரைக்கப்பட்ட கோப்புறைகளைத் "
-"திருப்பித் தரவும். ஒரே வகையின் பெரும்பாலான கோப்புகள் கொள்கலனில் அமைந்துள்ள "
-"இடத்தை அடிப்படையாகக் கொண்டது. ஒரு குறிப்பிட்ட வகையின் கோப்புகள் எதுவும் "
-"இல்லை என்றால், பரிந்துரைக்கப்பட்ட கோப்புறை OPF கோப்பைக் கொண்ட கோப்புறையாக "
-"கருதப்படுகிறது."
-
-#: ../../__w/calibre/calibre/manual/polish.rst:47
-msgid "Pretty printing and auto fixing parse errors"
-msgstr "அழகான அச்சிடுதல் மற்றும் ஆட்டோ சரிசெய்தல் பாகுபடுத்தும் பிழைகள்"
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/pretty.pydocstring
-#: of calibre.ebooks.oeb.polish.pretty.fix_html:1
-msgid ""
-"Fix any parsing errors in the HTML represented as a string in raw. Fixing is"
-" done using the HTML5 parsing algorithm."
-msgstr ""
-"HTML இல் எந்த பாகுபடுத்தும் பிழைகளையும் ராவில் ஒரு சரமாக குறிப்பிடவும். "
-"HTML5 பாகுபடுத்தும் வழிமுறையைப் பயன்படுத்தி சரிசெய்தல் செய்யப்படுகிறது."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/pretty.pydocstring
-#: of calibre.ebooks.oeb.polish.pretty.fix_all_html:1
-msgid ""
-"Fix any parsing errors in all HTML files in the container. Fixing is done "
-"using the HTML5 parsing algorithm."
-msgstr ""
-"கொள்கலனில் உள்ள அனைத்து HTML கோப்புகளிலும் எந்த பாகுபடுத்தும் பிழைகளையும் "
-"சரிசெய்யவும். HTML5 பாகுபடுத்தும் வழிமுறையைப் பயன்படுத்தி சரிசெய்தல் "
-"செய்யப்படுகிறது."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/pretty.pydocstring
-#: of calibre.ebooks.oeb.polish.pretty.pretty_html:1
-msgid "Pretty print the HTML represented as a string in raw"
-msgstr "HTML ஐ மிகவும் அச்சிடுக"
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/pretty.pydocstring
-#: of calibre.ebooks.oeb.polish.pretty.pretty_css:1
-msgid "Pretty print the CSS represented as a string in raw"
-msgstr "CSS ஐ ஒரு சரம் மூலமாக குறிப்பிடுகிறது"
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/pretty.pydocstring
-#: of calibre.ebooks.oeb.polish.pretty.pretty_xml:1
-msgid ""
-"Pretty print the XML represented as a string in raw. If ``name`` is the name"
-" of the OPF, extra OPF-specific prettying is performed."
-msgstr ""
-"எக்ஸ்எம்எல் பச்சையாக ஒரு சரம் என குறிப்பிடப்படுகிறது. `` பெயர்`` என்பது OPF "
-"இன் பெயர் என்றால், கூடுதல் OPF- குறிப்பிட்ட அழகானது செய்யப்படுகிறது."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/pretty.pydocstring
-#: of calibre.ebooks.oeb.polish.pretty.pretty_all:1
-msgid "Pretty print all HTML/CSS/XML files in the container"
-msgstr "அனைத்து HTML/CSS/XML கோப்புகளையும் கொள்கலனில் அச்சிடுக"
-
-#: ../../__w/calibre/calibre/manual/polish.rst:65
-msgid "Managing book jackets"
-msgstr "புத்தக ஜாக்கெட்டுகளை நிர்வகித்தல்"
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/jacket.pydocstring
-#: of calibre.ebooks.oeb.polish.jacket.remove_jacket:1
-msgid ""
-"Remove an existing jacket, if any. Returns False if no existing jacket was "
-"found."
-msgstr ""
-"ஏதேனும் இருந்தால், ஏற்கனவே இருக்கும் ஜாக்கெட்டை அகற்றவும். தற்போதுள்ள "
-"ஜாக்கெட் எதுவும் கிடைக்கவில்லை என்றால் தவறானது."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/jacket.pydocstring
-#: of calibre.ebooks.oeb.polish.jacket.add_or_replace_jacket:1
-msgid ""
-"Either create a new jacket from the book's metadata or replace an existing "
-"jacket. Returns True if an existing jacket was replaced."
-msgstr ""
-"புத்தகத்தின் மெட்டாடேட்டாவிலிருந்து ஒரு புதிய ஜாக்கெட்டை உருவாக்கவும் அல்லது"
-" ஏற்கனவே உள்ள ஜாக்கெட்டை மாற்றவும். ஏற்கனவே இருக்கும் ஜாக்கெட் "
-"மாற்றப்பட்டால் உண்மை."
-
-#: ../../__w/calibre/calibre/manual/polish.rst:74
-msgid "Splitting and merging of files"
-msgstr "கோப்புகளைப் பிரித்தல் மற்றும் ஒன்றிணைத்தல்"
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
-#: of calibre.ebooks.oeb.polish.split.split:1
-msgid ""
-"Split the file specified by name at the position specified by loc_or_xpath. "
-"Splitting automatically migrates all links and references to the affected "
-"files."
-msgstr ""
-"LOC_OR_XPATH ஆல் குறிப்பிடப்பட்ட நிலையில் பெயரால் குறிப்பிடப்பட்ட கோப்பை "
-"பிரிக்கவும். பிளவு தானாகவே பாதிக்கப்பட்ட கோப்புகளுக்கான அனைத்து "
-"இணைப்புகளையும் குறிப்புகளையும் நகர்த்துகிறது."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
-#: of calibre.ebooks.oeb.polish.split.split:5
-msgid ""
-"Should be an XPath expression such as //h:div[@id=\"split_here\"]. Can also "
-"be a *loc* which is used internally to implement splitting in the preview "
-"panel."
-msgstr ""
-"// h: div [@id = \"split_here\"] போன்ற ஒரு XPath வெளிப்பாடாக இருக்க "
-"வேண்டும். முன்னோட்டக் குழுவில் பிளவுபடுவதை செயல்படுத்த உள்நாட்டில் "
-"பயன்படுத்தப்படும் * லாக் * ஆகவும் இருக்கலாம்."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
-#: of calibre.ebooks.oeb.polish.split.split:8
-msgid ""
-"If True the split occurs before the identified element otherwise after it."
-msgstr "உண்மை என்றால் பிளவு அடையாளம் காணப்பட்ட உறுப்புக்கு முன் நிகழ்கிறது."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
-#: of calibre.ebooks.oeb.polish.split.split:9
-msgid "Used internally"
-msgstr "உள்நாட்டில் பயன்படுத்தப்படுகிறது"
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
-#: of calibre.ebooks.oeb.polish.split.multisplit:1
-msgid ""
-"Split the specified file at multiple locations (all tags that match the "
-"specified XPath expression). See also: :func:`split`. Splitting "
-"automatically migrates all links and references to the affected files."
-msgstr ""
-"குறிப்பிட்ட கோப்பை பல இடங்களில் பிரிக்கவும் (குறிப்பிட்ட எக்ஸ்பாத் "
-"வெளிப்பாட்டுடன் பொருந்தக்கூடிய அனைத்து குறிச்சொற்களும்). மேலும் காண்க :: "
-"func: `பிளவு`. பிளவு தானாகவே பாதிக்கப்பட்ட கோப்புகளுக்கான அனைத்து "
-"இணைப்புகளையும் குறிப்புகளையும் நகர்த்துகிறது."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
-#: of calibre.ebooks.oeb.polish.split.multisplit:5
-msgid ""
-"If True the splits occur before the identified element otherwise after it."
-msgstr ""
-"உண்மை என்றால், அடையாளம் காணப்பட்ட உறுப்புக்கு முன் பிளவுகள் நிகழ்கின்றன."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
-#: of calibre.ebooks.oeb.polish.split.merge:1
-msgid ""
-"Merge the specified files into a single file, automatically migrating all "
-"links and references to the affected files. The file must all either be HTML"
-" or CSS files."
-msgstr ""
-"குறிப்பிட்ட கோப்புகளை ஒற்றை கோப்பில் ஒன்றிணைத்து, பாதிக்கப்பட்ட "
-"கோப்புகளுக்கு எல்லா இணைப்புகளையும் குறிப்புகளையும் தானாக நகர்த்தும். கோப்பு "
-"அனைத்தும் HTML அல்லது CSS கோப்புகளாக இருக்க வேண்டும்."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
-#: of calibre.ebooks.oeb.polish.split.merge:4
-msgid "Must be either ``'text'`` for HTML files or ``'styles'`` for CSS files"
-msgstr ""
-"HTML கோப்புகளுக்கான `` 'உரை'` அல்லது CSS கோப்புகளுக்கு ``' ஸ்டைல்கள்'` ஆக "
-"இருக்க வேண்டும்"
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
-#: of calibre.ebooks.oeb.polish.split.merge:5
-msgid "The list of files to be merged"
-msgstr "இணைக்கப்பட வேண்டிய கோப்புகளின் பட்டியல்"
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
-#: of calibre.ebooks.oeb.polish.split.merge:6
-msgid ""
-"Which of the merged files is the *master* file, that is, the file that will "
-"remain after merging."
-msgstr ""
-"இணைக்கப்பட்ட கோப்புகளில் எது * மாஸ்டர் * கோப்பு, அதாவது, ஒன்றிணைந்த பிறகு "
-"இருக்கும் கோப்பு."
-
-#: ../../__w/calibre/calibre/manual/polish.rst:85
-msgid "Managing covers"
-msgstr "மேலாண்மை கவர்கள்"
+"உண்மை என்றால் HTML கோப்பு முதுகெலும்பின் தொடக்கத்திற்கு நகர்த்தப்படும்"
 
 #: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/cover.pydocstring
 #: of calibre.ebooks.oeb.polish.cover.set_cover:1
@@ -958,40 +818,29 @@ msgstr ""
 "ரேப்பரைப் பயன்படுத்தவும்) ** இருக்கும் **: உண்மை அல்லது பொய் (`` கவர்_பாத்``"
 " புத்தகத்தில் இருக்கும் படத்தைக் குறிக்கிறது)"
 
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/cover.pydocstring
-#: of calibre.ebooks.oeb.polish.cover.mark_as_cover:1
-msgid "Mark the specified image as the cover image."
-msgstr "குறிப்பிட்ட படத்தை கவர் படமாகக் குறிக்கவும்."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/cover.pydocstring
-#: of calibre.ebooks.oeb.polish.cover.mark_as_titlepage:1
-msgid "Mark the specified HTML file as the titlepage of the EPUB."
-msgstr "குறிப்பிட்ட HTML கோப்பை EPUB இன் தலைப்புப் பெட்டியாகக் குறிக்கவும்."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/cover.pydocstring
-#: of calibre.ebooks.oeb.polish.cover.mark_as_titlepage:3
-msgid "If True the HTML file is moved to the start of the spine"
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/css.pydocstring of
+#: calibre.ebooks.oeb.polish.css.filter_css:1
+msgid "Remove the specified CSS properties from all CSS rules in the book."
 msgstr ""
-"உண்மை என்றால் HTML கோப்பு முதுகெலும்பின் தொடக்கத்திற்கு நகர்த்தப்படும்"
+"புத்தகத்தில் உள்ள அனைத்து CSS விதிகளிலிருந்தும் குறிப்பிட்ட CSS பண்புகளை "
+"அகற்றவும்."
 
-#: ../../__w/calibre/calibre/manual/polish.rst:96
-msgid "Working with CSS"
-msgstr "CSS உடன் பணிபுரிதல்"
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/fonts.pydocstring
-#: of calibre.ebooks.oeb.polish.fonts.change_font:1
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/css.pydocstring of
+#: calibre.ebooks.oeb.polish.css.filter_css:3
 msgid ""
-"Change a font family from old_name to new_name. Changes all occurrences of "
-"the font family in stylesheets, style tags and style attributes. If the "
-"old_name refers to an embedded font, it is removed. You can set new_name to "
-"None to remove the font family instead of changing it."
+"Set of properties to remove. For example: :code:`{'font-family', 'color'}`."
 msgstr ""
-"ஒரு எழுத்துரு குடும்பத்தை பழைய_பெயரிலிருந்து புதிய_பெயராக மாற்றவும். "
-"எழுத்துரு குடும்பத்தின் அனைத்து நிகழ்வுகளையும் ஸ்டைல்ஷீட்கள், பாணி "
-"குறிச்சொற்கள் மற்றும் பாணி பண்புகளில் மாற்றுகிறது. பழைய_ பெயர் "
-"உட்பொதிக்கப்பட்ட எழுத்துருவைக் குறிக்கும் என்றால், அது அகற்றப்படும். "
-"எழுத்துரு குடும்பத்தை மாற்றுவதற்குப் பதிலாக அதை அகற்ற புதிய_பெயரை யாரும் "
-"அமைக்கலாம்."
+"அகற்ற வேண்டிய பண்புகளின் தொகுப்பு. எடுத்துக்காட்டாக :: குறியீடு: "
+"`{'எழுத்துரு-குடும்பம்', 'வண்ணம்'}`."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/css.pydocstring of
+#: calibre.ebooks.oeb.polish.css.filter_css:4
+msgid ""
+"The files from which to remove the properties. Defaults to all HTML and CSS "
+"files in the book."
+msgstr ""
+"பண்புகளை அகற்ற வேண்டிய கோப்புகள். புத்தகத்தில் உள்ள அனைத்து HTML மற்றும் CSS"
+" கோப்புகளுக்கும் இயல்புநிலை."
 
 #: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/css.pydocstring of
 #: calibre.ebooks.oeb.polish.css.remove_unused_css:1
@@ -1041,59 +890,231 @@ msgstr ""
 "உண்மை என்றால், எந்தவொரு உள்ளடக்கத்தாலும் குறிப்பிடப்படாத ஸ்டைல்ஷீட்கள் "
 "அகற்றப்படும்"
 
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/css.pydocstring of
-#: calibre.ebooks.oeb.polish.css.filter_css:1
-msgid "Remove the specified CSS properties from all CSS rules in the book."
-msgstr ""
-"புத்தகத்தில் உள்ள அனைத்து CSS விதிகளிலிருந்தும் குறிப்பிட்ட CSS பண்புகளை "
-"அகற்றவும்."
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/css.pydocstring of
-#: calibre.ebooks.oeb.polish.css.filter_css:3
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/fonts.pydocstring
+#: of calibre.ebooks.oeb.polish.fonts.change_font:1
 msgid ""
-"Set of properties to remove. For example: :code:`{'font-family', 'color'}`."
+"Change a font family from old_name to new_name. Changes all occurrences of "
+"the font family in stylesheets, style tags and style attributes. If the "
+"old_name refers to an embedded font, it is removed. You can set new_name to "
+"None to remove the font family instead of changing it."
 msgstr ""
-"அகற்ற வேண்டிய பண்புகளின் தொகுப்பு. எடுத்துக்காட்டாக :: குறியீடு: "
-"`{'எழுத்துரு-குடும்பம்', 'வண்ணம்'}`."
+"ஒரு எழுத்துரு குடும்பத்தை பழைய_பெயரிலிருந்து புதிய_பெயராக மாற்றவும். "
+"எழுத்துரு குடும்பத்தின் அனைத்து நிகழ்வுகளையும் ஸ்டைல்ஷீட்கள், பாணி "
+"குறிச்சொற்கள் மற்றும் பாணி பண்புகளில் மாற்றுகிறது. பழைய_ பெயர் "
+"உட்பொதிக்கப்பட்ட எழுத்துருவைக் குறிக்கும் என்றால், அது அகற்றப்படும். "
+"எழுத்துரு குடும்பத்தை மாற்றுவதற்குப் பதிலாக அதை அகற்ற புதிய_பெயரை யாரும் "
+"அமைக்கலாம்."
 
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/css.pydocstring of
-#: calibre.ebooks.oeb.polish.css.filter_css:4
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/jacket.pydocstring
+#: of calibre.ebooks.oeb.polish.jacket.add_or_replace_jacket:1
 msgid ""
-"The files from which to remove the properties. Defaults to all HTML and CSS "
-"files in the book."
+"Either create a new jacket from the book's metadata or replace an existing "
+"jacket. Returns True if an existing jacket was replaced."
 msgstr ""
-"பண்புகளை அகற்ற வேண்டிய கோப்புகள். புத்தகத்தில் உள்ள அனைத்து HTML மற்றும் CSS"
-" கோப்புகளுக்கும் இயல்புநிலை."
+"புத்தகத்தின் மெட்டாடேட்டாவிலிருந்து ஒரு புதிய ஜாக்கெட்டை உருவாக்கவும் அல்லது"
+" ஏற்கனவே உள்ள ஜாக்கெட்டை மாற்றவும். ஏற்கனவே இருக்கும் ஜாக்கெட் "
+"மாற்றப்பட்டால் உண்மை."
 
-#: ../../__w/calibre/calibre/manual/polish.rst:108
-msgid "Working with the Table of Contents"
-msgstr "உள்ளடக்க அட்டவணையுடன் பணிபுரிதல்"
-
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/toc.pydocstring of
-#: calibre.ebooks.oeb.polish.toc.from_xpaths:1
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/jacket.pydocstring
+#: of calibre.ebooks.oeb.polish.jacket.remove_jacket:1
 msgid ""
-"Generate a Table of Contents from a list of XPath expressions. Each "
-"expression in the list corresponds to a level of the generate ToC. For "
-"example: :code:`['//h:h1', '//h:h2', '//h:h3']` will generate a three level "
-"Table of Contents from the ``<h1>``, ``<h2>`` and ``<h3>`` tags."
+"Remove an existing jacket, if any. Returns False if no existing jacket was "
+"found."
 msgstr ""
-"எக்ஸ்பாத் வெளிப்பாடுகளின் பட்டியலிலிருந்து உள்ளடக்க அட்டவணையை "
-"உருவாக்குங்கள். பட்டியலில் உள்ள ஒவ்வொரு வெளிப்பாடும் உருவாக்க TOC இன் "
-"நிலைக்கு ஒத்திருக்கிறது. எடுத்துக்காட்டாக :: குறியீடு: `['// // h: h1', '// "
-"h: h2', '// h: h3']` `` <h1> `` இலிருந்து மூன்று நிலை உள்ளடக்க அட்டவணையை "
-"உருவாக்கும் , `` <H2> `` மற்றும் `` <H3> `` குறிச்சொற்கள்."
+"ஏதேனும் இருந்தால், ஏற்கனவே இருக்கும் ஜாக்கெட்டை அகற்றவும். தற்போதுள்ள "
+"ஜாக்கெட் எதுவும் கிடைக்கவில்லை என்றால் தவறானது."
 
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/toc.pydocstring of
-#: calibre.ebooks.oeb.polish.toc.from_links:1
-msgid "Generate a Table of Contents from links in the book."
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/pretty.pydocstring
+#: of calibre.ebooks.oeb.polish.pretty.fix_all_html:1
+msgid ""
+"Fix any parsing errors in all HTML files in the container. Fixing is done "
+"using the HTML5 parsing algorithm."
 msgstr ""
-"புத்தகத்தில் உள்ள இணைப்புகளிலிருந்து உள்ளடக்க அட்டவணையை உருவாக்குங்கள்."
+"கொள்கலனில் உள்ள அனைத்து HTML கோப்புகளிலும் எந்த பாகுபடுத்தும் பிழைகளையும் "
+"சரிசெய்யவும். HTML5 பாகுபடுத்தும் வழிமுறையைப் பயன்படுத்தி சரிசெய்தல் "
+"செய்யப்படுகிறது."
 
-#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/toc.pydocstring of
-#: calibre.ebooks.oeb.polish.toc.from_files:1
-msgid "Generate a Table of Contents from files in the book."
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/pretty.pydocstring
+#: of calibre.ebooks.oeb.polish.pretty.fix_html:1
+msgid ""
+"Fix any parsing errors in the HTML represented as a string in raw. Fixing is"
+" done using the HTML5 parsing algorithm."
 msgstr ""
-"புத்தகத்தில் உள்ள கோப்புகளிலிருந்து உள்ளடக்க அட்டவணையை உருவாக்குங்கள்."
+"HTML இல் எந்த பாகுபடுத்தும் பிழைகளையும் ராவில் ஒரு சரமாக குறிப்பிடவும். "
+"HTML5 பாகுபடுத்தும் வழிமுறையைப் பயன்படுத்தி சரிசெய்தல் செய்யப்படுகிறது."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/pretty.pydocstring
+#: of calibre.ebooks.oeb.polish.pretty.pretty_all:1
+msgid "Pretty print all HTML/CSS/XML files in the container"
+msgstr "அனைத்து HTML/CSS/XML கோப்புகளையும் கொள்கலனில் அச்சிடுக"
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/pretty.pydocstring
+#: of calibre.ebooks.oeb.polish.pretty.pretty_css:1
+msgid "Pretty print the CSS represented as a string in raw"
+msgstr "CSS ஐ ஒரு சரம் மூலமாக குறிப்பிடுகிறது"
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/pretty.pydocstring
+#: of calibre.ebooks.oeb.polish.pretty.pretty_html:1
+msgid "Pretty print the HTML represented as a string in raw"
+msgstr "HTML ஐ மிகவும் அச்சிடுக"
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/pretty.pydocstring
+#: of calibre.ebooks.oeb.polish.pretty.pretty_xml:1
+msgid ""
+"Pretty print the XML represented as a string in raw. If ``name`` is the name"
+" of the OPF, extra OPF-specific prettying is performed."
+msgstr ""
+"எக்ஸ்எம்எல் பச்சையாக ஒரு சரம் என குறிப்பிடப்படுகிறது. `` பெயர்`` என்பது OPF "
+"இன் பெயர் என்றால், கூடுதல் OPF- குறிப்பிட்ட அழகானது செய்யப்படுகிறது."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/replace.pydocstring
+#: of calibre.ebooks.oeb.polish.replace.get_recommended_folders:1
+msgid ""
+"Return the folders that are recommended for the given filenames. The "
+"recommendation is based on where the majority of files of the same type are "
+"located in the container. If no files of a particular type are present, the "
+"recommended folder is assumed to be the folder containing the OPF file."
+msgstr ""
+"கொடுக்கப்பட்ட கோப்பு பெயர்களுக்கு பரிந்துரைக்கப்பட்ட கோப்புறைகளைத் "
+"திருப்பித் தரவும். ஒரே வகையின் பெரும்பாலான கோப்புகள் கொள்கலனில் அமைந்துள்ள "
+"இடத்தை அடிப்படையாகக் கொண்டது. ஒரு குறிப்பிட்ட வகையின் கோப்புகள் எதுவும் "
+"இல்லை என்றால், பரிந்துரைக்கப்பட்ட கோப்புறை OPF கோப்பைக் கொண்ட கோப்புறையாக "
+"கருதப்படுகிறது."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/replace.pydocstring
+#: of calibre.ebooks.oeb.polish.replace.rename_files:1
+msgid ""
+"Rename files in the container, automatically updating all links to them."
+msgstr ""
+"கொள்கலனில் உள்ள கோப்புகளை மறுபெயரிட்டு, அவற்றுக்கான அனைத்து இணைப்புகளையும் "
+"தானாகவே புதுப்பிக்கவும்."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/replace.pydocstring
+#: of calibre.ebooks.oeb.polish.replace.rename_files:3
+msgid ""
+"A mapping of old canonical name to new canonical name, for example: "
+":code:`{'text/chapter1.html': 'chapter1.html'}`."
+msgstr ""
+"புதிய நியமன பெயருக்கு பழைய நியமனப் பெயரின் மேப்பிங், எடுத்துக்காட்டாக :: "
+"குறியீடு: {'உரை/அத்தியாயம் 1.html': 'பாடம் 1.html'} `."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/replace.pydocstring
+#: of calibre.ebooks.oeb.polish.replace.replace_links:1
+msgid ""
+"Replace links to files in the container. Will iterate over all files in the "
+"container and change the specified links in them."
+msgstr ""
+"கொள்கலனில் உள்ள கோப்புகளுக்கான இணைப்புகளை மாற்றவும். கொள்கலனில் உள்ள எல்லா "
+"கோப்புகளையும் மீண்டும் கூறி அவற்றில் உள்ள குறிப்பிட்ட இணைப்புகளை மாற்றும்."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/replace.pydocstring
+#: of calibre.ebooks.oeb.polish.replace.replace_links:3
+msgid ""
+"A mapping of old canonical name to new canonical name. For example: "
+":code:`{'images/old.png': 'images/new.png'}`"
+msgstr ""
+"புதிய நியமன பெயருக்கு பழைய நியமன பெயரை வரைபடம். எடுத்துக்காட்டாக :: "
+"குறியீடு: `{'படங்கள்/old.png': 'படங்கள்/new.png'}`"
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/replace.pydocstring
+#: of calibre.ebooks.oeb.polish.replace.replace_links:4
+msgid ""
+"A callable that takes two arguments ``(name, anchor)`` and returns a new "
+"anchor. This is useful if you need to change the anchors in HTML files. By "
+"default, it does nothing."
+msgstr ""
+"அழைக்கக்கூடிய இரண்டு வாதங்களை எடுத்து `(பெயர், நங்கூரம்)` `மற்றும் ஒரு புதிய"
+" நங்கூரத்தை வழங்குகிறது. HTML கோப்புகளில் உள்ள நங்கூரங்களை மாற்ற "
+"வேண்டியிருந்தால் இது பயனுள்ளதாக இருக்கும். இயல்பாக, இது எதுவும் செய்யாது."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/replace.pydocstring
+#: of calibre.ebooks.oeb.polish.replace.replace_links:7
+msgid "If False, links are not replaced in the OPF file."
+msgstr "தவறு என்றால், OPF கோப்பில் இணைப்புகள் மாற்றப்படாது."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
+#: of calibre.ebooks.oeb.polish.split.merge:1
+msgid ""
+"Merge the specified files into a single file, automatically migrating all "
+"links and references to the affected files. The file must all either be HTML"
+" or CSS files."
+msgstr ""
+"குறிப்பிட்ட கோப்புகளை ஒற்றை கோப்பில் ஒன்றிணைத்து, பாதிக்கப்பட்ட "
+"கோப்புகளுக்கு எல்லா இணைப்புகளையும் குறிப்புகளையும் தானாக நகர்த்தும். கோப்பு "
+"அனைத்தும் HTML அல்லது CSS கோப்புகளாக இருக்க வேண்டும்."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
+#: of calibre.ebooks.oeb.polish.split.merge:4
+msgid "Must be either ``'text'`` for HTML files or ``'styles'`` for CSS files"
+msgstr ""
+"HTML கோப்புகளுக்கான `` 'உரை'` அல்லது CSS கோப்புகளுக்கு ``' ஸ்டைல்கள்'` ஆக "
+"இருக்க வேண்டும்"
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
+#: of calibre.ebooks.oeb.polish.split.merge:5
+msgid "The list of files to be merged"
+msgstr "இணைக்கப்பட வேண்டிய கோப்புகளின் பட்டியல்"
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
+#: of calibre.ebooks.oeb.polish.split.merge:6
+msgid ""
+"Which of the merged files is the *master* file, that is, the file that will "
+"remain after merging."
+msgstr ""
+"இணைக்கப்பட்ட கோப்புகளில் எது * மாஸ்டர் * கோப்பு, அதாவது, ஒன்றிணைந்த பிறகு "
+"இருக்கும் கோப்பு."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
+#: of calibre.ebooks.oeb.polish.split.multisplit:1
+msgid ""
+"Split the specified file at multiple locations (all tags that match the "
+"specified XPath expression). See also: :func:`split`. Splitting "
+"automatically migrates all links and references to the affected files."
+msgstr ""
+"குறிப்பிட்ட கோப்பை பல இடங்களில் பிரிக்கவும் (குறிப்பிட்ட எக்ஸ்பாத் "
+"வெளிப்பாட்டுடன் பொருந்தக்கூடிய அனைத்து குறிச்சொற்களும்). மேலும் காண்க :: "
+"func: `பிளவு`. பிளவு தானாகவே பாதிக்கப்பட்ட கோப்புகளுக்கான அனைத்து "
+"இணைப்புகளையும் குறிப்புகளையும் நகர்த்துகிறது."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
+#: of calibre.ebooks.oeb.polish.split.multisplit:5
+msgid ""
+"If True the splits occur before the identified element otherwise after it."
+msgstr ""
+"உண்மை என்றால், அடையாளம் காணப்பட்ட உறுப்புக்கு முன் பிளவுகள் நிகழ்கின்றன."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
+#: of calibre.ebooks.oeb.polish.split.split:1
+msgid ""
+"Split the file specified by name at the position specified by loc_or_xpath. "
+"Splitting automatically migrates all links and references to the affected "
+"files."
+msgstr ""
+"LOC_OR_XPATH ஆல் குறிப்பிடப்பட்ட நிலையில் பெயரால் குறிப்பிடப்பட்ட கோப்பை "
+"பிரிக்கவும். பிளவு தானாகவே பாதிக்கப்பட்ட கோப்புகளுக்கான அனைத்து "
+"இணைப்புகளையும் குறிப்புகளையும் நகர்த்துகிறது."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
+#: of calibre.ebooks.oeb.polish.split.split:5
+msgid ""
+"Should be an XPath expression such as //h:div[@id=\"split_here\"]. Can also "
+"be a *loc* which is used internally to implement splitting in the preview "
+"panel."
+msgstr ""
+"// h: div [@id = \"split_here\"] போன்ற ஒரு XPath வெளிப்பாடாக இருக்க "
+"வேண்டும். முன்னோட்டக் குழுவில் பிளவுபடுவதை செயல்படுத்த உள்நாட்டில் "
+"பயன்படுத்தப்படும் * லாக் * ஆகவும் இருக்கலாம்."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
+#: of calibre.ebooks.oeb.polish.split.split:8
+msgid ""
+"If True the split occurs before the identified element otherwise after it."
+msgstr "உண்மை என்றால் பிளவு அடையாளம் காணப்பட்ட உறுப்புக்கு முன் நிகழ்கிறது."
+
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/split.pydocstring
+#: of calibre.ebooks.oeb.polish.split.split:9
+msgid "Used internally"
+msgstr "உள்நாட்டில் பயன்படுத்தப்படுகிறது"
 
 #: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/toc.pydocstring of
 #: calibre.ebooks.oeb.polish.toc.create_inline_toc:1
@@ -1109,203 +1130,31 @@ msgstr ""
 msgid "The title for this table of contents."
 msgstr "இந்த உள்ளடக்க அட்டவணைக்கான தலைப்பு."
 
-#: ../../__w/calibre/calibre/manual/polish.rst:122
-msgid "Edit book tool"
-msgstr "புத்தக திருத்த கருவி"
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/toc.pydocstring of
+#: calibre.ebooks.oeb.polish.toc.from_files:1
+msgid "Generate a Table of Contents from files in the book."
+msgstr ""
+"புத்தகத்தில் உள்ள கோப்புகளிலிருந்து உள்ளடக்க அட்டவணையை உருவாக்குங்கள்."
 
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool:1
-msgid "Bases: :py:class:`object`"
-msgstr "தளங்கள் :: py: வகுப்பு: `பொருள்`"
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/toc.pydocstring of
+#: calibre.ebooks.oeb.polish.toc.from_links:1
+msgid "Generate a Table of Contents from links in the book."
+msgstr ""
+"புத்தகத்தில் உள்ள இணைப்புகளிலிருந்து உள்ளடக்க அட்டவணையை உருவாக்குங்கள்."
 
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool:1
+#: ../../__w/calibre/calibre/src/calibre/ebooks/oeb/polish/toc.pydocstring of
+#: calibre.ebooks.oeb.polish.toc.from_xpaths:1
 msgid ""
-"The base class for individual tools in an Edit Book plugin. Useful members "
-"include:"
+"Generate a Table of Contents from a list of XPath expressions. Each "
+"expression in the list corresponds to a level of the generate ToC. For "
+"example: :code:`['//h:h1', '//h:h2', '//h:h3']` will generate a three level "
+"Table of Contents from the ``<h1>``, ``<h2>`` and ``<h3>`` tags."
 msgstr ""
-"ஒரு திருத்து புத்தக சொருகியில் தனிப்பட்ட கருவிகளுக்கான அடிப்படை வகுப்பு. "
-"பயனுள்ள உறுப்பினர்கள் பின்வருமாறு:"
-
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool:3
-msgid ""
-"``self.plugin``: A reference to the :class:`calibre.customize.Plugin` object"
-" to which this tool belongs."
-msgstr ""
-"`` self.plugin``: ஒரு குறிப்பு: வகுப்புக்கு: `calibre.customize.plugin` இந்த"
-" கருவி சொந்தமான பொருள்."
-
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool:4
-msgid "self. :attr:`boss`"
-msgstr "சுய. : attr: `முதலாளி`"
-
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool:5
-msgid "self. :attr:`gui`"
-msgstr "சுய. : attr: `gui`"
-
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool:7
-msgid "Methods that must be overridden in sub classes:"
-msgstr "துணை வகுப்புகளில் மீறப்பட வேண்டிய முறைகள்:"
-
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool:9
-msgid ":meth:`create_action`"
-msgstr ": மெத்: `create_action`"
-
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool:10
-msgid ":meth:`register_shortcut`"
-msgstr ": மெத்: `register_shortcut`"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.gui2.tweak_book.plugin.Tool.name:1
-msgid "Set this to a unique name it will be used as a key"
-msgstr ""
-"இதை ஒரு தனித்துவமான பெயராக அமைக்கவும், இது ஒரு விசையாகப் பயன்படுத்தப்படும்"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.gui2.tweak_book.plugin.Tool.allowed_in_toolbar:1
-msgid "If True the user can choose to place this tool in the plugins toolbar"
-msgstr ""
-"உண்மை என்றால் பயனர் இந்த கருவியை செருகுநிரல்கள் கருவிப்பட்டியில் வைக்க "
-"தேர்வு செய்யலாம்"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.gui2.tweak_book.plugin.Tool.allowed_in_menu:1
-msgid "If True the user can choose to place this tool in the plugins menu"
-msgstr ""
-"உண்மை என்றால் பயனர் இந்த கருவியை செருகுநிரல்கள் மெனுவில் வைக்க தேர்வு "
-"செய்யலாம்"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.gui2.tweak_book.plugin.Tool.toolbar_button_popup_mode:1
-msgid ""
-"The popup mode for the menu (if any) of the toolbar button. Possible values "
-"are 'delayed', 'instant', 'button'"
-msgstr ""
-"கருவிப்பட்டி பொத்தானின் மெனுவுக்கான பாப்அப் பயன்முறை (ஏதேனும் இருந்தால்). "
-"சாத்தியமான மதிப்புகள் 'தாமதமானது', 'உடனடி', 'பொத்தான்'"
-
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool.boss:1
-msgid ""
-"The :class:`calibre.gui2.tweak_book.boss.Boss` object. Used to control the "
-"user interface."
-msgstr ""
-"தி: வகுப்பு: `calibre.gui2.tweak_book.boss.boss` பொருள். பயனர் இடைமுகத்தைக் "
-"கட்டுப்படுத்தப் பயன்படுகிறது."
-
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool.gui:1
-msgid "The main window of the user interface"
-msgstr "பயனர் இடைமுகத்தின் முக்கிய சாளரம்"
-
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool.current_container:1
-msgid ""
-"Return the current :class:`calibre.ebooks.oeb.polish.container.Container` "
-"object that represents the book being edited."
-msgstr ""
-"மின்னோட்டத்தைத் திருப்பி: வகுப்பு: "
-"`calibre.ebooks.oeb.polish.container.container` பொருள் திருத்தப்பட்ட "
-"புத்தகத்தைக் குறிக்கும் பொருள்."
-
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool.register_shortcut:1
-msgid ""
-"Register a keyboard shortcut that will trigger the specified ``qaction``. "
-"This keyboard shortcut will become automatically customizable by the user in"
-" the Keyboard shortcuts section of the editor preferences."
-msgstr ""
-"குறிப்பிட்ட `` Qaction`` ஐத் தூண்டும் விசைப்பலகை குறுக்குவழியை பதிவு "
-"செய்யுங்கள். இந்த விசைப்பலகை குறுக்குவழி எடிட்டர் விருப்பங்களின் விசைப்பலகை "
-"குறுக்குவழிகள் பிரிவில் பயனரால் தானாகவே தனிப்பயனாக்கப்படும்."
-
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool.register_shortcut:4
-msgid ""
-"A QAction object, it will be triggered when the configured key combination "
-"is pressed by the user."
-msgstr ""
-"ஒரு Qaction பொருள், கட்டமைக்கப்பட்ட விசை சேர்க்கை பயனரால் அழுத்தும்போது அது "
-"தூண்டப்படும்."
-
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool.register_shortcut:6
-msgid ""
-"A unique name for this shortcut/action. It will be used internally, it must "
-"not be shared by any other actions in this plugin."
-msgstr ""
-"இந்த குறுக்குவழி/செயலுக்கான தனித்துவமான பெயர். இது உள்நாட்டில் "
-"பயன்படுத்தப்படும், இந்த சொருகி வேறு எந்த செயல்களாலும் இது பகிரப்படக்கூடாது."
-
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool.register_shortcut:9
-msgid ""
-"A list of the default keyboard shortcuts. If not specified no default "
-"shortcuts will be set. If the shortcuts specified here conflict with either "
-"builtin shortcuts or shortcuts from user configuration/other plugins, they "
-"will be ignored. In that case, users will have to configure the shortcuts "
-"manually via Preferences. For example: ``default_keys=('Ctrl+J', 'F9')``."
-msgstr ""
-"இயல்புநிலை விசைப்பலகை குறுக்குவழிகளின் பட்டியல். குறிப்பிடப்படவில்லை என்றால்"
-" இயல்புநிலை குறுக்குவழிகள் அமைக்கப்படாது. இங்கே குறிப்பிடப்பட்டுள்ள "
-"குறுக்குவழிகள் பயனர் உள்ளமைவு/பிற செருகுநிரல்களிலிருந்து பில்டின் "
-"குறுக்குவழிகள் அல்லது குறுக்குவழிகளுடன் முரண்பட்டால், அவை "
-"புறக்கணிக்கப்படும். அவ்வாறான நிலையில், பயனர்கள் குறுக்குவழிகளை "
-"விருப்பத்தேர்வுகள் வழியாக கைமுறையாக உள்ளமைக்க வேண்டும். எடுத்துக்காட்டாக: ``"
-" default_keys = ('ctrl+j', 'f9') ``."
-
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool.register_shortcut:15
-msgid ""
-"An optional short description of this action. If not specified the text from"
-" the QAction will be used."
-msgstr ""
-"இந்த செயலின் விருப்பமான குறுகிய விளக்கம். குறிப்பிடப்படாவிட்டால் QACTION "
-"இலிருந்து உரை பயன்படுத்தப்படும்."
-
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool.register_shortcut:17
-msgid ""
-"An optional longer description of this action, it will be used in the "
-"preferences entry for this shortcut."
-msgstr ""
-"இந்த செயலின் விருப்பமான நீண்ட விளக்கம், இந்த குறுக்குவழிக்கான "
-"விருப்பத்தேர்வுகள் உள்ளீட்டில் இது பயன்படுத்தப்படும்."
-
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool.create_action:1
-msgid ""
-"Create a QAction that will be added to either the plugins toolbar or the "
-"plugins menu depending on ``for_toolbar``. For example::"
-msgstr ""
-"`` For_toolbar`` ஐப் பொறுத்து செருகுநிரல்கள் கருவிப்பட்டி அல்லது "
-"செருகுநிரல்கள் மெனுவில் சேர்க்கப்படும் ஒரு QACTION ஐ உருவாக்கவும். "
-"உதாரணத்திற்கு::"
-
-#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
-#: calibre.gui2.tweak_book.plugin.Tool.create_action:19
-msgid "Method :meth:`register_shortcut`."
-msgstr "முறை: மெத்: `register_shortcut`."
-
-#: ../../__w/calibre/calibre/manual/polish.rst:131
-msgid "Controlling the editor's user interface"
-msgstr "எடிட்டரின் பயனர் இடைமுகத்தை கட்டுப்படுத்துதல்"
-
-#: ../../__w/calibre/calibre/manual/polish.rst:133
-msgid ""
-"The e-book editor's user interface is controlled by a single global *Boss* "
-"object. This has many useful methods that can be used in plugin code to "
-"perform common tasks."
-msgstr ""
-"மின் புத்தக எடிட்டரின் பயனர் இடைமுகம் ஒற்றை உலகளாவிய * முதலாளி * பொருளால் "
-"கட்டுப்படுத்தப்படுகிறது. இது பொதுவான பணிகளைச் செய்ய சொருகி குறியீட்டில் "
-"பயன்படுத்தக்கூடிய பல பயனுள்ள முறைகளைக் கொண்டுள்ளது."
+"எக்ஸ்பாத் வெளிப்பாடுகளின் பட்டியலிலிருந்து உள்ளடக்க அட்டவணையை "
+"உருவாக்குங்கள். பட்டியலில் உள்ள ஒவ்வொரு வெளிப்பாடும் உருவாக்க TOC இன் "
+"நிலைக்கு ஒத்திருக்கிறது. எடுத்துக்காட்டாக :: குறியீடு: `['// // h: h1', '// "
+"h: h2', '// h: h3']` `` <h1> `` இலிருந்து மூன்று நிலை உள்ளடக்க அட்டவணையை "
+"உருவாக்கும் , `` <H2> `` மற்றும் `` <H3> `` குறிச்சொற்கள்."
 
 #: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/boss.pydocstring of
 #: calibre.gui2.tweak_book.boss.Boss.add_savepoint:1
@@ -1451,3 +1300,154 @@ msgid ""
 msgstr ""
 "தற்போதைய எடிட்டரில் தற்போதைய கர்சர் நிலைக்கு முன்னோட்டக் குழுவின் நிலையை "
 "ஒத்திசைக்கவும்"
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool:1
+msgid "Bases: :py:class:`object`"
+msgstr "தளங்கள் :: py: வகுப்பு: `பொருள்`"
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool:1
+msgid ""
+"The base class for individual tools in an Edit Book plugin. Useful members "
+"include:"
+msgstr ""
+"ஒரு திருத்து புத்தக சொருகியில் தனிப்பட்ட கருவிகளுக்கான அடிப்படை வகுப்பு. "
+"பயனுள்ள உறுப்பினர்கள் பின்வருமாறு:"
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool:10
+msgid ":meth:`register_shortcut`"
+msgstr ": மெத்: `register_shortcut`"
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool:3
+msgid ""
+"``self.plugin``: A reference to the :class:`calibre.customize.Plugin` object"
+" to which this tool belongs."
+msgstr ""
+"`` self.plugin``: ஒரு குறிப்பு: வகுப்புக்கு: `calibre.customize.plugin` இந்த"
+" கருவி சொந்தமான பொருள்."
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool:4
+msgid "self. :attr:`boss`"
+msgstr "சுய. : attr: `முதலாளி`"
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool:5
+msgid "self. :attr:`gui`"
+msgstr "சுய. : attr: `gui`"
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool:7
+msgid "Methods that must be overridden in sub classes:"
+msgstr "துணை வகுப்புகளில் மீறப்பட வேண்டிய முறைகள்:"
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool:9
+msgid ":meth:`create_action`"
+msgstr ": மெத்: `create_action`"
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool.boss:1
+msgid ""
+"The :class:`calibre.gui2.tweak_book.boss.Boss` object. Used to control the "
+"user interface."
+msgstr ""
+"தி: வகுப்பு: `calibre.gui2.tweak_book.boss.boss` பொருள். பயனர் இடைமுகத்தைக் "
+"கட்டுப்படுத்தப் பயன்படுகிறது."
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool.create_action:1
+msgid ""
+"Create a QAction that will be added to either the plugins toolbar or the "
+"plugins menu depending on ``for_toolbar``. For example::"
+msgstr ""
+"`` For_toolbar`` ஐப் பொறுத்து செருகுநிரல்கள் கருவிப்பட்டி அல்லது "
+"செருகுநிரல்கள் மெனுவில் சேர்க்கப்படும் ஒரு QACTION ஐ உருவாக்கவும். "
+"உதாரணத்திற்கு::"
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool.create_action:19
+msgid "Method :meth:`register_shortcut`."
+msgstr "முறை: மெத்: `register_shortcut`."
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool.current_container:1
+msgid ""
+"Return the current :class:`calibre.ebooks.oeb.polish.container.Container` "
+"object that represents the book being edited."
+msgstr ""
+"மின்னோட்டத்தைத் திருப்பி: வகுப்பு: "
+"`calibre.ebooks.oeb.polish.container.container` பொருள் திருத்தப்பட்ட "
+"புத்தகத்தைக் குறிக்கும் பொருள்."
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool.gui:1
+msgid "The main window of the user interface"
+msgstr "பயனர் இடைமுகத்தின் முக்கிய சாளரம்"
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool.register_shortcut:1
+msgid ""
+"Register a keyboard shortcut that will trigger the specified ``qaction``. "
+"This keyboard shortcut will become automatically customizable by the user in"
+" the Keyboard shortcuts section of the editor preferences."
+msgstr ""
+"குறிப்பிட்ட `` Qaction`` ஐத் தூண்டும் விசைப்பலகை குறுக்குவழியை பதிவு "
+"செய்யுங்கள். இந்த விசைப்பலகை குறுக்குவழி எடிட்டர் விருப்பங்களின் விசைப்பலகை "
+"குறுக்குவழிகள் பிரிவில் பயனரால் தானாகவே தனிப்பயனாக்கப்படும்."
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool.register_shortcut:15
+msgid ""
+"An optional short description of this action. If not specified the text from"
+" the QAction will be used."
+msgstr ""
+"இந்த செயலின் விருப்பமான குறுகிய விளக்கம். குறிப்பிடப்படாவிட்டால் QACTION "
+"இலிருந்து உரை பயன்படுத்தப்படும்."
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool.register_shortcut:17
+msgid ""
+"An optional longer description of this action, it will be used in the "
+"preferences entry for this shortcut."
+msgstr ""
+"இந்த செயலின் விருப்பமான நீண்ட விளக்கம், இந்த குறுக்குவழிக்கான "
+"விருப்பத்தேர்வுகள் உள்ளீட்டில் இது பயன்படுத்தப்படும்."
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool.register_shortcut:4
+msgid ""
+"A QAction object, it will be triggered when the configured key combination "
+"is pressed by the user."
+msgstr ""
+"ஒரு Qaction பொருள், கட்டமைக்கப்பட்ட விசை சேர்க்கை பயனரால் அழுத்தும்போது அது "
+"தூண்டப்படும்."
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool.register_shortcut:6
+msgid ""
+"A unique name for this shortcut/action. It will be used internally, it must "
+"not be shared by any other actions in this plugin."
+msgstr ""
+"இந்த குறுக்குவழி/செயலுக்கான தனித்துவமான பெயர். இது உள்நாட்டில் "
+"பயன்படுத்தப்படும், இந்த சொருகி வேறு எந்த செயல்களாலும் இது பகிரப்படக்கூடாது."
+
+#: ../../__w/calibre/calibre/src/calibre/gui2/tweak_book/plugin.pydocstring of
+#: calibre.gui2.tweak_book.plugin.Tool.register_shortcut:9
+msgid ""
+"A list of the default keyboard shortcuts. If not specified no default "
+"shortcuts will be set. If the shortcuts specified here conflict with either "
+"builtin shortcuts or shortcuts from user configuration/other plugins, they "
+"will be ignored. In that case, users will have to configure the shortcuts "
+"manually via Preferences. For example: ``default_keys=('Ctrl+J', 'F9')``."
+msgstr ""
+"இயல்புநிலை விசைப்பலகை குறுக்குவழிகளின் பட்டியல். குறிப்பிடப்படவில்லை என்றால்"
+" இயல்புநிலை குறுக்குவழிகள் அமைக்கப்படாது. இங்கே குறிப்பிடப்பட்டுள்ள "
+"குறுக்குவழிகள் பயனர் உள்ளமைவு/பிற செருகுநிரல்களிலிருந்து பில்டின் "
+"குறுக்குவழிகள் அல்லது குறுக்குவழிகளுடன் முரண்பட்டால், அவை "
+"புறக்கணிக்கப்படும். அவ்வாறான நிலையில், பயனர்கள் குறுக்குவழிகளை "
+"விருப்பத்தேர்வுகள் வழியாக கைமுறையாக உள்ளமைக்க வேண்டும். எடுத்துக்காட்டாக: ``"
+" default_keys = ('ctrl+j', 'f9') ``."

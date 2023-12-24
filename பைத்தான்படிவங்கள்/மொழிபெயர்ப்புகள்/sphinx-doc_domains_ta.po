@@ -17,13 +17,501 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/domains.rst:6
-msgid "Sphinx Domains"
-msgstr "ஸ்பின்க்ஸ் களங்கள்"
+#: ../../sphinx/doc/domains.rst:0
+msgid "Parameters"
+msgstr "அளவுருக்கள்"
+
+#: ../../sphinx/doc/domains.rst:0
+msgid "Raises"
+msgstr "எழுப்புகிறது"
+
+#: ../../sphinx/doc/domains.rst:0
+msgid "Return type"
+msgstr "திரும்ப வகை"
+
+#: ../../sphinx/doc/domains.rst:0
+msgid "Throws"
+msgstr "வீசுகிறது"
+
+#: ../../sphinx/doc/domains.rst:0 ../../sphinx/doc/domains.rst:0
+msgid "Arguments"
+msgstr "வாதங்கள்"
+
+#: ../../sphinx/doc/domains.rst:0 ../../sphinx/doc/domains.rst:0
+msgid "Returns"
+msgstr "வருமானம்"
+
+#: ../../sphinx/doc/domains.rst:1001
+msgid ""
+"In general the reference must include the template paraemter declarations, "
+"e.g., ``template\\<typename TOuter> Wrapper::Outer`` "
+"(:cpp:class:`template\\<typename TOuter> Wrapper::Outer`). Currently the "
+"lookup only succeed if the template parameter identifiers are equal strings."
+" That is, ``template\\<typename UOuter> Wrapper::Outer`` will not work."
+msgstr ""
+"பொதுவாக குறிப்பில் வார்ப்புரு பாரேம்ட்டர் அறிவிப்புகள் இருக்க வேண்டும், "
+"எ.கா. வார்ப்புரு அளவுரு அடையாளங்காட்டிகள் சம சரங்களாக இருந்தால் மட்டுமே "
+"தற்போது தேடல் வெற்றி பெறுகிறது. அதாவது, `` வார்ப்புரு \\ <typename uouter> "
+"rapper :: outter`` வேலை செய்யாது."
+
+#: ../../sphinx/doc/domains.rst:1006
+msgid ""
+"The inner class template can not be directly referenced, unless the current "
+"namespace is changed or the following shorthand is used. If a template "
+"parameter list is omitted, then the lookup will assume either a template or "
+"a non-template, but not a partial template specialisation. This means the "
+"following references work."
+msgstr ""
+"தற்போதைய பெயர்வெளி மாற்றப்படாவிட்டால் அல்லது பின்வரும் சுருக்கெழுத்து "
+"பயன்படுத்தப்படாவிட்டால், உள் வகுப்பு வார்ப்புருவை நேரடியாக குறிப்பிட "
+"முடியாது. ஒரு வார்ப்புரு அளவுரு பட்டியல் தவிர்க்கப்பட்டால், தேடல் ஒரு "
+"வார்ப்புரு அல்லது டெம்ப்ளேட் அல்லாததாகக் கருதப்படும், ஆனால் ஒரு பகுதி "
+"வார்ப்புரு நிபுணத்துவம் அல்ல. இதன் பொருள் பின்வரும் குறிப்புகள் "
+"செயல்படுகின்றன."
+
+#: ../../sphinx/doc/domains.rst:1012
+msgid "``Wrapper::Outer`` (:cpp:class:`Wrapper::Outer`)"
+msgstr ""
+"`` ரேப்பர் :: வெளிப்புறம்`` (: சிபிபி: வகுப்பு: `ரேப்பர் :: வெளிப்புறம்`)"
+
+#: ../../sphinx/doc/domains.rst:1013
+msgid "``Wrapper::Outer::Inner`` (:cpp:class:`Wrapper::Outer::Inner`)"
+msgstr ""
+"`` ரேப்பர் :: வெளி :: உள்`` (: சிபிபி: வகுப்பு: `ரேப்பர் :: வெளிப்புற :: "
+"உள்`)"
+
+#: ../../sphinx/doc/domains.rst:1014
+msgid ""
+"``template\\<typename TInner> Wrapper::Outer::Inner`` "
+"(:cpp:class:`template\\<typename TInner> Wrapper::Outer::Inner`)"
+msgstr ""
+"`` வார்ப்புரு \\ <typename t உள்> ரேப்பர் :: வெளிப்புற :: உள்`` (: c ++: "
+"வகுப்பு: `வார்ப்புரு \\ <தட்டச்சு பெயர் மெல்லியதாகும்> ரேப்பர் :: வெளிப்புற "
+":: உள்`)"
+
+#: ../../sphinx/doc/domains.rst:1017
+msgid "(Full) Template Specialisations"
+msgstr "(முழு) வார்ப்புரு நிபுணத்துவம்"
+
+#: ../../sphinx/doc/domains.rst:991 ../../sphinx/doc/domains.rst:1019
+msgid "Assume the following declarations."
+msgstr "பின்வரும் அறிவிப்புகளை எடுத்துக் கொள்ளுங்கள்."
+
+#: ../../sphinx/doc/domains.rst:1036
+msgid ""
+"In general the reference must include a template parameter list for each "
+"template argument list. The full specialisation above can therefore be "
+"referenced with ``template\\<> Outer\\<int>`` (:cpp:class:`template\\<> "
+"Outer\\<int>`) and ``template\\<> template\\<> Outer\\<int>::Inner\\<bool>``"
+" (:cpp:class:`template\\<> template\\<> Outer\\<int>::Inner\\<bool>`). As a "
+"shorthand the empty template parameter list can be omitted, e.g., "
+"``Outer\\<int>`` (:cpp:class:`Outer\\<int>`) and "
+"``Outer\\<int>::Inner\\<bool>`` (:cpp:class:`Outer\\<int>::Inner\\<bool>`)."
+msgstr ""
+"பொதுவாக குறிப்பில் ஒவ்வொரு வார்ப்புரு வாத பட்டியலுக்கும் ஒரு வார்ப்புரு "
+"அளவுரு பட்டியல் இருக்க வேண்டும். எனவே மேலே உள்ள முழு நிபுணத்துவத்தையும் `` "
+"வார்ப்புரு \\ <> வெளிப்புற \\ <int> `` (: cpp: class: `வார்ப்புரு \\ <> வெளி"
+" \\ <int>`) மற்றும் `` வார்ப்புரு \\ <> வார்ப்புரு \\ < > வெளிப்புறம் \\ "
+"<int> :: உள் \\ <bool> `` (: cpp: class: `வார்ப்புரு \\ <> வார்ப்புரு \\ <> "
+"வெளி \\ <int> :: உள் \\ <bool>`). ஒரு சுருக்கெழுத்தாக வெற்று வார்ப்புரு "
+"அளவுரு பட்டியலை தவிர்க்கலாம், எ.கா. bool> `` (: cpp: வகுப்பு: `வெளி \\ <int>"
+" :: உள் \\ <bool>`)."
+
+#: ../../sphinx/doc/domains.rst:104
+msgid "Cross-referencing syntax"
+msgstr "குறுக்கு-குறிப்பு தொடரியல்"
+
+#: ../../sphinx/doc/domains.rst:1044
+msgid "Partial Template Specialisations"
+msgstr "பகுதி வார்ப்புரு நிபுணத்துவம்"
+
+#: ../../sphinx/doc/domains.rst:1046
+msgid "Assume the following declaration."
+msgstr "பின்வரும் அறிவிப்பை எடுத்துக் கொள்ளுங்கள்."
+
+#: ../../sphinx/doc/domains.rst:1051
+msgid ""
+"References to partial specialisations must always include the template "
+"parameter lists, e.g., ``template\\<typename T> Outer\\<T*>`` "
+"(:cpp:class:`template\\<typename T> Outer\\<T*>`). Currently the lookup only"
+" succeed if the template parameter identifiers are equal strings."
+msgstr ""
+"பகுதி சிறப்புகளுக்கான குறிப்புகள் எப்போதுமே வார்ப்புரு அளவுரு பட்டியல்களைக் "
+"கொண்டிருக்க வேண்டும், எ.கா. ). வார்ப்புரு அளவுரு அடையாளங்காட்டிகள் சம "
+"சரங்களாக இருந்தால் மட்டுமே தற்போது தேடல் வெற்றி பெறுகிறது."
+
+#: ../../sphinx/doc/domains.rst:1057
+msgid "Configuration Variables"
+msgstr "உள்ளமைவு மாறிகள்"
+
+#: ../../sphinx/doc/domains.rst:1059
+msgid "See :ref:`cpp-config`."
+msgstr "காண்க: குறிப்பு: `சிபிபி-கான்ஃபிக்`."
+
+#: ../../sphinx/doc/domains.rst:106
+msgid ""
+"For cross-reference roles provided by domains, the same facilities exist as "
+"for general cross-references.  See :ref:`xref-syntax`."
+msgstr ""
+"களங்களால் வழங்கப்பட்ட குறுக்கு-குறிப்பு பாத்திரங்களுக்கு, பொதுவான குறுக்கு "
+"குறிப்புகளுக்கும் அதே வசதிகள் உள்ளன. காண்க: குறிப்பு: `xref-syntax`."
+
+#: ../../sphinx/doc/domains.rst:1063
+msgid "The Standard Domain"
+msgstr "நிலையான டொமைன்"
+
+#: ../../sphinx/doc/domains.rst:1065
+msgid ""
+"The so-called \"standard\" domain collects all markup that doesn't warrant a"
+" domain of its own.  Its directives and roles are not prefixed with a domain"
+" name."
+msgstr ""
+"\"நிலையான\" டொமைன் என்று அழைக்கப்படுவது அதன் சொந்த களத்திற்கு உத்தரவாதம் "
+"அளிக்காத அனைத்து மார்க்அப்பையும் சேகரிக்கிறது. அதன் வழிமுறைகள் மற்றும் "
+"பாத்திரங்கள் ஒரு டொமைன் பெயருடன் முன்னொட்டப்படவில்லை."
+
+#: ../../sphinx/doc/domains.rst:1069
+msgid ""
+"The standard domain is also where custom object descriptions, added using "
+"the :func:`~sphinx.application.Sphinx.add_object_type` API, are placed."
+msgstr ""
+"தனிப்பயன் பொருள் விளக்கங்கள், func: `~ "
+"sphinx.application.sphinx.add_object_type` api, வைக்கப்பட்டுள்ள இடத்திலும் "
+"நிலையான டொமைன் உள்ளது."
+
+#: ../../sphinx/doc/domains.rst:1072
+msgid ""
+"There is a set of directives allowing documenting command-line programs:"
+msgstr ""
+"கட்டளை-வரி நிரல்களை ஆவணப்படுத்த அனுமதிக்கும் வழிமுறைகளின் தொகுப்பு உள்ளது:"
+
+#: ../../sphinx/doc/domains.rst:1076
+msgid ""
+"Describes a command line argument or switch.  Option argument names should "
+"be enclosed in angle brackets.  Examples::"
+msgstr ""
+"கட்டளை வரி வாதம் அல்லது சுவிட்சை விவரிக்கிறது. விருப்ப வாத பெயர்கள் கோண "
+"அடைப்புக்குறிக்குள் இணைக்கப்பட வேண்டும். எடுத்துக்காட்டுகள் ::"
+
+#: ../../sphinx/doc/domains.rst:1087
+msgid ""
+"The directive will create cross-reference targets for the given options, "
+"referencable by :rst:role:`option` (in the example case, you'd use something"
+" like ``:option:`dest_dir```, ``:option:`-m```, or ``:option:`--module```)."
+msgstr ""
+"வழங்கப்பட்ட விருப்பங்களுக்கான குறுக்கு-குறிப்பு இலக்குகளை உருவாக்கும், இதன் "
+"மூலம் குறிப்பிடப்படுகிறது: rst: rest: `விருப்பம்` (எடுத்துக்காட்டு வழக்கில்,"
+" நீங்கள்` `: விருப்பம்:` dest_dir```, ``: விருப்பம் போன்ற ஒன்றைப் "
+"பயன்படுத்துவீர்கள் : `-m```, அல்லது` `: விருப்பம்:`--மாதிரி```)."
+
+#: ../../sphinx/doc/domains.rst:109
+msgid "In short:"
+msgstr "சுருக்கமாக:"
+
+#: ../../sphinx/doc/domains.rst:1091
+msgid ""
+"``cmdoption`` directive is a deprecated alias for the ``option`` directive."
+msgstr ""
+"`` cmdoption`` உத்தரவு என்பது `` விருப்பம்`` உத்தரவுக்கான நீக்கப்பட்ட "
+"மாற்றுப்பெயராகும்."
+
+#: ../../sphinx/doc/domains.rst:1095
+msgid ""
+"Describes an environment variable that the documented code or program uses "
+"or defines.  Referencable by :rst:role:`envvar`."
+msgstr ""
+"ஆவணப்படுத்தப்பட்ட குறியீடு அல்லது நிரல் பயன்படுத்தும் அல்லது வரையறுக்கும் "
+"சூழல் மாறியை விவரிக்கிறது. குறிப்பிடக்கூடியவர்: rst: பங்கு: `envvar`."
 
 #: ../../sphinx/doc/domains.rst:11
 msgid "What is a Domain?"
 msgstr "ஒரு டொமைன் என்றால் என்ன?"
+
+#: ../../sphinx/doc/domains.rst:1100
+msgid ""
+"Like :rst:dir:`py:currentmodule`, this directive produces no output. "
+"Instead, it serves to notify Sphinx that all following :rst:dir:`option` "
+"directives document options for the program called *name*."
+msgstr ""
+"போன்றவை: rst: dir: `py: currentModule`, இந்த உத்தரவு எந்த வெளியீட்டையும் "
+"உருவாக்காது. அதற்கு பதிலாக, பின்வரும் அனைத்தும் பின்வருமாறு: rst: dir: "
+"`விருப்பம்` *பெயர் *எனப்படும் நிரலுக்கான ஆவண விருப்பங்கள்."
+
+#: ../../sphinx/doc/domains.rst:1104
+msgid ""
+"If you use :rst:dir:`program`, you have to qualify the references in your "
+":rst:role:`option` roles by the program name, so if you have the following "
+"situation ::"
+msgstr ""
+"நீங்கள் பயன்படுத்தினால்: rst: dir: `program`, உங்கள்: rst: rest:` "
+"விருப்பத்தேர்வு` பாத்திரங்களில் உள்ள குறிப்புகளை நீங்கள் தகுதி பெற வேண்டும்,"
+" எனவே உங்களுக்கு பின்வரும் நிலைமை இருந்தால் ::"
+
+#: ../../sphinx/doc/domains.rst:111
+msgid ""
+"You may supply an explicit title and reference target: ``:role:`title "
+"<target>``` will refer to *target*, but the link text will be *title*."
+msgstr ""
+"நீங்கள் வெளிப்படையான தலைப்பு மற்றும் குறிப்பு இலக்கை வழங்கலாம்: ``: பங்கு: "
+"`தலைப்பு <இலக்கு>` `` *இலக்கு *ஐக் குறிக்கும், ஆனால் இணைப்பு உரை *தலைப்பு "
+"*ஆக இருக்கும்."
+
+#: ../../sphinx/doc/domains.rst:1120
+msgid ""
+"then ``:option:`rm -r``` would refer to the first option, while "
+"``:option:`svn -r``` would refer to the second one."
+msgstr ""
+"பின்னர் ``: விருப்பம்: `rm -r``` முதல் விருப்பத்தைக் குறிக்கும், அதே "
+"நேரத்தில்` `: விருப்பம்:` svn -r``` இரண்டாவது ஒன்றைக் குறிக்கும்."
+
+#: ../../sphinx/doc/domains.rst:1123
+msgid ""
+"The program name may contain spaces (in case you want to document "
+"subcommands like ``svn add`` and ``svn commit`` separately)."
+msgstr ""
+"நிரல் பெயரில் இடைவெளிகளைக் கொண்டிருக்கலாம் (நீங்கள் `` எஸ்.வி.என் சேர்` "
+"மற்றும் `எஸ்.வி.என் கமிட்`` தனித்தனியாக ஆவணப்படுத்த விரும்பினால்)."
+
+#: ../../sphinx/doc/domains.rst:1129
+msgid ""
+"There is also a very generic object description directive, which is not tied"
+" to any domain:"
+msgstr ""
+"மிகவும் பொதுவான பொருள் விளக்க உத்தரவும் உள்ளது, இது எந்த களத்துடனும் "
+"பிணைக்கப்படவில்லை:"
+
+#: ../../sphinx/doc/domains.rst:1135
+msgid ""
+"This directive produces the same formatting as the specific ones provided by"
+" domains, but does not create index entries or cross-referencing targets. "
+"Example::"
+msgstr ""
+"இந்த உத்தரவு களங்களால் வழங்கப்பட்ட குறிப்பிட்ட வடிவத்தை உருவாக்குகிறது, "
+"ஆனால் குறியீட்டு உள்ளீடுகள் அல்லது குறுக்கு-குறிப்பு இலக்குகளை உருவாக்காது. "
+"உதாரணமாக::"
+
+#: ../../sphinx/doc/domains.rst:114
+msgid ""
+"If you prefix the content with ``!``, no reference/hyperlink will be "
+"created."
+msgstr ""
+"உள்ளடக்கத்தை ``! `` உடன் முன்னொட்டினால், குறிப்பு/ஹைப்பர்லிங்க் "
+"உருவாக்கப்படாது."
+
+#: ../../sphinx/doc/domains.rst:1145
+msgid "The JavaScript Domain"
+msgstr "ஜாவாஸ்கிரிப்ட் டொமைன்"
+
+#: ../../sphinx/doc/domains.rst:1147
+msgid "The JavaScript domain (name **js**) provides the following directives:"
+msgstr ""
+"ஜாவாஸ்கிரிப்ட் டொமைன் (பெயர் ** JS **) பின்வரும் வழிமுறைகளை வழங்குகிறது:"
+
+#: ../../sphinx/doc/domains.rst:1151
+msgid ""
+"This directive sets the module name for object declarations that follow "
+"after. The module name is used in the global module index and in cross "
+"references. This directive does not create an object heading like "
+":rst:dir:`py:class` would, for example."
+msgstr ""
+"இந்த உத்தரவு பின்வரும் பொருள் அறிவிப்புகளுக்கான தொகுதி பெயரை அமைக்கிறது. "
+"தொகுதி பெயர் உலகளாவிய தொகுதி குறியீட்டிலும் குறுக்கு குறிப்புகளிலும் "
+"பயன்படுத்தப்படுகிறது. இந்த உத்தரவு ஒரு பொருளை உருவாக்காது: rst: dir: `py: "
+"class`, எடுத்துக்காட்டாக."
+
+#: ../../sphinx/doc/domains.rst:1156
+msgid ""
+"By default, this directive will create a linkable entity and will cause an "
+"entry in the global module index, unless the ``noindex`` option is "
+"specified. If this option is specified, the directive will only update the "
+"current module name."
+msgstr ""
+"இயல்பாக, இந்த உத்தரவு ஒரு இணைக்கக்கூடிய நிறுவனத்தை உருவாக்கும், மேலும் `` "
+"NoIndex`` விருப்பம் குறிப்பிடப்படாவிட்டால், உலகளாவிய தொகுதி குறியீட்டில் "
+"நுழைவதை ஏற்படுத்தும். இந்த விருப்பம் குறிப்பிடப்பட்டால், உத்தரவு தற்போதைய "
+"தொகுதி பெயரை மட்டுமே புதுப்பிக்கும்."
+
+#: ../../sphinx/doc/domains.rst:116
+msgid ""
+"If you prefix the content with ``~``, the link text will only be the last "
+"component of the target.  For example, ``:py:meth:`~Queue.Queue.get``` will "
+"refer to ``Queue.Queue.get`` but only display ``get`` as the link text."
+msgstr ""
+"உள்ளடக்கத்தை `` ~ `` உடன் முன்னொட்டினால், இணைப்பு உரை இலக்கின் கடைசி அங்கமாக"
+" மட்டுமே இருக்கும். எடுத்துக்காட்டாக, ``: py: meth: `~ queue.queue.get```` "
+"`queue.queue.get`` ஐக் குறிக்கும், ஆனால் இணைப்பு உரையாக` `பெறவும்` மட்டுமே "
+"காண்பிக்கும்."
+
+#: ../../sphinx/doc/domains.rst:1161
+msgid ""
+"To clear the current module, set the module name to ``null`` or ``None``"
+msgstr ""
+"தற்போதைய தொகுதியை அழிக்க, தொகுதி பெயரை `` null`` அல்லது `` எதுவுமில்லை`` என "
+"அமைக்கவும்"
+
+#: ../../sphinx/doc/domains.rst:1167
+msgid ""
+"Describes a JavaScript function or method.  If you want to describe "
+"arguments as optional use square brackets as :ref:`documented <signatures>` "
+"for Python signatures."
+msgstr ""
+"ஜாவாஸ்கிரிப்ட் செயல்பாடு அல்லது முறையை விவரிக்கிறது. நீங்கள் வாதங்களை "
+"விருப்பமான சதுர அடைப்புக்குறிகளாக விவரிக்க விரும்பினால்: குறிப்பு: "
+"`ஆவணப்படுத்தப்பட்ட <கையொப்பங்கள்>` பைதான் கையொப்பங்களுக்கு."
+
+#: ../../sphinx/doc/domains.rst:1171
+msgid ""
+"You can use fields to give more details about arguments and their expected "
+"types, errors which may be thrown by the function, and the value being "
+"returned::"
+msgstr ""
+"வாதங்கள் மற்றும் அவற்றின் எதிர்பார்க்கப்படும் வகைகள், செயல்பாட்டால் "
+"வீசப்படக்கூடிய பிழைகள் மற்றும் திரும்பப் பெறப்படும் மதிப்பு பற்றிய கூடுதல் "
+"விவரங்களை வழங்க நீங்கள் புலங்களைப் பயன்படுத்தலாம் ::"
+
+#: ../../sphinx/doc/domains.rst:1185 ../../sphinx/doc/domains.rst:1214
+msgid "This is rendered as:"
+msgstr "இது இவ்வாறு வழங்கப்படுகிறது:"
+
+#: ../../sphinx/doc/domains.rst:1189
+msgid "An URI to the location of the resource."
+msgstr "வளத்தின் இருப்பிடத்திற்கு ஒரு யூரி."
+
+#: ../../sphinx/doc/domains.rst:1190
+msgid "Gets called with the object."
+msgstr "பொருளுடன் அழைக்கப்படுகிறது."
+
+#: ../../sphinx/doc/domains.rst:1191
+msgid ""
+"Gets called in case the request fails. And a lot of other text so we need "
+"multiple lines."
+msgstr ""
+"கோரிக்கை தோல்வியுற்றால் அழைக்கப்படுகிறது. மற்றும் பல உரைகள் எனவே எங்களுக்கு "
+"பல கோடுகள் தேவை."
+
+#: ../../sphinx/doc/domains.rst:1194
+msgid "For whatever reason in that case."
+msgstr "அந்த விஷயத்தில் எந்த காரணத்திற்காகவும்."
+
+#: ../../sphinx/doc/domains.rst:1195
+msgid "Something."
+msgstr "ஏதோ."
+
+#: ../../sphinx/doc/domains.rst:1199
+msgid ""
+"This directive is an alias for :rst:dir:`js:function`, however it describes "
+"a function that is implemented as a method on a class object."
+msgstr ""
+"இந்த உத்தரவு இதற்கான மாற்றுப்பெயராகும்: rst: dir: `js: செயல்பாடு`, "
+"இருப்பினும் இது ஒரு வகுப்பு பொருளின் முறையாக செயல்படுத்தப்படும் ஒரு "
+"செயல்பாட்டை விவரிக்கிறது."
+
+#: ../../sphinx/doc/domains.rst:1206
+msgid ""
+"Describes a constructor that creates an object.  This is basically like a "
+"function but will show up with a `class` prefix::"
+msgstr ""
+"ஒரு பொருளை உருவாக்கும் ஒரு கட்டமைப்பாளரை விவரிக்கிறது. இது அடிப்படையில் ஒரு "
+"செயல்பாடு போன்றது, ஆனால் `வகுப்பு` முன்னொட்டு ::"
+
+#: ../../sphinx/doc/domains.rst:1218
+msgid "The name of the animal"
+msgstr "விலங்கின் பெயர்"
+
+#: ../../sphinx/doc/domains.rst:1219
+msgid "an optional age for the animal"
+msgstr "விலங்குக்கு ஒரு விருப்ப வயது"
+
+#: ../../sphinx/doc/domains.rst:122
+msgid "The Python Domain"
+msgstr "பைதான் டொமைன்"
+
+#: ../../sphinx/doc/domains.rst:1223
+msgid "Describes a global variable or constant."
+msgstr "உலகளாவிய மாறி அல்லது மாறிலி விவரிக்கிறது."
+
+#: ../../sphinx/doc/domains.rst:1227
+msgid "Describes the attribute *name* of *object*."
+msgstr "*பொருள் *என்ற பண்புக்கூறு *பெயர் *விவரிக்கிறது."
+
+#: ../../sphinx/doc/domains.rst:1231 ../../sphinx/doc/domains.rst:1286
+msgid "These roles are provided to refer to the described objects:"
+msgstr ""
+"விவரிக்கப்பட்ட பொருள்களைக் குறிக்க இந்த பாத்திரங்கள் வழங்கப்படுகின்றன:"
+
+#: ../../sphinx/doc/domains.rst:124
+msgid ""
+"The Python domain (name **py**) provides the following directives for module"
+" declarations:"
+msgstr ""
+"பைதான் டொமைன் (பெயர் ** பை **) தொகுதி அறிவிப்புகளுக்கு பின்வரும் வழிமுறைகளை "
+"வழங்குகிறது:"
+
+#: ../../sphinx/doc/domains.rst:1242
+msgid "The reStructuredText domain"
+msgstr "மறுசீரமைப்பு டொமைன்"
+
+#: ../../sphinx/doc/domains.rst:1244
+msgid ""
+"The reStructuredText domain (name **rst**) provides the following "
+"directives:"
+msgstr ""
+"மறுசீரமைக்கப்பட்ட டெக்ஸ்ட் டொமைன் (பெயர் ** rst **) பின்வரும் வழிமுறைகளை "
+"வழங்குகிறது:"
+
+#: ../../sphinx/doc/domains.rst:1248
+msgid ""
+"Describes a reST directive.  The *name* can be a single directive name or "
+"actual directive syntax (`..` prefix and `::` suffix) with arguments that "
+"will be rendered differently.  For example::"
+msgstr ""
+"REST உத்தரவை விவரிக்கிறது. * பெயர் * ஒரு ஒற்றை வழிநடத்தும் பெயர் அல்லது "
+"உண்மையான வழிநடத்துதல் தொடரியல் (`..` முன்னொட்டு மற்றும்` :: `பின்னொட்டு) "
+"ஆகியவை வித்தியாசமாக வழங்கப்படும் வாதங்களுடன் இருக்கலாம். உதாரணத்திற்கு::"
+
+#: ../../sphinx/doc/domains.rst:1260 ../../sphinx/doc/domains.rst:1278
+msgid "will be rendered as:"
+msgstr "இவ்வாறு வழங்கப்படும்:"
+
+#: ../../sphinx/doc/domains.rst:1264 ../../sphinx/doc/domains.rst:1282
+msgid "Foo description."
+msgstr "Foo விளக்கம்."
+
+#: ../../sphinx/doc/domains.rst:1268
+msgid "Bar description."
+msgstr "பார் விளக்கம்."
+
+#: ../../sphinx/doc/domains.rst:1272
+msgid "Describes a reST role.  For example::"
+msgstr "ஓய்வு பாத்திரத்தை விவரிக்கிறது. உதாரணத்திற்கு::"
+
+#: ../../sphinx/doc/domains.rst:129
+msgid ""
+"This directive marks the beginning of the description of a module (or "
+"package submodule, in which case the name should be fully qualified, "
+"including the package name).  It does not create content (like e.g. "
+":rst:dir:`py:class` does)."
+msgstr ""
+"இந்த உத்தரவு ஒரு தொகுதியின் விளக்கத்தின் தொடக்கத்தைக் குறிக்கிறது (அல்லது "
+"தொகுப்பு துணைமோடூல், இந்த விஷயத்தில் தொகுப்பு பெயர் உட்பட பெயர் முழுமையாக "
+"தகுதி பெற வேண்டும்). இது உள்ளடக்கத்தை உருவாக்காது (எ.கா.: rst: dir: `py: "
+"class` செய்கிறது)."
+
+#: ../../sphinx/doc/domains.rst:1293
+msgid "More domains"
+msgstr "மேலும் களங்கள்"
+
+#: ../../sphinx/doc/domains.rst:1295
+msgid ""
+"The sphinx-contrib_ repository contains more domains available as "
+"extensions; currently Ada_, CoffeeScript_, Erlang_, HTTP_, Lasso_, MATLAB_, "
+"PHP_, and Ruby_ domains. Also available are domains for `Chapel`_, `Common "
+"Lisp`_, dqn_, Go_, Jinja_, Operation_, and Scala_."
+msgstr ""
+"ஸ்பின்க்ஸ்-கான்ட்ரிஃப்_ களஞ்சியத்தில் நீட்டிப்புகளாக கிடைக்கும் அதிக களங்கள்"
+" உள்ளன; தற்போது ada_, coffeescript_, erlang_, http_, lasso_, matlab_, php_, "
+"மற்றும் ரூபி_ களங்கள். `சேப்பல்`_,` பொதுவான லிஸ்ப்`_, டக்என்_, கோ_, ஜின்ஜா_,"
+" ஆபரேஷன்_ மற்றும் ஸ்கலா_ ஆகியவற்றிற்கான களங்களும் கிடைக்கின்றன."
 
 #: ../../sphinx/doc/domains.rst:13
 msgid ""
@@ -43,222 +531,6 @@ msgstr ""
 "நோக்கங்களுக்காக இதைப் பயன்படுத்துவதில் ஆர்வம் உருவானது: C/C ++ திட்டங்கள், "
 "ஜாவாஸ்கிரிப்ட் அல்லது மறுசீரமைப்பு டெக்ஸ்ட் மார்க்அப் கூட (இந்த ஆவணத்தைப் "
 "போல)."
-
-#: ../../sphinx/doc/domains.rst:21
-msgid ""
-"While this was always possible, it is now much easier to easily support "
-"documentation of projects using different programming languages or even ones"
-" not supported by the main Sphinx distribution, by providing a **domain** "
-"for every such purpose."
-msgstr ""
-"இது எப்போதுமே சாத்தியமாக இருந்தாலும், இதுபோன்ற ஒவ்வொரு நோக்கத்திற்கும் ** "
-"டொமைன் ** ஐ வழங்குவதன் மூலம், வெவ்வேறு நிரலாக்க மொழிகளைப் பயன்படுத்தி அல்லது"
-" பிரதான ஸ்பிங்க்ஸ் விநியோகத்தால் ஆதரிக்கப்படாத திட்டங்களின் ஆவணங்களை எளிதில்"
-" ஆதரிப்பது இப்போது மிகவும் எளிதானது."
-
-#: ../../sphinx/doc/domains.rst:26
-msgid ""
-"A domain is a collection of markup (reStructuredText :term:`directive`\\ s "
-"and :term:`role`\\ s) to describe and link to :term:`object`\\ s belonging "
-"together, e.g. elements of a programming language.  Directive and role names"
-" in a domain have names like ``domain:name``, e.g. ``py:function``.  Domains"
-" can also provide custom indices (like the Python Module Index)."
-msgstr ""
-"ஒரு டொமைன் என்பது மார்க்அப்பின் தொகுப்பாகும் (மறுசீரமைப்பு: சொல்: "
-"`டைரெக்டிவ்` \\ கள் மற்றும்: கால:` ரோல்` \\ கள்) விவரிக்கவும் இணைக்கவும்: "
-"கால: கால: `பொருள்` ஒன்றாகச் சேர்ந்தவர்கள், எ.கா. ஒரு நிரலாக்க மொழியின் "
-"கூறுகள். ஒரு டொமைனில் உள்ள உத்தரவு மற்றும் பங்கு பெயர்கள் `` டொமைன்: பெயர்``"
-" போன்ற பெயர்களைக் கொண்டுள்ளன, எ.கா. `` பை: செயல்பாடு``. களங்கள் தனிப்பயன் "
-"குறியீடுகளையும் வழங்க முடியும் (பைதான் தொகுதி குறியீடு போன்றவை)."
-
-#: ../../sphinx/doc/domains.rst:32
-msgid ""
-"Having domains means that there are no naming problems when one set of "
-"documentation wants to refer to e.g. C++ and Python classes.  It also means "
-"that extensions that support the documentation of whole new languages are "
-"much easier to write."
-msgstr ""
-"களங்களைக் கொண்டிருப்பது என்பது ஒரு ஆவணத்தின் தொகுப்பு எ.கா. சி ++ மற்றும் "
-"பைதான் வகுப்புகள். முழு புதிய மொழிகளின் ஆவணங்களை ஆதரிக்கும் நீட்டிப்புகளை "
-"எழுதுவது மிகவும் எளிதானது என்பதும் இதன் பொருள்."
-
-#: ../../sphinx/doc/domains.rst:37
-msgid ""
-"This section describes what the domains that are included with Sphinx "
-"provide. The domain API is documented as well, in the section :ref:`domain-"
-"api`."
-msgstr ""
-"இந்த பிரிவு SPHINX உடன் சேர்க்கப்பட்டுள்ள களங்கள் வழங்குவதை விவரிக்கிறது. "
-"டொமைன் ஏபிஐ ஆவணப்படுத்தப்பட்டுள்ளது, பிரிவில்: குறிப்பு: `டொமைன்-ஏபிஐ`."
-
-#: ../../sphinx/doc/domains.rst:44
-msgid "Basic Markup"
-msgstr "அடிப்படை மார்க்அப்"
-
-#: ../../sphinx/doc/domains.rst:46
-msgid ""
-"Most domains provide a number of :dfn:`object description directives`, used "
-"to describe specific objects provided by modules.  Each directive requires "
-"one or more signatures to provide basic information about what is being "
-"described, and the content should be the description.  The basic version "
-"makes entries in the general index; if no index entry is desired, you can "
-"give the directive option flag ``:noindex:``.  An example using a Python "
-"domain directive::"
-msgstr ""
-"பெரும்பாலான களங்கள் பலவற்றை வழங்குகின்றன: டி.எஃப்.என்: `பொருள் விளக்க "
-"வழிமுறைகள்`, தொகுதிகள் வழங்கிய குறிப்பிட்ட பொருள்களை விவரிக்கப் "
-"பயன்படுகிறது. ஒவ்வொரு உத்தரவுக்கும் விவரிக்கப்பட்டுள்ளதைப் பற்றிய அடிப்படை "
-"தகவல்களை வழங்க ஒன்று அல்லது அதற்கு மேற்பட்ட கையொப்பங்கள் தேவைப்படுகின்றன, "
-"மேலும் உள்ளடக்கம் விளக்கமாக இருக்க வேண்டும். அடிப்படை பதிப்பு பொது "
-"குறியீட்டில் உள்ளீடுகளை உருவாக்குகிறது; குறியீட்டு நுழைவு எதுவும் "
-"விரும்பவில்லை என்றால், நீங்கள் வழிநடத்தும் விருப்பக் கொடியை ``: நொய்டெக்ஸ்: "
-"`` கொடுக்கலாம். பைதான் டொமைன் உத்தரவைப் பயன்படுத்தும் எடுத்துக்காட்டு ::"
-
-#: ../../sphinx/doc/domains.rst:58
-msgid ""
-"This describes the two Python functions ``spam`` and ``ham``.  (Note that "
-"when signatures become too long, you can break them if you add a backslash "
-"to lines that are continued in the next line.  Example::"
-msgstr ""
-"இது இரண்டு பைதான் செயல்பாடுகளை `` ஸ்பேம்`` மற்றும் `` ஹாம்`` ஆகியவற்றை "
-"விவரிக்கிறது. (கையொப்பங்கள் மிக நீளமாக இருக்கும்போது, அடுத்த வரியில் தொடரும்"
-" வரிகளில் பின்சாய்வுக்கோடுகளைச் சேர்த்தால் அவற்றை உடைக்கலாம் என்பதை நினைவில்"
-" கொள்க. எடுத்துக்காட்டு ::"
-
-#: ../../sphinx/doc/domains.rst:66
-msgid "(This example also shows how to use the ``:noindex:`` flag.)"
-msgstr ""
-"(இந்த எடுத்துக்காட்டு ``: நொய்டெக்ஸ்: `` கொடி.) எவ்வாறு பயன்படுத்துவது "
-"என்பதையும் காட்டுகிறது.)"
-
-#: ../../sphinx/doc/domains.rst:68
-msgid ""
-"The domains also provide roles that link back to these object descriptions."
-"  For example, to link to one of the functions described in the example "
-"above, you could say ::"
-msgstr ""
-"இந்த பொருள் விளக்கங்களுடன் மீண்டும் இணைக்கும் பாத்திரங்களையும் களங்கள் "
-"வழங்குகின்றன. எடுத்துக்காட்டாக, மேலே உள்ள எடுத்துக்காட்டில் "
-"விவரிக்கப்பட்டுள்ள செயல்பாடுகளில் ஒன்றை இணைக்க, நீங்கள் சொல்லலாம் ::"
-
-#: ../../sphinx/doc/domains.rst:74
-msgid ""
-"As you can see, both directive and role names contain the domain name and "
-"the directive name."
-msgstr ""
-"நீங்கள் பார்க்க முடியும் என, உத்தரவு மற்றும் பங்கு பெயர்கள் இரண்டும் டொமைன் "
-"பெயர் மற்றும் வழிநடத்தும் பெயரைக் கொண்டுள்ளன."
-
-#: ../../sphinx/doc/domains.rst:78
-msgid "Default Domain"
-msgstr "இயல்புநிலை களம்"
-
-#: ../../sphinx/doc/domains.rst:79
-msgid ""
-"For documentation describing objects from solely one domain, authors will "
-"not have to state again its name at each directive, role, etc... after "
-"having specified a default. This can be done either via the config value "
-":confval:`primary_domain` or via this directive:"
-msgstr ""
-"ஒரு டொமைனில் இருந்து பொருள்களை விவரிக்கும் ஆவணங்களுக்கு, ஆசிரியர்கள் ஒவ்வொரு"
-" உத்தரவு, பங்கு போன்றவற்றிலும் அதன் பெயரைக் குறிப்பிட வேண்டியதில்லை ... "
-"இயல்புநிலையைக் குறிப்பிட்ட பிறகு. இதை உள்ளமைவு மதிப்பு வழியாகச் செய்யலாம்: "
-"confval: `primary_domain` அல்லது இந்த உத்தரவு வழியாக:"
-
-#: ../../sphinx/doc/domains.rst:86
-msgid ""
-"Select a new default domain.  While the :confval:`primary_domain` selects a "
-"global default, this only has an effect within the same file."
-msgstr ""
-"புதிய இயல்புநிலை களத்தைத் தேர்ந்தெடுக்கவும். : Confval: `primary_domain` "
-"உலகளாவிய இயல்புநிலையைத் தேர்ந்தெடுக்கும் போது, இது ஒரே கோப்பில் மட்டுமே "
-"விளைவைக் கொண்டுள்ளது."
-
-#: ../../sphinx/doc/domains.rst:89
-msgid ""
-"If no other default is selected, the Python domain (named ``py``) is the "
-"default one, mostly for compatibility with documentation written for older "
-"versions of Sphinx."
-msgstr ""
-"வேறு எந்த இயல்புநிலையும் தேர்ந்தெடுக்கப்படவில்லை என்றால், பைதான் டொமைன் (`` "
-"py`` என்று பெயரிடப்பட்டது) இயல்புநிலை ஒன்றாகும், பெரும்பாலும் ஸ்பிங்க்ஸின் "
-"பழைய பதிப்புகளுக்கு எழுதப்பட்ட ஆவணங்களுடன் பொருந்தக்கூடிய தன்மைக்காக."
-
-#: ../../sphinx/doc/domains.rst:93
-msgid ""
-"Directives and roles that belong to the default domain can be mentioned "
-"without giving the domain name, i.e. ::"
-msgstr ""
-"டொமைன் பெயரைக் கொடுக்காமல் இயல்புநிலை களத்திற்கு சொந்தமான வழிமுறைகள் மற்றும்"
-" பாத்திரங்கள் குறிப்பிடப்படலாம், அதாவது ::"
-
-#: ../../sphinx/doc/domains.rst:104
-msgid "Cross-referencing syntax"
-msgstr "குறுக்கு-குறிப்பு தொடரியல்"
-
-#: ../../sphinx/doc/domains.rst:106
-msgid ""
-"For cross-reference roles provided by domains, the same facilities exist as "
-"for general cross-references.  See :ref:`xref-syntax`."
-msgstr ""
-"களங்களால் வழங்கப்பட்ட குறுக்கு-குறிப்பு பாத்திரங்களுக்கு, பொதுவான குறுக்கு "
-"குறிப்புகளுக்கும் அதே வசதிகள் உள்ளன. காண்க: குறிப்பு: `xref-syntax`."
-
-#: ../../sphinx/doc/domains.rst:109
-msgid "In short:"
-msgstr "சுருக்கமாக:"
-
-#: ../../sphinx/doc/domains.rst:111
-msgid ""
-"You may supply an explicit title and reference target: ``:role:`title "
-"<target>``` will refer to *target*, but the link text will be *title*."
-msgstr ""
-"நீங்கள் வெளிப்படையான தலைப்பு மற்றும் குறிப்பு இலக்கை வழங்கலாம்: ``: பங்கு: "
-"`தலைப்பு <இலக்கு>` `` *இலக்கு *ஐக் குறிக்கும், ஆனால் இணைப்பு உரை *தலைப்பு "
-"*ஆக இருக்கும்."
-
-#: ../../sphinx/doc/domains.rst:114
-msgid ""
-"If you prefix the content with ``!``, no reference/hyperlink will be "
-"created."
-msgstr ""
-"உள்ளடக்கத்தை ``! `` உடன் முன்னொட்டினால், குறிப்பு/ஹைப்பர்லிங்க் "
-"உருவாக்கப்படாது."
-
-#: ../../sphinx/doc/domains.rst:116
-msgid ""
-"If you prefix the content with ``~``, the link text will only be the last "
-"component of the target.  For example, ``:py:meth:`~Queue.Queue.get``` will "
-"refer to ``Queue.Queue.get`` but only display ``get`` as the link text."
-msgstr ""
-"உள்ளடக்கத்தை `` ~ `` உடன் முன்னொட்டினால், இணைப்பு உரை இலக்கின் கடைசி அங்கமாக"
-" மட்டுமே இருக்கும். எடுத்துக்காட்டாக, ``: py: meth: `~ queue.queue.get```` "
-"`queue.queue.get`` ஐக் குறிக்கும், ஆனால் இணைப்பு உரையாக` `பெறவும்` மட்டுமே "
-"காண்பிக்கும்."
-
-#: ../../sphinx/doc/domains.rst:122
-msgid "The Python Domain"
-msgstr "பைதான் டொமைன்"
-
-#: ../../sphinx/doc/domains.rst:124
-msgid ""
-"The Python domain (name **py**) provides the following directives for module"
-" declarations:"
-msgstr ""
-"பைதான் டொமைன் (பெயர் ** பை **) தொகுதி அறிவிப்புகளுக்கு பின்வரும் வழிமுறைகளை "
-"வழங்குகிறது:"
-
-#: ../../sphinx/doc/domains.rst:129
-msgid ""
-"This directive marks the beginning of the description of a module (or "
-"package submodule, in which case the name should be fully qualified, "
-"including the package name).  It does not create content (like e.g. "
-":rst:dir:`py:class` does)."
-msgstr ""
-"இந்த உத்தரவு ஒரு தொகுதியின் விளக்கத்தின் தொடக்கத்தைக் குறிக்கிறது (அல்லது "
-"தொகுப்பு துணைமோடூல், இந்த விஷயத்தில் தொகுப்பு பெயர் உட்பட பெயர் முழுமையாக "
-"தகுதி பெற வேண்டும்). இது உள்ளடக்கத்தை உருவாக்காது (எ.கா.: rst: dir: `py: "
-"class` செய்கிறது)."
 
 #: ../../sphinx/doc/domains.rst:134
 msgid "This directive will also cause an entry in the global module index."
@@ -392,6 +664,18 @@ msgstr ""
 "பெயரைக் கொண்டிருக்க வேண்டும், இதனால் குறுக்கு குறிப்புகள் இன்னும் வேலை "
 "செய்கின்றன. உதாரணமாக::"
 
+#: ../../sphinx/doc/domains.rst:21
+msgid ""
+"While this was always possible, it is now much easier to easily support "
+"documentation of projects using different programming languages or even ones"
+" not supported by the main Sphinx distribution, by providing a **domain** "
+"for every such purpose."
+msgstr ""
+"இது எப்போதுமே சாத்தியமாக இருந்தாலும், இதுபோன்ற ஒவ்வொரு நோக்கத்திற்கும் ** "
+"டொமைன் ** ஐ வழங்குவதன் மூலம், வெவ்வேறு நிரலாக்க மொழிகளைப் பயன்படுத்தி அல்லது"
+" பிரதான ஸ்பிங்க்ஸ் விநியோகத்தால் ஆதரிக்கப்படாத திட்டங்களின் ஆவணங்களை எளிதில்"
+" ஆதரிப்பது இப்போது மிகவும் எளிதானது."
+
 #: ../../sphinx/doc/domains.rst:211
 msgid "The first way is the preferred one."
 msgstr "முதல் வழி விருப்பமான ஒன்று."
@@ -443,6 +727,21 @@ msgstr ""
 #: ../../sphinx/doc/domains.rst:256
 msgid "the descriptions should look like this::"
 msgstr "விளக்கங்கள் இப்படி இருக்க வேண்டும் ::"
+
+#: ../../sphinx/doc/domains.rst:26
+msgid ""
+"A domain is a collection of markup (reStructuredText :term:`directive`\\ s "
+"and :term:`role`\\ s) to describe and link to :term:`object`\\ s belonging "
+"together, e.g. elements of a programming language.  Directive and role names"
+" in a domain have names like ``domain:name``, e.g. ``py:function``.  Domains"
+" can also provide custom indices (like the Python Module Index)."
+msgstr ""
+"ஒரு டொமைன் என்பது மார்க்அப்பின் தொகுப்பாகும் (மறுசீரமைப்பு: சொல்: "
+"`டைரெக்டிவ்` \\ கள் மற்றும்: கால:` ரோல்` \\ கள்) விவரிக்கவும் இணைக்கவும்: "
+"கால: கால: `பொருள்` ஒன்றாகச் சேர்ந்தவர்கள், எ.கா. ஒரு நிரலாக்க மொழியின் "
+"கூறுகள். ஒரு டொமைனில் உள்ள உத்தரவு மற்றும் பங்கு பெயர்கள் `` டொமைன்: பெயர்``"
+" போன்ற பெயர்களைக் கொண்டுள்ளன, எ.கா. `` பை: செயல்பாடு``. களங்கள் தனிப்பயன் "
+"குறியீடுகளையும் வழங்க முடியும் (பைதான் தொகுதி குறியீடு போன்றவை)."
 
 #: ../../sphinx/doc/domains.rst:266
 msgid "(as opposed to ``.. py:decorator:: removename(func)``.)"
@@ -547,6 +846,17 @@ msgstr ""
 msgid "``returns``, ``return``: Description of the return value."
 msgstr "`` வருமானம்``, `` திரும்ப``: வருவாய் மதிப்பின் விளக்கம்."
 
+#: ../../sphinx/doc/domains.rst:32
+msgid ""
+"Having domains means that there are no naming problems when one set of "
+"documentation wants to refer to e.g. C++ and Python classes.  It also means "
+"that extensions that support the documentation of whole new languages are "
+"much easier to write."
+msgstr ""
+"களங்களைக் கொண்டிருப்பது என்பது ஒரு ஆவணத்தின் தொகுப்பு எ.கா. சி ++ மற்றும் "
+"பைதான் வகுப்புகள். முழு புதிய மொழிகளின் ஆவணங்களை ஆதரிக்கும் நீட்டிப்புகளை "
+"எழுதுவது மிகவும் எளிதானது என்பதும் இதன் பொருள்."
+
 #: ../../sphinx/doc/domains.rst:320
 msgid "``rtype``: Return type.  Creates a link if possible."
 msgstr "`` rtype``: திரும்ப வகை. முடிந்தால் ஒரு இணைப்பை உருவாக்குகிறது."
@@ -577,10 +887,6 @@ msgstr "இது இது போன்றதாக இருக்கும்
 msgid "Send a message to a recipient"
 msgstr "பெறுநருக்கு ஒரு செய்தியை அனுப்பவும்"
 
-#: ../../sphinx/doc/domains.rst:0
-msgid "Parameters"
-msgstr "அளவுருக்கள்"
-
 #: ../../sphinx/doc/domains.rst:352
 msgid "The person sending the message"
 msgstr "செய்தியை அனுப்பும் நபர்"
@@ -597,21 +903,9 @@ msgstr "செய்தியின் உடல்"
 msgid "The priority of the message, can be a number 1-5"
 msgstr "செய்தியின் முன்னுரிமை, 1-5 என்ற எண்ணாக இருக்கலாம்"
 
-#: ../../sphinx/doc/domains.rst:0 ../../sphinx/doc/domains.rst:0
-msgid "Returns"
-msgstr "வருமானம்"
-
 #: ../../sphinx/doc/domains.rst:357
 msgid "the message id"
 msgstr "செய்தி ஐடி"
-
-#: ../../sphinx/doc/domains.rst:0
-msgid "Return type"
-msgstr "திரும்ப வகை"
-
-#: ../../sphinx/doc/domains.rst:0
-msgid "Raises"
-msgstr "எழுப்புகிறது"
 
 #: ../../sphinx/doc/domains.rst:359
 msgid "if the message_body exceeds 160 characters"
@@ -628,6 +922,15 @@ msgid ""
 msgstr ""
 "வகை ஒரு வார்த்தையாக இருந்தால், இது போன்ற அளவுரு வகை மற்றும் விளக்கத்தை "
 "இணைக்கவும் முடியும் ::"
+
+#: ../../sphinx/doc/domains.rst:37
+msgid ""
+"This section describes what the domains that are included with Sphinx "
+"provide. The domain API is documented as well, in the section :ref:`domain-"
+"api`."
+msgstr ""
+"இந்த பிரிவு SPHINX உடன் சேர்க்கப்பட்டுள்ள களங்கள் வழங்குவதை விவரிக்கிறது. "
+"டொமைன் ஏபிஐ ஆவணப்படுத்தப்பட்டுள்ளது, பிரிவில்: குறிப்பு: `டொமைன்-ஏபிஐ`."
 
 #: ../../sphinx/doc/domains.rst:370
 msgid ""
@@ -721,6 +1024,10 @@ msgstr ""
 "குறிப்பிடப்படாத வகையின் ஒரு பொருளைக் குறிப்பிடவும். பயனுள்ள எ.கா. என: "
 "confval: `இயல்புநிலை_ரோல்`."
 
+#: ../../sphinx/doc/domains.rst:44
+msgid "Basic Markup"
+msgstr "அடிப்படை மார்க்அப்"
+
 #: ../../sphinx/doc/domains.rst:441
 msgid ""
 "The name enclosed in this markup can include a module name and/or a class "
@@ -778,6 +1085,25 @@ msgstr ""
 "இல்லாவிட்டாலும் கூட. இது தெளிவற்றதாக இருப்பதால், ஒன்றுக்கு மேற்பட்ட "
 "போட்டிகள் இருந்தால், நீங்கள் ஸ்பின்க்ஸிடமிருந்து ஒரு எச்சரிக்கையைப் "
 "பெறுவீர்கள்."
+
+#: ../../sphinx/doc/domains.rst:46
+msgid ""
+"Most domains provide a number of :dfn:`object description directives`, used "
+"to describe specific objects provided by modules.  Each directive requires "
+"one or more signatures to provide basic information about what is being "
+"described, and the content should be the description.  The basic version "
+"makes entries in the general index; if no index entry is desired, you can "
+"give the directive option flag ``:noindex:``.  An example using a Python "
+"domain directive::"
+msgstr ""
+"பெரும்பாலான களங்கள் பலவற்றை வழங்குகின்றன: டி.எஃப்.என்: `பொருள் விளக்க "
+"வழிமுறைகள்`, தொகுதிகள் வழங்கிய குறிப்பிட்ட பொருள்களை விவரிக்கப் "
+"பயன்படுகிறது. ஒவ்வொரு உத்தரவுக்கும் விவரிக்கப்பட்டுள்ளதைப் பற்றிய அடிப்படை "
+"தகவல்களை வழங்க ஒன்று அல்லது அதற்கு மேற்பட்ட கையொப்பங்கள் தேவைப்படுகின்றன, "
+"மேலும் உள்ளடக்கம் விளக்கமாக இருக்க வேண்டும். அடிப்படை பதிப்பு பொது "
+"குறியீட்டில் உள்ளீடுகளை உருவாக்குகிறது; குறியீட்டு நுழைவு எதுவும் "
+"விரும்பவில்லை என்றால், நீங்கள் வழிநடத்தும் விருப்பக் கொடியை ``: நொய்டெக்ஸ்: "
+"`` கொடுக்கலாம். பைதான் டொமைன் உத்தரவைப் பயன்படுத்தும் எடுத்துக்காட்டு ::"
 
 #: ../../sphinx/doc/domains.rst:464
 msgid ""
@@ -945,6 +1271,17 @@ msgstr "ஒரு வகுப்பு வார்ப்புருவை அ
 msgid "or with a line break::"
 msgstr "அல்லது ஒரு வரி இடைவெளியுடன் ::"
 
+#: ../../sphinx/doc/domains.rst:58
+msgid ""
+"This describes the two Python functions ``spam`` and ``ham``.  (Note that "
+"when signatures become too long, you can break them if you add a backslash "
+"to lines that are continued in the next line.  Example::"
+msgstr ""
+"இது இரண்டு பைதான் செயல்பாடுகளை `` ஸ்பேம்`` மற்றும் `` ஹாம்`` ஆகியவற்றை "
+"விவரிக்கிறது. (கையொப்பங்கள் மிக நீளமாக இருக்கும்போது, அடுத்த வரியில் தொடரும்"
+" வரிகளில் பின்சாய்வுக்கோடுகளைச் சேர்த்தால் அவற்றை உடைக்கலாம் என்பதை நினைவில்"
+" கொள்க. எடுத்துக்காட்டு ::"
+
 #: ../../sphinx/doc/domains.rst:580
 msgid "Full and partial template specialisations can be declared::"
 msgstr "முழு மற்றும் பகுதி வார்ப்புரு சிறப்புகளை அறிவிக்கலாம் ::"
@@ -952,6 +1289,10 @@ msgstr "முழு மற்றும் பகுதி வார்ப்ப
 #: ../../sphinx/doc/domains.rst:591
 msgid "Describe a function or member function, e.g.,::"
 msgstr "ஒரு செயல்பாடு அல்லது உறுப்பினர் செயல்பாட்டை விவரிக்கவும், எ.கா., ::"
+
+#: ../../sphinx/doc/domains.rst:6
+msgid "Sphinx Domains"
+msgstr "ஸ்பின்க்ஸ் களங்கள்"
 
 #: ../../sphinx/doc/domains.rst:617
 msgid "Function templates can also be described::"
@@ -978,6 +1319,12 @@ msgstr ""
 "குறிப்பிடப்படாத வகையுடன் ஒரு வகையின் பெயர், எ.கா., :: ஒரு வகையைப் போல ஒரு "
 "வகையை விவரிக்கவும்"
 
+#: ../../sphinx/doc/domains.rst:66
+msgid "(This example also shows how to use the ``:noindex:`` flag.)"
+msgstr ""
+"(இந்த எடுத்துக்காட்டு ``: நொய்டெக்ஸ்: `` கொடி.) எவ்வாறு பயன்படுத்துவது "
+"என்பதையும் காட்டுகிறது.)"
+
 #: ../../sphinx/doc/domains.rst:664
 msgid "A type alias can also be templated::"
 msgstr "ஒரு வகை மாற்றுப்பெயரும் வார்ப்புரு ::"
@@ -993,6 +1340,16 @@ msgstr "ஒரு வகையின் தட்டச்சு போன்ற
 #: ../../sphinx/doc/domains.rst:677
 msgid "Declaration of a type alias with unspecified type."
 msgstr "குறிப்பிடப்படாத வகையுடன் ஒரு வகை மாற்றுப்பெயரின் அறிவிப்பு."
+
+#: ../../sphinx/doc/domains.rst:68
+msgid ""
+"The domains also provide roles that link back to these object descriptions."
+"  For example, to link to one of the functions described in the example "
+"above, you could say ::"
+msgstr ""
+"இந்த பொருள் விளக்கங்களுடன் மீண்டும் இணைக்கும் பாத்திரங்களையும் களங்கள் "
+"வழங்குகின்றன. எடுத்துக்காட்டாக, மேலே உள்ள எடுத்துக்காட்டில் "
+"விவரிக்கப்பட்டுள்ள செயல்பாடுகளில் ஒன்றை இணைக்க, நீங்கள் சொல்லலாம் ::"
 
 #: ../../sphinx/doc/domains.rst:681
 msgid "Declaration of a type alias."
@@ -1032,6 +1389,14 @@ msgid ""
 msgstr ""
 "ஒரு கருத்தை விவரிக்கவும். இது சரியாக 1 வார்ப்புரு அளவுரு பட்டியலைக் "
 "கொண்டிருக்க வேண்டும். பெயர் உள்ளமைக்கப்பட்ட பெயராக இருக்கலாம். உதாரணமாக::"
+
+#: ../../sphinx/doc/domains.rst:74
+msgid ""
+"As you can see, both directive and role names contain the domain name and "
+"the directive name."
+msgstr ""
+"நீங்கள் பார்க்க முடியும் என, உத்தரவு மற்றும் பங்கு பெயர்கள் இரண்டும் டொமைன் "
+"பெயர் மற்றும் வழிநடத்தும் பெயரைக் கொண்டுள்ளன."
 
 #: ../../sphinx/doc/domains.rst:747
 msgid "This will render as follows:"
@@ -1091,6 +1456,10 @@ msgstr ""
 msgid "Constrained Templates"
 msgstr "கட்டுப்படுத்தப்பட்ட வார்ப்புருக்கள்"
 
+#: ../../sphinx/doc/domains.rst:78
+msgid "Default Domain"
+msgstr "இயல்புநிலை களம்"
+
 #: ../../sphinx/doc/domains.rst:782
 msgid "Sphinx does not currently support ``requires`` clauses."
 msgstr "ஸ்பிங்க்ஸ் தற்போது `` தேவைப்படுகிறது` உட்பிரிவுகளை ஆதரிக்கவில்லை."
@@ -1108,6 +1477,18 @@ msgstr ""
 "கட்டுப்படுத்தப்பட்ட வார்ப்புரு அளவுருக்களை அறிமுகப்படுத்த அறிவிப்புகள் ஒரு "
 "கருத்தின் பெயரைப் பயன்படுத்தலாம் அல்லது கட்டுப்படுத்தப்படாத வார்ப்புரு "
 "அளவுருக்களை அறிமுகப்படுத்த `` ஆட்டோ`` என்ற முக்கிய சொல் ::"
+
+#: ../../sphinx/doc/domains.rst:79
+msgid ""
+"For documentation describing objects from solely one domain, authors will "
+"not have to state again its name at each directive, role, etc... after "
+"having specified a default. This can be done either via the config value "
+":confval:`primary_domain` or via this directive:"
+msgstr ""
+"ஒரு டொமைனில் இருந்து பொருள்களை விவரிக்கும் ஆவணங்களுக்கு, ஆசிரியர்கள் ஒவ்வொரு"
+" உத்தரவு, பங்கு போன்றவற்றிலும் அதன் பெயரைக் குறிப்பிட வேண்டியதில்லை ... "
+"இயல்புநிலையைக் குறிப்பிட்ட பிறகு. இதை உள்ளமைவு மதிப்பு வழியாகச் செய்யலாம்: "
+"confval: `primary_domain` அல்லது இந்த உத்தரவு வழியாக:"
 
 #: ../../sphinx/doc/domains.rst:800
 msgid "Template Introductions"
@@ -1195,6 +1576,15 @@ msgstr ""
 "பெயர்வெளி-பாப்`` டைரெக்டிவ் மிக சமீபத்திய `` சிபிபி: பெயர்வெளி-புஷ்`` "
 "உத்தரவு."
 
+#: ../../sphinx/doc/domains.rst:86
+msgid ""
+"Select a new default domain.  While the :confval:`primary_domain` selects a "
+"global default, this only has an effect within the same file."
+msgstr ""
+"புதிய இயல்புநிலை களத்தைத் தேர்ந்தெடுக்கவும். : Confval: `primary_domain` "
+"உலகளாவிய இயல்புநிலையைத் தேர்ந்தெடுக்கும் போது, இது ஒரே கோப்பில் மட்டுமே "
+"விளைவைக் கொண்டுள்ளது."
+
 #: ../../sphinx/doc/domains.rst:866
 msgid ""
 "Changes the current scope for the subsequent objects to the given scope, and"
@@ -1236,6 +1626,16 @@ msgstr ""
 "வகுப்பு வார்ப்புருவின் உறுப்பினர் செயல்பாடாக `` அளவு`` அறிவிக்கிறது `` "
 "எஸ்.டி.டி :: திசையன்``. சமமாக இது :: பயன்படுத்தி அறிவிக்கப்பட்டிருக்கலாம் ::"
 
+#: ../../sphinx/doc/domains.rst:89
+msgid ""
+"If no other default is selected, the Python domain (named ``py``) is the "
+"default one, mostly for compatibility with documentation written for older "
+"versions of Sphinx."
+msgstr ""
+"வேறு எந்த இயல்புநிலையும் தேர்ந்தெடுக்கப்படவில்லை என்றால், பைதான் டொமைன் (`` "
+"py`` என்று பெயரிடப்பட்டது) இயல்புநிலை ஒன்றாகும், பெரும்பாலும் ஸ்பிங்க்ஸின் "
+"பழைய பதிப்புகளுக்கு எழுதப்பட்ட ஆவணங்களுடன் பொருந்தக்கூடிய தன்மைக்காக."
+
 #: ../../sphinx/doc/domains.rst:895
 msgid "or:::"
 msgstr "அல்லது:::"
@@ -1271,6 +1671,14 @@ msgstr ""
 "ஆனால் ஒரு `` சிபிபி: பெயர்வெளி`` உத்தரவு மட்டுமே இருந்தால், தற்போதைய நோக்கம்"
 " உலகளாவிய நோக்கத்திற்கு மீட்டமைக்கப்படும். அதாவது, `` .. சிபிபி: பெயர்வெளி "
 ":: அ :: பி`` க்கு சமம் ::"
+
+#: ../../sphinx/doc/domains.rst:93
+msgid ""
+"Directives and roles that belong to the default domain can be mentioned "
+"without giving the domain name, i.e. ::"
+msgstr ""
+"டொமைன் பெயரைக் கொடுக்காமல் இயல்புநிலை களத்திற்கு சொந்தமான வழிமுறைகள் மற்றும்"
+" பாத்திரங்கள் குறிப்பிடப்படலாம், அதாவது ::"
 
 #: ../../sphinx/doc/domains.rst:936
 msgid ""
@@ -1370,411 +1778,3 @@ msgstr ""
 #: ../../sphinx/doc/domains.rst:989
 msgid "Templated declarations"
 msgstr "வார்ப்புரு அறிவிப்புகள்"
-
-#: ../../sphinx/doc/domains.rst:991 ../../sphinx/doc/domains.rst:1019
-msgid "Assume the following declarations."
-msgstr "பின்வரும் அறிவிப்புகளை எடுத்துக் கொள்ளுங்கள்."
-
-#: ../../sphinx/doc/domains.rst:1001
-msgid ""
-"In general the reference must include the template paraemter declarations, "
-"e.g., ``template\\<typename TOuter> Wrapper::Outer`` "
-"(:cpp:class:`template\\<typename TOuter> Wrapper::Outer`). Currently the "
-"lookup only succeed if the template parameter identifiers are equal strings."
-" That is, ``template\\<typename UOuter> Wrapper::Outer`` will not work."
-msgstr ""
-"பொதுவாக குறிப்பில் வார்ப்புரு பாரேம்ட்டர் அறிவிப்புகள் இருக்க வேண்டும், "
-"எ.கா. வார்ப்புரு அளவுரு அடையாளங்காட்டிகள் சம சரங்களாக இருந்தால் மட்டுமே "
-"தற்போது தேடல் வெற்றி பெறுகிறது. அதாவது, `` வார்ப்புரு \\ <typename uouter> "
-"rapper :: outter`` வேலை செய்யாது."
-
-#: ../../sphinx/doc/domains.rst:1006
-msgid ""
-"The inner class template can not be directly referenced, unless the current "
-"namespace is changed or the following shorthand is used. If a template "
-"parameter list is omitted, then the lookup will assume either a template or "
-"a non-template, but not a partial template specialisation. This means the "
-"following references work."
-msgstr ""
-"தற்போதைய பெயர்வெளி மாற்றப்படாவிட்டால் அல்லது பின்வரும் சுருக்கெழுத்து "
-"பயன்படுத்தப்படாவிட்டால், உள் வகுப்பு வார்ப்புருவை நேரடியாக குறிப்பிட "
-"முடியாது. ஒரு வார்ப்புரு அளவுரு பட்டியல் தவிர்க்கப்பட்டால், தேடல் ஒரு "
-"வார்ப்புரு அல்லது டெம்ப்ளேட் அல்லாததாகக் கருதப்படும், ஆனால் ஒரு பகுதி "
-"வார்ப்புரு நிபுணத்துவம் அல்ல. இதன் பொருள் பின்வரும் குறிப்புகள் "
-"செயல்படுகின்றன."
-
-#: ../../sphinx/doc/domains.rst:1012
-msgid "``Wrapper::Outer`` (:cpp:class:`Wrapper::Outer`)"
-msgstr ""
-"`` ரேப்பர் :: வெளிப்புறம்`` (: சிபிபி: வகுப்பு: `ரேப்பர் :: வெளிப்புறம்`)"
-
-#: ../../sphinx/doc/domains.rst:1013
-msgid "``Wrapper::Outer::Inner`` (:cpp:class:`Wrapper::Outer::Inner`)"
-msgstr ""
-"`` ரேப்பர் :: வெளி :: உள்`` (: சிபிபி: வகுப்பு: `ரேப்பர் :: வெளிப்புற :: "
-"உள்`)"
-
-#: ../../sphinx/doc/domains.rst:1014
-msgid ""
-"``template\\<typename TInner> Wrapper::Outer::Inner`` "
-"(:cpp:class:`template\\<typename TInner> Wrapper::Outer::Inner`)"
-msgstr ""
-"`` வார்ப்புரு \\ <typename t உள்> ரேப்பர் :: வெளிப்புற :: உள்`` (: c ++: "
-"வகுப்பு: `வார்ப்புரு \\ <தட்டச்சு பெயர் மெல்லியதாகும்> ரேப்பர் :: வெளிப்புற "
-":: உள்`)"
-
-#: ../../sphinx/doc/domains.rst:1017
-msgid "(Full) Template Specialisations"
-msgstr "(முழு) வார்ப்புரு நிபுணத்துவம்"
-
-#: ../../sphinx/doc/domains.rst:1036
-msgid ""
-"In general the reference must include a template parameter list for each "
-"template argument list. The full specialisation above can therefore be "
-"referenced with ``template\\<> Outer\\<int>`` (:cpp:class:`template\\<> "
-"Outer\\<int>`) and ``template\\<> template\\<> Outer\\<int>::Inner\\<bool>``"
-" (:cpp:class:`template\\<> template\\<> Outer\\<int>::Inner\\<bool>`). As a "
-"shorthand the empty template parameter list can be omitted, e.g., "
-"``Outer\\<int>`` (:cpp:class:`Outer\\<int>`) and "
-"``Outer\\<int>::Inner\\<bool>`` (:cpp:class:`Outer\\<int>::Inner\\<bool>`)."
-msgstr ""
-"பொதுவாக குறிப்பில் ஒவ்வொரு வார்ப்புரு வாத பட்டியலுக்கும் ஒரு வார்ப்புரு "
-"அளவுரு பட்டியல் இருக்க வேண்டும். எனவே மேலே உள்ள முழு நிபுணத்துவத்தையும் `` "
-"வார்ப்புரு \\ <> வெளிப்புற \\ <int> `` (: cpp: class: `வார்ப்புரு \\ <> வெளி"
-" \\ <int>`) மற்றும் `` வார்ப்புரு \\ <> வார்ப்புரு \\ < > வெளிப்புறம் \\ "
-"<int> :: உள் \\ <bool> `` (: cpp: class: `வார்ப்புரு \\ <> வார்ப்புரு \\ <> "
-"வெளி \\ <int> :: உள் \\ <bool>`). ஒரு சுருக்கெழுத்தாக வெற்று வார்ப்புரு "
-"அளவுரு பட்டியலை தவிர்க்கலாம், எ.கா. bool> `` (: cpp: வகுப்பு: `வெளி \\ <int>"
-" :: உள் \\ <bool>`)."
-
-#: ../../sphinx/doc/domains.rst:1044
-msgid "Partial Template Specialisations"
-msgstr "பகுதி வார்ப்புரு நிபுணத்துவம்"
-
-#: ../../sphinx/doc/domains.rst:1046
-msgid "Assume the following declaration."
-msgstr "பின்வரும் அறிவிப்பை எடுத்துக் கொள்ளுங்கள்."
-
-#: ../../sphinx/doc/domains.rst:1051
-msgid ""
-"References to partial specialisations must always include the template "
-"parameter lists, e.g., ``template\\<typename T> Outer\\<T*>`` "
-"(:cpp:class:`template\\<typename T> Outer\\<T*>`). Currently the lookup only"
-" succeed if the template parameter identifiers are equal strings."
-msgstr ""
-"பகுதி சிறப்புகளுக்கான குறிப்புகள் எப்போதுமே வார்ப்புரு அளவுரு பட்டியல்களைக் "
-"கொண்டிருக்க வேண்டும், எ.கா. ). வார்ப்புரு அளவுரு அடையாளங்காட்டிகள் சம "
-"சரங்களாக இருந்தால் மட்டுமே தற்போது தேடல் வெற்றி பெறுகிறது."
-
-#: ../../sphinx/doc/domains.rst:1057
-msgid "Configuration Variables"
-msgstr "உள்ளமைவு மாறிகள்"
-
-#: ../../sphinx/doc/domains.rst:1059
-msgid "See :ref:`cpp-config`."
-msgstr "காண்க: குறிப்பு: `சிபிபி-கான்ஃபிக்`."
-
-#: ../../sphinx/doc/domains.rst:1063
-msgid "The Standard Domain"
-msgstr "நிலையான டொமைன்"
-
-#: ../../sphinx/doc/domains.rst:1065
-msgid ""
-"The so-called \"standard\" domain collects all markup that doesn't warrant a"
-" domain of its own.  Its directives and roles are not prefixed with a domain"
-" name."
-msgstr ""
-"\"நிலையான\" டொமைன் என்று அழைக்கப்படுவது அதன் சொந்த களத்திற்கு உத்தரவாதம் "
-"அளிக்காத அனைத்து மார்க்அப்பையும் சேகரிக்கிறது. அதன் வழிமுறைகள் மற்றும் "
-"பாத்திரங்கள் ஒரு டொமைன் பெயருடன் முன்னொட்டப்படவில்லை."
-
-#: ../../sphinx/doc/domains.rst:1069
-msgid ""
-"The standard domain is also where custom object descriptions, added using "
-"the :func:`~sphinx.application.Sphinx.add_object_type` API, are placed."
-msgstr ""
-"தனிப்பயன் பொருள் விளக்கங்கள், func: `~ "
-"sphinx.application.sphinx.add_object_type` api, வைக்கப்பட்டுள்ள இடத்திலும் "
-"நிலையான டொமைன் உள்ளது."
-
-#: ../../sphinx/doc/domains.rst:1072
-msgid ""
-"There is a set of directives allowing documenting command-line programs:"
-msgstr ""
-"கட்டளை-வரி நிரல்களை ஆவணப்படுத்த அனுமதிக்கும் வழிமுறைகளின் தொகுப்பு உள்ளது:"
-
-#: ../../sphinx/doc/domains.rst:1076
-msgid ""
-"Describes a command line argument or switch.  Option argument names should "
-"be enclosed in angle brackets.  Examples::"
-msgstr ""
-"கட்டளை வரி வாதம் அல்லது சுவிட்சை விவரிக்கிறது. விருப்ப வாத பெயர்கள் கோண "
-"அடைப்புக்குறிக்குள் இணைக்கப்பட வேண்டும். எடுத்துக்காட்டுகள் ::"
-
-#: ../../sphinx/doc/domains.rst:1087
-msgid ""
-"The directive will create cross-reference targets for the given options, "
-"referencable by :rst:role:`option` (in the example case, you'd use something"
-" like ``:option:`dest_dir```, ``:option:`-m```, or ``:option:`--module```)."
-msgstr ""
-"வழங்கப்பட்ட விருப்பங்களுக்கான குறுக்கு-குறிப்பு இலக்குகளை உருவாக்கும், இதன் "
-"மூலம் குறிப்பிடப்படுகிறது: rst: rest: `விருப்பம்` (எடுத்துக்காட்டு வழக்கில்,"
-" நீங்கள்` `: விருப்பம்:` dest_dir```, ``: விருப்பம் போன்ற ஒன்றைப் "
-"பயன்படுத்துவீர்கள் : `-m```, அல்லது` `: விருப்பம்:`--மாதிரி```)."
-
-#: ../../sphinx/doc/domains.rst:1091
-msgid ""
-"``cmdoption`` directive is a deprecated alias for the ``option`` directive."
-msgstr ""
-"`` cmdoption`` உத்தரவு என்பது `` விருப்பம்`` உத்தரவுக்கான நீக்கப்பட்ட "
-"மாற்றுப்பெயராகும்."
-
-#: ../../sphinx/doc/domains.rst:1095
-msgid ""
-"Describes an environment variable that the documented code or program uses "
-"or defines.  Referencable by :rst:role:`envvar`."
-msgstr ""
-"ஆவணப்படுத்தப்பட்ட குறியீடு அல்லது நிரல் பயன்படுத்தும் அல்லது வரையறுக்கும் "
-"சூழல் மாறியை விவரிக்கிறது. குறிப்பிடக்கூடியவர்: rst: பங்கு: `envvar`."
-
-#: ../../sphinx/doc/domains.rst:1100
-msgid ""
-"Like :rst:dir:`py:currentmodule`, this directive produces no output. "
-"Instead, it serves to notify Sphinx that all following :rst:dir:`option` "
-"directives document options for the program called *name*."
-msgstr ""
-"போன்றவை: rst: dir: `py: currentModule`, இந்த உத்தரவு எந்த வெளியீட்டையும் "
-"உருவாக்காது. அதற்கு பதிலாக, பின்வரும் அனைத்தும் பின்வருமாறு: rst: dir: "
-"`விருப்பம்` *பெயர் *எனப்படும் நிரலுக்கான ஆவண விருப்பங்கள்."
-
-#: ../../sphinx/doc/domains.rst:1104
-msgid ""
-"If you use :rst:dir:`program`, you have to qualify the references in your "
-":rst:role:`option` roles by the program name, so if you have the following "
-"situation ::"
-msgstr ""
-"நீங்கள் பயன்படுத்தினால்: rst: dir: `program`, உங்கள்: rst: rest:` "
-"விருப்பத்தேர்வு` பாத்திரங்களில் உள்ள குறிப்புகளை நீங்கள் தகுதி பெற வேண்டும்,"
-" எனவே உங்களுக்கு பின்வரும் நிலைமை இருந்தால் ::"
-
-#: ../../sphinx/doc/domains.rst:1120
-msgid ""
-"then ``:option:`rm -r``` would refer to the first option, while "
-"``:option:`svn -r``` would refer to the second one."
-msgstr ""
-"பின்னர் ``: விருப்பம்: `rm -r``` முதல் விருப்பத்தைக் குறிக்கும், அதே "
-"நேரத்தில்` `: விருப்பம்:` svn -r``` இரண்டாவது ஒன்றைக் குறிக்கும்."
-
-#: ../../sphinx/doc/domains.rst:1123
-msgid ""
-"The program name may contain spaces (in case you want to document "
-"subcommands like ``svn add`` and ``svn commit`` separately)."
-msgstr ""
-"நிரல் பெயரில் இடைவெளிகளைக் கொண்டிருக்கலாம் (நீங்கள் `` எஸ்.வி.என் சேர்` "
-"மற்றும் `எஸ்.வி.என் கமிட்`` தனித்தனியாக ஆவணப்படுத்த விரும்பினால்)."
-
-#: ../../sphinx/doc/domains.rst:1129
-msgid ""
-"There is also a very generic object description directive, which is not tied"
-" to any domain:"
-msgstr ""
-"மிகவும் பொதுவான பொருள் விளக்க உத்தரவும் உள்ளது, இது எந்த களத்துடனும் "
-"பிணைக்கப்படவில்லை:"
-
-#: ../../sphinx/doc/domains.rst:1135
-msgid ""
-"This directive produces the same formatting as the specific ones provided by"
-" domains, but does not create index entries or cross-referencing targets. "
-"Example::"
-msgstr ""
-"இந்த உத்தரவு களங்களால் வழங்கப்பட்ட குறிப்பிட்ட வடிவத்தை உருவாக்குகிறது, "
-"ஆனால் குறியீட்டு உள்ளீடுகள் அல்லது குறுக்கு-குறிப்பு இலக்குகளை உருவாக்காது. "
-"உதாரணமாக::"
-
-#: ../../sphinx/doc/domains.rst:1145
-msgid "The JavaScript Domain"
-msgstr "ஜாவாஸ்கிரிப்ட் டொமைன்"
-
-#: ../../sphinx/doc/domains.rst:1147
-msgid "The JavaScript domain (name **js**) provides the following directives:"
-msgstr ""
-"ஜாவாஸ்கிரிப்ட் டொமைன் (பெயர் ** JS **) பின்வரும் வழிமுறைகளை வழங்குகிறது:"
-
-#: ../../sphinx/doc/domains.rst:1151
-msgid ""
-"This directive sets the module name for object declarations that follow "
-"after. The module name is used in the global module index and in cross "
-"references. This directive does not create an object heading like "
-":rst:dir:`py:class` would, for example."
-msgstr ""
-"இந்த உத்தரவு பின்வரும் பொருள் அறிவிப்புகளுக்கான தொகுதி பெயரை அமைக்கிறது. "
-"தொகுதி பெயர் உலகளாவிய தொகுதி குறியீட்டிலும் குறுக்கு குறிப்புகளிலும் "
-"பயன்படுத்தப்படுகிறது. இந்த உத்தரவு ஒரு பொருளை உருவாக்காது: rst: dir: `py: "
-"class`, எடுத்துக்காட்டாக."
-
-#: ../../sphinx/doc/domains.rst:1156
-msgid ""
-"By default, this directive will create a linkable entity and will cause an "
-"entry in the global module index, unless the ``noindex`` option is "
-"specified. If this option is specified, the directive will only update the "
-"current module name."
-msgstr ""
-"இயல்பாக, இந்த உத்தரவு ஒரு இணைக்கக்கூடிய நிறுவனத்தை உருவாக்கும், மேலும் `` "
-"NoIndex`` விருப்பம் குறிப்பிடப்படாவிட்டால், உலகளாவிய தொகுதி குறியீட்டில் "
-"நுழைவதை ஏற்படுத்தும். இந்த விருப்பம் குறிப்பிடப்பட்டால், உத்தரவு தற்போதைய "
-"தொகுதி பெயரை மட்டுமே புதுப்பிக்கும்."
-
-#: ../../sphinx/doc/domains.rst:1161
-msgid ""
-"To clear the current module, set the module name to ``null`` or ``None``"
-msgstr ""
-"தற்போதைய தொகுதியை அழிக்க, தொகுதி பெயரை `` null`` அல்லது `` எதுவுமில்லை`` என "
-"அமைக்கவும்"
-
-#: ../../sphinx/doc/domains.rst:1167
-msgid ""
-"Describes a JavaScript function or method.  If you want to describe "
-"arguments as optional use square brackets as :ref:`documented <signatures>` "
-"for Python signatures."
-msgstr ""
-"ஜாவாஸ்கிரிப்ட் செயல்பாடு அல்லது முறையை விவரிக்கிறது. நீங்கள் வாதங்களை "
-"விருப்பமான சதுர அடைப்புக்குறிகளாக விவரிக்க விரும்பினால்: குறிப்பு: "
-"`ஆவணப்படுத்தப்பட்ட <கையொப்பங்கள்>` பைதான் கையொப்பங்களுக்கு."
-
-#: ../../sphinx/doc/domains.rst:1171
-msgid ""
-"You can use fields to give more details about arguments and their expected "
-"types, errors which may be thrown by the function, and the value being "
-"returned::"
-msgstr ""
-"வாதங்கள் மற்றும் அவற்றின் எதிர்பார்க்கப்படும் வகைகள், செயல்பாட்டால் "
-"வீசப்படக்கூடிய பிழைகள் மற்றும் திரும்பப் பெறப்படும் மதிப்பு பற்றிய கூடுதல் "
-"விவரங்களை வழங்க நீங்கள் புலங்களைப் பயன்படுத்தலாம் ::"
-
-#: ../../sphinx/doc/domains.rst:1185 ../../sphinx/doc/domains.rst:1214
-msgid "This is rendered as:"
-msgstr "இது இவ்வாறு வழங்கப்படுகிறது:"
-
-#: ../../sphinx/doc/domains.rst:0 ../../sphinx/doc/domains.rst:0
-msgid "Arguments"
-msgstr "வாதங்கள்"
-
-#: ../../sphinx/doc/domains.rst:1189
-msgid "An URI to the location of the resource."
-msgstr "வளத்தின் இருப்பிடத்திற்கு ஒரு யூரி."
-
-#: ../../sphinx/doc/domains.rst:1190
-msgid "Gets called with the object."
-msgstr "பொருளுடன் அழைக்கப்படுகிறது."
-
-#: ../../sphinx/doc/domains.rst:1191
-msgid ""
-"Gets called in case the request fails. And a lot of other text so we need "
-"multiple lines."
-msgstr ""
-"கோரிக்கை தோல்வியுற்றால் அழைக்கப்படுகிறது. மற்றும் பல உரைகள் எனவே எங்களுக்கு "
-"பல கோடுகள் தேவை."
-
-#: ../../sphinx/doc/domains.rst:0
-msgid "Throws"
-msgstr "வீசுகிறது"
-
-#: ../../sphinx/doc/domains.rst:1194
-msgid "For whatever reason in that case."
-msgstr "அந்த விஷயத்தில் எந்த காரணத்திற்காகவும்."
-
-#: ../../sphinx/doc/domains.rst:1195
-msgid "Something."
-msgstr "ஏதோ."
-
-#: ../../sphinx/doc/domains.rst:1199
-msgid ""
-"This directive is an alias for :rst:dir:`js:function`, however it describes "
-"a function that is implemented as a method on a class object."
-msgstr ""
-"இந்த உத்தரவு இதற்கான மாற்றுப்பெயராகும்: rst: dir: `js: செயல்பாடு`, "
-"இருப்பினும் இது ஒரு வகுப்பு பொருளின் முறையாக செயல்படுத்தப்படும் ஒரு "
-"செயல்பாட்டை விவரிக்கிறது."
-
-#: ../../sphinx/doc/domains.rst:1206
-msgid ""
-"Describes a constructor that creates an object.  This is basically like a "
-"function but will show up with a `class` prefix::"
-msgstr ""
-"ஒரு பொருளை உருவாக்கும் ஒரு கட்டமைப்பாளரை விவரிக்கிறது. இது அடிப்படையில் ஒரு "
-"செயல்பாடு போன்றது, ஆனால் `வகுப்பு` முன்னொட்டு ::"
-
-#: ../../sphinx/doc/domains.rst:1218
-msgid "The name of the animal"
-msgstr "விலங்கின் பெயர்"
-
-#: ../../sphinx/doc/domains.rst:1219
-msgid "an optional age for the animal"
-msgstr "விலங்குக்கு ஒரு விருப்ப வயது"
-
-#: ../../sphinx/doc/domains.rst:1223
-msgid "Describes a global variable or constant."
-msgstr "உலகளாவிய மாறி அல்லது மாறிலி விவரிக்கிறது."
-
-#: ../../sphinx/doc/domains.rst:1227
-msgid "Describes the attribute *name* of *object*."
-msgstr "*பொருள் *என்ற பண்புக்கூறு *பெயர் *விவரிக்கிறது."
-
-#: ../../sphinx/doc/domains.rst:1231 ../../sphinx/doc/domains.rst:1286
-msgid "These roles are provided to refer to the described objects:"
-msgstr ""
-"விவரிக்கப்பட்ட பொருள்களைக் குறிக்க இந்த பாத்திரங்கள் வழங்கப்படுகின்றன:"
-
-#: ../../sphinx/doc/domains.rst:1242
-msgid "The reStructuredText domain"
-msgstr "மறுசீரமைப்பு டொமைன்"
-
-#: ../../sphinx/doc/domains.rst:1244
-msgid ""
-"The reStructuredText domain (name **rst**) provides the following "
-"directives:"
-msgstr ""
-"மறுசீரமைக்கப்பட்ட டெக்ஸ்ட் டொமைன் (பெயர் ** rst **) பின்வரும் வழிமுறைகளை "
-"வழங்குகிறது:"
-
-#: ../../sphinx/doc/domains.rst:1248
-msgid ""
-"Describes a reST directive.  The *name* can be a single directive name or "
-"actual directive syntax (`..` prefix and `::` suffix) with arguments that "
-"will be rendered differently.  For example::"
-msgstr ""
-"REST உத்தரவை விவரிக்கிறது. * பெயர் * ஒரு ஒற்றை வழிநடத்தும் பெயர் அல்லது "
-"உண்மையான வழிநடத்துதல் தொடரியல் (`..` முன்னொட்டு மற்றும்` :: `பின்னொட்டு) "
-"ஆகியவை வித்தியாசமாக வழங்கப்படும் வாதங்களுடன் இருக்கலாம். உதாரணத்திற்கு::"
-
-#: ../../sphinx/doc/domains.rst:1260 ../../sphinx/doc/domains.rst:1278
-msgid "will be rendered as:"
-msgstr "இவ்வாறு வழங்கப்படும்:"
-
-#: ../../sphinx/doc/domains.rst:1264 ../../sphinx/doc/domains.rst:1282
-msgid "Foo description."
-msgstr "Foo விளக்கம்."
-
-#: ../../sphinx/doc/domains.rst:1268
-msgid "Bar description."
-msgstr "பார் விளக்கம்."
-
-#: ../../sphinx/doc/domains.rst:1272
-msgid "Describes a reST role.  For example::"
-msgstr "ஓய்வு பாத்திரத்தை விவரிக்கிறது. உதாரணத்திற்கு::"
-
-#: ../../sphinx/doc/domains.rst:1293
-msgid "More domains"
-msgstr "மேலும் களங்கள்"
-
-#: ../../sphinx/doc/domains.rst:1295
-msgid ""
-"The sphinx-contrib_ repository contains more domains available as "
-"extensions; currently Ada_, CoffeeScript_, Erlang_, HTTP_, Lasso_, MATLAB_, "
-"PHP_, and Ruby_ domains. Also available are domains for `Chapel`_, `Common "
-"Lisp`_, dqn_, Go_, Jinja_, Operation_, and Scala_."
-msgstr ""
-"ஸ்பின்க்ஸ்-கான்ட்ரிஃப்_ களஞ்சியத்தில் நீட்டிப்புகளாக கிடைக்கும் அதிக களங்கள்"
-" உள்ளன; தற்போது ada_, coffeescript_, erlang_, http_, lasso_, matlab_, php_, "
-"மற்றும் ரூபி_ களங்கள். `சேப்பல்`_,` பொதுவான லிஸ்ப்`_, டக்என்_, கோ_, ஜின்ஜா_,"
-" ஆபரேஷன்_ மற்றும் ஸ்கலா_ ஆகியவற்றிற்கான களங்களும் கிடைக்கின்றன."

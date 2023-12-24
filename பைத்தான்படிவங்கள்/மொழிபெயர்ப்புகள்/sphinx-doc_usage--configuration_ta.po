@@ -17,1867 +17,61 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/usage/configuration.rst:7
-msgid "Configuration"
-msgstr "உள்ளமைவு"
-
-#: ../../sphinx/doc/usage/configuration.rst:12
-msgid ""
-"The :term:`configuration directory` must contain a file named "
-":file:`conf.py`. This file (containing Python code) is called the \"build "
-"configuration file\" and contains (almost) all configuration needed to "
-"customize Sphinx input and output behavior."
-msgstr ""
-"தி: கால: `உள்ளமைவு அடைவு` பெயரிடப்பட்ட ஒரு கோப்பைக் கொண்டிருக்க வேண்டும்: "
-"கோப்பு:` conf.py`. இந்த கோப்பு (பைதான் குறியீட்டைக் கொண்டுள்ளது) "
-"\"கட்டமைப்பு கோப்பை உருவாக்கு\" என்று அழைக்கப்படுகிறது, மேலும் ஸ்பிங்க்ஸ் "
-"உள்ளீடு மற்றும் வெளியீட்டு நடத்தை தனிப்பயனாக்க தேவையான அனைத்து "
-"உள்ளமைவுகளையும் கொண்டுள்ளது."
-
-#: ../../sphinx/doc/usage/configuration.rst:17
-msgid ""
-"An optional file `docutils.conf`_ can be added to the configuration "
-"directory to adjust `Docutils`_ configuration if not otherwise overridden or"
-" set by Sphinx."
-msgstr ""
-"`Docutils.conf`_ ஐ உள்ளமைவு கோப்பகத்தில் சேர்க்கலாம்` டாக்யூடில்ஸ்`_ "
-"உள்ளமைவை சரிசெய்யவும் அல்லது ஸ்பிங்க்ஸால் அமைக்கப்படாவிட்டால் அல்லது "
-"அமைக்கப்படாவிட்டால்."
-
-#: ../../sphinx/doc/usage/configuration.rst:24
-msgid ""
-"The configuration file is executed as Python code at build time (using "
-":func:`importlib.import_module`, and with the current directory set to its "
-"containing directory), and therefore can execute arbitrarily complex code. "
-"Sphinx then reads simple names from the file's namespace as its "
-"configuration."
-msgstr ""
-"கட்டமைப்பு கோப்பு பில்ட் நேரத்தில் பைதான் குறியீடாக செயல்படுத்தப்படுகிறது "
-"(பயன்படுத்துதல்: func: `importlib.import_module`, மற்றும் தற்போதைய "
-"கோப்பகத்துடன் அதன் கொண்ட கோப்பகத்திற்கு அமைக்கப்பட்டுள்ளது), எனவே "
-"தன்னிச்சையாக சிக்கலான குறியீட்டை இயக்க முடியும். ஸ்பிங்க்ஸ் பின்னர் கோப்பின்"
-" பெயர்வெளியில் இருந்து எளிய பெயர்களை அதன் உள்ளமைவாகப் படிக்கிறது."
-
-#: ../../sphinx/doc/usage/configuration.rst:29
-msgid "Important points to note:"
-msgstr "கவனிக்க வேண்டிய முக்கியமான புள்ளிகள்:"
-
-#: ../../sphinx/doc/usage/configuration.rst:31
-msgid ""
-"If not otherwise documented, values must be strings, and their default is "
-"the empty string."
-msgstr ""
-"வேறுவிதமாக ஆவணப்படுத்தப்படாவிட்டால், மதிப்புகள் சரங்களாக இருக்க வேண்டும், "
-"அவற்றின் இயல்புநிலை வெற்று சரம்."
-
-#: ../../sphinx/doc/usage/configuration.rst:34
-msgid ""
-"The term \"fully-qualified name\" refers to a string that names an "
-"importable Python object inside a module; for example, the FQN "
-"``\"sphinx.builders.Builder\"`` means the ``Builder`` class in the "
-"``sphinx.builders`` module."
-msgstr ""
-"\"முழுமையாக தகுதி வாய்ந்த பெயர்\" என்ற சொல் ஒரு தொகுதிக்குள் இறக்குமதி "
-"செய்யக்கூடிய பைதான் பொருளைக் குறிக்கும் ஒரு சரத்தை குறிக்கிறது; "
-"எடுத்துக்காட்டாக, fqn `` \"sphinx.builders.builder\" `` என்பது `` "
-"sphinx.builders`` தொகுதியில் `` பில்டர்`` வகுப்பைக் குறிக்கிறது."
-
-#: ../../sphinx/doc/usage/configuration.rst:39
-msgid ""
-"Remember that document names use ``/`` as the path separator and don't "
-"contain the file name extension."
-msgstr ""
-"ஆவண பெயர்கள் ``/`` பாதை பிரிப்பானாகப் பயன்படுத்துகின்றன என்பதையும், கோப்பு "
-"பெயர் நீட்டிப்பு இல்லை என்பதையும் நினைவில் கொள்ளுங்கள்."
-
-#: ../../sphinx/doc/usage/configuration.rst:42
-msgid ""
-"Since :file:`conf.py` is read as a Python file, the usual rules apply for "
-"encodings and Unicode support."
-msgstr ""
-"பின்னர்: கோப்பு: `conf.py` ஒரு பைதான் கோப்பாக படிக்கப்படுகிறது, வழக்கமான "
-"விதிகள் குறியாக்கங்கள் மற்றும் யூனிகோட் ஆதரவுக்கு பொருந்தும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:45
-msgid ""
-"The contents of the config namespace are pickled (so that Sphinx can find "
-"out when configuration changes), so it may not contain unpickleable values "
-"-- delete them from the namespace with ``del`` if appropriate.  Modules are "
-"removed automatically, so you don't need to ``del`` your imports after use."
-msgstr ""
-"உள்ளமைவு பெயர்வெளியின் உள்ளடக்கங்கள் ஊறுகாய்களாக இருக்கும் (இதனால் உள்ளமைவு "
-"மாறும்போது ஸ்பிங்க்ஸ் கண்டுபிடிக்க முடியும்), எனவே அதில் திறக்க முடியாத "
-"மதிப்புகள் இருக்காது - பெயர்வெளியில் இருந்து அவற்றை `` டெல்`` பொருத்தமாக "
-"இருந்தால் அவற்றை நீக்கவும். தொகுதிகள் தானாக அகற்றப்படும், எனவே நீங்கள் "
-"பயன்படுத்திய பிறகு உங்கள் இறக்குமதியை `` டெல்`` தேவையில்லை."
-
-#: ../../sphinx/doc/usage/configuration.rst:52
-msgid ""
-"There is a special object named ``tags`` available in the config file. It "
-"can be used to query and change the tags (see :ref:`tags`).  Use "
-"``tags.has('tag')`` to query, ``tags.add('tag')`` and ``tags.remove('tag')``"
-" to change. Only tags set via the ``-t`` command-line option or via "
-"``tags.add('tag')`` can be queried using ``tags.has('tag')``. Note that the "
-"current builder tag is not available in ``conf.py``, as it is created "
-"*after* the builder is initialized."
-msgstr ""
-"கட்டமைப்பு கோப்பில் `` குறிச்சொற்கள்` என்ற சிறப்பு பொருள் உள்ளது. "
-"குறிச்சொற்களை வினவவும் மாற்றவும் இதைப் பயன்படுத்தலாம் (பார்க்க: குறிப்பு: "
-"`குறிச்சொற்கள்`). `` குறிச்சொற்கள்) `` வினவ, `` குறிச்சொற்கள். `` -T`` "
-"கட்டளை-வரி விருப்பம் வழியாக அல்லது `` குறிச்சொற்கள். தற்போதைய பில்டர் "
-"குறிச்சொல் `` conf.py`` இல் கிடைக்கவில்லை என்பதை நினைவில் கொள்க, ஏனெனில் இது"
-" உருவாக்கப்பட்டது * பில்டர் துவக்கப்பட்ட பிறகு."
-
-#: ../../sphinx/doc/usage/configuration.rst:62
-msgid "Project information"
-msgstr "திட்ட தகவல்"
-
-#: ../../sphinx/doc/usage/configuration.rst:66
-msgid "The documented project's name."
-msgstr "ஆவணப்படுத்தப்பட்ட திட்டத்தின் பெயர்."
-
-#: ../../sphinx/doc/usage/configuration.rst:70
-msgid ""
-"The author name(s) of the document.  The default value is ``'unknown'``."
-msgstr ""
-"ஆவணத்தின் ஆசிரியர் பெயர் (கள்). இயல்புநிலை மதிப்பு `` 'அறியப்படாதது'``."
-
-#: ../../sphinx/doc/usage/configuration.rst:74
-msgid "A copyright statement in the style ``'2008, Author Name'``."
-msgstr "பாணியில் ஒரு பதிப்புரிமை அறிக்கை `` '2008, ஆசிரியர் பெயர்'``."
-
-#: ../../sphinx/doc/usage/configuration.rst:76
-msgid ""
-"The value may now be a sequence of copyright statements in the above form, "
-"which will be displayed each to their own line."
-msgstr ""
-"மதிப்பு இப்போது மேலே உள்ள படிவத்தில் பதிப்புரிமை அறிக்கைகளின் வரிசையாக "
-"இருக்கலாம், அவை ஒவ்வொன்றும் அவற்றின் சொந்த வரிக்கு காட்டப்படும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:82
-msgid "An alias of :confval:`copyright`."
-msgstr "ஒரு மாற்றுப்பெயர்: confval: `பதிப்புரிமை`."
-
-#: ../../sphinx/doc/usage/configuration.rst:88
-msgid ""
-"The major project version, used as the replacement for ``|version|``.  For "
-"example, for the Python documentation, this may be something like ``2.6``."
-msgstr ""
-"முக்கிய திட்ட பதிப்பு, `` | பதிப்பு | `` க்கு மாற்றாக பயன்படுத்தப்படுகிறது. "
-"எடுத்துக்காட்டாக, பைதான் ஆவணங்களுக்கு, இது `` 2.6`` போன்றதாக இருக்கலாம்."
-
-#: ../../sphinx/doc/usage/configuration.rst:93
-msgid ""
-"The full project version, used as the replacement for ``|release|`` and e.g."
-" in the HTML templates.  For example, for the Python documentation, this may"
-" be something like ``2.6.0rc1``."
-msgstr ""
-"முழு திட்ட பதிப்பு, `` | வெளியீடு | `` மற்றும் எ.கா. HTML வார்ப்புருக்கள். "
-"எடுத்துக்காட்டாக, பைதான் ஆவணங்களுக்கு, இது `` 2.6.0rc1`` போன்றதாக "
-"இருக்கலாம்."
-
-#: ../../sphinx/doc/usage/configuration.rst:97
-msgid ""
-"If you don't need the separation provided between :confval:`version` and "
-":confval:`release`, just set them both to the same value."
-msgstr ""
-"இடையில் வழங்கப்பட்ட பிரிப்பு உங்களுக்குத் தேவையில்லை என்றால்: confval: "
-"`பதிப்பு` மற்றும்: confval:` வெளியீடு`, இரண்டையும் ஒரே மதிப்புக்கு "
-"அமைக்கவும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:102
-msgid "General configuration"
-msgstr "பொது உள்ளமைவு"
-
-#: ../../sphinx/doc/usage/configuration.rst:106
-msgid ""
-"A list of strings that are module names of :doc:`extensions "
-"<extensions/index>`. These can be extensions coming with Sphinx (named "
-"``sphinx.ext.*``) or custom ones."
-msgstr ""
-"தொகுதி பெயர்களாக இருக்கும் சரங்களின் பட்டியல்: டாக்: `நீட்டிப்புகள் "
-"<நீட்டிப்புகள்/குறியீட்டு>`. இவை ஸ்பிங்க்ஸ் (`` sphinx.ext.*``) அல்லது "
-"தனிப்பயன் என பெயரிடப்பட்ட நீட்டிப்புகளாக இருக்கலாம்."
-
-#: ../../sphinx/doc/usage/configuration.rst:110
-msgid ""
-"Note that you can extend :data:`sys.path` within the conf file if your "
-"extensions live in another directory -- but make sure you use absolute "
-"paths. If your extension path is relative to the :term:`configuration "
-"directory`, use :func:`os.path.abspath` like so::"
-msgstr ""
-"நீங்கள் நீட்டிக்க முடியும் என்பதை நினைவில் கொள்க: தரவு: `sys.path` உங்கள் "
-"நீட்டிப்புகள் வேறொரு கோப்பகத்தில் வாழ்ந்தால் CONF கோப்பில் - ஆனால் நீங்கள் "
-"முழுமையான பாதைகளைப் பயன்படுத்துவதை உறுதிசெய்க. உங்கள் நீட்டிப்பு பாதை: கால: "
-"`உள்ளமைவு அடைவு` உடன் தொடர்புடையதாக இருந்தால், பயன்படுத்தவும்: func:` "
-"os.path.abspath` அவ்வாறு ::"
-
-#: ../../sphinx/doc/usage/configuration.rst:121
-msgid ""
-"That way, you can load an extension called ``extname`` from the subdirectory"
-" ``sphinxext``."
-msgstr ""
-"அந்த வகையில், துணை அடைவு `` Sphinxext`` இலிருந்து `` extname`` எனப்படும் "
-"நீட்டிப்பை ஏற்றலாம்."
-
-#: ../../sphinx/doc/usage/configuration.rst:124
-msgid ""
-"The configuration file itself can be an extension; for that, you only need "
-"to provide a :func:`setup` function in it."
-msgstr ""
-"உள்ளமைவு கோப்பு ஒரு நீட்டிப்பாக இருக்கலாம்; அதற்காக, நீங்கள் ஒரு: func: "
-"`setup` செயல்பாட்டை மட்டுமே வழங்க வேண்டும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:129
-msgid ""
-"The file extensions of source files.  Sphinx considers the files with this "
-"suffix as sources.  The value can be a dictionary mapping file extensions to"
-" file types.  For example::"
-msgstr ""
-"மூல கோப்புகளின் கோப்பு நீட்டிப்புகள். இந்த பின்னொட்டுடன் கோப்புகளை "
-"ஆதாரங்களாக ஸ்பிங்க்ஸ் கருதுகிறது. மதிப்பு கோப்பு வகைகளுக்கு அகராதி மேப்பிங் "
-"கோப்பு நீட்டிப்புகளாக இருக்கலாம். உதாரணத்திற்கு::"
-
-#: ../../sphinx/doc/usage/configuration.rst:139
-msgid ""
-"By default, Sphinx only supports ``'restructuredtext'`` file type.  You can "
-"add a new file type using source parser extensions.  Please read a document "
-"of the extension to know which file type the extension supports."
-msgstr ""
-"இயல்பாக, SPHINX `` 'மறுசீரமைப்பு செய்யப்பட்ட டெக்ஸ்ட்'`` கோப்பு வகையை "
-"மட்டுமே ஆதரிக்கிறது. மூல பாகுபடுத்தி நீட்டிப்புகளைப் பயன்படுத்தி புதிய "
-"கோப்பு வகையைச் சேர்க்கலாம். நீட்டிப்பு எந்த கோப்பு வகை ஆதரிக்கிறது என்பதை "
-"அறிய நீட்டிப்பின் ஆவணத்தைப் படியுங்கள்."
-
-#: ../../sphinx/doc/usage/configuration.rst:143
-msgid ""
-"The value may also be a list of file extensions: then Sphinx will consider "
-"that they all map to the ``'restructuredtext'`` file type."
-msgstr ""
-"மதிப்பு கோப்பு நீட்டிப்புகளின் பட்டியலாகவும் இருக்கலாம்: பின்னர் அவை "
-"அனைத்தும் `` 'மறுசீரமைப்பு செய்யப்பட்ட டெக்ஸ்ட்'`` கோப்பு வகைக்கு வரைபடமாக "
-"இருப்பதைக் கருத்தில் கொள்ளும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:146
-msgid "Default is ``{'.rst': 'restructuredtext'}``."
-msgstr "இயல்புநிலை `` {'.ஆர்எஸ்டி': 'மறுசீரமைப்பு டெக்ஸ்ட்'} ``."
-
-#: ../../sphinx/doc/usage/configuration.rst:148
-msgid "file extensions have to start with a dot (e.g. ``.rst``)."
-msgstr ""
-"கோப்பு நீட்டிப்புகள் ஒரு புள்ளியுடன் தொடங்கப்பட வேண்டும் (எ.கா. `` "
-".ஆர்எஸ்டி``)."
-
-#: ../../sphinx/doc/usage/configuration.rst:150
-msgid "Can now be a list of extensions."
-msgstr "இப்போது நீட்டிப்புகளின் பட்டியலாக இருக்கலாம்."
-
-#: ../../sphinx/doc/usage/configuration.rst:153
-msgid "Support file type mapping"
-msgstr "கோப்பு வகை மேப்பிங் ஆதரவு"
-
-#: ../../sphinx/doc/usage/configuration.rst:158
-msgid ""
-"The encoding of all reST source files.  The recommended encoding, and the "
-"default value, is ``'utf-8-sig'``."
-msgstr ""
-"அனைத்து ஓய்வு மூல கோப்புகளின் குறியாக்கம். பரிந்துரைக்கப்பட்ட குறியாக்கம் "
-"மற்றும் இயல்புநிலை மதிப்பு `` '' utf-8-sig'```."
-
-#: ../../sphinx/doc/usage/configuration.rst:161
-msgid "Previously, Sphinx accepted only UTF-8 encoded sources."
-msgstr ""
-"முன்னதாக, SPHINX UTF-8 குறியிடப்பட்ட ஆதாரங்களை மட்டுமே ஏற்றுக்கொண்டது."
-
-#: ../../sphinx/doc/usage/configuration.rst:166
-msgid ""
-"If given, a dictionary of parser classes for different source suffices.  The"
-" keys are the suffix, the values can be either a class or a string giving a "
-"fully-qualified name of a parser class.  The parser class can be either "
-"``docutils.parsers.Parser`` or :class:`sphinx.parsers.Parser`.  Files with a"
-" suffix that is not in the dictionary will be parsed with the default "
-"reStructuredText parser."
-msgstr ""
-"வழங்கப்பட்டால், வெவ்வேறு மூலங்களுக்கான பாகுபடுத்தி வகுப்புகளின் அகராதி "
-"போதுமானது. விசைகள் பின்னொட்டு, மதிப்புகள் ஒரு வகுப்பாக இருக்கலாம் அல்லது ஒரு"
-" பாகுபடுத்தி வகுப்பின் முழுமையான தகுதி வாய்ந்த பெயரைக் கொடுக்கும் சரமாக "
-"இருக்கலாம். பாகுபடுத்தி வகுப்பு `` docutils.parsers.parser` அல்லது: வகுப்பு:"
-" `sphinx.parsers.parser` ஆக இருக்கலாம். அகராதியில் இல்லாத பின்னொட்டுடன் "
-"கூடிய கோப்புகள் இயல்புநிலை மறுசீரமைப்பு செய்யப்பட்ட டெக்ஸ்ட் பாகுபடுத்தலுடன்"
-" பாகுபடுத்தப்படும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:173
-#: ../../sphinx/doc/usage/configuration.rst:1562
-msgid "For example::"
-msgstr "உதாரணத்திற்கு::"
-
-#: ../../sphinx/doc/usage/configuration.rst:179
-msgid ""
-"Refer to :doc:`/usage/markdown` for more information on using Markdown with "
-"Sphinx."
-msgstr ""
-"பார்க்கவும்: DOC: `/பயன்பாடு/மார்க் டவுன்` ஸ்பிங்க்ஸுடன் மார்க் டவுனைப் "
-"பயன்படுத்துவது பற்றிய கூடுதல் தகவலுக்கு."
-
-#: ../../sphinx/doc/usage/configuration.rst:184
-msgid ""
-"Now Sphinx provides an API :meth:`.Sphinx.add_source_parser` to register a "
-"source parser.  Please use it instead."
-msgstr ""
-"இப்போது ஸ்பின்க்ஸ் ஒரு ஏபிஐ: மெத்: `.sphinx.add_source_parser` ஒரு மூல "
-"பாகுபடுத்தி பதிவு செய்ய வழங்குகிறது. அதற்கு பதிலாக அதைப் பயன்படுத்தவும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:190
-msgid "Same as :confval:`root_doc`."
-msgstr "அதே: confval: `root_doc`."
-
-#: ../../sphinx/doc/usage/configuration.rst:192
-msgid "Renamed ``master_doc`` to ``root_doc``."
-msgstr "`` மாஸ்டர்_டோக்`` `` ரூட்_டோக்`` என மறுபெயரிடப்பட்டது."
-
-#: ../../sphinx/doc/usage/configuration.rst:197
-msgid ""
-"The document name of the \"root\" document, that is, the document that "
-"contains the root :rst:dir:`toctree` directive.  Default is ``'index'``."
-msgstr ""
-"\"ரூட்\" ஆவணத்தின் ஆவண பெயர், அதாவது, ரூட் கொண்ட ஆவணம்: rst: dir: `toctree` "
-"உத்தரவு. இயல்புநிலை `` 'குறியீட்டு'``."
-
-#: ../../sphinx/doc/usage/configuration.rst:200
-msgid "The default is changed to ``'index'`` from ``'contents'``."
-msgstr "இயல்புநிலை `` 'உள்ளடக்கங்களிலிருந்து ``' குறியீட்டு'`````."
-
-#: ../../sphinx/doc/usage/configuration.rst:202
-msgid "Renamed ``root_doc`` from ``master_doc``."
-msgstr "`` Master_doc`` இலிருந்து `` ரூட்_டோக்`."
-
-#: ../../sphinx/doc/usage/configuration.rst:207
-msgid ""
-"A list of glob-style patterns [1]_ that should be excluded when looking for "
-"source files. They are matched against the source file names relative to the"
-" source directory, using slashes as directory separators on all platforms."
-msgstr ""
-"குளோப்-பாணி வடிவங்களின் பட்டியல் [1] _ மூல கோப்புகளைத் தேடும்போது விலக்கப்பட"
-" வேண்டும். அவை மூல கோப்பகத்துடன் தொடர்புடைய மூல கோப்பு பெயர்களுக்கு எதிராக "
-"பொருந்துகின்றன, எல்லா தளங்களிலும் உள்ள அடைவு பிரிப்பான்களாகப் "
-"பயன்படுத்துகின்றன."
-
-#: ../../sphinx/doc/usage/configuration.rst:212
-#: ../../sphinx/doc/usage/configuration.rst:232
-msgid "Example patterns:"
-msgstr "எடுத்துக்காட்டு வடிவங்கள்:"
-
-#: ../../sphinx/doc/usage/configuration.rst:214
-msgid "``'library/xml.rst'`` -- ignores the ``library/xml.rst`` file"
-msgstr "`` 'நூலகம்/xml.rst'`` - `` நூலகம்/xml.rst`` கோப்பை புறக்கணிக்கிறது"
-
-#: ../../sphinx/doc/usage/configuration.rst:215
-msgid "``'library/xml'`` -- ignores the ``library/xml`` directory"
-msgstr ""
-"`` 'நூலகம்/xml'`` - `` நூலகம்/எக்ஸ்எம்எல்`` கோப்பகத்தை புறக்கணிக்கிறது"
-
-#: ../../sphinx/doc/usage/configuration.rst:216
-msgid ""
-"``'library/xml*'`` -- ignores all files and directories starting with "
-"``library/xml``"
-msgstr ""
-"`` 'நூலகம்/எக்ஸ்எம்எல்*' `` - `` நூலகம்/எக்ஸ்எம்எல்`` உடன் தொடங்கி அனைத்து "
-"கோப்புகளையும் கோப்பகங்களையும் புறக்கணிக்கிறது"
-
-#: ../../sphinx/doc/usage/configuration.rst:218
-msgid "``'**/.svn'`` -- ignores all ``.svn`` directories"
-msgstr "`` '**/. svn'`` - அனைத்து `` .svn`` கோப்பகங்களையும் புறக்கணிக்கிறது"
-
-#: ../../sphinx/doc/usage/configuration.rst:220
-msgid ""
-":confval:`exclude_patterns` is also consulted when looking for static files "
-"in :confval:`html_static_path` and :confval:`html_extra_path`."
-msgstr "."
-
-#: ../../sphinx/doc/usage/configuration.rst:227
-msgid ""
-"A list of glob-style patterns [1]_ that are used to find source files. They "
-"are matched against the source file names relative to the source directory, "
-"using slashes as directory separators on all platforms. The default is "
-"``**``, meaning that all files are recursively included from the source "
-"directory."
-msgstr ""
-"மூல கோப்புகளைக் கண்டறியப் பயன்படும் குளோப்-பாணி வடிவங்களின் பட்டியல் [1] _. "
-"அவை மூல கோப்பகத்துடன் தொடர்புடைய மூல கோப்பு பெயர்களுக்கு எதிராக "
-"பொருந்துகின்றன, எல்லா தளங்களிலும் உள்ள அடைவு பிரிப்பான்களாகப் "
-"பயன்படுத்துகின்றன. இயல்புநிலை `` ** ``, அதாவது எல்லா கோப்புகளும் மூல "
-"கோப்பகத்திலிருந்து மீண்டும் மீண்டும் சேர்க்கப்பட்டுள்ளன."
-
-#: ../../sphinx/doc/usage/configuration.rst:234
-msgid ""
-"``'**'`` -- all files in the source directory and subdirectories, "
-"recursively"
-msgstr ""
-"`` '**' `` - மூல அடைவு மற்றும் துணை அடைவுகளில் உள்ள அனைத்து கோப்புகளும் "
-"மீண்டும் மீண்டும்"
-
-#: ../../sphinx/doc/usage/configuration.rst:235
-msgid "``'library/xml'`` -- just the ``library/xml`` directory"
-msgstr "`` 'நூலகம்/xml'`` - `` நூலகம்/xml`` அடைவு"
-
-#: ../../sphinx/doc/usage/configuration.rst:236
-msgid ""
-"``'library/xml*'`` -- all files and directories starting with "
-"``library/xml``"
-msgstr ""
-"`` 'நூலகம்/எக்ஸ்எம்எல்*' `` - `` நூலகம்/எக்ஸ்எம்எல்`` உடன் தொடங்கும் அனைத்து"
-" கோப்புகளும் கோப்பகங்களும்"
-
-#: ../../sphinx/doc/usage/configuration.rst:237
-msgid ""
-"``'**/doc'`` -- all ``doc`` directories (this might be useful if "
-"documentation is co-located with source files)"
-msgstr ""
-"`` '**/doc'``-அனைத்து `` doc`` கோப்பகங்களும் (ஆவணங்கள் மூல கோப்புகளுடன் "
-"இணைந்து அமைந்துள்ளால் இது பயனுள்ளதாக இருக்கும்)"
-
-#: ../../sphinx/doc/usage/configuration.rst:244
-msgid ""
-"A list of paths that contain extra templates (or templates that overwrite "
-"builtin/theme-specific templates).  Relative paths are taken as relative to "
-"the configuration directory."
-msgstr ""
-"கூடுதல் வார்ப்புருக்களைக் கொண்ட பாதைகளின் பட்டியல் (அல்லது "
-"பில்டின்/தீம்-குறிப்பிட்ட வார்ப்புருக்களை மேலெழுதும் வார்ப்புருக்கள்). "
-"உறவினர் பாதைகள் உள்ளமைவு கோப்பகத்துடன் தொடர்புடையவை."
-
-#: ../../sphinx/doc/usage/configuration.rst:248
-msgid ""
-"As these files are not meant to be built, they are automatically added to "
-":confval:`exclude_patterns`."
-msgstr ""
-"இந்த கோப்புகள் கட்டமைக்கப்படக்கூடாது என்பதால், அவை தானாகவே "
-"சேர்க்கப்படுகின்றன: confval: `விலக்கு_பேட்டர்கள்`."
-
-#: ../../sphinx/doc/usage/configuration.rst:254
-msgid ""
-"A string with the fully-qualified name of a callable (or simply a class) "
-"that returns an instance of :class:`~sphinx.application.TemplateBridge`. "
-"This instance is then used to render HTML documents, and possibly the output"
-" of other builders (currently the changes builder).  (Note that the template"
-" bridge must be made theme-aware if HTML themes are to be used.)"
-msgstr ""
-"அழைக்கக்கூடிய (அல்லது வெறுமனே ஒரு வகுப்பின்) முழு தகுதி வாய்ந்த பெயரைக் "
-"கொண்ட ஒரு சரம்: வகுப்பு: `~ sphinx.application.templatebridge`. இந்த நிகழ்வு"
-" பின்னர் HTML ஆவணங்களை வழங்க பயன்படுகிறது, மேலும் பிற பில்டர்களின் வெளியீடு "
-"(தற்போது மாற்றங்கள் பில்டர்). (HTML கருப்பொருள்கள் பயன்படுத்தப்பட "
-"வேண்டுமானால் வார்ப்புரு பாலம் தீம்-விழிப்புணர்வு செய்யப்பட வேண்டும் என்பதை "
-"நினைவில் கொள்க.)"
-
-#: ../../sphinx/doc/usage/configuration.rst:264
-msgid ""
-"A string of reStructuredText that will be included at the end of every "
-"source file that is read.  This is a possible place to add substitutions "
-"that should be available in every file (another being "
-":confval:`rst_prolog`).  An example::"
-msgstr ""
-"படிக்கப்படும் ஒவ்வொரு மூல கோப்பின் முடிவிலும் சேர்க்கப்படும் மறுசீரமைப்பு "
-"டெக்ஸ்டின் சரம். ஒவ்வொரு கோப்பிலும் கிடைக்க வேண்டிய மாற்றீடுகளைச் சேர்க்க "
-"இது சாத்தியமான இடம் (மற்றொரு இருப்பு: confval: `rst_prolog`). ஒரு "
-"எடுத்துக்காட்டு ::"
-
-#: ../../sphinx/doc/usage/configuration.rst:279
-msgid ""
-"A string of reStructuredText that will be included at the beginning of every"
-" source file that is read.  This is a possible place to add substitutions "
-"that should be available in every file (another being "
-":confval:`rst_epilog`).  An example::"
-msgstr ""
-"படிக்கப்படும் ஒவ்வொரு மூல கோப்பின் தொடக்கத்திலும் சேர்க்கப்படும் "
-"மறுசீரமைப்பு டெக்ஸ்டின் சரம். ஒவ்வொரு கோப்பிலும் கிடைக்க வேண்டிய "
-"மாற்றீடுகளைச் சேர்க்க இது சாத்தியமான இடமாகும் (மற்றொன்று: confval: "
-"`rst_epilog`). ஒரு எடுத்துக்காட்டு ::"
-
-#: ../../sphinx/doc/usage/configuration.rst:295
-msgid ""
-"The name of the default :doc:`domain </usage/domains/index>`. Can also be "
-"``None`` to disable a default domain.  The default is ``'py'``. Those "
-"objects in other domains (whether the domain name is given explicitly, or "
-"selected by a :rst:dir:`default-domain` directive) will have the domain name"
-" explicitly prepended when named (e.g., when the default domain is C, Python"
-" functions will be named \"Python function\", not just \"function\")."
-msgstr ""
-"இயல்புநிலையின் பெயர்: டாக்: `டொமைன் </பயன்பாடு/களங்கள்/குறியீட்டு>`. "
-"இயல்புநிலை களத்தை முடக்க `` எதுவுமில்லை`. இயல்புநிலை `` 'பை'``. மற்ற "
-"களங்களில் உள்ள அந்த பொருள்கள் (டொமைன் பெயர் வெளிப்படையாக வழங்கப்பட்டதா, "
-"அல்லது ஒரு: rst: dir: `இயல்புநிலை-டொமைன்` டைரெக்டிவ்) பெயரிடும்போது டொமைன் "
-"பெயர் வெளிப்படையாக தயாரிக்கப்படும் (எ.கா., இயல்புநிலை டொமைன் சி, பைதான் ஆக "
-"இருக்கும்போது செயல்பாடுகளுக்கு \"பைதான் செயல்பாடு\" என்று பெயரிடப்படும், "
-"\"செயல்பாடு\" மட்டுமல்ல)."
-
-#: ../../sphinx/doc/usage/configuration.rst:308
-msgid ""
-"The name of a reST role (builtin or Sphinx extension) to use as the default "
-"role, that is, for text marked up ```like this```.  This can be set to "
-"``'py:obj'`` to make ```filter``` a cross-reference to the Python function "
-"\"filter\".  The default is ``None``, which doesn't reassign the default "
-"role."
-msgstr ""
-"இயல்புநிலை பாத்திரமாகப் பயன்படுத்த, ஓய்வு பாத்திரத்தின் பெயர் (பில்டின் "
-"அல்லது ஸ்பின்க்ஸ் நீட்டிப்பு), அதாவது, `` இது போன்றவற்றைப் போல குறிக்கப்பட்ட"
-" உரைக்கு. இதை `` `வடிகட்டி``` பைதான் செயல்பாடு\" வடிகட்டி \"க்கு குறுக்கு "
-"குறிப்பை உருவாக்க` `'py: obj'`` என அமைக்கலாம். இயல்புநிலை `` எதுவுமில்லை``, "
-"இது இயல்புநிலை பாத்திரத்தை மீண்டும் வகுக்காது."
-
-#: ../../sphinx/doc/usage/configuration.rst:313
-msgid ""
-"The default role can always be set within individual documents using the "
-"standard reST :dudir:`default-role` directive."
-msgstr ""
-"இயல்புநிலை பங்கு எப்போதும் நிலையான ஓய்வு: டுடிர்: `இயல்புநிலை-பங்கு` உத்தரவு"
-" ஆகியவற்றைப் பயன்படுத்தி தனிப்பட்ட ஆவணங்களுக்குள் அமைக்கப்படலாம்."
-
-#: ../../sphinx/doc/usage/configuration.rst:320
-msgid ""
-"If true, keep warnings as \"system message\" paragraphs in the built "
-"documents.  Regardless of this setting, warnings are always written to the "
-"standard error stream when ``sphinx-build`` is run."
-msgstr ""
-"உண்மை என்றால், எச்சரிக்கைகளை கட்டப்பட்ட ஆவணங்களில் \"கணினி செய்தி\" "
-"பத்திகளாக வைத்திருங்கள். இந்த அமைப்பைப் பொருட்படுத்தாமல், `` "
-"ஸ்பின்க்ஸ்-பில்ட்`` இயக்கப்படும்போது எச்சரிக்கைகள் எப்போதும் நிலையான பிழை "
-"ஸ்ட்ரீமுக்கு எழுதப்படும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:324
-msgid ""
-"The default is ``False``, the pre-0.5 behavior was to always keep them."
-msgstr ""
-"இயல்புநிலை `` தவறு``, 0.5 க்கு முந்தைய நடத்தை எப்போதும் அவற்றை "
-"வைத்திருப்பதுதான்."
-
-#: ../../sphinx/doc/usage/configuration.rst:330
-msgid "A list of warning types to suppress arbitrary warning messages."
-msgstr "தன்னிச்சையான எச்சரிக்கை செய்திகளை அடக்க எச்சரிக்கை வகைகளின் பட்டியல்."
-
-#: ../../sphinx/doc/usage/configuration.rst:332
-msgid "Sphinx supports following warning types:"
-msgstr "எச்சரிக்கை வகைகளைத் தொடர்ந்து SPHINX ஆதரிக்கிறது:"
-
-#: ../../sphinx/doc/usage/configuration.rst:334
-msgid "``app.add_node``"
-msgstr "`` app.add_node``"
-
-#: ../../sphinx/doc/usage/configuration.rst:335
-msgid "``app.add_directive``"
-msgstr "`` app.add_directive``"
-
-#: ../../sphinx/doc/usage/configuration.rst:336
-msgid "``app.add_role``"
-msgstr "`` app.add_role``"
-
-#: ../../sphinx/doc/usage/configuration.rst:337
-msgid "``app.add_generic_role``"
-msgstr "`` app.add_generic_role``"
-
-#: ../../sphinx/doc/usage/configuration.rst:338
-msgid "``app.add_source_parser``"
-msgstr "`` app.add_source_parser``"
-
-#: ../../sphinx/doc/usage/configuration.rst:339
-msgid "``autosectionlabel.*``"
-msgstr "`` AutoSectionLabel.*``"
-
-#: ../../sphinx/doc/usage/configuration.rst:340
-msgid "``download.not_readable``"
-msgstr "`` பதிவிறக்கம். Not_readable``"
-
-#: ../../sphinx/doc/usage/configuration.rst:341
-msgid "``epub.unknown_project_files``"
-msgstr "`` epub.unknown_project_files``"
-
-#: ../../sphinx/doc/usage/configuration.rst:342
-msgid "``epub.duplicated_toc_entry``"
-msgstr "`` epub.duplicated_toc_entry``"
-
-#: ../../sphinx/doc/usage/configuration.rst:343
-msgid "``i18n.inconsistent_references``"
-msgstr "`` i18n.inconsistent_references``"
-
-#: ../../sphinx/doc/usage/configuration.rst:344
-msgid "``index``"
-msgstr "`` குறியீட்டு``"
-
-#: ../../sphinx/doc/usage/configuration.rst:345
-msgid "``image.not_readable``"
-msgstr "`` image.not_readable``"
-
-#: ../../sphinx/doc/usage/configuration.rst:346
-msgid "``ref.term``"
-msgstr "`` ref.term``"
-
-#: ../../sphinx/doc/usage/configuration.rst:347
-msgid "``ref.ref``"
-msgstr "`` ref.ref``"
-
-#: ../../sphinx/doc/usage/configuration.rst:348
-msgid "``ref.numref``"
-msgstr "`` ref.numref``"
-
-#: ../../sphinx/doc/usage/configuration.rst:349
-msgid "``ref.keyword``"
-msgstr "`` ref.keyword``"
-
-#: ../../sphinx/doc/usage/configuration.rst:350
-msgid "``ref.option``"
-msgstr "`` ref.option``"
-
-#: ../../sphinx/doc/usage/configuration.rst:351
-msgid "``ref.citation``"
-msgstr "`` ref.cital ``"
-
-#: ../../sphinx/doc/usage/configuration.rst:352
-msgid "``ref.footnote``"
-msgstr "`` ref.footnote``"
-
-#: ../../sphinx/doc/usage/configuration.rst:353
-msgid "``ref.doc``"
-msgstr "`` ref.doc``"
-
-#: ../../sphinx/doc/usage/configuration.rst:354
-msgid "``ref.python``"
-msgstr "`` ref.python``"
-
-#: ../../sphinx/doc/usage/configuration.rst:355
-msgid "``misc.highlighting_failure``"
-msgstr "`` misc.highlighting_failure``"
-
-#: ../../sphinx/doc/usage/configuration.rst:356
-msgid "``toc.circular``"
-msgstr "`` toc.cricular``"
-
-#: ../../sphinx/doc/usage/configuration.rst:357
-msgid "``toc.excluded``"
-msgstr "`` toc.excluded``"
-
-#: ../../sphinx/doc/usage/configuration.rst:358
-msgid "``toc.not_readable``"
-msgstr "`` toc.not_readable``"
-
-#: ../../sphinx/doc/usage/configuration.rst:359
-msgid "``toc.secnum``"
-msgstr "`` toc.secnum``"
-
-#: ../../sphinx/doc/usage/configuration.rst:361
-msgid ""
-"You can choose from these types.  You can also give only the first component"
-" to exclude all warnings attached to it."
-msgstr ""
-"இந்த வகைகளிலிருந்து நீங்கள் தேர்வு செய்யலாம். அதனுடன் இணைக்கப்பட்ட அனைத்து "
-"எச்சரிக்கைகளையும் விலக்க முதல் கூறுகளை மட்டுமே நீங்கள் கொடுக்க முடியும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:364
-msgid "Now, this option should be considered *experimental*."
-msgstr "இப்போது, இந்த விருப்பத்தை *சோதனை *கருத வேண்டும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:370
-msgid "Added ``misc.highlighting_failure``"
-msgstr "சேர்க்கப்பட்டது `` misc.highlighting_failure``"
-
-#: ../../sphinx/doc/usage/configuration.rst:374
-msgid "Added ``epub.unknown_project_files``"
-msgstr "`` Epub.unknown_project_files`` சேர்க்கப்பட்டது"
-
-#: ../../sphinx/doc/usage/configuration.rst:378
-msgid "Added ``ref.footnote``"
-msgstr "சேர்க்கப்பட்டது `` ref.footnote``"
-
-#: ../../sphinx/doc/usage/configuration.rst:382
-msgid "Added ``autosectionlabel.*``"
-msgstr "`` AutoSectionLabel ஐச் சேர்த்தது.*``"
-
-#: ../../sphinx/doc/usage/configuration.rst:386
-msgid "Added ``epub.duplicated_toc_entry``"
-msgstr "சேர்க்கப்பட்டது `` epub.duplicated_toc_entry``"
-
-#: ../../sphinx/doc/usage/configuration.rst:390
-msgid "Added ``toc.excluded`` and ``toc.not_readable``"
-msgstr "`` Toc.excluded`` மற்றும் `` toc.not_readable``"
-
-#: ../../sphinx/doc/usage/configuration.rst:394
-msgid "Added ``i18n.inconsistent_references``"
-msgstr "சேர்க்கப்பட்டது"
-
-#: ../../sphinx/doc/usage/configuration.rst:398
-msgid "Added ``index`` warning type."
-msgstr "`` குறியீட்டு`` எச்சரிக்கை வகை சேர்க்கப்பட்டது."
-
-#: ../../sphinx/doc/usage/configuration.rst:402
-msgid ""
-"If set to a ``major.minor`` version string like ``'1.1'``, Sphinx will "
-"compare it with its version and refuse to build if it is too old.  Default "
-"is no requirement."
-msgstr ""
-"`` '1.1'`` போன்ற `` மேஜர்.மினோர்`` பதிப்பு சரத்திற்கு அமைக்கப்பட்டால், "
-"ஸ்பின்க்ஸ் அதை அதன் பதிப்போடு ஒப்பிட்டு, அது மிகவும் பழையதாக இருந்தால் கட்ட "
-"மறுக்கும். இயல்புநிலை தேவையில்லை."
-
-#: ../../sphinx/doc/usage/configuration.rst:408
-msgid "also accepts micro version string"
-msgstr "மைக்ரோ பதிப்பு சரத்தையும் ஏற்றுக்கொள்கிறது"
-
-#: ../../sphinx/doc/usage/configuration.rst:413
-msgid ""
-"This value can be a dictionary specifying version requirements for "
-"extensions in :confval:`extensions`, e.g. ``needs_extensions = "
-"{'sphinxcontrib.something': '1.5'}``.  The version strings should be in the "
-"form ``major.minor``.  Requirements do not have to be specified for all "
-"extensions, only for those you want to check."
-msgstr ""
-"இந்த மதிப்பு நீட்டிப்புகளுக்கான பதிப்பு தேவைகளை குறிப்பிடும் அகராதியாக "
-"இருக்கலாம்: confval: `நீட்டிப்புகள்`, எ.கா. `` தேவைகள்_எக்ஸ்டென்சன்ஸ் = "
-"{'sphinxcontrib.something': '1.5'} ``. பதிப்பு சரங்கள் `` மேஜர்.மினோர்`` "
-"வடிவத்தில் இருக்க வேண்டும். அனைத்து நீட்டிப்புகளுக்கும் தேவைகள் "
-"குறிப்பிடப்பட வேண்டியதில்லை, நீங்கள் சரிபார்க்க விரும்புவோருக்கு மட்டுமே."
-
-#: ../../sphinx/doc/usage/configuration.rst:419
-msgid ""
-"This requires that the extension specifies its version to Sphinx (see "
-":ref:`dev-extensions` for how to do that)."
-msgstr ""
-"இதற்கு நீட்டிப்பு அதன் பதிப்பை ஸ்பிங்க்ஸுக்குக் குறிப்பிட வேண்டும் (பார்க்க:"
-" குறிப்பு: `தேவ்-நீட்டிப்புகள்` அதை எப்படி செய்வது என்பதற்காக)."
-
-#: ../../sphinx/doc/usage/configuration.rst:426
-msgid ""
-"A URL to cross-reference :rst:role:`manpage` roles. If this is defined to "
-"``https://manpages.debian.org/{path}``, the :literal:`:manpage:`man(1)`` "
-"role will link to <https://manpages.debian.org/man(1)>. The patterns "
-"available are:"
-msgstr ""
-"குறுக்கு-குறிப்புக்கு ஒரு URL: rst: பங்கு: `manpage` பாத்திரங்கள். இது `` "
-"https://manpages.debian.org/ {பாதை} ``, தி: லிட்டரல்: `: மேன் (1)` "
-"`பாத்திரம் <https: //manpages.debian உடன் இணைக்கப்படும் என்றால் "
-"வரையறுக்கப்பட்டால் .org/man (1)>. கிடைக்கக்கூடிய வடிவங்கள்:"
-
-#: ../../sphinx/doc/usage/configuration.rst:431
-msgid "``page`` - the manual page (``man``)"
-msgstr "`` பக்கம்`` - கையேடு பக்கம் (`` மனிதன்``)"
-
-#: ../../sphinx/doc/usage/configuration.rst:432
-msgid "``section`` - the manual section (``1``)"
-msgstr "`` பிரிவு`` - கையேடு பிரிவு (`` 1``)"
-
-#: ../../sphinx/doc/usage/configuration.rst:433
-msgid "``path`` - the original manual page and section specified (``man(1)``)"
-msgstr ""
-"`` பாதை`` - அசல் கையேடு பக்கம் மற்றும் பிரிவு குறிப்பிடப்பட்ட (`` மனிதன் (1)"
-" ``)"
-
-#: ../../sphinx/doc/usage/configuration.rst:435
-msgid "This also supports manpages specified as ``man.1``."
-msgstr "இது `` MAN.1`` என குறிப்பிடப்பட்ட மனிதப் பக்கங்களையும் ஆதரிக்கிறது."
-
-#: ../../sphinx/doc/usage/configuration.rst:437
-msgid ""
-"This currently affects only HTML writers but could be expanded in the "
-"future."
-msgstr ""
-"இது தற்போது HTML எழுத்தாளர்களை மட்டுமே பாதிக்கிறது, ஆனால் எதிர்காலத்தில் "
-"விரிவாக்கப்படலாம்."
-
-#: ../../sphinx/doc/usage/configuration.rst:444
-msgid ""
-"If true, Sphinx will warn about *all* references where the target cannot be "
-"found.  Default is ``False``.  You can activate this mode temporarily using "
-"the :option:`-n <sphinx-build -n>` command-line switch."
-msgstr ""
-"உண்மை என்றால், இலக்கு கண்டுபிடிக்க முடியாத * அனைத்து * குறிப்புகளையும் "
-"ஸ்பின்க்ஸ் எச்சரிக்கும். இயல்புநிலை `` பொய்``. இந்த பயன்முறையை நீங்கள் "
-"தற்காலிகமாக செயல்படுத்தலாம்: விருப்பம்: `-n <sphinx- கட்டளை -n>` கட்டளை-வரி "
-"சுவிட்ச்."
-
-#: ../../sphinx/doc/usage/configuration.rst:452
-msgid ""
-"A set or list of ``(type, target)`` tuples (by default empty) that should be"
-" ignored when generating warnings in \"nitpicky mode\".  Note that ``type`` "
-"should include the domain name if present.  Example entries would be "
-"``('py:func', 'int')`` or ``('envvar', 'LD_LIBRARY_PATH')``."
-msgstr ""
-"\"நைட் பிக்கி பயன்முறையில்\" எச்சரிக்கைகளை உருவாக்கும் போது புறக்கணிக்கப்பட "
-"வேண்டிய `` (வகை, இலக்கு) `` டூப்பிள்ஸ் (இயல்பாக காலியாக) ஒரு தொகுப்பு அல்லது"
-" பட்டியல். `` வகை`` இருந்தால் டொமைன் பெயரை சேர்க்க வேண்டும் என்பதை நினைவில் "
-"கொள்க. எடுத்துக்காட்டு உள்ளீடுகள் `` ('py: func', 'int') `` அல்லது `` "
-"('envvar', 'ld_library_path') ``."
-
-#: ../../sphinx/doc/usage/configuration.rst:458
-#: ../../sphinx/doc/usage/configuration.rst:474
-msgid "Changed allowable container types to a set, list, or tuple"
-msgstr ""
-"அனுமதிக்கக்கூடிய கொள்கலன் வகைகளை ஒரு தொகுப்பு, பட்டியல் அல்லது டப்பிள் என "
-"மாற்றியது"
-
-#: ../../sphinx/doc/usage/configuration.rst:463
-msgid ""
-"An extended version of :confval:`nitpick_ignore`, which instead interprets "
-"the ``type`` and ``target`` strings as regular expressions. Note, that the "
-"regular expression must match the whole string (as if the ``^`` and ``$`` "
-"markers were inserted)."
-msgstr ""
-"இதன் நீட்டிக்கப்பட்ட பதிப்பு: confval: `nitpick_ignore`, இது` `வகை`` "
-"மற்றும்` `இலக்கு`` சரங்களை வழக்கமான வெளிப்பாடுகளாக விளக்குகிறது. குறிப்பு, "
-"வழக்கமான வெளிப்பாடு முழு சரத்தையும் பொருத்த வேண்டும் (``^`` மற்றும் `` $ `` "
-"குறிப்பான்கள் செருகப்பட்டதைப் போல)."
-
-#: ../../sphinx/doc/usage/configuration.rst:468
-msgid ""
-"For example, ``(r'py:.*', r'foo.*bar\\.B.*')`` will ignore nitpicky warnings"
-" for all python entities that start with ``'foo'`` and have ``'bar.B'`` in "
-"them, such as ``('py:const', 'foo_package.bar.BAZ_VALUE')`` or "
-"``('py:class', 'food.bar.Barman')``."
-msgstr ""
-"எடுத்துக்காட்டாக, `` (r'py:.*', R'foo.*Bar \\ .b. `` ('py: const', "
-"'foo_package.bar.baz_value') `` அல்லது `` ('py: class', 'food.bar.barman' "
-"``."
-
-#: ../../sphinx/doc/usage/configuration.rst:479
-msgid ""
-"If true, figures, tables and code-blocks are automatically numbered if they "
-"have a caption.  The :rst:role:`numref` role is enabled. Obeyed so far only "
-"by HTML and LaTeX builders. Default is ``False``."
-msgstr ""
-"உண்மை என்றால், புள்ளிவிவரங்கள், அட்டவணைகள் மற்றும் குறியீடு-தொகுதிகள் ஒரு "
-"தலைப்பு இருந்தால் தானாகவே எண்ணப்படும். தி: ஆர்எஸ்டி: பங்கு: `எண்ரெஃப்` பங்கு"
-" இயக்கப்பட்டது. இதுவரை HTML மற்றும் லேடெக்ஸ் பில்டர்களால் மட்டுமே "
-"கீழ்ப்படியது. இயல்புநிலை `` பொய்``."
-
-#: ../../sphinx/doc/usage/configuration.rst:485
-msgid ""
-"The LaTeX builder always assigns numbers whether this option is enabled or "
-"not."
-msgstr ""
-"இந்த விருப்பம் இயக்கப்பட்டதா இல்லையா என்பதை லேடெக்ஸ் பில்டர் எப்போதும் "
-"எண்களை ஒதுக்குகிறது."
-
-#: ../../sphinx/doc/usage/configuration.rst:492
-msgid ""
-"A dictionary mapping ``'figure'``, ``'table'``, ``'code-block'`` and "
-"``'section'`` to strings that are used for format of figure numbers. As a "
-"special character, ``%s`` will be replaced to figure number."
-msgstr ""
-"ஒரு அகராதி மேப்பிங் `` 'படம்'``, ``' அட்டவணை'``, `` 'குறியீடு-பிளாக்'````` "
-"``' பிரிவு படம் எண்களின் வடிவமைப்பிற்கு பயன்படுத்தப்படும் சரங்களுக்கு. ஒரு "
-"சிறப்பு எழுத்தாக, ``%s`` எண்ணிக்கை எண்ணுக்கு மாற்றப்படும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:496
-msgid ""
-"Default is to use ``'Fig. %s'`` for ``'figure'``, ``'Table %s'`` for "
-"``'table'``, ``'Listing %s'`` for ``'code-block'`` and ``'Section %s'`` for "
-"``'section'``."
-msgstr ""
-"இயல்புநிலை `` 'புள்ளிவிவரங்கள்'``, ``' அட்டவணைகள்'`` `'அட்டவணை'`,` `' "
-"பட்டியல்கள்'`` '' '' '' `` மற்றும் `` 'பிரிவு %s'`` ``' பிரிவு."
-
-#: ../../sphinx/doc/usage/configuration.rst:504
-msgid ""
-"if set to ``0``, figures, tables and code-blocks are continuously numbered "
-"starting at ``1``."
-msgstr ""
-"`` 0`` என அமைக்கப்பட்டால், புள்ளிவிவரங்கள், அட்டவணைகள் மற்றும் "
-"குறியீடு-தொகுதிகள் தொடர்ந்து `` 1`` இல் தொடங்கப்படுகின்றன."
-
-#: ../../sphinx/doc/usage/configuration.rst:506
-msgid ""
-"if ``1`` (default) numbers will be ``x.1``, ``x.2``, ... with ``x`` the "
-"section number (top level sectioning; no ``x.`` if no section). This "
-"naturally applies only if section numbering has been activated via the "
-"``:numbered:`` option of the :rst:dir:`toctree` directive."
-msgstr ""
-"`` 1`` (இயல்புநிலை) எண்கள் `` x.1``, `` x.2``, ... `` x`` பிரிவு எண் (உயர் "
-"நிலை பிரிவு; இல்லை `` x. `` பிரிவு இல்லை என்றால்). பிரிவு எண் ``: எண்ணற்ற: "
-"`` விருப்பம்: rst: dir: `toctree` உத்தரவு வழியாக செயல்படுத்தப்பட்டிருந்தால் "
-"மட்டுமே இது இயற்கையாகவே பொருந்தும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:510
-msgid ""
-"``2`` means that numbers will be ``x.y.1``, ``x.y.2``, ... if located in a "
-"sub-section (but still ``x.1``, ``x.2``, ... if located directly under a "
-"section and ``1``, ``2``, ... if not in any top level section.)"
-msgstr ""
-"`` 2`` என்றால், எண்கள் `` x.y.1``, `` x.y.2``, ஒரு துணைப்பிரிவில் "
-"அமைந்திருந்தால் (ஆனால் இன்னும் `` x.1``, `` x.2 ``, ... ஒரு பிரிவின் கீழ் "
-"நேரடியாக அமைந்தால் `` 1``, `` 2``, ... எந்த உயர் மட்டத்திலும் "
-"இல்லாவிட்டால்.)"
-
-#: ../../sphinx/doc/usage/configuration.rst:513
-msgid "etc..."
-msgstr "போன்றவை ..."
-
-#: ../../sphinx/doc/usage/configuration.rst:517
-msgid ""
-"The LaTeX builder obeys this setting (if :confval:`numfig` is set to "
-"``True``)."
-msgstr ""
-"லேடெக்ஸ் பில்டர் இந்த அமைப்பைக் கடைப்பிடிக்கிறார் (if: confval: `numfig`` "
-"`உண்மை`` என அமைக்கப்பட்டுள்ளது)."
-
-#: ../../sphinx/doc/usage/configuration.rst:523
-msgid ""
-"If true, the `Docutils Smart Quotes transform`__, originally based on "
-"`SmartyPants`__ (limited to English) and currently applying to many "
-"languages, will be used to convert quotes and dashes to typographically "
-"correct entities.  Default: ``True``."
-msgstr ""
-"உண்மை என்றால், `டாக்யூடில்ஸ் ஸ்மார்ட் மேற்கோள்கள் உருமாறும்`__, முதலில்` "
-"ஸ்மார்டிபாண்ட்கள்` (ஆங்கிலத்திற்கு வரையறுக்கப்பட்டவை) அடிப்படையாகக் கொண்டது "
-"மற்றும் தற்போது பல மொழிகளுக்கு விண்ணப்பிக்கும், மேற்கோள்கள் மற்றும் கோடுகளை "
-"அச்சுக்கலை ரீதியாக சரியான நிறுவனங்களாக மாற்ற பயன்படுத்தப்படும். இயல்புநிலை: "
-"`` உண்மை``."
-
-#: ../../sphinx/doc/usage/configuration.rst:531
-msgid ""
-"It replaces deprecated :confval:`html_use_smartypants`. It applies by "
-"default to all builders except ``man`` and ``text`` (see "
-":confval:`smartquotes_excludes`.)"
-msgstr ""
-"இது நீக்கப்பட்டதை மாற்றுகிறது: confval: `html_use_smartypants`. `` மனிதன்` "
-"மற்றும் `` உரை`` தவிர அனைத்து பில்டர்களுக்கும் இது இயல்புநிலையாக பொருந்தும் "
-"(பார்க்க: confval: `SmartQuotes_excludes`.)"
-
-#: ../../sphinx/doc/usage/configuration.rst:536
-msgid ""
-"A `docutils.conf`__ file located in the configuration directory (or a global"
-" :file:`~/.docutils` file) is obeyed unconditionally if it *deactivates* "
-"smart quotes via the corresponding `Docutils option`__.  But if it "
-"*activates* them, then :confval:`smartquotes` does prevail."
-msgstr ""
-"உள்ளமைவு கோப்பகத்தில் அமைந்துள்ள ஒரு `docutils.conf`__ கோப்பு (அல்லது "
-"உலகளாவிய: கோப்பு: கோப்பு:` ~/.docutils` கோப்பு) நிபந்தனையின்றி "
-"கீழ்ப்படிகிறது * ஸ்மார்ட் மேற்கோள்களை தொடர்புடைய `டொக்யூட்டில்ஸ் "
-"விருப்பம்`__ வழியாக செயலிழக்கச் செய்தால். ஆனால் அது * அவற்றை * "
-"செயல்படுத்தினால்,: confval: `ஸ்மார்ட் கியூட்ஸ்` மேலோங்குகிறது."
-
-#: ../../sphinx/doc/usage/configuration.rst:546
-msgid ""
-"This string customizes the Smart Quotes transform.  See the file "
-":file:`smartquotes.py` at the `Docutils repository`__ for details.  The "
-"default ``'qDe'`` educates normal **q**\\ uote characters ``\"``, ``'``, em-"
-" and en-**D**\\ ashes ``---``, ``--``, and **e**\\ llipses ``...``."
-msgstr ""
-"இந்த சரம் ஸ்மார்ட் மேற்கோள்கள் உருமாற்றத்தைத் தனிப்பயனாக்குகிறது. கோப்பைக் "
-"காண்க: கோப்பைக் காண்க: விவரங்களுக்கு `டாக்யூடில்ஸ் களஞ்சியத்தில்` ஸ்மார்ட் "
-"க்வோட்ஸ்.பை`. இயல்புநிலை `` 'qde'`` இயல்பான ** q ** \\ uote எழுத்துக்கள் `` "
-"`` `,` `'` `` `` ``-** டி ** \\ சாம்பல் `` --- `` `` `` `` `` `` ` , `` "
-"--``, மற்றும் ** e ** \\ llipses `` ... ``."
-
-#: ../../sphinx/doc/usage/configuration.rst:557
-msgid "This is a ``dict`` whose default is::"
-msgstr "இது ஒரு `` டிக்ட்`` அதன் இயல்புநிலை ::"
-
-#: ../../sphinx/doc/usage/configuration.rst:561
-msgid ""
-"Each entry gives a sufficient condition to ignore the :confval:`smartquotes`"
-" setting and deactivate the Smart Quotes transform. Accepted keys are as "
-"above ``'builders'`` or ``'languages'``. The values are lists."
-msgstr ""
-"ஒவ்வொரு நுழைவும் புறக்கணிக்க போதுமான நிபந்தனையை அளிக்கிறது: confval: "
-"`ஸ்மார்ட் கியூட்ஸ்` அமைப்பு மற்றும் ஸ்மார்ட் மேற்கோள்கள் உருமாற்றத்தை "
-"செயலிழக்கச் செய்யுங்கள். ஏற்றுக்கொள்ளப்பட்ட விசைகள் `` 'பில்டர்கள்'`` அல்லது"
-" `' 'மொழிகள்`` மேலே உள்ளன. மதிப்புகள் பட்டியல்கள்."
-
-#: ../../sphinx/doc/usage/configuration.rst:566
-msgid ""
-"Currently, in case of invocation of :program:`make` with multiple targets, "
-"the first target name is the only one which is tested against the "
-"``'builders'`` entry and it decides for all.  Also, a ``make text`` "
-"following ``make html`` needs to be issued in the form ``make text "
-"O=\"-E\"`` to force re-parsing of source files, as the cached ones are "
-"already transformed.  On the other hand the issue does not arise with direct"
-" usage of :program:`sphinx-build` as it caches (in its default usage) the "
-"parsed source files in per builder locations."
-msgstr ""
-"தற்போது. மேலும், ஒரு `` உரையை உருவாக்கவும் `` `செய்யுங்கள் html` "
-"மாற்றப்பட்டது. மறுபுறம், சிக்கல் நேரடி பயன்பாட்டுடன் எழவில்லை: நிரல்: "
-"`ஸ்பின்க்ஸ்-பில்ட்` அது தற்காலிகமாக (அதன் இயல்புநிலை பயன்பாட்டில்) ஒரு "
-"பில்டர் இடங்களில் பாகுபடுத்தப்பட்ட மூல கோப்புகளை தற்காலிகமாக சேமிக்கும்போது."
-
-#: ../../sphinx/doc/usage/configuration.rst:575
-msgid ""
-"An alternative way to effectively deactivate (or customize) the smart quotes"
-" for a given builder, for example ``latex``, is to use ``make`` this way:"
-msgstr ""
-"கொடுக்கப்பட்ட பில்டருக்கான ஸ்மார்ட் மேற்கோள்களை திறம்பட செயலிழக்கச் "
-"செய்வதற்கான (அல்லது தனிப்பயனாக்க) ஒரு மாற்று வழி, எடுத்துக்காட்டாக `` "
-"லேடெக்ஸ்``, `` செய்யுங்கள்` இந்த வழியில் பயன்படுத்த வேண்டும்:"
-
-#: ../../sphinx/doc/usage/configuration.rst:583
-msgid ""
-"This can follow some ``make html`` with no problem, in contrast to the "
-"situation from the prior note."
-msgstr ""
-"இது முந்தைய குறிப்பிலிருந்து நிலைமைக்கு மாறாக, எந்த பிரச்சனையும் இல்லாமல் "
-"சில `` html` `ஐ உருவாக்கலாம்."
-
-#: ../../sphinx/doc/usage/configuration.rst:590
-msgid ""
-"A User-Agent of Sphinx.  It is used for a header on HTTP access (ex. "
-"linkcheck, intersphinx and so on).  Default is ``\"Sphinx/X.Y.Z "
-"requests/X.Y.Z python/X.Y.Z\"``."
-msgstr ""
-"ஸ்பிங்கின் பயனர் முகவர். இது HTTP அணுகல் (எ.கா. லிங்க்செக், இன்டர்ஸ்பின்க்ஸ்"
-" மற்றும் பலவற்றில்) ஒரு தலைப்புக்கு பயன்படுத்தப்படுகிறது. இயல்புநிலை `` "
-"\"Sphinx/x.y.z கோரிக்கைகள்/x.y.z பைதான்/x.y.z\" ``."
-
-#: ../../sphinx/doc/usage/configuration.rst:598
-msgid "If true, Sphinx verifies server certifications.  Default is ``True``."
-msgstr ""
-"உண்மை என்றால், SPHINX சேவையக சான்றிதழ்களை சரிபார்க்கிறது. இயல்புநிலை `` "
-"உண்மை``."
-
-#: ../../sphinx/doc/usage/configuration.rst:604
-msgid ""
-"A path to a certification file of CA or a path to directory which contains "
-"the certificates.  This also allows a dictionary mapping hostname to the "
-"path to certificate file. The certificates are used to verify server "
-"certifications."
-msgstr ""
-"CA இன் சான்றிதழ் கோப்பிற்கான பாதை அல்லது சான்றிதழ்களைக் கொண்ட "
-"கோப்பகத்திற்கான பாதை. இது ஒரு அகராதி மேப்பிங் ஹோஸ்ட்பெயரை சான்றிதழ் "
-"கோப்புக்கான பாதைக்கு அனுமதிக்கிறது. சேவையக சான்றிதழ்களை சரிபார்க்க "
-"சான்றிதழ்கள் பயன்படுத்தப்படுகின்றன."
-
-#: ../../sphinx/doc/usage/configuration.rst:611
-msgid ""
-"Sphinx uses requests_ as a HTTP library internally. Therefore, Sphinx refers"
-" a certification file on the directory pointed ``REQUESTS_CA_BUNDLE`` "
-"environment variable if ``tls_cacerts`` not set."
-msgstr ""
-"ஸ்பிங்க்ஸ் கோரிக்கைகள்_ ஐ உள்நாட்டில் ஒரு HTTP நூலகமாகப் பயன்படுத்துகிறது. "
-"ஆகையால், `` tls_cacerts`` அமைக்கப்படாவிட்டால் `` requests_ca_bundle`` "
-"சுற்றுச்சூழல் மாறியில் சுட்டிக்காட்டப்பட்ட கோப்பகத்தில் ஒரு சான்றிதழ் கோப்பை"
-" SPHINX குறிக்கிறது."
-
-#: ../../sphinx/doc/usage/configuration.rst:621
-msgid ""
-"These values determine how to format the current date, used as the "
-"replacement for ``|today|``."
-msgstr ""
-"இந்த மதிப்புகள் தற்போதைய தேதியை எவ்வாறு வடிவமைப்பது என்பதை தீர்மானிக்கிறது, "
-"இது `` | இன்று | `` க்கு மாற்றாக பயன்படுத்தப்படுகிறது."
-
-#: ../../sphinx/doc/usage/configuration.rst:624
-msgid "If you set :confval:`today` to a non-empty value, it is used."
-msgstr ""
-"நீங்கள் அமைத்தால்: confval: `இன்று` காலியாக இல்லாத மதிப்புக்கு, அது "
-"பயன்படுத்தப்படுகிறது."
-
-#: ../../sphinx/doc/usage/configuration.rst:625
-msgid ""
-"Otherwise, the current time is formatted using :func:`time.strftime` and the"
-" format given in :confval:`today_fmt`."
-msgstr ""
-"இல்லையெனில், தற்போதைய நேரம் பயன்படுத்தி வடிவமைக்கப்பட்டுள்ளது: func: "
-"`time.strftime` மற்றும் கொடுக்கப்பட்ட வடிவம்: confval:` today_fmt`."
-
-#: ../../sphinx/doc/usage/configuration.rst:628
-msgid ""
-"The default is now :confval:`today` and a :confval:`today_fmt` of ``'%b %d, "
-"%Y'`` (or, if translation is enabled with :confval:`language`, an equivalent"
-" format for the selected locale)."
-msgstr ""
-"இயல்புநிலை இப்போது: confval: `இன்று` மற்றும் ஒரு: கான்ஃப்வால்:` `' %b %d, "
-"%y'`` (அல்லது, மொழிபெயர்ப்பு இயக்கப்பட்டிருந்தால்: confval:` மொழி`, சமமான "
-"வடிவம் தேர்ந்தெடுக்கப்பட்ட இடத்திற்கு)."
-
-#: ../../sphinx/doc/usage/configuration.rst:634
-msgid ""
-"The default language to highlight source code in.  The default is "
-"``'default'``.  It is similar to ``'python3'``; it is mostly a superset of "
-"``'python'`` but it fallbacks to ``'none'`` without warning if failed. "
-"``'python3'`` and other languages will emit warning if failed."
-msgstr ""
-"மூலக் குறியீட்டை முன்னிலைப்படுத்த இயல்புநிலை மொழி. இயல்புநிலை `` "
-"'இயல்புநிலை'``. இது `` 'பைதான் 3'`` க்கு ஒத்ததாகும்; இது பெரும்பாலும் `` "
-"'பைதான்'` இன் சூப்பர்செட் ஆகும், ஆனால் அது தோல்வியுற்றால் எச்சரிக்கையின்றி "
-"``' எதுவுமில்லை '. `` 'பைதான் 3'`` மற்றும் பிற மொழிகள் தோல்வியுற்றால் "
-"எச்சரிக்கையை வெளியிடும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:639
-msgid ""
-"The value should be a valid Pygments lexer name, see :ref:`code-examples` "
-"for more details."
-msgstr ""
-"மதிப்பு செல்லுபடியாகும் பைக்மென்ட் லெக்ஸர் பெயராக இருக்க வேண்டும், காண்க: "
-"குறிப்பு: மேலும் விவரங்களுக்கு `கோட்-எக்ஸாம்பிள்ஸ்`."
-
-#: ../../sphinx/doc/usage/configuration.rst:644
-msgid ""
-"The default is now ``'default'``.  If you prefer Python 2 only highlighting,"
-" you can set it back to ``'python'``."
-msgstr ""
-"இயல்புநிலை இப்போது `` 'இயல்புநிலை'``. நீங்கள் பைதான் 2 ஐ முன்னிலைப்படுத்த "
-"விரும்பினால், அதை மீண்டும் `` 'பைதான்'`` க்கு அமைக்கலாம்."
-
-#: ../../sphinx/doc/usage/configuration.rst:650
-msgid ""
-"A dictionary that maps language names to options for the lexer modules of "
-"Pygments.  These are lexer-specific; for the options understood by each, see"
-" the `Pygments documentation <https://pygments.org/docs/lexers>`_."
-msgstr ""
-"பிக்மென்ட்களின் லெக்ஸர் தொகுதிகளுக்கான விருப்பங்களுக்கு மொழி பெயர்களை "
-"வரைபடமாக்கும் அகராதி. இவை லெக்ஸர்-குறிப்பிட்டவை; ஒவ்வொருவரும் "
-"புரிந்துகொள்ளும் விருப்பங்களுக்கு, `பைக்மென்ட் ஆவணங்கள் "
-"<https://pygments.org/docs/lexers>` _ ஐப் பார்க்கவும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:654
-#: ../../sphinx/doc/usage/configuration.rst:1174
-#: ../../sphinx/doc/usage/configuration.rst:1197
-#: ../../sphinx/doc/usage/configuration.rst:1332
-#: ../../sphinx/doc/usage/configuration.rst:1355
-#: ../../sphinx/doc/usage/configuration.rst:2879
-#: ../../sphinx/doc/usage/configuration.rst:2911
-msgid "Example::"
-msgstr "உதாரணமாக::"
-
-#: ../../sphinx/doc/usage/configuration.rst:661
-msgid ""
-"A single dictionary of options are also allowed.  Then it is recognized as "
-"options to the lexer specified by :confval:`highlight_language`::"
-msgstr ""
-"விருப்பங்களின் ஒற்றை அகராதியும் அனுமதிக்கப்படுகிறது. பின்னர் குறிப்பிடப்பட்ட"
-" லெக்ஸருக்கான விருப்பங்களாக இது அங்கீகரிக்கப்பட்டுள்ளது: confval: "
-"`filation_language` ::"
-
-#: ../../sphinx/doc/usage/configuration.rst:670
-msgid "Allow to configure highlight options for multiple languages"
-msgstr "பல மொழிகளுக்கான சிறப்பம்சமாக விருப்பங்களை உள்ளமைக்க அனுமதிக்கவும்"
-
-#: ../../sphinx/doc/usage/configuration.rst:674
-msgid ""
-"The style name to use for Pygments highlighting of source code.  If not set,"
-" either the theme's default style or ``'sphinx'`` is selected for HTML "
-"output."
-msgstr ""
-"மூலக் குறியீட்டை முன்னிலைப்படுத்த பைக்மென்ட்ஸ் பயன்படுத்த பாணி பெயர். "
-"அமைக்கப்படாவிட்டால், தீம் இயல்புநிலை பாணி அல்லது `` 'ஸ்பின்எக்ஸ்'`` HTML "
-"வெளியீட்டிற்கு தேர்ந்தெடுக்கப்படுகிறது."
-
-#: ../../sphinx/doc/usage/configuration.rst:678
-msgid ""
-"If the value is a fully-qualified name of a custom Pygments style class, "
-"this is then used as custom style."
-msgstr ""
-"மதிப்பு தனிப்பயன் பைக்மென்ட் ஸ்டைல் வகுப்பின் முழுமையான தகுதி வாய்ந்த பெயராக"
-" இருந்தால், இது தனிப்பயன் பாணியாகப் பயன்படுத்தப்படுகிறது."
-
-#: ../../sphinx/doc/usage/configuration.rst:684
-msgid ""
-"If a signature's length in characters exceeds the number set, each parameter"
-" within the signature will be displayed on an individual logical line."
-msgstr ""
-"எழுத்துக்களில் கையொப்பத்தின் நீளம் எண் தொகுப்பை மீறினால், கையொப்பத்திற்குள் "
-"உள்ள ஒவ்வொரு அளவுருவும் ஒரு தனிப்பட்ட தருக்க வரியில் காண்பிக்கப்படும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:688
-msgid ""
-"When ``None`` (the default), there is no maximum length and the entire "
-"signature will be displayed on a single logical line."
-msgstr ""
-"`` எதுவுமில்லை`` (இயல்புநிலை), அதிகபட்ச நீளம் இல்லை மற்றும் முழு கையொப்பமும்"
-" ஒரு தருக்க வரியில் காண்பிக்கப்படும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:691
-msgid ""
-"A 'logical line' is similar to a hard line break---builders or themes may "
-"choose to 'soft wrap' a single logical line, and this setting does not "
-"affect that behaviour."
-msgstr ""
-"ஒரு 'தருக்க வரி' ஒரு கடினமான வரி இடைவெளிக்கு ஒத்ததாகும் --- பில்டர்கள் "
-"அல்லது கருப்பொருள்கள் ஒரு தர்க்கரீதியான வரியை 'மென்மையான மடக்கு' தேர்வு "
-"செய்யலாம், மேலும் இந்த அமைப்பு அந்த நடத்தையை பாதிக்காது."
-
-#: ../../sphinx/doc/usage/configuration.rst:695
-msgid ""
-"Domains may provide options to suppress any hard wrapping on an individual "
-"object directive, such as seen in the C, C++, and Python domains (e.g. "
-":rst:dir:`py:function:single-line-parameter-list`)."
-msgstr ""
-"சி, சி ++ மற்றும் பைதான் களங்களில் (எ.கா.: rst: dir: `py: செயல்பாடு: ஒற்றை "
-"வரி-அளவுரு-பட்டியல்`) போன்ற ஒரு தனிப்பட்ட பொருள் உத்தரவில் எந்தவொரு கடினமான "
-"மடக்கையும் அடக்குவதற்கான விருப்பங்களை களங்கள் வழங்கக்கூடும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:703
-msgid ""
-"A boolean that decides whether parentheses are appended to function and "
-"method role text (e.g. the content of ``:func:`input```) to signify that the"
-" name is callable.  Default is ``True``."
-msgstr ""
-"பெயர் அழைக்கக்கூடியது என்பதைக் குறிக்கும் வகையில், அடைப்புக்குறிக்குள் "
-"செயல்பாடு மற்றும் முறை பங்கு உரைக்கு (எ.கா.: FUNC: `உள்ளீடு``` இன் "
-"உள்ளடக்கம்) சேர்க்கப்பட்டுள்ளதா என்பதை தீர்மானிக்கும் ஒரு பூலியன். "
-"இயல்புநிலை `` உண்மை``."
-
-#: ../../sphinx/doc/usage/configuration.rst:709
-msgid ""
-"A boolean that decides whether module names are prepended to all "
-":term:`object` names (for object types where a \"module\" of some kind is "
-"defined), e.g. for :rst:dir:`py:function` directives.  Default is ``True``."
-msgstr ""
-"அனைவருக்கும் தொகுதி பெயர்கள் தயாரிக்கப்படுகின்றனவா என்பதை தீர்மானிக்கும் ஒரு"
-" பூலியன்: சொல்: `பொருள்` பெயர்கள் (பொருள் வகைகளுக்கு, சில வகையான\" தொகுதி "
-"\"வரையறுக்கப்பட்டுள்ள இடத்தில்), எ.கா. க்கு: rst: dir: `py: செயல்பாடு` "
-"வழிமுறைகள். இயல்புநிலை `` உண்மை``."
-
-#: ../../sphinx/doc/usage/configuration.rst:715
-msgid ""
-"Create table of contents entries for domain objects (e.g. functions, "
-"classes, attributes, etc.). Default is ``True``."
-msgstr ""
-"டொமைன் பொருள்களுக்கான உள்ளடக்க உள்ளீடுகளின் அட்டவணையை உருவாக்கவும் (எ.கா. "
-"செயல்பாடுகள், வகுப்புகள், பண்புக்கூறுகள் போன்றவை). இயல்புநிலை `` உண்மை``."
-
-#: ../../sphinx/doc/usage/configuration.rst:720
-msgid ""
-"A string that determines how domain objects (e.g. functions, classes, "
-"attributes, etc.) are displayed in their table of contents entry."
-msgstr ""
-"டொமைன் பொருள்கள் (எ.கா. செயல்பாடுகள், வகுப்புகள், பண்புக்கூறுகள் போன்றவை) "
-"அவற்றின் உள்ளடக்க அட்டவணையில் எவ்வாறு காட்டப்படுகின்றன என்பதை தீர்மானிக்கும்"
-" ஒரு சரம்."
-
-#: ../../sphinx/doc/usage/configuration.rst:723
-msgid ""
-"Use ``domain`` to allow the domain to determine the appropriate number of "
-"parents to show. For example, the Python domain would show "
-"``Class.method()`` and ``function()``, leaving out the ``module.`` level of "
-"parents. This is the default setting."
-msgstr ""
-"காட்டுவதற்கு பொருத்தமான எண்ணிக்கையை தீர்மானிக்க டொமைனை அனுமதிக்க `` டொமைன்``"
-" ஐப் பயன்படுத்தவும். எடுத்துக்காட்டாக, பைதான் டொமைன் `` வகுப்பு. இது "
-"இயல்புநிலை அமைப்பு."
-
-#: ../../sphinx/doc/usage/configuration.rst:728
-msgid ""
-"Use ``hide`` to only show the name of the element without any parents (i.e. "
-"``method()``)."
-msgstr ""
-"எந்தவொரு பெற்றோர்களும் இல்லாமல் உறுப்பின் பெயரைக் காட்ட `` மறை`` ஐப் "
-"பயன்படுத்தவும் (அதாவது `` முறை () ``)."
-
-#: ../../sphinx/doc/usage/configuration.rst:731
-msgid ""
-"Use ``all`` to show the fully-qualified name for the object (i.e. "
-"``module.Class.method()``),  displaying all parents."
-msgstr ""
-"அனைத்து பெற்றோர்களையும் காண்பிக்கும் பொருளுக்கு (அதாவது `` "
-"module.class.method () ``) முழுமையாக தகுதி வாய்ந்த பெயரைக் காட்ட `` "
-"அனைத்தையும்`` பயன்படுத்தவும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:738
-msgid ""
-"A boolean that decides whether :rst:dir:`codeauthor` and "
-":rst:dir:`sectionauthor` directives produce any output in the built files."
-msgstr ""
-": Rst: dir: `codeauthor` மற்றும்: rst: dir:` பிரிவு வழக்கறிஞர்` கட்டளைகள் "
-"கட்டப்பட்ட கோப்புகளில் எந்த வெளியீட்டையும் உருவாக்குகின்றன என்பதை "
-"தீர்மானிக்கும் ஒரு பூலியன்."
-
-#: ../../sphinx/doc/usage/configuration.rst:743
-msgid ""
-"A list of prefixes that are ignored for sorting the Python module index "
-"(e.g., if this is set to ``['foo.']``, then ``foo.bar`` is shown under "
-"``B``, not ``F``). This can be handy if you document a project that consists"
-" of a single package.  Works only for the HTML builder currently.  Default "
-"is ``[]``."
-msgstr ""
-"பைதான் தொகுதி குறியீட்டை வரிசைப்படுத்துவதற்கு புறக்கணிக்கப்பட்ட "
-"முன்னொட்டுகளின் பட்டியல் (எ.கா., இது `` ['foo.'] ``, பின்னர் `` foo.bar`` "
-"இன் கீழ் காட்டப்பட்டுள்ளது `` F``). ஒற்றை தொகுப்பைக் கொண்ட ஒரு திட்டத்தை "
-"நீங்கள் ஆவணப்படுத்தினால் இது எளிது. தற்போது HTML பில்டருக்கு மட்டுமே வேலை "
-"செய்கிறது. இயல்புநிலை `` [] ``."
-
-#: ../../sphinx/doc/usage/configuration.rst:753
-msgid ""
-"Trim spaces before footnote references that are necessary for the reST "
-"parser to recognize the footnote, but do not look too nice in the output."
-msgstr ""
-"அடிக்குறிப்புக்கு முன் இடங்களை ஒழுங்கமைக்கவும், மீதமுள்ள பாகுபடுத்தி "
-"அடிக்குறிப்பை அடையாளம் காண அவசியமானவை, ஆனால் வெளியீட்டில் மிகவும் அழகாக "
-"இல்லை."
-
-#: ../../sphinx/doc/usage/configuration.rst:760
-msgid ""
-"If true, doctest flags (comments looking like ``# doctest: FLAG, ...``) at "
-"the ends of lines and ``<BLANKLINE>`` markers are removed for all code "
-"blocks showing interactive Python sessions (i.e. doctests).  Default is "
-"``True``.  See the extension :mod:`~sphinx.ext.doctest` for more "
-"possibilities of including doctests."
-msgstr ""
-"உண்மை என்றால், டாக் டாக் கொடிகள் (கருத்துக்கள் ``# ஆவணத்தைப் போன்றவை: கொடி, "
-"... ``) வரிகளின் முனைகளில் மற்றும் `` <mangline> `` குறிப்பான்கள் ஊடாடும் "
-"பைதான் அமர்வுகளைக் காட்டும் அனைத்து குறியீடு தொகுதிகளுக்கும் "
-"அகற்றப்படுகின்றன (அதாவது ஆவணங்கள்) . இயல்புநிலை `` உண்மை``. நீட்டிப்பைக் "
-"காண்க: மோட்: `~ sphinx.ext.doctast` ஆவணங்களைச் சேர்ப்பதற்கான கூடுதல் "
-"சாத்தியக்கூறுகளுக்கு."
-
-#: ../../sphinx/doc/usage/configuration.rst:767
-msgid "Now also removes ``<BLANKLINE>``."
-msgstr "இப்போது `` <slankline> `` ஐயும் நீக்குகிறது."
-
-#: ../../sphinx/doc/usage/configuration.rst:772
-msgid ""
-"Default is ``False``. When backslash stripping is enabled then every "
-"occurrence of ``\\\\`` in a domain directive will be changed to ``\\``, even"
-" within string literals. This was the behaviour before version 3.0, and "
-"setting this variable to ``True`` will reinstate that behaviour."
-msgstr ""
-"இயல்புநிலை `` பொய்``. பின்சாய்வுக்கோடானது இயக்கப்பட்டால், ஒரு டொமைன் "
-"உத்தரவில் `` \\\\ `` `` `` `` `` ``, சரம் எழுத்துக்களுக்குள் கூட "
-"மாற்றப்படும். இது பதிப்பு 3.0 க்கு முந்தைய நடத்தை, மேலும் இந்த மாறியை `` "
-"உண்மை`` என அமைப்பது அந்த நடத்தையை மீண்டும் நிலைநிறுத்தும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:782
-msgid ""
-"Default is ``False``. When enabled, emphasise placeholders in "
-":rst:dir:`option` directives. To display literal braces, escape with a "
-"backslash (``\\{``). For example, ``option_emphasise_placeholders=True`` and"
-" ``.. option:: -foption={TYPE}`` would render with ``TYPE`` emphasised."
-msgstr ""
-"இயல்புநிலை `` பொய்``. இயக்கப்பட்டால், இடம் வைத்திருப்பவர்களை "
-"வலியுறுத்துங்கள்: rst: dir: `விருப்பம்` வழிமுறைகள். நேரடி பிரேஸ்களைக் "
-"காண்பிக்க, பின்சாய்வுக்கோடான (`` \\ {``) தப்பிக்க. எடுத்துக்காட்டாக, `` "
-"option_emphasise_placeholders = true`` மற்றும் `` .. விருப்பம் :: -foption ="
-" {type} `` வலியுறுத்தப்பட்ட `` வகை`` உடன் வழங்கப்படும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:793
-msgid "Options for internationalization"
-msgstr "சர்வதேசமயமாக்கலுக்கான விருப்பங்கள்"
-
-#: ../../sphinx/doc/usage/configuration.rst:795
-msgid ""
-"These options influence Sphinx's *Native Language Support*.  See the "
-"documentation on :ref:`intl` for details."
-msgstr ""
-"இந்த விருப்பங்கள் ஸ்பின்க்ஸின் *சொந்த மொழி ஆதரவை *பாதிக்கின்றன. "
-"விவரங்களுக்கு ஆவணங்களை காண்க: ref: `intl`."
-
-#: ../../sphinx/doc/usage/configuration.rst:800
-msgid ""
-"The code for the language the docs are written in.  Any text automatically "
-"generated by Sphinx will be in that language.  Also, Sphinx will try to "
-"substitute individual paragraphs from your documents with the translation "
-"sets obtained from :confval:`locale_dirs`.  Sphinx will search language-"
-"specific figures named by :confval:`figure_language_filename` (e.g. the "
-"German version of ``myfigure.png`` will be ``myfigure.de.png`` by default "
-"setting) and substitute them for original figures.  In the LaTeX builder, a "
-"suitable language will be selected as an option for the *Babel* package.  "
-"Default is ``'en'``."
-msgstr ""
-"டாக்ஸ் எழுதப்பட்ட மொழிக்கான குறியீடு. ஸ்பிங்க்ஸால் தானாக உருவாக்கப்படும் "
-"எந்த உரையும் அந்த மொழியில் இருக்கும். மேலும், SPHINX உங்கள் ஆவணங்களிலிருந்து"
-" தனிப்பட்ட பத்திகளை மொழிபெயர்ப்பு தொகுப்புகளுடன் மாற்ற முயற்சிக்கும்: "
-"confval: `locale_dirs`. ஸ்பின்க்ஸ் பெயரிடப்பட்ட மொழி-குறிப்பிட்ட "
-"புள்ளிவிவரங்களைத் தேடும்: confval: `Figure_language_filename` (எ.கா.` "
-"`myfigure.png`` ஜெர்மன் பதிப்பு` `myfigure.d.png``` இயல்புநிலை அமைப்பால்) "
-"மற்றும் அசல் புள்ளிவிவரங்களுக்கு மாற்றாக இருக்கும். லேடெக்ஸ் பில்டரில், * "
-"பாபல் * தொகுப்புக்கான விருப்பமாக பொருத்தமான மொழி தேர்ந்தெடுக்கப்படும். "
-"இயல்புநிலை `` 'en'``."
-
-#: ../../sphinx/doc/usage/configuration.rst:814
-msgid "Support figure substitution"
-msgstr "ஆதரவு எண்ணிக்கை மாற்றீடு"
-
-#: ../../sphinx/doc/usage/configuration.rst:818
-msgid "Currently supported languages by Sphinx are:"
-msgstr "SPHINX ஆல் தற்போது ஆதரிக்கப்படும் மொழிகள்:"
-
-#: ../../sphinx/doc/usage/configuration.rst:820
-msgid "``ar`` -- Arabic"
-msgstr "`` ar`` - அரபு"
-
-#: ../../sphinx/doc/usage/configuration.rst:821
-msgid "``bg`` -- Bulgarian"
-msgstr "`` பி.ஜி`` - பல்கேரிய"
-
-#: ../../sphinx/doc/usage/configuration.rst:822
-msgid "``bn`` -- Bengali"
-msgstr "`` பி.என்`` - பெங்காலி"
-
-#: ../../sphinx/doc/usage/configuration.rst:823
-msgid "``ca`` -- Catalan"
-msgstr "`` ca`` - கற்றலான்"
-
-#: ../../sphinx/doc/usage/configuration.rst:824
-msgid "``cak`` -- Kaqchikel"
-msgstr "`` காக்`` - கச்சிகெல்"
-
-#: ../../sphinx/doc/usage/configuration.rst:825
-msgid "``cs`` -- Czech"
-msgstr "`` cs`` - செக்"
-
-#: ../../sphinx/doc/usage/configuration.rst:826
-msgid "``cy`` -- Welsh"
-msgstr "`` சை`` - வெல்ஷ்"
-
-#: ../../sphinx/doc/usage/configuration.rst:827
-#: ../../sphinx/doc/usage/configuration.rst:1486
-msgid "``da`` -- Danish"
-msgstr "`` டா`` - டேனிஷ்"
-
-#: ../../sphinx/doc/usage/configuration.rst:828
-#: ../../sphinx/doc/usage/configuration.rst:1491
-msgid "``de`` -- German"
-msgstr "`` டி`` - ஜெர்மன்"
-
-#: ../../sphinx/doc/usage/configuration.rst:829
-msgid "``el`` -- Greek"
-msgstr "`` எல்`` - கிரேக்கம்"
-
-#: ../../sphinx/doc/usage/configuration.rst:830
-msgid "``en`` -- English (default)"
-msgstr "`` en`` - ஆங்கிலம் (இயல்புநிலை)"
-
-#: ../../sphinx/doc/usage/configuration.rst:831
-msgid "``eo`` -- Esperanto"
-msgstr "`` eo`` - எஸ்பெராண்டோ"
-
-#: ../../sphinx/doc/usage/configuration.rst:832
-#: ../../sphinx/doc/usage/configuration.rst:1499
-msgid "``es`` -- Spanish"
-msgstr "`` எஸ்`` - ஸ்பானிஷ்"
-
-#: ../../sphinx/doc/usage/configuration.rst:833
-msgid "``et`` -- Estonian"
-msgstr "`` et`` - எஸ்டோனியன்"
-
-#: ../../sphinx/doc/usage/configuration.rst:834
-msgid "``eu`` -- Basque"
-msgstr "`` eu`` - பாஸ்க்"
-
-#: ../../sphinx/doc/usage/configuration.rst:835
-msgid "``fa`` -- Iranian"
-msgstr "`` fa`` - ஈரானிய"
-
-#: ../../sphinx/doc/usage/configuration.rst:836
-#: ../../sphinx/doc/usage/configuration.rst:1489
-msgid "``fi`` -- Finnish"
-msgstr "`` fi`` - பின்னிஷ்"
-
-#: ../../sphinx/doc/usage/configuration.rst:837
-#: ../../sphinx/doc/usage/configuration.rst:1490
-msgid "``fr`` -- French"
-msgstr "`` fr`` - பிரஞ்சு"
-
-#: ../../sphinx/doc/usage/configuration.rst:838
-msgid "``he`` -- Hebrew"
-msgstr "`` அவர்`` - எபிரேய"
-
-#: ../../sphinx/doc/usage/configuration.rst:839
-msgid "``hi`` -- Hindi"
-msgstr "`` ஹாய்`` - இந்தி"
-
-#: ../../sphinx/doc/usage/configuration.rst:840
-msgid "``hi_IN`` -- Hindi (India)"
-msgstr "`` hi_in`` - இந்தி (இந்தியா)"
-
-#: ../../sphinx/doc/usage/configuration.rst:841
-msgid "``hr`` -- Croatian"
-msgstr "`` hr`` - குரோஷிய"
-
-#: ../../sphinx/doc/usage/configuration.rst:842
-#: ../../sphinx/doc/usage/configuration.rst:1492
-msgid "``hu`` -- Hungarian"
-msgstr "`` ஹு`` - ஹங்கேரிய"
-
-#: ../../sphinx/doc/usage/configuration.rst:843
-msgid "``id`` -- Indonesian"
-msgstr "`` ஐடி`` - இந்தோனேசிய"
-
-#: ../../sphinx/doc/usage/configuration.rst:844
-#: ../../sphinx/doc/usage/configuration.rst:1493
-msgid "``it`` -- Italian"
-msgstr "`` இது`` - இத்தாலியன்"
-
-#: ../../sphinx/doc/usage/configuration.rst:845
-#: ../../sphinx/doc/usage/configuration.rst:1494
-msgid "``ja`` -- Japanese"
-msgstr "`` ஜா`` - ஜப்பானிய"
-
-#: ../../sphinx/doc/usage/configuration.rst:846
-msgid "``ko`` -- Korean"
-msgstr "`` கோ`` - கொரிய"
-
-#: ../../sphinx/doc/usage/configuration.rst:847
-msgid "``lt`` -- Lithuanian"
-msgstr "`` lt`` - லிதுவேனியன்"
-
-#: ../../sphinx/doc/usage/configuration.rst:848
-msgid "``lv`` -- Latvian"
-msgstr "`` lv`` - லாட்வியன்"
-
-#: ../../sphinx/doc/usage/configuration.rst:849
-msgid "``mk`` -- Macedonian"
-msgstr "`` mk`` - மாசிடோனியன்"
-
-#: ../../sphinx/doc/usage/configuration.rst:850
-msgid "``nb_NO`` -- Norwegian Bokmal"
-msgstr "`` nb_no`` - நோர்வே போக்மால்"
-
-#: ../../sphinx/doc/usage/configuration.rst:851
-msgid "``ne`` -- Nepali"
-msgstr "`` ne`` - நேபாளி"
-
-#: ../../sphinx/doc/usage/configuration.rst:852
-#: ../../sphinx/doc/usage/configuration.rst:1487
-msgid "``nl`` -- Dutch"
-msgstr "`` nl`` - டச்சு"
-
-#: ../../sphinx/doc/usage/configuration.rst:853
-msgid "``pl`` -- Polish"
-msgstr "`` pl`` - போலந்து"
-
-#: ../../sphinx/doc/usage/configuration.rst:854
-#: ../../sphinx/doc/usage/configuration.rst:1496
-msgid "``pt`` -- Portuguese"
-msgstr "`` pt`` - போர்த்துகீசியம்"
-
-#: ../../sphinx/doc/usage/configuration.rst:855
-msgid "``pt_BR`` -- Brazilian Portuguese"
-msgstr "`` pt_br`` - பிரேசிலிய போர்த்துகீசியம்"
-
-#: ../../sphinx/doc/usage/configuration.rst:856
-msgid "``pt_PT`` -- European Portuguese"
-msgstr "`` pt_pt`` - ஐரோப்பிய போர்த்துகீசியம்"
-
-#: ../../sphinx/doc/usage/configuration.rst:857
-#: ../../sphinx/doc/usage/configuration.rst:1497
-msgid "``ro`` -- Romanian"
-msgstr "`` ரோ`` - ருமேனிய"
-
-#: ../../sphinx/doc/usage/configuration.rst:858
-#: ../../sphinx/doc/usage/configuration.rst:1498
-msgid "``ru`` -- Russian"
-msgstr "`` ru`` - ரஷ்யன்"
-
-#: ../../sphinx/doc/usage/configuration.rst:859
-msgid "``si`` -- Sinhala"
-msgstr "`` si`` - சிங்களம்"
-
-#: ../../sphinx/doc/usage/configuration.rst:860
-msgid "``sk`` -- Slovak"
-msgstr "`` எஸ்.கே`` - ஸ்லோவாக்"
-
-#: ../../sphinx/doc/usage/configuration.rst:861
-msgid "``sl`` -- Slovenian"
-msgstr "`` sl`` - ஸ்லோவேனியன்"
-
-#: ../../sphinx/doc/usage/configuration.rst:862
-msgid "``sq`` -- Albanian"
-msgstr "`` sq`` - அல்பேனிய"
-
-#: ../../sphinx/doc/usage/configuration.rst:863
-msgid "``sr`` -- Serbian"
-msgstr "`` sr`` - செர்பியன்"
-
-#: ../../sphinx/doc/usage/configuration.rst:864
-msgid "``sr@latin`` -- Serbian (Latin)"
-msgstr "`` எஸ்ஆர்@லத்தீன்`` - செர்பியன் (லத்தீன்)"
-
-#: ../../sphinx/doc/usage/configuration.rst:865
-msgid "``sr_RS`` -- Serbian (Cyrillic)"
-msgstr "`` sr_rs`` - செர்பியன் (சிரிலிக்)"
-
-#: ../../sphinx/doc/usage/configuration.rst:866
-#: ../../sphinx/doc/usage/configuration.rst:1500
-msgid "``sv`` -- Swedish"
-msgstr "`` எஸ்.வி`` - ஸ்வீடிஷ்"
-
-#: ../../sphinx/doc/usage/configuration.rst:867
-msgid "``ta`` -- Tamil"
-msgstr "`` ta`` - தமிழ்"
-
-#: ../../sphinx/doc/usage/configuration.rst:868
-msgid "``te`` -- Telugu"
-msgstr "`` தே`` - தெலுங்கு"
-
-#: ../../sphinx/doc/usage/configuration.rst:869
-#: ../../sphinx/doc/usage/configuration.rst:1501
-msgid "``tr`` -- Turkish"
-msgstr "`` tr`` - துருக்கிய"
-
-#: ../../sphinx/doc/usage/configuration.rst:870
-msgid "``uk_UA`` -- Ukrainian"
-msgstr "`` UK_UA`` - உக்ரேனிய"
-
-#: ../../sphinx/doc/usage/configuration.rst:871
-msgid "``ur`` -- Urdu"
-msgstr "`` உர்`` - உருது"
-
-#: ../../sphinx/doc/usage/configuration.rst:872
-msgid "``vi`` -- Vietnamese"
-msgstr "`` vi`` - வியட்நாமிய"
-
-#: ../../sphinx/doc/usage/configuration.rst:873
-msgid "``zh_CN`` -- Simplified Chinese"
-msgstr "`` zh_cn`` - எளிமைப்படுத்தப்பட்ட சீன"
-
-#: ../../sphinx/doc/usage/configuration.rst:874
-msgid "``zh_TW`` -- Traditional Chinese"
-msgstr "`` zh_tw`` - பாரம்பரிய சீன"
-
-#: ../../sphinx/doc/usage/configuration.rst:880
-msgid ""
-"Directories in which to search for additional message catalogs (see "
-":confval:`language`), relative to the source directory.  The directories on "
-"this path are searched by the standard :mod:`gettext` module."
-msgstr ""
-"கூடுதல் செய்தி பட்டியல்களைத் தேட வேண்டிய கோப்பகங்கள் (பார்க்க: confval: "
-"`மொழி`), மூல கோப்பகத்துடன் தொடர்புடையது. இந்த பாதையில் உள்ள கோப்பகங்கள் "
-"தரநிலையால் தேடப்படுகின்றன: MOD: `GetText` தொகுதி."
-
-#: ../../sphinx/doc/usage/configuration.rst:884
-msgid ""
-"Internal messages are fetched from a text domain of ``sphinx``; so if you "
-"add the directory :file:`./locale` to this setting, the message catalogs "
-"(compiled from ``.po`` format using :program:`msgfmt`) must be in "
-":file:`./locale/{language}/LC_MESSAGES/sphinx.mo`.  The text domain of "
-"individual documents depends on :confval:`gettext_compact`."
-msgstr ""
-"`` ஸ்பின்க்ஸ்`` இன் உரை களத்திலிருந்து உள் செய்திகள் பெறப்படுகின்றன; எனவே "
-"நீங்கள் கோப்பகத்தை சேர்த்தால்: கோப்பு: `./லோகேல்` இந்த அமைப்பிற்கு, செய்தி "
-"பட்டியல்கள் (` `.போ`` வடிவத்திலிருந்து தொகுக்கப்பட்டுள்ளன: நிரல்:` msgfmt`) "
-"இருக்க வேண்டும்: கோப்பு: `./locale/ {மொழி}/lc_messages/sphinx.mo`. தனிப்பட்ட"
-" ஆவணங்களின் உரை களம் சார்ந்துள்ளது: confval: `getText_compact`."
-
-#: ../../sphinx/doc/usage/configuration.rst:890
-msgid "The default is ``['locales']``."
-msgstr "இயல்புநிலை `` ['இடங்கள்'] ``."
-
-#: ../../sphinx/doc/usage/configuration.rst:892
-msgid ""
-"The :option:`-v option for sphinx-build command <sphinx-build -v>` is useful"
-" to check the locale_dirs config works as expected.  It emits debug messages"
-" if message catalog directory not found."
-msgstr ""
-"தி: விருப்பம்: `-V விருப்பம் ஸ்பின்க்ஸ்-பில்ட் கட்டளைக்கான <sphinx- கட்டளை "
-"-v>` லோகேல்_டிர்ஸ் கட்டமைப்பு எதிர்பார்த்தபடி செயல்படுவதை சரிபார்க்க "
-"பயனுள்ளதாக இருக்கும். செய்தி பட்டியல் அடைவு காணப்படாவிட்டால் அது "
-"பிழைத்திருத்த செய்திகளை வெளியிடுகிறது."
-
-#: ../../sphinx/doc/usage/configuration.rst:896
-msgid "Use ``locales`` directory as a default value"
-msgstr "இயல்புநிலை மதிப்பாக `` இடங்கள்` கோப்பகத்தைப் பயன்படுத்தவும்"
-
-#: ../../sphinx/doc/usage/configuration.rst:901
-msgid ""
-"If true, \"fuzzy\" messages in the message catalogs are used for "
-"translation. The default is ``False``."
-msgstr ""
-"உண்மை என்றால், செய்தி பட்டியல்களில் உள்ள \"தெளிவில்லாத\" செய்திகள் "
-"மொழிபெயர்ப்புக்கு பயன்படுத்தப்படுகின்றன. இயல்புநிலை `` தவறு``."
-
-#: ../../sphinx/doc/usage/configuration.rst:910
-msgid ""
-"If true, a document's text domain is its docname if it is a top-level "
-"project file and its very base directory otherwise."
-msgstr ""
-"உண்மை என்றால், ஒரு ஆவணத்தின் உரை டொமைன் அதன் ஆவண பெயர், அது ஒரு உயர்மட்ட "
-"திட்டக் கோப்பு மற்றும் இல்லையெனில் அதன் அடிப்படை கோப்பகமாக இருந்தால்."
-
-#: ../../sphinx/doc/usage/configuration.rst:913
-msgid ""
-"If set to string, all document's text domain is this string, making all "
-"documents use single text domain."
-msgstr ""
-"சரம் என அமைக்கப்பட்டால், அனைத்து ஆவணங்களின் உரை டொமைனையும் இந்த சரம், எல்லா "
-"ஆவணங்களும் ஒற்றை உரை களத்தைப் பயன்படுத்துகின்றன."
-
-#: ../../sphinx/doc/usage/configuration.rst:916
-msgid ""
-"By default, the document ``markup/code.rst`` ends up in the ``markup`` text "
-"domain.  With this option set to ``False``, it is ``markup/code``."
-msgstr ""
-"இயல்பாக, ஆவணம் `` markup/code.rst`` `` மார்க்அப்` உரை களத்தில் முடிகிறது. "
-"இந்த விருப்பம் `` FALSE`` என அமைக்கப்பட்டவுடன், இது `` மார்க்அப்/குறியீடு``."
-
-#: ../../sphinx/doc/usage/configuration.rst:919
-msgid "The string value is now accepted."
-msgstr "சரம் மதிப்பு இப்போது ஏற்றுக்கொள்ளப்பட்டுள்ளது."
-
-#: ../../sphinx/doc/usage/configuration.rst:924
-msgid ""
-"If true, Sphinx generates uuid information for version tracking in message "
-"catalogs. It is used for:"
-msgstr ""
-"உண்மை என்றால், செய்தி பட்டியலில் பதிப்பு கண்காணிப்புக்கான UUID தகவல்களை "
-"SPHINX உருவாக்குகிறது. இது பயன்படுத்தப்படுகிறது:"
-
-#: ../../sphinx/doc/usage/configuration.rst:927
-msgid "Add uid line for each msgids in .pot files."
-msgstr ".Pot கோப்புகளில் ஒவ்வொரு msgids க்கும் UID வரியைச் சேர்க்கவும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:928
-msgid ""
-"Calculate similarity between new msgids and previously saved old msgids. "
-"This calculation takes a long time."
-msgstr ""
-"புதிய MSGID களுக்கும் முன்னர் சேமிக்கப்பட்ட பழைய MSGID களுக்கும் இடையிலான "
-"ஒற்றுமையைக் கணக்கிடுங்கள். இந்த கணக்கீடு நீண்ட நேரம் எடுக்கும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:931
-msgid ""
-"If you want to accelerate the calculation, you can use ``python-"
-"levenshtein`` 3rd-party package written in C by using :command:`pip install "
-"python-levenshtein`."
-msgstr ""
-"நீங்கள் கணக்கீட்டை விரைவுபடுத்த விரும்பினால், நீங்கள் `` "
-"பைதான்-லெவன்ஷ்டீன்`` 3 வது தரப்பு தொகுப்பைப் பயன்படுத்தலாம்: கட்டளை: `பிப் "
-"நிறுவவும் பைதான்-லெவன்ஷ்டைன்`."
-
-#: ../../sphinx/doc/usage/configuration.rst:935
-msgid "The default is ``False``."
-msgstr "இயல்புநிலை `` தவறு``."
-
-#: ../../sphinx/doc/usage/configuration.rst:941
-msgid ""
-"If true, Sphinx generates location information for messages in message "
-"catalogs."
-msgstr ""
-"உண்மை என்றால், செய்தி பட்டியலில் உள்ள செய்திகளுக்கான இருப்பிட தகவல்களை "
-"SPHINX உருவாக்குகிறது."
-
-#: ../../sphinx/doc/usage/configuration.rst:944
-#: ../../sphinx/doc/usage/configuration.rst:952
-msgid "The default is ``True``."
-msgstr "இயல்புநிலை `` உண்மை``."
-
-#: ../../sphinx/doc/usage/configuration.rst:950
-msgid "If true, Sphinx builds mo file for each translation catalog files."
-msgstr ""
-"உண்மை என்றால், ஒவ்வொரு மொழிபெயர்ப்பு அட்டவணை கோப்புகளுக்கும் SPHINX MO "
-"கோப்பை உருவாக்குகிறது."
-
-#: ../../sphinx/doc/usage/configuration.rst:958
-msgid ""
-"To specify names to enable gettext extracting and translation applying for "
-"i18n additionally. You can specify below names:"
-msgstr ""
-"கூடுதலாக I18N க்கு விண்ணப்பிக்கும் GetText பிரித்தெடுத்தல் மற்றும் "
-"மொழிபெயர்ப்பை இயக்க பெயர்களைக் குறிப்பிட. பெயர்களுக்குக் கீழே குறிப்பிடலாம்:"
+#: ../../sphinx/doc/usage/configuration.rst:0
+msgid "'sphinx.search.ja.DefaultSplitter'"
+msgstr "'sphinx.search.ja.defaultsplitter'"
 
 #: ../../sphinx/doc/usage/configuration.rst:0
-msgid "index"
-msgstr "குறியீட்டு"
-
-#: ../../sphinx/doc/usage/configuration.rst:961
-msgid "index terms"
-msgstr "குறியீட்டு விதிமுறைகள்"
+msgid "'sphinx.search.ja.JanomeSplitter'"
+msgstr "'sphinx.search.ja.janomesplitter'"
 
 #: ../../sphinx/doc/usage/configuration.rst:0
-msgid "literal-block"
-msgstr "நேரடி-தொகுதி"
+msgid "'sphinx.search.ja.MecabSplitter'"
+msgstr "'sphinx.search.ja.mecabsplitter'"
 
-#: ../../sphinx/doc/usage/configuration.rst:962
-msgid "literal blocks (``::`` annotation and ``code-block`` directive)"
-msgstr ""
-"நேரடி தொகுதிகள் (`` :: `` சிறுகுறிப்பு மற்றும் `` கோட்-பிளாக்`` உத்தரவு)"
+#: ../../sphinx/doc/usage/configuration.rst:0
+msgid "dic_enc"
+msgstr "dic_enc"
+
+#: ../../sphinx/doc/usage/configuration.rst:0
+msgid "dict"
+msgstr "ஆர்ட்"
 
 #: ../../sphinx/doc/usage/configuration.rst:0
 msgid "doctest-block"
 msgstr "ஆவண-தடுப்பு"
 
-#: ../../sphinx/doc/usage/configuration.rst:963
-msgid "doctest block"
-msgstr "ஆவணத் தொகுதி"
+#: ../../sphinx/doc/usage/configuration.rst:0
+msgid "image"
+msgstr "படம்"
+
+#: ../../sphinx/doc/usage/configuration.rst:0
+msgid "index"
+msgstr "குறியீட்டு"
+
+#: ../../sphinx/doc/usage/configuration.rst:0
+msgid "lib"
+msgstr "லிப்"
+
+#: ../../sphinx/doc/usage/configuration.rst:0
+msgid "literal-block"
+msgstr "நேரடி-தொகுதி"
 
 #: ../../sphinx/doc/usage/configuration.rst:0
 msgid "raw"
 msgstr "மூல"
 
-#: ../../sphinx/doc/usage/configuration.rst:964
-msgid "raw content"
-msgstr "மூல உள்ளடக்கம்"
+#: ../../sphinx/doc/usage/configuration.rst:0
+msgid "type"
+msgstr "தட்டச்சு செய்க"
 
 #: ../../sphinx/doc/usage/configuration.rst:0
-msgid "image"
-msgstr "படம்"
+msgid "user_dic"
+msgstr "user_dic"
 
-#: ../../sphinx/doc/usage/configuration.rst:965
-msgid "image/figure uri"
-msgstr "படம்/படம் யூரி"
-
-#: ../../sphinx/doc/usage/configuration.rst:967
-msgid ""
-"For example: ``gettext_additional_targets = ['literal-block', 'image']``."
-msgstr ""
-"எடுத்துக்காட்டாக: `` getText_addisional_targets = ['நேரடி-தொகுதி', 'படம்'] "
-"``."
-
-#: ../../sphinx/doc/usage/configuration.rst:969
-msgid "The default is ``[]``."
-msgstr "இயல்புநிலை `` [] ``."
-
-#: ../../sphinx/doc/usage/configuration.rst:974
-msgid "The alt text for image is translated by default."
-msgstr "படத்திற்கான ALT உரை இயல்பாக மொழிபெயர்க்கப்பட்டுள்ளது."
-
-#: ../../sphinx/doc/usage/configuration.rst:978
-msgid ""
-"The filename format for language-specific figures.  The default value is "
-"``{root}.{language}{ext}``.  It will be expanded to "
-"``dirname/filename.en.png`` from ``.. image:: dirname/filename.png``. The "
-"available format tokens are:"
-msgstr ""
-"மொழி சார்ந்த புள்ளிவிவரங்களுக்கான கோப்பு பெயர் வடிவம். இயல்புநிலை மதிப்பு ``"
-" {ரூட்}. {மொழி} {ext} ``. இது `` `` tirname/filename.en.png` க்கு "
-"விரிவாக்கப்படும். கிடைக்கக்கூடிய வடிவமைப்பு டோக்கன்கள்:"
-
-#: ../../sphinx/doc/usage/configuration.rst:983
-msgid ""
-"``{root}`` - the filename, including any path component, without the file "
-"extension, e.g. ``dirname/filename``"
-msgstr ""
-"`` {ரூட்} `` - கோப்பு நீட்டிப்பு இல்லாமல், எந்த பாதை கூறு உட்பட கோப்பு "
-"பெயர், எ.கா. `` dirname/fileName``"
-
-#: ../../sphinx/doc/usage/configuration.rst:985
-msgid ""
-"``{path}`` - the directory path component of the filename, with a trailing "
-"slash if non-empty, e.g. ``dirname/``"
-msgstr ""
-"`` {பாதை} `` - கோப்பு பெயரின் அடைவு பாதை கூறு, காலியாக இல்லாதிருந்தால், "
-"எ.கா. `` dirname/``"
-
-#: ../../sphinx/doc/usage/configuration.rst:987
-msgid ""
-"``{docpath}`` - the directory path component for the current document, with "
-"a trailing slash if non-empty."
-msgstr ""
-"`` {docbath} `` ` - தற்போதைய ஆவணத்திற்கான அடைவு பாதை கூறு, காலியாக "
-"இல்லாவிட்டால் ஒரு பின்தங்கிய குறைப்பு."
-
-#: ../../sphinx/doc/usage/configuration.rst:989
-msgid ""
-"``{basename}`` - the filename without the directory path or file extension "
-"components, e.g. ``filename``"
-msgstr ""
-"`` {அடிப்படை பெயர்} `` - அடைவு பாதை அல்லது கோப்பு நீட்டிப்பு கூறுகள் "
-"இல்லாமல் கோப்பு பெயர், எ.கா. `` கோப்பு பெயர்``"
-
-#: ../../sphinx/doc/usage/configuration.rst:991
-msgid "``{ext}`` - the file extension, e.g. ``.png``"
-msgstr "`{ext}` ` - கோப்பு நீட்டிப்பு, எ.கா. `.png``"
-
-#: ../../sphinx/doc/usage/configuration.rst:992
-msgid "``{language}`` - the translation language, e.g. ``en``"
-msgstr "`` {மொழி} `` - மொழிபெயர்ப்பு மொழி, எ.கா. `` en``"
-
-#: ../../sphinx/doc/usage/configuration.rst:994
-msgid ""
-"For example, setting this to ``{path}{language}/{basename}{ext}`` will "
-"expand to ``dirname/en/filename.png`` instead."
-msgstr ""
-"எடுத்துக்காட்டாக, இதை `{பாதை {{மொழி}/{BaseName} {ext}` `அதற்கு பதிலாக` "
-"`dirname/en/filename.png`` க்கு விரிவாக்கும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:999
-msgid "Added ``{path}`` and ``{basename}`` tokens."
-msgstr ""
-"`` {பாதை} `` மற்றும் `` {அடிப்படை பெயர்} `` டோக்கன்கள் சேர்க்கப்பட்டன."
+#: ../../sphinx/doc/usage/configuration.rst:0
+msgid "user_dic_enc"
+msgstr "user_dic_enc"
 
 #: ../../sphinx/doc/usage/configuration.rst:1002
 msgid "Added ``{docpath}`` token."
@@ -1923,6 +117,10 @@ msgstr ""
 #: ../../sphinx/doc/usage/configuration.rst:1833
 msgid "Defaults to ``False``."
 msgstr "இயல்புநிலை `` பொய்``."
+
+#: ../../sphinx/doc/usage/configuration.rst:102
+msgid "General configuration"
+msgstr "பொது உள்ளமைவு"
 
 #: ../../sphinx/doc/usage/configuration.rst:1024
 msgid "Options for Math"
@@ -1976,6 +174,16 @@ msgid ""
 msgstr ""
 "இந்த விருப்பங்கள் HTML மற்றும் HTML உதவி வெளியீடு மற்றும் SPHINX இன் "
 "HTMLWRITER வகுப்பைப் பயன்படுத்தும் பிற பில்டர்களை பாதிக்கின்றன."
+
+#: ../../sphinx/doc/usage/configuration.rst:106
+msgid ""
+"A list of strings that are module names of :doc:`extensions "
+"<extensions/index>`. These can be extensions coming with Sphinx (named "
+"``sphinx.ext.*``) or custom ones."
+msgstr ""
+"தொகுதி பெயர்களாக இருக்கும் சரங்களின் பட்டியல்: டாக்: `நீட்டிப்புகள் "
+"<நீட்டிப்புகள்/குறியீட்டு>`. இவை ஸ்பிங்க்ஸ் (`` sphinx.ext.*``) அல்லது "
+"தனிப்பயன் என பெயரிடப்பட்ட நீட்டிப்புகளாக இருக்கலாம்."
 
 #: ../../sphinx/doc/usage/configuration.rst:1060
 msgid ""
@@ -2047,6 +255,19 @@ msgstr ""
 "HTML டாக்ஸிற்கான குறுகிய \"தலைப்பு\". இது தலைப்பு மற்றும் HTML உதவி டாக்ஸில்"
 " உள்ள இணைப்புகளுக்கு பயன்படுத்தப்படுகிறது. வழங்கப்படாவிட்டால், இது "
 "மதிப்புக்கு இயல்புநிலையாகிறது: confval: `html_title`."
+
+#: ../../sphinx/doc/usage/configuration.rst:110
+msgid ""
+"Note that you can extend :data:`sys.path` within the conf file if your "
+"extensions live in another directory -- but make sure you use absolute "
+"paths. If your extension path is relative to the :term:`configuration "
+"directory`, use :func:`os.path.abspath` like so::"
+msgstr ""
+"நீங்கள் நீட்டிக்க முடியும் என்பதை நினைவில் கொள்க: தரவு: `sys.path` உங்கள் "
+"நீட்டிப்புகள் வேறொரு கோப்பகத்தில் வாழ்ந்தால் CONF கோப்பில் - ஆனால் நீங்கள் "
+"முழுமையான பாதைகளைப் பயன்படுத்துவதை உறுதிசெய்க. உங்கள் நீட்டிப்பு பாதை: கால: "
+"`உள்ளமைவு அடைவு` உடன் தொடர்புடையதாக இருந்தால், பயன்படுத்தவும்: func:` "
+"os.path.abspath` அவ்வாறு ::"
 
 #: ../../sphinx/doc/usage/configuration.rst:1107
 msgid ""
@@ -2149,6 +370,16 @@ msgstr ""
 "குறிச்சொல்லின் பண்புகளுக்கு பயன்படுத்தப்படுகின்றன. இது வெற்று பட்டியலுக்கு "
 "இயல்புநிலையாகிறது."
 
+#: ../../sphinx/doc/usage/configuration.rst:654
+#: ../../sphinx/doc/usage/configuration.rst:1174
+#: ../../sphinx/doc/usage/configuration.rst:1197
+#: ../../sphinx/doc/usage/configuration.rst:1332
+#: ../../sphinx/doc/usage/configuration.rst:1355
+#: ../../sphinx/doc/usage/configuration.rst:2879
+#: ../../sphinx/doc/usage/configuration.rst:2911
+msgid "Example::"
+msgstr "உதாரணமாக::"
+
 #: ../../sphinx/doc/usage/configuration.rst:1180
 #: ../../sphinx/doc/usage/configuration.rst:1203
 msgid ""
@@ -2181,6 +412,27 @@ msgstr ""
 "திட்டத்துடன் கூடிய முழு URI உடன் தொடர்புடையதாக இருக்க வேண்டும். * "
 "பண்புக்கூறுகள் * `` <ஸ்கிரிப்ட்> `` குறிச்சொல்லின் பண்புகளுக்கு "
 "பயன்படுத்தப்படுகின்றன. இது வெற்று பட்டியலுக்கு இயல்புநிலையாகிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:12
+msgid ""
+"The :term:`configuration directory` must contain a file named "
+":file:`conf.py`. This file (containing Python code) is called the \"build "
+"configuration file\" and contains (almost) all configuration needed to "
+"customize Sphinx input and output behavior."
+msgstr ""
+"தி: கால: `உள்ளமைவு அடைவு` பெயரிடப்பட்ட ஒரு கோப்பைக் கொண்டிருக்க வேண்டும்: "
+"கோப்பு:` conf.py`. இந்த கோப்பு (பைதான் குறியீட்டைக் கொண்டுள்ளது) "
+"\"கட்டமைப்பு கோப்பை உருவாக்கு\" என்று அழைக்கப்படுகிறது, மேலும் ஸ்பிங்க்ஸ் "
+"உள்ளீடு மற்றும் வெளியீட்டு நடத்தை தனிப்பயனாக்க தேவையான அனைத்து "
+"உள்ளமைவுகளையும் கொண்டுள்ளது."
+
+#: ../../sphinx/doc/usage/configuration.rst:121
+msgid ""
+"That way, you can load an extension called ``extname`` from the subdirectory"
+" ``sphinxext``."
+msgstr ""
+"அந்த வகையில், துணை அடைவு `` Sphinxext`` இலிருந்து `` extname`` எனப்படும் "
+"நீட்டிப்பை ஏற்றலாம்."
 
 #: ../../sphinx/doc/usage/configuration.rst:1214
 msgid ""
@@ -2235,6 +487,14 @@ msgstr ""
 msgid "The entries in :confval:`html_static_path` can now be single files."
 msgstr ""
 "உள்ளீடுகள்: confval: `html_static_path` இப்போது ஒற்றை கோப்புகளாக இருக்கலாம்."
+
+#: ../../sphinx/doc/usage/configuration.rst:124
+msgid ""
+"The configuration file itself can be an extension; for that, you only need "
+"to provide a :func:`setup` function in it."
+msgstr ""
+"உள்ளமைவு கோப்பு ஒரு நீட்டிப்பாக இருக்கலாம்; அதற்காக, நீங்கள் ஒரு: func: "
+"`setup` செயல்பாட்டை மட்டுமே வழங்க வேண்டும்."
 
 #: ../../sphinx/doc/usage/configuration.rst:1242
 msgid ""
@@ -2309,6 +569,16 @@ msgstr ""
 "ஒவ்வொரு தலைப்பு மற்றும் விளக்க சூழலுக்கான இணைப்பு நங்கூரங்களுக்கான உரை. HTML"
 " நிறுவனங்கள் மற்றும் யூனிகோட் ஆகியவை அனுமதிக்கப்படுகின்றன. இயல்புநிலை: ஒரு "
 "பத்தி அடையாளம்; `` ¶``"
+
+#: ../../sphinx/doc/usage/configuration.rst:129
+msgid ""
+"The file extensions of source files.  Sphinx considers the files with this "
+"suffix as sources.  The value can be a dictionary mapping file extensions to"
+" file types.  For example::"
+msgstr ""
+"மூல கோப்புகளின் கோப்பு நீட்டிப்புகள். இந்த பின்னொட்டுடன் கோப்புகளை "
+"ஆதாரங்களாக ஸ்பிங்க்ஸ் கருதுகிறது. மதிப்பு கோப்பு வகைகளுக்கு அகராதி மேப்பிங் "
+"கோப்பு நீட்டிப்புகளாக இருக்கலாம். உதாரணத்திற்கு::"
 
 #: ../../sphinx/doc/usage/configuration.rst:1295
 msgid ""
@@ -2485,6 +755,17 @@ msgstr ""
 "உள்ளீடுகளுடன் ஒரு பக்கமாகவும், ஒரு முறை தொடக்க கடிதத்திற்கு ஒரு பக்கமாகவும்."
 " இயல்புநிலை `` பொய்``."
 
+#: ../../sphinx/doc/usage/configuration.rst:139
+msgid ""
+"By default, Sphinx only supports ``'restructuredtext'`` file type.  You can "
+"add a new file type using source parser extensions.  Please read a document "
+"of the extension to know which file type the extension supports."
+msgstr ""
+"இயல்பாக, SPHINX `` 'மறுசீரமைப்பு செய்யப்பட்ட டெக்ஸ்ட்'`` கோப்பு வகையை "
+"மட்டுமே ஆதரிக்கிறது. மூல பாகுபடுத்தி நீட்டிப்புகளைப் பயன்படுத்தி புதிய "
+"கோப்பு வகையைச் சேர்க்கலாம். நீட்டிப்பு எந்த கோப்பு வகை ஆதரிக்கிறது என்பதை "
+"அறிய நீட்டிப்பின் ஆவணத்தைப் படியுங்கள்."
+
 #: ../../sphinx/doc/usage/configuration.rst:1391
 msgid ""
 "If true, the reST sources are included in the HTML build as "
@@ -2548,6 +829,15 @@ msgstr ""
 "எதுவாக இருந்தாலும்: confval: `html_file_suffix` அமைக்கப்பட்டுள்ளது; இதை "
 "வித்தியாசமாக அமைக்கலாம் (எ.கா. வெவ்வேறு வலை சேவையக அமைப்புகளை ஆதரிக்க)."
 
+#: ../../sphinx/doc/usage/configuration.rst:143
+msgid ""
+"The value may also be a list of file extensions: then Sphinx will consider "
+"that they all map to the ``'restructuredtext'`` file type."
+msgstr ""
+"மதிப்பு கோப்பு நீட்டிப்புகளின் பட்டியலாகவும் இருக்கலாம்: பின்னர் அவை "
+"அனைத்தும் `` 'மறுசீரமைப்பு செய்யப்பட்ட டெக்ஸ்ட்'`` கோப்பு வகைக்கு வரைபடமாக "
+"இருப்பதைக் கருத்தில் கொள்ளும்."
+
 #: ../../sphinx/doc/usage/configuration.rst:1434
 msgid ""
 "If true, \"(C) Copyright ...\" is shown in the HTML footer. Default is "
@@ -2583,6 +873,10 @@ msgstr ""
 "செல்லுபடியாகும் HTML `` சார்செட்`` மதிப்பாக இருக்க வேண்டும் என்பதை நினைவில் "
 "கொள்க."
 
+#: ../../sphinx/doc/usage/configuration.rst:146
+msgid "Default is ``{'.rst': 'restructuredtext'}``."
+msgstr "இயல்புநிலை `` {'.ஆர்எஸ்டி': 'மறுசீரமைப்பு டெக்ஸ்ட்'} ``."
+
 #: ../../sphinx/doc/usage/configuration.rst:1463
 msgid ""
 "If true, a list all whose items consist of a single paragraph and/or a sub-"
@@ -2615,17 +909,97 @@ msgstr ""
 "இந்த மொழிக்கு எந்த ஆதரவும் இல்லை என்றால், ஆங்கில மொழியைத் தேர்ந்தெடுக்கும் "
 "`` \"என்\" `` பயன்படுத்தப்படுகிறது."
 
+#: ../../sphinx/doc/usage/configuration.rst:148
+msgid "file extensions have to start with a dot (e.g. ``.rst``)."
+msgstr ""
+"கோப்பு நீட்டிப்புகள் ஒரு புள்ளியுடன் தொடங்கப்பட வேண்டும் (எ.கா. `` "
+".ஆர்எஸ்டி``)."
+
 #: ../../sphinx/doc/usage/configuration.rst:1484
 msgid "Support is present for these languages:"
 msgstr "இந்த மொழிகளுக்கு ஆதரவு உள்ளது:"
+
+#: ../../sphinx/doc/usage/configuration.rst:827
+#: ../../sphinx/doc/usage/configuration.rst:1486
+msgid "``da`` -- Danish"
+msgstr "`` டா`` - டேனிஷ்"
+
+#: ../../sphinx/doc/usage/configuration.rst:852
+#: ../../sphinx/doc/usage/configuration.rst:1487
+msgid "``nl`` -- Dutch"
+msgstr "`` nl`` - டச்சு"
 
 #: ../../sphinx/doc/usage/configuration.rst:1488
 msgid "``en`` -- English"
 msgstr "`` en`` - ஆங்கிலம்"
 
+#: ../../sphinx/doc/usage/configuration.rst:836
+#: ../../sphinx/doc/usage/configuration.rst:1489
+msgid "``fi`` -- Finnish"
+msgstr "`` fi`` - பின்னிஷ்"
+
+#: ../../sphinx/doc/usage/configuration.rst:837
+#: ../../sphinx/doc/usage/configuration.rst:1490
+msgid "``fr`` -- French"
+msgstr "`` fr`` - பிரஞ்சு"
+
+#: ../../sphinx/doc/usage/configuration.rst:828
+#: ../../sphinx/doc/usage/configuration.rst:1491
+msgid "``de`` -- German"
+msgstr "`` டி`` - ஜெர்மன்"
+
+#: ../../sphinx/doc/usage/configuration.rst:842
+#: ../../sphinx/doc/usage/configuration.rst:1492
+msgid "``hu`` -- Hungarian"
+msgstr "`` ஹு`` - ஹங்கேரிய"
+
+#: ../../sphinx/doc/usage/configuration.rst:844
+#: ../../sphinx/doc/usage/configuration.rst:1493
+msgid "``it`` -- Italian"
+msgstr "`` இது`` - இத்தாலியன்"
+
+#: ../../sphinx/doc/usage/configuration.rst:845
+#: ../../sphinx/doc/usage/configuration.rst:1494
+msgid "``ja`` -- Japanese"
+msgstr "`` ஜா`` - ஜப்பானிய"
+
 #: ../../sphinx/doc/usage/configuration.rst:1495
 msgid "``no`` -- Norwegian"
 msgstr "`` இல்லை`` - நோர்வே"
+
+#: ../../sphinx/doc/usage/configuration.rst:854
+#: ../../sphinx/doc/usage/configuration.rst:1496
+msgid "``pt`` -- Portuguese"
+msgstr "`` pt`` - போர்த்துகீசியம்"
+
+#: ../../sphinx/doc/usage/configuration.rst:857
+#: ../../sphinx/doc/usage/configuration.rst:1497
+msgid "``ro`` -- Romanian"
+msgstr "`` ரோ`` - ருமேனிய"
+
+#: ../../sphinx/doc/usage/configuration.rst:858
+#: ../../sphinx/doc/usage/configuration.rst:1498
+msgid "``ru`` -- Russian"
+msgstr "`` ru`` - ரஷ்யன்"
+
+#: ../../sphinx/doc/usage/configuration.rst:832
+#: ../../sphinx/doc/usage/configuration.rst:1499
+msgid "``es`` -- Spanish"
+msgstr "`` எஸ்`` - ஸ்பானிஷ்"
+
+#: ../../sphinx/doc/usage/configuration.rst:150
+msgid "Can now be a list of extensions."
+msgstr "இப்போது நீட்டிப்புகளின் பட்டியலாக இருக்கலாம்."
+
+#: ../../sphinx/doc/usage/configuration.rst:866
+#: ../../sphinx/doc/usage/configuration.rst:1500
+msgid "``sv`` -- Swedish"
+msgstr "`` எஸ்.வி`` - ஸ்வீடிஷ்"
+
+#: ../../sphinx/doc/usage/configuration.rst:869
+#: ../../sphinx/doc/usage/configuration.rst:1501
+msgid "``tr`` -- Turkish"
+msgstr "`` tr`` - துருக்கிய"
 
 #: ../../sphinx/doc/usage/configuration.rst:1502
 msgid "``zh`` -- Chinese"
@@ -2680,10 +1054,6 @@ msgstr "ஆங்கில ஆதரவுக்கு விருப்பங�
 msgid "The Japanese support has these options:"
 msgstr "ஜப்பானிய ஆதரவில் இந்த விருப்பங்கள் உள்ளன:"
 
-#: ../../sphinx/doc/usage/configuration.rst:0
-msgid "type"
-msgstr "தட்டச்சு செய்க"
-
 #: ../../sphinx/doc/usage/configuration.rst:1529
 msgid ""
 "_`type` is dotted module path string to specify Splitter implementation "
@@ -2696,21 +1066,17 @@ msgstr ""
 "குறிப்பிடப்படவில்லை அல்லது `` எதுவுமில்லை` குறிப்பிடப்பட்டால், `` "
 "'sphinx.search.ja.defaultsplitter'`` பயன்படுத்தப்படும்."
 
+#: ../../sphinx/doc/usage/configuration.rst:153
+msgid "Support file type mapping"
+msgstr "கோப்பு வகை மேப்பிங் ஆதரவு"
+
 #: ../../sphinx/doc/usage/configuration.rst:1534
 msgid "You can choose from these modules:"
 msgstr "இந்த தொகுதிகளிலிருந்து நீங்கள் தேர்வு செய்யலாம்:"
 
-#: ../../sphinx/doc/usage/configuration.rst:0
-msgid "'sphinx.search.ja.DefaultSplitter'"
-msgstr "'sphinx.search.ja.defaultsplitter'"
-
 #: ../../sphinx/doc/usage/configuration.rst:1537
 msgid "TinySegmenter algorithm. This is default splitter."
 msgstr "டைனிஸ்பெமென்டர் அல்காரிதம். இது இயல்புநிலை ஸ்ப்ளிட்டர்."
-
-#: ../../sphinx/doc/usage/configuration.rst:0
-msgid "'sphinx.search.ja.MecabSplitter'"
-msgstr "'sphinx.search.ja.mecabsplitter'"
 
 #: ../../sphinx/doc/usage/configuration.rst:1539
 msgid ""
@@ -2720,10 +1086,6 @@ msgstr ""
 "மெக்காப் பிணைப்பு. இந்த ஸ்ப்ளிட்டரைப் பயன்படுத்த, 'மெக்காப்' பைதான் பிணைப்பு"
 " அல்லது டைனமிக் இணைப்பு நூலகம் ('லினக்ஸுக்கு' libmecab.so ', விண்டோஸிற்கான' "
 "libmecab.dll ') தேவை."
-
-#: ../../sphinx/doc/usage/configuration.rst:0
-msgid "'sphinx.search.ja.JanomeSplitter'"
-msgstr "'sphinx.search.ja.janomesplitter'"
 
 #: ../../sphinx/doc/usage/configuration.rst:1543
 msgid ""
@@ -2749,30 +1111,14 @@ msgstr ""
 "பிற விருப்ப மதிப்புகள் நீங்கள் தேர்ந்தெடுக்கும் ஸ்ப்ளிட்டர் மதிப்பைப் "
 "பொறுத்தது."
 
-#: ../../sphinx/doc/usage/configuration.rst:1569
-msgid "Options for ``'mecab'``:"
-msgstr "`` 'மெகாப்'`` க்கான விருப்பங்கள்:"
-
-#: ../../sphinx/doc/usage/configuration.rst:0
-msgid "dic_enc"
-msgstr "dic_enc"
-
 #: ../../sphinx/doc/usage/configuration.rst:1555
 msgid "_`dic_enc option` is the encoding for the MeCab algorithm."
 msgstr "_`dic_enc விருப்பம்` என்பது MECAB வழிமுறைக்கான குறியாக்கமாகும்."
-
-#: ../../sphinx/doc/usage/configuration.rst:0
-msgid "dict"
-msgstr "ஆர்ட்"
 
 #: ../../sphinx/doc/usage/configuration.rst:1557
 msgid "_`dict option` is the dictionary to use for the MeCab algorithm."
 msgstr ""
 "_` டிக்ட் விருப்பம்` என்பது மெக்காப் வழிமுறைக்கு பயன்படுத்த வேண்டிய அகராதி."
-
-#: ../../sphinx/doc/usage/configuration.rst:0
-msgid "lib"
-msgstr "லிப்"
 
 #: ../../sphinx/doc/usage/configuration.rst:1559
 msgid ""
@@ -2782,21 +1128,18 @@ msgstr ""
 "பைதான் பிணைப்பு நிறுவப்படாவிட்டால் CTYPE கள் வழியாக மெக்காப் நூலகத்தைக் "
 "கண்டுபிடிப்பதற்கான நூலக பெயர் _` லிப் விருப்பம்."
 
-#: ../../sphinx/doc/usage/configuration.rst:1576
-msgid "Options for ``'janome'``:"
-msgstr "`` 'Janome'`` க்கான விருப்பங்கள்:"
+#: ../../sphinx/doc/usage/configuration.rst:173
+#: ../../sphinx/doc/usage/configuration.rst:1562
+msgid "For example::"
+msgstr "உதாரணத்திற்கு::"
 
-#: ../../sphinx/doc/usage/configuration.rst:0
-msgid "user_dic"
-msgstr "user_dic"
+#: ../../sphinx/doc/usage/configuration.rst:1569
+msgid "Options for ``'mecab'``:"
+msgstr "`` 'மெகாப்'`` க்கான விருப்பங்கள்:"
 
 #: ../../sphinx/doc/usage/configuration.rst:1573
 msgid "_`user_dic option` is the user dictionary file path for Janome."
 msgstr "_`USER_DIC விருப்பம்` என்பது ஜானோமுக்கான பயனர் அகராதி கோப்பு பாதை."
-
-#: ../../sphinx/doc/usage/configuration.rst:0
-msgid "user_dic_enc"
-msgstr "user_dic_enc"
 
 #: ../../sphinx/doc/usage/configuration.rst:1575
 msgid ""
@@ -2805,6 +1148,18 @@ msgid ""
 msgstr ""
 "_`USER_DIC_ENC விருப்பம்` என்பது `` USER_DIC`` விருப்பத்தால் குறிப்பிடப்பட்ட"
 " பயனர் அகராதி கோப்பிற்கான குறியாக்கமாகும். இயல்புநிலை 'UTF8'."
+
+#: ../../sphinx/doc/usage/configuration.rst:1576
+msgid "Options for ``'janome'``:"
+msgstr "`` 'Janome'`` க்கான விருப்பங்கள்:"
+
+#: ../../sphinx/doc/usage/configuration.rst:158
+msgid ""
+"The encoding of all reST source files.  The recommended encoding, and the "
+"default value, is ``'utf-8-sig'``."
+msgstr ""
+"அனைத்து ஓய்வு மூல கோப்புகளின் குறியாக்கம். பரிந்துரைக்கப்பட்ட குறியாக்கம் "
+"மற்றும் இயல்புநிலை மதிப்பு `` '' utf-8-sig'```."
 
 #: ../../sphinx/doc/usage/configuration.rst:1580
 msgid ""
@@ -2852,6 +1207,11 @@ msgid ""
 msgstr ""
 "ஆவண ஆசிரியர்கள் இந்த அம்சத்தை கைமுறையாக முடக்கலாம் `` "
 "இல்லை-அளவிலான-இணைப்பு`` படத்திற்கு வகுப்பைக் கொடுப்பதன் மூலம்:"
+
+#: ../../sphinx/doc/usage/configuration.rst:161
+msgid "Previously, Sphinx accepted only UTF-8 encoded sources."
+msgstr ""
+"முன்னதாக, SPHINX UTF-8 குறியிடப்பட்ட ஆதாரங்களை மட்டுமே ஏற்றுக்கொண்டது."
 
 #: ../../sphinx/doc/usage/configuration.rst:1617
 msgid "It is disabled for images having ``no-scaled-link`` class"
@@ -2903,6 +1263,23 @@ msgid "Output file base name for HTML help builder.  Default is ``'pydoc'``."
 msgstr ""
 "HTML உதவி பில்டருக்கான வெளியீட்டு கோப்பு அடிப்படை பெயர். இயல்புநிலை `` "
 "'பைடோக்'```."
+
+#: ../../sphinx/doc/usage/configuration.rst:166
+msgid ""
+"If given, a dictionary of parser classes for different source suffices.  The"
+" keys are the suffix, the values can be either a class or a string giving a "
+"fully-qualified name of a parser class.  The parser class can be either "
+"``docutils.parsers.Parser`` or :class:`sphinx.parsers.Parser`.  Files with a"
+" suffix that is not in the dictionary will be parsed with the default "
+"reStructuredText parser."
+msgstr ""
+"வழங்கப்பட்டால், வெவ்வேறு மூலங்களுக்கான பாகுபடுத்தி வகுப்புகளின் அகராதி "
+"போதுமானது. விசைகள் பின்னொட்டு, மதிப்புகள் ஒரு வகுப்பாக இருக்கலாம் அல்லது ஒரு"
+" பாகுபடுத்தி வகுப்பின் முழுமையான தகுதி வாய்ந்த பெயரைக் கொடுக்கும் சரமாக "
+"இருக்கலாம். பாகுபடுத்தி வகுப்பு `` docutils.parsers.parser` அல்லது: வகுப்பு:"
+" `sphinx.parsers.parser` ஆக இருக்கலாம். அகராதியில் இல்லாத பின்னொட்டுடன் "
+"கூடிய கோப்புகள் இயல்புநிலை மறுசீரமைப்பு செய்யப்பட்ட டெக்ஸ்ட் பாகுபடுத்தலுடன்"
+" பாகுபடுத்தப்படும்."
 
 #: ../../sphinx/doc/usage/configuration.rst:1660
 msgid ""
@@ -2960,6 +1337,16 @@ msgid ""
 msgstr ""
 "ஆப்பிள் உதவி புத்தகத்திற்கான அடிப்படை பெயர். இயல்புநிலைகள்: confval: "
 "`திட்டம்` பெயர்."
+
+#: ../../sphinx/doc/usage/configuration.rst:17
+msgid ""
+"An optional file `docutils.conf`_ can be added to the configuration "
+"directory to adjust `Docutils`_ configuration if not otherwise overridden or"
+" set by Sphinx."
+msgstr ""
+"`Docutils.conf`_ ஐ உள்ளமைவு கோப்பகத்தில் சேர்க்கலாம்` டாக்யூடில்ஸ்`_ "
+"உள்ளமைவை சரிசெய்யவும் அல்லது ஸ்பிங்க்ஸால் அமைக்கப்படாவிட்டால் அல்லது "
+"அமைக்கப்படாவிட்டால்."
 
 #: ../../sphinx/doc/usage/configuration.rst:1700
 msgid "The bundle ID for the help book bundle."
@@ -3081,12 +1468,12 @@ msgstr ""
 " எழுதும் நேரத்தில், பின்வரும் மொழிகளுக்கான நிறுத்தச் சொற்களைக் கொண்டுள்ளது:"
 
 #: ../../sphinx/doc/usage/configuration.rst:1771
-msgid "Language"
-msgstr "மொழி"
-
-#: ../../sphinx/doc/usage/configuration.rst:1771
 msgid "Code"
 msgstr "குறியீடு"
+
+#: ../../sphinx/doc/usage/configuration.rst:1771
+msgid "Language"
+msgstr "மொழி"
 
 #: ../../sphinx/doc/usage/configuration.rst:1773
 msgid "English"
@@ -3159,6 +1546,14 @@ msgstr ""
 "உதவியை உருவாக்க இருப்பிடத்தைக் குறிப்பிடுகிறது. உதவி புத்தகத்தின் `` "
 "வளங்கள்`` க்குள் `` .lproj`` கோப்புறையின் பெயரைத் தீர்மானிக்க இது "
 "பயன்படுத்தப்படுகிறது, மேலும் இது உதவி குறியீட்டாளருக்கு அனுப்பப்படுகிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:179
+msgid ""
+"Refer to :doc:`/usage/markdown` for more information on using Markdown with "
+"Sphinx."
+msgstr ""
+"பார்க்கவும்: DOC: `/பயன்பாடு/மார்க் டவுன்` ஸ்பிங்க்ஸுடன் மார்க் டவுனைப் "
+"பயன்படுத்துவது பற்றிய கூடுதல் தகவலுக்கு."
 
 #: ../../sphinx/doc/usage/configuration.rst:1794
 msgid ""
@@ -3238,6 +1633,14 @@ msgstr ""
 msgid "Options for epub output"
 msgstr "EPUB வெளியீட்டிற்கான விருப்பங்கள்"
 
+#: ../../sphinx/doc/usage/configuration.rst:184
+msgid ""
+"Now Sphinx provides an API :meth:`.Sphinx.add_source_parser` to register a "
+"source parser.  Please use it instead."
+msgstr ""
+"இப்போது ஸ்பின்க்ஸ் ஒரு ஏபிஐ: மெத்: `.sphinx.add_source_parser` ஒரு மூல "
+"பாகுபடுத்தி பதிவு செய்ய வழங்குகிறது. அதற்கு பதிலாக அதைப் பயன்படுத்தவும்."
+
 #: ../../sphinx/doc/usage/configuration.rst:1841
 msgid ""
 "These options influence the epub output.  As this builder derives from the "
@@ -3313,6 +1716,10 @@ msgstr ""
 msgid "Renamed from ``epub3_contributor``"
 msgstr "`` Epub3_contributor`` இலிருந்து மறுபெயரிடப்பட்டது"
 
+#: ../../sphinx/doc/usage/configuration.rst:190
+msgid "Same as :confval:`root_doc`."
+msgstr "அதே: confval: `root_doc`."
+
 #: ../../sphinx/doc/usage/configuration.rst:1901
 msgid ""
 "The language of the document.  This is put in the Dublin Core metadata.  The"
@@ -3350,6 +1757,10 @@ msgstr ""
 "வைக்கப்பட்டுள்ளது. வெளியிடப்பட்ட ஆவணங்களுக்கு இது ISBN எண், ஆனால் நீங்கள் "
 "ஒரு மாற்றுத் திட்டத்தையும் பயன்படுத்தலாம், எ.கா. திட்ட முகப்புப்பக்கம். "
 "இயல்புநிலை மதிப்பு `` 'அறியப்படாதது'``."
+
+#: ../../sphinx/doc/usage/configuration.rst:192
+msgid "Renamed ``master_doc`` to ``root_doc``."
+msgstr "`` மாஸ்டர்_டோக்`` `` ரூட்_டோக்`` என மறுபெயரிடப்பட்டது."
 
 #: ../../sphinx/doc/usage/configuration.rst:1924
 msgid ""
@@ -3422,6 +1833,14 @@ msgstr ""
 "உள்ளீடுகள் தானாகவே செருகப்படுகின்றன. இருப்பினும், இயல்புநிலை உள்ளீடுகள் "
 "பொருத்தமானதாக இல்லாவிட்டால் வகைகளை வெளிப்படையாக மேலெழுதலாம். உதாரணமாக::"
 
+#: ../../sphinx/doc/usage/configuration.rst:197
+msgid ""
+"The document name of the \"root\" document, that is, the document that "
+"contains the root :rst:dir:`toctree` directive.  Default is ``'index'``."
+msgstr ""
+"\"ரூட்\" ஆவணத்தின் ஆவண பெயர், அதாவது, ரூட் கொண்ட ஆவணம்: rst: dir: `toctree` "
+"உத்தரவு. இயல்புநிலை `` 'குறியீட்டு'``."
+
 #: ../../sphinx/doc/usage/configuration.rst:1977
 msgid ""
 "Additional files that should be inserted before the text generated by "
@@ -3456,6 +1875,10 @@ msgid ""
 msgstr ""
 "உருவாக்க கோப்பகத்தில் உருவாக்கப்பட்ட/நகலெடுக்கப்பட்ட கோப்புகளின் பட்டியல் "
 "ஆனால் எபப் கோப்பில் சேர்க்கப்படக்கூடாது. இயல்புநிலை மதிப்பு `` [] ``."
+
+#: ../../sphinx/doc/usage/configuration.rst:200
+msgid "The default is changed to ``'index'`` from ``'contents'``."
+msgstr "இயல்புநிலை `` 'உள்ளடக்கங்களிலிருந்து ``' குறியீட்டு'`````."
 
 #: ../../sphinx/doc/usage/configuration.rst:2001
 msgid ""
@@ -3497,6 +1920,10 @@ msgstr ""
 #: ../../sphinx/doc/usage/configuration.rst:2018
 msgid "``'includehidden'`` -- include all toc entries"
 msgstr "`` 'ஐ சேர்க்கவும்'` - அனைத்து TOC உள்ளீடுகளையும் சேர்க்கவும்"
+
+#: ../../sphinx/doc/usage/configuration.rst:202
+msgid "Renamed ``root_doc`` from ``master_doc``."
+msgstr "`` Master_doc`` இலிருந்து `` ரூட்_டோக்`."
 
 #: ../../sphinx/doc/usage/configuration.rst:2024
 msgid ""
@@ -3576,6 +2003,17 @@ msgid ""
 msgstr ""
 "இது எழுதும் திசையைக் குறிப்பிடுகிறது. இது `` 'கிடைமட்டமாக' (இயல்புநிலை) "
 "மற்றும் `` 'செங்குத்து'`` ஆகியவற்றை ஏற்றுக்கொள்ளலாம்"
+
+#: ../../sphinx/doc/usage/configuration.rst:207
+msgid ""
+"A list of glob-style patterns [1]_ that should be excluded when looking for "
+"source files. They are matched against the source file names relative to the"
+" source directory, using slashes as directory separators on all platforms."
+msgstr ""
+"குளோப்-பாணி வடிவங்களின் பட்டியல் [1] _ மூல கோப்புகளைத் தேடும்போது விலக்கப்பட"
+" வேண்டும். அவை மூல கோப்பகத்துடன் தொடர்புடைய மூல கோப்பு பெயர்களுக்கு எதிராக "
+"பொருந்துகின்றன, எல்லா தளங்களிலும் உள்ள அடைவு பிரிப்பான்களாகப் "
+"பயன்படுத்துகின்றன."
 
 #: ../../sphinx/doc/usage/configuration.rst:2074
 msgid "``epub_writing_mode``"
@@ -3697,6 +2135,11 @@ msgstr ""
 "ஸ்பின்க்ஸ் 2.0 என்பதால் இயல்புநிலை குனு ஃப்ரீஃபோன்ட் ஆகும், இது நன்கு "
 "லத்தீன், சிரிலிக் மற்றும் கிரேக்கம் ஆகியவற்றை உள்ளடக்கியது."
 
+#: ../../sphinx/doc/usage/configuration.rst:212
+#: ../../sphinx/doc/usage/configuration.rst:232
+msgid "Example patterns:"
+msgstr "எடுத்துக்காட்டு வடிவங்கள்:"
+
 #: ../../sphinx/doc/usage/configuration.rst:2125
 msgid ""
 "Use ``xelatex`` (and LaTeX package ``xeCJK``) by default for Chinese "
@@ -3716,6 +2159,10 @@ msgstr "`` அப்ளேட்எக்ஸ்`` ஆதரவைச் சே�
 #: ../../sphinx/doc/usage/configuration.rst:2138
 msgid "``uplatex`` becomes the default setting of Japanese documents."
 msgstr "`` அப்ளேட்எக்ஸ்`` ஜப்பானிய ஆவணங்களின் இயல்புநிலை அமைப்பாக மாறுகிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:214
+msgid "``'library/xml.rst'`` -- ignores the ``library/xml.rst`` file"
+msgstr "`` 'நூலகம்/xml.rst'`` - `` நூலகம்/xml.rst`` கோப்பை புறக்கணிக்கிறது"
 
 #: ../../sphinx/doc/usage/configuration.rst:2140
 msgid ""
@@ -3738,6 +2185,11 @@ msgstr ""
 "போலவே, வெளியீட்டில் இருப்பதைப் போலவே இவ்வாறு வழங்கப்படுகிறது: கணிதம்: `\\ "
 "ஆல்பா`."
 
+#: ../../sphinx/doc/usage/configuration.rst:215
+msgid "``'library/xml'`` -- ignores the ``library/xml`` directory"
+msgstr ""
+"`` 'நூலகம்/xml'`` - `` நூலகம்/எக்ஸ்எம்எல்`` கோப்பகத்தை புறக்கணிக்கிறது"
+
 #: ../../sphinx/doc/usage/configuration.rst:2152
 msgid ""
 "This value determines how to group the document tree into LaTeX source "
@@ -3747,12 +2199,6 @@ msgstr ""
 "இந்த மதிப்பு ஆவண மரத்தை லேடெக்ஸ் மூல கோப்புகளாக எவ்வாறு தொகுத்தல் என்பதை "
 "தீர்மானிக்கிறது. இது டூப்ஸ் `` (ஸ்டார்ட் டோக் பெயர், இலக்கு பெயர், தலைப்பு, "
 "ஆசிரியர், தீம், டோக்ரீ_ஓஎன்எல்லி) ``, உருப்படிகள் எங்கே:"
-
-#: ../../sphinx/doc/usage/configuration.rst:2160
-#: ../../sphinx/doc/usage/configuration.rst:2535
-#: ../../sphinx/doc/usage/configuration.rst:2596
-msgid "*startdocname*"
-msgstr "*StartDocName*"
 
 #: ../../sphinx/doc/usage/configuration.rst:2157
 msgid ""
@@ -3765,19 +2211,28 @@ msgstr ""
 " மரங்களில் * StartDoc * ஆவணத்தால் குறிப்பிடப்பட்ட அனைத்து ஆவணங்களும் "
 "லேடெக்ஸ் கோப்பில் சேர்க்கப்படும். ."
 
-#: ../../sphinx/doc/usage/configuration.rst:2163
-#: ../../sphinx/doc/usage/configuration.rst:2599
-msgid "*targetname*"
-msgstr "*இலக்கு பெயர்*"
+#: ../../sphinx/doc/usage/configuration.rst:216
+msgid ""
+"``'library/xml*'`` -- ignores all files and directories starting with "
+"``library/xml``"
+msgstr ""
+"`` 'நூலகம்/எக்ஸ்எம்எல்*' `` - `` நூலகம்/எக்ஸ்எம்எல்`` உடன் தொடங்கி அனைத்து "
+"கோப்புகளையும் கோப்பகங்களையும் புறக்கணிக்கிறது"
+
+#: ../../sphinx/doc/usage/configuration.rst:2160
+#: ../../sphinx/doc/usage/configuration.rst:2535
+#: ../../sphinx/doc/usage/configuration.rst:2596
+msgid "*startdocname*"
+msgstr "*StartDocName*"
 
 #: ../../sphinx/doc/usage/configuration.rst:2163
 msgid "File name of the LaTeX file in the output directory."
 msgstr "வெளியீட்டு கோப்பகத்தில் லேடெக்ஸ் கோப்பின் கோப்பு பெயர்."
 
-#: ../../sphinx/doc/usage/configuration.rst:2169
-#: ../../sphinx/doc/usage/configuration.rst:2604
-msgid "*title*"
-msgstr "*தலைப்பு*"
+#: ../../sphinx/doc/usage/configuration.rst:2163
+#: ../../sphinx/doc/usage/configuration.rst:2599
+msgid "*targetname*"
+msgstr "*இலக்கு பெயர்*"
 
 #: ../../sphinx/doc/usage/configuration.rst:2166
 msgid ""
@@ -3791,10 +2246,10 @@ msgstr ""
 "பின்சாய்வுக்கோடானது அல்லது ஆம்பர்சண்ட் போன்ற சிறப்பு எழுத்துக்கள் சரியான "
 "லேடெக்ஸ் கட்டளைகளால் குறிப்பிடப்பட வேண்டும்."
 
-#: ../../sphinx/doc/usage/configuration.rst:2174
-#: ../../sphinx/doc/usage/configuration.rst:2608
-msgid "*author*"
-msgstr "*நூலாசிரியர்*"
+#: ../../sphinx/doc/usage/configuration.rst:2169
+#: ../../sphinx/doc/usage/configuration.rst:2604
+msgid "*title*"
+msgstr "*தலைப்பு*"
 
 #: ../../sphinx/doc/usage/configuration.rst:2172
 msgid ""
@@ -3807,6 +2262,11 @@ msgstr ""
 "பயன்படுத்தவும்: `` 'ஜான் \\\\ மற்றும் சாரா'``` (பின்சாய்வுக்கள் லேடெக்ஸை "
 "அடைய பைதான்-எஸ்கேப் செய்யப்பட வேண்டும்)."
 
+#: ../../sphinx/doc/usage/configuration.rst:2174
+#: ../../sphinx/doc/usage/configuration.rst:2608
+msgid "*author*"
+msgstr "*நூலாசிரியர்*"
+
 #: ../../sphinx/doc/usage/configuration.rst:2177
 msgid "*theme*"
 msgstr "*தீம்*"
@@ -3815,10 +2275,9 @@ msgstr "*தீம்*"
 msgid "LaTeX theme.  See :confval:`latex_theme`."
 msgstr "லேடெக்ஸ் தீம். காண்க: confval: `Latex_theme`."
 
-#: ../../sphinx/doc/usage/configuration.rst:2183
-#: ../../sphinx/doc/usage/configuration.rst:2624
-msgid "*toctree_only*"
-msgstr "*toctree_only*"
+#: ../../sphinx/doc/usage/configuration.rst:218
+msgid "``'**/.svn'`` -- ignores all ``.svn`` directories"
+msgstr "`` '**/. svn'`` - அனைத்து `` .svn`` கோப்பகங்களையும் புறக்கணிக்கிறது"
 
 #: ../../sphinx/doc/usage/configuration.rst:2180
 msgid ""
@@ -3831,6 +2290,11 @@ msgstr ""
 "ஆவணம் வெளியீட்டில் சேர்க்கப்படவில்லை, TOC மரங்கள் வழியாக குறிப்பிடப்பட்ட "
 "ஆவணங்கள் மட்டுமே. இந்த விருப்பத்தின் மூலம், HTML இல் காண்பிக்கப்படும் "
 "முதன்மை ஆவணத்தில் கூடுதல் பொருட்களை வைக்கலாம், ஆனால் லேடெக்ஸ் வெளியீடு அல்ல."
+
+#: ../../sphinx/doc/usage/configuration.rst:2183
+#: ../../sphinx/doc/usage/configuration.rst:2624
+msgid "*toctree_only*"
+msgstr "*toctree_only*"
 
 #: ../../sphinx/doc/usage/configuration.rst:2185
 msgid ""
@@ -3857,6 +2321,12 @@ msgstr ""
 "வழங்கப்பட்டால், இது ஒரு படக் கோப்பின் பெயராக இருக்க வேண்டும் (உள்ளமைவு "
 "கோப்பகத்துடன் தொடர்புடையது) இது டாக்ஸின் சின்னமாகும். இது தலைப்பு பக்கத்தின்"
 " மேலே வைக்கப்படுகிறது. இயல்புநிலை: `` எதுவுமில்லை``."
+
+#: ../../sphinx/doc/usage/configuration.rst:220
+msgid ""
+":confval:`exclude_patterns` is also consulted when looking for static files "
+"in :confval:`html_static_path` and :confval:`html_extra_path`."
+msgstr "."
 
 #: ../../sphinx/doc/usage/configuration.rst:2201
 msgid ""
@@ -3974,6 +2444,20 @@ msgstr ""
 "கோடுகள் மட்டுமே (பிந்தையது ஒரு தலைப்பு இருந்தால்), புக் டேப்ஸ்_ தொகுப்பைப் "
 "பயன்படுத்துகிறது."
 
+#: ../../sphinx/doc/usage/configuration.rst:227
+msgid ""
+"A list of glob-style patterns [1]_ that are used to find source files. They "
+"are matched against the source file names relative to the source directory, "
+"using slashes as directory separators on all platforms. The default is "
+"``**``, meaning that all files are recursively included from the source "
+"directory."
+msgstr ""
+"மூல கோப்புகளைக் கண்டறியப் பயன்படும் குளோப்-பாணி வடிவங்களின் பட்டியல் [1] _. "
+"அவை மூல கோப்பகத்துடன் தொடர்புடைய மூல கோப்பு பெயர்களுக்கு எதிராக "
+"பொருந்துகின்றன, எல்லா தளங்களிலும் உள்ள அடைவு பிரிப்பான்களாகப் "
+"பயன்படுத்துகின்றன. இயல்புநிலை `` ** ``, அதாவது எல்லா கோப்புகளும் மூல "
+"கோப்பகத்திலிருந்து மீண்டும் மீண்டும் சேர்க்கப்பட்டுள்ளன."
+
 #: ../../sphinx/doc/usage/configuration.rst:2272
 msgid "``'borderless'``: no lines whatsoever."
 msgstr "`` 'எல்லையற்றது'`: எந்த வரிகளும் இல்லை."
@@ -4089,6 +2573,14 @@ msgstr ""
 "வண்ணத்தைப் பயன்படுத்த விரும்பினால் ``> {\\ noindent \\ வண்ணம் {<col>}} ``, "
 "மேற்கூறியவற்றுடன் கூடுதலாக."
 
+#: ../../sphinx/doc/usage/configuration.rst:234
+msgid ""
+"``'**'`` -- all files in the source directory and subdirectories, "
+"recursively"
+msgstr ""
+"`` '**' `` - மூல அடைவு மற்றும் துணை அடைவுகளில் உள்ள அனைத்து கோப்புகளும் "
+"மீண்டும் மீண்டும்"
+
 #: ../../sphinx/doc/usage/configuration.rst:2340
 msgid ""
 "Multi-row merged cells, whether single column or multi-column currently "
@@ -4109,6 +2601,10 @@ msgstr ""
 "லேடெக்ஸ் கட்டளை. இது தற்போது ஒன்றிணைக்கப்பட்ட கலத்தில் எந்த வகையான விளைவும் "
 "இல்லாமல் உள்ளது."
 
+#: ../../sphinx/doc/usage/configuration.rst:235
+msgid "``'library/xml'`` -- just the ``library/xml`` directory"
+msgstr "`` 'நூலகம்/xml'`` - `` நூலகம்/xml`` அடைவு"
+
 #: ../../sphinx/doc/usage/configuration.rst:2350
 msgid ""
 "In a document not using ``'booktabs'`` globally, it is possible to style an "
@@ -4128,6 +2624,14 @@ msgstr ""
 "வகுப்பைப் பயன்படுத்தலாம் (5.3.0 முதல் ஸ்பிங்க்ஸ் என எப்போதும் Colortbl_ ஐ "
 "ஏற்றும்)."
 
+#: ../../sphinx/doc/usage/configuration.rst:236
+msgid ""
+"``'library/xml*'`` -- all files and directories starting with "
+"``library/xml``"
+msgstr ""
+"`` 'நூலகம்/எக்ஸ்எம்எல்*' `` - `` நூலகம்/எக்ஸ்எம்எல்`` உடன் தொடங்கும் அனைத்து"
+" கோப்புகளும் கோப்பகங்களும்"
+
 #: ../../sphinx/doc/usage/configuration.rst:2363
 msgid ""
 "If ``True``, the PDF build from the LaTeX files created by Sphinx will use "
@@ -4141,6 +2645,14 @@ msgstr ""
 "`makeindex` பொதுவான விதிமுறைகளின் குறியீட்டைத் தயாரிப்பதற்காக (இருந்து: rst:"
 " dir: `குறியீட்டு` பயன்பாடு). இதன் பொருள் யுடிஎஃப் -8 எழுத்துக்களைக் கொண்ட "
 "சொற்கள் சரியாக ஆர்டர் செய்யப்படும்: confval: `மொழி`."
+
+#: ../../sphinx/doc/usage/configuration.rst:237
+msgid ""
+"``'**/doc'`` -- all ``doc`` directories (this might be useful if "
+"documentation is co-located with source files)"
+msgstr ""
+"`` '**/doc'``-அனைத்து `` doc`` கோப்பகங்களும் (ஆவணங்கள் மூல கோப்புகளுடன் "
+"இணைந்து அமைந்துள்ளால் இது பயனுள்ளதாக இருக்கும்)"
 
 #: ../../sphinx/doc/usage/configuration.rst:2371
 msgid ""
@@ -4192,6 +2704,20 @@ msgid ""
 msgstr ""
 "அதன்: குறிப்பு: `ஆவணங்கள் <latex_elements_confval>` இதற்கு நகர்ந்தது: doc: "
 "`/Latex`."
+
+#: ../../sphinx/doc/usage/configuration.rst:24
+msgid ""
+"The configuration file is executed as Python code at build time (using "
+":func:`importlib.import_module`, and with the current directory set to its "
+"containing directory), and therefore can execute arbitrarily complex code. "
+"Sphinx then reads simple names from the file's namespace as its "
+"configuration."
+msgstr ""
+"கட்டமைப்பு கோப்பு பில்ட் நேரத்தில் பைதான் குறியீடாக செயல்படுத்தப்படுகிறது "
+"(பயன்படுத்துதல்: func: `importlib.import_module`, மற்றும் தற்போதைய "
+"கோப்பகத்துடன் அதன் கொண்ட கோப்பகத்திற்கு அமைக்கப்பட்டுள்ளது), எனவே "
+"தன்னிச்சையாக சிக்கலான குறியீட்டை இயக்க முடியும். ஸ்பிங்க்ஸ் பின்னர் கோப்பின்"
+" பெயர்வெளியில் இருந்து எளிய பெயர்களை அதன் உள்ளமைவாகப் படிக்கிறது."
 
 #: ../../sphinx/doc/usage/configuration.rst:2400
 msgid ""
@@ -4268,15 +2794,21 @@ msgstr ""
 "அமைப்புகளின் தொகுப்பாகும் (எ.கா. ஆவண வகுப்பு, உயர் மட்ட பிரித்தல் அலகு "
 "மற்றும் பல)."
 
+#: ../../sphinx/doc/usage/configuration.rst:244
+msgid ""
+"A list of paths that contain extra templates (or templates that overwrite "
+"builtin/theme-specific templates).  Relative paths are taken as relative to "
+"the configuration directory."
+msgstr ""
+"கூடுதல் வார்ப்புருக்களைக் கொண்ட பாதைகளின் பட்டியல் (அல்லது "
+"பில்டின்/தீம்-குறிப்பிட்ட வார்ப்புருக்களை மேலெழுதும் வார்ப்புருக்கள்). "
+"உறவினர் பாதைகள் உள்ளமைவு கோப்பகத்துடன் தொடர்புடையவை."
+
 #: ../../sphinx/doc/usage/configuration.rst:2442
 msgid "As a built-in LaTeX themes, ``manual`` and ``howto`` are bundled."
 msgstr ""
 "ஒரு உள்ளமைக்கப்பட்ட லேடெக்ஸ் கருப்பொருள்களாக, `` கையேடு`` மற்றும் `` "
 "எப்படி`` தொகுக்கப்பட்டுள்ளன."
-
-#: ../../sphinx/doc/usage/configuration.rst:2446
-msgid "``manual``"
-msgstr "`` கையேடு``"
 
 #: ../../sphinx/doc/usage/configuration.rst:2445
 msgid ""
@@ -4286,9 +2818,9 @@ msgstr ""
 "ஒரு கையேட்டை எழுதுவதற்கான லேடெக்ஸ் தீம். இது `` அறிக்கை` ஆவண வகுப்பை "
 "இறக்குமதி செய்கிறது (ஜப்பானிய ஆவணங்கள் `` jsbook`` ஐப் பயன்படுத்துகின்றன)."
 
-#: ../../sphinx/doc/usage/configuration.rst:2451
-msgid "``howto``"
-msgstr "`` எப்படி``"
+#: ../../sphinx/doc/usage/configuration.rst:2446
+msgid "``manual``"
+msgstr "`` கையேடு``"
 
 #: ../../sphinx/doc/usage/configuration.rst:2449
 msgid ""
@@ -4300,6 +2832,10 @@ msgstr ""
 "இறக்குமதி செய்கிறது (ஜப்பானிய ஆவணங்கள் `` jreport`` மாறாக) "
 "பயன்படுத்துகின்றன. : confval: `Latex_appendices` இந்த கருப்பொருளுக்கு "
 "மட்டுமே கிடைக்கிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:2451
+msgid "``howto``"
+msgstr "`` எப்படி``"
 
 #: ../../sphinx/doc/usage/configuration.rst:2453
 msgid "It defaults to ``'manual'``."
@@ -4328,6 +2864,14 @@ msgstr "உரை வெளியீட்டிற்கான விருப�
 #: ../../sphinx/doc/usage/configuration.rst:2477
 msgid "These options influence text output."
 msgstr "இந்த விருப்பங்கள் உரை வெளியீட்டை பாதிக்கின்றன."
+
+#: ../../sphinx/doc/usage/configuration.rst:248
+msgid ""
+"As these files are not meant to be built, they are automatically added to "
+":confval:`exclude_patterns`."
+msgstr ""
+"இந்த கோப்புகள் கட்டமைக்கப்படக்கூடாது என்பதால், அவை தானாகவே "
+"சேர்க்கப்படுகின்றன: confval: `விலக்கு_பேட்டர்கள்`."
 
 #: ../../sphinx/doc/usage/configuration.rst:2481
 msgid "Determines which end-of-line character(s) are used in text output."
@@ -4419,10 +2963,6 @@ msgstr ""
 " இயல்புநிலை ரூட் ஆவணத்தைப் பயன்படுத்த விரும்பினால், உங்கள்: confval: "
 "`root_doc` இங்கே பயன்படுத்தவும்.)"
 
-#: ../../sphinx/doc/usage/configuration.rst:2540
-msgid "*name*"
-msgstr "*பெயர்*"
-
 #: ../../sphinx/doc/usage/configuration.rst:2538
 msgid ""
 "Name of the manual page.  This should be a short string without spaces or "
@@ -4433,10 +2973,24 @@ msgstr ""
 "குறுகிய சரமாக இருக்க வேண்டும். கோப்பு பெயர் மற்றும் கையேடு பக்கத்தின் பெயரை "
 "(பெயர் பிரிவில்) தீர்மானிக்க இது பயன்படுத்தப்படுகிறது."
 
-#: ../../sphinx/doc/usage/configuration.rst:2545
-#: ../../sphinx/doc/usage/configuration.rst:2614
-msgid "*description*"
-msgstr "*விளக்கம்*"
+#: ../../sphinx/doc/usage/configuration.rst:254
+msgid ""
+"A string with the fully-qualified name of a callable (or simply a class) "
+"that returns an instance of :class:`~sphinx.application.TemplateBridge`. "
+"This instance is then used to render HTML documents, and possibly the output"
+" of other builders (currently the changes builder).  (Note that the template"
+" bridge must be made theme-aware if HTML themes are to be used.)"
+msgstr ""
+"அழைக்கக்கூடிய (அல்லது வெறுமனே ஒரு வகுப்பின்) முழு தகுதி வாய்ந்த பெயரைக் "
+"கொண்ட ஒரு சரம்: வகுப்பு: `~ sphinx.application.templatebridge`. இந்த நிகழ்வு"
+" பின்னர் HTML ஆவணங்களை வழங்க பயன்படுகிறது, மேலும் பிற பில்டர்களின் வெளியீடு "
+"(தற்போது மாற்றங்கள் பில்டர்). (HTML கருப்பொருள்கள் பயன்படுத்தப்பட "
+"வேண்டுமானால் வார்ப்புரு பாலம் தீம்-விழிப்புணர்வு செய்யப்பட வேண்டும் என்பதை "
+"நினைவில் கொள்க.)"
+
+#: ../../sphinx/doc/usage/configuration.rst:2540
+msgid "*name*"
+msgstr "*பெயர்*"
 
 #: ../../sphinx/doc/usage/configuration.rst:2543
 msgid ""
@@ -4446,9 +3000,10 @@ msgstr ""
 "கையேடு பக்கத்தின் விளக்கம். இது பெயர் பிரிவில் பயன்படுத்தப்படுகிறது. பெயர் "
 "பிரிவை தானாக உருவாக்க விரும்பவில்லை என்றால் வெற்று சரமாக இருக்கலாம்."
 
-#: ../../sphinx/doc/usage/configuration.rst:2550
-msgid "*authors*"
-msgstr "*ஆசிரியர்கள்*"
+#: ../../sphinx/doc/usage/configuration.rst:2545
+#: ../../sphinx/doc/usage/configuration.rst:2614
+msgid "*description*"
+msgstr "*விளக்கம்*"
 
 #: ../../sphinx/doc/usage/configuration.rst:2548
 msgid ""
@@ -4460,9 +3015,9 @@ msgstr ""
 "ஆசிரியர்கள் பிரிவை தானாக உருவாக்க விரும்பவில்லை என்றால் வெற்று சரம் அல்லது "
 "பட்டியலாக இருக்கலாம்."
 
-#: ../../sphinx/doc/usage/configuration.rst:2554
-msgid "*section*"
-msgstr "*பிரிவு*"
+#: ../../sphinx/doc/usage/configuration.rst:2550
+msgid "*authors*"
+msgstr "*ஆசிரியர்கள்*"
 
 #: ../../sphinx/doc/usage/configuration.rst:2553
 msgid ""
@@ -4471,6 +3026,10 @@ msgid ""
 msgstr ""
 "கையேடு பக்க பிரிவு. வெளியீட்டு கோப்பு பெயருக்கும் கையேடு பக்க தலைப்பிலும் "
 "பயன்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:2554
+msgid "*section*"
+msgstr "*பிரிவு*"
 
 #: ../../sphinx/doc/usage/configuration.rst:2560
 msgid "If true, add URL addresses after links.  Default is ``False``."
@@ -4560,10 +3119,6 @@ msgstr "உயர்மட்ட `` dir`` மெனு கோப்பில் 
 msgid "Descriptive text to appear in the top-level ``DIR`` menu file."
 msgstr "உயர்மட்ட `` dir`` மெனு கோப்பில் தோன்றும் விளக்க உரை."
 
-#: ../../sphinx/doc/usage/configuration.rst:2618
-msgid "*category*"
-msgstr "*வகை*"
-
 #: ../../sphinx/doc/usage/configuration.rst:2617
 msgid ""
 "Specifies the section which this entry will appear in the top-level ``DIR`` "
@@ -4571,6 +3126,10 @@ msgid ""
 msgstr ""
 "இந்த நுழைவு மேல்-நிலை `` dir`` மெனு கோப்பில் தோன்றும் பகுதியைக் "
 "குறிப்பிடுகிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:2618
+msgid "*category*"
+msgstr "*வகை*"
 
 #: ../../sphinx/doc/usage/configuration.rst:2621
 msgid ""
@@ -4584,6 +3143,18 @@ msgstr ""
 "ஆவணங்கள் மட்டுமே. இந்த விருப்பத்துடன், நீங்கள் HTML இல் காண்பிக்கப்படும் "
 "முதன்மை ஆவணத்தில் கூடுதல் விஷயங்களை வைக்கலாம், ஆனால் டெக்ஸின்ஃபோ வெளியீடு "
 "அல்ல."
+
+#: ../../sphinx/doc/usage/configuration.rst:264
+msgid ""
+"A string of reStructuredText that will be included at the end of every "
+"source file that is read.  This is a possible place to add substitutions "
+"that should be available in every file (another being "
+":confval:`rst_prolog`).  An example::"
+msgstr ""
+"படிக்கப்படும் ஒவ்வொரு மூல கோப்பின் முடிவிலும் சேர்க்கப்படும் மறுசீரமைப்பு "
+"டெக்ஸ்டின் சரம். ஒவ்வொரு கோப்பிலும் கிடைக்க வேண்டிய மாற்றீடுகளைச் சேர்க்க "
+"இது சாத்தியமான இடம் (மற்றொரு இருப்பு: confval: `rst_prolog`). ஒரு "
+"எடுத்துக்காட்டு ::"
 
 #: ../../sphinx/doc/usage/configuration.rst:2647
 msgid "Control how to display URL addresses."
@@ -4614,10 +3185,6 @@ msgstr ""
 msgid "Keys that you may want to override include:"
 msgstr "நீங்கள் மேலெழுத விரும்பும் விசைகள் பின்வருமாறு:"
 
-#: ../../sphinx/doc/usage/configuration.rst:2671
-msgid "``'paragraphindent'``"
-msgstr "`` 'பத்தி"
-
 #: ../../sphinx/doc/usage/configuration.rst:2670
 msgid ""
 "Number of spaces to indent the first line of each paragraph, default ``2``."
@@ -4626,9 +3193,9 @@ msgstr ""
 "ஒவ்வொரு பத்தியின் முதல் வரியையும் உள்தள்ளுவதற்கான இடைவெளிகளின் எண்ணிக்கை, "
 "இயல்புநிலை `` 2``. உள்தள்ளல் இல்லை என்று `` 0`` ஐக் குறிப்பிடவும்."
 
-#: ../../sphinx/doc/usage/configuration.rst:2675
-msgid "``'exampleindent'``"
-msgstr "`` 'எடுத்துக்காட்டு"
+#: ../../sphinx/doc/usage/configuration.rst:2671
+msgid "``'paragraphindent'``"
+msgstr "`` 'பத்தி"
 
 #: ../../sphinx/doc/usage/configuration.rst:2674
 msgid ""
@@ -4639,17 +3206,17 @@ msgstr ""
 "இடைவெளிகளின் எண்ணிக்கை, இயல்புநிலை `` 4``. உள்தள்ளல் இல்லை என்று `` 0`` ஐக் "
 "குறிப்பிடவும்."
 
-#: ../../sphinx/doc/usage/configuration.rst:2678
-msgid "``'preamble'``"
-msgstr "`` 'முன்னுரை'``"
+#: ../../sphinx/doc/usage/configuration.rst:2675
+msgid "``'exampleindent'``"
+msgstr "`` 'எடுத்துக்காட்டு"
 
 #: ../../sphinx/doc/usage/configuration.rst:2678
 msgid "Texinfo markup inserted near the beginning of the file."
 msgstr "கோப்பின் தொடக்கத்தில் டெக்ஸின்ஃபோ மார்க்அப் செருகப்பட்டது."
 
-#: ../../sphinx/doc/usage/configuration.rst:2683
-msgid "``'copying'``"
-msgstr "`` 'நகலெடுப்பது'``"
+#: ../../sphinx/doc/usage/configuration.rst:2678
+msgid "``'preamble'``"
+msgstr "`` 'முன்னுரை'``"
 
 #: ../../sphinx/doc/usage/configuration.rst:2681
 msgid ""
@@ -4660,6 +3227,10 @@ msgstr ""
 "டெக்ஸின்ஃபோ மார்க்அப் `` `@நகலெடுக்கும்`` தொகுதிக்குள் செருகப்பட்டு "
 "தலைப்புக்குப் பிறகு காட்டப்படும். இயல்புநிலை மதிப்பு திட்டத்தை அடையாளம் "
 "காணும் எளிய தலைப்புப் பக்கத்தைக் கொண்டுள்ளது."
+
+#: ../../sphinx/doc/usage/configuration.rst:2683
+msgid "``'copying'``"
+msgstr "`` 'நகலெடுப்பது'``"
 
 #: ../../sphinx/doc/usage/configuration.rst:2685
 msgid ""
@@ -4781,6 +3352,18 @@ msgid "The value is a dictionary that maps header name to its value."
 msgstr ""
 "மதிப்பு ஒரு அகராதி, இது தலைப்பு பெயரை அதன் மதிப்புக்கு வரைபடமாக்குகிறது."
 
+#: ../../sphinx/doc/usage/configuration.rst:279
+msgid ""
+"A string of reStructuredText that will be included at the beginning of every"
+" source file that is read.  This is a possible place to add substitutions "
+"that should be available in every file (another being "
+":confval:`rst_epilog`).  An example::"
+msgstr ""
+"படிக்கப்படும் ஒவ்வொரு மூல கோப்பின் தொடக்கத்திலும் சேர்க்கப்படும் "
+"மறுசீரமைப்பு டெக்ஸ்டின் சரம். ஒவ்வொரு கோப்பிலும் கிடைக்க வேண்டிய "
+"மாற்றீடுகளைச் சேர்க்க இது சாத்தியமான இடமாகும் (மற்றொன்று: confval: "
+"`rst_epilog`). ஒரு எடுத்துக்காட்டு ::"
+
 #: ../../sphinx/doc/usage/configuration.rst:2800
 msgid ""
 "The number of times the linkcheck builder will attempt to check a URL before"
@@ -4880,10 +3463,6 @@ msgstr "*regex_pattern*"
 msgid "A regular expression that matches a URI."
 msgstr "ஒரு URI உடன் பொருந்தக்கூடிய வழக்கமான வெளிப்பாடு."
 
-#: ../../sphinx/doc/usage/configuration.rst:2873
-msgid "*auth_info*"
-msgstr "*auth_info*"
-
 #: ../../sphinx/doc/usage/configuration.rst:2871
 msgid ""
 "Authentication information to use for that URI. The value can be anything "
@@ -4893,6 +3472,10 @@ msgstr ""
 "அந்த URI க்கு பயன்படுத்த அங்கீகார தகவல். மதிப்பு `` கோரிக்கைகள்`` நூலகத்தால்"
 " புரிந்துகொள்ளப்பட்ட எதையும் இருக்கலாம் (பார்க்க: குறிப்பு: `கோரிக்கைகள் "
 "அங்கீகாரம் <கோரிக்கைகள்: அங்கீகாரம்>` விவரங்களுக்கு)."
+
+#: ../../sphinx/doc/usage/configuration.rst:2873
+msgid "*auth_info*"
+msgstr "*auth_info*"
 
 #: ../../sphinx/doc/usage/configuration.rst:2875
 msgid ""
@@ -4935,6 +3518,10 @@ msgstr ""
 "லிங்க்செக்_ரேட்_மிட்_ டைம்அவுட்டை வெற்றிபெறும் அல்லது மீறும் வரை "
 "முயற்சிகளுக்கு இடையில் காத்திருப்பு நேரத்தை இரட்டிப்பாக்குகிறது. இயல்பாக, "
 "நேரம் முடிந்தது 5 நிமிடங்கள்."
+
+#: ../../sphinx/doc/usage/configuration.rst:29
+msgid "Important points to note:"
+msgstr "கவனிக்க வேண்டிய முக்கியமான புள்ளிகள்:"
 
 #: ../../sphinx/doc/usage/configuration.rst:2907
 msgid ""
@@ -4984,6 +3571,23 @@ msgstr ""
 "பாகுபடுத்தி கூடுதலாக பண்புகளாக ஏற்றுக்கொள்ள வேண்டிய சரங்களின் பட்டியல். "
 "பண்புக்கூறுகள் பெயர்வுத்திறனுக்காக ``#வரையறுத்தல்` d ஆக இருக்கும்போது இதைப் "
 "பயன்படுத்தலாம்."
+
+#: ../../sphinx/doc/usage/configuration.rst:295
+msgid ""
+"The name of the default :doc:`domain </usage/domains/index>`. Can also be "
+"``None`` to disable a default domain.  The default is ``'py'``. Those "
+"objects in other domains (whether the domain name is given explicitly, or "
+"selected by a :rst:dir:`default-domain` directive) will have the domain name"
+" explicitly prepended when named (e.g., when the default domain is C, Python"
+" functions will be named \"Python function\", not just \"function\")."
+msgstr ""
+"இயல்புநிலையின் பெயர்: டாக்: `டொமைன் </பயன்பாடு/களங்கள்/குறியீட்டு>`. "
+"இயல்புநிலை களத்தை முடக்க `` எதுவுமில்லை`. இயல்புநிலை `` 'பை'``. மற்ற "
+"களங்களில் உள்ள அந்த பொருள்கள் (டொமைன் பெயர் வெளிப்படையாக வழங்கப்பட்டதா, "
+"அல்லது ஒரு: rst: dir: `இயல்புநிலை-டொமைன்` டைரெக்டிவ்) பெயரிடும்போது டொமைன் "
+"பெயர் வெளிப்படையாக தயாரிக்கப்படும் (எ.கா., இயல்புநிலை டொமைன் சி, பைதான் ஆக "
+"இருக்கும்போது செயல்பாடுகளுக்கு \"பைதான் செயல்பாடு\" என்று பெயரிடப்படும், "
+"\"செயல்பாடு\" மட்டுமல்ல)."
 
 #: ../../sphinx/doc/usage/configuration.rst:2952
 #: ../../sphinx/doc/usage/configuration.rst:2998
@@ -5116,6 +3720,20 @@ msgstr ""
 "அளவுருக்களின் பட்டியல் மட்டுமே மூடப்பட்டிருக்கும், அதே நேரத்தில் வாதங்களின் "
 "பட்டியல் ஒரு வரியில் வழங்கப்படும்"
 
+#: ../../sphinx/doc/usage/configuration.rst:308
+msgid ""
+"The name of a reST role (builtin or Sphinx extension) to use as the default "
+"role, that is, for text marked up ```like this```.  This can be set to "
+"``'py:obj'`` to make ```filter``` a cross-reference to the Python function "
+"\"filter\".  The default is ``None``, which doesn't reassign the default "
+"role."
+msgstr ""
+"இயல்புநிலை பாத்திரமாகப் பயன்படுத்த, ஓய்வு பாத்திரத்தின் பெயர் (பில்டின் "
+"அல்லது ஸ்பின்க்ஸ் நீட்டிப்பு), அதாவது, `` இது போன்றவற்றைப் போல குறிக்கப்பட்ட"
+" உரைக்கு. இதை `` `வடிகட்டி``` பைதான் செயல்பாடு\" வடிகட்டி \"க்கு குறுக்கு "
+"குறிப்பை உருவாக்க` `'py: obj'`` என அமைக்கலாம். இயல்புநிலை `` எதுவுமில்லை``, "
+"இது இயல்புநிலை பாத்திரத்தை மீண்டும் வகுக்காது."
+
 #: ../../sphinx/doc/usage/configuration.rst:3080
 msgid "Options for the Javascript domain"
 msgstr "ஜாவாஸ்கிரிப்ட் டொமைனுக்கான விருப்பங்கள்"
@@ -5123,3 +3741,1385 @@ msgstr "ஜாவாஸ்கிரிப்ட் டொமைனுக்க�
 #: ../../sphinx/doc/usage/configuration.rst:3091
 msgid "Example of configuration file"
 msgstr "உள்ளமைவு கோப்பின் எடுத்துக்காட்டு"
+
+#: ../../sphinx/doc/usage/configuration.rst:31
+msgid ""
+"If not otherwise documented, values must be strings, and their default is "
+"the empty string."
+msgstr ""
+"வேறுவிதமாக ஆவணப்படுத்தப்படாவிட்டால், மதிப்புகள் சரங்களாக இருக்க வேண்டும், "
+"அவற்றின் இயல்புநிலை வெற்று சரம்."
+
+#: ../../sphinx/doc/usage/configuration.rst:313
+msgid ""
+"The default role can always be set within individual documents using the "
+"standard reST :dudir:`default-role` directive."
+msgstr ""
+"இயல்புநிலை பங்கு எப்போதும் நிலையான ஓய்வு: டுடிர்: `இயல்புநிலை-பங்கு` உத்தரவு"
+" ஆகியவற்றைப் பயன்படுத்தி தனிப்பட்ட ஆவணங்களுக்குள் அமைக்கப்படலாம்."
+
+#: ../../sphinx/doc/usage/configuration.rst:320
+msgid ""
+"If true, keep warnings as \"system message\" paragraphs in the built "
+"documents.  Regardless of this setting, warnings are always written to the "
+"standard error stream when ``sphinx-build`` is run."
+msgstr ""
+"உண்மை என்றால், எச்சரிக்கைகளை கட்டப்பட்ட ஆவணங்களில் \"கணினி செய்தி\" "
+"பத்திகளாக வைத்திருங்கள். இந்த அமைப்பைப் பொருட்படுத்தாமல், `` "
+"ஸ்பின்க்ஸ்-பில்ட்`` இயக்கப்படும்போது எச்சரிக்கைகள் எப்போதும் நிலையான பிழை "
+"ஸ்ட்ரீமுக்கு எழுதப்படும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:324
+msgid ""
+"The default is ``False``, the pre-0.5 behavior was to always keep them."
+msgstr ""
+"இயல்புநிலை `` தவறு``, 0.5 க்கு முந்தைய நடத்தை எப்போதும் அவற்றை "
+"வைத்திருப்பதுதான்."
+
+#: ../../sphinx/doc/usage/configuration.rst:330
+msgid "A list of warning types to suppress arbitrary warning messages."
+msgstr "தன்னிச்சையான எச்சரிக்கை செய்திகளை அடக்க எச்சரிக்கை வகைகளின் பட்டியல்."
+
+#: ../../sphinx/doc/usage/configuration.rst:332
+msgid "Sphinx supports following warning types:"
+msgstr "எச்சரிக்கை வகைகளைத் தொடர்ந்து SPHINX ஆதரிக்கிறது:"
+
+#: ../../sphinx/doc/usage/configuration.rst:334
+msgid "``app.add_node``"
+msgstr "`` app.add_node``"
+
+#: ../../sphinx/doc/usage/configuration.rst:335
+msgid "``app.add_directive``"
+msgstr "`` app.add_directive``"
+
+#: ../../sphinx/doc/usage/configuration.rst:336
+msgid "``app.add_role``"
+msgstr "`` app.add_role``"
+
+#: ../../sphinx/doc/usage/configuration.rst:337
+msgid "``app.add_generic_role``"
+msgstr "`` app.add_generic_role``"
+
+#: ../../sphinx/doc/usage/configuration.rst:338
+msgid "``app.add_source_parser``"
+msgstr "`` app.add_source_parser``"
+
+#: ../../sphinx/doc/usage/configuration.rst:339
+msgid "``autosectionlabel.*``"
+msgstr "`` AutoSectionLabel.*``"
+
+#: ../../sphinx/doc/usage/configuration.rst:34
+msgid ""
+"The term \"fully-qualified name\" refers to a string that names an "
+"importable Python object inside a module; for example, the FQN "
+"``\"sphinx.builders.Builder\"`` means the ``Builder`` class in the "
+"``sphinx.builders`` module."
+msgstr ""
+"\"முழுமையாக தகுதி வாய்ந்த பெயர்\" என்ற சொல் ஒரு தொகுதிக்குள் இறக்குமதி "
+"செய்யக்கூடிய பைதான் பொருளைக் குறிக்கும் ஒரு சரத்தை குறிக்கிறது; "
+"எடுத்துக்காட்டாக, fqn `` \"sphinx.builders.builder\" `` என்பது `` "
+"sphinx.builders`` தொகுதியில் `` பில்டர்`` வகுப்பைக் குறிக்கிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:340
+msgid "``download.not_readable``"
+msgstr "`` பதிவிறக்கம். Not_readable``"
+
+#: ../../sphinx/doc/usage/configuration.rst:341
+msgid "``epub.unknown_project_files``"
+msgstr "`` epub.unknown_project_files``"
+
+#: ../../sphinx/doc/usage/configuration.rst:342
+msgid "``epub.duplicated_toc_entry``"
+msgstr "`` epub.duplicated_toc_entry``"
+
+#: ../../sphinx/doc/usage/configuration.rst:343
+msgid "``i18n.inconsistent_references``"
+msgstr "`` i18n.inconsistent_references``"
+
+#: ../../sphinx/doc/usage/configuration.rst:344
+msgid "``index``"
+msgstr "`` குறியீட்டு``"
+
+#: ../../sphinx/doc/usage/configuration.rst:345
+msgid "``image.not_readable``"
+msgstr "`` image.not_readable``"
+
+#: ../../sphinx/doc/usage/configuration.rst:346
+msgid "``ref.term``"
+msgstr "`` ref.term``"
+
+#: ../../sphinx/doc/usage/configuration.rst:347
+msgid "``ref.ref``"
+msgstr "`` ref.ref``"
+
+#: ../../sphinx/doc/usage/configuration.rst:348
+msgid "``ref.numref``"
+msgstr "`` ref.numref``"
+
+#: ../../sphinx/doc/usage/configuration.rst:349
+msgid "``ref.keyword``"
+msgstr "`` ref.keyword``"
+
+#: ../../sphinx/doc/usage/configuration.rst:350
+msgid "``ref.option``"
+msgstr "`` ref.option``"
+
+#: ../../sphinx/doc/usage/configuration.rst:351
+msgid "``ref.citation``"
+msgstr "`` ref.cital ``"
+
+#: ../../sphinx/doc/usage/configuration.rst:352
+msgid "``ref.footnote``"
+msgstr "`` ref.footnote``"
+
+#: ../../sphinx/doc/usage/configuration.rst:353
+msgid "``ref.doc``"
+msgstr "`` ref.doc``"
+
+#: ../../sphinx/doc/usage/configuration.rst:354
+msgid "``ref.python``"
+msgstr "`` ref.python``"
+
+#: ../../sphinx/doc/usage/configuration.rst:355
+msgid "``misc.highlighting_failure``"
+msgstr "`` misc.highlighting_failure``"
+
+#: ../../sphinx/doc/usage/configuration.rst:356
+msgid "``toc.circular``"
+msgstr "`` toc.cricular``"
+
+#: ../../sphinx/doc/usage/configuration.rst:357
+msgid "``toc.excluded``"
+msgstr "`` toc.excluded``"
+
+#: ../../sphinx/doc/usage/configuration.rst:358
+msgid "``toc.not_readable``"
+msgstr "`` toc.not_readable``"
+
+#: ../../sphinx/doc/usage/configuration.rst:359
+msgid "``toc.secnum``"
+msgstr "`` toc.secnum``"
+
+#: ../../sphinx/doc/usage/configuration.rst:361
+msgid ""
+"You can choose from these types.  You can also give only the first component"
+" to exclude all warnings attached to it."
+msgstr ""
+"இந்த வகைகளிலிருந்து நீங்கள் தேர்வு செய்யலாம். அதனுடன் இணைக்கப்பட்ட அனைத்து "
+"எச்சரிக்கைகளையும் விலக்க முதல் கூறுகளை மட்டுமே நீங்கள் கொடுக்க முடியும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:364
+msgid "Now, this option should be considered *experimental*."
+msgstr "இப்போது, இந்த விருப்பத்தை *சோதனை *கருத வேண்டும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:370
+msgid "Added ``misc.highlighting_failure``"
+msgstr "சேர்க்கப்பட்டது `` misc.highlighting_failure``"
+
+#: ../../sphinx/doc/usage/configuration.rst:374
+msgid "Added ``epub.unknown_project_files``"
+msgstr "`` Epub.unknown_project_files`` சேர்க்கப்பட்டது"
+
+#: ../../sphinx/doc/usage/configuration.rst:378
+msgid "Added ``ref.footnote``"
+msgstr "சேர்க்கப்பட்டது `` ref.footnote``"
+
+#: ../../sphinx/doc/usage/configuration.rst:382
+msgid "Added ``autosectionlabel.*``"
+msgstr "`` AutoSectionLabel ஐச் சேர்த்தது.*``"
+
+#: ../../sphinx/doc/usage/configuration.rst:386
+msgid "Added ``epub.duplicated_toc_entry``"
+msgstr "சேர்க்கப்பட்டது `` epub.duplicated_toc_entry``"
+
+#: ../../sphinx/doc/usage/configuration.rst:39
+msgid ""
+"Remember that document names use ``/`` as the path separator and don't "
+"contain the file name extension."
+msgstr ""
+"ஆவண பெயர்கள் ``/`` பாதை பிரிப்பானாகப் பயன்படுத்துகின்றன என்பதையும், கோப்பு "
+"பெயர் நீட்டிப்பு இல்லை என்பதையும் நினைவில் கொள்ளுங்கள்."
+
+#: ../../sphinx/doc/usage/configuration.rst:390
+msgid "Added ``toc.excluded`` and ``toc.not_readable``"
+msgstr "`` Toc.excluded`` மற்றும் `` toc.not_readable``"
+
+#: ../../sphinx/doc/usage/configuration.rst:394
+msgid "Added ``i18n.inconsistent_references``"
+msgstr "சேர்க்கப்பட்டது"
+
+#: ../../sphinx/doc/usage/configuration.rst:398
+msgid "Added ``index`` warning type."
+msgstr "`` குறியீட்டு`` எச்சரிக்கை வகை சேர்க்கப்பட்டது."
+
+#: ../../sphinx/doc/usage/configuration.rst:402
+msgid ""
+"If set to a ``major.minor`` version string like ``'1.1'``, Sphinx will "
+"compare it with its version and refuse to build if it is too old.  Default "
+"is no requirement."
+msgstr ""
+"`` '1.1'`` போன்ற `` மேஜர்.மினோர்`` பதிப்பு சரத்திற்கு அமைக்கப்பட்டால், "
+"ஸ்பின்க்ஸ் அதை அதன் பதிப்போடு ஒப்பிட்டு, அது மிகவும் பழையதாக இருந்தால் கட்ட "
+"மறுக்கும். இயல்புநிலை தேவையில்லை."
+
+#: ../../sphinx/doc/usage/configuration.rst:408
+msgid "also accepts micro version string"
+msgstr "மைக்ரோ பதிப்பு சரத்தையும் ஏற்றுக்கொள்கிறது"
+
+#: ../../sphinx/doc/usage/configuration.rst:413
+msgid ""
+"This value can be a dictionary specifying version requirements for "
+"extensions in :confval:`extensions`, e.g. ``needs_extensions = "
+"{'sphinxcontrib.something': '1.5'}``.  The version strings should be in the "
+"form ``major.minor``.  Requirements do not have to be specified for all "
+"extensions, only for those you want to check."
+msgstr ""
+"இந்த மதிப்பு நீட்டிப்புகளுக்கான பதிப்பு தேவைகளை குறிப்பிடும் அகராதியாக "
+"இருக்கலாம்: confval: `நீட்டிப்புகள்`, எ.கா. `` தேவைகள்_எக்ஸ்டென்சன்ஸ் = "
+"{'sphinxcontrib.something': '1.5'} ``. பதிப்பு சரங்கள் `` மேஜர்.மினோர்`` "
+"வடிவத்தில் இருக்க வேண்டும். அனைத்து நீட்டிப்புகளுக்கும் தேவைகள் "
+"குறிப்பிடப்பட வேண்டியதில்லை, நீங்கள் சரிபார்க்க விரும்புவோருக்கு மட்டுமே."
+
+#: ../../sphinx/doc/usage/configuration.rst:419
+msgid ""
+"This requires that the extension specifies its version to Sphinx (see "
+":ref:`dev-extensions` for how to do that)."
+msgstr ""
+"இதற்கு நீட்டிப்பு அதன் பதிப்பை ஸ்பிங்க்ஸுக்குக் குறிப்பிட வேண்டும் (பார்க்க:"
+" குறிப்பு: `தேவ்-நீட்டிப்புகள்` அதை எப்படி செய்வது என்பதற்காக)."
+
+#: ../../sphinx/doc/usage/configuration.rst:42
+msgid ""
+"Since :file:`conf.py` is read as a Python file, the usual rules apply for "
+"encodings and Unicode support."
+msgstr ""
+"பின்னர்: கோப்பு: `conf.py` ஒரு பைதான் கோப்பாக படிக்கப்படுகிறது, வழக்கமான "
+"விதிகள் குறியாக்கங்கள் மற்றும் யூனிகோட் ஆதரவுக்கு பொருந்தும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:426
+msgid ""
+"A URL to cross-reference :rst:role:`manpage` roles. If this is defined to "
+"``https://manpages.debian.org/{path}``, the :literal:`:manpage:`man(1)`` "
+"role will link to <https://manpages.debian.org/man(1)>. The patterns "
+"available are:"
+msgstr ""
+"குறுக்கு-குறிப்புக்கு ஒரு URL: rst: பங்கு: `manpage` பாத்திரங்கள். இது `` "
+"https://manpages.debian.org/ {பாதை} ``, தி: லிட்டரல்: `: மேன் (1)` "
+"`பாத்திரம் <https: //manpages.debian உடன் இணைக்கப்படும் என்றால் "
+"வரையறுக்கப்பட்டால் .org/man (1)>. கிடைக்கக்கூடிய வடிவங்கள்:"
+
+#: ../../sphinx/doc/usage/configuration.rst:431
+msgid "``page`` - the manual page (``man``)"
+msgstr "`` பக்கம்`` - கையேடு பக்கம் (`` மனிதன்``)"
+
+#: ../../sphinx/doc/usage/configuration.rst:432
+msgid "``section`` - the manual section (``1``)"
+msgstr "`` பிரிவு`` - கையேடு பிரிவு (`` 1``)"
+
+#: ../../sphinx/doc/usage/configuration.rst:433
+msgid "``path`` - the original manual page and section specified (``man(1)``)"
+msgstr ""
+"`` பாதை`` - அசல் கையேடு பக்கம் மற்றும் பிரிவு குறிப்பிடப்பட்ட (`` மனிதன் (1)"
+" ``)"
+
+#: ../../sphinx/doc/usage/configuration.rst:435
+msgid "This also supports manpages specified as ``man.1``."
+msgstr "இது `` MAN.1`` என குறிப்பிடப்பட்ட மனிதப் பக்கங்களையும் ஆதரிக்கிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:437
+msgid ""
+"This currently affects only HTML writers but could be expanded in the "
+"future."
+msgstr ""
+"இது தற்போது HTML எழுத்தாளர்களை மட்டுமே பாதிக்கிறது, ஆனால் எதிர்காலத்தில் "
+"விரிவாக்கப்படலாம்."
+
+#: ../../sphinx/doc/usage/configuration.rst:444
+msgid ""
+"If true, Sphinx will warn about *all* references where the target cannot be "
+"found.  Default is ``False``.  You can activate this mode temporarily using "
+"the :option:`-n <sphinx-build -n>` command-line switch."
+msgstr ""
+"உண்மை என்றால், இலக்கு கண்டுபிடிக்க முடியாத * அனைத்து * குறிப்புகளையும் "
+"ஸ்பின்க்ஸ் எச்சரிக்கும். இயல்புநிலை `` பொய்``. இந்த பயன்முறையை நீங்கள் "
+"தற்காலிகமாக செயல்படுத்தலாம்: விருப்பம்: `-n <sphinx- கட்டளை -n>` கட்டளை-வரி "
+"சுவிட்ச்."
+
+#: ../../sphinx/doc/usage/configuration.rst:45
+msgid ""
+"The contents of the config namespace are pickled (so that Sphinx can find "
+"out when configuration changes), so it may not contain unpickleable values "
+"-- delete them from the namespace with ``del`` if appropriate.  Modules are "
+"removed automatically, so you don't need to ``del`` your imports after use."
+msgstr ""
+"உள்ளமைவு பெயர்வெளியின் உள்ளடக்கங்கள் ஊறுகாய்களாக இருக்கும் (இதனால் உள்ளமைவு "
+"மாறும்போது ஸ்பிங்க்ஸ் கண்டுபிடிக்க முடியும்), எனவே அதில் திறக்க முடியாத "
+"மதிப்புகள் இருக்காது - பெயர்வெளியில் இருந்து அவற்றை `` டெல்`` பொருத்தமாக "
+"இருந்தால் அவற்றை நீக்கவும். தொகுதிகள் தானாக அகற்றப்படும், எனவே நீங்கள் "
+"பயன்படுத்திய பிறகு உங்கள் இறக்குமதியை `` டெல்`` தேவையில்லை."
+
+#: ../../sphinx/doc/usage/configuration.rst:452
+msgid ""
+"A set or list of ``(type, target)`` tuples (by default empty) that should be"
+" ignored when generating warnings in \"nitpicky mode\".  Note that ``type`` "
+"should include the domain name if present.  Example entries would be "
+"``('py:func', 'int')`` or ``('envvar', 'LD_LIBRARY_PATH')``."
+msgstr ""
+"\"நைட் பிக்கி பயன்முறையில்\" எச்சரிக்கைகளை உருவாக்கும் போது புறக்கணிக்கப்பட "
+"வேண்டிய `` (வகை, இலக்கு) `` டூப்பிள்ஸ் (இயல்பாக காலியாக) ஒரு தொகுப்பு அல்லது"
+" பட்டியல். `` வகை`` இருந்தால் டொமைன் பெயரை சேர்க்க வேண்டும் என்பதை நினைவில் "
+"கொள்க. எடுத்துக்காட்டு உள்ளீடுகள் `` ('py: func', 'int') `` அல்லது `` "
+"('envvar', 'ld_library_path') ``."
+
+#: ../../sphinx/doc/usage/configuration.rst:458
+#: ../../sphinx/doc/usage/configuration.rst:474
+msgid "Changed allowable container types to a set, list, or tuple"
+msgstr ""
+"அனுமதிக்கக்கூடிய கொள்கலன் வகைகளை ஒரு தொகுப்பு, பட்டியல் அல்லது டப்பிள் என "
+"மாற்றியது"
+
+#: ../../sphinx/doc/usage/configuration.rst:463
+msgid ""
+"An extended version of :confval:`nitpick_ignore`, which instead interprets "
+"the ``type`` and ``target`` strings as regular expressions. Note, that the "
+"regular expression must match the whole string (as if the ``^`` and ``$`` "
+"markers were inserted)."
+msgstr ""
+"இதன் நீட்டிக்கப்பட்ட பதிப்பு: confval: `nitpick_ignore`, இது` `வகை`` "
+"மற்றும்` `இலக்கு`` சரங்களை வழக்கமான வெளிப்பாடுகளாக விளக்குகிறது. குறிப்பு, "
+"வழக்கமான வெளிப்பாடு முழு சரத்தையும் பொருத்த வேண்டும் (``^`` மற்றும் `` $ `` "
+"குறிப்பான்கள் செருகப்பட்டதைப் போல)."
+
+#: ../../sphinx/doc/usage/configuration.rst:468
+msgid ""
+"For example, ``(r'py:.*', r'foo.*bar\\.B.*')`` will ignore nitpicky warnings"
+" for all python entities that start with ``'foo'`` and have ``'bar.B'`` in "
+"them, such as ``('py:const', 'foo_package.bar.BAZ_VALUE')`` or "
+"``('py:class', 'food.bar.Barman')``."
+msgstr ""
+"எடுத்துக்காட்டாக, `` (r'py:.*', R'foo.*Bar \\ .b. `` ('py: const', "
+"'foo_package.bar.baz_value') `` அல்லது `` ('py: class', 'food.bar.barman' "
+"``."
+
+#: ../../sphinx/doc/usage/configuration.rst:479
+msgid ""
+"If true, figures, tables and code-blocks are automatically numbered if they "
+"have a caption.  The :rst:role:`numref` role is enabled. Obeyed so far only "
+"by HTML and LaTeX builders. Default is ``False``."
+msgstr ""
+"உண்மை என்றால், புள்ளிவிவரங்கள், அட்டவணைகள் மற்றும் குறியீடு-தொகுதிகள் ஒரு "
+"தலைப்பு இருந்தால் தானாகவே எண்ணப்படும். தி: ஆர்எஸ்டி: பங்கு: `எண்ரெஃப்` பங்கு"
+" இயக்கப்பட்டது. இதுவரை HTML மற்றும் லேடெக்ஸ் பில்டர்களால் மட்டுமே "
+"கீழ்ப்படியது. இயல்புநிலை `` பொய்``."
+
+#: ../../sphinx/doc/usage/configuration.rst:485
+msgid ""
+"The LaTeX builder always assigns numbers whether this option is enabled or "
+"not."
+msgstr ""
+"இந்த விருப்பம் இயக்கப்பட்டதா இல்லையா என்பதை லேடெக்ஸ் பில்டர் எப்போதும் "
+"எண்களை ஒதுக்குகிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:492
+msgid ""
+"A dictionary mapping ``'figure'``, ``'table'``, ``'code-block'`` and "
+"``'section'`` to strings that are used for format of figure numbers. As a "
+"special character, ``%s`` will be replaced to figure number."
+msgstr ""
+"ஒரு அகராதி மேப்பிங் `` 'படம்'``, ``' அட்டவணை'``, `` 'குறியீடு-பிளாக்'````` "
+"``' பிரிவு படம் எண்களின் வடிவமைப்பிற்கு பயன்படுத்தப்படும் சரங்களுக்கு. ஒரு "
+"சிறப்பு எழுத்தாக, ``%s`` எண்ணிக்கை எண்ணுக்கு மாற்றப்படும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:496
+msgid ""
+"Default is to use ``'Fig. %s'`` for ``'figure'``, ``'Table %s'`` for "
+"``'table'``, ``'Listing %s'`` for ``'code-block'`` and ``'Section %s'`` for "
+"``'section'``."
+msgstr ""
+"இயல்புநிலை `` 'புள்ளிவிவரங்கள்'``, ``' அட்டவணைகள்'`` `'அட்டவணை'`,` `' "
+"பட்டியல்கள்'`` '' '' '' `` மற்றும் `` 'பிரிவு %s'`` ``' பிரிவு."
+
+#: ../../sphinx/doc/usage/configuration.rst:504
+msgid ""
+"if set to ``0``, figures, tables and code-blocks are continuously numbered "
+"starting at ``1``."
+msgstr ""
+"`` 0`` என அமைக்கப்பட்டால், புள்ளிவிவரங்கள், அட்டவணைகள் மற்றும் "
+"குறியீடு-தொகுதிகள் தொடர்ந்து `` 1`` இல் தொடங்கப்படுகின்றன."
+
+#: ../../sphinx/doc/usage/configuration.rst:506
+msgid ""
+"if ``1`` (default) numbers will be ``x.1``, ``x.2``, ... with ``x`` the "
+"section number (top level sectioning; no ``x.`` if no section). This "
+"naturally applies only if section numbering has been activated via the "
+"``:numbered:`` option of the :rst:dir:`toctree` directive."
+msgstr ""
+"`` 1`` (இயல்புநிலை) எண்கள் `` x.1``, `` x.2``, ... `` x`` பிரிவு எண் (உயர் "
+"நிலை பிரிவு; இல்லை `` x. `` பிரிவு இல்லை என்றால்). பிரிவு எண் ``: எண்ணற்ற: "
+"`` விருப்பம்: rst: dir: `toctree` உத்தரவு வழியாக செயல்படுத்தப்பட்டிருந்தால் "
+"மட்டுமே இது இயற்கையாகவே பொருந்தும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:510
+msgid ""
+"``2`` means that numbers will be ``x.y.1``, ``x.y.2``, ... if located in a "
+"sub-section (but still ``x.1``, ``x.2``, ... if located directly under a "
+"section and ``1``, ``2``, ... if not in any top level section.)"
+msgstr ""
+"`` 2`` என்றால், எண்கள் `` x.y.1``, `` x.y.2``, ஒரு துணைப்பிரிவில் "
+"அமைந்திருந்தால் (ஆனால் இன்னும் `` x.1``, `` x.2 ``, ... ஒரு பிரிவின் கீழ் "
+"நேரடியாக அமைந்தால் `` 1``, `` 2``, ... எந்த உயர் மட்டத்திலும் "
+"இல்லாவிட்டால்.)"
+
+#: ../../sphinx/doc/usage/configuration.rst:513
+msgid "etc..."
+msgstr "போன்றவை ..."
+
+#: ../../sphinx/doc/usage/configuration.rst:517
+msgid ""
+"The LaTeX builder obeys this setting (if :confval:`numfig` is set to "
+"``True``)."
+msgstr ""
+"லேடெக்ஸ் பில்டர் இந்த அமைப்பைக் கடைப்பிடிக்கிறார் (if: confval: `numfig`` "
+"`உண்மை`` என அமைக்கப்பட்டுள்ளது)."
+
+#: ../../sphinx/doc/usage/configuration.rst:52
+msgid ""
+"There is a special object named ``tags`` available in the config file. It "
+"can be used to query and change the tags (see :ref:`tags`).  Use "
+"``tags.has('tag')`` to query, ``tags.add('tag')`` and ``tags.remove('tag')``"
+" to change. Only tags set via the ``-t`` command-line option or via "
+"``tags.add('tag')`` can be queried using ``tags.has('tag')``. Note that the "
+"current builder tag is not available in ``conf.py``, as it is created "
+"*after* the builder is initialized."
+msgstr ""
+"கட்டமைப்பு கோப்பில் `` குறிச்சொற்கள்` என்ற சிறப்பு பொருள் உள்ளது. "
+"குறிச்சொற்களை வினவவும் மாற்றவும் இதைப் பயன்படுத்தலாம் (பார்க்க: குறிப்பு: "
+"`குறிச்சொற்கள்`). `` குறிச்சொற்கள்) `` வினவ, `` குறிச்சொற்கள். `` -T`` "
+"கட்டளை-வரி விருப்பம் வழியாக அல்லது `` குறிச்சொற்கள். தற்போதைய பில்டர் "
+"குறிச்சொல் `` conf.py`` இல் கிடைக்கவில்லை என்பதை நினைவில் கொள்க, ஏனெனில் இது"
+" உருவாக்கப்பட்டது * பில்டர் துவக்கப்பட்ட பிறகு."
+
+#: ../../sphinx/doc/usage/configuration.rst:523
+msgid ""
+"If true, the `Docutils Smart Quotes transform`__, originally based on "
+"`SmartyPants`__ (limited to English) and currently applying to many "
+"languages, will be used to convert quotes and dashes to typographically "
+"correct entities.  Default: ``True``."
+msgstr ""
+"உண்மை என்றால், `டாக்யூடில்ஸ் ஸ்மார்ட் மேற்கோள்கள் உருமாறும்`__, முதலில்` "
+"ஸ்மார்டிபாண்ட்கள்` (ஆங்கிலத்திற்கு வரையறுக்கப்பட்டவை) அடிப்படையாகக் கொண்டது "
+"மற்றும் தற்போது பல மொழிகளுக்கு விண்ணப்பிக்கும், மேற்கோள்கள் மற்றும் கோடுகளை "
+"அச்சுக்கலை ரீதியாக சரியான நிறுவனங்களாக மாற்ற பயன்படுத்தப்படும். இயல்புநிலை: "
+"`` உண்மை``."
+
+#: ../../sphinx/doc/usage/configuration.rst:531
+msgid ""
+"It replaces deprecated :confval:`html_use_smartypants`. It applies by "
+"default to all builders except ``man`` and ``text`` (see "
+":confval:`smartquotes_excludes`.)"
+msgstr ""
+"இது நீக்கப்பட்டதை மாற்றுகிறது: confval: `html_use_smartypants`. `` மனிதன்` "
+"மற்றும் `` உரை`` தவிர அனைத்து பில்டர்களுக்கும் இது இயல்புநிலையாக பொருந்தும் "
+"(பார்க்க: confval: `SmartQuotes_excludes`.)"
+
+#: ../../sphinx/doc/usage/configuration.rst:536
+msgid ""
+"A `docutils.conf`__ file located in the configuration directory (or a global"
+" :file:`~/.docutils` file) is obeyed unconditionally if it *deactivates* "
+"smart quotes via the corresponding `Docutils option`__.  But if it "
+"*activates* them, then :confval:`smartquotes` does prevail."
+msgstr ""
+"உள்ளமைவு கோப்பகத்தில் அமைந்துள்ள ஒரு `docutils.conf`__ கோப்பு (அல்லது "
+"உலகளாவிய: கோப்பு: கோப்பு:` ~/.docutils` கோப்பு) நிபந்தனையின்றி "
+"கீழ்ப்படிகிறது * ஸ்மார்ட் மேற்கோள்களை தொடர்புடைய `டொக்யூட்டில்ஸ் "
+"விருப்பம்`__ வழியாக செயலிழக்கச் செய்தால். ஆனால் அது * அவற்றை * "
+"செயல்படுத்தினால்,: confval: `ஸ்மார்ட் கியூட்ஸ்` மேலோங்குகிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:546
+msgid ""
+"This string customizes the Smart Quotes transform.  See the file "
+":file:`smartquotes.py` at the `Docutils repository`__ for details.  The "
+"default ``'qDe'`` educates normal **q**\\ uote characters ``\"``, ``'``, em-"
+" and en-**D**\\ ashes ``---``, ``--``, and **e**\\ llipses ``...``."
+msgstr ""
+"இந்த சரம் ஸ்மார்ட் மேற்கோள்கள் உருமாற்றத்தைத் தனிப்பயனாக்குகிறது. கோப்பைக் "
+"காண்க: கோப்பைக் காண்க: விவரங்களுக்கு `டாக்யூடில்ஸ் களஞ்சியத்தில்` ஸ்மார்ட் "
+"க்வோட்ஸ்.பை`. இயல்புநிலை `` 'qde'`` இயல்பான ** q ** \\ uote எழுத்துக்கள் `` "
+"`` `,` `'` `` `` ``-** டி ** \\ சாம்பல் `` --- `` `` `` `` `` `` ` , `` "
+"--``, மற்றும் ** e ** \\ llipses `` ... ``."
+
+#: ../../sphinx/doc/usage/configuration.rst:557
+msgid "This is a ``dict`` whose default is::"
+msgstr "இது ஒரு `` டிக்ட்`` அதன் இயல்புநிலை ::"
+
+#: ../../sphinx/doc/usage/configuration.rst:561
+msgid ""
+"Each entry gives a sufficient condition to ignore the :confval:`smartquotes`"
+" setting and deactivate the Smart Quotes transform. Accepted keys are as "
+"above ``'builders'`` or ``'languages'``. The values are lists."
+msgstr ""
+"ஒவ்வொரு நுழைவும் புறக்கணிக்க போதுமான நிபந்தனையை அளிக்கிறது: confval: "
+"`ஸ்மார்ட் கியூட்ஸ்` அமைப்பு மற்றும் ஸ்மார்ட் மேற்கோள்கள் உருமாற்றத்தை "
+"செயலிழக்கச் செய்யுங்கள். ஏற்றுக்கொள்ளப்பட்ட விசைகள் `` 'பில்டர்கள்'`` அல்லது"
+" `' 'மொழிகள்`` மேலே உள்ளன. மதிப்புகள் பட்டியல்கள்."
+
+#: ../../sphinx/doc/usage/configuration.rst:566
+msgid ""
+"Currently, in case of invocation of :program:`make` with multiple targets, "
+"the first target name is the only one which is tested against the "
+"``'builders'`` entry and it decides for all.  Also, a ``make text`` "
+"following ``make html`` needs to be issued in the form ``make text "
+"O=\"-E\"`` to force re-parsing of source files, as the cached ones are "
+"already transformed.  On the other hand the issue does not arise with direct"
+" usage of :program:`sphinx-build` as it caches (in its default usage) the "
+"parsed source files in per builder locations."
+msgstr ""
+"தற்போது. மேலும், ஒரு `` உரையை உருவாக்கவும் `` `செய்யுங்கள் html` "
+"மாற்றப்பட்டது. மறுபுறம், சிக்கல் நேரடி பயன்பாட்டுடன் எழவில்லை: நிரல்: "
+"`ஸ்பின்க்ஸ்-பில்ட்` அது தற்காலிகமாக (அதன் இயல்புநிலை பயன்பாட்டில்) ஒரு "
+"பில்டர் இடங்களில் பாகுபடுத்தப்பட்ட மூல கோப்புகளை தற்காலிகமாக சேமிக்கும்போது."
+
+#: ../../sphinx/doc/usage/configuration.rst:575
+msgid ""
+"An alternative way to effectively deactivate (or customize) the smart quotes"
+" for a given builder, for example ``latex``, is to use ``make`` this way:"
+msgstr ""
+"கொடுக்கப்பட்ட பில்டருக்கான ஸ்மார்ட் மேற்கோள்களை திறம்பட செயலிழக்கச் "
+"செய்வதற்கான (அல்லது தனிப்பயனாக்க) ஒரு மாற்று வழி, எடுத்துக்காட்டாக `` "
+"லேடெக்ஸ்``, `` செய்யுங்கள்` இந்த வழியில் பயன்படுத்த வேண்டும்:"
+
+#: ../../sphinx/doc/usage/configuration.rst:583
+msgid ""
+"This can follow some ``make html`` with no problem, in contrast to the "
+"situation from the prior note."
+msgstr ""
+"இது முந்தைய குறிப்பிலிருந்து நிலைமைக்கு மாறாக, எந்த பிரச்சனையும் இல்லாமல் "
+"சில `` html` `ஐ உருவாக்கலாம்."
+
+#: ../../sphinx/doc/usage/configuration.rst:590
+msgid ""
+"A User-Agent of Sphinx.  It is used for a header on HTTP access (ex. "
+"linkcheck, intersphinx and so on).  Default is ``\"Sphinx/X.Y.Z "
+"requests/X.Y.Z python/X.Y.Z\"``."
+msgstr ""
+"ஸ்பிங்கின் பயனர் முகவர். இது HTTP அணுகல் (எ.கா. லிங்க்செக், இன்டர்ஸ்பின்க்ஸ்"
+" மற்றும் பலவற்றில்) ஒரு தலைப்புக்கு பயன்படுத்தப்படுகிறது. இயல்புநிலை `` "
+"\"Sphinx/x.y.z கோரிக்கைகள்/x.y.z பைதான்/x.y.z\" ``."
+
+#: ../../sphinx/doc/usage/configuration.rst:598
+msgid "If true, Sphinx verifies server certifications.  Default is ``True``."
+msgstr ""
+"உண்மை என்றால், SPHINX சேவையக சான்றிதழ்களை சரிபார்க்கிறது. இயல்புநிலை `` "
+"உண்மை``."
+
+#: ../../sphinx/doc/usage/configuration.rst:604
+msgid ""
+"A path to a certification file of CA or a path to directory which contains "
+"the certificates.  This also allows a dictionary mapping hostname to the "
+"path to certificate file. The certificates are used to verify server "
+"certifications."
+msgstr ""
+"CA இன் சான்றிதழ் கோப்பிற்கான பாதை அல்லது சான்றிதழ்களைக் கொண்ட "
+"கோப்பகத்திற்கான பாதை. இது ஒரு அகராதி மேப்பிங் ஹோஸ்ட்பெயரை சான்றிதழ் "
+"கோப்புக்கான பாதைக்கு அனுமதிக்கிறது. சேவையக சான்றிதழ்களை சரிபார்க்க "
+"சான்றிதழ்கள் பயன்படுத்தப்படுகின்றன."
+
+#: ../../sphinx/doc/usage/configuration.rst:611
+msgid ""
+"Sphinx uses requests_ as a HTTP library internally. Therefore, Sphinx refers"
+" a certification file on the directory pointed ``REQUESTS_CA_BUNDLE`` "
+"environment variable if ``tls_cacerts`` not set."
+msgstr ""
+"ஸ்பிங்க்ஸ் கோரிக்கைகள்_ ஐ உள்நாட்டில் ஒரு HTTP நூலகமாகப் பயன்படுத்துகிறது. "
+"ஆகையால், `` tls_cacerts`` அமைக்கப்படாவிட்டால் `` requests_ca_bundle`` "
+"சுற்றுச்சூழல் மாறியில் சுட்டிக்காட்டப்பட்ட கோப்பகத்தில் ஒரு சான்றிதழ் கோப்பை"
+" SPHINX குறிக்கிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:62
+msgid "Project information"
+msgstr "திட்ட தகவல்"
+
+#: ../../sphinx/doc/usage/configuration.rst:621
+msgid ""
+"These values determine how to format the current date, used as the "
+"replacement for ``|today|``."
+msgstr ""
+"இந்த மதிப்புகள் தற்போதைய தேதியை எவ்வாறு வடிவமைப்பது என்பதை தீர்மானிக்கிறது, "
+"இது `` | இன்று | `` க்கு மாற்றாக பயன்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:624
+msgid "If you set :confval:`today` to a non-empty value, it is used."
+msgstr ""
+"நீங்கள் அமைத்தால்: confval: `இன்று` காலியாக இல்லாத மதிப்புக்கு, அது "
+"பயன்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:625
+msgid ""
+"Otherwise, the current time is formatted using :func:`time.strftime` and the"
+" format given in :confval:`today_fmt`."
+msgstr ""
+"இல்லையெனில், தற்போதைய நேரம் பயன்படுத்தி வடிவமைக்கப்பட்டுள்ளது: func: "
+"`time.strftime` மற்றும் கொடுக்கப்பட்ட வடிவம்: confval:` today_fmt`."
+
+#: ../../sphinx/doc/usage/configuration.rst:628
+msgid ""
+"The default is now :confval:`today` and a :confval:`today_fmt` of ``'%b %d, "
+"%Y'`` (or, if translation is enabled with :confval:`language`, an equivalent"
+" format for the selected locale)."
+msgstr ""
+"இயல்புநிலை இப்போது: confval: `இன்று` மற்றும் ஒரு: கான்ஃப்வால்:` `' %b %d, "
+"%y'`` (அல்லது, மொழிபெயர்ப்பு இயக்கப்பட்டிருந்தால்: confval:` மொழி`, சமமான "
+"வடிவம் தேர்ந்தெடுக்கப்பட்ட இடத்திற்கு)."
+
+#: ../../sphinx/doc/usage/configuration.rst:634
+msgid ""
+"The default language to highlight source code in.  The default is "
+"``'default'``.  It is similar to ``'python3'``; it is mostly a superset of "
+"``'python'`` but it fallbacks to ``'none'`` without warning if failed. "
+"``'python3'`` and other languages will emit warning if failed."
+msgstr ""
+"மூலக் குறியீட்டை முன்னிலைப்படுத்த இயல்புநிலை மொழி. இயல்புநிலை `` "
+"'இயல்புநிலை'``. இது `` 'பைதான் 3'`` க்கு ஒத்ததாகும்; இது பெரும்பாலும் `` "
+"'பைதான்'` இன் சூப்பர்செட் ஆகும், ஆனால் அது தோல்வியுற்றால் எச்சரிக்கையின்றி "
+"``' எதுவுமில்லை '. `` 'பைதான் 3'`` மற்றும் பிற மொழிகள் தோல்வியுற்றால் "
+"எச்சரிக்கையை வெளியிடும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:639
+msgid ""
+"The value should be a valid Pygments lexer name, see :ref:`code-examples` "
+"for more details."
+msgstr ""
+"மதிப்பு செல்லுபடியாகும் பைக்மென்ட் லெக்ஸர் பெயராக இருக்க வேண்டும், காண்க: "
+"குறிப்பு: மேலும் விவரங்களுக்கு `கோட்-எக்ஸாம்பிள்ஸ்`."
+
+#: ../../sphinx/doc/usage/configuration.rst:644
+msgid ""
+"The default is now ``'default'``.  If you prefer Python 2 only highlighting,"
+" you can set it back to ``'python'``."
+msgstr ""
+"இயல்புநிலை இப்போது `` 'இயல்புநிலை'``. நீங்கள் பைதான் 2 ஐ முன்னிலைப்படுத்த "
+"விரும்பினால், அதை மீண்டும் `` 'பைதான்'`` க்கு அமைக்கலாம்."
+
+#: ../../sphinx/doc/usage/configuration.rst:650
+msgid ""
+"A dictionary that maps language names to options for the lexer modules of "
+"Pygments.  These are lexer-specific; for the options understood by each, see"
+" the `Pygments documentation <https://pygments.org/docs/lexers>`_."
+msgstr ""
+"பிக்மென்ட்களின் லெக்ஸர் தொகுதிகளுக்கான விருப்பங்களுக்கு மொழி பெயர்களை "
+"வரைபடமாக்கும் அகராதி. இவை லெக்ஸர்-குறிப்பிட்டவை; ஒவ்வொருவரும் "
+"புரிந்துகொள்ளும் விருப்பங்களுக்கு, `பைக்மென்ட் ஆவணங்கள் "
+"<https://pygments.org/docs/lexers>` _ ஐப் பார்க்கவும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:66
+msgid "The documented project's name."
+msgstr "ஆவணப்படுத்தப்பட்ட திட்டத்தின் பெயர்."
+
+#: ../../sphinx/doc/usage/configuration.rst:661
+msgid ""
+"A single dictionary of options are also allowed.  Then it is recognized as "
+"options to the lexer specified by :confval:`highlight_language`::"
+msgstr ""
+"விருப்பங்களின் ஒற்றை அகராதியும் அனுமதிக்கப்படுகிறது. பின்னர் குறிப்பிடப்பட்ட"
+" லெக்ஸருக்கான விருப்பங்களாக இது அங்கீகரிக்கப்பட்டுள்ளது: confval: "
+"`filation_language` ::"
+
+#: ../../sphinx/doc/usage/configuration.rst:670
+msgid "Allow to configure highlight options for multiple languages"
+msgstr "பல மொழிகளுக்கான சிறப்பம்சமாக விருப்பங்களை உள்ளமைக்க அனுமதிக்கவும்"
+
+#: ../../sphinx/doc/usage/configuration.rst:674
+msgid ""
+"The style name to use for Pygments highlighting of source code.  If not set,"
+" either the theme's default style or ``'sphinx'`` is selected for HTML "
+"output."
+msgstr ""
+"மூலக் குறியீட்டை முன்னிலைப்படுத்த பைக்மென்ட்ஸ் பயன்படுத்த பாணி பெயர். "
+"அமைக்கப்படாவிட்டால், தீம் இயல்புநிலை பாணி அல்லது `` 'ஸ்பின்எக்ஸ்'`` HTML "
+"வெளியீட்டிற்கு தேர்ந்தெடுக்கப்படுகிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:678
+msgid ""
+"If the value is a fully-qualified name of a custom Pygments style class, "
+"this is then used as custom style."
+msgstr ""
+"மதிப்பு தனிப்பயன் பைக்மென்ட் ஸ்டைல் வகுப்பின் முழுமையான தகுதி வாய்ந்த பெயராக"
+" இருந்தால், இது தனிப்பயன் பாணியாகப் பயன்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:684
+msgid ""
+"If a signature's length in characters exceeds the number set, each parameter"
+" within the signature will be displayed on an individual logical line."
+msgstr ""
+"எழுத்துக்களில் கையொப்பத்தின் நீளம் எண் தொகுப்பை மீறினால், கையொப்பத்திற்குள் "
+"உள்ள ஒவ்வொரு அளவுருவும் ஒரு தனிப்பட்ட தருக்க வரியில் காண்பிக்கப்படும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:688
+msgid ""
+"When ``None`` (the default), there is no maximum length and the entire "
+"signature will be displayed on a single logical line."
+msgstr ""
+"`` எதுவுமில்லை`` (இயல்புநிலை), அதிகபட்ச நீளம் இல்லை மற்றும் முழு கையொப்பமும்"
+" ஒரு தருக்க வரியில் காண்பிக்கப்படும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:691
+msgid ""
+"A 'logical line' is similar to a hard line break---builders or themes may "
+"choose to 'soft wrap' a single logical line, and this setting does not "
+"affect that behaviour."
+msgstr ""
+"ஒரு 'தருக்க வரி' ஒரு கடினமான வரி இடைவெளிக்கு ஒத்ததாகும் --- பில்டர்கள் "
+"அல்லது கருப்பொருள்கள் ஒரு தர்க்கரீதியான வரியை 'மென்மையான மடக்கு' தேர்வு "
+"செய்யலாம், மேலும் இந்த அமைப்பு அந்த நடத்தையை பாதிக்காது."
+
+#: ../../sphinx/doc/usage/configuration.rst:695
+msgid ""
+"Domains may provide options to suppress any hard wrapping on an individual "
+"object directive, such as seen in the C, C++, and Python domains (e.g. "
+":rst:dir:`py:function:single-line-parameter-list`)."
+msgstr ""
+"சி, சி ++ மற்றும் பைதான் களங்களில் (எ.கா.: rst: dir: `py: செயல்பாடு: ஒற்றை "
+"வரி-அளவுரு-பட்டியல்`) போன்ற ஒரு தனிப்பட்ட பொருள் உத்தரவில் எந்தவொரு கடினமான "
+"மடக்கையும் அடக்குவதற்கான விருப்பங்களை களங்கள் வழங்கக்கூடும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:7
+msgid "Configuration"
+msgstr "உள்ளமைவு"
+
+#: ../../sphinx/doc/usage/configuration.rst:70
+msgid ""
+"The author name(s) of the document.  The default value is ``'unknown'``."
+msgstr ""
+"ஆவணத்தின் ஆசிரியர் பெயர் (கள்). இயல்புநிலை மதிப்பு `` 'அறியப்படாதது'``."
+
+#: ../../sphinx/doc/usage/configuration.rst:703
+msgid ""
+"A boolean that decides whether parentheses are appended to function and "
+"method role text (e.g. the content of ``:func:`input```) to signify that the"
+" name is callable.  Default is ``True``."
+msgstr ""
+"பெயர் அழைக்கக்கூடியது என்பதைக் குறிக்கும் வகையில், அடைப்புக்குறிக்குள் "
+"செயல்பாடு மற்றும் முறை பங்கு உரைக்கு (எ.கா.: FUNC: `உள்ளீடு``` இன் "
+"உள்ளடக்கம்) சேர்க்கப்பட்டுள்ளதா என்பதை தீர்மானிக்கும் ஒரு பூலியன். "
+"இயல்புநிலை `` உண்மை``."
+
+#: ../../sphinx/doc/usage/configuration.rst:709
+msgid ""
+"A boolean that decides whether module names are prepended to all "
+":term:`object` names (for object types where a \"module\" of some kind is "
+"defined), e.g. for :rst:dir:`py:function` directives.  Default is ``True``."
+msgstr ""
+"அனைவருக்கும் தொகுதி பெயர்கள் தயாரிக்கப்படுகின்றனவா என்பதை தீர்மானிக்கும் ஒரு"
+" பூலியன்: சொல்: `பொருள்` பெயர்கள் (பொருள் வகைகளுக்கு, சில வகையான\" தொகுதி "
+"\"வரையறுக்கப்பட்டுள்ள இடத்தில்), எ.கா. க்கு: rst: dir: `py: செயல்பாடு` "
+"வழிமுறைகள். இயல்புநிலை `` உண்மை``."
+
+#: ../../sphinx/doc/usage/configuration.rst:715
+msgid ""
+"Create table of contents entries for domain objects (e.g. functions, "
+"classes, attributes, etc.). Default is ``True``."
+msgstr ""
+"டொமைன் பொருள்களுக்கான உள்ளடக்க உள்ளீடுகளின் அட்டவணையை உருவாக்கவும் (எ.கா. "
+"செயல்பாடுகள், வகுப்புகள், பண்புக்கூறுகள் போன்றவை). இயல்புநிலை `` உண்மை``."
+
+#: ../../sphinx/doc/usage/configuration.rst:720
+msgid ""
+"A string that determines how domain objects (e.g. functions, classes, "
+"attributes, etc.) are displayed in their table of contents entry."
+msgstr ""
+"டொமைன் பொருள்கள் (எ.கா. செயல்பாடுகள், வகுப்புகள், பண்புக்கூறுகள் போன்றவை) "
+"அவற்றின் உள்ளடக்க அட்டவணையில் எவ்வாறு காட்டப்படுகின்றன என்பதை தீர்மானிக்கும்"
+" ஒரு சரம்."
+
+#: ../../sphinx/doc/usage/configuration.rst:723
+msgid ""
+"Use ``domain`` to allow the domain to determine the appropriate number of "
+"parents to show. For example, the Python domain would show "
+"``Class.method()`` and ``function()``, leaving out the ``module.`` level of "
+"parents. This is the default setting."
+msgstr ""
+"காட்டுவதற்கு பொருத்தமான எண்ணிக்கையை தீர்மானிக்க டொமைனை அனுமதிக்க `` டொமைன்``"
+" ஐப் பயன்படுத்தவும். எடுத்துக்காட்டாக, பைதான் டொமைன் `` வகுப்பு. இது "
+"இயல்புநிலை அமைப்பு."
+
+#: ../../sphinx/doc/usage/configuration.rst:728
+msgid ""
+"Use ``hide`` to only show the name of the element without any parents (i.e. "
+"``method()``)."
+msgstr ""
+"எந்தவொரு பெற்றோர்களும் இல்லாமல் உறுப்பின் பெயரைக் காட்ட `` மறை`` ஐப் "
+"பயன்படுத்தவும் (அதாவது `` முறை () ``)."
+
+#: ../../sphinx/doc/usage/configuration.rst:731
+msgid ""
+"Use ``all`` to show the fully-qualified name for the object (i.e. "
+"``module.Class.method()``),  displaying all parents."
+msgstr ""
+"அனைத்து பெற்றோர்களையும் காண்பிக்கும் பொருளுக்கு (அதாவது `` "
+"module.class.method () ``) முழுமையாக தகுதி வாய்ந்த பெயரைக் காட்ட `` "
+"அனைத்தையும்`` பயன்படுத்தவும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:738
+msgid ""
+"A boolean that decides whether :rst:dir:`codeauthor` and "
+":rst:dir:`sectionauthor` directives produce any output in the built files."
+msgstr ""
+": Rst: dir: `codeauthor` மற்றும்: rst: dir:` பிரிவு வழக்கறிஞர்` கட்டளைகள் "
+"கட்டப்பட்ட கோப்புகளில் எந்த வெளியீட்டையும் உருவாக்குகின்றன என்பதை "
+"தீர்மானிக்கும் ஒரு பூலியன்."
+
+#: ../../sphinx/doc/usage/configuration.rst:74
+msgid "A copyright statement in the style ``'2008, Author Name'``."
+msgstr "பாணியில் ஒரு பதிப்புரிமை அறிக்கை `` '2008, ஆசிரியர் பெயர்'``."
+
+#: ../../sphinx/doc/usage/configuration.rst:743
+msgid ""
+"A list of prefixes that are ignored for sorting the Python module index "
+"(e.g., if this is set to ``['foo.']``, then ``foo.bar`` is shown under "
+"``B``, not ``F``). This can be handy if you document a project that consists"
+" of a single package.  Works only for the HTML builder currently.  Default "
+"is ``[]``."
+msgstr ""
+"பைதான் தொகுதி குறியீட்டை வரிசைப்படுத்துவதற்கு புறக்கணிக்கப்பட்ட "
+"முன்னொட்டுகளின் பட்டியல் (எ.கா., இது `` ['foo.'] ``, பின்னர் `` foo.bar`` "
+"இன் கீழ் காட்டப்பட்டுள்ளது `` F``). ஒற்றை தொகுப்பைக் கொண்ட ஒரு திட்டத்தை "
+"நீங்கள் ஆவணப்படுத்தினால் இது எளிது. தற்போது HTML பில்டருக்கு மட்டுமே வேலை "
+"செய்கிறது. இயல்புநிலை `` [] ``."
+
+#: ../../sphinx/doc/usage/configuration.rst:753
+msgid ""
+"Trim spaces before footnote references that are necessary for the reST "
+"parser to recognize the footnote, but do not look too nice in the output."
+msgstr ""
+"அடிக்குறிப்புக்கு முன் இடங்களை ஒழுங்கமைக்கவும், மீதமுள்ள பாகுபடுத்தி "
+"அடிக்குறிப்பை அடையாளம் காண அவசியமானவை, ஆனால் வெளியீட்டில் மிகவும் அழகாக "
+"இல்லை."
+
+#: ../../sphinx/doc/usage/configuration.rst:76
+msgid ""
+"The value may now be a sequence of copyright statements in the above form, "
+"which will be displayed each to their own line."
+msgstr ""
+"மதிப்பு இப்போது மேலே உள்ள படிவத்தில் பதிப்புரிமை அறிக்கைகளின் வரிசையாக "
+"இருக்கலாம், அவை ஒவ்வொன்றும் அவற்றின் சொந்த வரிக்கு காட்டப்படும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:760
+msgid ""
+"If true, doctest flags (comments looking like ``# doctest: FLAG, ...``) at "
+"the ends of lines and ``<BLANKLINE>`` markers are removed for all code "
+"blocks showing interactive Python sessions (i.e. doctests).  Default is "
+"``True``.  See the extension :mod:`~sphinx.ext.doctest` for more "
+"possibilities of including doctests."
+msgstr ""
+"உண்மை என்றால், டாக் டாக் கொடிகள் (கருத்துக்கள் ``# ஆவணத்தைப் போன்றவை: கொடி, "
+"... ``) வரிகளின் முனைகளில் மற்றும் `` <mangline> `` குறிப்பான்கள் ஊடாடும் "
+"பைதான் அமர்வுகளைக் காட்டும் அனைத்து குறியீடு தொகுதிகளுக்கும் "
+"அகற்றப்படுகின்றன (அதாவது ஆவணங்கள்) . இயல்புநிலை `` உண்மை``. நீட்டிப்பைக் "
+"காண்க: மோட்: `~ sphinx.ext.doctast` ஆவணங்களைச் சேர்ப்பதற்கான கூடுதல் "
+"சாத்தியக்கூறுகளுக்கு."
+
+#: ../../sphinx/doc/usage/configuration.rst:767
+msgid "Now also removes ``<BLANKLINE>``."
+msgstr "இப்போது `` <slankline> `` ஐயும் நீக்குகிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:772
+msgid ""
+"Default is ``False``. When backslash stripping is enabled then every "
+"occurrence of ``\\\\`` in a domain directive will be changed to ``\\``, even"
+" within string literals. This was the behaviour before version 3.0, and "
+"setting this variable to ``True`` will reinstate that behaviour."
+msgstr ""
+"இயல்புநிலை `` பொய்``. பின்சாய்வுக்கோடானது இயக்கப்பட்டால், ஒரு டொமைன் "
+"உத்தரவில் `` \\\\ `` `` `` `` `` ``, சரம் எழுத்துக்களுக்குள் கூட "
+"மாற்றப்படும். இது பதிப்பு 3.0 க்கு முந்தைய நடத்தை, மேலும் இந்த மாறியை `` "
+"உண்மை`` என அமைப்பது அந்த நடத்தையை மீண்டும் நிலைநிறுத்தும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:782
+msgid ""
+"Default is ``False``. When enabled, emphasise placeholders in "
+":rst:dir:`option` directives. To display literal braces, escape with a "
+"backslash (``\\{``). For example, ``option_emphasise_placeholders=True`` and"
+" ``.. option:: -foption={TYPE}`` would render with ``TYPE`` emphasised."
+msgstr ""
+"இயல்புநிலை `` பொய்``. இயக்கப்பட்டால், இடம் வைத்திருப்பவர்களை "
+"வலியுறுத்துங்கள்: rst: dir: `விருப்பம்` வழிமுறைகள். நேரடி பிரேஸ்களைக் "
+"காண்பிக்க, பின்சாய்வுக்கோடான (`` \\ {``) தப்பிக்க. எடுத்துக்காட்டாக, `` "
+"option_emphasise_placeholders = true`` மற்றும் `` .. விருப்பம் :: -foption ="
+" {type} `` வலியுறுத்தப்பட்ட `` வகை`` உடன் வழங்கப்படும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:793
+msgid "Options for internationalization"
+msgstr "சர்வதேசமயமாக்கலுக்கான விருப்பங்கள்"
+
+#: ../../sphinx/doc/usage/configuration.rst:795
+msgid ""
+"These options influence Sphinx's *Native Language Support*.  See the "
+"documentation on :ref:`intl` for details."
+msgstr ""
+"இந்த விருப்பங்கள் ஸ்பின்க்ஸின் *சொந்த மொழி ஆதரவை *பாதிக்கின்றன. "
+"விவரங்களுக்கு ஆவணங்களை காண்க: ref: `intl`."
+
+#: ../../sphinx/doc/usage/configuration.rst:800
+msgid ""
+"The code for the language the docs are written in.  Any text automatically "
+"generated by Sphinx will be in that language.  Also, Sphinx will try to "
+"substitute individual paragraphs from your documents with the translation "
+"sets obtained from :confval:`locale_dirs`.  Sphinx will search language-"
+"specific figures named by :confval:`figure_language_filename` (e.g. the "
+"German version of ``myfigure.png`` will be ``myfigure.de.png`` by default "
+"setting) and substitute them for original figures.  In the LaTeX builder, a "
+"suitable language will be selected as an option for the *Babel* package.  "
+"Default is ``'en'``."
+msgstr ""
+"டாக்ஸ் எழுதப்பட்ட மொழிக்கான குறியீடு. ஸ்பிங்க்ஸால் தானாக உருவாக்கப்படும் "
+"எந்த உரையும் அந்த மொழியில் இருக்கும். மேலும், SPHINX உங்கள் ஆவணங்களிலிருந்து"
+" தனிப்பட்ட பத்திகளை மொழிபெயர்ப்பு தொகுப்புகளுடன் மாற்ற முயற்சிக்கும்: "
+"confval: `locale_dirs`. ஸ்பின்க்ஸ் பெயரிடப்பட்ட மொழி-குறிப்பிட்ட "
+"புள்ளிவிவரங்களைத் தேடும்: confval: `Figure_language_filename` (எ.கா.` "
+"`myfigure.png`` ஜெர்மன் பதிப்பு` `myfigure.d.png``` இயல்புநிலை அமைப்பால்) "
+"மற்றும் அசல் புள்ளிவிவரங்களுக்கு மாற்றாக இருக்கும். லேடெக்ஸ் பில்டரில், * "
+"பாபல் * தொகுப்புக்கான விருப்பமாக பொருத்தமான மொழி தேர்ந்தெடுக்கப்படும். "
+"இயல்புநிலை `` 'en'``."
+
+#: ../../sphinx/doc/usage/configuration.rst:814
+msgid "Support figure substitution"
+msgstr "ஆதரவு எண்ணிக்கை மாற்றீடு"
+
+#: ../../sphinx/doc/usage/configuration.rst:818
+msgid "Currently supported languages by Sphinx are:"
+msgstr "SPHINX ஆல் தற்போது ஆதரிக்கப்படும் மொழிகள்:"
+
+#: ../../sphinx/doc/usage/configuration.rst:82
+msgid "An alias of :confval:`copyright`."
+msgstr "ஒரு மாற்றுப்பெயர்: confval: `பதிப்புரிமை`."
+
+#: ../../sphinx/doc/usage/configuration.rst:820
+msgid "``ar`` -- Arabic"
+msgstr "`` ar`` - அரபு"
+
+#: ../../sphinx/doc/usage/configuration.rst:821
+msgid "``bg`` -- Bulgarian"
+msgstr "`` பி.ஜி`` - பல்கேரிய"
+
+#: ../../sphinx/doc/usage/configuration.rst:822
+msgid "``bn`` -- Bengali"
+msgstr "`` பி.என்`` - பெங்காலி"
+
+#: ../../sphinx/doc/usage/configuration.rst:823
+msgid "``ca`` -- Catalan"
+msgstr "`` ca`` - கற்றலான்"
+
+#: ../../sphinx/doc/usage/configuration.rst:824
+msgid "``cak`` -- Kaqchikel"
+msgstr "`` காக்`` - கச்சிகெல்"
+
+#: ../../sphinx/doc/usage/configuration.rst:825
+msgid "``cs`` -- Czech"
+msgstr "`` cs`` - செக்"
+
+#: ../../sphinx/doc/usage/configuration.rst:826
+msgid "``cy`` -- Welsh"
+msgstr "`` சை`` - வெல்ஷ்"
+
+#: ../../sphinx/doc/usage/configuration.rst:829
+msgid "``el`` -- Greek"
+msgstr "`` எல்`` - கிரேக்கம்"
+
+#: ../../sphinx/doc/usage/configuration.rst:830
+msgid "``en`` -- English (default)"
+msgstr "`` en`` - ஆங்கிலம் (இயல்புநிலை)"
+
+#: ../../sphinx/doc/usage/configuration.rst:831
+msgid "``eo`` -- Esperanto"
+msgstr "`` eo`` - எஸ்பெராண்டோ"
+
+#: ../../sphinx/doc/usage/configuration.rst:833
+msgid "``et`` -- Estonian"
+msgstr "`` et`` - எஸ்டோனியன்"
+
+#: ../../sphinx/doc/usage/configuration.rst:834
+msgid "``eu`` -- Basque"
+msgstr "`` eu`` - பாஸ்க்"
+
+#: ../../sphinx/doc/usage/configuration.rst:835
+msgid "``fa`` -- Iranian"
+msgstr "`` fa`` - ஈரானிய"
+
+#: ../../sphinx/doc/usage/configuration.rst:838
+msgid "``he`` -- Hebrew"
+msgstr "`` அவர்`` - எபிரேய"
+
+#: ../../sphinx/doc/usage/configuration.rst:839
+msgid "``hi`` -- Hindi"
+msgstr "`` ஹாய்`` - இந்தி"
+
+#: ../../sphinx/doc/usage/configuration.rst:840
+msgid "``hi_IN`` -- Hindi (India)"
+msgstr "`` hi_in`` - இந்தி (இந்தியா)"
+
+#: ../../sphinx/doc/usage/configuration.rst:841
+msgid "``hr`` -- Croatian"
+msgstr "`` hr`` - குரோஷிய"
+
+#: ../../sphinx/doc/usage/configuration.rst:843
+msgid "``id`` -- Indonesian"
+msgstr "`` ஐடி`` - இந்தோனேசிய"
+
+#: ../../sphinx/doc/usage/configuration.rst:846
+msgid "``ko`` -- Korean"
+msgstr "`` கோ`` - கொரிய"
+
+#: ../../sphinx/doc/usage/configuration.rst:847
+msgid "``lt`` -- Lithuanian"
+msgstr "`` lt`` - லிதுவேனியன்"
+
+#: ../../sphinx/doc/usage/configuration.rst:848
+msgid "``lv`` -- Latvian"
+msgstr "`` lv`` - லாட்வியன்"
+
+#: ../../sphinx/doc/usage/configuration.rst:849
+msgid "``mk`` -- Macedonian"
+msgstr "`` mk`` - மாசிடோனியன்"
+
+#: ../../sphinx/doc/usage/configuration.rst:850
+msgid "``nb_NO`` -- Norwegian Bokmal"
+msgstr "`` nb_no`` - நோர்வே போக்மால்"
+
+#: ../../sphinx/doc/usage/configuration.rst:851
+msgid "``ne`` -- Nepali"
+msgstr "`` ne`` - நேபாளி"
+
+#: ../../sphinx/doc/usage/configuration.rst:853
+msgid "``pl`` -- Polish"
+msgstr "`` pl`` - போலந்து"
+
+#: ../../sphinx/doc/usage/configuration.rst:855
+msgid "``pt_BR`` -- Brazilian Portuguese"
+msgstr "`` pt_br`` - பிரேசிலிய போர்த்துகீசியம்"
+
+#: ../../sphinx/doc/usage/configuration.rst:856
+msgid "``pt_PT`` -- European Portuguese"
+msgstr "`` pt_pt`` - ஐரோப்பிய போர்த்துகீசியம்"
+
+#: ../../sphinx/doc/usage/configuration.rst:859
+msgid "``si`` -- Sinhala"
+msgstr "`` si`` - சிங்களம்"
+
+#: ../../sphinx/doc/usage/configuration.rst:860
+msgid "``sk`` -- Slovak"
+msgstr "`` எஸ்.கே`` - ஸ்லோவாக்"
+
+#: ../../sphinx/doc/usage/configuration.rst:861
+msgid "``sl`` -- Slovenian"
+msgstr "`` sl`` - ஸ்லோவேனியன்"
+
+#: ../../sphinx/doc/usage/configuration.rst:862
+msgid "``sq`` -- Albanian"
+msgstr "`` sq`` - அல்பேனிய"
+
+#: ../../sphinx/doc/usage/configuration.rst:863
+msgid "``sr`` -- Serbian"
+msgstr "`` sr`` - செர்பியன்"
+
+#: ../../sphinx/doc/usage/configuration.rst:864
+msgid "``sr@latin`` -- Serbian (Latin)"
+msgstr "`` எஸ்ஆர்@லத்தீன்`` - செர்பியன் (லத்தீன்)"
+
+#: ../../sphinx/doc/usage/configuration.rst:865
+msgid "``sr_RS`` -- Serbian (Cyrillic)"
+msgstr "`` sr_rs`` - செர்பியன் (சிரிலிக்)"
+
+#: ../../sphinx/doc/usage/configuration.rst:867
+msgid "``ta`` -- Tamil"
+msgstr "`` ta`` - தமிழ்"
+
+#: ../../sphinx/doc/usage/configuration.rst:868
+msgid "``te`` -- Telugu"
+msgstr "`` தே`` - தெலுங்கு"
+
+#: ../../sphinx/doc/usage/configuration.rst:870
+msgid "``uk_UA`` -- Ukrainian"
+msgstr "`` UK_UA`` - உக்ரேனிய"
+
+#: ../../sphinx/doc/usage/configuration.rst:871
+msgid "``ur`` -- Urdu"
+msgstr "`` உர்`` - உருது"
+
+#: ../../sphinx/doc/usage/configuration.rst:872
+msgid "``vi`` -- Vietnamese"
+msgstr "`` vi`` - வியட்நாமிய"
+
+#: ../../sphinx/doc/usage/configuration.rst:873
+msgid "``zh_CN`` -- Simplified Chinese"
+msgstr "`` zh_cn`` - எளிமைப்படுத்தப்பட்ட சீன"
+
+#: ../../sphinx/doc/usage/configuration.rst:874
+msgid "``zh_TW`` -- Traditional Chinese"
+msgstr "`` zh_tw`` - பாரம்பரிய சீன"
+
+#: ../../sphinx/doc/usage/configuration.rst:88
+msgid ""
+"The major project version, used as the replacement for ``|version|``.  For "
+"example, for the Python documentation, this may be something like ``2.6``."
+msgstr ""
+"முக்கிய திட்ட பதிப்பு, `` | பதிப்பு | `` க்கு மாற்றாக பயன்படுத்தப்படுகிறது. "
+"எடுத்துக்காட்டாக, பைதான் ஆவணங்களுக்கு, இது `` 2.6`` போன்றதாக இருக்கலாம்."
+
+#: ../../sphinx/doc/usage/configuration.rst:880
+msgid ""
+"Directories in which to search for additional message catalogs (see "
+":confval:`language`), relative to the source directory.  The directories on "
+"this path are searched by the standard :mod:`gettext` module."
+msgstr ""
+"கூடுதல் செய்தி பட்டியல்களைத் தேட வேண்டிய கோப்பகங்கள் (பார்க்க: confval: "
+"`மொழி`), மூல கோப்பகத்துடன் தொடர்புடையது. இந்த பாதையில் உள்ள கோப்பகங்கள் "
+"தரநிலையால் தேடப்படுகின்றன: MOD: `GetText` தொகுதி."
+
+#: ../../sphinx/doc/usage/configuration.rst:884
+msgid ""
+"Internal messages are fetched from a text domain of ``sphinx``; so if you "
+"add the directory :file:`./locale` to this setting, the message catalogs "
+"(compiled from ``.po`` format using :program:`msgfmt`) must be in "
+":file:`./locale/{language}/LC_MESSAGES/sphinx.mo`.  The text domain of "
+"individual documents depends on :confval:`gettext_compact`."
+msgstr ""
+"`` ஸ்பின்க்ஸ்`` இன் உரை களத்திலிருந்து உள் செய்திகள் பெறப்படுகின்றன; எனவே "
+"நீங்கள் கோப்பகத்தை சேர்த்தால்: கோப்பு: `./லோகேல்` இந்த அமைப்பிற்கு, செய்தி "
+"பட்டியல்கள் (` `.போ`` வடிவத்திலிருந்து தொகுக்கப்பட்டுள்ளன: நிரல்:` msgfmt`) "
+"இருக்க வேண்டும்: கோப்பு: `./locale/ {மொழி}/lc_messages/sphinx.mo`. தனிப்பட்ட"
+" ஆவணங்களின் உரை களம் சார்ந்துள்ளது: confval: `getText_compact`."
+
+#: ../../sphinx/doc/usage/configuration.rst:890
+msgid "The default is ``['locales']``."
+msgstr "இயல்புநிலை `` ['இடங்கள்'] ``."
+
+#: ../../sphinx/doc/usage/configuration.rst:892
+msgid ""
+"The :option:`-v option for sphinx-build command <sphinx-build -v>` is useful"
+" to check the locale_dirs config works as expected.  It emits debug messages"
+" if message catalog directory not found."
+msgstr ""
+"தி: விருப்பம்: `-V விருப்பம் ஸ்பின்க்ஸ்-பில்ட் கட்டளைக்கான <sphinx- கட்டளை "
+"-v>` லோகேல்_டிர்ஸ் கட்டமைப்பு எதிர்பார்த்தபடி செயல்படுவதை சரிபார்க்க "
+"பயனுள்ளதாக இருக்கும். செய்தி பட்டியல் அடைவு காணப்படாவிட்டால் அது "
+"பிழைத்திருத்த செய்திகளை வெளியிடுகிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:896
+msgid "Use ``locales`` directory as a default value"
+msgstr "இயல்புநிலை மதிப்பாக `` இடங்கள்` கோப்பகத்தைப் பயன்படுத்தவும்"
+
+#: ../../sphinx/doc/usage/configuration.rst:901
+msgid ""
+"If true, \"fuzzy\" messages in the message catalogs are used for "
+"translation. The default is ``False``."
+msgstr ""
+"உண்மை என்றால், செய்தி பட்டியல்களில் உள்ள \"தெளிவில்லாத\" செய்திகள் "
+"மொழிபெயர்ப்புக்கு பயன்படுத்தப்படுகின்றன. இயல்புநிலை `` தவறு``."
+
+#: ../../sphinx/doc/usage/configuration.rst:910
+msgid ""
+"If true, a document's text domain is its docname if it is a top-level "
+"project file and its very base directory otherwise."
+msgstr ""
+"உண்மை என்றால், ஒரு ஆவணத்தின் உரை டொமைன் அதன் ஆவண பெயர், அது ஒரு உயர்மட்ட "
+"திட்டக் கோப்பு மற்றும் இல்லையெனில் அதன் அடிப்படை கோப்பகமாக இருந்தால்."
+
+#: ../../sphinx/doc/usage/configuration.rst:913
+msgid ""
+"If set to string, all document's text domain is this string, making all "
+"documents use single text domain."
+msgstr ""
+"சரம் என அமைக்கப்பட்டால், அனைத்து ஆவணங்களின் உரை டொமைனையும் இந்த சரம், எல்லா "
+"ஆவணங்களும் ஒற்றை உரை களத்தைப் பயன்படுத்துகின்றன."
+
+#: ../../sphinx/doc/usage/configuration.rst:916
+msgid ""
+"By default, the document ``markup/code.rst`` ends up in the ``markup`` text "
+"domain.  With this option set to ``False``, it is ``markup/code``."
+msgstr ""
+"இயல்பாக, ஆவணம் `` markup/code.rst`` `` மார்க்அப்` உரை களத்தில் முடிகிறது. "
+"இந்த விருப்பம் `` FALSE`` என அமைக்கப்பட்டவுடன், இது `` மார்க்அப்/குறியீடு``."
+
+#: ../../sphinx/doc/usage/configuration.rst:919
+msgid "The string value is now accepted."
+msgstr "சரம் மதிப்பு இப்போது ஏற்றுக்கொள்ளப்பட்டுள்ளது."
+
+#: ../../sphinx/doc/usage/configuration.rst:924
+msgid ""
+"If true, Sphinx generates uuid information for version tracking in message "
+"catalogs. It is used for:"
+msgstr ""
+"உண்மை என்றால், செய்தி பட்டியலில் பதிப்பு கண்காணிப்புக்கான UUID தகவல்களை "
+"SPHINX உருவாக்குகிறது. இது பயன்படுத்தப்படுகிறது:"
+
+#: ../../sphinx/doc/usage/configuration.rst:927
+msgid "Add uid line for each msgids in .pot files."
+msgstr ".Pot கோப்புகளில் ஒவ்வொரு msgids க்கும் UID வரியைச் சேர்க்கவும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:928
+msgid ""
+"Calculate similarity between new msgids and previously saved old msgids. "
+"This calculation takes a long time."
+msgstr ""
+"புதிய MSGID களுக்கும் முன்னர் சேமிக்கப்பட்ட பழைய MSGID களுக்கும் இடையிலான "
+"ஒற்றுமையைக் கணக்கிடுங்கள். இந்த கணக்கீடு நீண்ட நேரம் எடுக்கும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:93
+msgid ""
+"The full project version, used as the replacement for ``|release|`` and e.g."
+" in the HTML templates.  For example, for the Python documentation, this may"
+" be something like ``2.6.0rc1``."
+msgstr ""
+"முழு திட்ட பதிப்பு, `` | வெளியீடு | `` மற்றும் எ.கா. HTML வார்ப்புருக்கள். "
+"எடுத்துக்காட்டாக, பைதான் ஆவணங்களுக்கு, இது `` 2.6.0rc1`` போன்றதாக "
+"இருக்கலாம்."
+
+#: ../../sphinx/doc/usage/configuration.rst:931
+msgid ""
+"If you want to accelerate the calculation, you can use ``python-"
+"levenshtein`` 3rd-party package written in C by using :command:`pip install "
+"python-levenshtein`."
+msgstr ""
+"நீங்கள் கணக்கீட்டை விரைவுபடுத்த விரும்பினால், நீங்கள் `` "
+"பைதான்-லெவன்ஷ்டீன்`` 3 வது தரப்பு தொகுப்பைப் பயன்படுத்தலாம்: கட்டளை: `பிப் "
+"நிறுவவும் பைதான்-லெவன்ஷ்டைன்`."
+
+#: ../../sphinx/doc/usage/configuration.rst:935
+msgid "The default is ``False``."
+msgstr "இயல்புநிலை `` தவறு``."
+
+#: ../../sphinx/doc/usage/configuration.rst:941
+msgid ""
+"If true, Sphinx generates location information for messages in message "
+"catalogs."
+msgstr ""
+"உண்மை என்றால், செய்தி பட்டியலில் உள்ள செய்திகளுக்கான இருப்பிட தகவல்களை "
+"SPHINX உருவாக்குகிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:944
+#: ../../sphinx/doc/usage/configuration.rst:952
+msgid "The default is ``True``."
+msgstr "இயல்புநிலை `` உண்மை``."
+
+#: ../../sphinx/doc/usage/configuration.rst:950
+msgid "If true, Sphinx builds mo file for each translation catalog files."
+msgstr ""
+"உண்மை என்றால், ஒவ்வொரு மொழிபெயர்ப்பு அட்டவணை கோப்புகளுக்கும் SPHINX MO "
+"கோப்பை உருவாக்குகிறது."
+
+#: ../../sphinx/doc/usage/configuration.rst:958
+msgid ""
+"To specify names to enable gettext extracting and translation applying for "
+"i18n additionally. You can specify below names:"
+msgstr ""
+"கூடுதலாக I18N க்கு விண்ணப்பிக்கும் GetText பிரித்தெடுத்தல் மற்றும் "
+"மொழிபெயர்ப்பை இயக்க பெயர்களைக் குறிப்பிட. பெயர்களுக்குக் கீழே குறிப்பிடலாம்:"
+
+#: ../../sphinx/doc/usage/configuration.rst:961
+msgid "index terms"
+msgstr "குறியீட்டு விதிமுறைகள்"
+
+#: ../../sphinx/doc/usage/configuration.rst:962
+msgid "literal blocks (``::`` annotation and ``code-block`` directive)"
+msgstr ""
+"நேரடி தொகுதிகள் (`` :: `` சிறுகுறிப்பு மற்றும் `` கோட்-பிளாக்`` உத்தரவு)"
+
+#: ../../sphinx/doc/usage/configuration.rst:963
+msgid "doctest block"
+msgstr "ஆவணத் தொகுதி"
+
+#: ../../sphinx/doc/usage/configuration.rst:964
+msgid "raw content"
+msgstr "மூல உள்ளடக்கம்"
+
+#: ../../sphinx/doc/usage/configuration.rst:965
+msgid "image/figure uri"
+msgstr "படம்/படம் யூரி"
+
+#: ../../sphinx/doc/usage/configuration.rst:967
+msgid ""
+"For example: ``gettext_additional_targets = ['literal-block', 'image']``."
+msgstr ""
+"எடுத்துக்காட்டாக: `` getText_addisional_targets = ['நேரடி-தொகுதி', 'படம்'] "
+"``."
+
+#: ../../sphinx/doc/usage/configuration.rst:969
+msgid "The default is ``[]``."
+msgstr "இயல்புநிலை `` [] ``."
+
+#: ../../sphinx/doc/usage/configuration.rst:97
+msgid ""
+"If you don't need the separation provided between :confval:`version` and "
+":confval:`release`, just set them both to the same value."
+msgstr ""
+"இடையில் வழங்கப்பட்ட பிரிப்பு உங்களுக்குத் தேவையில்லை என்றால்: confval: "
+"`பதிப்பு` மற்றும்: confval:` வெளியீடு`, இரண்டையும் ஒரே மதிப்புக்கு "
+"அமைக்கவும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:974
+msgid "The alt text for image is translated by default."
+msgstr "படத்திற்கான ALT உரை இயல்பாக மொழிபெயர்க்கப்பட்டுள்ளது."
+
+#: ../../sphinx/doc/usage/configuration.rst:978
+msgid ""
+"The filename format for language-specific figures.  The default value is "
+"``{root}.{language}{ext}``.  It will be expanded to "
+"``dirname/filename.en.png`` from ``.. image:: dirname/filename.png``. The "
+"available format tokens are:"
+msgstr ""
+"மொழி சார்ந்த புள்ளிவிவரங்களுக்கான கோப்பு பெயர் வடிவம். இயல்புநிலை மதிப்பு ``"
+" {ரூட்}. {மொழி} {ext} ``. இது `` `` tirname/filename.en.png` க்கு "
+"விரிவாக்கப்படும். கிடைக்கக்கூடிய வடிவமைப்பு டோக்கன்கள்:"
+
+#: ../../sphinx/doc/usage/configuration.rst:983
+msgid ""
+"``{root}`` - the filename, including any path component, without the file "
+"extension, e.g. ``dirname/filename``"
+msgstr ""
+"`` {ரூட்} `` - கோப்பு நீட்டிப்பு இல்லாமல், எந்த பாதை கூறு உட்பட கோப்பு "
+"பெயர், எ.கா. `` dirname/fileName``"
+
+#: ../../sphinx/doc/usage/configuration.rst:985
+msgid ""
+"``{path}`` - the directory path component of the filename, with a trailing "
+"slash if non-empty, e.g. ``dirname/``"
+msgstr ""
+"`` {பாதை} `` - கோப்பு பெயரின் அடைவு பாதை கூறு, காலியாக இல்லாதிருந்தால், "
+"எ.கா. `` dirname/``"
+
+#: ../../sphinx/doc/usage/configuration.rst:987
+msgid ""
+"``{docpath}`` - the directory path component for the current document, with "
+"a trailing slash if non-empty."
+msgstr ""
+"`` {docbath} `` ` - தற்போதைய ஆவணத்திற்கான அடைவு பாதை கூறு, காலியாக "
+"இல்லாவிட்டால் ஒரு பின்தங்கிய குறைப்பு."
+
+#: ../../sphinx/doc/usage/configuration.rst:989
+msgid ""
+"``{basename}`` - the filename without the directory path or file extension "
+"components, e.g. ``filename``"
+msgstr ""
+"`` {அடிப்படை பெயர்} `` - அடைவு பாதை அல்லது கோப்பு நீட்டிப்பு கூறுகள் "
+"இல்லாமல் கோப்பு பெயர், எ.கா. `` கோப்பு பெயர்``"
+
+#: ../../sphinx/doc/usage/configuration.rst:991
+msgid "``{ext}`` - the file extension, e.g. ``.png``"
+msgstr "`{ext}` ` - கோப்பு நீட்டிப்பு, எ.கா. `.png``"
+
+#: ../../sphinx/doc/usage/configuration.rst:992
+msgid "``{language}`` - the translation language, e.g. ``en``"
+msgstr "`` {மொழி} `` - மொழிபெயர்ப்பு மொழி, எ.கா. `` en``"
+
+#: ../../sphinx/doc/usage/configuration.rst:994
+msgid ""
+"For example, setting this to ``{path}{language}/{basename}{ext}`` will "
+"expand to ``dirname/en/filename.png`` instead."
+msgstr ""
+"எடுத்துக்காட்டாக, இதை `{பாதை {{மொழி}/{BaseName} {ext}` `அதற்கு பதிலாக` "
+"`dirname/en/filename.png`` க்கு விரிவாக்கும்."
+
+#: ../../sphinx/doc/usage/configuration.rst:999
+msgid "Added ``{path}`` and ``{basename}`` tokens."
+msgstr ""
+"`` {பாதை} `` மற்றும் `` {அடிப்படை பெயர்} `` டோக்கன்கள் சேர்க்கப்பட்டன."

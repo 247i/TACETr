@@ -19,10 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: gui\about.cpp:97
-msgid "About UltraDefrag"
-msgstr "அல்ட்ரா டீபிராக்மேன்ட்டர் பற்றி"
-
 #: gui\about.cpp:108
 msgid "A powerful defragmentation utility."
 msgstr "ஒரு சக்திவாய்ந்த டிஃப்ராக்மென்டேஷன் பயன்பாடு."
@@ -30,6 +26,10 @@ msgstr "ஒரு சக்திவாய்ந்த டிஃப்ராக�
 #: gui\about.cpp:113
 msgid "UltraDefrag website"
 msgstr "அல்ட்ரேட்ஃப்ராக் வலைத்தளம்"
+
+#: gui\about.cpp:97
+msgid "About UltraDefrag"
+msgstr "அல்ட்ரா டீபிராக்மேன்ட்டர் பற்றி"
 
 #: gui\btd.cpp:140
 msgid "Boot time defragmentation requires system reboot."
@@ -40,20 +40,16 @@ msgid "Boot time defragmentation"
 msgstr "துவக்க நேரம் defragmentation"
 
 #: gui\btd.cpp:144
-msgid "Reboot now"
-msgstr "இப்போது மறுமுறை துவக்கு"
-
-#: gui\btd.cpp:144
 msgid "Reboot later"
 msgstr "பின்னர் மீண்டும் துவக்கவும்"
+
+#: gui\btd.cpp:144
+msgid "Reboot now"
+msgstr "இப்போது மறுமுறை துவக்கு"
 
 #: gui\btd.cpp:144 gui\config.cpp:1896 gui\utils.cpp:228 shellex\utils.cpp:135
 msgid "Cancel"
 msgstr "ரத்துசெய்"
-
-#: gui\config.cpp:901 gui\config.cpp:1761
-msgid "Preferences"
-msgstr "விருப்பத்தேர்வுகள்"
 
 #: gui\config.cpp:1632 gui\config.cpp:1771
 msgid "Advanced"
@@ -75,6 +71,10 @@ msgstr ""
 #: gui\config.cpp:1707 gui\config.cpp:1792 gui\config.cpp:1798
 msgid "Add patterns"
 msgstr "வடிவங்களைச் சேர்க்கவும்"
+
+#: gui\config.cpp:901 gui\config.cpp:1761
+msgid "Preferences"
+msgstr "விருப்பத்தேர்வுகள்"
 
 #: gui\config.cpp:1765
 msgid "General"
@@ -612,26 +612,6 @@ msgstr "&மேம்படுத்தல்"
 msgid "Reports are not available yet for the selected drives!"
 msgstr "தேர்ந்தெடுக்கப்பட்ட டிரைவ்களுக்கு அறிக்கைகள் இன்னும் கிடைக்கவில்லை!"
 
-#: gui\shutdown.cpp:88
-msgid "Please confirm"
-msgstr "உறுதி செய்யவும்"
-
-#: gui\shutdown.cpp:93
-msgid "Do you really want to hibernate when done?"
-msgstr "உண்மையில் நீங்கள் செய்த போது உறங்கும் விரும்புகிறீர்களா?"
-
-#. : This expands to "60 seconds until hibernation"
-#. : Make sure that "%lu" is included in the translated string at the correct
-#. position
-#: gui\shutdown.cpp:96
-#, c-format
-msgid "%lu seconds until hibernation"
-msgstr "%lu செயலற்றிருத்தல் வரை விநாடிகள்"
-
-#: gui\shutdown.cpp:99
-msgid "Do you really want to log off when done?"
-msgstr "உண்மையில் நீங்கள் செய்த போது விடுபதிகை விரும்புகிறீர்களா?"
-
 #. : This expands to "60 seconds until logoff"
 #. : Make sure that "%lu" is included in the translated string at the correct
 #. position
@@ -672,6 +652,26 @@ msgstr "&ஆம்"
 msgid "&No"
 msgstr "&இல்லை"
 
+#: gui\shutdown.cpp:88
+msgid "Please confirm"
+msgstr "உறுதி செய்யவும்"
+
+#: gui\shutdown.cpp:93
+msgid "Do you really want to hibernate when done?"
+msgstr "உண்மையில் நீங்கள் செய்த போது உறங்கும் விரும்புகிறீர்களா?"
+
+#. : This expands to "60 seconds until hibernation"
+#. : Make sure that "%lu" is included in the translated string at the correct
+#. position
+#: gui\shutdown.cpp:96
+#, c-format
+msgid "%lu seconds until hibernation"
+msgstr "%lu செயலற்றிருத்தல் வரை விநாடிகள்"
+
+#: gui\shutdown.cpp:99
+msgid "Do you really want to log off when done?"
+msgstr "உண்மையில் நீங்கள் செய்த போது விடுபதிகை விரும்புகிறீர்களா?"
+
 #: gui\statbar.cpp:95
 msgid "folders"
 msgstr "கோப்புறைகள்"
@@ -693,12 +693,12 @@ msgid "The job is running"
 msgstr "ஒரு வேலை இயங்கும்"
 
 #: gui\tray.cpp:56 shellex\tray.cpp:56
-msgid "Show"
-msgstr "காண்பி"
-
-#: gui\tray.cpp:56 shellex\tray.cpp:56
 msgid "Hide"
 msgstr "மறை"
+
+#: gui\tray.cpp:56 shellex\tray.cpp:56
+msgid "Show"
+msgstr "காண்பி"
 
 #: gui\upgrade.cpp:107
 msgid "No updates are available at the moment."

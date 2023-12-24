@@ -17,9 +17,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/usage/extensions/inheritance.rst:4
-msgid ":mod:`sphinx.ext.inheritance_diagram` -- Include inheritance diagrams"
-msgstr ":mod:`sphinx.ext.inheritance_diagram` -- Include inheritance diagrams"
+#: ../../sphinx/doc/usage/extensions/inheritance.rst:102
+msgid "Examples"
+msgstr "எடுத்துக்காட்டுகள்"
+
+#: ../../sphinx/doc/usage/extensions/inheritance.rst:104
+msgid ""
+"The following are different inheritance diagrams for the internal "
+"``InheritanceDiagram`` class that implements the directive."
+msgstr ""
+"பின்வருபவை உள் `` பரம்பரை கிராம்`` வகுப்பிற்கான வெவ்வேறு பரம்பரை வரைபடங்கள்."
+
+#: ../../sphinx/doc/usage/extensions/inheritance.rst:107
+msgid "With full names::"
+msgstr "முழு பெயர்களுடன் ::"
 
 #: ../../sphinx/doc/usage/extensions/inheritance.rst:11
 msgid ""
@@ -29,9 +40,61 @@ msgstr ""
 "இந்த நீட்டிப்பு பரம்பரை வரைபடங்களைச் சேர்க்க உங்களை அனுமதிக்கிறது, இது: mod:"
 " `கிராஃப்விஸ் நீட்டிப்பு <sphinx.ext.graphviz>` `."
 
+#: ../../sphinx/doc/usage/extensions/inheritance.rst:114
+msgid "Showing class names only::"
+msgstr "வகுப்பு பெயர்களை மட்டுமே காண்பிக்கும் ::"
+
+#: ../../sphinx/doc/usage/extensions/inheritance.rst:122
+msgid ""
+"Stopping the diagram at :class:`sphinx.util.docutils.SphinxDirective` (the "
+"highest superclass still part of Sphinx), and dropping the common left-most "
+"part (``sphinx``) from all names::"
+msgstr ""
+"வரைபடத்தை நிறுத்துதல்: வகுப்பு: `sphinx.util.docutils.sphinxdirective` (மிக "
+"உயர்ந்த சூப்பர் கிளாஸ் இன்னும் ஸ்பிங்க்ஸின் ஒரு பகுதி), மற்றும் எல்லா "
+"பெயர்களிலிருந்தும் பொதுவான இடது பகுதியை (` `ஸ்பிங்க்ஸ்``) கைவிடுதல் ::"
+
+#: ../../sphinx/doc/usage/extensions/inheritance.rst:138
+msgid ""
+"The internal class that implements the ``inheritance-diagram`` directive."
+msgstr "`` பரம்பரை-வரைபடத்தை செயல்படுத்தும் உள் வர்க்கம்."
+
 #: ../../sphinx/doc/usage/extensions/inheritance.rst:14
 msgid "It adds this directive:"
 msgstr "இது இந்த உத்தரவை சேர்க்கிறது:"
+
+#: ../../sphinx/doc/usage/extensions/inheritance.rst:142
+msgid "Configuration"
+msgstr "உள்ளமைவு"
+
+#: ../../sphinx/doc/usage/extensions/inheritance.rst:146
+msgid "A dictionary of graphviz graph attributes for inheritance diagrams."
+msgstr "பரம்பரை வரைபடங்களுக்கான கிராப்விஸ் வரைபட பண்புகளின் அகராதி."
+
+#: ../../sphinx/doc/usage/extensions/inheritance.rst:148
+#: ../../sphinx/doc/usage/extensions/inheritance.rst:157
+#: ../../sphinx/doc/usage/extensions/inheritance.rst:172
+msgid "For example::"
+msgstr "உதாரணத்திற்கு::"
+
+#: ../../sphinx/doc/usage/extensions/inheritance.rst:155
+msgid "A dictionary of graphviz node attributes for inheritance diagrams."
+msgstr "பரம்பரை வரைபடங்களுக்கான கிராப்விஸ் முனை பண்புகளின் அகராதி."
+
+#: ../../sphinx/doc/usage/extensions/inheritance.rst:164
+msgid "A dictionary of graphviz edge attributes for inheritance diagrams."
+msgstr "பரம்பரை வரைபடங்களுக்கான கிராப்விஸ் விளிம்பின் பண்புகளின் அகராதி."
+
+#: ../../sphinx/doc/usage/extensions/inheritance.rst:168
+msgid ""
+"Allows mapping the full qualified name of the class to custom values (useful"
+" when exposing the underlying path of a class is not desirable, e.g. it's a "
+"private class and should not be instantiated by the user)."
+msgstr ""
+"வகுப்பின் முழு தகுதிவாய்ந்த பெயரை தனிப்பயன் மதிப்புகளுக்கு மேப்பிங் செய்ய "
+"அனுமதிக்கிறது (ஒரு வகுப்பின் அடிப்படை பாதையை அம்பலப்படுத்தும்போது பயனுள்ளதாக"
+" இல்லை, எ.கா. இது ஒரு தனியார் வகுப்பு மற்றும் பயனரால் "
+"உடனடிப்படுத்தக்கூடாது)."
 
 #: ../../sphinx/doc/usage/extensions/inheritance.rst:18
 msgid ""
@@ -93,6 +156,10 @@ msgstr ""
 "வழங்கப்பட்டால், தனியார் அடிப்படை வகுப்புகள் (யாருடைய பெயர் `` _`` உடன் "
 "தொடங்குகின்றன) சேர்க்கப்படும்."
 
+#: ../../sphinx/doc/usage/extensions/inheritance.rst:4
+msgid ":mod:`sphinx.ext.inheritance_diagram` -- Include inheritance diagrams"
+msgstr ":mod:`sphinx.ext.inheritance_diagram` -- Include inheritance diagrams"
+
 #: ../../sphinx/doc/usage/extensions/inheritance.rst:42
 msgid "You can use ``caption`` option to give a caption to the diagram."
 msgstr ""
@@ -153,70 +220,3 @@ msgid "Added ``top-classes`` option to limit the scope of inheritance graphs."
 msgstr ""
 "பரம்பரை வரைபடங்களின் நோக்கத்தை கட்டுப்படுத்த `` உயர்மட்ட வகுப்புகள்` "
 "விருப்பம் சேர்க்கப்பட்டது."
-
-#: ../../sphinx/doc/usage/extensions/inheritance.rst:102
-msgid "Examples"
-msgstr "எடுத்துக்காட்டுகள்"
-
-#: ../../sphinx/doc/usage/extensions/inheritance.rst:104
-msgid ""
-"The following are different inheritance diagrams for the internal "
-"``InheritanceDiagram`` class that implements the directive."
-msgstr ""
-"பின்வருபவை உள் `` பரம்பரை கிராம்`` வகுப்பிற்கான வெவ்வேறு பரம்பரை வரைபடங்கள்."
-
-#: ../../sphinx/doc/usage/extensions/inheritance.rst:107
-msgid "With full names::"
-msgstr "முழு பெயர்களுடன் ::"
-
-#: ../../sphinx/doc/usage/extensions/inheritance.rst:114
-msgid "Showing class names only::"
-msgstr "வகுப்பு பெயர்களை மட்டுமே காண்பிக்கும் ::"
-
-#: ../../sphinx/doc/usage/extensions/inheritance.rst:122
-msgid ""
-"Stopping the diagram at :class:`sphinx.util.docutils.SphinxDirective` (the "
-"highest superclass still part of Sphinx), and dropping the common left-most "
-"part (``sphinx``) from all names::"
-msgstr ""
-"வரைபடத்தை நிறுத்துதல்: வகுப்பு: `sphinx.util.docutils.sphinxdirective` (மிக "
-"உயர்ந்த சூப்பர் கிளாஸ் இன்னும் ஸ்பிங்க்ஸின் ஒரு பகுதி), மற்றும் எல்லா "
-"பெயர்களிலிருந்தும் பொதுவான இடது பகுதியை (` `ஸ்பிங்க்ஸ்``) கைவிடுதல் ::"
-
-#: ../../sphinx/doc/usage/extensions/inheritance.rst:138
-msgid ""
-"The internal class that implements the ``inheritance-diagram`` directive."
-msgstr "`` பரம்பரை-வரைபடத்தை செயல்படுத்தும் உள் வர்க்கம்."
-
-#: ../../sphinx/doc/usage/extensions/inheritance.rst:142
-msgid "Configuration"
-msgstr "உள்ளமைவு"
-
-#: ../../sphinx/doc/usage/extensions/inheritance.rst:146
-msgid "A dictionary of graphviz graph attributes for inheritance diagrams."
-msgstr "பரம்பரை வரைபடங்களுக்கான கிராப்விஸ் வரைபட பண்புகளின் அகராதி."
-
-#: ../../sphinx/doc/usage/extensions/inheritance.rst:148
-#: ../../sphinx/doc/usage/extensions/inheritance.rst:157
-#: ../../sphinx/doc/usage/extensions/inheritance.rst:172
-msgid "For example::"
-msgstr "உதாரணத்திற்கு::"
-
-#: ../../sphinx/doc/usage/extensions/inheritance.rst:155
-msgid "A dictionary of graphviz node attributes for inheritance diagrams."
-msgstr "பரம்பரை வரைபடங்களுக்கான கிராப்விஸ் முனை பண்புகளின் அகராதி."
-
-#: ../../sphinx/doc/usage/extensions/inheritance.rst:164
-msgid "A dictionary of graphviz edge attributes for inheritance diagrams."
-msgstr "பரம்பரை வரைபடங்களுக்கான கிராப்விஸ் விளிம்பின் பண்புகளின் அகராதி."
-
-#: ../../sphinx/doc/usage/extensions/inheritance.rst:168
-msgid ""
-"Allows mapping the full qualified name of the class to custom values (useful"
-" when exposing the underlying path of a class is not desirable, e.g. it's a "
-"private class and should not be instantiated by the user)."
-msgstr ""
-"வகுப்பின் முழு தகுதிவாய்ந்த பெயரை தனிப்பயன் மதிப்புகளுக்கு மேப்பிங் செய்ய "
-"அனுமதிக்கிறது (ஒரு வகுப்பின் அடிப்படை பாதையை அம்பலப்படுத்தும்போது பயனுள்ளதாக"
-" இல்லை, எ.கா. இது ஒரு தனியார் வகுப்பு மற்றும் பயனரால் "
-"உடனடிப்படுத்தக்கூடாது)."

@@ -20,10 +20,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: pygettext.py 1.5\n"
 
-#: ..\common\common_dialogs.py:84 config.py:929
-msgid "Keyboard shortcuts"
-msgstr "விசைப்பலகை குறுக்குவழிகள்"
-
 #: ..\common\common_dialogs.py:112
 msgid "Restart calibre now"
 msgstr "இப்போது காலிபரை மறுதொடக்கம் செய்யுங்கள்"
@@ -90,9 +86,9 @@ msgstr "இந்த நூலகத்தில் இந்த சொருக
 msgid "Copy to clipboard"
 msgstr "கிளிப்போர்டுக்கு நகலெடுக்கவும்"
 
-#: ..\common\common_widgets.py:93
-msgid "Undefined"
-msgstr "வரையறுக்கப்படவில்லை"
+#: ..\common\common_dialogs.py:84 config.py:929
+msgid "Keyboard shortcuts"
+msgstr "விசைப்பலகை குறுக்குவழிகள்"
 
 #: ..\common\common_widgets.py:148
 msgid "Restart required"
@@ -108,6 +104,10 @@ msgstr ""
 #: ..\common\common_widgets.py:222
 msgid "Create new column"
 msgstr "புதிய நெடுவரிசையை உருவாக்கவும்"
+
+#: ..\common\common_widgets.py:93
+msgid "Undefined"
+msgstr "வரையறுக்கப்படவில்லை"
 
 #: action.py:30
 msgid "Import List"
@@ -229,14 +229,6 @@ msgstr "முடிந்தது"
 msgid "Confirmation dialogs have all been reset"
 msgstr "உறுதிப்படுத்தல் உரையாடல்கள் அனைத்தும் மீட்டமைக்கப்பட்டுள்ளன"
 
-#: encodings.py:98
-msgid "Add or Remove"
-msgstr "சேர்க்கவும் அல்லது அகற்றவும்"
-
-#: encodings.py:99
-msgid "detect encoding"
-msgstr "குறியாக்கத்தைக் கண்டறியவும்"
-
 #: encodings.py:236
 msgid "Description"
 msgstr "விளக்கம்"
@@ -286,6 +278,14 @@ msgid "You must select one or more fields first."
 msgstr ""
 "நீங்கள் முதலில் ஒன்று அல்லது அதற்கு மேற்பட்ட புலங்களைத் தேர்ந்தெடுக்க "
 "வேண்டும்."
+
+#: encodings.py:98
+msgid "Add or Remove"
+msgstr "சேர்க்கவும் அல்லது அகற்றவும்"
+
+#: encodings.py:99
+msgid "detect encoding"
+msgstr "குறியாக்கத்தைக் கண்டறியவும்"
 
 #: models.py:101
 msgid "A matching book was found in your calibre library"
@@ -416,14 +416,6 @@ msgstr ""
 msgid "Choose file for exported csv"
 msgstr "ஏற்றுமதி செய்யப்பட்ட CSV க்கான கோப்பைத் தேர்வுசெய்க"
 
-#: page_persist.py:80
-msgid "Current step progress:"
-msgstr "தற்போதைய படி முன்னேற்றம்:"
-
-#: page_persist.py:86
-msgid "Step"
-msgstr "படி"
-
 #: page_persist.py:101
 msgid "Importing"
 msgstr "இறக்குமதி"
@@ -546,17 +538,21 @@ msgstr "நீங்கள் ஒரு அமைப்பின் பெயர
 msgid "Failed"
 msgstr "தோல்வி"
 
-#: page_resolve.py:56
-msgid "Update metadata fields"
-msgstr "மெட்டாடேட்டா புலங்களை புதுப்பிக்கவும்"
+#: page_persist.py:80
+msgid "Current step progress:"
+msgstr "தற்போதைய படி முன்னேற்றம்:"
 
-#: page_resolve.py:70
-msgid "Select all"
-msgstr "அனைத்தையும் தெரிவுசெய்"
+#: page_persist.py:86
+msgid "Step"
+msgstr "படி"
 
-#: page_resolve.py:72
-msgid "Clear all"
-msgstr "அனைத்தையும் அழி"
+#: page_resolve.py:240 page_resolve.py:1032 page_resolve.py:1036
+msgid "Matches in library:"
+msgstr "நூலகத்தில் பொருந்துகிறது:"
+
+#: page_resolve.py:1034
+msgid "Matches in library:(1 match)"
+msgstr "நூலகத்தில் போட்டிகள்: (1 போட்டி)"
 
 #: page_resolve.py:128 tab_common.py:360
 msgid "No fields selected"
@@ -585,10 +581,6 @@ msgstr "போட்டி வழிமுறை மூலம் வடிகட
 #: page_resolve.py:238
 msgid "Books in list:"
 msgstr "பட்டியலில் உள்ள புத்தகங்கள்:"
-
-#: page_resolve.py:240 page_resolve.py:1032 page_resolve.py:1036
-msgid "Matches in library:"
-msgstr "நூலகத்தில் பொருந்துகிறது:"
 
 #: page_resolve.py:258
 msgid "Clear the match associated with the selected books in the list"
@@ -702,9 +694,21 @@ msgstr "& புத்தகத்தைத் தேர்ந்தெடுக
 msgid "&Append to list"
 msgstr "பட்டியலிட சேர்க்கவும்"
 
+#: page_resolve.py:56
+msgid "Update metadata fields"
+msgstr "மெட்டாடேட்டா புலங்களை புதுப்பிக்கவும்"
+
 #: page_resolve.py:562
 msgid "*** No Match ***"
 msgstr "*** பொருத்தம் இல்லை ***"
+
+#: page_resolve.py:70
+msgid "Select all"
+msgstr "அனைத்தையும் தெரிவுசெய்"
+
+#: page_resolve.py:72
+msgid "Clear all"
+msgstr "அனைத்தையும் அழி"
 
 #: page_resolve.py:726
 msgid "Are you sure you want to add the selected book to the list?"
@@ -730,9 +734,33 @@ msgstr "இந்த புத்தகத்திற்கான அனைத�
 msgid "Search for a book in your library"
 msgstr "உங்கள் நூலகத்தில் ஒரு புத்தகத்தைத் தேடுங்கள்"
 
-#: page_resolve.py:1034
-msgid "Matches in library:(1 match)"
-msgstr "நூலகத்தில் போட்டிகள்: (1 போட்டி)"
+#: tab_clipboard.py:100
+msgid "Add expression for field to import"
+msgstr "இறக்குமதி செய்ய புலத்திற்கு வெளிப்பாட்டைச் சேர்க்கவும்"
+
+#: tab_clipboard.py:102 tab_csv.py:217 tab_webpage.py:310
+msgid "Reverse order"
+msgstr "பின்னோக்கு வரிசை"
+
+#: tab_clipboard.py:103 tab_csv.py:218 tab_webpage.py:311
+msgid "Display the books in the opposite order to the source"
+msgstr "புத்தகங்களை எதிர் வரிசையில் மூலத்திற்கு காண்பி"
+
+#: tab_clipboard.py:104 tab_csv.py:219 tab_settings.py:53 tab_webpage.py:312
+msgid "&Preview"
+msgstr "&முன்னோட்ட"
+
+#: tab_clipboard.py:105 tab_csv.py:220 tab_settings.py:54 tab_webpage.py:313
+msgid "Preview the results in the books grid"
+msgstr "புத்தகங்கள் கட்டத்தில் முடிவுகளை முன்னோட்டமிடுங்கள்"
+
+#: tab_clipboard.py:173
+msgid "Failed to parse page:\n"
+msgstr "பக்கத்தை அலசத் தவறிவிட்டது:"
+
+#: tab_clipboard.py:174
+msgid "Invalid regular expression"
+msgstr "தவறான வழக்கமான வெளிப்பாடு"
 
 #: tab_clipboard.py:50
 msgid "&Paste your book list here:"
@@ -778,34 +806,6 @@ msgstr ""
 #: tab_clipboard.py:99 tab_csv.py:209 tab_webpage.py:307
 msgid "&Fields"
 msgstr "& புலங்கள்"
-
-#: tab_clipboard.py:100
-msgid "Add expression for field to import"
-msgstr "இறக்குமதி செய்ய புலத்திற்கு வெளிப்பாட்டைச் சேர்க்கவும்"
-
-#: tab_clipboard.py:102 tab_csv.py:217 tab_webpage.py:310
-msgid "Reverse order"
-msgstr "பின்னோக்கு வரிசை"
-
-#: tab_clipboard.py:103 tab_csv.py:218 tab_webpage.py:311
-msgid "Display the books in the opposite order to the source"
-msgstr "புத்தகங்களை எதிர் வரிசையில் மூலத்திற்கு காண்பி"
-
-#: tab_clipboard.py:104 tab_csv.py:219 tab_settings.py:53 tab_webpage.py:312
-msgid "&Preview"
-msgstr "&முன்னோட்ட"
-
-#: tab_clipboard.py:105 tab_csv.py:220 tab_settings.py:54 tab_webpage.py:313
-msgid "Preview the results in the books grid"
-msgstr "புத்தகங்கள் கட்டத்தில் முடிவுகளை முன்னோட்டமிடுங்கள்"
-
-#: tab_clipboard.py:173
-msgid "Failed to parse page:\n"
-msgstr "பக்கத்தை அலசத் தவறிவிட்டது:"
-
-#: tab_clipboard.py:174
-msgid "Invalid regular expression"
-msgstr "தவறான வழக்கமான வெளிப்பாடு"
 
 #: tab_common.py:140
 msgid "Title"
@@ -979,22 +979,6 @@ msgstr "தவறான விருப்பங்கள்"
 msgid "You have not specified a delimiter"
 msgstr "நீங்கள் ஒரு டிலிமிட்டரைக் குறிப்பிடவில்லை"
 
-#: tab_settings.py:47
-msgid "Browser"
-msgstr "உலாவி"
-
-#: tab_settings.py:48
-msgid "View related website page in your web browser"
-msgstr "தொடர்புடைய வலைத்தள பக்கத்தை உங்கள் வலை உலாவியில் காண்க"
-
-#: tab_settings.py:50
-msgid "Edit"
-msgstr "தொகு"
-
-#: tab_settings.py:51
-msgid "Edit this saved setting"
-msgstr "இந்த சேமித்த அமைப்பைத் திருத்தவும்"
-
 #: tab_settings.py:105
 msgid "Delete"
 msgstr "அழி"
@@ -1079,17 +1063,21 @@ msgstr "பட்டியலாக காண்க"
 msgid "View by Category"
 msgstr "வகை மூலம் காண்க"
 
-#: tab_webpage.py:83
-msgid "Strip matching text"
-msgstr "பொருந்தும் உரை"
+#: tab_settings.py:47
+msgid "Browser"
+msgstr "உலாவி"
 
-#: tab_webpage.py:84
-msgid "Include matching text"
-msgstr "பொருந்தக்கூடிய உரையை சேர்க்கவும்"
+#: tab_settings.py:48
+msgid "View related website page in your web browser"
+msgstr "தொடர்புடைய வலைத்தள பக்கத்தை உங்கள் வலை உலாவியில் காண்க"
 
-#: tab_webpage.py:99
-msgid "Choose a predefined pattern"
-msgstr "முன் வரையறுக்கப்பட்ட வடிவத்தைத் தேர்வுசெய்க"
+#: tab_settings.py:50
+msgid "Edit"
+msgstr "தொகு"
+
+#: tab_settings.py:51
+msgid "Edit this saved setting"
+msgstr "இந்த சேமித்த அமைப்பைத் திருத்தவும்"
 
 #: tab_webpage.py:104
 msgid "Clear the regular expression"
@@ -1262,9 +1250,21 @@ msgstr ""
 "தொடர் குறியீட்டைப் பயன்படுத்தினால் நீங்கள் ஒரு தொடர் எக்ஸ்பாத் புலத்தைச் "
 "சேர்க்க வேண்டும்"
 
+#: tab_webpage.py:83
+msgid "Strip matching text"
+msgstr "பொருந்தும் உரை"
+
+#: tab_webpage.py:84
+msgid "Include matching text"
+msgstr "பொருந்தக்கூடிய உரையை சேர்க்கவும்"
+
 #: tab_webpage.py:914 tab_webpage.py:915
 msgid "Failed to process page"
 msgstr "பக்கத்தை செயலாக்குவதில் தோல்வி"
+
+#: tab_webpage.py:99
+msgid "Choose a predefined pattern"
+msgstr "முன் வரையறுக்கப்பட்ட வடிவத்தைத் தேர்வுசெய்க"
 
 #: wizards.py:44
 msgid "Import Book List"

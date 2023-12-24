@@ -17,10 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/theming.rst:4
-msgid "HTML theming support"
-msgstr "HTML தீமிங் ஆதரவு"
-
 #: ../../sphinx/doc/theming.rst:10
 msgid ""
 "This document provides information about creating your own theme. If you "
@@ -30,6 +26,66 @@ msgstr ""
 "இந்த ஆவணம் உங்கள் சொந்த கருப்பொருளை உருவாக்குவது பற்றிய தகவல்களை "
 "வழங்குகிறது. முன்பே இருக்கும் HTML கருப்பொருள்களைப் பயன்படுத்த நீங்கள் "
 "விரும்பினால், பார்க்க: DOC: `/பயன்பாடு/தீமிங்`."
+
+#: ../../sphinx/doc/theming.rst:112
+msgid ""
+"If your theme package contains two or more themes, please call "
+"``add_html_theme()`` twice or more."
+msgstr ""
+"உங்கள் தீம் தொகுப்பில் இரண்டு அல்லது அதற்கு மேற்பட்ட கருப்பொருள்கள் "
+"இருந்தால், தயவுசெய்து `` add_html_theme () `` இரண்டு அல்லது அதற்கு "
+"மேற்பட்டவற்றை அழைக்கவும்."
+
+#: ../../sphinx/doc/theming.rst:115
+msgid "'sphinx_themes' entry_points feature."
+msgstr "'sphinx_themes' enter_points அம்சம்."
+
+#: ../../sphinx/doc/theming.rst:118
+msgid "``sphinx_themes`` entry_points has been deprecated."
+msgstr "`` sphinx_themes`` entry_points நீக்கப்பட்டது."
+
+#: ../../sphinx/doc/theming.rst:121
+msgid "``sphinx.html_themes`` entry_points feature."
+msgstr "`` sphinx.html_themes`` entry_points அம்சம்."
+
+#: ../../sphinx/doc/theming.rst:126
+msgid "Templating"
+msgstr "வார்ப்புரு"
+
+#: ../../sphinx/doc/theming.rst:128
+msgid ""
+"The :doc:`guide to templating <templating>` is helpful if you want to write "
+"your own templates.  What is important to keep in mind is the order in which"
+" Sphinx searches for templates:"
+msgstr ""
+"தி: டாக்: `உங்கள் சொந்த வார்ப்புருக்கள் எழுத விரும்பினால்` "
+"வார்ப்புருவாக்கத்திற்கான வழிகாட்டி உதவியாக இருக்கும். நினைவில் கொள்ள "
+"வேண்டியது என்னவென்றால், ஸ்பிங்க்ஸ் வார்ப்புருக்களைத் தேடும் ஒழுங்கு:"
+
+#: ../../sphinx/doc/theming.rst:132
+msgid "First, in the user's ``templates_path`` directories."
+msgstr "முதலாவதாக, பயனரின் `` வார்ப்புருக்கள்_பாத்` கோப்புகளில்."
+
+#: ../../sphinx/doc/theming.rst:133
+msgid "Then, in the selected theme."
+msgstr "பின்னர், தேர்ந்தெடுக்கப்பட்ட கருப்பொருளில்."
+
+#: ../../sphinx/doc/theming.rst:134
+msgid "Then, in its base theme, its base's base theme, etc."
+msgstr "பின்னர், அதன் அடிப்படை கருப்பொருளில், அதன் அடிப்படை தீம் போன்றவை."
+
+#: ../../sphinx/doc/theming.rst:136
+msgid ""
+"When extending a template in the base theme with the same name, use the "
+"theme name as an explicit directory: ``{% extends \"basic/layout.html\" "
+"%}``.  From a user ``templates_path`` template, you can still use the "
+"\"exclamation mark\" syntax as described in the templating document."
+msgstr ""
+"அதே பெயருடன் அடிப்படை கருப்பொருளில் ஒரு வார்ப்புருவை நீட்டிக்கும்போது, தீம் "
+"பெயரை வெளிப்படையான கோப்பகமாகப் பயன்படுத்தவும்: `` { % \"அடிப்படை/தளவமைப்பு\""
+" %} `` `. ஒரு பயனரிடமிருந்து `` வார்ப்புருக்கள்_பாத்`` வார்ப்புருவில், "
+"வார்ப்புரு ஆவணத்தில் விவரிக்கப்பட்டுள்ளபடி \"ஆச்சரியக் குறி\" தொடரியல் "
+"பயன்படுத்தலாம்."
 
 #: ../../sphinx/doc/theming.rst:14
 msgid ""
@@ -46,6 +102,52 @@ msgstr ""
 "இருக்க வேண்டும் என்பதைக் குறிப்பிடுகிறது, இது பயன்படுத்த பாணியை "
 "முன்னிலைப்படுத்துகிறது, மேலும் கருப்பொருளின் தோற்றம் மற்றும் உணர்வைத் "
 "தனிப்பயனாக்க என்ன விருப்பங்கள் உள்ளன."
+
+#: ../../sphinx/doc/theming.rst:142
+msgid "Static templates"
+msgstr "நிலையான வார்ப்புருக்கள்"
+
+#: ../../sphinx/doc/theming.rst:144
+msgid ""
+"Since theme options are meant for the user to configure a theme more easily,"
+" without having to write a custom stylesheet, it is necessary to be able to "
+"template static files as well as HTML files.  Therefore, Sphinx supports so-"
+"called \"static templates\", like this:"
+msgstr ""
+"தீம் விருப்பங்கள் பயனருக்கு ஒரு கருப்பொருளை மிக எளிதாக உள்ளமைக்க வேண்டும் "
+"என்பதால், தனிப்பயன் ஸ்டைல்ஷீட்டை எழுதாமல், நிலையான கோப்புகளையும் HTML "
+"கோப்புகளையும் வார்ப்புரு செய்ய முடியும். எனவே, இது போன்ற \"நிலையான "
+"வார்ப்புருக்கள்\" என்று அழைக்கப்படுவதை ஸ்பிங்க்ஸ் ஆதரிக்கிறது:"
+
+#: ../../sphinx/doc/theming.rst:149
+msgid ""
+"If the name of a file in the ``static/`` directory of a theme (or in the "
+"user's static path, for that matter) ends with ``_t``, it will be processed "
+"by the template engine.  The ``_t`` will be left from the final file name.  "
+"For example, the *classic* theme has a file ``static/classic.css_t`` which "
+"uses templating to put the color options into the stylesheet.  When a "
+"documentation is built with the classic theme, the output directory will "
+"contain a ``_static/classic.css`` file where all template tags have been "
+"processed."
+msgstr ""
+"`` நிலையான/`` ஒரு கருப்பொருளின் கோப்பகத்தில் (அல்லது பயனரின் நிலையான "
+"பாதையில், அந்த விஷயத்தில்) ஒரு கோப்பின் பெயர் `` _t`` உடன் முடிவடைந்தால், "
+"அது வார்ப்புரு இயந்திரத்தால் செயலாக்கப்படும். `` _T`` இறுதி கோப்பு "
+"பெயரிலிருந்து விடப்படும். எடுத்துக்காட்டாக, * கிளாசிக் * கருப்பொருளில் `` "
+"நிலையான/கிளாசிக்.கஸ்ஸ்_டி`` ஒரு கோப்பைக் கொண்டுள்ளது, இது வண்ண விருப்பங்களை "
+"ஸ்டைல்ஷீட்டில் வைக்க வார்ப்புருவைப் பயன்படுத்துகிறது. கிளாசிக் "
+"கருப்பொருளுடன் ஒரு ஆவணங்கள் கட்டமைக்கப்படும்போது, வெளியீட்டு கோப்பகத்தில் "
+"அனைத்து வார்ப்புரு குறிச்சொற்களும் செயலாக்கப்பட்ட `_static/class.css`` "
+"கோப்பைக் கொண்டிருக்கும்."
+
+#: ../../sphinx/doc/theming.rst:157
+msgid ""
+"It is not an executable Python file, as opposed to :file:`conf.py`, because "
+"that would pose an unnecessary security risk if themes are shared."
+msgstr ""
+"இது இயங்கக்கூடிய பைதான் கோப்பு அல்ல, இதற்கு மாறாக: கோப்பு: `conf.py`, "
+"ஏனென்றால் கருப்பொருள்கள் பகிரப்பட்டால் அது தேவையற்ற பாதுகாப்பு அபாயத்தை "
+"ஏற்படுத்தும்."
 
 #: ../../sphinx/doc/theming.rst:20
 msgid ""
@@ -93,6 +195,10 @@ msgstr ""
 "தி: கோப்பு: `தீம்.கான்ஃப்` கோப்பு ஐ.என்.ஐ வடிவத்தில் உள்ளது [1] _ (நிலையான "
 "பைதான்: மோட்:` கட்டமைப்பு பார்வையாளர்` தொகுதி) மற்றும் பின்வரும் "
 "கட்டமைப்பைக் கொண்டுள்ளது:"
+
+#: ../../sphinx/doc/theming.rst:4
+msgid "HTML theming support"
+msgstr "HTML தீமிங் ஆதரவு"
 
 #: ../../sphinx/doc/theming.rst:49
 msgid ""
@@ -197,109 +303,3 @@ msgstr ""
 "setup.py`` கோப்பில் `` sphinx.html_themes`` என்ற நுழைவு புள்ளியை "
 "வரையறுக்கவும், `` அமைவு () `` செயல்பாட்டை `` `செயல்பாட்டை எழுதவும் "
 "`add_html_theme ()` `அதில் API ::"
-
-#: ../../sphinx/doc/theming.rst:112
-msgid ""
-"If your theme package contains two or more themes, please call "
-"``add_html_theme()`` twice or more."
-msgstr ""
-"உங்கள் தீம் தொகுப்பில் இரண்டு அல்லது அதற்கு மேற்பட்ட கருப்பொருள்கள் "
-"இருந்தால், தயவுசெய்து `` add_html_theme () `` இரண்டு அல்லது அதற்கு "
-"மேற்பட்டவற்றை அழைக்கவும்."
-
-#: ../../sphinx/doc/theming.rst:115
-msgid "'sphinx_themes' entry_points feature."
-msgstr "'sphinx_themes' enter_points அம்சம்."
-
-#: ../../sphinx/doc/theming.rst:118
-msgid "``sphinx_themes`` entry_points has been deprecated."
-msgstr "`` sphinx_themes`` entry_points நீக்கப்பட்டது."
-
-#: ../../sphinx/doc/theming.rst:121
-msgid "``sphinx.html_themes`` entry_points feature."
-msgstr "`` sphinx.html_themes`` entry_points அம்சம்."
-
-#: ../../sphinx/doc/theming.rst:126
-msgid "Templating"
-msgstr "வார்ப்புரு"
-
-#: ../../sphinx/doc/theming.rst:128
-msgid ""
-"The :doc:`guide to templating <templating>` is helpful if you want to write "
-"your own templates.  What is important to keep in mind is the order in which"
-" Sphinx searches for templates:"
-msgstr ""
-"தி: டாக்: `உங்கள் சொந்த வார்ப்புருக்கள் எழுத விரும்பினால்` "
-"வார்ப்புருவாக்கத்திற்கான வழிகாட்டி உதவியாக இருக்கும். நினைவில் கொள்ள "
-"வேண்டியது என்னவென்றால், ஸ்பிங்க்ஸ் வார்ப்புருக்களைத் தேடும் ஒழுங்கு:"
-
-#: ../../sphinx/doc/theming.rst:132
-msgid "First, in the user's ``templates_path`` directories."
-msgstr "முதலாவதாக, பயனரின் `` வார்ப்புருக்கள்_பாத்` கோப்புகளில்."
-
-#: ../../sphinx/doc/theming.rst:133
-msgid "Then, in the selected theme."
-msgstr "பின்னர், தேர்ந்தெடுக்கப்பட்ட கருப்பொருளில்."
-
-#: ../../sphinx/doc/theming.rst:134
-msgid "Then, in its base theme, its base's base theme, etc."
-msgstr "பின்னர், அதன் அடிப்படை கருப்பொருளில், அதன் அடிப்படை தீம் போன்றவை."
-
-#: ../../sphinx/doc/theming.rst:136
-msgid ""
-"When extending a template in the base theme with the same name, use the "
-"theme name as an explicit directory: ``{% extends \"basic/layout.html\" "
-"%}``.  From a user ``templates_path`` template, you can still use the "
-"\"exclamation mark\" syntax as described in the templating document."
-msgstr ""
-"அதே பெயருடன் அடிப்படை கருப்பொருளில் ஒரு வார்ப்புருவை நீட்டிக்கும்போது, தீம் "
-"பெயரை வெளிப்படையான கோப்பகமாகப் பயன்படுத்தவும்: `` { % \"அடிப்படை/தளவமைப்பு\""
-" %} `` `. ஒரு பயனரிடமிருந்து `` வார்ப்புருக்கள்_பாத்`` வார்ப்புருவில், "
-"வார்ப்புரு ஆவணத்தில் விவரிக்கப்பட்டுள்ளபடி \"ஆச்சரியக் குறி\" தொடரியல் "
-"பயன்படுத்தலாம்."
-
-#: ../../sphinx/doc/theming.rst:142
-msgid "Static templates"
-msgstr "நிலையான வார்ப்புருக்கள்"
-
-#: ../../sphinx/doc/theming.rst:144
-msgid ""
-"Since theme options are meant for the user to configure a theme more easily,"
-" without having to write a custom stylesheet, it is necessary to be able to "
-"template static files as well as HTML files.  Therefore, Sphinx supports so-"
-"called \"static templates\", like this:"
-msgstr ""
-"தீம் விருப்பங்கள் பயனருக்கு ஒரு கருப்பொருளை மிக எளிதாக உள்ளமைக்க வேண்டும் "
-"என்பதால், தனிப்பயன் ஸ்டைல்ஷீட்டை எழுதாமல், நிலையான கோப்புகளையும் HTML "
-"கோப்புகளையும் வார்ப்புரு செய்ய முடியும். எனவே, இது போன்ற \"நிலையான "
-"வார்ப்புருக்கள்\" என்று அழைக்கப்படுவதை ஸ்பிங்க்ஸ் ஆதரிக்கிறது:"
-
-#: ../../sphinx/doc/theming.rst:149
-msgid ""
-"If the name of a file in the ``static/`` directory of a theme (or in the "
-"user's static path, for that matter) ends with ``_t``, it will be processed "
-"by the template engine.  The ``_t`` will be left from the final file name.  "
-"For example, the *classic* theme has a file ``static/classic.css_t`` which "
-"uses templating to put the color options into the stylesheet.  When a "
-"documentation is built with the classic theme, the output directory will "
-"contain a ``_static/classic.css`` file where all template tags have been "
-"processed."
-msgstr ""
-"`` நிலையான/`` ஒரு கருப்பொருளின் கோப்பகத்தில் (அல்லது பயனரின் நிலையான "
-"பாதையில், அந்த விஷயத்தில்) ஒரு கோப்பின் பெயர் `` _t`` உடன் முடிவடைந்தால், "
-"அது வார்ப்புரு இயந்திரத்தால் செயலாக்கப்படும். `` _T`` இறுதி கோப்பு "
-"பெயரிலிருந்து விடப்படும். எடுத்துக்காட்டாக, * கிளாசிக் * கருப்பொருளில் `` "
-"நிலையான/கிளாசிக்.கஸ்ஸ்_டி`` ஒரு கோப்பைக் கொண்டுள்ளது, இது வண்ண விருப்பங்களை "
-"ஸ்டைல்ஷீட்டில் வைக்க வார்ப்புருவைப் பயன்படுத்துகிறது. கிளாசிக் "
-"கருப்பொருளுடன் ஒரு ஆவணங்கள் கட்டமைக்கப்படும்போது, வெளியீட்டு கோப்பகத்தில் "
-"அனைத்து வார்ப்புரு குறிச்சொற்களும் செயலாக்கப்பட்ட `_static/class.css`` "
-"கோப்பைக் கொண்டிருக்கும்."
-
-#: ../../sphinx/doc/theming.rst:157
-msgid ""
-"It is not an executable Python file, as opposed to :file:`conf.py`, because "
-"that would pose an unnecessary security risk if themes are shared."
-msgstr ""
-"இது இயங்கக்கூடிய பைதான் கோப்பு அல்ல, இதற்கு மாறாக: கோப்பு: `conf.py`, "
-"ஏனென்றால் கருப்பொருள்கள் பகிரப்பட்டால் அது தேவையற்ற பாதுகாப்பு அபாயத்தை "
-"ஏற்படுத்தும்."

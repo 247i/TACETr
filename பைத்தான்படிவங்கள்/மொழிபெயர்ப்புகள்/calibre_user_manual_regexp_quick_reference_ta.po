@@ -17,270 +17,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:2
-msgid "Quick reference for regexp syntax"
-msgstr "REGEXP தொடரியல் விரைவான குறிப்பு"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:4
-msgid ""
-"This checklist summarizes the most commonly used/hard to remember parts of "
-"the regexp engine available in most parts of calibre."
-msgstr ""
-"இந்த சரிபார்ப்பு பட்டியல் காலிபரின் பெரும்பாலான பகுதிகளில் கிடைக்கும் Regexp"
-" இயந்திரத்தின் சில பகுதிகளை நினைவில் கொள்ள பொதுவாக பயன்படுத்தப்படும்/கடினமாக"
-" உள்ளது."
-
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:10
 msgid "Contents"
 msgstr "உள்ளடக்கங்கள்"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:13
-msgid "Character classes"
-msgstr "எழுத்து வகுப்புகள்"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:15
-msgid ""
-"Character classes are useful to represent different groups of characters, "
-"succinctly."
-msgstr ""
-"எழுத்துக்குறி வகுப்புகள் சுருக்கமாக கதாபாத்திரங்களின் வெவ்வேறு குழுக்களைக் "
-"குறிக்க பயனுள்ளதாக இருக்கும்."
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:18
-msgid "Examples:"
-msgstr "எடுத்துக்காட்டுகள்:"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:21
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:52
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:253
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:283
-msgid "**Representation**"
-msgstr "** பிரதிநிதித்துவம் **"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:21
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:52
-msgid "**Class**"
-msgstr "**வர்க்கம்**"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:24
-msgid "``[a-z]``"
-msgstr "`` [a-z] ``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:24
-msgid ""
-"Lowercase letters. Does not include characters with accent mark and "
-"ligatures"
-msgstr ""
-"சிறிய ஆங்கில எழுத்துக்கள். உச்சரிப்பு குறி மற்றும் தசைநார்கள் கொண்ட "
-"எழுத்துக்கள் இல்லை"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:27
-msgid "``[a-z0-9]``"
-msgstr "`` [A-Z0-9] ``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:27
-msgid "Lowercase letters from a to z or numbers from 0 to 9"
-msgstr "A முதல் Z வரை அல்லது எண்கள் 0 முதல் 9 வரையிலான சிறிய எழுத்துக்கள்"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:30
-msgid "``[A-Za-z-]``"
-msgstr "`` [A-za-z-] ``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:30
-msgid ""
-"Uppercase or lowercase letters, or a dash. To include the dash in a class, "
-"you must put it at the beginning or at the end so as not to confuse it with "
-"the hyphen that specifies a range of characters"
-msgstr ""
-"பெரிய எழுத்துக்கள் அல்லது சிறிய எழுத்துக்கள், அல்லது ஒரு கோடு. ஒரு வகுப்பில்"
-" கோடு சேர்க்க, நீங்கள் அதை ஆரம்பத்திலோ அல்லது முடிவிலோ வைக்க வேண்டும், "
-"இதனால் அதை ஹைபனுடன் குழப்பக்கூடாது, இது பலவிதமான எழுத்துக்களைக் "
-"குறிப்பிடுகிறது"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:33
-msgid "``[^0-9]``"
-msgstr "`` [^0-9] ``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:33
-msgid ""
-"Any character except a digit. The caret (^) placed at the beginning of the "
-"class excludes the characters of the class (complemented class)"
-msgstr ""
-"ஒரு இலக்கத்தைத் தவிர வேறு எந்த எழுத்தும். வகுப்பின் தொடக்கத்தில் "
-"வைக்கப்பட்டுள்ள கேரட் (^) வகுப்பின் எழுத்துக்களை விலக்குகிறது (பூர்த்தி "
-"செய்யப்பட்ட வகுப்பு)"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:36
-msgid "``[[a-z]--[aeiouy]]``"
-msgstr "`` [a-z]-[aeiouy]] ``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:36
-msgid ""
-"The lowercase consonants. A class can be included in a class. The characters"
-" ``--`` exclude what follows them"
-msgstr ""
-"சிறிய எழுத்துக்கள். ஒரு வகுப்பில் ஒரு வகுப்பைச் சேர்க்கலாம். எழுத்துக்கள் ``"
-" --`` அவற்றைப் பின்தொடர்வதை விலக்கவும்"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:39
-msgid "``[\\w--[\\d_]]``"
-msgstr "`` [\\ w-[\\ d _]] ``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:39
-msgid ""
-"All letters (including foreign accented characters). Abbreviated classes can"
-" be used inside a class"
-msgstr ""
-"அனைத்து கடிதங்களும் (வெளிநாட்டு உச்சரிக்கப்பட்ட எழுத்துக்கள் உட்பட). "
-"சுருக்கமான வகுப்புகள் ஒரு வகுப்பிற்குள் பயன்படுத்தப்படலாம்"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:44
-msgid "Example::"
-msgstr "உதாரணமாக::"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:49
-msgid "Shorthand character classes"
-msgstr "சுருக்கெழுத்து எழுத்து வகுப்புகள்"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:55
-msgid "``\\d``"
-msgstr "`` \\ d``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:55
-msgid "A digit (same as ``[0-9]``)"
-msgstr "ஒரு இலக்க (`[0-9]` `போன்றவை)"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:58
-msgid "``\\D``"
-msgstr "`` \\ D``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:58
-msgid "Any non-numeric character (same as ``[^0-9]``)"
-msgstr "எந்த நோயுற்ற தன்மை அல்லாத எழுத்து (`` [^0-9] ``)"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:61
-msgid "``\\w``"
-msgstr "`` \\ w``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:61
-msgid ""
-"An alphanumeric character (``[a-zA-Z0-9]``) including characters with accent"
-" mark and ligatures"
-msgstr ""
-"உச்சரிப்பு குறி மற்றும் தசைநார்கள் கொண்ட எழுத்துக்கள் உட்பட ஒரு எண்ணெழுத்து "
-"எழுத்து (`` [a-za-z0-9] ``)"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:64
-msgid "``\\W``"
-msgstr "`` \\ W``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:64
-msgid "Any “non-word” character"
-msgstr "எந்த “சொல் அல்லாத” பாத்திரம்"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:67
-msgid "``\\s``"
-msgstr "`` \\ s``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:67
-msgid "Space, non-breaking space, tab, return line"
-msgstr "இடம், உடைக்காத இடம், தாவல், வருவாய் வரி"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:70
-msgid "``\\S``"
-msgstr "`` \\ S``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:70
-msgid "Any “non-whitespace” character"
-msgstr "எந்த “வெண்மையான அல்லாத” பாத்திரம்"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:73
-msgid "``.``"
-msgstr "`` .``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:73
-msgid ""
-"Any character except newline. Use the “dot all” checkbox or the ``(?s)`` "
-"regexp modifier to include the newline character."
-msgstr ""
-"நியூலைன் தவிர வேறு எந்த கதாபாத்திரமும். நியூலைன் எழுத்தை சேர்க்க “டாட் ஆல்” "
-"தேர்வுப்பெட்டி அல்லது `` (? கள்) `` regexp மாற்றியமைப்பைப் பயன்படுத்தவும்."
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:78
-msgid "The quantifiers"
-msgstr "அளவு"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:81
-msgid "**Quantifier**"
-msgstr "** அளவு **"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:81
-msgid "**Number of occurrences of the expression preceding the quantifier**"
-msgstr ""
-"** குவாண்டிஃபையருக்கு முந்தைய வெளிப்பாட்டின் நிகழ்வுகளின் எண்ணிக்கை **"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:84
-msgid "``?``"
-msgstr "``? ``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:84
-msgid "0 or 1 occurrence of the expression. Same as ``{0,1}``"
-msgstr "0 அல்லது 1 வெளிப்பாட்டின் நிகழ்வு. `` {0,1} ``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:87
-msgid "``+``"
-msgstr "``+``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:87
-msgid "1 or more occurrences of the expression. Same as ``{1,}``"
-msgstr "வெளிப்பாட்டின் 1 அல்லது அதற்கு மேற்பட்ட நிகழ்வுகள். `` {1,} ``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:90
-msgid "``*``"
-msgstr "``*``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:90
-msgid "0, 1 or more occurrences of the expression. Same as ``{0,}``"
-msgstr "வெளிப்பாட்டின் 0, 1 அல்லது அதற்கு மேற்பட்ட நிகழ்வுகள். `` {0,} ``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:93
-msgid "``{n}``"
-msgstr "`{n}` `"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:93
-msgid "Exactly n occurrences of the expression"
-msgstr "வெளிப்பாட்டின் சரியாக n நிகழ்வுகள்"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:96
-msgid "``{min,max}``"
-msgstr "`` {நிமிடம், அதிகபட்சம்} ``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:96
-msgid "Number of occurrences between the minimum and maximum values included"
-msgstr ""
-"சேர்க்கப்பட்ட குறைந்தபட்ச மற்றும் அதிகபட்ச மதிப்புகளுக்கு இடையிலான "
-"நிகழ்வுகளின் எண்ணிக்கை"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:99
-msgid "``{min,}``"
-msgstr "`` {நிமிடம்,} ``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:99
-msgid ""
-"Number of occurrences between the minimum value included and the infinite"
-msgstr ""
-"சேர்க்கப்பட்ட குறைந்தபட்ச மதிப்பு மற்றும் எல்லையற்ற இடங்களுக்கு இடையிலான "
-"நிகழ்வுகளின் எண்ணிக்கை"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:102
-msgid "``{,max}``"
-msgstr "`` {, அதிகபட்சம்} ``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:102
 msgid "Number of occurrences between 0 and the maximum value included"
 msgstr ""
 "0 மற்றும் அதிகபட்ச மதிப்புக்கு இடையிலான நிகழ்வுகளின் எண்ணிக்கை "
 "சேர்க்கப்பட்டுள்ளது"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:102
+msgid "``{,max}``"
+msgstr "`` {, அதிகபட்சம்} ``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:109
 msgid "Greed"
@@ -325,6 +74,10 @@ msgstr "விலக்கு"
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:128
 msgid "Method 1"
 msgstr "முறை 1"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:13
+msgid "Character classes"
+msgstr "எழுத்து வகுப்புகள்"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:130
 msgid "``pattern_to_exclude(*SKIP)(*FAIL)|pattern_to_select``"
@@ -372,9 +125,13 @@ msgstr ""
 "ஒரு சரம் பொருத்துவதற்கான ஒரு வழியாகும். உரை செயலாக்கத்திற்கு மிகவும் பயனுள்ள"
 " நங்கூரங்கள்:"
 
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:155
-msgid "``\\b``"
-msgstr "`` \\ b``"
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:15
+msgid ""
+"Character classes are useful to represent different groups of characters, "
+"succinctly."
+msgstr ""
+"எழுத்துக்குறி வகுப்புகள் சுருக்கமாக கதாபாத்திரங்களின் வெவ்வேறு குழுக்களைக் "
+"குறிக்க பயனுள்ளதாக இருக்கும்."
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:153
 msgid ""
@@ -386,9 +143,9 @@ msgstr ""
 "எழுத்துக்கு மாறுதல். எடுத்துக்காட்டாக, `` சர்ப்`` உடன் பொருந்த `` \\ bsurd``"
 " ஐப் பயன்படுத்தலாம், ஆனால் `` அபத்தமானது`."
 
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:159
-msgid "``^``"
-msgstr "``^``"
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:155
+msgid "``\\b``"
+msgstr "`` \\ b``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:158
 msgid "Matches the start of a line (in multi-line mode, which is the default)"
@@ -396,9 +153,9 @@ msgstr ""
 "ஒரு வரியின் தொடக்கத்துடன் பொருந்துகிறது (மல்டி-லைன் பயன்முறையில், இது "
 "இயல்புநிலை)"
 
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:162
-msgid "``$``"
-msgstr "`` $ ``"
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:159
+msgid "``^``"
+msgstr "``^``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:162
 msgid "Matches the end of a line (in multi-line mode, which is the default)"
@@ -406,9 +163,9 @@ msgstr ""
 "ஒரு வரியின் முடிவுடன் பொருந்துகிறது (மல்டி-லைன் பயன்முறையில், இது "
 "இயல்புநிலை)"
 
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:169
-msgid "``\\K``"
-msgstr "`` \\ K``"
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:162
+msgid "``$``"
+msgstr "`` $ ``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:165
 msgid ""
@@ -424,13 +181,13 @@ msgstr ""
 "நீளத்தின் நேர்மறையான தேடலுக்கு சமமானதை எழுதுவதன் மூலம் இந்த வரம்பை அகற்றவும்"
 " இது உங்களை அனுமதிக்கிறது."
 
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:169
+msgid "``\\K``"
+msgstr "`` \\ K``"
+
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:172
 msgid "Groups"
 msgstr "குழுக்கள்"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:177
-msgid "``(expression)``"
-msgstr "`` (வெளிப்பாடு) ``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:175
 msgid ""
@@ -442,17 +199,21 @@ msgstr ""
 "வடிவங்களை `` \\ n`` உடன் நினைவுபடுத்துகிறது, அங்கு `` n`` என்பது கைப்பற்றும்"
 " குழுவின் வரிசை எண் (வாசிப்பில் 1 இல் தொடங்குகிறது ஒழுங்கு)"
 
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:180
-msgid "``(?:expression)``"
-msgstr "`` (?: வெளிப்பாடு) ``"
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:177
+msgid "``(expression)``"
+msgstr "`` (வெளிப்பாடு) ``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:18
+msgid "Examples:"
+msgstr "எடுத்துக்காட்டுகள்:"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:180
 msgid "Group that does not capture the selection"
 msgstr "தேர்வைக் கைப்பற்றாத குழு"
 
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:186
-msgid "``(?>expression)``"
-msgstr "`` (?> வெளிப்பாடு) ``"
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:180
+msgid "``(?:expression)``"
+msgstr "`` (?: வெளிப்பாடு) ``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:183
 msgid ""
@@ -464,9 +225,9 @@ msgstr ""
 "செல்கிறது, மீதமுள்ள முறை தோல்வியுற்றால், வெளிப்பாட்டுடன் மற்ற சேர்க்கைகளை "
 "முயற்சிக்க இது பின்வாங்காது. அணு குழுக்கள் பிடிக்கவில்லை."
 
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:190
-msgid "``(?|expression)``"
-msgstr "`` (? | வெளிப்பாடு) ``"
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:186
+msgid "``(?>expression)``"
+msgstr "`` (?> வெளிப்பாடு) ``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:189
 msgid ""
@@ -476,9 +237,9 @@ msgstr ""
 "கிளை மீட்டமைப்புக் குழு: வெளிப்பாட்டில் சேர்க்கப்பட்ட மாற்றங்களின் கிளைகள் "
 "ஒரே குழு எண்களைப் பகிர்ந்து கொள்ளுங்கள்"
 
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:196
-msgid "``(?<name>expression)``"
-msgstr "`` (? <பெயர்> வெளிப்பாடு) ``"
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:190
+msgid "``(?|expression)``"
+msgstr "`` (? | வெளிப்பாடு) ``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:193
 msgid ""
@@ -490,9 +251,17 @@ msgstr ""
 "மற்றும் * மாற்றத்தில் * `\\ g <amane>` `மூலம் நினைவுபடுத்தலாம். இரண்டு "
 "வெவ்வேறு குழுக்கள் ஒரே பெயரைப் பயன்படுத்தலாம்."
 
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:196
+msgid "``(?<name>expression)``"
+msgstr "`` (? <பெயர்> வெளிப்பாடு) ``"
+
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:199
 msgid "Lookarounds"
 msgstr "தேடல்கள்"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:2
+msgid "Quick reference for regexp syntax"
+msgstr "REGEXP தொடரியல் விரைவான குறிப்பு"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:202
 msgid "**Lookaround**"
@@ -504,36 +273,48 @@ msgid "**Meaning**"
 msgstr "** பொருள் **"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:205
-msgid "``?=``"
-msgstr "``? = ``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:205
 msgid "Positive lookahead (to be placed after the selection)"
 msgstr "நேர்மறையான பார்வை (தேர்வுக்குப் பிறகு வைக்கப்பட வேண்டும்)"
 
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:208
-msgid "``?!``"
-msgstr "``?! ``"
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:205
+msgid "``?=``"
+msgstr "``? = ``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:208
 msgid "Negative lookahead (to be placed after the selection)"
 msgstr "எதிர்மறை லுக்காஹெட் (தேர்வுக்குப் பிறகு வைக்கப்பட வேண்டும்)"
 
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:211
-msgid "``?<=``"
-msgstr "``? <= ``"
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:208
+msgid "``?!``"
+msgstr "``?! ``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:21
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:52
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:253
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:283
+msgid "**Representation**"
+msgstr "** பிரதிநிதித்துவம் **"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:21
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:52
+msgid "**Class**"
+msgstr "**வர்க்கம்**"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:211
 msgid "Positive lookbehind (to be placed before the selection)"
 msgstr "நேர்மறை தேடல் (தேர்வுக்கு முன் வைக்கப்பட வேண்டும்)"
 
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:214
-msgid "``?<!``"
-msgstr "``? <! ``"
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:211
+msgid "``?<=``"
+msgstr "``? <= ``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:214
 msgid "Negative lookbehind (to be placed before the selection)"
 msgstr "எதிர்மறை தேடல் (தேர்வுக்கு முன் வைக்கப்பட வேண்டும்)"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:214
+msgid "``?<!``"
+msgstr "``? <! ``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:218
 msgid ""
@@ -586,6 +367,18 @@ msgstr ""
 "கொண்டிருக்கும்போது (அல்லது மோசமான, பல) நேர்மறையான தேடலைக் காட்டிலும் `` \\ "
 "k`` ஐப் பயன்படுத்தவும்."
 
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:24
+msgid ""
+"Lowercase letters. Does not include characters with accent mark and "
+"ligatures"
+msgstr ""
+"சிறிய ஆங்கில எழுத்துக்கள். உச்சரிப்பு குறி மற்றும் தசைநார்கள் கொண்ட "
+"எழுத்துக்கள் இல்லை"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:24
+msgid "``[a-z]``"
+msgstr "`` [a-z] ``"
+
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:240
 msgid "Example of negative lookahead:"
 msgstr "எதிர்மறை தோற்றத்தின் எடுத்துக்காட்டு:"
@@ -615,22 +408,22 @@ msgid "Recursion"
 msgstr "மறுநிகழ்வு"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:256
-msgid "``(?R)``"
-msgstr "`` (? R) ``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:256
 msgid "Recursion of the entire pattern"
 msgstr "முழு வடிவத்தின் மறுநிகழ்வு"
 
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:259
-msgid "``(?1)``"
-msgstr "`` (? 1) ``"
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:256
+msgid "``(?R)``"
+msgstr "`` (? R) ``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:259
 msgid ""
 "Recursion of the only pattern of the numbered capturing group, here group 1"
 msgstr ""
 "எண்ணப்பட்ட கைப்பற்றும் குழுவின் ஒரே வடிவத்தின் மறுநிகழ்வு, இங்கே குழு 1"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:259
+msgid "``(?1)``"
+msgstr "`` (? 1) ``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:263
 msgid ""
@@ -647,6 +440,14 @@ msgstr ""
 "புதிய சரத்தின் தொடக்கத்தை நாங்கள் சந்திக்கிறோம், எப்படி செய்வது என்று "
 "எங்களுக்குத் தெரியும், நாங்கள் நம்மை அழைக்கிறோம். பின்னர் எங்களுக்கு ஒரு "
 "முறை உள்ளது ::"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:27
+msgid "Lowercase letters from a to z or numbers from 0 to 9"
+msgstr "A முதல் Z வரை அல்லது எண்கள் 0 முதல் 9 வரையிலான சிறிய எழுத்துக்கள்"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:27
+msgid "``[a-z0-9]``"
+msgstr "`` [A-Z0-9] ``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:271
 msgid ""
@@ -689,12 +490,12 @@ msgid "line break"
 msgstr "வரி இடைவெளி"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:292
-msgid "``\\x20``"
-msgstr "`` \\ x20``"
-
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:292
 msgid "(breakable) space"
 msgstr "(உடைக்கக்கூடிய) இடம்"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:292
+msgid "``\\x20``"
+msgstr "`` \\ x20``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:295
 msgid "``\\xa0``"
@@ -703,6 +504,21 @@ msgstr "`` \\ xa0``"
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:295
 msgid "no-break space"
 msgstr "பிரேக் ஸ்பேஸ் இல்லை"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:30
+msgid ""
+"Uppercase or lowercase letters, or a dash. To include the dash in a class, "
+"you must put it at the beginning or at the end so as not to confuse it with "
+"the hyphen that specifies a range of characters"
+msgstr ""
+"பெரிய எழுத்துக்கள் அல்லது சிறிய எழுத்துக்கள், அல்லது ஒரு கோடு. ஒரு வகுப்பில்"
+" கோடு சேர்க்க, நீங்கள் அதை ஆரம்பத்திலோ அல்லது முடிவிலோ வைக்க வேண்டும், "
+"இதனால் அதை ஹைபனுடன் குழப்பக்கூடாது, இது பலவிதமான எழுத்துக்களைக் "
+"குறிப்பிடுகிறது"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:30
+msgid "``[A-Za-z-]``"
+msgstr "`` [A-za-z-] ``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:300
 msgid "Meta-characters"
@@ -763,17 +579,26 @@ msgstr ""
 msgid "Modes"
 msgstr "முறைகள்"
 
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:330
-msgid "``(?s)``"
-msgstr "`` (? கள்) ``"
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:33
+msgid ""
+"Any character except a digit. The caret (^) placed at the beginning of the "
+"class excludes the characters of the class (complemented class)"
+msgstr ""
+"ஒரு இலக்கத்தைத் தவிர வேறு எந்த எழுத்தும். வகுப்பின் தொடக்கத்தில் "
+"வைக்கப்பட்டுள்ள கேரட் (^) வகுப்பின் எழுத்துக்களை விலக்குகிறது (பூர்த்தி "
+"செய்யப்பட்ட வகுப்பு)"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:33
+msgid "``[^0-9]``"
+msgstr "`` [^0-9] ``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:330
 msgid "Causes the dot (``.``) to match newline characters as well"
 msgstr "டாட் (`` .``) நியூலைன் எழுத்துக்களையும் பொருத்த காரணமாகிறது"
 
-#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:333
-msgid "``(?m)``"
-msgstr "`` (? மீ) ``"
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:330
+msgid "``(?s)``"
+msgstr "`` (? கள்) ``"
 
 #: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:333
 msgid ""
@@ -782,3 +607,178 @@ msgid ""
 msgstr ""
 "``^`` மற்றும் `` `` `நங்கூரங்கள் முழு சரத்தின் தொடக்கத்திற்கும் முடிவிற்கும்"
 " பதிலாக வரிகளின் தொடக்கத்தையும் முடிவையும் பொருத்துகின்றன."
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:333
+msgid "``(?m)``"
+msgstr "`` (? மீ) ``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:36
+msgid ""
+"The lowercase consonants. A class can be included in a class. The characters"
+" ``--`` exclude what follows them"
+msgstr ""
+"சிறிய எழுத்துக்கள். ஒரு வகுப்பில் ஒரு வகுப்பைச் சேர்க்கலாம். எழுத்துக்கள் ``"
+" --`` அவற்றைப் பின்தொடர்வதை விலக்கவும்"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:36
+msgid "``[[a-z]--[aeiouy]]``"
+msgstr "`` [a-z]-[aeiouy]] ``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:39
+msgid ""
+"All letters (including foreign accented characters). Abbreviated classes can"
+" be used inside a class"
+msgstr ""
+"அனைத்து கடிதங்களும் (வெளிநாட்டு உச்சரிக்கப்பட்ட எழுத்துக்கள் உட்பட). "
+"சுருக்கமான வகுப்புகள் ஒரு வகுப்பிற்குள் பயன்படுத்தப்படலாம்"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:39
+msgid "``[\\w--[\\d_]]``"
+msgstr "`` [\\ w-[\\ d _]] ``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:4
+msgid ""
+"This checklist summarizes the most commonly used/hard to remember parts of "
+"the regexp engine available in most parts of calibre."
+msgstr ""
+"இந்த சரிபார்ப்பு பட்டியல் காலிபரின் பெரும்பாலான பகுதிகளில் கிடைக்கும் Regexp"
+" இயந்திரத்தின் சில பகுதிகளை நினைவில் கொள்ள பொதுவாக பயன்படுத்தப்படும்/கடினமாக"
+" உள்ளது."
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:44
+msgid "Example::"
+msgstr "உதாரணமாக::"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:49
+msgid "Shorthand character classes"
+msgstr "சுருக்கெழுத்து எழுத்து வகுப்புகள்"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:55
+msgid "A digit (same as ``[0-9]``)"
+msgstr "ஒரு இலக்க (`[0-9]` `போன்றவை)"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:55
+msgid "``\\d``"
+msgstr "`` \\ d``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:58
+msgid "Any non-numeric character (same as ``[^0-9]``)"
+msgstr "எந்த நோயுற்ற தன்மை அல்லாத எழுத்து (`` [^0-9] ``)"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:58
+msgid "``\\D``"
+msgstr "`` \\ D``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:61
+msgid ""
+"An alphanumeric character (``[a-zA-Z0-9]``) including characters with accent"
+" mark and ligatures"
+msgstr ""
+"உச்சரிப்பு குறி மற்றும் தசைநார்கள் கொண்ட எழுத்துக்கள் உட்பட ஒரு எண்ணெழுத்து "
+"எழுத்து (`` [a-za-z0-9] ``)"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:61
+msgid "``\\w``"
+msgstr "`` \\ w``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:64
+msgid "Any “non-word” character"
+msgstr "எந்த “சொல் அல்லாத” பாத்திரம்"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:64
+msgid "``\\W``"
+msgstr "`` \\ W``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:67
+msgid "Space, non-breaking space, tab, return line"
+msgstr "இடம், உடைக்காத இடம், தாவல், வருவாய் வரி"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:67
+msgid "``\\s``"
+msgstr "`` \\ s``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:70
+msgid "Any “non-whitespace” character"
+msgstr "எந்த “வெண்மையான அல்லாத” பாத்திரம்"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:70
+msgid "``\\S``"
+msgstr "`` \\ S``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:73
+msgid ""
+"Any character except newline. Use the “dot all” checkbox or the ``(?s)`` "
+"regexp modifier to include the newline character."
+msgstr ""
+"நியூலைன் தவிர வேறு எந்த கதாபாத்திரமும். நியூலைன் எழுத்தை சேர்க்க “டாட் ஆல்” "
+"தேர்வுப்பெட்டி அல்லது `` (? கள்) `` regexp மாற்றியமைப்பைப் பயன்படுத்தவும்."
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:73
+msgid "``.``"
+msgstr "`` .``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:78
+msgid "The quantifiers"
+msgstr "அளவு"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:81
+msgid "**Number of occurrences of the expression preceding the quantifier**"
+msgstr ""
+"** குவாண்டிஃபையருக்கு முந்தைய வெளிப்பாட்டின் நிகழ்வுகளின் எண்ணிக்கை **"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:81
+msgid "**Quantifier**"
+msgstr "** அளவு **"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:84
+msgid "0 or 1 occurrence of the expression. Same as ``{0,1}``"
+msgstr "0 அல்லது 1 வெளிப்பாட்டின் நிகழ்வு. `` {0,1} ``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:84
+msgid "``?``"
+msgstr "``? ``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:87
+msgid "1 or more occurrences of the expression. Same as ``{1,}``"
+msgstr "வெளிப்பாட்டின் 1 அல்லது அதற்கு மேற்பட்ட நிகழ்வுகள். `` {1,} ``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:87
+msgid "``+``"
+msgstr "``+``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:90
+msgid "0, 1 or more occurrences of the expression. Same as ``{0,}``"
+msgstr "வெளிப்பாட்டின் 0, 1 அல்லது அதற்கு மேற்பட்ட நிகழ்வுகள். `` {0,} ``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:90
+msgid "``*``"
+msgstr "``*``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:93
+msgid "Exactly n occurrences of the expression"
+msgstr "வெளிப்பாட்டின் சரியாக n நிகழ்வுகள்"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:93
+msgid "``{n}``"
+msgstr "`{n}` `"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:96
+msgid "Number of occurrences between the minimum and maximum values included"
+msgstr ""
+"சேர்க்கப்பட்ட குறைந்தபட்ச மற்றும் அதிகபட்ச மதிப்புகளுக்கு இடையிலான "
+"நிகழ்வுகளின் எண்ணிக்கை"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:96
+msgid "``{min,max}``"
+msgstr "`` {நிமிடம், அதிகபட்சம்} ``"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:99
+msgid ""
+"Number of occurrences between the minimum value included and the infinite"
+msgstr ""
+"சேர்க்கப்பட்ட குறைந்தபட்ச மதிப்பு மற்றும் எல்லையற்ற இடங்களுக்கு இடையிலான "
+"நிகழ்வுகளின் எண்ணிக்கை"
+
+#: ../../__w/calibre/calibre/manual/regexp_quick_reference.rst:99
+msgid "``{min,}``"
+msgstr "`` {நிமிடம்,} ``"

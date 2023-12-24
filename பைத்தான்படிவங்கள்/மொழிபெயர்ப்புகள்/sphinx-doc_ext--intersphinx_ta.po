@@ -17,10 +17,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/ext/intersphinx.rst:2
-msgid ":mod:`sphinx.ext.intersphinx` -- Link to other projects' documentation"
+#: ../../sphinx/doc/ext/intersphinx.rst:103
+msgid ""
+"This will read the inventory from :file:`python-inv.txt` in the source "
+"directory, but still generate links to the pages under "
+"``https://docs.python.org/3``.  It is up to you to update the inventory file"
+" as new objects are added to the Python documentation."
 msgstr ""
-": மோட்: `sphinx.ext.intersphinx` - பிற திட்டங்களுக்கான இணைப்பு 'ஆவணங்கள்"
+"இது சரக்குகளை இதிலிருந்து படிக்கும்: கோப்பு: `python-inv.txt` மூல "
+"கோப்பகத்தில், ஆனால்` `https: // docs.python.org/3`` இன் கீழ் உள்ள "
+"பக்கங்களுக்கான இணைப்புகளை உருவாக்குகிறது. பைதான் ஆவணத்தில் புதிய பொருள்கள் "
+"சேர்க்கப்படுவதால் சரக்கு கோப்பைப் புதுப்பிக்க வேண்டியது உங்களுடையது."
+
+#: ../../sphinx/doc/ext/intersphinx.rst:108
+msgid "**Multiple target for the inventory**"
+msgstr "** சரக்குகளுக்கான பல இலக்கு **"
 
 #: ../../sphinx/doc/ext/intersphinx.rst:11
 msgid ""
@@ -29,6 +40,49 @@ msgid ""
 msgstr ""
 "இந்த நீட்டிப்பு மற்ற திட்டங்களில் உள்ள பொருட்களின் ஆவணங்களுக்கு தானியங்கி "
 "இணைப்புகளை உருவாக்க முடியும்."
+
+#: ../../sphinx/doc/ext/intersphinx.rst:112
+msgid ""
+"Alternative files can be specified for each inventory. One can give a tuple "
+"for the second inventory tuple item as shown in the following example. This "
+"will read the inventory iterating through the (second) tuple items until the"
+" first successful fetch. The primary use case for this to specify mirror "
+"sites for server downtime of the primary inventory::"
+msgstr ""
+"ஒவ்வொரு சரக்குகளுக்கும் மாற்று கோப்புகளைக் குறிப்பிடலாம். பின்வரும் "
+"எடுத்துக்காட்டில் காட்டப்பட்டுள்ளபடி இரண்டாவது சரக்கு டூப்பிள் உருப்படிக்கு "
+"ஒரு டப்பிள் கொடுக்க முடியும். இது முதல் வெற்றிகரமான பெறும் வரை (இரண்டாவது) "
+"டூப்பிள் உருப்படிகள் மூலம் சரக்குகளை மீண்டும் வாசிக்கும். முதன்மை "
+"சரக்குகளின் சேவையக வேலையில்லா நேரத்திற்கான கண்ணாடி தளங்களைக் "
+"குறிப்பிடுவதற்கான முதன்மை பயன்பாட்டு வழக்கு ::"
+
+#: ../../sphinx/doc/ext/intersphinx.rst:124
+msgid ""
+"The maximum number of days to cache remote inventories.  The default is "
+"``5``, meaning five days.  Set this to a negative value to cache inventories"
+" for unlimited time."
+msgstr ""
+"தொலைநிலை சரக்குகளை கேச் செய்ய அதிகபட்ச நாட்கள். இயல்புநிலை `` 5``, அதாவது "
+"ஐந்து நாட்கள். வரம்பற்ற நேரத்திற்கு சரக்குகளை கேச் செய்ய இதை எதிர்மறை "
+"மதிப்பாக அமைக்கவும்."
+
+#: ../../sphinx/doc/ext/intersphinx.rst:130
+msgid ""
+"The number of seconds for timeout.  The default is ``None``, meaning do not "
+"timeout."
+msgstr ""
+"காலக்கெடுவுக்கான விநாடிகளின் எண்ணிக்கை. இயல்புநிலை `` எதுவுமில்லை``, அதாவது "
+"காலக்கெடு இல்லை."
+
+#: ../../sphinx/doc/ext/intersphinx.rst:135
+msgid ""
+"timeout is not a time limit on the entire response download; rather, an "
+"exception is raised if the server has not issued a response for timeout "
+"seconds."
+msgstr ""
+"முழு மறுமொழி பதிவிறக்கத்திற்கான கால அவகாசம் அல்ல; மாறாக, காலக்கெடு "
+"விநாடிகளுக்கு சேவையகம் பதிலை வழங்கவில்லை என்றால் விதிவிலக்கு "
+"எழுப்பப்படுகிறது."
 
 #: ../../sphinx/doc/ext/intersphinx.rst:14
 msgid ""
@@ -45,6 +99,30 @@ msgstr ""
 "PY: வகுப்பு: `zipfile.zipfile`` போன்ற ஒரு குறிப்பு, ஜிப்ஃபைல் வகுப்பிற்கான "
 "பைதான் ஆவணங்களுடன் இணைக்கலாம், அது சரியாக அமைந்துள்ளது என்பதை நீங்கள் "
 "குறிப்பிடாமல்."
+
+#: ../../sphinx/doc/ext/intersphinx.rst:140
+msgid "Showing all links of an Intersphinx mapping file"
+msgstr "இன்டர்ஸ்பின்க்ஸ் மேப்பிங் கோப்பின் அனைத்து இணைப்புகளையும் காட்டுகிறது"
+
+#: ../../sphinx/doc/ext/intersphinx.rst:142
+msgid ""
+"To show all Intersphinx links and their targets of an Intersphinx mapping "
+"file, run ``python -msphinx.ext.intersphinx url-or-path``.  This is helpful "
+"when searching for the root cause of a broken Intersphinx link in a "
+"documentation project. The following example prints the Intersphinx mapping "
+"of the Python 3 documentation::"
+msgstr ""
+"அனைத்து இன்டர்ஸ்பின்க்ஸ் இணைப்புகளையும் அவற்றின் இலக்குகளை ஒரு "
+"இன்டர்ஸ்பின்க்ஸ் மேப்பிங் கோப்பின் இலக்குகளையும் காட்ட, `` பைதான் "
+"-எம்ஸ்பின்எக்ஸ்.இஎக்ஸ்ட்.இண்டர்ஸ்பின்க்ஸ் url-அல்லது-பாத்`` ஐ இயக்கவும். "
+"ஆவணத் திட்டத்தில் உடைந்த இன்டர்ஸ்பின்க்ஸ் இணைப்பின் மூல காரணத்தைத் "
+"தேடும்போது இது உதவியாக இருக்கும். பின்வரும் எடுத்துக்காட்டு பைத்தானின் "
+"இன்டர்ஸ்பின்க்ஸ் மேப்பிங்கை அச்சிடுகிறது 3 ஆவணங்கள் ::"
+
+#: ../../sphinx/doc/ext/intersphinx.rst:2
+msgid ":mod:`sphinx.ext.intersphinx` -- Link to other projects' documentation"
+msgstr ""
+": மோட்: `sphinx.ext.intersphinx` - பிற திட்டங்களுக்கான இணைப்பு 'ஆவணங்கள்"
 
 #: ../../sphinx/doc/ext/intersphinx.rst:21
 msgid ""
@@ -225,81 +303,3 @@ msgid ""
 msgstr ""
 "இரண்டாவது எடுத்துக்காட்டு, இரண்டாவது டூப்பிள் உருப்படியின் ``நோன்` மதிப்பின்"
 " பொருளைக் காட்டுகிறது ::"
-
-#: ../../sphinx/doc/ext/intersphinx.rst:103
-msgid ""
-"This will read the inventory from :file:`python-inv.txt` in the source "
-"directory, but still generate links to the pages under "
-"``https://docs.python.org/3``.  It is up to you to update the inventory file"
-" as new objects are added to the Python documentation."
-msgstr ""
-"இது சரக்குகளை இதிலிருந்து படிக்கும்: கோப்பு: `python-inv.txt` மூல "
-"கோப்பகத்தில், ஆனால்` `https: // docs.python.org/3`` இன் கீழ் உள்ள "
-"பக்கங்களுக்கான இணைப்புகளை உருவாக்குகிறது. பைதான் ஆவணத்தில் புதிய பொருள்கள் "
-"சேர்க்கப்படுவதால் சரக்கு கோப்பைப் புதுப்பிக்க வேண்டியது உங்களுடையது."
-
-#: ../../sphinx/doc/ext/intersphinx.rst:108
-msgid "**Multiple target for the inventory**"
-msgstr "** சரக்குகளுக்கான பல இலக்கு **"
-
-#: ../../sphinx/doc/ext/intersphinx.rst:112
-msgid ""
-"Alternative files can be specified for each inventory. One can give a tuple "
-"for the second inventory tuple item as shown in the following example. This "
-"will read the inventory iterating through the (second) tuple items until the"
-" first successful fetch. The primary use case for this to specify mirror "
-"sites for server downtime of the primary inventory::"
-msgstr ""
-"ஒவ்வொரு சரக்குகளுக்கும் மாற்று கோப்புகளைக் குறிப்பிடலாம். பின்வரும் "
-"எடுத்துக்காட்டில் காட்டப்பட்டுள்ளபடி இரண்டாவது சரக்கு டூப்பிள் உருப்படிக்கு "
-"ஒரு டப்பிள் கொடுக்க முடியும். இது முதல் வெற்றிகரமான பெறும் வரை (இரண்டாவது) "
-"டூப்பிள் உருப்படிகள் மூலம் சரக்குகளை மீண்டும் வாசிக்கும். முதன்மை "
-"சரக்குகளின் சேவையக வேலையில்லா நேரத்திற்கான கண்ணாடி தளங்களைக் "
-"குறிப்பிடுவதற்கான முதன்மை பயன்பாட்டு வழக்கு ::"
-
-#: ../../sphinx/doc/ext/intersphinx.rst:124
-msgid ""
-"The maximum number of days to cache remote inventories.  The default is "
-"``5``, meaning five days.  Set this to a negative value to cache inventories"
-" for unlimited time."
-msgstr ""
-"தொலைநிலை சரக்குகளை கேச் செய்ய அதிகபட்ச நாட்கள். இயல்புநிலை `` 5``, அதாவது "
-"ஐந்து நாட்கள். வரம்பற்ற நேரத்திற்கு சரக்குகளை கேச் செய்ய இதை எதிர்மறை "
-"மதிப்பாக அமைக்கவும்."
-
-#: ../../sphinx/doc/ext/intersphinx.rst:130
-msgid ""
-"The number of seconds for timeout.  The default is ``None``, meaning do not "
-"timeout."
-msgstr ""
-"காலக்கெடுவுக்கான விநாடிகளின் எண்ணிக்கை. இயல்புநிலை `` எதுவுமில்லை``, அதாவது "
-"காலக்கெடு இல்லை."
-
-#: ../../sphinx/doc/ext/intersphinx.rst:135
-msgid ""
-"timeout is not a time limit on the entire response download; rather, an "
-"exception is raised if the server has not issued a response for timeout "
-"seconds."
-msgstr ""
-"முழு மறுமொழி பதிவிறக்கத்திற்கான கால அவகாசம் அல்ல; மாறாக, காலக்கெடு "
-"விநாடிகளுக்கு சேவையகம் பதிலை வழங்கவில்லை என்றால் விதிவிலக்கு "
-"எழுப்பப்படுகிறது."
-
-#: ../../sphinx/doc/ext/intersphinx.rst:140
-msgid "Showing all links of an Intersphinx mapping file"
-msgstr "இன்டர்ஸ்பின்க்ஸ் மேப்பிங் கோப்பின் அனைத்து இணைப்புகளையும் காட்டுகிறது"
-
-#: ../../sphinx/doc/ext/intersphinx.rst:142
-msgid ""
-"To show all Intersphinx links and their targets of an Intersphinx mapping "
-"file, run ``python -msphinx.ext.intersphinx url-or-path``.  This is helpful "
-"when searching for the root cause of a broken Intersphinx link in a "
-"documentation project. The following example prints the Intersphinx mapping "
-"of the Python 3 documentation::"
-msgstr ""
-"அனைத்து இன்டர்ஸ்பின்க்ஸ் இணைப்புகளையும் அவற்றின் இலக்குகளை ஒரு "
-"இன்டர்ஸ்பின்க்ஸ் மேப்பிங் கோப்பின் இலக்குகளையும் காட்ட, `` பைதான் "
-"-எம்ஸ்பின்எக்ஸ்.இஎக்ஸ்ட்.இண்டர்ஸ்பின்க்ஸ் url-அல்லது-பாத்`` ஐ இயக்கவும். "
-"ஆவணத் திட்டத்தில் உடைந்த இன்டர்ஸ்பின்க்ஸ் இணைப்பின் மூல காரணத்தைத் "
-"தேடும்போது இது உதவியாக இருக்கும். பின்வரும் எடுத்துக்காட்டு பைத்தானின் "
-"இன்டர்ஸ்பின்க்ஸ் மேப்பிங்கை அச்சிடுகிறது 3 ஆவணங்கள் ::"

@@ -17,193 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/tutorial.rst:4
-msgid "First Steps with Sphinx"
-msgstr "ஸ்பிங்க்ஸுடன் முதல் படிகள்"
-
-#: ../../sphinx/doc/tutorial.rst:6
-msgid ""
-"This document is meant to give a tutorial-like overview of all common tasks "
-"while using Sphinx."
-msgstr ""
-"இந்த ஆவணம் ஸ்பிங்க்ஸைப் பயன்படுத்தும் போது அனைத்து பொதுவான பணிகளின் "
-"டுடோரியல் போன்ற கண்ணோட்டத்தை வழங்குவதாகும்."
-
-#: ../../sphinx/doc/tutorial.rst:9
-msgid ""
-"The green arrows designate \"more info\" links leading to advanced sections "
-"about the described task."
-msgstr ""
-"பசுமை அம்புகள் விவரிக்கப்பட்ட பணியைப் பற்றிய மேம்பட்ட பிரிவுகளுக்கு "
-"வழிவகுக்கும் \"கூடுதல் தகவல்\" இணைப்புகளை நியமிக்கின்றன."
-
-#: ../../sphinx/doc/tutorial.rst:14
-msgid "Install Sphinx"
-msgstr "ஸ்பிங்க்ஸை நிறுவவும்"
-
-#: ../../sphinx/doc/tutorial.rst:16
-msgid ""
-"Install Sphinx, either from a distribution package or from `PyPI "
-"<https://pypi.python.org/pypi/Sphinx>`_ with ::"
-msgstr ""
-"ஒரு விநியோக தொகுப்பிலிருந்து அல்லது `pypi "
-"<https://pypi.python.org/pypi/sphinx>` _ உடன் ::"
-
-#: ../../sphinx/doc/tutorial.rst:23
-msgid "Setting up the documentation sources"
-msgstr "ஆவணங்கள் ஆதாரங்களை அமைத்தல்"
-
-#: ../../sphinx/doc/tutorial.rst:25
-msgid ""
-"The root directory of a Sphinx collection of reStructuredText document "
-"sources is called the :term:`source directory`.  This directory also "
-"contains the Sphinx configuration file :file:`conf.py`, where you can "
-"configure all aspects of how Sphinx reads your sources and builds your "
-"documentation.  [#]_"
-msgstr ""
-"மறுசீரமைப்பு ஆவண ஆதாரங்களின் ஸ்பிங்க்ஸ் தொகுப்பின் ரூட் அடைவு: கால: `மூல "
-"அடைவு` என்று அழைக்கப்படுகிறது. இந்த கோப்பகத்தில் SPHINX உள்ளமைவு கோப்பும் "
-"உள்ளது: கோப்பு: `conf.py`, அங்கு ஸ்பின்க்ஸ் உங்கள் ஆதாரங்களை எவ்வாறு "
-"படிக்கிறது மற்றும் உங்கள் ஆவணங்களை உருவாக்குகிறது என்பதற்கான அனைத்து "
-"அம்சங்களையும் நீங்கள் உள்ளமைக்க முடியும். [#] _"
-
-#: ../../sphinx/doc/tutorial.rst:30
-msgid ""
-"Sphinx comes with a script called :program:`sphinx-quickstart` that sets up "
-"a source directory and creates a default :file:`conf.py` with the most "
-"useful configuration values from a few questions it asks you.  Just run ::"
-msgstr ""
-"SPHINX ஒரு ஸ்கிரிப்டுடன் வருகிறது: நிரல்: `Sphinx-quickstart` இது ஒரு மூல "
-"கோப்பகத்தை அமைத்து இயல்புநிலையை உருவாக்குகிறது: கோப்பு:` conf.py` இது ஒரு "
-"சில கேள்விகளிலிருந்து மிகவும் பயனுள்ள உள்ளமைவு மதிப்புகளுடன். ஓடு ::"
-
-#: ../../sphinx/doc/tutorial.rst:36
-msgid ""
-"and answer its questions.  (Be sure to say yes to the \"autodoc\" "
-"extension.)"
-msgstr ""
-"அதன் கேள்விகளுக்கு பதிலளிக்கவும். (\"ஆட்டோடோக்\" நீட்டிப்புக்கு ஆம் என்று "
-"சொல்ல மறக்காதீர்கள்.)"
-
-#: ../../sphinx/doc/tutorial.rst:38
-msgid ""
-"There is also an automatic \"API documentation\" generator called "
-":program:`sphinx-apidoc`; see :doc:`/man/sphinx-apidoc` for details."
-msgstr ""
-"ஒரு தானியங்கி \"ஏபிஐ ஆவணங்கள்\" ஜெனரேட்டரும் அழைக்கப்படுகிறது: நிரல்: "
-"`ஸ்பின்க்ஸ்-அபிடோக்`; காண்க: DOC: `/man/sphinx-apidoc` விவரங்களுக்கு."
-
-#: ../../sphinx/doc/tutorial.rst:43
-msgid "Defining document structure"
-msgstr "ஆவண அமைப்பை வரையறுத்தல்"
-
-#: ../../sphinx/doc/tutorial.rst:45
-msgid ""
-"Let's assume you've run :program:`sphinx-quickstart`.  It created a source "
-"directory with :file:`conf.py` and a master document, :file:`index.rst` (if "
-"you accepted the defaults).  The main function of the :term:`master "
-"document` is to serve as a welcome page, and to contain the root of the "
-"\"table of contents tree\" (or *toctree*).  This is one of the main things "
-"that Sphinx adds to reStructuredText, a way to connect multiple files to a "
-"single hierarchy of documents."
-msgstr ""
-"நீங்கள் இயங்கினீர்கள் என்று வைத்துக் கொள்வோம்: நிரல்: "
-"`ஸ்பின்க்ஸ்-க்யூக்ஸ்டார்ட்`. இது ஒரு மூல கோப்பகத்தை உருவாக்கியது: கோப்பு: "
-"`conf.py` மற்றும் ஒரு முதன்மை ஆவணம்,: கோப்பு:` index.rst` (நீங்கள் "
-"இயல்புநிலைகளை ஏற்றுக்கொண்டால்). இதன் முக்கிய செயல்பாடு: கால: `முதன்மை ஆவணம்`"
-" ஒரு வரவேற்புப் பக்கமாக செயல்படுவதோடு,\" உள்ளடக்க மரங்களின் அட்டவணை "
-"\"(அல்லது *டோக்ட்ரீ *) இன் மூலத்தைக் கொண்டிருப்பது. மறுசீரமைப்பு "
-"டெக்ஸ்டுக்கு SPHINX சேர்க்கும் முக்கிய விஷயங்களில் இதுவும் ஒன்றாகும், இது பல"
-" கோப்புகளை ஆவணங்களின் ஒரே வரிசைக்கு இணைப்பதற்கான ஒரு வழியாகும்."
-
-#: ../../sphinx/doc/tutorial.rst:55
-msgid ""
-"``toctree`` is a reStructuredText :dfn:`directive`, a very versatile piece "
-"of markup.  Directives can have arguments, options and content."
-msgstr ""
-"`` toctree`` என்பது ஒரு மறுசீரமைப்பு: dfn: `டைரெக்டிவ்`, மிகவும் பல்துறை "
-"மார்க்அப்பின் துண்டு. வழிமுறைகள் வாதங்கள், விருப்பங்கள் மற்றும் உள்ளடக்கம் "
-"கொண்டிருக்கலாம்."
-
-#: ../../sphinx/doc/tutorial.rst:58
-msgid ""
-"*Arguments* are given directly after the double colon following the "
-"directive's name.  Each directive decides whether it can have arguments, and"
-" how many."
-msgstr ""
-"* வாதங்கள்* உத்தரவின் பெயரைத் தொடர்ந்து இரட்டை பெருங்குடலுக்குப் பிறகு "
-"நேரடியாக வழங்கப்படுகின்றன. ஒவ்வொரு உத்தரவும் அதற்கு வாதங்கள் இருக்க "
-"முடியுமா, எத்தனை."
-
-#: ../../sphinx/doc/tutorial.rst:62
-msgid ""
-"*Options* are given after the arguments, in form of a \"field list\".  The "
-"``maxdepth`` is such an option for the ``toctree`` directive."
-msgstr ""
-"* விருப்பங்கள்* வாதங்களுக்குப் பிறகு, \"புல பட்டியல்\" வடிவத்தில் "
-"வழங்கப்படுகின்றன. `` MaxDepth`` `` toctree`` உத்தரவுக்கான ஒரு விருப்பமாகும்."
-
-#: ../../sphinx/doc/tutorial.rst:65
-msgid ""
-"*Content* follows the options or arguments after a blank line.  Each "
-"directive decides whether to allow content, and what to do with it."
-msgstr ""
-"* உள்ளடக்கம்* வெற்று வரிக்குப் பிறகு விருப்பங்கள் அல்லது வாதங்களைப் "
-"பின்பற்றுகிறது. ஒவ்வொரு உத்தரவும் உள்ளடக்கத்தை அனுமதிக்கலாமா, அதை என்ன "
-"செய்வது என்று தீர்மானிக்கிறது."
-
-#: ../../sphinx/doc/tutorial.rst:68
-msgid ""
-"A common gotcha with directives is that **the first line of the content must"
-" be indented to the same level as the options are**."
-msgstr ""
-"வழிமுறைகளுடன் ஒரு பொதுவான கோட்சா என்னவென்றால், ** உள்ளடக்கத்தின் முதல் வரி "
-"விருப்பங்கள் ** அதே நிலைக்கு உள்தள்ளப்பட வேண்டும்."
-
-#: ../../sphinx/doc/tutorial.rst:72
-msgid "The toctree directive initially is empty, and looks like this::"
-msgstr "டோக்ட்ரீ உத்தரவு ஆரம்பத்தில் காலியாக உள்ளது, இதுபோன்று தெரிகிறது ::"
-
-#: ../../sphinx/doc/tutorial.rst:77
-msgid "You add documents listing them in the *content* of the directive::"
-msgstr ""
-"உத்தரவின் * உள்ளடக்கத்தில் * அவற்றை பட்டியலிடும் ஆவணங்களை நீங்கள் "
-"சேர்க்கிறீர்கள் ::"
-
-#: ../../sphinx/doc/tutorial.rst:86
-msgid ""
-"This is exactly how the toctree for this documentation looks.  The documents"
-" to include are given as :term:`document name`\\ s, which in short means "
-"that you leave off the file name extension and use slashes as directory "
-"separators."
-msgstr ""
-"இந்த ஆவணத்திற்கான டோக்ட்ரீ எப்படி இருக்கிறது. சேர்க்க வேண்டிய ஆவணங்கள் "
-"இவ்வாறு கொடுக்கப்பட்டுள்ளன: கால: `ஆவண பெயர்` \\ கள், சுருக்கமாக நீங்கள் "
-"கோப்பு பெயர் நீட்டிப்பை விட்டுவிட்டு, குறைப்புகளை அடைவு பிரிப்பான்களாகப் "
-"பயன்படுத்த வேண்டும் என்பதாகும்."
-
-#: ../../sphinx/doc/tutorial.rst:90
-msgid ""
-"|more| Read more about :ref:`the toctree directive <toctree-directive>`."
-msgstr ""
-"| மேலும் | பற்றி மேலும் வாசிக்க: ref: `toctree உத்தரவு <toctree-directive>`."
-
-#: ../../sphinx/doc/tutorial.rst:92
-msgid ""
-"You can now create the files you listed in the toctree and add content, and "
-"their section titles will be inserted (up to the \"maxdepth\" level) at the "
-"place where the toctree directive is placed.  Also, Sphinx now knows about "
-"the order and hierarchy of your documents.  (They may contain ``toctree`` "
-"directives themselves, which means you can create deeply nested hierarchies "
-"if necessary.)"
-msgstr ""
-"டோக்ட்ரீயில் நீங்கள் பட்டியலிட்டுள்ள கோப்புகளை இப்போது உருவாக்கி "
-"உள்ளடக்கத்தைச் சேர்க்கலாம், மேலும் அவற்றின் பிரிவு தலைப்புகள் டோக்ட்ரீ "
-"உத்தரவு வைக்கப்பட்டுள்ள இடத்தில் (\"மேக்ஸ் டெப்ட்\" நிலை வரை) செருகப்படும். "
-"மேலும், உங்கள் ஆவணங்களின் ஒழுங்கு மற்றும் வரிசைமுறை பற்றி ஸ்பிங்க்ஸ் இப்போது"
-" அறிந்திருக்கிறார். (அவற்றில் `` toctree`` உத்தரவுகள் இருக்கலாம், அதாவது "
-"தேவைப்பட்டால் நீங்கள் ஆழமான உள்ளமைக்கப்பட்ட வரிசைமுறைகளை உருவாக்க முடியும்.)"
-
 #: ../../sphinx/doc/tutorial.rst:100
 msgid "Adding content"
 msgstr "உள்ளடக்கத்தைச் சேர்ப்பது"
@@ -293,6 +106,10 @@ msgstr ""
 "நீங்கள் தேர்ந்தெடுத்த பில்ட் கோப்பகத்தில் HTML டாக்ஸை உருவாக்க. எந்த "
 "இலக்குகள் உள்ளன என்பதைக் காண ஒரு வாதம் இல்லாமல் `` Make`` ஐ இயக்கவும்."
 
+#: ../../sphinx/doc/tutorial.rst:14
+msgid "Install Sphinx"
+msgstr "ஸ்பிங்க்ஸை நிறுவவும்"
+
 #: ../../sphinx/doc/tutorial.rst:141
 msgid "How do I generate PDF documents?"
 msgstr "PDF ஆவணங்களை எவ்வாறு உருவாக்குவது?"
@@ -332,6 +149,14 @@ msgstr ""
 "மிக முக்கியமான டொமைன் பைதான் டொமைன். எடுத்துக்காட்டாக, பைத்தானின் "
 "உள்ளமைக்கப்பட்ட செயல்பாட்டை ஆவணப்படுத்த `` கணக்கிடவும் () ``, இதை உங்கள் மூல"
 " கோப்புகளில் ஒன்றில் சேர்ப்பீர்கள் ::"
+
+#: ../../sphinx/doc/tutorial.rst:16
+msgid ""
+"Install Sphinx, either from a distribution package or from `PyPI "
+"<https://pypi.python.org/pypi/Sphinx>`_ with ::"
+msgstr ""
+"ஒரு விநியோக தொகுப்பிலிருந்து அல்லது `pypi "
+"<https://pypi.python.org/pypi/sphinx>` _ உடன் ::"
 
 #: ../../sphinx/doc/tutorial.rst:165
 msgid "This is rendered like this:"
@@ -474,6 +299,10 @@ msgstr ""
 "| மேலும் | காண்க: குறிப்பு: கிடைக்கக்கூடிய அனைத்து கட்டமைப்பு மதிப்புகளின் "
 "ஆவணங்களுக்காக `பில்ட்-கான்ஃபிக்`."
 
+#: ../../sphinx/doc/tutorial.rst:23
+msgid "Setting up the documentation sources"
+msgstr "ஆவணங்கள் ஆதாரங்களை அமைத்தல்"
+
 #: ../../sphinx/doc/tutorial.rst:231
 msgid "Autodoc"
 msgstr "ஆட்டோடாக்"
@@ -519,6 +348,20 @@ msgid ""
 msgstr ""
 "ஆட்டோ வழிமுறைகளுக்கான உறுப்பினர் விருப்பங்களைப் பயன்படுத்தி, முழு வகுப்புகள்"
 " அல்லது தொகுதிக்கூறுகளையும் தானாகவே ஆவணப்படுத்தலாம் :: போன்றவை ::"
+
+#: ../../sphinx/doc/tutorial.rst:25
+msgid ""
+"The root directory of a Sphinx collection of reStructuredText document "
+"sources is called the :term:`source directory`.  This directory also "
+"contains the Sphinx configuration file :file:`conf.py`, where you can "
+"configure all aspects of how Sphinx reads your sources and builds your "
+"documentation.  [#]_"
+msgstr ""
+"மறுசீரமைப்பு ஆவண ஆதாரங்களின் ஸ்பிங்க்ஸ் தொகுப்பின் ரூட் அடைவு: கால: `மூல "
+"அடைவு` என்று அழைக்கப்படுகிறது. இந்த கோப்பகத்தில் SPHINX உள்ளமைவு கோப்பும் "
+"உள்ளது: கோப்பு: `conf.py`, அங்கு ஸ்பின்க்ஸ் உங்கள் ஆதாரங்களை எவ்வாறு "
+"படிக்கிறது மற்றும் உங்கள் ஆவணங்களை உருவாக்குகிறது என்பதற்கான அனைத்து "
+"அம்சங்களையும் நீங்கள் உள்ளமைக்க முடியும். [#] _"
 
 #: ../../sphinx/doc/tutorial.rst:254
 msgid ""
@@ -620,6 +463,16 @@ msgstr ""
 "| மேலும் | காண்க: மோட்: `sphinx.ext.intersphinx` இன்டர்ஸ்பிங்கின் "
 "அம்சங்களின் முழுமையான விளக்கத்திற்கு."
 
+#: ../../sphinx/doc/tutorial.rst:30
+msgid ""
+"Sphinx comes with a script called :program:`sphinx-quickstart` that sets up "
+"a source directory and creates a default :file:`conf.py` with the most "
+"useful configuration values from a few questions it asks you.  Just run ::"
+msgstr ""
+"SPHINX ஒரு ஸ்கிரிப்டுடன் வருகிறது: நிரல்: `Sphinx-quickstart` இது ஒரு மூல "
+"கோப்பகத்தை அமைத்து இயல்புநிலையை உருவாக்குகிறது: கோப்பு:` conf.py` இது ஒரு "
+"சில கேள்விகளிலிருந்து மிகவும் பயனுள்ள உள்ளமைவு மதிப்புகளுடன். ஓடு ::"
+
 #: ../../sphinx/doc/tutorial.rst:301
 msgid "More topics to be covered"
 msgstr "மறைக்க வேண்டிய கூடுதல் தலைப்புகள்"
@@ -681,3 +534,150 @@ msgstr ""
 "இது வழக்கமான தளவமைப்பு. இருப்பினும்,: கோப்பு: `conf.py` மற்றொரு "
 "கோப்பகத்திலும் வாழலாம், தி: கால:` உள்ளமைவு அடைவு`. மேலும் தகவலுக்கு: நிரல்: "
 "`ஸ்பின்க்ஸ்-பில்ட் மேன் பேஜ் <ஸ்பின்க்ஸ்-பில்ட்> ஐப் பார்க்கவும்."
+
+#: ../../sphinx/doc/tutorial.rst:36
+msgid ""
+"and answer its questions.  (Be sure to say yes to the \"autodoc\" "
+"extension.)"
+msgstr ""
+"அதன் கேள்விகளுக்கு பதிலளிக்கவும். (\"ஆட்டோடோக்\" நீட்டிப்புக்கு ஆம் என்று "
+"சொல்ல மறக்காதீர்கள்.)"
+
+#: ../../sphinx/doc/tutorial.rst:38
+msgid ""
+"There is also an automatic \"API documentation\" generator called "
+":program:`sphinx-apidoc`; see :doc:`/man/sphinx-apidoc` for details."
+msgstr ""
+"ஒரு தானியங்கி \"ஏபிஐ ஆவணங்கள்\" ஜெனரேட்டரும் அழைக்கப்படுகிறது: நிரல்: "
+"`ஸ்பின்க்ஸ்-அபிடோக்`; காண்க: DOC: `/man/sphinx-apidoc` விவரங்களுக்கு."
+
+#: ../../sphinx/doc/tutorial.rst:4
+msgid "First Steps with Sphinx"
+msgstr "ஸ்பிங்க்ஸுடன் முதல் படிகள்"
+
+#: ../../sphinx/doc/tutorial.rst:43
+msgid "Defining document structure"
+msgstr "ஆவண அமைப்பை வரையறுத்தல்"
+
+#: ../../sphinx/doc/tutorial.rst:45
+msgid ""
+"Let's assume you've run :program:`sphinx-quickstart`.  It created a source "
+"directory with :file:`conf.py` and a master document, :file:`index.rst` (if "
+"you accepted the defaults).  The main function of the :term:`master "
+"document` is to serve as a welcome page, and to contain the root of the "
+"\"table of contents tree\" (or *toctree*).  This is one of the main things "
+"that Sphinx adds to reStructuredText, a way to connect multiple files to a "
+"single hierarchy of documents."
+msgstr ""
+"நீங்கள் இயங்கினீர்கள் என்று வைத்துக் கொள்வோம்: நிரல்: "
+"`ஸ்பின்க்ஸ்-க்யூக்ஸ்டார்ட்`. இது ஒரு மூல கோப்பகத்தை உருவாக்கியது: கோப்பு: "
+"`conf.py` மற்றும் ஒரு முதன்மை ஆவணம்,: கோப்பு:` index.rst` (நீங்கள் "
+"இயல்புநிலைகளை ஏற்றுக்கொண்டால்). இதன் முக்கிய செயல்பாடு: கால: `முதன்மை ஆவணம்`"
+" ஒரு வரவேற்புப் பக்கமாக செயல்படுவதோடு,\" உள்ளடக்க மரங்களின் அட்டவணை "
+"\"(அல்லது *டோக்ட்ரீ *) இன் மூலத்தைக் கொண்டிருப்பது. மறுசீரமைப்பு "
+"டெக்ஸ்டுக்கு SPHINX சேர்க்கும் முக்கிய விஷயங்களில் இதுவும் ஒன்றாகும், இது பல"
+" கோப்புகளை ஆவணங்களின் ஒரே வரிசைக்கு இணைப்பதற்கான ஒரு வழியாகும்."
+
+#: ../../sphinx/doc/tutorial.rst:55
+msgid ""
+"``toctree`` is a reStructuredText :dfn:`directive`, a very versatile piece "
+"of markup.  Directives can have arguments, options and content."
+msgstr ""
+"`` toctree`` என்பது ஒரு மறுசீரமைப்பு: dfn: `டைரெக்டிவ்`, மிகவும் பல்துறை "
+"மார்க்அப்பின் துண்டு. வழிமுறைகள் வாதங்கள், விருப்பங்கள் மற்றும் உள்ளடக்கம் "
+"கொண்டிருக்கலாம்."
+
+#: ../../sphinx/doc/tutorial.rst:58
+msgid ""
+"*Arguments* are given directly after the double colon following the "
+"directive's name.  Each directive decides whether it can have arguments, and"
+" how many."
+msgstr ""
+"* வாதங்கள்* உத்தரவின் பெயரைத் தொடர்ந்து இரட்டை பெருங்குடலுக்குப் பிறகு "
+"நேரடியாக வழங்கப்படுகின்றன. ஒவ்வொரு உத்தரவும் அதற்கு வாதங்கள் இருக்க "
+"முடியுமா, எத்தனை."
+
+#: ../../sphinx/doc/tutorial.rst:6
+msgid ""
+"This document is meant to give a tutorial-like overview of all common tasks "
+"while using Sphinx."
+msgstr ""
+"இந்த ஆவணம் ஸ்பிங்க்ஸைப் பயன்படுத்தும் போது அனைத்து பொதுவான பணிகளின் "
+"டுடோரியல் போன்ற கண்ணோட்டத்தை வழங்குவதாகும்."
+
+#: ../../sphinx/doc/tutorial.rst:62
+msgid ""
+"*Options* are given after the arguments, in form of a \"field list\".  The "
+"``maxdepth`` is such an option for the ``toctree`` directive."
+msgstr ""
+"* விருப்பங்கள்* வாதங்களுக்குப் பிறகு, \"புல பட்டியல்\" வடிவத்தில் "
+"வழங்கப்படுகின்றன. `` MaxDepth`` `` toctree`` உத்தரவுக்கான ஒரு விருப்பமாகும்."
+
+#: ../../sphinx/doc/tutorial.rst:65
+msgid ""
+"*Content* follows the options or arguments after a blank line.  Each "
+"directive decides whether to allow content, and what to do with it."
+msgstr ""
+"* உள்ளடக்கம்* வெற்று வரிக்குப் பிறகு விருப்பங்கள் அல்லது வாதங்களைப் "
+"பின்பற்றுகிறது. ஒவ்வொரு உத்தரவும் உள்ளடக்கத்தை அனுமதிக்கலாமா, அதை என்ன "
+"செய்வது என்று தீர்மானிக்கிறது."
+
+#: ../../sphinx/doc/tutorial.rst:68
+msgid ""
+"A common gotcha with directives is that **the first line of the content must"
+" be indented to the same level as the options are**."
+msgstr ""
+"வழிமுறைகளுடன் ஒரு பொதுவான கோட்சா என்னவென்றால், ** உள்ளடக்கத்தின் முதல் வரி "
+"விருப்பங்கள் ** அதே நிலைக்கு உள்தள்ளப்பட வேண்டும்."
+
+#: ../../sphinx/doc/tutorial.rst:72
+msgid "The toctree directive initially is empty, and looks like this::"
+msgstr "டோக்ட்ரீ உத்தரவு ஆரம்பத்தில் காலியாக உள்ளது, இதுபோன்று தெரிகிறது ::"
+
+#: ../../sphinx/doc/tutorial.rst:77
+msgid "You add documents listing them in the *content* of the directive::"
+msgstr ""
+"உத்தரவின் * உள்ளடக்கத்தில் * அவற்றை பட்டியலிடும் ஆவணங்களை நீங்கள் "
+"சேர்க்கிறீர்கள் ::"
+
+#: ../../sphinx/doc/tutorial.rst:86
+msgid ""
+"This is exactly how the toctree for this documentation looks.  The documents"
+" to include are given as :term:`document name`\\ s, which in short means "
+"that you leave off the file name extension and use slashes as directory "
+"separators."
+msgstr ""
+"இந்த ஆவணத்திற்கான டோக்ட்ரீ எப்படி இருக்கிறது. சேர்க்க வேண்டிய ஆவணங்கள் "
+"இவ்வாறு கொடுக்கப்பட்டுள்ளன: கால: `ஆவண பெயர்` \\ கள், சுருக்கமாக நீங்கள் "
+"கோப்பு பெயர் நீட்டிப்பை விட்டுவிட்டு, குறைப்புகளை அடைவு பிரிப்பான்களாகப் "
+"பயன்படுத்த வேண்டும் என்பதாகும்."
+
+#: ../../sphinx/doc/tutorial.rst:9
+msgid ""
+"The green arrows designate \"more info\" links leading to advanced sections "
+"about the described task."
+msgstr ""
+"பசுமை அம்புகள் விவரிக்கப்பட்ட பணியைப் பற்றிய மேம்பட்ட பிரிவுகளுக்கு "
+"வழிவகுக்கும் \"கூடுதல் தகவல்\" இணைப்புகளை நியமிக்கின்றன."
+
+#: ../../sphinx/doc/tutorial.rst:90
+msgid ""
+"|more| Read more about :ref:`the toctree directive <toctree-directive>`."
+msgstr ""
+"| மேலும் | பற்றி மேலும் வாசிக்க: ref: `toctree உத்தரவு <toctree-directive>`."
+
+#: ../../sphinx/doc/tutorial.rst:92
+msgid ""
+"You can now create the files you listed in the toctree and add content, and "
+"their section titles will be inserted (up to the \"maxdepth\" level) at the "
+"place where the toctree directive is placed.  Also, Sphinx now knows about "
+"the order and hierarchy of your documents.  (They may contain ``toctree`` "
+"directives themselves, which means you can create deeply nested hierarchies "
+"if necessary.)"
+msgstr ""
+"டோக்ட்ரீயில் நீங்கள் பட்டியலிட்டுள்ள கோப்புகளை இப்போது உருவாக்கி "
+"உள்ளடக்கத்தைச் சேர்க்கலாம், மேலும் அவற்றின் பிரிவு தலைப்புகள் டோக்ட்ரீ "
+"உத்தரவு வைக்கப்பட்டுள்ள இடத்தில் (\"மேக்ஸ் டெப்ட்\" நிலை வரை) செருகப்படும். "
+"மேலும், உங்கள் ஆவணங்களின் ஒழுங்கு மற்றும் வரிசைமுறை பற்றி ஸ்பிங்க்ஸ் இப்போது"
+" அறிந்திருக்கிறார். (அவற்றில் `` toctree`` உத்தரவுகள் இருக்கலாம், அதாவது "
+"தேவைப்பட்டால் நீங்கள் ஆழமான உள்ளமைக்கப்பட்ட வரிசைமுறைகளை உருவாக்க முடியும்.)"

@@ -17,9 +17,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/ext/graphviz.rst:4
-msgid ":mod:`sphinx.ext.graphviz` -- Add Graphviz graphs"
-msgstr ": மோட்: `sphinx.ext.graphviz` - கிராஃப்விஸ் வரைபடங்களைச் சேர்க்கவும்"
+#: ../../sphinx/doc/ext/graphviz.rst:102
+msgid ""
+"Since this setting is not portable from system to system, it is normally not"
+" useful to set it in ``conf.py``; rather, giving it on the :program:`sphinx-"
+"build` command line via the :option:`-D <sphinx-build -D>` option should be "
+"preferable, like this::"
+msgstr ""
+"இந்த அமைப்பு கணினியிலிருந்து கணினிக்கு சிறியதாக இல்லை என்பதால், அதை `` "
+"conf.py`` இல் அமைப்பது பொதுவாக பயனுள்ளதாக இருக்காது; மாறாக, அதை வழங்குதல்: "
+"நிரல்: `ஸ்பின்க்ஸ்-பில்ட்` கட்டளை வரி வழியாக: விருப்பம்:` -d <sphinx- கட்டளை"
+" -d> `விருப்பம் விரும்பத்தக்கதாக இருக்க வேண்டும், இது போன்றது ::"
 
 #: ../../sphinx/doc/ext/graphviz.rst:11
 msgid ""
@@ -28,6 +36,36 @@ msgid ""
 msgstr ""
 "உங்கள் ஆவணங்களில் `` கிராஃப்விஸ் <https://graphviz.org/> _ _ வரைபடங்களை "
 "உட்பொதிக்க இந்த நீட்டிப்பு உங்களை அனுமதிக்கிறது."
+
+#: ../../sphinx/doc/ext/graphviz.rst:111
+msgid ""
+"Additional command-line arguments to give to dot, as a list.  The default is"
+" an empty list.  This is the right place to set global graph, node or edge "
+"attributes via dot's ``-G``, ``-N`` and ``-E`` options."
+msgstr ""
+"ஒரு பட்டியலாக, DOT க்கு வழங்க கூடுதல் கட்டளை-வரி வாதங்கள். இயல்புநிலை வெற்று"
+" பட்டியல். டாட்டின் `` -g``, `-n`` மற்றும்` `-e`` விருப்பங்கள் வழியாக "
+"உலகளாவிய வரைபடம், முனை அல்லது விளிம்பு பண்புகளை அமைக்க இது சரியான இடம்."
+
+#: ../../sphinx/doc/ext/graphviz.rst:117
+msgid ""
+"The output format for Graphviz when building HTML files.  This must be "
+"either ``'png'`` or ``'svg'``; the default is ``'png'``. If ``'svg'`` is "
+"used, in order to make the URL links work properly, an appropriate "
+"``target`` attribute must be set, such as ``\"_top\"`` and ``\"_blank\"``. "
+"For example, the link in the following graph should work in the svg output: "
+"::"
+msgstr ""
+"HTML கோப்புகளை உருவாக்கும்போது கிராஃப்விஸிற்கான வெளியீட்டு வடிவம். இது `` "
+"'png'`` அல்லது ``' svg'``; இயல்புநிலை `` 'png'``. `` 'Svg'`` "
+"பயன்படுத்தப்பட்டால், URL இணைப்புகளை சரியாகச் செய்ய, பொருத்தமான `` இலக்கு`` "
+"பண்புக்கூறு அமைக்கப்பட வேண்டும், அதாவது `` \"_TOP\" `` மற்றும் `` \" . "
+"எடுத்துக்காட்டாக, பின்வரும் வரைபடத்தில் உள்ள இணைப்பு எஸ்.வி.ஜி வெளியீட்டில் "
+"செயல்பட வேண்டும்: ::"
+
+#: ../../sphinx/doc/ext/graphviz.rst:131
+msgid "Previously, output always was PNG."
+msgstr "முன்னதாக, வெளியீடு எப்போதும் பி.என்.ஜி."
 
 #: ../../sphinx/doc/ext/graphviz.rst:14
 msgid "It adds these directives:"
@@ -70,6 +108,10 @@ msgstr ""
 "SPHINX இல் உள்ள அனைத்து கோப்பு குறிப்புகளையும் பொறுத்தவரை, கோப்பு பெயர் "
 "முழுமையானதாக இருந்தால், அது மூல கோப்பகத்துடன் தொடர்புடையதாக எடுத்துக் "
 "கொள்ளப்படுகிறது."
+
+#: ../../sphinx/doc/ext/graphviz.rst:4
+msgid ":mod:`sphinx.ext.graphviz` -- Add Graphviz graphs"
+msgstr ": மோட்: `sphinx.ext.graphviz` - கிராஃப்விஸ் வரைபடங்களைச் சேர்க்கவும்"
 
 #: ../../sphinx/doc/ext/graphviz.rst:40
 msgid "Added support for external files."
@@ -163,45 +205,3 @@ msgstr ""
 "`` Dot`` ஐ அழைக்கும் கட்டளை பெயர். இயல்புநிலை `` 'டாட்'``; இயங்கக்கூடிய "
 "தேடல் பாதையில் இல்லாவிட்டால் இதை நீங்கள் முழு பாதையில் அமைக்க "
 "வேண்டியிருக்கலாம்."
-
-#: ../../sphinx/doc/ext/graphviz.rst:102
-msgid ""
-"Since this setting is not portable from system to system, it is normally not"
-" useful to set it in ``conf.py``; rather, giving it on the :program:`sphinx-"
-"build` command line via the :option:`-D <sphinx-build -D>` option should be "
-"preferable, like this::"
-msgstr ""
-"இந்த அமைப்பு கணினியிலிருந்து கணினிக்கு சிறியதாக இல்லை என்பதால், அதை `` "
-"conf.py`` இல் அமைப்பது பொதுவாக பயனுள்ளதாக இருக்காது; மாறாக, அதை வழங்குதல்: "
-"நிரல்: `ஸ்பின்க்ஸ்-பில்ட்` கட்டளை வரி வழியாக: விருப்பம்:` -d <sphinx- கட்டளை"
-" -d> `விருப்பம் விரும்பத்தக்கதாக இருக்க வேண்டும், இது போன்றது ::"
-
-#: ../../sphinx/doc/ext/graphviz.rst:111
-msgid ""
-"Additional command-line arguments to give to dot, as a list.  The default is"
-" an empty list.  This is the right place to set global graph, node or edge "
-"attributes via dot's ``-G``, ``-N`` and ``-E`` options."
-msgstr ""
-"ஒரு பட்டியலாக, DOT க்கு வழங்க கூடுதல் கட்டளை-வரி வாதங்கள். இயல்புநிலை வெற்று"
-" பட்டியல். டாட்டின் `` -g``, `-n`` மற்றும்` `-e`` விருப்பங்கள் வழியாக "
-"உலகளாவிய வரைபடம், முனை அல்லது விளிம்பு பண்புகளை அமைக்க இது சரியான இடம்."
-
-#: ../../sphinx/doc/ext/graphviz.rst:117
-msgid ""
-"The output format for Graphviz when building HTML files.  This must be "
-"either ``'png'`` or ``'svg'``; the default is ``'png'``. If ``'svg'`` is "
-"used, in order to make the URL links work properly, an appropriate "
-"``target`` attribute must be set, such as ``\"_top\"`` and ``\"_blank\"``. "
-"For example, the link in the following graph should work in the svg output: "
-"::"
-msgstr ""
-"HTML கோப்புகளை உருவாக்கும்போது கிராஃப்விஸிற்கான வெளியீட்டு வடிவம். இது `` "
-"'png'`` அல்லது ``' svg'``; இயல்புநிலை `` 'png'``. `` 'Svg'`` "
-"பயன்படுத்தப்பட்டால், URL இணைப்புகளை சரியாகச் செய்ய, பொருத்தமான `` இலக்கு`` "
-"பண்புக்கூறு அமைக்கப்பட வேண்டும், அதாவது `` \"_TOP\" `` மற்றும் `` \" . "
-"எடுத்துக்காட்டாக, பின்வரும் வரைபடத்தில் உள்ள இணைப்பு எஸ்.வி.ஜி வெளியீட்டில் "
-"செயல்பட வேண்டும்: ::"
-
-#: ../../sphinx/doc/ext/graphviz.rst:131
-msgid "Previously, output always was PNG."
-msgstr "முன்னதாக, வெளியீடு எப்போதும் பி.என்.ஜி."

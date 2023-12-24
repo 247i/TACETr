@@ -17,279 +17,125 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/usage/theming.rst:6
-msgid "HTML Theming"
-msgstr "HTML தீமிங்"
-
-#: ../../sphinx/doc/usage/theming.rst:8
-msgid "Sphinx provides a number of builders for HTML and HTML-based formats."
-msgstr ""
-"HTML மற்றும் HTML- அடிப்படையிலான வடிவங்களுக்கு SPHINX பல பில்டர்களை "
-"வழங்குகிறது."
-
-#: ../../sphinx/doc/usage/theming.rst:11
-msgid "Builders"
-msgstr "பில்டர்கள்"
-
-#: ../../sphinx/doc/usage/theming.rst:13
-msgid "Todo"
-msgstr "டோடோ"
-
-#: ../../sphinx/doc/usage/theming.rst:13
-msgid "Populate when the 'builders' document is split up."
-msgstr "'பில்டர்ஸ்' ஆவணம் பிரிக்கப்படும்போது விரிவுபடுத்துங்கள்."
-
-#: ../../sphinx/doc/usage/theming.rst:17
-msgid "Themes"
-msgstr "கருப்பொருள்கள்"
-
-#: ../../sphinx/doc/usage/theming.rst:23
-msgid ""
-"This section provides information about using pre-existing HTML themes. If "
-"you wish to create your own theme, refer to :doc:`/development/theming`."
-msgstr ""
-"முன்பே இருக்கும் HTML கருப்பொருள்களைப் பயன்படுத்துவது பற்றிய தகவல்களை இந்த "
-"பிரிவு வழங்குகிறது. உங்கள் சொந்த கருப்பொருளை உருவாக்க விரும்பினால், இதைப் "
-"பார்க்கவும்: doc: `/வளர்ச்சி/தீமிங்`."
-
-#: ../../sphinx/doc/usage/theming.rst:27
-msgid ""
-"Sphinx supports changing the appearance of its HTML output via *themes*.  A "
-"theme is a collection of HTML templates, stylesheet(s) and other static "
-"files. Additionally, it has a configuration file which specifies from which "
-"theme to inherit, which highlighting style to use, and what options exist "
-"for customizing the theme's look and feel."
-msgstr ""
-"ஸ்பின்க்ஸ் அதன் HTML வெளியீட்டின் தோற்றத்தை *கருப்பொருள்கள் *வழியாக "
-"மாற்றுவதை ஆதரிக்கிறது. ஒரு தீம் என்பது HTML வார்ப்புருக்கள், ஸ்டைல்ஷீட் "
-"(கள்) மற்றும் பிற நிலையான கோப்புகளின் தொகுப்பாகும். கூடுதலாக, இது ஒரு "
-"உள்ளமைவு கோப்பைக் கொண்டுள்ளது, இது எந்த கருப்பொருளிலிருந்து மரபுரிமையாக "
-"இருக்க வேண்டும் என்பதைக் குறிப்பிடுகிறது, இது பாணியைப் பயன்படுத்துவதற்கு "
-"முன்னிலைப்படுத்துகிறது, மேலும் கருப்பொருளின் தோற்றம் மற்றும் உணர்வைத் "
-"தனிப்பயனாக்க என்ன விருப்பங்கள் உள்ளன."
-
-#: ../../sphinx/doc/usage/theming.rst:33
-msgid ""
-"Themes are meant to be project-unaware, so they can be used for different "
-"projects without change."
-msgstr ""
-"கருப்பொருள்கள் திட்ட-அனாவேர் என்று பொருள், எனவே அவை மாற்றமின்றி வெவ்வேறு "
-"திட்டங்களுக்கு பயன்படுத்தப்படலாம்."
-
-#: ../../sphinx/doc/usage/theming.rst:37
-msgid "Using a theme"
-msgstr "ஒரு கருப்பொருளைப் பயன்படுத்துதல்"
-
-#: ../../sphinx/doc/usage/theming.rst:39
-msgid ""
-"Using a :ref:`theme provided with Sphinx <builtin-themes>` is easy. Since "
-"these do not need to be installed, you only need to set the "
-":confval:`html_theme` config value. For example, to enable the ``classic`` "
-"theme, add the following to :file:`conf.py`::"
-msgstr ""
-"ஒரு: ref ஐப் பயன்படுத்துதல்: `ஸ்பிங்க்ஸ் <பில்டின்-தீம்ஸ்> உடன் வழங்கப்பட்ட "
-"தீம் எளிதானது. இவை நிறுவப்பட வேண்டிய அவசியமில்லை என்பதால், நீங்கள்: confval:"
-" `html_theme` கட்டமைப்பு மதிப்பை மட்டுமே அமைக்க வேண்டும். எடுத்துக்காட்டாக, "
-"`` கிளாசிக்`` கருப்பொருளை இயக்க, பின்வருவனவற்றைச் சேர்க்கவும்: கோப்பு: "
-"`conf.py` ::"
-
-#: ../../sphinx/doc/usage/theming.rst:46
-msgid ""
-"You can also set theme-specific options using the "
-":confval:`html_theme_options` config value.  These options are generally "
-"used to change the look and feel of the theme. For example, to place the "
-"sidebar on the right side and a black background for the relation bar (the "
-"bar with the navigation links at the page's top and bottom), add the "
-"following :file:`conf.py`::"
-msgstr ""
-": Confval: `html_theme_options` கட்டமைப்பு மதிப்பைப் பயன்படுத்தி "
-"தீம்-குறிப்பிட்ட விருப்பங்களையும் நீங்கள் அமைக்கலாம். இந்த விருப்பங்கள் "
-"பொதுவாக கருப்பொருளின் தோற்றத்தையும் உணர்வையும் மாற்ற பயன்படுகின்றன. "
-"எடுத்துக்காட்டாக, பக்கப்பட்டியை வலது பக்கத்தில் வைக்கவும், உறவுக்கு ஒரு "
-"கருப்பு பின்னணியையும் (பக்கத்தின் மேல் மற்றும் கீழ் வழிசெலுத்தல் "
-"இணைப்புகளைக் கொண்ட பட்டி), பின்வருவனவற்றைச் சேர்க்கவும்: கோப்பு: `conf.py` "
-"::"
-
-#: ../../sphinx/doc/usage/theming.rst:57
-msgid ""
-"If the theme does not come with Sphinx, it can be in two static forms or as "
-"a Python package. For the static forms, either a directory (containing "
-":file:`theme.conf` and other needed files), or a zip file with the same "
-"contents is supported. The directory or zipfile must be put where Sphinx can"
-" find it; for this there is the config value :confval:`html_theme_path`. "
-"This can be a list of directories, relative to the directory containing "
-":file:`conf.py`, that can contain theme directories or zip files.  For "
-"example, if you have a theme in the file :file:`blue.zip`, you can put it "
-"right in the directory containing :file:`conf.py` and use this "
-"configuration::"
-msgstr ""
-"தீம் ஸ்பிங்க்ஸுடன் வரவில்லை என்றால், அது இரண்டு நிலையான வடிவங்களில் அல்லது "
-"பைதான் தொகுப்பாக இருக்கலாம். நிலையான படிவங்களுக்கு, ஒரு அடைவு (உள்ளிட்டவை: "
-"கோப்பு: `தீம்.கான்ஃப்` மற்றும் தேவையான பிற கோப்புகள்), அல்லது அதே "
-"உள்ளடக்கங்களைக் கொண்ட ஜிப் கோப்பு ஆதரிக்கப்படுகிறது. ஸ்பிங்க்ஸ் அதைக் "
-"கண்டுபிடிக்கக்கூடிய இடத்தில் அடைவு அல்லது ஜிப்ஃபைல் வைக்கப்பட வேண்டும்; "
-"இதற்காக கட்டமைப்பு மதிப்பு உள்ளது: confVal: `html_theme_path`. இது "
-"கோப்பகங்களுடன் தொடர்புடைய கோப்பகங்களின் பட்டியலாக இருக்கலாம்: கோப்பு: "
-"`conf.py`, இது தீம் கோப்பகங்கள் அல்லது ஜிப் கோப்புகளைக் கொண்டிருக்கலாம். "
-"எடுத்துக்காட்டாக, கோப்பில் உங்களிடம் ஒரு தீம் இருந்தால்: கோப்பு: `blue.zip`,"
-" நீங்கள் அதை வைத்திருக்கும் கோப்பகத்தில் சரியாக வைக்கலாம்: கோப்பு:` conf.py`"
-" மற்றும் இந்த உள்ளமைவைப் பயன்படுத்தவும் ::"
-
-#: ../../sphinx/doc/usage/theming.rst:70
-msgid ""
-"The third form is a Python package.  If a theme you want to use is "
-"distributed as a Python package, you can use it after installing"
-msgstr ""
-"மூன்றாவது வடிவம் பைதான் தொகுப்பு. நீங்கள் பயன்படுத்த விரும்பும் தீம் பைதான் "
-"தொகுப்பாக விநியோகிக்கப்பட்டால், நிறுவிய பின் அதைப் பயன்படுத்தலாம்"
-
-#: ../../sphinx/doc/usage/theming.rst:78
-msgid ""
-"Once installed, this can be used in the same manner as a directory or "
-"zipfile-based theme::"
-msgstr ""
-"நிறுவப்பட்டதும், இதை ஒரு அடைவு அல்லது ஜிப்ஃபைல் அடிப்படையிலான தீம் போலவே "
-"பயன்படுத்தலாம் ::"
-
-#: ../../sphinx/doc/usage/theming.rst:83
-msgid ""
-"For more information on the design of themes, including information about "
-"writing your own themes, refer to :doc:`/development/theming`."
-msgstr ""
-"உங்கள் சொந்த கருப்பொருள்களை எழுதுவது பற்றிய தகவல்கள் உட்பட கருப்பொருள்களின் "
-"வடிவமைப்பு குறித்த கூடுதல் தகவலுக்கு,: DOC: `/வளர்ச்சி/கருப்பொருள்`."
-
-#: ../../sphinx/doc/usage/theming.rst:89
-msgid "Builtin themes"
-msgstr "பில்டின் தீம்கள்"
-
-#: ../../sphinx/doc/usage/theming.rst:94
-msgid "**Theme overview**"
-msgstr "** தீம் கண்ணோட்டம் **"
-
-#: ../../sphinx/doc/usage/theming.rst:96
-msgid "|alabaster|"
-msgstr "| அலபாஸ்டர் |"
-
-#: ../../sphinx/doc/usage/theming.rst:117
-msgid "alabaster"
-msgstr "அலபாஸ்டர்"
-
-#: ../../sphinx/doc/usage/theming.rst:98
-msgid "*alabaster*"
-msgstr "*அலபாஸ்டர்*"
-
-#: ../../sphinx/doc/usage/theming.rst:96
-msgid "|classic|"
-msgstr "| கிளாசிக் |"
-
-#: ../../sphinx/doc/usage/theming.rst:118
-msgid "classic"
-msgstr "செந்தரம்"
-
-#: ../../sphinx/doc/usage/theming.rst:98
-msgid "*classic*"
-msgstr "*செந்தரம்*"
+#: ../../sphinx/doc/usage/theming.rst:100
+msgid "|scrolls|"
+msgstr "| சுருள்கள் |"
 
 #: ../../sphinx/doc/usage/theming.rst:100
 msgid "|sphinxdoc|"
 msgstr "| sphinxdoc |"
 
-#: ../../sphinx/doc/usage/theming.rst:119
-msgid "sphinxdoc"
-msgstr "SphinxDoc"
+#: ../../sphinx/doc/usage/theming.rst:102
+msgid "*scrolls*"
+msgstr "*சுருள்கள்*"
 
 #: ../../sphinx/doc/usage/theming.rst:102
 msgid "*sphinxdoc*"
 msgstr "*sphinxdoc*"
 
-#: ../../sphinx/doc/usage/theming.rst:100
-msgid "|scrolls|"
-msgstr "| சுருள்கள் |"
-
-#: ../../sphinx/doc/usage/theming.rst:120
-msgid "scrolls"
-msgstr "சுருள்கள்"
-
-#: ../../sphinx/doc/usage/theming.rst:102
-msgid "*scrolls*"
-msgstr "*சுருள்கள்*"
-
 #: ../../sphinx/doc/usage/theming.rst:104
 msgid "|agogo|"
 msgstr "| அகோகோ |"
-
-#: ../../sphinx/doc/usage/theming.rst:121
-msgid "agogo"
-msgstr "அகோகோ"
-
-#: ../../sphinx/doc/usage/theming.rst:106
-msgid "*agogo*"
-msgstr "*அகோகோ*"
 
 #: ../../sphinx/doc/usage/theming.rst:104
 msgid "|traditional|"
 msgstr "| பாரம்பரிய |"
 
-#: ../../sphinx/doc/usage/theming.rst:122
-msgid "traditional"
-msgstr "பாரம்பரிய"
+#: ../../sphinx/doc/usage/theming.rst:106
+msgid "*agogo*"
+msgstr "*அகோகோ*"
 
 #: ../../sphinx/doc/usage/theming.rst:106
 msgid "*traditional*"
 msgstr "*பாரம்பரிய*"
 
 #: ../../sphinx/doc/usage/theming.rst:108
-msgid "|nature|"
-msgstr "| இயற்கை |"
-
-#: ../../sphinx/doc/usage/theming.rst:123
-msgid "nature"
-msgstr "இயற்கை"
-
-#: ../../sphinx/doc/usage/theming.rst:110
-msgid "*nature*"
-msgstr "*இயற்கை*"
-
-#: ../../sphinx/doc/usage/theming.rst:108
 msgid "|haiku|"
 msgstr "| ஹைக்கு |"
 
-#: ../../sphinx/doc/usage/theming.rst:124
-msgid "haiku"
-msgstr "ஹைக்கு"
+#: ../../sphinx/doc/usage/theming.rst:108
+msgid "|nature|"
+msgstr "| இயற்கை |"
+
+#: ../../sphinx/doc/usage/theming.rst:11
+msgid "Builders"
+msgstr "பில்டர்கள்"
 
 #: ../../sphinx/doc/usage/theming.rst:110
 msgid "*haiku*"
 msgstr "*ஹைக்கு*"
 
-#: ../../sphinx/doc/usage/theming.rst:112
-msgid "|pyramid|"
-msgstr "| பிரமிட் |"
-
-#: ../../sphinx/doc/usage/theming.rst:125
-msgid "pyramid"
-msgstr "பிரமிட்"
-
-#: ../../sphinx/doc/usage/theming.rst:114
-msgid "*pyramid*"
-msgstr "*பிரமிட்*"
+#: ../../sphinx/doc/usage/theming.rst:110
+msgid "*nature*"
+msgstr "*இயற்கை*"
 
 #: ../../sphinx/doc/usage/theming.rst:112
 msgid "|bizstyle|"
 msgstr "| பிஸ்ஸ்டைல் |"
 
-#: ../../sphinx/doc/usage/theming.rst:126
-msgid "bizstyle"
-msgstr "பிஸ்ஸ்டைல்"
+#: ../../sphinx/doc/usage/theming.rst:112
+msgid "|pyramid|"
+msgstr "| பிரமிட் |"
 
 #: ../../sphinx/doc/usage/theming.rst:114
 msgid "*bizstyle*"
 msgstr "*பிஸ்ஸ்டைல்*"
 
+#: ../../sphinx/doc/usage/theming.rst:114
+msgid "*pyramid*"
+msgstr "*பிரமிட்*"
+
+#: ../../sphinx/doc/usage/theming.rst:117
+msgid "alabaster"
+msgstr "அலபாஸ்டர்"
+
+#: ../../sphinx/doc/usage/theming.rst:118
+msgid "classic"
+msgstr "செந்தரம்"
+
+#: ../../sphinx/doc/usage/theming.rst:119
+msgid "sphinxdoc"
+msgstr "SphinxDoc"
+
+#: ../../sphinx/doc/usage/theming.rst:120
+msgid "scrolls"
+msgstr "சுருள்கள்"
+
+#: ../../sphinx/doc/usage/theming.rst:121
+msgid "agogo"
+msgstr "அகோகோ"
+
+#: ../../sphinx/doc/usage/theming.rst:122
+msgid "traditional"
+msgstr "பாரம்பரிய"
+
+#: ../../sphinx/doc/usage/theming.rst:123
+msgid "nature"
+msgstr "இயற்கை"
+
+#: ../../sphinx/doc/usage/theming.rst:124
+msgid "haiku"
+msgstr "ஹைக்கு"
+
+#: ../../sphinx/doc/usage/theming.rst:125
+msgid "pyramid"
+msgstr "பிரமிட்"
+
+#: ../../sphinx/doc/usage/theming.rst:126
+msgid "bizstyle"
+msgstr "பிஸ்ஸ்டைல்"
+
 #: ../../sphinx/doc/usage/theming.rst:128
 msgid "Sphinx comes with a selection of themes to choose from."
 msgstr "SPHINX தேர்வு செய்ய கருப்பொருள்களின் தேர்வோடு வருகிறது."
+
+#: ../../sphinx/doc/usage/theming.rst:13
+msgid "Populate when the 'builders' document is split up."
+msgstr "'பில்டர்ஸ்' ஆவணம் பிரிக்கப்படும்போது விரிவுபடுத்துங்கள்."
+
+#: ../../sphinx/doc/usage/theming.rst:13
+msgid "Todo"
+msgstr "டோடோ"
 
 #: ../../sphinx/doc/usage/theming.rst:130
 msgid ""
@@ -304,10 +150,6 @@ msgstr ""
 #: ../../sphinx/doc/usage/theming.rst:136
 msgid "These themes are:"
 msgstr "இந்த கருப்பொருள்கள்:"
-
-#: ../../sphinx/doc/usage/theming.rst:193
-msgid "**basic**"
-msgstr "** அடிப்படை **"
 
 #: ../../sphinx/doc/usage/theming.rst:139
 msgid ""
@@ -393,6 +235,10 @@ msgid ""
 " with :kbd:`/` and allow removal of search highlighting with :kbd:`Esc`."
 msgstr "."
 
+#: ../../sphinx/doc/usage/theming.rst:17
+msgid "Themes"
+msgstr "கருப்பொருள்கள்"
+
 #: ../../sphinx/doc/usage/theming.rst:172
 msgid "Defaults to ``True``."
 msgstr "இயல்புநிலை `` உண்மை``."
@@ -422,9 +268,9 @@ msgstr ""
 ". வரம்பற்ற ஆழத்தை அனுமதிக்க அதை -1 ஆக அமைக்கவும். டோக்ட்ரீ உத்தரவில் "
 "தேர்ந்தெடுக்கப்பட்ட அதிகபட்ச ஆழத்திற்கு இயல்புநிலை."
 
-#: ../../sphinx/doc/usage/theming.rst:203
-msgid "**alabaster**"
-msgstr "** அலபாஸ்டர் **"
+#: ../../sphinx/doc/usage/theming.rst:193
+msgid "**basic**"
+msgstr "** அடிப்படை **"
 
 #: ../../sphinx/doc/usage/theming.rst:196
 msgid ""
@@ -441,9 +287,9 @@ msgstr ""
 "பயன்பாட்டிற்கு அதன் `நிறுவல் பக்கம்`_ ஐப் பார்க்கவும்: confval:` "
 "html_sidebars`."
 
-#: ../../sphinx/doc/usage/theming.rst:249
-msgid "**classic**"
-msgstr "**செந்தரம்**"
+#: ../../sphinx/doc/usage/theming.rst:203
+msgid "**alabaster**"
+msgstr "** அலபாஸ்டர் **"
 
 #: ../../sphinx/doc/usage/theming.rst:206
 msgid ""
@@ -510,6 +356,15 @@ msgstr ""
 #: ../../sphinx/doc/usage/theming.rst:229
 msgid "**sidebarbgcolor** (CSS color): Background color for the sidebar."
 msgstr "."
+
+#: ../../sphinx/doc/usage/theming.rst:23
+msgid ""
+"This section provides information about using pre-existing HTML themes. If "
+"you wish to create your own theme, refer to :doc:`/development/theming`."
+msgstr ""
+"முன்பே இருக்கும் HTML கருப்பொருள்களைப் பயன்படுத்துவது பற்றிய தகவல்களை இந்த "
+"பிரிவு வழங்குகிறது. உங்கள் சொந்த கருப்பொருளை உருவாக்க விரும்பினால், இதைப் "
+"பார்க்கவும்: doc: `/வளர்ச்சி/தீமிங்`."
 
 #: ../../sphinx/doc/usage/theming.rst:230
 msgid ""
@@ -586,13 +441,13 @@ msgstr ""
 "** பாடிஃபோன்ட் ** (CSS எழுத்துரு-குடும்பம்): சாதாரண உரைக்கான எழுத்துரு."
 
 #: ../../sphinx/doc/usage/theming.rst:249
+msgid "**classic**"
+msgstr "**செந்தரம்**"
+
+#: ../../sphinx/doc/usage/theming.rst:249
 msgid "**headfont** (CSS font-family): Font for headings."
 msgstr ""
 "** ஹெட்ஃபாண்ட் ** (CSS எழுத்துரு-குடும்பம்): தலைப்புகளுக்கான எழுத்துரு."
-
-#: ../../sphinx/doc/usage/theming.rst:260
-msgid "**sphinxdoc**"
-msgstr "** sphinxdoc **"
 
 #: ../../sphinx/doc/usage/theming.rst:252
 msgid ""
@@ -614,9 +469,9 @@ msgstr ""
 "பயன்படுத்துகின்றன <https://github.com/sphinx-"
 "doc/sphinx/tree/master/doc/_themes/sphinx13>` _."
 
-#: ../../sphinx/doc/usage/theming.rst:271
-msgid "**scrolls**"
-msgstr "** சுருள்கள் **"
+#: ../../sphinx/doc/usage/theming.rst:260
+msgid "**sphinxdoc**"
+msgstr "** sphinxdoc **"
 
 #: ../../sphinx/doc/usage/theming.rst:263
 msgid ""
@@ -639,6 +494,22 @@ msgstr "** subheadlineColor **"
 msgid "**linkcolor**"
 msgstr "** இணைப்பு வண்ணம் **"
 
+#: ../../sphinx/doc/usage/theming.rst:27
+msgid ""
+"Sphinx supports changing the appearance of its HTML output via *themes*.  A "
+"theme is a collection of HTML templates, stylesheet(s) and other static "
+"files. Additionally, it has a configuration file which specifies from which "
+"theme to inherit, which highlighting style to use, and what options exist "
+"for customizing the theme's look and feel."
+msgstr ""
+"ஸ்பின்க்ஸ் அதன் HTML வெளியீட்டின் தோற்றத்தை *கருப்பொருள்கள் *வழியாக "
+"மாற்றுவதை ஆதரிக்கிறது. ஒரு தீம் என்பது HTML வார்ப்புருக்கள், ஸ்டைல்ஷீட் "
+"(கள்) மற்றும் பிற நிலையான கோப்புகளின் தொகுப்பாகும். கூடுதலாக, இது ஒரு "
+"உள்ளமைவு கோப்பைக் கொண்டுள்ளது, இது எந்த கருப்பொருளிலிருந்து மரபுரிமையாக "
+"இருக்க வேண்டும் என்பதைக் குறிப்பிடுகிறது, இது பாணியைப் பயன்படுத்துவதற்கு "
+"முன்னிலைப்படுத்துகிறது, மேலும் கருப்பொருளின் தோற்றம் மற்றும் உணர்வைத் "
+"தனிப்பயனாக்க என்ன விருப்பங்கள் உள்ளன."
+
 #: ../../sphinx/doc/usage/theming.rst:270
 msgid "**visitedlinkcolor**"
 msgstr "** VisitedLinkColor **"
@@ -647,9 +518,9 @@ msgstr "** VisitedLinkColor **"
 msgid "**admonitioncolor**"
 msgstr "** formonitionColor **"
 
-#: ../../sphinx/doc/usage/theming.rst:295
-msgid "**agogo**"
-msgstr "** அகோகோ **"
+#: ../../sphinx/doc/usage/theming.rst:271
+msgid "**scrolls**"
+msgstr "** சுருள்கள் **"
 
 #: ../../sphinx/doc/usage/theming.rst:274
 msgid ""
@@ -732,9 +603,9 @@ msgid ""
 " is ``justify``."
 msgstr "."
 
-#: ../../sphinx/doc/usage/theming.rst:299
-msgid "**nature**"
-msgstr "** இயற்கை **"
+#: ../../sphinx/doc/usage/theming.rst:295
+msgid "**agogo**"
+msgstr "** அகோகோ **"
 
 #: ../../sphinx/doc/usage/theming.rst:298
 msgid ""
@@ -744,9 +615,9 @@ msgstr ""
 "ஒரு பச்சை தீம். *மூசிட்பார் *மற்றும் *பக்கபார்பிட் *க்கு அப்பால் தற்போது "
 "விருப்பங்கள் இல்லை."
 
-#: ../../sphinx/doc/usage/theming.rst:303
-msgid "**pyramid**"
-msgstr "** பிரமிட் **"
+#: ../../sphinx/doc/usage/theming.rst:299
+msgid "**nature**"
+msgstr "** இயற்கை **"
 
 #: ../../sphinx/doc/usage/theming.rst:302
 msgid ""
@@ -756,9 +627,9 @@ msgstr ""
 "பிளேஸ் லாஃப்ளாம் வடிவமைத்த பிரமிட் வலை கட்டமைப்பின் திட்டத்தின் ஒரு தீம். "
 "*மூசிட்பார் *மற்றும் *பக்கபார்பிட் *க்கு அப்பால் தற்போது விருப்பங்கள் இல்லை."
 
-#: ../../sphinx/doc/usage/theming.rst:316
-msgid "**haiku**"
-msgstr "** ஹைக்கு **"
+#: ../../sphinx/doc/usage/theming.rst:303
+msgid "**pyramid**"
+msgstr "** பிரமிட் **"
 
 #: ../../sphinx/doc/usage/theming.rst:306
 msgid ""
@@ -787,9 +658,9 @@ msgid ""
 "**hoverlinkcolor** (CSS colors): Colors for various body elements."
 msgstr "."
 
-#: ../../sphinx/doc/usage/theming.rst:320
-msgid "**traditional**"
-msgstr "** பாரம்பரிய **"
+#: ../../sphinx/doc/usage/theming.rst:316
+msgid "**haiku**"
+msgstr "** ஹைக்கு **"
 
 #: ../../sphinx/doc/usage/theming.rst:319
 msgid ""
@@ -799,9 +670,9 @@ msgstr ""
 "பழைய பைதான் ஆவணத்தை ஒத்த ஒரு தீம். *மூசிட்பார் *மற்றும் *பக்கபார்பிட் *க்கு "
 "அப்பால் தற்போது விருப்பங்கள் இல்லை."
 
-#: ../../sphinx/doc/usage/theming.rst:331
-msgid "**epub**"
-msgstr "** எபப் **"
+#: ../../sphinx/doc/usage/theming.rst:320
+msgid "**traditional**"
+msgstr "** பாரம்பரிய **"
 
 #: ../../sphinx/doc/usage/theming.rst:323
 msgid ""
@@ -818,6 +689,14 @@ msgid ""
 "`relbar1` block is inserted in the epub output, otherwise it is omitted."
 msgstr "."
 
+#: ../../sphinx/doc/usage/theming.rst:33
+msgid ""
+"Themes are meant to be project-unaware, so they can be used for different "
+"projects without change."
+msgstr ""
+"கருப்பொருள்கள் திட்ட-அனாவேர் என்று பொருள், எனவே அவை மாற்றமின்றி வெவ்வேறு "
+"திட்டங்களுக்கு பயன்படுத்தப்படலாம்."
+
 #: ../../sphinx/doc/usage/theming.rst:330
 msgid ""
 "**footer**  (true or false, default ``True``): If this is true, the `footer`"
@@ -827,9 +706,9 @@ msgstr ""
 " இருந்தால், `அடிக்குறிப்பு` தொகுதி EPUB வெளியீட்டில் செருகப்படுகிறது, "
 "இல்லையெனில் அது தவிர்க்கப்படுகிறது."
 
-#: ../../sphinx/doc/usage/theming.rst:338
-msgid "**bizstyle**"
-msgstr "** பிஸ்ஸ்டைல் **"
+#: ../../sphinx/doc/usage/theming.rst:331
+msgid "**epub**"
+msgstr "** எபப் **"
 
 #: ../../sphinx/doc/usage/theming.rst:334
 msgid ""
@@ -838,6 +717,10 @@ msgid ""
 msgstr ""
 "ஒரு எளிய நீல தீம். பின்வரும் விருப்பங்கள் *நோசிட்பார் *மற்றும் *பக்கபார்விட்"
 " *க்கு அப்பால் ஆதரிக்கப்படுகின்றன:"
+
+#: ../../sphinx/doc/usage/theming.rst:338
+msgid "**bizstyle**"
+msgstr "** பிஸ்ஸ்டைல் **"
 
 #: ../../sphinx/doc/usage/theming.rst:340
 msgid "'alabaster', 'sphinx_rtd_theme' and 'bizstyle' theme."
@@ -877,3 +760,120 @@ msgstr ""
 "கருப்பொருள்களைக் காட்டுகிறது, ஒவ்வொரு கருப்பொருளின் கீழும் டெமோ ஆவணங்கள் "
 "வழங்கப்படுகின்றன. Pypi__ இல் கருப்பொருள்களைக் காணலாம் (வகைப்படுத்தி `` "
 "கட்டமைப்பு :: SPHINX :: தீம்``), Github__ மற்றும் gitlab__."
+
+#: ../../sphinx/doc/usage/theming.rst:37
+msgid "Using a theme"
+msgstr "ஒரு கருப்பொருளைப் பயன்படுத்துதல்"
+
+#: ../../sphinx/doc/usage/theming.rst:39
+msgid ""
+"Using a :ref:`theme provided with Sphinx <builtin-themes>` is easy. Since "
+"these do not need to be installed, you only need to set the "
+":confval:`html_theme` config value. For example, to enable the ``classic`` "
+"theme, add the following to :file:`conf.py`::"
+msgstr ""
+"ஒரு: ref ஐப் பயன்படுத்துதல்: `ஸ்பிங்க்ஸ் <பில்டின்-தீம்ஸ்> உடன் வழங்கப்பட்ட "
+"தீம் எளிதானது. இவை நிறுவப்பட வேண்டிய அவசியமில்லை என்பதால், நீங்கள்: confval:"
+" `html_theme` கட்டமைப்பு மதிப்பை மட்டுமே அமைக்க வேண்டும். எடுத்துக்காட்டாக, "
+"`` கிளாசிக்`` கருப்பொருளை இயக்க, பின்வருவனவற்றைச் சேர்க்கவும்: கோப்பு: "
+"`conf.py` ::"
+
+#: ../../sphinx/doc/usage/theming.rst:46
+msgid ""
+"You can also set theme-specific options using the "
+":confval:`html_theme_options` config value.  These options are generally "
+"used to change the look and feel of the theme. For example, to place the "
+"sidebar on the right side and a black background for the relation bar (the "
+"bar with the navigation links at the page's top and bottom), add the "
+"following :file:`conf.py`::"
+msgstr ""
+": Confval: `html_theme_options` கட்டமைப்பு மதிப்பைப் பயன்படுத்தி "
+"தீம்-குறிப்பிட்ட விருப்பங்களையும் நீங்கள் அமைக்கலாம். இந்த விருப்பங்கள் "
+"பொதுவாக கருப்பொருளின் தோற்றத்தையும் உணர்வையும் மாற்ற பயன்படுகின்றன. "
+"எடுத்துக்காட்டாக, பக்கப்பட்டியை வலது பக்கத்தில் வைக்கவும், உறவுக்கு ஒரு "
+"கருப்பு பின்னணியையும் (பக்கத்தின் மேல் மற்றும் கீழ் வழிசெலுத்தல் "
+"இணைப்புகளைக் கொண்ட பட்டி), பின்வருவனவற்றைச் சேர்க்கவும்: கோப்பு: `conf.py` "
+"::"
+
+#: ../../sphinx/doc/usage/theming.rst:57
+msgid ""
+"If the theme does not come with Sphinx, it can be in two static forms or as "
+"a Python package. For the static forms, either a directory (containing "
+":file:`theme.conf` and other needed files), or a zip file with the same "
+"contents is supported. The directory or zipfile must be put where Sphinx can"
+" find it; for this there is the config value :confval:`html_theme_path`. "
+"This can be a list of directories, relative to the directory containing "
+":file:`conf.py`, that can contain theme directories or zip files.  For "
+"example, if you have a theme in the file :file:`blue.zip`, you can put it "
+"right in the directory containing :file:`conf.py` and use this "
+"configuration::"
+msgstr ""
+"தீம் ஸ்பிங்க்ஸுடன் வரவில்லை என்றால், அது இரண்டு நிலையான வடிவங்களில் அல்லது "
+"பைதான் தொகுப்பாக இருக்கலாம். நிலையான படிவங்களுக்கு, ஒரு அடைவு (உள்ளிட்டவை: "
+"கோப்பு: `தீம்.கான்ஃப்` மற்றும் தேவையான பிற கோப்புகள்), அல்லது அதே "
+"உள்ளடக்கங்களைக் கொண்ட ஜிப் கோப்பு ஆதரிக்கப்படுகிறது. ஸ்பிங்க்ஸ் அதைக் "
+"கண்டுபிடிக்கக்கூடிய இடத்தில் அடைவு அல்லது ஜிப்ஃபைல் வைக்கப்பட வேண்டும்; "
+"இதற்காக கட்டமைப்பு மதிப்பு உள்ளது: confVal: `html_theme_path`. இது "
+"கோப்பகங்களுடன் தொடர்புடைய கோப்பகங்களின் பட்டியலாக இருக்கலாம்: கோப்பு: "
+"`conf.py`, இது தீம் கோப்பகங்கள் அல்லது ஜிப் கோப்புகளைக் கொண்டிருக்கலாம். "
+"எடுத்துக்காட்டாக, கோப்பில் உங்களிடம் ஒரு தீம் இருந்தால்: கோப்பு: `blue.zip`,"
+" நீங்கள் அதை வைத்திருக்கும் கோப்பகத்தில் சரியாக வைக்கலாம்: கோப்பு:` conf.py`"
+" மற்றும் இந்த உள்ளமைவைப் பயன்படுத்தவும் ::"
+
+#: ../../sphinx/doc/usage/theming.rst:6
+msgid "HTML Theming"
+msgstr "HTML தீமிங்"
+
+#: ../../sphinx/doc/usage/theming.rst:70
+msgid ""
+"The third form is a Python package.  If a theme you want to use is "
+"distributed as a Python package, you can use it after installing"
+msgstr ""
+"மூன்றாவது வடிவம் பைதான் தொகுப்பு. நீங்கள் பயன்படுத்த விரும்பும் தீம் பைதான் "
+"தொகுப்பாக விநியோகிக்கப்பட்டால், நிறுவிய பின் அதைப் பயன்படுத்தலாம்"
+
+#: ../../sphinx/doc/usage/theming.rst:78
+msgid ""
+"Once installed, this can be used in the same manner as a directory or "
+"zipfile-based theme::"
+msgstr ""
+"நிறுவப்பட்டதும், இதை ஒரு அடைவு அல்லது ஜிப்ஃபைல் அடிப்படையிலான தீம் போலவே "
+"பயன்படுத்தலாம் ::"
+
+#: ../../sphinx/doc/usage/theming.rst:8
+msgid "Sphinx provides a number of builders for HTML and HTML-based formats."
+msgstr ""
+"HTML மற்றும் HTML- அடிப்படையிலான வடிவங்களுக்கு SPHINX பல பில்டர்களை "
+"வழங்குகிறது."
+
+#: ../../sphinx/doc/usage/theming.rst:83
+msgid ""
+"For more information on the design of themes, including information about "
+"writing your own themes, refer to :doc:`/development/theming`."
+msgstr ""
+"உங்கள் சொந்த கருப்பொருள்களை எழுதுவது பற்றிய தகவல்கள் உட்பட கருப்பொருள்களின் "
+"வடிவமைப்பு குறித்த கூடுதல் தகவலுக்கு,: DOC: `/வளர்ச்சி/கருப்பொருள்`."
+
+#: ../../sphinx/doc/usage/theming.rst:89
+msgid "Builtin themes"
+msgstr "பில்டின் தீம்கள்"
+
+#: ../../sphinx/doc/usage/theming.rst:94
+msgid "**Theme overview**"
+msgstr "** தீம் கண்ணோட்டம் **"
+
+#: ../../sphinx/doc/usage/theming.rst:96
+msgid "|alabaster|"
+msgstr "| அலபாஸ்டர் |"
+
+#: ../../sphinx/doc/usage/theming.rst:96
+msgid "|classic|"
+msgstr "| கிளாசிக் |"
+
+#: ../../sphinx/doc/usage/theming.rst:98
+msgid "*alabaster*"
+msgstr "*அலபாஸ்டர்*"
+
+#: ../../sphinx/doc/usage/theming.rst:98
+msgid "*classic*"
+msgstr "*செந்தரம்*"

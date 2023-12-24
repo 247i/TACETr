@@ -19,6 +19,611 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.filter_regexps:9
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.match_regexps:9
+msgid ""
+"Only one of :attr:`BasicNewsRecipe.match_regexps` or "
+":attr:`BasicNewsRecipe.filter_regexps` should be defined."
+msgstr ""
+"ஒன்று மட்டுமே: ATTR: `BasicNewsRecipe.match_regexps` அல்லது: attr:` "
+"BasicNewsRecipe.filter_regexps` வரையறுக்கப்பட வேண்டும்."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.articles_are_obfuscated:1
+msgid ""
+"Set to True and implement :meth:`get_obfuscated_article` to handle websites "
+"that try to make it difficult to scrape content."
+msgstr ""
+"உண்மை மற்றும் செயல்படுத்தவும்: மெத்: `get_obfuscated_article` வலைத்தளங்களைக்"
+" கையாள உள்ளடக்கத்தை துடைக்க கடினமாக முயற்சிக்கிறது."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.auto_cleanup:1
+msgid ""
+"Automatically extract all the text from downloaded article pages. Uses the "
+"algorithms from the readability project. Setting this to True, means that "
+"you do not have to worry about cleaning up the downloaded HTML manually "
+"(though manual cleanup will always be superior)."
+msgstr ""
+"பதிவிறக்கம் செய்யப்பட்ட கட்டுரை பக்கங்களிலிருந்து எல்லா உரையையும் தானாகவே "
+"பிரித்தெடுக்கவும். வாசிப்பு திட்டத்திலிருந்து வழிமுறைகளைப் பயன்படுத்துகிறது."
+" இதை உண்மையாக அமைத்தல், பதிவிறக்கம் செய்யப்பட்ட HTML ஐ கைமுறையாக சுத்தம் "
+"செய்வதைப் பற்றி நீங்கள் கவலைப்பட வேண்டியதில்லை (கையேடு தூய்மைப்படுத்தல் "
+"எப்போதும் உயர்ந்ததாக இருக்கும் என்றாலும்)."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.auto_cleanup_keep:1
+msgid ""
+"Specify elements that the auto cleanup algorithm should never remove. The "
+"syntax is a XPath expression. For example::"
+msgstr ""
+"ஆட்டோ தூய்மைப்படுத்தும் வழிமுறை ஒருபோதும் அகற்றக்கூடாது என்ற கூறுகளைக் "
+"குறிப்பிடவும். தொடரியல் ஒரு எக்ஸ்பாத் வெளிப்பாடு. உதாரணத்திற்கு::"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.center_navbar:1
+msgid ""
+"If True the navigation bar is center aligned, otherwise it is left aligned"
+msgstr ""
+"உண்மை என்றால் வழிசெலுத்தல் பட்டி மையம் சீரமைக்கப்பட்டதாக இருந்தால், "
+"இல்லையெனில் அது சீரமைக்கப்படுகிறது"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.compress_news_images:1
+msgid ""
+"Set this to False to ignore all scaling and compression parameters and pass "
+"images through unmodified. If True and the other compression parameters are "
+"left at their default values, JPEG images will be scaled to fit in the "
+"screen dimensions set by the output profile and compressed to size at most "
+"(w * h)/16 where w x h are the scaled image dimensions."
+msgstr ""
+"அனைத்து அளவிடுதல் மற்றும் சுருக்க அளவுருக்களை புறக்கணிக்க இதை பொய்யாக "
+"அமைக்கவும், மாற்றப்படாத மூலம் படங்களை அனுப்பவும். உண்மை மற்றும் பிற சுருக்க "
+"அளவுருக்கள் அவற்றின் இயல்புநிலை மதிப்புகளில் விடப்பட்டால், வெளியீட்டு "
+"சுயவிவரத்தால் அமைக்கப்பட்ட திரை பரிமாணங்களில் பொருந்தும் வகையில் JPEG "
+"படங்கள் அளவிடப்படும் மற்றும் அதிகபட்சமாக (W * H)/16 அளவில் சுருக்கப்படும், "
+"அங்கு W x H என்பது அளவிடப்பட்ட பட பரிமாணங்கள் ."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.compress_news_images_auto_size:1
+msgid ""
+"The factor used when auto compressing JPEG images. If set to None, auto "
+"compression is disabled. Otherwise, the images will be reduced in size to (w"
+" * h)/compress_news_images_auto_size bytes if possible by reducing the "
+"quality level, where w x h are the image dimensions in pixels. The minimum "
+"JPEG quality will be 5/100 so it is possible this constraint will not be "
+"met.  This parameter can be overridden by the parameter "
+"compress_news_images_max_size which provides a fixed maximum size for "
+"images. Note that if you enable scale_news_images_to_device then the image "
+"will first be scaled and then its quality lowered until its size is less "
+"than (w * h)/factor where w and h are now the *scaled* image dimensions. In "
+"other words, this compression happens after scaling."
+msgstr ""
+"தானாக அமுக்க JPEG படங்களை பயன்படுத்தும்போது பயன்படுத்தப்படும் காரணி. "
+"எதுவுமில்லை என்றால், ஆட்டோ சுருக்கம் முடக்கப்பட்டுள்ளது. இல்லையெனில், "
+"படங்கள் (W * H)/சுருக்கம்_நியூஸ்_ஐஎம்ஜேஜ்கள்_ஆட்டோ_சைஸ் பைட்டுகள் தர அளவைக் "
+"குறைப்பதன் மூலம் குறைக்கப்படும், அங்கு w x h என்பது பிக்சல்களில் பட "
+"பரிமாணங்களாகும். குறைந்தபட்ச JPEG தரம் 5/100 ஆக இருக்கும், எனவே இந்த "
+"கட்டுப்பாடு பூர்த்தி செய்யப்படாது. இந்த அளவுருவை "
+"சுருக்கம்_நியூஸ்_ஐஎம்ஜேஜ்கள்_மாக்ஸ்_சிஸ் அளவுருவால் மீறலாம், இது படங்களுக்கு"
+" நிலையான அதிகபட்ச அளவை வழங்குகிறது. நீங்கள் scale_news_images_to_device ஐ "
+"இயக்கினால், படம் முதலில் அளவிடப்படும், பின்னர் அதன் அளவு (W * h)/காரணி "
+"குறைவாக இருக்கும் வரை அதன் தரம் குறையும், அங்கு W மற்றும் H இப்போது * "
+"அளவிடப்பட்ட * பட பரிமாணங்கள். வேறு வார்த்தைகளில் கூறுவதானால், இந்த சுருக்கம்"
+" அளவிடப்பட்ட பிறகு நிகழ்கிறது."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.compress_news_images_max_size:1
+msgid ""
+"Set JPEG quality so images do not exceed the size given (in KBytes). If set,"
+" this parameter overrides auto compression via "
+"compress_news_images_auto_size. The minimum JPEG quality will be 5/100 so it"
+" is possible this constraint will not be met."
+msgstr ""
+"JPEG தரத்தை அமைக்கவும், எனவே படங்கள் கொடுக்கப்பட்ட அளவை விட அதிகமாக "
+"இருக்காது (KBytes இல்). அமைக்கப்பட்டால், இந்த அளவுரு தானாக சுருக்கத்தை "
+"அமுக்க_நியூஸ்_ஐஎம்ஜேஜ்கள்_ஆட்டோ_சிஸ் வழியாக மேலெழுதும். குறைந்தபட்ச JPEG "
+"தரம் 5/100 ஆக இருக்கும், எனவே இந்த கட்டுப்பாடு பூர்த்தி செய்யப்படாது."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.conversion_options:1
+msgid ""
+"Recipe specific options to control the conversion of the downloaded content "
+"into an e-book. These will override any user or plugin specified values, so "
+"only use if absolutely necessary. For example::"
+msgstr ""
+"பதிவிறக்கம் செய்யப்பட்ட உள்ளடக்கத்தை மின் புத்தகமாக மாற்றுவதைக் "
+"கட்டுப்படுத்த செய்முறை குறிப்பிட்ட விருப்பங்கள். இவை எந்தவொரு பயனர் அல்லது "
+"சொருகி குறிப்பிட்ட மதிப்புகளை மேலெழுதும், எனவே முற்றிலும் தேவைப்பட்டால் "
+"மட்டுமே பயன்படுத்தவும். உதாரணத்திற்கு::"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.cover_margins:1
+msgid ""
+"By default, the cover image returned by get_cover_url() will be used as the "
+"cover for the periodical.  Overriding this in your recipe instructs calibre "
+"to render the downloaded cover into a frame whose width and height are "
+"expressed as a percentage of the downloaded cover. cover_margins = (10, 15, "
+"'#ffffff') pads the cover with a white margin 10px on the left and right, "
+"15px on the top and bottom. Color names are defined `here "
+"<https://www.imagemagick.org/script/color.php>`_. Note that for some reason,"
+" white does not always work in Windows. Use #ffffff instead"
+msgstr ""
+"இயல்பாக, Get_Cover_url () ஆல் வழங்கப்பட்ட அட்டை படம் குறிப்பிட்ட "
+"காலத்திற்கான அட்டையாக பயன்படுத்தப்படும். உங்கள் செய்முறையில் இதை மீறுவது "
+"பதிவிறக்கம் செய்யப்பட்ட அட்டையை ஒரு சட்டகமாக வழங்குமாறு அறிவுறுத்துகிறது, "
+"அதன் அகலமும் உயரமும் பதிவிறக்கம் செய்யப்பட்ட அட்டையின் சதவீதமாக "
+"வெளிப்படுத்தப்படுகின்றன. கவர்_மார்கின்ஸ் = (10, 15, '#FFFFFF') இடது மற்றும் "
+"வலதுபுறத்தில் ஒரு வெள்ளை விளிம்பு 10px, மேல் மற்றும் கீழ் 15px உடன் கவர். "
+"வண்ண பெயர்கள் வரையறுக்கப்பட்டுள்ளன `இங்கே "
+"<https://www.imagemagick.org/script/color.php>` _. சில காரணங்களால், வெள்ளை "
+"எப்போதும் விண்டோஸில் வேலை செய்யாது என்பதை நினைவில் கொள்க. அதற்கு பதிலாக "
+"#FFFFFF ஐப் பயன்படுத்தவும்"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.delay:1
+msgid ""
+"The default delay between consecutive downloads in seconds. The argument may"
+" be a floating point number to indicate a more precise time. See "
+":meth:`get_url_specific_delay` to implement per URL delays."
+msgstr ""
+"நொடிகளில் தொடர்ச்சியான பதிவிறக்கங்களுக்கு இடையிலான இயல்புநிலை தாமதம். வாதம் "
+"மிகவும் துல்லியமான நேரத்தைக் குறிக்க மிதக்கும் புள்ளி எண்ணாக இருக்கலாம். "
+"காண்க: மெத்: URL தாமதங்களுக்கு செயல்படுத்த `get_url_specific_delay`."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.description:1
+msgid ""
+"A couple of lines that describe the content this recipe downloads. This will"
+" be used primarily in a GUI that presents a list of recipes."
+msgstr ""
+"உள்ளடக்கத்தை விவரிக்கும் இரண்டு வரிகள் இந்த செய்முறை பதிவிறக்குகிறது. இது "
+"முதன்மையாக ஒரு GUI இல் பயன்படுத்தப்படும், இது சமையல் பட்டியலை முன்வைக்கிறது."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.encoding:1
+msgid ""
+"Specify an override encoding for sites that have an incorrect charset "
+"specification. The most common being specifying ``latin1`` and using "
+"``cp1252``. If None, try to detect the encoding. If it is a callable, the "
+"callable is called with two arguments: The recipe object and the source to "
+"be decoded. It must return the decoded source."
+msgstr ""
+"தவறான சார்ஸெட் விவரக்குறிப்பைக் கொண்ட தளங்களுக்கான மேலெழுதும் "
+"குறியாக்கத்தைக் குறிப்பிடவும். `` லத்தீன் 1`` ஐக் குறிப்பிடுவது மிகவும் "
+"பொதுவானது மற்றும் `` cp1252`` ஐப் பயன்படுத்துதல். எதுவுமில்லை என்றால், "
+"குறியாக்கத்தைக் கண்டறிய முயற்சிக்கவும். இது அழைக்கக்கூடியதாக இருந்தால், "
+"அழைக்கக்கூடியது இரண்டு வாதங்களுடன் அழைக்கப்படுகிறது: செய்முறை பொருள் மற்றும்"
+" மூலமானது டிகோட் செய்யப்பட வேண்டும். இது டிகோட் செய்யப்பட்ட மூலத்தை "
+"திருப்பித் தர வேண்டும்."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.extra_css:1
+msgid ""
+"Specify any extra :term:`CSS` that should be added to downloaded "
+":term:`HTML` files. It will be inserted into `<style>` tags, just before the"
+" closing `</head>` tag thereby overriding all :term:`CSS` except that which "
+"is declared using the style attribute on individual :term:`HTML` tags. Note "
+"that if you want to programmatically generate the extra_css override the "
+":meth:`get_extra_css()` method instead. For example::"
+msgstr ""
+"பதிவிறக்கம் செய்யப்பட்டவற்றில் சேர்க்கப்பட வேண்டிய கூடுதல்: கால: `CSS` ஐக் "
+"குறிப்பிடவும்: கால:` HTML` கோப்புகள். இது `<syle>` குறிச்சொற்களில் "
+"செருகப்படும், இதன் மூலம் `</head>` குறிச்சொல் அதன் மூலம் அனைத்தையும் "
+"மீறுகிறது: கால: `css` தனிநபர்: கால: கால:` html` குறிச்சொற்களைப் பயன்படுத்தி "
+"அறிவிக்கப்பட்டதைத் தவிர . கூடுதல்_சிஎஸ்எஸ்ஸை மேலெழுதும்: மெத்: "
+"`get_extra_css ()` அதற்கு பதிலாக முறை ஆகியவற்றை நீங்கள் நிரல் முறையில் "
+"உருவாக்க விரும்பினால் என்பதை நினைவில் கொள்க. உதாரணத்திற்கு::"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.feeds:1
+msgid ""
+"List of feeds to download. Can be either ``[url1, url2, ...]`` or "
+"``[('title1', url1), ('title2', url2),...]``"
+msgstr ""
+"பதிவிறக்கம் செய்ய ஊட்டங்களின் பட்டியல். `` [Url1, url2, ...] `` அல்லது "
+"`(('தலைப்பு 1', url1), ('தலைப்பு 2', url2), ...]` `"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.filter_regexps:1
+msgid ""
+"List of regular expressions that determines which links to ignore. If empty "
+"it is ignored. Used only if is_link_wanted is not implemented. For example::"
+msgstr ""
+"புறக்கணிக்க எந்த இணைப்புகளை தீர்மானிக்கும் வழக்கமான வெளிப்பாடுகளின் "
+"பட்டியல். காலியாக இருந்தால் அது புறக்கணிக்கப்படுகிறது. IS_link_wanted "
+"செயல்படுத்தப்படாவிட்டால் மட்டுமே பயன்படுத்தப்படுகிறது. உதாரணத்திற்கு::"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.filter_regexps:7
+msgid "will remove all URLs that have `ads.doubleclick.net` in them."
+msgstr "`விளம்பரங்கள். DoubleClick.net` கொண்ட அனைத்து URL களையும் அகற்றும்."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.handle_gzip:1
+msgid ""
+"Set to False if you do not want to use gzipped transfers. Note that some old"
+" servers flake out with gzip"
+msgstr ""
+"நீங்கள் gziped இடமாற்றங்களைப் பயன்படுத்த விரும்பவில்லை என்றால் பொய்யாக "
+"அமைக்கவும். சில பழைய சேவையகங்கள் GZIP உடன் வெளியேறுகின்றன என்பதை நினைவில் "
+"கொள்க"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.ignore_duplicate_articles:1
+msgid ""
+"Ignore duplicates of articles that are present in more than one section. A "
+"duplicate article is an article that has the same title and/or URL. To "
+"ignore articles with the same title, set this to::"
+msgstr ""
+"ஒன்றுக்கு மேற்பட்ட பிரிவுகளில் இருக்கும் கட்டுரைகளின் நகல்களைப் "
+"புறக்கணிக்கவும். ஒரு நகல் கட்டுரை என்பது ஒரே தலைப்பு மற்றும்/அல்லது URL ஐக் "
+"கொண்ட ஒரு கட்டுரை. அதே தலைப்பைக் கொண்ட கட்டுரைகளை புறக்கணிக்க, இதை "
+"அமைக்கவும் ::"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.ignore_duplicate_articles:11
+msgid "To match on title or URL, set it to::"
+msgstr "தலைப்பு அல்லது URL இல் பொருத்த, அதை அமைக்கவும் ::"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.ignore_duplicate_articles:7
+msgid "To use URLs instead, set it to::"
+msgstr "அதற்கு பதிலாக URL களைப் பயன்படுத்த, அதை அமைக்கவும் ::"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.keep_only_tags:1
+msgid ""
+"Keep only the specified tags and their children. For the format for "
+"specifying a tag see :attr:`BasicNewsRecipe.remove_tags`. If this list is "
+"not empty, then the `<body>` tag will be emptied and re-filled with the tags"
+" that match the entries in this list. For example::"
+msgstr ""
+"குறிப்பிட்ட குறிச்சொற்களையும் அவர்களின் குழந்தைகளையும் மட்டுமே "
+"வைத்திருங்கள். ஒரு குறிச்சொல்லைக் குறிப்பிடுவதற்கான வடிவமைப்பிற்கு: Attr: "
+"`BasicNewsRecipe.Remove_tags`. இந்த பட்டியல் காலியாக இல்லாவிட்டால், இந்த "
+"பட்டியலில் உள்ள உள்ளீடுகளுடன் பொருந்தக்கூடிய குறிச்சொற்களுடன் `<உடல்>` "
+"குறிச்சொல் காலியாகி மீண்டும் நிரப்பப்படும். உதாரணத்திற்கு::"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.keep_only_tags:8
+msgid ""
+"will keep only tags that have an `id` attribute of `\"content\"` or "
+"`\"heading\"`."
+msgstr ""
+"`\" உள்ளடக்கம் \"` அல்லது `தலைப்பு\" `` ஐடி` பண்புக்கூறு கொண்ட குறிச்சொற்களை"
+" மட்டுமே வைத்திருக்கும்."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.language:1
+msgid ""
+"The language that the news is in. Must be an ISO-639 code either two or "
+"three characters long"
+msgstr ""
+"செய்தி இருக்கும் மொழி. இரண்டு அல்லது மூன்று எழுத்துக்கள் நீளமாக ஐஎஸ்ஓ -639 "
+"குறியீடாக இருக்க வேண்டும்"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.masthead_url:1
+msgid ""
+"By default, calibre will use a default image for the masthead (Kindle only)."
+" Override this in your recipe to provide a URL to use as a masthead."
+msgstr ""
+"இயல்பாக, காலிபர் மாஸ்ட்ஹெட் (கின்டெல் மட்டும்) இயல்புநிலை படத்தைப் "
+"பயன்படுத்தும். உங்கள் செய்முறையில் இதை மீறுங்கள்."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.match_regexps:1
+msgid ""
+"List of regular expressions that determines which links to follow. If empty,"
+" it is ignored. Used only if is_link_wanted is not implemented. For "
+"example::"
+msgstr ""
+"எந்த இணைப்புகளைப் பின்பற்ற வேண்டும் என்பதை தீர்மானிக்கும் வழக்கமான "
+"வெளிப்பாடுகளின் பட்டியல். காலியாக இருந்தால், அது புறக்கணிக்கப்படுகிறது. "
+"IS_link_wanted செயல்படுத்தப்படாவிட்டால் மட்டுமே பயன்படுத்தப்படுகிறது. "
+"உதாரணத்திற்கு::"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.match_regexps:7
+msgid "will match all URLs that have `page=some number` in them."
+msgstr "அவற்றில் `பக்கம் = சில எண்` கொண்ட அனைத்து URL களையும் பொருத்தும்."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.max_articles_per_feed:1
+msgid ""
+"Maximum number of articles to download from each feed. This is primarily "
+"useful for feeds that don't have article dates. For most feeds, you should "
+"use :attr:`BasicNewsRecipe.oldest_article`"
+msgstr ""
+"ஒவ்வொரு ஊட்டத்திலிருந்தும் பதிவிறக்கம் செய்ய அதிகபட்ச கட்டுரைகள். கட்டுரை "
+"தேதிகள் இல்லாத ஊட்டங்களுக்கு இது முதன்மையாக பயனுள்ளதாக இருக்கும். "
+"பெரும்பாலான ஊட்டங்களுக்கு, நீங்கள் பயன்படுத்த வேண்டும்: ATTR: "
+"`BasicNewsRecipe.oldest_article`"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.needs_subscription:1
+msgid ""
+"If True the GUI will ask the user for a username and password to use while "
+"downloading. If set to \"optional\" the use of a username and password "
+"becomes optional"
+msgstr ""
+"உண்மை என்றால் GUI பயனருக்கு பயனர்பெயர் மற்றும் கடவுச்சொல்லை பதிவிறக்கும் "
+"போது பயன்படுத்துமாறு கேட்கும். \"விரும்பினால்\" என அமைக்கப்பட்டால், "
+"பயனர்பெயர் மற்றும் கடவுச்சொல்லின் பயன்பாடு விருப்பமாகிறது"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.no_stylesheets:1
+msgid ""
+"Convenient flag to disable loading of stylesheets for websites that have "
+"overly complex stylesheets unsuitable for conversion to e-book formats. If "
+"True stylesheets are not downloaded and processed"
+msgstr ""
+"மின்-புத்தக வடிவங்களுக்கு மாற்றுவதற்கு பொருத்தமற்ற அதிகப்படியான சிக்கலான "
+"ஸ்டைல்ஷீட்களைக் கொண்ட வலைத்தளங்களுக்கான ஸ்டைல்ஷீட்களை ஏற்றுவதை முடக்க "
+"வசதியான கொடி. உண்மையான ஸ்டைல்ஷீட்கள் பதிவிறக்கம் செய்யப்பட்டு "
+"செயலாக்கப்படாவிட்டால்"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.oldest_article:1
+msgid "Oldest article to download from this news source. In days."
+msgstr ""
+"இந்த செய்தி மூலத்திலிருந்து பதிவிறக்கம் செய்ய பழமையான கட்டுரை. நாட்களில்."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.preprocess_regexps:1
+msgid ""
+"List of :term:`regexp` substitution rules to run on the downloaded "
+":term:`HTML`. Each element of the list should be a two element tuple. The "
+"first element of the tuple should be a compiled regular expression and the "
+"second a callable that takes a single match object and returns a string to "
+"replace the match. For example::"
+msgstr ""
+"பட்டியல்: கால: `REGEXP` பதிவிறக்கம் செய்யப்பட்டவற்றில் இயக்க மாற்று விதிகள்:"
+" கால:` html`. பட்டியலின் ஒவ்வொரு உறுப்புகளும் இரண்டு உறுப்பு டப்பிள் ஆக "
+"இருக்க வேண்டும். டூப்பிளின் முதல் உறுப்பு தொகுக்கப்பட்ட வழக்கமான வெளிப்பாடாக"
+" இருக்க வேண்டும், மேலும் இரண்டாவது ஒரு மேட்ச் பொருளை எடுத்து போட்டியை "
+"மாற்றுவதற்கு ஒரு சரத்தை வழங்குகிறது. உதாரணத்திற்கு::"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.preprocess_regexps:12
+msgid "will remove everything from `<!--Article ends here-->` to `</body>`."
+msgstr "`<!-கட்டுரை இங்கே முடிவடைகிறது->` </body> `வரை அனைத்தையும் அகற்றும்."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.publication_type:1
+msgid ""
+"Publication type Set to newspaper, magazine or blog. If set to None, no "
+"publication type metadata will be written to the opf file."
+msgstr ""
+"வெளியீட்டு வகை செய்தித்தாள், பத்திரிகை அல்லது வலைப்பதிவில் "
+"அமைக்கப்பட்டுள்ளது. எதுவுமில்லை என்றால், எந்த வெளியீட்டு வகை மெட்டாடேட்டா "
+"OPF கோப்பில் எழுதப்படாது."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.recipe_disabled:1
+msgid ""
+"Set to a non empty string to disable this recipe. The string will be used as"
+" the disabled message"
+msgstr ""
+"இந்த செய்முறையை முடக்க வெற்று அல்லாத சரத்திற்கு அமைக்கவும். சரம் "
+"முடக்கப்பட்ட செய்தியாக பயன்படுத்தப்படும்"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.recursions:1
+msgid "Number of levels of links to follow on article webpages"
+msgstr ""
+"கட்டுரை வலைப்பக்கங்களில் பின்பற்ற வேண்டிய இணைப்புகளின் நிலைகளின் எண்ணிக்கை"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.remove_attributes:1
+msgid "List of attributes to remove from all tags. For example::"
+msgstr ""
+"எல்லா குறிச்சொற்களிலிருந்தும் அகற்ற வேண்டிய பண்புகளின் பட்டியல். "
+"உதாரணத்திற்கு::"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.remove_empty_feeds:1
+msgid ""
+"If True empty feeds are removed from the output. This option has no effect "
+"if parse_index is overridden in the sub class. It is meant only for recipes "
+"that return a list of feeds using `feeds` or :meth:`get_feeds`. It is also "
+"used if you use the ignore_duplicate_articles option."
+msgstr ""
+"உண்மையான வெற்று ஊட்டங்கள் வெளியீட்டிலிருந்து அகற்றப்பட்டால். துணை வகுப்பில் "
+"parse_index ஐ மீறினால் இந்த விருப்பம் எந்த விளைவையும் ஏற்படுத்தாது. "
+"`ஊட்டங்கள்` அல்லது: மெத்:` get_feeds` ஐப் பயன்படுத்தி ஊட்டங்களின் பட்டியலைத்"
+" தரும் சமையல் குறிப்புகளுக்கு மட்டுமே இது. நீங்கள் "
+"புறக்கணிப்பு_டூஃபிகேட்_ஆர்டிகல்ஸ் விருப்பத்தைப் பயன்படுத்தினால் இது "
+"பயன்படுத்தப்படுகிறது."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.remove_javascript:1
+msgid "Convenient flag to strip all JavaScript tags from the downloaded HTML"
+msgstr ""
+"பதிவிறக்கம் செய்யப்பட்ட HTML இலிருந்து அனைத்து ஜாவாஸ்கிரிப்ட் "
+"குறிச்சொற்களையும் அகற்ற வசதியான கொடி"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.remove_tags:1
+msgid ""
+"List of tags to be removed. Specified tags are removed from downloaded HTML."
+" A tag is specified as a dictionary of the form::"
+msgstr ""
+"அகற்றப்பட வேண்டிய குறிச்சொற்களின் பட்டியல். குறிப்பிடப்பட்ட குறிச்சொற்கள் "
+"பதிவிறக்கம் செய்யப்பட்ட HTML இலிருந்து அகற்றப்படுகின்றன. ஒரு குறிச்சொல் "
+"படிவத்தின் அகராதியாக குறிப்பிடப்பட்டுள்ளது ::"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.remove_tags:15
+msgid ""
+"This will remove all `<div class=\"advert\">` tags and all their children "
+"from the downloaded :term:`HTML`."
+msgstr ""
+"இது அனைத்து `<div class =\" விளம்பரம் \">` குறிச்சொற்களையும் அவர்களின் "
+"அனைத்து குழந்தைகளையும் பதிவிறக்கம் செய்யப்பட்டவற்றிலிருந்து அகற்றும்: கால: "
+"`html`."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.remove_tags:9
+msgid ""
+"All keys are optional. For a full explanation of the search criteria, see "
+"`Beautiful Soup "
+"<https://www.crummy.com/software/BeautifulSoup/bs4/doc/#searching-the-"
+"tree>`__ A common example::"
+msgstr ""
+"எல்லா விசைகளும் விருப்பமானவை. தேடல் அளவுகோல்களின் முழு விளக்கத்திற்கு, "
+"`அழகான சூப் "
+"<https://www.crummy.com/software/beautifulsoup/bs4/doc/#searching-the-tree>`"
+" __ ஒரு பொதுவான எடுத்துக்காட்டு ::"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.remove_tags_after:1
+msgid ""
+"Remove all tags that occur after the specified tag. For the format for "
+"specifying a tag see :attr:`BasicNewsRecipe.remove_tags`. For example::"
+msgstr ""
+"குறிப்பிட்ட குறிச்சொல்லுக்குப் பிறகு ஏற்படும் அனைத்து குறிச்சொற்களையும் "
+"அகற்றவும். ஒரு குறிச்சொல்லைக் குறிப்பிடுவதற்கான வடிவமைப்பிற்கு: Attr: "
+"`BasicNewsRecipe.Remove_tags`. உதாரணத்திற்கு::"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.remove_tags_after:7
+msgid "will remove all tags after the first element with `id=\"content\"`."
+msgstr ""
+"முதல் உறுப்புக்குப் பிறகு அனைத்து குறிச்சொற்களையும் `ஐடி =\" உள்ளடக்கம் \"` "
+"`அகற்றும்."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.remove_tags_before:1
+msgid ""
+"Remove all tags that occur before the specified tag. For the format for "
+"specifying a tag see :attr:`BasicNewsRecipe.remove_tags`. For example::"
+msgstr ""
+"குறிப்பிட்ட குறிச்சொல்லுக்கு முன் நிகழும் அனைத்து குறிச்சொற்களையும் அகற்று. "
+"ஒரு குறிச்சொல்லைக் குறிப்பிடுவதற்கான வடிவமைப்பிற்கு: Attr: "
+"`BasicNewsRecipe.Remove_tags`. உதாரணத்திற்கு::"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.remove_tags_before:7
+msgid "will remove all tags before the first element with `id=\"content\"`."
+msgstr ""
+"முதல் உறுப்புக்கு முன் `ஐடி =\" உள்ளடக்கம் \"` `உடன் எல்லா குறிச்சொற்களையும்"
+" அகற்றும்."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.requires_version:1
+msgid "Minimum calibre version needed to use this recipe"
+msgstr "இந்த செய்முறையைப் பயன்படுத்த குறைந்தபட்ச காலிபர் பதிப்பு தேவை"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.resolve_internal_links:1
+msgid ""
+"If set to True then links in downloaded articles that point to other "
+"downloaded articles are changed to point to the downloaded copy of the "
+"article rather than its original web URL. If you set this to True, you might"
+" also need to implement :meth:`canonicalize_internal_url` to work with the "
+"URL scheme of your particular website."
+msgstr ""
+"உண்மை என அமைக்கப்பட்டால், பதிவிறக்கம் செய்யப்பட்ட கட்டுரைகளில் உள்ள "
+"இணைப்புகள் பதிவிறக்கம் செய்யப்பட்ட பிற கட்டுரைகளை சுட்டிக்காட்டுகின்றன, அதன்"
+" அசல் வலை URL ஐ விட கட்டுரையின் பதிவிறக்கம் செய்யப்பட்ட நகலை "
+"சுட்டிக்காட்டுகின்றன. இதை நீங்கள் உண்மையாக அமைத்தால், நீங்கள் செயல்படுத்த "
+"வேண்டியிருக்கலாம்: மெத்: உங்கள் குறிப்பிட்ட வலைத்தளத்தின் URL திட்டத்துடன் "
+"பணியாற்ற `canonicalize_internal_url`."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.reverse_article_order:1
+msgid "Reverse the order of articles in each feed"
+msgstr "ஒவ்வொரு ஊட்டத்திலும் கட்டுரைகளின் வரிசையை மாற்றியமைக்கவும்"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.scale_news_images:1
+msgid ""
+"Maximum dimensions (w,h) to scale images to. If scale_news_images_to_device "
+"is True this is set to the device screen dimensions set by the output "
+"profile unless there is no profile set, in which case it is left at whatever"
+" value it has been assigned (default None)."
+msgstr ""
+"படங்களை அளவிட அதிகபட்ச பரிமாணங்கள் (W, H). SCALE_NEWS_IMAGES_TO_DEVICE உண்மை"
+" என்றால், இது சுயவிவரத் தொகுப்பு எதுவும் இல்லாவிட்டால் வெளியீட்டு "
+"சுயவிவரத்தால் அமைக்கப்பட்ட சாதனத் திரை பரிமாணங்களுக்கு அமைக்கப்பட்டுள்ளது, "
+"இந்த விஷயத்தில் அது ஒதுக்கப்பட்ட எந்த மதிப்பிலும் (இயல்புநிலை எதுவுமில்லை) "
+"விடப்படுகிறது."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.scale_news_images_to_device:1
+msgid ""
+"Rescale images to fit in the device screen dimensions set by the output "
+"profile. Ignored if no output profile is set."
+msgstr ""
+"வெளியீட்டு சுயவிவரத்தால் அமைக்கப்பட்ட சாதனத் திரை பரிமாணங்களில் "
+"பொருந்தக்கூடிய படங்களை மீட்டெடுக்கவும். வெளியீட்டு சுயவிவரம் "
+"அமைக்கப்படாவிட்டால் புறக்கணிக்கப்படுகிறது."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.simultaneous_downloads:1
+msgid ""
+"Number of simultaneous downloads. Set to 1 if the server is picky. "
+"Automatically reduced to 1 if :attr:`BasicNewsRecipe.delay` > 0"
+msgstr ""
+"ஒரே நேரத்தில் பதிவிறக்கங்களின் எண்ணிக்கை. சேவையகம் சேகரிப்பதாக இருந்தால் 1 "
+"ஆக அமைக்கவும். தானாகவே 1 எனக் குறைக்கப்படுகிறது: ATTR: "
+"`BasicNewsRecipe.Delay`> 0"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.summary_length:1
+msgid "Max number of characters in the short description"
+msgstr "குறுகிய விளக்கத்தில் அதிகபட்ச எழுத்துக்களின் எண்ணிக்கை"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.template_css:1
+msgid ""
+"The CSS that is used to style the templates, i.e., the navigation bars and "
+"the Tables of Contents. Rather than overriding this variable, you should use"
+" `extra_css` in your recipe to customize look and feel."
+msgstr ""
+"வார்ப்புருக்கள், அதாவது, வழிசெலுத்தல் பார்கள் மற்றும் உள்ளடக்கங்களின் "
+"அட்டவணைகள் ஆகியவற்றை பாணி செய்யப் பயன்படும் CSS. இந்த மாறியை மீறுவதற்குப் "
+"பதிலாக, தோற்றத்தையும் உணர்வையும் தனிப்பயனாக்க உங்கள் செய்முறையில் "
+"`கூடுதல்_சிஎஸ்ஸைப் பயன்படுத்த வேண்டும்."
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.timefmt:1
+msgid ""
+"The format string for the date shown on the first page. By default: "
+"Day_Name, Day_Number Month_Name Year"
+msgstr ""
+"முதல் பக்கத்தில் காட்டப்பட்டுள்ள தேதிக்கான வடிவமைப்பு சரம். இயல்பாக: "
+"day_name, day_number monthy_name ஆண்டு"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.timeout:1
+msgid "Timeout for fetching files from server in seconds"
+msgstr "சேவையகத்திலிருந்து கோப்புகளை நொடிகளில் பெறுவதற்கான நேரம் முடிந்தது"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.title:1
+msgid "The title to use for the e-book"
+msgstr "மின் புத்தகத்திற்கு பயன்படுத்த வேண்டிய தலைப்பு"
+
+#: ../../__w/calibre/calibre/manual/docstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.use_embedded_content:1
+msgid ""
+"Normally we try to guess if a feed has full articles embedded in it based on"
+" the length of the embedded content. If `None`, then the default guessing is"
+" used. If `True` then the we always assume the feeds has embedded content "
+"and if `False` we always assume the feed does not have embedded content."
+msgstr ""
+"உட்பொதிக்கப்பட்ட உள்ளடக்கத்தின் நீளத்தின் அடிப்படையில் ஒரு ஊட்டத்தில் முழு "
+"கட்டுரைகள் பதிக்கப்பட்டுள்ளனவா என்று பொதுவாக யூகிக்க முயற்சிக்கிறோம். "
+"`எதுவுமில்லை 'என்றால், இயல்புநிலை யூகம் பயன்படுத்தப்படுகிறது. `உண்மை` "
+"என்றால், ஊட்டங்கள் உள்ளடக்கத்தை உட்பொதித்ததாக நாங்கள் எப்போதும் "
+"கருதுகிறோம்,` பொய் 'என்றால், தீவனத்தில் உட்பொதிக்கப்பட்ட உள்ளடக்கம் இல்லை "
+"என்று நாங்கள் எப்போதும் கருதுகிறோம்."
+
 #: ../../__w/calibre/calibre/manual/news_recipe.rst:4
 msgid "API documentation for recipes"
 msgstr "சமையல் குறிப்புகளுக்கான ஏபிஐ ஆவணங்கள்"
@@ -28,6 +633,32 @@ msgid "The API for writing recipes is defined by the :class:`BasicNewsRecipe`"
 msgstr ""
 "சமையல் எழுதுவதற்கான ஏபிஐ வரையறுக்கப்படுகிறது: வகுப்பு: `அடிப்படை "
 "நியூஸ்ரெசிப்`"
+
+#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.canonicalize_internal_url:0
+#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.is_link_wanted:0
+#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.populate_article_metadata:0
+#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.postprocess_book:0
+#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.postprocess_html:0
+msgid "Parameters"
+msgstr "அளவுருக்கள்"
+
+#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.preprocess_html:7
+#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.skip_ad_pages:8
+msgid ""
+"`soup`: A `BeautifulSoup "
+"<https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`__ instance "
+"containing the downloaded :term:`HTML`."
+msgstr ""
+"`சூப்`: ஒரு` அழகான சூப் "
+"<https://www.crummy.com/software/beautifulsoup/bs4/doc/> __ பதிவிறக்கம் "
+"செய்யப்பட்டுள்ள நிகழ்வு: கால: `html`."
 
 #: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
 #: calibre.web.feeds.news.BasicNewsRecipe:1
@@ -107,19 +738,6 @@ msgstr ""
 "இந்த செய்தி மூலத்திற்கான அனைத்து URL களிலும் நியமன பிரதிநிதித்துவங்கள் "
 "தனித்துவமாக இருக்க வேண்டும். அவை இல்லையென்றால், உள் இணைப்புகள் தவறாக "
 "தீர்க்கப்படலாம்."
-
-#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.canonicalize_internal_url:0
-#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.is_link_wanted:0
-#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.populate_article_metadata:0
-#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.postprocess_book:0
-#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.postprocess_html:0
-msgid "Parameters"
-msgstr "அளவுருக்கள்"
 
 #: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
 #: calibre.web.feeds.news.BasicNewsRecipe.canonicalize_internal_url:7
@@ -338,6 +956,11 @@ msgstr ""
 " முறை பொதுவாக பயனுள்ளதாக இருக்கும்."
 
 #: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.get_url_specific_delay:0
+msgid "Returns"
+msgstr "வருமானம்"
+
+#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
 #: calibre.web.feeds.news.BasicNewsRecipe.get_url_specific_delay:1
 msgid ""
 "Return the delay in seconds before downloading this URL. If you want to "
@@ -349,11 +972,6 @@ msgstr ""
 "URL க்கான தாமதத்தை நீங்கள் நிரல் ரீதியாக தீர்மானிக்க விரும்பினால், உங்கள் "
 "துணைப்பிரிவில் இந்த முறையை மேலெழுதவும், நீங்கள் பாதிக்க விரும்பாத URL "
 "களுக்கு இயல்புநிலையாக சுய."
-
-#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.get_url_specific_delay:0
-msgid "Returns"
-msgstr "வருமானம்"
 
 #: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
 #: calibre.web.feeds.news.BasicNewsRecipe.get_url_specific_delay:5
@@ -436,16 +1054,6 @@ msgstr ""
 "`BasicNewsRecipe.Parse_feeds`."
 
 #: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.parse_index:7
-msgid ""
-"It must return a list. Each element of the list must be a 2-element tuple of"
-" the form ``('feed title', list of articles)``."
-msgstr ""
-"அது ஒரு பட்டியலைத் திருப்பித் தர வேண்டும். பட்டியலின் ஒவ்வொரு உறுப்புகளும் "
-"`` ('ஊட்ட தலைப்பு', கட்டுரைகளின் பட்டியல்) `` வடிவத்தின் 2-உறுப்பு டூப்பலாக "
-"இருக்க வேண்டும்."
-
-#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
 #: calibre.web.feeds.news.BasicNewsRecipe.parse_index:10
 msgid "Each list of articles must contain dictionaries of the form::"
 msgstr ""
@@ -470,6 +1078,16 @@ msgstr ""
 "நீங்கள் சில காரணங்களால் செயலாக்கத்தை நிறுத்த விரும்பினால், பிழைக்கு பதிலாக "
 "பயனருக்கு ஒரு எளிய செய்தியைக் காட்டினால், அழைக்கவும்: மெத்: "
 "`abort_recipe_processing`."
+
+#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
+#: calibre.web.feeds.news.BasicNewsRecipe.parse_index:7
+msgid ""
+"It must return a list. Each element of the list must be a 2-element tuple of"
+" the form ``('feed title', list of articles)``."
+msgstr ""
+"அது ஒரு பட்டியலைத் திருப்பித் தர வேண்டும். பட்டியலின் ஒவ்வொரு உறுப்புகளும் "
+"`` ('ஊட்ட தலைப்பு', கட்டுரைகளின் பட்டியல்) `` வடிவத்தின் 2-உறுப்பு டூப்பலாக "
+"இருக்க வேண்டும்."
 
 #: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
 #: calibre.web.feeds.news.BasicNewsRecipe.populate_article_metadata:1
@@ -560,19 +1178,6 @@ msgstr ""
 "தூய்மைப்படுத்தலுக்குப் பிறகு அழைக்கப்படுகிறது. இது தன்னிச்சையாக சக்திவாய்ந்த"
 " முன் செயலாக்கத்தை செய்ய பயன்படுத்தப்படலாம்: கால: `html`. அதை செயலாக்கிய "
 "பிறகு அது `சூப்` திரும்ப வேண்டும்."
-
-#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.preprocess_html:7
-#: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.skip_ad_pages:8
-msgid ""
-"`soup`: A `BeautifulSoup "
-"<https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`__ instance "
-"containing the downloaded :term:`HTML`."
-msgstr ""
-"`சூப்`: ஒரு` அழகான சூப் "
-"<https://www.crummy.com/software/beautifulsoup/bs4/doc/> __ பதிவிறக்கம் "
-"செய்யப்பட்டுள்ள நிகழ்வு: கால: `html`."
 
 #: ../../__w/calibre/calibre/src/calibre/web/feeds/news.pydocstring of
 #: calibre.web.feeds.news.BasicNewsRecipe.preprocess_image:1
@@ -706,608 +1311,3 @@ msgstr ""
 "`குறிச்சொல்`:` பியூட்டிஃபுல் சப் "
 "<https://www.crummy.com/software/beautifulsoup/bs4/doc/> `_: குறியீடு:` "
 "குறிச்சொல்`"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.articles_are_obfuscated:1
-msgid ""
-"Set to True and implement :meth:`get_obfuscated_article` to handle websites "
-"that try to make it difficult to scrape content."
-msgstr ""
-"உண்மை மற்றும் செயல்படுத்தவும்: மெத்: `get_obfuscated_article` வலைத்தளங்களைக்"
-" கையாள உள்ளடக்கத்தை துடைக்க கடினமாக முயற்சிக்கிறது."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.auto_cleanup:1
-msgid ""
-"Automatically extract all the text from downloaded article pages. Uses the "
-"algorithms from the readability project. Setting this to True, means that "
-"you do not have to worry about cleaning up the downloaded HTML manually "
-"(though manual cleanup will always be superior)."
-msgstr ""
-"பதிவிறக்கம் செய்யப்பட்ட கட்டுரை பக்கங்களிலிருந்து எல்லா உரையையும் தானாகவே "
-"பிரித்தெடுக்கவும். வாசிப்பு திட்டத்திலிருந்து வழிமுறைகளைப் பயன்படுத்துகிறது."
-" இதை உண்மையாக அமைத்தல், பதிவிறக்கம் செய்யப்பட்ட HTML ஐ கைமுறையாக சுத்தம் "
-"செய்வதைப் பற்றி நீங்கள் கவலைப்பட வேண்டியதில்லை (கையேடு தூய்மைப்படுத்தல் "
-"எப்போதும் உயர்ந்ததாக இருக்கும் என்றாலும்)."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.auto_cleanup_keep:1
-msgid ""
-"Specify elements that the auto cleanup algorithm should never remove. The "
-"syntax is a XPath expression. For example::"
-msgstr ""
-"ஆட்டோ தூய்மைப்படுத்தும் வழிமுறை ஒருபோதும் அகற்றக்கூடாது என்ற கூறுகளைக் "
-"குறிப்பிடவும். தொடரியல் ஒரு எக்ஸ்பாத் வெளிப்பாடு. உதாரணத்திற்கு::"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.center_navbar:1
-msgid ""
-"If True the navigation bar is center aligned, otherwise it is left aligned"
-msgstr ""
-"உண்மை என்றால் வழிசெலுத்தல் பட்டி மையம் சீரமைக்கப்பட்டதாக இருந்தால், "
-"இல்லையெனில் அது சீரமைக்கப்படுகிறது"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.compress_news_images:1
-msgid ""
-"Set this to False to ignore all scaling and compression parameters and pass "
-"images through unmodified. If True and the other compression parameters are "
-"left at their default values, JPEG images will be scaled to fit in the "
-"screen dimensions set by the output profile and compressed to size at most "
-"(w * h)/16 where w x h are the scaled image dimensions."
-msgstr ""
-"அனைத்து அளவிடுதல் மற்றும் சுருக்க அளவுருக்களை புறக்கணிக்க இதை பொய்யாக "
-"அமைக்கவும், மாற்றப்படாத மூலம் படங்களை அனுப்பவும். உண்மை மற்றும் பிற சுருக்க "
-"அளவுருக்கள் அவற்றின் இயல்புநிலை மதிப்புகளில் விடப்பட்டால், வெளியீட்டு "
-"சுயவிவரத்தால் அமைக்கப்பட்ட திரை பரிமாணங்களில் பொருந்தும் வகையில் JPEG "
-"படங்கள் அளவிடப்படும் மற்றும் அதிகபட்சமாக (W * H)/16 அளவில் சுருக்கப்படும், "
-"அங்கு W x H என்பது அளவிடப்பட்ட பட பரிமாணங்கள் ."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.compress_news_images_auto_size:1
-msgid ""
-"The factor used when auto compressing JPEG images. If set to None, auto "
-"compression is disabled. Otherwise, the images will be reduced in size to (w"
-" * h)/compress_news_images_auto_size bytes if possible by reducing the "
-"quality level, where w x h are the image dimensions in pixels. The minimum "
-"JPEG quality will be 5/100 so it is possible this constraint will not be "
-"met.  This parameter can be overridden by the parameter "
-"compress_news_images_max_size which provides a fixed maximum size for "
-"images. Note that if you enable scale_news_images_to_device then the image "
-"will first be scaled and then its quality lowered until its size is less "
-"than (w * h)/factor where w and h are now the *scaled* image dimensions. In "
-"other words, this compression happens after scaling."
-msgstr ""
-"தானாக அமுக்க JPEG படங்களை பயன்படுத்தும்போது பயன்படுத்தப்படும் காரணி. "
-"எதுவுமில்லை என்றால், ஆட்டோ சுருக்கம் முடக்கப்பட்டுள்ளது. இல்லையெனில், "
-"படங்கள் (W * H)/சுருக்கம்_நியூஸ்_ஐஎம்ஜேஜ்கள்_ஆட்டோ_சைஸ் பைட்டுகள் தர அளவைக் "
-"குறைப்பதன் மூலம் குறைக்கப்படும், அங்கு w x h என்பது பிக்சல்களில் பட "
-"பரிமாணங்களாகும். குறைந்தபட்ச JPEG தரம் 5/100 ஆக இருக்கும், எனவே இந்த "
-"கட்டுப்பாடு பூர்த்தி செய்யப்படாது. இந்த அளவுருவை "
-"சுருக்கம்_நியூஸ்_ஐஎம்ஜேஜ்கள்_மாக்ஸ்_சிஸ் அளவுருவால் மீறலாம், இது படங்களுக்கு"
-" நிலையான அதிகபட்ச அளவை வழங்குகிறது. நீங்கள் scale_news_images_to_device ஐ "
-"இயக்கினால், படம் முதலில் அளவிடப்படும், பின்னர் அதன் அளவு (W * h)/காரணி "
-"குறைவாக இருக்கும் வரை அதன் தரம் குறையும், அங்கு W மற்றும் H இப்போது * "
-"அளவிடப்பட்ட * பட பரிமாணங்கள். வேறு வார்த்தைகளில் கூறுவதானால், இந்த சுருக்கம்"
-" அளவிடப்பட்ட பிறகு நிகழ்கிறது."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.compress_news_images_max_size:1
-msgid ""
-"Set JPEG quality so images do not exceed the size given (in KBytes). If set,"
-" this parameter overrides auto compression via "
-"compress_news_images_auto_size. The minimum JPEG quality will be 5/100 so it"
-" is possible this constraint will not be met."
-msgstr ""
-"JPEG தரத்தை அமைக்கவும், எனவே படங்கள் கொடுக்கப்பட்ட அளவை விட அதிகமாக "
-"இருக்காது (KBytes இல்). அமைக்கப்பட்டால், இந்த அளவுரு தானாக சுருக்கத்தை "
-"அமுக்க_நியூஸ்_ஐஎம்ஜேஜ்கள்_ஆட்டோ_சிஸ் வழியாக மேலெழுதும். குறைந்தபட்ச JPEG "
-"தரம் 5/100 ஆக இருக்கும், எனவே இந்த கட்டுப்பாடு பூர்த்தி செய்யப்படாது."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.conversion_options:1
-msgid ""
-"Recipe specific options to control the conversion of the downloaded content "
-"into an e-book. These will override any user or plugin specified values, so "
-"only use if absolutely necessary. For example::"
-msgstr ""
-"பதிவிறக்கம் செய்யப்பட்ட உள்ளடக்கத்தை மின் புத்தகமாக மாற்றுவதைக் "
-"கட்டுப்படுத்த செய்முறை குறிப்பிட்ட விருப்பங்கள். இவை எந்தவொரு பயனர் அல்லது "
-"சொருகி குறிப்பிட்ட மதிப்புகளை மேலெழுதும், எனவே முற்றிலும் தேவைப்பட்டால் "
-"மட்டுமே பயன்படுத்தவும். உதாரணத்திற்கு::"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.cover_margins:1
-msgid ""
-"By default, the cover image returned by get_cover_url() will be used as the "
-"cover for the periodical.  Overriding this in your recipe instructs calibre "
-"to render the downloaded cover into a frame whose width and height are "
-"expressed as a percentage of the downloaded cover. cover_margins = (10, 15, "
-"'#ffffff') pads the cover with a white margin 10px on the left and right, "
-"15px on the top and bottom. Color names are defined `here "
-"<https://www.imagemagick.org/script/color.php>`_. Note that for some reason,"
-" white does not always work in Windows. Use #ffffff instead"
-msgstr ""
-"இயல்பாக, Get_Cover_url () ஆல் வழங்கப்பட்ட அட்டை படம் குறிப்பிட்ட "
-"காலத்திற்கான அட்டையாக பயன்படுத்தப்படும். உங்கள் செய்முறையில் இதை மீறுவது "
-"பதிவிறக்கம் செய்யப்பட்ட அட்டையை ஒரு சட்டகமாக வழங்குமாறு அறிவுறுத்துகிறது, "
-"அதன் அகலமும் உயரமும் பதிவிறக்கம் செய்யப்பட்ட அட்டையின் சதவீதமாக "
-"வெளிப்படுத்தப்படுகின்றன. கவர்_மார்கின்ஸ் = (10, 15, '#FFFFFF') இடது மற்றும் "
-"வலதுபுறத்தில் ஒரு வெள்ளை விளிம்பு 10px, மேல் மற்றும் கீழ் 15px உடன் கவர். "
-"வண்ண பெயர்கள் வரையறுக்கப்பட்டுள்ளன `இங்கே "
-"<https://www.imagemagick.org/script/color.php>` _. சில காரணங்களால், வெள்ளை "
-"எப்போதும் விண்டோஸில் வேலை செய்யாது என்பதை நினைவில் கொள்க. அதற்கு பதிலாக "
-"#FFFFFF ஐப் பயன்படுத்தவும்"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.delay:1
-msgid ""
-"The default delay between consecutive downloads in seconds. The argument may"
-" be a floating point number to indicate a more precise time. See "
-":meth:`get_url_specific_delay` to implement per URL delays."
-msgstr ""
-"நொடிகளில் தொடர்ச்சியான பதிவிறக்கங்களுக்கு இடையிலான இயல்புநிலை தாமதம். வாதம் "
-"மிகவும் துல்லியமான நேரத்தைக் குறிக்க மிதக்கும் புள்ளி எண்ணாக இருக்கலாம். "
-"காண்க: மெத்: URL தாமதங்களுக்கு செயல்படுத்த `get_url_specific_delay`."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.description:1
-msgid ""
-"A couple of lines that describe the content this recipe downloads. This will"
-" be used primarily in a GUI that presents a list of recipes."
-msgstr ""
-"உள்ளடக்கத்தை விவரிக்கும் இரண்டு வரிகள் இந்த செய்முறை பதிவிறக்குகிறது. இது "
-"முதன்மையாக ஒரு GUI இல் பயன்படுத்தப்படும், இது சமையல் பட்டியலை முன்வைக்கிறது."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.encoding:1
-msgid ""
-"Specify an override encoding for sites that have an incorrect charset "
-"specification. The most common being specifying ``latin1`` and using "
-"``cp1252``. If None, try to detect the encoding. If it is a callable, the "
-"callable is called with two arguments: The recipe object and the source to "
-"be decoded. It must return the decoded source."
-msgstr ""
-"தவறான சார்ஸெட் விவரக்குறிப்பைக் கொண்ட தளங்களுக்கான மேலெழுதும் "
-"குறியாக்கத்தைக் குறிப்பிடவும். `` லத்தீன் 1`` ஐக் குறிப்பிடுவது மிகவும் "
-"பொதுவானது மற்றும் `` cp1252`` ஐப் பயன்படுத்துதல். எதுவுமில்லை என்றால், "
-"குறியாக்கத்தைக் கண்டறிய முயற்சிக்கவும். இது அழைக்கக்கூடியதாக இருந்தால், "
-"அழைக்கக்கூடியது இரண்டு வாதங்களுடன் அழைக்கப்படுகிறது: செய்முறை பொருள் மற்றும்"
-" மூலமானது டிகோட் செய்யப்பட வேண்டும். இது டிகோட் செய்யப்பட்ட மூலத்தை "
-"திருப்பித் தர வேண்டும்."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.extra_css:1
-msgid ""
-"Specify any extra :term:`CSS` that should be added to downloaded "
-":term:`HTML` files. It will be inserted into `<style>` tags, just before the"
-" closing `</head>` tag thereby overriding all :term:`CSS` except that which "
-"is declared using the style attribute on individual :term:`HTML` tags. Note "
-"that if you want to programmatically generate the extra_css override the "
-":meth:`get_extra_css()` method instead. For example::"
-msgstr ""
-"பதிவிறக்கம் செய்யப்பட்டவற்றில் சேர்க்கப்பட வேண்டிய கூடுதல்: கால: `CSS` ஐக் "
-"குறிப்பிடவும்: கால:` HTML` கோப்புகள். இது `<syle>` குறிச்சொற்களில் "
-"செருகப்படும், இதன் மூலம் `</head>` குறிச்சொல் அதன் மூலம் அனைத்தையும் "
-"மீறுகிறது: கால: `css` தனிநபர்: கால: கால:` html` குறிச்சொற்களைப் பயன்படுத்தி "
-"அறிவிக்கப்பட்டதைத் தவிர . கூடுதல்_சிஎஸ்எஸ்ஸை மேலெழுதும்: மெத்: "
-"`get_extra_css ()` அதற்கு பதிலாக முறை ஆகியவற்றை நீங்கள் நிரல் முறையில் "
-"உருவாக்க விரும்பினால் என்பதை நினைவில் கொள்க. உதாரணத்திற்கு::"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.feeds:1
-msgid ""
-"List of feeds to download. Can be either ``[url1, url2, ...]`` or "
-"``[('title1', url1), ('title2', url2),...]``"
-msgstr ""
-"பதிவிறக்கம் செய்ய ஊட்டங்களின் பட்டியல். `` [Url1, url2, ...] `` அல்லது "
-"`(('தலைப்பு 1', url1), ('தலைப்பு 2', url2), ...]` `"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.filter_regexps:1
-msgid ""
-"List of regular expressions that determines which links to ignore. If empty "
-"it is ignored. Used only if is_link_wanted is not implemented. For example::"
-msgstr ""
-"புறக்கணிக்க எந்த இணைப்புகளை தீர்மானிக்கும் வழக்கமான வெளிப்பாடுகளின் "
-"பட்டியல். காலியாக இருந்தால் அது புறக்கணிக்கப்படுகிறது. IS_link_wanted "
-"செயல்படுத்தப்படாவிட்டால் மட்டுமே பயன்படுத்தப்படுகிறது. உதாரணத்திற்கு::"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.filter_regexps:7
-msgid "will remove all URLs that have `ads.doubleclick.net` in them."
-msgstr "`விளம்பரங்கள். DoubleClick.net` கொண்ட அனைத்து URL களையும் அகற்றும்."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.filter_regexps:9
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.match_regexps:9
-msgid ""
-"Only one of :attr:`BasicNewsRecipe.match_regexps` or "
-":attr:`BasicNewsRecipe.filter_regexps` should be defined."
-msgstr ""
-"ஒன்று மட்டுமே: ATTR: `BasicNewsRecipe.match_regexps` அல்லது: attr:` "
-"BasicNewsRecipe.filter_regexps` வரையறுக்கப்பட வேண்டும்."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.handle_gzip:1
-msgid ""
-"Set to False if you do not want to use gzipped transfers. Note that some old"
-" servers flake out with gzip"
-msgstr ""
-"நீங்கள் gziped இடமாற்றங்களைப் பயன்படுத்த விரும்பவில்லை என்றால் பொய்யாக "
-"அமைக்கவும். சில பழைய சேவையகங்கள் GZIP உடன் வெளியேறுகின்றன என்பதை நினைவில் "
-"கொள்க"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.ignore_duplicate_articles:1
-msgid ""
-"Ignore duplicates of articles that are present in more than one section. A "
-"duplicate article is an article that has the same title and/or URL. To "
-"ignore articles with the same title, set this to::"
-msgstr ""
-"ஒன்றுக்கு மேற்பட்ட பிரிவுகளில் இருக்கும் கட்டுரைகளின் நகல்களைப் "
-"புறக்கணிக்கவும். ஒரு நகல் கட்டுரை என்பது ஒரே தலைப்பு மற்றும்/அல்லது URL ஐக் "
-"கொண்ட ஒரு கட்டுரை. அதே தலைப்பைக் கொண்ட கட்டுரைகளை புறக்கணிக்க, இதை "
-"அமைக்கவும் ::"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.ignore_duplicate_articles:7
-msgid "To use URLs instead, set it to::"
-msgstr "அதற்கு பதிலாக URL களைப் பயன்படுத்த, அதை அமைக்கவும் ::"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.ignore_duplicate_articles:11
-msgid "To match on title or URL, set it to::"
-msgstr "தலைப்பு அல்லது URL இல் பொருத்த, அதை அமைக்கவும் ::"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.keep_only_tags:1
-msgid ""
-"Keep only the specified tags and their children. For the format for "
-"specifying a tag see :attr:`BasicNewsRecipe.remove_tags`. If this list is "
-"not empty, then the `<body>` tag will be emptied and re-filled with the tags"
-" that match the entries in this list. For example::"
-msgstr ""
-"குறிப்பிட்ட குறிச்சொற்களையும் அவர்களின் குழந்தைகளையும் மட்டுமே "
-"வைத்திருங்கள். ஒரு குறிச்சொல்லைக் குறிப்பிடுவதற்கான வடிவமைப்பிற்கு: Attr: "
-"`BasicNewsRecipe.Remove_tags`. இந்த பட்டியல் காலியாக இல்லாவிட்டால், இந்த "
-"பட்டியலில் உள்ள உள்ளீடுகளுடன் பொருந்தக்கூடிய குறிச்சொற்களுடன் `<உடல்>` "
-"குறிச்சொல் காலியாகி மீண்டும் நிரப்பப்படும். உதாரணத்திற்கு::"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.keep_only_tags:8
-msgid ""
-"will keep only tags that have an `id` attribute of `\"content\"` or "
-"`\"heading\"`."
-msgstr ""
-"`\" உள்ளடக்கம் \"` அல்லது `தலைப்பு\" `` ஐடி` பண்புக்கூறு கொண்ட குறிச்சொற்களை"
-" மட்டுமே வைத்திருக்கும்."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.language:1
-msgid ""
-"The language that the news is in. Must be an ISO-639 code either two or "
-"three characters long"
-msgstr ""
-"செய்தி இருக்கும் மொழி. இரண்டு அல்லது மூன்று எழுத்துக்கள் நீளமாக ஐஎஸ்ஓ -639 "
-"குறியீடாக இருக்க வேண்டும்"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.masthead_url:1
-msgid ""
-"By default, calibre will use a default image for the masthead (Kindle only)."
-" Override this in your recipe to provide a URL to use as a masthead."
-msgstr ""
-"இயல்பாக, காலிபர் மாஸ்ட்ஹெட் (கின்டெல் மட்டும்) இயல்புநிலை படத்தைப் "
-"பயன்படுத்தும். உங்கள் செய்முறையில் இதை மீறுங்கள்."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.match_regexps:1
-msgid ""
-"List of regular expressions that determines which links to follow. If empty,"
-" it is ignored. Used only if is_link_wanted is not implemented. For "
-"example::"
-msgstr ""
-"எந்த இணைப்புகளைப் பின்பற்ற வேண்டும் என்பதை தீர்மானிக்கும் வழக்கமான "
-"வெளிப்பாடுகளின் பட்டியல். காலியாக இருந்தால், அது புறக்கணிக்கப்படுகிறது. "
-"IS_link_wanted செயல்படுத்தப்படாவிட்டால் மட்டுமே பயன்படுத்தப்படுகிறது. "
-"உதாரணத்திற்கு::"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.match_regexps:7
-msgid "will match all URLs that have `page=some number` in them."
-msgstr "அவற்றில் `பக்கம் = சில எண்` கொண்ட அனைத்து URL களையும் பொருத்தும்."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.max_articles_per_feed:1
-msgid ""
-"Maximum number of articles to download from each feed. This is primarily "
-"useful for feeds that don't have article dates. For most feeds, you should "
-"use :attr:`BasicNewsRecipe.oldest_article`"
-msgstr ""
-"ஒவ்வொரு ஊட்டத்திலிருந்தும் பதிவிறக்கம் செய்ய அதிகபட்ச கட்டுரைகள். கட்டுரை "
-"தேதிகள் இல்லாத ஊட்டங்களுக்கு இது முதன்மையாக பயனுள்ளதாக இருக்கும். "
-"பெரும்பாலான ஊட்டங்களுக்கு, நீங்கள் பயன்படுத்த வேண்டும்: ATTR: "
-"`BasicNewsRecipe.oldest_article`"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.needs_subscription:1
-msgid ""
-"If True the GUI will ask the user for a username and password to use while "
-"downloading. If set to \"optional\" the use of a username and password "
-"becomes optional"
-msgstr ""
-"உண்மை என்றால் GUI பயனருக்கு பயனர்பெயர் மற்றும் கடவுச்சொல்லை பதிவிறக்கும் "
-"போது பயன்படுத்துமாறு கேட்கும். \"விரும்பினால்\" என அமைக்கப்பட்டால், "
-"பயனர்பெயர் மற்றும் கடவுச்சொல்லின் பயன்பாடு விருப்பமாகிறது"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.no_stylesheets:1
-msgid ""
-"Convenient flag to disable loading of stylesheets for websites that have "
-"overly complex stylesheets unsuitable for conversion to e-book formats. If "
-"True stylesheets are not downloaded and processed"
-msgstr ""
-"மின்-புத்தக வடிவங்களுக்கு மாற்றுவதற்கு பொருத்தமற்ற அதிகப்படியான சிக்கலான "
-"ஸ்டைல்ஷீட்களைக் கொண்ட வலைத்தளங்களுக்கான ஸ்டைல்ஷீட்களை ஏற்றுவதை முடக்க "
-"வசதியான கொடி. உண்மையான ஸ்டைல்ஷீட்கள் பதிவிறக்கம் செய்யப்பட்டு "
-"செயலாக்கப்படாவிட்டால்"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.oldest_article:1
-msgid "Oldest article to download from this news source. In days."
-msgstr ""
-"இந்த செய்தி மூலத்திலிருந்து பதிவிறக்கம் செய்ய பழமையான கட்டுரை. நாட்களில்."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.preprocess_regexps:1
-msgid ""
-"List of :term:`regexp` substitution rules to run on the downloaded "
-":term:`HTML`. Each element of the list should be a two element tuple. The "
-"first element of the tuple should be a compiled regular expression and the "
-"second a callable that takes a single match object and returns a string to "
-"replace the match. For example::"
-msgstr ""
-"பட்டியல்: கால: `REGEXP` பதிவிறக்கம் செய்யப்பட்டவற்றில் இயக்க மாற்று விதிகள்:"
-" கால:` html`. பட்டியலின் ஒவ்வொரு உறுப்புகளும் இரண்டு உறுப்பு டப்பிள் ஆக "
-"இருக்க வேண்டும். டூப்பிளின் முதல் உறுப்பு தொகுக்கப்பட்ட வழக்கமான வெளிப்பாடாக"
-" இருக்க வேண்டும், மேலும் இரண்டாவது ஒரு மேட்ச் பொருளை எடுத்து போட்டியை "
-"மாற்றுவதற்கு ஒரு சரத்தை வழங்குகிறது. உதாரணத்திற்கு::"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.preprocess_regexps:12
-msgid "will remove everything from `<!--Article ends here-->` to `</body>`."
-msgstr "`<!-கட்டுரை இங்கே முடிவடைகிறது->` </body> `வரை அனைத்தையும் அகற்றும்."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.publication_type:1
-msgid ""
-"Publication type Set to newspaper, magazine or blog. If set to None, no "
-"publication type metadata will be written to the opf file."
-msgstr ""
-"வெளியீட்டு வகை செய்தித்தாள், பத்திரிகை அல்லது வலைப்பதிவில் "
-"அமைக்கப்பட்டுள்ளது. எதுவுமில்லை என்றால், எந்த வெளியீட்டு வகை மெட்டாடேட்டா "
-"OPF கோப்பில் எழுதப்படாது."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.recipe_disabled:1
-msgid ""
-"Set to a non empty string to disable this recipe. The string will be used as"
-" the disabled message"
-msgstr ""
-"இந்த செய்முறையை முடக்க வெற்று அல்லாத சரத்திற்கு அமைக்கவும். சரம் "
-"முடக்கப்பட்ட செய்தியாக பயன்படுத்தப்படும்"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.recursions:1
-msgid "Number of levels of links to follow on article webpages"
-msgstr ""
-"கட்டுரை வலைப்பக்கங்களில் பின்பற்ற வேண்டிய இணைப்புகளின் நிலைகளின் எண்ணிக்கை"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.remove_attributes:1
-msgid "List of attributes to remove from all tags. For example::"
-msgstr ""
-"எல்லா குறிச்சொற்களிலிருந்தும் அகற்ற வேண்டிய பண்புகளின் பட்டியல். "
-"உதாரணத்திற்கு::"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.remove_empty_feeds:1
-msgid ""
-"If True empty feeds are removed from the output. This option has no effect "
-"if parse_index is overridden in the sub class. It is meant only for recipes "
-"that return a list of feeds using `feeds` or :meth:`get_feeds`. It is also "
-"used if you use the ignore_duplicate_articles option."
-msgstr ""
-"உண்மையான வெற்று ஊட்டங்கள் வெளியீட்டிலிருந்து அகற்றப்பட்டால். துணை வகுப்பில் "
-"parse_index ஐ மீறினால் இந்த விருப்பம் எந்த விளைவையும் ஏற்படுத்தாது. "
-"`ஊட்டங்கள்` அல்லது: மெத்:` get_feeds` ஐப் பயன்படுத்தி ஊட்டங்களின் பட்டியலைத்"
-" தரும் சமையல் குறிப்புகளுக்கு மட்டுமே இது. நீங்கள் "
-"புறக்கணிப்பு_டூஃபிகேட்_ஆர்டிகல்ஸ் விருப்பத்தைப் பயன்படுத்தினால் இது "
-"பயன்படுத்தப்படுகிறது."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.remove_javascript:1
-msgid "Convenient flag to strip all JavaScript tags from the downloaded HTML"
-msgstr ""
-"பதிவிறக்கம் செய்யப்பட்ட HTML இலிருந்து அனைத்து ஜாவாஸ்கிரிப்ட் "
-"குறிச்சொற்களையும் அகற்ற வசதியான கொடி"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.remove_tags:1
-msgid ""
-"List of tags to be removed. Specified tags are removed from downloaded HTML."
-" A tag is specified as a dictionary of the form::"
-msgstr ""
-"அகற்றப்பட வேண்டிய குறிச்சொற்களின் பட்டியல். குறிப்பிடப்பட்ட குறிச்சொற்கள் "
-"பதிவிறக்கம் செய்யப்பட்ட HTML இலிருந்து அகற்றப்படுகின்றன. ஒரு குறிச்சொல் "
-"படிவத்தின் அகராதியாக குறிப்பிடப்பட்டுள்ளது ::"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.remove_tags:9
-msgid ""
-"All keys are optional. For a full explanation of the search criteria, see "
-"`Beautiful Soup "
-"<https://www.crummy.com/software/BeautifulSoup/bs4/doc/#searching-the-"
-"tree>`__ A common example::"
-msgstr ""
-"எல்லா விசைகளும் விருப்பமானவை. தேடல் அளவுகோல்களின் முழு விளக்கத்திற்கு, "
-"`அழகான சூப் "
-"<https://www.crummy.com/software/beautifulsoup/bs4/doc/#searching-the-tree>`"
-" __ ஒரு பொதுவான எடுத்துக்காட்டு ::"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.remove_tags:15
-msgid ""
-"This will remove all `<div class=\"advert\">` tags and all their children "
-"from the downloaded :term:`HTML`."
-msgstr ""
-"இது அனைத்து `<div class =\" விளம்பரம் \">` குறிச்சொற்களையும் அவர்களின் "
-"அனைத்து குழந்தைகளையும் பதிவிறக்கம் செய்யப்பட்டவற்றிலிருந்து அகற்றும்: கால: "
-"`html`."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.remove_tags_after:1
-msgid ""
-"Remove all tags that occur after the specified tag. For the format for "
-"specifying a tag see :attr:`BasicNewsRecipe.remove_tags`. For example::"
-msgstr ""
-"குறிப்பிட்ட குறிச்சொல்லுக்குப் பிறகு ஏற்படும் அனைத்து குறிச்சொற்களையும் "
-"அகற்றவும். ஒரு குறிச்சொல்லைக் குறிப்பிடுவதற்கான வடிவமைப்பிற்கு: Attr: "
-"`BasicNewsRecipe.Remove_tags`. உதாரணத்திற்கு::"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.remove_tags_after:7
-msgid "will remove all tags after the first element with `id=\"content\"`."
-msgstr ""
-"முதல் உறுப்புக்குப் பிறகு அனைத்து குறிச்சொற்களையும் `ஐடி =\" உள்ளடக்கம் \"` "
-"`அகற்றும்."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.remove_tags_before:1
-msgid ""
-"Remove all tags that occur before the specified tag. For the format for "
-"specifying a tag see :attr:`BasicNewsRecipe.remove_tags`. For example::"
-msgstr ""
-"குறிப்பிட்ட குறிச்சொல்லுக்கு முன் நிகழும் அனைத்து குறிச்சொற்களையும் அகற்று. "
-"ஒரு குறிச்சொல்லைக் குறிப்பிடுவதற்கான வடிவமைப்பிற்கு: Attr: "
-"`BasicNewsRecipe.Remove_tags`. உதாரணத்திற்கு::"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.remove_tags_before:7
-msgid "will remove all tags before the first element with `id=\"content\"`."
-msgstr ""
-"முதல் உறுப்புக்கு முன் `ஐடி =\" உள்ளடக்கம் \"` `உடன் எல்லா குறிச்சொற்களையும்"
-" அகற்றும்."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.requires_version:1
-msgid "Minimum calibre version needed to use this recipe"
-msgstr "இந்த செய்முறையைப் பயன்படுத்த குறைந்தபட்ச காலிபர் பதிப்பு தேவை"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.resolve_internal_links:1
-msgid ""
-"If set to True then links in downloaded articles that point to other "
-"downloaded articles are changed to point to the downloaded copy of the "
-"article rather than its original web URL. If you set this to True, you might"
-" also need to implement :meth:`canonicalize_internal_url` to work with the "
-"URL scheme of your particular website."
-msgstr ""
-"உண்மை என அமைக்கப்பட்டால், பதிவிறக்கம் செய்யப்பட்ட கட்டுரைகளில் உள்ள "
-"இணைப்புகள் பதிவிறக்கம் செய்யப்பட்ட பிற கட்டுரைகளை சுட்டிக்காட்டுகின்றன, அதன்"
-" அசல் வலை URL ஐ விட கட்டுரையின் பதிவிறக்கம் செய்யப்பட்ட நகலை "
-"சுட்டிக்காட்டுகின்றன. இதை நீங்கள் உண்மையாக அமைத்தால், நீங்கள் செயல்படுத்த "
-"வேண்டியிருக்கலாம்: மெத்: உங்கள் குறிப்பிட்ட வலைத்தளத்தின் URL திட்டத்துடன் "
-"பணியாற்ற `canonicalize_internal_url`."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.reverse_article_order:1
-msgid "Reverse the order of articles in each feed"
-msgstr "ஒவ்வொரு ஊட்டத்திலும் கட்டுரைகளின் வரிசையை மாற்றியமைக்கவும்"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.scale_news_images:1
-msgid ""
-"Maximum dimensions (w,h) to scale images to. If scale_news_images_to_device "
-"is True this is set to the device screen dimensions set by the output "
-"profile unless there is no profile set, in which case it is left at whatever"
-" value it has been assigned (default None)."
-msgstr ""
-"படங்களை அளவிட அதிகபட்ச பரிமாணங்கள் (W, H). SCALE_NEWS_IMAGES_TO_DEVICE உண்மை"
-" என்றால், இது சுயவிவரத் தொகுப்பு எதுவும் இல்லாவிட்டால் வெளியீட்டு "
-"சுயவிவரத்தால் அமைக்கப்பட்ட சாதனத் திரை பரிமாணங்களுக்கு அமைக்கப்பட்டுள்ளது, "
-"இந்த விஷயத்தில் அது ஒதுக்கப்பட்ட எந்த மதிப்பிலும் (இயல்புநிலை எதுவுமில்லை) "
-"விடப்படுகிறது."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.scale_news_images_to_device:1
-msgid ""
-"Rescale images to fit in the device screen dimensions set by the output "
-"profile. Ignored if no output profile is set."
-msgstr ""
-"வெளியீட்டு சுயவிவரத்தால் அமைக்கப்பட்ட சாதனத் திரை பரிமாணங்களில் "
-"பொருந்தக்கூடிய படங்களை மீட்டெடுக்கவும். வெளியீட்டு சுயவிவரம் "
-"அமைக்கப்படாவிட்டால் புறக்கணிக்கப்படுகிறது."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.simultaneous_downloads:1
-msgid ""
-"Number of simultaneous downloads. Set to 1 if the server is picky. "
-"Automatically reduced to 1 if :attr:`BasicNewsRecipe.delay` > 0"
-msgstr ""
-"ஒரே நேரத்தில் பதிவிறக்கங்களின் எண்ணிக்கை. சேவையகம் சேகரிப்பதாக இருந்தால் 1 "
-"ஆக அமைக்கவும். தானாகவே 1 எனக் குறைக்கப்படுகிறது: ATTR: "
-"`BasicNewsRecipe.Delay`> 0"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.summary_length:1
-msgid "Max number of characters in the short description"
-msgstr "குறுகிய விளக்கத்தில் அதிகபட்ச எழுத்துக்களின் எண்ணிக்கை"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.template_css:1
-msgid ""
-"The CSS that is used to style the templates, i.e., the navigation bars and "
-"the Tables of Contents. Rather than overriding this variable, you should use"
-" `extra_css` in your recipe to customize look and feel."
-msgstr ""
-"வார்ப்புருக்கள், அதாவது, வழிசெலுத்தல் பார்கள் மற்றும் உள்ளடக்கங்களின் "
-"அட்டவணைகள் ஆகியவற்றை பாணி செய்யப் பயன்படும் CSS. இந்த மாறியை மீறுவதற்குப் "
-"பதிலாக, தோற்றத்தையும் உணர்வையும் தனிப்பயனாக்க உங்கள் செய்முறையில் "
-"`கூடுதல்_சிஎஸ்ஸைப் பயன்படுத்த வேண்டும்."
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.timefmt:1
-msgid ""
-"The format string for the date shown on the first page. By default: "
-"Day_Name, Day_Number Month_Name Year"
-msgstr ""
-"முதல் பக்கத்தில் காட்டப்பட்டுள்ள தேதிக்கான வடிவமைப்பு சரம். இயல்பாக: "
-"day_name, day_number monthy_name ஆண்டு"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.timeout:1
-msgid "Timeout for fetching files from server in seconds"
-msgstr "சேவையகத்திலிருந்து கோப்புகளை நொடிகளில் பெறுவதற்கான நேரம் முடிந்தது"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.title:1
-msgid "The title to use for the e-book"
-msgstr "மின் புத்தகத்திற்கு பயன்படுத்த வேண்டிய தலைப்பு"
-
-#: ../../__w/calibre/calibre/manual/docstring of
-#: calibre.web.feeds.news.BasicNewsRecipe.use_embedded_content:1
-msgid ""
-"Normally we try to guess if a feed has full articles embedded in it based on"
-" the length of the embedded content. If `None`, then the default guessing is"
-" used. If `True` then the we always assume the feeds has embedded content "
-"and if `False` we always assume the feed does not have embedded content."
-msgstr ""
-"உட்பொதிக்கப்பட்ட உள்ளடக்கத்தின் நீளத்தின் அடிப்படையில் ஒரு ஊட்டத்தில் முழு "
-"கட்டுரைகள் பதிக்கப்பட்டுள்ளனவா என்று பொதுவாக யூகிக்க முயற்சிக்கிறோம். "
-"`எதுவுமில்லை 'என்றால், இயல்புநிலை யூகம் பயன்படுத்தப்படுகிறது. `உண்மை` "
-"என்றால், ஊட்டங்கள் உள்ளடக்கத்தை உட்பொதித்ததாக நாங்கள் எப்போதும் "
-"கருதுகிறோம்,` பொய் 'என்றால், தீவனத்தில் உட்பொதிக்கப்பட்ட உள்ளடக்கம் இல்லை "
-"என்று நாங்கள் எப்போதும் கருதுகிறோம்."

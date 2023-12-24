@@ -17,10 +17,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:4
-msgid ":mod:`sphinx.ext.autosummary` -- Generate autodoc summaries"
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:105
+msgid ""
+"would use the template :file:`mytemplate.rst` in your "
+":confval:`templates_path` to generate the pages for all entries listed. See "
+"`Customizing templates`_ below."
 msgstr ""
-": மோட்: `sphinx.ext.autosummary` - ஆட்டோடோக் சுருக்கங்களை உருவாக்குங்கள்"
+"பட்டியலிடப்பட்ட அனைத்து உள்ளீடுகளுக்கும் பக்கங்களை உருவாக்க `myTemplate.rst`"
+" உங்கள்:` mytemplate.rst` இல் பயன்படுத்தலாம். கீழே `வார்ப்புருக்கள் "
+"தனிப்பயனாக்குதல்`_ ஐப் பார்க்கவும்."
 
 #: ../../sphinx/doc/usage/extensions/autosummary.rst:11
 msgid ""
@@ -34,165 +39,6 @@ msgstr ""
 " தலைமுறை கருவிகள். உங்கள் ஆவணங்கள் நீண்ட மற்றும் விரிவாக இருக்கும்போது இது "
 "மிகவும் பயனுள்ளதாக இருக்கும், மேலும் அவை ஒவ்வொன்றையும் ஒரு தனி பக்கத்தில் "
 "வைப்பது அவற்றைப் படிக்க எளிதாக்குகிறது."
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:16
-msgid "The :mod:`sphinx.ext.autosummary` extension does this in two parts:"
-msgstr ""
-"தி: மோட்: `sphinx.ext.autosummary` நீட்டிப்பு இதை இரண்டு பகுதிகளாக "
-"செய்கிறது:"
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:18
-msgid ""
-"There is an :rst:dir:`autosummary` directive for generating summary listings"
-" that contain links to the documented items, and short summary blurbs "
-"extracted from their docstrings."
-msgstr ""
-"ஒரு: rst: dir: ஆவணப்படுத்தப்பட்ட உருப்படிகளுக்கான இணைப்புகளைக் கொண்ட "
-"சுருக்கமான பட்டியல்களை உருவாக்குவதற்கான `தன்னியக்க` உத்தரவு, மற்றும் "
-"அவற்றின் ஆவணங்களிலிருந்து பிரித்தெடுக்கப்பட்ட குறுகிய சுருக்க மங்கல்கள் "
-"உள்ளன."
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:22
-msgid ""
-"A :rst:dir:`autosummary` directive also generates short \"stub\" files for "
-"the entries listed in its content.  These files by default contain only the "
-"corresponding :mod:`sphinx.ext.autodoc` directive, but can be customized "
-"with templates."
-msgstr ""
-"A: RST: DIR: `தன்னியக்க` உத்தரவு அதன் உள்ளடக்கத்தில் பட்டியலிடப்பட்ட "
-"உள்ளீடுகளுக்கான குறுகிய\" ஸ்டப் \"கோப்புகளையும் உருவாக்குகிறது. இந்த "
-"கோப்புகளில் இயல்பாகவே தொடர்புடையது: MOD: `sphinx.ext.autodoc` உத்தரவு, ஆனால்"
-" வார்ப்புருக்கள் மூலம் தனிப்பயனாக்க முடியும்."
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:27
-msgid ""
-"The :program:`sphinx-autogen` script is also able to generate \"stub\" files"
-" from command line."
-msgstr ""
-"தி: நிரல்: `ஸ்பின்க்ஸ்-ஆட்டோஜென்` ஸ்கிரிப்ட் கட்டளை வரியிலிருந்து\" ஸ்டப் "
-"\"கோப்புகளை உருவாக்க முடியும்."
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:32
-msgid ""
-"Insert a table that contains links to documented items, and a short summary "
-"blurb (the first sentence of the docstring) for each of them."
-msgstr ""
-"ஆவணப்படுத்தப்பட்ட உருப்படிகளுக்கான இணைப்புகளைக் கொண்ட ஒரு அட்டவணையையும், அவை"
-" ஒவ்வொன்றிற்கும் ஒரு குறுகிய சுருக்கம் (டாக்ஸ்ட்ரிங்கின் முதல் வாக்கியம்) "
-"செருகவும்."
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:35
-msgid ""
-"The :rst:dir:`autosummary` directive can also optionally serve as a "
-":rst:dir:`toctree` entry for the included items. Optionally, stub ``.rst`` "
-"files for these items can also be automatically generated when "
-":confval:`autosummary_generate` is `True`."
-msgstr ""
-"தி: rst: dir: `AutoSummary` உத்தரவு விருப்பமாக A: rst: dir:` toctree` நுழைவு"
-" சேர்க்கப்பட்டுள்ளது. விருப்பமாக, இந்த உருப்படிகளுக்கான ஸ்டப் `` .rst`` "
-"கோப்புகளையும் தானாக உருவாக்கலாம்: confval: `autosummary_generate` என்பது` "
-"உண்மை`."
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:40
-msgid "For example, ::"
-msgstr "உதாரணத்திற்கு, ::"
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:49
-msgid "produces a table like this:"
-msgstr "இது போன்ற ஒரு அட்டவணையை உருவாக்குகிறது:"
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:57:<autosummary>:1
-msgid ""
-":py:obj:`environment.BuildEnvironment "
-"<sphinx.environment.BuildEnvironment>`\\ \\(app\\)"
-msgstr "."
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:57:<autosummary>:1
-msgid "The environment in which the ReST files are translated."
-msgstr "மீதமுள்ள கோப்புகள் மொழிபெயர்க்கப்பட்ட சூழல்."
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:57:<autosummary>:1
-msgid ":py:obj:`util.relative_uri <sphinx.util.relative_uri>`\\ \\(base\\, to\\)"
-msgstr "."
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:57:<autosummary>:1
-msgid "Return a relative URL from ``base`` to ``to``."
-msgstr "உறவினர் URL ஐ `` அடிப்படை`` முதல் ``` வரை திருப்பித் தரவும்."
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:60
-msgid ""
-"Autosummary preprocesses the docstrings and signatures with the same "
-":event:`autodoc-process-docstring` and :event:`autodoc-process-signature` "
-"hooks as :mod:`~sphinx.ext.autodoc`."
-msgstr ""
-"தன்னியக்கமானது ஆவணங்கள் மற்றும் கையொப்பங்களை முன்னறிவிக்கிறது: நிகழ்வு: "
-"`ஆட்டோடோக்-செயல்முறை-டோக்ஸ்ட்ரிங்` மற்றும்: நிகழ்வு:` "
-"ஆட்டோடோக்-செயல்முறை-கையொப்பம்` கொக்கிகள்: மோட்: `~ sphinx.ext.autodoc`."
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:64
-msgid "**Options**"
-msgstr "**விருப்பங்கள்**"
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:66
-msgid ""
-"If you want the :rst:dir:`autosummary` table to also serve as a "
-":rst:dir:`toctree` entry, use the ``toctree`` option, for example::"
-msgstr ""
-"நீங்கள் விரும்பினால்: rst: dir: `AutoSummary` அட்டவணை a: rst: dir:` toctree`"
-" நுழைவு எனவும், `` toctree`` விருப்பத்தைப் பயன்படுத்தவும், எடுத்துக்காட்டாக "
-"::"
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:75
-msgid ""
-"The ``toctree`` option also signals to the :program:`sphinx-autogen` script "
-"that stub pages should be generated for the entries listed in this "
-"directive.  The option accepts a directory name as an argument; "
-":program:`sphinx-autogen` will by default place its output in this "
-"directory. If no argument is given, output is placed in the same directory "
-"as the file that contains the directive."
-msgstr ""
-"`` Toctree`` விருப்பம்: நிரல்: இந்த உத்தரவில் பட்டியலிடப்பட்ட உள்ளீடுகளுக்கு"
-" ஸ்டப் பக்கங்கள் உருவாக்கப்பட வேண்டும் என்று `ஸ்பின்க்ஸ்-ஆட்டோஜென்` "
-"ஸ்கிரிப்ட் சமிக்ஞை செய்கிறது. விருப்பம் ஒரு அடைவு பெயரை ஒரு வாதமாக "
-"ஏற்றுக்கொள்கிறது; : நிரல்: `Sphinx-autogen` இயல்புநிலையாக அதன் வெளியீட்டை "
-"இந்த கோப்பகத்தில் வைக்கும். எந்த வாதமும் வழங்கப்படாவிட்டால், வெளியீடு "
-"உத்தரவைக் கொண்ட கோப்பின் அதே கோப்பகத்தில் வைக்கப்படுகிறது."
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:82
-msgid "You can also use ``caption`` option to give a caption to the toctree."
-msgstr ""
-"டோக்ட்ரீக்கு தலைப்பு கொடுக்க `` தலைப்பு` விருப்பத்தையும் பயன்படுத்தலாம்."
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:86
-msgid "caption option added."
-msgstr "தலைப்பு விருப்பம் சேர்க்கப்பட்டது."
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:88
-msgid ""
-"If you don't want the :rst:dir:`autosummary` to show function signatures in "
-"the listing, include the ``nosignatures`` option::"
-msgstr ""
-"நீங்கள் விரும்பவில்லை என்றால்: rst: dir: `AutoSummary` பட்டியலில் "
-"செயல்பாட்டு கையொப்பங்களைக் காட்ட,` `nosignatures`` விருப்பத்தை சேர்க்கவும் "
-"::"
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:97
-msgid ""
-"You can specify a custom template with the ``template`` option. For example,"
-" ::"
-msgstr ""
-"தனிப்பயன் வார்ப்புருவை `` வார்ப்புரு`` விருப்பத்துடன் குறிப்பிடலாம். "
-"உதாரணத்திற்கு, ::"
-
-#: ../../sphinx/doc/usage/extensions/autosummary.rst:105
-msgid ""
-"would use the template :file:`mytemplate.rst` in your "
-":confval:`templates_path` to generate the pages for all entries listed. See "
-"`Customizing templates`_ below."
-msgstr ""
-"பட்டியலிடப்பட்ட அனைத்து உள்ளீடுகளுக்கும் பக்கங்களை உருவாக்க `myTemplate.rst`"
-" உங்கள்:` mytemplate.rst` இல் பயன்படுத்தலாம். கீழே `வார்ப்புருக்கள் "
-"தனிப்பயனாக்குதல்`_ ஐப் பார்க்கவும்."
 
 #: ../../sphinx/doc/usage/extensions/autosummary.rst:111
 msgid ""
@@ -270,6 +116,12 @@ msgstr ""
 "தன்னியக்க ஸ்டப்ஸ் கோப்புகளுக்கான வார்ப்புரு இயந்திரத்தின் சூழலுக்குள் செல்ல "
 "மதிப்புகளின் அகராதி."
 
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:16
+msgid "The :mod:`sphinx.ext.autosummary` extension does this in two parts:"
+msgstr ""
+"தி: மோட்: `sphinx.ext.autosummary` நீட்டிப்பு இதை இரண்டு பகுதிகளாக "
+"செய்கிறது:"
+
 #: ../../sphinx/doc/usage/extensions/autosummary.rst:165
 msgid ""
 "Boolean indicating whether to scan all found documents for autosummary "
@@ -298,6 +150,17 @@ msgid ""
 msgstr ""
 "உமிழ்வுகள்: நிகழ்வு: `ஆட்டோடோக்-ஸ்கிப்-மெம்பர்` நிகழ்வு: மோட்:` ~ "
 "sphinx.ext.autodoc` செய்கிறது."
+
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:18
+msgid ""
+"There is an :rst:dir:`autosummary` directive for generating summary listings"
+" that contain links to the documented items, and short summary blurbs "
+"extracted from their docstrings."
+msgstr ""
+"ஒரு: rst: dir: ஆவணப்படுத்தப்பட்ட உருப்படிகளுக்கான இணைப்புகளைக் கொண்ட "
+"சுருக்கமான பட்டியல்களை உருவாக்குவதற்கான `தன்னியக்க` உத்தரவு, மற்றும் "
+"அவற்றின் ஆவணங்களிலிருந்து பிரித்தெடுக்கப்பட்ட குறுகிய சுருக்க மங்கல்கள் "
+"உள்ளன."
 
 #: ../../sphinx/doc/usage/extensions/autosummary.rst:180
 msgid "Enabled by default."
@@ -361,6 +224,18 @@ msgstr ""
 "ஆவணப்படுத்தப்படும் என்பதை நினைவில் கொள்க. தொகுதி இறக்குமதி *`` இன் `` இன் "
 "நடத்தையை பொருத்த, `` autosummary_ignore_module_all`` ஐ பொய்யாக அமைக்கவும், "
 "`` autoSummary_imported_members`` `உண்மை."
+
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:22
+msgid ""
+"A :rst:dir:`autosummary` directive also generates short \"stub\" files for "
+"the entries listed in its content.  These files by default contain only the "
+"corresponding :mod:`sphinx.ext.autodoc` directive, but can be customized "
+"with templates."
+msgstr ""
+"A: RST: DIR: `தன்னியக்க` உத்தரவு அதன் உள்ளடக்கத்தில் பட்டியலிடப்பட்ட "
+"உள்ளீடுகளுக்கான குறுகிய\" ஸ்டப் \"கோப்புகளையும் உருவாக்குகிறது. இந்த "
+"கோப்புகளில் இயல்பாகவே தொடர்புடையது: MOD: `sphinx.ext.autodoc` உத்தரவு, ஆனால்"
+" வார்ப்புருக்கள் மூலம் தனிப்பயனாக்க முடியும்."
 
 #: ../../sphinx/doc/usage/extensions/autosummary.rst:225
 msgid ""
@@ -439,6 +314,14 @@ msgstr ""
 msgid "Name of the documented object, excluding the module parts."
 msgstr "தொகுதி பகுதிகளைத் தவிர்த்து, ஆவணப்படுத்தப்பட்ட பொருளின் பெயர்."
 
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:27
+msgid ""
+"The :program:`sphinx-autogen` script is also able to generate \"stub\" files"
+" from command line."
+msgstr ""
+"தி: நிரல்: `ஸ்பின்க்ஸ்-ஆட்டோஜென்` ஸ்கிரிப்ட் கட்டளை வரியிலிருந்து\" ஸ்டப் "
+"\"கோப்புகளை உருவாக்க முடியும்."
+
 #: ../../sphinx/doc/usage/extensions/autosummary.rst:272
 msgid "Full name of the documented object, including module and class parts."
 msgstr ""
@@ -516,6 +399,15 @@ msgstr ""
 "தொகுதியில் \"பொது\" விதிவிலக்குகளின் பெயர்களைக் கொண்ட பட்டியல். "
 "தொகுதிகளுக்கு மட்டுமே கிடைக்கும்."
 
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:32
+msgid ""
+"Insert a table that contains links to documented items, and a short summary "
+"blurb (the first sentence of the docstring) for each of them."
+msgstr ""
+"ஆவணப்படுத்தப்பட்ட உருப்படிகளுக்கான இணைப்புகளைக் கொண்ட ஒரு அட்டவணையையும், அவை"
+" ஒவ்வொன்றிற்கும் ஒரு குறுகிய சுருக்கம் (டாக்ஸ்ட்ரிங்கின் முதல் வாக்கியம்) "
+"செருகவும்."
+
 #: ../../sphinx/doc/usage/extensions/autosummary.rst:324
 msgid ""
 "List containing names of \"public\" methods in the class.  Only available "
@@ -559,6 +451,18 @@ msgstr ""
 "தடுக்கிறது. இது பில்டின் ஜின்ஜா `எஸ்கேப் ஃபில்டர்`_ ஐ மாற்றுகிறது, இது html-"
 "escapeing செய்கிறது."
 
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:35
+msgid ""
+"The :rst:dir:`autosummary` directive can also optionally serve as a "
+":rst:dir:`toctree` entry for the included items. Optionally, stub ``.rst`` "
+"files for these items can also be automatically generated when "
+":confval:`autosummary_generate` is `True`."
+msgstr ""
+"தி: rst: dir: `AutoSummary` உத்தரவு விருப்பமாக A: rst: dir:` toctree` நுழைவு"
+" சேர்க்கப்பட்டுள்ளது. விருப்பமாக, இந்த உருப்படிகளுக்கான ஸ்டப் `` .rst`` "
+"கோப்புகளையும் தானாக உருவாக்கலாம்: confval: `autosummary_generate` என்பது` "
+"உண்மை`."
+
 #: ../../sphinx/doc/usage/extensions/autosummary.rst:354
 msgid "Add a title underline to a piece of text."
 msgstr "உரையின் ஒரு தலைப்பு அடிக்கோடிட்டு சேர்க்கவும்."
@@ -578,3 +482,99 @@ msgid ""
 msgstr ""
 "நீங்கள்: rst: dir: `ஆட்டோசம்மரி` உத்தரவை STUB பக்கங்களில் பயன்படுத்தலாம். "
 "இந்த வழிமுறைகளின் அடிப்படையில் ஸ்டப் பக்கங்களும் உருவாக்கப்படுகின்றன."
+
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:4
+msgid ":mod:`sphinx.ext.autosummary` -- Generate autodoc summaries"
+msgstr ""
+": மோட்: `sphinx.ext.autosummary` - ஆட்டோடோக் சுருக்கங்களை உருவாக்குங்கள்"
+
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:40
+msgid "For example, ::"
+msgstr "உதாரணத்திற்கு, ::"
+
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:49
+msgid "produces a table like this:"
+msgstr "இது போன்ற ஒரு அட்டவணையை உருவாக்குகிறது:"
+
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:60
+msgid ""
+"Autosummary preprocesses the docstrings and signatures with the same "
+":event:`autodoc-process-docstring` and :event:`autodoc-process-signature` "
+"hooks as :mod:`~sphinx.ext.autodoc`."
+msgstr ""
+"தன்னியக்கமானது ஆவணங்கள் மற்றும் கையொப்பங்களை முன்னறிவிக்கிறது: நிகழ்வு: "
+"`ஆட்டோடோக்-செயல்முறை-டோக்ஸ்ட்ரிங்` மற்றும்: நிகழ்வு:` "
+"ஆட்டோடோக்-செயல்முறை-கையொப்பம்` கொக்கிகள்: மோட்: `~ sphinx.ext.autodoc`."
+
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:64
+msgid "**Options**"
+msgstr "**விருப்பங்கள்**"
+
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:66
+msgid ""
+"If you want the :rst:dir:`autosummary` table to also serve as a "
+":rst:dir:`toctree` entry, use the ``toctree`` option, for example::"
+msgstr ""
+"நீங்கள் விரும்பினால்: rst: dir: `AutoSummary` அட்டவணை a: rst: dir:` toctree`"
+" நுழைவு எனவும், `` toctree`` விருப்பத்தைப் பயன்படுத்தவும், எடுத்துக்காட்டாக "
+"::"
+
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:75
+msgid ""
+"The ``toctree`` option also signals to the :program:`sphinx-autogen` script "
+"that stub pages should be generated for the entries listed in this "
+"directive.  The option accepts a directory name as an argument; "
+":program:`sphinx-autogen` will by default place its output in this "
+"directory. If no argument is given, output is placed in the same directory "
+"as the file that contains the directive."
+msgstr ""
+"`` Toctree`` விருப்பம்: நிரல்: இந்த உத்தரவில் பட்டியலிடப்பட்ட உள்ளீடுகளுக்கு"
+" ஸ்டப் பக்கங்கள் உருவாக்கப்பட வேண்டும் என்று `ஸ்பின்க்ஸ்-ஆட்டோஜென்` "
+"ஸ்கிரிப்ட் சமிக்ஞை செய்கிறது. விருப்பம் ஒரு அடைவு பெயரை ஒரு வாதமாக "
+"ஏற்றுக்கொள்கிறது; : நிரல்: `Sphinx-autogen` இயல்புநிலையாக அதன் வெளியீட்டை "
+"இந்த கோப்பகத்தில் வைக்கும். எந்த வாதமும் வழங்கப்படாவிட்டால், வெளியீடு "
+"உத்தரவைக் கொண்ட கோப்பின் அதே கோப்பகத்தில் வைக்கப்படுகிறது."
+
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:82
+msgid "You can also use ``caption`` option to give a caption to the toctree."
+msgstr ""
+"டோக்ட்ரீக்கு தலைப்பு கொடுக்க `` தலைப்பு` விருப்பத்தையும் பயன்படுத்தலாம்."
+
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:86
+msgid "caption option added."
+msgstr "தலைப்பு விருப்பம் சேர்க்கப்பட்டது."
+
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:88
+msgid ""
+"If you don't want the :rst:dir:`autosummary` to show function signatures in "
+"the listing, include the ``nosignatures`` option::"
+msgstr ""
+"நீங்கள் விரும்பவில்லை என்றால்: rst: dir: `AutoSummary` பட்டியலில் "
+"செயல்பாட்டு கையொப்பங்களைக் காட்ட,` `nosignatures`` விருப்பத்தை சேர்க்கவும் "
+"::"
+
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:97
+msgid ""
+"You can specify a custom template with the ``template`` option. For example,"
+" ::"
+msgstr ""
+"தனிப்பயன் வார்ப்புருவை `` வார்ப்புரு`` விருப்பத்துடன் குறிப்பிடலாம். "
+"உதாரணத்திற்கு, ::"
+
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:57:<autosummary>:1
+msgid ""
+":py:obj:`environment.BuildEnvironment "
+"<sphinx.environment.BuildEnvironment>`\\ \\(app\\)"
+msgstr "."
+
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:57:<autosummary>:1
+msgid ":py:obj:`util.relative_uri <sphinx.util.relative_uri>`\\ \\(base\\, to\\)"
+msgstr "."
+
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:57:<autosummary>:1
+msgid "Return a relative URL from ``base`` to ``to``."
+msgstr "உறவினர் URL ஐ `` அடிப்படை`` முதல் ``` வரை திருப்பித் தரவும்."
+
+#: ../../sphinx/doc/usage/extensions/autosummary.rst:57:<autosummary>:1
+msgid "The environment in which the ReST files are translated."
+msgstr "மீதமுள்ள கோப்புகள் மொழிபெயர்க்கப்பட்ட சூழல்."

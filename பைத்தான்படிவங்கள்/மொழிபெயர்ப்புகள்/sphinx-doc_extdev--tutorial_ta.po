@@ -17,20 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/extdev/tutorial.rst:4
-msgid "Tutorial: Writing a simple extension"
-msgstr "பயிற்சி: எளிய நீட்டிப்பு எழுதுதல்"
-
-#: ../../sphinx/doc/extdev/tutorial.rst:6
-msgid ""
-"This section is intended as a walkthrough for the creation of custom "
-"extensions. It covers the basics of writing and activating an extension, as "
-"well as commonly used features of extensions."
-msgstr ""
-"இந்த பிரிவு தனிப்பயன் நீட்டிப்புகளை உருவாக்குவதற்கான ஒத்திகையாக "
-"கருதப்படுகிறது. இது ஒரு நீட்டிப்பை எழுதுவதற்கும் செயல்படுத்துவதற்கும் "
-"அடிப்படைகளையும், பொதுவாக நீட்டிப்புகளின் அம்சங்களையும் உள்ளடக்கியது."
-
 #: ../../sphinx/doc/extdev/tutorial.rst:10
 msgid ""
 "As an example, we will cover a \"todo\" extension that adds capabilities to "
@@ -41,231 +27,6 @@ msgstr ""
 "சேர்ப்பதற்கும், இவற்றை ஒரு மைய இடத்தில் சேகரிப்பதற்கும் ஒரு \"டோடோ\" "
 "நீட்டிப்பை நாங்கள் உள்ளடக்குவோம். (இதேபோன்ற \"டோடோ\" நீட்டிப்பு "
 "ஸ்பிங்க்ஸுடன் விநியோகிக்கப்படுகிறது.)"
-
-#: ../../sphinx/doc/extdev/tutorial.rst:16
-msgid "Important objects"
-msgstr "முக்கியமான பொருள்கள்"
-
-#: ../../sphinx/doc/extdev/tutorial.rst:18
-msgid ""
-"There are several key objects whose API you will use while writing an "
-"extension.  These are:"
-msgstr ""
-"நீட்டிப்பை எழுதும் போது நீங்கள் ஏபிஐ பயன்படுத்தும் பல முக்கிய பொருள்கள் "
-"உள்ளன. அவை:"
-
-#: ../../sphinx/doc/extdev/tutorial.rst:27
-msgid "**Application**"
-msgstr "**விண்ணப்பம்**"
-
-#: ../../sphinx/doc/extdev/tutorial.rst:22
-msgid ""
-"The application object (usually called ``app``) is an instance of "
-":class:`.Sphinx`.  It controls most high-level functionality, such as the "
-"setup of extensions, event dispatching and producing output (logging)."
-msgstr ""
-"பயன்பாட்டு பொருள் (வழக்கமாக `` app`` என்று அழைக்கப்படுகிறது) இதன் ஒரு "
-"நிகழ்வு: வகுப்பு: `.sphinx`. இது நீட்டிப்புகளை அமைத்தல், நிகழ்வு அனுப்புதல் "
-"மற்றும் வெளியீட்டை உருவாக்குதல் (பதிவு செய்தல்) போன்ற மிக உயர் மட்ட "
-"செயல்பாட்டைக் கட்டுப்படுத்துகிறது."
-
-#: ../../sphinx/doc/extdev/tutorial.rst:26
-msgid ""
-"If you have the environment object, the application is available as "
-"``env.app``."
-msgstr ""
-"உங்களிடம் சுற்றுச்சூழல் பொருள் இருந்தால், பயன்பாடு `` env.app`` ஆகக் "
-"கிடைக்கிறது."
-
-#: ../../sphinx/doc/extdev/tutorial.rst:40
-msgid "**Environment**"
-msgstr "** சூழல் **"
-
-#: ../../sphinx/doc/extdev/tutorial.rst:30
-msgid ""
-"The build environment object (usually called ``env``) is an instance of "
-":class:`.BuildEnvironment`.  It is responsible for parsing the source "
-"documents, stores all metadata about the document collection and is "
-"serialized to disk after each build."
-msgstr ""
-"உருவாக்க சுற்றுச்சூழல் பொருள் (பொதுவாக `` env`` என்று அழைக்கப்படுகிறது) இதன்"
-" ஒரு நிகழ்வு: வகுப்பு: `.பிலென்டென்டென்ட்மென்ட்`. மூல ஆவணங்களை "
-"பாகுபடுத்துவதற்கு இது பொறுப்பு, ஆவண சேகரிப்பு பற்றி அனைத்து "
-"மெட்டாடேட்டாவையும் சேமிக்கிறது மற்றும் ஒவ்வொரு கட்டமைப்பிற்கும் பிறகு "
-"வட்டுக்கு வரிசைப்படுத்தப்படுகிறது."
-
-#: ../../sphinx/doc/extdev/tutorial.rst:35
-msgid ""
-"Its API provides methods to do with access to metadata, resolving "
-"references, etc.  It can also be used by extensions to cache information "
-"that should persist for incremental rebuilds."
-msgstr ""
-"அதன் ஏபிஐ மெட்டாடேட்டாவிற்கான அணுகல், குறிப்புகளைத் தீர்ப்பது போன்றவற்றைச் "
-"செய்வதற்கான வழிமுறைகளை வழங்குகிறது. அதிகரிக்கும் மறுகட்டமைப்புகளுக்கு "
-"தொடர்ந்து இருக்க வேண்டிய தகவல்களை கேச் செய்ய நீட்டிப்புகளால் இதைப் "
-"பயன்படுத்தலாம்."
-
-#: ../../sphinx/doc/extdev/tutorial.rst:39
-msgid ""
-"If you have the application or builder object, the environment is available "
-"as ``app.env`` or ``builder.env``."
-msgstr ""
-"உங்களிடம் பயன்பாடு அல்லது பில்டர் பொருள் இருந்தால், சூழல் `` app.env`` "
-"அல்லது `` பில்டர்.இன்வி`` எனக் கிடைக்கிறது."
-
-#: ../../sphinx/doc/extdev/tutorial.rst:49
-msgid "**Builder**"
-msgstr "** பில்டர் **"
-
-#: ../../sphinx/doc/extdev/tutorial.rst:43
-msgid ""
-"The builder object (usually called ``builder``) is an instance of a specific"
-" subclass of :class:`.Builder`.  Each builder class knows how to convert the"
-" parsed documents into an output format, or otherwise process them (e.g. "
-"check external links)."
-msgstr ""
-"பில்டர் பொருள் (வழக்கமாக `` பில்டர்`` என்று அழைக்கப்படுகிறது) ஒரு "
-"குறிப்பிட்ட துணைப்பிரிவின் ஒரு எடுத்துக்காட்டு: வகுப்பு: `.பில்டர்`. ஒவ்வொரு"
-" பில்டர் வகுப்பிலும் பாகுபடுத்தப்பட்ட ஆவணங்களை வெளியீட்டு வடிவமாக மாற்றுவது "
-"அல்லது அவற்றை செயலாக்குவது எப்படி என்று தெரியும் (எ.கா. வெளிப்புற இணைப்புகளை"
-" சரிபார்க்கவும்)."
-
-#: ../../sphinx/doc/extdev/tutorial.rst:48
-msgid ""
-"If you have the application object, the builder is available as "
-"``app.builder``."
-msgstr ""
-"உங்களிடம் பயன்பாட்டு பொருள் இருந்தால், பில்டர் `` app.builder`` ஆகக் "
-"கிடைக்கிறது."
-
-#: ../../sphinx/doc/extdev/tutorial.rst:57
-msgid "**Config**"
-msgstr "** கட்டமைப்பு **"
-
-#: ../../sphinx/doc/extdev/tutorial.rst:52
-msgid ""
-"The config object (usually called ``config``) provides the values of "
-"configuration values set in :file:`conf.py` as attributes.  It is an "
-"instance of :class:`.Config`."
-msgstr ""
-"உள்ளமைவு பொருள் (வழக்கமாக `` கட்டமைப்பு`` என்று அழைக்கப்படுகிறது) உள்ளமைவு "
-"மதிப்புகளின் மதிப்புகளை அமைக்கிறது: கோப்பு: `conf.py` பண்புகளாக. இது ஒரு "
-"நிகழ்வு: வகுப்பு: `.கான்ஃபிக்`."
-
-#: ../../sphinx/doc/extdev/tutorial.rst:56
-msgid "The config is available as ``app.config`` or ``env.config``."
-msgstr ""
-"இந்த கட்டமைப்பு `` app.config`` அல்லது `` env.config`` எனக் கிடைக்கிறது."
-
-#: ../../sphinx/doc/extdev/tutorial.rst:60
-msgid "Build Phases"
-msgstr "கட்டங்களை உருவாக்குங்கள்"
-
-#: ../../sphinx/doc/extdev/tutorial.rst:62
-msgid ""
-"One thing that is vital in order to understand extension mechanisms is the "
-"way in which a Sphinx project is built: this works in several phases."
-msgstr ""
-"நீட்டிப்பு வழிமுறைகளைப் புரிந்துகொள்வதற்கு இன்றியமையாத ஒரு விஷயம், ஒரு "
-"ஸ்பிங்க்ஸ் திட்டம் கட்டமைக்கப்பட்ட வழி: இது பல கட்டங்களில் செயல்படுகிறது."
-
-#: ../../sphinx/doc/extdev/tutorial.rst:65
-msgid "**Phase 0: Initialization**"
-msgstr "** கட்டம் 0: துவக்கம் **"
-
-#: ../../sphinx/doc/extdev/tutorial.rst:67
-msgid ""
-"In this phase, almost nothing of interest to us happens.  The source "
-"directory is searched for source files, and extensions are initialized. "
-"Should a stored build environment exist, it is loaded, otherwise a new one "
-"is created."
-msgstr ""
-"இந்த கட்டத்தில், எங்களுக்கு ஆர்வம் எதுவும் நடக்காது. மூல கோப்புகளை மூல "
-"கோப்புகளுக்காக தேடப்படுகிறது, மேலும் நீட்டிப்புகள் துவக்கப்படுகின்றன. "
-"சேமிக்கப்பட்ட உருவாக்க சூழல் இருந்தால், அது ஏற்றப்படுகிறது, இல்லையெனில் "
-"புதியது உருவாக்கப்படுகிறது."
-
-#: ../../sphinx/doc/extdev/tutorial.rst:72
-msgid "**Phase 1: Reading**"
-msgstr "** கட்டம் 1: படித்தல் **"
-
-#: ../../sphinx/doc/extdev/tutorial.rst:74
-msgid ""
-"In Phase 1, all source files (and on subsequent builds, those that are new "
-"or changed) are read and parsed.  This is the phase where directives and "
-"roles are encountered by docutils, and the corresponding code is executed.  "
-"The output of this phase is a *doctree* for each source file; that is a tree"
-" of docutils nodes.  For document elements that aren't fully known until all"
-" existing files are read, temporary nodes are created."
-msgstr ""
-"கட்டம் 1 இல், அனைத்து மூல கோப்புகளும் (மற்றும் அடுத்தடுத்த கட்டடங்களில், "
-"புதியவை அல்லது மாற்றப்பட்டவை) படிக்கப்பட்டு பாகுபடுத்தப்படுகின்றன. "
-"ஆவணங்களால் வழிமுறைகள் மற்றும் பாத்திரங்கள் எதிர்கொள்ளும் கட்டம் இது, அதனுடன்"
-" தொடர்புடைய குறியீடு செயல்படுத்தப்படுகிறது. இந்த கட்டத்தின் வெளியீடு ஒவ்வொரு"
-" மூல கோப்பிற்கும் ஒரு * கோட்பாட்டு * ஆகும்; அது ஆவண முனைகளின் மரம். "
-"தற்போதுள்ள அனைத்து கோப்புகளும் படிக்கும் வரை முழுமையாக அறியப்படாத ஆவண "
-"கூறுகளுக்கு, தற்காலிக முனைகள் உருவாக்கப்படுகின்றன."
-
-#: ../../sphinx/doc/extdev/tutorial.rst:81
-msgid ""
-"There are nodes provided by docutils, which are documented `in the docutils "
-"documentation <http://docutils.sourceforge.net/docs/ref/doctree.html>`__. "
-"Additional nodes are provided by Sphinx and :ref:`documented here <nodes>`."
-msgstr ""
-"டொக்யூடில்ஸ் வழங்கிய முனைகள் உள்ளன, அவை `ஆவண ஆவணங்களில் "
-"ஆவணப்படுத்தப்பட்டுள்ளன "
-"<http://docutils.sourceforge.net/docs/ref/doctree.html> __. __. கூடுதல் "
-"முனைகள் SPHINX ஆல் வழங்கப்படுகின்றன: ref: `இங்கே ஆவணப்படுத்தப்பட்டுள்ளது "
-"<Nodes>."
-
-#: ../../sphinx/doc/extdev/tutorial.rst:85
-msgid ""
-"During reading, the build environment is updated with all meta- and cross "
-"reference data of the read documents, such as labels, the names of headings,"
-" described Python objects and index entries.  This will later be used to "
-"replace the temporary nodes."
-msgstr ""
-"வாசிப்பின் போது, லேபிள்கள், தலைப்புகளின் பெயர்கள், விவரிக்கப்பட்ட பைதான் "
-"பொருள்கள் மற்றும் குறியீட்டு உள்ளீடுகள் போன்ற வாசிப்பு ஆவணங்களின் அனைத்து "
-"மெட்டா மற்றும் குறுக்கு குறிப்பு தரவுகளுடன் உருவாக்க சூழல் "
-"புதுப்பிக்கப்படுகிறது. இது பின்னர் தற்காலிக முனைகளை மாற்ற பயன்படுகிறது."
-
-#: ../../sphinx/doc/extdev/tutorial.rst:90
-msgid ""
-"The parsed doctrees are stored on the disk, because it is not possible to "
-"hold all of them in memory."
-msgstr ""
-"பாகுபடுத்தப்பட்ட கோட்பாடுகள் வட்டில் சேமிக்கப்படுகின்றன, ஏனென்றால் அவை "
-"அனைத்தையும் நினைவகத்தில் வைத்திருக்க முடியாது."
-
-#: ../../sphinx/doc/extdev/tutorial.rst:93
-msgid "**Phase 2: Consistency checks**"
-msgstr "** கட்டம் 2: நிலைத்தன்மை காசோலைகள் **"
-
-#: ../../sphinx/doc/extdev/tutorial.rst:95
-msgid "Some checking is done to ensure no surprises in the built documents."
-msgstr ""
-"கட்டப்பட்ட ஆவணங்களில் எந்த ஆச்சரியமும் இல்லை என்பதை உறுதிப்படுத்த சில சோதனை "
-"செய்யப்படுகிறது."
-
-#: ../../sphinx/doc/extdev/tutorial.rst:97
-msgid "**Phase 3: Resolving**"
-msgstr "** கட்டம் 3: தீர்க்கும் **"
-
-#: ../../sphinx/doc/extdev/tutorial.rst:99
-msgid ""
-"Now that the metadata and cross-reference data of all existing documents is "
-"known, all temporary nodes are replaced by nodes that can be converted into "
-"output using components called tranform.  For example, links are created for"
-" object references that exist, and simple literal nodes are created for "
-"those that don't."
-msgstr ""
-"இப்போது தற்போதுள்ள அனைத்து ஆவணங்களின் மெட்டாடேட்டா மற்றும் குறுக்கு-குறிப்பு"
-" தரவு அறியப்பட்டுள்ளதால், அனைத்து தற்காலிக முனைகளும் முனைகளால் "
-"மாற்றப்படுகின்றன, அவை டிரான்ஃபார்ம் எனப்படும் கூறுகளைப் பயன்படுத்தி "
-"வெளியீட்டாக மாற்றப்படலாம். எடுத்துக்காட்டாக, இருக்கும் பொருள் "
-"குறிப்புகளுக்காக இணைப்புகள் உருவாக்கப்படுகின்றன, மேலும் இல்லாதவர்களுக்கு "
-"எளிய நேரடி முனைகள் உருவாக்கப்படுகின்றன."
 
 #: ../../sphinx/doc/extdev/tutorial.rst:105
 msgid "**Phase 4: Writing**"
@@ -376,6 +137,10 @@ msgstr ""
 "அழைக்கப்படும் புதிய பைதான் தொகுதியை உருவாக்குவோம்: கோப்பு: `todo.py` மற்றும்"
 " அமைவு செயல்பாட்டைச் சேர்க்கவும் ::"
 
+#: ../../sphinx/doc/extdev/tutorial.rst:16
+msgid "Important objects"
+msgstr "முக்கியமான பொருள்கள்"
+
 #: ../../sphinx/doc/extdev/tutorial.rst:168
 msgid ""
 "The calls in this function refer to classes and functions not yet written.  "
@@ -414,6 +179,14 @@ msgstr ""
 " குறிப்பிடலாம். புதிய முனைகள் 4 ஆம் கட்டம் வரை தங்கியிருக்கும்போது இந்த "
 "பார்வையாளர் செயல்பாடுகள் தேவைப்படுகின்றன - `` டோடோலிஸ்ட்`` முனை எப்போதும் 3 "
 "ஆம் கட்டத்தில் மாற்றப்படுவதால், அதற்கு எதுவும் தேவையில்லை."
+
+#: ../../sphinx/doc/extdev/tutorial.rst:18
+msgid ""
+"There are several key objects whose API you will use while writing an "
+"extension.  These are:"
+msgstr ""
+"நீட்டிப்பை எழுதும் போது நீங்கள் ஏபிஐ பயன்படுத்தும் பல முக்கிய பொருள்கள் "
+"உள்ளன. அவை:"
 
 #: ../../sphinx/doc/extdev/tutorial.rst:184
 msgid ""
@@ -463,6 +236,17 @@ msgstr ""
 "எச்சரிக்கையைப் போல கையாளப்பட வேண்டும்,` `டோடோலிஸ்ட்`` ஒரு\" பொது \"முனை "
 "மட்டுமே."
 
+#: ../../sphinx/doc/extdev/tutorial.rst:22
+msgid ""
+"The application object (usually called ``app``) is an instance of "
+":class:`.Sphinx`.  It controls most high-level functionality, such as the "
+"setup of extensions, event dispatching and producing output (logging)."
+msgstr ""
+"பயன்பாட்டு பொருள் (வழக்கமாக `` app`` என்று அழைக்கப்படுகிறது) இதன் ஒரு "
+"நிகழ்வு: வகுப்பு: `.sphinx`. இது நீட்டிப்புகளை அமைத்தல், நிகழ்வு அனுப்புதல் "
+"மற்றும் வெளியீட்டை உருவாக்குதல் (பதிவு செய்தல்) போன்ற மிக உயர் மட்ட "
+"செயல்பாட்டைக் கட்டுப்படுத்துகிறது."
+
 #: ../../sphinx/doc/extdev/tutorial.rst:221
 msgid ""
 "Many extensions will not have to create their own node classes and work fine"
@@ -509,6 +293,18 @@ msgstr ""
 #: ../../sphinx/doc/extdev/tutorial.rst:248
 msgid "The ``todo`` directive function looks like this::"
 msgstr "`` டோடோ`` உத்தரவு செயல்பாடு இப்படி தெரிகிறது ::"
+
+#: ../../sphinx/doc/extdev/tutorial.rst:26
+msgid ""
+"If you have the environment object, the application is available as "
+"``env.app``."
+msgstr ""
+"உங்களிடம் சுற்றுச்சூழல் பொருள் இருந்தால், பயன்பாடு `` env.app`` ஆகக் "
+"கிடைக்கிறது."
+
+#: ../../sphinx/doc/extdev/tutorial.rst:27
+msgid "**Application**"
+msgstr "**விண்ணப்பம்**"
 
 #: ../../sphinx/doc/extdev/tutorial.rst:278
 msgid ""
@@ -570,6 +366,19 @@ msgstr ""
 "எனவே கட்டளை தேவைப்பட்டால் அதை சரிபார்த்து உருவாக்க வேண்டும். டோடோ நுழைவு "
 "இருப்பிடம் பற்றிய பல்வேறு தகவல்கள் முனையின் நகலுடன் சேமிக்கப்படுகின்றன."
 
+#: ../../sphinx/doc/extdev/tutorial.rst:30
+msgid ""
+"The build environment object (usually called ``env``) is an instance of "
+":class:`.BuildEnvironment`.  It is responsible for parsing the source "
+"documents, stores all metadata about the document collection and is "
+"serialized to disk after each build."
+msgstr ""
+"உருவாக்க சுற்றுச்சூழல் பொருள் (பொதுவாக `` env`` என்று அழைக்கப்படுகிறது) இதன்"
+" ஒரு நிகழ்வு: வகுப்பு: `.பிலென்டென்டென்ட்மென்ட்`. மூல ஆவணங்களை "
+"பாகுபடுத்துவதற்கு இது பொறுப்பு, ஆவண சேகரிப்பு பற்றி அனைத்து "
+"மெட்டாடேட்டாவையும் சேமிக்கிறது மற்றும் ஒவ்வொரு கட்டமைப்பிற்கும் பிறகு "
+"வட்டுக்கு வரிசைப்படுத்தப்படுகிறது."
+
 #: ../../sphinx/doc/extdev/tutorial.rst:302
 msgid ""
 "In the last line, the nodes that should be put into the doctree are "
@@ -623,6 +432,17 @@ msgstr ""
 "இந்த நிகழ்வு 3 ஆம் கட்டத்தின் முடிவில் உமிழப்படுகிறது மற்றும் தனிப்பயன் "
 "தீர்வு செய்ய அனுமதிக்கிறது ::"
 
+#: ../../sphinx/doc/extdev/tutorial.rst:35
+msgid ""
+"Its API provides methods to do with access to metadata, resolving "
+"references, etc.  It can also be used by extensions to cache information "
+"that should persist for incremental rebuilds."
+msgstr ""
+"அதன் ஏபிஐ மெட்டாடேட்டாவிற்கான அணுகல், குறிப்புகளைத் தீர்ப்பது போன்றவற்றைச் "
+"செய்வதற்கான வழிமுறைகளை வழங்குகிறது. அதிகரிக்கும் மறுகட்டமைப்புகளுக்கு "
+"தொடர்ந்து இருக்க வேண்டிய தகவல்களை கேச் செய்ய நீட்டிப்புகளால் இதைப் "
+"பயன்படுத்தலாம்."
+
 #: ../../sphinx/doc/extdev/tutorial.rst:386
 msgid ""
 "It is a bit more involved.  If our new \"todo_include_todos\" config value "
@@ -654,3 +474,183 @@ msgstr ""
 "app.builder.get_relative_uri`` ஆல் கட்டப்பட்டுள்ளது, இது பயன்படுத்தப்பட்ட "
 "பில்டரைப் பொறுத்து பொருத்தமான URI ஐ உருவாக்குகிறது, மேலும் டோடோ முனையின் "
 "(இலக்கின்) ஐடியை நங்கூரப் பெயராக சேர்க்கிறது."
+
+#: ../../sphinx/doc/extdev/tutorial.rst:39
+msgid ""
+"If you have the application or builder object, the environment is available "
+"as ``app.env`` or ``builder.env``."
+msgstr ""
+"உங்களிடம் பயன்பாடு அல்லது பில்டர் பொருள் இருந்தால், சூழல் `` app.env`` "
+"அல்லது `` பில்டர்.இன்வி`` எனக் கிடைக்கிறது."
+
+#: ../../sphinx/doc/extdev/tutorial.rst:4
+msgid "Tutorial: Writing a simple extension"
+msgstr "பயிற்சி: எளிய நீட்டிப்பு எழுதுதல்"
+
+#: ../../sphinx/doc/extdev/tutorial.rst:40
+msgid "**Environment**"
+msgstr "** சூழல் **"
+
+#: ../../sphinx/doc/extdev/tutorial.rst:43
+msgid ""
+"The builder object (usually called ``builder``) is an instance of a specific"
+" subclass of :class:`.Builder`.  Each builder class knows how to convert the"
+" parsed documents into an output format, or otherwise process them (e.g. "
+"check external links)."
+msgstr ""
+"பில்டர் பொருள் (வழக்கமாக `` பில்டர்`` என்று அழைக்கப்படுகிறது) ஒரு "
+"குறிப்பிட்ட துணைப்பிரிவின் ஒரு எடுத்துக்காட்டு: வகுப்பு: `.பில்டர்`. ஒவ்வொரு"
+" பில்டர் வகுப்பிலும் பாகுபடுத்தப்பட்ட ஆவணங்களை வெளியீட்டு வடிவமாக மாற்றுவது "
+"அல்லது அவற்றை செயலாக்குவது எப்படி என்று தெரியும் (எ.கா. வெளிப்புற இணைப்புகளை"
+" சரிபார்க்கவும்)."
+
+#: ../../sphinx/doc/extdev/tutorial.rst:48
+msgid ""
+"If you have the application object, the builder is available as "
+"``app.builder``."
+msgstr ""
+"உங்களிடம் பயன்பாட்டு பொருள் இருந்தால், பில்டர் `` app.builder`` ஆகக் "
+"கிடைக்கிறது."
+
+#: ../../sphinx/doc/extdev/tutorial.rst:49
+msgid "**Builder**"
+msgstr "** பில்டர் **"
+
+#: ../../sphinx/doc/extdev/tutorial.rst:52
+msgid ""
+"The config object (usually called ``config``) provides the values of "
+"configuration values set in :file:`conf.py` as attributes.  It is an "
+"instance of :class:`.Config`."
+msgstr ""
+"உள்ளமைவு பொருள் (வழக்கமாக `` கட்டமைப்பு`` என்று அழைக்கப்படுகிறது) உள்ளமைவு "
+"மதிப்புகளின் மதிப்புகளை அமைக்கிறது: கோப்பு: `conf.py` பண்புகளாக. இது ஒரு "
+"நிகழ்வு: வகுப்பு: `.கான்ஃபிக்`."
+
+#: ../../sphinx/doc/extdev/tutorial.rst:56
+msgid "The config is available as ``app.config`` or ``env.config``."
+msgstr ""
+"இந்த கட்டமைப்பு `` app.config`` அல்லது `` env.config`` எனக் கிடைக்கிறது."
+
+#: ../../sphinx/doc/extdev/tutorial.rst:57
+msgid "**Config**"
+msgstr "** கட்டமைப்பு **"
+
+#: ../../sphinx/doc/extdev/tutorial.rst:6
+msgid ""
+"This section is intended as a walkthrough for the creation of custom "
+"extensions. It covers the basics of writing and activating an extension, as "
+"well as commonly used features of extensions."
+msgstr ""
+"இந்த பிரிவு தனிப்பயன் நீட்டிப்புகளை உருவாக்குவதற்கான ஒத்திகையாக "
+"கருதப்படுகிறது. இது ஒரு நீட்டிப்பை எழுதுவதற்கும் செயல்படுத்துவதற்கும் "
+"அடிப்படைகளையும், பொதுவாக நீட்டிப்புகளின் அம்சங்களையும் உள்ளடக்கியது."
+
+#: ../../sphinx/doc/extdev/tutorial.rst:60
+msgid "Build Phases"
+msgstr "கட்டங்களை உருவாக்குங்கள்"
+
+#: ../../sphinx/doc/extdev/tutorial.rst:62
+msgid ""
+"One thing that is vital in order to understand extension mechanisms is the "
+"way in which a Sphinx project is built: this works in several phases."
+msgstr ""
+"நீட்டிப்பு வழிமுறைகளைப் புரிந்துகொள்வதற்கு இன்றியமையாத ஒரு விஷயம், ஒரு "
+"ஸ்பிங்க்ஸ் திட்டம் கட்டமைக்கப்பட்ட வழி: இது பல கட்டங்களில் செயல்படுகிறது."
+
+#: ../../sphinx/doc/extdev/tutorial.rst:65
+msgid "**Phase 0: Initialization**"
+msgstr "** கட்டம் 0: துவக்கம் **"
+
+#: ../../sphinx/doc/extdev/tutorial.rst:67
+msgid ""
+"In this phase, almost nothing of interest to us happens.  The source "
+"directory is searched for source files, and extensions are initialized. "
+"Should a stored build environment exist, it is loaded, otherwise a new one "
+"is created."
+msgstr ""
+"இந்த கட்டத்தில், எங்களுக்கு ஆர்வம் எதுவும் நடக்காது. மூல கோப்புகளை மூல "
+"கோப்புகளுக்காக தேடப்படுகிறது, மேலும் நீட்டிப்புகள் துவக்கப்படுகின்றன. "
+"சேமிக்கப்பட்ட உருவாக்க சூழல் இருந்தால், அது ஏற்றப்படுகிறது, இல்லையெனில் "
+"புதியது உருவாக்கப்படுகிறது."
+
+#: ../../sphinx/doc/extdev/tutorial.rst:72
+msgid "**Phase 1: Reading**"
+msgstr "** கட்டம் 1: படித்தல் **"
+
+#: ../../sphinx/doc/extdev/tutorial.rst:74
+msgid ""
+"In Phase 1, all source files (and on subsequent builds, those that are new "
+"or changed) are read and parsed.  This is the phase where directives and "
+"roles are encountered by docutils, and the corresponding code is executed.  "
+"The output of this phase is a *doctree* for each source file; that is a tree"
+" of docutils nodes.  For document elements that aren't fully known until all"
+" existing files are read, temporary nodes are created."
+msgstr ""
+"கட்டம் 1 இல், அனைத்து மூல கோப்புகளும் (மற்றும் அடுத்தடுத்த கட்டடங்களில், "
+"புதியவை அல்லது மாற்றப்பட்டவை) படிக்கப்பட்டு பாகுபடுத்தப்படுகின்றன. "
+"ஆவணங்களால் வழிமுறைகள் மற்றும் பாத்திரங்கள் எதிர்கொள்ளும் கட்டம் இது, அதனுடன்"
+" தொடர்புடைய குறியீடு செயல்படுத்தப்படுகிறது. இந்த கட்டத்தின் வெளியீடு ஒவ்வொரு"
+" மூல கோப்பிற்கும் ஒரு * கோட்பாட்டு * ஆகும்; அது ஆவண முனைகளின் மரம். "
+"தற்போதுள்ள அனைத்து கோப்புகளும் படிக்கும் வரை முழுமையாக அறியப்படாத ஆவண "
+"கூறுகளுக்கு, தற்காலிக முனைகள் உருவாக்கப்படுகின்றன."
+
+#: ../../sphinx/doc/extdev/tutorial.rst:81
+msgid ""
+"There are nodes provided by docutils, which are documented `in the docutils "
+"documentation <http://docutils.sourceforge.net/docs/ref/doctree.html>`__. "
+"Additional nodes are provided by Sphinx and :ref:`documented here <nodes>`."
+msgstr ""
+"டொக்யூடில்ஸ் வழங்கிய முனைகள் உள்ளன, அவை `ஆவண ஆவணங்களில் "
+"ஆவணப்படுத்தப்பட்டுள்ளன "
+"<http://docutils.sourceforge.net/docs/ref/doctree.html> __. __. கூடுதல் "
+"முனைகள் SPHINX ஆல் வழங்கப்படுகின்றன: ref: `இங்கே ஆவணப்படுத்தப்பட்டுள்ளது "
+"<Nodes>."
+
+#: ../../sphinx/doc/extdev/tutorial.rst:85
+msgid ""
+"During reading, the build environment is updated with all meta- and cross "
+"reference data of the read documents, such as labels, the names of headings,"
+" described Python objects and index entries.  This will later be used to "
+"replace the temporary nodes."
+msgstr ""
+"வாசிப்பின் போது, லேபிள்கள், தலைப்புகளின் பெயர்கள், விவரிக்கப்பட்ட பைதான் "
+"பொருள்கள் மற்றும் குறியீட்டு உள்ளீடுகள் போன்ற வாசிப்பு ஆவணங்களின் அனைத்து "
+"மெட்டா மற்றும் குறுக்கு குறிப்பு தரவுகளுடன் உருவாக்க சூழல் "
+"புதுப்பிக்கப்படுகிறது. இது பின்னர் தற்காலிக முனைகளை மாற்ற பயன்படுகிறது."
+
+#: ../../sphinx/doc/extdev/tutorial.rst:90
+msgid ""
+"The parsed doctrees are stored on the disk, because it is not possible to "
+"hold all of them in memory."
+msgstr ""
+"பாகுபடுத்தப்பட்ட கோட்பாடுகள் வட்டில் சேமிக்கப்படுகின்றன, ஏனென்றால் அவை "
+"அனைத்தையும் நினைவகத்தில் வைத்திருக்க முடியாது."
+
+#: ../../sphinx/doc/extdev/tutorial.rst:93
+msgid "**Phase 2: Consistency checks**"
+msgstr "** கட்டம் 2: நிலைத்தன்மை காசோலைகள் **"
+
+#: ../../sphinx/doc/extdev/tutorial.rst:95
+msgid "Some checking is done to ensure no surprises in the built documents."
+msgstr ""
+"கட்டப்பட்ட ஆவணங்களில் எந்த ஆச்சரியமும் இல்லை என்பதை உறுதிப்படுத்த சில சோதனை "
+"செய்யப்படுகிறது."
+
+#: ../../sphinx/doc/extdev/tutorial.rst:97
+msgid "**Phase 3: Resolving**"
+msgstr "** கட்டம் 3: தீர்க்கும் **"
+
+#: ../../sphinx/doc/extdev/tutorial.rst:99
+msgid ""
+"Now that the metadata and cross-reference data of all existing documents is "
+"known, all temporary nodes are replaced by nodes that can be converted into "
+"output using components called tranform.  For example, links are created for"
+" object references that exist, and simple literal nodes are created for "
+"those that don't."
+msgstr ""
+"இப்போது தற்போதுள்ள அனைத்து ஆவணங்களின் மெட்டாடேட்டா மற்றும் குறுக்கு-குறிப்பு"
+" தரவு அறியப்பட்டுள்ளதால், அனைத்து தற்காலிக முனைகளும் முனைகளால் "
+"மாற்றப்படுகின்றன, அவை டிரான்ஃபார்ம் எனப்படும் கூறுகளைப் பயன்படுத்தி "
+"வெளியீட்டாக மாற்றப்படலாம். எடுத்துக்காட்டாக, இருக்கும் பொருள் "
+"குறிப்புகளுக்காக இணைப்புகள் உருவாக்கப்படுகின்றன, மேலும் இல்லாதவர்களுக்கு "
+"எளிய நேரடி முனைகள் உருவாக்கப்படுகின்றன."

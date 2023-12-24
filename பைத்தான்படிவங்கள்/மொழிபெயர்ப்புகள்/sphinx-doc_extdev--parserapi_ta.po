@@ -17,21 +17,45 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/extdev/parserapi.rst:4
-msgid "Parser API"
-msgstr "பாகுபடுத்தி ஏபிஐ"
-
-#: ../../sphinx/doc/extdev/parserapi.rst:6
-msgid "`The docutils documentation describes`__ parsers as follows:"
-msgstr "`டாக்யூடில்ஸ் ஆவணங்கள் `__ பாகுபடுத்திகளை பின்வருமாறு விவரிக்கின்றன:"
-
-#: ../../sphinx/doc/extdev/parserapi.rst:8
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/parsers.pydocstring
+#: of sphinx.parsers.Parser:1
 msgid ""
-"The Parser analyzes the input document and creates a node tree "
-"representation."
+"A base class of source parsers.  The additional parsers should inherit this "
+"class instead of ``docutils.parsers.Parser``.  Compared with "
+"``docutils.parsers.Parser``, this class improves accessibility to Sphinx "
+"APIs."
 msgstr ""
-"பாகுபடுத்தி உள்ளீட்டு ஆவணத்தை பகுப்பாய்வு செய்து ஒரு முனை மர "
-"பிரதிநிதித்துவத்தை உருவாக்குகிறது."
+"மூல பாகுபடுத்திகளின் அடிப்படை வகுப்பு. கூடுதல் பாகுபடுத்துபவர்கள் `` "
+"docutils.parsers.parser`` என்பதற்கு பதிலாக இந்த வகுப்பைப் பெற வேண்டும். `` "
+"Docutils.parsers.parser`` உடன் ஒப்பிடும்போது, இந்த வகுப்பு SPHINX API "
+"களுக்கான அணுகலை மேம்படுத்துகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/parsers.pydocstring
+#: of sphinx.parsers.Parser:5
+msgid ""
+"The subclasses can access sphinx core runtime objects (app, config and env)."
+msgstr ""
+"துணைப்பிரிவுகள் SPHINX கோர் இயக்க நேர பொருள்களை (APP, CONFIG மற்றும் ENV) "
+"அணுகலாம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/parsers.pydocstring
+#: of sphinx.parsers.Parser.set_application:0
+msgid "Parameters"
+msgstr "அளவுருக்கள்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/parsers.pydocstring
+#: of sphinx.parsers.Parser.set_application:1
+msgid ""
+"set_application will be called from Sphinx to set app and other instance "
+"variables"
+msgstr ""
+"பயன்பாடு மற்றும் பிற நிகழ்வு மாறிகள் அமைக்க SPHINX இலிருந்து Set_application"
+" அழைக்கப்படும்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/parsers.pydocstring
+#: of sphinx.parsers.Parser.set_application:3
+msgid "Sphinx application object"
+msgstr "SPHINX பயன்பாட்டு பொருள்"
 
 #: ../../sphinx/doc/extdev/parserapi.rst:13
 msgid ""
@@ -75,45 +99,21 @@ msgstr ""
 "உங்கள் பாகுபடுத்தி ஆதரிக்கும் கோப்பு வகைகளை நீங்கள் குறிக்க வேண்டும். இது "
 "பயனர்கள் தங்கள் அமைப்புகளை சரியான முறையில் உள்ளமைக்க அனுமதிக்கும்."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/parsers.pydocstring
-#: of sphinx.parsers.Parser:1
+#: ../../sphinx/doc/extdev/parserapi.rst:4
+msgid "Parser API"
+msgstr "பாகுபடுத்தி ஏபிஐ"
+
+#: ../../sphinx/doc/extdev/parserapi.rst:6
+msgid "`The docutils documentation describes`__ parsers as follows:"
+msgstr "`டாக்யூடில்ஸ் ஆவணங்கள் `__ பாகுபடுத்திகளை பின்வருமாறு விவரிக்கின்றன:"
+
+#: ../../sphinx/doc/extdev/parserapi.rst:8
 msgid ""
-"A base class of source parsers.  The additional parsers should inherit this "
-"class instead of ``docutils.parsers.Parser``.  Compared with "
-"``docutils.parsers.Parser``, this class improves accessibility to Sphinx "
-"APIs."
+"The Parser analyzes the input document and creates a node tree "
+"representation."
 msgstr ""
-"மூல பாகுபடுத்திகளின் அடிப்படை வகுப்பு. கூடுதல் பாகுபடுத்துபவர்கள் `` "
-"docutils.parsers.parser`` என்பதற்கு பதிலாக இந்த வகுப்பைப் பெற வேண்டும். `` "
-"Docutils.parsers.parser`` உடன் ஒப்பிடும்போது, இந்த வகுப்பு SPHINX API "
-"களுக்கான அணுகலை மேம்படுத்துகிறது."
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/parsers.pydocstring
-#: of sphinx.parsers.Parser:5
-msgid ""
-"The subclasses can access sphinx core runtime objects (app, config and env)."
-msgstr ""
-"துணைப்பிரிவுகள் SPHINX கோர் இயக்க நேர பொருள்களை (APP, CONFIG மற்றும் ENV) "
-"அணுகலாம்."
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/parsers.pydocstring
-#: of sphinx.parsers.Parser.set_application:1
-msgid ""
-"set_application will be called from Sphinx to set app and other instance "
-"variables"
-msgstr ""
-"பயன்பாடு மற்றும் பிற நிகழ்வு மாறிகள் அமைக்க SPHINX இலிருந்து Set_application"
-" அழைக்கப்படும்"
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/parsers.pydocstring
-#: of sphinx.parsers.Parser.set_application:0
-msgid "Parameters"
-msgstr "அளவுருக்கள்"
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/parsers.pydocstring
-#: of sphinx.parsers.Parser.set_application:3
-msgid "Sphinx application object"
-msgstr "SPHINX பயன்பாட்டு பொருள்"
+"பாகுபடுத்தி உள்ளீட்டு ஆவணத்தை பகுப்பாய்வு செய்து ஒரு முனை மர "
+"பிரதிநிதித்துவத்தை உருவாக்குகிறது."
 
 #: ../docstring of sphinx.parsers.Parser.config:1
 msgid "The config object"

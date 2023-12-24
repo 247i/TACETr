@@ -17,189 +17,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/usage/advanced/intl.rst:4
-msgid "Internationalization"
-msgstr "சர்வதேசமயமாக்கல்"
+#: ../../sphinx/doc/usage/advanced/intl.rst:0
+msgid "Project ID"
+msgstr "திட்ட ஐடி"
 
-#: ../../sphinx/doc/usage/advanced/intl.rst:8
-msgid ""
-"Complementary to translations provided for Sphinx-generated messages such as"
-" navigation bars, Sphinx provides mechanisms facilitating the translation of"
-" *documents*.  See the :ref:`intl-options` for details on configuration."
-msgstr ""
-"வழிசெலுத்தல் பார்கள் போன்ற SPHINX- உருவாக்கிய செய்திகளுக்கு வழங்கப்பட்ட "
-"மொழிபெயர்ப்புகளுக்கு நிரப்பு, SPHINX *ஆவணங்கள் *மொழிபெயர்ப்பை எளிதாக்கும் "
-"வழிமுறைகளை வழங்குகிறது. உள்ளமைவு குறித்த விவரங்களுக்கு: ref: `intl-options` "
-"ஐப் பார்க்கவும்."
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:15
-msgid ""
-"Workflow visualization of translations in Sphinx.  (The figure is created by"
-" `plantuml <https://plantuml.com>`_.)"
-msgstr "ஸ்பிங்க்ஸில் மொழிபெயர்ப்புகளின் பணிப்பாய்வு காட்சிப்படுத்தல். ."
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:22
-msgid "Sphinx internationalization details"
-msgstr "ஸ்பிங்க்ஸ் சர்வதேசமயமாக்கல் விவரங்கள்"
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:24
-msgid ""
-"**gettext** [1]_ is an established standard for internationalization and "
-"localization.  It naively maps messages in a program to a translated string."
-" Sphinx uses these facilities to translate whole documents."
-msgstr ""
-"** getText ** [1] _ என்பது சர்வதேசமயமாக்கல் மற்றும் உள்ளூர்மயமாக்கலுக்கான "
-"நிறுவப்பட்ட தரமாகும். இது ஒரு நிரலில் செய்திகளை மொழிபெயர்க்கப்பட்ட "
-"சரத்திற்கு அப்பாவியாக வரைபடமாக்குகிறது. முழு ஆவணங்களையும் மொழிபெயர்க்க "
-"ஸ்பின்க்ஸ் இந்த வசதிகளைப் பயன்படுத்துகிறது."
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:28
-msgid ""
-"Initially project maintainers have to collect all translatable strings (also"
-" referred to as *messages*) to make them known to translators.  Sphinx "
-"extracts these through invocation of ``sphinx-build -M gettext``."
-msgstr ""
-"ஆரம்பத்தில் திட்ட பராமரிப்பாளர்கள் மொழிபெயர்ப்பாளர்களுக்குத் தெரியப்படுத்த "
-"அனைத்து மொழிபெயர்க்கக்கூடிய சரங்களையும் ( *செய்திகள் *என்றும் "
-"குறிப்பிடப்படுகிறார்கள்) சேகரிக்க வேண்டும். `` ஸ்பின்க்ஸ் -பில்ட் -எம் "
-"getText`` இன் அழைப்பின் மூலம் ஸ்பிங்க்ஸ் இவற்றை பிரித்தெடுக்கிறது."
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:32
-msgid ""
-"Every single element in the doctree will end up in a single message which "
-"results in lists being equally split into different chunks while large "
-"paragraphs will remain as coarsely-grained as they were in the original "
-"document.  This grants seamless document updates while still providing a "
-"little bit of context for translators in free-text passages.  It is the "
-"maintainer's task to split up paragraphs which are too large as there is no "
-"sane automated way to do that."
-msgstr ""
-"கோட்பாட்டில் உள்ள ஒவ்வொரு உறுப்புகளும் ஒரு செய்தியில் முடிவடையும், இதன் "
-"விளைவாக பட்டியல்கள் சமமாக வெவ்வேறு துகள்களாக பிரிக்கப்படுகின்றன, அதே "
-"நேரத்தில் பெரிய பத்திகள் அசல் ஆவணத்தில் இருந்ததைப் போலவே கரடுமுரடாக "
-"இருக்கும். இலவச உரை பத்திகளில் மொழிபெயர்ப்பாளர்களுக்கு சிறிது சூழலை வழங்கும்"
-" போது இது தடையற்ற ஆவண புதுப்பிப்புகளை வழங்குகிறது. அதைச் செய்ய விவேகமான "
-"தானியங்கு வழி இல்லாததால் மிகப் பெரிய பத்திகளை பிரிப்பது பராமரிப்பாளரின் "
-"பணியாகும்."
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:40
-msgid ""
-"After Sphinx successfully ran the "
-":class:`~sphinx.builders.gettext.MessageCatalogBuilder` you will find a "
-"collection of ``.pot`` files in your output directory.  These are **catalog "
-"templates** and contain messages in your original language *only*."
-msgstr ""
-"SPHINX வெற்றிகரமாக இயக்கிய பிறகு: வகுப்பு: `~ "
-"sphinx.builders.gettext.messagecatalogbuilder` உங்கள் வெளியீட்டு "
-"கோப்பகத்தில்` `.pot`` கோப்புகளின் தொகுப்பை நீங்கள் காண்பீர்கள். இவை ** "
-"பட்டியல் வார்ப்புருக்கள் ** மற்றும் உங்கள் அசல் மொழியில் செய்திகளைக் "
-"கொண்டுள்ளன*மட்டும்*."
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:45
-msgid ""
-"They can be delivered to translators which will transform them to ``.po`` "
-"files --- so called **message catalogs** --- containing a mapping from the "
-"original messages to foreign-language strings."
-msgstr ""
-"அவை மொழிபெயர்ப்பாளர்களுக்கு வழங்கப்படலாம், அவை அவற்றை `` .போ` `கோப்புகளாக "
-"மாற்றும் --- ** செய்தி பட்டியல்கள் ** --- அசல் செய்திகளிலிருந்து வெளிநாட்டு "
-"மொழி சரங்களுக்கு ஒரு மேப்பிங்கைக் கொண்டிருக்கும்."
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:49
-msgid ""
-"*gettext* compiles them into a binary format known as **binary catalogs** "
-"through :program:`msgfmt` for efficiency reasons.  If you make these files "
-"discoverable with :confval:`locale_dirs` for your :confval:`language`, "
-"Sphinx will pick them up automatically."
-msgstr ""
-". இந்த கோப்புகளை நீங்கள் கண்டறியக்கூடியதாக மாற்றினால்: confval: "
-"`locale_dirs` உங்கள்: confval:` மொழி`, ஸ்பின்க்ஸ் அவற்றை தானாகவே எடுக்கும்."
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:54
-msgid ""
-"An example: you have a document ``usage.rst`` in your Sphinx project.  The "
-"*gettext* builder will put its messages into ``usage.pot``.  Imagine you "
-"have Spanish translations [2]_ stored in ``usage.po`` --- for your builds to"
-" be translated you need to follow these instructions:"
-msgstr ""
-"ஒரு எடுத்துக்காட்டு: உங்கள் ஸ்பிங்க்ஸ் திட்டத்தில் `` useage.rst`` ஆவணம் "
-"உங்களிடம் உள்ளது. * GetText * பில்டர் அதன் செய்திகளை `` use.pot`` இல் "
-"வைக்கும். உங்களிடம் ஸ்பானிஷ் மொழிபெயர்ப்புகள் உள்ளன என்று கற்பனை செய்து "
-"பாருங்கள் [2] _ `` பயன்பாடு.போ`` --- இல் சேமிக்கப்பட்டுள்ளது உங்கள் "
-"கட்டமைப்புகள் மொழிபெயர்க்கப்படுவதற்கு நீங்கள் இந்த வழிமுறைகளைப் பின்பற்ற "
-"வேண்டும்:"
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:59
-msgid ""
-"Compile your message catalog to a locale directory, say ``locale``, so it "
-"ends up in ``./locale/es/LC_MESSAGES/usage.mo`` in your source directory "
-"(where ``es`` is the language code for Spanish.) ::"
-msgstr ""
-"உங்கள் செய்தி பட்டியலை ஒரு லோகேல் கோப்பகத்தில் தொகுத்து, `` லோகேல்`` என்று "
-"சொல்லுங்கள், எனவே இது உங்கள் மூல கோப்பகத்தில் "
-"``./லோகேல்/எஸ்/எல்.சி_மெசேஜ்கள்/பயன்பாடு. ஸ்பானிஷ் குறியீடு.) ::"
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:65
-msgid "Set :confval:`locale_dirs` to ``[\"locale/\"]``."
-msgstr "அமைக்கவும்: confval: `` [\"locale/\"] `` `` locale_dirs."
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:66
-msgid ""
-"Set :confval:`language` to ``es`` (also possible via :option:`-D <sphinx-"
-"build -D>`)."
-msgstr ""
-"Set: confval: `மொழி` முதல்` `es`` (மேலும் வழியாகவும் சாத்தியமாகும்: "
-"விருப்பம்:` -d <sphinx-tuld -d> `)."
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:68
-msgid "Run your desired build."
-msgstr "நீங்கள் விரும்பிய கட்டமைப்பை இயக்கவும்."
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:71
-msgid ""
-"In order to protect against mistakes, a warning is emitted if cross-"
-"references in the translated paragraph do not match those from the original."
-"  This can be turned off globally using the :confval:`suppress_warnings` "
-"configuration variable.  Alternatively, to turn it off for one message only,"
-" end the message with ``#noqa`` like this::"
-msgstr ""
-"தவறுகளிலிருந்து பாதுகாப்பதற்காக, மொழிபெயர்க்கப்பட்ட பத்தியில் குறுக்கு "
-"குறிப்புகள் அசலில் இருந்து பொருந்தவில்லை என்றால் ஒரு எச்சரிக்கை வெளிப்படும்."
-" இதை உலகளவில் அணைக்கலாம்: confval: `Soppress_warnings` உள்ளமைவு மாறி. "
-"மாற்றாக, ஒரு செய்திக்கு மட்டுமே அதை அணைக்க, செய்தியை ``#noqa`` உடன் முடிக்க "
-"::"
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:81
-msgid ""
-"(Write ``\\#noqa`` in case you want to have \"#noqa\" literally in the text."
-"  This does not apply to code blocks, where ``#noqa`` is ignored because "
-"code blocks do not contain references anyway.)"
-msgstr ". )"
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:85
-msgid "The ``#noqa`` mechanism."
-msgstr "``#NoQa`` வழிமுறை."
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:90
-msgid "Translating with sphinx-intl"
-msgstr "Sphinx-intl உடன் மொழிபெயர்க்கிறது"
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:93
-msgid "Quick guide"
-msgstr "விரைவு வழிகாட்டி"
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:95
-msgid ""
-"`sphinx-intl`_ is a useful tool to work with Sphinx translation flow.  This "
-"section describe an easy way to translate with *sphinx-intl*."
-msgstr ""
-"`Sphinx-intl`_ என்பது ஸ்பின்க்ஸ் மொழிபெயர்ப்பு ஓட்டத்துடன் பணிபுரிய ஒரு "
-"பயனுள்ள கருவியாகும். இந்த பிரிவு *Sphinx-intl *உடன் மொழிபெயர்க்க எளிதான "
-"வழியை விவரிக்கிறது."
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:98
-msgid "Install `sphinx-intl`_."
-msgstr "`Sphinx-intl`_ ஐ நிறுவவும்."
+#: ../../sphinx/doc/usage/advanced/intl.rst:0
+msgid "Project URL"
+msgstr "திட்ட URL"
 
 #: ../../sphinx/doc/usage/advanced/intl.rst:104
 msgid "Add configurations to ``conf.py``."
@@ -264,6 +88,12 @@ msgstr ""
 "மேலே குறிப்பிட்டுள்ளபடி, இவை `` ./locale/ <lang>/lc_messages`` கோப்பகத்தில் "
 "அமைந்துள்ளன. அத்தகைய ஒரு கோப்பின் எடுத்துக்காட்டு, ஸ்பிங்க்ஸிலிருந்து, `` "
 "பில்டர்ஸ்.போ``, கீழே கொடுக்கப்பட்டுள்ளது."
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:15
+msgid ""
+"Workflow visualization of translations in Sphinx.  (The figure is created by"
+" `plantuml <https://plantuml.com>`_.)"
+msgstr "ஸ்பிங்க்ஸில் மொழிபெயர்ப்புகளின் பணிப்பாய்வு காட்சிப்படுத்தல். ."
 
 #: ../../sphinx/doc/usage/advanced/intl.rst:150
 msgid ""
@@ -351,6 +181,10 @@ msgstr ""
 msgid "Using Transifex service for team translation"
 msgstr "குழு மொழிபெயர்ப்புக்கு டிரான்ஸ்ஃபெக்ஸ் சேவையைப் பயன்படுத்துதல்"
 
+#: ../../sphinx/doc/usage/advanced/intl.rst:22
+msgid "Sphinx internationalization details"
+msgstr "ஸ்பிங்க்ஸ் சர்வதேசமயமாக்கல் விவரங்கள்"
+
 #: ../../sphinx/doc/usage/advanced/intl.rst:220
 msgid ""
 "Transifex_ is one of several services that allow collaborative translation "
@@ -392,21 +226,24 @@ msgstr ""
 "மேற்பட்ட பதிப்பைக் கொண்டிருக்க அனுமதிக்காது, எனவே உங்கள் திட்ட பெயரில் "
 "பதிப்பு எண்ணைச் சேர்ப்பது நல்லது."
 
+#: ../../sphinx/doc/usage/advanced/intl.rst:24
+msgid ""
+"**gettext** [1]_ is an established standard for internationalization and "
+"localization.  It naively maps messages in a program to a translated string."
+" Sphinx uses these facilities to translate whole documents."
+msgstr ""
+"** getText ** [1] _ என்பது சர்வதேசமயமாக்கல் மற்றும் உள்ளூர்மயமாக்கலுக்கான "
+"நிறுவப்பட்ட தரமாகும். இது ஒரு நிரலில் செய்திகளை மொழிபெயர்க்கப்பட்ட "
+"சரத்திற்கு அப்பாவியாக வரைபடமாக்குகிறது. முழு ஆவணங்களையும் மொழிபெயர்க்க "
+"ஸ்பின்க்ஸ் இந்த வசதிகளைப் பயன்படுத்துகிறது."
+
 #: ../../sphinx/doc/usage/advanced/intl.rst:243
 msgid "For example:"
 msgstr "உதாரணத்திற்கு:"
 
-#: ../../sphinx/doc/usage/advanced/intl.rst:0
-msgid "Project ID"
-msgstr "திட்ட ஐடி"
-
 #: ../../sphinx/doc/usage/advanced/intl.rst:245
 msgid "``sphinx-document-test_1_0``"
 msgstr "`` Sphinx-chicument-test_1_0``"
-
-#: ../../sphinx/doc/usage/advanced/intl.rst:0
-msgid "Project URL"
-msgstr "திட்ட URL"
 
 #: ../../sphinx/doc/usage/advanced/intl.rst:246
 msgid "``https://www.transifex.com/projects/p/sphinx-document-test_1_0/``"
@@ -436,6 +273,17 @@ msgstr "பானை கோப்புகளை `` .tx/config`` கோப்ப
 #: ../../sphinx/doc/usage/advanced/intl.rst:274
 msgid "and upload pot files:"
 msgstr "மற்றும் பானை கோப்புகளை பதிவேற்றவும்:"
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:28
+msgid ""
+"Initially project maintainers have to collect all translatable strings (also"
+" referred to as *messages*) to make them known to translators.  Sphinx "
+"extracts these through invocation of ``sphinx-build -M gettext``."
+msgstr ""
+"ஆரம்பத்தில் திட்ட பராமரிப்பாளர்கள் மொழிபெயர்ப்பாளர்களுக்குத் தெரியப்படுத்த "
+"அனைத்து மொழிபெயர்க்கக்கூடிய சரங்களையும் ( *செய்திகள் *என்றும் "
+"குறிப்பிடப்படுகிறார்கள்) சேகரிக்க வேண்டும். `` ஸ்பின்க்ஸ் -பில்ட் -எம் "
+"getText`` இன் அழைப்பின் மூலம் ஸ்பிங்க்ஸ் இவற்றை பிரித்தெடுக்கிறது."
 
 #: ../../sphinx/doc/usage/advanced/intl.rst:285
 msgid "Forward the translation on Transifex."
@@ -485,6 +333,24 @@ msgstr ""
 "வேறு வார்த்தைகளில் கூறுவதானால், நீங்கள் ஒவ்வொன்றையும் சேவை மற்றும் உள்ளூர் "
 "பிஓ கோப்புகளில் புதுப்பித்திருந்தால், அவற்றை ஒருங்கிணைக்க அதிக நேரமும் "
 "முயற்சியும் எடுக்கும்."
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:32
+msgid ""
+"Every single element in the doctree will end up in a single message which "
+"results in lists being equally split into different chunks while large "
+"paragraphs will remain as coarsely-grained as they were in the original "
+"document.  This grants seamless document updates while still providing a "
+"little bit of context for translators in free-text passages.  It is the "
+"maintainer's task to split up paragraphs which are too large as there is no "
+"sane automated way to do that."
+msgstr ""
+"கோட்பாட்டில் உள்ள ஒவ்வொரு உறுப்புகளும் ஒரு செய்தியில் முடிவடையும், இதன் "
+"விளைவாக பட்டியல்கள் சமமாக வெவ்வேறு துகள்களாக பிரிக்கப்படுகின்றன, அதே "
+"நேரத்தில் பெரிய பத்திகள் அசல் ஆவணத்தில் இருந்ததைப் போலவே கரடுமுரடாக "
+"இருக்கும். இலவச உரை பத்திகளில் மொழிபெயர்ப்பாளர்களுக்கு சிறிது சூழலை வழங்கும்"
+" போது இது தடையற்ற ஆவண புதுப்பிப்புகளை வழங்குகிறது. அதைச் செய்ய விவேகமான "
+"தானியங்கு வழி இல்லாததால் மிகப் பெரிய பத்திகளை பிரிப்பது பராமரிப்பாளரின் "
+"பணியாகும்."
 
 #: ../../sphinx/doc/usage/advanced/intl.rst:322
 msgid "Using Weblate service for team translation"
@@ -590,3 +456,137 @@ msgstr ""
 #: ../../sphinx/doc/usage/advanced/intl.rst:365
 msgid "Because nobody expects the Spanish Inquisition!"
 msgstr "ஏனென்றால் ஸ்பானிஷ் விசாரணையை யாரும் எதிர்பார்க்கவில்லை!"
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:4
+msgid "Internationalization"
+msgstr "சர்வதேசமயமாக்கல்"
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:40
+msgid ""
+"After Sphinx successfully ran the "
+":class:`~sphinx.builders.gettext.MessageCatalogBuilder` you will find a "
+"collection of ``.pot`` files in your output directory.  These are **catalog "
+"templates** and contain messages in your original language *only*."
+msgstr ""
+"SPHINX வெற்றிகரமாக இயக்கிய பிறகு: வகுப்பு: `~ "
+"sphinx.builders.gettext.messagecatalogbuilder` உங்கள் வெளியீட்டு "
+"கோப்பகத்தில்` `.pot`` கோப்புகளின் தொகுப்பை நீங்கள் காண்பீர்கள். இவை ** "
+"பட்டியல் வார்ப்புருக்கள் ** மற்றும் உங்கள் அசல் மொழியில் செய்திகளைக் "
+"கொண்டுள்ளன*மட்டும்*."
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:45
+msgid ""
+"They can be delivered to translators which will transform them to ``.po`` "
+"files --- so called **message catalogs** --- containing a mapping from the "
+"original messages to foreign-language strings."
+msgstr ""
+"அவை மொழிபெயர்ப்பாளர்களுக்கு வழங்கப்படலாம், அவை அவற்றை `` .போ` `கோப்புகளாக "
+"மாற்றும் --- ** செய்தி பட்டியல்கள் ** --- அசல் செய்திகளிலிருந்து வெளிநாட்டு "
+"மொழி சரங்களுக்கு ஒரு மேப்பிங்கைக் கொண்டிருக்கும்."
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:49
+msgid ""
+"*gettext* compiles them into a binary format known as **binary catalogs** "
+"through :program:`msgfmt` for efficiency reasons.  If you make these files "
+"discoverable with :confval:`locale_dirs` for your :confval:`language`, "
+"Sphinx will pick them up automatically."
+msgstr ""
+". இந்த கோப்புகளை நீங்கள் கண்டறியக்கூடியதாக மாற்றினால்: confval: "
+"`locale_dirs` உங்கள்: confval:` மொழி`, ஸ்பின்க்ஸ் அவற்றை தானாகவே எடுக்கும்."
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:54
+msgid ""
+"An example: you have a document ``usage.rst`` in your Sphinx project.  The "
+"*gettext* builder will put its messages into ``usage.pot``.  Imagine you "
+"have Spanish translations [2]_ stored in ``usage.po`` --- for your builds to"
+" be translated you need to follow these instructions:"
+msgstr ""
+"ஒரு எடுத்துக்காட்டு: உங்கள் ஸ்பிங்க்ஸ் திட்டத்தில் `` useage.rst`` ஆவணம் "
+"உங்களிடம் உள்ளது. * GetText * பில்டர் அதன் செய்திகளை `` use.pot`` இல் "
+"வைக்கும். உங்களிடம் ஸ்பானிஷ் மொழிபெயர்ப்புகள் உள்ளன என்று கற்பனை செய்து "
+"பாருங்கள் [2] _ `` பயன்பாடு.போ`` --- இல் சேமிக்கப்பட்டுள்ளது உங்கள் "
+"கட்டமைப்புகள் மொழிபெயர்க்கப்படுவதற்கு நீங்கள் இந்த வழிமுறைகளைப் பின்பற்ற "
+"வேண்டும்:"
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:59
+msgid ""
+"Compile your message catalog to a locale directory, say ``locale``, so it "
+"ends up in ``./locale/es/LC_MESSAGES/usage.mo`` in your source directory "
+"(where ``es`` is the language code for Spanish.) ::"
+msgstr ""
+"உங்கள் செய்தி பட்டியலை ஒரு லோகேல் கோப்பகத்தில் தொகுத்து, `` லோகேல்`` என்று "
+"சொல்லுங்கள், எனவே இது உங்கள் மூல கோப்பகத்தில் "
+"``./லோகேல்/எஸ்/எல்.சி_மெசேஜ்கள்/பயன்பாடு. ஸ்பானிஷ் குறியீடு.) ::"
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:65
+msgid "Set :confval:`locale_dirs` to ``[\"locale/\"]``."
+msgstr "அமைக்கவும்: confval: `` [\"locale/\"] `` `` locale_dirs."
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:66
+msgid ""
+"Set :confval:`language` to ``es`` (also possible via :option:`-D <sphinx-"
+"build -D>`)."
+msgstr ""
+"Set: confval: `மொழி` முதல்` `es`` (மேலும் வழியாகவும் சாத்தியமாகும்: "
+"விருப்பம்:` -d <sphinx-tuld -d> `)."
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:68
+msgid "Run your desired build."
+msgstr "நீங்கள் விரும்பிய கட்டமைப்பை இயக்கவும்."
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:71
+msgid ""
+"In order to protect against mistakes, a warning is emitted if cross-"
+"references in the translated paragraph do not match those from the original."
+"  This can be turned off globally using the :confval:`suppress_warnings` "
+"configuration variable.  Alternatively, to turn it off for one message only,"
+" end the message with ``#noqa`` like this::"
+msgstr ""
+"தவறுகளிலிருந்து பாதுகாப்பதற்காக, மொழிபெயர்க்கப்பட்ட பத்தியில் குறுக்கு "
+"குறிப்புகள் அசலில் இருந்து பொருந்தவில்லை என்றால் ஒரு எச்சரிக்கை வெளிப்படும்."
+" இதை உலகளவில் அணைக்கலாம்: confval: `Soppress_warnings` உள்ளமைவு மாறி. "
+"மாற்றாக, ஒரு செய்திக்கு மட்டுமே அதை அணைக்க, செய்தியை ``#noqa`` உடன் முடிக்க "
+"::"
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:8
+msgid ""
+"Complementary to translations provided for Sphinx-generated messages such as"
+" navigation bars, Sphinx provides mechanisms facilitating the translation of"
+" *documents*.  See the :ref:`intl-options` for details on configuration."
+msgstr ""
+"வழிசெலுத்தல் பார்கள் போன்ற SPHINX- உருவாக்கிய செய்திகளுக்கு வழங்கப்பட்ட "
+"மொழிபெயர்ப்புகளுக்கு நிரப்பு, SPHINX *ஆவணங்கள் *மொழிபெயர்ப்பை எளிதாக்கும் "
+"வழிமுறைகளை வழங்குகிறது. உள்ளமைவு குறித்த விவரங்களுக்கு: ref: `intl-options` "
+"ஐப் பார்க்கவும்."
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:81
+msgid ""
+"(Write ``\\#noqa`` in case you want to have \"#noqa\" literally in the text."
+"  This does not apply to code blocks, where ``#noqa`` is ignored because "
+"code blocks do not contain references anyway.)"
+msgstr ". )"
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:85
+msgid "The ``#noqa`` mechanism."
+msgstr "``#NoQa`` வழிமுறை."
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:90
+msgid "Translating with sphinx-intl"
+msgstr "Sphinx-intl உடன் மொழிபெயர்க்கிறது"
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:93
+msgid "Quick guide"
+msgstr "விரைவு வழிகாட்டி"
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:95
+msgid ""
+"`sphinx-intl`_ is a useful tool to work with Sphinx translation flow.  This "
+"section describe an easy way to translate with *sphinx-intl*."
+msgstr ""
+"`Sphinx-intl`_ என்பது ஸ்பின்க்ஸ் மொழிபெயர்ப்பு ஓட்டத்துடன் பணிபுரிய ஒரு "
+"பயனுள்ள கருவியாகும். இந்த பிரிவு *Sphinx-intl *உடன் மொழிபெயர்க்க எளிதான "
+"வழியை விவரிக்கிறது."
+
+#: ../../sphinx/doc/usage/advanced/intl.rst:98
+msgid "Install `sphinx-intl`_."
+msgstr "`Sphinx-intl`_ ஐ நிறுவவும்."

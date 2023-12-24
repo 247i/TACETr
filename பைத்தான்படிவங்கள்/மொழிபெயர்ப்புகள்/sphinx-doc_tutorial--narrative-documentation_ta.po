@@ -17,27 +17,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/tutorial/narrative-documentation.rst:2
-msgid "Narrative documentation in Sphinx"
-msgstr "ஸ்பிங்க்ஸில் கதை ஆவணங்கள்"
+#: ../../sphinx/doc/tutorial/narrative-documentation.rst:113
+msgid "And make the sentence you added in ``index.rst`` look like this:"
+msgstr "`` Index.rst`` இல் நீங்கள் சேர்த்த வாக்கியத்தை இப்படி பாருங்கள்:"
 
-#: ../../sphinx/doc/tutorial/narrative-documentation.rst:5
-msgid "Structuring your documentation across multiple pages"
-msgstr "உங்கள் ஆவணங்களை பல பக்கங்களில் கட்டமைத்தல்"
+#: ../../sphinx/doc/tutorial/narrative-documentation.rst:44
+#: ../../sphinx/doc/tutorial/narrative-documentation.rst:83
+#: ../../sphinx/doc/tutorial/narrative-documentation.rst:115
+msgid "docs/source/index.rst"
+msgstr "docs/source/index.rst"
 
-#: ../../sphinx/doc/tutorial/narrative-documentation.rst:7
+#: ../../sphinx/doc/tutorial/narrative-documentation.rst:121
 msgid ""
-"The file ``index.rst`` created by ``sphinx-quickstart`` is the :term:`root "
-"document`, whose main function is to serve as a welcome page and to contain "
-"the root of the \"table of contents tree\" (or *toctree*).  Sphinx allows "
-"you to assemble a project from different files, which is helpful when the "
-"project grows."
+"Notice a trick here: the ``install`` part specifies how the link will look "
+"like (we want it to be a specific word, so the sentence makes sense), "
+"whereas the ``<installation>`` part refers to the actual label we want to "
+"add a cross-reference to. If you do not include an explicit title, hence "
+"using ``:ref:`installation```, the section title will be used (in this case,"
+" ``Installation``). Both the ``:doc:`` and the ``:ref:`` roles will be "
+"rendered as hyperlinks in the HTML documentation."
 msgstr ""
-"`` Sphinx-quickstart`` உருவாக்கிய `` index.rst`` கோப்பு: கால: `ரூட் ஆவணம்`, "
-"அதன் முக்கிய செயல்பாடு வரவேற்புப் பக்கமாக செயல்படுவதோடு\" உள்ளடக்க மரத்தின் "
-"அட்டவணையின் மூலத்தையும் கொண்டிருப்பது \" \"(அல்லது *டோக்ட்ரீ *). வெவ்வேறு "
-"கோப்புகளிலிருந்து ஒரு திட்டத்தை சேகரிக்க SPHINX உங்களை அனுமதிக்கிறது, இது "
-"திட்டம் வளரும்போது உதவியாக இருக்கும்."
+"இங்கே ஒரு தந்திரத்தைக் கவனியுங்கள்: `` நிறுவல்`` பகுதி இணைப்பு எப்படி "
+"இருக்கும் என்பதைக் குறிப்பிடுகிறது (இது ஒரு குறிப்பிட்ட வார்த்தையாக இருக்க "
+"வேண்டும் என்று நாங்கள் விரும்புகிறோம், எனவே வாக்கியம் அர்த்தமுள்ளதாக "
+"இருக்கிறது), அதேசமயம் `` <நிறுவல்> `` பகுதி உண்மையானதைக் குறிக்கிறது லேபிள் "
+"ஒரு குறுக்கு குறிப்பைச் சேர்க்க விரும்புகிறோம். நீங்கள் ஒரு வெளிப்படையான "
+"தலைப்பைச் சேர்க்கவில்லை என்றால், எனவே ``: ref: `நிறுவல்``` ஐப் "
+"பயன்படுத்தினால், பிரிவு தலைப்பு பயன்படுத்தப்படும் (இந்த விஷயத்தில்,` "
+"`நிறுவல்``). ``: Doc: `` மற்றும் ``: ref: `` பாத்திரங்கள் HTML ஆவணத்தில் "
+"ஹைப்பர்லிங்க்களாக வழங்கப்படும்."
+
+#: ../../sphinx/doc/tutorial/narrative-documentation.rst:129
+msgid ""
+"What about :doc:`documenting code objects in Sphinx </tutorial/describing-"
+"code>`? Read on!"
+msgstr ""
+"என்ன பற்றி: டாக்: `ஸ்பின்க்ஸில் குறியீடு பொருள்களை ஆவணப்படுத்துதல் "
+"</டுடோரியல்/விவரிக்கும்-குறியீடு>`? படியுங்கள்!"
 
 #: ../../sphinx/doc/tutorial/narrative-documentation.rst:13
 msgid ""
@@ -49,6 +65,10 @@ msgstr "உதாரணமாக, இந்த உள்ளடக்கங்க
 #: ../../sphinx/doc/tutorial/narrative-documentation.rst:99
 msgid "docs/source/usage.rst"
 msgstr "டாக்ஸ்/மூல/பயன்பாடு"
+
+#: ../../sphinx/doc/tutorial/narrative-documentation.rst:2
+msgid "Narrative documentation in Sphinx"
+msgstr "ஸ்பிங்க்ஸில் கதை ஆவணங்கள்"
 
 #: ../../sphinx/doc/tutorial/narrative-documentation.rst:31
 msgid ""
@@ -83,11 +103,9 @@ msgstr ""
 "செயல்முறையை முடிக்க, ஒரு `` toctree``: ref: `டைரக்டிவ்ஸ்>` நீங்கள் இப்போது "
 "உருவாக்கிய ஆவணத்தை உள்ளடக்கியது, பின்வருமாறு: `டைரக்டிவ்ஸ்>`"
 
-#: ../../sphinx/doc/tutorial/narrative-documentation.rst:44
-#: ../../sphinx/doc/tutorial/narrative-documentation.rst:83
-#: ../../sphinx/doc/tutorial/narrative-documentation.rst:115
-msgid "docs/source/index.rst"
-msgstr "docs/source/index.rst"
+#: ../../sphinx/doc/tutorial/narrative-documentation.rst:5
+msgid "Structuring your documentation across multiple pages"
+msgstr "உங்கள் ஆவணங்களை பல பக்கங்களில் கட்டமைத்தல்"
 
 #: ../../sphinx/doc/tutorial/narrative-documentation.rst:54
 msgid ""
@@ -116,6 +134,20 @@ msgid ""
 msgstr ""
 "A * TOCTREE * க்கு வெளியே உள்ள ஆவணங்கள் `` எச்சரிக்கை: DOMUMENT TOCTREE `` "
 "`` `சந்தை சேர்க்கப்படவில்லை, மேலும் பயனர்களுக்கு அணுக முடியாததாக இருக்கும்."
+
+#: ../../sphinx/doc/tutorial/narrative-documentation.rst:7
+msgid ""
+"The file ``index.rst`` created by ``sphinx-quickstart`` is the :term:`root "
+"document`, whose main function is to serve as a welcome page and to contain "
+"the root of the \"table of contents tree\" (or *toctree*).  Sphinx allows "
+"you to assemble a project from different files, which is helpful when the "
+"project grows."
+msgstr ""
+"`` Sphinx-quickstart`` உருவாக்கிய `` index.rst`` கோப்பு: கால: `ரூட் ஆவணம்`, "
+"அதன் முக்கிய செயல்பாடு வரவேற்புப் பக்கமாக செயல்படுவதோடு\" உள்ளடக்க மரத்தின் "
+"அட்டவணையின் மூலத்தையும் கொண்டிருப்பது \" \"(அல்லது *டோக்ட்ரீ *). வெவ்வேறு "
+"கோப்புகளிலிருந்து ஒரு திட்டத்தை சேகரிக்க SPHINX உங்களை அனுமதிக்கிறது, இது "
+"திட்டம் வளரும்போது உதவியாக இருக்கும்."
 
 #: ../../sphinx/doc/tutorial/narrative-documentation.rst:73
 msgid "Adding cross-references"
@@ -169,35 +201,3 @@ msgid ""
 msgstr ""
 "எடுத்துக்காட்டாக, \"நிறுவல்\" துணைப்பிரிவைக் குறிப்பிட, தலைப்புக்கு முன் ஒரு"
 " லேபிளைச் சேர்க்கவும், பின்வருமாறு:"
-
-#: ../../sphinx/doc/tutorial/narrative-documentation.rst:113
-msgid "And make the sentence you added in ``index.rst`` look like this:"
-msgstr "`` Index.rst`` இல் நீங்கள் சேர்த்த வாக்கியத்தை இப்படி பாருங்கள்:"
-
-#: ../../sphinx/doc/tutorial/narrative-documentation.rst:121
-msgid ""
-"Notice a trick here: the ``install`` part specifies how the link will look "
-"like (we want it to be a specific word, so the sentence makes sense), "
-"whereas the ``<installation>`` part refers to the actual label we want to "
-"add a cross-reference to. If you do not include an explicit title, hence "
-"using ``:ref:`installation```, the section title will be used (in this case,"
-" ``Installation``). Both the ``:doc:`` and the ``:ref:`` roles will be "
-"rendered as hyperlinks in the HTML documentation."
-msgstr ""
-"இங்கே ஒரு தந்திரத்தைக் கவனியுங்கள்: `` நிறுவல்`` பகுதி இணைப்பு எப்படி "
-"இருக்கும் என்பதைக் குறிப்பிடுகிறது (இது ஒரு குறிப்பிட்ட வார்த்தையாக இருக்க "
-"வேண்டும் என்று நாங்கள் விரும்புகிறோம், எனவே வாக்கியம் அர்த்தமுள்ளதாக "
-"இருக்கிறது), அதேசமயம் `` <நிறுவல்> `` பகுதி உண்மையானதைக் குறிக்கிறது லேபிள் "
-"ஒரு குறுக்கு குறிப்பைச் சேர்க்க விரும்புகிறோம். நீங்கள் ஒரு வெளிப்படையான "
-"தலைப்பைச் சேர்க்கவில்லை என்றால், எனவே ``: ref: `நிறுவல்``` ஐப் "
-"பயன்படுத்தினால், பிரிவு தலைப்பு பயன்படுத்தப்படும் (இந்த விஷயத்தில்,` "
-"`நிறுவல்``). ``: Doc: `` மற்றும் ``: ref: `` பாத்திரங்கள் HTML ஆவணத்தில் "
-"ஹைப்பர்லிங்க்களாக வழங்கப்படும்."
-
-#: ../../sphinx/doc/tutorial/narrative-documentation.rst:129
-msgid ""
-"What about :doc:`documenting code objects in Sphinx </tutorial/describing-"
-"code>`? Read on!"
-msgstr ""
-"என்ன பற்றி: டாக்: `ஸ்பின்க்ஸில் குறியீடு பொருள்களை ஆவணப்படுத்துதல் "
-"</டுடோரியல்/விவரிக்கும்-குறியீடு>`? படியுங்கள்!"
