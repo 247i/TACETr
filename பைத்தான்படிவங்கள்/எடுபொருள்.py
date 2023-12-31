@@ -156,12 +156,12 @@ def மொழிபெயர்():
                 try:
                     print(பதிவு.msgid)
                     if not பதிவு.msgid_plural:
-                        பதிவு.msgstr, கு =பொருள்_பெறு(பதிவு.msgid, வ)
+                        பதிவு.msgstr, _ = பொருள்_பெறு(பதிவு.msgid, வ)
                         print(பதிவு.msgstr)
                     else:
-                        பதிவு.msgstr[0], கு=பொருள்_பெறு(பதிவு.msgid, வ)
+                        பதிவு.msgstr[0], _ = பொருள்_பெறு(பதிவு.msgid, வ)
                         # if 1 in பதிவு.msgstr_plural:
-                        பதிவு.msgstr[1], கு=பொருள்_பெறு(பதிவு.msgid_plural, வ)
+                        பதிவு.msgstr[1], _ = பொருள்_பெறு(பதிவு.msgid_plural, வ)
                         # if 2 in பதிவு.msgstr_plural:
                         # To do for msgid with multiple entries
                 except Exception as e:
