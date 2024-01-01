@@ -2,20 +2,28 @@ import pota
 
 file = open('./காலி/WinSCP-TA.ini','r')
 file2 = open('./காலி/WinSCP-TA1.ini','w')
-t = ''
-for line in file.readlines():
-    if line.strip() == '':
-        file2.write(line)
-    elif line.strip()[0] == ';':
-        t , _ = pota.பொருள்_பெறு(line[1:],0)
-        file2.write(line)
-    elif line.strip()[0] == '[':
-        file2.write(line)
-    else:
-        k = line.split('=')
-        print(k)
-        data = k[0] + '=' + t
-        print(data)
-        file2.write(data)
+try:
+    for line in file.readlines():
+        if line.strip() == '':
+            file2.write(line)
+        elif line.strip()[0] == ';':
+            com = line[1:].strip()
+            if com[0] == '"':
+                en = com
+            file2.write(line)
+        elif line.strip()[0] == '[':
+            file2.write(line)
+        else:
+            k = line.split('=')
+            if k[1].strip() == "<translate>":
+                t , _ = pota.பொருள்_பெறு(en,0)
+                data = k[0] + '=' + t
+                print(line)
+                print(data)
+                file2.write(data)
+            else:
+                file2.write(line)
+except Exception as e:
+    print(e)
 file.close()
 file2.close()
