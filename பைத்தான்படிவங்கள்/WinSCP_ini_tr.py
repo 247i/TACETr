@@ -1,7 +1,7 @@
 import pota
 
-file = open('./காலி/WinSCP-TA.ini','r')
-file2 = open('./காலி/WinSCP-TA1.ini','w')
+file = open('./வெறுமை/WinSCP-TA-6.2.2.ini','r')
+file2 = open('./வெறுமை/WinSCP-TA-6.2.2-1.ini','w')
 try:
     for line in file.readlines():
         if line.strip() == '':
