@@ -16,7 +16,7 @@ try:
         else:
             k = line.split('=')
             if k[1].strip() == "<translate>":
-                t , _ = pota.பொருள்_பெறு(en,0)
+                t, _ = pota.பொருள்_பெறு(en, 0)
                 data = k[0] + '=' + t
                 print(line)
                 print(data)
