@@ -1,7 +1,7 @@
 import pota
 
-file = open('./வெறுமை/WinSCP-TA-6.2.2.ini','r')
-file2 = open('./வெறுமை/WinSCP-TA-6.2.2-1.ini','w')
+file = open('./வெறுமை/WinSCP-TA-6.2.2.ini', 'r')
+file2 = open('./வெறுமை/WinSCP-TA-6.2.2-1.ini', 'w')
 try:
     for line in file.readlines():
         if line.strip() == '':
@@ -17,7 +17,7 @@ try:
             k = line.split('=')
             if k[1].strip() == "<translate>":
                 t, _ = pota.பொருள்_பெறு(en, 0)
-                data = k[0] + '=' + t
+                data = k[0] + '=' + t + "\n"
                 print(line)
                 print(data)
                 file2.write(data)
