@@ -212,7 +212,7 @@ def மொழிபெயர்():
                 except Exception as e:
                     print(e)
                     அ.save(கோப்பு)
-                    time.sleep(5*வ)
+                    time.sleep(5)
                     வ += 1
                 else:
                     ஐ += 1
