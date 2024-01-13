@@ -1,5 +1,5 @@
 """
-எடுபொருள் கோப்புகள் 
+எடுபொருள் கோப்புகள்
 """
 
 import os
@@ -68,7 +68,7 @@ def பொருள்_பெறு(ஆங்கிலம், சேவையக
 
 def அகராதி_இருமபொருள்(பாதை):
     '''
-    எடுபொருள் => இருமம் 
+    எடுபொருள் => இருமம்
     po கோப்பை mo கோப்பாக சேமி
     பாதை -> எடுபொருள் கோப்பு பாதை
     '''
@@ -169,7 +169,7 @@ def அகராதி_மேம்படுத்து():
 
 def அகராதி_குழப்பம்நீக்கு(அகராதி, பதிவுநீக்கு=False):
     """
-    Removes all the fuzzy flag entries in the po file and 
+    Removes all the fuzzy flag entries in the po file and
     when the clear_tr is true it also removes
     the translation message as well.
     """
