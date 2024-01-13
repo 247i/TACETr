@@ -196,6 +196,7 @@ def மொழிபெயர்():
         முன் = அ.percent_translated()
         if முன் != 100:
             print(கோப்பு, "முன் : ", முன், "%")
+            ஐ = 0
             for பதிவு in அ.untranslated_entries():
                 try:
                     print(பதிவு.msgid)
@@ -210,8 +211,14 @@ def மொழிபெயர்():
                         # To do for msgid with multiple entries
                 except Exception as e:
                     print(e)
+                    அ.save(கோப்பு)
                     time.sleep(5*வ)
                     வ += 1
+                else:
+                    ஐ += 1
+                    if ஐ == 100:
+                        அ.save(கோப்பு)
+                        ஐ = 0
                 if வ == 5:
                     break
             அ.save(கோப்பு)
