@@ -15,8 +15,7 @@ def இணையமொழி(ஆங்கிலம், சேவையகம்=
     """
     சேவையகங்கள் = ['google', 'bing']
     வ = சேவையகங்கள்[சேவையகம்% len(சேவையகங்கள்)]
-    தமிழ் = ts.translate_text(ஆங்கிலம், translator=வ,
-                              from_language='en', to_language='ta')
+    தமிழ் = ts.translate_text(ஆங்கிலம், translator=வ, from_language='en', to_language='ta')
     குழப்பமானது = True
     return தமிழ், குழப்பமானது
 
@@ -228,19 +227,16 @@ def மொழிபெயர்():
                 try:
                     if not பதிவு.msgid_plural:
                         if பதிவு.msgid == பதிவு.msgstr:
-                            print(பதிவு.msgid)
-                            பதிவு.msgstr, _ = பொருள்_பெறு(பதிவு.msgid, வ)
-                            print(பதிவு.msgstr)
+                            பதிவு.msgstr, _ = பொருள்_பெறு(பதிவு.msgid, வ+1)
+                            print(பதிவு.msgid, பதிவு.msgstr)
                     else:
                         if பதிவு.msgid == பதிவு.msgstr[0]:
-                            print(பதிவு.msgid)
-                            பதிவு.msgstr[0], _ = பொருள்_பெறு(பதிவு.msgid, வ)
-                            print(பதிவு.msgstr[0])
+                            பதிவு.msgstr[0], _ = பொருள்_பெறு(பதிவு.msgid, வ+1)
+                            print(பதிவு.msgid, பதிவு.msgstr[0])
                         # if 1 in பதிவு.msgstr_plural:
                         if பதிவு.msgid_plural == பதிவு.msgstr[1]:
-                            print(பதிவு.msgid_plural)
                             பதிவு.msgstr[1], _ = பொருள்_பெறு(பதிவு.msgid_plural, வ)
-                            print(பதிவு.msgstr[1])
+                            print(பதிவு.msgid_plural, பதிவு.msgstr[1])
                         # if 2 in பதிவு.msgstr_plural:
                         # To do for msgid with multiple entries
                 except Exception as e:
