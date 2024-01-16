@@ -192,10 +192,10 @@ def மொழிபெயர்():
         # அகராதி_குழப்பம்நீக்கு(கோப்பு)
         அ = அகராதி_திற(கோப்பு)
         வ = 0
+        ஐ = 0
         முன் = அ.percent_translated()
         if முன் != 100:
             print(கோப்பு, "முன் : ", முன், "%")
-            ஐ = 0
             for பதிவு in அ.untranslated_entries():
                 try:
                     print(பதிவு.msgid)
@@ -203,9 +203,10 @@ def மொழிபெயர்():
                         பதிவு.msgstr, _ = பொருள்_பெறு(பதிவு.msgid, வ)
                         print(பதிவு.msgstr)
                     else:
-                        பதிவு.msgstr[0], _ = பொருள்_பெறு(பதிவு.msgid, வ)
+                        இ, _ = பொருள்_பெறு(பதிவு.msgid, வ)
                         # if 1 in பதிவு.msgstr_plural:
-                        பதிவு.msgstr[1], _ = பொருள்_பெறு(பதிவு.msgid_plural, வ)
+                        ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural, வ)
+                        பதிவு.msgstr_plural = {0:இ, 1:ஈ}
                         # if 2 in பதிவு.msgstr_plural:
                         # To do for msgid with multiple entries
                 except Exception as e:
@@ -215,14 +216,36 @@ def மொழிபெயர்():
                     வ += 1
                 else:
                     ஐ += 1
-                    if ஐ == 100:
+                    if ஐ == 2:
                         அ.save(கோப்பு)
                         ஐ = 0
                 if வ == 5:
                     break
-            அ.save(கோப்பு)
-            print("பின் : ", அ.percent_translated(), "%")
-        else:
+            for பதிவு in அ.fuzzy_entries():
+                try:
+                    print(பதிவு.msgid)
+                    if not பதிவு.msgid_plural:
+                        பதிவு.msgstr, _ = பொருள்_பெறு(பதிவு.msgid, வ)
+                        print(பதிவு.msgstr)
+                    else:
+                        இ, _ = பொருள்_பெறு(பதிவு.msgid, வ)
+                        # if 1 in பதிவு.msgstr_plural:
+                        ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural, வ)
+                        பதிவு.msgstr_plural = {0:இ, 1:ஈ}
+                        # if 2 in பதிவு.msgstr_plural:
+                        # To do for msgid with multiple entries
+                except Exception as e:
+                    print(e)
+                    அ.save(கோப்பு)
+                    time.sleep(5)
+                    வ += 1
+                else:
+                    ஐ += 1
+                    if ஐ == 1:
+                        அ.save(கோப்பு)
+                        ஐ = 0
+                if வ == 5:
+                    break
             for பதிவு in அ.translated_entries():
                 try:
                     if not பதிவு.msgid_plural:
@@ -231,11 +254,12 @@ def மொழிபெயர்():
                             print(பதிவு.msgid, பதிவு.msgstr)
                     else:
                         if பதிவு.msgid == பதிவு.msgstr[0]:
-                            பதிவு.msgstr[0], _ = பொருள்_பெறு(பதிவு.msgid, வ+1)
+                            இ, _ = பொருள்_பெறு(பதிவு.msgid, வ+1)
                             print(பதிவு.msgid, பதிவு.msgstr[0])
                         # if 1 in பதிவு.msgstr_plural:
                         if பதிவு.msgid_plural == பதிவு.msgstr[1]:
-                            பதிவு.msgstr[1], _ = பொருள்_பெறு(பதிவு.msgid_plural, வ)
+                            ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural, வ)
+                            பதிவு.msgstr_plural = {0:இ, 1:ஈ}
                             print(பதிவு.msgid_plural, பதிவு.msgstr[1])
                         # if 2 in பதிவு.msgstr_plural:
                         # To do for msgid with multiple entries
@@ -246,7 +270,7 @@ def மொழிபெயர்():
                     வ += 1
                 else:
                     ஐ += 1
-                    if ஐ == 100:
+                    if ஐ == 1:
                         அ.save(கோப்பு)
                         ஐ = 0
                 if வ == 5:
