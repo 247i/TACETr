@@ -223,6 +223,41 @@ def மொழிபெயர்():
                     break
             அ.save(கோப்பு)
             print("பின் : ", அ.percent_translated(), "%")
+        else:
+            for பதிவு in அ.translated_entries():
+                try:
+                    if not பதிவு.msgid_plural:
+                        if பதிவு.msgid == பதிவு.msgstr:
+                            print(பதிவு.msgid)
+                            பதிவு.msgstr, _ = பொருள்_பெறு(பதிவு.msgid, வ)
+                            print(பதிவு.msgstr)
+                    else:
+                        if பதிவு.msgid == பதிவு.msgstr[0]:
+                            print(பதிவு.msgid)
+                            பதிவு.msgstr[0], _ = பொருள்_பெறு(பதிவு.msgid, வ)
+                            print(பதிவு.msgstr[0])
+                        # if 1 in பதிவு.msgstr_plural:
+                        if பதிவு.msgid_plural == பதிவு.msgstr[1]:
+                            print(பதிவு.msgid_plural)
+                            பதிவு.msgstr[1], _ = பொருள்_பெறு(பதிவு.msgid_plural, வ)
+                            print(பதிவு.msgstr[1])
+                        # if 2 in பதிவு.msgstr_plural:
+                        # To do for msgid with multiple entries
+                except Exception as e:
+                    print(e)
+                    அ.save(கோப்பு)
+                    time.sleep(5)
+                    வ += 1
+                else:
+                    ஐ += 1
+                    if ஐ == 100:
+                        அ.save(கோப்பு)
+                        ஐ = 0
+                if வ == 5:
+                    break
+            அ.save(கோப்பு)
+            print("பின் : ", அ.percent_translated(), "%")
+
 
 
 def குழப்பம்திருத்து(அகராதி, பதிவுநீக்கு=False):
