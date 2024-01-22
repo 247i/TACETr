@@ -6,7 +6,7 @@ import os
 import glob
 import time
 import polib
-import translators as ts
+# import translators as ts
 
 
 def அகராதி_இருமபொருள்(பாதை):
