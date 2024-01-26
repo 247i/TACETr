@@ -4,10 +4,9 @@
 
 import os
 import glob
-import time
 import polib
 from collections import OrderedDict
-# import translators as ts
+import translators as ts
 
 ஃ = None
 
@@ -84,8 +83,14 @@ def இணையமொழி(ஆங்கிலம், சேவையகம்=
     """
     சேவையகங்கள் = ['google', 'bing', 'Yandex']
     வ = சேவையகங்கள்[சேவையகம்% len(சேவையகங்கள்)]
-    கலவை = ts.translate_text(ஆங்கிலம், translator=வ, from_language='en', to_language='ta')
     குழப்பமானது = True
+    கலவை = ""
+    try:
+        கலவை = ts.translate_text(ஆங்கிலம், translator=வ, from_language='en',
+                                 to_language='ta')
+    except Exception as e:
+        print(e)
+        print(ஆங்கிலம், வ)
     return கலவை, குழப்பமானது
 
 
@@ -246,9 +251,8 @@ def மொழிபெயர்(அனைத்தும்=False):
                         print(பதிவு.msgid, பதிவு.msgid_plural,
                               பதிவு.msgstr_plural)
                 except Exception as e:
-                    print(e)
+                    print(e,)
                     அ.save(கோப்பு)
-                    time.sleep(5)
                     வ += 1
                 else:
                     ஐ += 1
@@ -272,9 +276,8 @@ def மொழிபெயர்(அனைத்தும்=False):
                                 பதிவு.msgstr_plural = {0:இ, 1:ஈ}
                                 print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
                     except Exception as e:
-                        print(e)
+                        print(e, )
                         அ.save(கோப்பு)
-                        time.sleep(5)
                         வ += 1
                     else:
                         ஐ += 1
