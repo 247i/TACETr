@@ -88,6 +88,8 @@ def இணையமொழி(ஆங்கிலம், சேவையகம்=
     try:
         கலவை = ts.translate_text(ஆங்கிலம், translator=வ, from_language='en',
                                  to_language='ta')
+        if கலவை == ".":
+            கலவை = ஆங்கிலம்
     except Exception as e:
         print(வ, ஆங்கிலம், e)
     return கலவை, குழப்பமானது
