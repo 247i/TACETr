@@ -269,11 +269,13 @@ def மொழிபெயர்(அனைத்தும்=False):
                                 பதிவு.msgstr = இ
                                 print(பதிவு.msgid, பதிவு.msgstr)
                         else:
-                            if (பதிவு.msgid == பதிவு.msgstr[0]) or (பதிவு.msgid_plural == பதிவு.msgstr[1]):
+                            if (பதிவு.msgid == பதிவு.msgstr[0]) or (
+                                பதிவு.msgid_plural == பதிவு.msgstr[1]):
                                 இ, _ = பொருள்_பெறு(பதிவு.msgid, வ)
                                 ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural, வ)
-                                பதிவு.msgstr_plural = {0:இ, 1:ஈ}
-                                print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
+                                பதிவு.msgstr_plural = {0: இ, 1: ஈ}
+                                print(பதிவு.msgid, பதிவு.msgid_plural,
+                                      பதிவு.msgstr_plural)
                     except Exception as e:
                         print(e, )
                         அ.save(கோப்பு)
