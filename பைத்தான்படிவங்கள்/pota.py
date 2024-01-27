@@ -1,4 +1,4 @@
-"""
+௷"""
 எடுபொருள் கோப்புகள்
 """
 
@@ -8,13 +8,16 @@ import polib
 from collections import OrderedDict
 import translators as ts
 
+
 ஃ = None
+௳ = None 
+நினைவில் = ""
 
 
 def அகராதி_இருமபொருள்(பாதை):
     """
     எடுபொருள் => இருமம்
-    po கோப்பை mo கோப்பாக சேமி
+    எபொ கோப்பை கபொ கோப்பாக சேமி
     பாதை -> எடுபொருள் கோப்பு பாதை
     """
     எடுபொருள்கள் = polib.pofile(பாதை)
@@ -24,7 +27,7 @@ def அகராதி_இருமபொருள்(பாதை):
 def அகராதி_எடுபொருள்(பாதை):
     """
     இருமம் => எடுபொருள்
-    mo கோப்பை po கோப்பாக சேமி
+    கபொ கோப்பை எபொ கோப்பாக சேமி
     பாதை -> இரும்கோப்பு பாதை
     """
     இருமபொருள்கள் = polib.mofile(பாதை)
@@ -60,8 +63,8 @@ def அகராதி_திற(அகராதி):
 def அகராதி_சேமி(பொருள்கள், இருமம்=False):
     """
     பொருளை தட்டில் சேமி.
-    po - எடுத்துசெல்லதக்கபொருள் கோப்பு.
-    mo - இருமபொருள் கோப்பு.
+    எபொ - எடுத்துசெல்லதக்கபொருள் கோப்பு.
+    கபொ - இருமபொருள் கோப்பு.
     """
     பொருள்கள்.save()
     if இருமம்:
@@ -106,14 +109,15 @@ def கோப்புமொழி(ஆங்கிலம், பாதை):
     """
     தமிழ் = None
     குழப்பமானது = True
-    கோப்புகள் = glob.glob(பாதை)
-    for கோப்பு in கோப்புகள்:
-        அ = அகராதி_திற(கோப்பு)
-        ஆ = அ.find(ஆங்கிலம்)
-        if ஆ:
-            தமிழ் = ஆ.msgstr
-            குழப்பமானது = ஆ.flags != []
-            break
+    global ௳
+    global நினைவில்
+    if நினைவில் != பாதை:
+        நினைவில் = பாதை
+        ௳ = அகராதி_மேம்படுத்து("./நினைவு/அகராதி.po", பாதை)
+    ஆ = ௳.find(ஆங்கிலம்)
+    if ஆ:
+        தமிழ் = ஆ.msgstr
+        குழப்பமானது = ஆ.flags != []
     return தமிழ், குழப்பமானது
 
 
@@ -222,15 +226,16 @@ def அகராதி_மேம்படுத்து(
             பொருள்_சேர்(அ, பதிவு.msgid, பதிவு.msgstr)
         for பதிவு in ஆ.fuzzy_entries():
             பொருள்_சேர்(அ, பதிவு.msgid, பதிவு.msgstr, True)
+    அ.sort()
     அ.save()
     return அ
 
 
 def அகராதி_குழப்பம்நீக்கு(அகராதி, பதிவுநீக்கு=False):
     """
-    Removes all the fuzzy flag entries in the po file and
-    when the clear_tr is true it also removes
-    the translation message as well.
+    போ கோப்பில் உள்ள அனைத்து தெளிவற்ற கொடி உள்ளீடுகளையும் அகற்றி,
+    பதிவுநீக்கு உண்மையாக இருக்கும் போது, அது மொழிபெயர்ப்பு செய்தியையும் 
+    நீக்குகிறது.
     """
     அ = அகராதி_திற(அகராதி)
     for பதிவு in அ.fuzzy_entries():
@@ -252,91 +257,42 @@ def மொழிபெயர்(அனைத்தும்=False):
         if அனைத்தும்:
             அகராதி_குழப்பம்நீக்கு(கோப்பு, True)
         அ = அகராதி_திற(கோப்பு)
-        வ = 0
-        ஐ = 0
         முன் = அ.percent_translated()
         if முன் != 100:
             print(கோப்பு, "முன் : ", முன், "%")
             for பதிவு in அ.untranslated_entries():
-                try:
-                    if not பதிவு.msgid_plural:
-                        இ, _ = பொருள்_பெறு(பதிவு.msgid, வ)
-                        பதிவு.msgstr = இ
-                        print(பதிவு.msgid, பதிவு.msgstr)
-                    else:
-                        இ, _ = பொருள்_பெறு(பதிவு.msgid, வ)
-                        ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural, வ)
-                        பதிவு.msgstr_plural = {0: இ, 1: ஈ}
-                        print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
-                except Exception as e:
-                    print(
-                        e,
-                    )
-                    அ.save(கோப்பு)
-                    வ += 1
+                if not பதிவு.msgid_plural:
+                    இ, _ = பொருள்_பெறு(பதிவு.msgid)
+                    பதிவு.msgstr = இ
+                    print(பதிவு.msgid, பதிவு.msgstr)
                 else:
-                    ஐ += 1
-                    if ஐ == 10:
-                        அ.save(கோப்பு)
-                        ஐ = 0
-                if வ == 5:
-                    break
+                    இ, _ = பொருள்_பெறு(பதிவு.msgid)
+                    ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural)
+                    பதிவு.msgstr_plural = {0: இ, 1: ஈ}
+                    print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
+                அ.save(கோப்பு)
             if அனைத்தும்:
                 for பதிவு in அ.translated_entries():
-                    try:
-                        if not பதிவு.msgid_plural:
-                            if பதிவு.msgid == பதிவு.msgstr:
-                                இ, _ = பொருள்_பெறு(பதிவு.msgid, வ)
-                                பதிவு.msgstr = இ
-                                print(பதிவு.msgid, பதிவு.msgstr)
-                        else:
-                            if (பதிவு.msgid == பதிவு.msgstr[0]) or (
-                                பதிவு.msgid_plural == பதிவு.msgstr[1]
-                            ):
-                                இ, _ = பொருள்_பெறு(பதிவு.msgid, வ)
-                                ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural, வ)
-                                பதிவு.msgstr_plural = {0: இ, 1: ஈ}
-                                print(
-                                    பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural
-                                )
-                    except Exception as e:
-                        print(
-                            e,
-                        )
-                        அ.save(கோப்பு)
-                        வ += 1
+                    if not பதிவு.msgid_plural:
+                        if பதிவு.msgid == பதிவு.msgstr:
+                            இ, _ = பொருள்_பெறு(பதிவு.msgid)
+                            பதிவு.msgstr = இ
+                            print(பதிவு.msgid, பதிவு.msgstr)
                     else:
-                        ஐ += 1
-                        if ஐ == 1:
-                            அ.save(கோப்பு)
-                            ஐ = 0
-                    if வ == 5:
-                        break
+                        if (பதிவு.msgid == பதிவு.msgstr[0]) or (
+                            பதிவு.msgid_plural == பதிவு.msgstr[1]
+                        ):
+                            இ, _ = பொருள்_பெறு(பதிவு.msgid)
+                            ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural)
+                            பதிவு.msgstr_plural = {0: இ, 1: ஈ}
+                            print(பதிவு.msgid, பதிவு.msgstr)
+                            print(பதிவு.msgid_plural, பதிவு.msgstr_plural)
             அ.save(கோப்பு)
             print("பின் : ", அ.percent_translated(), "%")
-
-
-def குழப்பம்திருத்து(அகராதி, பதிவுநீக்கு=False):
-    """
-    மாற்று அனைத்து குழப்பம்
-    """
-    அ = அகராதி_திற(அகராதி)
-    for பதிவு in அ.fuzzy_entries():
-        க = பதிவு.msgstr
-        # ப = க.split(",")
-        # ப2 = ப[1:]
-        # ப2.append(ப[0])
-        # print(ப2)
-        # க = " ".join(ப2)
-        பதிவு.msgstr = க.strip()
-        print(பதிவு.msgstr)
-    அ.save()
 
 
 if __name__ == "__main__":
     வரிசைபடுத்து_கோப்புகள்("./பிறமொழி/*.po")
     # அகராதி_மேம்படுத்து()
-    மொழிபெயர்()
-    # மொழிபெயர்(True)
-    # குழப்பம்திருத்து("./வெறுமை/iso-codes-iso-639-3-ta.po")
-    பிறமொழி_தவிர்_கோப்புகள்('./வெறுமை/*.po')
+    மொழிபெயர்(True)
+    பிறமொழி_தவிர்_கோப்புகள்("./வெறுமை/*.po")
