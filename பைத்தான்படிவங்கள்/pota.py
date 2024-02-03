@@ -6,8 +6,11 @@ import os
 import glob
 import polib
 from collections import OrderedDict
-# import translators as ts
 
+try:
+    import translators as ts
+except (ConnectionError, Exception) as e:
+    print(type(e))
 
 ஃ = None
 ஔ = None
