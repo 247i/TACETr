@@ -329,8 +329,10 @@ def சரங்கள்மொழிபெயர்():
         வரிகள் = அ.readlines()
         ஆ = open(கோப்பு + ".சரங்கள்", "w")
         for வரி in வரிகள்:
-            if வரி == "" or வரி.startswith("/* Class"):
+            if வரி.startswith("/* Class"):
                 ஆ.write(வரி)
+            elif வரி == "":
+                ஆ.write("\n")
             else:
                 try:
                     # /* "sUQ-Yx-bHF.title" = "Mount Location"; */
