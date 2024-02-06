@@ -325,9 +325,9 @@ def எடுபொருள்மொழிபெயர்(அனைத்து
 def சரங்கள்மொழிபெயர்():
     கோப்புகள் = glob.glob("./வெறுமை/*.strings")
     for கோப்பு in கோப்புகள்:
-        அ = open(கோப்பு, "r")
+        அ = open(கோப்பு, "r", encoding='utf-16')
         வரிகள் = அ.readlines()
-        ஆ = open(கோப்பு + ".சரங்கள்", "w")
+        ஆ = open(கோப்பு + ".சரங்கள்", "w",encoding='utf-16')
         for வரி in வரிகள்:
             if வரி.startswith("/* Class"):
                 ஆ.write(வரி)
