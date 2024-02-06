@@ -323,44 +323,32 @@ def எடுபொருள்மொழிபெயர்(அனைத்து
             print("பின் : ", அ.percent_translated(), "%")
 
 
-def சரங்கள்மொழிபெயர்(அனைத்தும்=False):
-    கோப்புகள் = glob.glob("./வெறுமை/*.po")
+def சரங்கள்மொழிபெயர்():
+    கோப்புகள் = glob.glob("./வெறுமை/*.strings")
     for கோப்பு in கோப்புகள்:
-        if அனைத்தும்:
-            அகராதி_குழப்பம்நீக்கு(கோப்பு, True)
-        அ = அகராதி_திற(கோப்பு)
-        முன் = அ.percent_translated()
-        if முன் != 100:
-            print(கோப்பு, "முன் : ", முன், "%")
-            for பதிவு in அ.untranslated_entries():
-                if not பதிவு.msgid_plural:
-                    இ, _ = பொருள்_பெறு(பதிவு.msgid)
-                    பதிவு.msgstr = இ
-                    print(பதிவு.msgid, பதிவு.msgstr)
-                else:
-                    இ, _ = பொருள்_பெறு(பதிவு.msgid)
-                    ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural)
-                    பதிவு.msgstr_plural = {0: இ, 1: ஈ}
-                    print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
-                அ.save(கோப்பு)
-            if அனைத்தும்:
-                for பதிவு in அ.translated_entries():
-                    if not பதிவு.msgid_plural:
-                        if பதிவு.msgid == பதிவு.msgstr:
-                            இ, _ = பொருள்_பெறு(பதிவு.msgid)
-                            பதிவு.msgstr = இ
-                            print(பதிவு.msgid, பதிவு.msgstr)
-                    else:
-                        if (பதிவு.msgid == பதிவு.msgstr[0]) or (
-                            பதிவு.msgid_plural == பதிவு.msgstr[1]
-                        ):
-                            இ, _ = பொருள்_பெறு(பதிவு.msgid)
-                            ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural)
-                            பதிவு.msgstr_plural = {0: இ, 1: ஈ}
-                            print(பதிவு.msgid, பதிவு.msgstr)
-                            print(பதிவு.msgid_plural, பதிவு.msgstr_plural)
-            அ.save(கோப்பு)
-            print("பின் : ", அ.percent_translated(), "%")
+        அ = open(கோப்பு, "r")
+        வரிகள் = அ.readlines()
+        ஆ = open(கோப்பு + ".சரங்கள்", "w")
+        print(கோப்பு)
+        for வரி in வரிகள்:
+            if வரி == "" or வரி.startswith("/* Class"):
+                ஆ.writeline(வரி)
+            else:
+                # /* "sUQ-Yx-bHF.title" = "Mount Location"; */
+                வரி = வரி[3:-3]
+                print(வரி)
+                ப, வ = வரி.split("=")
+                வ = வ[1:-2]
+                print(வ)
+                இ, _ = பொருள்_பெறு(வ)
+                print(இ)
+                இ = '"' + இ + '";'
+                print(இ)
+                உ = "=".join((ப, இ))
+                ஆ.writeline(உ)
+                print(வரி, உ)
+        அ.close()
+        ஆ.close()
 
 
 if __name__ == "__main__":
@@ -368,7 +356,7 @@ if __name__ == "__main__":
     பாதை = "/Users/apt/Documents/அறிவிலி/TACETranslation/பைத்தான்படிவங்கள்/"
     # வரிசைபடுத்து_கோப்புகள்(பாதை + "பிறமொழி/*.po")
     # அகராதி_மேம்படுத்து()
-    எடுபொருள்மொழிபெயர்(True)
+    # எடுபொருள்மொழிபெயர்(True)
     சரங்கள்மொழிபெயர்()
     # பிறமொழி_தவிர்_கோப்புகள்(பாதை + "தானி/*.po")
     # வரிசைபடுத்து_கோப்புகள்(பாதை + "மொழிபெயர்ப்புகள்/மின்னியல்.po")
