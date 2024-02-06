@@ -343,6 +343,7 @@ def சரங்கள்மொழிபெயர்():
                     இ = '"' + இ + '";'
                     உ = " = ".join((ப, இ))
                     ஆ.write(உ)
+                    ஆ.write("\n")
                     print(வரி, உ)
                 except Exception:
                     ஆ.write(வரி)
