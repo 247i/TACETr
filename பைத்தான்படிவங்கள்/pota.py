@@ -330,21 +330,20 @@ def சரங்கள்மொழிபெயர்():
         ஆ = open(கோப்பு + ".சரங்கள்", "w")
         for வரி in வரிகள்:
             if வரி == "" or வரி.startswith("/* Class"):
-                ஆ.writeline(வரி)
+                ஆ.write(வரி)
             else:
-                # /* "sUQ-Yx-bHF.title" = "Mount Location"; */
-                வரி = வரி[3:-3]
-                print(வரி)
-                ப, வ = வரி.split("=")
-                வ = வ[1:-2]
-                print(வ)
-                இ, _ = பொருள்_பெறு(வ)
-                print(இ)
-                இ = '"' + இ + '";'
-                print(இ)
-                உ = "=".join((ப, இ))
-                ஆ.write(உ)
-                print(வரி, உ)
+                try:
+                    # /* "sUQ-Yx-bHF.title" = "Mount Location"; */
+                    வ = வரி[3:-3]
+                    ப, வ = வ.split(" = ")
+                    வ = வ[1:-3]
+                    இ, _ = பொருள்_பெறு(வ)
+                    இ = '"' + இ + '";'
+                    உ = " = ".join((ப, இ))
+                    ஆ.write(உ)
+                    print(வரி, உ)
+                except Exception:
+                    ஆ.write(வரி)
         அ.close()
         ஆ.close()
 
