@@ -325,28 +325,29 @@ def எடுபொருள்மொழிபெயர்(அனைத்து
 def சரங்கள்மொழிபெயர்():
     கோப்புகள் = glob.glob("./வெறுமை/*.strings")
     for கோப்பு in கோப்புகள்:
-        அ = open(கோப்பு, "r", encoding='utf-16')
+        அ = open(கோப்பு, "r", encoding="utf-16")
         வரிகள் = அ.readlines()
-        ஆ = open(கோப்பு + ".சரங்கள்", "w",encoding='utf-16')
+        ஆ = open(கோப்பு + ".சரங்கள்", "w", encoding="utf-16")
         for வரி in வரிகள்:
-            if வரி.startswith("/* Class"):
-                ஆ.write(வரி)
-            elif வரி == "":
-                ஆ.write("\n")
-            else:
-                try:
-                    # /* "sUQ-Yx-bHF.title" = "Mount Location"; */
-                    வ = வரி[3:-3]
-                    ப, வ = வ.split(" = ")
-                    வ = வ[1:-3]
-                    இ, _ = பொருள்_பெறு(வ)
-                    இ = '"' + இ + '";'
-                    உ = " = ".join((ப, இ))
-                    ஆ.write(உ)
-                    ஆ.write("\n")
-                    print(வரி, உ)
-                except Exception:
+            if வரி.startswith("/*"):
+                if வரி.startswith("/* Class"):
                     ஆ.write(வரி)
+                else:
+                    try:
+                        # /* "sUQ-Yx-bHF.title" = "Mount Location"; */
+                        வ = வரி[3:-3]
+                        ப, வ = வ.split(" = ")
+                        வ = வ[1:-3]
+                        இ, _ = பொருள்_பெறு(வ)
+                        இ = '"' + இ + '";'
+                        உ = " = ".join((ப, இ))
+                        ஆ.write(உ)
+                        ஆ.write("\n")
+                        print(வரி, உ)
+                    except Exception:
+                        ஆ.write(வரி)
+            else:
+                ஆ.write(வரி)
         அ.close()
         ஆ.close()
 
