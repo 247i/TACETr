@@ -403,3 +403,29 @@ def டீடிடீமொழிபெயர்():
                 ஆ.write(வரி)
         அ.close()
         ஆ.close()
+
+
+def சேசன்மொழிபெயர்():
+    கோப்புகள் = glob.glob("./வெறுமை/*.json")
+    for கோப்பு in கோப்புகள்:
+        அ = open(கோப்பு, "r")
+        வரிகள் = அ.readlines()
+        ஆ = open(கோப்பு + ".சேசன்", "w")
+        for வரி in வரிகள்:
+            if வரி.startswith('        "message":') and வரி.endswith('",\n'):
+                try:
+                    #         "message": "Done",
+                    #         "message": "ஆம்",
+                    வ = வரி[0:-3]
+                    ப, வி = வ.split(': "')
+                    இ, _ = பொருள்_பெறு(வி)
+                    ஊ = ': "'.join((ப, இ))
+                    உ = ஊ + '",\n'
+                    ஆ.write(உ)
+                    print(வரி, உ)
+                except Exception:
+                    ஆ.write(வரி)
+            else:
+                ஆ.write(வரி)
+        அ.close()
+        ஆ.close()
