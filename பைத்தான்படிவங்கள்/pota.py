@@ -379,21 +379,22 @@ def பண்புகள்மொழிபெயர்():
 
 
 def டீடிடீமொழிபெயர்():
-    கோப்புகள் = glob.glob("./வெறுமை/*.dtd")
+    கோப்புகள் = glob.glob("./வெறுமை/*en.dtd")
     for கோப்பு in கோப்புகள்:
         அ = open(கோப்பு, "r")
         வரிகள் = அ.readlines()
-        ஆ = open(கோப்பு + ".டீடிடீ", "w")
+        ஆ = open(கோப்பு + ".தமிழ்", "w")
         for வரி in வரிகள்:
-            if வரி.startswith("<!ENTITY ") and வரி.endswith('"">\n'):
+            if வரி.startswith("<!ENTITY ") and வரி.endswith('">\n'):
                 try:
-                    # <!ENTITY zotero.preferences.settings					"">
-                    # <!ENTITY zotero.preferences.custom                    "">
-                    வ = வரி[0:-4]
-                    ப = வ.split(".")
-                    ச = ப[-1].strip()
+                    # <!ENTITY zotero.version		"version">
+                    # <!ENTITY zotero.whatsNew "What’s new">
+                    வ = வரி[0:-3]
+                    ப = வ.split('"')
+                    print(ப)
+                    ச = ப[-1]
+                    ஊ = ப[0]
                     இ, _ = பொருள்_பெறு(ச)
-                    ஊ = ".".join(ப)
                     உ = ஊ + '"' + இ + '">\n'
                     ஆ.write(உ)
                     print(வரி, உ)
