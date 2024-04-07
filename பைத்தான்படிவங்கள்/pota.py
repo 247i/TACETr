@@ -5,6 +5,7 @@
 import os
 import glob
 import polib
+import json
 from collections import OrderedDict
 
 try:
@@ -440,3 +441,28 @@ def சேசன்மொழிபெயர்():
                 ஆ.write(வரி)
         அ.close()
         ஆ.close()
+
+
+def சாதொபொகுமொழிபெயர்():
+    கோப்புகள் = glob.glob("./வெறுமை/*.json")
+    for கோப்பு in கோப்புகள்:
+        with open(கோப்பு) as அ:
+            தரவுகள் = json.load(அ)
+            with open(கோப்பு + ".சன்", "w") as ஆ:
+                for தரவு, மதிப்பு in தரவுகள்:
+                    if type(தரவு) == dict:
+                            வ = வரி[0:-3]
+                            ப, வி = வ.split(': "')
+                            இ, _ = பொருள்_பெறு(வி)
+                            ஊ = ': "'.join((ப, இ))
+                            உ = ஊ + '",\n'
+                            ஆ.write(உ)
+                            print(வரி, உ)
+                    else:
+                        இ, _ = பொருள்_பெறு(வி)
+                        ஊ = ': "'.join((ப, இ))
+                        உ = ஊ + '",\n'
+                        ஆ.write(உ)
+                        print(வரி, உ)
+                        தரவுகள்[தரவு]=உ
+                json.dump(தரவுகள், ஆ)
