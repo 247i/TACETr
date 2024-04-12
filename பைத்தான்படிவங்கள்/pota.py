@@ -461,7 +461,7 @@ def சாதொபொகுமொழிபெயர்():
                     else:
                         இ, _ = பொருள்_பெறு(மதிப்பு)
                         print(மதிப்பு, இ)
-                        அகராதி[மதிப்பு] = இ
+                        அகராதி[தரவு] = இ
                 test = json.dumps(அகராதி, ensure_ascii=False)
                 print(test)
                 ஆ.write(test)
