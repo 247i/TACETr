@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (itch.io)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-13 23:49+0000\n"
+"POT-Creation-Date: 2024-04-14 00:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://weblate.itch.ovh/projects/itchio/itchio/ta/>\n"
@@ -61,6 +61,11 @@ msgstr ""
 "விரும்புவீர்கள்."
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".game_download.purchase.percent_off"
+msgid "{{percent}}% off"
+msgstr "{{percent}}% தள்ளுபடி"
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".community.new_topic.new_topic"
 msgid "New topic"
 msgstr "புது தலைப்பு"
@@ -74,16 +79,6 @@ msgstr "உருவாக்குநர்"
 msgctxt ".blog.all_posts"
 msgid "All posts"
 msgstr "அனைத்து இடுகைகளும்"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".buy_form_popup.powered_by_itchio"
-msgid "powered by {{itchio}}"
-msgstr "{{itchio}}ஆல் இயக்கப்படுகிறது"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".community.topic.replies_count"
-msgid "Replies: {{count}}"
-msgstr "பதில்கள்: {{count}}"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".jam.results.submissions.view_submission_page"
@@ -126,6 +121,11 @@ msgctxt ".user_settings.email_addresses.primary_email_description"
 msgid "Your primary email is where itch.io will send any notifications to you."
 msgstr ""
 "உங்கள் முதன்மை மின்னஞ்சல், itch.io உங்களுக்கு ஏதேனும் அறிவிப்புகளை அனுப்பும்."
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".game_download.header.download_title"
+msgid "Download {{project_title}}"
+msgstr "பதிவிறக்கம் {{project_title}}"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".misc.follow_button.follow"
@@ -198,11 +198,6 @@ msgid "Tip"
 msgstr "உதவிக்குறிப்பு"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".jam.results.submissions.ranked_score"
-msgid "Score: {{score}}"
-msgstr "ச்கோர்: {{score}}"
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".community.topic_list.list_header_topic_title"
 msgid "Topic"
 msgstr "தலைப்பு"
@@ -254,11 +249,6 @@ msgid "Dance pad"
 msgstr "நடன பேட்"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".stripe_checkout.card_ending_last4"
-msgid "Ending in {{last4}}"
-msgstr "{{last4}} இல் முடிகிறது"
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".browse_tags.no_description_yet"
 msgid "No description yet"
 msgstr "இன்னும் விளக்கம் இல்லை"
@@ -289,6 +279,11 @@ msgstr ""
 "விளையாட்டின் திரை சாட்கள் மற்றும் பிற பதிவிறக்கங்களுடன் நாங்கள் உங்கள் "
 "விளையாட்டை வழங்குகிறோம். உங்கள் பதிவிறக்கங்கள் எப்போதும் கிடைக்கின்றன, "
 "எப்போதும் வேகமாக இருக்கும்."
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".misc.pager.current_page_of_total"
+msgid "Page {{current_page}} of {{total_pages}}"
+msgstr "{{total_pages}} இன் பக்கம் {{current_page}}"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".game.comments.write_your_comment"
@@ -348,25 +343,9 @@ msgstr ""
 "மதிப்பாய்வு செய்யவும்"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".jam.results.average_and_median_results"
-msgid ""
-"The average number of ratings per game was <s>{{average_ratings}}</s> and "
-"the median was <s>{{median_ratings}}</s>."
-msgstr ""
-"ஒரு விளையாட்டுக்கு சராசரி மதிப்பீடுகளின் எண்ணிக்கை <s> {{average_ratings}} </"
-"s> மற்றும் சராசரி <s> {{median_ratings}} </s>."
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".browse_tags.types.genre"
 msgid "Genres"
 msgstr "வகைகள்"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".jam.submission.ranked_with_vote_count"
-msgid "Ranked {{ordinal_rank}} with {{count}} vote"
-msgid_plural "Ranked {{ordinal_rank}} with {{count}} votes"
-msgstr[0] "{{count}} வாக்கு உடன் {{ordinal_rank}} தரவரிசை"
-msgstr[1] "{{count}} வாக்குகளுடன் {{ordinal_rank}}"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".game_download.alternate_download.enable_alternate_download_mode"
@@ -426,6 +405,15 @@ msgstr "குழுவிலகவும்"
 msgctxt ".game.layout.ownership.purchased_in_a_bundle_for_price"
 msgid "Purchased in a bundle for {{price}}"
 msgstr "{{price}} க்கு ஒரு மூட்டையில் வாங்கப்பட்டது"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".game_download.purchase.payment_summary_with_email"
+msgid ""
+"You paid for this on {{payment_date}} for {{payment_price}} with the email "
+"{{email_address}}."
+msgstr ""
+"{{payment_price}} க்கு {{payment_date}} இல் {{email_address}} உடன் பணம் "
+"செலுத்தியுள்ளீர்கள்."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".layout.user_menu.create"
@@ -511,6 +499,11 @@ msgid "Platforms"
 msgstr "தளங்கள்"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".game_download.purchase.youve_been_gifted"
+msgid "You've been gifted {{product_title}}."
+msgstr "உங்களுக்குப் பரிசளிக்கப்பட்டவர் {{product_title}}."
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".misc.countdown.seconds"
 msgid "seconds"
 msgstr "நொடிகள்"
@@ -544,6 +537,11 @@ msgstr "தற்காலிக பிணையம் மல்டிபிள�
 msgctxt ".community.post_form.post"
 msgid "Post"
 msgstr "அஞ்சல்"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".misc.follow_button.following_username"
+msgid "Following {{username}}"
+msgstr "{{username}} பின்தொடர்கிறது"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".layout.user_menu.posts"
@@ -641,11 +639,6 @@ msgid "Require a click to run HTML5 game embeds"
 msgstr "html5 கேம் உட்பொதிகளை இயக்க ஒரு சொடுக்கு தேவை"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".jam.submission.rate_submission.you_voted_ago"
-msgid "You voted {{timestamp}}."
-msgstr "நீங்கள் வாக்களித்தீர்கள் {{timestamp}}."
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".browse.filter_group_tools"
 msgid "Tools & Engines"
 msgstr "கருவிகள் மற்றும் இயந்திரங்கள்"
@@ -710,12 +703,6 @@ msgctxt ".browse.filter_group_when"
 msgid "When"
 msgstr "எப்பொழுது"
 
-# Is this "install instructions" as in installing the instructions or instructions on how to install? Sorry if this is a dumb question.
-#, angularjs-format, i18next-interpolation
-msgctxt ".game_download.install_instructions_intro"
-msgid "Download and install instructions from {{username}}:"
-msgstr "{{username}} இருந்து இலிருந்து வழிமுறைகளைப் பதிவிறக்கி நிறுவவும்:"
-
 #, angularjs-format, i18next-interpolation
 msgctxt ".jams.page_summary"
 msgid ""
@@ -737,9 +724,30 @@ msgid "Archived"
 msgstr "காப்பகப்படுத்தப்பட்டது"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".game_download.header.preorder_title"
+msgid "Preorder for {{project_title}}"
+msgstr "{{project_title}} க்கான முன்பதிவு"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".dashboard.follow_itchio"
+msgid "Follow itch.io on {{twitter}} and {{facebook}}"
+msgstr "{{twitter}} மற்றும் {{facebook}}இல் நமைச்சீயைப் பின்தொடரவும்"
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".index.view_all_platforms"
 msgid "View all platforms"
 msgstr "அனைத்து தளங்களையும் பார்க்கவும்"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".user.verify_email.confirm_verification"
+msgid ""
+"Please confirm verifying the email address {{email_address}} for the account "
+"{{account}}. It is necessary to verify your email address to perform many "
+"actions on itch.io."
+msgstr ""
+"கணக்கிற்கான மின்னஞ்சல் முகவரியை {{email_address}} சரிபார்க்கவும் என்பதை "
+"உறுதிப்படுத்தவும் {{account}}. நமைச்சலில் பல செயல்களைச் செய்ய உங்கள் "
+"மின்னஞ்சல் முகவரியை சரிபார்க்க வேண்டியது தேவை."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".layout.user_menu.account"
@@ -789,15 +797,6 @@ msgid "Delete file"
 msgstr "கோப்பை அழி"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".library.rate_game.follow_creator"
-msgid ""
-"Consider following the creator of {{project_title}} to stay up to date on "
-"their latest releases."
-msgstr ""
-"{{project_title}}இன் படைப்பாளரை அவர்களின் அண்மைக் கால வெளியீடுகளில் "
-"புதுப்பித்த நிலையில் இருக்க வேண்டும்."
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".jam.submission.comments.post_comment"
 msgid "Post comment"
 msgstr "கருத்து தெரிவிக்கவும்"
@@ -840,6 +839,13 @@ msgstr "இதை நீங்கள் ஏற்கனவே வைத்தி
 msgctxt ".library.show_on_my_profile_toggle"
 msgid "Show on my profile"
 msgstr "எனது சுயவிவரத்தில் காட்டு"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".jam.submitter.view_entries"
+msgid "View {{count}} entry"
+msgid_plural "View {{count}} entries"
+msgstr[0] "{{count}} உள்ளீடு காண்க"
+msgstr[1] "{{count}} உள்ளீடுகளைக் காண்க"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".layout.user_menu.account_menu_tooltip"
@@ -900,9 +906,9 @@ msgid "Required"
 msgstr "தேவை"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".stripe_checkout.donating_price_to"
-msgid "Donating {{price}} to:"
-msgstr "{{price}}க்கு நன்கொடை அளிக்கிறது:"
+msgctxt ".game_download.claim_external_key"
+msgid "Claim {{key_type}} key"
+msgstr "உரிமைகோரல் {{key_type}} விசை"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".user_login.login_form.username_or_email"
@@ -1058,12 +1064,6 @@ msgstr ""
 ", நீங்கள் அங்கு வைக்காத எதையும் நீங்கள் காண மாட்டீர்கள்."
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".game_download.purchase.payment_summary"
-msgid "You paid for this on {{payment_date}} for {{payment_price}}."
-msgstr ""
-"இதற்காக {{payment_date}}இல் {{payment_price}}க்கு  பணம் செலுத்தினீர்கள்."
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".user_login.intent.jam_submit"
 msgid "You'll need an account on itch.io before you can submit to a jam."
 msgstr ""
@@ -1197,13 +1197,6 @@ msgid "Popular"
 msgstr "மக்கள்"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".jam.results.submissions.ranked_vote_count"
-msgid "Ranked {{ordinal_rank}} with {{count}} vote"
-msgid_plural "Ranked {{ordinal_rank}} with {{count}} votes"
-msgstr[0] "{{count}} வாக்கு உடன் {{ordinal_rank}} தரவரிசை"
-msgstr[1] "{{count}} வாக்குகளுடன் {{ordinal_rank}}"
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".index.search_games_creators"
 msgid "Search games & creators"
 msgstr "விளையாட்டுகளையும் படைப்பாளர்களையும் தேடுங்கள்"
@@ -1237,6 +1230,11 @@ msgstr "கருத்துகள்"
 msgctxt ".community.topic.first_page"
 msgid "First page"
 msgstr "முதல் பக்கம்"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".stripe_checkout.card_ending_last4"
+msgid "Ending in {{last4}}"
+msgstr "{{last4}} இல் முடிகிறது"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".jam.submission.comments.empty_message"
@@ -1293,14 +1291,6 @@ msgid "Accelerometer"
 msgstr "முடுக்கமானி"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".jam.results.submissions.ranked_criteria_vote_count"
-msgid "Ranked {{ordinal_rank}} in {{criteria_name}} with {{count}} vote"
-msgid_plural "Ranked {{ordinal_rank}} in {{criteria_name}} with {{count}} votes"
-msgstr[0] "{{colteria_name}} இல் {{count}}  வாக்குடன் {{ordinal_rank}} தரவரிசை"
-msgstr[1] ""
-"{{countaria_name}} இல் {{count}}  வாக்குகளுடன் {{ordinal_rank}} தரவரிசை"
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".game_download.preorder_instructions"
 msgid ""
 "This project has files that aren't released yet. Come back to this page when "
@@ -1326,6 +1316,17 @@ msgstr "நூலாசிரியர்"
 msgctxt ".community.category.view_this_communitys_rules"
 msgid "View this community's rules…"
 msgstr "இந்த சமூகத்தின் விதிகளைக் காண்க…"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".community.topic.replies_count"
+msgid "Replies: {{count}}"
+msgstr "பதில்கள்: {{count}}"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".buy_form.percent_off_until"
+msgid "All purchases are <s>{{rate}}%</s> off until {{end_date}}."
+msgstr ""
+"அனைத்து வாங்குதல்களும் <s> {{rate}}%</s> {{end_date}} வரை முடக்கப்படுகின்றன."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".layout.header.upload_game"
@@ -1374,11 +1375,6 @@ msgid "or already have an account?"
 msgstr "அல்லது ஏற்கனவே கணக்கு உள்ளதா?"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".jam.results.submissions.ranked_criteria"
-msgid "Ranked {{ordinal_rank}} in {{criteria_name}}"
-msgstr "{{compritaria_name}} இல் {{ordinal_rank}} தரவரிசை"
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".misc.project_visibility.published"
 msgid "Published"
 msgstr "வெளியிடப்பட்டது"
@@ -1412,15 +1408,6 @@ msgstr "பரிந்துரைகள்"
 msgctxt ".misc.accessibility_features.blind"
 msgid "Blind friendly"
 msgstr "குருட்டு நட்பு"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".jam.results.submissions.ranked_criteria_rating_count"
-msgid "Ranked {{ordinal_rank}} in {{criteria_name}} with {{count}} rating"
-msgid_plural "Ranked {{ordinal_rank}} in {{criteria_name}} with {{count}} ratings"
-msgstr[0] ""
-" {{criteria_name}}இல் {{count}} மதிப்பீட்டில் {{ordinal_rank}} தரவரிசை"
-msgstr[1] ""
-"{{criteria_name}} இல் {{count}} மதிப்பீடுகளுடன் {{ordinal_rank}} தரவரிசை"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".layout.header.fun_games"
@@ -1516,11 +1503,6 @@ msgstr "நூலகம்"
 msgctxt ".user_register.register_form.your_email_address"
 msgid "Your email address"
 msgstr "உங்கள் மின்னஞ்சல் முகவரி"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".game_download.header.download_title"
-msgid "Download {{project_title}}"
-msgstr "பதிவிறக்கம் {{project_title}}"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".search.browse_all_games"
@@ -1680,21 +1662,6 @@ msgid "Account settings"
 msgstr "கணக்கு அமைப்புகள்"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".jam.results.ratings_given_count"
-msgid ""
-"<s>{{count}} rating</s> was given between {{vote_start_date}} and "
-"{{vote_end_date}}."
-msgid_plural ""
-"<s>{{count}} ratings</s> were given between {{vote_start_date}} and "
-"{{vote_end_date}}."
-msgstr[0] ""
-"<s> {{count}} மதிப்பீடுகள்> {{vote_start_date}}  மற்றும் {{vote_"
-"end_date} between க்கு இடையில் கொடுக்கப்பட்டது."
-msgstr[1] ""
-"<s> {{count}} மதிப்பீடுகள் </s> {{vote_start_date}}  மற்றும் {{vote_end_date}"
-" between க்கு இடையில் கொடுக்கப்பட்டது."
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".dashboard.not_a_developer_escape"
 msgid "Nah, take me to the games feed"
 msgstr "இல்லை, என்னை விளையாட்டு ஊட்டத்திற்கு அழைத்துச் செல்லுங்கள்"
@@ -1705,6 +1672,11 @@ msgid "Default donation amount"
 msgstr "இயல்புநிலை நன்கொடை தொகை"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".jam.results.submissions.ranked_criteria"
+msgid "Ranked {{ordinal_rank}} in {{criteria_name}}"
+msgstr "{{criteria_name}} இல் {{ordinal_rank}} தரவரிசை"
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".community.category.stats.topics"
 msgid "Topics"
 msgstr "தலைப்புகள்"
@@ -1713,11 +1685,6 @@ msgstr "தலைப்புகள்"
 msgctxt ".game.layout.follow"
 msgid "Follow"
 msgstr "பின்தொடர்"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".buy_form.preorder_title"
-msgid "Pre-order '{{title}}'"
-msgstr "முன்கூட்டிய வரிசை '{{title}}'"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".dashboard.hello"
@@ -1733,13 +1700,6 @@ msgstr "சேகரிப்பைத் திருத்து"
 msgctxt ".buy_form.support_the_creator_with_an_additional_contribution"
 msgid "Support the creator with an additional contribution"
 msgstr "கூடுதல் பங்களிப்புடன் படைப்பாளரை ஆதரிக்கவும்"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".jam.submitter.jam_is_now_over"
-msgid "This jam is now over. It ran from {{start_date}} to {{end_date}}."
-msgstr ""
-"இந்த நெரிசல் இப்போது முடிந்துவிட்டது. இது {{start_date}}  இலிருந்து "
-"{{end_date}} வரை இயங்கியது."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".blog.digest"
@@ -1826,13 +1786,6 @@ msgid "You can manage your cards from your <a>Account Settings</a>"
 msgstr ""
 "உங்கள் அட்டைகளை உங்கள் <a> கணக்கு அமைப்புகளிலிருந்து நிர்வகிக்கலாம் </a>"
 
-# @Starnest Personally, I think that "by {{author}}" looks better and natural, because  the expression "by ~~" is widely used in Japanese websites or games, and without "by," it will become a bit difficult for users to understand what {{author}} means (maybe some users think of it as tags or something).
-# But in the submissions page(in the tab jam.header.links.submissions), "by" is omitted, so making "by {{author}}" to "{{author}}" will be valid, too.
-#, angularjs-format, i18next-interpolation
-msgctxt ".jam.results.submissions.by_author"
-msgid "by {{author}}"
-msgstr "வழங்கியவர் {{author}}"
-
 #, angularjs-format, i18next-interpolation
 msgctxt ".community.post_form.save"
 msgid "Save"
@@ -1886,11 +1839,6 @@ msgid "Edit project"
 msgstr "திட்டத்தைத் திருத்து"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".misc.follow_button.follow_username"
-msgid "Follow {{username}}"
-msgstr "{{username}}ஐப் பின்தொடரவும்"
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".dashboard.edit_project.pricing.free_price_info"
 msgid ""
 "Someone downloading your project will be asked for a donation before getting "
@@ -1898,6 +1846,11 @@ msgid ""
 msgstr ""
 "உங்கள் திட்டத்தைப் பதிவிறக்கும் ஒருவர் அணுகலைப் பெறுவதற்கு முன்பு நன்கொடை "
 "கேட்கப்படுவார். அவர்கள் இலவசமாக பதிவிறக்கம் செய்ய தவிர்க்கலாம்."
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".stripe_checkout.paying_price_vat_for"
+msgid "Paying {{price}} VAT inc. for:"
+msgstr "செலுத்துதல் {{price}} வாட் இன்க். இதற்கு:"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".dashboard.header.game_jams_link"
@@ -1971,14 +1924,14 @@ msgid "Create a new account"
 msgstr "புதிய கணக்கை துவங்கு"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".jam.submission.time_remaining_before_deadline"
+msgid "{{time_duration}} before the deadline"
+msgstr "{{time_duration}} காலக்கெடுவுக்கு முன்"
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".jam.submission.rate_submission.save_vote"
 msgid "Save vote"
 msgstr "வாக்குகளை சேமிக்கவும்"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".game_download.purchase.thank_you_for_donating"
-msgid "Thank you for donating to {{product_title}}."
-msgstr "{{product_title}}க்கு நன்கொடை அளித்ததற்கு நன்றி."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".misc.release_statuses.canceled"
@@ -2032,11 +1985,27 @@ msgid "New"
 msgstr "புதிய"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".jam.submissions.help_submissions_in_need_of_ratings"
+msgid ""
+"Help rate submissions that have few ratings: <a>Submissions in need of "
+"ratings</a>"
+msgstr ""
+"சில மதிப்பீடுகளைக் கொண்ட சமர்ப்பிப்புகளுக்கு மதிப்பிடுவதற்கு உதவுங்கள்: "
+"<a>மதிப்பீடுகள் தேவைப்படும் சமர்ப்பிப்புகள் </a>"
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".collection.private_collection_message"
 msgid "This collection is private, only contributors can see its contents"
 msgstr ""
 "இந்தத் தொகுப்பு தனிப்பட்டது, பங்களிப்பாளர்கள் மட்டுமே அதன் உள்ளடக்கங்களைக் "
 "காணலாம்"
+
+# @Starnest Personally, I think that "by {{author}}" looks better and natural, because  the expression "by ~~" is widely used in Japanese websites or games, and without "by," it will become a bit difficult for users to understand what {{author}} means (maybe some users think of it as tags or something).
+# But in the submissions page(in the tab jam.header.links.submissions), "by" is omitted, so making "by {{author}}" to "{{author}}" will be valid, too.
+#, angularjs-format, i18next-interpolation
+msgctxt ".jam.results.submissions.by_author"
+msgid "by {{author}}"
+msgstr "வழங்கியவர் {{author}}"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".browse.related_collections"
@@ -2052,6 +2021,12 @@ msgstr "<1> ஒரு கணக்கை உருவாக்கவும் </
 msgctxt ".game_download.purchase.link_purchase_warning"
 msgid "Don't lose your purchase!"
 msgstr "உங்கள் வாங்குதலை இழக்காதீர்கள்!"
+
+# Is this "install instructions" as in installing the instructions or instructions on how to install? Sorry if this is a dumb question.
+#, angularjs-format, i18next-interpolation
+msgctxt ".game_download.install_instructions_intro"
+msgid "Download and install instructions from {{username}}:"
+msgstr "{{username}} இருந்து இலிருந்து வழிமுறைகளைப் பதிவிறக்கி நிறுவவும்:"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".user_settings.two_factor_auth.page_description"
@@ -2095,6 +2070,11 @@ msgid "You will receive a Steam key with your purchase."
 msgstr "நீங்கள் வாங்கியதன் மூலம் நீராவி விசையைப் பெறுவீர்கள்."
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".misc.follow_button.follow_username"
+msgid "Follow {{username}}"
+msgstr "{{username}}ஐப் பின்தொடரவும்"
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".user_settings.profile.change_username"
 msgid "Change my username/URL"
 msgstr "எனது பயனர்பெயர்/url ஐ மாற்றவும்"
@@ -2103,21 +2083,6 @@ msgstr "எனது பயனர்பெயர்/url ஐ மாற்றவ�
 msgctxt ".game.upload_list.if_you_pay_price_or_more"
 msgid "if you pay {{price}} or more"
 msgstr "நீங்கள் {{price}} அல்லது அதற்கு மேற்பட்ட தொகையைச் செலுத்தினால்"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".jam.results.votes_cast_count"
-msgid ""
-"<s>{{count}}</s> vote was cast between {{vote_start_date}} and "
-"{{vote_end_date}}."
-msgid_plural ""
-"<s>{{count}}</s> votes were cast between {{vote_start_date}} and "
-"{{vote_end_date}}."
-msgstr[0] ""
-"<s> {{count}} </s> {{vote_start_date}}  மற்றும் {{vote_end_date}} க்கு"
-" இடையில் வாக்கு செலுத்தப்பட்டது."
-msgstr[1] ""
-"<s> {{count}} </s> வாக்குகள் {{vote_start_date}}  மற்றும் {{vote_end_date}} "
-"க்கு இடையில் அனுப்பப்பட்டன."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".developers.upload_a_new_game"
@@ -2199,11 +2164,6 @@ msgstr "{{jam_title}} க்கான வீதம்"
 msgctxt ".layout.user_menu.settings"
 msgid "Settings"
 msgstr "அமைப்புகள்"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".game_download.social_share_message_download"
-msgid "I just downloaded {{title}} by {{username}}"
-msgstr "நான் {{title}} by {{username}} by பதிவிறக்கம் செய்தேன்"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".dashboard.edit_project.pricing.no_payments"
@@ -2293,6 +2253,11 @@ msgstr[0] "{{count}} முடிவு"
 msgstr[1] "{{count}} முடிவுகள்"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".library.rate_game.rate_header"
+msgid "Rate & Review {{project_title}}"
+msgstr "விகிதம் மற்றும் மதிப்பாய்வு {{project_title}}"
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".stripe_checkout.you_will_receive_files"
 msgid "You will receive:"
 msgstr "உங்களுக்கு கிடைக்கும்:"
@@ -2315,11 +2280,6 @@ msgid "Click to leave a comment…"
 msgstr "ஒரு கருத்தை தெரிவிக்க சொடுக்கு செய்க…"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".stripe_checkout.pay_price_button"
-msgid "Pay {{price}}"
-msgstr "{{price}} செலுத்துங்கள்"
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".game.layout.jam_submission.accepting_ratiings"
 msgid ""
 "The jam is currently accepting ratings for submissions. <a>Learn more</a>"
@@ -2336,6 +2296,26 @@ msgstr "வகை"
 msgctxt ".user_register.create_an_account_on_itchio"
 msgid "Create an account on itch.io"
 msgstr "etch.io இல் ஒரு கணக்கை உருவாக்கவும்"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".game_download.social_share_message_download"
+msgid "I just downloaded {{title}} by {{username}}"
+msgstr "நான் {{title}} by {{username}} by பதிவிறக்கம் செய்தேன்"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".jam.results.votes_cast_count"
+msgid ""
+"<s>{{count}}</s> vote was cast between {{vote_start_date}} and "
+"{{vote_end_date}}."
+msgid_plural ""
+"<s>{{count}}</s> votes were cast between {{vote_start_date}} and "
+"{{vote_end_date}}."
+msgstr[0] ""
+"<s> {{count}} </s> {{vote_start_date}} மற்றும் {{vote_end_date}} க்கு இடையில்"
+" வாக்கு செலுத்தப்பட்டது."
+msgstr[1] ""
+"<s> {{count}} </s> வாக்குகள் {{vote_start_date}} மற்றும் {{vote_end_date}} "
+"க்கு இடையில் அனுப்பப்பட்டன."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".dashboard.edit_project.kind_of_project_field"
@@ -2495,24 +2475,6 @@ msgstr ""
 "<1> ஒரு புதிய விளையாட்டைப் பதிவேற்றவும் </1> <em> அல்லது </em> <2> "
 "டாச்போர்டுக்குச் செல்லவும் </2>"
 
-# This sentence has four possible numerous combinations due  to both count and submission_count
-#, angularjs-format, i18next-interpolation
-msgctxt ".jam.results.ratings_given_submissions_count"
-msgid ""
-"<s>{{count}} rating</s> was given to <s>{{submission_count}} entries</s> "
-"({{percent}}%) between {{vote_start_date}} and {{vote_end_date}}."
-msgid_plural ""
-"<s>{{count}} ratings</s> were given to <s>{{submission_count}} entries</s> "
-"({{percent}}%) between {{vote_start_date}} and {{vote_end_date}}."
-msgstr[0] ""
-"<s> {{count}} மதிப்பீடு </s> <s> {{சமர்ப்பிப்பு_கவுண்ட்}} உள்ளீடுகள் </s> "
-"({{percent}}%) {{boot_start_date}} } மற்றும் {{{wote_end_date} beto க்கு "
-"வழங்கப்பட்டது."
-msgstr[1] ""
-"<s> {{count}} மதிப்பீடுகள் </s> <s> {{சமர்ப்பிப்பு_கவுண்ட்}} உள்ளீடுகள் </s> "
-"({{percent}}%) {{boot_start_date}} }} மற்றும் {{{food_end_date} beto க்கு "
-"வழங்கப்பட்டன."
-
 #, angularjs-format, i18next-interpolation
 msgctxt ".user_settings.password.reset_password"
 msgid "Reset password"
@@ -2596,6 +2558,11 @@ msgid "Invoice"
 msgstr "விலைப்பட்டியல்"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".game_download.purchase.payment_summary"
+msgid "You paid for this on {{payment_date}} for {{payment_price}}."
+msgstr "இதற்காக {{payment_date}}இல் {{payment_price}}க்கு பணம் செலுத்தினீர்கள்."
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".misc.durations.days"
 msgid "Days or more"
 msgstr "நாட்கள் அல்லது அதற்கு மேற்பட்டவை"
@@ -2651,6 +2618,11 @@ msgid "Description"
 msgstr "விவரம்"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".game_download.check_out_more_from_jam_title"
+msgid "Check out more from {{jam_title}}"
+msgstr "{{jam_title}} இலிருந்து மேலும் பாருங்கள்"
+
+#, angularjs-format, i18next-interpolation
 msgctxt ""
 ".game.upload_list.this_file_will_be_available_when_the_creator_uploads_it"
 msgid "This file will be available when the creator uploads it"
@@ -2660,6 +2632,11 @@ msgstr "படைப்பாளி பதிவேற்றும்போத�
 msgctxt ".app.contribute_link"
 msgid "Want to contribute? <a>View the source on GitHub</a>"
 msgstr "பங்களிக்க வேண்டுமா? <a> கிதுபில் மூலத்தைக் காண்க </a>"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".game_download.version_name"
+msgid "Version {{version_name}}"
+msgstr "பதிப்பு {{version_name}}"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".library.rate_game.choose_stars"
@@ -2687,9 +2664,9 @@ msgid "You will get access to the following files when they are released:"
 msgstr "பின்வரும் கோப்புகள் வெளியிடப்படும் போது அவற்றை அணுகலாம்:"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".dashboard.follow_itchio"
-msgid "Follow itch.io on {{twitter}} and {{facebook}}"
-msgstr "{{ட்விட்டர்}} மற்றும் {{பேச்புக்}} இல் நமைச்சீயைப் பின்தொடரவும்"
+msgctxt ".buy_form_popup.author_line"
+msgid "<1>by</1> {{author}}"
+msgstr "<1> ஆல் </1> {{author}}"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".jam.submitter.join_jam"
@@ -2705,6 +2682,13 @@ msgstr "சிறந்த விற்பனையாளர்கள்"
 msgctxt ".game_download.claim_external_key_instructions"
 msgid "Click the button to claim it."
 msgstr "அதைக் கோர பொத்தானைக் சொடுக்கு செய்க."
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".jam.submitter.jam_is_now_over"
+msgid "This jam is now over. It ran from {{start_date}} to {{end_date}}."
+msgstr ""
+"இந்த நெரிசல் இப்போது முடிந்துவிட்டது. இது {{start_date}} இலிருந்து "
+"{{end_date}} வரை இயங்கியது."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".layout.header.devlogs"
@@ -2789,9 +2773,9 @@ msgstr ""
 " மேல் வாங்க வேண்டும்."
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".jam.submitter.submissions_open_from"
-msgid "Submissions open from {{start_date}} to {{end_date}}"
-msgstr "சமர்ப்பிப்புகள் {{start_date}}  fout {{end_date}} வரை திறக்கப்படுகின்றன"
+msgctxt ".game_download.purchase.linked_user_message"
+msgid "This purchase is linked to the account {{username}}."
+msgstr "இந்த கொள்முதல் கணக்குடன் இணைக்கப்பட்டுள்ளது {{username}} ."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".jams.jam_calendar_header"
@@ -2814,6 +2798,13 @@ msgid "Made with"
 msgstr "உடன் தயாரிக்கப்பட்டது"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".add_to_collection.count_items"
+msgid "{{count}} item"
+msgid_plural "{{count}} items"
+msgstr[0] "{{count}} உருப்படி"
+msgstr[1] "{{count}} உருப்படிகள்"
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".user_settings.email_addresses.additional_emails_instructions"
 msgid ""
 "You will be mailed verification instructions after adding an additional "
@@ -2833,11 +2824,6 @@ msgid "Post comment"
 msgstr "கருத்து தெரிவிக்கவும்"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".add_to_collection.default_title"
-msgid "{{username}}'s Collection"
-msgstr "{{username}} of இன் சேகரிப்பு"
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".dashboard.project_header.rewards"
 msgid "Rewards"
 msgstr "வெகுமதிகள்"
@@ -2853,13 +2839,6 @@ msgstr ""
 msgctxt ".game.join_the_community"
 msgid "Join the community"
 msgstr "சமூகத்தில் சேரவும்"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".add_to_collection.count_items"
-msgid "{{count}} item"
-msgid_plural "{{count}} items"
-msgstr[0] "{{எண்ணிக்கை}} உருப்படி"
-msgstr[1] "{{எண்ணிக்கை}} உருப்படிகள்"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".game.layout.related_games"
@@ -2890,6 +2869,11 @@ msgstr "பின்வரும் கோப்புகளுக்கான �
 msgctxt ".game.layout.community"
 msgid "Community"
 msgstr "சமூக"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".stripe_checkout.paying_price_for"
+msgid "Paying {{price}} for:"
+msgstr "{{price}} செலுத்துதல்:"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".community.post_list.pinned_reply"
@@ -2957,6 +2941,11 @@ msgid "Rated by {{count}} person so far"
 msgid_plural "Rated by {{count}} people so far"
 msgstr[0] "இதுவரை {{count}} நபரால் மதிப்பிடப்பட்டது"
 msgstr[1] "இதுவரை {{count}} மக்களால் மதிப்பிடப்பட்டது"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".game_download.get_external_key"
+msgid "Get {{key_type}} key"
+msgstr "{{key_type}} } bet ஐப் பெறுங்கள்"
 
 # Is "topic" here like a forum topic, ie. thread? Or does it mean something else?
 #, angularjs-format, i18next-interpolation
@@ -3048,11 +3037,6 @@ msgctxt ".feed.upload_a_game_button"
 msgid "Upload a game"
 msgstr "ஒரு விளையாட்டைப் பதிவேற்றவும்"
 
-#, angularjs-format, i18next-interpolation
-msgctxt ".game_download.get_external_key"
-msgid "Get {{key_type}} key"
-msgstr "{{key_type}} } bet ஐப் பெறுங்கள்"
-
 # where is this used?
 #, angularjs-format, i18next-interpolation
 msgctxt ".game.available_header"
@@ -3076,6 +3060,13 @@ msgstr "{{count}} முடிவுகள்"
 msgctxt ".user_settings.email_addresses.change_email_form.current_password"
 msgid "Current password"
 msgstr "தற்போதைய கடவுச்சொல்"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".feed.event.collection_summary"
+msgid "A collection with {{count}} item."
+msgid_plural "A collection with {{count}} items."
+msgstr[0] "{{count}} உருப்படி கொண்ட தொகுப்பு."
+msgstr[1] "{{count}} உருப்படிகளுடன் ஒரு தொகுப்பு."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".dashboard.header.coop_bundles_link"
@@ -3148,6 +3139,11 @@ msgid "Play in browser"
 msgstr "உலாவியில் விளையாடுங்கள்"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".dashboard.edit_project.default_noun"
+msgid "Leave blank to default to: '{{default_noun}}'."
+msgstr "இயல்புநிலைக்கு காலியாக விடுங்கள்: '{{default_noun}}'."
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".game.layout.following_username"
 msgid "Following {{username}}"
 msgstr "பின்வருபவை {{username}}"
@@ -3173,6 +3169,15 @@ msgstr ""
 "நிர்வகிக்கவும். இப்போது சாளரங்கள், மேகோச் மற்றும் லினக்சுக்கு கிடைக்கிறது."
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".user_settings.password.no_password_service_name"
+msgid ""
+"Your account currently doesn't have a password because you registered with "
+"{{service_name}}."
+msgstr ""
+"உங்கள் கணக்கில் தற்போது கடவுச்சொல் இல்லை, ஏனெனில் நீங்கள் "
+"{{service_name}}உடன் பதிவு செய்துள்ளீர்கள்."
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".user_login.intent.follow"
 msgid "You'll need an account on itch.io before you can follow someone."
 msgstr "நீங்கள் யாரையாவது பின்தொடர்வதற்கு முன்பு உங்களுக்கு ஒரு கணக்கு தேவை."
@@ -3186,6 +3191,24 @@ msgstr "உருவம் இல்லை"
 msgctxt ".user_settings.navigation.support_email"
 msgid "Support email"
 msgstr "உதவி மின்னஞ்சல்"
+
+# This sentence has four possible numerous combinations due  to both count and submission_count
+#, angularjs-format, i18next-interpolation
+msgctxt ".jam.results.ratings_given_submissions_count"
+msgid ""
+"<s>{{count}} rating</s> was given to <s>{{submission_count}} entries</s> "
+"({{percent}}%) between {{vote_start_date}} and {{vote_end_date}}."
+msgid_plural ""
+"<s>{{count}} ratings</s> were given to <s>{{submission_count}} entries</s> "
+"({{percent}}%) between {{vote_start_date}} and {{vote_end_date}}."
+msgstr[0] ""
+"<s> {{count}} மதிப்பீடு </s> <s> {{submission_count}}உள்ளீடுகள் </s> "
+"({{percent}}%) {{vote_start_date}}மற்றும் {{vote_end_date}}க்கு "
+"வழங்கப்பட்டது."
+msgstr[1] ""
+"<s> {{count}} மதிப்பீடுகள் </s> <s> {{submission_count}}உள்ளீடுகள் </s> "
+"({{percent}}%) {{vote_start_date}} மற்றும் {{vote_end_date}}க்கு "
+"வழங்கப்பட்டன."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".jam.submission.score_information"
@@ -3219,16 +3242,6 @@ msgstr "பதிவிறக்கம்"
 msgctxt ".community.post_list.edit"
 msgid "Edit"
 msgstr "தொகு"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".game.after_download.powered_by"
-msgid "<s>Powered by</s> {{itchio_logo}}"
-msgstr "<s> இயக்கப்படுகிறது </s> {{itchio_logo}} "
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".user_settings.two_factor_auth.tfa_status"
-msgid "Status: {{tfa_status}}"
-msgstr "நிலை: {{tfa_status}} "
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".misc.filter_when.last_day"
@@ -3289,11 +3302,6 @@ msgid "Submit report"
 msgstr "அறிக்கையை சமர்ப்பிக்கவும்"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".dashboard.edit_project.default_noun"
-msgid "Leave blank to default to: '{{default_noun}}'."
-msgstr "இயல்புநிலைக்கு காலியாக விடுங்கள்: '{{இயல்புநிலை_நவுன்}}'."
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".browse.sort_new_and_popular"
 msgid "New & Popular"
 msgstr "புதிய & பிரபலமான"
@@ -3307,6 +3315,11 @@ msgstr "பயன்பாட்டு வழிகாட்டியைப் �
 msgctxt ".jam.submitter.submission_is_closed_for_voting"
 msgid "Submission is closed and voting is now in progress"
 msgstr "சமர்ப்பிப்பு மூடப்பட்டு வாக்களிப்பு இப்போது நடந்து வருகிறது"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".jam.submission.submitted_by_contributors"
+msgid "Submitted by {{contributors}}"
+msgstr "சமர்ப்பிக்கப்பட்டது {{contributors}}"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".game.info_panel.inputs"
@@ -3363,11 +3376,6 @@ msgid "Collection"
 msgstr "சேகரிப்பு"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".stripe_checkout.paying_price_for"
-msgid "Paying {{price}} for:"
-msgstr "{{price}} செலுத்துதல்:"
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".buy_form.go_back"
 msgid "Go back"
 msgstr "திரும்பிச் செல்லுங்கள்"
@@ -3418,11 +3426,6 @@ msgstr "இதற்கு நான் ஏற்கனவே பணம் ச�
 msgctxt ".community.category.empty_message"
 msgid "There are no topics"
 msgstr "தலைப்புகள் எதுவும் இல்லை"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".game_download.purchase.youve_been_gifted"
-msgid "You've been gifted {{product_title}}."
-msgstr "உங்களுக்கு பரிசளிக்கப்பட்டவர் {{தயாரிப்பு_டிடில்}}."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".game.layout.footer.view_all_by_username"
@@ -3490,6 +3493,11 @@ msgstr "மொழி"
 msgctxt ".dashboard.header.projects_link"
 msgid "Projects"
 msgstr "திட்டங்கள்"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".jam.submission.rate_submission.you_voted_ago"
+msgid "You voted {{timestamp}}."
+msgstr "நீங்கள் வாக்களித்தீர்கள் {{timestamp}}."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".blog.updates"
@@ -3566,6 +3574,26 @@ msgstr "நிர்வாகிகள்"
 msgctxt ".game.info_panel.publisher"
 msgid "Publisher"
 msgstr "பதிப்பகத்தார்"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".jam.results.ratings_given_count"
+msgid ""
+"<s>{{count}} rating</s> was given between {{vote_start_date}} and "
+"{{vote_end_date}}."
+msgid_plural ""
+"<s>{{count}} ratings</s> were given between {{vote_start_date}} and "
+"{{vote_end_date}}."
+msgstr[0] ""
+"<s> {{count}} மதிப்பீடுகள்</s> {{vote_start_date}} மற்றும் "
+"{{vote_end_date}}க்கு இடையில் கொடுக்கப்பட்டது."
+msgstr[1] ""
+"<s> {{count}} மதிப்பீடுகள் </s> {{vote_start_date}} மற்றும் "
+"{{vote_end_date}}க்கு இடையில் கொடுக்கப்பட்டது."
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".game_download.payment_comes_with_key"
+msgid "Your payment comes with a {{key_type}} key!"
+msgstr "உங்கள் கட்டணம் {{key_type}} விசையுடன் வருகிறது!"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".feed.filter_ratings_tab"
@@ -3646,6 +3674,11 @@ msgid "Remove…"
 msgstr "அகற்று…"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".add_to_collection.private_collection_title"
+msgid "[Private] {{title}}"
+msgstr "[தனிப்பட்ட] {{title}}"
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".library.rate_game.rating_saved_header"
 msgid "Rating saved"
 msgstr "மதிப்பீடு சேமிக்கப்பட்டது"
@@ -3677,9 +3710,9 @@ msgstr ""
 "நீங்கள் மற்றொரு நகலைக் கோர முடியாது, ஆனால் உங்கள் இருக்கும் ஒன்றை அணுகலாம்."
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".user_settings.email_addresses.your_primary_email_address"
-msgid "Your primary email address: {{email}}"
-msgstr "உங்கள் முதன்மை மின்னஞ்சல் முகவரி: {{மின்னஞ்சல்}}"
+msgctxt ".game_download.purchase.thank_you_for_donating"
+msgid "Thank you for donating to {{product_title}}."
+msgstr "{{product_title}}க்கு நன்கொடை அளித்ததற்கு நன்றி."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".browse.filter_group_price"
@@ -3788,11 +3821,6 @@ msgstr ""
 "சொந்தமான வேறு எந்த விசயங்களுடனும் காண்பிக்கப்படும்."
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".game_download.linked_user_message"
-msgid "This page is linked to the account {{username}}."
-msgstr "இந்த பக்கம் கணக்கில் இணைக்கப்பட்டுள்ளது {{username}} ."
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".misc.pager.previous_page"
 msgid "Previous page"
 msgstr "முந்தைய பக்கம்"
@@ -3869,6 +3897,11 @@ msgid "Edit saved cards"
 msgstr "சேமித்த அட்டைகளைத் திருத்தவும்"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".stripe_checkout.donating_price_vat_to"
+msgid "Donating {{price}} VAT inc. to:"
+msgstr "நன்கொடை {{price}} வரி உட்பட இவருக்கு:"
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".misc.inputs.touchscreen"
 msgid "Touchscreen"
 msgstr "தொடு திரை"
@@ -3925,11 +3958,6 @@ msgid "Thanks for downloading"
 msgstr "பதிவிறக்கியதற்கு நன்றி"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".buy_form_popup.author_line"
-msgid "<1>by</1> {{author}}"
-msgstr "<1> ஆல் </1> {{author}}"
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".community.post_list.deleted_account"
 msgid "Deleted account"
 msgstr "கணக்கு நீக்கப்பட்டது"
@@ -3974,11 +4002,6 @@ msgctxt ".user_login.intent.recent_purchases"
 msgid "Log in to link any purchases you've recently made."
 msgstr ""
 "நீங்கள் அண்மைக் காலத்தில் உருவாக்கிய எந்தவொரு வாங்குதலையும் இணைக்க உள்நுழைக."
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".user_forgot_password.please_provide_a_new_password_for_account"
-msgid "Please provide a new password for the account {{account_name}}."
-msgstr "கணக்கிற்கு புதிய கடவுச்சொல்லை வழங்கவும் {{கணக்கு_நாம்}}."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".game_download.header.view_rest_in_bundle"
@@ -4060,19 +4083,9 @@ msgid "No rankings available"
 msgstr "தரவரிசை எதுவும் கிடைக்கவில்லை"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".game_download.payment_comes_with_key"
-msgid "Your payment comes with a {{key_type}} key!"
-msgstr "உங்கள் கட்டணம் {{key_type}}  விசையுடன் வருகிறது!"
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".browse_tags.commonly_tagged_with"
 msgid "Commonly tagged with"
 msgstr "பொதுவாக குறிக்கப்பட்டுள்ளது"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".game_download.access_comes_with_key"
-msgid "Your access comes with a {{key_type}} key!"
-msgstr "உங்கள் அணுகல் {{key_type}} } விசையுடன் வருகிறது!"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".game.info_panel.languages"
@@ -4142,11 +4155,6 @@ msgstr "எனது ஊட்டம்"
 msgctxt ".index.page_title"
 msgid "Download the latest indie games"
 msgstr "அண்மைக் கால இண்டி கேம்களைப் பதிவிறக்கவும்"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".game_download.version_name"
-msgid "Version {{version_name}}"
-msgstr "பதிப்பு {{பதிப்பு_பெயர்}} "
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".index.view_something_random"
@@ -4224,9 +4232,9 @@ msgid "Filter"
 msgstr "வடிப்பி"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".stripe_checkout.paying_price_vat_for"
-msgid "Paying {{price}} VAT inc. for:"
-msgstr "செலுத்துதல் {{price}} வாட் இன்க். இதற்கு:"
+msgctxt ".buy_form.preorder_title"
+msgid "Pre-order '{{title}}'"
+msgstr "முன்கூட்டிய வரிசை '{{title}}'"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".user_settings.navigation.email_addresses"
@@ -4324,6 +4332,11 @@ msgid "Ranked {{ordinal_rank}}"
 msgstr "தரவரிசை {{ordinal_rank}}"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".game_download.linked_user_message"
+msgid "This page is linked to the account {{username}}."
+msgstr "இந்த பக்கம் கணக்கில் இணைக்கப்பட்டுள்ளது {{username}} ."
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".game.layout.creator"
 msgid "Creator"
 msgstr "உருவாக்கியவர்"
@@ -4334,22 +4347,9 @@ msgid "Project URL"
 msgstr "திட்ட முகவரி"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".feed.event.collection_summary"
-msgid "A collection with {{count}} item."
-msgid_plural "A collection with {{count}} items."
-msgstr[0] "{{எண்ணிக்கை}} உருப்படி கொண்ட தொகுப்பு."
-msgstr[1] "{{எண்ணிக்கை}} உருப்படிகளுடன் ஒரு தொகுப்பு."
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".dashboard.header.payouts_link"
 msgid "Payouts"
 msgstr "பணம் செலுத்துதல்"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".game_download.purchase.thank_you_for_donating_author"
-msgid "Thank you for donating to {{product_title}} by {{author}}."
-msgstr ""
-"{{ஆசிரியர்} by ஆல் {{product_title} க்கு க்கு நன்கொடை அளித்ததற்கு நன்றி."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".community.post_list.edits_count"
@@ -4507,11 +4507,6 @@ msgid "New email address"
 msgstr "புதிய மின்னஞ்சல் முகவரி"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".jam.submission.submitted_by_contributors"
-msgid "Submitted by {{contributors}}"
-msgstr "சமர்ப்பிக்கப்பட்டது {{பங்களிப்பாளர்கள்}} "
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".library.things_rated_header"
 msgid "Things you've rated"
 msgstr "நீங்கள் மதிப்பிட்ட விசயங்கள்"
@@ -4581,6 +4576,11 @@ msgstr ""
 "படைப்பாளி உங்கள் ஆதரவை ஏற்றுக்கொள்கிறார்."
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".user_settings.two_factor_auth.tfa_status"
+msgid "Status: {{tfa_status}}"
+msgstr "நிலை: {{tfa_status}}"
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".index.to_follow.created_projects"
 msgid "Created {{project_list}}"
 msgstr "{{project_list}} உருவாக்கப்பட்டது"
@@ -4601,11 +4601,9 @@ msgid "Follows"
 msgstr "பின்வருமாறு"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".jam.submitter.view_entries"
-msgid "View {{count}} entry"
-msgid_plural "View {{count}} entries"
-msgstr[0] "{{எண்ணிக்கை}} நுழைவு காண்க"
-msgstr[1] "{{count}} உள்ளீடுகளைக் காண்க"
+msgctxt ".buy_form_popup.powered_by_itchio"
+msgid "powered by {{itchio}}"
+msgstr "{{itchio}}ஆல் இயக்கப்படுகிறது"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".user_settings.profile.account_type_gamer"
@@ -4721,6 +4719,11 @@ msgstr "புதிய தொகுப்பில் சேர்க்கவ�
 msgctxt ".game_download.header.more_menu"
 msgid "More"
 msgstr "மேலும்"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".user_forgot_password.please_provide_a_new_password_for_account"
+msgid "Please provide a new password for the account {{account_name}}."
+msgstr "கணக்கிற்கு புதிய கடவுச்சொல்லை வழங்கவும் {{account_name}}."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".community.new_topic.locked"
@@ -4864,28 +4867,21 @@ msgid "Open source"
 msgstr "திறந்த மூல"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".game_download.purchase.thank_you_for_purchasing_author"
-msgid "Thank you for purchasing {{product_title}} by {{author}}."
-msgstr "{{{ஆசிரியர்} by ஆல் {{product_title}} வாங்கியதற்கு நன்றி."
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".game_download.start_project_button"
 msgid "Start"
 msgstr "தொடங்கு"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".jam.results.submissions.ranked_criteria_vote_count"
+msgid "Ranked {{ordinal_rank}} in {{criteria_name}} with {{count}} vote"
+msgid_plural "Ranked {{ordinal_rank}} in {{criteria_name}} with {{count}} votes"
+msgstr[0] "{{criteria_name}} இல் {{count}} வாக்குடன் {{ordinal_rank}} தரவரிசை"
+msgstr[1] "{{criteria_name}} இல் {{count}} வாக்குகளுடன் {{ordinal_rank}} தரவரிசை"
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".layout.user_menu.game_jams"
 msgid "Game jams"
 msgstr "விளையாட்டும் போட்டி"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".game_download.purchase.payment_summary_with_email"
-msgid ""
-"You paid for this on {{payment_date}} for {{payment_price}} with the email "
-"{{email_address}}."
-msgstr ""
-"{{payment_price க்கு க்கு {{payment_date}} இல் {{{மின்னஞ்சல்_அடிரெச்}} உடன் "
-"பணம் செலுத்தியுள்ளீர்கள்."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".stripe_checkout.steam_key"
@@ -5012,6 +5008,11 @@ msgid "Orientation"
 msgstr "நோக்குநிலை"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".game.after_download.powered_by"
+msgid "<s>Powered by</s> {{itchio_logo}}"
+msgstr "<s> இயக்கப்படுகிறது </s> {{itchio_logo}}"
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".developers.host_a_sale"
 msgid "Host A Sale"
 msgstr "ஒரு விற்பனையை நடத்துங்கள்"
@@ -5035,11 +5036,6 @@ msgstr ""
 "பாப்அப் தடுப்பாளரைச் சரிபார்க்கவும்."
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".jam.submission.time_remaining_before_deadline"
-msgid "{{time_duration}} before the deadline"
-msgstr "{{time_duration} the காலக்கெடுவுக்கு முன்"
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".user_settings.navigation.publisher_get_started"
 msgid "Get started"
 msgstr "தொடங்கவும்"
@@ -5050,23 +5046,14 @@ msgid "You are logged out"
 msgstr "நீங்கள் வெளியேறிவிட்டீர்கள்"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".stripe_checkout.donating_price_to"
+msgid "Donating {{price}} to:"
+msgstr "{{price}}க்கு நன்கொடை அளிக்கிறது:"
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".developers.design_your_games_page"
 msgid "Design Your Game's Page"
 msgstr "உங்கள் விளையாட்டின் பக்கத்தை வடிவமைக்கவும்"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".game_download.purchase.linked_user_message"
-msgid "This purchase is linked to the account {{username}}."
-msgstr "இந்த கொள்முதல் கணக்குடன் இணைக்கப்பட்டுள்ளது {{username}} ."
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".user_settings.password.no_password_service_name"
-msgid ""
-"Your account currently doesn't have a password because you registered with "
-"{{service_name}}."
-msgstr ""
-"உங்கள் கணக்கில் தற்போது கடவுச்சொல் இல்லை, ஏனெனில் நீங்கள் {{service_name} "
-"bith உடன் பதிவு செய்துள்ளீர்கள்."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".misc.more_ellip"
@@ -5121,14 +5108,23 @@ msgid "The public URL for your account"
 msgstr "உங்கள் கணக்கிற்கான பொது முகவரி"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".library.rate_game.rate_header"
-msgid "Rate & Review {{project_title}}"
-msgstr "விகிதம் மற்றும் மதிப்பாய்வு {{project_title}} "
+msgctxt ".jam.results.average_and_median_results"
+msgid ""
+"The average number of ratings per game was <s>{{average_ratings}}</s> and "
+"the median was <s>{{median_ratings}}</s>."
+msgstr ""
+"ஒரு விளையாட்டுக்கு சராசரி மதிப்பீடுகளின் எண்ணிக்கை <s> {{average_ratings}} </"
+"s> மற்றும் சராசரி <s> {{median_ratings}} </s>."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".game_download.purchase.unique_url_for_your_payment"
 msgid "This page has a unique URL for your payment."
 msgstr "இந்த பக்கத்தில் உங்கள் கட்டணத்திற்கு தனித்துவமான முகவரி உள்ளது."
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".jam.header.hosted_by"
+msgid "Hosted by {{hosts}}"
+msgstr "{{hosts}} வழங்கியது"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".user_settings.navigation.thirdparty_analytics"
@@ -5144,6 +5140,11 @@ msgstr "சரிபார்க்கப்பட்டது"
 msgctxt ".dashboard.project_header.distribute"
 msgid "Distribute"
 msgstr "விநியோகிக்கவும்"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".game_download.purchase.thank_you_for_donating_author"
+msgid "Thank you for donating to {{product_title}} by {{author}}."
+msgstr "{{author}}ஆல் {{product_title}} க்கு நன்கொடை அளித்ததற்கு நன்றி."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".community.category.unsubscribe_from_topics"
@@ -5177,6 +5178,11 @@ msgid "Remove tag"
 msgstr "குறிச்சொல்லை அகற்று"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".game_download.access_comes_with_key"
+msgid "Your access comes with a {{key_type}} key!"
+msgstr "உங்கள் அணுகல் {{key_type}} } விசையுடன் வருகிறது!"
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".misc.durations.minutes"
 msgid "A few minutes"
 msgstr "ஒரு சில நிமிடங்கள்"
@@ -5192,18 +5198,14 @@ msgid "Log in"
 msgstr "புகுபதிகை"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".jam.submissions.help_submissions_in_need_of_ratings"
-msgid ""
-"Help rate submissions that have few ratings: <a>Submissions in need of "
-"ratings</a>"
-msgstr ""
-"சில மதிப்பீடுகளைக் கொண்ட மதிப்பீடுகளைக் கொண்ட மதிப்பீடுகள் தேவைப்படும் "
-"சமர்ப்பிப்புகளை மதிப்பிடுவதற்கு உதவுங்கள் </a>"
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".dashboard.edit_project.community_comments"
 msgid "Comments"
 msgstr "கருத்துகள்"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".jam.results.submissions.ranked_score"
+msgid "Score: {{score}}"
+msgstr "ச்கோர்: {{score}}"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".browse.filter_group.more_options"
@@ -5214,6 +5216,13 @@ msgstr "மேலும் விருப்பங்கள்"
 msgctxt ".game.report_form.support_page_link"
 msgid "Go to the official support page"
 msgstr "அதிகாரப்பூர்வ உதவி பக்கத்திற்குச் செல்லவும்"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".jam.submission.ranked_with_vote_count"
+msgid "Ranked {{ordinal_rank}} with {{count}} vote"
+msgid_plural "Ranked {{ordinal_rank}} with {{count}} votes"
+msgstr[0] "{{count}} வாக்கு உடன் {{ordinal_rank}} தரவரிசை"
+msgstr[1] "{{count}} வாக்குகளுடன் {{ordinal_rank}}"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".misc.pager.first_page"
@@ -5261,6 +5270,11 @@ msgstr "சேகரிப்புகளை நிர்வகிக்கவ�
 msgctxt ".notifications.filter_replies"
 msgid "Replies"
 msgstr "பதில்கள்"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".user_settings.email_addresses.your_primary_email_address"
+msgid "Your primary email address: {{email}}"
+msgstr "உங்கள் முதன்மை மின்னஞ்சல் முகவரி: {{email}}"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".game_download.alternate_download.region_message"
@@ -5327,16 +5341,6 @@ msgid "Add To Collection"
 msgstr "சேகரிப்பில் சேர்க்கவும்"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".game_download.purchase.percent_off"
-msgid "{{percent}}% off"
-msgstr "{{percent}}% தள்ளுபடி"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".game_download.check_out_more_from_jam_title"
-msgid "Check out more from {{jam_title}}"
-msgstr "{{jam_title}} இலிருந்து மேலும் பாருங்கள்"
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".browse.sort_top_sellers"
 msgid "Top sellers"
 msgstr "சிறந்த விற்பனையாளர்கள்"
@@ -5354,9 +5358,9 @@ msgstr[0] "{{count}} திட்டம்"
 msgstr[1] "{{count}} திட்டங்கள்"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".jam.header.hosted_by"
-msgid "Hosted by {{hosts}}"
-msgstr "{{hosts}} வழங்கியது"
+msgctxt ".stripe_checkout.pay_price_button"
+msgid "Pay {{price}}"
+msgstr "{{price}} செலுத்துங்கள்"
 
 # define 'blurb'
 #, angularjs-format, i18next-interpolation
@@ -5425,20 +5429,6 @@ msgid "New post"
 msgstr "புதிய பதவி"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".jam.results.submissions_summary"
-msgid ""
-"<s>{{count}} entry</s> was submitted between {{start_date}} and {{end_date}}."
-msgid_plural ""
-"<s>{{count}} entries</s> were submitted between {{start_date}} and "
-"{{end_date}}."
-msgstr[0] ""
-"<s> {{count}} நுழைவு </s> {{start_date}}  மற்றும் {{end_date} bower க்கு "
-"இடையில் சமர்ப்பிக்கப்பட்டது."
-msgstr[1] ""
-"<s> {{count}} உள்ளீடுகள் </s> {{start_date}}  மற்றும் {{end_date} bower க்கு "
-"இடையில் சமர்ப்பிக்கப்பட்டன."
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".library.nav.things_to_rate"
 msgid "Things to Rate"
 msgstr "மதிப்பிட வேண்டிய விசயங்கள்"
@@ -5455,11 +5445,6 @@ msgstr ""
 msgctxt ".game.empty_page_no_uploads"
 msgid "The creator has not uploaded anything yet…"
 msgstr "படைப்பாளி இதுவரை எதையும் பதிவேற்றவில்லை…"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".game_download.claim_external_key"
-msgid "Claim {{key_type}} key"
-msgstr "உரிமைகோரல் {{key_type}}  விசை"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".dashboard.stats.downloads"
@@ -5505,11 +5490,6 @@ msgstr "தேடல் & உலாவலில் பட்டியலிட�
 msgctxt ".user_settings.profile.profile_image"
 msgid "Profile image"
 msgstr "சுயவிவர படம்"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".misc.pager.current_page_of_total"
-msgid "Page {{current_page}} of {{total_pages}}"
-msgstr "{{total_pages}} இன் பக்கம் {{current_page}}"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".browse_tags.types.event"
@@ -5566,6 +5546,11 @@ msgstr ""
 " சமூகத்தை உருவாக்குங்கள்."
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".jam.submitter.submissions_open_from"
+msgid "Submissions open from {{start_date}} to {{end_date}}"
+msgstr "சமர்ப்பிப்புகள் {{start_date}} முதல் {{end_date}} வரை திறக்கப்படுகின்றன"
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".game.comments.leave_a_comment_header"
 msgid "Leave a comment"
 msgstr "ஒரு கருத்தை இடுங்கள்"
@@ -5595,11 +5580,6 @@ msgid "Remove this submission"
 msgstr "இந்த சமர்ப்பிப்பை அகற்று"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".dashboard.edit_project.pricing.free_or_donate"
-msgid "{{money}} or donate"
-msgstr "{{money}} அல்லது நன்கொடை"
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".jam.submitter.or_leave_jam"
 msgid "or <a>Leave jam</a>"
 msgstr "அல்லது <a> சாம் விடுங்கள் </a>"
@@ -5627,6 +5607,15 @@ msgstr ""
 "தலைப்பை நகலெடுப்பதைத் தவிர்க்கவும்"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".library.rate_game.follow_creator"
+msgid ""
+"Consider following the creator of {{project_title}} to stay up to date on "
+"their latest releases."
+msgstr ""
+"{{project_title}}இன் படைப்பாளரை அவர்களின் அண்மைக் கால வெளியீடுகளில் "
+"புதுப்பித்த நிலையில் இருக்க வேண்டும்."
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".game_download.purchase.receipt_support_information"
 msgid ""
 "You should have also received an email with a link to this page. If you ever "
@@ -5652,11 +5641,6 @@ msgstr ""
 " எவ்வாறு முன்வைக்க வேண்டும் என்பதில் நமைச்சல்.யோவைக் குறிக்கப் பயன்படுகிறது."
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".misc.follow_button.following_username"
-msgid "Following {{username}}"
-msgstr "{{username}} பின்தொடர்கிறது"
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".user_settings.navigation.credit_cards"
 msgid "Credit cards"
 msgstr "கடன் அட்டைகள்"
@@ -5671,6 +5655,13 @@ msgctxt ".user_login.intent.rate_game"
 msgid "You'll need an account on itch.io before you can rate a game."
 msgstr ""
 "நீங்கள் ஒரு விளையாட்டை மதிப்பிடுவதற்கு முன்பு உங்களுக்கு ஒரு கணக்கு தேவை."
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".jam.results.submissions.ranked_vote_count"
+msgid "Ranked {{ordinal_rank}} with {{count}} vote"
+msgid_plural "Ranked {{ordinal_rank}} with {{count}} votes"
+msgstr[0] "{{count}} வாக்கு உடன் {{ordinal_rank}} தரவரிசை"
+msgstr[1] "{{count}} வாக்குகளுடன் {{ordinal_rank}}"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".user_settings.profile.content_description"
@@ -5719,9 +5710,12 @@ msgid "itch.io does not moderate these boards, your moderators are:"
 msgstr "itch.io இந்த பலகைகளை மிதப்படுத்தாது, உங்கள் மதிப்பீட்டாளர்கள்:"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".add_to_collection.private_collection_title"
-msgid "[Private] {{title}}"
-msgstr "[தனிப்பட்ட] {{title}}"
+msgctxt ".jam.results.submissions.ranked_criteria_rating_count"
+msgid "Ranked {{ordinal_rank}} in {{criteria_name}} with {{count}} rating"
+msgid_plural "Ranked {{ordinal_rank}} in {{criteria_name}} with {{count}} ratings"
+msgstr[0] "{{criteria_name}}இல் {{count}} மதிப்பீட்டில் {{ordinal_rank}} தரவரிசை"
+msgstr[1] ""
+"{{criteria_name}} இல் {{count}} மதிப்பீடுகளுடன் {{ordinal_rank}} தரவரிசை"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".index.view_all_blog_posts"
@@ -5820,6 +5814,11 @@ msgstr "இந்த விளையாட்டை மதிப்பிட்�
 msgctxt ".misc.release_statuses.released"
 msgid "Released"
 msgstr "வெளியிடப்பட்டது"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".dashboard.edit_project.pricing.free_or_donate"
+msgid "{{money}} or donate"
+msgstr "{{money}} அல்லது நன்கொடை"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".game.info_panel.multiplayer"
@@ -5936,11 +5935,6 @@ msgid "Profile"
 msgstr "சுயவிவரம்"
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".stripe_checkout.donating_price_vat_to"
-msgid "Donating {{price}} VAT inc. to:"
-msgstr "நன்கொடை {{price}} வரி உட்பட இவருக்கு:"
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".game.post_first_topic"
 msgid "Post first topic"
 msgstr "முதல் தலைப்பை இடுங்கள்"
@@ -5959,17 +5953,6 @@ msgstr "பொது"
 msgctxt ".index.popular_tags"
 msgid "Popular Tags"
 msgstr "பிரபலமான குறிச்சொற்கள்"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".user.verify_email.confirm_verification"
-msgid ""
-"Please confirm verifying the email address {{email_address}} for the account "
-"{{account}}. It is necessary to verify your email address to perform many "
-"actions on itch.io."
-msgstr ""
-"கணக்கிற்கான மின்னஞ்சல் முகவரியை {{email_address}} சரிபார்க்கவும் என்பதை "
-"உறுதிப்படுத்தவும் {{account}}. நமைச்சலில் பல செயல்களைச் செய்ய உங்கள் மின்னஞ்சல்"
-" முகவரியை சரிபார்க்க வேண்டியது தேவை."
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".collection.remove_confirm"
@@ -5992,6 +5975,25 @@ msgid "Disable auto-loading next page when browsing"
 msgstr "உலாவும்போது தானாக ஏற்றுதல் அடுத்த பக்கத்தை முடக்கு"
 
 #, angularjs-format, i18next-interpolation
+msgctxt ".jam.results.submissions_summary"
+msgid ""
+"<s>{{count}} entry</s> was submitted between {{start_date}} and {{end_date}}."
+msgid_plural ""
+"<s>{{count}} entries</s> were submitted between {{start_date}} and "
+"{{end_date}}."
+msgstr[0] ""
+"<s> {{count}} நுழைவு </s> {{start_date}} மற்றும் {{end_date}}க்கு இடையில் "
+"சமர்ப்பிக்கப்பட்டது."
+msgstr[1] ""
+"<s> {{count}} உள்ளீடுகள் </s> {{start_date}} மற்றும் {{end_date}}க்கு இடையில்"
+" சமர்ப்பிக்கப்பட்டன."
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".game_download.purchase.thank_you_for_purchasing_author"
+msgid "Thank you for purchasing {{product_title}} by {{author}}."
+msgstr "{{author}} ஆல் {{product_title}} வாங்கியதற்கு நன்றி."
+
+#, angularjs-format, i18next-interpolation
 msgctxt ".game.report_form.email_creator_link"
 msgid "Email the creator"
 msgstr "படைப்பாளருக்கு மின்னஞ்சல் அனுப்புங்கள்"
@@ -6000,6 +6002,11 @@ msgstr "படைப்பாளருக்கு மின்னஞ்சல�
 msgctxt ".dashboard.edit_project.uploads.preorder_toggle"
 msgid "This file is a pre-order placeholder"
 msgstr "இந்த கோப்பு ஒரு முன்கூட்டிய ஆர்டர் ஒதுக்கிடமாகும்"
+
+#, angularjs-format, i18next-interpolation
+msgctxt ".add_to_collection.default_title"
+msgid "{{username}}'s Collection"
+msgstr "{{username}} of இன் சேகரிப்பு"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".developers.product_summary2"
@@ -6153,12 +6160,6 @@ msgstr ""
 "ஒன்றைத் தேடும் ஒருவர் நீங்கள் உள்ளடக்கியுள்ளீர்கள்."
 
 #, angularjs-format, i18next-interpolation
-msgctxt ".buy_form.percent_off_until"
-msgid "All purchases are <s>{{rate}}%</s> off until {{end_date}}."
-msgstr ""
-"அனைத்து வாங்குதல்களும் <s> {{rate}}%</s> {{end_date}}  வரை முடக்கப்படுகின்றன."
-
-#, angularjs-format, i18next-interpolation
 msgctxt ".user_settings.password.password_again"
 msgid "Password again"
 msgstr "கடவுச்சொல் மீண்டும்"
@@ -6228,11 +6229,6 @@ msgstr "வீரர் எண்ணிக்கை"
 msgctxt ".game.info_panel.mentions"
 msgid "Mentions"
 msgstr "குறிப்பிடுகிறது"
-
-#, angularjs-format, i18next-interpolation
-msgctxt ".game_download.header.preorder_title"
-msgid "Preorder for {{project_title}}"
-msgstr "{{project_title}} க்கான முன்பதிவு"
 
 #, angularjs-format, i18next-interpolation
 msgctxt ".dashboard.edit_project.video_field"
