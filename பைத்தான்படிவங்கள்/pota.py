@@ -219,6 +219,8 @@ def சரிபார்(மூலம், தமிழ்):
     குழப்பமானது = False
     if மூலம்.endswith("\n") and not தமிழ்.endswith("\n"):
         தமிழ் += "\n"
+    if மூலம்.startswith("\n") and not தமிழ்.startswith("\n"):
+        தமிழ் = "\n"+தமிழ்
     return தமிழ், குழப்பமானது
 
 
