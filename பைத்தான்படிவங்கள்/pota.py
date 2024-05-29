@@ -418,7 +418,7 @@ def பண்புகள்மொழிபெயர்():
     for கோப்பு in கோப்புகள்:
         அ = open(கோப்பு, "r", encoding="utf-8")
         வரிகள் = அ.readlines()
-        ஆ = open(கோப்பு + ".பண்புகள்", "w", encoding="utf-8")
+        ஆ = open(கோப்பு + ".ப", "w", encoding="utf-8")
         for வரி in வரிகள்:
             if வரி.find("=") != 0:
                 try:
@@ -436,6 +436,7 @@ def பண்புகள்மொழிபெயர்():
             else:
                 ஆ.write(வரி)
         அ.close()
+        அ.delete()
         ஆ.close()
 
 
