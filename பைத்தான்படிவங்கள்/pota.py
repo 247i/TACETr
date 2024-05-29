@@ -436,7 +436,6 @@ def பண்புகள்மொழிபெயர்():
             else:
                 ஆ.write(வரி)
         அ.close()
-        அ.delete()
         ஆ.close()
 
 
