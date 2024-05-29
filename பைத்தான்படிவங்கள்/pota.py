@@ -420,7 +420,7 @@ def பண்புகள்மொழிபெயர்():
         வரிகள் = அ.readlines()
         ஆ = open(கோப்பு + ".பண்புகள்", "w", encoding="utf-8")
         for வரி in வரிகள்:
-            if வரி.contains("="):
+            if வரி.find("=") != 0:
                 try:
                     # Save=
                     ப, வ = வரி.split("=")
@@ -430,7 +430,7 @@ def பண்புகள்மொழிபெயர்():
                         உ = "=".join((ப, இ))
                         ஆ.write(உ)
                         ஆ.write("\n")
-                        print(வரி, உ)
+                        print(உ)
                 except Exception:
                     ஆ.write(வரி)
             else:
