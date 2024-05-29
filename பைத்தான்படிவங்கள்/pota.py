@@ -220,7 +220,7 @@ def சரிபார்(மூலம், தமிழ்):
     if மூலம்.endswith("\n") and not தமிழ்.endswith("\n"):
         தமிழ் += "\n"
     if மூலம்.startswith("\n") and not தமிழ்.startswith("\n"):
-        தமிழ் = "\n"+தமிழ்
+        தமிழ் = "\n" + தமிழ்
     return தமிழ், குழப்பமானது
 
 
@@ -387,7 +387,7 @@ def சரங்கள்மொழிபெயர்():
         ஆ.close()
 
 
-def பண்புகள்மொழிபெயர்():
+def பண்புகள்மொழிபெயர்_பழைய():
     கோப்புகள் = glob.glob("./வெறுமை/*.properties")
     for கோப்பு in கோப்புகள்:
         அ = open(கோப்பு, "r", encoding="utf-8")
@@ -405,6 +405,32 @@ def பண்புகள்மொழிபெயர்():
                     ஆ.write(உ)
                     ஆ.write("\n")
                     print(வரி, உ)
+                except Exception:
+                    ஆ.write(வரி)
+            else:
+                ஆ.write(வரி)
+        அ.close()
+        ஆ.close()
+
+
+def பண்புகள்மொழிபெயர்():
+    கோப்புகள் = glob.glob("./வெறுமை/*.properties")
+    for கோப்பு in கோப்புகள்:
+        அ = open(கோப்பு, "r", encoding="utf-8")
+        வரிகள் = அ.readlines()
+        ஆ = open(கோப்பு + ".பண்புகள்", "w", encoding="utf-8")
+        for வரி in வரிகள்:
+            if வரி.contains("="):
+                try:
+                    # Save=
+                    ப, வ = வரி.split("=")
+                    வ = வ.strip()
+                    if வ == "":
+                        இ, _ = பொருள்_பெறு(ப)
+                        உ = "=".join((ப, இ))
+                        ஆ.write(உ)
+                        ஆ.write("\n")
+                        print(வரி, உ)
                 except Exception:
                     ஆ.write(வரி)
             else:
