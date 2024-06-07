@@ -94,7 +94,7 @@ def இணையமொழி(ஆங்கிலம், சேவையகம்=
     கலவை = ஆங்கிலம்
     try:
         கலவை = ts.translate_text(
-            ஆங்கிலம், translator=வ, from_language="en", to_language="ta"
+            ஆங்கிலம், translator=வ, from_language="auto", to_language="ta"
         )
         if கலவை == ".":
             கலவை = ஆங்கிலம்
