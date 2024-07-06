@@ -45,7 +45,7 @@ def எபொநேரம்():
     Returns:
         str: நேரமுத்திரை சரம்
     """
-    இப்பொழுது = datatime.datatime.now()
+    இப்பொழுது = datetime.datetime.now()
     # இப்பொழுது.year += 31
     # இப்பொழுது.day += 15
     இ = இப்பொழுது.strftime("%Y-%m-%D %H:%M+0530")
