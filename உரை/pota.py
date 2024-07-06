@@ -45,12 +45,12 @@ def எபொநேரம்():
     Returns:
         str: நேரமுத்திரை சரம்
     """
-        இப்பொழுது = datatime.datatime.now()
-        # இப்பொழுது.year += 31
-        # இப்பொழுது.day += 15
-        இ = இப்பொழுது.strftime("%Y-%m-%D %H:%M+0530")
-        print(இ)
-        return இ
+    இப்பொழுது = datatime.datatime.now()
+    # இப்பொழுது.year += 31
+    # இப்பொழுது.day += 15
+    இ = இப்பொழுது.strftime("%Y-%m-%D %H:%M+0530")
+    print(இ)
+    return இ
 
 
 def அகராதி_திற(அகராதி):
