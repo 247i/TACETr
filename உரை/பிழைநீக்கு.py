@@ -1,6 +1,6 @@
 import pota
 
-# பாதை = "/Users/apt/Documents/அறிவிலி/TACETranslation/பைத்தான்படிவங்கள்/"
+# பாதை = "/Users/apt/Documents/அறிவிலி/TACETranslation/உரை/"
 பாதை = "./"
 
 # pota.அகராதி_இருமபொருள்(பாதை + "முடிந்தது/*.po")
