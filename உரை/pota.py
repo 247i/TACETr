@@ -553,3 +553,33 @@ def சாதொபொகுமொழிபெயர்():
                 test = json.dumps(அகராதி, ensure_ascii=False)
                 ஆ.seek(0)
                 ஆ.write(test)
+
+
+
+def இனிமொழிபெயர்():
+    கோப்புகள் = glob.glob("./வெறுமை/*.ini")
+    for கோப்பு in கோப்புகள்:
+        அ = open(கோப்பு, "r", encoding="utf-8")
+        வரிகள் = அ.readlines()
+        ஆ = open(கோப்பு + ".இனி", "w", encoding="utf-8")
+        for வரி in வரிகள்:
+            if வரி.find("=") != 0:
+                try:
+                    # Save=
+                    ப, வ = வரி.split("=")
+                    வ = வ.strip()
+                    if வ != "":
+                        இ, _ = பொருள்_பெறு(வ)
+                        உ = "=".join((வ, இ))
+                        ஆ.write(உ)
+                        ஆ.write("\n")
+                        print(உ)
+                    else:
+                        ஆ.write(வரி)
+                except Exception:
+                    ஆ.write(வரி)
+            else:
+                ஆ.write(வரி)
+        அ.close()
+        ஆ.close()
+
