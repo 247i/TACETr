@@ -1,5 +1,6 @@
 ﻿; *** Inno Setup version 6.1.0+ English messages ***
-;
+; தமிழ்நேரம் (https://TamilNeram.github.io)
+;anishprabu.t@gmail.com
 ; To download user-contributed translations of this file, go to:
 ;   https://jrsoftware.org/files/istrans/
 ;
