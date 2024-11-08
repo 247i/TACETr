@@ -4,7 +4,7 @@ import pota
 # பாதை = "/Users/apt/Documents/அறிவிலி/TACETranslation/உரை/"
 # பாதை = "D:\அறிவிலி\TACETranslation\உரை\வரிசை\ta.po"
 # pota.வரிசைபடுத்து_கோப்புகள்(பாதை)
-pota.எடுபொருள்மொழிபெயர்(அனைத்தும்=True, இருமம்=True)
+pota.எடுபொருள்மொழிபெயர்(அனைத்தும்=True, இருமம்=False)
 pota.பண்புகள்மொழிபெயர்()
 pota.டீடிடீமொழிபெயர்()
 pota.சேசன்மொழிபெயர்()
