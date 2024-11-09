@@ -412,7 +412,7 @@ def எடுபொருள்மொழிபெயர்(அனைத்து
                             print(பதிவு.msgid_plural, பதிவு.msgstr_plural)
             அகராதி_சேமி(அ, இருமம்)
             print("பின் : ", அ.percent_translated(), "%")
-        else if இருமம்:
+        elif இருமம்:
             அகராதி_சேமி(அ, இருமம்)
 
 
