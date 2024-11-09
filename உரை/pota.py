@@ -246,28 +246,28 @@ def சரிபார்(மூலம், தமிழ்):
         தமிழ் += "\n"
     if மூலம்.startswith("\n") and not தமிழ்.startswith("\n"):
         தமிழ் = "\n" + தமிழ்
-    if மூலம்.find("%s") >= 0 and not தமிழ்.find("%s") < 0:        
+    if (மூலம்.find("%s") >= 0) and not (தமிழ்.find("%s") < 0):        
         தமிழ் = தமிழ்.replace("%கள்", "%s")
         தமிழ் = தமிழ்.replace("% கள்", "%s")
         தமிழ் = தமிழ்.replace("%எச்", "%s")
         தமிழ் = தமிழ்.replace("% எச்", "%s")
         தமிழ் = தமிழ்.replace("% எச்", "%s")
         தமிழ் = தமிழ்.replace("%S", "%s")
-    if மூலம்.find("%r") >= 0 and not தமிழ்.find("%s") < 0:
+    if (மூலம்.find("%r") >= 0) and not (தமிழ்.find("%s") < 0):
         தமிழ் = தமிழ்.replace("%ஆர்", "%r")
         தமிழ் = தமிழ்.replace("% ஆர்", "%r")
         தமிழ் = தமிழ்.replace("%R", "%r")
-    if மூலம்.find("%g") >= 0 and not தமிழ்.find("%s") < 0:
+    if (மூலம்.find("%g") >= 0) and not (தமிழ்.find("%s") < 0):
         தமிழ் = தமிழ்.replace("%கிராம்", "%g")
         தமிழ் = தமிழ்.replace("% கிராம்", "%g")
         தமிழ் = தமிழ்.replace("%G", "%g")
-    if மூலம்.find("%d") >= 0 and not தமிழ்.find("%s") < 0:
+    if (மூலம்.find("%d") >= 0) and not (தமிழ்.find("%s") < 0):
         தமிழ் = தமிழ்.replace("%டி", "%d")
         தமிழ் = தமிழ்.replace("% டி", "%d")
         தமிழ் = தமிழ்.replace("%D", "%d")
-    if மூலம்.find("%i") >= 0 and not தமிழ்.find("%s") < 0:
+    if (மூலம்.find("%i") >= 0) and not (தமிழ்.find("%s") < 0):
         தமிழ் = தமிழ்.replace("%I", "%i")
-    if மூலம்.find("%lld") >= 0 and not தமிழ்.find("%s") < 0:
+    if (மூலம்.find("%lld") >= 0) and not (தமிழ்.find("%s") < 0):
         தமிழ் = தமிழ்.replace("%எல்.எல்.டி.", "%lld")
         தமிழ் = தமிழ்.replace("% எல்.எல்.டி.", "%lld")
     மாற்றம் = தமிழ்!=முன்
