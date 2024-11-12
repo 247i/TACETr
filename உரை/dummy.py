@@ -9,17 +9,21 @@ test = "மொழிபெயர்ப்புகளை ஏற்றுகி�
 # %(num_contained_saves)d
 
 import re
-ஆங்கிலம் = "%(save_profile)s - English message"
-incom = re.search(r"%\([a-z_A-Z]+\)s", ஆங்கிலம்)
-print(incom)
-
-தமிழ் = "%(தமிழ்) கள் - தமிழ் தகவல்"
-out = re.search(r"%\([a-z_A-Zஂ-௺ ]+\) கள்", தமிழ்)
-print(out)
-
-if out:
-    # re.replace("%(save_profile) கள்", "%(save_profile)s")
-    தமிழ் = தமிழ்.replace(out.match, incom.match)
-    print(தமிழ்)
-    print("exitcode")
+மூலம் = "%(save_profile)s %(num_contained_saves)d - English message"
+தமிழ் = " %(num_contained_saves) டி - %(தமிழ்) கள் - தமிழ் தகவல்"
+print (தமிழ்)
     
+# regular expression based replacements - %(sometext)s
+அடை_var = re.search(r"%\([a-z_A-Z]+\)s", மூலம்)
+அடை_மாறி = re.search(r"%\([a-z_A-Zஂ-௺ ]+\) கள்", தமிழ்)
+if அடை_மாறி and அடை_var:
+    தமிழ் = தமிழ்.replace(அடை_மாறி.group(0), அடை_var.group(0))
+print (தமிழ்)
+
+# regular expression based replacements - %(sometext)d
+அடை_var = re.search(r"%\([a-z_A-Z]+\)d", மூலம்)
+அடை_மாறி = re.search(r"%\([a-z_A-Zஂ-௺ ]+\) டி", தமிழ்)
+if அடை_மாறி and அடை_var:
+    தமிழ் = தமிழ்.replace(அடை_மாறி.group(0), அடை_var.group(0))
+        
+print (தமிழ்)

@@ -3,6 +3,7 @@
 """
 
 import os
+import re
 import glob
 import polib
 import json
@@ -271,6 +272,16 @@ def சரிபார்(மூலம், தமிழ்):
         தமிழ் = தமிழ்.replace("%எல்.எல்.டி.", "%lld")
         தமிழ் = தமிழ்.replace("%LLD", "%lld")
         தமிழ் = தமிழ்.replace("% எல்.எல்.டி.", "%lld")
+    # regular expression based replacements - %(sometext)s
+    அடை_var = re.search(r"%\([a-z_A-Z]+\)s", மூலம்)
+    அடை_மாறி = re.search(r"%\([a-z_A-Zஂ-௺ ]+\) கள்", தமிழ்)
+    if அடை_மாறி and அடை_var:
+        தமிழ் = தமிழ்.replace(அடை_மாறி.group(0), அடை_var.group(0))
+    # regular expression based replacements - %(sometext)d
+    அடை_var = re.search(r"%\([a-z_A-Z]+\)d", மூலம்)
+    அடை_மாறி = re.search(r"%\([a-z_A-Zஂ-௺ ]+\) டி", தமிழ்)
+    if அடை_மாறி and அடை_var:
+        தமிழ் = தமிழ்.replace(அடை_மாறி.group(0), அடை_var.group(0))
     மாற்றம் = தமிழ்!=முன்
     return தமிழ், மாற்றம்
 
