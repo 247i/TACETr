@@ -278,13 +278,13 @@ def சரிபார்(மூலம், தமிழ்):
 
     if அடை_மாறி and அடை_var:
         for மாறி, var in zip(அடை_மாறி, அடை_var):
-            தமிழ் = தமிழ்.replace(மாறி, var)
+            தமிழ் = தமிழ்.replace(மாறி, var, 1)
     # regular expression based replacements - %(sometext)d
     அடை_var = re.findall(r"%\([a-z_A-Z]+\)d", மூலம்)
     அடை_மாறி = re.findall(r"%\([a-z_A-Zஂ-௺ ]+\) டி", தமிழ்)
     if அடை_மாறி and அடை_var:
         for மாறி, var in zip(அடை_மாறி, அடை_var):
-            தமிழ் = தமிழ்.replace(மாறி, var)
+            தமிழ் = தமிழ்.replace(மாறி, var, 1)
     மாற்றம் = தமிழ்!=முன்
     return தமிழ், மாற்றம்
 
