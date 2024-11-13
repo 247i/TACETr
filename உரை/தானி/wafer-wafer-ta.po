@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Tamil (Wafer)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-05 11:04+0200\n"
-"PO-Revision-Date: 2024-11-05 21:34+0530\n"
+"PO-Revision-Date: 2024-11-12 13:26+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/wafer/wafer/ta/>\n"
 "Language: ta\n"
@@ -37,7 +37,7 @@ msgstr "கடந்த 30 நாட்களில்"
 #: wafer/compare/admin.py:140
 #, python-format
 msgid "Comparing current %(model)s with revision created %(date)s"
-msgstr "தற்போதைய %(மாதிரி) களை திருத்தம் உருவாக்கிய %(தேதி) கள் ஒப்பிடுகின்றன"
+msgstr "தற்போதைய %(மாதிரி) களை திருத்தம் உருவாக்கிய %(model)s ஒப்பிடுகின்றன"
 
 #: wafer/compare/templates/admin/wafer.compare/change_form.html:6
 msgid "History"
@@ -58,7 +58,7 @@ msgstr "ஒப்பிடுக"
 #: wafer/compare/templates/admin/wafer.compare/compare.html:7
 #, python-format
 msgid "%(name)s"
-msgstr "%(பெயர்) கள்"
+msgstr "%(name)s"
 
 #: wafer/compare/templates/admin/wafer.compare/compare.html:19
 #: wafer/pages/templates/wafer.pages/page_compare.html:24
@@ -175,12 +175,12 @@ msgstr "ஒப்பிடும் பக்கம்"
 #: wafer/pages/templates/wafer.pages/page_compare.html:8
 #, python-format
 msgid "Last Saved: %(cur_date)s by %(cur_author)s"
-msgstr "கடைசியாக சேமிக்கப்பட்டது: %(cur_date) கள் %(cur_author) கள்"
+msgstr "கடைசியாக சேமிக்கப்பட்டது: %(cur_date)s %(cur_author)s"
 
 #: wafer/pages/templates/wafer.pages/page_compare.html:11
 #, python-format
 msgid "Comparing to version saved: %(prev_date)s by %(prev_author)s"
-msgstr "சேமிக்கப்பட்ட பதிப்போடு ஒப்பிடுதல்: %(prev_date) s %(prev_author) கள்"
+msgstr "சேமிக்கப்பட்ட பதிப்போடு ஒப்பிடுதல்: %(prev_date) s %(prev_date)s"
 
 #: wafer/pages/templates/wafer.pages/page_compare.html:33
 msgid "Compare to next older version"
@@ -201,7 +201,7 @@ msgstr "ஒப்பிடுவதற்கு முந்தைய பதி�
 #: wafer/pages/templates/wafer.pages/page_form.html:5
 #, python-format
 msgid "Editing Page: %(page)s - %(WAFER_CONFERENCE_NAME)s"
-msgstr "திருத்துதல் பக்கம்: %(பக்கம்) எச் - %(Wafer_conference_name) கள்"
+msgstr "திருத்துதல் பக்கம்: %(பக்கம்) எச் - %(page)s"
 
 #: wafer/pages/templates/wafer.pages/page_form.html:12
 msgid "Edit Page"
@@ -279,9 +279,9 @@ msgid ""
 msgstr ""
 "ஆய்,\n"
 "\n"
-" Tl; dr சொடுக்கு https: //%(டொமைன்) s%(activation_url) கள்\n"
+" Tl; dr சொடுக்கு https: //%(டொமைன்) s%(domain)s\n"
 "\n"
-" %(Wafer_conference_name) கள் பதிவுபெற்றதற்கு நன்றி.\n"
+" %(activation_url)s பதிவுபெற்றதற்கு நன்றி.\n"
 "\n"
 " உங்கள் மின்னஞ்சல் முகவரியை சரிபார்க்க, உங்கள் செயல்படுத்த மேலே உள்ள இணைப்பைப் பின்தொடரவும்\n"
 " கணக்கு. அவ்வாறு செய்ய உங்களுக்கு %(காலாவதி_கட்டங்கள்) நாட்கள் உள்ளன.\n"
@@ -293,8 +293,8 @@ msgstr ""
 " %(Wafer_conference_name) s வலைத்தளம்.\n"
 "\n"
 " -\n"
-" %(Wafer_conference_name) கள்\n"
-" http: //%(டொமைன்) s%(index_url) கள்\n"
+" %(activation_url)s\n"
+" http: //%(டொமைன்) s%(expiration_days)s\n"
 
 #: wafer/registration/templates/registration/activation_email_subject.txt:2
 #, python-format
@@ -335,7 +335,7 @@ msgid ""
 "sent you an e-mail. Please follow the instructions in it to activate your "
 "account."
 msgstr ""
-"%(Wafer_conference_name) கள் ஒரு கணக்கை உருவாக்கியதற்கு நன்றி. நாங்கள் "
+"%(WAFER_CONFERENCE_NAME)s ஒரு கணக்கை உருவாக்கியதற்கு நன்றி. நாங்கள் "
 "உங்களுக்கு ஒரு மின்னஞ்சல் அனுப்பியுள்ளோம். உங்கள் கணக்கை செயல்படுத்த அதில் "
 "உள்ள வழிமுறைகளைப் பின்பற்றவும்."
 
@@ -542,7 +542,7 @@ msgstr "அட்டவணையைத் திருத்து"
 #: wafer/schedule/templates/wafer.schedule/edit_schedule.html:37
 #, python-format
 msgid "(Block %(block_id)s)"
-msgstr "(பிளாக் %(பிளாக்_ஐடி) கள்)"
+msgstr "(பிளாக் %(block_id)s)"
 
 #: wafer/schedule/templates/wafer.schedule/edit_schedule.html:42
 msgid "Schedule Editor"
@@ -755,7 +755,7 @@ msgstr "வீடியோ அனுமதிக்கப்பட்டால�
 #: wafer/talks/forms.py:169
 #, python-format
 msgid "(Score range: %(min)d to %(max)d)"
-msgstr "(மதிப்பெண் வரம்பு: %(நிமிடம்) டி முதல் %(அதிகபட்சம்) டி)"
+msgstr "(மதிப்பெண் வரம்பு: %(min)d முதல் %(max)d)"
 
 #: wafer/talks/models.py:38
 msgid "The speakers presenting the talk."
@@ -1022,8 +1022,7 @@ msgstr "முன்மொழிவு குறித்த கருத்த�
 #: wafer/talks/models.py:402
 #, python-format
 msgid "Review of %(title)s by %(reviewer)s (%(average_score)s)"
-msgstr ""
-"%(தலைப்பு) களை %(மதிப்பாய்வாளர்) கள் ( %(சராசரி_ச்கோர்) கள்) மதிப்பாய்வு"
+msgstr "%(தலைப்பு) களை %(title)s ( %(reviewer)s) மதிப்பாய்வு"
 
 #: wafer/talks/models.py:421
 msgid "review"
@@ -1108,12 +1107,12 @@ msgstr "வழங்கப்படவில்லை"
 #: wafer/talks/templates/wafer.talks/talk.html:57
 #, python-format
 msgid "Language: %(language)s"
-msgstr "மொழி: %(மொழி) கள்"
+msgstr "மொழி: %(language)s"
 
 #: wafer/talks/templates/wafer.talks/talk.html:65
 #, python-format
 msgid "Track: %(track)s"
-msgstr "ட்ராக்: %(ட்ராக்) கள்"
+msgstr "ட்ராக்: %(track)s"
 
 #: wafer/talks/templates/wafer.talks/talk.html:72
 #: wafer/talks/templates/wafer.talks/talks.html:25
@@ -1124,17 +1123,17 @@ msgstr "பேச்சு"
 #: wafer/talks/templates/wafer.talks/talk.html:72
 #, python-format
 msgid "Type: %(talk_type)s"
-msgstr "வகை: %(talk_type) கள்"
+msgstr "வகை: %(talk_type)s"
 
 #: wafer/talks/templates/wafer.talks/talk.html:80
 #, python-format
 msgid "Room: %(venue)s"
-msgstr "அறை: %(இடம்) கள்"
+msgstr "அறை: %(venue)s"
 
 #: wafer/talks/templates/wafer.talks/talk.html:86
 #, python-format
 msgid "Time: %(start_time)s"
-msgstr "நேரம்: %(Start_Time) கள்"
+msgstr "நேரம்: %(start_time)s"
 
 #: wafer/talks/templates/wafer.talks/talk.html:92
 #, python-format
