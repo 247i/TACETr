@@ -274,14 +274,14 @@ def சரிபார்(மூலம், தமிழ்):
         தமிழ் = தமிழ்.replace("% எல்.எல்.டி.", "%lld")
     # regular expression based replacements - %(sometext)s
     அடை_var = re.findall(r"%\([a-z_A-Z]+\)s", மூலம்)
-    அடை_மாறி = re.findall(r"%\([a-z_A-Zஂ-௺ ]+\)[ ][sSகள்ை]+", தமிழ்)
+    அடை_மாறி = re.findall(r"%\([a-z_A-Zஂ-௺ ]+\)[ ]*[sSகள்ை]+", தமிழ்)
 
     if அடை_மாறி and அடை_var:
         for மாறி, var in zip(அடை_மாறி, அடை_var):
             தமிழ் = தமிழ்.replace(மாறி, var, 1)
     # regular expression based replacements - %(sometext)d
     அடை_var = re.findall(r"%\([a-z_A-Z]+\)d", மூலம்)
-    அடை_மாறி = re.findall(r"%\([a-z_A-Zஂ-௺ ]+\)[ ][dடிD]+", தமிழ்)
+    அடை_மாறி = re.findall(r"%\([a-z_A-Zஂ-௺ ]+\)[ ]*[dDடி]+", தமிழ்)
     if அடை_மாறி and அடை_var:
         for மாறி, var in zip(அடை_மாறி, அடை_var):
             தமிழ் = தமிழ்.replace(மாறி, var, 1)
