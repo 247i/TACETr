@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Tamil (Wrye Bash)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-13 04:53+0200\n"
-"PO-Revision-Date: 2024-11-13 10:14+0530\n"
+"PO-Revision-Date: 2024-11-13 10:41+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/wrye-bash/wrye-bash/ta/>\n"
 "Language: ta\n"
@@ -20,7 +20,7 @@ msgid ""
 "Too few arguments to %(obj_type)s '%(obj_name)s': got %(got)s, expected "
 "%(expected)s."
 msgstr ""
-"%(Obj_type) s ' %(obj_name) s' க்கு மிகக் குறைவான வாதங்கள்: கிடைத்தது "
+"%(obj_type)s ' %(obj_name)s' க்கு மிகக் குறைவான வாதங்கள்: கிடைத்தது "
 "%(obj_type)s, எதிர்பார்க்கப்படும் %(obj_name)s."
 
 #: Mopy/bash/ScriptParser.py:108
@@ -29,14 +29,14 @@ msgid ""
 "Too many arguments to %(obj_type)s '%(obj_name)s': got %(got)s, expected "
 "%(expected)s."
 msgstr ""
-"%(Obj_type) s ' %(obj_name) s' க்கு பல வாதங்கள்: கிடைத்தது %(obj_type)s, "
+"%(obj_type)s ' %(obj_name)s' க்கு பல வாதங்கள்: கிடைத்தது %(obj_type)s, "
 "எதிர்பார்க்கப்படும் %(obj_name)s."
 
 #: Mopy/bash/ScriptParser.py:114
 #, ignore-reused, ignore-same, python-format
 msgid ""
 "Cannot set %(obj_type)s '%(obj_name)s': type is '%(conflicting_type)s'."
-msgstr "%(Obj_type) s '%(obj_name) s' ஐ அமைக்க முடியாது: வகை '%(obj_type)s'."
+msgstr "%(obj_type)s '%(obj_name)s' ஐ அமைக்க முடியாது: வகை '%(obj_type)s'."
 
 #: Mopy/bash/ScriptParser.py:120
 #, ignore-reused, ignore-same, python-format
@@ -47,7 +47,7 @@ msgstr "எதிர்பாராத '%(unexpected_keyword)s'."
 #, ignore-reused, ignore-same, python-format
 msgid "Function '%(string_only_function)s' only operates on string types."
 msgstr ""
-"செயல்பாடு '%(string_only_function) s' சரம் வகைகளில் மட்டுமே இயங்குகிறது."
+"செயல்பாடு '%(string_only_function)s' சரம் வகைகளில் மட்டுமே இயங்குகிறது."
 
 #: Mopy/bash/ScriptParser.py:513 Mopy/bash/ScriptParser.py:743
 #, ignore-reused, ignore-same
@@ -156,7 +156,7 @@ msgstr "எந்த காரணமும் கொடுக்கப்பட�
 #: Mopy/bash/ScriptParser.py:1088
 #, ignore-reused, ignore-same, python-format
 msgid "Cannot assign a value to %(lhs_name)s, type is %(lhs_type)s."
-msgstr "%(Lhs_name) s க்கு ஒரு மதிப்பை ஒதுக்க முடியாது, வகை %(lhs_name)s."
+msgstr "%(lhs_name)s க்கு ஒரு மதிப்பை ஒதுக்க முடியாது, வகை %(lhs_name)s."
 
 #: Mopy/bash/ScriptParser.py:1167
 #, ignore-reused, ignore-same, python-format
@@ -174,8 +174,8 @@ msgid ""
 "Cannot rename %(old_plugin_name)s to %(new_plugin_name)s: the extensions "
 "must match."
 msgstr ""
-"%(பழைய செருகுநிரல்_பெயர்) S ஐ %(புதிய செருகுநிரல்_பெயர்) என மறுபெயரிட "
-"முடியாது: நீட்டிப்புகள் பொருந்த வேண்டும்."
+"%(old_plugin_name)s ஐ %(புதிய செருகுநிரல்_பெயர்) என மறுபெயரிட முடியாது: "
+"நீட்டிப்புகள் பொருந்த வேண்டும்."
 
 #: Mopy/bash/ScriptParser.py:1538
 #, ignore-reused, ignore-same
@@ -395,7 +395,7 @@ msgstr "திற…"
 #: Mopy/bash/balt.py:1961
 #, ignore-reused, ignore-same, python-format
 msgid "Open '%(item_to_open)s' with the system's default program."
-msgstr "கணினியின் இயல்புநிலை நிரலுடன் '%(item_to_open) s' ஐத் திறக்கவும்."
+msgstr "கணினியின் இயல்புநிலை நிரலுடன் '%(item_to_open)s' ஐத் திறக்கவும்."
 
 #: Mopy/bash/balt.py:1963
 #, ignore-reused, ignore-same
@@ -511,7 +511,7 @@ msgstr "%(cli_uac)s: எப்போதும் நிர்வாக சலு
 #: Mopy/bash/balt.py:2050
 #, ignore-reused, ignore-same, python-format
 msgid "See the %(readme)s for more information."
-msgstr "மேலும் தகவலுக்கு %(README) S ஐப் பார்க்கவும்."
+msgstr "மேலும் தகவலுக்கு %(readme)s ஐப் பார்க்கவும்."
 
 #: Mopy/bash/balt.py:2051
 #, ignore-reused, ignore-same
@@ -601,7 +601,8 @@ msgstr ""
 #: Mopy/bash/barb.py:299
 #, ignore-reused, ignore-same, python-format
 msgid "Backup %(saved_backup_ver)s is not compatible with %(wb_ver)s."
-msgstr "காப்புப்பிரதி %(saved_backup_ver)s %(wb_ver) s உடன் பொருந்தாது."
+msgstr ""
+"காப்புப்பிரதி %(saved_backup_ver)s %(saved_backup_ver)s உடன் பொருந்தாது."
 
 #: Mopy/bash/barb.py:303
 #, ignore-reused, ignore-same
@@ -645,7 +646,8 @@ msgstr ""
 #: Mopy/bash/barb.py:324
 #, ignore-reused, ignore-same, python-format
 msgid "Backup %(saved_backup_ver)s does not match %(wb_ver)s."
-msgstr "காப்புப்பிரதி %(saved_backup_ver)s %(wb_ver) s உடன் பொருந்தவில்லை."
+msgstr ""
+"காப்புப்பிரதி %(saved_backup_ver)s %(saved_backup_ver)s உடன் பொருந்தவில்லை."
 
 #: Mopy/bash/barb.py:328
 #, ignore-reused, ignore-same
@@ -740,7 +742,7 @@ msgstr ""
 #: Mopy/bash/bash.py:507
 #, ignore-reused, ignore-same, python-format
 msgid "Generating HTML file from '%(gen_target)s'"
-msgstr "'%(Gen_target) s' இலிருந்து உஉகுமொ கோப்பை உருவாக்குதல்"
+msgstr "'%(gen_target)s' இலிருந்து உஉகுமொ கோப்பை உருவாக்குதல்"
 
 #: Mopy/bash/bash.py:511 Mopy/bash/basher/__init__.py:4265
 #: Mopy/bash/bosh/bain.py:1867
@@ -769,7 +771,7 @@ msgid ""
 "thread at %(thread_url)s or to the Wrye Bash Discord at %(discord_url)s"
 msgstr ""
 "பிழை தொடர்ந்தால், தயவுசெய்து உங்கள் பாச்பக்டம்பை அதிகாரப்பூர்வ நூலுக்கு "
-"%(Thread_url) S இல் அல்லது %(Disort_url) இல் Wrye பாச் முரண்பாட்டிற்கு "
+"%(thread_url)s இல் அல்லது %(Disort_url) இல் Wrye பாச் முரண்பாட்டிற்கு "
 "இடுகையிடவும்"
 
 #: Mopy/bash/bash.py:550
@@ -780,7 +782,7 @@ msgid ""
 "Bash Discord at %(discord_url)s"
 msgstr ""
 "Wrye பாச் ஒரு பிழையை எதிர்கொண்டது. தயவுசெய்து கீழே உள்ள தகவல்களையும், உங்கள்"
-" பாச்பக்டம்பையும் அதிகாரப்பூர்வ நூலுக்கு %(thread_url) s இல் அல்லது "
+" பாச்பக்டம்பையும் அதிகாரப்பூர்வ நூலுக்கு %(thread_url)s இல் அல்லது "
 "%(disort_url) இல் Wrye பாச் முரண்பாட்டிற்கு இடுகையிடவும்"
 
 #: Mopy/bash/bash.py:624
@@ -800,9 +802,9 @@ msgid ""
 " directory. If you do not start Wrye Bash with elevated privileges, you will"
 " be prompted at each operation that requires elevated privileges."
 msgstr ""
-"%(கேமன் பெயர்) கோப்பகத்தில் மாற்றங்களைச் செய்ய WRYE பாசுக்கு நிர்வாகி "
-"சலுகைகள் தேவை. உயர்ந்த சலுகைகளுடன் நீங்கள் வெறுக்கத்தக்க பாசைத் தொடங்கவில்லை"
-" என்றால், ஒவ்வொரு செயல்பாட்டிலும் உயர்ந்த சலுகைகள் தேவைப்படும்."
+"%(gameName)sோப்பகத்தில் மாற்றங்களைச் செய்ய WRYE பாசுக்கு நிர்வாகி சலுகைகள் "
+"தேவை. உயர்ந்த சலுகைகளுடன் நீங்கள் வெறுக்கத்தக்க பாசைத் தொடங்கவில்லை என்றால்,"
+" ஒவ்வொரு செயல்பாட்டிலும் உயர்ந்த சலுகைகள் தேவைப்படும்."
 
 #. This is used as the title for a dialog.
 #: Mopy/bash/bash.py:667 Mopy/bash/basher/settings_dialog.py:755
@@ -856,7 +858,7 @@ msgid ""
 "%(bash_config_file)s to specify the path manually."
 msgstr ""
 "பாதையை கைமுறையாகக் குறிப்பிட %(cli_game_detect) இன் கட்டளை வரி உரையாடல் "
-"அல்லது %(Bash_config_file) s ஐப் பயன்படுத்தலாம்."
+"அல்லது %(cli_game_detect)s ஐப் பயன்படுத்தலாம்."
 
 #: Mopy/bash/bash.py:765
 #, ignore-reused, ignore-same
@@ -1168,7 +1170,7 @@ msgstr "தொடர கைமுறையாக உருவாக்கவு�
 #: Mopy/bash/basher/__init__.py:846
 #, ignore-reused, ignore-same, python-format
 msgid "Failed to copy %(def_ini_path)s to %(target_ini_pth)s."
-msgstr "%(Def_ini_path) s ஐ %(def_ini_path)s நகலெடுப்பதில் தோல்வி."
+msgstr "%(def_ini_path)s ஐ %(def_ini_path)s நகலெடுப்பதில் தோல்வி."
 
 #. "crashes" here refers to the game crashing, not Wrye Bash crashing.
 #: Mopy/bash/basher/__init__.py:858
@@ -1292,12 +1294,12 @@ msgstr "பாச் குறிச்சொற்கள்:"
 #: Mopy/bash/basher/__init__.py:1587
 #, ignore-reused, ignore-same, python-format
 msgid "Author - [%(curr_bytes)d/%(max_bytes)d bytes]:"
-msgstr "ஆசிரியர் - [%(curr_bytes) d/%(curr_bytes)d பைட்டுகள்]:"
+msgstr "ஆசிரியர் - [%(curr_bytes)d/%(curr_bytes)d பைட்டுகள்]:"
 
 #: Mopy/bash/basher/__init__.py:1599
 #, ignore-reused, ignore-same, python-format
 msgid "Description - [%(curr_bytes)d/%(max_bytes)d bytes]:"
-msgstr "விளக்கம் - [%(curr_bytes) d/%(curr_bytes)d பைட்டுகள்]:"
+msgstr "விளக்கம் - [%(curr_bytes)d/%(curr_bytes)d பைட்டுகள்]:"
 
 #: Mopy/bash/basher/__init__.py:1645
 #, ignore-reused, ignore-same, python-format
@@ -1487,7 +1489,7 @@ msgstr "டாம்ல் கோப்புகள்"
 #: Mopy/bash/basher/__init__.py:2091
 #, ignore-reused, ignore-same, python-format
 msgid "Tweaks: %(status_num)d/%(total_status_num)d"
-msgstr "மாற்றங்கள்: %(status_num) d/ %(status_num)d"
+msgstr "மாற்றங்கள்: %(status_num)d/ %(status_num)d"
 
 #: Mopy/bash/basher/__init__.py:2117
 #, ignore-reused, ignore-same, python-format
@@ -1540,7 +1542,7 @@ msgid ""
 "Clicking on a save icon will disable/enable the save by changing its "
 "extension to %(save_ext_on)s (enabled) or %(save_ext_off)s (disabled)."
 msgstr ""
-"ஒரு சேமி ஐகானைக் சொடுக்கு செய்வது அதன் நீட்டிப்பை %(save_ext_on) s "
+"ஒரு சேமி ஐகானைக் சொடுக்கு செய்வது அதன் நீட்டிப்பை %(save_ext_on)s "
 "(இயக்கப்பட்ட) அல்லது %(save_ext_on)s (முடக்கப்பட்ட) மாற்றுவதன் மூலம் "
 "சேமிப்பதை முடக்கும்/இயக்கும்."
 
@@ -1575,7 +1577,7 @@ msgid ""
 "a new save to see the true master order."
 msgstr ""
 "இந்த சேமிப்பில் ஈ.எச்.எல் முதுநிலை உள்ளது மற்றும் புதுப்பித்த கோசேவ் "
-"இல்லாமல் துல்லியமாக காட்ட முடியாது. தயவுசெய்து %(SE_NAME) S இன் அண்மைக் கால "
+"இல்லாமல் துல்லியமாக காட்ட முடியாது. தயவுசெய்து %(se_name)s இன் அண்மைக் கால "
 "பதிப்பை நிறுவி, உண்மையான முதன்மை வரிசையைக் காண புதிய சேமிப்பகத்தை "
 "உருவாக்கவும்."
 
@@ -1616,8 +1618,8 @@ msgid ""
 "The project '%(omod_project)s' already exists. Do you want to overwrite it "
 "with '%(omod_name)s'?"
 msgstr ""
-"'%(OMOD_PROJECT) S' திட்டம் ஏற்கனவே உள்ளது. '%(OMOD_NAME) S' உடன் அதை "
-"மேலெழுத விரும்புகிறீர்களா?"
+"'%(omod_project)s' திட்டம் ஏற்கனவே உள்ளது. '%(omod_name)s' உடன் அதை மேலெழுத "
+"விரும்புகிறீர்களா?"
 
 #: Mopy/bash/basher/__init__.py:2633
 #, ignore-reused, ignore-same
@@ -1674,7 +1676,7 @@ msgid ""
 "A package with the name '%(target_fname)s' already exists. Do you want to "
 "overwrite it?"
 msgstr ""
-"'%(Target_fname) s' என்ற பெயருடன் ஒரு தொகுப்பு ஏற்கனவே உள்ளது. அதை மேலெழுத "
+"'%(target_fname)s' என்ற பெயருடன் ஒரு தொகுப்பு ஏற்கனவே உள்ளது. அதை மேலெழுத "
 "விரும்புகிறீர்களா?"
 
 #: Mopy/bash/basher/__init__.py:2674
@@ -1718,7 +1720,7 @@ msgstr "புத்துணர்ச்சியூட்டும் தொ�
 #: Mopy/bash/basher/__init__.py:2859
 #, ignore-reused, ignore-same, python-format
 msgid "Refreshing from %(data_folder)s…"
-msgstr "%(Data_folder) s இலிருந்து புத்துணர்ச்சி…"
+msgstr "%(data_folder)s இலிருந்து புத்துணர்ச்சி…"
 
 #: Mopy/bash/basher/__init__.py:2904 Mopy/bash/basher/settings_dialog.py:587
 #: Mopy/bash/basher/settings_dialog.py:1539
@@ -1919,7 +1921,7 @@ msgstr ""
 #: Mopy/bash/basher/__init__.py:3423
 #, ignore-reused, ignore-same, python-format
 msgid "Packages: %(status_num)d/%(total_status_num)d"
-msgstr "தொகுப்புகள்: %(status_num) d/ %(status_num)d"
+msgstr "தொகுப்புகள்: %(status_num)d/ %(status_num)d"
 
 #: Mopy/bash/basher/__init__.py:3533
 #, ignore-reused, ignore-same, python-format
@@ -1940,7 +1942,7 @@ msgstr "BSAS: %(status_num)d"
 #: Mopy/bash/basher/__init__.py:3638
 #, ignore-reused, ignore-same, python-format
 msgid "Show/Hide the %(tabtitle)s Tab."
-msgstr "%(TABTITLE) S தாவலைக் காட்டவும்/மறைக்கவும்."
+msgstr "%(tabtitle)s தாவலைக் காட்டவும்/மறைக்கவும்."
 
 #: Mopy/bash/basher/__init__.py:3888
 #, ignore-reused, ignore-same, python-format
@@ -1950,8 +1952,8 @@ msgid ""
 "problems in %(game_name)s; see the auto-ghost section of the readme for more"
 " details and consider enabling auto-ghosting."
 msgstr ""
-"உங்கள் %(டேட்டா_ஃபோல்டர்) கோப்புறையில் 325 க்கும் மேற்பட்ட செருகுநிரல்கள் "
-"மற்றும் பிஎச்ஏக்கள் இருப்பதாகத் தெரிகிறது மற்றும் ஆட்டோ-கோச்டிங் "
+"உங்கள் %(data_folder)sோப்புறையில் 325 க்கும் மேற்பட்ட செருகுநிரல்கள் மற்றும்"
+" பிஎச்ஏக்கள் இருப்பதாகத் தெரிகிறது மற்றும் ஆட்டோ-கோச்டிங் "
 "முடக்கப்பட்டுள்ளது. இது %(data_folder)s சிக்கல்களை ஏற்படுத்தக்கூடும்; மேலும்"
 " விவரங்களுக்கு README இன் ஆட்டோ-கோச்ட் பகுதியைப் பார்க்கவும், "
 "ஆட்டோ-கோச்டிங்கை இயக்குவதைக் கருத்தில் கொள்ளுங்கள்."
@@ -1964,8 +1966,8 @@ msgid ""
 "problems in %(game_name)s; see the auto-ghost section of the readme for more"
 " details."
 msgstr ""
-"உங்கள் %(டேட்டா_ஃபோல்டர்) கோப்புறையில் 400 க்கும் மேற்பட்ட செருகுநிரல்கள் "
-"மற்றும் பிஎச்ஏக்கள் இருப்பதாகத் தெரிகிறது மற்றும் ஆட்டோ-கோச்டிங் "
+"உங்கள் %(data_folder)sோப்புறையில் 400 க்கும் மேற்பட்ட செருகுநிரல்கள் மற்றும்"
+" பிஎச்ஏக்கள் இருப்பதாகத் தெரிகிறது மற்றும் ஆட்டோ-கோச்டிங் "
 "முடக்கப்பட்டுள்ளது. இது %(data_folder)s சிக்கல்களை ஏற்படுத்தும்; மேலும் "
 "விவரங்களுக்கு README இன் ஆட்டோ-கோச்ட் பகுதியைப் பார்க்கவும்."
 
@@ -1982,12 +1984,12 @@ msgstr "%."
 #: Mopy/bash/basher/__init__.py:3948
 #, ignore-reused, ignore-same, python-format
 msgid "Wrye Bash %(wb_version)s (Standalone) for %(game_name)s"
-msgstr "%(wb_version)s க்கு fory bash %(Wb_version) s (bentalone)"
+msgstr "%(wb_version)s க்கு fory bash %(wb_version)s (bentalone)"
 
 #: Mopy/bash/basher/__init__.py:3951
 #, ignore-reused, ignore-same, python-format
 msgid "Wrye Bash %(wb_version)s for %(game_name)s"
-msgstr "%(Game_name) s க்கான wry bash %(Wb_version) s"
+msgstr "%(wb_version)s க்கான wry bash %(game_name)s"
 
 #: Mopy/bash/basher/__init__.py:3962 Mopy/bash/basher/saves_links.py:209
 #: Mopy/bash/basher/saves_links.py:637
@@ -2035,8 +2037,8 @@ msgid ""
 "The following plugins could not be found in the %(data_folder)s folder or "
 "are corrupt and have thus been removed from the load order."
 msgstr ""
-"பின்வரும் செருகுநிரல்களை %(தரவு_போல்டர்) கோப்புறையில் காண முடியவில்லை அல்லது"
-" ஊழல் நிறைந்தவை, இதனால் சுமை வரிசையில் இருந்து அகற்றப்பட்டுள்ளன."
+"பின்வரும் செருகுநிரல்களை %(data_folder)sோப்புறையில் காண முடியவில்லை அல்லது "
+"ஊழல் நிறைந்தவை, இதனால் சுமை வரிசையில் இருந்து அகற்றப்பட்டுள்ளன."
 
 #: Mopy/bash/basher/__init__.py:4032
 #, ignore-reused, ignore-same, python-format
@@ -2119,7 +2121,7 @@ msgid ""
 msgstr ""
 "பின்வரும் பிஎச்ஏக்கள் ஒரு %(கேம்_பேம்) எதிர்பார்ப்பிலிருந்து வேறுபட்ட "
 "பதிப்பைக் கொண்டுள்ளன. இது CTD களுக்கு வழிவகுக்கும், தயவுசெய்து அவற்றை "
-"%(CK_NAME) S- வழங்கிய கருவியைப் பயன்படுத்தி பிரித்தெடுக்கவும் மறுபிரசுரம் "
+"%(game_name)s- வழங்கிய கருவியைப் பயன்படுத்தி பிரித்தெடுக்கவும் மறுபிரசுரம் "
 "செய்யவும்."
 
 #: Mopy/bash/basher/__init__.py:4116
@@ -2184,8 +2186,8 @@ msgid ""
 "Hides %(status_btn_name)s's status bar button (can be restored through the "
 "settings menu)."
 msgstr ""
-"%(Status_btn_name) S இன் நிலை பட்டி பொத்தானை மறைக்கிறது (அமைப்புகள் பட்டியல்"
-" மூலம் மீட்டமைக்க முடியும்)."
+"%(status_btn_name)s இன் நிலை பட்டி பொத்தானை மறைக்கிறது (அமைப்புகள் பட்டியல் "
+"மூலம் மீட்டமைக்க முடியும்)."
 
 #: Mopy/bash/basher/app_buttons.py:168
 #, ignore-reused, ignore-same, python-format
@@ -2195,7 +2197,7 @@ msgstr "தொடங்கவும் %(application_name)s"
 #: Mopy/bash/basher/app_buttons.py:184
 #, ignore-reused, ignore-same, python-format
 msgid "Launch %(application_name)s %(application_version)s"
-msgstr "தொடங்கவும் %(application_name) s %(application_name)s"
+msgstr "தொடங்கவும் %(application_name)s %(application_name)s"
 
 #: Mopy/bash/basher/app_buttons.py:201
 #, ignore-reused, ignore-same
@@ -2224,7 +2226,7 @@ msgstr "'%(launched_exe_name)s' தொடங்க முடியவில்�
 #: Mopy/bash/basher/app_buttons.py:242
 #, ignore-reused, ignore-same, python-format
 msgid "Waiting for %(other_process)s…"
-msgstr "%(பிற_ நடைமுறைக்கு) காத்திருக்கிறது…"
+msgstr "%(other_process)sாத்திருக்கிறது…"
 
 #: Mopy/bash/basher/app_buttons.py:245
 #, ignore-reused, ignore-same, python-format
@@ -2315,12 +2317,12 @@ msgstr ""
 #: Mopy/bash/basher/app_buttons.py:569
 #, ignore-reused, ignore-same, python-format
 msgid "%(se_name)s %(se_ver)s Enabled"
-msgstr "%(se_name) s %(se_name)s இயக்கப்பட்டன"
+msgstr "%(se_name)s %(se_name)s இயக்கப்பட்டன"
 
 #: Mopy/bash/basher/app_buttons.py:571
 #, ignore-reused, ignore-same, python-format
 msgid "%(se_name)s %(se_ver)s Disabled"
-msgstr "%(S பெயர்) S %(SE வினை) முடக்கப்பட்டுள்ளது"
+msgstr "%(se_name)s %(SE வினை) முடக்கப்பட்டுள்ளது"
 
 #: Mopy/bash/basher/app_buttons.py:573
 #, ignore-reused, ignore-same, python-format
@@ -2330,7 +2332,7 @@ msgstr "%(se_name)s இயக்கப்பட்டன"
 #: Mopy/bash/basher/app_buttons.py:574
 #, ignore-reused, ignore-same, python-format
 msgid "%(se_name)s Disabled"
-msgstr "%(Se_name) S முடக்கப்பட்டது"
+msgstr "%(se_name)s முடக்கப்பட்டது"
 
 #: Mopy/bash/basher/app_buttons.py:587
 #, ignore-reused, ignore-same
@@ -2423,7 +2425,7 @@ msgstr ""
 #, ignore-reused, ignore-same, python-format
 msgid "Generated by Wrye Bash %(wb_version)s for '%(target_ini)s' via wizard"
 msgstr ""
-"வழிகாட்டி வழியாக ' %(wb_version)s' க்கான WRY BASH %(WB_VERSION) S ஆல் "
+"வழிகாட்டி வழியாக ' %(wb_version)s' க்கான WRY BASH %(wb_version)s ஆல் "
 "உருவாக்கப்பட்டது"
 
 #: Mopy/bash/basher/belt.py:335
@@ -2496,7 +2498,7 @@ msgstr "வழிகாட்டி ச்கிரிப்டில் பி�
 #: Mopy/bash/basher/belt.py:509 Mopy/bash/basher/belt.py:518
 #, ignore-reused, ignore-same, python-format
 msgid "Line %(line_num)d: %(line_contents)s"
-msgstr "வரி %(line_num) d: %(line_contents)s"
+msgstr "வரி %(line_num)d: %(line_contents)s"
 
 #: Mopy/bash/basher/belt.py:512
 #, ignore-reused, ignore-same, python-format
@@ -2516,7 +2518,7 @@ msgstr "துணை தொகுப்பு '%(sp_name)s' இல்லை."
 #: Mopy/bash/basher/belt.py:686
 #, ignore-reused, ignore-same, python-format
 msgid "Missing arguments to '%(keyword_name)s'."
-msgstr "'%(Keyword_name) s' க்கு வாதங்களைக் காணவில்லை."
+msgstr "'%(keyword_name)s' க்கு வாதங்களைக் காணவில்லை."
 
 #: Mopy/bash/basher/belt.py:740
 #, ignore-reused, ignore-same, python-format
@@ -3495,19 +3497,19 @@ msgstr "தூய்மையான தரவு - முன்னோட்ட�
 #: Mopy/bash/basher/dialogs.py:612
 #, ignore-reused, ignore-same, python-format
 msgid "Files To Move (%(to_move_count)d):"
-msgstr "நகர்த்த வேண்டிய கோப்புகள் (%(to_move_count) d):"
+msgstr "நகர்த்த வேண்டிய கோப்புகள் (%(to_move_count)d):"
 
 #: Mopy/bash/basher/dialogs.py:614
 #, ignore-reused, ignore-same, python-format
 msgid "Uncheck any files you want to keep in the %(data_folder)s folder."
 msgstr ""
-"%(டேட்டா_ஃபோல்டர்) கோப்புறையில் நீங்கள் வைக்க விரும்பும் எந்த கோப்புகளையும் "
+"%(data_folder)sோப்புறையில் நீங்கள் வைக்க விரும்பும் எந்த கோப்புகளையும் "
 "தேர்வு செய்யவும்."
 
 #: Mopy/bash/basher/dialogs.py:618
 #, ignore-reused, ignore-same, python-format
 msgid "Move the following files out of the %(data_folder)s folder?"
-msgstr "பின்வரும் கோப்புகளை %(data_folder) கோப்புறையில் இருந்து நகர்த்தவா?"
+msgstr "பின்வரும் கோப்புகளை %(data_folder)sோப்புறையில் இருந்து நகர்த்தவா?"
 
 #: Mopy/bash/basher/dialogs.py:619 Mopy/bash/basher/settings_dialog.py:862
 #: Mopy/bash/gui/popups.py:63
@@ -3523,7 +3525,7 @@ msgstr "வெளிப்புற நிறுவலைக் கண்கா�
 #: Mopy/bash/basher/dialogs.py:632
 #, ignore-reused, ignore-same, python-format
 msgid "New Files (%(new_file_cnt)d):"
-msgstr "புதிய கோப்புகள் (%(new_file_cnt) d):"
+msgstr "புதிய கோப்புகள் (%(new_file_cnt)d):"
 
 #: Mopy/bash/basher/dialogs.py:634
 #, ignore-reused, ignore-same, python-format
@@ -3531,13 +3533,13 @@ msgid ""
 "These files are newly added to the %(data_folder)s folder. Uncheck any that "
 "you want to skip."
 msgstr ""
-"இந்த கோப்புகள் %(டேட்டா_ஃபோல்டர்) கோப்புறையில் புதிதாக சேர்க்கப்பட்டுள்ளன. "
+"இந்த கோப்புகள் %(data_folder)sோப்புறையில் புதிதாக சேர்க்கப்பட்டுள்ளன. "
 "நீங்கள் தவிர்க்க விரும்பும் எதையும் தேர்வு செய்யவும்."
 
 #: Mopy/bash/basher/dialogs.py:639
 #, ignore-reused, ignore-same, python-format
 msgid "Changed Files (%(chg_file_cnt)d):"
-msgstr "மாற்றப்பட்ட கோப்புகள் (%(chg_file_cnt) d):"
+msgstr "மாற்றப்பட்ட கோப்புகள் (%(chg_file_cnt)d):"
 
 #: Mopy/bash/basher/dialogs.py:641
 #, ignore-reused, ignore-same
@@ -3549,7 +3551,7 @@ msgstr ""
 #: Mopy/bash/basher/dialogs.py:645
 #, ignore-reused, ignore-same, python-format
 msgid "Touched Files (%(tch_file_cnt)d):"
-msgstr "தொட்ட கோப்புகள் (%(tch_file_cnt) d):"
+msgstr "தொட்ட கோப்புகள் (%(tch_file_cnt)d):"
 
 #: Mopy/bash/basher/dialogs.py:647
 #, ignore-reused, ignore-same, python-format
@@ -3561,13 +3563,13 @@ msgid ""
 msgstr ""
 "இந்த கோப்புகள் மாற்றப்படவில்லை, ஆனால் அவற்றின் மாற்ற நேரம் மாற்றப்பட்டது. "
 "இந்த கோப்புகள் பெரும்பாலும் வெளிப்புற நிறுவலில் சேர்க்கப்பட்டுள்ளன, ஆனால் "
-"ஏற்கனவே %(தரவு_போல்டர்) கோப்புறையில் இருந்தவற்றுடன் ஒத்ததாக இருந்தன. நீங்கள்"
-" தவிர்க்க விரும்பும் எதையும் தேர்வு செய்யவும்."
+"ஏற்கனவே %(data_folder)sோப்புறையில் இருந்தவற்றுடன் ஒத்ததாக இருந்தன. நீங்கள் "
+"தவிர்க்க விரும்பும் எதையும் தேர்வு செய்யவும்."
 
 #: Mopy/bash/basher/dialogs.py:655
 #, ignore-reused, ignore-same, python-format
 msgid "Deleted Files (%(del_file_cnt)d):"
-msgstr "நீக்கப்பட்ட கோப்புகள் (%(del_file_cnt) d):"
+msgstr "நீக்கப்பட்ட கோப்புகள் (%(del_file_cnt)d):"
 
 #: Mopy/bash/basher/dialogs.py:657
 #, ignore-reused, ignore-same
@@ -3588,7 +3590,7 @@ msgid ""
 "The following changes were detected in the %(data_folder)s folder. Do you "
 "want to create a project from them?"
 msgstr ""
-"பின்வரும் மாற்றங்கள் %(தரவு_போல்டர்) கோப்புறையில் கண்டறியப்பட்டன. "
+"பின்வரும் மாற்றங்கள் %(data_folder)sோப்புறையில் கண்டறியப்பட்டன. "
 "அவர்களிடமிருந்து ஒரு திட்டத்தை உருவாக்க விரும்புகிறீர்களா?"
 
 #: Mopy/bash/basher/dialogs.py:668
@@ -3610,7 +3612,7 @@ msgstr "ஒட்டுவதற்கு முன் செயலிழக்�
 #: Mopy/bash/basher/dialogs.py:683
 #, ignore-reused, ignore-same, python-format
 msgid "Mergeable (%(plgn_cnt)d):"
-msgstr "ஒன்றிணைக்கக்கூடிய (%(plgn_cnt) d):"
+msgstr "ஒன்றிணைக்கக்கூடிய (%(plgn_cnt)d):"
 
 #: Mopy/bash/basher/dialogs.py:685
 #, ignore-reused, ignore-same
@@ -3627,7 +3629,7 @@ msgstr ""
 #: Mopy/bash/basher/dialogs.py:691
 #, ignore-reused, ignore-same, python-format
 msgid "Mergeable, but Tagged 'NoMerge' (%(plgn_cnt)d):"
-msgstr "ஒன்றிணைக்கக்கூடியது, ஆனால் குறிக்கப்பட்ட 'பெயரளவு' (%(plgn_cnt) d):"
+msgstr "ஒன்றிணைக்கக்கூடியது, ஆனால் குறிக்கப்பட்ட 'பெயரளவு' (%(plgn_cnt)d):"
 
 #: Mopy/bash/basher/dialogs.py:693
 #, ignore-reused, ignore-same
@@ -3644,7 +3646,7 @@ msgstr ""
 #: Mopy/bash/basher/dialogs.py:700
 #, ignore-reused, ignore-same, python-format
 msgid "Tagged 'Deactivate' (%(plgn_cnt)d):"
-msgstr "குறித்துள்ளார் 'செயலிழக்கச் செய்யுங்கள்' (%(plgn_cnt) d):"
+msgstr "குறித்துள்ளார் 'செயலிழக்கச் செய்யுங்கள்' (%(plgn_cnt)d):"
 
 #: Mopy/bash/basher/dialogs.py:702
 #, ignore-reused, ignore-same
@@ -3680,7 +3682,7 @@ msgstr "தேவையற்ற பாச்ட் ஒட்டு பாகங
 #: Mopy/bash/basher/dialogs.py:727
 #, ignore-reused, ignore-same, python-format
 msgid "Unneeded (%(unneeded_part_cnt)d):"
-msgstr "தேவையற்ற (%(Anseded_part_cnt) d):"
+msgstr "தேவையற்ற (%(unneeded_part_cnt)d):"
 
 #: Mopy/bash/basher/dialogs.py:729
 #, ignore-reused, ignore-same
@@ -3716,7 +3718,7 @@ msgstr ""
 #: Mopy/bash/basher/dialogs.py:796
 #, ignore-reused, ignore-same, python-format
 msgid "Download from %(dl_name)s (%(dl_url)s)."
-msgstr "%(Dl_name) s ( %(dl_name)s) இலிருந்து பதிவிறக்கவும்."
+msgstr "%(dl_name)s ( %(dl_name)s) இலிருந்து பதிவிறக்கவும்."
 
 #: Mopy/bash/basher/dialogs.py:807
 #, ignore-reused, ignore-same
@@ -3812,7 +3814,7 @@ msgstr "சார்பு செருகுநிரல்கள்"
 #: Mopy/bash/basher/dialogs.py:1007
 #, ignore-reused, ignore-same, python-format
 msgid "Installed? (%(inst_y)s/%(inst_n)s)"
-msgstr "நிறுவப்பட்டதா? (%(inst_y) s/%(inst_y)s)"
+msgstr "நிறுவப்பட்டதா? (%(inst_y)s/%(inst_y)s)"
 
 #: Mopy/bash/basher/dialogs.py:1012
 #, ignore-reused, ignore-same
@@ -4085,8 +4087,8 @@ msgid ""
 "Jump to the package associated with %(filename)s. You can Alt-Click on the "
 "file to the same effect."
 msgstr ""
-"%(கோப்பு பெயர்) களுடன் தொடர்புடைய தொகுப்புக்கு செல்லவும். அதே விளைவுக்கு "
-"கோப்பில் நீங்கள் ஆல்ட்-கிளிக் செய்யலாம்."
+"%(filename)sுடன் தொடர்புடைய தொகுப்புக்கு செல்லவும். அதே விளைவுக்கு கோப்பில் "
+"நீங்கள் ஆல்ட்-கிளிக் செய்யலாம்."
 
 #: Mopy/bash/basher/frames.py:61
 #, ignore-reused, ignore-same
@@ -4397,7 +4399,7 @@ msgid ""
 "Group '%(grp_name)s' should have exactly one option selected but has "
 "%(actual_num_opts)d."
 msgstr ""
-"குழுவில் ' %(grp_name) s' சரியாக ஒரு விருப்பத்தைத் தேர்ந்தெடுக்க வேண்டும், "
+"குழுவில் ' %(grp_name)s' சரியாக ஒரு விருப்பத்தைத் தேர்ந்தெடுக்க வேண்டும், "
 "ஆனால் %(actual_num_opts)d."
 
 #: Mopy/bash/basher/gui_fomod.py:446
@@ -4406,7 +4408,7 @@ msgid ""
 "Group '%(grp_name)s' should have at most one option selected but has "
 "%(actual_num_opts)d."
 msgstr ""
-"குழு ' %(grp_name) s' அதிகபட்சமாக ஒரு விருப்பத்தைத் தேர்ந்தெடுக்க வேண்டும், "
+"குழு ' %(grp_name)s' அதிகபட்சமாக ஒரு விருப்பத்தைத் தேர்ந்தெடுக்க வேண்டும், "
 "ஆனால் %(actual_num_opts)d."
 
 #: Mopy/bash/basher/gui_fomod.py:450
@@ -4415,7 +4417,7 @@ msgid ""
 "Group '%(grp_name)s' should have at least one option selected but has "
 "%(actual_num_opts)d."
 msgstr ""
-"குழுவில் ' %(grp_name) s' குறைந்தது ஒரு விருப்பத்தையாவது "
+"குழுவில் ' %(grp_name)s' குறைந்தது ஒரு விருப்பத்தையாவது "
 "தேர்ந்தெடுக்கப்பட்டிருக்க வேண்டும், ஆனால் %(actual_num_opts)d ஐக் "
 "கொண்டுள்ளது."
 
@@ -4454,14 +4456,14 @@ msgstr "நிறுவ வேண்டிய கோப்புகள்"
 #, ignore-reused, ignore-same, python-format
 msgid "Selects all options in the '%(curr_fomod_group)s' group."
 msgstr ""
-"'%(Curr_fomod_group) s' குழுவில் உள்ள அனைத்து விருப்பங்களையும் தேர்வு "
+"'%(curr_fomod_group)s' குழுவில் உள்ள அனைத்து விருப்பங்களையும் தேர்வு "
 "செய்கிறது."
 
 #: Mopy/bash/basher/gui_fomod.py:575
 #, ignore-reused, ignore-same, python-format
 msgid "Deselects all options in the '%(curr_fomod_group)s' group."
 msgstr ""
-"'%(Curr_fomod_group) s' குழுவில் உள்ள அனைத்து விருப்பங்களையும் தேர்வு "
+"'%(curr_fomod_group)s' குழுவில் உள்ள அனைத்து விருப்பங்களையும் தேர்வு "
 "செய்கிறது."
 
 #: Mopy/bash/basher/gui_fomod.py:582
@@ -4470,8 +4472,8 @@ msgid ""
 "Deselects all selected options in the '%(curr_fomod_group)s' group and vice "
 "versa."
 msgstr ""
-"தேர்ந்தெடுக்கப்பட்ட அனைத்து விருப்பங்களையும் '%(corr_fomod_group) s' "
-"குழுவில் மற்றும் நேர்மாறாக தேர்வுசெய்கிறது."
+"தேர்ந்தெடுக்கப்பட்ட அனைத்து விருப்பங்களையும் '%(curr_fomod_group)s' குழுவில்"
+" மற்றும் நேர்மாறாக தேர்வுசெய்கிறது."
 
 #: Mopy/bash/basher/gui_patchers.py:187
 #, ignore-reused, ignore-same
@@ -4567,7 +4569,7 @@ msgstr "'%(செல்லாத_ஃப்ளோட்) எச்' என்ப�
 #: Mopy/bash/basher/gui_patchers.py:769 Mopy/bash/basher/gui_patchers.py:811
 #, ignore-reused, ignore-same, python-format
 msgid "%(tweak_title)s - Error"
-msgstr "%(TWEAK_TITLE) S - பிழை"
+msgstr "%(tweak_title)s - பிழை"
 
 #: Mopy/bash/basher/gui_patchers.py:775 Mopy/bash/brec/record_structs.py:126
 #: Mopy/bash/parsers.py:1110
@@ -5162,12 +5164,12 @@ msgstr "இடு"
 #: Mopy/bash/basher/ini_links.py:93
 #, ignore-reused, ignore-same, python-format
 msgid "Applies '%(tweak)s' to '%(ini)s'."
-msgstr "'%(tweak)s' '%(ini) s' க்கு பொருந்தும்."
+msgstr "'%(tweak)s' '%(tweak)s' க்கு பொருந்தும்."
 
 #: Mopy/bash/basher/ini_links.py:96
 #, ignore-reused, ignore-same, python-format
 msgid "Applies selected tweaks to '%(ini)s'."
-msgstr "தேர்ந்தெடுக்கப்பட்ட மாற்றங்களை '%(ini) s' க்கு பயன்படுத்துகிறது."
+msgstr "தேர்ந்தெடுக்கப்பட்ட மாற்றங்களை '%(ini)s' க்கு பயன்படுத்துகிறது."
 
 #: Mopy/bash/basher/ini_links.py:111
 #, ignore-reused, ignore-same
@@ -5185,8 +5187,8 @@ msgid ""
 "Create a new tweak based on '%(target_tweak)s' but with values from "
 "'%(target_ini)s'."
 msgstr ""
-"'%(Target_tweak) s' இன் அடிப்படையில் புதிய மாற்றங்களை உருவாக்கவும், ஆனால் "
-"'%(target_ini) s' இலிருந்து மதிப்புகளுடன்."
+"'%(target_tweak)s' இன் அடிப்படையில் புதிய மாற்றங்களை உருவாக்கவும், ஆனால் "
+"'%(target_ini)s' இலிருந்து மதிப்புகளுடன்."
 
 #: Mopy/bash/basher/ini_links.py:134
 #, ignore-reused, ignore-same
@@ -5256,10 +5258,10 @@ msgid ""
 "The BashBugDump.log in Wrye Bash's Mopy folder contains additional details, "
 "please include it in your report."
 msgstr ""
-"%(Packact_name) S உடன் வரும் ModuleConfig.xml கோப்பில் தவறான தொடரியல் "
-"உள்ளது. இதை மோட் எழுத்தாளரிடம் புகாரளிக்கவும், எனவே அதை சரியாக சரிசெய்ய "
-"முடியும். Wrye Bash’s Mopy கோப்புறையில் உள்ள Bashbugdump.log கூடுதல் "
-"விவரங்களைக் கொண்டுள்ளது, தயவுசெய்து அதை உங்கள் அறிக்கையில் சேர்க்கவும்."
+"%(package_name)s உடன் வரும் ModuleConfig.xml கோப்பில் தவறான தொடரியல் உள்ளது."
+" இதை மோட் எழுத்தாளரிடம் புகாரளிக்கவும், எனவே அதை சரியாக சரிசெய்ய முடியும். "
+"Wrye Bash’s Mopy கோப்புறையில் உள்ள Bashbugdump.log கூடுதல் விவரங்களைக் "
+"கொண்டுள்ளது, தயவுசெய்து அதை உங்கள் அறிக்கையில் சேர்க்கவும்."
 
 #: Mopy/bash/basher/installer_links.py:219
 #, ignore-reused, ignore-same
@@ -5378,7 +5380,7 @@ msgid ""
 msgstr ""
 "எஞ்சியிருக்கும் கோப்புகளை (செயலில் உள்ள தொகுப்புகளுக்கு) நிறுவவும் மற்றும் "
 "தேர்ந்தெடுக்கப்பட்ட தொகுப்புகளில் உள்ளமைவு மாற்றங்களை நிறுவுவதற்கு "
-"%(தரவு_போல்டர்) கோப்புறையின் உள்ளடக்கங்களைப் புதுப்பிக்கவும்."
+"%(data_folder)sோப்புறையின் உள்ளடக்கங்களைப் புதுப்பிக்கவும்."
 
 #: Mopy/bash/basher/installer_links.py:472
 #, ignore-reused, ignore-same, python-format
@@ -5403,7 +5405,7 @@ msgstr "தரமற்ற கோப்பகங்களில் கோப்�
 #: Mopy/bash/basher/installer_links.py:520
 #, ignore-reused, ignore-same, python-format
 msgid "Override global file type skipping for %(sel_pkg)s."
-msgstr "%(SEL_PKG) s க்கு உலகளாவிய கோப்பு வகை தவிர்க்கவும்."
+msgstr "%(sel_pkg)s க்கு உலகளாவிய கோப்பு வகை தவிர்க்கவும்."
 
 #: Mopy/bash/basher/installer_links.py:533
 #, ignore-reused, ignore-same
@@ -5626,7 +5628,7 @@ msgstr ""
 "%(nexusName)s என மோட் ஆகத் திறக்க முயற்சிக்கிறீர்களா? தொகுப்பின் பெயரில் "
 "பின்தங்கிய இலக்கங்கள் உண்மையில் %(nexusName)s மோடின் அடையாள எண் என்று இது "
 "கருதுகிறது. இந்த அனுமானம் தவறாக இருந்தால், நீங்கள் ஒரு சீரற்ற மோட் பக்கத்தை "
-"(அல்லது பிழை அறிவிப்பு) %(நெக்சச்நேம்) களில் பெறுவீர்கள்."
+"(அல்லது பிழை அறிவிப்பு) %(nexusName)sில் பெறுவீர்கள்."
 
 #: Mopy/bash/basher/installer_links.py:787
 #, ignore-reused, ignore-same, python-format
@@ -5707,7 +5709,7 @@ msgstr "குரல்களைத் தவிர்க்கவும்"
 #: Mopy/bash/basher/installer_links.py:865
 #, ignore-reused, ignore-same, python-format
 msgid "Skip over any voice files in %(sel_pkg)s"
-msgstr "%(Sel_PKG) s இல் எந்த குரல் கோப்புகளையும் தவிர்க்கவும்"
+msgstr "%(sel_pkg)s இல் எந்த குரல் கோப்புகளையும் தவிர்க்கவும்"
 
 #: Mopy/bash/basher/installer_links.py:876
 #, ignore-reused, ignore-same
@@ -5721,7 +5723,7 @@ msgid ""
 "%(data_folder)s folder."
 msgstr ""
 "தேர்ந்தெடுக்கப்பட்ட தொகுப்புகளை நிறுவல் நீக்கவும், அவற்றின் பொருந்திய "
-"அனைத்து கோப்புகளையும் %(தரவு_போல்டர்) கோப்புறையிலிருந்து அகற்றவும்."
+"அனைத்து கோப்புகளையும் %(data_folder)sோப்புறையிலிருந்து அகற்றவும்."
 
 #: Mopy/bash/basher/installer_links.py:886
 #: Mopy/bash/basher/installers_links.py:195
@@ -5843,7 +5845,7 @@ msgstr ""
 #: Mopy/bash/basher/installer_links.py:1051
 #, ignore-reused, ignore-same, python-format
 msgid "Plugin List for %(sel_pkg)s:"
-msgstr "%(SEL_PKG) s க்கான சொருகி பட்டியல்:"
+msgstr "%(sel_pkg)s க்கான சொருகி பட்டியல்:"
 
 #: Mopy/bash/basher/installer_links.py:1063
 #, ignore-reused, ignore-same
@@ -5893,7 +5895,7 @@ msgstr ""
 #: Mopy/bash/basher/installer_links.py:1121
 #, ignore-reused, ignore-same, python-format
 msgid "Sub-Packages List for %(sel_pkg)s:"
-msgstr "%(Sel_pkg) s க்கான துணை பேக்கேச்கள் பட்டியல்:"
+msgstr "%(sel_pkg)s க்கான துணை பேக்கேச்கள் பட்டியல்:"
 
 #: Mopy/bash/basher/installer_links.py:1129
 #, ignore-reused, ignore-same
@@ -5952,7 +5954,7 @@ msgstr "தரவிலிருந்து ஒத்திசைக்கவ�
 #, ignore-reused, ignore-same, python-format
 msgid "Synchronize a package with files from the %(data_folder)s folder."
 msgstr ""
-"%(Data_folder) கோப்புறையிலிருந்து கோப்புகளுடன் ஒரு தொகுப்பை ஒத்திசைக்கவும்."
+"%(data_folder)sோப்புறையிலிருந்து கோப்புகளுடன் ஒரு தொகுப்பை ஒத்திசைக்கவும்."
 
 #: Mopy/bash/basher/installer_links.py:1202
 #, ignore-reused, ignore-same
@@ -6008,7 +6010,7 @@ msgstr ""
 #: Mopy/bash/basher/installer_links.py:1230
 #, ignore-reused, ignore-same, python-format
 msgid "Check the integrity of %(target_package)s."
-msgstr "%(Target_Package) s இன் ஒருமைப்பாட்டை சரிபார்க்கவும்."
+msgstr "%(target_package)s இன் ஒருமைப்பாட்டை சரிபார்க்கவும்."
 
 #: Mopy/bash/basher/installer_links.py:1253
 #, ignore-reused, ignore-same
@@ -6287,7 +6289,7 @@ msgid ""
 "3rd party tools."
 msgstr ""
 "கைமுறையாக அல்லது 3 வது தரப்பு கருவிகள் வழியாக மாற்றப்பட்ட மாற்றங்களைக் "
-"கைப்பற்ற %(தரவு_போல்டர்) கோப்புறையை கண்காணிக்கிறது."
+"கைப்பற்ற %(data_folder)sோப்புறையை கண்காணிக்கிறது."
 
 #: Mopy/bash/basher/installers_links.py:81
 #, ignore-reused, ignore-same, python-format
@@ -6298,8 +6300,8 @@ msgid ""
 msgstr ""
 "வெளிப்புற பயன்பாடு அல்லது கையேடு நிறுவல் வழியாக மோட் ஐ நிறுவும் போது "
 "மாற்றங்களுக்காக உங்கள் தரவு கோப்புறையை WRY BASH கண்காணிக்கும். இதற்கு "
-"%(டேட்டா_ஃபோல்டர்) கோப்புறையின் இரண்டு புதுப்பிப்புகள் தேவைப்படும், மேலும் "
-"சிறிது நேரம் ஆகலாம். தொடரவா?"
+"%(data_folder)sோப்புறையின் இரண்டு புதுப்பிப்புகள் தேவைப்படும், மேலும் சிறிது"
+" நேரம் ஆகலாம். தொடரவா?"
 
 #: Mopy/bash/basher/installers_links.py:86
 #: Mopy/bash/basher/installers_links.py:94
@@ -6318,7 +6320,7 @@ msgstr ""
 #: Mopy/bash/basher/installers_links.py:112
 #, ignore-reused, ignore-same, python-format
 msgid "No changes were detected in the %(data_folder)s folder."
-msgstr "%(தரவு_போல்டர்) கோப்புறையில் எந்த மாற்றங்களும் கண்டறியப்படவில்லை."
+msgstr "%(data_folder)sோப்புறையில் எந்த மாற்றங்களும் கண்டறியப்படவில்லை."
 
 #: Mopy/bash/basher/installers_links.py:114
 #, ignore-reused, ignore-same
@@ -6374,7 +6376,7 @@ msgid ""
 msgstr ""
 "காணாமல் போன கோப்புகளை (செயலில் உள்ள தொகுப்புகளுக்கு) நிறுவவும் மற்றும் "
 "அனைத்து நிறுவல் ஆர்டர் மற்றும் உள்ளமைவு மாற்றங்களுக்கும் கணக்கில் "
-"%(தரவு_போல்டர்) கோப்புறையின் உள்ளடக்கங்களைப் புதுப்பிக்கவும்."
+"%(data_folder)sோப்புறையின் உள்ளடக்கங்களைப் புதுப்பிக்கவும்."
 
 #: Mopy/bash/basher/installers_links.py:186
 #, ignore-reused, ignore-same
@@ -6426,8 +6428,7 @@ msgstr "தரவைப் புதுப்பிக்கவும்"
 #, ignore-reused, ignore-same, python-format
 msgid "Rescan the %(data_folder)s folder and all project directories."
 msgstr ""
-"%(Data_folder) கோப்புறை மற்றும் அனைத்து திட்ட கோப்பகங்களையும் "
-"மீட்டமைக்கவும்."
+"%(data_folder)sோப்புறை மற்றும் அனைத்து திட்ட கோப்பகங்களையும் மீட்டமைக்கவும்."
 
 #. `Data` here originally referred to the Data folder in Bethesda games, but
 #. the command is now named the same even for games that don't have a Data
@@ -6443,13 +6444,13 @@ msgid ""
 "Move all files that are not linked to an active installer out of the "
 "%(data_folder)s folder."
 msgstr ""
-"செயலில் நிறுவியுடன் இணைக்கப்படாத எல்லா கோப்புகளையும் %(தரவு_போல்டர்) "
-"கோப்புறையில் இருந்து நகர்த்தவும்."
+"செயலில் நிறுவியுடன் இணைக்கப்படாத எல்லா கோப்புகளையும் "
+"%(data_folder)sோப்புறையில் இருந்து நகர்த்தவும்."
 
 #: Mopy/bash/basher/installers_links.py:242
 #, ignore-reused, ignore-same, python-format
 msgid "Clean %(data_folder)s folder?"
-msgstr "தூய்மையான %(data_folder) S கோப்புறை?"
+msgstr "தூய்மையான %(data_folder)s கோப்புறை?"
 
 #: Mopy/bash/basher/installers_links.py:243
 #, ignore-reused, ignore-same, python-format
@@ -6459,7 +6460,7 @@ msgid ""
 " you can retrieve them later if necessary."
 msgstr ""
 "கைமுறையாக அல்லது மற்றொரு நிரலால் நிறுவப்பட்ட கோப்புகள் இதில் அடங்கும். "
-"கோப்புகள் நீக்கப்படுவதற்கு பதிலாக '%(dfc_path) s' கோப்புறைக்கு "
+"கோப்புகள் நீக்கப்படுவதற்கு பதிலாக '%(dfc_path)s' கோப்புறைக்கு "
 "நகர்த்தப்படும், எனவே தேவைப்பட்டால் அவற்றை பின்னர் மீட்டெடுக்கலாம்."
 
 #: Mopy/bash/basher/installers_links.py:248
@@ -6476,7 +6477,7 @@ msgstr ""
 #, ignore-reused, ignore-same, python-format
 msgid "There are no untracked files in the %(data_folder)s folder."
 msgstr ""
-"%(தரவு_போல்டர்) கோப்புறையில் கட்டுப்படுத்தப்படாத கோப்புகள் எதுவும் இல்லை."
+"%(data_folder)sோப்புறையில் கட்டுப்படுத்தப்படாத கோப்புகள் எதுவும் இல்லை."
 
 #: Mopy/bash/basher/installers_links.py:261
 #, ignore-reused, ignore-same, python-format
@@ -6541,7 +6542,7 @@ msgid ""
 "Exported order and installation status for %(exp_num)d packages to "
 "%(exp_path)s."
 msgstr ""
-"%(exp_num)d தொகுப்புகளுக்கு %(exp_path) s க்கு ஏற்றுமதி செய்யப்பட்ட ஆர்டர் "
+"%(exp_num)d தொகுப்புகளுக்கு %(exp_path)s க்கு ஏற்றுமதி செய்யப்பட்ட ஆர்டர் "
 "மற்றும் நிறுவல் நிலை."
 
 #: Mopy/bash/basher/installers_links.py:310
@@ -6820,8 +6821,8 @@ msgid ""
 "Toggles whether or not Wrye Bash will remove empty directories when scanning"
 " the %(data_folder)s folder."
 msgstr ""
-"%(டேட்டா_ஃபோல்டர்) கோப்புறையை ச்கேன் செய்யும் போது வ்ரி பாச் வெற்று "
-"கோப்பகங்களை அகற்றுமா இல்லையா என்பதை மாற்றுகிறது."
+"%(data_folder)sோப்புறையை ச்கேன் செய்யும் போது வ்ரி பாச் வெற்று கோப்பகங்களை "
+"அகற்றுமா இல்லையா என்பதை மாற்றுகிறது."
 
 #: Mopy/bash/basher/installers_links.py:547
 #, ignore-reused, ignore-same
@@ -7286,7 +7287,7 @@ msgstr "சேமிப்பதற்கான JPG தரத்தை அமை
 #: Mopy/bash/basher/misc_links.py:141 Mopy/bash/basher/misc_links.py:150
 #, ignore-reused, ignore-same, python-format
 msgid "Custom [%(custom_quality)d]"
-msgstr "தனிப்பயன் [%(custom_quality) d]"
+msgstr "தனிப்பயன் [%(custom_quality)d]"
 
 #: Mopy/bash/basher/misc_links.py:145
 #, ignore-reused, ignore-same
@@ -7338,7 +7339,7 @@ msgstr "மாச்டர் பெயரை மாற்றவும்:"
 #: Mopy/bash/basher/misc_links.py:202
 #, ignore-reused, ignore-same, python-format
 msgid "File must be selected from %(data_folder)s folder."
-msgstr "கோப்பு %(தரவு_போல்டர்) கோப்புறையிலிருந்து தேர்ந்தெடுக்கப்பட வேண்டும்."
+msgstr "கோப்பு %(data_folder)sோப்புறையிலிருந்து தேர்ந்தெடுக்கப்பட வேண்டும்."
 
 #: Mopy/bash/basher/misc_links.py:218
 #, ignore-reused, ignore-same, python-format
@@ -7480,10 +7481,9 @@ msgid ""
 "'Filter' patches in %(xedit_name)s. It will create empty plugins for each "
 "missing master. Are you sure you want to continue?"
 msgstr ""
-"இது ஒரு மேம்பட்ட அம்சமாகும், முதலில் 'வடிகட்டி' திட்டுகளை %(xedit_name) s "
-"இல் பார்க்கவும் திருத்தவும் நோக்கம் கொண்டது. காணாமல் போன ஒவ்வொரு "
-"மாச்டருக்கும் இது வெற்று செருகுநிரல்களை உருவாக்கும். நீங்கள் தொடர "
-"விரும்புகிறீர்களா?"
+"இது ஒரு மேம்பட்ட அம்சமாகும், முதலில் 'வடிகட்டி' திட்டுகளை %(xedit_name)s இல்"
+" பார்க்கவும் திருத்தவும் நோக்கம் கொண்டது. காணாமல் போன ஒவ்வொரு மாச்டருக்கும் "
+"இது வெற்று செருகுநிரல்களை உருவாக்கும். நீங்கள் தொடர விரும்புகிறீர்களா?"
 
 #: Mopy/bash/basher/mod_links.py:203
 #, ignore-reused, ignore-same
@@ -7597,7 +7597,7 @@ msgstr ""
 #, ignore-reused, ignore-same, python-format
 msgid "Applies the label '%(target_label)s' to the selected plugins."
 msgstr ""
-"தேர்ந்தெடுக்கப்பட்ட செருகுநிரல்களுக்கு '%(Target_label) S' லேபிளை "
+"தேர்ந்தெடுக்கப்பட்ட செருகுநிரல்களுக்கு '%(target_label)s' லேபிளை "
 "பயன்படுத்துகிறது."
 
 #: Mopy/bash/basher/mod_links.py:484
@@ -8335,7 +8335,7 @@ msgstr "முடிந்தது."
 #: Mopy/bash/basher/mod_links.py:1357
 #, ignore-reused, ignore-same, python-format
 msgid "Orphan cell blocks removed: %(num_orphans_removed)d."
-msgstr "அனாதை செல் தொகுதி அகற்றப்பட்டது: %(எண் அனாதைகள் அகற்றப்பட்டன) d."
+msgstr "அனாதை செல் தொகுதி அகற்றப்பட்டது: %(num_orphans_removed)d."
 
 #: Mopy/bash/basher/mod_links.py:1361 Mopy/bash/basher/mod_links.py:1393
 #: Mopy/bash/basher/mod_links.py:1518 Mopy/bash/basher/mod_links.py:1744
@@ -8385,8 +8385,8 @@ msgid ""
 "Creates a copy of the selected plugins with the extensions changed to "
 "%(new_plugin_ext)s."
 msgstr ""
-"தேர்ந்தெடுக்கப்பட்ட செருகுநிரல்களின் நகலை நீட்டிப்புகளுடன் %(new_plugin_ext)"
-" s ஆக மாற்றுகிறது."
+"தேர்ந்தெடுக்கப்பட்ட செருகுநிரல்களின் நகலை நீட்டிப்புகளுடன் "
+"%(new_plugin_ext)s ஆக மாற்றுகிறது."
 
 #: Mopy/bash/basher/mod_links.py:1425
 #, ignore-reused, ignore-same, python-format
@@ -8423,7 +8423,7 @@ msgstr "Sking %(skipping_plugin)s"
 #: Mopy/bash/basher/mod_links.py:1508
 #, ignore-reused, ignore-same, python-format
 msgid "Scripts removed: %(num_scripts_removed)d."
-msgstr "ச்கிரிப்ட்கள் அகற்றப்பட்டன: %(num_scripts_removed) d."
+msgstr "ச்கிரிப்ட்கள் அகற்றப்பட்டன: %(num_scripts_removed)d."
 
 #: Mopy/bash/basher/mod_links.py:1509
 #, ignore-reused, ignore-same, python-format
@@ -8527,7 +8527,7 @@ msgid ""
 "load it in the %(ck_name)s."
 msgstr ""
 "தேர்ந்தெடுக்கப்பட்ட சொருகி அனைத்து எசமானர்களிடமும் ESM கொடியை புரட்டுகிறது, "
-"அதை %(ck_name) s இல் ஏற்ற அனுமதிக்கிறது."
+"அதை %(ck_name)s இல் ஏற்ற அனுமதிக்கிறது."
 
 #: Mopy/bash/basher/mod_links.py:1640
 #, ignore-reused, ignore-same
@@ -8547,7 +8547,7 @@ msgid ""
 "%(ck_name)s."
 msgstr ""
 "எச்சரிக்கை! மேம்பட்ட மோடர்களுக்கு மட்டுமே! தேர்ந்தெடுக்கப்பட்ட சொருகி "
-"அனைத்து ஈஎச்பி எச்பிசின் ஈஎச்எம் கொடியை புரட்டுகிறது. %(Ck_name) s இல் ESP- "
+"அனைத்து ஈஎச்பி எச்பிசின் ஈஎச்எம் கொடியை புரட்டுகிறது. %(ck_name)s இல் ESP- "
 "மாச்டர்டு மோட்களை ஏற்றுவதற்கு பயனுள்ளதாக இருக்கும்."
 
 #: Mopy/bash/basher/mod_links.py:1682
@@ -8569,7 +8569,7 @@ msgid ""
 "break the plugin in unpredictable ways."
 msgstr ""
 "எச்சரிக்கை! மேம்பட்ட மோடர்களுக்கு மட்டுமே! உள் தலைப்பு பதிப்பு எண்ணை 0.8 ஆக "
-"மீட்டமைப்பதன் மூலம் %(CK_NAME) S இல் புதிய அதிகாரப்பூர்வ செருகுநிரல்களைத் "
+"மீட்டமைப்பதன் மூலம் %(ck_name)s இல் புதிய அதிகாரப்பூர்வ செருகுநிரல்களைத் "
 "திருத்த இந்த நற்பொருத்தம் உங்களை அனுமதிக்கிறது. இது சொருகி திருத்தக்கூடியதாக"
 " இருக்கும் அதே வேளையில், இது கணிக்க முடியாத வழிகளில் சொருகி உடைக்கப்படலாம்."
 
@@ -8679,13 +8679,13 @@ msgstr "மோட்/உரை கோப்பு"
 #, ignore-reused, ignore-same, python-format
 msgid "Source file must be a %(csv_ext)s file or a plugin (%(plugin_exts)s)."
 msgstr ""
-"மூல கோப்பு ஒரு %(CSV_EXT) S கோப்பு அல்லது ஒரு சொருகி ( %(csv_ext)s) இருக்க "
+"மூல கோப்பு ஒரு %(csv_ext)s கோப்பு அல்லது ஒரு சொருகி ( %(csv_ext)s) இருக்க "
 "வேண்டும்."
 
 #: Mopy/bash/basher/mod_links.py:1896
 #, ignore-reused, ignore-same, python-format
 msgid "Source file must be a %(csv_ext)s file."
-msgstr "மூல கோப்பு %(CSV_EXT) S கோப்பாக இருக்க வேண்டும்."
+msgstr "மூல கோப்பு %(csv_ext)s கோப்பாக இருக்க வேண்டும்."
 
 #: Mopy/bash/basher/mod_links.py:1912
 #, ignore-reused, ignore-same
@@ -9382,8 +9382,8 @@ msgid ""
 "Revert %(target_file_name)s to snapshot %(snapsnot_file_name)s dated "
 "%(snapshot_date)s?"
 msgstr ""
-"Snapshot %(snapsnot_file_name) s தேதியிட்ட %(target_file_name)s பெறுநர் "
-"%(target_file_name) s க்கு மாற்றவும்?"
+"Snapshot %(target_file_name)s தேதியிட்ட %(target_file_name)s பெறுநர் "
+"%(snapsnot_file_name)s க்கு மாற்றவும்?"
 
 #: Mopy/bash/basher/mod_links.py:2452
 #, ignore-reused, ignore-same
@@ -9397,8 +9397,8 @@ msgid ""
 "The snapshot file may be corrupt. Do you want to restore the original file "
 "again? 'No' keeps the reverted, possibly broken snapshot instead."
 msgstr ""
-"Snapshot %(SnapShot_file_name) s க்கு %(target_file_name)s மாற்றுவதில் "
-"தோல்வி. ச்னாப்சாட் கோப்பு ஊழல் நிறைந்ததாக இருக்கலாம். அசல் கோப்பை மீண்டும் "
+"Snapshot %(target_file_name)s க்கு %(target_file_name)s மாற்றுவதில் தோல்வி. "
+"ச்னாப்சாட் கோப்பு ஊழல் நிறைந்ததாக இருக்கலாம். அசல் கோப்பை மீண்டும் "
 "மீட்டெடுக்க விரும்புகிறீர்களா? 'இல்லை' அதற்கு பதிலாக மாற்றியமைக்கப்பட்ட, "
 "உடைந்த ச்னாப்சாட்டை வைத்திருக்கிறது."
 
@@ -9766,7 +9766,7 @@ msgstr "பாச் குறிச்சொற்களை ஏற்றும�
 #, ignore-reused, ignore-same, python-format
 msgid "Exported tags for %(exp_num)d plugins to %(exp_path)s."
 msgstr ""
-"%(exp_num)d செருகுநிரல்களுக்கு %(exp_path) s க்கு ஏற்றுமதி செய்யப்பட்ட "
+"%(exp_num)d செருகுநிரல்களுக்கு %(exp_path)s க்கு ஏற்றுமதி செய்யப்பட்ட "
 "குறிச்சொற்கள்."
 
 #: Mopy/bash/basher/mods_links.py:505
@@ -9877,7 +9877,7 @@ msgstr "திறந்த %(lo_file_name)s"
 msgid ""
 "Opens the load order management file '%(lo_file_name)s' in a text editor."
 msgstr ""
-"உரை எடிட்டரில் சுமை ஆர்டர் மேலாண்மை கோப்பை '%(LO_FILE_NAME) S' திறக்கிறது."
+"உரை எடிட்டரில் சுமை ஆர்டர் மேலாண்மை கோப்பை '%(lo_file_name)s' திறக்கிறது."
 
 #: Mopy/bash/basher/mods_links.py:613
 #, ignore-reused, ignore-same
@@ -10037,7 +10037,7 @@ msgid ""
 "import the config, then rebuild the patch using PBash to convert it and "
 "finally export the config again to get one that will work in this version."
 msgstr ""
-"%(Bp_config_path) S இல் உள்ள ஒட்டு கட்டமைப்பு தரவு, இந்த பதிப்பைக் கையாள "
+"%(bp_config_path)s இல் உள்ள ஒட்டு கட்டமைப்பு தரவு, இந்த பதிப்பைக் கையாள "
 "முடியாத அல்லது CBASH உடன் உருவாக்கப்பட்டது. உள்ளமைவை இறக்குமதி செய்ய "
 "தயவுசெய்து Wrye Bash 307 ஐப் பயன்படுத்தவும், பின்னர் அதை மாற்றுவதற்கு PBASH "
 "ஐப் பயன்படுத்தி பேட்சை மீண்டும் கட்டியெழுப்பவும், இறுதியாக இந்த பதிப்பில் "
@@ -10202,7 +10202,7 @@ msgstr "இவ்வாறு ச்கிரீன்சாட்டை சே�
 #: Mopy/bash/basher/saves_links.py:333
 #, ignore-reused, ignore-same, python-format
 msgid "Screenshot %(save_name)s.jpg"
-msgstr "திரைக்காட்சி %(Save_name) s.jpg"
+msgstr "திரைக்காட்சி %(save_name)s.jpg"
 
 #: Mopy/bash/basher/saves_links.py:344
 #, ignore-reused, ignore-same
@@ -10309,7 +10309,7 @@ msgstr "எந்த மாற்றங்களும் செய்யப்�
 #: Mopy/bash/basher/saves_links.py:514
 #, ignore-reused, ignore-same, python-format
 msgid "Names modified: %(num_names_changed)d."
-msgstr "பெயர்கள் மாற்றியமைக்கப்பட்டவை: %(num_names_changed) d."
+msgstr "பெயர்கள் மாற்றியமைக்கப்பட்டவை: %(num_names_changed)d."
 
 #: Mopy/bash/basher/saves_links.py:521
 #, ignore-reused, ignore-same
@@ -10440,7 +10440,7 @@ msgid ""
 "A file named %(conflicting_save)s already exists in %(save_profile)s. "
 "Overwrite it?"
 msgstr ""
-"%(மோதல்_சேவ்) என்ற பெயரிடப்பட்ட ஒரு கோப்பு ஏற்கனவே %(Save_Profile) களில் "
+"%(மோதல்_சேவ்) என்ற பெயரிடப்பட்ட ஒரு கோப்பு ஏற்கனவே %(conflicting_save)sில் "
 "உள்ளது. அதை மேலெழுதவா?"
 
 #: Mopy/bash/basher/saves_links.py:692
@@ -10539,7 +10539,7 @@ msgstr "செயலாக்கம்."
 #: Mopy/bash/basher/saves_links.py:788
 #, ignore-reused, ignore-same, python-format
 msgid "Potions reweighed: %(num_reweighed)d."
-msgstr "போசன்கள் மறுபரிசீலனை செய்தன: %(num_reweied) d."
+msgstr "போசன்கள் மறுபரிசீலனை செய்தன: %(num_reweighed)d."
 
 #: Mopy/bash/basher/saves_links.py:792
 #, ignore-reused, ignore-same
@@ -10564,13 +10564,13 @@ msgstr "புள்ளிவிவரங்களைக் கணக்கி�
 #: Mopy/bash/basher/saves_links.py:833
 #, ignore-reused, ignore-same, python-format
 msgid "Dump %(co_ext)s Contents"
-msgstr "டம்ப் %(Co_ext) S உள்ளடக்கங்கள்"
+msgstr "டம்ப் %(co_ext)s உள்ளடக்கங்கள்"
 
 #: Mopy/bash/basher/saves_links.py:835
 #, ignore-reused, ignore-same, python-format
 msgid "Create a report of the contents of the associated %(xse_abbr)s cosave."
 msgstr ""
-"தொடர்புடைய %(XSE_ABBR) SCAVE இன் உள்ளடக்கங்களின் அறிக்கையை உருவாக்கவும்."
+"தொடர்புடைய %(xse_abbr)sCAVE இன் உள்ளடக்கங்களின் அறிக்கையை உருவாக்கவும்."
 
 #: Mopy/bash/basher/saves_links.py:846
 #, ignore-reused, ignore-same
@@ -11567,7 +11567,7 @@ msgid ""
 "You are already using the newest version of Wrye Bash, version "
 "%(wb_version)s."
 msgstr ""
-"நீங்கள் ஏற்கனவே Wrye Bash, பதிப்பு %(WB_VERSION) S இன் புதிய பதிப்பைப் "
+"நீங்கள் ஏற்கனவே Wrye Bash, பதிப்பு %(wb_version)s இன் புதிய பதிப்பைப் "
 "பயன்படுத்துகிறீர்கள்."
 
 #: Mopy/bash/basher/settings_dialog.py:1267
@@ -12012,7 +12012,7 @@ msgstr "%க்கு மாச்டர் காணவில்லை (எம�
 #: Mopy/bash/bosh/__init__.py:2663
 #, ignore-reused, ignore-same, python-format
 msgid "Masters for %(m_plugin)s:"
-msgstr "%(M_plugin) s க்கான முதுநிலை:"
+msgstr "%(m_plugin)s க்கான முதுநிலை:"
 
 #: Mopy/bash/bosh/__init__.py:2670
 #, ignore-reused, ignore-same
@@ -12125,9 +12125,9 @@ msgid ""
 " Do you want to try the backup %(settings_file_name)s (it will have all your"
 " settings from the second to last time that you used Wrye Bash)?"
 msgstr ""
-"WRYE BASH அமைப்புகள் தரவுத்தளத்தைப் படிப்பதில் பிழை (பிழை '%(settings_err) "
-"s'). இது தற்போதைய கோப்பில் மீட்டெடுக்கப்படாது. காப்புப்பிரதி "
-"%(settings_file_name) s ஐ முயற்சிக்க விரும்புகிறீர்களா (இது உங்கள் எல்லா "
+"WRYE BASH அமைப்புகள் தரவுத்தளத்தைப் படிப்பதில் பிழை (பிழை "
+"'%(settings_err)s'). இது தற்போதைய கோப்பில் மீட்டெடுக்கப்படாது. காப்புப்பிரதி"
+" %(settings_file_name)s ஐ முயற்சிக்க விரும்புகிறீர்களா (இது உங்கள் எல்லா "
 "அமைப்புகளையும் இரண்டாவது முதல் கடைசி நேரம் வரை நீங்கள் WRYE BASH ஐப் "
 "பயன்படுத்தியிருக்கும்)?"
 
@@ -12146,7 +12146,7 @@ msgid ""
 "your saved settings (choosing 'No' will cause Wrye Bash to exit)?"
 msgstr ""
 "காப்புப்பிரதியைப் படிப்பதில் பிழை WRY பாச் அமைப்புகள் தரவுத்தளத்தை (பிழை "
-"'%(settings_err) s'). இது தற்போதைய கோப்பில் மீட்டெடுக்கப்படாது. நீங்கள் "
+"'%(settings_err)s'). இது தற்போதைய கோப்பில் மீட்டெடுக்கப்படாது. நீங்கள் "
 "சேமித்த அமைப்புகள் இல்லாமல் சிதைந்த அமைப்புகளை நீக்கி, வதக்கப்பட்ட "
 "அமைப்புகள் இல்லாமல் சுமை செய்ய விரும்புகிறீர்களா ('இல்லை' என்பதைத் "
 "தேர்ந்தெடுப்பது மிகவும் பாச் வெளியேறும்)?"
@@ -12200,7 +12200,7 @@ msgstr ""
 #: Mopy/bash/bosh/_mergeability.py:47
 #, ignore-reused, ignore-same, python-format
 msgid "This plugin has an associated %(bsa_ext)s file."
-msgstr "இந்த சொருகி தொடர்புடைய %(BSA_EXT) S கோப்பைக் கொண்டுள்ளது."
+msgstr "இந்த சொருகி தொடர்புடைய %(bsa_ext)s கோப்பைக் கொண்டுள்ளது."
 
 #: Mopy/bash/bosh/_mergeability.py:53
 #, ignore-reused, ignore-same
@@ -12555,7 +12555,7 @@ msgstr "தொகுப்பு அமைப்பு:"
 #: Mopy/bash/bosh/bain.py:1371
 #, ignore-reused, ignore-same, python-format
 msgid "Syncing from %(data_folder)s folder…"
-msgstr "%(Data_folder) S கோப்புறையிலிருந்து ஒத்திசைத்தல்…"
+msgstr "%(data_folder)s கோப்புறையிலிருந்து ஒத்திசைத்தல்…"
 
 #: Mopy/bash/bosh/bain.py:1448
 #, ignore-reused, ignore-same
@@ -12747,7 +12747,7 @@ msgstr "மேப்பிங் கோப்புகள்…"
 #: Mopy/bash/bosh/cosaves.py:150
 #, ignore-reused, ignore-same, python-format
 msgid "%(cosave_file_tag)s Header"
-msgstr "%(cosave_file_tag) S தலைப்பு"
+msgstr "%(cosave_file_tag)s தலைப்பு"
 
 #: Mopy/bash/bosh/cosaves.py:179
 #, ignore-reused, ignore-same, python-format
@@ -12757,7 +12757,7 @@ msgstr "வடிவமைப்பு பதிப்பு: %(co_format_ver)s"
 #: Mopy/bash/bosh/cosaves.py:182
 #, ignore-reused, ignore-same, python-format
 msgid "%(co_file_tag)s version: %(co_main_record_ver)s"
-msgstr "%(co_file_tag) s பதிப்பு: %(co_file_tag)s"
+msgstr "%(co_file_tag)s பதிப்பு: %(co_file_tag)s"
 
 #: Mopy/bash/bosh/cosaves.py:187
 #, ignore-reused, ignore-same, python-format
@@ -12868,7 +12868,7 @@ msgstr "சொருகி தொகுதி"
 #: Mopy/bash/bosh/cosaves.py:946
 #, ignore-reused, ignore-same, python-format
 msgid "Owner: %(string_owner)s (%(string_owner_index)s)"
-msgstr "உரிமையாளர்: %(string_owner) s ( %(string_owner)s)"
+msgstr "உரிமையாளர்: %(string_owner)s ( %(string_owner)s)"
 
 #: Mopy/bash/bosh/cosaves.py:950
 #, ignore-reused, ignore-same, python-format
@@ -12888,7 +12888,7 @@ msgstr "சரம் தொகுதி"
 #: Mopy/bash/bosh/cosaves.py:1045
 #, ignore-reused, ignore-same, python-format
 msgid "Owner: %(array_owner)s (%(array_owner_index)s)"
-msgstr "உரிமையாளர்: %(Array_owner) s ( %(array_owner)s)"
+msgstr "உரிமையாளர்: %(array_owner)s ( %(array_owner)s)"
 
 #: Mopy/bash/bosh/cosaves.py:1048
 #, ignore-reused, ignore-same, python-format
@@ -12958,7 +12958,7 @@ msgstr "HUD ஐடி: %(hud_id)d"
 #: Mopy/bash/bosh/cosaves.py:1183 Mopy/bash/bosh/cosaves.py:1302
 #, ignore-reused, ignore-same, python-format
 msgid "Owner: %(hud_owner)s (%(hud_owner_index)s)"
-msgstr "உரிமையாளர்: %(HUD_OWNER) S ( %(hud_owner)s)"
+msgstr "உரிமையாளர்: %(hud_owner)s ( %(hud_owner)s)"
 
 #: Mopy/bash/bosh/cosaves.py:1186 Mopy/bash/bosh/cosaves.py:1305
 #, ignore-reused, ignore-same, python-format
@@ -13084,8 +13084,7 @@ msgstr "சாய்வு: %(hud_font_italic)d"
 #, ignore-reused, ignore-same, python-format
 msgid "Font Color: (%(hud_font_red)d, %(hud_font_green)d, %(hud_font_blue)d)"
 msgstr ""
-"எழுத்துரு நிறம்: ( %(HUD_FONT_RED) D, %(HUD_FONT_GREEN) D, %(HUD_FONT_BLUE) "
-"D)"
+"எழுத்துரு நிறம்: ( %(hud_font_red)d, %(hud_font_green)d, %(hud_font_blue)d)"
 
 #: Mopy/bash/bosh/cosaves.py:1362
 #, ignore-reused, ignore-same, python-format
@@ -13176,7 +13175,7 @@ msgstr "1 நீக்கப்பட்ட நவாம்கள்"
 #: Mopy/bash/bosh/mods_metadata.py:508
 #, ignore-reused, ignore-same, python-format
 msgid "%(num_del_navms)d deleted navmeshes"
-msgstr "%(Num_del_navans) de nedated navamshes"
+msgstr "%(num_del_navms)de nedated navamshes"
 
 #: Mopy/bash/bosh/mods_metadata.py:525
 #, ignore-reused, ignore-same
@@ -13224,8 +13223,8 @@ msgid ""
 "your entire load order (simply accept the 'Module Selection' prompt in "
 "%(xedit_name)s with OK)."
 msgstr ""
-"இந்த ஃபார்மிட்களுடன் பதிவுகளை %(xedit_name) s இல் காண, உங்கள் முழு சுமை "
-"வரிசையை ஏற்றுவதை உறுதிசெய்க ('தொகுதி தேர்வு' வரியில் %(xedit_name) s இல் "
+"இந்த ஃபார்மிட்களுடன் பதிவுகளை %(xedit_name)s இல் காண, உங்கள் முழு சுமை "
+"வரிசையை ஏற்றுவதை உறுதிசெய்க ('தொகுதி தேர்வு' வரியில் %(xedit_name)s இல் "
 "சரி)."
 
 #: Mopy/bash/bosh/mods_metadata.py:599
@@ -13243,8 +13242,8 @@ msgid ""
 "To view the records with these FormIDs in %(xedit_name)s, double-click the "
 "plugin in the 'Module Selection' prompt in %(xedit_name)s."
 msgstr ""
-"இந்த ஃபார்மிட்களுடன் %(xedit_name) s இல் பதிவுகளைக் காண, %(xedit_name) s இல்"
-" 'தொகுதி தேர்வு' வரியில் சொருகி இருமுறை சொடுக்கு செய்யவும்."
+"இந்த ஃபார்மிட்களுடன் %(xedit_name)s இல் பதிவுகளைக் காண, %(xedit_name)s இல் "
+"'தொகுதி தேர்வு' வரியில் சொருகி இருமுறை சொடுக்கு செய்யவும்."
 
 #: Mopy/bash/bosh/mods_metadata.py:638
 #, ignore-reused, ignore-same, python-format
@@ -13257,7 +13256,8 @@ msgstr ""
 #: Mopy/bash/bosh/mods_metadata.py:643
 #, ignore-reused, ignore-same, python-format
 msgid "%(overriden_formid)s from %(source_plugin)s, colliding versions:"
-msgstr "%(source_plugin) s இலிருந்து %(overriden_formid)s, மோதல் பதிப்புகள்:"
+msgstr ""
+"%(overriden_formid)s இலிருந்து %(overriden_formid)s, மோதல் பதிப்புகள்:"
 
 #: Mopy/bash/bosh/mods_metadata.py:650
 #, ignore-reused, ignore-same, python-format
@@ -13368,7 +13368,7 @@ msgstr ""
 "பின்வரும் செருகுநிரல்களில் மேலடுக்கு கொடி உள்ளது, ஆனால் அவர்களிடம் "
 "எசமானர்கள் இல்லாததால் தகுதி பெற வேண்டாம். %(game_name)s இவற்றை மேலடுக்கு "
 "செருகுநிரல்களாகக் கருதாது. 'மேலடுக்கு கொடியை அகற்று' என்று கொடியை அகற்றவும்,"
-" அல்லது சொருகி குறைந்தபட்சம் ஒரு மாச்டரைச் சேர்க்க %(xedit_name) s ஐப் "
+" அல்லது சொருகி குறைந்தபட்சம் ஒரு மாச்டரைச் சேர்க்க %(game_name)s ஐப் "
 "பயன்படுத்தவும்."
 
 #: Mopy/bash/bosh/mods_metadata.py:700
@@ -13485,13 +13485,13 @@ msgstr ""
 " மாச்டராக - அத்தகைய சங்கிலி இன்னும் நீளமாக இருக்கலாம்). இதைத் தீர்ப்பது "
 "விளையாட்டுக்கு சாத்தியமற்றது, இந்த செருகுநிரல்களை ஏற்ற முயற்சிக்கும்போது இது"
 " பெரும்பாலும் செயலிழக்கும். வட்ட மாச்டரை மறுசீரமைக்க 'மாற்றம்…' கட்டளையைப் "
-"பயன்படுத்தி நீங்கள் விசாரிக்க முயற்சி செய்யலாம், இதனால் சொருகி %(xedit_name)"
-" s இல் திறக்கப்படலாம்."
+"பயன்படுத்தி நீங்கள் விசாரிக்க முயற்சி செய்யலாம், இதனால் சொருகி %(example_a)s"
+" இல் திறக்கப்படலாம்."
 
 #: Mopy/bash/bosh/mods_metadata.py:755
 #, ignore-reused, ignore-same, python-format
 msgid "Invalid %(file_header_label)s versions"
-msgstr "தவறான %(file_header_label) s பதிப்புகள்"
+msgstr "தவறான %(file_header_label)s பதிப்புகள்"
 
 #: Mopy/bash/bosh/mods_metadata.py:757
 #, ignore-reused, ignore-same, python-format
@@ -13502,7 +13502,7 @@ msgid ""
 "indicates the plugin was created for a different game."
 msgstr ""
 "பின்வரும் செருகுநிரல்களில் %(file_header_label)s ( %(ck_name)s) உருவாக்கிய "
-"பதிப்புகளில் ஒன்றாக அங்கீகரிக்கப்படாத %(file_header_label) S பதிப்பைக் "
+"பதிப்புகளில் ஒன்றாக அங்கீகரிக்கப்படாத %(file_header_label)s பதிப்பைக் "
 "கொண்டுள்ளது. இது வரையறுக்கப்படாத நடத்தை மற்றும் பெரும்பாலும் சொருகி வேறு "
 "விளையாட்டுக்காக உருவாக்கப்பட்டதைக் குறிக்கிறது."
 
@@ -13535,7 +13535,7 @@ msgid ""
 "information."
 msgstr ""
 "பின்வரும் செருகுநிரல்கள் %(xedit_name)s மூலம் சரிசெய்யக்கூடிய குறிப்புகள் "
-"அல்லது பிற சிக்கல்களை நீக்கிவிட்டன. மேலும் தகவலுக்கு %(TOME_OF_XEDIT) S ஐப் "
+"அல்லது பிற சிக்கல்களை நீக்கிவிட்டன. மேலும் தகவலுக்கு %(xedit_name)s ஐப் "
 "பார்வையிடவும்."
 
 #: Mopy/bash/bosh/mods_metadata.py:782
@@ -13599,7 +13599,7 @@ msgstr ""
 "அறிமுகப்படுத்திய புதிய பதிவுகள், அவை நீக்கப்பட்ட கொடி தொகுப்பையும் "
 "கொண்டுள்ளன. இது பெரும்பாலும் மோட் எழுத்தாளரின் தவறு. பதிவு பயன்படுத்தப்பட "
 "விரும்பவில்லை என்றால் (எ.கா. இது கைவிடப்பட்ட யோசனையிலிருந்து "
-"எஞ்சியிருந்தால்), முழு பதிவையும் %(xedit_name) s இல் அகற்றுவதன் மூலம் இதை "
+"எஞ்சியிருந்தால்), முழு பதிவையும் %(xedit_name)s இல் அகற்றுவதன் மூலம் இதை "
 "சரிசெய்ய முடியும். எந்தவொரு சந்தர்ப்பத்திலும், மோட் எழுத்தாளருக்கு "
 "அறிவிக்கப்பட வேண்டும், எனவே அவர்கள் இங்கே என்ன செய்ய வேண்டும் என்பதைக் "
 "கண்டுபிடித்து அதை சரியாக சரிசெய்யலாம்."
@@ -13700,7 +13700,7 @@ msgstr ""
 #: Mopy/bash/bosh/mods_metadata.py:882
 #, ignore-reused, ignore-same, python-format
 msgid "%(full_fid)s in %(orig_plugin)s: occurs %(num_duplicates)d times"
-msgstr "%(full_fid)s %(orig_plugin) s: நிகழ்கிறது %(num_duplicates)d முறை"
+msgstr "%(full_fid)s %(full_fid)s: நிகழ்கிறது %(num_duplicates)d முறை"
 
 #: Mopy/bash/bosh/mods_metadata.py:889
 #, ignore-reused, ignore-same
@@ -14176,7 +14176,7 @@ msgstr ""
 #: Mopy/bash/env/common.py:361
 #, ignore-reused, ignore-same, python-format
 msgid "Overwrite %(destination)s with %(source)s?"
-msgstr "%(மூல) களுடன் %(destination)s மேலெழுதவா?"
+msgstr "%(destination)sுடன் %(destination)s மேலெழுதவா?"
 
 #: Mopy/bash/env/common.py:364
 #, ignore-reused, ignore-same
@@ -14318,8 +14318,9 @@ msgid ""
 "Flag %(target_flag_name)s was expected to have value '%(val_want)s' but has "
 "value '%(val_have)s' instead."
 msgstr ""
-"கொடி%(target_flag_name)s '%(val_want) s' மதிப்பைக் கொண்டிருக்கும் என்று "
-"எதிர்பார்க்கப்பட்டது, ஆனால் அதற்கு பதிலாக '%(val_have) s' மதிப்பு உள்ளது."
+"கொடி%(target_flag_name)s '%(target_flag_name)s' மதிப்பைக் கொண்டிருக்கும் "
+"என்று எதிர்பார்க்கப்பட்டது, ஆனால் அதற்கு பதிலாக '%(val_want)s' மதிப்பு "
+"உள்ளது."
 
 #: Mopy/bash/fomod.py:594
 #, ignore-reused, ignore-same, python-format
@@ -14334,7 +14335,7 @@ msgid ""
 "%(se_name)s version %(ver_want)s or higher is required, but could not be "
 "found."
 msgstr ""
-"%(SE_NAME) S பதிப்பு %(se_name)s அல்லது அதற்கு மேற்பட்டவை தேவை, ஆனால் "
+"%(se_name)s பதிப்பு %(se_name)s அல்லது அதற்கு மேற்பட்டவை தேவை, ஆனால் "
 "கண்டுபிடிக்க முடியவில்லை."
 
 #: Mopy/bash/fomod.py:630
@@ -14343,8 +14344,8 @@ msgid ""
 "%(se_name)s version %(ver_want)s or higher is required, but version "
 "%(ver_have)s was found instead."
 msgstr ""
-"%(SE_NAME) S பதிப்பு %(se_name)s அல்லது அதற்கு மேற்பட்டவை தேவை, ஆனால் அதற்கு"
-" பதிலாக பதிப்பு %(ver_want)s கண்டறியப்பட்டன."
+"%(se_name)s பதிப்பு %(se_name)s அல்லது அதற்கு மேற்பட்டவை தேவை, ஆனால் அதற்கு "
+"பதிலாக பதிப்பு %(ver_want)s கண்டறியப்பட்டன."
 
 #. From Enderal: https://en.wiki.sureai.net/Enderal:Races#Kil.C3.A9an
 #: Mopy/bash/game/enderal/__init__.py:64
@@ -16114,8 +16115,7 @@ msgstr "கட்டளை வரியில் குறிப்பிடப�
 #: Mopy/bash/initialization.py:61
 #, ignore-reused, ignore-same, python-format
 msgid "Folder path specified in bash.ini (%(bash_ini_setting)s)"
-msgstr ""
-"Bash.ini (%(Bash_ini_setting) s இல் குறிப்பிடப்பட்டுள்ள கோப்புறை பாதை)"
+msgstr "Bash.ini (%(bash_ini_setting)s இல் குறிப்பிடப்பட்டுள்ள கோப்புறை பாதை)"
 
 #: Mopy/bash/initialization.py:68 Mopy/bash/initialization.py:76
 #, ignore-reused, ignore-same, python-format
@@ -16161,7 +16161,7 @@ msgid ""
 "problems for Wrye Bash, like BAIN not working if the case differs between a "
 "mod-added file and an existing version of that file in the Data folder."
 msgstr ""
-"%(Data_folder) S கோப்புறை வழக்கு உணர்திறன் கொண்டது. தரவு கோப்புறையில் மோட் "
+"%(data_folder)s கோப்புறை வழக்கு உணர்திறன் கொண்டது. தரவு கோப்புறையில் மோட் "
 "கூட்டப்பட்ட கோப்பிற்கும் அந்த கோப்பின் ஏற்கனவே உள்ள பதிப்பிற்கும் இடையில் "
 "வழக்கு வேறுபட்டால், பெய்ன் வேலை செய்யாதது போல, இது மிகவும் மோசமான பாசுக்கு "
 "கடுமையான சிக்கல்களை ஏற்படுத்தும்."
@@ -16353,7 +16353,7 @@ msgstr "மூல மோட்ச்"
 msgid ""
 "The values you entered (%(t_val)s) are not valid for the '%(t_name)s' tweak."
 msgstr ""
-"நீங்கள் உள்ளிட்ட மதிப்புகள் (%(t_val)s) '%(t_name) s' மாற்றத்திற்கு "
+"நீங்கள் உள்ளிட்ட மதிப்புகள் (%(t_val)s) '%(t_val)s' மாற்றத்திற்கு "
 "செல்லுபடியாகாது."
 
 #: Mopy/bash/patcher/base.py:427
@@ -16361,7 +16361,7 @@ msgstr ""
 msgid ""
 "The value you entered (%(t_val)s) is not valid for the '%(t_name)s' tweak."
 msgstr ""
-"நீங்கள் உள்ளிட்ட மதிப்பு (%(t_val)s) '%(t_name) s' மாற்றத்திற்கு "
+"நீங்கள் உள்ளிட்ட மதிப்பு (%(t_val)s) '%(t_val)s' மாற்றத்திற்கு "
 "செல்லுபடியாகாது."
 
 #: Mopy/bash/patcher/base.py:509
@@ -16372,7 +16372,7 @@ msgstr "மாற்றியமைக்கப்பட்ட பதிவு�
 #: Mopy/bash/patcher/base.py:527
 #, ignore-reused, ignore-same, python-format
 msgid "Modified %(tg_type)s Records: %(rec_cnt)d"
-msgstr "மாற்றியமைக்கப்பட்ட %(TG_TYPE) S பதிவுகள்: %(rec_cnt)d"
+msgstr "மாற்றியமைக்கப்பட்ட %(tg_type)s பதிவுகள்: %(rec_cnt)d"
 
 #: Mopy/bash/patcher/patch_files.py:56
 #, ignore-reused, ignore-same
@@ -16406,7 +16406,7 @@ msgstr ""
 #: Mopy/bash/patcher/patch_files.py:71
 #, ignore-reused, ignore-same, python-format
 msgid "%(patcher_n)s skipped %(num_skip)d records:"
-msgstr "%(patcher_n) S தவிர்க்கப்பட்ட %(num_skip)d பதிவுகள்:"
+msgstr "%(patcher_n)s தவிர்க்கப்பட்ட %(num_skip)d பதிவுகள்:"
 
 #: Mopy/bash/patcher/patch_files.py:75
 #, ignore-reused, ignore-same, python-format
@@ -16472,8 +16472,7 @@ msgid ""
 msgstr ""
 "பின்வரும் செருகுநிரல்களில் அனாதை உலகக் குழுக்கள் இருந்தன, அவை "
 "தவிர்க்கப்பட்டன. இது ஒரு பெரிய சிக்கல் அல்ல, ஆனால் செருகுநிரல்களை சரிசெய்ய "
-"நீங்கள் Wrye Bash இன் '%(இணைப்பு_ஆர்வோ) S' கட்டளையைப் பயன்படுத்த "
-"விரும்பலாம்."
+"நீங்கள் Wrye Bash இன் '%(link_rwo)s' கட்டளையைப் பயன்படுத்த விரும்பலாம்."
 
 #: Mopy/bash/patcher/patch_files.py:110
 #, ignore-reused, ignore-same
@@ -16506,7 +16505,7 @@ msgstr "அனைத்தையும் தொகுத்து"
 #: Mopy/bash/patcher/patch_files.py:131
 #, ignore-reused, ignore-same, python-format
 msgid "%(msg_plugin)s [Version %(plugin_ver)s]"
-msgstr "%(msg_plugin) s [பதிப்பு %(msg_plugin)s]"
+msgstr "%(msg_plugin)s [பதிப்பு %(msg_plugin)s]"
 
 #: Mopy/bash/patcher/patch_files.py:138
 #, ignore-reused, ignore-same
@@ -16572,7 +16571,7 @@ msgid ""
 "masters. This is part %(bp_part)d."
 msgstr ""
 "இந்த இணைப்பு %(max_num_masters)d முதுநிலை காரணமாக பிரிக்க வேண்டியிருந்தது. "
-"இது பகுதி %(bp_part) d."
+"இது பகுதி %(max_num_masters)d."
 
 #: Mopy/bash/patcher/patchers/base.py:60
 #, ignore-reused, ignore-same
@@ -16668,12 +16667,12 @@ msgstr "ஒன்றிணைக்க %(லேபிள்கள் பட்�
 #: Mopy/bash/patcher/patchers/mergers.py:817
 #, ignore-reused, ignore-same, python-format
 msgid "Empty %(ll_label)s Sublists"
-msgstr "வெற்று %(ll_label) s sublists"
+msgstr "வெற்று %(ll_label)s sublists"
 
 #: Mopy/bash/patcher/patchers/mergers.py:821
 #, ignore-reused, ignore-same, python-format
 msgid "Empty %(ll_label)s Sublists Removed"
-msgstr "வெற்று %(ll_label) S Sublists அகற்றப்பட்டது"
+msgstr "வெற்று %(ll_label)s Sublists அகற்றப்பட்டது"
 
 #: Mopy/bash/patcher/patchers/mergers.py:843
 #, ignore-reused, ignore-same
@@ -18270,7 +18269,7 @@ msgid ""
 "'Body Part Codes' must be enabled when using the '%(bpc_dependent_tweak)s' "
 "tweak."
 msgstr ""
-"'%(BPC_DEPECTIENT_TWEAK) S' மாற்றங்களைப் பயன்படுத்தும் போது 'உடல் பகுதி "
+"'%(bpc_dependent_tweak)s' மாற்றங்களைப் பயன்படுத்தும் போது 'உடல் பகுதி "
 "குறியீடுகள்' இயக்கப்பட வேண்டும்."
 
 #: Mopy/bash/patcher/patchers/multitweak_races.py:45
@@ -18510,7 +18509,7 @@ msgstr "ஆற்றல் நடத்தை வரைபடம் பாலி
 #: Mopy/bash/patcher/patchers/multitweak_settings.py:53
 #, ignore-reused, ignore-same, python-format
 msgid "%(global_tweak_name)s set to %(global_tweak_value)s"
-msgstr "%(global_tweak_name)s %(global_tweak_value) s"
+msgstr "%(global_tweak_name)s %(global_tweak_name)s"
 
 #: Mopy/bash/patcher/patchers/multitweak_settings.py:59
 #, ignore-reused, ignore-same
@@ -18578,7 +18577,7 @@ msgid ""
 "The value chosen for GMST '%(gmst_eid)s' must be a float, but is currently "
 "of type %(actual_type)s (%(actual_value)s)."
 msgstr ""
-"GMST '%(GMST_EID) S' க்காக தேர்ந்தெடுக்கப்பட்ட மதிப்பு ஒரு மிதவையாக இருக்க "
+"GMST '%(gmst_eid)s' க்காக தேர்ந்தெடுக்கப்பட்ட மதிப்பு ஒரு மிதவையாக இருக்க "
 "வேண்டும், ஆனால் தற்போது வகை%(gmst_eid)s (%(actual_type)s)."
 
 #: Mopy/bash/patcher/patchers/multitweak_settings.py:255
