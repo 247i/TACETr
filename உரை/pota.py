@@ -254,6 +254,12 @@ def சரிபார்(மூலம், தமிழ்):
         தமிழ் = தமிழ்.replace("% எச்", "%s")
         தமிழ் = தமிழ்.replace("% எச்", "%s")
         தமிழ் = தமிழ்.replace("%S", "%s")
+    if மூலம்.find("%1$d") >= 0:        
+        தமிழ் = தமிழ்.replace("%1 $ டி", "%1$d")
+    if மூலம்.find("%2$d") >= 0:        
+        தமிழ் = தமிழ்.replace("%2 $ டி", "%2$d")
+    if மூலம்.find("%3$d") >= 0:        
+        தமிழ் = தமிழ்.replace("%3 $ டி", "%3$d")        
     if மூலம்.find("%r") >= 0:
         தமிழ் = தமிழ்.replace("%ஆர்", "%r")
         தமிழ் = தமிழ்.replace("% ஆர்", "%r")
@@ -276,6 +282,13 @@ def சரிபார்(மூலம், தமிழ்):
         தமிழ் = தமிழ்.replace("%எல்.எல்.டி.", "%lld")
         தமிழ் = தமிழ்.replace("%LLD", "%lld")
         தமிழ் = தமிழ்.replace("% எல்.எல்.டி.", "%lld")
+
+    # regular expression based replacements - {pyvariable}
+    அடை_var = re.findall(r"{[a-z_A-Z]+}", மூலம்)
+    அடை_மாறி = re.findall(r"{[a-z_A-Zஂ-௺]+}", தமிழ்)
+    if அடை_மாறி and அடை_var:
+        for மாறி, var in zip(அடை_மாறி, அடை_var):
+            தமிழ் = தமிழ்.replace(மாறி, var, 1)
 
     # regular expression based replacements - {{sometext}}
     அடை_var = re.findall(r"{{[a-z_A-Z]+}}", மூலம்)
