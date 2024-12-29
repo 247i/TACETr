@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Galette)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-28 14:37+0200\n"
-"PO-Revision-Date: 2024-12-28 23:31+0530\n"
+"POT-Creation-Date: 2024-12-29 12:37+0200\n"
+"PO-Revision-Date: 2024-12-29 17:58+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/galette/galette/ta/>\n"
 "Language: ta\n"
@@ -121,7 +121,7 @@ msgid "Scheduled payments management"
 msgstr "திட்டமிடப்பட்ட கொடுப்பனவு மேலாண்மை"
 
 #: ../lib/Galette/Controllers/Crud/ScheduledPaymentController.php:273
-#: ../lib/Galette/Controllers/Crud/ContributionsController.php:662
+#: ../lib/Galette/Controllers/Crud/ContributionsController.php:671
 #, safe-html
 msgid "- Unknown payment type!"
 msgstr "- தெரியாத கட்டண வகை!"
@@ -257,7 +257,7 @@ msgid "Mailing preview"
 msgstr "அஞ்சல் முன்னோட்டம்"
 
 #: ../lib/Galette/Controllers/Crud/ContributionsTypesController.php:91
-#: ../lib/Galette/Core/Install.php:1170 ../lib/Galette/Core/Galette.php:434
+#: ../lib/Galette/Core/Install.php:1177 ../lib/Galette/Core/Galette.php:434
 #, safe-html
 msgid "Contributions types"
 msgstr "பங்களிப்பு வகைகள்"
@@ -422,95 +422,108 @@ msgstr ""
 "எந்த உறுப்பினரும் தேர்ந்தெடுக்கப்படவில்லை, தயவுசெய்து குறைந்தது ஒரு "
 "பெயரையாவது சரிபார்க்கவும்."
 
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1097
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1101
 #, php-format, safe-html
 msgid "Mass change %count members"
 msgstr "வெகுசன மாற்றம் %எண்ணிக்கை உறுப்பினர்கள்"
 
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1128
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1225
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1133
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1253
 #, safe-html
 msgid "Mass changes has not been confirmed!"
 msgstr "வெகுசன மாற்றங்கள் உறுதிப்படுத்தப்படவில்லை!"
 
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1194
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1158
+#: ../../tempcache/components/forms/mass_groups.html.twig:73
+#, safe-html
+msgid "Add to group"
+msgstr "குழுவில் சேர்க்கவும்"
+
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1168
+#: ../../tempcache/components/forms/mass_groups.html.twig:80
+#, safe-html
+msgid "Remove from group"
+msgstr "குழுவிலிருந்து அகற்று"
+
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1221
 #, php-format, safe-html
 msgid "Review mass change %count members"
 msgstr "வெகுசன மாற்றம் %எண்ணிக்கை உறுப்பினர்களை மதிப்பாய்வு செய்யவும்"
 
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1278
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1316
 #, safe-html
 msgid "Nothing to do!"
 msgstr "செய்ய எதுவும் இல்லை!"
 
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1305
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1542
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1341
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1604
 #, safe-html
 msgid "An error occurred while storing the member."
 msgstr "உறுப்பினரை சேமிக்கும் போது பிழை ஏற்பட்டது."
 
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1317
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1366
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1585
+#, safe-html
+msgid "An error occurred adding member to its groups."
+msgstr "அதன் குழுக்களில் உறுப்பினரைச் சேர்ப்பது பிழை ஏற்பட்டது."
+
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1379
 #, safe-html
 msgid "Something went wrong during mass edition!"
 msgstr "வெகுசன பதிப்பின் போது ஏதோ தவறு ஏற்பட்டது!"
 
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1324
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1386
 #, php-format, safe-html
 msgid "%1$s member has been changed successfully!"
 msgid_plural "%1$s members has been changed successfully!"
 msgstr[0] "%1$s உறுப்பினர் வெற்றிகரமாக மாற்றப்பட்டுள்ளது!"
 msgstr[1] "%1$s உறுப்பினர்கள் வெற்றிகரமாக மாற்றப்பட்டுள்ளனர்!"
 
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1393
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1455
 #, safe-html
 msgid "Invalid captcha"
 msgstr "தவறான கேப்ட்சா"
 
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1500
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1562
 #, safe-html
 msgid "Your account has been created!"
 msgstr "உங்கள் கணக்கு உருவாக்கப்பட்டது!"
 
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1505
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1567
 #, safe-html
 msgid "An email has been sent to you, check your inbox."
 msgstr ""
 "உங்களுக்கு ஒரு மின்னஞ்சல் அனுப்பப்பட்டுள்ளது, உங்கள் இன்பாக்சை "
 "சரிபார்க்கவும்."
 
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1508
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1570
 #, safe-html
 msgid "New member has been successfully added."
 msgstr "புதிய உறுப்பினர் வெற்றிகரமாக சேர்க்கப்பட்டுள்ளது."
 
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1511
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1573
 #, safe-html
 msgid "Member account has been modified."
 msgstr "உறுப்பினர் கணக்கு மாற்றியமைக்கப்பட்டுள்ளது."
 
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1523
-#, safe-html
-msgid "An error occurred adding member to its groups."
-msgstr "அதன் குழுக்களில் உறுப்பினரைச் சேர்ப்பது பிழை ஏற்பட்டது."
-
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1537
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1599
 #, safe-html
 msgid "An error occurred adding member to its groups as manager."
 msgstr "மேலாளராக அதன் குழுக்களில் உறுப்பினரைச் சேர்ப்பது பிழை ஏற்பட்டது."
 
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1560
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1622
 #: ../lib/Galette/Controllers/GaletteController.php:279
 #: ../lib/Galette/Controllers/GaletteController.php:311
 #, safe-html
 msgid "Delete failed"
 msgstr "நீக்கு தோல்வியுற்றது"
 
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1698
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1760
 #, php-format, safe-html
 msgid "Remove member %1$s"
 msgstr "உறுப்பினர் %1$s ஐ அகற்று"
 
-#: ../lib/Galette/Controllers/Crud/MembersController.php:1708
+#: ../lib/Galette/Controllers/Crud/MembersController.php:1770
 #, php-format, safe-html
 msgid "You are about to remove %count members."
 msgstr "நீங்கள் %எண்ணிக்கை உறுப்பினர்களை அகற்ற உள்ளீர்கள்."
@@ -614,78 +627,85 @@ msgstr "உறுப்பினர் கட்டணம்"
 msgid "Donation"
 msgstr "நன்கொடை"
 
-#: ../lib/Galette/Controllers/Crud/ContributionsController.php:242
-#: ../lib/Galette/Controllers/Crud/ContributionsController.php:290
+#: ../lib/Galette/Controllers/Crud/ContributionsController.php:175
+#, safe-html
+msgid "No related contribution type available, please create a new one."
+msgstr ""
+"தொடர்புடைய பங்களிப்பு வகை எதுவும் கிடைக்கவில்லை, தயவுசெய்து புதிய ஒன்றை "
+"உருவாக்கவும்."
+
+#: ../lib/Galette/Controllers/Crud/ContributionsController.php:251
+#: ../lib/Galette/Controllers/Crud/ContributionsController.php:299
 #, php-format, safe-html
 msgid "Mass add contribution on %count members"
 msgstr "%எண்ணிக்கை உறுப்பினர்களுக்கு வெகுசன சேர்க்கவும் பங்களிப்பு"
 
-#: ../lib/Galette/Controllers/Crud/ContributionsController.php:522
+#: ../lib/Galette/Controllers/Crud/ContributionsController.php:531
 #, safe-html
 msgid "Contributions management"
 msgstr "பங்களிப்பு மேலாண்மை"
 
-#: ../lib/Galette/Controllers/Crud/ContributionsController.php:522
+#: ../lib/Galette/Controllers/Crud/ContributionsController.php:531
 #, safe-html
 msgid "Transactions management"
 msgstr "பரிவர்த்தனை மேலாண்மை"
 
-#: ../lib/Galette/Controllers/Crud/ContributionsController.php:675
+#: ../lib/Galette/Controllers/Crud/ContributionsController.php:684
 #, safe-html
 msgid "- Unknown contribution type!"
 msgstr "- அறியப்படாத பங்களிப்பு வகை!"
 
-#: ../lib/Galette/Controllers/Crud/ContributionsController.php:734
+#: ../lib/Galette/Controllers/Crud/ContributionsController.php:743
 #, safe-html
 msgid "No contribution was selected, please check at least one."
 msgstr ""
 "பங்களிப்பு எதுவும் தேர்ந்தெடுக்கப்படவில்லை, தயவுசெய்து குறைந்தபட்சம் ஒன்றைச்"
 " சரிபார்க்கவும்."
 
-#: ../lib/Galette/Controllers/Crud/ContributionsController.php:770
+#: ../lib/Galette/Controllers/Crud/ContributionsController.php:779
 #: ../lib/Galette/Controllers/PdfController.php:432
-#: ../lib/Galette/Controllers/PdfController.php:701
+#: ../lib/Galette/Controllers/PdfController.php:700
 #, safe-html
 msgid "Unable to load contribution #%id!"
 msgstr "பங்களிப்பை ஏற்ற முடியவில்லை #%ஐடி!"
 
-#: ../lib/Galette/Controllers/Crud/ContributionsController.php:868
+#: ../lib/Galette/Controllers/Crud/ContributionsController.php:877
 #, safe-html
 msgid "Contribution has been successfully stored"
 msgstr "பங்களிப்பு வெற்றிகரமாக சேமிக்கப்பட்டுள்ளது"
 
-#: ../lib/Galette/Controllers/Crud/ContributionsController.php:872
+#: ../lib/Galette/Controllers/Crud/ContributionsController.php:881
 #, safe-html
 msgid "An error occurred while storing the contribution."
 msgstr "பங்களிப்பை சேமிக்கும் போது பிழை ஏற்பட்டது."
 
-#: ../lib/Galette/Controllers/Crud/ContributionsController.php:986
+#: ../lib/Galette/Controllers/Crud/ContributionsController.php:995
 #, ignore-long-untranslated, php-format, safe-html
 msgid "Remove %1$s %2$s"
 msgstr "%1$s %2$s ஐ அகற்று"
 
-#: ../lib/Galette/Controllers/Crud/ContributionsController.php:988
+#: ../lib/Galette/Controllers/Crud/ContributionsController.php:997
 #, safe-html
 msgid "contributions"
 msgstr "பங்களிப்புகள்"
 
-#: ../lib/Galette/Controllers/Crud/ContributionsController.php:988
+#: ../lib/Galette/Controllers/Crud/ContributionsController.php:997
 #, safe-html
 msgid "transactions"
 msgstr "பரிவர்த்தனைகள்"
 
-#: ../lib/Galette/Controllers/Crud/ContributionsController.php:992
+#: ../lib/Galette/Controllers/Crud/ContributionsController.php:1001
 #, php-format, safe-html
 msgid "Remove %1$s #%2$s"
 msgstr "%1$s # %2$s ஐ அகற்று"
 
-#: ../lib/Galette/Controllers/Crud/ContributionsController.php:993
+#: ../lib/Galette/Controllers/Crud/ContributionsController.php:1002
 #: ../lib/Galette/IO/PdfContribution.php:64
 #, safe-html
 msgid "contribution"
 msgstr "பங்களிப்பு"
 
-#: ../lib/Galette/Controllers/Crud/ContributionsController.php:993
+#: ../lib/Galette/Controllers/Crud/ContributionsController.php:1002
 #, safe-html
 msgid "transaction"
 msgstr "பரிவர்த்தனை"
@@ -776,7 +796,7 @@ msgid "Dashboard"
 msgstr "முகப்புப்பெட்டி"
 
 #: ../lib/Galette/Controllers/GaletteController.php:201
-#: ../lib/Galette/Core/Install.php:1166 ../lib/Galette/Core/Galette.php:383
+#: ../lib/Galette/Core/Install.php:1173 ../lib/Galette/Core/Galette.php:383
 #: ../lib/Galette/Core/Galette.php:762
 #, ignore-reused, safe-html
 msgid "Settings"
@@ -972,7 +992,7 @@ msgstr "நீக்க முயற்சிக்கும் பிழை ஏ
 
 #: ../lib/Galette/Controllers/PdfController.php:165
 #: ../lib/Galette/Controllers/PdfController.php:242
-#: ../lib/Galette/Controllers/PdfController.php:682
+#: ../lib/Galette/Controllers/PdfController.php:681
 #, safe-html
 msgid "Unable to get members list."
 msgstr "உறுப்பினர்கள் பட்டியலைப் பெற முடியவில்லை."
@@ -996,33 +1016,33 @@ msgstr "வருகை தாளை உருவாக்க எந்த உ�
 msgid "Attendance sheet"
 msgstr "வருகை தாள்"
 
-#: ../lib/Galette/Controllers/PdfController.php:475
+#: ../lib/Galette/Controllers/PdfController.php:474
 #, safe-html
 msgid "Unable to get groups list."
 msgstr "குழுக்கள் பட்டியலைப் பெற முடியவில்லை."
 
-#: ../lib/Galette/Controllers/PdfController.php:533
-#: ../lib/Galette/Core/Install.php:1190 ../lib/Galette/Core/Galette.php:456
+#: ../lib/Galette/Controllers/PdfController.php:532
+#: ../lib/Galette/Core/Install.php:1197 ../lib/Galette/Core/Galette.php:456
 #, safe-html
 msgid "PDF models"
 msgstr "PDF மாதிரிகள்"
 
-#: ../lib/Galette/Controllers/PdfController.php:562
+#: ../lib/Galette/Controllers/PdfController.php:561
 #, safe-html
 msgid "Missing PDF model type!"
 msgstr "PDF மாதிரி வகை காணவில்லை!"
 
-#: ../lib/Galette/Controllers/PdfController.php:597
+#: ../lib/Galette/Controllers/PdfController.php:596
 #, safe-html
 msgid "Model has been successfully stored!"
 msgstr "மாதிரி வெற்றிகரமாக சேமிக்கப்பட்டுள்ளது!"
 
-#: ../lib/Galette/Controllers/PdfController.php:600
+#: ../lib/Galette/Controllers/PdfController.php:599
 #, safe-html
 msgid "Model has not been stored :("
 msgstr "மாதிரி சேமிக்கப்படவில்லை :("
 
-#: ../lib/Galette/Controllers/PdfController.php:642
+#: ../lib/Galette/Controllers/PdfController.php:641
 #, safe-html
 msgid "Invalid link!"
 msgstr "தவறான இணைப்பு!"
@@ -1124,8 +1144,8 @@ msgid ""
 "An email has been sent to your address.<br/>Please check your inbox and "
 "follow the instructions."
 msgstr ""
-"உங்கள் முகவரிக்கு ஒரு மின்னஞ்சல் அனுப்பப்பட்டுள்ளது. <br/> தயவுசெய்து உங்கள்"
-" இன்பாக்சை சரிபார்த்து வழிமுறைகளைப் பின்பற்றவும்."
+"உங்கள் முகவரிக்கு ஒரு மின்னஞ்சல் அனுப்பப்பட்டுள்ளது. <br> தயவுசெய்து உங்கள் "
+"இன்பாக்சை சரிபார்த்து வழிமுறைகளைப் பின்பற்றவும்."
 
 #: ../lib/Galette/Controllers/AuthController.php:397
 #, safe-html
@@ -1151,6 +1171,7 @@ msgstr ""
 msgid "Your account (%s) do not contain any valid email address"
 msgstr "உங்கள் கணக்கில் (%s) எந்த சரியான மின்னஞ்சல் முகவரியும் இல்லை"
 
+# "%s" variable is missing in translation
 #: ../lib/Galette/Controllers/AuthController.php:448
 #, php-format, safe-html
 msgid "Mails address %s does not exist"
@@ -1177,7 +1198,7 @@ msgid "No password"
 msgstr "கடவுச்சொல் இல்லை"
 
 #: ../lib/Galette/Controllers/AuthController.php:534
-#: ../lib/Galette/Entity/Adherent.php:1496
+#: ../lib/Galette/Entity/Adherent.php:1491
 #, safe-html
 msgid "- The passwords don't match!"
 msgstr "- கடவுச்சொற்கள் பொருந்தவில்லை!"
@@ -1192,6 +1213,7 @@ msgstr "உங்கள் கடவுச்சொல் மிகவும் 
 msgid "An error occurred while updating your password."
 msgstr "உங்கள் கடவுச்சொல்லைப் புதுப்பிக்கும்போது பிழை ஏற்பட்டது."
 
+# "%s" variable is missing in translation
 #: ../lib/Galette/Controllers/AuthController.php:555
 #, php-format, safe-html
 msgid "Password changed for member '%s'."
@@ -1216,7 +1238,7 @@ msgid ""
 "documentation."
 msgstr ""
 "சில பிஎச்பி தொகுதிகள் காணவில்லை. தயவுசெய்து அவற்றை நிறுவவும் அல்லது உங்கள் "
-"ஆதரவைத் தொடர்பு கொள்ளவும். <br/> தேவையான தொகுதிகள் பற்றிய கூடுதல் தகவல்கள் "
+"ஆதரவைத் தொடர்பு கொள்ளவும். <br> தேவையான தொகுதிகள் பற்றிய கூடுதல் தகவல்கள் "
 "ஆவணங்களில் காணப்படலாம்."
 
 #: ../lib/Galette/Controllers/AdminToolsController.php:94
@@ -1313,8 +1335,8 @@ msgstr "லேபிள்களை மொழிபெயர்க்கவு�
 msgid ""
 "No translation for '%s'!<br/>Please fill and submit above form to create it."
 msgstr ""
-"'%s' என்பதற்கு எந்த மொழிபெயர்ப்பும் இல்லை! <br/> தயவுசெய்து அதை உருவாக்க "
-"மேலே படிவத்தை நிறைவு செய்து சமர்ப்பிக்கவும்."
+"'%s' என்பதற்கு எந்த மொழிபெயர்ப்பும் இல்லை! <br> தயவுசெய்து அதை உருவாக்க மேலே"
+" படிவத்தை நிறைவு செய்து சமர்ப்பிக்கவும்."
 
 #: ../lib/Galette/Controllers/DynamicTranslationsController.php:182
 #: ../lib/Galette/Controllers/DynamicTranslationsController.php:207
@@ -1439,7 +1461,7 @@ msgstr "மின்னஞ்சல்: '%s' மாற்றியமைக்�
 msgid "Email: '%s' has been successfully modified."
 msgstr "மின்னஞ்சல்: '%s' வெற்றிகரமாக மாற்றியமைக்கப்பட்டுள்ளது."
 
-#: ../lib/Galette/Core/History.php:230 ../lib/Galette/Core/History.php:319
+#: ../lib/Galette/Core/History.php:240 ../lib/Galette/Core/History.php:329
 #: ../lib/Galette/Features/Replacements.php:632
 #: ../lib/Galette/Features/Replacements.php:633
 #: ../../tempcache/elements/group.html.twig:207
@@ -1545,39 +1567,39 @@ msgstr "உள்ளமைவு கோப்பை எழுதுங்கள�
 msgid "Config file already exists and is up to date"
 msgstr "கட்டமைப்பு கோப்பு ஏற்கனவே உள்ளது மற்றும் புதுப்பித்த நிலையில் உள்ளது"
 
-#: ../lib/Galette/Core/Install.php:1113
+#: ../lib/Galette/Core/Install.php:1105
 #, safe-html
 msgid "Unable to create configuration file (%path)"
 msgstr "உள்ளமைவு கோப்பை உருவாக்க முடியவில்லை (%பாதை)"
 
-#: ../lib/Galette/Core/Install.php:1174
+#: ../lib/Galette/Core/Install.php:1181
 #: ../../tempcache/pages/advanced_search.html.twig:502
 #: ../../tempcache/pages/advanced_search.html.twig:507
 #, safe-html
 msgid "Status"
 msgstr "நிலை"
 
-#: ../lib/Galette/Core/Install.php:1178
+#: ../lib/Galette/Core/Install.php:1185
 #, safe-html
 msgid "Fields config and categories"
 msgstr "புலங்கள் கட்டமைப்பு மற்றும் வகைகள்"
 
-#: ../lib/Galette/Core/Install.php:1182 ../lib/Galette/Core/Install.php:1204
+#: ../lib/Galette/Core/Install.php:1189 ../lib/Galette/Core/Install.php:1211
 #, safe-html
 msgid "Mails texts"
 msgstr "அஞ்சல் நூல்கள்"
 
-#: ../lib/Galette/Core/Install.php:1186 ../lib/Galette/Core/Galette.php:448
+#: ../lib/Galette/Core/Install.php:1193 ../lib/Galette/Core/Galette.php:448
 #, safe-html
 msgid "Titles"
 msgstr "தலைப்புகள்"
 
-#: ../lib/Galette/Core/Install.php:1196
+#: ../lib/Galette/Core/Install.php:1203
 #, safe-html
 msgid "Update preferences"
 msgstr "விருப்பங்களை புதுப்பிக்கவும்"
 
-#: ../lib/Galette/Core/Install.php:1200
+#: ../lib/Galette/Core/Install.php:1207
 #, safe-html
 msgid "Update models"
 msgstr "புதுப்பிப்பு மாதிரிகள்"
@@ -1663,7 +1685,7 @@ msgstr "அனைத்தும்"
 #: ../lib/Galette/Core/Authentication.php:286
 #, ignore-safe-html, php-format, safe-html
 msgid "Logged in as:<br/>%login"
-msgstr "உள்நுழைந்தது: <br/>%உள்நுழைவு"
+msgstr "உள்நுழைந்தது: <br>%உள்நுழைவு"
 
 #: ../lib/Galette/Core/MailingHistory.php:481
 #, safe-html
@@ -1749,7 +1771,7 @@ msgid "Perform advanced search into members list"
 msgstr "உறுப்பினர்கள் பட்டியலில் மேம்பட்ட தேடலைச் செய்யுங்கள்"
 
 #: ../lib/Galette/Core/Galette.php:211
-#: ../../tempcache/pages/members_list.html.twig:114
+#: ../../tempcache/pages/members_list.html.twig:113
 #, safe-html
 msgid "Add a member"
 msgstr "ஒரு உறுப்பினரைச் சேர்க்கவும்"
@@ -1761,7 +1783,7 @@ msgstr "தரவுத்தளத்தில் புதிய உறுப�
 
 #: ../lib/Galette/Core/Galette.php:222 ../lib/Galette/Core/Galette.php:709
 #: ../lib/Galette/DynamicFields/DynamicField.php:547
-#: ../../tempcache/pages/members_list.html.twig:585
+#: ../../tempcache/pages/members_list.html.twig:584
 #, safe-html
 msgid "Contributions"
 msgstr "பங்களிப்புகள்"
@@ -1797,8 +1819,8 @@ msgid "View and filter transactions"
 msgstr "பரிவர்த்தனைகளைக் காணவும் வடிகட்டவும்"
 
 #: ../lib/Galette/Core/Galette.php:271
-#: ../../tempcache/pages/contributions_list.html.twig:309
-#: ../../tempcache/pages/contributions_list.html.twig:420
+#: ../../tempcache/pages/contributions_list.html.twig:304
+#: ../../tempcache/pages/contributions_list.html.twig:415
 #: ../../tempcache/pages/member_show.html.twig:200
 #, safe-html
 msgid "Add a membership fee"
@@ -1810,8 +1832,8 @@ msgid "Add new membership fee in database"
 msgstr "தரவுத்தளத்தில் புதிய உறுப்பினர் கட்டணத்தைச் சேர்க்கவும்"
 
 #: ../lib/Galette/Core/Galette.php:279
-#: ../../tempcache/pages/contributions_list.html.twig:323
-#: ../../tempcache/pages/contributions_list.html.twig:433
+#: ../../tempcache/pages/contributions_list.html.twig:318
+#: ../../tempcache/pages/contributions_list.html.twig:428
 #: ../../tempcache/pages/member_show.html.twig:215
 #, safe-html
 msgid "Add a donation"
@@ -1823,8 +1845,8 @@ msgid "Add new donation in database"
 msgstr "தரவுத்தளத்தில் புதிய நன்கொடை சேர்க்கவும்"
 
 #: ../lib/Galette/Core/Galette.php:292
-#: ../../tempcache/pages/transactions_list.html.twig:212
-#: ../../tempcache/pages/transactions_list.html.twig:271
+#: ../../tempcache/pages/transactions_list.html.twig:217
+#: ../../tempcache/pages/transactions_list.html.twig:276
 #, safe-html
 msgid "Add a transaction"
 msgstr "ஒரு பரிவர்த்தனை சேர்க்கவும்"
@@ -2075,14 +2097,14 @@ msgstr "வெகுசன சேர்க்க பங்களிப்பு�
 
 #: ../lib/Galette/Core/Galette.php:986
 #: ../../tempcache/elements/group.html.twig:379
-#: ../../tempcache/pages/contributions_list.html.twig:66
+#: ../../tempcache/pages/contributions_list.html.twig:61
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:57
 #, safe-html
 msgid "Delete"
 msgstr "நீக்கு"
 
 #: ../lib/Galette/Core/Galette.php:1002
-#: ../../tempcache/pages/members_list.html.twig:768
+#: ../../tempcache/pages/members_list.html.twig:767
 #, safe-html
 msgid "Mail"
 msgstr "அஞ்சல்"
@@ -2099,7 +2121,7 @@ msgid "Generate Member Cards"
 msgstr "உறுப்பினர் அட்டைகளை உருவாக்குங்கள்"
 
 #: ../lib/Galette/Core/Galette.php:1033
-#: ../../tempcache/pages/contributions_list.html.twig:66
+#: ../../tempcache/pages/contributions_list.html.twig:61
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:57
 #, safe-html
 msgid "Export as CSV"
@@ -2164,7 +2186,7 @@ msgstr ""
 "- மாதங்கள் வழங்குவது உறுப்பினரின் தொடக்கத்துடன் மட்டுமே ஒத்துப்போகும்."
 
 #: ../lib/Galette/Core/Preferences.php:623
-#: ../lib/Galette/Entity/Adherent.php:1255
+#: ../lib/Galette/Entity/Adherent.php:1250
 #: ../lib/Galette/Entity/Transaction.php:375
 #: ../lib/Galette/Entity/Contribution.php:538
 #, php-format, safe-html
@@ -2246,42 +2268,42 @@ msgstr "- தவறான வலைத்தள முகவரி."
 msgid "%name association's %status"
 msgstr "%பெயர் சங்கத்தின் %நிலை"
 
-#: ../lib/Galette/Core/Preferences.php:1236
+#: ../lib/Galette/Core/Preferences.php:1234
 #, safe-html
 msgid "Please define constant \"GALETTE_URI\" with the path to your instance."
 msgstr "உங்கள் நிகழ்வுக்கான பாதையுடன் நிலையான \"கேலட்_ரி\" ஐ வரையறுக்கவும்."
 
-#: ../lib/Galette/Core/Preferences.php:1255
-#: ../lib/Galette/Core/Preferences.php:1271 ../lib/Galette/IO/Csv.php:99
-#: ../lib/Galette/Entity/Document.php:446 ../lib/Galette/Entity/Texts.php:195
+#: ../lib/Galette/Core/Preferences.php:1253
+#: ../lib/Galette/Core/Preferences.php:1269 ../lib/Galette/IO/Csv.php:100
+#: ../lib/Galette/Entity/Document.php:447 ../lib/Galette/Entity/Texts.php:195
 #: ../../tempcache/pages/history.html.twig:343
 #: ../../tempcache/pages/mailings_list.html.twig:326
 #, safe-html
 msgid "Y-m-d H:i:s"
 msgstr "Y-m-d h: i: s"
 
-#: ../lib/Galette/Core/Preferences.php:1257
+#: ../lib/Galette/Core/Preferences.php:1255
 #, safe-html
 msgid "Never"
 msgstr "ஒருபோதும்"
 
-#: ../lib/Galette/Core/Preferences.php:1295
+#: ../lib/Galette/Core/Preferences.php:1293
 #, safe-html
 msgid "Current cards configuration may exceed page width!"
 msgstr "தற்போதைய அட்டைகள் உள்ளமைவு பக்க அகலத்தை விட அதிகமாக இருக்கலாம்!"
 
-#: ../lib/Galette/Core/Preferences.php:1306
+#: ../lib/Galette/Core/Preferences.php:1304
 #, safe-html
 msgid "Current cards configuration may exceed page height!"
 msgstr "தற்போதைய அட்டைகள் உள்ளமைவு பக்க உயரத்தை விட அதிகமாக இருக்கலாம்!"
 
-#: ../lib/Galette/Core/Preferences.php:1332
+#: ../lib/Galette/Core/Preferences.php:1330
 #: ../lib/Galette/Features/Replacements.php:804
 #, safe-html
 msgid "Main information"
 msgstr "முக்கிய செய்தி"
 
-#: ../lib/Galette/Core/Preferences.php:1339
+#: ../lib/Galette/Core/Preferences.php:1337
 #: ../../tempcache/elements/display_socials.html.twig:50
 #: ../../tempcache/elements/edit_socials.html.twig:81
 #: ../../tempcache/pages/preferences.html.twig:77
@@ -2382,24 +2404,24 @@ msgstr ""
 #: ../lib/Galette/Features/Dynamics.php:162
 #: ../lib/Galette/Features/Dynamics.php:175
 #: ../lib/Galette/Features/Dynamics.php:181
-#: ../lib/Galette/Entity/Adherent.php:808
-#: ../lib/Galette/Entity/Adherent.php:831
-#: ../lib/Galette/Entity/Adherent.php:844
-#: ../lib/Galette/Entity/Adherent.php:1359
-#: ../lib/Galette/Entity/Adherent.php:1393
-#: ../lib/Galette/Entity/Adherent.php:1399
-#: ../lib/Galette/Entity/Adherent.php:1900
+#: ../lib/Galette/Entity/Adherent.php:803
+#: ../lib/Galette/Entity/Adherent.php:826
+#: ../lib/Galette/Entity/Adherent.php:839
+#: ../lib/Galette/Entity/Adherent.php:1354
+#: ../lib/Galette/Entity/Adherent.php:1388
+#: ../lib/Galette/Entity/Adherent.php:1394
+#: ../lib/Galette/Entity/Adherent.php:1895
 #: ../lib/Galette/Entity/Contribution.php:623
 #: ../lib/Galette/Entity/ImportModel.php:196
 #: ../lib/Galette/Entity/SavedSearch.php:269
 #: ../lib/Galette/Entity/Group.php:666
 #: ../lib/Galette/Filters/AdvancedMembersList.php:570
 #: ../lib/Galette/Helpers/DatesHelper.php:50
-#: ../lib/Galette/Helpers/DatesHelper.php:69
-#: ../lib/Galette/Helpers/DatesHelper.php:82
-#: ../lib/Galette/Helpers/DatesHelper.php:104
-#: ../lib/Galette/Helpers/DatesHelper.php:141
-#: ../lib/Galette/Helpers/DatesHelper.php:218
+#: ../lib/Galette/Helpers/DatesHelper.php:70
+#: ../lib/Galette/Helpers/DatesHelper.php:84
+#: ../lib/Galette/Helpers/DatesHelper.php:106
+#: ../lib/Galette/Helpers/DatesHelper.php:143
+#: ../lib/Galette/Helpers/DatesHelper.php:222
 #: ../../tempcache/pages/member_form.html.twig:899
 #: ../../tempcache/pages/advanced_search.html.twig:1394
 #, safe-html
@@ -2426,6 +2448,7 @@ msgstr "பங்களிப்புகள் நீக்கப்பட்�
 msgid "Password is blacklisted!"
 msgstr "கடவுச்சொல் தடுப்புப்பட்டியலில் உள்ளது!"
 
+# "%length" and "%count" should not have be translated. I'm not able to fix.
 #: ../lib/Galette/Util/Password.php:91
 #, php-format, safe-html
 msgid "Too short (%length characters minimum, %count found)"
@@ -2628,8 +2651,8 @@ msgstr "மேலாளர்கள்:"
 #: ../../tempcache/elements/edit_core_fields.html.twig:49
 #: ../../tempcache/pages/plugins.html.twig:68
 #: ../../tempcache/pages/plugins.html.twig:234
-#: ../../tempcache/pages/members_list.html.twig:521
-#: ../../tempcache/pages/members_list.html.twig:529
+#: ../../tempcache/pages/members_list.html.twig:520
+#: ../../tempcache/pages/members_list.html.twig:528
 #: ../../tempcache/pages/contributions_types_list.html.twig:69
 #: ../../tempcache/pages/contributions_types_list.html.twig:97
 #: ../../tempcache/pages/contributions_types_list.html.twig:102
@@ -2645,7 +2668,7 @@ msgstr "மேலாளர்கள்:"
 #: ../../tempcache/pages/mailing_form.html.twig:122
 #: ../../tempcache/pages/saved_searches_list.html.twig:81
 #: ../../tempcache/pages/saved_searches_list.html.twig:150
-#: ../../tempcache/pages/members_public_list.html.twig:91
+#: ../../tempcache/pages/members_public_list.html.twig:90
 #: ../../tempcache/pages/export.html.twig:136
 #: ../../tempcache/pages/export.html.twig:263
 #, safe-html
@@ -2657,8 +2680,8 @@ msgstr "பெயர்"
 #: ../lib/Galette/Features/Replacements.php:354
 #: ../../tempcache/elements/member_card.html.twig:152
 #: ../../tempcache/pages/preferences.html.twig:2170
-#: ../../tempcache/pages/members_public_list.html.twig:99
-#: ../../tempcache/pages/members_public_list.html.twig:313
+#: ../../tempcache/pages/members_public_list.html.twig:98
+#: ../../tempcache/pages/members_public_list.html.twig:312
 #, safe-html
 msgid "Email"
 msgstr "மின்னஞ்சல்"
@@ -2684,8 +2707,8 @@ msgstr "வடிகட்டப்பட்ட_மெம்பர்ச்ல�
 
 #: ../lib/Galette/IO/MembersCsv.php:209
 #: ../lib/Galette/Features/Replacements.php:624
-#: ../lib/Galette/Entity/Adherent.php:1866
-#: ../../tempcache/modals/mass_change_members.html.twig:171
+#: ../lib/Galette/Entity/Adherent.php:1861
+#: ../../tempcache/modals/mass_change_members.html.twig:187
 #: ../../tempcache/elements/ajax_members.html.twig:105
 #: ../../tempcache/elements/group_persons.html.twig:103
 #: ../../tempcache/pages/advanced_search.html.twig:1162
@@ -2697,8 +2720,8 @@ msgstr "மனிதன்"
 
 #: ../lib/Galette/IO/MembersCsv.php:212
 #: ../lib/Galette/Features/Replacements.php:626
-#: ../lib/Galette/Entity/Adherent.php:1868
-#: ../../tempcache/modals/mass_change_members.html.twig:162
+#: ../lib/Galette/Entity/Adherent.php:1863
+#: ../../tempcache/modals/mass_change_members.html.twig:178
 #: ../../tempcache/elements/ajax_members.html.twig:116
 #: ../../tempcache/elements/group_persons.html.twig:114
 #: ../../tempcache/pages/advanced_search.html.twig:1162
@@ -2710,8 +2733,8 @@ msgstr "பெண்"
 
 #: ../lib/Galette/IO/MembersCsv.php:215
 #: ../lib/Galette/Features/Replacements.php:628
-#: ../lib/Galette/Entity/Adherent.php:1870
-#: ../../tempcache/modals/mass_change_members.html.twig:153
+#: ../lib/Galette/Entity/Adherent.php:1865
+#: ../../tempcache/modals/mass_change_members.html.twig:169
 #: ../../tempcache/pages/advanced_search.html.twig:1162
 #: ../../tempcache/pages/advanced_search.html.twig:1681
 #: ../../tempcache/components/forms/gender.html.twig:128
@@ -2722,10 +2745,10 @@ msgstr "குறிப்பிடப்படாத"
 #: ../lib/Galette/IO/MembersCsv.php:223 ../lib/Galette/IO/MembersCsv.php:227
 #: ../lib/Galette/IO/MembersCsv.php:231 ../lib/Galette/IO/MembersCsv.php:235
 #: ../lib/Galette/Features/Replacements.php:749
-#: ../lib/Galette/Entity/Adherent.php:1831
-#: ../lib/Galette/Entity/Adherent.php:1833
-#: ../lib/Galette/Entity/Adherent.php:1835
-#: ../lib/Galette/Entity/Adherent.php:1837
+#: ../lib/Galette/Entity/Adherent.php:1826
+#: ../lib/Galette/Entity/Adherent.php:1828
+#: ../lib/Galette/Entity/Adherent.php:1830
+#: ../lib/Galette/Entity/Adherent.php:1832
 #: ../../tempcache/elements/edit_dynamic_fields.html.twig:132
 #: ../../tempcache/elements/js/messages.js.twig:331
 #: ../../tempcache/elements/display_dynamic_fields.html.twig:140
@@ -2745,10 +2768,10 @@ msgstr "ஆம்"
 #: ../lib/Galette/IO/MembersCsv.php:223 ../lib/Galette/IO/MembersCsv.php:227
 #: ../lib/Galette/IO/MembersCsv.php:231 ../lib/Galette/IO/MembersCsv.php:235
 #: ../lib/Galette/Features/Replacements.php:749
-#: ../lib/Galette/Entity/Adherent.php:1831
-#: ../lib/Galette/Entity/Adherent.php:1833
-#: ../lib/Galette/Entity/Adherent.php:1835
-#: ../lib/Galette/Entity/Adherent.php:1837
+#: ../lib/Galette/Entity/Adherent.php:1826
+#: ../lib/Galette/Entity/Adherent.php:1828
+#: ../lib/Galette/Entity/Adherent.php:1830
+#: ../lib/Galette/Entity/Adherent.php:1832
 #: ../../tempcache/elements/edit_dynamic_fields.html.twig:134
 #: ../../tempcache/elements/js/messages.js.twig:349
 #: ../../tempcache/elements/display_dynamic_fields.html.twig:146
@@ -2787,43 +2810,43 @@ msgstr "Mmmm, eeee டி ஒய்"
 msgid "Signature"
 msgstr "கையொப்பம்"
 
-#: ../lib/Galette/IO/Charts.php:126 ../lib/Galette/Filters/MembersList.php:300
+#: ../lib/Galette/IO/Charts.php:121 ../lib/Galette/Filters/MembersList.php:300
 #, safe-html
 msgid "Staff members"
 msgstr "பணியாளர்கள்"
 
-#: ../lib/Galette/IO/Charts.php:165
+#: ../lib/Galette/IO/Charts.php:160
 #, safe-html
 msgid "Due free"
 msgstr "சரியான இலவச"
 
-#: ../lib/Galette/IO/Charts.php:181
+#: ../lib/Galette/IO/Charts.php:176
 #, safe-html
 msgid "Never contribute"
 msgstr "ஒருபோதும் பங்களிக்க வேண்டாம்"
 
-#: ../lib/Galette/IO/Charts.php:203
+#: ../lib/Galette/IO/Charts.php:198
 #, safe-html
 msgid "Impending due dates"
 msgstr "வரவிருக்கும் தேதிகள்"
 
-#: ../lib/Galette/IO/Charts.php:219
+#: ../lib/Galette/IO/Charts.php:214
 #, safe-html
 msgid "Up to date"
 msgstr "புதுப்பித்த நிலையில்"
 
-#: ../lib/Galette/IO/Charts.php:235
+#: ../lib/Galette/IO/Charts.php:230
 #: ../../tempcache/pages/reminder.html.twig:124
 #, safe-html
 msgid "Late"
 msgstr "தாமதமாக"
 
-#: ../lib/Galette/IO/Charts.php:290
+#: ../lib/Galette/IO/Charts.php:285
 #, safe-html
 msgid "Individuals"
 msgstr "தனிநபர்கள்"
 
-#: ../lib/Galette/IO/Charts.php:291
+#: ../lib/Galette/IO/Charts.php:286
 #, safe-html
 msgid "Companies"
 msgstr "நிறுவனங்கள்"
@@ -2849,7 +2872,7 @@ msgstr "சிட்டைகள்"
 msgid "File %filename cannot be open!"
 msgstr "கோப்பு %கோப்பு பெயர் திறந்திருக்க முடியாது!"
 
-#: ../lib/Galette/IO/CsvIn.php:278
+#: ../lib/Galette/IO/CsvIn.php:279
 #, ignore-ellipsis, safe-html
 msgid ""
 "Fields count mismatch... There should be %should_count fields and there are "
@@ -2858,47 +2881,47 @@ msgstr ""
 "புலங்கள் பொருந்தாத தன்மையை எண்ணுகின்றன ... %செய்ய வேண்டிய_கவுண்ட் புலங்கள் "
 "இருக்க வேண்டும் மற்றும் %எண்ணிக்கை (வரிசை %வரிசை) இருக்க வேண்டும்"
 
-#: ../lib/Galette/IO/CsvIn.php:300
+#: ../lib/Galette/IO/CsvIn.php:301
 #, safe-html
 msgid "Field %field is required, but missing in row %row"
 msgstr "புலம் %புலம் தேவை, ஆனால் வரிசை %வரிசையில் காணவில்லை"
 
-#: ../lib/Galette/IO/CsvIn.php:322
+#: ../lib/Galette/IO/CsvIn.php:323
 #, php-format, safe-html
 msgid "Status %status does not exists!"
 msgstr "நிலை %நிலை இல்லை!"
 
-#: ../lib/Galette/IO/CsvIn.php:342
+#: ../lib/Galette/IO/CsvIn.php:343
 #, safe-html
 msgid "Title %title does not exists!"
 msgstr "தலைப்பு %தலைப்பு இல்லை!"
 
-#: ../lib/Galette/IO/CsvIn.php:358
+#: ../lib/Galette/IO/CsvIn.php:359
 #, safe-html
 msgid "from another member in import"
 msgstr "இறக்குமதியில் உள்ள மற்றொரு உறுப்பினரிடமிருந்து"
 
-#: ../lib/Galette/IO/CsvIn.php:358
+#: ../lib/Galette/IO/CsvIn.php:359
 #, safe-html
 msgid "from member %id_adh"
 msgstr "உறுப்பினரிடமிருந்து %id_adh"
 
-#: ../lib/Galette/IO/CsvIn.php:364
+#: ../lib/Galette/IO/CsvIn.php:365
 #, safe-html
 msgid "Email address %address is already used! (%extra)"
 msgstr "மின்னஞ்சல் முகவரி %முகவரி ஏற்கனவே பயன்படுத்தப்பட்டுள்ளது! (%கூடுதல்)"
 
-#: ../lib/Galette/IO/CsvIn.php:390
+#: ../lib/Galette/IO/CsvIn.php:391
 #, safe-html
 msgid "Lang %lang does not exists!"
 msgstr "லாங் %லாங் இல்லை!"
 
-#: ../lib/Galette/IO/CsvIn.php:443
+#: ../lib/Galette/IO/CsvIn.php:444
 #, safe-html
 msgid "File is empty!"
 msgstr "கோப்பு காலியாக உள்ளது!"
 
-#: ../lib/Galette/IO/CsvIn.php:534 ../lib/Galette/IO/CsvIn.php:545
+#: ../lib/Galette/IO/CsvIn.php:536 ../lib/Galette/IO/CsvIn.php:547
 #, safe-html
 msgid "An error occurred storing member at row %row (%name):"
 msgstr "வரிசை %வரிசையில் ( %பெயர்) உறுப்பினரை சேமிக்கும் பிழை ஏற்பட்டது:"
@@ -2948,7 +2971,7 @@ msgid "File extension is not allowed, only %s files are."
 msgstr "கோப்பு நீட்டிப்பு அனுமதிக்கப்படவில்லை, %s கோப்புகள் மட்டுமே."
 
 #: ../lib/Galette/IO/FileTrait.php:516
-#: ../lib/Galette/Features/Dynamics.php:281
+#: ../lib/Galette/Features/Dynamics.php:282
 #, php-format, safe-html
 msgid "File is too big. Maximum allowed size is %dKo"
 msgstr "கோப்பு மிகப் பெரியது. அதிகபட்சமாக அனுமதிக்கப்பட்ட அளவு %dko ஆகும்"
@@ -3043,14 +3066,14 @@ msgstr "விலைப்பட்டியல்"
 
 #: ../lib/Galette/IO/PdfMembersCardsAdaptative.php:236
 #: ../../tempcache/pages/transaction_form.html.twig:235
-#: ../../tempcache/pages/contributions_list.html.twig:459
-#: ../../tempcache/pages/contributions_list.html.twig:671
+#: ../../tempcache/pages/contributions_list.html.twig:454
+#: ../../tempcache/pages/contributions_list.html.twig:659
 #: ../../tempcache/pages/history.html.twig:185
 #: ../../tempcache/pages/contribution_form.html.twig:310
 #: ../../tempcache/pages/scheduledpayment_form.html.twig:196
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:224
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:377
-#: ../../tempcache/pages/transactions_list.html.twig:402
+#: ../../tempcache/pages/transactions_list.html.twig:407
 #, safe-html
 msgid "Member"
 msgstr "உறுப்பினர்"
@@ -3079,8 +3102,8 @@ msgstr "பயனர், படிக்க/எழுத"
 #: ../lib/Galette/Features/Permissions.php:72
 #: ../../tempcache/elements/ajax_members.html.twig:157
 #: ../../tempcache/elements/group_persons.html.twig:153
-#: ../../tempcache/pages/members_list.html.twig:650
-#: ../../tempcache/pages/members_list.html.twig:808
+#: ../../tempcache/pages/members_list.html.twig:649
+#: ../../tempcache/pages/members_list.html.twig:807
 #: ../../tempcache/pages/member_form.html.twig:685
 #: ../../tempcache/pages/member_show.html.twig:559
 #: ../../tempcache/components/forms/groups.html.twig:156
@@ -3091,8 +3114,8 @@ msgstr "குழு மேலாளர்"
 #: ../lib/Galette/Features/Permissions.php:73
 #: ../../tempcache/elements/ajax_members.html.twig:146
 #: ../../tempcache/elements/group_persons.html.twig:142
-#: ../../tempcache/pages/members_list.html.twig:643
-#: ../../tempcache/pages/members_list.html.twig:797
+#: ../../tempcache/pages/members_list.html.twig:642
+#: ../../tempcache/pages/members_list.html.twig:796
 #: ../../tempcache/pages/status_list.html.twig:156
 #: ../../tempcache/pages/preferences.html.twig:400
 #, safe-html
@@ -3217,7 +3240,7 @@ msgid "Last name"
 msgstr "கடைசி பெயர்"
 
 #: ../lib/Galette/Features/Replacements.php:250
-#: ../lib/Galette/Features/Replacements.php:346 ../includes/i18n.inc.php:314
+#: ../lib/Galette/Features/Replacements.php:346 ../includes/i18n.inc.php:90
 #, safe-html
 msgid "First name"
 msgstr "முதல் பெயர்"
@@ -3225,8 +3248,8 @@ msgstr "முதல் பெயர்"
 #: ../lib/Galette/Features/Replacements.php:254
 #: ../../tempcache/elements/group_persons.html.twig:55
 #: ../../tempcache/pages/preferences.html.twig:2186
-#: ../../tempcache/pages/members_public_list.html.twig:91
-#: ../../tempcache/pages/members_public_list.html.twig:302
+#: ../../tempcache/pages/members_public_list.html.twig:90
+#: ../../tempcache/pages/members_public_list.html.twig:301
 #, safe-html
 msgid "Nickname"
 msgstr "புனைப்பெயர்"
@@ -3278,7 +3301,7 @@ msgstr "சிப்கோட்"
 msgid "Town"
 msgstr "நகரம்"
 
-#: ../lib/Galette/Features/Replacements.php:294 ../includes/i18n.inc.php:311
+#: ../lib/Galette/Features/Replacements.php:294 ../includes/i18n.inc.php:87
 #, safe-html
 msgid "Country"
 msgstr "நாடு"
@@ -3315,8 +3338,8 @@ msgstr "பங்களிப்பு சிட்டை"
 
 #: ../lib/Galette/Features/Replacements.php:380
 #: ../../tempcache/pages/transaction_form.html.twig:245
-#: ../../tempcache/pages/contributions_list.html.twig:467
-#: ../../tempcache/pages/contributions_list.html.twig:735
+#: ../../tempcache/pages/contributions_list.html.twig:462
+#: ../../tempcache/pages/contributions_list.html.twig:723
 #: ../../tempcache/pages/contributions_types_list.html.twig:73
 #: ../../tempcache/pages/contributions_types_list.html.twig:109
 #: ../../tempcache/pages/contributions_types_list.html.twig:114
@@ -3326,8 +3349,8 @@ msgstr "பங்களிப்பு சிட்டை"
 #: ../../tempcache/pages/scheduledpayment_form.html.twig:211
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:224
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:395
-#: ../../tempcache/pages/transactions_list.html.twig:309
-#: ../../tempcache/pages/transactions_list.html.twig:449
+#: ../../tempcache/pages/transactions_list.html.twig:314
+#: ../../tempcache/pages/transactions_list.html.twig:454
 #: ../../tempcache/pages/advanced_search.html.twig:797
 #, safe-html
 msgid "Amount"
@@ -3373,12 +3396,12 @@ msgid "Contribution id"
 msgstr "பங்களிப்பு ஐடி"
 
 #: ../lib/Galette/Features/Replacements.php:412
-#: ../../tempcache/pages/contributions_list.html.twig:467
-#: ../../tempcache/pages/contributions_list.html.twig:741
+#: ../../tempcache/pages/contributions_list.html.twig:462
+#: ../../tempcache/pages/contributions_list.html.twig:729
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:224
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:401
-#: ../../tempcache/pages/transactions_list.html.twig:314
-#: ../../tempcache/pages/transactions_list.html.twig:455
+#: ../../tempcache/pages/transactions_list.html.twig:319
+#: ../../tempcache/pages/transactions_list.html.twig:460
 #: ../../tempcache/pages/advanced_search.html.twig:860
 #: ../../tempcache/pages/advanced_search.html.twig:865
 #, safe-html
@@ -3387,7 +3410,7 @@ msgstr "கட்டண வகை"
 
 #: ../lib/Galette/Features/Replacements.php:416
 #: ../lib/Galette/Entity/Contribution.php:1105
-#: ../lib/Galette/Entity/Texts.php:625
+#: ../lib/Galette/Entity/Texts.php:614
 #: ../lib/Galette/Entity/PdfContribution.php:67
 #, safe-html
 msgid "Contribution information"
@@ -3407,9 +3430,9 @@ msgstr "தேவையான புலம் %புலம் இல்லை"
 #. TRANS %1$s is the expected dat format, %2$s the field label
 #. TRANS: %1$s is the date format, %2$s is the field name
 #: ../lib/Galette/Features/Dynamics.php:180
-#: ../lib/Galette/Entity/Adherent.php:1398
-#: ../lib/Galette/Helpers/DatesHelper.php:81
-#: ../lib/Galette/Helpers/DatesHelper.php:181
+#: ../lib/Galette/Entity/Adherent.php:1393
+#: ../lib/Galette/Helpers/DatesHelper.php:83
+#: ../lib/Galette/Helpers/DatesHelper.php:184
 #, php-format, safe-html
 msgid "- Wrong date format (%1$s) for %2$s!"
 msgstr "- %2$s க்கு தவறான தேதி வடிவம் ( %1$s)!"
@@ -3427,7 +3450,7 @@ msgstr "மாற்றியமைக்கப்பட்ட"
 #: ../lib/Galette/Entity/Reminder.php:250
 #, ignore-safe-html, safe-html
 msgid "%name <%mail> (%days days)"
-msgstr "%பெயர் <%அஞ்சல்> (%நாட்கள்)"
+msgstr "%பெயர் &lt;%அஞ்சல்&gt; (%நாட்கள்)"
 
 #: ../lib/Galette/Entity/Reminder.php:257
 #, safe-html
@@ -3459,163 +3482,166 @@ msgstr "%உறுப்பினர் நினைவூட்டலை அன
 msgid "%name (#%id - %days days)"
 msgstr "%பெயர் (# %ஐடி - %நாட்கள்)"
 
-#: ../lib/Galette/Entity/Adherent.php:798
+#: ../lib/Galette/Entity/Adherent.php:793
 #, safe-html
 msgid "Freed of dues"
 msgstr "நிலுவைத் தொகையிலிருந்து விடுபடுகிறது"
 
-#: ../lib/Galette/Entity/Adherent.php:814
+# "%days" and "%date" should not have be translated. I'm not able to fix.
+#: ../lib/Galette/Entity/Adherent.php:809
 #, php-format, safe-html
 msgid "Never contributed: Registered %days days ago (since %date)"
 msgstr ""
 "ஒருபோதும் பங்களிக்கவில்லை: பதிவுசெய்யப்பட்ட %நாட்கள் முன்பு ( "
 "%தேதியிலிருந்து)"
 
-#: ../lib/Galette/Entity/Adherent.php:817
+#: ../lib/Galette/Entity/Adherent.php:812
 #: ../lib/Galette/Filters/MembersList.php:299
-#: ../../tempcache/pages/members_list.html.twig:552
+#: ../../tempcache/pages/members_list.html.twig:551
 #, safe-html
 msgid "Never contributed"
 msgstr "ஒருபோதும் பங்களிக்கவில்லை"
 
-#: ../lib/Galette/Entity/Adherent.php:822
+#: ../lib/Galette/Entity/Adherent.php:817
 #, safe-html
 msgid "Last day!"
 msgstr "கடைசி நாள்!"
 
-#: ../lib/Galette/Entity/Adherent.php:824
+#: ../lib/Galette/Entity/Adherent.php:819
 #, safe-html
 msgid "Late since today!"
 msgstr "இன்று முதல் தாமதமாக!"
 
-#: ../lib/Galette/Entity/Adherent.php:836
+# "%days" and "%date" should not have be translated. I'm not able to fix.
+#: ../lib/Galette/Entity/Adherent.php:831
 #, ignore-unnamed-format, php-format, safe-html
 msgid "%days days remaining (ending on %date)"
 msgstr "%நாட்கள் மீதமுள்ள ( %தேதியில் முடிவடையும்)"
 
-#: ../lib/Galette/Entity/Adherent.php:850
+# "%days" and "%date" should not have be translated. I'm not able to fix.
+#: ../lib/Galette/Entity/Adherent.php:845
 #, ignore-unnamed-format, php-format, safe-html
 msgid "Late of %days days (since %date)"
 msgstr "%நாட்களின் பிற்பகுதியில் ( %தேதியிலிருந்து)"
 
-#: ../lib/Galette/Entity/Adherent.php:853
+#: ../lib/Galette/Entity/Adherent.php:848
 #, safe-html
 msgid "No longer member"
 msgstr "இனி உறுப்பினர் இல்லை"
 
-#: ../lib/Galette/Entity/Adherent.php:1268
-#: ../lib/Galette/Entity/Adherent.php:1278
+#: ../lib/Galette/Entity/Adherent.php:1263
+#: ../lib/Galette/Entity/Adherent.php:1273
 #, safe-html
 msgid "You have to select a group you own!"
 msgstr "உங்களுக்கு சொந்தமான ஒரு குழுவைத் தேர்ந்தெடுக்க வேண்டும்!"
 
-#: ../lib/Galette/Entity/Adherent.php:1376
+#: ../lib/Galette/Entity/Adherent.php:1371
 #, safe-html
 msgid "- Birthdate must be set in the past!"
 msgstr "- பிறந்த தேதி கடந்த காலத்தில் அமைக்கப்பட வேண்டும்!"
 
-#: ../lib/Galette/Entity/Adherent.php:1384
+#: ../lib/Galette/Entity/Adherent.php:1379
 #, safe-html
 msgid "- Members must be less than 200 years old (currently %years)!"
 msgstr ""
 "- உறுப்பினர்கள் 200 வயதுக்கு குறைவாக இருக்க வேண்டும் (தற்போது %ஆண்டுகள்)!"
 
-#: ../lib/Galette/Entity/Adherent.php:1418
+#: ../lib/Galette/Entity/Adherent.php:1413
 #, safe-html
 msgid "- Non-valid E-Mail address!"
 msgstr "-செல்லுபடியாகாத மின்னஞ்சல் முகவரி!"
 
-#: ../lib/Galette/Entity/Adherent.php:1436
+#: ../lib/Galette/Entity/Adherent.php:1431
 #, safe-html
 msgid "- This E-Mail address is already used by another member!"
 msgstr ""
 "- இந்த மின்னஞ்சல் முகவரி ஏற்கனவே மற்றொரு உறுப்பினரால் பயன்படுத்தப்படுகிறது!"
 
-#: ../lib/Galette/Entity/Adherent.php:1443
-#: ../lib/Galette/Entity/Adherent.php:1485
+#: ../lib/Galette/Entity/Adherent.php:1438
+#: ../lib/Galette/Entity/Adherent.php:1480
 #, safe-html
 msgid "An error has occurred while looking if login already exists."
 msgstr "உள்நுழைவு ஏற்கனவே இருக்கிறதா என்று பார்க்கும்போது பிழை ஏற்பட்டது."
 
-#: ../lib/Galette/Entity/Adherent.php:1453
+#: ../lib/Galette/Entity/Adherent.php:1448
 #, safe-html
 msgid "- The username must be composed of at least %i characters!"
 msgstr "- பயனர்பெயர் குறைந்தது %i எழுத்துக்களால் ஆனதாக இருக்க வேண்டும்!"
 
-#: ../lib/Galette/Entity/Adherent.php:1458
+#: ../lib/Galette/Entity/Adherent.php:1453
 #, safe-html
 msgid "- The username cannot contain the @ character"
 msgstr "- பயனர்பெயரில் @ எழுத்து இருக்க முடியாது"
 
-#: ../lib/Galette/Entity/Adherent.php:1478
+#: ../lib/Galette/Entity/Adherent.php:1473
 #, safe-html
 msgid "- This username is already in use, please choose another one!"
 msgstr ""
 "- இந்த பயனர்பெயர் ஏற்கனவே பயன்பாட்டில் உள்ளது, தயவுசெய்து ஒன்றைத் "
 "தேர்வுசெய்க!"
 
-#: ../lib/Galette/Entity/Adherent.php:1501
+#: ../lib/Galette/Entity/Adherent.php:1496
 #, safe-html
 msgid "Password misrepeated: "
-msgstr "கடவுச்சொல் தவறாகப் பயன்படுத்தப்பட்டது:"
+msgstr "கடவுச்சொல் தவறாகப் பயன்படுத்தப்பட்டது: "
 
-#: ../lib/Galette/Entity/Adherent.php:1535
+#: ../lib/Galette/Entity/Adherent.php:1530
 #, safe-html
 msgid "Status #%id does not exists in database."
 msgstr "நிலை #%ஐடி தரவுத்தளத்தில் இல்லை."
 
-#: ../lib/Galette/Entity/Adherent.php:1551
+#: ../lib/Galette/Entity/Adherent.php:1546
 #, safe-html
 msgid "Gender %gender does not exists!"
 msgstr "பாலின %பாலினம் இல்லை!"
 
-#: ../lib/Galette/Entity/Adherent.php:1557
+#: ../lib/Galette/Entity/Adherent.php:1552
 #, safe-html
 msgid "A member cannot be its own parent!"
 msgstr "ஒரு உறுப்பினர் அதன் சொந்த பெற்றோராக இருக்க முடியாது!"
 
-#: ../lib/Galette/Entity/Adherent.php:1681
+#: ../lib/Galette/Entity/Adherent.php:1676
 #, ignore-end-colon, ignore-end-space, safe-html
 msgid "Self_subscription as a member: "
 msgstr "உறுப்பினராக சுய_சப்ச்கிரிப்சன்:"
 
-#: ../lib/Galette/Entity/Adherent.php:1687
+#: ../lib/Galette/Entity/Adherent.php:1682
 #, safe-html
 msgid "Member card added"
 msgstr "உறுப்பினர் அட்டை சேர்க்கப்பட்டது"
 
-#: ../lib/Galette/Entity/Adherent.php:1694
+#: ../lib/Galette/Entity/Adherent.php:1689
 #, safe-html
 msgid "Fail to add new member."
 msgstr "புதிய உறுப்பினரைச் சேர்க்கத் தவறிவிட்டது."
 
-#: ../lib/Galette/Entity/Adherent.php:1724
+#: ../lib/Galette/Entity/Adherent.php:1719
 #, safe-html
 msgid "Member card updated"
 msgstr "உறுப்பினர் அட்டை புதுப்பிக்கப்பட்டது"
 
 #. Activity flag for members, masculine
-#: ../lib/Galette/Entity/Adherent.php:1839
+#: ../lib/Galette/Entity/Adherent.php:1834
 #: ../../tempcache/components/forms/account.html.twig:72
 #, ignore-inconsistent, safe-html
 msgid "Active"
 msgstr "செயலில்"
 
-#: ../lib/Galette/Entity/Adherent.php:1839
-#: ../../tempcache/pages/contributions_list.html.twig:278
-#: ../../tempcache/pages/transactions_list.html.twig:188
+#: ../lib/Galette/Entity/Adherent.php:1834
+#: ../../tempcache/pages/contributions_list.html.twig:273
+#: ../../tempcache/pages/transactions_list.html.twig:193
 #: ../../tempcache/components/forms/account.html.twig:80
 #, safe-html
 msgid "Inactive"
 msgstr "செயலற்றது"
 
-#: ../lib/Galette/Entity/Adherent.php:2130
+#: ../lib/Galette/Entity/Adherent.php:2125
 #: ../../tempcache/pages/member_form.html.twig:913
 #, safe-html
 msgid " (%age years old)"
-msgstr "(%வயது)"
+msgstr " (%வயது)"
 
-#: ../lib/Galette/Entity/Adherent.php:2208
+#: ../lib/Galette/Entity/Adherent.php:2203
 #, safe-html
 msgid "Duplicated from %name (%id)"
 msgstr "%பெயரிலிருந்து ( %ஐடி) நகல்"
@@ -3683,17 +3709,17 @@ msgstr ""
 "- அனைத்து பங்களிப்புகளின் கூட்டுத்தொகை தொடர்புடைய பரிவர்த்தனை தொகையை "
 "மீறுகிறது."
 
-#: ../lib/Galette/Entity/Transaction.php:442
+#: ../lib/Galette/Entity/Transaction.php:440
 #, safe-html
 msgid "Transaction added"
 msgstr "பரிவர்த்தனை சேர்க்கப்பட்டது"
 
-#: ../lib/Galette/Entity/Transaction.php:447
+#: ../lib/Galette/Entity/Transaction.php:445
 #, safe-html
 msgid "Fail to add new transaction."
 msgstr "புதிய பரிவர்த்தனையைச் சேர்க்கத் தவறியது."
 
-#: ../lib/Galette/Entity/Transaction.php:461
+#: ../lib/Galette/Entity/Transaction.php:459
 #, safe-html
 msgid "Transaction updated"
 msgstr "பரிவர்த்தனை புதுப்பிக்கப்பட்டது"
@@ -3717,7 +3743,7 @@ msgid "Contributor:"
 msgstr "பங்களிப்பாளர்:"
 
 #: ../lib/Galette/Entity/Contribution.php:211
-#: ../../tempcache/pages/contributions_list.html.twig:170
+#: ../../tempcache/pages/contributions_list.html.twig:165
 #: ../../tempcache/pages/contribution_form.html.twig:143
 #, safe-html
 msgid "Contribution type:"
@@ -3733,8 +3759,8 @@ msgstr "கருத்துரைகள்:"
 #: ../lib/Galette/Entity/Contribution.php:227
 #: ../../tempcache/modals/members_attendance_sheet.html.twig:132
 #: ../../tempcache/pages/transaction_form.html.twig:216
-#: ../../tempcache/pages/contributions_list.html.twig:451
-#: ../../tempcache/pages/contributions_list.html.twig:650
+#: ../../tempcache/pages/contributions_list.html.twig:446
+#: ../../tempcache/pages/contributions_list.html.twig:638
 #: ../../tempcache/pages/history.html.twig:118
 #: ../../tempcache/pages/history.html.twig:341
 #: ../../tempcache/pages/import.html.twig:98
@@ -3745,8 +3771,8 @@ msgstr "கருத்துரைகள்:"
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:91
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:224
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:383
-#: ../../tempcache/pages/transactions_list.html.twig:288
-#: ../../tempcache/pages/transactions_list.html.twig:393
+#: ../../tempcache/pages/transactions_list.html.twig:293
+#: ../../tempcache/pages/transactions_list.html.twig:398
 #: ../../tempcache/pages/export.html.twig:140
 #: ../../tempcache/pages/export.html.twig:186
 #, safe-html
@@ -3790,7 +3816,7 @@ msgstr "- காலம் ஒரு நேர்மறையான முழு 
 #: ../lib/Galette/Entity/Contribution.php:622
 #, safe-html
 msgid "- Membership period overlaps period starting at "
-msgstr "- உறுப்பினர் காலம் ஒன்றுடன் ஒன்று தொடங்குகிறது"
+msgstr "- உறுப்பினர் காலம் ஒன்றுடன் ஒன்று தொடங்குகிறது "
 
 #: ../lib/Galette/Entity/Contribution.php:691
 #, safe-html
@@ -3824,29 +3850,29 @@ msgid "Cannot change payment type if there is an attached scheduled payment"
 msgstr ""
 "இணைக்கப்பட்ட திட்டமிடப்பட்ட கட்டணம் இருந்தால் கட்டண வகையை மாற்ற முடியாது"
 
-#: ../lib/Galette/Entity/Document.php:462
+#: ../lib/Galette/Entity/Document.php:463
 #, safe-html
 msgid "Association status"
 msgstr "சங்க நிலை"
 
-#: ../lib/Galette/Entity/Document.php:463
+#: ../lib/Galette/Entity/Document.php:464
 #, safe-html
 msgid "Rules of procedure"
 msgstr "நடைமுறை விதிகள்"
 
-#: ../lib/Galette/Entity/Document.php:464
+#: ../lib/Galette/Entity/Document.php:465
 #: ../../tempcache/elements/edit_pdf_models.html.twig:194
 #: ../../tempcache/pages/member_show.html.twig:160
 #, safe-html
 msgid "Adhesion form"
 msgstr "ஒட்டுதல் வடிவம்"
 
-#: ../lib/Galette/Entity/Document.php:465
+#: ../lib/Galette/Entity/Document.php:466
 #, safe-html
 msgid "Meeting minutes"
 msgstr "சந்திப்பு நிமிடங்கள்"
 
-#: ../lib/Galette/Entity/Document.php:466
+#: ../lib/Galette/Entity/Document.php:467
 #, safe-html
 msgid "Votes results"
 msgstr "வாக்குகள் முடிவுகள்"
@@ -3886,7 +3912,7 @@ msgstr "விலைப்பட்டியல்/ரசீது பதிவ�
 msgid "Galette's change password URI"
 msgstr "கேலட்டின் மாற்றம் கடவுச்சொல் யூரி"
 
-#: ../lib/Galette/Entity/Texts.php:632
+#: ../lib/Galette/Entity/Texts.php:621
 #, safe-html
 msgid "Mail specific"
 msgstr "அஞ்சல் குறிப்பிட்ட"
@@ -4014,6 +4040,7 @@ msgstr "வலைப்பதிவு"
 msgid "Discord"
 msgstr "முரண்பாடு"
 
+# "%field" and "%chars" should not have be translated. I'm not able to fix.
 #: ../lib/Galette/Entity/PdfModel.php:296
 #, ignore-unnamed-format, php-format, safe-html
 msgid "%field should be less than %chars characters long."
@@ -4112,7 +4139,7 @@ msgid "Group has been detached from its parent"
 msgstr "குழு அதன் பெற்றோரிடமிருந்து பிரிக்கப்பட்டுள்ளது"
 
 #: ../lib/Galette/Entity/Group.php:437
-#: ../../tempcache/pages/groups_list.html.twig:226
+#: ../../tempcache/pages/groups_list.html.twig:225
 #, safe-html
 msgid "The group name you have requested already exists in the database."
 msgstr "நீங்கள் ஏற்கனவே கோரிய குழு பெயர் தரவுத்தளத்தில் உள்ளது."
@@ -4345,8 +4372,8 @@ msgstr "நிர்வாகிகள்"
 msgid "Non members"
 msgstr "உறுப்பினர்கள் அல்லாதவர்கள்"
 
-#: ../lib/Galette/Helpers/DatesHelper.php:102
-#: ../lib/Galette/Helpers/DatesHelper.php:109
+#: ../lib/Galette/Helpers/DatesHelper.php:104
+#: ../lib/Galette/Helpers/DatesHelper.php:111
 #, safe-html
 msgid "Y"
 msgstr "ஒய்"
@@ -4354,27 +4381,27 @@ msgstr "ஒய்"
 #. This how date must be formatted, see
 #. https://www.php.net/manual/datetime.format.php
 #. "Y" is the year on 4 digits, "m" the month on 2 digits
-#: ../lib/Galette/Helpers/DatesHelper.php:103
-#: ../lib/Galette/Helpers/DatesHelper.php:126
+#: ../lib/Galette/Helpers/DatesHelper.php:105
+#: ../lib/Galette/Helpers/DatesHelper.php:128
 #, safe-html
 msgid "Y-m"
 msgstr "Y-m"
 
-#: ../lib/Galette/Helpers/DatesHelper.php:149
+#: ../lib/Galette/Helpers/DatesHelper.php:151
 #, safe-html
 msgid "start date filter"
 msgstr "தொடக்க தேதி வடிகட்டி"
 
-#: ../lib/Galette/Helpers/DatesHelper.php:151
+#: ../lib/Galette/Helpers/DatesHelper.php:153
 #, safe-html
 msgid "end date filter"
 msgstr "இறுதி தேதி வடிகட்டி"
 
 #. TRANS: %1$s is field name, %2$s is list of known date formats
-#: ../lib/Galette/Helpers/DatesHelper.php:157
+#: ../lib/Galette/Helpers/DatesHelper.php:159
 #, ignore-safe-html, php-format, safe-html
 msgid "Unknown date format for %1$s.<br/>Know formats are: %2$s"
-msgstr "%1$s க்கான அறியப்படாத தேதி வடிவம். <br/> வடிவங்கள்: %2$s"
+msgstr "%1$s க்கான அறியப்படாத தேதி வடிவம். <br> வடிவங்கள்: %2$s"
 
 #: ../webroot/installer.php:113
 #, safe-html
@@ -4440,264 +4467,264 @@ msgstr "தரவுத்தள நிறுவல்"
 msgid "Documentation"
 msgstr "ஆவணப்படுத்துதல்"
 
-#: ../includes/i18n.inc.php:261
+#: ../includes/i18n.inc.php:37
 #, safe-html
 msgid "Realization:"
 msgstr "உணர்தல்:"
 
-#: ../includes/i18n.inc.php:262
+#: ../includes/i18n.inc.php:38
 #, safe-html
 msgid "Graphics:"
 msgstr "கிராபிக்ச்:"
 
-#: ../includes/i18n.inc.php:263
+#: ../includes/i18n.inc.php:39
 #, safe-html
 msgid "Publisher:"
 msgstr "வெளியீட்டாளர்:"
 
-#: ../includes/i18n.inc.php:264
+#: ../includes/i18n.inc.php:40
 #, safe-html
 msgid "President"
 msgstr "குடியரசுத் தலைவர்"
 
-#: ../includes/i18n.inc.php:265
+#: ../includes/i18n.inc.php:41
 #, safe-html
 msgid "Vice-president"
 msgstr "துணைத் தலைவர்"
 
-#: ../includes/i18n.inc.php:266
+#: ../includes/i18n.inc.php:42
 #, safe-html
 msgid "Treasurer"
 msgstr "பொருளாளர்"
 
-#: ../includes/i18n.inc.php:267
+#: ../includes/i18n.inc.php:43
 #, safe-html
 msgid "Vice-treasurer"
 msgstr "துணை பொருளாளர்"
 
-#: ../includes/i18n.inc.php:268
+#: ../includes/i18n.inc.php:44
 #, safe-html
 msgid "Secretary"
 msgstr "செயலாளர்"
 
-#: ../includes/i18n.inc.php:269
+#: ../includes/i18n.inc.php:45
 #, safe-html
 msgid "Vice-secretary"
 msgstr "துணை செயலாளர்"
 
-#: ../includes/i18n.inc.php:270
+#: ../includes/i18n.inc.php:46
 #, safe-html
 msgid "Active member"
 msgstr "செயலில் உறுப்பினர்"
 
-#: ../includes/i18n.inc.php:271
+#: ../includes/i18n.inc.php:47
 #, safe-html
 msgid "Benefactor member"
 msgstr "பயனாளி உறுப்பினர்"
 
-#: ../includes/i18n.inc.php:272
+#: ../includes/i18n.inc.php:48
 #, safe-html
 msgid "Founder member"
 msgstr "நிறுவனர் உறுப்பினர்"
 
-#: ../includes/i18n.inc.php:273
+#: ../includes/i18n.inc.php:49
 #, safe-html
 msgid "Old-timer"
 msgstr "பழைய நேரங்குறிகருவி"
 
-#: ../includes/i18n.inc.php:274
+#: ../includes/i18n.inc.php:50
 #, safe-html
 msgid "Legal entity"
 msgstr "சட்ட நிறுவனம்"
 
-#: ../includes/i18n.inc.php:275
+#: ../includes/i18n.inc.php:51
 #, safe-html
 msgid "Non-member"
 msgstr "உறுப்பினர் அல்லாதவர்"
 
-#: ../includes/i18n.inc.php:276
+#: ../includes/i18n.inc.php:52
 #, safe-html
 msgid "Reduced annual contribution"
 msgstr "குறைக்கப்பட்ட ஆண்டு பங்களிப்பு"
 
-#: ../includes/i18n.inc.php:277
+#: ../includes/i18n.inc.php:53
 #, safe-html
 msgid "Company fee"
 msgstr "நிறுவனத்தின் கட்டணம்"
 
-#: ../includes/i18n.inc.php:278
+#: ../includes/i18n.inc.php:54
 #, safe-html
 msgid "Donation in kind"
 msgstr "நன்கொடை"
 
-#: ../includes/i18n.inc.php:279
+#: ../includes/i18n.inc.php:55
 #, safe-html
 msgid "Donation in money"
 msgstr "பணத்தில் நன்கொடை"
 
-#: ../includes/i18n.inc.php:280
+#: ../includes/i18n.inc.php:56
 #, safe-html
 msgid "Partnership"
 msgstr "கூட்டாண்மை"
 
-#: ../includes/i18n.inc.php:281
+#: ../includes/i18n.inc.php:57
 #, safe-html
 msgid "french"
 msgstr "பிரஞ்சு"
 
-#: ../includes/i18n.inc.php:282
+#: ../includes/i18n.inc.php:58
 #, safe-html
 msgid "english"
 msgstr "ஆங்கிலம்"
 
-#: ../includes/i18n.inc.php:283
+#: ../includes/i18n.inc.php:59
 #, safe-html
 msgid "spanish"
 msgstr "ச்பானிச்"
 
-#: ../includes/i18n.inc.php:284
+#: ../includes/i18n.inc.php:60
 #, safe-html
 msgid "annual fee"
 msgstr "ஆண்டு கட்டணம்"
 
-#: ../includes/i18n.inc.php:285
+#: ../includes/i18n.inc.php:61
 #, safe-html
 msgid "annual fee (to be paid)"
 msgstr "ஆண்டு கட்டணம் (செலுத்தப்பட வேண்டும்)"
 
-#: ../includes/i18n.inc.php:286
+#: ../includes/i18n.inc.php:62
 #, safe-html
 msgid "company fee"
 msgstr "நிறுவனத்தின் கட்டணம்"
 
-#: ../includes/i18n.inc.php:287
+#: ../includes/i18n.inc.php:63
 #, safe-html
 msgid "donation in kind"
 msgstr "நன்கொடை"
 
-#: ../includes/i18n.inc.php:288
+#: ../includes/i18n.inc.php:64
 #, safe-html
 msgid "donation in money"
 msgstr "பணத்தில் நன்கொடை"
 
-#: ../includes/i18n.inc.php:289
+#: ../includes/i18n.inc.php:65
 #, safe-html
 msgid "partnership"
 msgstr "கூட்டாண்மை"
 
-#: ../includes/i18n.inc.php:290
+#: ../includes/i18n.inc.php:66
 #, safe-html
 msgid "reduced annual fee"
 msgstr "குறைக்கப்பட்ட ஆண்டு கட்டணம்"
 
-#: ../includes/i18n.inc.php:291
+#: ../includes/i18n.inc.php:67
 #, safe-html
 msgid "Identity"
 msgstr "முற்றொருமை"
 
-#: ../includes/i18n.inc.php:292
+#: ../includes/i18n.inc.php:68
 #, safe-html
 msgid "Galette-related data"
 msgstr "கேலட் தொடர்பான தரவு"
 
-#: ../includes/i18n.inc.php:293
+#: ../includes/i18n.inc.php:69
 #, safe-html
 msgid "Contact information"
 msgstr "தொடர்பு செய்தி"
 
-#: ../includes/i18n.inc.php:294
+#: ../includes/i18n.inc.php:70
 #, safe-html
 msgid "Mr."
 msgstr "திரு."
 
-#: ../includes/i18n.inc.php:295
+#: ../includes/i18n.inc.php:71
 #, safe-html
 msgid "Mrs."
 msgstr "திருமதி."
 
-#: ../includes/i18n.inc.php:296
+#: ../includes/i18n.inc.php:72
 #, safe-html
 msgid "Miss"
 msgstr "மிச்"
 
-#: ../includes/i18n.inc.php:297
+#: ../includes/i18n.inc.php:73
 #, safe-html
 msgid "Identity:"
 msgstr "அடையாளம்:"
 
-#: ../includes/i18n.inc.php:298
+#: ../includes/i18n.inc.php:74
 #, safe-html
 msgid "Galette-related data:"
 msgstr "கேலட் தொடர்பான தரவு:"
 
-#: ../includes/i18n.inc.php:299
+#: ../includes/i18n.inc.php:75
 #, safe-html
 msgid "Contact information:"
 msgstr "தொடர்பு தகவல்:"
 
-#: ../includes/i18n.inc.php:300
+#: ../includes/i18n.inc.php:76
 #, safe-html
 msgid "Society"
 msgstr "சமூகம்"
 
-#: ../includes/i18n.inc.php:301
+#: ../includes/i18n.inc.php:77
 #, safe-html
 msgid "Politeness"
 msgstr "மரியாதை"
 
-#: ../includes/i18n.inc.php:303
+#: ../includes/i18n.inc.php:79
 #, safe-html
 msgid "Main"
 msgstr "முக்கிய"
 
-#: ../includes/i18n.inc.php:304
+#: ../includes/i18n.inc.php:80
 #, safe-html
 msgid "** Galette identifier, if applicable"
 msgstr "** கேலட் அடையாளங்காட்டி, பொருந்தினால்"
 
-#: ../includes/i18n.inc.php:305
+#: ../includes/i18n.inc.php:81
 #, safe-html
 msgid "* Only for compagnies"
 msgstr "* நிறுவனங்களுக்கு மட்டுமே"
 
-#: ../includes/i18n.inc.php:306
+#: ../includes/i18n.inc.php:82
 #, php-format, safe-html
 msgid "Hereby, I agree to comply to %s association statutes and its rules."
 msgstr ""
 "இதன்மூலம், %s அசோசியேசன் சட்டங்கள் மற்றும் அதன் விதிகளுக்கு இணங்க "
 "ஒப்புக்கொள்கிறேன்."
 
-#: ../includes/i18n.inc.php:307
+#: ../includes/i18n.inc.php:83
 #, safe-html
 msgid "At ................................................"
 msgstr "At ............................................"
 
-#: ../includes/i18n.inc.php:308
+#: ../includes/i18n.inc.php:84
 #, safe-html
 msgid "On .......... / .......... / .......... "
-msgstr "ஆன் .......... / .......... / .........."
+msgstr "ஆன் .......... / .......... / .......... "
 
-#: ../includes/i18n.inc.php:309
+#: ../includes/i18n.inc.php:85
 #, safe-html
 msgid "Username"
 msgstr "பயனர்பெயர்"
 
-#: ../includes/i18n.inc.php:310
+#: ../includes/i18n.inc.php:86
 #, safe-html
 msgid "Email address"
 msgstr "மின்னஞ்சல் முகவரி"
 
-#: ../includes/i18n.inc.php:312
+#: ../includes/i18n.inc.php:88
 #, safe-html
 msgid "City"
 msgstr "நகரம்"
 
-#: ../includes/i18n.inc.php:313
+#: ../includes/i18n.inc.php:89
 #, safe-html
 msgid "Zip Code"
 msgstr "சிப் குறியீடு"
 
-#: ../includes/i18n.inc.php:315
+#: ../includes/i18n.inc.php:91
 #, safe-html
 msgid ""
 "The minimum contribution for each type of membership are defined on the "
@@ -4708,12 +4735,12 @@ msgstr ""
 "இணையதளத்தில் வரையறுக்கப்படுகிறது. நன்கொடைகளின் அளவு தாராளமான நன்கொடையாளரால் "
 "தீர்மானிக்கப்படுவதற்கு இலவசம்."
 
-#: ../includes/i18n.inc.php:316
+#: ../includes/i18n.inc.php:92
 #, safe-html
 msgid "Required membership:"
 msgstr "தேவையான உறுப்பினர்:"
 
-#: ../includes/i18n.inc.php:317
+#: ../includes/i18n.inc.php:93
 #, safe-html
 msgid ""
 "Complete the following form and send it with your funds, in order to "
@@ -4722,22 +4749,22 @@ msgstr ""
 "உங்கள் சந்தாவை முடிக்க பின்வரும் படிவத்தை நிறைவு செய்து உங்கள் நிதியுடன் "
 "அனுப்பவும்."
 
-#: ../includes/i18n.inc.php:318
+#: ../includes/i18n.inc.php:94
 #, safe-html
 msgid "on"
 msgstr "ஆன்"
 
-#: ../includes/i18n.inc.php:319
+#: ../includes/i18n.inc.php:95
 #, safe-html
 msgid "from"
 msgstr "இருந்து"
 
-#: ../includes/i18n.inc.php:320
+#: ../includes/i18n.inc.php:96
 #, safe-html
 msgid "to"
 msgstr "பெறுநர்"
 
-#: ../includes/i18n.inc.php:321
+#: ../includes/i18n.inc.php:97
 #, safe-html
 msgid "Association"
 msgstr "தொடர்பு"
@@ -4774,7 +4801,7 @@ msgstr "நிலை:"
 #: ../../tempcache/pages/contribution_type_form.html.twig:71
 #: ../../tempcache/pages/configuration_dynamic_field_form.html.twig:85
 #: ../../tempcache/pages/plugin_info.html.twig:81
-#: ../../tempcache/pages/groups_list.html.twig:188
+#: ../../tempcache/pages/groups_list.html.twig:187
 #: ../../tempcache/pages/status_form.html.twig:71
 #: ../../tempcache/pages/configuration_payment_type_form.html.twig:73
 #, safe-html
@@ -5442,13 +5469,13 @@ msgstr "மற்றும்"
 #: ../../tempcache/modals/mass_choose_contributions_type.html.twig:128
 #: ../../tempcache/modals/confirm_removal.html.twig:168
 #: ../../tempcache/modals/mass_add_contributions.html.twig:122
-#: ../../tempcache/modals/mass_change_members.html.twig:224
+#: ../../tempcache/modals/mass_change_members.html.twig:240
 #: ../../tempcache/modals/telemetry.html.twig:144
 #: ../../tempcache/elements/js/modal.js.twig:284
 #: ../../tempcache/pages/contribution_type_form.html.twig:132
 #: ../../tempcache/pages/configuration_dynamic_field_form.html.twig:378
 #: ../../tempcache/pages/configuration_dynamic_field_form.html.twig:553
-#: ../../tempcache/pages/members_list.html.twig:1201
+#: ../../tempcache/pages/members_list.html.twig:1200
 #: ../../tempcache/pages/status_form.html.twig:114
 #: ../../tempcache/pages/mailing_form.html.twig:733
 #: ../../tempcache/pages/scheduledpayment_form.html.twig:334
@@ -5606,13 +5633,13 @@ msgstr "தரவு துவக்கப்பட்டது."
 #: ../../tempcache/elements/scripts.html.twig:233
 #: ../../tempcache/elements/scripts.html.twig:253
 #: ../../tempcache/pages/plugins.html.twig:450
-#: ../../tempcache/pages/members_list.html.twig:1337
-#: ../../tempcache/pages/members_list.html.twig:1351
-#: ../../tempcache/pages/members_list.html.twig:1365
-#: ../../tempcache/pages/members_list.html.twig:1435
-#: ../../tempcache/pages/members_list.html.twig:1449
-#: ../../tempcache/pages/members_list.html.twig:1463
-#: ../../tempcache/pages/groups_list.html.twig:221
+#: ../../tempcache/pages/members_list.html.twig:1336
+#: ../../tempcache/pages/members_list.html.twig:1350
+#: ../../tempcache/pages/members_list.html.twig:1364
+#: ../../tempcache/pages/members_list.html.twig:1434
+#: ../../tempcache/pages/members_list.html.twig:1448
+#: ../../tempcache/pages/members_list.html.twig:1462
+#: ../../tempcache/pages/groups_list.html.twig:220
 #: ../../tempcache/pages/configuration_payment_types.html.twig:294
 #: ../../tempcache/pages/configuration_dynamic_fields.html.twig:190
 #: ../../tempcache/pages/configuration_dynamic_fields.html.twig:262
@@ -5763,7 +5790,7 @@ msgid ""
 "It seems that you have already installed Galette once.<br/>All existing data"
 " will be removed if you keep going on using existing database!"
 msgstr ""
-"நீங்கள் ஏற்கனவே ஒரு முறை கேலட்டை நிறுவியுள்ளீர்கள் என்று தெரிகிறது. <br/> "
+"நீங்கள் ஏற்கனவே ஒரு முறை கேலட்டை நிறுவியுள்ளீர்கள் என்று தெரிகிறது. <br> "
 "நீங்கள் ஏற்கனவே இருக்கும் தரவுத்தளத்தைப் பயன்படுத்தி தொடர்ந்து நடந்து "
 "கொண்டால் தற்போதுள்ள எல்லா தரவும் அகற்றப்படும்!"
 
@@ -5891,7 +5918,7 @@ msgstr "பங்களிப்பு வகை"
 
 #: ../../tempcache/modals/mass_choose_contributions_type.html.twig:122
 #: ../../tempcache/modals/mass_add_contributions.html.twig:115
-#: ../../tempcache/modals/mass_change_members.html.twig:217
+#: ../../tempcache/modals/mass_change_members.html.twig:233
 #, safe-html
 msgid "OK"
 msgstr "சரி"
@@ -5996,7 +6023,7 @@ msgid "Remove"
 msgstr "அகற்று"
 
 #: ../../tempcache/modals/mass_add_contributions.html.twig:113
-#: ../../tempcache/modals/mass_change_members.html.twig:215
+#: ../../tempcache/modals/mass_change_members.html.twig:231
 #, safe-html
 msgid "Edit"
 msgstr "தொகு"
@@ -6038,7 +6065,7 @@ msgstr "அஞ்சல் உடல்"
 msgid "Only checked fields will be updated."
 msgstr "சரிபார்க்கப்பட்ட புலங்கள் மட்டுமே புதுப்பிக்கப்படும்."
 
-#: ../../tempcache/modals/mass_change_members.html.twig:116
+#: ../../tempcache/modals/mass_change_members.html.twig:123
 #, safe-html
 msgid "You are about to proceed following changes for selected members:"
 msgstr ""
@@ -6061,8 +6088,8 @@ msgstr "தாள் வகை"
 
 #: ../../tempcache/modals/members_attendance_sheet.html.twig:142
 #: ../../tempcache/pages/transaction_form.html.twig:129
-#: ../../tempcache/pages/contributions_list.html.twig:135
-#: ../../tempcache/pages/contributions_list.html.twig:152
+#: ../../tempcache/pages/contributions_list.html.twig:130
+#: ../../tempcache/pages/contributions_list.html.twig:147
 #: ../../tempcache/pages/history.html.twig:151
 #: ../../tempcache/pages/history.html.twig:168
 #: ../../tempcache/pages/contribution_form.html.twig:621
@@ -6074,8 +6101,8 @@ msgstr "தாள் வகை"
 #: ../../tempcache/pages/mailings_list.html.twig:191
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:116
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:133
-#: ../../tempcache/pages/transactions_list.html.twig:85
-#: ../../tempcache/pages/transactions_list.html.twig:102
+#: ../../tempcache/pages/transactions_list.html.twig:90
+#: ../../tempcache/pages/transactions_list.html.twig:107
 #: ../../tempcache/pages/advanced_search.html.twig:289
 #: ../../tempcache/pages/advanced_search.html.twig:306
 #: ../../tempcache/pages/advanced_search.html.twig:331
@@ -6094,7 +6121,7 @@ msgstr "தாள் வகை"
 #: ../../tempcache/pages/advanced_search.html.twig:1396
 #: ../../tempcache/pages/advanced_search.html.twig:1806
 #: ../../tempcache/components/forms/date.html.twig:63
-#: ../../tempcache/components/dynamic_fields.html.twig:631
+#: ../../tempcache/components/dynamic_fields.html.twig:630
 #, safe-html
 msgid "yyyy-mm-dd format"
 msgstr "YYYYY-MM-DD வடிவம்"
@@ -6144,25 +6171,25 @@ msgstr "தற்போதுள்ள மாறிகள்"
 #: ../../tempcache/pages/transaction_form.html.twig:633
 #: ../../tempcache/pages/transaction_form.html.twig:664
 #: ../../tempcache/pages/transaction_form.html.twig:695
-#: ../../tempcache/pages/contributions_list.html.twig:890
+#: ../../tempcache/pages/contributions_list.html.twig:878
 #: ../../tempcache/pages/import_model.html.twig:283
-#: ../../tempcache/pages/members_list.html.twig:659
-#: ../../tempcache/pages/members_list.html.twig:1265
-#: ../../tempcache/pages/members_list.html.twig:1337
-#: ../../tempcache/pages/members_list.html.twig:1351
-#: ../../tempcache/pages/members_list.html.twig:1365
-#: ../../tempcache/pages/members_list.html.twig:1435
-#: ../../tempcache/pages/members_list.html.twig:1449
-#: ../../tempcache/pages/members_list.html.twig:1463
-#: ../../tempcache/pages/groups_list.html.twig:221
-#: ../../tempcache/pages/groups_list.html.twig:226
-#: ../../tempcache/pages/groups_list.html.twig:236
-#: ../../tempcache/pages/groups_list.html.twig:243
-#: ../../tempcache/pages/groups_list.html.twig:258
-#: ../../tempcache/pages/groups_list.html.twig:299
-#: ../../tempcache/pages/groups_list.html.twig:321
-#: ../../tempcache/pages/groups_list.html.twig:383
-#: ../../tempcache/pages/groups_list.html.twig:451
+#: ../../tempcache/pages/members_list.html.twig:658
+#: ../../tempcache/pages/members_list.html.twig:1264
+#: ../../tempcache/pages/members_list.html.twig:1336
+#: ../../tempcache/pages/members_list.html.twig:1350
+#: ../../tempcache/pages/members_list.html.twig:1364
+#: ../../tempcache/pages/members_list.html.twig:1434
+#: ../../tempcache/pages/members_list.html.twig:1448
+#: ../../tempcache/pages/members_list.html.twig:1462
+#: ../../tempcache/pages/groups_list.html.twig:220
+#: ../../tempcache/pages/groups_list.html.twig:225
+#: ../../tempcache/pages/groups_list.html.twig:235
+#: ../../tempcache/pages/groups_list.html.twig:242
+#: ../../tempcache/pages/groups_list.html.twig:257
+#: ../../tempcache/pages/groups_list.html.twig:298
+#: ../../tempcache/pages/groups_list.html.twig:320
+#: ../../tempcache/pages/groups_list.html.twig:382
+#: ../../tempcache/pages/groups_list.html.twig:450
 #: ../../tempcache/pages/import.html.twig:325
 #: ../../tempcache/pages/import.html.twig:336
 #: ../../tempcache/pages/configuration_payment_types.html.twig:294
@@ -6189,7 +6216,7 @@ msgstr "தற்போதுள்ள மாறிகள்"
 #: ../../tempcache/pages/member_form.html.twig:625
 #: ../../tempcache/pages/member_form.html.twig:645
 #: ../../tempcache/pages/member_show.html.twig:726
-#: ../../tempcache/pages/transactions_list.html.twig:559
+#: ../../tempcache/pages/transactions_list.html.twig:564
 #, safe-html
 msgid "Close"
 msgstr "மூடு"
@@ -6250,7 +6277,7 @@ msgstr "இருப்பிடத்தை '%லோகேல்' க்கு 
 #: ../../tempcache/pages/status_list.html.twig:124
 #: ../../tempcache/pages/configuration_dynamic_fields.html.twig:184
 #: ../../tempcache/pages/configuration_core_lists.html.twig:150
-#: ../../tempcache/components/dynamic_fields.html.twig:286
+#: ../../tempcache/components/dynamic_fields.html.twig:285
 #, safe-html
 msgid "Add"
 msgstr "கூட்டு"
@@ -6273,8 +6300,8 @@ msgstr "அனுமதிகள்"
 #: ../../tempcache/elements/edit_pdf_models.html.twig:168
 #: ../../tempcache/pages/configuration_dynamic_field_form.html.twig:472
 #: ../../tempcache/pages/transaction_form.html.twig:241
-#: ../../tempcache/pages/contributions_list.html.twig:467
-#: ../../tempcache/pages/contributions_list.html.twig:729
+#: ../../tempcache/pages/contributions_list.html.twig:462
+#: ../../tempcache/pages/contributions_list.html.twig:717
 #: ../../tempcache/pages/documents_list.html.twig:113
 #: ../../tempcache/pages/documents_list.html.twig:188
 #: ../../tempcache/pages/scheduledpayment_form.html.twig:156
@@ -6308,7 +6335,7 @@ msgstr "வடிவங்களில் அகலம்"
 #: ../../tempcache/elements/list.html.twig:411
 #: ../../tempcache/pages/transaction_form.html.twig:252
 #: ../../tempcache/pages/configuration_titles.html.twig:77
-#: ../../tempcache/pages/members_list.html.twig:567
+#: ../../tempcache/pages/members_list.html.twig:566
 #: ../../tempcache/pages/contributions_types_list.html.twig:81
 #: ../../tempcache/pages/import.html.twig:106
 #: ../../tempcache/pages/configuration_payment_types.html.twig:73
@@ -6505,7 +6532,7 @@ msgid "%membercount members"
 msgstr "%membercount உறுப்பினர்கள்"
 
 #: ../../tempcache/elements/ajax_groups.html.twig:141
-#: ../../tempcache/pages/groups_list.html.twig:158
+#: ../../tempcache/pages/groups_list.html.twig:157
 #, safe-html
 msgid "no group"
 msgstr "குழு இல்லை"
@@ -6665,9 +6692,9 @@ msgstr "ஏற்றுகிறது ..."
 #: ../../tempcache/pages/configuration_dynamic_field_form.html.twig:373
 #: ../../tempcache/pages/transaction_form.html.twig:485
 #: ../../tempcache/pages/configuration_texts.html.twig:225
-#: ../../tempcache/pages/members_list.html.twig:407
-#: ../../tempcache/pages/members_list.html.twig:437
-#: ../../tempcache/pages/members_list.html.twig:1194
+#: ../../tempcache/pages/members_list.html.twig:406
+#: ../../tempcache/pages/members_list.html.twig:436
+#: ../../tempcache/pages/members_list.html.twig:1193
 #: ../../tempcache/pages/configuration_core_fields.html.twig:168
 #: ../../tempcache/pages/status_form.html.twig:109
 #: ../../tempcache/pages/contribution_form.html.twig:796
@@ -6841,8 +6868,8 @@ msgid "CSS styles"
 msgstr "சிஎச்எச் ச்டைல்கள்"
 
 #: ../../tempcache/elements/edit_pdf_models.html.twig:176
-#: ../../tempcache/pages/contributions_list.html.twig:164
-#: ../../tempcache/pages/contributions_list.html.twig:175
+#: ../../tempcache/pages/contributions_list.html.twig:159
+#: ../../tempcache/pages/contributions_list.html.twig:170
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:145
 #: ../../tempcache/pages/advanced_search.html.twig:968
 #, safe-html
@@ -6860,14 +6887,14 @@ msgid "Receipt"
 msgstr "பற்றுச்சீட்டு"
 
 #: ../../tempcache/elements/display_dynamic_fields.html.twig:50
-#: ../../tempcache/components/dynamic_fields.html.twig:65
+#: ../../tempcache/components/dynamic_fields.html.twig:64
 #, safe-html
 msgid "Additionnal fields:"
 msgstr "கூடுதல் புலங்கள்:"
 
 #: ../../tempcache/elements/group.html.twig:82
-#: ../../tempcache/pages/members_public_list.html.twig:107
-#: ../../tempcache/pages/members_public_list.html.twig:325
+#: ../../tempcache/pages/members_public_list.html.twig:106
+#: ../../tempcache/pages/members_public_list.html.twig:324
 #, safe-html
 msgid "Information"
 msgstr "தகவல்"
@@ -6929,8 +6956,8 @@ msgid "Invert selection"
 msgstr "தலைகீழ் தேர்வு"
 
 #: ../../tempcache/elements/list.html.twig:514
-#: ../../tempcache/pages/transactions_list.html.twig:578
-#: ../../tempcache/pages/transactions_list.html.twig:593
+#: ../../tempcache/pages/transactions_list.html.twig:583
+#: ../../tempcache/pages/transactions_list.html.twig:598
 #, safe-html
 msgid "Show legend"
 msgstr "புராணக்கதை காட்டு"
@@ -6964,7 +6991,7 @@ msgid "Demonstration"
 msgstr "ஆர்ப்பாட்டம்"
 
 #: ../../tempcache/elements/group_persons.html.twig:212
-#: ../../tempcache/pages/groups_list.html.twig:371
+#: ../../tempcache/pages/groups_list.html.twig:370
 #, safe-html
 msgid "No member attached"
 msgstr "எந்த உறுப்பினரும் இணைக்கப்படவில்லை"
@@ -7070,7 +7097,7 @@ msgstr "புதிய சமூக வலைப்பின்னலைச் 
 msgid "Choose or enter your own..."
 msgstr "உங்கள் சொந்த தேர்வு அல்லது உள்ளிடவும் ..."
 
-#: ../../tempcache/macros.twig:425
+#: ../../tempcache/macros.twig:424
 #, safe-html
 msgid "For the selection:"
 msgstr "தேர்வுக்கு:"
@@ -7104,8 +7131,8 @@ msgstr "செயலில் உள்ள செருகுநிரல்க�
 #: ../../tempcache/pages/plugins.html.twig:133
 #: ../../tempcache/pages/history.html.twig:118
 #: ../../tempcache/pages/history.html.twig:365
-#: ../../tempcache/pages/transactions_list.html.twig:304
-#: ../../tempcache/pages/transactions_list.html.twig:443
+#: ../../tempcache/pages/transactions_list.html.twig:309
+#: ../../tempcache/pages/transactions_list.html.twig:448
 #: ../../tempcache/pages/export.html.twig:267
 #: ../../tempcache/pages/export.html.twig:297
 #, safe-html
@@ -7315,13 +7342,13 @@ msgstr "புலம் பெயர்"
 msgid "Visibility"
 msgstr "விழிமை"
 
-#: ../../tempcache/pages/documents_public_list.html.twig:68
+#: ../../tempcache/pages/documents_public_list.html.twig:67
 #: ../../tempcache/pages/documents_list.html.twig:267
 #, safe-html
 msgid "No document"
 msgstr "ஆவணம் இல்லை"
 
-#: ../../tempcache/pages/documents_public_list.html.twig:110
+#: ../../tempcache/pages/documents_public_list.html.twig:109
 #: ../../tempcache/pages/documents_list.html.twig:65
 #, php-format, safe-html
 msgid "%count document"
@@ -7354,26 +7381,26 @@ msgid "Attached contributions"
 msgstr "இணைக்கப்பட்ட பங்களிப்புகள்"
 
 #: ../../tempcache/pages/transaction_form.html.twig:220
-#: ../../tempcache/pages/contributions_list.html.twig:100
-#: ../../tempcache/pages/contributions_list.html.twig:451
-#: ../../tempcache/pages/contributions_list.html.twig:656
+#: ../../tempcache/pages/contributions_list.html.twig:95
+#: ../../tempcache/pages/contributions_list.html.twig:446
+#: ../../tempcache/pages/contributions_list.html.twig:644
 #: ../../tempcache/pages/scheduledpayment_form.html.twig:168
 #, safe-html
 msgid "Begin"
 msgstr "தொடங்கு"
 
 #: ../../tempcache/pages/transaction_form.html.twig:224
-#: ../../tempcache/pages/contributions_list.html.twig:110
-#: ../../tempcache/pages/contributions_list.html.twig:451
-#: ../../tempcache/pages/contributions_list.html.twig:662
+#: ../../tempcache/pages/contributions_list.html.twig:105
+#: ../../tempcache/pages/contributions_list.html.twig:446
+#: ../../tempcache/pages/contributions_list.html.twig:650
 #: ../../tempcache/pages/scheduledpayment_form.html.twig:180
 #, safe-html
 msgid "End"
 msgstr "முடிவு"
 
 #: ../../tempcache/pages/transaction_form.html.twig:228
-#: ../../tempcache/pages/contributions_list.html.twig:467
-#: ../../tempcache/pages/contributions_list.html.twig:747
+#: ../../tempcache/pages/contributions_list.html.twig:462
+#: ../../tempcache/pages/contributions_list.html.twig:735
 #, safe-html
 msgid "Duration"
 msgstr "காலம்"
@@ -7420,7 +7447,7 @@ msgid "Detach contribution from this transaction"
 msgstr "இந்த பரிவர்த்தனையிலிருந்து பங்களிப்பைப் பிரிக்கவும்"
 
 #: ../../tempcache/pages/transaction_form.html.twig:458
-#: ../../tempcache/pages/contributions_list.html.twig:820
+#: ../../tempcache/pages/contributions_list.html.twig:808
 #, safe-html
 msgid "no contribution"
 msgstr "பங்களிப்பு இல்லை"
@@ -7515,12 +7542,12 @@ msgstr "ACLS இல்லை!"
 msgid "Raw information"
 msgstr "மூல செய்தி"
 
-#: ../../tempcache/pages/contributions_list.html.twig:64
+#: ../../tempcache/pages/contributions_list.html.twig:59
 #, safe-html
 msgid "No contribution selected"
 msgstr "பங்களிப்பு எதுவும் தேர்ந்தெடுக்கப்படவில்லை"
 
-#: ../../tempcache/pages/contributions_list.html.twig:64
+#: ../../tempcache/pages/contributions_list.html.twig:59
 #, safe-html
 msgid ""
 "Please make sure to select at least one contribution from the list to "
@@ -7529,17 +7556,17 @@ msgstr ""
 "இந்த செயலைச் செய்ய பட்டியலிலிருந்து குறைந்தது ஒரு பங்களிப்பையாவது "
 "தேர்ந்தெடுக்கவும்."
 
-#: ../../tempcache/pages/contributions_list.html.twig:89
+#: ../../tempcache/pages/contributions_list.html.twig:84
 #, safe-html
 msgid "Show contributions by"
 msgstr "வழங்கிய பங்களிப்புகளைக் காட்டு"
 
-#: ../../tempcache/pages/contributions_list.html.twig:120
+#: ../../tempcache/pages/contributions_list.html.twig:115
 #, safe-html
 msgid "Record"
 msgstr "பதிவு"
 
-#: ../../tempcache/pages/contributions_list.html.twig:128
+#: ../../tempcache/pages/contributions_list.html.twig:123
 #: ../../tempcache/pages/history.html.twig:144
 #: ../../tempcache/pages/mailings_list.html.twig:167
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:109
@@ -7547,156 +7574,156 @@ msgstr "பதிவு"
 msgid "since"
 msgstr "முதல்"
 
-#: ../../tempcache/pages/contributions_list.html.twig:145
+#: ../../tempcache/pages/contributions_list.html.twig:140
 #: ../../tempcache/pages/history.html.twig:161
 #: ../../tempcache/pages/mailings_list.html.twig:184
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:126
-#: ../../tempcache/pages/transactions_list.html.twig:95
+#: ../../tempcache/pages/transactions_list.html.twig:100
 #, safe-html
 msgid "until"
 msgstr "வரை"
 
-#: ../../tempcache/pages/contributions_list.html.twig:205
+#: ../../tempcache/pages/contributions_list.html.twig:200
 #: ../../tempcache/pages/history.html.twig:263
-#: ../../tempcache/pages/members_list.html.twig:392
+#: ../../tempcache/pages/members_list.html.twig:391
 #: ../../tempcache/pages/mailings_list.html.twig:269
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:151
-#: ../../tempcache/pages/transactions_list.html.twig:114
+#: ../../tempcache/pages/transactions_list.html.twig:119
 #, safe-html
 msgid "Apply filters"
 msgstr "வடிப்பான்களைப் பயன்படுத்துங்கள்"
 
-#: ../../tempcache/pages/contributions_list.html.twig:210
+#: ../../tempcache/pages/contributions_list.html.twig:205
 #: ../../tempcache/pages/history.html.twig:268
-#: ../../tempcache/pages/members_list.html.twig:397
+#: ../../tempcache/pages/members_list.html.twig:396
 #: ../../tempcache/pages/mailings_list.html.twig:274
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:156
-#: ../../tempcache/pages/transactions_list.html.twig:119
+#: ../../tempcache/pages/transactions_list.html.twig:124
 #: ../../tempcache/pages/advanced_search.html.twig:1539
 #, safe-html
 msgid "Filter"
 msgstr "வடிப்பி"
 
-#: ../../tempcache/pages/contributions_list.html.twig:215
+#: ../../tempcache/pages/contributions_list.html.twig:210
 #: ../../tempcache/pages/history.html.twig:273
-#: ../../tempcache/pages/members_list.html.twig:412
-#: ../../tempcache/pages/members_list.html.twig:453
+#: ../../tempcache/pages/members_list.html.twig:411
+#: ../../tempcache/pages/members_list.html.twig:452
 #: ../../tempcache/pages/mailings_list.html.twig:279
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:161
-#: ../../tempcache/pages/transactions_list.html.twig:124
+#: ../../tempcache/pages/transactions_list.html.twig:129
 #, safe-html
 msgid "Reset all filters to defaults"
 msgstr "அனைத்து வடிப்பான்களையும் இயல்புநிலைக்கு மீட்டமைக்கவும்"
 
-#: ../../tempcache/pages/contributions_list.html.twig:220
+#: ../../tempcache/pages/contributions_list.html.twig:215
 #: ../../tempcache/pages/history.html.twig:278
-#: ../../tempcache/pages/members_list.html.twig:417
-#: ../../tempcache/pages/members_list.html.twig:458
+#: ../../tempcache/pages/members_list.html.twig:416
+#: ../../tempcache/pages/members_list.html.twig:457
 #: ../../tempcache/pages/mailings_list.html.twig:284
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:166
-#: ../../tempcache/pages/transactions_list.html.twig:129
+#: ../../tempcache/pages/transactions_list.html.twig:134
 #: ../../tempcache/pages/advanced_search.html.twig:1547
 #, safe-html
 msgid "Clear filter"
 msgstr "தெளிவான வடிகட்டி"
 
-#: ../../tempcache/pages/contributions_list.html.twig:255
+#: ../../tempcache/pages/contributions_list.html.twig:250
 #, safe-html
 msgid "Show all your contributions"
 msgstr "உங்கள் எல்லா பங்களிப்புகளையும் காட்டுங்கள்"
 
-#: ../../tempcache/pages/contributions_list.html.twig:261
+#: ../../tempcache/pages/contributions_list.html.twig:256
 #, safe-html
 msgid "Show all members contributions"
 msgstr "அனைத்து உறுப்பினர்களின் பங்களிப்புகளையும் காட்டு"
 
-#: ../../tempcache/pages/contributions_list.html.twig:295
-#: ../../tempcache/pages/transactions_list.html.twig:202
+#: ../../tempcache/pages/contributions_list.html.twig:290
+#: ../../tempcache/pages/transactions_list.html.twig:207
 #, safe-html
 msgid "See member profile"
 msgstr "உறுப்பினர் சுயவிவரத்தைக் காண்க"
 
-#: ../../tempcache/pages/contributions_list.html.twig:389
+#: ../../tempcache/pages/contributions_list.html.twig:384
 #, php-format, safe-html
 msgid "%count contribution"
 msgid_plural "%count contributions"
 msgstr[0] "%பங்களிப்பை எண்ணுங்கள்"
 msgstr[1] "%பங்களிப்புகளை எண்ணுங்கள்"
 
-#: ../../tempcache/pages/contributions_list.html.twig:500
+#: ../../tempcache/pages/contributions_list.html.twig:488
 #, php-format, safe-html
 msgid "Found contributions total %f"
 msgstr "மொத்தம் %f பங்களிப்புகள் காணப்பட்டன"
 
-#: ../../tempcache/pages/contributions_list.html.twig:593
-#: ../../tempcache/pages/contributions_list.html.twig:622
+#: ../../tempcache/pages/contributions_list.html.twig:581
+#: ../../tempcache/pages/contributions_list.html.twig:610
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:367
 #, safe-html
 msgid "Contribution %id"
 msgstr "பங்களிப்பு %ஐடி"
 
-#: ../../tempcache/pages/contributions_list.html.twig:610
-#: ../../tempcache/pages/contributions_list.html.twig:632
+#: ../../tempcache/pages/contributions_list.html.twig:598
+#: ../../tempcache/pages/contributions_list.html.twig:620
 #, php-format, safe-html
 msgid "Transaction: %s"
 msgstr "பரிவர்த்தனை: %s"
 
-#: ../../tempcache/pages/contributions_list.html.twig:701
+#: ../../tempcache/pages/contributions_list.html.twig:689
 #, safe-html
 msgid "Show only '%name' contributions"
 msgstr "'%பெயர்' பங்களிப்புகளை மட்டும் காட்டு"
 
-#: ../../tempcache/pages/contributions_list.html.twig:716
-#: ../../tempcache/pages/transactions_list.html.twig:430
+#: ../../tempcache/pages/contributions_list.html.twig:704
+#: ../../tempcache/pages/transactions_list.html.twig:435
 #, safe-html
 msgid "Show '%name' card"
 msgstr "'%பெயர்' அட்டையைக் காட்டு"
 
-#: ../../tempcache/pages/contributions_list.html.twig:765
+#: ../../tempcache/pages/contributions_list.html.twig:753
 #, safe-html
 msgid "Print an invoice or a receipt (depending on contribution type)"
 msgstr "விலைப்பட்டியல் அல்லது ரசீதை அச்சிடுக (பங்களிப்பு வகையைப் பொறுத்து)"
 
-#: ../../tempcache/pages/contributions_list.html.twig:782
+#: ../../tempcache/pages/contributions_list.html.twig:770
 #, safe-html
 msgid "Edit the contribution"
 msgstr "பங்களிப்பைத் திருத்தவும்"
 
-#: ../../tempcache/pages/contributions_list.html.twig:795
+#: ../../tempcache/pages/contributions_list.html.twig:783
 #, safe-html
 msgid "Delete the contribution"
 msgstr "பங்களிப்பை நீக்கு"
 
-#: ../../tempcache/pages/contributions_list.html.twig:839
-#: ../../tempcache/pages/contributions_list.html.twig:843
-#: ../../tempcache/pages/members_list.html.twig:501
-#: ../../tempcache/pages/members_list.html.twig:505
-#: ../../tempcache/pages/transactions_list.html.twig:533
-#: ../../tempcache/pages/transactions_list.html.twig:537
+#: ../../tempcache/pages/contributions_list.html.twig:827
+#: ../../tempcache/pages/contributions_list.html.twig:831
+#: ../../tempcache/pages/members_list.html.twig:500
+#: ../../tempcache/pages/members_list.html.twig:504
+#: ../../tempcache/pages/transactions_list.html.twig:538
+#: ../../tempcache/pages/transactions_list.html.twig:542
 #, safe-html
 msgid "Legend"
 msgstr "புராணக்கதை"
 
-#: ../../tempcache/pages/contributions_list.html.twig:857
-#: ../../tempcache/pages/members_list.html.twig:578
+#: ../../tempcache/pages/contributions_list.html.twig:845
+#: ../../tempcache/pages/members_list.html.twig:577
 #: ../../tempcache/pages/member_show.html.twig:91
 #, safe-html
 msgid "Modification"
 msgstr "மாற்றம்"
 
-#: ../../tempcache/pages/contributions_list.html.twig:866
-#: ../../tempcache/pages/members_list.html.twig:594
+#: ../../tempcache/pages/contributions_list.html.twig:854
+#: ../../tempcache/pages/members_list.html.twig:593
 #, safe-html
 msgid "Deletion"
 msgstr "நீக்குதல்"
 
-#: ../../tempcache/pages/contributions_list.html.twig:876
+#: ../../tempcache/pages/contributions_list.html.twig:864
 #: ../../tempcache/pages/scheduledpayments_list.html.twig:359
 #, safe-html
 msgid "Contribution"
 msgstr "பங்களிப்பு"
 
-#: ../../tempcache/pages/contributions_list.html.twig:883
+#: ../../tempcache/pages/contributions_list.html.twig:871
 #, safe-html
 msgid "Gift"
 msgstr "பரிசு"
@@ -7962,12 +7989,12 @@ msgstr "மின்னஞ்சல் உடல்:"
 msgid "Sorry, the page you are looking for could not be found."
 msgstr "மன்னிக்கவும், நீங்கள் தேடும் பக்கத்தைக் கண்டுபிடிக்க முடியவில்லை."
 
-#: ../../tempcache/pages/members_list.html.twig:65
+#: ../../tempcache/pages/members_list.html.twig:64
 #, safe-html
 msgid "No member selected"
 msgstr "எந்த உறுப்பினரும் தேர்ந்தெடுக்கப்படவில்லை"
 
-#: ../../tempcache/pages/members_list.html.twig:65
+#: ../../tempcache/pages/members_list.html.twig:64
 #, safe-html
 msgid ""
 "Please make sure to select at least one member from the list to perform this"
@@ -7976,56 +8003,56 @@ msgstr ""
 "இந்த செயலைச் செய்ய பட்டியலிலிருந்து குறைந்தது ஒரு உறுப்பினராவது "
 "தேர்ந்தெடுக்கவும்."
 
-#: ../../tempcache/pages/members_list.html.twig:83
-#: ../../tempcache/pages/members_public_list.html.twig:72
-#: ../../tempcache/pages/members_public_gallery.html.twig:69
+#: ../../tempcache/pages/members_list.html.twig:82
+#: ../../tempcache/pages/members_public_list.html.twig:71
+#: ../../tempcache/pages/members_public_gallery.html.twig:68
 #, php-format, safe-html
 msgid "%count member"
 msgid_plural "%count members"
 msgstr[0] "உறுப்பினரை எண்ணுங்கள்"
 msgstr[1] "உறுப்பினர்களை எண்ணுங்கள்"
 
-#: ../../tempcache/pages/members_list.html.twig:145
+#: ../../tempcache/pages/members_list.html.twig:144
 #, safe-html
 msgid "Mbr id"
 msgstr "MBR ஐடி"
 
-#: ../../tempcache/pages/members_list.html.twig:202
+#: ../../tempcache/pages/members_list.html.twig:201
 #: ../../tempcache/pages/advanced_search.html.twig:75
 #, safe-html
 msgid "Search:"
 msgstr "தேடல்:"
 
-#: ../../tempcache/pages/members_list.html.twig:208
+#: ../../tempcache/pages/members_list.html.twig:207
 #: ../../tempcache/pages/advanced_search.html.twig:81
 #, safe-html
 msgid "Enter a value"
 msgstr "ஒரு மதிப்பை உள்ளிடவும்"
 
-#: ../../tempcache/pages/members_list.html.twig:214
+#: ../../tempcache/pages/members_list.html.twig:213
 #: ../../tempcache/pages/advanced_search.html.twig:87
 #, safe-html
 msgid "in:"
 msgstr "இல்:"
 
-#: ../../tempcache/pages/members_list.html.twig:243
-#: ../../tempcache/pages/members_list.html.twig:272
-#: ../../tempcache/pages/members_list.html.twig:301
+#: ../../tempcache/pages/members_list.html.twig:242
+#: ../../tempcache/pages/members_list.html.twig:271
+#: ../../tempcache/pages/members_list.html.twig:300
 #, safe-html
 msgid "among:"
 msgstr "மத்தியில்:"
 
-#: ../../tempcache/pages/members_list.html.twig:306
+#: ../../tempcache/pages/members_list.html.twig:305
 #, safe-html
 msgid "All groups"
 msgstr "அனைத்து குழுக்களும்"
 
-#: ../../tempcache/pages/members_list.html.twig:337
+#: ../../tempcache/pages/members_list.html.twig:336
 #, safe-html
 msgid "Members that have an email address:"
 msgstr "மின்னஞ்சல் முகவரி கொண்ட உறுப்பினர்கள்:"
 
-#: ../../tempcache/pages/members_list.html.twig:351
+#: ../../tempcache/pages/members_list.html.twig:350
 #: ../../tempcache/pages/mailings_list.html.twig:227
 #: ../../tempcache/pages/advanced_search.html.twig:222
 #: ../../tempcache/pages/advanced_search.html.twig:461
@@ -8033,143 +8060,143 @@ msgstr "மின்னஞ்சல் முகவரி கொண்ட உற
 msgid "Don't care"
 msgstr "கவலைப்பட வேண்டாம்"
 
-#: ../../tempcache/pages/members_list.html.twig:367
+#: ../../tempcache/pages/members_list.html.twig:366
 #: ../../tempcache/pages/advanced_search.html.twig:238
 #, safe-html
 msgid "With"
 msgstr "உடன்"
 
-#: ../../tempcache/pages/members_list.html.twig:383
+#: ../../tempcache/pages/members_list.html.twig:382
 #: ../../tempcache/pages/advanced_search.html.twig:254
 #, safe-html
 msgid "Without"
 msgstr "இல்லாமல்"
 
-#: ../../tempcache/pages/members_list.html.twig:402
+#: ../../tempcache/pages/members_list.html.twig:401
 #, safe-html
 msgid "Save selected criteria"
 msgstr "தேர்ந்தெடுக்கப்பட்ட அளவுகோல்களைச் சேமிக்கவும்"
 
-#: ../../tempcache/pages/members_list.html.twig:428
+#: ../../tempcache/pages/members_list.html.twig:427
 #, safe-html
 msgid "Advanced search mode"
 msgstr "மேம்பட்ட தேடல் முறை"
 
-#: ../../tempcache/pages/members_list.html.twig:432
+#: ../../tempcache/pages/members_list.html.twig:431
 #, safe-html
 msgid "Save current advanced search criteria"
 msgstr "தற்போதைய மேம்பட்ட தேடல் அளவுகோல்களைச் சேமிக்கவும்"
 
-#: ../../tempcache/pages/members_list.html.twig:442
+#: ../../tempcache/pages/members_list.html.twig:441
 #, safe-html
 msgid "Change search criteria"
 msgstr "தேடல் அளவுகோல்களை மாற்றவும்"
 
-#: ../../tempcache/pages/members_list.html.twig:447
+#: ../../tempcache/pages/members_list.html.twig:446
 #, safe-html
 msgid "Change criteria"
 msgstr "அளவுகோல்களை மாற்றவும்"
 
-#: ../../tempcache/pages/members_list.html.twig:466
+#: ../../tempcache/pages/members_list.html.twig:465
 #, safe-html
 msgid "Show/hide query"
 msgstr "வினவலைக் காட்டு/மறைக்கவும்"
 
-#: ../../tempcache/pages/members_list.html.twig:513
+#: ../../tempcache/pages/members_list.html.twig:512
 #, safe-html
 msgid "Reading the list"
 msgstr "பட்டியலைப் படித்தல்"
 
-#: ../../tempcache/pages/members_list.html.twig:525
+#: ../../tempcache/pages/members_list.html.twig:524
 #, safe-html
 msgid "Active account"
 msgstr "செயலில் கணக்கு"
 
-#: ../../tempcache/pages/members_list.html.twig:533
+#: ../../tempcache/pages/members_list.html.twig:532
 #, safe-html
 msgid "Inactive account"
 msgstr "செயலற்ற கணக்கு"
 
-#: ../../tempcache/pages/members_list.html.twig:540
+#: ../../tempcache/pages/members_list.html.twig:539
 #, safe-html
 msgid "Membership in order"
 msgstr "வரிசையில் உறுப்பினர்"
 
-#: ../../tempcache/pages/members_list.html.twig:545
+#: ../../tempcache/pages/members_list.html.twig:544
 #, safe-html
 msgid "Membership will expire soon (&lt;30d)"
-msgstr "உறுப்பினர் விரைவில் காலாவதியாகும் (& lt; 30d)"
+msgstr "உறுப்பினர் விரைவில் காலாவதியாகும் (&amp; lt; 30d)"
 
-#: ../../tempcache/pages/members_list.html.twig:557
+#: ../../tempcache/pages/members_list.html.twig:556
 #, safe-html
 msgid "Lateness in fee"
 msgstr "கட்டணத்தில் தாமதங்கள்"
 
-#: ../../tempcache/pages/members_list.html.twig:604
+#: ../../tempcache/pages/members_list.html.twig:603
 #, safe-html
 msgid "User status/interactions"
 msgstr "பயனர் நிலை/இடைவினைகள்"
 
-#: ../../tempcache/pages/members_list.html.twig:613
+#: ../../tempcache/pages/members_list.html.twig:612
 #, safe-html
 msgid "Send an email"
 msgstr "மின்னஞ்சல் அனுப்புங்கள்"
 
-#: ../../tempcache/pages/members_list.html.twig:618
-#: ../../tempcache/pages/members_list.html.twig:727
-#: ../../tempcache/pages/members_public_list.html.twig:225
-#: ../../tempcache/pages/members_public_list.html.twig:229
+#: ../../tempcache/pages/members_list.html.twig:617
+#: ../../tempcache/pages/members_list.html.twig:726
+#: ../../tempcache/pages/members_public_list.html.twig:224
+#: ../../tempcache/pages/members_public_list.html.twig:228
 #, safe-html
 msgid "Is a company"
 msgstr "ஒரு நிறுவனம்"
 
-#: ../../tempcache/pages/members_list.html.twig:626
-#: ../../tempcache/pages/members_list.html.twig:738
-#: ../../tempcache/pages/members_public_list.html.twig:239
-#: ../../tempcache/pages/members_public_list.html.twig:243
+#: ../../tempcache/pages/members_list.html.twig:625
+#: ../../tempcache/pages/members_list.html.twig:737
+#: ../../tempcache/pages/members_public_list.html.twig:238
+#: ../../tempcache/pages/members_public_list.html.twig:242
 #, safe-html
 msgid "Is a man"
 msgstr "ஒரு மனிதன்"
 
-#: ../../tempcache/pages/members_list.html.twig:631
-#: ../../tempcache/pages/members_list.html.twig:749
-#: ../../tempcache/pages/members_public_list.html.twig:253
-#: ../../tempcache/pages/members_public_list.html.twig:257
+#: ../../tempcache/pages/members_list.html.twig:630
+#: ../../tempcache/pages/members_list.html.twig:748
+#: ../../tempcache/pages/members_public_list.html.twig:252
+#: ../../tempcache/pages/members_public_list.html.twig:256
 #, safe-html
 msgid "Is a woman"
 msgstr "ஒரு பெண்"
 
-#: ../../tempcache/pages/members_list.html.twig:638
-#: ../../tempcache/pages/members_list.html.twig:786
+#: ../../tempcache/pages/members_list.html.twig:637
+#: ../../tempcache/pages/members_list.html.twig:785
 #: ../../tempcache/pages/preferences.html.twig:140
 #, safe-html
 msgid "Admin"
 msgstr "நிர்வாகி"
 
-#: ../../tempcache/pages/members_list.html.twig:934
+#: ../../tempcache/pages/members_list.html.twig:933
 #, safe-html
 msgid "Is a sponsor"
 msgstr "ஒரு ஒப்புரவாளர்"
 
-#: ../../tempcache/pages/members_list.html.twig:1066
-#: ../../tempcache/pages/members_public_list.html.twig:187
-#: ../../tempcache/pages/members_public_gallery.html.twig:146
+#: ../../tempcache/pages/members_list.html.twig:1065
+#: ../../tempcache/pages/members_public_list.html.twig:186
+#: ../../tempcache/pages/members_public_gallery.html.twig:145
 #, safe-html
 msgid "No member"
 msgstr "உறுப்பினர் இல்லை"
 
-#: ../../tempcache/pages/members_list.html.twig:1137
+#: ../../tempcache/pages/members_list.html.twig:1136
 #, safe-html
 msgid "Search title"
 msgstr "தேடல் தலைப்பு"
 
-#: ../../tempcache/pages/members_list.html.twig:1227
+#: ../../tempcache/pages/members_list.html.twig:1226
 #: ../../tempcache/pages/mailings_list.html.twig:121
 #, safe-html
 msgid "Existing mailing"
 msgstr "தற்போதுள்ள அஞ்சல்"
 
-#: ../../tempcache/pages/members_list.html.twig:1227
+#: ../../tempcache/pages/members_list.html.twig:1226
 #, safe-html
 msgid ""
 "A mailing already exists. Do you want to create a new one or resume the "
@@ -8178,22 +8205,22 @@ msgstr ""
 "ஒரு அஞ்சல் ஏற்கனவே உள்ளது. புதிய ஒன்றை உருவாக்க விரும்புகிறீர்களா அல்லது "
 "ஏற்கனவே உள்ளதை மீண்டும் தொடங்க விரும்புகிறீர்களா?"
 
-#: ../../tempcache/pages/members_list.html.twig:1227
+#: ../../tempcache/pages/members_list.html.twig:1226
 #, safe-html
 msgid "New"
 msgstr "புதிய"
 
-#: ../../tempcache/pages/members_list.html.twig:1227
+#: ../../tempcache/pages/members_list.html.twig:1226
 #, safe-html
 msgid "Resume"
 msgstr "மீண்டும் தொடங்குங்கள்"
 
-#: ../../tempcache/pages/members_list.html.twig:1265
+#: ../../tempcache/pages/members_list.html.twig:1264
 #, safe-html
 msgid "An error occurred displaying attendance sheet details interface :("
 msgstr "வருகை தாள் விவரங்கள் இடைமுகத்தைக் காண்பிக்கும் பிழை ஏற்பட்டது :("
 
-#: ../../tempcache/pages/members_list.html.twig:1488
+#: ../../tempcache/pages/members_list.html.twig:1487
 #, safe-html
 msgid "Required field!"
 msgstr "தேவையான புலம்!"
@@ -8218,52 +8245,53 @@ msgstr "எச்சரிக்கை"
 msgid "New contribution type"
 msgstr "புதிய பங்களிப்பு வகை"
 
-#: ../../tempcache/pages/groups_list.html.twig:76
+#: ../../tempcache/pages/groups_list.html.twig:75
 #: ../../tempcache/pages/advanced_search.html.twig:179
 #: ../../tempcache/pages/advanced_search.html.twig:605
+#: ../../tempcache/components/forms/mass_groups.html.twig:53
 #, safe-html
 msgid "Select a group"
 msgstr "ஒரு குழுவைத் தேர்ந்தெடுக்கவும்"
 
-#: ../../tempcache/pages/groups_list.html.twig:112
+#: ../../tempcache/pages/groups_list.html.twig:111
 #, safe-html
 msgid "Export all groups and their members as PDF"
 msgstr ""
 "அனைத்து குழுக்களையும் அவற்றின் உறுப்பினர்களையும் PDF ஆக ஏற்றுமதி செய்யுங்கள்"
 
-#: ../../tempcache/pages/groups_list.html.twig:117
+#: ../../tempcache/pages/groups_list.html.twig:116
 #, safe-html
 msgid "All groups PDF"
 msgstr "அனைத்து குழுக்களும் PDF"
 
-#: ../../tempcache/pages/groups_list.html.twig:132
+#: ../../tempcache/pages/groups_list.html.twig:131
 #, safe-html
 msgid "New group"
 msgstr "புதிய குழு"
 
-#: ../../tempcache/pages/groups_list.html.twig:193
+#: ../../tempcache/pages/groups_list.html.twig:192
 #, safe-html
 msgid "Add a new group"
 msgstr "ஒரு புதிய குழுவைச் சேர்க்கவும்"
 
-#: ../../tempcache/pages/groups_list.html.twig:236
+#: ../../tempcache/pages/groups_list.html.twig:235
 #, safe-html
 msgid "An error occurred checking name uniqueness :("
 msgstr "பெயர் தனித்துவத்தை சரிபார்க்க ஒரு பிழை ஏற்பட்டது :("
 
-#: ../../tempcache/pages/groups_list.html.twig:243
+#: ../../tempcache/pages/groups_list.html.twig:242
 #, safe-html
 msgid "Please provide a group name"
 msgstr "குழு பெயரை வழங்கவும்"
 
-#: ../../tempcache/pages/groups_list.html.twig:251
+#: ../../tempcache/pages/groups_list.html.twig:250
 #, safe-html
 msgid "Create"
 msgstr "உருவாக்கு"
 
-#: ../../tempcache/pages/groups_list.html.twig:299
-#: ../../tempcache/pages/groups_list.html.twig:383
-#: ../../tempcache/pages/groups_list.html.twig:451
+#: ../../tempcache/pages/groups_list.html.twig:298
+#: ../../tempcache/pages/groups_list.html.twig:382
+#: ../../tempcache/pages/groups_list.html.twig:450
 #: ../../tempcache/pages/mailing_form.html.twig:598
 #: ../../tempcache/pages/mailing_form.html.twig:642
 #: ../../tempcache/pages/mailing_form.html.twig:711
@@ -8271,17 +8299,17 @@ msgstr "உருவாக்கு"
 msgid "An error occurred displaying members interface :("
 msgstr "உறுப்பினர்களின் இடைமுகத்தைக் காண்பிக்கும் பிழை ஏற்பட்டது :("
 
-#: ../../tempcache/pages/groups_list.html.twig:311
+#: ../../tempcache/pages/groups_list.html.twig:310
 #, safe-html
 msgid "Group members selection"
 msgstr "குழு உறுப்பினர்கள் தேர்வு"
 
-#: ../../tempcache/pages/groups_list.html.twig:316
+#: ../../tempcache/pages/groups_list.html.twig:315
 #, safe-html
 msgid "Group managers selection"
 msgstr "குழு மேலாளர்கள் தேர்வு"
 
-#: ../../tempcache/pages/groups_list.html.twig:361
+#: ../../tempcache/pages/groups_list.html.twig:360
 #: ../../tempcache/pages/member_form.html.twig:701
 #, safe-html
 msgid ""
@@ -8290,7 +8318,7 @@ msgstr ""
 "இந்த பட்டியலில் உள்ள உருப்படிகள் மாற்றியமைக்கப்பட்டுள்ளன. உங்கள் "
 "மாற்றங்களைச் சேமிக்க மறக்காதீர்கள்."
 
-#: ../../tempcache/pages/groups_list.html.twig:417
+#: ../../tempcache/pages/groups_list.html.twig:416
 #: ../../tempcache/pages/mailing_form.html.twig:674
 #, safe-html
 msgid "Click on a row to select a member"
@@ -8393,7 +8421,7 @@ msgstr "புதிய கோப்பைப் பதிவேற்றவு�
 #: ../../tempcache/pages/preferences.html.twig:2098
 #: ../../tempcache/pages/document_form.html.twig:109
 #: ../../tempcache/components/forms/picture.html.twig:80
-#: ../../tempcache/components/dynamic_fields.html.twig:763
+#: ../../tempcache/components/dynamic_fields.html.twig:762
 #, safe-html
 msgid "Choose a file"
 msgstr "ஒரு கோப்பைத் தேர்வுசெய்க"
@@ -8513,7 +8541,7 @@ msgstr ""
 #: ../../tempcache/pages/reminder.html.twig:210
 #: ../../tempcache/pages/mailing_form.html.twig:311
 #: ../../tempcache/pages/mailing_form.html.twig:424
-#: ../../tempcache/pages/500.html.twig:119
+#: ../../tempcache/pages/500.html.twig:118
 #, safe-html
 msgid "Message:"
 msgstr "செய்தி:"
@@ -8702,9 +8730,9 @@ msgid ""
 "Select files to add as attachments.<br/>Multiple file selection using 'ctrl'"
 " or 'shift' keys are only available on compatible browsers."
 msgstr ""
-"இணைப்புகளாக சேர்க்க கோப்புகளைத் தேர்ந்தெடுக்கவும். <br/> 'கட்டுப்பாடு' "
-"அல்லது 'உயர்த்து' விசைகளைப் பயன்படுத்தி பல கோப்புத் தேர்வு இணக்கமான "
-"உலாவிகளில் மட்டுமே கிடைக்கும்."
+"இணைப்புகளாக சேர்க்க கோப்புகளைத் தேர்ந்தெடுக்கவும். <br> 'கட்டுப்பாடு' அல்லது"
+" 'உயர்த்து' விசைகளைப் பயன்படுத்தி பல கோப்புத் தேர்வு இணக்கமான உலாவிகளில் "
+"மட்டுமே கிடைக்கும்."
 
 #: ../../tempcache/pages/mailing_form.html.twig:271
 #, safe-html
@@ -8856,7 +8884,7 @@ msgstr "தற்போதைய லோகோ"
 #: ../../tempcache/pages/preferences.html.twig:2096
 #: ../../tempcache/pages/document_form.html.twig:107
 #: ../../tempcache/components/forms/picture.html.twig:78
-#: ../../tempcache/components/dynamic_fields.html.twig:761
+#: ../../tempcache/components/dynamic_fields.html.twig:760
 #, safe-html
 msgid "Choose another file"
 msgstr "மற்றொரு கோப்பைத் தேர்வுசெய்க"
@@ -8871,7 +8899,7 @@ msgstr "படத்தை நீக்கு"
 #: ../../tempcache/pages/preferences.html.twig:297
 #, safe-html
 msgid " (continuation)"
-msgstr "(தொடர்ச்சி)"
+msgstr " (தொடர்ச்சி)"
 
 #: ../../tempcache/pages/preferences.html.twig:347
 #, safe-html
@@ -9126,7 +9154,7 @@ msgid ""
 "parameter if the current page URL is not:<br/>%galette_url"
 msgstr ""
 "உங்கள் கேலட் நிகழ்வுக்கு அடிப்படை முகவரி ஐ உள்ளிடவும். தற்போதைய பக்க முகவரி "
-"இல்லாவிட்டால் மட்டுமே இந்த அளவுருவை மாற்ற வேண்டும்: <br/>%கேலட்_ஆர்ல்"
+"இல்லாவிட்டால் மட்டுமே இந்த அளவுருவை மாற்ற வேண்டும்: <br>%கேலட்_ஆர்ல்"
 
 #: ../../tempcache/pages/preferences.html.twig:1049
 #, safe-html
@@ -9424,7 +9452,7 @@ msgid ""
 "Do you want to use server's TLS capabilities?<br/>For GMail, this will "
 "always be on."
 msgstr ""
-"சேவையகத்தின் டி.எல்.எச் திறன்களைப் பயன்படுத்த விரும்புகிறீர்களா? <br/> "
+"சேவையகத்தின் டி.எல்.எச் திறன்களைப் பயன்படுத்த விரும்புகிறீர்களா? <br> "
 "சிமெயிலுக்கு, இது எப்போதும் இருக்கும்."
 
 #: ../../tempcache/pages/preferences.html.twig:1641
@@ -9607,9 +9635,9 @@ msgid ""
 "You can enter either:<br/>- a year,<br/>- two years with a slash as "
 "separator,<br/>- the string 'DEADLINE' to use member deadline"
 msgstr ""
-"நீங்கள் நுழையலாம்: <br/>- ஒரு வருடம், <br/>- பிரிப்பானாக ஒரு குறைப்புடன் "
-"இரண்டு ஆண்டுகள், <br/>- உறுப்பினர் காலக்கெடுவைப் பயன்படுத்த 'காலக்கெடு' என்ற"
-" சரம்"
+"நீங்கள் நுழையலாம்: <br>- ஒரு வருடம், <br>- பிரிப்பானாக ஒரு குறைப்புடன் "
+"இரண்டு ஆண்டுகள், <br>- உறுப்பினர் காலக்கெடுவைப் பயன்படுத்த 'காலக்கெடு' என்ற "
+"சரம்"
 
 #: ../../tempcache/pages/preferences.html.twig:2327
 #, safe-html
@@ -10061,6 +10089,7 @@ msgstr "குடும்பம்"
 
 #: ../../tempcache/pages/member_show.html.twig:521
 #: ../../tempcache/components/forms/groups.html.twig:45
+#: ../../tempcache/components/forms/mass_groups.html.twig:47
 #, safe-html
 msgid "Groups:"
 msgstr "குழுக்கள்:"
@@ -10103,64 +10132,64 @@ msgstr "உறுதிப்படுத்தல்:"
 msgid "Change my password"
 msgstr "எனது கடவுச்சொல்லை மாற்றவும்"
 
-#: ../../tempcache/pages/transactions_list.html.twig:78
+#: ../../tempcache/pages/transactions_list.html.twig:83
 #, safe-html
 msgid "Show transactions since"
 msgstr "பின்னர் பரிவர்த்தனைகளைக் காட்டு"
 
-#: ../../tempcache/pages/transactions_list.html.twig:165
+#: ../../tempcache/pages/transactions_list.html.twig:170
 #, safe-html
 msgid "Show all your transactions"
 msgstr "உங்கள் அனைத்து பரிவர்த்தனைகளையும் காட்டுங்கள்"
 
-#: ../../tempcache/pages/transactions_list.html.twig:171
+#: ../../tempcache/pages/transactions_list.html.twig:176
 #, safe-html
 msgid "Show all members transactions"
 msgstr "அனைத்து உறுப்பினர்களின் பரிவர்த்தனைகளையும் காட்டு"
 
-#: ../../tempcache/pages/transactions_list.html.twig:240
+#: ../../tempcache/pages/transactions_list.html.twig:245
 #, php-format, safe-html
 msgid "%count transaction"
 msgid_plural "%count transactions"
 msgstr[0] "பரிவர்த்தனையை எண்ணுங்கள்"
 msgstr[1] "பரிவர்த்தனைகளை எண்ணுங்கள்"
 
-#: ../../tempcache/pages/transactions_list.html.twig:296
+#: ../../tempcache/pages/transactions_list.html.twig:301
 #, safe-html
 msgid "Originator"
 msgstr "தோற்றுவிப்பவர்"
 
-#: ../../tempcache/pages/transactions_list.html.twig:386
+#: ../../tempcache/pages/transactions_list.html.twig:391
 #, safe-html
 msgid "Transaction %id"
 msgstr "பரிவர்த்தனை %ஐடி"
 
-#: ../../tempcache/pages/transactions_list.html.twig:415
+#: ../../tempcache/pages/transactions_list.html.twig:420
 #, safe-html
 msgid "Show only '%name' transactions"
 msgstr "'%பெயர்' பரிவர்த்தனைகளை மட்டும் காட்டு"
 
-#: ../../tempcache/pages/transactions_list.html.twig:474
+#: ../../tempcache/pages/transactions_list.html.twig:479
 #, safe-html
 msgid "Edit transaction #%id"
 msgstr "பரிவர்த்தனை #%ஐடியைத் திருத்தவும்"
 
-#: ../../tempcache/pages/transactions_list.html.twig:491
+#: ../../tempcache/pages/transactions_list.html.twig:496
 #, safe-html
 msgid "Remove transaction #%id"
 msgstr "பரிவர்த்தனை #%ஐடியை அகற்று"
 
-#: ../../tempcache/pages/transactions_list.html.twig:514
+#: ../../tempcache/pages/transactions_list.html.twig:519
 #, safe-html
 msgid "no transaction"
 msgstr "பரிவர்த்தனை இல்லை"
 
-#: ../../tempcache/pages/transactions_list.html.twig:545
+#: ../../tempcache/pages/transactions_list.html.twig:550
 #, safe-html
 msgid "Completely dispatched transaction"
 msgstr "முற்றிலும் அனுப்பப்பட்ட பரிவர்த்தனை"
 
-#: ../../tempcache/pages/transactions_list.html.twig:552
+#: ../../tempcache/pages/transactions_list.html.twig:557
 #, safe-html
 msgid "Uncomplete dispatched transaction"
 msgstr "முழுமையான அனுப்பப்பட்ட பரிவர்த்தனை"
@@ -10219,8 +10248,8 @@ msgstr "காலப்போக்கில் பங்களிப்பு�
 msgid "Total contributions for the month"
 msgstr "மாதத்திற்கான மொத்த பங்களிப்புகள்"
 
-#: ../../tempcache/pages/members_public_list.html.twig:131
-#: ../../tempcache/pages/members_public_gallery.html.twig:92
+#: ../../tempcache/pages/members_public_list.html.twig:130
+#: ../../tempcache/pages/members_public_gallery.html.twig:91
 #, safe-html
 msgid ""
 "This page shows only members who have choosen to be visible on the public "
@@ -10400,38 +10429,38 @@ msgstr "உடன் தொடங்குகிறது"
 msgid "ends with"
 msgstr "உடன் முடிவடைகிறது"
 
-#: ../../tempcache/pages/500.html.twig:62
+#: ../../tempcache/pages/500.html.twig:61
 #, safe-html
 msgid "Application error"
 msgstr "பயன்பாட்டு பிழை"
 
-#: ../../tempcache/pages/500.html.twig:94
+#: ../../tempcache/pages/500.html.twig:93
 #, safe-html
 msgid "Details"
 msgstr "விவரங்கள்"
 
-#: ../../tempcache/pages/500.html.twig:99
+#: ../../tempcache/pages/500.html.twig:98
 #, safe-html
 msgid "Type:"
 msgstr "தட்டச்சு:"
 
-#: ../../tempcache/pages/500.html.twig:109
+#: ../../tempcache/pages/500.html.twig:108
 #, safe-html
 msgid "Code:"
 msgstr "குறியீடு:"
 
-#: ../../tempcache/pages/500.html.twig:133
+#: ../../tempcache/pages/500.html.twig:132
 #: ../../tempcache/pages/document_form.html.twig:76
 #, safe-html
 msgid "File:"
 msgstr "கோப்பு:"
 
-#: ../../tempcache/pages/500.html.twig:143
+#: ../../tempcache/pages/500.html.twig:142
 #, safe-html
 msgid "Line:"
 msgstr "வரி:"
 
-#: ../../tempcache/pages/500.html.twig:161
+#: ../../tempcache/pages/500.html.twig:160
 #, safe-html
 msgid "Trace"
 msgstr "சுவடு"
@@ -10574,10 +10603,10 @@ msgid ""
 msgstr ""
 "இந்த பெட்டியை நீங்கள் சரிபார்த்தால் (உங்கள் பங்களிப்புகளுடன் நீங்கள் "
 "புதுப்பித்த நிலையில் இருந்தால்), உங்கள் முழு பெயர் மற்றும் பிற தகவல்கள் "
-"உறுப்பினர்கள் பட்டியலில் பகிரங்கமாகத் தெரியும். <br/> நீங்கள் ஒரு "
+"உறுப்பினர்கள் பட்டியலில் பகிரங்கமாகத் தெரியும். <br> நீங்கள் ஒரு "
 "புகைப்படத்தை பதிவேற்றினால், அது காண்பிக்கப்படும் டிராம்பினோச்கோப் பக்கம். "
-"<br/> நிர்வாகிகள் பொது பக்கங்களை முடக்க முடியும் என்பதை நினைவில் கொள்க, இந்த"
-" அமைப்பு அந்த விசயத்தில் எந்த விளைவையும் ஏற்படுத்தாது."
+"<br> நிர்வாகிகள் பொது பக்கங்களை முடக்க முடியும் என்பதை நினைவில் கொள்க, இந்த "
+"அமைப்பு அந்த விசயத்தில் எந்த விளைவையும் ஏற்படுத்தாது."
 
 #: ../../tempcache/components/form.html.twig:358
 #, safe-html
@@ -10636,6 +10665,18 @@ msgstr "பதிவு ச்பேமைத் தவிர்க்க இந
 msgid "Captcha"
 msgstr "கேப்ட்சா"
 
+#: ../../tempcache/components/forms/mass_groups.html.twig:73
+#, safe-html
+msgid "Select a group to add selected members to"
+msgstr ""
+"தேர்ந்தெடுக்கப்பட்ட உறுப்பினர்களைச் சேர்க்க ஒரு குழுவைத் தேர்ந்தெடுக்கவும்"
+
+#: ../../tempcache/components/forms/mass_groups.html.twig:80
+#, safe-html
+msgid "Select a group to remove selected members from"
+msgstr ""
+"தேர்ந்தெடுக்கப்பட்ட உறுப்பினர்களை அகற்ற ஒரு குழுவைத் தேர்ந்தெடுக்கவும்"
+
 #: ../../tempcache/components/forms/member_dropdown.html.twig:77
 #, safe-html
 msgid "Load previous members..."
@@ -10661,23 +10702,23 @@ msgstr "வழங்கப்படவில்லை"
 msgid "Picture:"
 msgstr "படம்:"
 
-#: ../../tempcache/components/dynamic_fields.html.twig:232
+#: ../../tempcache/components/dynamic_fields.html.twig:231
 #, safe-html
 msgid "Enter as many occurrences you want."
 msgstr "நீங்கள் விரும்பும் பல நிகழ்வுகளை உள்ளிடவும்."
 
-#: ../../tempcache/components/dynamic_fields.html.twig:257
-#: ../../tempcache/components/dynamic_fields.html.twig:319
+#: ../../tempcache/components/dynamic_fields.html.twig:256
+#: ../../tempcache/components/dynamic_fields.html.twig:318
 #, php-format, safe-html
 msgid "Enter up to %count more occurrences."
 msgstr "%எண்ணிக்கை அதிக நிகழ்வுகளை உள்ளிடவும்."
 
-#: ../../tempcache/components/dynamic_fields.html.twig:584
+#: ../../tempcache/components/dynamic_fields.html.twig:583
 #, safe-html
 msgid "Select an option"
 msgstr "ஒரு விருப்பத்தைத் தேர்ந்தெடுக்கவும்"
 
-#: ../../tempcache/components/dynamic_fields.html.twig:804
+#: ../../tempcache/components/dynamic_fields.html.twig:803
 #, safe-html
 msgid "delete"
 msgstr "நீக்கு"
