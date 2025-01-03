@@ -1,0 +1,611 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tamil (isoquery)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-03 01:53+0200\n"
+"PO-Revision-Date: 2025-01-03 08:31+0530\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/isoquery/manpage/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
+
+#. type: Title =
+#: man/isoquery.adoc:1
+#, no-wrap
+msgid "isoquery(1)"
+msgstr "ஐசோக்வரி (1)"
+
+#. type: Plain text
+#: man/isoquery.adoc:3 man/isoquery.adoc:221
+#, ignore-same
+msgid "Dr. Tobias Quathamer <toddy@debian.org>"
+msgstr "டாக்டர் டோபியாச் குயாதமர் <toddy@debian.org>"
+
+#. type: Title ==
+#: man/isoquery.adoc:8
+#, no-wrap
+msgid "Name"
+msgstr "பெயர்"
+
+#. type: Plain text
+#: man/isoquery.adoc:11
+msgid "isoquery - search and display various ISO codes (country, language, …)"
+msgstr ""
+"ஐசோக்வரி - பல்வேறு ஐஎச்ஓ குறியீடுகளைத் தேடவும் காண்பிக்கவும் (நாடு, மொழி,…)"
+
+#. type: Title ==
+#: man/isoquery.adoc:12
+#, no-wrap
+msgid "Synopsis"
+msgstr "சுருக்கம்"
+
+#. type: Plain text
+#: man/isoquery.adoc:15
+msgid "*isoquery* [_OPTION …_] [_ISO codes_]"
+msgstr "* isoquery* [_Option… _] [_iso குறியீடுகள்_]"
+
+#. type: Title ==
+#: man/isoquery.adoc:16
+#, no-wrap
+msgid "Description"
+msgstr "விவரம்"
+
+#. type: Plain text
+#: man/isoquery.adoc:25
+msgid ""
+"This manual page documents briefly the *isoquery* command.  It can be used "
+"to generate a tabular output of the ISO standard codes provided by the "
+"package *iso-codes*.  It parses the JSON files and shows all included ISO "
+"codes or just matching entries, if specified on the command line.  Moreover,"
+" it's possible to get all available translations for the ISO standard."
+msgstr ""
+"இந்த கையேடு பக்கம் சுருக்கமாக * ஐசோக்வரி * கட்டளையை ஆவணப்படுத்துகிறது. "
+"*ஐஎச்ஓ-குறியீடுகள் *தொகுப்பு வழங்கிய ஐஎச்ஓ தரநிலை குறியீடுகளின் அட்டவணை "
+"வெளியீட்டை உருவாக்க இதைப் பயன்படுத்தலாம். இது சாதொபொகு கோப்புகளை "
+"பாகுபடுத்துகிறது மற்றும் கட்டளை வரியில் குறிப்பிடப்பட்டால், சேர்க்கப்பட்ட "
+"அனைத்து ஐஎச்ஓ குறியீடுகளையும் அல்லது பொருந்தக்கூடிய உள்ளீடுகளையும் "
+"காட்டுகிறது. மேலும், ஐஎச்ஓ தரநிலைக்கு கிடைக்கக்கூடிய அனைத்து "
+"மொழிபெயர்ப்புகளையும் பெற முடியும்."
+
+#. type: Title ==
+#: man/isoquery.adoc:26
+#, no-wrap
+msgid "Options"
+msgstr "விருப்பங்கள்"
+
+#. type: Plain text
+#: man/isoquery.adoc:30
+msgid ""
+"This program follows the usual GNU command line syntax, with long options "
+"starting with two dashes ('*-*'). *isoquery* supports the following options:"
+msgstr ""
+"இந்த நிரல் வழக்கமான குனு கட்டளை வரி தொடரியல், இரண்டு கோடுகளுடன் ('*-*') "
+"தொடங்கும் நீண்ட விருப்பங்களுடன். * ஐசோக்வரி* பின்வரும் விருப்பங்களை "
+"ஆதரிக்கிறது:"
+
+#. type: Labeled list
+#: man/isoquery.adoc:31
+#, no-wrap
+msgid "*-i, --iso*=_STANDARD_"
+msgstr "*-i, --iso*= _ STANDAND_"
+
+#. type: Plain text
+#: man/isoquery.adoc:34
+msgid ""
+"The ISO standard to use. Possible values: 639-2, 639-3, 639-5, 3166-1, "
+"3166-2, 3166-3, 4217, 15924 (default: 3166-1)"
+msgstr ""
+"பயன்படுத்த ஐஎச்ஓ தரநிலை. சாத்தியமான மதிப்புகள்: 639-2, 639-3, 639-5, 3166-1,"
+" 3166-2, 3166-3, 4217, 15924 (இயல்புநிலை: 3166-1)"
+
+#. type: Labeled list
+#: man/isoquery.adoc:35
+#, no-wrap
+msgid "*-p, --pathname*=_PATHNAME_"
+msgstr "*-P, -_ _ _ _ _ _ _ _ _"
+
+#. type: Plain text
+#: man/isoquery.adoc:37
+msgid ""
+"Use _PATHNAME_ as prefix for the data files (default: /usr/share/iso-"
+"codes/json)"
+msgstr ""
+"தரவுக் கோப்புகளுக்கான முன்னொட்டாக _pathname_ ஐப் பயன்படுத்தவும் "
+"(இயல்புநிலை:/usr/share/iso-codes/json)"
+
+#. type: Labeled list
+#: man/isoquery.adoc:38
+#, no-wrap
+msgid "*-l, --locale*=_LOCALE_"
+msgstr "*-L,-அறை*= _ உள்ளூர்_"
+
+#. type: Plain text
+#: man/isoquery.adoc:40
+msgid "Use this _LOCALE_ for output"
+msgstr "வெளியீட்டிற்கு இந்த _locale_ ஐப் பயன்படுத்தவும்"
+
+#. type: Labeled list
+#: man/isoquery.adoc:41
+#, no-wrap
+msgid "*-n, --name*"
+msgstr "*-n,-பெயர்*"
+
+#. type: Plain text
+#: man/isoquery.adoc:43
+msgid "Name for the supplied codes (default)"
+msgstr "வழங்கப்பட்ட குறியீடுகளுக்கான பெயர் (இயல்புநிலை)"
+
+#. type: Labeled list
+#: man/isoquery.adoc:44
+#, no-wrap
+msgid "*-o, --official_name*"
+msgstr "*-o, --official_name*"
+
+#. type: Plain text
+#: man/isoquery.adoc:47
+msgid ""
+"Official name for the supplied codes. This may be the same as *--name* (only"
+" applies to ISO 3166-1)"
+msgstr ""
+"வழங்கப்பட்ட குறியீடுகளுக்கான அதிகாரப்பூர்வ பெயர். இது *-பெயர் * போன்றதாக "
+"இருக்கலாம் (ஐஎச்ஓ 3166-1 க்கு மட்டுமே பொருந்தும்)"
+
+#. type: Labeled list
+#: man/isoquery.adoc:48
+#, ignore-same, no-wrap
+msgid "*-c, --common_name*"
+msgstr "*-c, --common_name*"
+
+#. type: Plain text
+#: man/isoquery.adoc:51
+msgid ""
+"Common name for the supplied codes. This may be the same as *--name* (only "
+"applies to ISO 639-2, 639-3, and 3166-1)"
+msgstr ""
+"வழங்கப்பட்ட குறியீடுகளுக்கான பொதுவான பெயர். இது *-பெயர் * க்கு சமமாக "
+"இருக்கலாம் (ஐஎச்ஓ 639-2, 639-3 மற்றும் 3166-1 க்கு மட்டுமே பொருந்தும்)"
+
+#. type: Labeled list
+#: man/isoquery.adoc:52
+#, no-wrap
+msgid "*-0, --null*"
+msgstr "*-0, --null*"
+
+#. type: Plain text
+#: man/isoquery.adoc:54
+msgid "Separate entries with a NULL character instead of newline"
+msgstr "நியூ்லைனுக்கு பதிலாக சுழிய எழுத்துடன் உள்ளீடுகளை பிரிக்கவும்"
+
+#. type: Labeled list
+#: man/isoquery.adoc:55
+#, ignore-same, no-wrap
+msgid "*-f, --flag*"
+msgstr "*-f,--FLAG*"
+
+#. type: Plain text
+#: man/isoquery.adoc:58
+msgid ""
+"Show country flags with regional indicator symbol letters (only applies to "
+"ISO 3166-1)"
+msgstr ""
+"பிராந்திய காட்டி குறியீட்டு எழுத்துக்களுடன் நாட்டின் கொடிகளைக் காட்டு (ஐஎச்ஓ"
+" 3166-1 க்கு மட்டுமே பொருந்தும்)"
+
+#. type: Labeled list
+#: man/isoquery.adoc:59
+#, no-wrap
+msgid "*-h, --help*"
+msgstr "*-h,-உதவி*"
+
+#. type: Plain text
+#: man/isoquery.adoc:61
+msgid "Show summary of options"
+msgstr "விருப்பங்களின் சுருக்கத்தைக் காட்டு"
+
+#. type: Labeled list
+#: man/isoquery.adoc:62
+#, no-wrap
+msgid "*-v, --version*"
+msgstr "*-v, --version*"
+
+#. type: Plain text
+#: man/isoquery.adoc:64
+msgid "Show program version and copyright"
+msgstr "நிரல் பதிப்பு மற்றும் பதிப்புரிமை ஆகியவற்றைக் காட்டு"
+
+#. type: Title ==
+#: man/isoquery.adoc:65
+#, no-wrap
+msgid "Examples"
+msgstr "எடுத்துக்காட்டுகள்"
+
+#. type: Plain text
+#: man/isoquery.adoc:71
+msgid ""
+"If called without any command line options, *isoquery* will print a table of"
+" all ISO 3166-1 codes. The first three columns contain the alpha-2 code, the"
+" alpha-3 code, and the numerical code assigned to the country listed in the "
+"fourth column."
+msgstr ""
+"எந்த கட்டளை வரி விருப்பங்களும் இல்லாமல் அழைக்கப்பட்டால், * ஐசோக்வரி * "
+"அனைத்து ஐஎச்ஓ 3166-1 குறியீடுகளின் அட்டவணையை அச்சிடும். முதல் மூன்று "
+"நெடுவரிசைகளில் ஆல்பா -2 குறியீடு, ஆல்பா -3 குறியீடு மற்றும் நான்காவது "
+"நெடுவரிசையில் பட்டியலிடப்பட்ட நாட்டிற்கு ஒதுக்கப்பட்ட எண் குறியீடு உள்ளன."
+
+#. type: delimited block .
+#: man/isoquery.adoc:77
+#, ignore-same, no-wrap
+msgid ""
+"$ isoquery\n"
+"AW      ABW     533     Aruba\n"
+"[…]\n"
+"ZW      ZWE     716     Zimbabwe\n"
+msgstr ""
+"$ Soqiery\n"
+" AW ABW 533 அருபா\n"
+" [...]\n"
+" சிம்பாப்வே 716 சிம்பாப்வே\n"
+
+#. type: Plain text
+#: man/isoquery.adoc:81
+msgid ""
+"If you need only some countries, you can specify any of the codes in the "
+"first three columns to cut down the output."
+msgstr ""
+"உங்களுக்கு சில நாடுகள் மட்டுமே தேவைப்பட்டால், வெளியீட்டைக் குறைக்க முதல் "
+"மூன்று நெடுவரிசைகளில் ஏதேனும் குறியீடுகளை நீங்கள் குறிப்பிடலாம்."
+
+#. type: delimited block .
+#: man/isoquery.adoc:87
+#, ignore-same, no-wrap
+msgid ""
+"$ isoquery so nor 484\n"
+"SO      SOM     706     Somalia\n"
+"NO      NOR     578     Norway\n"
+"MX      MEX     484     Mexico\n"
+msgstr ""
+"$ ஐசோக்வரி எனவே 484\n"
+" எனவே சோம் 706 சோமாலியா\n"
+" இல்லை அல்லது 578 நோர்வே\n"
+" MX மெக்ச் 484 மெக்சிகோ\n"
+
+#. type: Plain text
+#: man/isoquery.adoc:93
+msgid ""
+"Should you need the translations of the countries' names, just specify in "
+"which _LOCALE_ you'd like to see the output.  Please note that the original "
+"English name will be shown if there is no translation available for the "
+"specified _LOCALE_."
+msgstr ""
+"நாடுகளின் பெயர்களின் மொழிபெயர்ப்புகள் உங்களுக்குத் தேவைப்பட்டால், _locale_ "
+"நீங்கள் வெளியீட்டைக் காண விரும்புகிறீர்கள் என்பதைக் குறிப்பிடவும். "
+"குறிப்பிட்ட _locale_ க்கு மொழிபெயர்ப்பு எதுவும் கிடைக்கவில்லை என்றால் அசல் "
+"ஆங்கில பெயர் காண்பிக்கப்படும் என்பதை நினைவில் கொள்க."
+
+#. type: delimited block .
+#: man/isoquery.adoc:99
+#, ignore-same, no-wrap
+msgid ""
+"$ isoquery --locale=nl fr de es\n"
+"FR      FRA     250     Frankrijk\n"
+"DE      DEU     276     Duitsland\n"
+"ES      ESP     724     Spanje\n"
+msgstr ""
+"$ isowely --- locally = nl fre the as\n"
+" Fr Fra 250 பிரான்ச்\n"
+" DEU 276 செர்மனி\n"
+" எச்பி 724 ச்பெயின் என்றால்\n"
+
+#. type: Plain text
+#: man/isoquery.adoc:104
+msgid ""
+"If your terminal supports the unicode regional indicator symbol letters, you"
+" can use the *--flag* command line option. Those letters can be displayed as"
+" a country flag."
+msgstr ""
+"உங்கள் முனையம் யூனிகோட் பிராந்திய காட்டி குறியீட்டு எழுத்துக்களை ஆதரித்தால்,"
+" நீங்கள் *-கொடி * கட்டளை வரி விருப்பத்தைப் பயன்படுத்தலாம். அந்த கடிதங்களை "
+"நாட்டின் கொடியாக காட்டலாம்."
+
+#. type: delimited block .
+#: man/isoquery.adoc:110
+#, ignore-same, no-wrap
+msgid ""
+"$ isoquery --flag --locale=nl fr de es\n"
+"FR      FRA     250     🇫🇷      Frankrijk\n"
+"DE      DEU     276     🇩🇪      Duitsland\n"
+"ES      ESP     724     🇪🇸      Spanje\n"
+msgstr ""
+"$ isoquery - -flag - -locale = nl fr\n"
+" Fr fra 250 🇫🇫🇫 பிரான்ச்\n"
+" DEU 276 🇩🇪 செர்மனி\n"
+" எச்பி 724 என்றால்\n"
+
+#. type: Plain text
+#: man/isoquery.adoc:116
+msgid ""
+"All of the above works for different ISO standards as well, so you can "
+"switch to the more extensive standard ISO 3166-2 by using the *--iso* "
+"command line option. The columns are ISO 3166-2 code, subset type (e.g. "
+"State, Province, etc.), parent, and name. The third column (parent) may be "
+"empty."
+msgstr ""
+"மேலே உள்ள அனைத்தும் வெவ்வேறு ஐஎச்ஓ தரங்களுக்கும் வேலை செய்கின்றன, எனவே "
+"*-ஐஎச்ஓ * கட்டளை வரி விருப்பத்தைப் பயன்படுத்தி நீங்கள் மிகவும் விரிவான தரமான"
+" ஐஎச்ஓ 3166-2 க்கு மாறலாம். நெடுவரிசைகள் ஐஎச்ஓ 3166-2 குறியீடு, துணைக்குழு "
+"வகை (எ.கா. மாநில, மாகாணம் போன்றவை), பெற்றோர் மற்றும் பெயர். மூன்றாவது "
+"நெடுவரிசை (பெற்றோர்) காலியாக இருக்கலாம்."
+
+#. type: delimited block .
+#: man/isoquery.adoc:122
+#, ignore-same, no-wrap
+msgid ""
+"$ isoquery --iso=3166-2\n"
+"AD-02   Parish          Canillo\n"
+"[…]\n"
+"ZW-MW   Province        Mashonaland West\n"
+msgstr ""
+"$ Isoquery --iso = 3166-2\n"
+" AD-02 PARISH CANILLO\n"
+" [...]\n"
+" ZW-MW மாகாணம் மசோனாலேண்ட் வெச்ட்\n"
+
+#. type: Plain text
+#: man/isoquery.adoc:128
+msgid ""
+"Codes which have been deleted from ISO 3166-1 are available in ISO 3166-3.  "
+"The columns are alpha-3 code, alpha-4 code, numeric code, comment, "
+"withdrawal date, and name. The columns for numeric code, comment, and "
+"withdrawal date may be empty."
+msgstr ""
+"ஐஎச்ஓ 3166-1 இலிருந்து நீக்கப்பட்ட குறியீடுகள் ஐஎச்ஓ 3166-3 இல் "
+"கிடைக்கின்றன. நெடுவரிசைகள் ஆல்பா -3 குறியீடு, ஆல்பா -4 குறியீடு, எண் "
+"குறியீடு, கருத்து, திரும்பப் பெறுதல் தேதி மற்றும் பெயர். எண் குறியீடு, "
+"கருத்து மற்றும் திரும்பப் பெறும் தேதிக்கான நெடுவரிசைகள் காலியாக இருக்கலாம்."
+
+#. type: delimited block .
+#: man/isoquery.adoc:136
+#, ignore-same, no-wrap
+msgid ""
+"$ isoquery --iso=3166-3\n"
+"AFI     AIDJ    262             1977    French Afars and Issas\n"
+"ANT     ANHH    532             1993-07-12      Netherlands Antilles\n"
+"[…]\n"
+"YUG     YUCS    891             1993-07-28      Yugoslavia, Socialist Federal Republic of\n"
+"ZAR     ZRCD    180             1997-07-14      Zaire, Republic of\n"
+msgstr ""
+"$ isoquery --iso = 3166-3\n"
+" AFI AIDJ 262 1977 பிரெஞ்சு அஃபர்ச் மற்றும் இசாச்\n"
+" ஆண்ட் அன்அ் 532 1993-07-12 நெதர்லாந்து அண்டில்லச்\n"
+" […]\n"
+" யக் யூக்ச் 891 1993-07-28 யூகோச்லாவியா, சோசலிச பெடரல் குடியரசு\n"
+" ZAR ZRCD 180 1997-07-14 சைர், குடியரசு\n"
+
+#. type: Plain text
+#: man/isoquery.adoc:141
+msgid ""
+"For ISO 639-2, the first three columns are the alpha-3 code, the "
+"bibliographic code, and the alpha-2 code. The second and third columns may "
+"be empty."
+msgstr ""
+"ஐஎச்ஓ 639-2 க்கு, முதல் மூன்று நெடுவரிசைகள் ஆல்பா -3 குறியீடு, நூலியல் "
+"குறியீடு மற்றும் ஆல்பா -2 குறியீடு. இரண்டாவது மற்றும் மூன்றாவது நெடுவரிசைகள்"
+" காலியாக இருக்கலாம்."
+
+#. type: delimited block .
+#: man/isoquery.adoc:151
+#, ignore-same, no-wrap
+msgid ""
+"$ isoquery --iso=639-2\n"
+"aar             aa      Afar\n"
+"abk             ab      Abkhazian\n"
+"ace                     Achinese\n"
+"[…]\n"
+"zun                     Zuni\n"
+"zxx                     No linguistic content; Not applicable\n"
+"zza                     Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki\n"
+msgstr ""
+"$ issockery-ISO = 639-2\n"
+" அபாரா\n"
+" ABKHHAZIANB ஆண்டு\n"
+" சானெச் ஏச்\n"
+" []\n"
+" வெசுன் சூனி\n"
+" சிக்ச் மொழியியல் உள்ளடக்கம் இல்லை; பொருந்தாது\n"
+" ZZA ZAZA; டெமிலி மங்கலான; கைட்கி; கிர்மன்னாக்; சாகிக்\n"
+
+#. type: Plain text
+#: man/isoquery.adoc:155
+msgid ""
+"You can trim down the results by specifying only some codes. Moreover, the "
+"option to get translated names is also available."
+msgstr ""
+"சில குறியீடுகளை மட்டுமே குறிப்பிடுவதன் மூலம் முடிவுகளை நீங்கள் ஒழுங்கமைக்க "
+"முடியும். மேலும், மொழிபெயர்க்கப்பட்ட பெயர்களைப் பெறுவதற்கான விருப்பமும் "
+"கிடைக்கிறது."
+
+#. type: delimited block .
+#: man/isoquery.adoc:161
+#, ignore-same, no-wrap
+msgid ""
+"$ isoquery --iso=639-2 --locale=pt vi bo kl\n"
+"vie             vi      Vietnamita\n"
+"bod     tib     bo      tibetano\n"
+"kal             kl      Kalaallisut; Greenlandic\n"
+msgstr ""
+"$ Isoquery --iso = 639-2--lole = pt vi bo kl\n"
+" VIE வியட்நாமிடமைட்டுகள்\n"
+" போட் திப் போ திபெத்தியன்\n"
+" Kl kl kalaallisut; கிரீன்லாந்திக்\n"
+
+#. type: Plain text
+#: man/isoquery.adoc:166
+msgid ""
+"If you want to use ISO 639-3, the displayed columns are alpha-3, scope, "
+"type, alpha-2, bibliographic, and the language name. Both alpha-2 and "
+"bibliographic may be empty."
+msgstr ""
+"நீங்கள் ஐஎச்ஓ 639-3 ஐப் பயன்படுத்த விரும்பினால், காட்டப்படும் நெடுவரிசைகள் "
+"ஆல்பா -3, நோக்கம், வகை, ஆல்பா -2, நூலியல் மற்றும் மொழி பெயர். ஆல்பா -2 "
+"மற்றும் நூலியல் இரண்டும் காலியாக இருக்கலாம்."
+
+#. type: delimited block .
+#: man/isoquery.adoc:173
+#, ignore-same, no-wrap
+msgid ""
+"$ isoquery -i 639-3 aal new spa guc\n"
+"aal     I       L                       Afade\n"
+"new     I       L                       Newari\n"
+"spa     I       L       es              Spanish\n"
+"guc     I       L                       Wayuu\n"
+msgstr ""
+"$ isoquery -i 639-3 AAL நியூ ச்பா கக்\n"
+" aal i l afade\n"
+" புதிய i l newari\n"
+" ச்பா ஐ எல் ச்பானிச்\n"
+" guc i l வெய்ய்\n"
+
+#. type: Plain text
+#: man/isoquery.adoc:176
+msgid ""
+"ISO 639-5 is also available. The displayed columns are alpha-3 and name."
+msgstr ""
+"ஐஎச்ஓ 639-5 கூட கிடைக்கிறது. காட்டப்படும் நெடுவரிசைகள் ஆல்பா -3 மற்றும் "
+"பெயர்."
+
+#. type: delimited block .
+#: man/isoquery.adoc:181
+#, ignore-same, no-wrap
+msgid ""
+"$ isoquery -i 639-5 aus tut\n"
+"aus     Australian languages\n"
+"tut     Altaic languages\n"
+msgstr ""
+"$ isoquery -i 639-5 aus tut\n"
+" ஆச் ஆச்திரேலிய மொழிகள்\n"
+" tut altaic மொழிகள்\n"
+
+#. type: Plain text
+#: man/isoquery.adoc:187
+msgid ""
+"You can get selected translations of currency names from the ISO 4217 "
+"standard by using the following command. The first of the columns is the "
+"alpha-3 code, and the second one is the numerical code assigned to the "
+"currency. The name of the currency is shown in the third column."
+msgstr ""
+"பின்வரும் கட்டளையைப் பயன்படுத்தி ஐஎச்ஓ 4217 தரத்திலிருந்து நாணய பெயர்களின் "
+"தேர்ந்தெடுக்கப்பட்ட மொழிபெயர்ப்புகளைப் பெறலாம். நெடுவரிசைகளில் முதலாவது "
+"ஆல்பா -3 குறியீடு, மற்றும் இரண்டாவது நாணயத்திற்கு ஒதுக்கப்பட்ட எண் குறியீடு."
+" நாணயத்தின் பெயர் மூன்றாவது நெடுவரிசையில் காட்டப்பட்டுள்ளது."
+
+#. type: delimited block .
+#: man/isoquery.adoc:192
+#, ignore-same, no-wrap
+msgid ""
+"$ isoquery --iso=4217 --locale=da cad 392\n"
+"CAD     124     Canadisk dollar\n"
+"JPY     392     Yen\n"
+msgstr ""
+"$ $ $ US --SO = 4217 -உள்ளூர் = 4212\n"
+" 124 டாலர் கனடிச்\n"
+" Jpy 392 நாங்கள்\n"
+
+#. type: Plain text
+#: man/isoquery.adoc:198
+msgid ""
+"If you need to get script names, you can use the ISO 15924 table.  The first"
+" of the columns is the alpha-4 code, and the second one is the numerical "
+"code assigned to the script. The name of the script is shown in the third "
+"column."
+msgstr ""
+"நீங்கள் ச்கிரிப்ட் பெயர்களைப் பெற வேண்டும் என்றால், நீங்கள் ஐஎச்ஓ 15924 "
+"அட்டவணையைப் பயன்படுத்தலாம். நெடுவரிசைகளில் முதலாவது ஆல்பா -4 குறியீடு, "
+"மற்றும் இரண்டாவது ச்கிரிப்டுக்கு ஒதுக்கப்பட்ட எண் குறியீடு. ச்கிரிப்டின் "
+"பெயர் மூன்றாவது நெடுவரிசையில் காட்டப்பட்டுள்ளது."
+
+#. type: delimited block .
+#: man/isoquery.adoc:204
+#, ignore-same, no-wrap
+msgid ""
+"$ isoquery --iso=15924 jpan latn 280\n"
+"Jpan    413     Japanese (alias for Han + Hiragana + Katakana)\n"
+"Latn    215     Latin\n"
+"Visp    280     Visible Speech\n"
+msgstr ""
+"$ Isquary --iso = 15924 jpan latn\n"
+" Jpan 413 சப்பானிய (ஆன் + இரகனா + கட்டகனா ஆகியவற்றிற்கான மாற்றுப்பெயர்)\n"
+" லாட்ன் 215 லத்தீன்\n"
+" விச்ப் 280 விசிப்ரியன் பேச்சு\n"
+
+#. type: Title ==
+#: man/isoquery.adoc:206
+#, no-wrap
+msgid "Files"
+msgstr "கோப்புகள்"
+
+#. type: Plain text
+#: man/isoquery.adoc:209
+msgid ""
+"By default, the JSON files provided by the *iso-codes* package will be used."
+msgstr ""
+"இயல்பாக, * ஐஎச்ஓ-குறியீடுகள் * தொகுப்பு வழங்கிய சாதொபொகு கோப்புகள் "
+"பயன்படுத்தப்படும்."
+
+#. type: Plain text
+#: man/isoquery.adoc:211
+#, ignore-same
+msgid "_/usr/share/iso-codes/json/iso_639-2.json_"
+msgstr "_/usr/share/iso-codes/json/iso_639-2.json_"
+
+#. type: Plain text
+#: man/isoquery.adoc:212
+#, ignore-same
+msgid "_/usr/share/iso-codes/json/iso_639-3.json_"
+msgstr "_/usr/share/iso-codes/json/iso_639-3.json_"
+
+#. type: Plain text
+#: man/isoquery.adoc:213
+#, ignore-same
+msgid "_/usr/share/iso-codes/json/iso_639-5.json_"
+msgstr "_/usr/share/iso-codes/json/iso_639-5.json_"
+
+#. type: Plain text
+#: man/isoquery.adoc:214
+#, ignore-same
+msgid "_/usr/share/iso-codes/json/iso_3166-1.json_"
+msgstr "_/usr/share/iso-codes/json/iso_3166-1.json_"
+
+#. type: Plain text
+#: man/isoquery.adoc:215
+#, ignore-same
+msgid "_/usr/share/iso-codes/json/iso_3166-2.json_"
+msgstr "_/usr/share/iso-codes/json/iso_3166-2.json_"
+
+#. type: Plain text
+#: man/isoquery.adoc:216
+#, ignore-same
+msgid "_/usr/share/iso-codes/json/iso_3166-3.json_"
+msgstr "_/usr/share/iso-codes/json/iso_3166-3.json_"
+
+#. type: Plain text
+#: man/isoquery.adoc:217
+#, ignore-same
+msgid "_/usr/share/iso-codes/json/iso_4217.json_"
+msgstr "_/usr/share/iso-codes/json/iso_4217.json_"
+
+#. type: Plain text
+#: man/isoquery.adoc:218
+#, ignore-same
+msgid "_/usr/share/iso-codes/json/iso_15924.json_"
+msgstr "_/usr/share/iso-codes/json/iso_15924.json_"
+
+#. type: Title ==
+#: man/isoquery.adoc:219
+#, no-wrap
+msgid "Author"
+msgstr "நூலாசிரியர்"
