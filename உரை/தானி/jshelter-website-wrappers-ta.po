@@ -1,0 +1,2114 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tamil (JShelter)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-04 05:58+0200\n"
+"PO-Revision-Date: 2025-01-04 15:44+0530\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/jshelter/website-wrappers/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
+
+#: ../content/wrappers/ajax.md:block 1 (paragraph)
+msgid "Title: Ajax Filename: ../common/wrappingS-AJAX.js"
+msgstr "தலைப்பு: அசாக்ச் கோப்பு பெயர்: ../common/wrappings-ajax.js"
+
+#: ../content/wrappers/ajax.md:block 2 (paragraph)
+msgid ""
+"XHR may be misused to exfiltrate data from the browser to the server. We "
+"provide a wrapper that either blocks all XHR requests or lets the user "
+"decide."
+msgstr ""
+"உலாவியில் இருந்து சேவையகத்திற்கு தரவை வெளியேற்ற எக்ச்எச்ஆர் தவறாகப் "
+"பயன்படுத்தப்படலாம். எல்லா எக்ச்எச்ஆர் கோரிக்கைகளையும் தடுக்கும் அல்லது பயனரை"
+" தீர்மானிக்க அனுமதிக்கும் ஒரு ரேப்பரை நாங்கள் வழங்குகிறோம்."
+
+#: ../content/wrappers/ajax.md:block 3 (paragraph)
+msgid "**Known bug**: There are two flaws in the current implementation:"
+msgstr ""
+"** அறியப்பட்ட பிழை **: தற்போதைய செயலாக்கத்தில் இரண்டு குறைபாடுகள் உள்ளன:"
+
+#: ../content/wrappers/ajax.md:block 4 (unordered list)
+msgid ""
+"There are many ways (see e.g. https://github.com/cure53/HTTPLeaks) to "
+"replace XHR and consequently evade the wrapper. This can be mitigating by "
+"monitoring the requests using Web Request API."
+msgstr ""
+"எக்ச்எச்ஆரை மாற்றுவதற்கு பல வழிகள் உள்ளன (எ.கா. வலை கோரிக்கை பநிஇ ஐப் "
+"பயன்படுத்தி கோரிக்கைகளை கண்காணிப்பதன் மூலம் இது தணிக்கலாம்."
+
+#: ../content/wrappers/ajax.md:block 4 (unordered list)
+msgid ""
+"The confirm method puts a lot of responsibility on the user who needs to "
+"have a good knowledge about the requests on each visited page."
+msgstr ""
+"உறுதிப்படுத்தும் முறை பயனருக்கு நிறைய பொறுப்பை அளிக்கிறது, அவர் பார்வையிட்ட "
+"ஒவ்வொரு பக்கத்திலும் கோரிக்கைகளைப் பற்றி நல்ல அறிவைக் கொண்டிருக்க வேண்டும்."
+
+#: ../content/wrappers/ajax.md:block 5 (paragraph)
+msgid ""
+"**Note**: We expect to remove the wrapper once we release JShelter with "
+"Fingerprint Detector (FPD). FPD should solve both issues above."
+msgstr ""
+"** குறிப்பு **: கைரேகை டிடெக்டர் (FPD) உடன் JShelter ஐ வெளியிட்டவுடன் "
+"ரேப்பரை அகற்ற எதிர்பார்க்கிறோம். மேலே உள்ள இரண்டு சிக்கல்களையும் FPD தீர்க்க"
+" வேண்டும்."
+
+#: ../content/wrappers/battery-cr.md:block 1 (paragraph)
+msgid "Title: Battery level Filename: ../common/wrappingS-BATTERY-CR.js"
+msgstr "தலைப்பு: பேட்டரி நிலை கோப்பு பெயர்: ../common/wrappings-battery-cr.js"
+
+#: ../content/wrappers/battery-cr.md:block 2 (paragraph)
+msgid ""
+"The `navigator.getBattery()` reports the state of the battery and can be "
+"misused to fingerprint users for a short term. The API was removed from "
+"Firefox, but is still supported in browsers derived from Chromium. The "
+"wrapper mimics Firefox behaviour."
+msgstr ""
+"`Navigator.getBattery ()` பேட்டரியின் நிலையைப் புகாரளிக்கிறது மற்றும் கைரேகை"
+" பயனர்களுக்கு குறுகிய காலத்திற்கு தவறாகப் பயன்படுத்தப்படலாம். பநிஇ "
+"பயர்பாக்சிலிருந்து அகற்றப்பட்டது, ஆனால் குரோமியத்திலிருந்து பெறப்பட்ட "
+"உலாவிகளில் இன்னும் ஆதரிக்கப்படுகிறது. ரேப்பர் பயர்பாக்ச் நடத்தையை "
+"பிரதிபலிக்கிறது."
+
+#: ../content/wrappers/battery-cr.md:block 3 (paragraph)
+msgid "\\see <https://lukaszolejnik.com/battery>"
+msgstr "\\ <https://lukaszolejnik.com/battery> ஐப் பார்க்கவும்"
+
+#: ../content/wrappers/battery-cr.md:block 4 (paragraph)
+msgid ""
+"**Known bug**: Because we mimic Firefox behaviour, a Chromium derived "
+"browser becomes more easily fingerprintable. This can be fixed by properly "
+"wrapping `BatteryManager.prototype` getters and setters."
+msgstr ""
+"** அறியப்பட்ட பிழை **: நாங்கள் பயர்பாக்ச் நடத்தையைப் பிரதிபலிப்பதால், ஒரு "
+"குரோமியம் பெறப்பட்ட உலாவி மிகவும் எளிதாக கைரேகையாகிறது. "
+"`பேட்டர்மேனேசர்.பிராடோடைப்` பெறுபவர்கள் மற்றும் செட்டர்களை சரியாக மடக்குவதன்"
+" மூலம் இதை சரிசெய்யலாம்."
+
+#: ../content/wrappers/be.md:block 1 (paragraph)
+msgid "Title: Beacon API Filename: ../common/wrappingS-BE.js"
+msgstr "தலைப்பு: பெக்கான் பநிஇ கோப்பு பெயர்: ../common/wrappings-be.js"
+
+#: ../content/wrappers/be.md:block 2 (paragraph)
+msgid ""
+"The `navigator.sendBeacon()` method asynchronously sends a small amount of "
+"data over HTTP to a web server. It is intended to be used for sending "
+"analytics data to a web server. For more details see the MDN docs on the "
+"[Beacon API](https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API) "
+"and [sendBeacon](https://developer.mozilla.org/en-"
+"US/docs/Web/API/Navigator/sendBeacon)."
+msgstr ""
+"`Navigator.sendbeacon ()` முறை ஒத்திசைவற்ற முறையில் HTTP வழியாக ஒரு சிறிய "
+"அளவு தரவை வலை சேவையகத்திற்கு அனுப்புகிறது. இது ஒரு வலை சேவையகத்திற்கு "
+"பகுப்பாய்வு தரவை அனுப்புவதற்கு பயன்படுத்தப்பட வேண்டும். மேலும் விவரங்களுக்கு"
+" [பெக்கான் ஏபிஐ] (https://developer.mozilla.org/en-"
+"us/docs/web/api/beacon_api) மற்றும் [sendBeacon] "
+"(https://developer.mozilla..org /en-us/docs/web/api/navigator/sendBeacon)."
+
+#: ../content/wrappers/be.md:block 3 (paragraph)
+msgid ""
+"`navigator.sendBeacon` is the only method currently defined for the Beacon "
+"API."
+msgstr ""
+"`நேவிகேட்டர்.செண்ட்பீச்கான்` என்பது பெக்கான் ஏபிஐக்கு தற்போது "
+"வரையறுக்கப்பட்ட ஒரே முறை."
+
+#: ../content/wrappers/coop-scheduling.md:block 1 (paragraph)
+msgid ""
+"Title: Cooperative Scheduling Filename: ../common/wrappingS-COOP-"
+"SCHEDULING.js"
+msgstr ""
+"தலைப்பு: கூட்டுறவு திட்டமிடல் கோப்பு பெயர்: ../common/wrappings-oop-"
+"scheduling.js"
+
+#: ../content/wrappers/coop-scheduling.md:block 2 (paragraph)
+msgid ""
+"The `window.requestIdleCallback()` API can schedule background tasks such "
+"that they do not introduce delays to other high priority tasks that share "
+"the same event loop, such as input processing, animations and frame "
+"compositing."
+msgstr "`சாளரம்."
+
+#: ../content/wrappers/coop-scheduling.md:block 3 (paragraph)
+msgid ""
+"But the API leaks information about the other tasks running in the browser "
+"as it leaks information on currently scheduled tasks, vsync deadlines, user-"
+"interaction and so on."
+msgstr ""
+"ஆனால் தற்போது திட்டமிடப்பட்ட பணிகள், VSYNC காலக்கெடுக்கள், பயனர் தொடர்பு "
+"மற்றும் பலவற்றின் தகவல்களை கசியவிட்டதால், உலாவியில் இயங்கும் மற்ற பணிகளைப் "
+"பற்றிய தகவல்களை பநிஇ கசியவிட்டது."
+
+#: ../content/wrappers/coop-scheduling.md:block 4 (paragraph)
+msgid "JShelter modifies the return call to:"
+msgstr "திரும்ப அழைப்பை jshelter மாற்றியமைக்கிறது:"
+
+#: ../content/wrappers/coop-scheduling.md:block 5 (ordered list)
+msgid ""
+"Never leak the information that the call was triggered by an expired "
+"timeout."
+msgstr ""
+"காலாவதியான காலக்கெடு மூலம் அழைப்பு தூண்டப்பட்ட தகவல்களை ஒருபோதும் கசிய "
+"வேண்டாம்."
+
+#: ../content/wrappers/coop-scheduling.md:block 5 (ordered list)
+msgid ""
+"Fake the information on remaining time in synchronization with the "
+"`Date.now()` wrapper. Returns up to 50% more time compared to the original "
+"value."
+msgstr ""
+"`தேதி. இப்போது ()` ரேப்பருடன் ஒத்திசைவில் மீதமுள்ள நேரம் குறித்த தகவல்களை "
+"போலியானது. அசல் மதிப்புடன் ஒப்பிடும்போது 50% அதிக நேரம் வரை கிடைக்கும்."
+
+#: ../content/wrappers/dm.md:block 1 (paragraph)
+msgid "Title: Device memory Filename: ../common/wrappingS-DM.js"
+msgstr "தலைப்பு: சாதன நினைவக கோப்பு பெயர்: ../common/wrappings-dm.js"
+
+#: ../content/wrappers/dm.md:block 2 (paragraph)
+msgid ""
+"This file contains a wrapper for "
+"[navigator.deviceMemory](https://developer.mozilla.org/en-"
+"US/docs/Web/API/Navigator/deviceMemory)."
+msgstr ""
+"இந்த கோப்பில் [navigator.devicememory] (https://developer.mozilla.org/en-"
+"us/docs/web/api/navigator/devicememory) க்கான ஒரு ரேப்பர் உள்ளது."
+
+#: ../content/wrappers/dm.md:block 3 (paragraph)
+msgid ""
+"The goal is to prevent fingerprinting by modifying the return value of the "
+"`navigator.deviceMemory` parameter."
+msgstr ""
+"`Navigator.devicememory` அளவுருவின் வருவாய் மதிப்பை மாற்றியமைப்பதன் மூலம் "
+"கைரேகையைத் தடுப்பதே குறிக்கோள்."
+
+#: ../content/wrappers/dm.md:block 4 (paragraph)
+msgid "This wrapper operates with three levels of protection:"
+msgstr "இந்த ரேப்பர் மூன்று நிலை பாதுகாப்புடன் இயங்குகிறது:"
+
+#: ../content/wrappers/dm.md:block 5 (unordered list)
+msgid "(0) - return random valid value from range [0.25 - real value]"
+msgstr ""
+"(0) - வரம்பிலிருந்து சீரற்ற செல்லுபடியாகும் மதிப்பைத் திரும்புக [0.25 - "
+"உண்மையான மதிப்பு]"
+
+#: ../content/wrappers/dm.md:block 5 (unordered list)
+msgid "(1) - return random valid value from range [0.25 - 8]"
+msgstr ""
+"(1) - வரம்பிலிருந்து சீரற்ற செல்லுபடியாகும் மதிப்பைத் திரும்புக [0.25 - 8]"
+
+#: ../content/wrappers/dm.md:block 5 (unordered list)
+msgid "(2) - return 4"
+msgstr "(2) - திரும்ப 4"
+
+#: ../content/wrappers/dm.md:block 6 (paragraph)
+msgid ""
+"These approaches are inspired by the algorithms created by [Brave "
+"Software](https://brave.com) available "
+"[here](https://github.com/brave/brave-"
+"core/blob/master/chromium_src/third_party/blink/renderer/core/frame/navigator_device_memory.cc)."
+msgstr ""
+"இந்த அணுகுமுறைகள் [துணிச்சலான மென்பொருள்] (https://brave.com) உருவாக்கிய "
+"வழிமுறைகளால் ஈர்க்கப்பட்டுள்ளன [இங்கே] "
+"/renderer/core/frame/navigator_device_memory.cc)."
+
+#: ../content/wrappers/dom.md:block 1 (paragraph)
+msgid "Title: DOM API Filename: ../common/wrappingS-DOM.js"
+msgstr "தலைப்பு: டோம் பநிஇ கோப்பு பெயர்: ../common/wrappings-dom.js"
+
+#: ../content/wrappers/dom.md:block 2 (paragraph)
+msgid ""
+"The events carry timestamp of their creation. As we allow wrapping of "
+"several ways to obtain timestamps, we need to provide the same precision for"
+" the Event API."
+msgstr ""
+"நிகழ்வுகள் அவற்றின் உருவாக்கத்தின் நேர முத்திரையைக் கொண்டுள்ளன. நேர "
+"முத்திரைகளைப் பெறுவதற்கு பல வழிகளை மடக்குவதை நாங்கள் அனுமதிக்கும்போது, "
+"​​நிகழ்வு பநிஇ க்கும் அதே துல்லியத்தை நாங்கள் வழங்க வேண்டும்."
+
+#: ../content/wrappers/ecma-array.md:block 1 (paragraph)
+msgid "Title: ECMAscript arrays Filename: ../common/wrappingS-ECMA-ARRAY.js"
+msgstr ""
+"தலைப்பு: ecmascript வரிசைகள் கோப்பு பெயர்: ../common/wrappings-ecma-array.js"
+
+#: ../content/wrappers/ecma-array.md:block 2 (paragraph)
+msgid ""
+"This wrapper aims on prevention of microarchitectural attacks like Meltdown "
+"and Spectre. This code was originally a part of "
+"[ChromeZero](https://github.com/IAIK/ChromeZero)."
+msgstr ""
+"இந்த ரேப்பர் மெல்டவுன் மற்றும் ச்பெக்டர் போன்ற மைக்ரோஆர்க்கிடெக்சரல் "
+"தாக்குதல்களைத் தடுப்பதை நோக்கமாகக் கொண்டுள்ளது. இந்த குறியீடு முதலில் "
+"[Chromezero] (https://github.com/iaik/chromezero) இன் ஒரு பகுதியாக இருந்தது."
+
+#: ../content/wrappers/ecma-array.md:block 3 (paragraph)
+msgid "**Known bug**: The `subarray()` method always ruturns the full array."
+msgstr ""
+"** அறியப்பட்ட பிழை **: `சப்அரே ()` முறை எப்போதும் முழு வரிசையையும் "
+"வழங்குகிறது."
+
+#: ../content/wrappers/ecma-array.md:block 4 (paragraph)
+msgid "The wrappers support the following behaviour:"
+msgstr "ரேப்பர்கள் பின்வரும் நடத்தையை ஆதரிக்கின்றன:"
+
+#: ../content/wrappers/ecma-array.md:block 5 (unordered list)
+msgid ""
+"Offset: The content of the buffer is shifted by a fix offset. This is a "
+"faster method but can be removed."
+msgstr ""
+"ஆஃப்செட்: இடையகத்தின் உள்ளடக்கம் ஒரு பிழைத்திருத்த ஆஃப்செட் மூலம் "
+"மாற்றப்படுகிறது. இது ஒரு வேகமான முறை ஆனால் அகற்றப்படலாம்."
+
+#: ../content/wrappers/ecma-array.md:block 5 (unordered list)
+msgid ""
+"Random mapping: All items are mapped randomly. This is a slower method but "
+"more reliable."
+msgstr ""
+"சீரற்ற மேப்பிங்: அனைத்து பொருட்களும் தோராயமாக வரைபடமாக்கப்படுகின்றன. இது "
+"மெதுவான முறை ஆனால் மிகவும் நம்பகமானது."
+
+#: ../content/wrappers/ecma-array.md:block 6 (paragraph)
+msgid ""
+"\\see "
+"<https://www.fit.vut.cz/study/thesis/22374/?year=0&sup=Pol%C4%8D%C3%A1k>, "
+"especially Sect. 5.1"
+msgstr ""
+"\\ பார்க்க "
+"<https://www.fit.vut.cz/study/tizes/22374/?year=0&sup=pol%C4%8D%C3%A1K>, "
+"குறிப்பாக பிரிவு. 5.1"
+
+#: ../content/wrappers/ecma-date.md:block 1 (paragraph)
+msgid "Title: ECMAscript date Filename: ../common/wrappingS-ECMA-DATE.js"
+msgstr ""
+"தலைப்பு: ecmascript தேதி கோப்பு பெயர்: ../common/wrappings-ecma-date.js"
+
+#: ../content/wrappers/ecma-date.md:block 2 (paragraph)
+msgid ""
+"This wrapper aims on prevention of microarchitectural attacks, clock-skew "
+"attacks, and other time related attacks. The goal is to limit the precision "
+"of the time returned by the Date object."
+msgstr ""
+"இந்த ரேப்பர் மைக்ரோஆர்கிடெக்சரல் தாக்குதல்கள், கடிகாரத்தைத் துடைக்கும் "
+"தாக்குதல்கள் மற்றும் பிற நேர தொடர்பான தாக்குதல்களைத் தடுப்பதை நோக்கமாகக் "
+"கொண்டுள்ளது. தேதி பொருளால் திரும்பிய நேரத்தின் துல்லியத்தை மட்டுப்படுத்துவதே"
+" குறிக்கோள்."
+
+#: ../content/wrappers/ecma-date.md:block 3 (paragraph)
+msgid ""
+"\\see "
+"<https://www.fit.vut.cz/study/thesis/22308/?year=0&sup=Pol%C4%8D%C3%A1k>, "
+"especially Sect. 7.2."
+msgstr ""
+"\\ காண்க "
+"<https://www.fit.vut.cz/study/tizes/22308/?year=0&sup=pol%C4%8D%C3%A1K>, "
+"குறிப்பாக பிரிவு. 7.2."
+
+#: ../content/wrappers/ecma-date.md:block 4 (paragraph)
+msgid ""
+"\\see Tom Van Goethem, Wouter Joosen, Nick Nikiforakis. The Clock is Still "
+"Ticking: Timing Attacks in the Modern Web. CCS'15. "
+"[Link](https://lirias.kuleuven.be/retrieve/389086), "
+"[DOI](http://dx.doi.org/10.1145/2810103.2813632)"
+msgstr ""
+"Tom டாம் வான் கோத்தெம், வூட்டர் சூசென், நிக் நிகிஃபோராகிச். கடிகாரம் இன்னும்"
+" துடிக்கிறது: நவீன வலையில் நேர தாக்குதல்கள். CCS'15. ."
+
+#: ../content/wrappers/ecma-date.md:block 5 (paragraph)
+msgid ""
+"\\see Schwarz, M., Lipp, M. a Gruss, D. JavaScript Zero: Real JavaScript and"
+" Zero Side-Channel Attacks. NDSS'18."
+msgstr ""
+"Sh ச்வார்ச், எம்., லிப், எம். எ க்ரச், டி. சாவாச்கிரிப்ட் சீரோ: ரியல் "
+"சாவாச்கிரிப்ட் மற்றும் சீரோ சைட்-சேனல் தாக்குதல்கள். Ndss'18."
+
+#: ../content/wrappers/ecma-date.md:block 6 (paragraph)
+msgid ""
+"\\see Schwarz M., Maurice C., Gruss D., Mangard S. (2017) Fantastic Timers "
+"and Where to Find Them: High-Resolution Microarchitectural Attacks in "
+"JavaScript. In: Kiayias A. (eds) Financial Cryptography and Data Security. "
+"FC 2017. Lecture Notes in Computer Science, vol 10322. Springer, Cham. "
+"https://doi.org/10.1007/978-3-319-70972-7_13"
+msgstr ""
+"Sh ச்வார்ச் எம்., மாரிச் சி., கிரச் டி., மங்கார்ட் எச். இல்: கியாயியாச் ஏ. "
+"(பதிப்புகள்) பொருள் குறியாக்கவியல் மற்றும் தரவு பாதுகாப்பு. எஃப்சி 2017. "
+"கணினி அறிவியலில் விரிவுரை குறிப்புகள், தொகுதி 10322. ச்பிரிங்கர், சாம். "
+"https://doi.org/10.1007/978-3-319-70972-7_13"
+
+#: ../content/wrappers/ecma-date.md:block 8 (unordered list)
+msgid ""
+"Round timestamp: Limit the precision by removing (a part of) the decimal "
+"part of the timestamp."
+msgstr ""
+"சுற்று நேர முத்திரை: நேர முத்திரையின் தசம பகுதியை (ஒரு பகுதியின்) அகற்றுவதன்"
+" மூலம் துல்லியத்தை கட்டுப்படுத்துங்கள்."
+
+#: ../content/wrappers/ecma-date.md:block 8 (unordered list)
+msgid ""
+"Randomize after rounding: Create a fake decimal part to confuse attackers "
+"and to create timestamps that look similar to expected timestamps."
+msgstr ""
+"ரவுண்டிங் செய்த பிறகு சீரற்றதாக: தாக்குபவர்களைக் குழப்பவும், எதிர்பார்த்த "
+"நேர முத்திரைகளுக்கு ஒத்ததாக இருக்கும் நேர முத்திரைகளை உருவாக்கவும் ஒரு போலி "
+"தசம பகுதியை உருவாக்கவும்."
+
+#: ../content/wrappers/ecma-shared.md:block 1 (paragraph)
+msgid ""
+"Title: ECMA shared buffers Filename: ../common/wrappingS-ECMA-SHARED.js"
+msgstr "தலைப்பு: ECMA பகிரப்பட்ட இடையக கோப்பு பெயர்: .."
+
+#: ../content/wrappers/ecma-shared.md:block 2 (paragraph)
+msgid ""
+"This wrapper aims on prevention of misusing `SharedArrayBuffer` to create "
+"perfect timers and to perfrom microarchitectural attacks. This code was "
+"originally a part of [ChromeZero](https://github.com/IAIK/ChromeZero)."
+msgstr ""
+"இந்த ரேப்பர் சரியான டைமர்களை உருவாக்குவதற்கும் மைக்ரோஆர்கிடெக்சரல் "
+"தாக்குதல்களைத் துடைப்பதற்கும் `சேர்டாரே பஃபர்` தவறாகப் பயன்படுத்துவதைத் "
+"தடுப்பதை நோக்கமாகக் கொண்டுள்ளது. இந்த குறியீடு முதலில் [Chromezero] "
+"(https://github.com/iaik/chromezero) இன் ஒரு பகுதியாக இருந்தது."
+
+#: ../content/wrappers/ecma-shared.md:block 3 (paragraph)
+msgid ""
+"\\see "
+"https://www.fit.vut.cz/study/thesis/22374/?year=0&sup=Pol%C4%8D%C3%A1k, "
+"especially Sect. 5.1"
+msgstr ""
+"Ht ஐப் பார்க்கவும் "
+"https://www.fit.vut.cz/study/thesis/22374/?year=0&sup=pol%C4%8D%C3%A1K, "
+"குறிப்பாக பிரிவு. 5.1"
+
+#: ../content/wrappers/eme.md:block 1 (paragraph)
+msgid "Title: Encrypted Media Extensions Filename: ../common/wrappingS-EME.js"
+msgstr ""
+"தலைப்பு: மறைகுறியாக்கப்பட்ட மீடியா நீட்டிப்புகள் கோப்பு பெயர்: "
+"../common/wrappings-eme.js"
+
+#: ../content/wrappers/eme.md:block 2 (paragraph)
+msgid ""
+"`Navigator.requestMediaKeySystemAccess()` provides access to "
+"`MediaKeySystemAccess` object that allows to query supported encryption "
+"mechanisms and other information about the system."
+msgstr "`Navigator."
+
+#: ../content/wrappers/eme.md:block 3 (paragraph)
+msgid ""
+"For example, visit https://www.fit.vutbr.cz/~polcak/jsr/hdcp/ and try a "
+"different browser or computer."
+msgstr ""
+"எடுத்துக்காட்டாக, https://www.fit.vutbr.cz/~polcak/jsr/hdcp/ ஐப் "
+"பார்வையிடவும், வேறு உலாவி அல்லது கணினியை முயற்சிக்கவும்."
+
+#: ../content/wrappers/eme.md:block 4 (paragraph)
+msgid ""
+"\\see https://w3c.github.io/encrypted-media/ \\see "
+"https://developer.mozilla.org/en-"
+"US/docs/Web/API/Navigator/requestMediaKeySystemAccess \\see "
+"https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemAccess \\see "
+"https://developer.mozilla.org/en-"
+"US/docs/Web/API/MediaKeySystemAccess/getConfiguration"
+msgstr ""
+"Ht ஐப் பார்க்கவும் https://w3c.github.io/encrypted-media/ \\ பார்க்க "
+"https://developer.mozilla.org/en-"
+"us/docs/web/api/navigator/requestmediakysystemaccess \\ https: "
+"//developer.mosillaer.mosillaer ஐப் பார்க்கவும் .org/en-"
+"us/docs/web/api/mediakeysystemaccess ht ஐப் பார்க்கவும் "
+"https://developer.mozilla.org/en-"
+"us/docs/web/api/mediakeysystemaccess/getconfiguration ஐப் பார்க்கவும்"
+
+#: ../content/wrappers/eme.md:block 5 (paragraph)
+msgid "We provide two modes of protection:"
+msgstr "நாங்கள் இரண்டு பாதுகாப்பு முறைகளை வழங்குகிறோம்:"
+
+#: ../content/wrappers/eme.md:block 6 (ordered list)
+msgid "Strict approach prevents accessing the API."
+msgstr "கடுமையான அணுகுமுறை பநிஇ ஐ அணுகுவதைத் தடுக்கிறது."
+
+#: ../content/wrappers/eme.md:block 6 (ordered list)
+msgid ""
+"Farbling approach changes the output to a non-existing key system with 12.5%"
+" probability."
+msgstr ""
+"ஃபர்ப்ளிங் அணுகுமுறை வெளியீட்டை 12.5% ​​நிகழ்தகவுடன் இல்லாத முக்கிய அமைப்பாக"
+" மாற்றுகிறது."
+
+#: ../content/wrappers/geo.md:block 1 (paragraph)
+msgid "Title: Geolocation Filename: ../common/wrappingS-GEO.js"
+msgstr "தலைப்பு: புவிஇருப்பிட கோப்பு பெயர்: ../common/wrappings-geo.js"
+
+#: ../content/wrappers/geo.md:block 2 (paragraph)
+msgid ""
+"The goal is to prevent leaks of user current position. The Geolocation API "
+"also provides access to high precision timestamps which can be used to "
+"various web attacks (see for example, "
+"http://www.jucs.org/jucs_21_9/clock_skew_based_computer, "
+"https://lirias.kuleuven.be/retrieve/389086)."
+msgstr ""
+"பயனர் தற்போதைய நிலை கசிவுகளைத் தடுப்பதே குறிக்கோள். பல்வேறு வலைத் "
+"தாக்குதல்களுக்குப் பயன்படுத்தக்கூடிய உயர் துல்லியமான நேர முத்திரைகளுக்கான "
+"அணுகலையும் புவிஇருப்பிட பநிஇ வழங்குகிறது (எடுத்துக்காட்டாக, "
+"http://www.jucs.org/jucs_21_9/clock_skew_based_computer, "
+"https://lirias.kuleuven.be/retrieve/389086 ஐக் காண்க )."
+
+#: ../content/wrappers/geo.md:block 3 (paragraph)
+msgid ""
+"Although it is true that the user needs to specificaly approve access to "
+"location facilities, these wrappers aim on improving the control of the "
+"precision of the geolocation."
+msgstr ""
+"இருப்பிட வசதிகளுக்கான அணுகலை பயனர் குறிப்பிட்டதாக ஒப்புக் கொள்ள வேண்டும் "
+"என்பது உண்மைதான் என்றாலும், இந்த ரேப்பர்கள் புவிஇருப்பிடத்தின் துல்லியத்தின்"
+" கட்டுப்பாட்டை மேம்படுத்துவதை நோக்கமாகக் கொண்டுள்ளன."
+
+#: ../content/wrappers/geo.md:block 4 (paragraph)
+msgid "The wrappers support the following controls:"
+msgstr "ரேப்பர்கள் பின்வரும் கட்டுப்பாடுகளை ஆதரிக்கின்றன:"
+
+#: ../content/wrappers/geo.md:block 5 (unordered list)
+msgid ""
+"Accurate data: the extension provides precise geolocation position but "
+"modifies the time precision in conformance with the Date and Performance "
+"wrappers."
+msgstr ""
+"துல்லியமான தரவு: நீட்டிப்பு துல்லியமான புவிஇருப்பிட நிலையை வழங்குகிறது, "
+"ஆனால் தேதி மற்றும் செயல்திறன் ரேப்பர்களுடன் ஒத்துப்போகும் நேர துல்லியத்தை "
+"மாற்றியமைக்கிறது."
+
+#: ../content/wrappers/geo.md:block 5 (unordered list)
+msgid ""
+"Modified position: the extension modifies the time precision of the time "
+"stamps in conformance with the Date and Performance wrappers, and "
+"additionally, allows to limit the precision of the current position to "
+"hundered of meters, kilometers, tens, or hundereds of kilometers."
+msgstr ""
+"மாற்றியமைக்கப்பட்ட நிலை: தேதி மற்றும் செயல்திறன் ரேப்பர்களுடன் ஒத்துப்போகும்"
+" நேர முத்திரைகளின் நேர துல்லியத்தை நீட்டிப்பு மாற்றியமைக்கிறது, மேலும் "
+"கூடுதலாக, தற்போதைய நிலையின் துல்லியத்தை மீட்டர், கிலோமீட்டர், "
+"பல்லாயிரக்கணக்கான அல்லது கிலோமீட்டர் வேட்டையாடல்களைக் கட்டுப்படுத்த "
+"அனுமதிக்கிறது."
+
+#: ../content/wrappers/geo.md:block 6 (paragraph)
+msgid "When modifying position:"
+msgstr "நிலையை மாற்றும்போது:"
+
+#: ../content/wrappers/geo.md:block 7 (unordered list)
+msgid ""
+"Repeated calls of `navigator.geolocation.getCurrentPosition()` return the "
+"same position without page load and typically return another position after "
+"page reload."
+msgstr ""
+"`Navigator.geolocation.getCurrentPosition () இன் தொடர்ச்சியான அழைப்புகள் "
+"பக்க சுமை இல்லாமல் அதே நிலையைத் திருப்பி, பக்க மறுஏற்றத்திற்குப் பிறகு "
+"பொதுவாக மற்றொரு நிலையைத் தரவும்."
+
+#: ../content/wrappers/geo.md:block 7 (unordered list)
+msgid "`navigator.geolocation.watchPosition()` does not change position."
+msgstr "`navigator.geolocation.watchPosition ()` நிலையை மாற்றாது."
+
+#: ../content/wrappers/gp.md:block 1 (paragraph)
+msgid "Title: Gamepad Filename: ../common/wrappingS-GP.js"
+msgstr "தலைப்பு: கேம்பேட் கோப்பு பெயர்: ../common/wrappings-gp.js"
+
+#: ../content/wrappers/gp.md:block 2 (paragraph)
+msgid ""
+"navigator.getGamepads() allows any page script to learn the gamepads "
+"connected to the computer if the feature is not blocked by the Feature-"
+"Policy."
+msgstr ""
+"அம்சம்-கொள்கை மூலம் நற்பொருத்தம் தடுக்கப்படாவிட்டால், கணினியுடன் "
+"இணைக்கப்பட்ட கேம்பேட்களைக் கற்றுக்கொள்ள எந்த பக்க ச்கிரிப்டையும் "
+"Navigator.getGamePads () அனுமதிக்கிறது."
+
+#: ../content/wrappers/gp.md:block 3 (paragraph)
+msgid ""
+"The \"Fingerprinting the Fingerprinters\" paper (see reference below) "
+"observed that the interface is used in the wild to fingerprint users. As it "
+"is likely that only a minority of users have a gamepad connected and the API"
+" provides additional information on the HW, it is likely that users with a "
+"gamepad connected are easily fingerprintable."
+msgstr ""
+"கைரேகை பயனர்களுக்கு இடைமுகம் காடுகளில் பயன்படுத்தப்படுவதைக் கண்டறிந்த "
+"\"கைரேகைகளை கைரேகை\" காகிதம் (கீழே உள்ள குறிப்பைக் காண்க) கவனித்தது. "
+"சிறுபான்மை பயனர்களில் மட்டுமே கேம்பேட் இணைக்கப்பட்டிருக்கலாம் மற்றும் பநிஇ "
+"HW இல் கூடுதல் தகவல்களை வழங்குவதால், கேம்பேட் இணைக்கப்பட்ட பயனர்கள் எளிதில் "
+"கைரேகையாக இருக்கக்கூடும்."
+
+#: ../content/wrappers/gp.md:block 4 (paragraph)
+msgid ""
+"As we expect that the majority of the users does not have a gamepad "
+"connected, we provide only a single mitigation - the wrapped APIs return an "
+"empty list."
+msgstr ""
+"பெரும்பான்மையான பயனர்களுக்கு கேம்பேட் இணைக்கப்படவில்லை என்று நாங்கள் "
+"எதிர்பார்ப்பது போல, நாங்கள் ஒரு தணிப்பை மட்டுமே வழங்குகிறோம் - போர்த்தப்பட்ட"
+" பநிஇ கள் வெற்று பட்டியலைத் தருகின்றன."
+
+#: ../content/wrappers/gp.md:block 5 (paragraph)
+msgid ""
+"**Known bug**: The standard provides an event `gamepadconnected` and "
+"`gamepaddisconnected` that fires at least on the window object. We do not "
+"mitigate the event to fire and consequently, it is possible that an "
+"adversary can learn that a gamepad was (dis)connected but there was no "
+"change in the result of the `navigator.getGamepads()` API."
+msgstr ""
+"** அறியப்பட்ட பிழை **: தரநிலை `கேம்பேட் கனெக்ட்` மற்றும்` கேம்பாட் "
+"டிச்க்னெக்ட்` ஒரு நிகழ்வை வழங்குகிறது, இது சாளர பொருளில் குறைந்தபட்சம் "
+"சுடும். இந்த நிகழ்வை நாங்கள் தீப்பிடிப்பதைத் தணிக்கவில்லை, இதன் விளைவாக, ஒரு"
+" கேம்பேட் (டிச்) இணைக்கப்பட்டிருப்பதை ஒரு எதிரி அறிய முடியும், ஆனால் "
+"`navigator.getgamepads ()` பநிஇ இன் விளைவாக எந்த மாற்றமும் இல்லை."
+
+#: ../content/wrappers/gp.md:block 6 (paragraph)
+msgid ""
+"The gamepad representing object carries a timestamp of the last change of "
+"the gamepad. As we allow wrapping of several ways to obtain timestamps, we "
+"need to provide the same precision for the Gamepad object."
+msgstr ""
+"பொருளைக் குறிக்கும் கேம்பேட் கேம்பேடின் கடைசி மாற்றத்தின் நேர முத்திரையைக் "
+"கொண்டுள்ளது. நேர முத்திரைகளைப் பெறுவதற்கு பல வழிகளை மடக்குவதை நாங்கள் "
+"அனுமதிக்கும்போது, ​​கேம்பேட் பொருளுக்கும் அதே துல்லியத்தை வழங்க வேண்டும்."
+
+#: ../content/wrappers/gp.md:block 7 (paragraph)
+msgid ""
+"\\see U. Iqbal, S. Englehardt and Z. Shafiq, [Fingerprinting the "
+"Fingerprinters: Learning to Detect Browser Fingerprinting "
+"Behaviors](https://github.com/uiowa-irl/FP-"
+"Inspector/blob/master/Data/potential_fingerprinting_APIs.md) in 2021 2021 "
+"IEEE Symposium on Security and Privacy (SP), San Francisco, CA, US, 2021 pp."
+" 283-301"
+msgstr ""
+"உ யு. இக்பால், எச். .எம்டி) 2021 2021 இல் பாதுகாப்பு மற்றும் தனியுரிமை "
+"பற்றிய IEEE சிம்போசியம் (SP), சான் பிரான்சிச்கோ, CA, யு.எச்., 2021 பக். "
+"283-301"
+
+#: ../content/wrappers/h-c.md:block 1 (paragraph)
+msgid "Title: HTML Canvas Filename: ../common/wrappingS-H-C.js"
+msgstr "தலைப்பு: உஉகுமொ கேன்வாச் கோப்பு பெயர்: ../common/wrappings-c.js"
+
+#: ../content/wrappers/h-c.md:block 2 (paragraph)
+msgid ""
+"This file contains wrappers for calls related to the Canvas API, about which"
+" you can read more at MDN:"
+msgstr ""
+"இந்த கோப்பில் கேன்வாச் பநிஇ தொடர்பான அழைப்புகளுக்கான ரேப்பர்கள் உள்ளன, அதைப்"
+" பற்றி நீங்கள் எம்.டி.என் இல் மேலும் படிக்கலாம்:"
+
+#: ../content/wrappers/h-c.md:block 3 (unordered list)
+msgid ""
+"[Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)"
+msgstr ""
+"[Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)"
+
+#: ../content/wrappers/h-c.md:block 3 (unordered list)
+msgid ""
+"[CanvasRenderingContext2D](https://developer.mozilla.org/en-"
+"US/docs/Web/API/CanvasRenderingContext2D)"
+msgstr ""
+"[CanvasRenderingContext2D](https://developer.mozilla.org/en-"
+"US/docs/Web/API/CanvasRenderingContext2D)"
+
+#: ../content/wrappers/h-c.md:block 3 (unordered list)
+msgid ""
+"[OffscreenCanvas](https://developer.mozilla.org/en-"
+"US/docs/Web/API/OffscreenCanvas)"
+msgstr ""
+"[OffscreenCanvas](https://developer.mozilla.org/en-"
+"US/docs/Web/API/OffscreenCanvas)"
+
+#: ../content/wrappers/h-c.md:block 4 (paragraph)
+msgid ""
+"The goal is to prevent fingerprinting by modifying the values that can be "
+"read from the canvas. So the visual content of wrapped canvases as displayed"
+" on the screen is the same as intended."
+msgstr ""
+"கேன்வாசிலிருந்து படிக்கக்கூடிய மதிப்புகளை மாற்றியமைப்பதன் மூலம் கைரேகையைத் "
+"தடுப்பதே குறிக்கோள். எனவே திரையில் காட்டப்பட்டுள்ளபடி மூடப்பட்ட "
+"கேன்வாச்களின் காட்சி உள்ளடக்கம் நோக்கம் கொண்டது."
+
+#: ../content/wrappers/h-c.md:block 5 (paragraph)
+msgid ""
+"The modified content can be either an empty image or a fake image that is "
+"modified according to session and domain keys to be different than the "
+"original albeit very similar (i.e. the approach inspired by the algorithms "
+"created by [Brave Software](https://brave.com) available "
+"[here](https://github.com/brave/brave-"
+"core/blob/master/chromium_src/third_party/blink/renderer/core/execution_context/execution_context.cc)."
+msgstr ""
+"மாற்றியமைக்கப்பட்ட உள்ளடக்கம் ஒரு வெற்று படமாக இருக்கலாம் அல்லது அமர்வு "
+"மற்றும் டொமைன் விசைகள் படி மாற்றியமைக்கப்பட்ட போலி படமாக இருக்கலாம், அசலை "
+"விட வித்தியாசமாக இருக்கும் (அதாவது [துணிச்சலான மென்பொருள்] உருவாக்கிய "
+"வழிமுறைகளால் ஈர்க்கப்பட்ட அணுகுமுறை (https: // பிரேவ்.காம்) கிடைக்கிறது "
+"[இங்கே] (https://github.com/brave/brave-"
+"core/blob/master/chromium_src/third_party/blink/renderer/core/execution_context/execution_context.cc)."
+
+#: ../content/wrappers/h-c.md:block 6 (paragraph)
+msgid ""
+"Note that both approaches are detectable by a fingerprinter that checks if a"
+" predetermined image inserted to the canvas is the same as the read one, see"
+" [here](https://arkenfox.github.io/TZP/tests/canvasnoise.html) for an "
+"example, Nevertheless, the aim of the wrappers is to limit the "
+"finerprintability."
+msgstr ""
+"இரண்டு அணுகுமுறைகளும் ஒரு கைரேகை மூலம் கண்டறியப்படுகின்றன என்பதை நினைவில் "
+"கொள்க, இது கேன்வாசில் செருகப்பட்ட ஒரு முன்னரே தீர்மானிக்கப்பட்ட படம் படிக்க "
+"ஒன்றைப் போலவே இருந்தால், [இங்கே] பார்க்க ஒரு எடுத்துக்காட்டுக்கு, "
+"ஆயினும்கூட, ரேப்பர்களின் நோக்கம் மிகச்சிறந்த அச்சுப்பொறியைக் "
+"கட்டுப்படுத்துவதாகும்."
+
+#: ../content/wrappers/h-c.md:block 7 (paragraph)
+msgid ""
+"Also note that a determined fingerprinter can reveal the modifications and "
+"consequently uncover the original image. This can be avoided with the "
+"approach that completely clears the data stored in the canvas. Use the "
+"modifications based on session and domain keys if you want to provide an "
+"image that is similar to the original or if you want to produce a fake image"
+" that is not obviously spoofed to a naked eye. Otherwise, use the clearing "
+"approach."
+msgstr ""
+"ஒரு தீர்மானிக்கப்பட்ட கைரேகை மாற்றங்களை வெளிப்படுத்தலாம், இதன் விளைவாக அசல் "
+"படத்தை கண்டறிய முடியும் என்பதையும் நினைவில் கொள்க. கேன்வாசில் சேமிக்கப்பட்ட "
+"தரவை முற்றிலுமாக அழிக்கும் அணுகுமுறையுடன் இதைத் தவிர்க்கலாம். அசல் போன்ற ஒரு"
+" படத்தை நீங்கள் வழங்க விரும்பினால் அல்லது ஒரு நிர்வாணக் கண்ணுக்கு "
+"வெளிப்படையாக ஏமாற்றப்படாத ஒரு போலி படத்தை உருவாக்க விரும்பினால் அமர்வு "
+"மற்றும் டொமைன் விசைகளின் அடிப்படையில் மாற்றங்களைப் பயன்படுத்தவும். "
+"இல்லையெனில், தீர்வு அணுகுமுறையைப் பயன்படுத்தவும்."
+
+#: ../content/wrappers/hrt.md:block 1 (paragraph)
+msgid "Title: HTML Performance Filename: ../common/wrappingS-HRT.js"
+msgstr "தலைப்பு: உஉகுமொ செயல்திறன் கோப்பு பெயர்: ../common/wrappings-hrt.js"
+
+#: ../content/wrappers/hrt.md:block 2 (paragraph)
+msgid ""
+"This wrapper aims on prevention of microarchitectural attacks, clock-skew "
+"attacks, and other time related attacks. The goal is to limit the precision "
+"of the time returned by the Performance API."
+msgstr ""
+"இந்த ரேப்பர் மைக்ரோஆர்கிடெக்சரல் தாக்குதல்கள், கடிகாரத்தைத் துடைக்கும் "
+"தாக்குதல்கள் மற்றும் பிற நேர தொடர்பான தாக்குதல்களைத் தடுப்பதை நோக்கமாகக் "
+"கொண்டுள்ளது. செயல்திறன் பநிஇ திரும்பிய நேரத்தின் துல்லியத்தை "
+"மட்டுப்படுத்துவதே குறிக்கோள்."
+
+#: ../content/wrappers/hrt.md:block 3 (paragraph)
+msgid ""
+"\\see "
+"https://www.fit.vut.cz/study/thesis/22308/?year=0&sup=Pol%C4%8D%C3%A1k, "
+"especially Sect. 7.2."
+msgstr ""
+"Ht ஐப் பார்க்கவும் "
+"https://www.fit.vut.cz/study/tizes/22308/?year=0&sup=pol%C4%8D%C3%A1K, "
+"குறிப்பாக பிரிவு. 7.2."
+
+#: ../content/wrappers/hrt.md:block 4 (paragraph)
+msgid ""
+"\\see Tom Van Goethem, Wouter Joosen, Nick Nikiforakis. The Clock is Still "
+"Ticking: Timing Attacks in the Modern Web. CCS'15. DOI: "
+"http://dx.doi.org/10.1145/2810103.2813632. "
+"https://lirias.kuleuven.be/retrieve/389086"
+msgstr ""
+"Tom டாம் வான் கோத்தெம், வூட்டர் சூசென், நிக் நிகிஃபோராகிச். கடிகாரம் இன்னும்"
+" துடிக்கிறது: நவீன வலையில் நேர தாக்குதல்கள். CCS'15. Doi: "
+"http://dx.doi.org/10.1145/2810103.2813632. "
+"https://lirias.kuleuven.be/retrieve/389086"
+
+#: ../content/wrappers/html5.md:block 1 (paragraph)
+msgid "Title: HTML multimedia Filename: ../common/wrappingS-HTML5.js"
+msgstr ""
+"தலைப்பு: உஉகுமொ மல்டிமீடியா கோப்பு பெயர்: ../common/wrappings-html5.js"
+
+#: ../content/wrappers/html5.md:block 2 (paragraph)
+msgid ""
+"Supported codecs (multimedia media types) can be misued for fingerprinting, "
+"see for example the [FPMon paper](https://fpmon.github.io/fingerprinting-"
+"monitor/files/FPMON.pdf)."
+msgstr ""
+"உதவி கோடெக்குகள் (மல்டிமீடியா மீடியா வகைகள்) கைரேகைக்கு தவறாகப் "
+"பயன்படுத்தப்படலாம், எடுத்துக்காட்டாக [FPM காகிதத்தில்] "
+"(https://fpmon.github.io/fingerprinting-monitor/files/fpmon.pdf) ஐப் "
+"பார்க்கவும்."
+
+#: ../content/wrappers/html5.md:block 3 (paragraph)
+msgid "JShelter provides two modes of protection:"
+msgstr "JShelter இரண்டு பாதுகாப்பு முறைகளை வழங்குகிறது:"
+
+#: ../content/wrappers/html5.md:block 4 (ordered list)
+msgid "Strict approach returns all media types as not supported."
+msgstr "கடுமையான அணுகுமுறை அனைத்து ஊடக வகைகளையும் ஆதரிக்காதபடி வழங்குகிறது."
+
+#: ../content/wrappers/html5.md:block 4 (ordered list)
+msgid "Modifies the output of probably/maybe supported codecs."
+msgstr ""
+"அநேகமாக/ஒருவேளை ஆதரிக்கப்பட்ட கோடெக்குகளின் வெளியீட்டை மாற்றியமைக்கிறது."
+
+#: ../content/wrappers/html-ls.md:block 1 (paragraph)
+msgid "Title: HTML Workers Filename: ../common/wrappingS-HTML-LS.js"
+msgstr ""
+"தலைப்பு: உஉகுமொ தொழிலாளர்கள் கோப்பு பெயர்: ../common/wrappings-html-ls.js"
+
+#: ../content/wrappers/html-ls.md:block 2 (paragraph)
+msgid ""
+"This wrapper aims on prevention of microarchitectural attacks. This code was"
+" originally a part of [ChromeZero](https://github.com/IAIK/ChromeZero)."
+msgstr ""
+"இந்த ரேப்பர் மைக்ரோஆர்கிடெக்சரல் தாக்குதல்களைத் தடுப்பதை நோக்கமாகக் "
+"கொண்டுள்ளது. இந்த குறியீடு முதலில் [Chromezero] "
+"(https://github.com/iaik/chromezero) இன் ஒரு பகுதியாக இருந்தது."
+
+#: ../content/wrappers/html-ls.md:block 4 (unordered list)
+msgid "Polyfill: Completely eliminates the paralelism."
+msgstr "பாலிஃபில்: இணையான தன்மையை முற்றிலுமாக நீக்குகிறது."
+
+#: ../content/wrappers/html-ls.md:block 4 (unordered list)
+msgid ""
+"Randomly slow messages: Add noise to the `postMessage` method execution."
+msgstr ""
+"தோராயமாக மெதுவான செய்திகள்: `போச்ட்மெசேச்` முறை செயலாக்கத்தில் ஒலி "
+"சேர்க்கவும்."
+
+#: ../content/wrappers/html-ls.md:block 5 (paragraph)
+msgid ""
+"\\see Lipp, M., Gruss, D., Schwarz, M., Bidner, D., Maurice, C. et al. "
+"Practical Keystroke Timing Attacks in Sandboxed JavaScript. In:. August "
+"2017, s. 191–209. ISBN 978-3-319-66398-2."
+msgstr ""
+"Lip லிப், எம்., க்ரச், டி., ச்வார்ச், எம்., பிட்னர், டி., மாரிச், சி. "
+"மற்றும் பலர் பார்க்கவும். சாண்ட்பாக்ச் செய்யப்பட்ட சாவாச்கிரிப்டில் நடைமுறை "
+"கீச்ட்ரோக் நேர தாக்குதல்கள். இல்:. ஆகச்ட் 2017, கள். 191-209. ஐ.எச்.பி.என் "
+"978-3-319-66398-2."
+
+#: ../content/wrappers/html-ls.md:block 7 (paragraph)
+msgid ""
+"\\see "
+"<https://www.fit.vut.cz/study/thesis/22374/?year=0&sup=Pol%C4%8D%C3%A1k>"
+msgstr ""
+"\\ பார்க்க "
+"<https://www.fit.vut.cz/study/tizes/22374/?year=0&sup=pol%C4%8D%C3%A1K> ஐப் "
+"பார்க்கவும்"
+
+#: ../content/wrappers/html.md:block 1 (paragraph)
+msgid "Title: HTML window name Filename: ../common/wrappingS-HTML.js"
+msgstr "தலைப்பு: உஉகுமொ சாளர பெயர் கோப்பு பெயர்: ../common/wrappings-html.js"
+
+#: ../content/wrappers/html.md:block 2 (paragraph)
+msgid ""
+"`window.name` provides a simple cross-origin tracking method of the same "
+"tab:"
+msgstr ""
+"`சாளரம்.நாம்` அதே தாவலின் எளிய குறுக்கு-தோற்றம் கண்காணிப்பு முறையை "
+"வழங்குகிறது:"
+
+#: ../content/wrappers/html.md:block 4 (paragraph)
+msgid "Go to completely different web site and window.name stays the same."
+msgstr ""
+"முற்றிலும் மாறுபட்ட வலைத்தளம் மற்றும் சாளரத்திற்குச் செல்லுங்கள். பெயர் "
+"அப்படியே இருக்கும்."
+
+#: ../content/wrappers/html.md:block 5 (paragraph)
+msgid ""
+"\\see https://2019.www.torproject.org/projects/torbrowser/design/ provides a"
+" library build on top of `window.name`: "
+"https://www.thomasfrank.se/sessionvars.html."
+msgstr ""
+"Ht ஐப் பார்க்கவும் "
+"https://2019.www.torproject.org/projects/torbrowser/design/ `சாளரத்தின் மேல்"
+" ஒரு நூலகத்தை உருவாக்குகிறது."
+
+#: ../content/wrappers/html.md:block 6 (paragraph)
+msgid ""
+"\\see https://html.spec.whatwg.org/#history-traversal; this feature should "
+"not be ncessary for Firefox 86 or newer "
+"https://bugzilla.mozilla.org/show_bug.cgi?id=444222."
+msgstr ""
+"The https://html.spec.whatwg.org/#history-traversal ஐக் காண்க; இந்த "
+"நற்பொருத்தம் பயர்பாக்ச் 86 அல்லது புதிய "
+"https://bugzilla.mozilla.org/show_bug.cgi?id=444222 க்கு மிகச்சிறந்ததாக "
+"இருக்கக்கூடாது."
+
+#: ../content/wrappers/idle.md:block 1 (paragraph)
+msgid "Title: Idle detection Filename: ../common/wrappingS-IDLE.js"
+msgstr "தலைப்பு: செயலற்ற கண்டறிதல் கோப்பு பெயர்: ../common/wrappings-idle.js"
+
+#: ../content/wrappers/idle.md:block 2 (paragraph)
+msgid ""
+"\\see https://web.dev/idle-detection/ \\see "
+"https://developer.mozilla.org/en-US/docs/Web/API/IdleDetector"
+msgstr ""
+"The https://web.dev/idle-detection/ ஐப் பார்க்கவும் "
+"https://developer.mozilla.org/en-us/docs/web/api/idledetector ஐப் "
+"பார்க்கவும்"
+
+#: ../content/wrappers/idle.md:block 3 (paragraph)
+msgid ""
+"The Idle Detection API can detect inactive users and locked screens. "
+"JShelter either removes the API (IdleDetector), or disables permission "
+"requests and returns user activity and unlocked screen (for previously "
+"granted permissions), or just always report user activity and unlocked "
+"screen."
+msgstr ""
+"செயலற்ற கண்டறிதல் பநிஇ செயலற்ற பயனர்களையும் பூட்டப்பட்ட திரைகளையும் கண்டறிய "
+"முடியும். JSHELTER பநிஇ (idlededector) ஐ நீக்குகிறது, அல்லது இசைவு "
+"கோரிக்கைகளை முடக்குகிறது மற்றும் பயனர் செயல்பாடு மற்றும் திறக்கப்பட்ட திரையை"
+" (முன்னர் வழங்கப்பட்ட அனுமதிகளுக்கு) வழங்குகிறது, அல்லது எப்போதும் பயனர் "
+"செயல்பாடு மற்றும் திறக்கப்படாத திரையைப் புகாரளிக்கிறது."
+
+#: ../content/wrappers/idle.md:block 4 (paragraph)
+msgid ""
+"**Known bug**: JShelter does not block events, so the page is notified that "
+"something changed but it cannot read what changed."
+msgstr ""
+"**Known bug**: JShelter does not block events, so the page is notified that "
+"something changed but it cannot read what changed."
+
+#: ../content/wrappers/mcs.md:block 1 (paragraph)
+msgid "Title: Media devices Filename: ../common/wrappingS-MCS.js"
+msgstr "தலைப்பு: மீடியா சாதனங்கள் கோப்பு பெயர்: ../common/wrappings-mcs.js"
+
+#: ../content/wrappers/mcs.md:block 2 (paragraph)
+msgid ""
+"This file contains wrapper for MediaDevices.enumerateDevices "
+"https://developer.mozilla.org/en-"
+"US/docs/Web/API/MediaDevices/enumerateDevices"
+msgstr "இந்த கோப்பில் மீடியா டிவிச்களுக்கான ரேப்பர் உள்ளது"
+
+#: ../content/wrappers/mcs.md:block 3 (paragraph)
+msgid ""
+"The goal is to prevent fingerprinting by modifying return value of "
+"enumerateDevices."
+msgstr ""
+"கணக்கிடப்படங்களின் வருவாய் மதிப்பை மாற்றியமைப்பதன் மூலம் கைரேகையைத் தடுப்பதே"
+" குறிக்கோள்."
+
+#: ../content/wrappers/mcs.md:block 5 (unordered list)
+msgid "(0) - return promise with shuffled array"
+msgstr "(0) - மாற்றப்பட்ட வரிசையுடன் வாக்குறுதியைத் திரும்புக"
+
+#: ../content/wrappers/mcs.md:block 5 (unordered list)
+msgid ""
+"(1) - return promise with shuffled array with additional 0-4 fake devices"
+msgstr ""
+"(1) - கூடுதல் 0-4 போலி சாதனங்களுடன் மாற்றப்பட்ட வரிசையுடன் வாக்குறுதியைத் "
+"தரவும்"
+
+#: ../content/wrappers/mcs.md:block 5 (unordered list)
+msgid "(2) - return empty promise"
+msgstr "(2) - வெற்று வாக்குறுதியைத் தரவும்"
+
+#: ../content/wrappers/mcs.md:block 6 (paragraph)
+msgid ""
+"The shuffling approach is inspired by the algorithms created by [Brave "
+"Software](https://brave.com) available "
+"[here](https://github.com/brave/brave-"
+"core/blob/master/chromium_src/third_party/blink/renderer/modules/mediastream/media_devices.cc)."
+msgstr ""
+"[துணிச்சலான மென்பொருள்] (https://brave.com) உருவாக்கிய வழிமுறைகளால் "
+"கலக்குதல் அணுகுமுறை ஈர்க்கப்பட்டுள்ளது [இங்கே] "
+"பிளிங்க்/ரெண்டரர்/தொகுதிகள்/மீடியாச்ட்ரீம்/மீடியா_டெவிச்.சிசி)."
+
+#: ../content/wrappers/media-capabilities.md:block 1 (paragraph)
+msgid ""
+"Title: Media capabilities Filename: ../common/wrappingS-MEDIA-"
+"CAPABILITIES.js"
+msgstr "தலைப்பு: ஊடக திறன்கள் கோப்பு பெயர்: .."
+
+#: ../content/wrappers/media-capabilities.md:block 2 (paragraph)
+msgid ""
+"`` provides access to `MediaKeySystemAccess` object that allows to query "
+"supported codecs and other informations about the system."
+msgstr ""
+"`` `மீடியா கேச் சிச்டம்அக்சச்` பொருளுக்கான அணுகலை வழங்குகிறது, இது "
+"ஆதரிக்கப்படும் கோடெக்குகள் மற்றும் கணினியைப் பற்றிய பிற தகவல்களை வினவ "
+"அனுமதிக்கிறது."
+
+#: ../content/wrappers/media-capabilities.md:block 4 (paragraph)
+msgid "\\see https://w3c.github.io/media-capabilities/"
+msgstr "The https://w3c.github.io/media-capapapities/ ஐப் பார்க்கவும்"
+
+#: ../content/wrappers/media-capabilities.md:block 6 (ordered list)
+msgid ""
+"Farbling approach changes the output to a non-existing codec with 12.5% "
+"probability."
+msgstr ""
+"ஃபர்ப்ளிங் அணுகுமுறை வெளியீட்டை 12.5% ​​நிகழ்தகவுடன் இல்லாத கோடெக் ஆக "
+"மாற்றுகிறது."
+
+#: ../content/wrappers/net.md:block 1 (paragraph)
+msgid "Title: Network information Filename: ../common/wrappingS-NET.js"
+msgstr "தலைப்பு: பிணைய செய்தி கோப்பு பெயர்: ../common/wrappings-net.js"
+
+#: ../content/wrappers/net.md:block 2 (paragraph)
+msgid ""
+"This file contains a wrapper for "
+"[NetworkInformation](https://developer.mozilla.org/en-"
+"US/docs/Web/API/NetworkInformation#specifications)."
+msgstr ""
+"இந்த கோப்பில் [நெட்வொர்க் இன்ஃப்ளேசன்] (https://developer.mozilla.org/en-"
+"us/docs/web/api/networkinformation#specifications க்கு ஒரு ரேப்பர் உள்ளது."
+
+#: ../content/wrappers/net.md:block 3 (paragraph)
+msgid ""
+"NetworkInformation allows sites to learn about local network conditions by "
+"querying `navigator.connection`. Fingerprinters can misuse the feature. "
+"Long-term observers may learn about traveling patterns through observation "
+"of repeated values (for example a network at work, home, travel, etc.)."
+msgstr ""
+"`Navigator.connection` ஐ வினவுவதன் மூலம் உள்ளக பிணைய நிலைமைகளைப் பற்றி அறிய "
+"பிணையம் இன்ஃப்ளேசன் தளங்களை அனுமதிக்கிறது. கைரேகைகள் அம்சத்தை தவறாகப் "
+"பயன்படுத்தலாம். நீண்டகால பார்வையாளர்கள் மீண்டும் மீண்டும் மதிப்புகளைக் "
+"கவனிப்பதன் மூலம் பயண முறைகளைப் பற்றி அறிந்து கொள்ளலாம் (எடுத்துக்காட்டாக "
+"வேலை, வீடு, பயணம் போன்றவை)."
+
+#: ../content/wrappers/net.md:block 4 (paragraph)
+msgid ""
+"We implement the same protection as Brave: https://github.com/brave/brave-"
+"browser/issues/20122."
+msgstr ""
+"துணிச்சலான அதே பாதுகாப்பை நாங்கள் செயல்படுத்துகிறோம்: "
+"https://github.com/brave/brave-browser/issues/20122."
+
+#: ../content/wrappers/nfc.md:block 1 (paragraph)
+msgid "Title: Web NFC Filename: ../common/wrappingS-NFC.js"
+msgstr "தலைப்பு: வலை NFC கோப்பு பெயர்: ../common/wrappings-nfc.js"
+
+#: ../content/wrappers/nfc.md:block 2 (paragraph)
+msgid ""
+"This file contains a wrapper for [Web NFC "
+"API](https://developer.mozilla.org/en-US/docs/Web/API/Web_NFC_API)."
+msgstr ""
+"இந்த கோப்பில் [வலை NFC API] (https://developer.mozilla.org/en-"
+"us/docs/web/api/web_nfc_api) க்கான ரேப்பர் உள்ளது."
+
+#: ../content/wrappers/nfc.md:block 3 (paragraph)
+msgid "This API is not broadly supported and we just disable all objects."
+msgstr ""
+"இந்த பநிஇ பரவலாக ஆதரிக்கப்படவில்லை, நாங்கள் எல்லா பொருட்களையும் "
+"முடக்குகிறோம்."
+
+#: ../content/wrappers/np.md:block 1 (paragraph)
+msgid "Title: Navigator Plugins Filename: ../common/wrappingS-NP.js"
+msgstr "தலைப்பு: நேவிகேட்டர் சொருகி கோப்பு பெயர்: ../common/wrapping-npmjs"
+
+#: ../content/wrappers/np.md:block 2 (paragraph)
+msgid ""
+"This file contains wrappers for NavigatorPlugins. See the MDN docs on the "
+"[plugins](https://developer.mozilla.org/en-"
+"US/docs/Web/API/NavigatorPlugins/plugins) and [MIME "
+"types](https://developer.mozilla.org/en-"
+"US/docs/Web/API/NavigatorPlugins/mimeTypes)."
+msgstr ""
+"இந்த கோப்பில் நேவிகேட்டர் பிளகின்சிற்கான ரேப்பர்கள் உள்ளன. [செருகுநிரல்கள்] "
+"(https://developer.mozilla.org/en-us/docs/web/api/navigatorplugins/plugins) "
+"மற்றும் [Mime வகைகள்] (https://developer.mozilla.org/ en-"
+"us/docs/web/api/navigatorplugins/mimetypes)."
+
+#: ../content/wrappers/np.md:block 3 (paragraph)
+msgid ""
+"The goal is to prevent fingerprinting by modifying value returned by getters"
+" navigator.plugins and navigator.mimeTypes"
+msgstr ""
+"Getters navigator.plugins மற்றும் navigator.mimetypes ஆல் வழங்கப்பட்ட "
+"மதிப்பை மாற்றியமைப்பதன் மூலம் கைரேகையைத் தடுப்பதே குறிக்கோள்."
+
+#: ../content/wrappers/np.md:block 5 (unordered list)
+msgid ""
+"(0) - replace by shuffled edited PluginArray with two added fake plugins, "
+"edited MimeTypeArray"
+msgstr ""
+"(0) - மாற்றவும் by shuffled edited PluginArray with two added fake plugins, "
+"edited MimeTypeArray"
+
+#: ../content/wrappers/np.md:block 5 (unordered list)
+msgid ""
+"(1) - replace by shuffled PluginArray with two fake plugins, empty "
+"MimeTypeArray"
+msgstr ""
+"(1) - இரண்டு போலி செருகுநிரல்களுடன் மாற்றப்பட்ட செருகுநிரல் மூலம் மாற்றவும்"
+
+#: ../content/wrappers/np.md:block 5 (unordered list)
+msgid "(2) - replace by empty PluginArray and MimeTypeArray"
+msgstr "(2) - வெற்று செருகுநிரல் மற்றும் மைமெட்டிபேரே மூலம் மாற்றவும்"
+
+#: ../content/wrappers/np.md:block 6 (paragraph)
+msgid ""
+"These approaches are inspired by the algorithms created by [Brave "
+"Software](https://brave.com) available "
+"[here](https://github.com/brave/brave-"
+"core/blob/master/chromium_src/third_party/blink/renderer/modules/plugins/dom_plugin_array.cc)."
+msgstr ""
+"இந்த அணுகுமுறைகள் [துணிச்சலான மென்பொருள்] (https://brave.com) உருவாக்கிய "
+"வழிமுறைகளால் ஈர்க்கப்பட்டுள்ளன [இங்கே] "
+"/renderer/modules/plugins/dom_plugin_array.cc)."
+
+#: ../content/wrappers/np.md:block 7 (paragraph)
+msgid ""
+"The purpose of the wrappers is solely to prevent fingerprinting. However, "
+"browsers modyfing the array stand out of the crowd, which makes them more "
+"fingerprintable. Consequently, JShelter does not modify an empty list. So no"
+" matter the configuration, an empty list is not populated by the wrappers."
+msgstr ""
+"ரேப்பர்களின் நோக்கம் கைரேகையைத் தடுப்பதே மட்டுமே. இருப்பினும், உலாவிகள் "
+"கூட்டத்திலிருந்து நிற்கும் வரிசையை மோடிஃபிங் செய்வது, இது அவர்களை "
+"கைரேகமாக்குகிறது. இதன் விளைவாக, JShelter ஒரு வெற்று பட்டியலை மாற்றாது. எனவே "
+"உள்ளமைவைப் பொருட்படுத்தாமல், வெற்று பட்டியல் ரேப்பர்களால் மக்கள் தொகை இல்லை."
+
+#: ../content/wrappers/np.md:block 8 (paragraph)
+msgid "If PDF inline viewing is supported, Firefox returns 5 plugins:"
+msgstr ""
+"PDF இன்லைன் பார்வை ஆதரிக்கப்பட்டால், பயர்பாக்ச் 5 செருகுநிரல்களை "
+"வழங்குகிறது:"
+
+#: ../content/wrappers/np.md:block 9 (unordered list)
+msgid "\"PDF Viewer\""
+msgstr "\"பி.டி.எஃப் பார்வையாளர்\""
+
+#: ../content/wrappers/np.md:block 9 (unordered list)
+msgid "\"Chrome PDF Viewer\""
+msgstr "\"குரோம் பி.டி.எஃப் பார்வையாளர்\""
+
+#: ../content/wrappers/np.md:block 9 (unordered list)
+msgid "\"Chromium PDF Viewer\""
+msgstr "\"குரோமியம் பி.டி.எஃப் பார்வையாளர்\""
+
+#: ../content/wrappers/np.md:block 9 (unordered list)
+msgid "\"Microsoft Edge PDF Viewer\""
+msgstr "\"நுண்மென் எட்ச் பி.டி.எஃப் பார்வையாளர்\""
+
+#: ../content/wrappers/np.md:block 9 (unordered list)
+msgid "\"WebKit built-in PDF\""
+msgstr "\"வெப்கிட் உள்ளமைக்கப்பட்ட பி.டி.எஃப்\""
+
+#: ../content/wrappers/np.md:block 10 (paragraph)
+msgid ""
+"A list containing exactly these plugins is treated as the empty list and it "
+"is not modified."
+msgstr ""
+"இந்த செருகுநிரல்களைக் கொண்ட பட்டியல் வெற்று பட்டியலாகக் கருதப்படுகிறது, அது "
+"மாற்றியமைக்கப்படவில்லை."
+
+#: ../content/wrappers/pt2.md:block 1 (paragraph)
+msgid "Title: Performance Timeline (L2) Filename: ../common/wrappingS-PT2.js"
+msgstr ""
+"தலைப்பு: செயல்திறன் காலவரிசை (எல் 2) கோப்பு பெயர்: ../common/wrappings-"
+"pt2.js"
+
+#: ../content/wrappers/pt2.md:block 2 (paragraph)
+msgid ""
+"This wrapper aims on prevention of microarchitectural attacks, clock-skew "
+"attacks, and other time related attacks. The goal is to limit the precision "
+"of the time returned by the Performance Timeline API."
+msgstr ""
+"இந்த ரேப்பர் மைக்ரோஆர்கிடெக்சரல் தாக்குதல்கள், கடிகாரத்தைத் துடைக்கும் "
+"தாக்குதல்கள் மற்றும் பிற நேர தொடர்பான தாக்குதல்களைத் தடுப்பதை நோக்கமாகக் "
+"கொண்டுள்ளது. செயல்திறன் காலவரிசை பநிஇ ஆல் திரும்பிய நேரத்தின் துல்லியத்தை "
+"மட்டுப்படுத்துவதே குறிக்கோள்."
+
+#: ../content/wrappers/sensor-accelerometer.md:block 1 (paragraph)
+msgid ""
+"Title: Accelerometer Filename: ../common/wrappingS-SENSOR-ACCELEROMETER.js"
+msgstr "தலைப்பு: முடுக்கமானி கோப்பு பெயர்: .."
+
+#: ../content/wrappers/sensor-accelerometer.md:block 2 (paragraph)
+msgid ""
+"MOTIVATION Readings from the Accelerometer, LinearAccelerationSensor, and "
+"GravitySensor of the Generic Sensor API should be secured as they provide a "
+"potentially valuable data for creating fingerprints. There are multiple "
+"options. A unique fingerprint can be obtained by describing the device's "
+"vibrations (See "
+"https://link.springer.com/chapter/10.1007/978-3-319-30806-7_7). Using "
+"trajectory inference and matching of the model to map data, one may use the "
+"readings from the Accelerometer to determing the device's position (See "
+"https://www.researchgate.net/publication/220990763_ACComplice_Location_ "
+"inference_using_accelerometers_on_smartphones)."
+msgstr ""
+"கைரேகைகளை உருவாக்குவதற்கான மதிப்புமிக்க தரவை வழங்குவதால், முடுக்கமானி, "
+"லீனியர்அக்செலரேசன்ச் சென்சார் மற்றும் கிரேட்டர்சென்சர் ஆகியவற்றிலிருந்து "
+"உந்துதல் அளவீடுகள் பாதுகாக்கப்பட வேண்டும். பல விருப்பங்கள் உள்ளன. சாதனத்தின்"
+" அதிர்வுகளை விவரிப்பதன் மூலம் ஒரு தனித்துவமான கைரேகையைப் பெறலாம் "
+"(https://link.springer.com/chapter/10.1007/978-3-319-30806-7_7 ஐப் "
+"பார்க்கவும்). தரவை வரைபடமாக்குவதற்கு மாதிரியின் பாதை அனுமானம் மற்றும் "
+"பொருத்தத்தைப் பயன்படுத்தி, சாதனத்தின் நிலையைத் தடுப்பதற்கு "
+"முடுக்கமானியிலிருந்து வாசிப்புகளைப் பயன்படுத்தலாம் "
+"(https://www.researchgate.net/publication/220990763_accomplice_location_usering_usingelerometers_smartphoces)."
+
+#: ../content/wrappers/sensor-accelerometer.md:block 3 (paragraph)
+msgid ""
+"WRAPPING The wrapper replaces the \"XYZ\" getters of the Accelerometer "
+"sensor, LinearAccelerationSensor, and GravitySensor. The wrapping's goal is "
+"to simulate a stationary device that is lying bottom down on a flat surface,"
+" e.g., a cell phone on the table. In such a case, only the `z` axis is "
+"affected by gravity. The `x` and `y` axes values should be set to zero. Yet,"
+" there could be vibrations that may change values a little bit, e.g., to "
+"spin around -0.1 to +0.1. This usually does not happed with every reading "
+"but only in intervals of seconds. And thus, after a few seconds we pseudo-"
+"randomly change these values. For the LinearAccelerationSensor, the returned"
+" values should represent the acceleration without the conribution of "
+"gravity. For stationary devices, the `x` and `y` are zeroes, while the 'z' "
+"portion fluctuates between 0 and 0.1 on the examined devices. The wrapper "
+"simulates the same behavior. Lastly, the GravitySensor's readings are "
+"calculated as the difference between the previous two."
+msgstr ""
+"ரேப்பரை மடக்குவது முடுக்கமானி சென்சார், லீனியர்அக்செலரேசன்ச் சென்சார் "
+"மற்றும் ஈர்ப்பு சென்சரின் \"XYZ\" பெறுநர்களை மாற்றுகிறது. ஒரு தட்டையான "
+"மேற்பரப்பில் கீழே கிடந்த ஒரு நிலையான சாதனத்தை உருவகப்படுத்துவதே மடக்குதலின் "
+"குறிக்கோள், எ.கா., அட்டவணையில் ஒரு செல்போன். அத்தகைய சந்தர்ப்பத்தில், `Z` "
+"அச்சு மட்டுமே ஈர்ப்பு விசையால் பாதிக்கப்படுகிறது. `X` மற்றும்` y` அச்சுகள் "
+"மதிப்புகள் பூச்சியமாக அமைக்கப்பட வேண்டும். ஆயினும்கூட, -0.1 முதல் +0.1 வரை "
+"சுழல, எ.கா., மதிப்புகளை சிறிது மாற்றக்கூடிய அதிர்வுகள் இருக்கலாம். இது "
+"வழக்கமாக ஒவ்வொரு வாசிப்பிலும் மகிழ்ச்சியாக இல்லை, ஆனால் விநாடிகளின் "
+"இடைவெளியில் மட்டுமே. இதனால், சில நொடிகளுக்குப் பிறகு, இந்த மதிப்புகளை "
+"போலி-சீரற்ற முறையில் மாற்றுகிறோம். லீனியர்அக்செலரேசன்ச் சென்சரைப் "
+"பொறுத்தவரை, திரும்பிய மதிப்புகள் ஈர்ப்பு விசையின்றி முடுக்கம் குறிக்க "
+"வேண்டும். நிலையான சாதனங்களுக்கு, `x` மற்றும்` y` ஆகியவை பூச்சியங்கள், அதே "
+"நேரத்தில் 'சட்' பகுதி ஆய்வு செய்யப்பட்ட சாதனங்களில் 0 முதல் 0.1 வரை "
+"மாறுபடுகிறது. ரேப்பர் அதே நடத்தையை உருவகப்படுத்துகிறது. கடைசியாக, "
+"கிராஃப்ட்சென்சரின் வாசிப்புகள் முந்தைய இரண்டிற்கும் இடையிலான வித்தியாசமாக "
+"கணக்கிடப்படுகின்றன."
+
+#: ../content/wrappers/sensor-accelerometer.md:block 4 (paragraph)
+msgid ""
+"POSSIBLE IMPROVEMENTS Currently, we assume te device is lying on a flat "
+"surface bottom down, and thus only the `z` is affected by gravity. As "
+"improvement, we can also assume the device is in an oblique position. In "
+"this case, the gravitational acceleration would affect two or three axes. "
+"Those will have to be updated properly to create a realistic behavior."
+msgstr ""
+"சாத்தியமான மேம்பாடுகள் தற்போது, ​​TE சாதனம் ஒரு தட்டையான மேற்பரப்பில் கீழே "
+"கிடந்ததாக நாங்கள் கருதுகிறோம், இதனால் `Z` மட்டுமே ஈர்ப்பு விசையால் "
+"பாதிக்கப்படுகிறது. முன்னேற்றமாக, சாதனம் ஒரு சாய்ந்த நிலையில் இருப்பதாகவும் "
+"நாம் கருதலாம். இந்த வழக்கில், ஈர்ப்பு முடுக்கம் இரண்டு அல்லது மூன்று "
+"அச்சுகளை பாதிக்கும். ஒரு யதார்த்தமான நடத்தையை உருவாக்க அவை சரியாக "
+"புதுப்பிக்கப்பட வேண்டும்."
+
+#: ../content/wrappers/sensor-accel.md:block 1 (paragraph)
+msgid "Title: Accelerometer Filename: ../common/wrappingS-SENSOR-ACCEL.js"
+msgstr ""
+"தலைப்பு: முடுக்கமானி கோப்பு பெயர்: ../common/wrappings-sensor-accel.js"
+
+#: ../content/wrappers/sensor-accel.md:block 2 (paragraph)
+msgid ""
+"MOTIVATION Readings from the Accelerometer, LinearAccelerationSensor, and "
+"GravitySensor of the Generic Sensor API should be secured as they provide a "
+"potentially valuable data for creating fingerprints. There are multiple "
+"options. A unique fingerprint can be obtained by describing the device's "
+"vibrations (See "
+"https://link.springer.com/chapter/10.1007/978-3-319-30806-7_7). Using "
+"trajectory inference and matching of the model to map data, one may use the "
+"readings from the Accelerometer to determing the device's position (See "
+"https://www.researchgate.net/publication/220990763_ACComplice_Location_ "
+"inference_using_accelerometers_on_smartphones). Accelerometer readings can "
+"also be used for determining human walking patterns (See "
+"https://www.researchgate.net/publication/322835708_Classifying_Human_ "
+"Walking_Patterns_using_Accelerometer_Data_from_Smartphone)."
+msgstr ""
+"கைரேகைகளை உருவாக்குவதற்கான மதிப்புமிக்க தரவை வழங்குவதால், முடுக்கமானி, "
+"லீனியர்அக்செலரேசன்ச் சென்சார் மற்றும் கிரேட்டர்சென்சர் ஆகியவற்றிலிருந்து "
+"உந்துதல் அளவீடுகள் பாதுகாக்கப்பட வேண்டும். பல விருப்பங்கள் உள்ளன. சாதனத்தின்"
+" அதிர்வுகளை விவரிப்பதன் மூலம் ஒரு தனித்துவமான கைரேகையைப் பெறலாம் "
+"(https://link.springer.com/chapter/10.1007/978-3-319-30806-7_7 ஐப் "
+"பார்க்கவும்). தரவை வரைபடமாக்குவதற்கு மாதிரியின் பாதை அனுமானம் மற்றும் "
+"பொருத்தத்தைப் பயன்படுத்தி, சாதனத்தின் நிலையைத் தடுப்பதற்கு "
+"முடுக்கமானியிலிருந்து வாசிப்புகளைப் பயன்படுத்தலாம் "
+"(https://www.researchgate.net/publication/220990763_accomplice_location_usering_usingelerometers_smartphoces)."
+" மனித நடைபயிற்சி முறைகளைத் தீர்மானிக்க முடுக்கமானி அளவீடுகள் "
+"பயன்படுத்தப்படலாம் "
+"(https://www.researchgate.net/publication/322835708_Classifine_human_ "
+"Walking_patterns_using_accelerometer_from_smarthone ஐப் பார்க்கவும்)."
+
+#: ../content/wrappers/sensor-accel.md:block 3 (paragraph)
+msgid ""
+"WRAPPING The wrapper replaces the \"XYZ\" getters of the Accelerometer "
+"sensor, LinearAccelerationSensor, and GravitySensor. The wrapping's goal is "
+"to simulate a stationary device that can be possibly rotated. The rotation "
+"of the device is represented by the fake rotation matrix \"orient.rotMat\"."
+msgstr ""
+"ரேப்பரை மடக்குவது முடுக்கமானி சென்சார், லீனியர்அக்செலரேசன்ச் சென்சார் "
+"மற்றும் ஈர்ப்பு சென்சரின் \"XYZ\" பெறுநர்களை மாற்றுகிறது. சுழலக்கூடிய ஒரு "
+"நிலையான சாதனத்தை உருவகப்படுத்துவதே மடக்குதலின் குறிக்கோள். சாதனத்தின் "
+"சுழற்சி போலி சுழற்சி மேட்ரிக்ச் \"ஓரியண்ட்.ராட்மாட்\" ஆல் "
+"குறிப்பிடப்படுகிறது."
+
+#: ../content/wrappers/sensor-accel.md:block 4 (paragraph)
+msgid ""
+"The GravitySensor should provide readings of gravity acceleration applied to"
+" the device. This is represented by a vector made of x, y, z portions. To "
+"get this faked gravity vector for the device, the reference vector [0, 0, "
+"9.8] is multipled with the rotation matrix. Wrappers for the GravitySensor's"
+" getters return x, y, z portions of the fake gravity vector."
+msgstr ""
+"கிராஃப்ட்சென்சர் சாதனத்திற்கு பயன்படுத்தப்படும் ஈர்ப்பு முடுக்கம் பற்றிய "
+"வாசிப்புகளை வழங்க வேண்டும். இது ஃச், ஒய், சட் பகுதிகளால் ஆன திசையன் மூலம் "
+"குறிக்கப்படுகிறது. சாதனத்திற்கான இந்த போலி ஈர்ப்பு திசையனைப் பெற, குறிப்பு "
+"திசையன் [0, 0, 9.8] சுழற்சி மேட்ரிக்சுடன் பலப்படுத்தப்பட்டுள்ளது. "
+"கிராஃப்ட்சென்சரின் பெறுநர்களுக்கான ரேப்பர்கள் போலி ஈர்ப்பு திசையனின் ஃச், "
+"ஒய், சட் பகுதிகளைத் தருகின்றன."
+
+#: ../content/wrappers/sensor-accel.md:block 5 (paragraph)
+msgid ""
+"Next, the LinearAccelerationSensor should return acceleration values without"
+" the contribution of gravity. For a stationary device, it should be all "
+"zeroes. Yet, there could be vibrations that may change values a little bit, "
+"e.g., spin around -0.1 to +0.1, as seen on the examined devices. This "
+"usually does not happed with every reading but only in intervals of seconds."
+" And thus, after a few seconds we pseudo-randomly change these values."
+msgstr ""
+"அடுத்து, லீனியர்அக்செலரேசன்ச் சென்சார் ஈர்ப்பு விசையின் பங்களிப்பு இல்லாமல் "
+"முடுக்கம் மதிப்புகளைத் தர வேண்டும். ஒரு நிலையான சாதனத்திற்கு, இது அனைத்து "
+"பூச்சியங்களாக இருக்க வேண்டும். ஆயினும்கூட, பரிசோதிக்கப்பட்ட சாதனங்களில் "
+"காணப்படுவது போல, மதிப்புகளை சிறிது மாற்றக்கூடிய அதிர்வுகள் இருக்கலாம், "
+"எ.கா., -0.1 முதல் +0.1 வரை சுழலும். இது வழக்கமாக ஒவ்வொரு வாசிப்பிலும் "
+"மகிழ்ச்சியாக இல்லை, ஆனால் விநாடிகளின் இடைவெளியில் மட்டுமே. இதனால், சில "
+"நொடிகளுக்குப் பிறகு, இந்த மதிப்புகளை போலி-சீரற்ற முறையில் மாற்றுகிறோம்."
+
+#: ../content/wrappers/sensor-accel.md:block 6 (paragraph)
+msgid ""
+"Finally, the Accelerometer sensor combines the previous two. Our wrappers "
+"thus return tha values from the LinearAccelerationSensor with the fake "
+"gravity vector portions added."
+msgstr ""
+"இறுதியாக, முடுக்கமானி சென்சார் முந்தைய இரண்டையும் ஒருங்கிணைக்கிறது. எங்கள் "
+"ரேப்பர்கள் இவ்வாறு நேரியல் முடுக்கம் சென்சாரிலிருந்து மதிப்புகளை "
+"சேர்க்கப்பட்ட போலி ஈர்ப்பு திசையன் பகுதிகளுடன் திருப்பித் தருகின்றன."
+
+#: ../content/wrappers/sensor-accel.md:block 7 (paragraph)
+msgid ""
+"POSSIBLE IMPROVEMENTS Support for simulation of a non-stationary device "
+"where the rotation can change. Currently, the calculation of the gravity "
+"vector is done only once by the initDataGenerator() where the reference "
+"vector is multiplied with the rotation matrix. If orient.rotMat could "
+"change, the dataGen would have to be updated periodically. Moreover, such a "
+"change should also be taken into account in wrappers for other movement-"
+"related sensors (Gyroscope, etc.)."
+msgstr ""
+"சுழற்சி மாறக்கூடிய நிலையான அல்லாத சாதனத்தின் உருவகப்படுத்துதலுக்கான "
+"சாத்தியமான மேம்பாடுகள் உதவி. தற்போது, ​​ஈர்ப்பு திசையனின் கணக்கீடு ஒரு முறை "
+"மட்டுமே initdatagenerator () ஆல் செய்யப்படுகிறது, அங்கு குறிப்பு திசையன் "
+"சுழற்சி மேட்ரிக்சுடன் பெருக்கப்படுகிறது. Orient.rotmat மாற முடிந்தால், "
+"டேட்டாசன் அவ்வப்போது புதுப்பிக்கப்பட வேண்டும். மேலும், இதுபோன்ற மாற்றம் மற்ற"
+" இயக்கம் தொடர்பான சென்சார்களுக்கான (கைரோச்கோப் போன்றவை) ரேப்பர்களில் "
+"கணக்கில் எடுத்துக்கொள்ளப்பட வேண்டும்."
+
+#: ../content/wrappers/sensor-gyro.md:block 1 (paragraph)
+msgid "Title: Gyroscope Filename: ../common/wrappingS-SENSOR-GYRO.js"
+msgstr "தலைப்பு: கைரோச்கோப் கோப்பு பெயர்: ../common/wrappings-sensor-gyro.js"
+
+#: ../content/wrappers/sensor-gyro.md:block 2 (paragraph)
+msgid ""
+"MOTIVATION Gyroscope readings can be used for speech recognition: "
+"https://crypto.stanford.edu/gyrophone/ and various fingerprinting "
+"operations. For stationary devices, the resonance of the unique internal or "
+"external sounds affects angular velocities affect the Gyroscope and allow to"
+" create a fingerprint: "
+"https://www.researchgate.net/publication/356678825_Mobile_Device_Fingerprint_Identification_Using_Gyroscope_Resonance"
+" For moving devices, one of the options is using the Gyroscope analyze human"
+" walking patterns: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7071017/"
+msgstr ""
+"பேச்சு அங்கீகாரத்திற்கு உந்துதல் கைரோச்கோப் அளவீடுகளைப் பயன்படுத்தலாம்: "
+"https://crypto.stanford.edu/gyroboone/ மற்றும் பல்வேறு கைரேகை செயல்பாடுகள். "
+"க்கு stationary devices, the ஒத்திசை of the unique internal or external "
+"sounds affects கோண velocities affect the Gyroscope and allow பெறுநர் create "
+"a fingerprint: "
+"https://www.researchgate.net/publication/356678825_Mobile_Device_Fingerprint_Identification_Using_Gyroscope_Resonance"
+" க்கு moving devices, one of the விருப்பங்கள் is using the கைரோச்கோப் மனித "
+"நடை முறைகளை பகுப்பாய்வு செய்யுங்கள்: "
+"https://www.ncbi.nlm.nih.gov/pmc/articles/pmc7071017/"
+
+#: ../content/wrappers/sensor-gyro.md:block 3 (paragraph)
+msgid ""
+"WRAPPING The Gyroscope sensor provides readings of the angular velocity of "
+"the device alongthe x/y/z axes. For a stationary device, all velocities "
+"should be zero in an ideal state. As we observed on the examined devices, "
+"device sensor imperfections andlittle vibrations cause the `x`, `y` and `z` "
+"to oscillate between -0.002 and 0.002 on the examined devices. The wrapper "
+"simulates the same behavior."
+msgstr ""
+"கைரோச்கோப் சென்சார் மடக்குதல் x/y/z அச்சுகளுடன் சாதனத்தின் கோண வேகத்தின் "
+"வாசிப்புகளை வழங்குகிறது. ஒரு நிலையான சாதனத்தைப் பொறுத்தவரை, அனைத்து "
+"வேகங்களும் ஒரு சிறந்த நிலையில் பூச்சியமாக இருக்க வேண்டும். பரிசோதிக்கப்பட்ட "
+"சாதனங்களில் நாங்கள் கவனித்தபடி, சாதன சென்சார் குறைபாடுகள் மற்றும் சிறிய "
+"அதிர்வுகள் `x`,` y` மற்றும் `z` ஆகியவற்றை ஆய்வு செய்யப்பட்ட சாதனங்களில் "
+"-0.002 மற்றும் 0.002 க்கு இடையில் ஊசலாடுகின்றன. ரேப்பர் அதே நடத்தையை "
+"உருவகப்படுத்துகிறது."
+
+#: ../content/wrappers/sensor-gyro.md:block 4 (paragraph)
+msgid ""
+"POSSIBLE IMPROVEMENTS Support for simulation of a non-stationary device. "
+"This would require modifications to other movement-related sensors "
+"(Accelerometer, etc.)"
+msgstr ""
+"நிலையான அல்லாத சாதனத்தின் உருவகப்படுத்துதலுக்கான சாத்தியமான மேம்பாடுகள் "
+"உதவி. இதற்கு இயக்கம் தொடர்பான பிற சென்சார்களுக்கு மாற்றங்கள் தேவைப்படும் "
+"(முடுக்கமானி, முதலியன)"
+
+#: ../content/wrappers/sensor-light.md:block 1 (paragraph)
+msgid ""
+"Title: Ambient light sensor Filename: ../common/wrappingS-SENSOR-LIGHT.js"
+msgstr ""
+"தலைப்பு: சுற்றுப்புற ஒளி சென்சார் கோப்பு பெயர்: ../common/wrappings-sensor-"
+"light.js"
+
+#: ../content/wrappers/sensor-light.md:block 2 (paragraph)
+msgid ""
+"MOTIVATION The AmbientLightSensor returns illuminance of the device's "
+"environment. This is another value that describes the nearby physical "
+"surrounding of the device, and can thus be used together with other readings"
+" for creating a unique fingerprint."
+msgstr ""
+"உந்துதல் சுற்றுப்புறக்கிள்சென்சர் சாதனத்தின் சூழலின் வெளிச்சத்தை "
+"வழங்குகிறது. இது சாதனத்தின் அருகிலுள்ள உடல் ரீதியான சூழலை விவரிக்கும் "
+"மற்றொரு மதிப்பு, இதனால் ஒரு தனித்துவமான கைரேகையை உருவாக்க மற்ற "
+"வாசிப்புகளுடன் சேர்ந்து பயன்படுத்தலாம்."
+
+#: ../content/wrappers/sensor-light.md:block 3 (paragraph)
+msgid ""
+"WRAPPING On examined stationary devices inside an office, the illuminance "
+"measured was between 500 and 900, depending on the concrete position's light"
+" conditions. All measured values were rounded to nearest 50 illuminance "
+"value. The wrapper silumlates the same behavior. At start, a pseudorandom "
+"illuminance value is drawn. As we simulate a stationary device, this value "
+"remains constant for all AmbientLightSensor.prototype.illuminance calls."
+msgstr ""
+"ஒரு அலுவலகத்திற்குள் பரிசோதிக்கப்பட்ட நிலையான சாதனங்களில் மடக்குதல், "
+"அளவிடப்பட்ட வெளிச்சம் 500 முதல் 900 வரை இருந்தது, இது கான்கிரீட் நிலையின் "
+"ஒளி நிலைமைகளைப் பொறுத்து இருந்தது. அளவிடப்பட்ட அனைத்து மதிப்புகளும் "
+"அருகிலுள்ள 50 ஒளிரும் மதிப்புக்கு வட்டமானவை. ரேப்பர் அதே நடத்தை சிலும்லேட் "
+"செய்கிறது. தொடக்கத்தில், ஒரு போலி வெளிச்சம் மதிப்பு வரையப்படுகிறது. ஒரு "
+"நிலையான சாதனத்தை நாங்கள் உருவகப்படுத்தும்போது, ​​இந்த மதிப்பு அனைத்து "
+"சுற்றுப்புறங்களுக்கு மாறாமல் இருக்கும்.பிராடோடைப்.லுமினன்ச் அழைப்புகள்."
+
+#: ../content/wrappers/sensor-light.md:block 4 (paragraph)
+msgid "POSSIBLE IMPROVEMENTS Simulation of changes in the illuminance."
+msgstr ""
+"சாத்தியமான மேம்பாடுகள் வெளிச்சத்தில் ஏற்படும் மாற்றங்களின் "
+"உருவகப்படுத்துதல்."
+
+#: ../content/wrappers/sensor-magnet.md:block 1 (paragraph)
+msgid "Title: Magnet Filename: ../common/wrappingS-SENSOR-MAGNET.js"
+msgstr "தலைப்பு: காந்த கோப்பு பெயர்: ../common/wrappings-sensor-magnet.js"
+
+#: ../content/wrappers/sensor-magnet.md:block 2 (paragraph)
+msgid "MOTIVATION"
+msgstr "உந்துதல்"
+
+#: ../content/wrappers/sensor-magnet.md:block 3 (paragraph)
+msgid ""
+"Magnetometer is a platform sensor available under the Generic Sensor API. "
+"Magnetometer measures strength and direction of the magnetic field at "
+"device's location. The interface offers sensor readings using three "
+"properties: x, y, and z. Each returns a number that describes the magnetic "
+"field aroud the particular axis. The numbers have a double precision and can"
+" be positive or negative, depending on the orientation of the field. The "
+"total strength of the magnetic field (M) can be calculated as M = sqrt(x^2 +"
+" z^2 + y^2). The unit is in microtesla (µT)."
+msgstr ""
+"மேக்னடோமீட்டர் என்பது பொதுவான சென்சார் பநிஇ கீழ் கிடைக்கும் ஒரு இயங்குதள "
+"சென்சார் ஆகும். சாதனத்தின் இருப்பிடத்தில் காந்தப்புலத்தின் வலிமையையும் "
+"திசையையும் காந்தமானி அளவிடுகிறது. ஃச், ஒய் மற்றும் சட் ஆகிய மூன்று "
+"பண்புகளைப் பயன்படுத்தி சென்சார் அளவீடுகளை இடைமுகம் வழங்குகிறது. ஒவ்வொன்றும் "
+"காந்தப்புலத்தை விவரிக்கும் ஒரு எண்ணை வழங்குகிறது. எண்கள் இரட்டை "
+"துல்லியத்தைக் கொண்டுள்ளன, மேலும் புலத்தின் நோக்குநிலையைப் பொறுத்து நேர்மறை "
+"அல்லது எதிர்மறையாக இருக்கலாம். காந்தப்புலத்தின் (மீ) மொத்த வலிமையை m = sqrt "
+"(x^2 + z^2 + y^2) என கணக்கிடலாம். அலகு மைக்ரோடெச்லாவில் (µt) உள்ளது."
+
+#: ../content/wrappers/sensor-magnet.md:block 4 (paragraph)
+msgid ""
+"The Earth's magnetic field ranges between approximately 25 and 65 µT. "
+"Concrete values depend on location, altitude, weather, interference made by "
+"other electric. devices, etc. While we consider it is unlikely that someone "
+"determines the precise location of the device from the Mangetometer values, "
+"its data can be used for fingerprinting. For instance, it can be determined "
+"wheter the device is moving or not. In case of a stationary device, we can "
+"make a fingerprint from the device's orientation. Another fingerprintable "
+"value is the average total strength of the field, which should remain stable"
+" if the device is at the same position and in the same environment."
+msgstr ""
+"பூமியின் காந்தப்புலம் தோராயமாக 25 முதல் 65 µt வரை இருக்கும். கான்கிரீட் "
+"மதிப்புகள் இருப்பிடம், உயரம், வானிலை, பிற மின்சாரத்தால் செய்யப்பட்ட "
+"குறுக்கீடு ஆகியவற்றைப் பொறுத்தது. சாதனங்கள், முதலியன. மங்கெட்டோமீட்டர் "
+"மதிப்புகளிலிருந்து சாதனத்தின் துல்லியமான இருப்பிடத்தை யாராவது தீர்மானிப்பது "
+"சாத்தியமில்லை என்று நாங்கள் கருதினாலும், அதன் தரவை கைரேகைக்கு "
+"பயன்படுத்தலாம். உதாரணமாக, சாதனம் நகரும் அல்லது இல்லை என்பதை தீர்மானிக்க "
+"முடியும். ஒரு நிலையான சாதனத்தைப் பொறுத்தவரை, சாதனத்தின் நோக்குநிலையிலிருந்து"
+" கைரேகையை உருவாக்கலாம். மற்றொரு கைரேகை மதிப்பு புலத்தின் சராசரி மொத்த வலிமை "
+"ஆகும், இது சாதனம் ஒரே நிலையில் இருந்தால் அதே சூழலில் இருந்தால் நிலையானதாக "
+"இருக்க வேண்டும்."
+
+#: ../content/wrappers/sensor-magnet.md:block 5 (paragraph)
+msgid "WRAPPING"
+msgstr "மடக்குதல்"
+
+#: ../content/wrappers/sensor-magnet.md:block 6 (paragraph)
+msgid ""
+"To protect the device, we are wrapping the x, y, z getters of the "
+"`Magnetometer.prototype` object. Instead of using the original data, we use "
+"artificially generated values that look like actual sensor readings."
+msgstr ""
+"சாதனத்தைப் பாதுகாக்க, `காந்தமானி.பிரோடோடைப்` பொருளின் ஃச், ஒய், சட் "
+"பெறுபவர்களை நாங்கள் போர்த்திக் கொண்டிருக்கிறோம். அசல் தரவைப் "
+"பயன்படுத்துவதற்குப் பதிலாக, உண்மையான சென்சார் அளவீடுகளைப் போல செயற்கையாக "
+"உருவாக்கப்பட்ட மதிப்புகளைப் பயன்படுத்துகிறோம்."
+
+#: ../content/wrappers/sensor-magnet.md:block 7 (paragraph)
+msgid ""
+"At every moment, our wrapper stores information about the previous reading. "
+"Each rewrapped getter first checks the `timestamp` value of the sensor "
+"object. If there is no difference from the previous reading's timestamp, the"
+" wrapper returns the last measured value. Otherwise, it provides a new fake "
+"reading."
+msgstr ""
+"ஒவ்வொரு தருணத்திலும், எங்கள் ரேப்பர் முந்தைய வாசிப்பு பற்றிய தகவல்களை "
+"சேமிக்கிறது. ஒவ்வொரு மாற்றியமைக்கப்பட்ட பெறுநரும் முதலில் சென்சார் பொருளின் "
+"`நேர முத்திரை` மதிப்பை சரிபார்க்கிறார். முந்தைய வாசிப்பின் நேர "
+"முத்திரையிலிருந்து எந்த வித்தியாசமும் இல்லை என்றால், ரேப்பர் கடைசி "
+"அளவிடப்பட்ட மதிப்பை வழங்குகிறது. இல்லையெனில், இது ஒரு புதிய போலி வாசிப்பை "
+"வழங்குகிறது."
+
+#: ../content/wrappers/sensor-magnet.md:block 8 (paragraph)
+msgid ""
+"We designed our fake field generator to fulfill the following properties:"
+msgstr ""
+"பின்வரும் பண்புகளை நிறைவேற்ற எங்கள் போலி புலம் செனரேட்டரை வடிவமைத்தோம்:"
+
+#: ../content/wrappers/sensor-magnet.md:block 9 (unordered list)
+msgid ""
+"The randomness of the generator should be high enough to prevent attackers "
+"from deducing the sensor values."
+msgstr ""
+"தாக்குதல் நடத்தியவர்கள் சென்சார் மதிப்புகளைக் குறைப்பதைத் தடுக்க "
+"செனரேட்டரின் சீரற்ற தன்மை போதுமானதாக இருக்க வேண்டும்."
+
+#: ../content/wrappers/sensor-magnet.md:block 9 (unordered list)
+msgid ""
+"Multiple scripts from the same website that access readings with the same "
+"timestamp must get the same results. And thus:"
+msgstr ""
+"ஒரே நேர முத்திரையுடன் வாசிப்புகளை அணுகும் ஒரே வலைத்தளத்திலிருந்து பல "
+"ச்கிரிப்ட்கள் ஒரே முடிவுகளைப் பெற வேண்டும். இவ்வாறு:"
+
+#: ../content/wrappers/sensor-magnet.md:block 9 (unordered list)
+msgid ""
+"The readings are deterministic - e.g., for a given website and time, we must"
+" be able to say what values to return."
+msgstr ""
+"வாசிப்புகள் தீர்மானகரமானவை - எ.கா., கொடுக்கப்பட்ட வலைத்தளம் மற்றும் "
+"நேரத்திற்கு, என்ன மதிப்புகள் திரும்ப வேண்டும் என்பதை நாம் சொல்ல முடியும்."
+
+#: ../content/wrappers/sensor-magnet.md:block 10 (paragraph)
+msgid ""
+"For every \"random\" draw, we use the Mulberry32 sen_prng that is seeded "
+"with a value generated from the `domainHash` which ensures deterministic "
+"behavior for the given website. First, we choose the desired total strength "
+"`M` of the magnetic field at our simulated location. This is a pseudo-random"
+" number from 25 to 60 uT, like on the Earth."
+msgstr ""
+"ஒவ்வொரு \"சீரற்ற\" டிராவிற்கும், `டொமைன்ஆச்` இலிருந்து உருவாக்கப்பட்ட "
+"மதிப்புடன் விதைக்கப்பட்டுள்ள மல்பெரி 32 சென்_பிராங்கைப் பயன்படுத்துகிறோம், "
+"இது கொடுக்கப்பட்ட வலைத்தளத்திற்கான தீர்மானகரமான நடத்தையை உறுதி செய்கிறது. "
+"முதலாவதாக, எங்கள் உருவகப்படுத்தப்பட்ட இடத்தில் காந்தப்புலத்தின் விரும்பிய "
+"மொத்த வலிமையை `m` தேர்வு செய்கிறோம். இது பூமியைப் போலவே 25 முதல் 60 யுடி வரை"
+" ஒரு போலி-சீரற்ற எண்."
+
+#: ../content/wrappers/sensor-magnet.md:block 11 (paragraph)
+msgid "We support two variants of settings the initial axes orientaton:"
+msgstr ""
+"ஆரம்ப அச்சுகள் நோக்குநிலையை அமைப்பதற்கான இரண்டு வகைகளை நாங்கள் ஆதரிக்கிறோம்:"
+
+#: ../content/wrappers/sensor-magnet.md:block 12 (unordered list)
+msgid ""
+"A pseudorandom draw (RANDOM_AXES_ORIENTATION = true) - the original "
+"implementation"
+msgstr ""
+"ஒரு சூடோராண்டம் டிரா (சீரற்ற_அக்ச்_ரியண்டேசன் = உண்மை) - அசல் செயல்படுத்தல்"
+
+#: ../content/wrappers/sensor-magnet.md:block 12 (unordered list)
+msgid ""
+"Calculation from the faked device rotation (shared by other wrappers) - "
+"improved version"
+msgstr ""
+"போலி சாதன சுழற்சியில் இருந்து கணக்கீடு (பிற ரேப்பர்களால் பகிரப்பட்டது) - "
+"மேம்படுத்தப்பட்ட பதிப்பு"
+
+#: ../content/wrappers/sensor-magnet.md:block 13 (paragraph)
+msgid ""
+"For both methods, the orientation is defined by a number from -1 to 1 for "
+"each axis: `baseX`, `baseY`, and `baseZ`. By modifying the above-shown "
+"formula, we calculate the `multiplier` that needs to be applied to the base "
+"values to get the desired field. The calculation is done as follows:"
+msgstr ""
+"இரண்டு முறைகளுக்கும், ஒவ்வொரு அச்சுக்கும் -1 முதல் 1 வரையிலான எண்ணால் "
+"நோக்குநிலை வரையறுக்கப்படுகிறது: `பேச்எக்ச்`,` பேச் ', மற்றும் `பேச்`. மேலே "
+"கவரும் சூத்திரத்தை மாற்றியமைப்பதன் மூலம், விரும்பிய புலத்தைப் பெற அடிப்படை "
+"மதிப்புகளுக்கு பயன்படுத்தப்பட வேண்டிய `பெருக்கி` ஐக் கணக்கிடுகிறோம். "
+"கணக்கீடு பின்வருமாறு செய்யப்படுகிறது:"
+
+#: ../content/wrappers/sensor-magnet.md:block 14 (unordered list)
+msgid ""
+"mult = (M * sqrt(baseX^2 + baseY^2 + baseZ^2) / (baseX^2 + baseY^2 + "
+"baseZ^2)) Now, we know that for axis `x`, the value should fluctuate around "
+"`baseX * mult`, etc."
+msgstr ""
+"mult = (m * sqrt (basex^2 + basy^2 + basez^2) / (basex^2 + basy^2 + "
+"basez^2)) இப்போது, ​​அச்சு `x` க்கு, மதிப்பு ஏற்ற இறக்கமாக இருக்க வேண்டும் "
+"என்பதை நாங்கள் அறிவோம் `BASEX * MULT`, முதலியன."
+
+#: ../content/wrappers/sensor-magnet.md:block 15 (paragraph)
+msgid ""
+"How much the field changes over time is specified by the fluctuation factor "
+"(0;1] that can also be configured. For instance, 0.2 means that the magnetic"
+" field on the axis may change from the base value by 20% in both positive "
+"and negative way."
+msgstr ""
+"காலப்போக்கில் புலம் எவ்வளவு மாறுகிறது என்பது ஏற்ற இறக்க காரணியால் "
+"குறிப்பிடப்படுகிறது (0; 1] இது கட்டமைக்கப்படலாம். உதாரணமாக, 0.2 என்பது "
+"அச்சில் உள்ள காந்தப்புலம் அடிப்படை மதிப்பிலிருந்து 20% நேர்மறை மற்றும் "
+"எதிர்மறை இரண்டிலும் மாறக்கூடும் என்பதாகும் வழி."
+
+#: ../content/wrappers/sensor-magnet.md:block 16 (paragraph)
+msgid ""
+"The fluctuation is simulated by using a series of **sine** functions for "
+"each axis. Each sine has a unique amplitude, phase shift, and period. The "
+"number of sines per axis is chosen pseudorandomly based on the wrapper "
+"settings. For initial experiments, we used around 20 to 30 sines for each "
+"axis. The optimal configuration is in question. More sines give less "
+"predictable results, but also increase the computing complexity that could "
+"have a negative impact on the browser's performance."
+msgstr ""
+"ஒவ்வொரு அச்சுக்கும் ** சைன் ** செயல்பாடுகளைப் பயன்படுத்துவதன் மூலம் ஏற்ற "
+"இறக்கங்கள் உருவகப்படுத்தப்படுகின்றன. ஒவ்வொரு சைனுக்கும் ஒரு தனித்துவமான "
+"வீச்சு, கட்ட மாற்றம் மற்றும் காலம் உள்ளது. ஒரு அச்சுக்கு சைன்களின் எண்ணிக்கை"
+" ரேப்பர் அமைப்புகளின் அடிப்படையில் சூடோராண்டம்லி தேர்ந்தெடுக்கப்படுகிறது. "
+"ஆரம்ப சோதனைகளுக்கு, ஒவ்வொரு அச்சுக்கும் 20 முதல் 30 சைன்களைப் "
+"பயன்படுத்தினோம். உகந்த உள்ளமைவு கேள்விக்குரியது. அதிகமான சைன்கள் குறைவான "
+"கணிக்கக்கூடிய முடிவுகளைத் தருகின்றன, ஆனால் உலாவியின் செயல்திறனில் "
+"எதிர்மறையான தாக்கத்தை ஏற்படுத்தக்கூடிய கம்ப்யூட்டிங் சிக்கலையும் "
+"அதிகரிக்கின்றன."
+
+#: ../content/wrappers/sensor-magnet.md:block 17 (paragraph)
+msgid ""
+"For the given timestamp `t`, we make the sum of all sine values at the point"
+" `x=t`. The result is then shifted over the y-axis by adding `base[X|Y|Z] * "
+"multiplier` to the sum. The initial configuration of the fake field "
+"generator was chosen intuitively to resemble the results of the real "
+"measurements. Currently, the generator uses at least one sine with the "
+"period around 100 us (with 10% tolerance), which seems to be the minimum "
+"sampling rate obtainable using the API on mobile devices. Then, at least one"
+" sine around 1 s, around 10 s, 1 minute, and 1 hour. When more than 5 sines "
+"are used, the cycle repeats using `modulo 5` and creates a new sine with the"
+" period around 100 us, but this time the tolerance is 20%. The same follows "
+"for seconds, tens of seconds, minutes, hours. The tolerance grows every 5 "
+"sines. For 11+ sines, the tolerance is 30% up to the maximum (currently "
+"50%). The amplitude of each sine is chosen pseudo- randomly based on the "
+"**fluctuation factor** described above. The phase shift of each sine is also"
+" pseudo-random number from [0;2PI)."
+msgstr ""
+"கொடுக்கப்பட்ட நேர முத்திரை `t` க்கு, அனைத்து சைன் மதிப்புகளின் தொகையை` ஃச் ="
+" t` புள்ளியில் செய்கிறோம். இதன் விளைவாக `அடிப்படை [x | ஒய் | z] * பெருக்கி` "
+"தொகையில் சேர்ப்பதன் மூலம் Y- அச்சுக்கு மேல் மாற்றப்படுகிறது. உண்மையான "
+"அளவீடுகளின் முடிவுகளை ஒத்திருக்க போலி புலம் செனரேட்டரின் ஆரம்ப உள்ளமைவு "
+"உள்ளுணர்வாக தேர்ந்தெடுக்கப்பட்டது. தற்போது, ​​செனரேட்டர் குறைந்தது ஒரு சைனை "
+"100 அமெரிக்காவுடன் (10% சகிப்புத்தன்மையுடன்) பயன்படுத்துகிறது, இது மொபைல் "
+"சாதனங்களில் பநிஇ ஐப் பயன்படுத்தி பெறக்கூடிய குறைந்தபட்ச மாதிரி விகிதமாகத் "
+"தெரிகிறது. பின்னர், குறைந்தது ஒரு சைன் 1 வினாடிகளில், 10 வி, 1 மணித்துளி, "
+"மற்றும் 1 மணிநேரம். 5 சைன்களுக்கு மேல் பயன்படுத்தப்படும்போது, ​​சுழற்சி "
+"`மாடுலோ 5` ஐப் பயன்படுத்தி மீண்டும் மீண்டும் 100 அமெரிக்க டாலர் காலத்துடன் "
+"ஒரு புதிய சைனை உருவாக்குகிறது, ஆனால் இந்த நேரத்தில் சகிப்புத்தன்மை 20%ஆகும்."
+" சில நொடிகள், பல்லாயிரக்கணக்கான விநாடிகள், நிமிடங்கள், மணிநேரங்கள். "
+"சகிப்புத்தன்மை ஒவ்வொரு 5 சைன்களையும் வளர்க்கிறது. 11+ சைன்களுக்கு, "
+"சகிப்புத்தன்மை 30% அதிகபட்சம் (தற்போது 50%). ஒவ்வொரு சைனின் வீச்சு போலி- "
+"மேலே விவரிக்கப்பட்ட ** ஏற்ற இறக்க காரணி ** ஐ அடிப்படையாகக் கொண்டது. ஒவ்வொரு "
+"சைனின் கட்ட மாற்றமும் [0; 2pi) இலிருந்து போலி-சீரற்ற எண்."
+
+#: ../content/wrappers/sensor-magnet.md:block 18 (paragraph)
+msgid ""
+"Based on the results, this heuristic returns belivable values that look like"
+" actual sensor readings. Nevertheless, the generator uses a series of "
+"constants, whose optimal values should be a subject of future research and "
+"improvements. Perphaps, a correlation analysis with real mesurements could "
+"help in the future."
+msgstr ""
+"முடிவுகளின் அடிப்படையில், இந்த ஊரிச்டிக் உண்மையான சென்சார் அளவீடுகளைப் போல "
+"தோற்றமளிக்கும் மதிப்புகளைத் தருகிறது. ஆயினும்கூட, செனரேட்டர் தொடர்ச்சியான "
+"மாறிலிகளைப் பயன்படுத்துகிறது, அதன் உகந்த மதிப்புகள் எதிர்கால ஆராய்ச்சி "
+"மற்றும் மேம்பாடுகளுக்கு உட்பட்டதாக இருக்க வேண்டும். பெர்பாப்ச், உண்மையான "
+"மெசூரேமென்ட்சுடன் ஒரு தொடர்பு பகுப்பாய்வு எதிர்காலத்தில் உதவக்கூடும்."
+
+#: ../content/wrappers/sensor-magnet.md:block 19 (paragraph)
+msgid ""
+"POSSIBLE IMPROVEMENTS Non-stationary devices can be supported if the "
+"baseX,Y,Z is updated with each movement. Do more experiments in real "
+"environments and possibly update the reference magnetic field vector, or the"
+" sine generator, e.g. by simulating temporary pseudorandom electromagnetic "
+"interferences, etc."
+msgstr ""
+"ஒவ்வொரு இயக்கத்திலும் பேச்எக்ச், ஒய், சட் புதுப்பிக்கப்பட்டால், சாத்தியமான "
+"மேம்பாடுகள் நிலையான அல்லாத சாதனங்களை ஆதரிக்க முடியும். உண்மையான சூழல்களில் "
+"கூடுதல் சோதனைகளைச் செய்யுங்கள் மற்றும் குறிப்பு காந்தப்புல திசையன் அல்லது "
+"சைன் செனரேட்டரைப் புதுப்பிக்கலாம், எ.கா. தற்காலிக சூடோராண்டம் மின்காந்த "
+"குறுக்கீடுகள் போன்றவற்றை உருவகப்படுத்துவதன் மூலம்."
+
+#: ../content/wrappers/sensor.md:block 1 (paragraph)
+msgid "Title: Generic sensor Filename: ../common/wrappingS-SENSOR.js"
+msgstr "தலைப்பு: பொதுவான சென்சார் கோப்பு பெயர்: ../common/wrappings-sensor.js"
+
+#: ../content/wrappers/sensor.md:block 2 (paragraph)
+msgid ""
+"MOTIVATION The risk of using Generic Sensor API calls for device "
+"fingerprinting is mentioned within the W3C Candidate Recommendation Draft, "
+"29 July 2021 (https://www.w3.org/TR/2021/CRD-generic-"
+"sensor-20210729/#device-fingerprinting) Documented threats include "
+"manufacturing imperfections and differences that are unique to the concrete "
+"model of the device and can be used for fingerprinting."
+msgstr ""
+"உந்துதல் சாதன கைரேகைக்கான பொதுவான சென்சார் பநிஇ அழைப்புகளைப் "
+"பயன்படுத்துவதற்கான இடர் W3C வேட்பாளர் பரிந்துரை வரைவுக்குள் "
+"குறிப்பிடப்பட்டுள்ளது, 29 சூலை 2021 (https://www.w3.org/tr/2021/crd-generic-"
+"sensor-20210729/#device- கைரேகை) ஆவணப்படுத்தப்பட்ட அச்சுறுத்தல்களில் "
+"விளைவாக்கம் குறைபாடுகள் மற்றும் சாதனத்தின் கான்கிரீட் மாதிரிக்கு தனித்துவமான"
+" வேறுபாடுகள் ஆகியவை அடங்கும், மேலும் அவை கைரேகைக்கு பயன்படுத்தப்படலாம்."
+
+#: ../content/wrappers/sensor.md:block 3 (paragraph)
+msgid ""
+"We discovered another loophole in the `Sensor.timestamp` attribute. The "
+"value describes when the last `Sensor.onreading` event occurred, in "
+"millisecond precision. We observed the time origin is not the time of "
+"browsing context creation but the last boot time of the device. Exposing "
+"such information is dangerous as it allows to fingerprint the user easily. "
+"It is unlikely that two different devices will boot at exactly the same "
+"time."
+msgstr ""
+"`Sensor.timestamp` பண்புக்கூறில் மற்றொரு ஓட்டை கண்டுபிடித்தோம். மில்லி நொடி "
+"துல்லியத்தில், கடைசி `சென்சார்.ஆன் ரீடிங்` நிகழ்வு நிகழ்ந்தபோது மதிப்பு "
+"விவரிக்கிறது. நேர தோற்றம் சூழல் உருவாக்கும் நேரம் அல்ல, ஆனால் சாதனத்தின் "
+"கடைசி துவக்க நேரம் என்பதை நாங்கள் கவனித்தோம். அத்தகைய தகவல்களை "
+"அம்பலப்படுத்துவது ஆபத்தானது, ஏனெனில் இது பயனரை எளிதாக கைரேகைக்கு "
+"அனுமதிக்கிறது. இரண்டு வெவ்வேறு சாதனங்கள் ஒரே நேரத்தில் துவங்கும் என்பது "
+"சாத்தியமில்லை."
+
+#: ../content/wrappers/sensor.md:block 4 (paragraph)
+msgid "Tested with the Magnetometer sensor on the following devices:"
+msgstr "பின்வரும் சாதனங்களில் காந்தமாமீட்டர் சென்சார் மூலம் சோதிக்கப்பட்டது:"
+
+#: ../content/wrappers/sensor.md:block 5 (unordered list)
+msgid ""
+"Samsung Galaxy S21 Ultra; Android 11, kernel 5.4.6-215566388-abG99BXXU3AUE1,"
+" Build/RP1A.200720.012.G998BXXU3AUE1 Chrome 94.0.4606.71 and Kiwi (Chromium)"
+" 94.0.4606.56"
+msgstr ""
+"சாம்சங் கேலக்சி எச் 21 அல்ட்ரா; ஆண்ட்ராய்டு 11, கர்னல் "
+"5.4.6-21566388-ABG99BXXU3AUE1, பில்ட்/RP1A.200720.012.G998BXXU3AUE1 CHROME "
+"94.0.4606.71 மற்றும் பசலிப்பழம் (குரோமியம்) 94.0.4606.56.56."
+
+#: ../content/wrappers/sensor.md:block 5 (unordered list)
+msgid ""
+"Xiaomi Redmi Note 5; Android 9, kernel 4.4.156-perf+, Build/9 "
+"PKQ1.180901.001 Chrome 94.0.4606.71"
+msgstr ""
+"சியோமி ரெட்மி குறிப்பு 5; ஆண்ட்ராய்டு 9, கர்னல் 4.4.156-பெர்ஃப்+, பில்ட்/9 "
+"பி.கே.க்யூ 1.180901.001 குரோம் 94.0.4606.71"
+
+#: ../content/wrappers/sensor.md:block 7 (paragraph)
+msgid ""
+"The wrapper thus protects device by changing the time origin to the browsing"
+" context creation time, whereas the timestamp should still uniquely identify"
+" the reading. This is achieved in the following way:"
+msgstr ""
+"டைம் தோற்றத்தை உலாவல் சூழல் உருவாக்கும் நேரத்திற்கு மாற்றுவதன் மூலம் ரேப்பர்"
+" சாதனத்தைப் பாதுகாக்கிறது, அதேசமயம் நேர முத்திரை வாசிப்பை தனித்துவமாக "
+"அடையாளம் காண வேண்டும். இது பின்வரும் வழியில் அடையப்படுகிறது:"
+
+#: ../content/wrappers/sensor.md:block 8 (unordered list)
+msgid ""
+"At the first reading, we calculate the difference between the original value"
+" and performance.now(). This gives us the offset between 1) the device boot "
+"and 2) the page context initialization."
+msgstr ""
+"முதல் வாசிப்பில், அசல் மதிப்பு மற்றும் செயல்திறன் ஆகியவற்றுக்கு இடையிலான "
+"வேறுபாட்டைக் கணக்கிடுகிறோம். இப்போது (). இது 1) சாதன துவக்கத்திற்கும் 2) "
+"பக்க சூழல் துவக்கத்திற்கும் இடையில் ஆஃப்செட்டை நமக்கு வழங்குகிறது."
+
+#: ../content/wrappers/sensor.md:block 8 (unordered list)
+msgid ""
+"On every reading, the offset is subtracted from the original value. The "
+"resulting value then uniquely identifies the reading sample without exposing"
+" the boot time."
+msgstr ""
+"ஒவ்வொரு வாசிப்பிலும், ஆஃப்செட் அசல் மதிப்பிலிருந்து கழிக்கப்படுகிறது. இதன் "
+"விளைவாக வரும் மதிப்பு துவக்க நேரத்தை அம்பலப்படுத்தாமல் வாசிப்பு மாதிரியை "
+"தனித்துவமாக அடையாளம் காட்டுகிறது."
+
+#: ../content/wrappers/sensor.md:block 8 (unordered list)
+msgid ""
+"Like in the other time precision wrappers, the resulting timestamp is "
+"processed by the mitigation function before return. The mitigation may round"
+" and (optionally) add noise to the resulting timestamp."
+msgstr ""
+"மற்ற நேர துல்லியமான ரேப்பர்களைப் போலவே, இதன் விளைவாக நேர முத்திரையும் "
+"திரும்புவதற்கு முன் தணிப்பு செயல்பாட்டால் செயலாக்கப்படுகிறது. தணிப்பு "
+"சுற்றிலும் (விருப்பமாக) இதன் விளைவாக வரும் நேர முத்திரைக்கு ஒலி சேர்க்கலாம்."
+
+#: ../content/wrappers/sensor.md:block 9 (paragraph)
+msgid ""
+"POSSIBLE IMPROVEMENTS in protection level 2, the timestamp origin may be set"
+" to a random value based on the session hash. This can serve as a \"fake "
+"boot time.\""
+msgstr ""
+"பாதுகாப்பு நிலை 2 இல் சாத்தியமான மேம்பாடுகள், நேர முத்திரை தோற்றம் அமர்வு "
+"ஆசின் அடிப்படையில் ஒரு சீரற்ற மதிப்புக்கு அமைக்கப்படலாம். இது \"போலி துவக்க "
+"நேரம்\" ஆக செயல்படும்."
+
+#: ../content/wrappers/sensor-orient.md:block 1 (paragraph)
+msgid ""
+"Title: Orientation sensor Filename: ../common/wrappingS-SENSOR-ORIENT.js"
+msgstr ""
+"தலைப்பு: நோக்குநிலை சென்சார் கோப்பு பெயர்: ../common/wrappings-sensor-"
+"orient.js"
+
+#: ../content/wrappers/sensor-orient.md:block 2 (paragraph)
+msgid ""
+"MOTIVATION Device orientation sensors can be easily used for fingerprinting."
+" As it highly unlikely that two devices visiting the same site will be "
+"oriented exactly the same, the orientation itself can serve as a "
+"fingerprint."
+msgstr ""
+"உந்துதல் சாதன நோக்குநிலை சென்சார்கள் கைரேகைக்கு எளிதாகப் பயன்படுத்தப்படலாம்."
+" ஒரே தளத்தைப் பார்வையிடும் இரண்டு சாதனங்கள் ஒரே மாதிரியாக இருக்கும் என்பது "
+"மிகவும் சாத்தியமில்லை என்பதால், நோக்குநிலை கைரேகையாக செயல்பட முடியும்."
+
+#: ../content/wrappers/sensor-orient.md:block 3 (paragraph)
+msgid ""
+"WRAPPING AbsoluteOrientationSensor returns a quaterion decribing the "
+"physical orientation of the device in relation to the Earth's reference "
+"coordinate system. The faked orientation of the device is saved inside the "
+"\"orient\" global variable that is accessible to all wrappers. The value is "
+"chosen pseudorandomly from the domain hash. The wrappper supports possible "
+"change of orientation. With each reading, it loads the \"orient\"'s "
+"contents, converts the rotation matrix to a quaternion that is returned by "
+"the wrapped getter."
+msgstr ""
+"பூமியின் குறிப்பு ஒருங்கிணைப்பு அமைப்பு தொடர்பாக சாதனத்தின் இயற்பியல் "
+"நோக்குநிலையை குறைக்கும் ஒரு குவாட்டரியனை மடக்குதல். சாதனத்தின் போலியான "
+"நோக்குநிலை அனைத்து ரேப்பர்களுக்கும் அணுகக்கூடிய \"ஓரியண்ட்\" உலகளாவிய "
+"மாறிக்குள் சேமிக்கப்படுகிறது. டொமைன் ஆசிலிருந்து சூடோராண்டம்லி என்ற மதிப்பு "
+"தேர்ந்தெடுக்கப்படுகிறது. ரேப்பர் நோக்குநிலையின் மாற்றத்தை ஆதரிக்கிறது. "
+"ஒவ்வொரு வாசிப்பிலும், இது \"ஓரியண்டின்\" உள்ளடக்கங்களை ஏற்றுகிறது, சுழற்சி "
+"மேட்ரிக்சை ஒரு குவாட்டர்னியனாக மாற்றுகிறது, இது போர்த்தப்பட்ட பெறுநரால் "
+"திருப்பித் தரப்படுகிறது."
+
+#: ../content/wrappers/sensor-orient.md:block 4 (paragraph)
+msgid ""
+"RelativeOrientationSensor also describes the orientation, but without regard"
+" to the Earth's reference coordinate system. We suppose the coordinate "
+"system is chosen at the beginning of the sensor instance creation. As we "
+"observed, no matter how the device is oriented, there is always a slight "
+"difference from the AbsoluteOrientationSensor's in at least one axis. When "
+"the device moves, both sensors' readings change. But their difference should"
+" be always constant. And thus, we pseudorandomly generate a deviation from "
+"the Earth's reference coordinate system. And for each reading, we take the "
+"values from the fake AbsoluteOrientationSensor and modify them by the "
+"constant deviation."
+msgstr ""
+"உறவினர்சென்சர் நோக்குநிலையையும் விவரிக்கிறது, ஆனால் பூமியின் குறிப்பு "
+"ஒருங்கிணைப்பு அமைப்பைப் பொருட்படுத்தாமல். சென்சார் நிகழ்வு உருவாக்கத்தின் "
+"தொடக்கத்தில் ஒருங்கிணைப்பு அமைப்பு தேர்ந்தெடுக்கப்பட்டதாக நாங்கள் "
+"கருதுகிறோம். நாங்கள் கவனித்தபடி, சாதனம் எவ்வாறு நோக்குநிலையாக இருந்தாலும், "
+"குறைந்தது ஒரு அச்சில் உள்ள முழுமையான வடிவத்திலிருந்து எப்போதும் ஒரு சிறிய "
+"வேறுபாடு இருக்கும். சாதனம் நகரும் போது, ​​இரண்டு சென்சார்களின் அளவீடுகளும் "
+"மாறுகின்றன. ஆனால் அவற்றின் வேறுபாடு எப்போதும் மாறாமல் இருக்க வேண்டும். "
+"இதனால், பூமியின் குறிப்பு ஒருங்கிணைப்பு அமைப்பிலிருந்து ஒரு விலகலை நாங்கள் "
+"போலி உருவாக்குகிறோம். ஒவ்வொரு வாசிப்புக்கும், போலி முழுமையான "
+"செயல்பாட்டாளரிடமிருந்து மதிப்புகளை எடுத்து நிலையான விலகலால் மாற்றுவோம்."
+
+#: ../content/wrappers/sensor-orient.md:block 5 (paragraph)
+msgid ""
+"POSSIBLE IMPROVEMENTS Study the supported coordinate systems of the "
+"RelativeOrientationSensor and modify the wrapper behavior if needed."
+msgstr ""
+"சாத்தியமான மேம்பாடுகள் உறவினர்களின் ஆதாரத்தின் உதவி ஒருங்கிணைப்பு "
+"அமைப்புகளைப் படித்து, தேவைப்பட்டால் ரேப்பர் நடத்தை மாற்றியமைக்கின்றன."
+
+#: ../content/wrappers/vr.md:block 1 (paragraph)
+msgid "Title: Virtual Reality 1.1 Filename: ../common/wrappingS-VR.js"
+msgstr ""
+"தலைப்பு: மெய்நிகர் ரியாலிட்டி 1.1 கோப்பு பெயர்: ../common/wrappings-vr.js"
+
+#: ../content/wrappers/vr.md:block 2 (paragraph)
+msgid ""
+"navigator.activeVRDisplays() allows any page script to learn the VR displays"
+" attached to the computer."
+msgstr ""
+"navigator.activevrdisplays () எந்த பக்க ச்கிரிப்டையும் கணினியுடன் "
+"இணைக்கப்பட்ட VR காட்சிகளைக் கற்றுக்கொள்ள அனுமதிக்கிறது."
+
+#: ../content/wrappers/vr.md:block 3 (paragraph)
+msgid ""
+"U. Iqbal, S. Englehardt and Z. Shafiq, \"Fingerprinting the Fingerprinters: "
+"Learning to Detect Browser Fingerprinting Behaviors,\" in 2021 2021 IEEE "
+"Symposium on Security and Privacy (SP), San Francisco, CA, US, 2021 pp. "
+"283-301 observed (https://github.com/uiowa-irl/FP-"
+"Inspector/blob/master/Data/potential_fingerprinting_APIs.md) that the "
+"interface is used in the wild to fingerprint users. As it is likely that "
+"only a minority of users have a VR display connected and the API provides "
+"additional information on the HW, it is likely that users with a VR display "
+"connected are easily fingerprintable."
+msgstr ""
+"யு. இக்பால், எச். 301 கவனிக்கப்பட்டது (https://github.com/uiowa-irl/fp-"
+"inspector/blob/master/data/data/potential_fingerprinting_apis.md) இடைமுகம் "
+"காடுகளில் கைரேகை பயனர்களுக்கு பயன்படுத்தப்படுகிறது. சிறுபான்மை பயனர்கள் "
+"மட்டுமே வி.ஆர் டிச்ப்ளே இணைக்கப்பட்டிருக்கலாம் மற்றும் பநிஇ எச்.டபிள்யூவில் "
+"கூடுதல் தகவல்களை வழங்குகிறது என்பதால், வி.ஆர் டிச்ப்ளே இணைக்கப்பட்ட பயனர்கள்"
+" எளிதில் கைரேகை இருக்கக்கூடும்."
+
+#: ../content/wrappers/vr.md:block 4 (paragraph)
+msgid ""
+"As we expect that the majority of the users does not have a VR display "
+"connected, we provide only a single mitigation - the wrapped APIs returns an"
+" empty list."
+msgstr ""
+"பெரும்பாலான பயனர்கள் வி.ஆர் காட்சி இணைக்கப்படவில்லை என்று நாங்கள் "
+"எதிர்பார்ப்பது போல, நாங்கள் ஒரே ஒரு தணிப்பை மட்டுமே வழங்குகிறோம் - "
+"போர்த்தப்பட்ட ஏபிஐக்கள் வெற்று பட்டியலைத் தருகின்றன."
+
+#: ../content/wrappers/vr.md:block 5 (paragraph)
+msgid ""
+"**Known bug**: The standard provides events *vrdisplayconnect*, "
+"*vrdisplaydisconnect* *vrdisplayactivate* and *vrdisplaydeactivate* that "
+"fires at least on the window object. We do not mitigate the event to fire "
+"and consequently, it is possible that an adversary can learn that a VR "
+"display was (dis)connected but there was no change in the result of the "
+"navigator.activeVRDisplays() API."
+msgstr ""
+"** அறியப்பட்ட பிழை **: தரநிலை நிகழ்வுகளை "
+"வழங்குகிறது*vrdisplayconnect*,*vrdisplaydisconnect**vrdisplayactivate*மற்றும்*vrdisplaydeactivate*இது"
+" சாளர பொருளின் மீது சுடுகிறது. நிகழ்வை நாங்கள் தீப்பிடிக்க மாட்டோம், இதன் "
+"விளைவாக, ஒரு வி.ஆர் காட்சி (டிச்) இணைக்கப்பட்டுள்ளது என்பதை ஒரு பகைவன் அறிய "
+"முடியும், ஆனால் நேவிகேட்டர்.அக்டிவ்.வி.ஆர்.டிச்ப்ளேச் () பநிஇ ஆகியவற்றின் "
+"விளைவாக எந்த மாற்றமும் இல்லை."
+
+#: ../content/wrappers/vr.md:block 6 (paragraph)
+msgid ""
+"The VRFrameData object carries a timestamp. As we allow wrapping of several "
+"ways to obtain timestamps, we need to provide the same precision for the "
+"VRFrameData object."
+msgstr ""
+"Vrframedata பொருள் ஒரு நேர முத்திரையைக் கொண்டுள்ளது. நேர முத்திரைகளைப் "
+"பெறுவதற்கு பல வழிகளை மடக்குவதை நாங்கள் அனுமதிக்கும்போது, ​​Vrframedata "
+"பொருளுக்கும் அதே துல்லியத்தை வழங்க வேண்டும்."
+
+#: ../content/wrappers/weba.md:block 1 (paragraph)
+msgid "Title: WebAudio Filename: ../common/wrappingS-WEBA.js"
+msgstr "தலைப்பு: வலை ஆடியோ கோப்பு பெயர்: ../common/wrappings-web.js"
+
+#: ../content/wrappers/weba.md:block 2 (paragraph)
+msgid ""
+"This file contains wrappers for AudioBuffer and AnalyserNode related calls"
+msgstr ""
+"இந்த கோப்பில் ஆடியோபுஃபர் மற்றும் அனலிசெர்னோட் தொடர்பான அழைப்புகளுக்கான "
+"ரேப்பர்கள் உள்ளன"
+
+#: ../content/wrappers/weba.md:block 3 (unordered list)
+msgid "https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer"
+msgstr "https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer"
+
+#: ../content/wrappers/weba.md:block 3 (unordered list)
+msgid "https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode"
+msgstr "https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode"
+
+#: ../content/wrappers/weba.md:block 4 (paragraph)
+msgid ""
+"The goal is to prevent fingerprinting by modifying the values from functions"
+" which are reading/copying from AudioBuffer and AnalyserNode. So the audio "
+"content of wrapped objects is the same as intended."
+msgstr ""
+"ஆடியோபுஃபர் மற்றும் அனலிசெர்னோடில் இருந்து படிக்கும்/நகலெடுக்கும் "
+"செயல்பாடுகளிலிருந்து மதிப்புகளை மாற்றுவதன் மூலம் கைரேகையைத் தடுப்பதே "
+"குறிக்கோள். எனவே மூடப்பட்ட பொருள்களின் ஆடியோ உள்ளடக்கம் நோக்கம் கொண்டது."
+
+#: ../content/wrappers/weba.md:block 5 (paragraph)
+msgid ""
+"The modified content can be either a white noise based on domain key or a "
+"fake audio data that is modified according to domain key to be different "
+"than the original albeit very similar (i.e. the approach inspired by the "
+"algorithms created by Brave Software <https://brave.com> available at "
+"https://github.com/brave/brave-"
+"core/blob/master/chromium_src/third_party/blink/renderer/core/execution_context/execution_context.cc.)"
+msgstr ""
+"மாற்றியமைக்கப்பட்ட உள்ளடக்கம் டொமைன் விசையை அடிப்படையாகக் கொண்ட ஒரு வெள்ளை "
+"சத்தமாக இருக்கலாம் அல்லது டொமைன் விசையின் படி மாற்றியமைக்கப்பட்ட போலி ஆடியோ "
+"தரவாக அசல் மிகவும் ஒத்ததாக இருந்தாலும் வித்தியாசமாக இருக்க முடியும் (அதாவது "
+"துணிச்சலான மென்பொருளால் உருவாக்கப்பட்ட வழிமுறைகளால் ஈர்க்கப்பட்ட அணுகுமுறை "
+"<https:/ /brave.com> https://github.com/brave/brave-"
+"core/blob/masromium_src/third_party/blink/renderer/core/execution_context/execution_context.cc"
+" இல் கிடைக்கிறது.)"
+
+#: ../content/wrappers/weba.md:block 6 (paragraph)
+msgid ""
+"**Note**: Both approaches are detectable by a fingerprinter that checks if a"
+" predetermined audio is the same as the read one. Nevertheless, the aim of "
+"the wrappers is to limit the finerprintability."
+msgstr ""
+"** குறிப்பு **: இரண்டு அணுகுமுறைகளும் ஒரு கைரேகை மூலம் கண்டறியப்படுகின்றன, "
+"இது முன்னரே தீர்மானிக்கப்பட்ட ஆடியோ வாசிப்புக்கு சமமானதா என்பதை "
+"சரிபார்க்கும். ஆயினும்கூட, ரேப்பர்களின் நோக்கம் மிகச்சிறந்த தன்மையைக் "
+"கட்டுப்படுத்துவதாகும்."
+
+#: ../content/wrappers/weba.md:block 7 (paragraph)
+msgid ""
+"**Known bug**: Possibly inconsistant data between AudioBuffer and "
+"AnalyserNode wrappers."
+msgstr ""
+"** அறியப்பட்ட பிழை **: ஆடியோபுஃபர் மற்றும் அனலிசெர்னோட் ரேப்பர்களுக்கு இடையே"
+" சீரற்ற தரவு."
+
+#: ../content/wrappers/weba.md:block 8 (paragraph)
+msgid ""
+"**Known bug**: Inconsistency between AudioBuffer.prototype.copyFromChannel "
+"and AudioBuffer.prototype.getChannelData. "
+"AudioBuffer.prototype.copyFromChannel should call "
+"AudioBuffer.prototype.getChannelData wrapper and then return result of the "
+"original call."
+msgstr ""
+". ஆடியோபுஃபர்.பிரோட்டோடைப்.கோபிஃப்ரோம்சானல் "
+"ஆடியோபுஃபர்.பிரோட்டோடைப்.செட்டோண்டேட்டா ரேப்பரை அழைத்து அசல் அழைப்பின் "
+"முடிவைத் தர வேண்டும்."
+
+#: ../content/wrappers/webgl.md:block 1 (paragraph)
+msgid "Title: WebGL Filename: ../common/wrappingS-WEBGL.js"
+msgstr "தலைப்பு: வெப்சிஎல் கோப்பு பெயர்: ../common/wrappings-webgl.js"
+
+#: ../content/wrappers/webgl.md:block 2 (paragraph)
+msgid "This file contains wrappers for WebGL related calls"
+msgstr "இந்த கோப்பில் வெப்சிஎல் தொடர்பான அழைப்புகளுக்கான ரேப்பர்கள் உள்ளன"
+
+#: ../content/wrappers/webgl.md:block 3 (unordered list)
+msgid "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext"
+msgstr ""
+"https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext"
+
+#: ../content/wrappers/webgl.md:block 3 (unordered list)
+msgid ""
+"https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext"
+msgstr ""
+"https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext"
+
+#: ../content/wrappers/webgl.md:block 4 (paragraph)
+msgid ""
+"The goal is to prevent fingerprinting by modifying the values from certain "
+"WebGLRenderingContext API functions. This includes return values of various "
+"functions which can be hardware/software specific and image data reading."
+msgstr ""
+"சில வெப்க்ள்ரெண்டரிங் கான்டெக்ச்ட் பநிஇ செயல்பாடுகளிலிருந்து மதிப்புகளை "
+"மாற்றுவதன் மூலம் கைரேகையைத் தடுப்பதே குறிக்கோள். வன்பொருள்/மென்பொருள் "
+"குறிப்பிட்ட மற்றும் பட தரவு வாசிப்பாக இருக்கக்கூடிய பல்வேறு செயல்பாடுகளின் "
+"வருவாய் மதிப்புகள் இதில் அடங்கும்."
+
+#: ../content/wrappers/webgl.md:block 5 (paragraph)
+msgid ""
+"Content is either modified according to domain and session keys to be "
+"different than the original albeit very similar or replaced by bottom value "
+"which is consistent every time. Both approaches are inspired by the "
+"algorithms created by [Brave Software](https://brave.com) available "
+"[here](https://github.com/brave/brave-"
+"core/$blob/master/chromium_src/third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc)"
+" and [here](https://github.com/brave/brave-"
+"core/blob/master/chromium_src/third_party/blink/renderer/modules/webgl/webgl2_rendering_context_base.cc)."
+msgstr ""
+"உள்ளடக்கம் டொமைன் மற்றும் அமர்வு விசைகள் படி மாற்றியமைக்கப்படுகிறது, அசல் "
+"விட வேறுபட்டதாக இருக்கும் அல்லது ஒவ்வொரு முறையும் சீரானதாக இருக்கும் கீழ் "
+"மதிப்பால் மாற்றப்படுகிறது. இரண்டு அணுகுமுறைகளும் [துணிச்சலான மென்பொருள்] "
+"(https://brave.com) உருவாக்கிய வழிமுறைகளால் ஈர்க்கப்பட்டுள்ளன [இங்கே] "
+"(https://github.com/brave/brave-core/$blob/master/chromium_src/third_party/ "
+"பிளிங்க்/ரெண்டரர்/தொகுதிகள்/வெப்சிஎல்/வெப்சிஎல்_ரெண்டரிங்_கோன்டெக்ச்ட்_பேச்.சிசி)"
+" மற்றும் [இங்கே] (https://github.com/brave-"
+"core/blob/master/chromium_src/third_party/blink/rendererer/modgaseralorgel/webgl/webgl/webgl/webgl/webgl/webgl/webgl/webgl2_obl2_ராக்"
+" )."
+
+#: ../content/wrappers/webgl.md:block 6 (paragraph)
+msgid "This wrapper operates with two levels of protection:"
+msgstr "இந்த ரேப்பர் இரண்டு நிலை பாதுகாப்புடன் இயங்குகிறது:"
+
+#: ../content/wrappers/webgl.md:block 7 (unordered list)
+msgid ""
+"(0) - return modified results, such as slightly changed image, slightly "
+"changed number or random string"
+msgstr ""
+"(0) - சற்று மாற்றப்பட்ட படம், சற்று மாற்றப்பட்ட எண் அல்லது சீரற்ற சரம் போன்ற"
+" மாற்றியமைக்கப்பட்ட முடிவுகளைத் தரவும்"
+
+#: ../content/wrappers/webgl.md:block 7 (unordered list)
+msgid ""
+"(1) - return bottom values - such as zero, empty string, empty image, null, "
+"etc."
+msgstr ""
+"(1) - கீழே மதிப்புகளைத் தரவும் - பூச்சியம், வெற்று சரம், வெற்று படம், "
+"சுழியம் போன்றவை."
+
+#: ../content/wrappers/webgl.md:block 8 (paragraph)
+msgid ""
+"Level 0 is trying to force WebGL fingeprint to be unique on every domain and"
+" every session. This can be effective when used with other wrappers with "
+"same options. This level causes breakage of websites using WebGL only "
+"rarely. Level 1 is trying to return as little information as possible while "
+"being consistent across domains and sessions. This level can cause breakage "
+"on majority of websites using WebGL."
+msgstr ""
+"நிலை 0 ஒவ்வொரு களத்திலும் ஒவ்வொரு அமர்விலும் webgl fingeprint ஐ தனித்துவமாக "
+"இருக்க கட்டாயப்படுத்த முயற்சிக்கிறது. அதே விருப்பங்களுடன் மற்ற ரேப்பர்களுடன்"
+" பயன்படுத்தும்போது இது பயனுள்ளதாக இருக்கும். இந்த நிலை Webgl ஐப் பயன்படுத்தி"
+" வலைத்தளங்களை உடைப்பதை அரிதாகவே ஏற்படுத்துகிறது. நிலை 1 களங்கள் மற்றும் "
+"அமர்வுகள் முழுவதும் சீராக இருக்கும்போது முடிந்தவரை சிறிய தகவல்களைத் திருப்ப "
+"முயற்சிக்கிறது. இந்த நிலை வெப்சிஎல் பயன்படுத்தும் பெரும்பாலான வலைத்தளங்களில்"
+" உடைக்கப்படலாம்."
+
+#: ../content/wrappers/webgl.md:block 9 (paragraph)
+msgid ""
+"**Note**: Both approaches are detectable by a fingerprinter that checks if a"
+" predetermined image is the same as the read one or if specific function "
+"returns expected value. Nevertheless, the aim of the wrappers is to limit "
+"the finerprintability."
+msgstr ""
+"** குறிப்பு **: இரண்டு அணுகுமுறைகளும் ஒரு கைரேகை மூலம் கண்டறியப்படுகின்றன, "
+"இது முன்னரே தீர்மானிக்கப்பட்ட படம் ஒன்றைப் படித்ததா அல்லது குறிப்பிட்ட "
+"செயல்பாடு எதிர்பார்க்கப்படும் மதிப்பை அளித்தால் சரிபார்க்கிறது. ஆயினும்கூட, "
+"ரேப்பர்களின் நோக்கம் மிகச்சிறந்த தன்மையைக் கட்டுப்படுத்துவதாகும்."
+
+#: ../content/wrappers/xr.md:block 1 (paragraph)
+msgid "Title: Web XR Filename: ../common/wrappingS-XR.js"
+msgstr "தலைப்பு: வலை எக்ச்ஆர் கோப்பு பெயர்: ../common/wrappings-xr.js"
+
+#: ../content/wrappers/xr.md:block 2 (paragraph)
+msgid ""
+"navigator.xr allows any page script to learn the VR displays attached to the"
+" computer and more."
+msgstr ""
+"Navigator.xr எந்த பக்க ச்கிரிப்டையும் கணினியுடன் இணைக்கப்பட்ட வி.ஆர் "
+"காட்சிகளைக் கற்றுக்கொள்ள அனுமதிக்கிறது."
+
+#: ../content/wrappers/xr.md:block 3 (paragraph)
+msgid ""
+"U. Iqbal, S. Englehardt and Z. Shafiq, \"Fingerprinting the Fingerprinters: "
+"Learning to Detect Browser Fingerprinting Behaviors,\" in 2021 2021 IEEE "
+"Symposium on Security and Privacy (SP), San Francisco, CA, US, 2021 pp. "
+"283-301 observed (https://github.com/uiowa-irl/FP-"
+"Inspector/blob/master/Data/potential_fingerprinting_APIs.md) that the "
+"orginal WebVR API is used in the wild to fingerprint users. As it is likely "
+"that only a minority of users have a VR display connected and the API "
+"provides additional information on the HW, it is likely that users with a VR"
+" display connected are easily fingerprintable."
+msgstr ""
+"யு. இக்பால், எச். 301 கவனிக்கப்பட்டது (https://github.com/uiowa-irl/fp-"
+"inspector/blob/master/data/data/potential_fingerprinting_apis.md) கைரேகை "
+"பயனர்களுக்கு ஆர்கினல் வெப்விஆர் பநிஇ பயன்படுத்தப்படுகிறது. சிறுபான்மை "
+"பயனர்கள் மட்டுமே வி.ஆர் டிச்ப்ளே இணைக்கப்பட்டிருக்கலாம் மற்றும் பநிஇ "
+"எச்.டபிள்யூவில் கூடுதல் தகவல்களை வழங்குகிறது என்பதால், வி.ஆர் டிச்ப்ளே "
+"இணைக்கப்பட்ட பயனர்கள் எளிதில் கைரேகை இருக்கக்கூடும்."
+
+#: ../content/wrappers/xr.md:block 4 (paragraph)
+msgid ""
+"As all the API calls are accessible through the navigator.xr API, we provide"
+" a single mitigation. We disable the API completely. This might need to be "
+"revised once this API is commonly enabled in browsers."
+msgstr ""
+"அனைத்து பநிஇ அழைப்புகளும் நேவிகேட்டர்.எக்ச்ஆர் பநிஇ மூலம் அணுகக்கூடியவை "
+"என்பதால், நாங்கள் ஒரு தணிப்பை வழங்குகிறோம். நாங்கள் பநிஇ ஐ முழுமையாக "
+"முடக்குகிறோம். இந்த பநிஇ பொதுவாக உலாவிகளில் இயக்கப்பட்டவுடன் இதை திருத்த "
+"வேண்டும்."
