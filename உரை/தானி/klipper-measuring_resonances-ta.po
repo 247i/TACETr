@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Tamil (Klipper)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-06 22:31+0200\n"
-"PO-Revision-Date: 2025-01-08 10:27+0530\n"
+"PO-Revision-Date: 2025-01-08 10:34+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/klipper/measuring_resonances/ta/>\n"
 "Language: ta\n"
@@ -2068,11 +2068,26 @@ msgid ""
 "    # Somewhere slightly above the middle of your print bed\n"
 "    147,154, 20\n"
 msgstr ""
+"[MCU LIS]\n"
+" # நீங்கள் மேலே கண்டறிந்த எதற்கும் <myserial> ஐ மாற்றவும். உதாரணமாக,\n"
+" # USB-KLIPPER_RP2040_E661640843545B2E-IF00\n"
+" சீரியல்:/dev/serial/by-id/usb-klipper_rp2040_ <myserial>\n"
+"\n"
+" [LIS2DW]\n"
+" CS_PIN: LIS: GPIO1\n"
+" SPI_BUS: SPI0A\n"
+" AXES_MAP: ஃச், சட், y\n"
+"\n"
+" [அதிர்வு_டெச்டர்]\n"
+" Act_chip: lis2dw\n"
+" probet_points:\n"
+" # உங்கள் அச்சு படுக்கையின் நடுவில் சற்று மேலே எங்காவது\n"
+" 147,154, 20\n"
 
 #: docs/Measuring_Resonances.md:block 87 (header)
 #, md-text
 msgid "Configure MPU-9520 Compatibles With Pico"
-msgstr ""
+msgstr "MPU-9520 ஐ பைக்கோவுடன் இணக்கமாக உள்ளமைக்கவும்"
 
 #: docs/Measuring_Resonances.md:block 88 (paragraph)
 #, md-text
@@ -2080,6 +2095,8 @@ msgid ""
 "Pico I2C is set to 400000 on default. Simply add the following to the "
 "printer.cfg:"
 msgstr ""
+"பிக்கோ ஐ 2 சி இயல்புநிலையாக 400000 ஆக அமைக்கப்பட்டுள்ளது. அச்சுப்பொறியில் "
+"பின்வருவனவற்றைச் சேர்க்கவும். Cfg:"
 
 #: docs/Measuring_Resonances.md:block 89 (code)
 #, md-text
@@ -2099,11 +2116,25 @@ msgid ""
 "[static_digital_output pico_3V3pwm] # Improve power stability\n"
 "pins: pico:gpio23\n"
 msgstr ""
+"[MCU பைக்கோ]\n"
+" சீரியல்:/dev/serial/by-id/<உங்கள் பைக்கோவின் தொடர் ஐடி>\n"
+"\n"
+" [MPU9250]\n"
+" I2C_MCU: PICO\n"
+" I2C_BUS: I2C0A\n"
+"\n"
+" [அதிர்வு_டெச்டர்]\n"
+" Act_chip: MPU9250\n"
+" probet_points:\n"
+" 100, 100, 20 # ஒரு எடுத்துக்காட்டு\n"
+"\n"
+" [static_digital_output pico_3v3pwm] # ஆற்றல் நிலைத்தன்மையை மேம்படுத்தவும்\n"
+" பின்ச்: பிக்கோ: GPIO23\n"
 
 #: docs/Measuring_Resonances.md:block 90 (header)
 #, md-text
 msgid "Configure MPU-9520 Compatibles with AVR"
-msgstr ""
+msgstr "AVR உடன் இணக்கமான MPU-9520 ஐ உள்ளமைக்கவும்"
 
 #: docs/Measuring_Resonances.md:block 91 (paragraph)
 #, md-text
@@ -2111,6 +2142,8 @@ msgid ""
 "AVR I2C will be set to 400000 by the mpu9250 option. Simply add the "
 "following to the printer.cfg:"
 msgstr ""
+"AVR I2C MPU9250 விருப்பத்தால் 400000 ஆக அமைக்கப்படும். அச்சுப்பொறியில் "
+"பின்வருவனவற்றைச் சேர்க்கவும். Cfg:"
 
 #: docs/Measuring_Resonances.md:block 92 (code)
 #, md-text
@@ -2126,13 +2159,23 @@ msgid ""
 "probe_points:\n"
 "    100, 100, 20  # an example\n"
 msgstr ""
+"[MCU நானோ]\n"
+" சீரியல்:/dev/serial/by-id/<உங்கள் நானோவின் தொடர் ஐடி>\n"
+"\n"
+" [MPU9250]\n"
+" I2C_MCU: நானோ\n"
+"\n"
+" [அதிர்வு_டெச்டர்]\n"
+" Act_chip: MPU9250\n"
+" probet_points:\n"
+" 100, 100, 20 # ஒரு எடுத்துக்காட்டு\n"
 
 #: docs/Measuring_Resonances.md:block 101 (paragraph)
 #, md-text
 msgid ""
 "**If you are using a MPU-9250 compatible accelerometer and it shows up as "
 "`mpu-unknown`, use with caution! They are probably refurbished chips!**"
-msgstr ""
+msgstr ". அவை புதுப்பிக்கப்பட்ட சில்லுகள்! **"
 
 #: docs/Measuring_Resonances.md:block 122 (paragraph)
 #, md-text
@@ -2142,6 +2185,11 @@ msgid ""
 "MCU board), or to two different physical SPI interfaces on the same board "
 "(rarely available). Then they can be configured in the following manner:"
 msgstr ""
+"இருப்பினும், நீங்கள் ஒரே நேரத்தில் இரண்டு முடுக்கமானிகளையும் இணைக்க "
+"முடியும், இருப்பினும் ADXL345 வெவ்வேறு பலகைகளுடன் (ஒரு RPI மற்றும் "
+"அச்சுப்பொறி MCU போர்டுடன்) அல்லது ஒரே பலகையில் இரண்டு வெவ்வேறு உடல் SPI "
+"இடைமுகங்களுடன் இணைக்கப்பட வேண்டும் (அரிதாகவே கிடைக்கிறது). பின்னர் அவை "
+"பின்வரும் முறையில் கட்டமைக்கப்படலாம்:"
 
 #: docs/Measuring_Resonances.md:block 124 (paragraph)
 #, md-text
@@ -2151,6 +2199,10 @@ msgid ""
 "pulled-down to 0V (address 104) and the other its AD0 pin pulled-up to 3.3V "
 "(address 105):"
 msgstr ""
+"இரண்டு MPU கள் ஒரு I2C பச்சைப் பகிர்ந்து கொள்ளலாம், ஆனால் 400Kbit/s I2C பச் "
+"போதுமானதாக இல்லாததால் அவை ** ஒரே நேரத்தில் அளவிட முடியாது. ஒன்று அதன் AD0 "
+"முள் 0V க்கு இழுக்கப்பட வேண்டும் (முகவரி 104), மற்றொன்று அதன் AD0 முள் 3.3V "
+"க்கு இழுக்கப்படுகிறது (முகவரி 105):"
 
 #: docs/Measuring_Resonances.md:block 125 (code)
 #, md-text
@@ -2171,6 +2223,21 @@ msgid ""
 "accel_chip_y: mpu9250 bed\n"
 "probe_points: ...\n"
 msgstr ""
+"[MPU9250 HOTEND]\n"
+" I2C_MCU: RPI\n"
+" I2C_BUS: I2C.1\n"
+" I2C_ADDRESS: 104 # இந்த MPU முள் AD0 குறைவாக இழுக்கப்பட்டுள்ளது\n"
+"\n"
+" [MPU9250 படுக்கை]\n"
+" I2C_MCU: RPI\n"
+" I2C_BUS: I2C.1\n"
+" I2C_ADDRESS: 105 # இந்த MPU முள் AD0 ஐ உயர்த்தியுள்ளது\n"
+"\n"
+" [அதிர்வு_டெச்டர்]\n"
+" # படுக்கை ச்லிங்கர் அச்சுப்பொறியின் வழக்கமான அமைப்பைக் கருதுங்கள்\n"
+" Act_chip_x: MPU9250 HOTEND\n"
+" Act_chip_y: MPU9250 படுக்கை\n"
+" probet_points: ...\n"
 
 #: docs/Measuring_Resonances.md:block 126 (paragraph)
 #, md-text
@@ -2178,6 +2245,8 @@ msgid ""
 "[Test with each MPU individually before connecting both to the bus for easy "
 "debugging.]"
 msgstr ""
+"[எளிதாக பிழைத்திருத்தத்திற்காக பச்சுடன் இணைவதற்கு முன் ஒவ்வொரு MPU உடன் "
+"தனித்தனியாக சோதிக்கவும்.]"
 
 #: docs/Measuring_Resonances.md:block 58 (code)
 #, md-text
@@ -2185,6 +2254,8 @@ msgid ""
 "sudo apt update\n"
 "sudo apt install python3-numpy python3-matplotlib libatlas-base-dev libopenblas-dev\n"
 msgstr ""
+"சூடோ APT புதுப்பிப்பு\n"
+" sudo apt install python3-numpy python3-matplotlib libatlas-base-dev libopenblas-dev\n"
 
 #: docs/Measuring_Resonances.md:block 148 (paragraph)
 #, md-text
@@ -2196,13 +2267,18 @@ msgid ""
 "you should inform the script about it by passing "
 "`--square_corner_velocity=...` parameter, e.g."
 msgstr ""
+"அதிக மென்மையாக்காமல் அதிகபட்ச முடுக்கம் `சதுர_கார்னர்_வெலோசிட்டி` ஐப் "
+"பொறுத்தது என்பதை நினைவில் கொள்ளுங்கள். பொதுவான பரிந்துரை அதன் இயல்புநிலை "
+"மதிப்பு 5.0 இலிருந்து அதை மாற்றக்கூடாது, இது இயல்புநிலையாக "
+"`அளவீடுகள்_சேப்பர்.பி` ச்கிரிப்ட் மூலம் பயன்படுத்தப்படும் மதிப்பு. நீங்கள் "
+"அதை மாற்றினால், `--சதுர_கார்ன்_வெலோசிட்டி = ...` அளவுரு, எ.கா."
 
 #: docs/Measuring_Resonances.md:block 149 (code)
 #, md-text
 msgid ""
 "~/klipper/scripts/calibrate_shaper.py /tmp/resonances_x_*.csv -o "
 "/tmp/shaper_calibrate_x.png --square_corner_velocity=10.0\n"
-msgstr ""
+msgstr "~/klipper/scripts/அளவீடுகள்_சேப்பர்\n"
 
 #: docs/Measuring_Resonances.md:block 150 (paragraph)
 #, md-text
@@ -2212,6 +2288,10 @@ msgid ""
 "`square_corner_velocity` parameter into account, and there is no need to "
 "specify it explicitly."
 msgstr ""
+"இதனால் அதிகபட்ச முடுக்கம் பரிந்துரைகளை சரியாக கணக்கிட முடியும். "
+"`சேப்பர்_லிபிரேட்` கட்டளை ஏற்கனவே கட்டமைக்கப்பட்ட` சதுர_கார்ன்_வெலோசிட்டி` "
+"அளவுருவை கணக்கில் எடுத்துக்கொள்கிறது, அதை வெளிப்படையாகக் குறிப்பிட வேண்டிய "
+"அவசியமில்லை என்பதை நினைவில் கொள்க."
 
 #: docs/Measuring_Resonances.md:block 111 (paragraph)
 #, md-text
@@ -2224,3 +2304,11 @@ msgid ""
 "can be useful, for example, if resonance tests were done at multiple test "
 "points. Delete the extra CSV files if you do not desire to average them."
 msgstr ""
+"இது 2 காபிம கோப்புகளை (`/TMP/அதிர்வு_எக்ச் _*. CSV` மற்றும்`/TMP/அதிர்வு_ஒய்"
+" _*. CSV`) உருவாக்கும். இந்த கோப்புகளை ராச்பெர்ரி பை மீது தனித்து நிற்கும் "
+"ச்கிரிப்ட் மூலம் செயலாக்க முடியும். இந்த ச்கிரிப்ட் அளவிடப்பட்ட ஒவ்வொரு "
+"அச்சுக்கும் ஒற்றை சி.எச்.வி கோப்புடன் இயக்கப்பட வேண்டும், இருப்பினும் "
+"நீங்கள் முடிவுகளை சராசரியாக விரும்பினால் பல சி.எச்.வி கோப்புகளுடன் "
+"பயன்படுத்தலாம். சராசரி முடிவுகள் பயனுள்ளதாக இருக்கும், எடுத்துக்காட்டாக, பல "
+"சோதனை புள்ளிகளில் அதிர்வு சோதனைகள் செய்யப்பட்டால். கூடுதல் சி.எச்.வி "
+"கோப்புகளை நீங்கள் சராசரியாக விரும்பவில்லை என்றால் அவற்றை நீக்கவும்."
