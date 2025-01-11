@@ -1,0 +1,330 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tamil (Lecturify)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-10 17:36+0200\n"
+"PO-Revision-Date: 2025-01-11 06:27+0530\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/lecturify/openbsd-cheat-sheet/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
+
+#. type: Title ##
+#, no-wrap
+msgid "The OpenBSD Cheatsheet."
+msgstr "OpenBSD SeatSheet."
+
+#. type: Title ####
+#, no-wrap
+msgid "Managing packages."
+msgstr "தொகுப்புகளை நிர்வகித்தல்."
+
+#. type: Plain text
+msgid "Installing packages"
+msgstr "தொகுப்புகளை நிறுவுதல்"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "pkg_add [pkgname(s)]\n"
+msgstr "pkg_add [pkgname (கள்)]\n"
+
+#. type: Plain text
+msgid "Uninstalling packages"
+msgstr "தொகுப்புகளை நிறுவல் நீக்குதல்"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "pkg_delete [pkgname(s)]\n"
+msgstr "pkg_delete [pkgname (s)]\n"
+
+#. type: Plain text
+msgid "Do not forget to also wipe the dependencies."
+msgstr "சார்புகளையும் துடைக்க மறக்காதீர்கள்."
+
+#. type: Fenced code block
+#, no-wrap
+msgid "pkg_delete -a\n"
+msgstr "pkg_delete -a\n"
+
+#. type: Plain text
+msgid "Updating all packages"
+msgstr "அனைத்து தொகுப்புகளையும் புதுப்பித்தல்"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "pkg_add -u\n"
+msgstr "pkg_add -u\n"
+
+#. type: Plain text
+msgid "Searching package(s) by name"
+msgstr "பெயரால் தொகுப்பு (களை) தேடுகிறது"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "pkg_info -Q [name]\n"
+msgstr "pkg_info -q [பெயர்]\n"
+
+#. type: Plain text
+msgid "Getting package info"
+msgstr "தொகுப்பு தகவலைப் பெறுதல்"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "pkg_info [pkgname]\n"
+msgstr "pkg_info [pkgname]\n"
+
+#. type: Plain text
+msgid "Getting list of installed files of certain package"
+msgstr "சில தொகுப்பின் நிறுவப்பட்ட கோப்புகளின் பட்டியலைப் பெறுதல்"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "pkg_info -L [pkgname]\n"
+msgstr "pkg_info -l [pkgname]\n"
+
+#. type: Plain text
+msgid "Also read: `man pkg_add`"
+msgstr "மேலும் படியுங்கள்: `மனிதன் pkg_add`"
+
+#. type: Title ####
+#, no-wrap
+msgid "System Upgrade"
+msgstr "கணினி மேம்படுத்தல்"
+
+#. type: Plain text
+msgid "Non-free Firmware update"
+msgstr "இல்லாத ஃபார்ம்வேர் புதுப்பிப்பு"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "fw_update\n"
+msgstr "fw_update\n"
+
+#. type: Plain text
+msgid "Updating firmwares with different mirror"
+msgstr "வெவ்வேறு கண்ணாடியுடன் ஃபார்ம்வேரைப் புதுப்பித்தல்"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "fw_update -p https://otherhost.com/path\n"
+msgstr "fw_update -p https://otherhost.com/path\n"
+
+#. type: Plain text
+msgid "Receiving patches"
+msgstr "திட்டுகளைப் பெறுதல்"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "syspatch\n"
+msgstr "சிச்பாட்ச்\n"
+
+#. type: Plain text
+msgid "Receiving new system update."
+msgstr "புதிய கணினி புதுப்பிப்பைப் பெறுதல்."
+
+#. type: Fenced code block
+#, no-wrap
+msgid "sysupgrade\n"
+msgstr "sysupgrade\n"
+
+#. type: Title ###
+#, no-wrap
+msgid "Managing Users"
+msgstr "பயனர்களை நிர்வகித்தல்"
+
+#. type: Plain text
+msgid "Adding user (yes. execute without any args)"
+msgstr "பயனரைச் சேர்ப்பது (ஆம். எந்த ஆர்க்ச் இல்லாமல் இயக்கவும்)"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "adduser\n"
+msgstr "adduser\n"
+
+#. type: Plain text
+msgid "Deleting user"
+msgstr "பயனரை நீக்குதல்"
+
+#. type: Fenced code block
+#, no-wrap
+msgid ""
+"userdel -r user\n"
+"groupdel user\n"
+msgstr ""
+"USERDEL -R பயனர்\n"
+" குரூப் டெல் பயனர்\n"
+
+#. type: Plain text
+msgid "Adding user to group"
+msgstr "குழுவில் பயனரைச் சேர்ப்பது"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "usermod -G groupname user\n"
+msgstr "usermod -g குழு பெயர் பயனர்\n"
+
+#. type: Plain text
+msgid "Changing password"
+msgstr "கடவுச்சொல்லை மாற்றுதல்"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "passwd\n"
+msgstr "பாச்ச்விடி\n"
+
+#. type: Plain text
+msgid "Changing certain user password"
+msgstr "சில பயனர் கடவுச்சொல்லை மாற்றுதல்"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "passwd user\n"
+msgstr "PASSWD பயனர்\n"
+
+#. type: Plain text
+msgid "Adding user to login class (Example: staff)"
+msgstr "உள்நுழைவு வகுப்பில் பயனரைச் சேர்ப்பது (எடுத்துக்காட்டு: பணியாளர்கள்)"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "usermod -L staff user\n"
+msgstr "usermod -l பணியாளர்கள் பயனர்\n"
+
+#. type: Plain text
+msgid "Changing username"
+msgstr "பயனர்பெயரை மாற்றுதல்"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "usermod -ml newname oldname\n"
+msgstr "usermod -ml புதிய பெயர் பழைய பெயர்\n"
+
+#. type: Plain text
+msgid "Changing user shell"
+msgstr "பயனர் செல்லை மாற்றுதல்"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "usermod -s /path/to/new/sh user\n"
+msgstr "usermod -s/path/to/new/sh பயனர்\n"
+
+#. type: Plain text
+msgid "Also read: `man usermod`"
+msgstr "மேலும் படியுங்கள்: `மனிதன் usermod`"
+
+#. type: Title ####
+#, no-wrap
+msgid "Managing services"
+msgstr "சேவைகளை நிர்வகித்தல்"
+
+#. type: Plain text
+msgid "Starting service"
+msgstr "சேவையைத் தொடங்குதல்"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "rcctl start servicename\n"
+msgstr "RCCTL தொடங்கு SERVICENAME\n"
+
+#. type: Plain text
+msgid "Checking service"
+msgstr "சேவையைச் சரிபார்க்கிறது"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "rcctl check servicename\n"
+msgstr "RCCTL சரிபார் SERVICENAME\n"
+
+#. type: Plain text
+msgid "Enabling service to start during boot"
+msgstr "துவக்கத்தின் போது சேவையைத் தொடங்க உதவுகிறது"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "rcctl enable servicename\n"
+msgstr "RCCTL சேவைப் பெயரை இயக்கவும்\n"
+
+#. type: Plain text
+msgid "Disabling service to start during boot"
+msgstr "துவக்கத்தின் போது தொடங்குவதற்கான சேவையை முடக்குதல்"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "rcctl disable servicename\n"
+msgstr "RCCTL சேவைப் பெயரை முடக்கு\n"
+
+#. type: Plain text
+msgid "Stopping service"
+msgstr "சேவையை நிறுத்துதல்"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "rcctl stop servicename\n"
+msgstr "RCCTL நிறுத்து ServiceName\n"
+
+#. type: Plain text
+msgid "Restarting service"
+msgstr "சேவையை மறுதொடக்கம் செய்தல்"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "rcctl restart servicename\n"
+msgstr "RCCTL மறுதொடக்கம் சேவைப் பெயர்\n"
+
+#. type: Plain text
+msgid "Also read `man rcctl`"
+msgstr "`MAN RCCTL` ஐயும் படிக்கவும்"
+
+#. type: Title ####
+#, no-wrap
+msgid "Managing network"
+msgstr "பிணையம் நிர்வகித்தல்"
+
+#. type: Plain text
+msgid "Do this first:"
+msgstr "இதை முதலில் செய்யுங்கள்:"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "ifconfig\n"
+msgstr "ifconfig\n"
+
+#. type: Plain text
+msgid ""
+"And read.  Say, You want to connect to internet with `re0` interface with "
+"DHCP."
+msgstr ""
+"மற்றும் படிக்கவும். சொல்லுங்கள், நீங்கள் DHCP உடன் `RE0` இடைமுகத்துடன் "
+"இணையத்துடன் இணைக்க விரும்புகிறீர்கள்."
+
+#. type: Fenced code block
+#, no-wrap
+msgid "doas ifconfig re0 autoconf\n"
+msgstr "doas ifconfig re0 autoconf\n"
+
+#. type: Plain text
+msgid "Making interface up"
+msgstr "இடைமுகத்தை உருவாக்குதல்"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "doas ifconfig re0 up\n"
+msgstr "doas ifconfig re0 மேலே\n"
+
+#. type: Plain text
+msgid "Making interface down"
+msgstr "இடைமுகத்தை கீழே செய்கிறது"
+
+#. type: Fenced code block
+#, no-wrap
+msgid "doas ifconfig re0 down\n"
+msgstr "doas ifconfig re0 பேரூர்\n"
+
+#. type: Plain text
+msgid "Also read: `man ifconfig`"
+msgstr "மேலும் படியுங்கள்: `மேன் இஃப்கான்ஃபிக்`"
