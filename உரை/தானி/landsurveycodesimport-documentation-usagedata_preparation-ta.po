@@ -1,0 +1,442 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tamil (Land Survey Codes Import)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-11 02:48+0200\n"
+"PO-Revision-Date: 2025-01-11 20:10+0530\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/landsurveycodesimport/documentation-usagedata_preparation/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
+
+#: ../usage/data_preparation.md:1
+#, md-text
+msgid "Préparer ses données"
+msgstr "உங்கள் தரவை ஆயத்தம் செய்யுங்கள்"
+
+#: ../usage/data_preparation.md:3
+#, md-text
+msgid ""
+"Le [GeoPackage] est le format central. Nous préconisons de travailler sur "
+"une copie vierge de vos données, ne contenant que la structure de vos "
+"tables. Cela permet d'insérer vos données de terrains, d'archiver les "
+"données par plans et ensuite de les insérer dans votre base de production."
+msgstr ""
+"[சியோபாகேச்] என்பது மைய வடிவமாகும். உங்கள் தரவுகளின் கட்டமைப்பை மட்டுமே "
+"கொண்ட உங்கள் தரவின் வெற்று நகலில் வேலை செய்ய பரிந்துரைக்கிறோம். இது உங்கள் "
+"நிலத் தரவைச் செருகவும், தரவை திட்டங்கள் மூலம் காப்பகப்படுத்தவும், பின்னர் "
+"அதை உங்கள் உற்பத்தித் தளத்தில் செருகவும் உங்களை அனுமதிக்கிறது."
+
+#: ../usage/data_preparation.md:7
+#, md-text
+msgid "Comment préparer vos données"
+msgstr "உங்கள் தரவை எவ்வாறு தயாரிப்பது"
+
+#: ../usage/data_preparation.md:9
+#, md-text
+msgid ""
+"Vous trouverez ci-après quelques cas d'utilisations et conseils pour "
+"profiter pleinement du plugin. Ces conseils sont à adapter à votre processus"
+" de travail."
+msgstr ""
+"சொருகி முழுமையாகப் பயன்படுத்த சில பயன்பாடுகள் மற்றும் ஆலோசனைகளின் சில "
+"நிகழ்வுகளை நீங்கள் கீழே காண்பீர்கள். இந்த உதவிக்குறிப்புகள் உங்கள் பணி "
+"செயல்முறைக்கு ஏற்றதாக இருக்க வேண்டும்."
+
+#: ../usage/data_preparation.md:13
+#, md-text
+msgid ""
+"Les parties ci-après n'ont pas pour objet de se substituer au manuel de QGIS"
+" et une formation SIG. Ils n'ont pour vocation que de donner des pistes pour"
+" vous assister à la préparation de la donnée pour ce plugin. À vous de les "
+"adapter à votre environnement de travail."
+msgstr ""
+"பொருள் கட்சிகள் QGIS கையேடு மற்றும் சிஐஎச் பயிற்சியை மாற்றும் நோக்கம் "
+"கொண்டவை அல்ல. இந்த சொருகி தரவைத் தயாரிப்பதற்கு உங்களுக்கு உதவ தடங்களை "
+"வழங்குவதே அவற்றின் தொழில். அவற்றை உங்கள் பணிச்சூழலுடன் மாற்றியமைப்பது "
+"உங்களுடையது."
+
+#: ../usage/data_preparation.md:18
+#, md-text
+msgid ""
+"En préambule, nous tenons à rappeler pourquoi, nous n'utilisons pas "
+"directement les données PostgreSQL/PostGIS. Ces informations proviennent "
+"d'expérience utilisateurs et de discussions entre eux et les développeurs."
+msgstr ""
+"முன்னுரையில், ஏன் என்பதை நினைவில் கொள்ள விரும்புகிறோம், நாங்கள் "
+"Postgresql/postgis தரவைப் பயன்படுத்துவதில்லை. இந்த செய்தி பயனர் பட்டறிவு "
+"மற்றும் அவர்களுக்கும் டெவலப்பர்களுக்கும் இடையிலான விவாதங்களிலிருந்து "
+"வருகிறது."
+
+#: ../usage/data_preparation.md:22
+#, md-text
+msgid ""
+"L'intégration des points topographiques, peuvent parfois engendrer des   "
+"décalages, des corrections à reprendre, etc. Il n'est pas préférable   "
+"d'intégrer directement ceux-ci dans la base de production."
+msgstr ""
+"நிலப்பரப்பு புள்ளிகளின் ஒருங்கிணைப்பு சில நேரங்களில் முரண்பாடுகள், "
+"திருத்தங்களை மீண்டும் தொடங்குவது போன்றவற்றை ஏற்படுத்தும். இவற்றை நேரடியாக "
+"உற்பத்தித் தளத்தில் ஒருங்கிணைப்பது நல்லதல்ல."
+
+#: ../usage/data_preparation.md:25
+#, md-text
+msgid ""
+"Nous avons la volonté de conserver un fichier dessin temporaire pour le   "
+"suivi des chantiers. C'est ainsi qu'intervient la notion d'archivage que   "
+"vous verrez dans l'étape suivante."
+msgstr ""
+"தளங்களின் பின்தொடர்தல் -அப்பிற்கு தற்காலிக வரைதல் கோப்பை வைத்திருக்க "
+"எங்களுக்கு விருப்பம் உள்ளது. அடுத்த கட்டத்தில் நீங்கள் காணும் காப்பகத்தின் "
+"கருத்து இப்படித்தான்."
+
+#: ../usage/data_preparation.md:28
+#, md-text
+msgid ""
+"La donnée saisie sur le terrain est souvent \"brut\" et va repasser par un"
+"   cycle d'enrichissement automatique (ce que fait en partie le plugin) ou"
+"   manuel. Ces étapes pouvant être chaînées dans QGIS."
+msgstr ""
+"புலத்தில் உள்ளிடப்பட்ட தரவு பெரும்பாலும் \"மொத்தம்\" மற்றும் தானியங்கி "
+"செறிவூட்டல் சுழற்சி (இது சொருகி ஓரளவு செய்கிறது) அல்லது கையேடு மூலம் "
+"திரும்பிச் செல்லும். QGIS இல் சங்கிலியால் பிடிக்கக்கூடிய இந்த படிகள்."
+
+#: ../usage/data_preparation.md:31
+#, md-text
+msgid ""
+"De même certaines structures vont contrôler le fichier dessin produit par   "
+"l'opérateur terrain et le fournir à une autre entité pour l'intégration   "
+"dans la base."
+msgstr ""
+"இதேபோல், சில கட்டமைப்புகள் புலம் ஆபரேட்டரால் தயாரிக்கப்பட்ட வரைபடக் கோப்பைக்"
+" கட்டுப்படுத்தும் மற்றும் அடித்தளத்தில் ஒருங்கிணைப்பதற்காக மற்றொரு "
+"நிறுவனத்திற்கு வழங்கும்."
+
+#: ../usage/data_preparation.md:34
+#, md-text
+msgid ""
+"Le GPKG en tant que fichier plat, permet également le découpage entre les   "
+"acteurs/métiers comme dans la démonstration : un fichier par métier.   Ce "
+"qui permet une plus grande flexibilité dans le processus terrain."
+msgstr ""
+"சி.பி.கே.சி ஒரு தட்டையான கோப்பாக, ஆர்ப்பாட்டத்தில் உள்ளதைப் போல "
+"நடிகர்கள்/தொழில்களுக்கு இடையில் வெட்டவும் அனுமதிக்கிறது: ஒரு வணிகத்திற்கு "
+"ஒரு கோப்பு. இது புல செயல்பாட்டில் அதிக நெகிழ்வுத்தன்மையை அனுமதிக்கிறது."
+
+#: ../usage/data_preparation.md:37
+#, md-text
+msgid ""
+"Certaines structures passent par des schémas \"temporaires\" pour "
+"l'intégration"
+msgstr ""
+"சில கட்டமைப்புகள் ஒருங்கிணைப்புக்கான \"தற்காலிக\" வடிவங்கள் வழியாக "
+"செல்கின்றன"
+
+#: ../usage/data_preparation.md:38
+#, md-text
+msgid ""
+"Il y a une différence de schéma (simplification ?) entre les données à   "
+"récolter sur le terrain et celles en base"
+msgstr ""
+"புலத்திலும் அடிப்படையிலும் அறுவடை செய்யப்பட வேண்டிய தரவுகளுக்கு இடையில் "
+"வரைபடத்தில் (எளிமைப்படுத்தல்?) வேறுபாடு உள்ளது"
+
+#: ../usage/data_preparation.md:40
+#, md-text
+msgid "Vous pouvez ne pas avoir de base PostgreSQL"
+msgstr "உங்களிடம் postgresql அடிப்படை இல்லை"
+
+#: ../usage/data_preparation.md:42
+#, md-text
+msgid ""
+"Le plugin reprend la logique d'autres outils métiers où un template (le GPKG"
+" vide) sera utilisé pour recevoir la donnée terrain. Une fois le nouveau "
+"GPKG créé, celui-ci peut être intégré au plan d'ensemble. Nous retrouvons la"
+" même logique que la réalisation d'un DWG en DAO et intégration dans le plan"
+" d'ensemble DWG (ou dans postgis)."
+msgstr ""
+"நில தரவைப் பெற ஒரு வார்ப்புரு (வெற்று சி.பி.கே.சி) பயன்படுத்தப்படும் பிற "
+"வணிக கருவிகளின் தர்க்கத்தை சொருகி எடுத்துக்கொள்கிறது. புதிய சி.பி.கே.சி "
+"உருவாக்கப்பட்டதும், அதை ஒட்டுமொத்த திட்டத்தில் ஒருங்கிணைக்க முடியும். டயோ "
+"இல் ஒரு DWG ஐ ​​உணர்ந்தது மற்றும் ஒட்டுமொத்த DWG (அல்லது போச்ட்கிசில்) "
+"ஒருங்கிணைப்பின் அதே தர்க்கத்தை நாங்கள் காண்கிறோம்."
+
+#: ../usage/data_preparation.md:48
+#, md-text
+msgid ""
+"Une fois les données acquises et traitées avec le plugin, vous obtenez une "
+"archive de ces dessins que vous pouvez rebasculer dans votre base."
+msgstr ""
+"சொருகி மூலம் தரவு வாங்கப்பட்டு செயலாக்கப்பட்டவுடன், இந்த வரைபடங்களின் "
+"காப்பகத்தை உங்கள் தளத்தில் மீண்டும் உருவாக்க முடியும்."
+
+#: ../usage/data_preparation.md:51
+#, md-text
+msgid "Votre SIG est composé de Shapefile ?"
+msgstr "உங்கள் சி.ஐ.க்கள் சேப்ஃபைலால் ஆனதா?"
+
+#: ../usage/data_preparation.md:53
+#, md-text
+msgid ""
+"QGIS vous permet de convertir vos fichiers dans différents formats dont le "
+"[GeoPackage]. Plusieurs moyens peuvent être mis en œuvre pour y parvenir."
+msgstr ""
+"[சியோபாகேச்] உள்ளிட்ட வெவ்வேறு வடிவங்களாக உங்கள் கோப்புகளை மாற்ற QGIS உங்களை"
+" அனுமதிக்கிறது. இதை அடைய பல வழிமுறைகளை செயல்படுத்தலாம்."
+
+#: ../usage/data_preparation.md:56
+#, md-text
+msgid "Pour cela, vous pouvez :"
+msgstr "இதற்காக, உங்களால் முடியும்:"
+
+#: ../usage/data_preparation.md:57
+#, md-text
+msgid ""
+"enregistrer les fichiers en utilisant le menu \"Exporter->Sauvegarder les "
+"entités sous\""
+msgstr "\"ஏற்றுமதி->\" பட்டியல் \"இன் கீழ் நிறுவனங்களைச் சேமிக்கவும்"
+
+#: ../usage/data_preparation.md:58
+#, md-text
+msgid ""
+"utiliser le plugin QConsolidate qui permet d'exporter chaque fichier présent"
+"   dans le projet dans un GeoPackage différent et crée un nouveau projet "
+"QGIS   contenant ces nouvelles couches"
+msgstr ""
+"QConsolidate செருகுநிரலைப் பயன்படுத்தவும், இது திட்டத்தில் இருக்கும் ஒவ்வொரு"
+" கோப்பையும் வேறு உலகம் ஈட்டியில் ஏற்றுமதி செய்ய அனுமதிக்கிறது மற்றும் இந்த "
+"புதிய அடுக்குகளைக் கொண்ட புதிய QGIS திட்டத்தை உருவாக்குகிறது"
+
+#: ../usage/data_preparation.md:61
+#, md-text
+msgid ""
+"utiliser la commande de conversion   "
+"[ogr2ogr](https://gdal.org/programs/ogr2ogr.html). Celle-ci étant présente"
+"   dans l'outil de traitement de QGIS et possède l'avantage de pouvoir   "
+"spécifier des options de conversions. C'est la méthode que nous préconisons."
+msgstr ""
+"மாற்று கட்டளை [OGR2OGR] (https://gdal.org/programs/ogr2ogr.html) ஐப் "
+"பயன்படுத்தவும். இது QGIS மருத்தீடு கருவியில் உள்ளது மற்றும் மாற்று "
+"விருப்பங்களைக் குறிப்பிடுவதன் நன்மையைக் கொண்டுள்ளது. இதுதான் நாங்கள் "
+"பரிந்துரைக்கும் முறை."
+
+#: ../usage/data_preparation.md:66
+#, md-text
+msgid "Utilisation de ogr2ogr via QGIS"
+msgstr "QGIS வழியாக OGR2OGR இன் பயன்பாடு"
+
+#: ../usage/data_preparation.md:68
+#, md-text
+msgid ""
+"ouvrez l'outil [Conversion de "
+"format](https://docs.qgis.org/3.16/fr/docs/user_manual/processing_algs/gdal/vectorconversion.html#gdalconvertformat)"
+" dans la boîte à outils de traitements."
+msgstr ""
+"செயலாக்க கருவி பெட்டியில் [வடிவமைப்பு மாற்றம்] கருவியை "
+"(https://docs.qgis.org/3.16/fr/docs/user_manual/processing_algs/gdal/voctorconversion.html#gdalconverteformat)"
+" திறக்கவும்."
+
+#: ../usage/data_preparation.md:71
+#, md-text
+msgid ""
+"sélectionnez vos Shapefiles en entrée et indiquez vos [GeoPackage] en "
+"sortie."
+msgstr ""
+"உள்ளீட்டில் உங்கள் சேப்ஃபைல்களைத் தேர்ந்தெடுத்து, வெளியீட்டில் உங்கள் "
+"[சியோபாக்கேச்] ஐக் குறிக்கவும்."
+
+#: ../usage/data_preparation.md:73
+#, md-text
+msgid ""
+"Notez sur la capture ci-dessous, qu'une colonne supplémentaire est présente."
+" Elle a été affichée en utilisant la roue crantée. Elle permet de définir "
+"une option, ici '-append'. Celle-ci vous permettra d'ajouter plusieurs "
+"tables dans un seul et même [GeoPackage] comme c'est le cas dans notre "
+"démonstration."
+msgstr ""
+"கூடுதல் நெடுவரிசை உள்ளது என்பதை கீழே உள்ள பிடிப்பு பற்றிய குறிப்பு. இது "
+"குறிப்பிடப்படாத சக்கரத்தைப் பயன்படுத்தி காட்டப்பட்டது. இங்கே ஒரு விருப்பத்தை"
+" வரையறுக்க இது உங்களை அனுமதிக்கிறது, இங்கே '-பொண்ட்'. இது எங்கள் "
+"ஆர்ப்பாட்டத்தில் உள்ளதைப் போலவே பல அட்டவணைகளை ஒன்றில் சேர்க்க உங்களை "
+"அனுமதிக்கும்."
+
+#: ../usage/data_preparation.md:78
+#, md-text
+msgid ""
+"Pour vider les tables et n'avoir que la donnée vide, ce que nous "
+"préconisons, pour l'utilisation de l'archivage par la suite, vous pouvez "
+"ajouter l'option '-limit 0'"
+msgstr ""
+"அட்டவணையை வெறுமை செய்ய மற்றும் வெற்று தரவை மட்டுமே வைத்திருக்க, நாங்கள் "
+"பரிந்துரைக்கும், அதன்பிறகு காப்பகத்தைப் பயன்படுத்த, நீங்கள் '-லிமிட் 0' "
+"விருப்பத்தை சேர்க்கலாம்"
+
+#: ../usage/data_preparation.md:83
+#, md-text
+msgid ""
+"Pour plus d'informations nous vous laissons vous reporter au manuel de "
+"ogr2ogr."
+msgstr "மேலும் தகவலுக்கு, OGR2OGR கையேட்டைக் குறிப்பிட உங்களை அனுமதிக்கிறோம்."
+
+#: ../usage/data_preparation.md:86
+#, md-text
+msgid "![ogr2ogr](/_static/images/fr/ogr2ogr.png)"
+msgstr "!"
+
+#: ../usage/data_preparation.md:86
+#, md-text
+msgid "ogr2ogr"
+msgstr "Ogr2ograph"
+
+#: ../usage/data_preparation.md:88
+#, md-text
+msgid ""
+"Vos fichiers sont convertis en [GeoPackage], vous pouvez les importer dans "
+"un nouveau projet QGIS et réaliser l'étape de création de votre "
+"codification."
+msgstr ""
+"உங்கள் கோப்புகள் [சியோபாகேச்] ஆக மாற்றப்படுகின்றன, அவற்றை நீங்கள் ஒரு புதிய "
+"QGIS திட்டத்தில் இறக்குமதி செய்து உங்கள் குறியீட்டின் உருவாக்கும் கட்டத்தை "
+"மேற்கொள்ளலாம்."
+
+#: ../usage/data_preparation.md:102
+#, md-text
+msgid "Votre SIG est composé de fichier GeoPackage ?"
+msgstr "உங்கள் சி.ஐ.எச் சியோபாக்கேச் கோப்பால் ஆனதா?"
+
+#: ../usage/data_preparation.md:104
+#, md-text
+msgid ""
+"Vous pouvez, soit procéder comme pour la conversion des Shapefiles en "
+"utilisant l'outil de conversion de format, soit copier vos [GeoPackage] dans"
+" un dossier et ensuite utiliser l'outil permettant de [vider les "
+"tables](https://docs.qgis.org/3.16/fr/docs/user_manual/processing_algs/qgis/vectorgeneral.html#qgistruncatetable)."
+msgstr ""
+"வடிவமைப்பு மாற்று கருவியைப் பயன்படுத்தி சேப்ஃபைல்களை மாற்றுவதற்கு நீங்கள் "
+"தொடரலாம், அல்லது உங்கள் [சியோபாக்கேசை] ஒரு கோப்புறையில் நகலெடுத்து, பின்னர் "
+"[அட்டவணைகளை காலி] அனுமதிக்கும் கருவியைப் பயன்படுத்தவும் (https: // docs. "
+"Qgis.org/3.16/fr ."
+
+#: ../usage/data_preparation.md:108
+#, md-text
+msgid "Votre SIG est dans une base PostgreSQL ?"
+msgstr "உங்கள் சி.ஐ.எச் ஒரு PostgresQL தளத்தில் உள்ளதா?"
+
+#: ../usage/data_preparation.md:110
+#, md-text
+msgid ""
+"Comme pour le [GeoPackage] ou le [Shapefile] vous pouvez utiliser l'outil de"
+" conversion de format."
+msgstr ""
+"[சியோபாகேச்] அல்லது [சேப்ஃபைல்] ஐப் பொறுத்தவரை நீங்கள் வடிவமைப்பு மாற்று "
+"கருவியைப் பயன்படுத்தலாம்."
+
+#: ../usage/data_preparation.md:113
+#, md-text
+msgid ""
+"Il existe également d'autres plugins pour la conversion de PostgreSQL vers "
+"du [GeoPackage]. Notre préconisation porte sur le plugin "
+"[ExportDBMapper](https://gitlab.com/Oslandia/qgis/exportdbmapper) que nous "
+"avons développé pour l'occasion."
+msgstr ""
+"போச்ட்கிரெச்க்யூல் [சியோபாகேச்] க்கு மாற்றுவதற்கான பிற செருகுநிரல்களும் "
+"உள்ளன. சந்தர்ப்பத்திற்காக நாங்கள் உருவாக்கிய சொருகி [exportdbmapper] "
+"(https://gitlab.com/oslandia/qgis/exportdbmapper) உடன் எங்கள் பரிந்துரை "
+"தொடர்புடையது."
+
+#: ../usage/data_preparation.md:118
+#, md-text
+msgid ""
+"À l'inverse d'autres plugins, celui-ci a la particularité de pouvoir "
+"s'intégrer totalement dans une chaîne de traitement QGIS. Ce plugin est en "
+"quelque sorte une fusion du meilleur de QConsolidate et d'ogr2ogr."
+msgstr ""
+"மற்ற செருகுநிரல்களைப் போலல்லாமல், இது ஒரு QGIS மருத்தீடு சங்கிலியில் "
+"முழுமையாக ஒருங்கிணைக்க முடியும் என்ற தனித்துவத்தைக் கொண்டுள்ளது. இந்த சொருகி"
+" ஒரு வகையில் QConsolidate மற்றும் OGR2OGR இன் சிறந்த இணைவு."
+
+#: ../usage/data_preparation.md:123
+#, md-text
+msgid ""
+"La documentation du projet est disponible à cette "
+"[page](https://oslandia.gitlab.io/qgis/exportdbmapper/fr_guide/1-usage.html)."
+msgstr ""
+"திட்ட ஆவணங்கள் இந்த [பக்கத்தில்] "
+"(https://oslandia.gitlab.io/qgis/exportdbmapper/fr_guide/1-usage.html) இல் "
+"கிடைக்கின்றன."
+
+#: ../usage/data_preparation.md:128
+#, md-text
+msgid "Étape d'export"
+msgstr "ஏற்றுமதி படி"
+
+#: ../usage/data_preparation.md:130
+#, md-text
+msgid ""
+"Vous définissez l'export de vos données PSQL en GPKG et vous obtenez un "
+"fichier YAML qui vous sera utile pour réaliser cette conversion avec la "
+"possibilité en plus d'avoir un fichier de projet QGIS."
+msgstr ""
+"GPKG இல் உங்கள் PSQL தரவின் ஏற்றுமதியை நீங்கள் வரையறுக்கிறீர்கள், மேலும் "
+"QGIS திட்டக் கோப்பை வைத்திருப்பதைத் தவிர இந்த மாற்றத்தை சாத்தியத்துடன் செய்ய"
+" பயனுள்ளதாக இருக்கும் ஒரு YAML கோப்பைப் பெறுவீர்கள்."
+
+#: ../usage/data_preparation.md:134
+#, md-text
+msgid ""
+"Vous pouvez ouvrir le projet QGIS et créer votre codification comme indiqué "
+"dans l'étape suivante."
+msgstr ""
+"நீங்கள் QGIS திட்டத்தைத் திறந்து அடுத்த கட்டத்தில் "
+"சுட்டிக்காட்டப்பட்டுள்ளபடி உங்கள் குறியீட்டை உருவாக்கலாம்."
+
+#: ../usage/data_preparation.md:137
+#, md-text
+msgid "Étape d'import"
+msgstr "இறக்குமதி படி"
+
+#: ../usage/data_preparation.md:139
+#, md-text
+msgid ""
+"Pour les personnes désirant recharger automatiquement la donnée traitée par "
+"LSCI dans une base PostgreSQL il vous suffira de créer le fichier de "
+"configuration YAML de la phase d'export."
+msgstr ""
+"ஒரு போச்ட்கிரெச்.கியூ.எல் தளத்தில் எல்.எச்.சி.ஐ.யால் செயலாக்கப்பட்ட தரவை "
+"தானாக ரீசார்ச் செய்ய விரும்பும் நபர்களுக்கு, ஏற்றுமதி கட்டத்தின் YAML "
+"உள்ளமைவு கோப்பை உருவாக்க இது போதுமானதாக இருக்கும்."
+
+#: ../usage/data_preparation.md:143
+#, md-text
+msgid ""
+"Vous trouverez sur notre dépôt un [exemple de script]( "
+"https://gitlab.com/Oslandia/qgis/landsurveycodesimport/-/blob/master/docs/_static/exportLSCI2PG.py)"
+" permettant de réaliser ce genre de traitement. Celui-ci est à adapter à "
+"votre environnement."
+msgstr ""
+"எங்கள் வைப்புத்தொகையில் [ச்கிரிப்ட்டின் எடுத்துக்காட்டு] "
+"(https://gitlab.com/oslandia/qgis/landsurveycodesimport/-/blob/master/docs/_static/exportlscag.py)"
+" இந்த வகையான சிகிச்சையை மேற்கொள்ள அனுமதிப்பீர்கள். இது உங்கள் சூழலுக்கு "
+"ஏற்றதாக இருக்க வேண்டும்."
+
+#: ../usage/data_preparation.md:147
+#, md-text
+msgid ""
+"LandSurveyCodesImport est une \"brique\" générique qui s'intègre pleinement "
+"dans la chaîne de traitement de QGIS. Libre à vous de configurer les post- "
+"et pré- traitements pour l'automatisation de l'intégration de vos données "
+"topographique. Si vous souhaitez bénéficier d'une assiste ou d'une formation"
+" sur ces sujets, [contactez-"
+"nous](mailto:infos@oslandia.com?subject=LSCI%20plugin)."
+msgstr ""
+"லேண்ட்சர்வெக்கோடெச்இம்போர்ட் என்பது ஒரு பொதுவான \"செங்கல்\" ஆகும், இது QGIS "
+"மருத்தீடு சங்கிலியில் முழுமையாக ஒருங்கிணைக்கிறது. உங்கள் இடவியல் தரவின் "
+"ஒருங்கிணைப்பின் ஆட்டோமேசனுக்காக பிந்தைய மற்றும் முன் செயலாக்கத்தை உள்ளமைக்க "
+"உங்களுக்கு விடுதலை உள்ளது. இந்த பாடங்களில் உதவியாளர் அல்லது "
+"பயிற்சியிலிருந்து நீங்கள் பயனடைய விரும்பினால், [எங்களை தொடர்பு கொள்ளவும்] "
+"(mailto: infos@oslandia.com? பொருள் = lsci%20plugin)."
