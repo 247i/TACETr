@@ -1,0 +1,3257 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tamil (lsjdocs)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-13 01:50+0200\n"
+"PO-Revision-Date: 2025-01-13 15:12+0530\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/lsjdocs/ch09/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
+
+#: ../../Ch09/Ch09_HypothesisTesting.rst:4
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Hypothesis testing"
+msgstr "கருதுகோள் சோதனை"
+
+#: ../../Ch09/Ch09_HypothesisTesting.rst:0
+#, rst-text
+msgid ""
+"*The process of induction is the process of assuming the simplest law that "
+"can be made to harmonize with our experience. This process, however, has no "
+"logical foundation but only a psychological one. It is clear that there are "
+"no grounds for believing that the simplest course of events will really "
+"happen. It is an hypothesis that the sun will rise tomorrow: and this means "
+"that we do not know whether it will rise*."
+msgstr ""
+"*தூண்டல் செயல்முறை என்பது எங்கள் அனுபவத்துடன் ஒத்திசைக்கக்கூடிய எளிய "
+"சட்டத்தை ஏற்றுக்கொள்வதற்கான செயல்முறையாகும். எவ்வாறாயினும், இந்த "
+"செயல்முறைக்கு தர்க்கரீதியான அடித்தளம் இல்லை, ஆனால் ஒரு உளவியல் மட்டுமே. "
+"நிகழ்வுகளின் எளிமையான பாடநெறி உண்மையில் நடக்கும் என்று நம்புவதற்கு எந்த "
+"காரணங்களும் இல்லை என்பது தெளிவாகிறது. சூரியன் நாளை உயரும் என்ற கருதுகோள் "
+"இது: இதன் பொருள் அது உயரும் என்று எங்களுக்குத் தெரியாது*."
+
+#: ../../Ch09/Ch09_HypothesisTesting.rst:32
+#, ignore-inconsistent, ignore-long-untranslated, ignore-same, rst-text
+msgid "Ludwig Wittgenstein\\ [#]_"
+msgstr "லுட்விக் விட்சென்ச்டீன் \\ [#] _"
+
+#: ../../Ch09/Ch09_HypothesisTesting.rst:34
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"In the last chapter I discussed the ideas behind estimation, which is one of"
+" the two “big ideas” in inferential statistics. It’s now time to turn our "
+"attention to the other big idea, which is *hypothesis testing*. In its most "
+"abstract form, hypothesis testing is really a very simple idea. The "
+"researcher has some theory about the world and wants to determine whether or"
+" not the data actually support that theory. However, the details are messy "
+"and most people find the theory of hypothesis testing to be the most "
+"frustrating part of statistics. The structure of the chapter is as follows. "
+"First, I’ll describe how hypothesis testing works in a fair amount of "
+"detail, using a simple running example to show you how a hypothesis test is "
+"“built”. I’ll try to avoid being too dogmatic while doing so, and focus "
+"instead on the underlying logic of the testing procedure.\\ [#]_ Afterwards,"
+" I’ll spend a bit of time talking about the various dogmas, rules and "
+"heresies that surround the theory of hypothesis testing."
+msgstr ""
+"கடைசி அத்தியாயத்தில் நான் மதிப்பீட்டின் பின்னணியில் உள்ள கருத்துக்களைப் "
+"பற்றி விவாதித்தேன், இது அனுமான புள்ளிவிவரங்களில் இரண்டு \"பெரிய யோசனைகளில்\""
+" ஒன்றாகும். *கருதுகோள் சோதனை *என்பது மற்ற பெரிய யோசனைக்கு நம் கவனத்தைத் "
+"திருப்புவதற்கான நேரம் இது. அதன் மிக சுருக்கமான வடிவத்தில், கருதுகோள் சோதனை "
+"உண்மையில் மிகவும் எளிமையான சிந்தனை. ஆராய்ச்சியாளருக்கு உலகத்தைப் பற்றி சில "
+"கோட்பாடுகள் உள்ளன, மேலும் அந்தக் கோட்பாட்டை தரவு உண்மையில் ஆதரிக்கிறதா "
+"இல்லையா என்பதை தீர்மானிக்க விரும்புகிறது. இருப்பினும், விவரங்கள் குழப்பமானவை"
+" மற்றும் பெரும்பாலான மக்கள் கருதுகோள் சோதனைக் கோட்பாட்டை புள்ளிவிவரங்களின் "
+"மிகவும் வெறுப்பூட்டும் பகுதியாகக் கருதுகின்றனர். அத்தியாயத்தின் கட்டமைப்பு "
+"பின்வருமாறு. முதலாவதாக, ஒரு கருதுகோள் சோதனை “கட்டமைக்கப்பட்டுள்ளது” என்பதை "
+"உங்களுக்குக் காண்பிக்க எளிய இயங்கும் உதாரணத்தைப் பயன்படுத்தி, கருதுகோள் "
+"சோதனை நியாயமான அளவிலான விவரங்களில் எவ்வாறு செயல்படுகிறது என்பதை நான் "
+"விவரிக்கிறேன். அவ்வாறு செய்யும்போது மிகவும் பிடிவாதமாக இருப்பதைத் தவிர்க்க "
+"முயற்சிப்பேன், அதற்கு பதிலாக சோதனை நடைமுறையின் அடிப்படை தர்க்கத்தில் கவனம் "
+"செலுத்துவேன். கருதுகோள் சோதனையின் கோட்பாட்டைச் சுற்றி."
+
+#: ../../Ch09/Ch09_HypothesisTesting.rst:53
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"The quote comes from Wittgenstein’s (1922) text, *Tractatus Logico-"
+"Philosphicus*."
+msgstr ""
+"மேற்கோள் விட்சென்ச்டீனின் (1922) உரை, *டிராக்டடச் லாசிக்கோ-பிலாச்பிகச் "
+"*இலிருந்து வருகிறது."
+
+#: ../../Ch09/Ch09_HypothesisTesting.rst:57
+#, rst-text
+msgid ""
+"A technical note. The description below differs subtly from the standard "
+"description given in a lot of introductory texts. The orthodox theory of "
+"null hypothesis testing emerged from the work of Sir Ronald Fisher and Jerzy"
+" Neyman in the early 20th century; but Fisher and Neyman actually had very "
+"different views about how it should work. The standard treatment of "
+"hypothesis testing that most texts use is a hybrid of the two approaches. "
+"The treatment here is a little more Neyman-style than the orthodox view, "
+"especially as regards the meaning of the *p*-value."
+msgstr ""
+"ஒரு தொழில்நுட்ப குறிப்பு. கீழேயுள்ள விளக்கம் நிறைய அறிமுக நூல்களில் "
+"கொடுக்கப்பட்ட நிலையான விளக்கத்திலிருந்து நுட்பமாக வேறுபடுகிறது. 20 ஆம் "
+"நூற்றாண்டின் முற்பகுதியில் சர் ரொனால்ட் ஃபிசர் மற்றும் செர்சி நெய்மனின் "
+"வேலையிலிருந்து சுழிய கருதுகோள் சோதனையின் ஆர்த்தடாக்ச் கோட்பாடு வெளிப்பட்டது;"
+" ஆனால் ஃபிசர் மற்றும் நெய்மன் உண்மையில் அது எவ்வாறு செயல்பட வேண்டும் என்பது "
+"பற்றி மிகவும் மாறுபட்ட கருத்துக்களைக் கொண்டிருந்தனர். பெரும்பாலான நூல்கள் "
+"பயன்படுத்தும் கருதுகோள் சோதனையின் நிலையான மருத்தீடு இரண்டு அணுகுமுறைகளின் "
+"கலப்பினமாகும். இங்கே சிகிச்சையானது ஆர்த்தடாக்ச் பார்வையை விட இன்னும் கொஞ்சம்"
+" நெய்மன் பாணியாகும், குறிப்பாக *பி *-மதிப்பின் பொருளைப் பொறுத்தவரை."
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:4
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "A menagerie of hypotheses"
+msgstr "கருதுகோள்களின் மெனகரி"
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:6
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"Eventually we all succumb to madness. For me, that day will arrive once I’m "
+"finally promoted to full professor. Safely ensconced in my ivory tower, "
+"happily protected by tenure, I will finally be able to take leave of my "
+"senses (so to speak) and indulge in that most thoroughly unproductive line "
+"of psychological research, the search for extrasensory perception (ESP).\\ "
+"[#]_"
+msgstr ""
+"இறுதியில் நாம் அனைவரும் பைத்தியக்காரத்தனத்திற்கு அடிபணிவோம். என்னைப் "
+"பொறுத்தவரை, நான் இறுதியாக முழு பேராசிரியராக பதவி உயர்வு பெற்றவுடன் அந்த நாள்"
+" வரும். எனது தந்த கோபுரத்தில் பாதுகாப்பாகச் சிக்கி, பதவிக்காலத்தால் "
+"மகிழ்ச்சியுடன் பாதுகாக்கப்படுகிறேன், நான் இறுதியாக என் புலன்களின் விடுப்பு "
+"எடுக்க முடியும் (எனவே பேசுவதற்கு) மற்றும் உளவியல் ஆராய்ச்சியின் மிக "
+"முழுமையான பயனற்ற வரிசையில் ஈடுபட முடியும், புறம்போக்கு உணர்வைத் தேடுவது "
+"(எச்பி). \\ [#] _"
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:13
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"Let’s suppose that this glorious day has come. My first study is a simple "
+"one in which I seek to test whether clairvoyance exists. Each participant "
+"sits down at a table and is shown a card by an experimenter. The card is "
+"black on one side and white on the other. The experimenter takes the card "
+"away and places it on a table in an adjacent room. The card is placed black "
+"side up or white side up completely at random, with the randomisation "
+"occurring only after the experimenter has left the room with the "
+"participant. A second experimenter comes in and asks the participant which "
+"side of the card is now facing upwards. It’s purely a one-shot experiment. "
+"Each person sees only one card and gives only one answer, and at no stage is"
+" the participant actually in contact with someone who knows the right "
+"answer. My data set, therefore, is very simple. I have asked the question of"
+" *N* people and some number *X* of these people have given the correct "
+"response. To make things concrete, let’s suppose that I have tested *N* = "
+"100 people and *X* = 62 of these got the answer right. A surprisingly large "
+"number, sure, but is it large enough for me to feel safe in claiming I’ve "
+"found evidence for ESP? This is the situation where hypothesis testing comes"
+" in useful. However, before we talk about how to *test* hypotheses, we need "
+"to be clear about what we mean by hypotheses."
+msgstr ""
+"இந்த புகழ்பெற்ற நாள் வந்துவிட்டது என்று வைத்துக்கொள்வோம். எனது முதல் ஆய்வு "
+"ஒரு எளிய ஒன்றாகும், அதில் நான் கிளேர்வொயன்ச் இருக்கிறதா என்பதை சோதிக்க "
+"முற்படுகிறேன். ஒவ்வொரு பங்கேற்பாளரும் ஒரு அட்டவணையில் அமர்ந்து ஒரு "
+"பரிசோதனையாளரால் ஒரு அட்டை காட்டப்படுகிறார். அட்டை ஒரு பக்கத்தில் கருப்பு "
+"மற்றும் மறுபுறம் வெள்ளை. பரிசோதகர் அட்டையை எடுத்துச் சென்று அருகிலுள்ள "
+"அறையில் ஒரு மேசையில் வைக்கிறார். அட்டை பங்கேற்பாளருடன் அறையை விட்டு "
+"வெளியேறிய பின்னரே, சீரற்றமயமாக்கல் ஏற்படுகிறது. இரண்டாவது பரிசோதனையாளர் "
+"வந்து பங்கேற்பாளரிடம் அட்டையின் எந்தப் பக்கம் இப்போது மேல்நோக்கி "
+"எதிர்கொள்கிறது என்று கேட்கிறார். இது முற்றிலும் ஒரு காட்சி சோதனை. ஒவ்வொரு "
+"நபரும் ஒரு அட்டையை மட்டுமே பார்த்து ஒரே ஒரு பதிலைக் கொடுக்கிறார்கள், எந்த "
+"கட்டத்திலும் பங்கேற்பாளர் உண்மையில் சரியான பதிலை அறிந்த ஒருவருடன் தொடர்பு "
+"கொள்ளவில்லை. எனவே, எனது தரவு தொகுப்பு மிகவும் எளிது. நான் * n * நபர்களின் "
+"கேள்வியைக் கேட்டேன், இந்த நபர்களில் சில எண்ணிக்கை * ஃச் * சரியான பதிலை "
+"அளித்துள்ளது. விசயங்களை உறுதியானதாக மாற்ற, நான் * n * = 100 பேரையும் * ஃச் *"
+" = 62 ஐயும் சோதித்தேன் என்று வைத்துக்கொள்வோம். ஒரு ஆச்சரியப்படும் விதமாக, "
+"நிச்சயமாக, ஆனால் ஈ.எச்.பி.க்கான ஆதாரங்களை நான் கண்டுபிடித்ததாகக் கூறுவதில் "
+"நான் பாதுகாப்பாக இருப்பதற்கு போதுமானதா? கருதுகோள் சோதனை பயனுள்ளதாக இருக்கும்"
+" நிலைமை இது. எவ்வாறாயினும், * கருதுகோள்களை எவ்வாறு சோதிப்பது என்பது பற்றி "
+"பேசுவதற்கு முன், கருதுகோள்களால் நாம் எதைக் குறிக்கிறோம் என்பது பற்றி தெளிவாக"
+" இருக்க வேண்டும்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:35
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Research hypotheses versus statistical hypotheses"
+msgstr "புள்ளிவிவர கருதுகோள்களுக்கு எதிராக ஆராய்ச்சி கருதுகோள்கள்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:37
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"The first distinction that you need to keep clear in your mind is between "
+"research hypotheses and statistical hypotheses. In my ESP study my overall "
+"scientific goal is to demonstrate that clairvoyance exists. In this "
+"situation I have a clear research goal: I am hoping to discover evidence for"
+" ESP. In other situations I might actually be a lot more neutral than that, "
+"so I might say that my research goal is to determine whether or not "
+"clairvoyance exists. Regardless of how I want to portray myself, the basic "
+"point that I’m trying to convey here is that a research hypothesis involves "
+"making a substantive, testable scientific claim. If you are a psychologist "
+"then your research hypotheses are fundamentally *about* psychological "
+"constructs. Any of the following would count as **research hypotheses**:"
+msgstr ""
+"உங்கள் மனதில் நீங்கள் தெளிவாக இருக்க வேண்டிய முதல் வேறுபாடு ஆராய்ச்சி "
+"கருதுகோள்கள் மற்றும் புள்ளிவிவர கருதுகோள்களுக்கு இடையில் உள்ளது. எனது ஈஎச்பி"
+" ஆய்வில், எனது ஒட்டுமொத்த அறிவியல் குறிக்கோள், தெளிவானவை இருப்பதை "
+"நிரூபிப்பதாகும். இந்த சூழ்நிலையில் எனக்கு ஒரு தெளிவான ஆராய்ச்சி குறிக்கோள் "
+"உள்ளது: ஈஎச்பிக்கான ஆதாரங்களைக் கண்டுபிடிப்பேன் என்று நம்புகிறேன். மற்ற "
+"சூழ்நிலைகளில் நான் அதை விட மிகவும் நடுநிலை வகிக்கக்கூடும், எனவே தெளிவானவை "
+"இருக்கிறதா இல்லையா என்பதை தீர்மானிப்பதே எனது ஆராய்ச்சி குறிக்கோள் என்று நான்"
+" கூறலாம். நான் எப்படி என்னை சித்தரிக்க விரும்புகிறேன் என்பதைப் "
+"பொருட்படுத்தாமல், நான் இங்கு தெரிவிக்க முயற்சிக்கும் அடிப்படை புள்ளி "
+"என்னவென்றால், ஒரு ஆராய்ச்சி கருதுகோள் ஒரு கணிசமான, சோதனைக்குரிய விஞ்ஞான "
+"கூற்றை உருவாக்குவதை உள்ளடக்குகிறது. நீங்கள் ஒரு உளவியலாளராக இருந்தால், "
+"உங்கள் ஆராய்ச்சி கருதுகோள்கள் அடிப்படையில் * உளவியல் கட்டுமானங்களைப் பற்றி *"
+" உள்ளன. பின்வருவனவற்றில் ஏதேனும் ** ஆராய்ச்சி கருதுகோள்கள் ** எனக் "
+"கருதப்படும்:"
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:50
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"*Listening to music reduces your ability to pay attention to other things.* "
+"This is a claim about the causal relationship between two psychologically "
+"meaningful concepts (listening to music and paying attention to things), so "
+"it’s a perfectly reasonable research hypothesis."
+msgstr ""
+"* இசையைக் கேட்பது மற்ற விசயங்களில் கவனம் செலுத்துவதற்கான உங்கள் திறனைக் "
+"குறைக்கிறது.* இது இரண்டு உளவியல் ரீதியாக அர்த்தமுள்ள கருத்துக்களுக்கு "
+"இடையிலான காரண உறவைப் பற்றிய கூற்று (இசையைக் கேட்பது மற்றும் விசயங்களில் "
+"கவனம் செலுத்துதல்), எனவே இது ஒரு நியாயமான ஆராய்ச்சி கருதுகோள்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:56
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"*Intelligence is related to personality*. Like the last one, this is a "
+"relational claim about two psychological constructs (intelligence and "
+"personality), but the claim is weaker: correlational not causal."
+msgstr ""
+"*நுண்ணறிவு ஆளுமையுடன் தொடர்புடையது*. கடைசியாக, இது இரண்டு உளவியல் "
+"கட்டுமானங்கள் (உளவுத்துறை மற்றும் ஆளுமை) பற்றிய தொடர்புடைய கூற்று, ஆனால் "
+"கூற்று பலவீனமானது: தொடர்பு காரணமல்ல."
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:60
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"*Intelligence is speed of information processing*. This hypothesis has a "
+"quite different character. It’s not actually a relational claim at all. It’s"
+" an ontological claim about the fundamental character of intelligence (and "
+"I’m pretty sure it’s wrong). It’s worth expanding on this one actually. It’s"
+" usually easier to think about how to construct experiments to test research"
+" hypotheses of the form “does X affect Y?” than it is to address claims like"
+" “what is X?” And in practice what usually happens is that you find ways of "
+"testing relational claims that follow from your ontological ones. For "
+"instance, if I believe that intelligence *is* speed of information "
+"processing in the brain, my experiments will often involve looking for "
+"relationships between measures of intelligence and measures of speed. As a "
+"consequence most everyday research questions do tend to be relational in "
+"nature, but they’re almost always motivated by deeper ontological questions "
+"about the state of nature."
+msgstr ""
+"*நுண்ணறிவு என்பது செய்தி செயலாக்கத்தின் வேகம்*. இந்த கருதுகோள் முற்றிலும் "
+"மாறுபட்ட தன்மையைக் கொண்டுள்ளது. இது உண்மையில் ஒரு தொடர்புடைய கூற்று அல்ல. "
+"இது உளவுத்துறையின் அடிப்படை தன்மை பற்றிய ஒரு இயக்கவியல் கூற்று (அது தவறு "
+"என்று நான் நம்புகிறேன்). இதை உண்மையில் விரிவாக்குவது மதிப்பு. “எக்ச் ஒய் ஐ "
+"பாதிக்கிறதா?” வடிவத்தின் ஆராய்ச்சி கருதுகோள்களை சோதிக்க சோதனைகளை எவ்வாறு "
+"உருவாக்குவது என்பது பற்றி சிந்திப்பது பொதுவாக எளிதானது. \"ஃச் என்றால் "
+"என்ன?\" வழக்கமாக என்ன நடக்கிறது என்பது உங்கள் இயக்கவியல் நிறுவனங்களிலிருந்து"
+" வரும் தொடர்புடைய உரிமைகோரல்களைச் சோதிக்கும் வழிகளைக் காணலாம். உதாரணமாக, "
+"உளவுத்துறை * மூளையில் செய்தி செயலாக்கத்தின் விரைவு * என்று நான் நம்பினால், "
+"எனது சோதனைகள் பெரும்பாலும் உளவுத்துறை நடவடிக்கைகள் மற்றும் வேக "
+"நடவடிக்கைகளுக்கு இடையிலான உறவுகளைத் தேடுவதை உள்ளடக்கும். இதன் விளைவாக, "
+"பெரும்பாலான அன்றாட ஆராய்ச்சி கேள்விகள் இயற்கையில் தொடர்புடையவை, ஆனால் அவை "
+"எப்போதும் இயற்கையின் நிலை குறித்த ஆழமான ஆன்டாலசிக்கல் கேள்விகளால் உந்துதல் "
+"பெறுகின்றன."
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:76
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"Notice that in practice, my research hypotheses could overlap a lot. My "
+"ultimate goal in the ESP experiment might be to test an ontological claim "
+"like “ESP exists”, but I might operationally restrict myself to a narrower "
+"hypothesis like “Some people can ‘see’ objects in a clairvoyant fashion”. "
+"That said, there are some things that really don’t count as proper research "
+"hypotheses in any meaningful sense:"
+msgstr ""
+"நடைமுறையில், எனது ஆராய்ச்சி கருதுகோள்கள் நிறைய ஒன்றுடன் ஒன்று சேரக்கூடும் "
+"என்பதைக் கவனியுங்கள். ஈ.எச்.பி பரிசோதனையில் எனது இறுதி குறிக்கோள் “ஈஎச்பி "
+"உள்ளது” போன்ற ஒரு இயக்கவியல் உரிமைகோரலை சோதிப்பதாக இருக்கலாம், ஆனால் “சிலர் "
+"ஒரு தெளிவான பாணியில் பொருள்களை‘ பார்க்கலாம் ’போன்ற ஒரு குறுகிய கருதுகோளுக்கு"
+" நான் செயல்பாட்டுடன் என்னைக் கட்டுப்படுத்தலாம். எந்தவொரு அர்த்தமுள்ள "
+"அர்த்தத்திலும் சரியான ஆராய்ச்சி கருதுகோள்களாகக் கருதப்படாத சில விசயங்கள் "
+"உள்ளன:"
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:83
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"*Love is a battlefield*. This is too vague to be testable. Whilst it’s okay "
+"for a research hypothesis to have a degree of vagueness to it, it has to be "
+"possible to operationalise your theoretical ideas. Maybe I’m just not "
+"creative enough to see it, but I can’t see how this can be converted into "
+"any concrete research design. If that’s true then this isn’t a scientific "
+"research hypothesis, it’s a pop song. That doesn’t mean it’s not "
+"interesting. A lot of deep questions that humans have fall into this "
+"category. Maybe one day science will be able to construct testable theories "
+"of love, or to test to see if God exists, and so on. But right now we can’t,"
+" and I wouldn’t bet on ever seeing a satisfying scientific approach to "
+"either."
+msgstr ""
+"*காதல் ஒரு போர்க்களம்*. இது சோதனைக்கு உட்படுத்த முடியாத அளவுக்கு தெளிவற்றது."
+" ஒரு ஆராய்ச்சி கருதுகோள் அதற்கு தெளிவற்ற தன்மையைக் கொண்டிருப்பது பரவாயில்லை "
+"என்றாலும், உங்கள் தத்துவார்த்த யோசனைகளை செயல்படுத்த முடியும். ஒருவேளை நான் "
+"அதைப் பார்க்கும் அளவுக்கு ஆக்கப்பூர்வமாக இல்லை, ஆனால் இதை எவ்வாறு உறுதியான "
+"ஆராய்ச்சி வடிவமைப்பாக மாற்ற முடியும் என்பதை என்னால் பார்க்க முடியவில்லை. அது"
+" உண்மை என்றால் இது விஞ்ஞான ஆராய்ச்சி கருதுகோள் அல்ல, இது ஒரு பாப் பாடல். இது"
+" சுவாரச்யமானது அல்ல என்று அர்த்தமல்ல. மனிதர்கள் இந்த வகைக்குள் வரக்கூடிய "
+"ஆழமான கேள்விகள் நிறைய. ஒருவேளை ஒரு நாள் அறிவியல் அன்பின் சோதனைக்குரிய "
+"கோட்பாடுகளை உருவாக்க முடியும், அல்லது கடவுள் இருக்கிறாரா என்று சோதிக்க "
+"முடியும், மற்றும் பல. ஆனால் இப்போது நம்மால் முடியாது, மேலும் திருப்திகரமான "
+"அறிவியல் அணுகுமுறையைப் பார்க்க நான் பந்தயம் கட்ட மாட்டேன்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:95
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"*The first rule of tautology club is the first rule of tautology club*. This"
+" is not a substantive claim of any kind. It’s true by definition. No "
+"conceivable state of nature could possibly be inconsistent with this claim. "
+"We say that this is an unfalsifiable hypothesis, and as such it is outside "
+"the domain of science. Whatever else you do in science your claims must have"
+" the possibility of being wrong."
+msgstr ""
+"*டாட்டாலசி கிளப்பின் முதல் விதி ட ut டாலசி கிளப்பின் முதல் விதி*. இது எந்த "
+"வகையிலும் கணிசமான கூற்று அல்ல. இது வரையறையால் உண்மை. இயற்கையின் எந்தவொரு "
+"கற்பனையும் இந்த கூற்றுக்கு முரணாக இருக்க முடியாது. இது ஒரு வரையறுக்க முடியாத"
+" கருதுகோள் என்று நாங்கள் கூறுகிறோம், மேலும் இது அறிவியலின் களத்திற்கு வெளியே"
+" உள்ளது. அறிவியலில் நீங்கள் வேறு எதைச் செய்தாலும் உங்கள் கூற்றுக்கள் தவறாக "
+"இருப்பதற்கான வாய்ப்பைக் கொண்டிருக்க வேண்டும்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:103
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"*More people in my experiment will say “yes” than “no”*. This one fails as a"
+" research hypothesis because it’s a claim about the data set, not about the "
+"psychology (unless of course your actual research question is whether people"
+" have some kind of “yes” bias!). Actually, this hypothesis is starting to "
+"sound more like a statistical hypothesis than a research hypothesis."
+msgstr ""
+"*எனது பரிசோதனையில் அதிகமானவர்கள் “இல்லை” என்பதை விட “ஆம்” என்று கூறுவார்கள்."
+" இது ஒரு ஆராய்ச்சி கருதுகோளாக தோல்வியடைகிறது, ஏனெனில் இது தரவுத் தொகுப்பைப் "
+"பற்றிய உரிமைகோரல், உளவியலைப் பற்றியது அல்ல (நிச்சயமாக உங்கள் உண்மையான "
+"ஆராய்ச்சி கேள்வி என்றால், மக்களுக்கு ஒருவித “ஆம்” சார்பு இருக்கிறதா!). "
+"உண்மையில், இந்த கருதுகோள் ஒரு ஆராய்ச்சி கருதுகோளை விட புள்ளிவிவர கருதுகோள் "
+"போல ஒலிக்கத் தொடங்குகிறது."
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:110
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"As you can see, research hypotheses can be somewhat messy at times and "
+"ultimately they are *scientific* claims. **Statistical hypotheses** are "
+"neither of these two things. Statistical hypotheses must be mathematically "
+"precise and they must correspond to specific claims about the "
+"characteristics of the data generating mechanism (i.e., the “population”). "
+"Even so, the intent is that statistical hypotheses bear a clear relationship"
+" to the substantive research hypotheses that you care about! For instance, "
+"in my ESP study my research hypothesis is that some people are able to see "
+"through walls or whatever. What I want to do is to “map” this onto a "
+"statement about how the data were generated. So let’s think about what that "
+"statement would be. The quantity that I’m interested in within the "
+"experiment is *P*\\ (“correct”), the true-but-unknown probability with which"
+" the participants in my experiment answer the question correctly. Let’s use "
+"the Greek letter *θ* (theta) to refer to this probability. Here are four "
+"different statistical hypotheses:"
+msgstr ""
+"நீங்கள் பார்க்க முடியும் என, ஆராய்ச்சி கருதுகோள்கள் சில நேரங்களில் ஓரளவு "
+"குழப்பமாக இருக்கும், இறுதியில் அவை * விஞ்ஞான * கூற்றுக்கள். ** புள்ளிவிவர "
+"கருதுகோள்கள் ** இந்த இரண்டு விசயங்களிலும் இல்லை. புள்ளிவிவர கருதுகோள்கள் "
+"கணித ரீதியாக துல்லியமாக இருக்க வேண்டும், மேலும் அவை தரவு உருவாக்கும் "
+"பொறிமுறையின் பண்புகள் (அதாவது “மக்கள் தொகை”) பற்றிய குறிப்பிட்ட "
+"கூற்றுக்களுடன் ஒத்திருக்க வேண்டும். அப்படியிருந்தும், நீங்கள் அக்கறை கொண்ட "
+"கணிசமான ஆராய்ச்சி கருதுகோள்களுக்கு புள்ளிவிவர கருதுகோள்கள் தெளிவான உறவைக் "
+"கொண்டுள்ளன என்பதே இதன் நோக்கம்! உதாரணமாக, எனது ஈஎச்பி ஆய்வில் எனது ஆராய்ச்சி"
+" கருதுகோள் என்னவென்றால், சிலர் சுவர்கள் அல்லது எதையாவது பார்க்க முடியும். "
+"நான் செய்ய விரும்புவது என்னவென்றால், தரவு எவ்வாறு உருவாக்கப்பட்டது என்பது "
+"பற்றிய அறிக்கையில் இதை \"வரைபடமாக்குவது\". எனவே அந்த அறிக்கை என்னவாக "
+"இருக்கும் என்பதைப் பற்றி சிந்திக்கலாம். பரிசோதனைக்குள் நான் ஆர்வமாக உள்ள "
+"அளவு *p *\\ (“சரியானது”), உண்மையான-ஆனால்-அறியப்படாத நிகழ்தகவு, எனது "
+"பரிசோதனையில் பங்கேற்பாளர்கள் கேள்விக்கு சரியாக பதிலளிக்கிறார்கள். இந்த "
+"நிகழ்தகவைக் குறிக்க கிரேக்க எழுத்தை * θ * (தீட்டா) பயன்படுத்துவோம். நான்கு "
+"வெவ்வேறு புள்ளிவிவர கருதுகோள்கள் இங்கே:"
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:127
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"If ESP doesn’t exist and if my experiment is well designed then my "
+"participants are just guessing. So I should expect them to get it right half"
+" of the time and so my statistical hypothesis is that the true probability "
+"of choosing correctly is *θ* = 0.5\\ ."
+msgstr ""
+"ESP இல்லை என்றால், எனது சோதனை நன்கு வடிவமைக்கப்பட்டிருந்தால், எனது "
+"பங்கேற்பாளர்கள் யூகிக்கிறார்கள். எனவே அவர்கள் அதை சரியாகப் பெறுவார்கள் என்று"
+" நான் எதிர்பார்க்க வேண்டும், எனவே எனது புள்ளிவிவர கருதுகோள் என்னவென்றால், "
+"சரியாகத் தேர்ந்தெடுப்பதற்கான உண்மையான நிகழ்தகவு * θ * = 0.5 \\."
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:132
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"Alternatively, suppose ESP does exist and participants can see the card. If "
+"that’s true people will perform better than chance and the statistical "
+"hypothesis is that *θ* > 0.5\\ ."
+msgstr ""
+"மாற்றாக, ஈஎச்பி உள்ளது என்று வைத்துக்கொள்வோம், பங்கேற்பாளர்கள் அட்டையைப் "
+"பார்க்கலாம். அது உண்மையானதாக இருந்தால், நபர்கள் வாய்ப்பை விட சிறப்பாக "
+"செயல்படுவார்கள் மற்றும் புள்ளிவிவர கருதுகோள் * θ *> 0.5 \\."
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:136
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"A third possibility is that ESP does exist, but the colours are all reversed"
+" and people don’t realise it (okay, that’s wacky, but you never know). If "
+"that’s how it works then you’d expect people’s performance to be *below* "
+"chance. This would correspond to a statistical hypothesis that *θ* < 0.5\\ ."
+msgstr ""
+"மூன்றாவது சாத்தியம் என்னவென்றால், எச்பி உள்ளது, ஆனால் வண்ணங்கள் அனைத்தும் "
+"தலைகீழாக இருக்கின்றன, மக்கள் அதை உணரவில்லை (சரி, அது அசத்தல், ஆனால் "
+"உங்களுக்கு ஒருபோதும் தெரியாது). இது எவ்வாறு செயல்படுகிறது என்றால், மக்களின் "
+"செயல்திறன் * வாய்ப்பாக இருக்கும் என்று நீங்கள் எதிர்பார்க்கிறீர்கள். இது * θ"
+" * <0.5 \\ என்ற புள்ளிவிவர கருதுகோளுடன் ஒத்திருக்கும்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:142
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"Finally, suppose ESP exists but I have no idea whether people are seeing the"
+" right colour or the wrong one. In that case the only claim I could make "
+"about the data would be that the probability of making the correct answer is"
+" *not* equal to 0.5. This corresponds to the statistical hypothesis that *θ*"
+" ≠ 0.5\\ ."
+msgstr ""
+"இறுதியாக, எச்பி உள்ளது என்று வைத்துக்கொள்வோம், ஆனால் மக்கள் சரியான நிறத்தைப்"
+" பார்க்கிறார்களா அல்லது தவறான ஒன்றைப் பார்க்கிறார்களா என்று எனக்குத் "
+"தெரியவில்லை. அவ்வாறான நிலையில், தரவைப் பற்றி நான் செய்யக்கூடிய ஒரே கூற்று, "
+"சரியான பதிலை உருவாக்குவதற்கான நிகழ்தகவு * 0.5 க்கு சமமானதல்ல. இது * θ * ≠ "
+"0.5 \\ என்ற புள்ளிவிவர கருதுகோளுக்கு ஒத்திருக்கிறது."
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:148
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"All of these are legitimate examples of a statistical hypothesis because "
+"they are statements about a population parameter and are meaningfully "
+"related to my experiment."
+msgstr ""
+"இவை அனைத்தும் ஒரு புள்ளிவிவரக் கருதுகோளின் நியாயமான எடுத்துக்காட்டுகள், "
+"ஏனெனில் அவை மக்கள்தொகை அளவுருவைப் பற்றிய அறிக்கைகள் மற்றும் எனது "
+"பரிசோதனையுடன் அர்த்தமுள்ளவை."
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:152
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"What this discussion makes clear, I hope, is that when attempting to "
+"construct a statistical hypothesis test the researcher actually has two "
+"quite distinct hypotheses to consider. First, he or she has a research "
+"hypothesis (a claim about psychology), and this then corresponds to a "
+"statistical hypothesis (a claim about the data generating population). In my"
+" ESP example these might be:"
+msgstr ""
+"இந்த விவாதம் தெளிவுபடுத்துகிறது, ஒரு புள்ளிவிவர கருதுகோள் சோதனையை உருவாக்க "
+"முயற்சிக்கும்போது, ​​ஆராய்ச்சியாளருக்கு உண்மையில் கருத்தில் கொள்ள இரண்டு "
+"தனித்துவமான கருதுகோள்கள் உள்ளன. முதலாவதாக, அவருக்கு அல்லது அவளுக்கு ஒரு "
+"ஆராய்ச்சி கருதுகோள் உள்ளது (உளவியல் பற்றிய கூற்று), பின்னர் இது ஒரு "
+"புள்ளிவிவர கருதுகோளுக்கு ஒத்திருக்கிறது (தரவு உருவாக்கும் மக்கள்தொகை பற்றிய "
+"கூற்று). எனது ஈஎச்பி எடுத்துக்காட்டில் இவை இருக்கலாம்:"
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:160
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Dani’s **research** hypothesis:"
+msgstr "டானியின் ** ஆராய்ச்சி ** கருதுகோள்:"
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:160
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "“ESP exists”"
+msgstr "“எச்பி உள்ளது”"
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:162
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Dani’s **statistical** hypothesis:"
+msgstr "டானியின் ** புள்ளிவிவர ** கருதுகோள்:"
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:162
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "*θ* ≠ 0.5"
+msgstr "* θ* ≠ 0.5"
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:165
+#, ignore-duplicate, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"And a key thing to recognise is this. *A statistical hypothesis test is a "
+"test of the statistical hypothesis, not the research hypothesis*. If your "
+"study is badly designed then the link between your research hypothesis and "
+"your statistical hypothesis is broken. To give a silly example, suppose that"
+" my ESP study was conducted in a situation where the participant can "
+"actually see the card reflected in a window. If that happens I would be able"
+" to find very strong evidence that *θ* ≠ 0.5, but this would tell us nothing"
+" about whether “ESP exists”."
+msgstr ""
+"அங்கீகரிக்க ஒரு முக்கிய சேதி இதுதான். *ஒரு புள்ளிவிவர கருதுகோள் சோதனை என்பது"
+" புள்ளிவிவர கருதுகோளின் சோதனை, ஆராய்ச்சி கருதுகோள் அல்ல*. உங்கள் ஆய்வு "
+"மோசமாக வடிவமைக்கப்பட்டிருந்தால், உங்கள் ஆராய்ச்சி கருதுகோளுக்கும் உங்கள் "
+"புள்ளிவிவர கருதுகோளுக்கும் இடையிலான இணைப்பு உடைக்கப்படுகிறது. ஒரு "
+"வேடிக்கையான உதாரணத்தைக் கொடுக்க, பங்கேற்பாளர் ஒரு சாளரத்தில் பிரதிபலிக்கும் "
+"அட்டையை உண்மையில் காணக்கூடிய சூழ்நிலையில் எனது ஈஎச்பி ஆய்வு நடத்தப்பட்டது "
+"என்று வைத்துக்கொள்வோம். அது நடந்தால், * θ * ≠ 0.5 என்பதற்கு நான் மிகவும் "
+"வலுவான ஆதாரங்களைக் கண்டுபிடிக்க முடியும், ஆனால் இது “எச்பி உள்ளது” என்பது "
+"பற்றி எங்களுக்கு எதுவும் சொல்லாது."
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:175
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Null hypotheses and alternative hypotheses"
+msgstr "சுழிய கருதுகோள்கள் மற்றும் மாற்று கருதுகோள்கள்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:177
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"So far, so good. I have a research hypothesis that corresponds to what I "
+"want to believe about the world, and I can map it onto a statistical "
+"hypothesis that corresponds to what I want to believe about how the data "
+"were generated. It’s at this point that things get somewhat counter-"
+"intuitive for a lot of people. Because what I’m about to do is invent a new "
+"statistical hypothesis (the “null” hypothesis, H\\ :sub:`0`\\ ) that "
+"corresponds to the exact opposite of what I want to believe, and then focus "
+"exclusively on that almost to the neglect of the thing I’m actually "
+"interested in (which is now called the “alternative” hypothesis, H\\ "
+":sub:`1`\\ ). In our ESP example, the null hypothesis is that *θ* = 0.5, "
+"since that’s what we’d expect if ESP *didn’t* exist. My hope, of course, is "
+"that ESP is totally real and so the *alternative* to this null hypothesis is"
+" *θ* ≠ 0.5. In essence, what we’re doing here is dividing up the possible "
+"values of *θ* into two groups: those values that I really hope aren’t true "
+"(the null), and those values that I’d be happy with if they turn out to be "
+"right (the alternative). Having done so, the important thing to recognise is"
+" that the goal of a hypothesis test is *not* to show that the alternative "
+"hypothesis is (probably) true. The goal is to show that the null hypothesis "
+"is (probably) false. Most people find this pretty weird."
+msgstr ""
+"இதுவரை, மிகவும் நல்லது. உலகைப் பற்றி நான் நம்ப விரும்புவதை ஒத்த ஒரு "
+"ஆராய்ச்சி கருதுகோள் என்னிடம் உள்ளது, மேலும் தரவு எவ்வாறு உருவாக்கப்பட்டது "
+"என்பதைப் பற்றி நான் நம்ப விரும்பும் ஒரு புள்ளிவிவர கருதுகோளில் அதை "
+"வரைபடமாக்க முடியும். இந்த கட்டத்தில் தான் நிறைய பேருக்கு விசயங்கள் ஓரளவு "
+"எதிர்-உள்ளுணர்வு பெறுகின்றன. ஏனென்றால், நான் செய்யப் போவது ஒரு புதிய "
+"புள்ளிவிவரக் கருதுகோளை (“பூச்ய” கருதுகோள், h \\: sub: `0` \\) "
+"கண்டுபிடிப்பது, இது நான் நம்ப விரும்பும் விசயங்களுக்கு நேர்மாறாக "
+"ஒத்திருக்கிறது, பின்னர் அதில் பிரத்தியேகமாக கவனம் செலுத்துங்கள் நான் "
+"உண்மையில் ஆர்வமாக உள்ள விசயத்தின் புறக்கணிப்புக்கு கிட்டத்தட்ட (இது இப்போது "
+"“மாற்று” கருதுகோள் என்று அழைக்கப்படுகிறது, h \\: துணை: `1` \\). எங்கள் "
+"ஈஎச்பி எடுத்துக்காட்டில், சுழிய கருதுகோள் என்னவென்றால், * θ * = 0.5, "
+"ஏனென்றால் எச்பி * இல்லை என்றால் நாங்கள் எதிர்பார்க்கிறோம். என் நம்பிக்கை, "
+"நிச்சயமாக, ஈ.எச்.பி முற்றிலும் உண்மையானது, எனவே இந்த சுழிய கருதுகோளுக்கு * "
+"மாற்று * * θ * ≠ 0.5 ஆகும். சாராம்சத்தில், நாங்கள் இங்கே என்ன செய்கிறோம் "
+"என்பது * θ * இன் சாத்தியமான மதிப்புகளை இரண்டு குழுக்களாகப் பிரிக்கிறது: நான்"
+" உண்மையில் நம்பும் அந்த மதிப்புகள் உண்மை இல்லை (பூச்யம்), மற்றும் அந்த "
+"மதிப்புகள் நான் மகிழ்ச்சியாக இருக்கும் சரியானதாக மாறவும் (மாற்று). அவ்வாறு "
+"செய்தபின், அங்கீகரிக்க வேண்டிய முக்கியமான சேதி என்னவென்றால், ஒரு கருதுகோள் "
+"சோதனையின் குறிக்கோள் * மாற்றக் கருதுகோள் (அநேகமாக) உண்மை என்பதைக் "
+"காண்பிப்பதாகும். சுழிய கருதுகோள் (அநேகமாக) தவறானது என்பதைக் காண்பிப்பதே "
+"குறிக்கோள். பெரும்பாலான மக்கள் இதை மிகவும் வித்தியாசமாகக் காண்கிறார்கள்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:199
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"The best way to think about it, in my experience, is to imagine that a "
+"hypothesis test is a criminal trial,\\ [#]_ *the trial of the null "
+"hypothesis*. The null hypothesis is the defendant, the researcher is the "
+"prosecutor, and the statistical test itself is the judge. Just like a "
+"criminal trial, there is a presumption of innocence. The null hypothesis is "
+"*deemed* to be true unless you, the researcher, can prove beyond a "
+"reasonable doubt that it is false. You are free to design your experiment "
+"however you like (within reason, obviously!) and your goal when doing so is "
+"to maximise the chance that the data will yield a conviction for the crime "
+"of being false. The catch is that the statistical test sets the rules of the"
+" trial and those rules are designed to protect the null hypothesis, "
+"specifically to ensure that if the null hypothesis is actually true the "
+"chances of a false conviction are guaranteed to be low. This is pretty "
+"important. After all, the null hypothesis doesn’t get a lawyer, and given "
+"that the researcher is trying desperately to prove it to be false *someone* "
+"has to protect it."
+msgstr ""
+"இதைப் பற்றி சிந்திக்க சிறந்த வழி, என் அனுபவத்தில், ஒரு கருதுகோள் சோதனை ஒரு "
+"குற்றவியல் சோதனை, \\ [#] _ *பூச்ய கருதுகோளின் சோதனை *. சுழிய கருதுகோள் "
+"எதிராளி, ஆராய்ச்சியாளர் வழக்கறிஞர், மற்றும் புள்ளிவிவர சோதனை தானே நீதிபதி. "
+"ஒரு குற்றவியல் விசாரணையைப் போலவே, அப்பாவித்தனத்தின் ஊகமும் உள்ளது. நீங்கள், "
+"ஆராய்ச்சியாளரான நீங்கள், அது தவறானது என்ற நியாயமான சந்தேகத்திற்கு அப்பால் "
+"நிரூபிக்க முடியாவிட்டால், சுழிய கருதுகோள் உண்மை என்று கருதப்படுகிறது. "
+"நீங்கள் விரும்பினாலும் (காரணத்தின்படி, வெளிப்படையாக!) உங்கள் பரிசோதனையை "
+"வடிவமைக்க நீங்கள் சுதந்திரமாக இருக்கிறீர்கள், அவ்வாறு செய்யும்போது உங்கள் "
+"குறிக்கோள், பொய்யான குற்றத்திற்கு தரவு ஒரு தண்டனையை அளிக்கும் வாய்ப்பை "
+"அதிகரிப்பதாகும். பிடிப்பு என்னவென்றால், புள்ளிவிவர சோதனை சோதனையின் விதிகளை "
+"அமைக்கிறது, மேலும் அந்த விதிகள் சுழிய கருதுகோளைப் பாதுகாக்க "
+"வடிவமைக்கப்பட்டுள்ளன, குறிப்பாக சுழிய கருதுகோள் உண்மையில் உண்மையாக "
+"இருந்தால், தவறான தண்டனைக்கான வாய்ப்புகள் குறைவாக இருப்பதற்கு பொறுப்பு "
+"அளிக்கப்படுகின்றன. இது மிகவும் முக்கியமானது. எல்லாவற்றிற்கும் மேலாக, சுழிய "
+"கருதுகோள் ஒரு வழக்கறிஞரைப் பெறவில்லை, மேலும் ஆராய்ச்சியாளர் அதை பொய்யானது "
+"என்பதை நிரூபிக்க தீவிரமாக முயற்சி செய்கிறார் * யாரோ * அதைப் பாதுகாக்க "
+"வேண்டும்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:219
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"My apologies to anyone who actually believes in this stuff, but on my "
+"reading of the literature on ESP it’s just not reasonable to think this is "
+"real. To be fair, though, some of the studies are rigorously designed, so "
+"it’s actually an interesting area for thinking about psychological research "
+"design. And of course it’s a free country so you can spend your own time and"
+" effort proving me wrong if you like, but I wouldn’t think that’s a terribly"
+" practical use of your intellect."
+msgstr ""
+"இந்த விசயங்களை உண்மையில் நம்பும் எவருக்கும் எனது மன்னிப்பு, ஆனால் ஈஎச்பி "
+"குறித்த இலக்கியத்தைப் படித்தபோது இது உண்மையானது என்று நினைப்பது "
+"நியாயமானதல்ல. சரியாகச் சொல்வதானால், சில ஆய்வுகள் கடுமையாக "
+"வடிவமைக்கப்பட்டுள்ளன, எனவே இது உண்மையில் உளவியல் ஆராய்ச்சி வடிவமைப்பைப் "
+"பற்றி சிந்திக்க ஒரு சுவையான பகுதி. நிச்சயமாக இது ஒரு இலவச நாடு, எனவே நீங்கள்"
+" விரும்பினால் என்னை தவறாக நிரூபிக்க உங்கள் சொந்த நேரத்தையும் முயற்சியையும் "
+"செலவிடலாம், ஆனால் இது உங்கள் புத்தியின் பயங்கரமான நடைமுறை பயன்பாடு என்று "
+"நான் நினைக்க மாட்டேன்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_01.rst:229
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"This analogy only works if you’re from an adversarial legal system like "
+"UK/US/Australia. As I understand these things, the French inquisitorial "
+"system is quite different."
+msgstr ""
+"நீங்கள் இங்கிலாந்து/யுஎச்/ஆச்திரேலியா போன்ற எதிர்மறையான சட்ட அமைப்பைச் "
+"சேர்ந்தவராக இருந்தால் மட்டுமே இந்த ஒப்புமை செயல்படும். இந்த விசயங்களை நான் "
+"புரிந்து கொண்டபடி, பிரெஞ்சு வினவல் அமைப்பு முற்றிலும் வேறுபட்டது."
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:4
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Two types of errors"
+msgstr "இரண்டு வகையான பிழைகள்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:6
+#, ignore-duplicate, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"Before going into details about how a statistical test is constructed it’s "
+"useful to understand the philosophy behind it. I hinted at it when pointing "
+"out the similarity between a null hypothesis test and a criminal trial, but "
+"I should now be explicit. Ideally, we would like to construct our test so "
+"that we never make any errors. Unfortunately, since the world is messy, this"
+" is never possible. Sometimes you’re just really unlucky. For instance, "
+"suppose you flip a coin 10 times in a row and it comes up heads all 10 "
+"times. That feels like very strong evidence for a conclusion that the coin "
+"is biased, but of course there’s a 1 in 1024 chance that this would happen "
+"even if the coin was totally fair. In other words, in real life we *always* "
+"have to accept that there’s a chance that we made a mistake. As a "
+"consequence the goal behind statistical hypothesis testing is not to "
+"*eliminate* errors, but to *minimise* them."
+msgstr ""
+"புள்ளிவிவர சோதனை எவ்வாறு கட்டமைக்கப்படுகிறது என்பது பற்றிய விவரங்களுக்குச் "
+"செல்வதற்கு முன், அதன் பின்னால் உள்ள தத்துவத்தைப் புரிந்துகொள்வது பயனுள்ளதாக "
+"இருக்கும். சுழிய கருதுகோள் சோதனை மற்றும் ஒரு குற்றவியல் விசாரணைக்கு இடையிலான"
+" ஒற்றுமையை சுட்டிக்காட்டும்போது நான் அதைக் குறிப்பிட்டேன், ஆனால் நான் "
+"இப்போது வெளிப்படையாக இருக்க வேண்டும். வெறுமனே, எங்கள் சோதனையை உருவாக்க "
+"விரும்புகிறோம், இதனால் நாங்கள் ஒருபோதும் பிழைகள் செய்ய மாட்டோம். "
+"துரதிர்ச்டவசமாக, உலகம் குழப்பமாக இருப்பதால், இது ஒருபோதும் சாத்தியமில்லை. "
+"சில நேரங்களில் நீங்கள் மிகவும் துரதிர்ச்டவசமாக இருக்கிறீர்கள். உதாரணமாக, "
+"நீங்கள் ஒரு நாணயத்தை ஒரு வரிசையில் 10 முறை புரட்டுகிறீர்கள் என்று "
+"வைத்துக்கொள்வோம், அது 10 முறை தலைகீழாகிறது. நாணயம் பக்கச்சார்பானது என்ற "
+"முடிவுக்கு இது மிகவும் வலுவான சான்றாக உணர்கிறது, ஆனால் நிச்சயமாக 1024 இல் 1 "
+"வாய்ப்பு உள்ளது, இது நாணயம் முற்றிலும் நியாயமானதாக இருந்தாலும் இது நடக்கும்."
+" வேறு வார்த்தைகளில் கூறுவதானால், நிச வாழ்க்கையில் நாம் ஒரு தவறு செய்ததற்கான "
+"வாய்ப்பு உள்ளது என்பதை எப்போதும் * எப்போதும் ஏற்றுக்கொள்ள வேண்டும். இதன் "
+"விளைவாக, புள்ளிவிவர கருதுகோள் சோதனையின் பின்னால் உள்ள குறிக்கோள் * பிழைகளை "
+"அகற்றுவதல்ல, ஆனால் அவற்றைக் குறைப்பது *."
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:21
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"At this point, we need to be a bit more precise about what we mean by "
+"“errors”. First, let’s state the obvious. It is either the case that the "
+"null hypothesis is true or that it is false, and our test will either retain"
+" the null hypothesis or reject it.\\ [#]_ So, as the table below "
+"illustrates, after we run the test and make our choice one of four things "
+"might have happened:"
+msgstr ""
+"இந்த கட்டத்தில், “பிழைகள்” என்பதன் பொருள் குறித்து நாம் இன்னும் கொஞ்சம் "
+"துல்லியமாக இருக்க வேண்டும். முதலில், வெளிப்படையாகக் கூறுவோம். சுழிய "
+"கருதுகோள் உண்மை அல்லது அது தவறானது, எங்கள் சோதனை சுழிய கருதுகோளைத் தக்க "
+"வைத்துக் கொள்ளும் அல்லது நிராகரிக்கும். எங்கள் தேர்வு நான்கு விசயங்களில் "
+"ஒன்று நடந்திருக்கலாம்:"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:29
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:69
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "retain H\\ :sub:`0`"
+msgstr "H \\: துணை: `0` ஐத் தக்க வைத்துக் கொள்ளுங்கள்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:29
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:69
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "reject H\\ :sub:`0`"
+msgstr "H \\: துணை: `0` நிராகரிக்கவும்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:31
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:71
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "**H\\ :sub:`0` is true**"
+msgstr "** h \\: துணை: `0` உண்மை **"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:31
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:33
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "correct decision"
+msgstr "சரியான முடிவு"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:31
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "error (type I)"
+msgstr "பிழை (வகை I)"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:33
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:74
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "**H\\ :sub:`0` is false**"
+msgstr "** h \\: துணை: `0` தவறானது **"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:33
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "error (type II)"
+msgstr "பிழை (வகை II)"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:36
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"As a consequence there are actually *two* different types of error here. If "
+"we reject a null hypothesis that is actually true then we have made a **type"
+" I error**. On the other hand, if we retain the null hypothesis when it is "
+"in fact false then we have made a **type II error**."
+msgstr ""
+"இதன் விளைவாக உண்மையில் * இரண்டு * வெவ்வேறு வகையான பிழைகள் உள்ளன. உண்மையில் "
+"உண்மை என்று ஒரு சுழிய கருதுகோளை நாங்கள் நிராகரித்தால், நாம் ஒரு ** வகை I "
+"பிழையை ** செய்துள்ளோம். மறுபுறம், சுழிய கருதுகோளை உண்மையில் பொய்யாக "
+"இருக்கும்போது தக்க வைத்துக் கொண்டால், ** வகை II பிழையை ** செய்துள்ளோம்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:41
+#, rst-text
+msgid ""
+"Remember how I said that statistical testing was kind of like a criminal "
+"trial? Well, I meant it. A criminal trial requires that you establish "
+"“beyond a reasonable doubt” that the defendant did it. All of the evidential"
+" rules are (in theory, at least) designed to ensure that there’s (almost) no"
+" chance of wrongfully convicting an innocent defendant. The trial is "
+"designed to protect the rights of a defendant, as the English jurist William"
+" Blackstone famously said, it is “better that ten guilty persons escape than"
+" that one innocent suffer.” In other words, a criminal trial doesn’t treat "
+"the two types of error in the same way. Punishing the innocent is deemed to "
+"be much worse than letting the guilty go free. A statistical test is pretty "
+"much the same. The single most important design principle of the test is to "
+"*control* the probability of a type I error, to keep it below some fixed "
+"probability. This probability, which is denoted α, is called the "
+"**significance level** of the test. And I’ll say it again, because it is so "
+"central to the whole set-up, a hypothesis test is said to have significance "
+"level α if the type I error rate is no larger than α."
+msgstr ""
+"புள்ளிவிவர சோதனை ஒரு குற்றவியல் வினவல் போன்றது என்று நான் எப்படி சொன்னேன் "
+"என்பதை நினைவில் கொள்க? சரி, நான் அதைக் குறிக்கிறேன். ஒரு குற்றவியல் "
+"விசாரணையில் எதிராளி அதைச் செய்த \"ஒரு நியாயமான சந்தேகத்திற்கு அப்பால்\" "
+"நீங்கள் நிறுவ வேண்டும். ஒரு பேதை பிரதிவாதியை தவறாக தண்டிப்பதற்கான "
+"வாய்ப்புகள் இல்லை என்பதை உறுதிப்படுத்த வடிவமைக்கப்பட்ட அனைத்து தெளிவான "
+"விதிகளும் (கோட்பாட்டில், குறைந்தபட்சம்) வடிவமைக்கப்பட்டுள்ளன. ஆங்கில நீதிபதி"
+" வில்லியம் பிளாக்ச்டோன் பிரபலமாக கூறியது போல், ஒரு பிரதிவாதியின் உரிமைகளைப் "
+"பாதுகாக்க இந்த வழக்கு வடிவமைக்கப்பட்டுள்ளது, \"ஒரு பேதை பாதிக்கப்படுவதை விட "
+"பத்து குற்றவாளிகள் தப்பிப்பது நல்லது.\" வேறு வார்த்தைகளில் கூறுவதானால், ஒரு "
+"குற்றவியல் வழக்கு இரண்டு வகையான பிழைகளையும் ஒரே மாதிரியாக நடத்தாது. "
+"குற்றவாளிகளை விடுவிப்பதை விட அப்பாவிகளை தண்டிப்பது மிகவும் மோசமானது என்று "
+"கருதப்படுகிறது. ஒரு புள்ளிவிவர சோதனை மிகவும் அதிகம். சோதனையின் மிக "
+"முக்கியமான வடிவமைப்புக் கொள்கை ஒரு வகை I பிழையின் நிகழ்தகவை * "
+"கட்டுப்படுத்துவது, சில நிலையான நிகழ்தகவுக்கு கீழே வைத்திருப்பது. இந்த "
+"நிகழ்தகவு, இது α குறிக்கப்படுகிறது, இது சோதனையின் ** முக்கியத்துவம் நிலை ** "
+"என்று அழைக்கப்படுகிறது. நான் அதை மீண்டும் கூறுவேன், ஏனெனில் இது முழு "
+"அமைப்பிற்கும் மிகவும் மையமாக இருப்பதால், ஒரு கருதுகோள் சோதனைக்கு "
+"முக்கியத்துவம் வாய்ந்த நிலை இருப்பதாகக் கூறப்படுகிறது fil வகை I பிழை விகிதம்"
+" α ஐ விட பெரியதாக இல்லாவிட்டால்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:60
+#, rst-text
+msgid ""
+"So, what about the type II error rate? Well, we’d also like to keep those "
+"under control too, and we denote this probability by β. However, it’s much "
+"more common to refer to the **power** of the test, that is the probability "
+"with which we reject a null hypothesis when it really is false, which is 1 -"
+" β. To help keep this straight, here’s the same table again but with the "
+"relevant numbers added:"
+msgstr ""
+"எனவே, வகை II பிழை வீதத்தைப் பற்றி என்ன? சரி, அவர்களையும் கட்டுப்பாட்டில் "
+"வைத்திருக்க விரும்புகிறோம், மேலும் இந்த நிகழ்தகவை by மூலம் குறிக்கிறோம். "
+"எவ்வாறாயினும், சோதனையின் ** ஆற்றல் ** ஐக் குறிப்பிடுவது மிகவும் பொதுவானது, "
+"இது ஒரு சுழிய கருதுகோளை உண்மையில் தவறானது போது நிராகரிக்கும் நிகழ்தகவு, இது "
+"1 - the ஆகும். இதை நேராக வைத்திருக்க உதவ, இங்கே மீண்டும் அதே அட்டவணை உள்ளது,"
+" ஆனால் தொடர்புடைய எண்களுடன் சேர்க்கப்பட்டுள்ளது:"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:0
+#, rst-text
+msgid "1 - α"
+msgstr "1 - அ"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:0
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "(probability of correct retention)"
+msgstr "(சரியான தக்கவைப்பின் நிகழ்தகவு)"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:0
+#, rst-text
+msgid "α"
+msgstr "a"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:0
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "(type I error rate)"
+msgstr "(வகை I பிழை வீதம்)"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:0
+#, rst-text
+msgid "β"
+msgstr "b"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:0
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "(type II error rate)"
+msgstr "(வகை II பிழை வீதம்)"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:0
+#, rst-text
+msgid "1 - β"
+msgstr "1 - பி"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:0
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "(power of the test)"
+msgstr "(சோதனையின் சக்தி)"
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:78
+#, rst-text
+msgid ""
+"A “powerful” hypothesis test is one that has a small value of β, while still"
+" keeping α fixed at some (small) desired level. By convention, scientists "
+"make use of three different α levels: *.05*, *.01* and *.001*. Notice the "
+"asymmetry here; the tests are designed to *ensure* that the α level is kept "
+"small but there’s no corresponding guarantee regarding β. We’d certainly "
+"*like* the type II error rate to be small and we try to design tests that "
+"keep it small, but this is typically secondary to the overwhelming need to "
+"control the type I error rate. As Blackstone might have said if he were a "
+"statistician, it is “better to retain 10 false null hypotheses than to "
+"reject a single true one”. To be honest, I don’t know that I agree with this"
+" philosophy. There are situations where I think it makes sense, and "
+"situations where I think it doesn’t, but that’s neither here nor there. It’s"
+" how the tests are built."
+msgstr ""
+"ஒரு \"சக்திவாய்ந்த\" கருதுகோள் சோதனை என்பது β இன் சிறிய மதிப்பைக் கொண்ட "
+"ஒன்றாகும், அதே நேரத்தில் சில (சிறிய) விரும்பிய மட்டத்தில் α சரி "
+"செய்யப்படுகிறது. மாநாட்டின் மூலம், விஞ்ஞானிகள் மூன்று வெவ்வேறு α நிலைகளைப் "
+"பயன்படுத்துகிறார்கள்: *.05 *, *.01 *மற்றும் *.001 *. இங்கே சமச்சீரற்ற "
+"தன்மையைக் கவனியுங்கள்; சோதனைகள் α நிலை சிறியதாக வைக்கப்பட்டுள்ளன என்பதை * "
+"உறுதிப்படுத்த * வடிவமைக்கப்பட்டுள்ளன, ஆனால் β தொடர்பாக எந்த உத்தரவாதமும் "
+"இல்லை. வகை II பிழை விகிதம் சிறியதாக இருக்க வேண்டும் என்று நாங்கள் நிச்சயமாக "
+"* விரும்புகிறோம், மேலும் அதை சிறியதாக வைத்திருக்கும் சோதனைகளை வடிவமைக்க "
+"முயற்சிக்கிறோம், ஆனால் இது பொதுவாக வகை I பிழை விகிதத்தைக் கட்டுப்படுத்த "
+"வேண்டிய அவசியத்திற்கு இரண்டாம் நிலை. பிளாக்ச்டோன் ஒரு புள்ளிவிவர நிபுணராக "
+"இருந்தால், \"ஒரு உண்மையான ஒன்றை நிராகரிப்பதை விட 10 தவறான சுழிய "
+"கருதுகோள்களைத் தக்கவைத்துக்கொள்வது நல்லது\". உண்மையைச் சொல்வதானால், இந்த "
+"தத்துவத்துடன் நான் உடன்படுகிறேன் என்று எனக்குத் தெரியாது. அர்த்தமுள்ளதாக "
+"நான் நினைக்கும் சூழ்நிலைகள், அது இல்லை என்று நான் நினைக்கும் சூழ்நிலைகள் "
+"உள்ளன, ஆனால் அது இங்கேயோ இல்லை. சோதனைகள் எவ்வாறு கட்டப்பட்டுள்ளன."
+
+#: ../../Ch09/Ch09_HypothesisTesting_02.rst:97
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"An aside regarding the language you use to talk about hypothesis testing. "
+"First, one thing you really want to avoid is the word “prove”. A statistical"
+" test really doesn’t *prove* that a hypothesis is true or false. Proof "
+"implies certainty and, as the saying goes, statistics means never having to "
+"say you’re certain. On that point almost everyone would agree. However, "
+"beyond that there’s a fair amount of confusion. Some people argue that "
+"you’re only allowed to make statements like “rejected the null”, “failed to "
+"reject the null”, or possibly “retained the null”. According to this line of"
+" thinking you can’t say things like “accept the alternative” or “accept the "
+"null”. Personally I think this is too strong. In my opinion, this conflates "
+"null hypothesis testing with Karl Popper’s falsificationist view of the "
+"scientific process. Whilst there are similarities between falsificationism "
+"and null hypothesis testing, they aren’t equivalent. However, whilst I "
+"personally think it’s fine to talk about accepting a hypothesis (on the "
+"proviso that “acceptance” doesn’t actually mean that it’s necessarily true, "
+"especially in the case of the null hypothesis), many people will disagree. "
+"And more to the point, you should be aware that this particular weirdness "
+"exists so that you’re not caught unawares by it when writing up your own "
+"results."
+msgstr ""
+"கருதுகோள் சோதனை பற்றி பேச நீங்கள் பயன்படுத்தும் மொழி குறித்து ஒரு ஒதுக்கி. "
+"முதலில், நீங்கள் உண்மையிலேயே தவிர்க்க விரும்பும் ஒரு சேதி “நிரூபிக்கவும்” "
+"என்ற சொல். ஒரு கருதுகோள் உண்மை அல்லது பொய் என்பதை ஒரு புள்ளிவிவர சோதனை "
+"உண்மையில் * நிரூபிக்காது. சான்று உறுதியைக் குறிக்கிறது, மேலும் சொல்வது போல்,"
+" புள்ளிவிவரங்கள் என்பது உங்களுக்கு உறுதியாக இருக்க வேண்டியதில்லை. அந்த "
+"நேரத்தில் கிட்டத்தட்ட எல்லோரும் ஒப்புக்கொள்வார்கள். இருப்பினும், அதையும் "
+"மீறி நியாயமான அளவு குழப்பம் உள்ளது. “பூச்யத்தை நிராகரித்தது”, “பூச்யத்தை "
+"நிராகரிக்கத் தவறியது” அல்லது “பூச்யத்தைத் தக்க வைத்துக் கொள்ள” போன்ற "
+"அறிக்கைகளை மட்டுமே செய்ய உங்களுக்கு இசைவு உண்டு என்று சிலர் வாதிடுகின்றனர். "
+"இந்த சிந்தனையின்படி, “மாற்றீட்டை ஏற்றுக்கொள்” அல்லது “பூச்யத்தை ஏற்றுக்கொள்”"
+" போன்ற விசயங்களை நீங்கள் சொல்ல முடியாது. தனிப்பட்ட முறையில் இது மிகவும் "
+"வலுவானது என்று நினைக்கிறேன். என் கருத்துப்படி, இது விஞ்ஞான செயல்முறையின் "
+"கார்ல் பாப்பரின் பொய்யான பார்வையுடன் சுழிய கருதுகோள் சோதனையை இணைக்கிறது. "
+"பொய்மைப்படுத்தல் மற்றும் சுழிய கருதுகோள் சோதனைக்கு இடையே ஒற்றுமைகள் "
+"இருந்தாலும், அவை சமமானவை அல்ல. இருப்பினும், ஒரு கருதுகோளை ஏற்றுக்கொள்வது "
+"பற்றி பேசுவது நல்லது என்று நான் தனிப்பட்ட முறையில் நினைக்கும் அதே வேளையில் "
+"(“ஏற்றுக்கொள்வது” என்பது உண்மையில் இது உண்மை என்று அர்த்தமல்ல, குறிப்பாக "
+"சுழிய கருதுகோளின் விசயத்தில்), பலர் உடன்பட மாட்டார்கள். மேலும், இந்த "
+"குறிப்பிட்ட வேறுபாடு இருப்பதை நீங்கள் அறிந்திருக்க வேண்டும், இதனால் உங்கள் "
+"சொந்த முடிவுகளை எழுதும் போது நீங்கள் அறியாமல் பிடிபடவில்லை."
+
+#: ../../Ch09/Ch09_HypothesisTesting_03.rst:4
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Test statistics and sampling distributions"
+msgstr "சோதனை புள்ளிவிவரங்கள் மற்றும் மாதிரி விநியோகங்கள்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_03.rst:6
+#, rst-text
+msgid ""
+"At this point we need to start talking specifics about how a hypothesis test"
+" is constructed. To that end, let’s return to the ESP example. Let’s ignore "
+"the actual data that we obtained, for the moment, and think about the "
+"structure of the experiment. Regardless of what the actual numbers are, the "
+"*form* of the data is that *X* out of *N* people correctly identified the "
+"colour of the hidden card. Moreover, let’s suppose for the moment that the "
+"null hypothesis really is true, that ESP doesn’t exist and the true "
+"probability that anyone picks the correct colour is exactly *θ* = 0.5. What "
+"would we *expect* the data to look like? Well, obviously we’d expect the "
+"proportion of people who make the correct response to be pretty close to "
+"50\\%. Or, to phrase this in more mathematical terms, we’d say that *X* / "
+"*N* is approximately \\0.5. Of course, we wouldn’t expect this fraction to "
+"be *exactly* \\0.5. If, for example, we tested *N* = 100 people and *X* = 53"
+" of them got the question right, we’d probably be forced to concede that the"
+" data are quite consistent with the null hypothesis. On the other hand, if "
+"*X* = 99 of our participants got the question right then we’d feel pretty "
+"confident that the null hypothesis is wrong. Similarly, if only *X* = 3 "
+"people got the answer right we’d be similarly confident that the null was "
+"wrong. Let’s be a little more technical about this. We have a quantity *X* "
+"that we can calculate by looking at our data. After looking at the value of "
+"*X* we make a decision about whether to believe that the null hypothesis is "
+"correct, or to reject the null hypothesis in favour of the alternative. The "
+"name for this thing that we calculate to guide our choices is a **test "
+"statistic**."
+msgstr ""
+"இந்த கட்டத்தில் ஒரு கருதுகோள் சோதனை எவ்வாறு கட்டமைக்கப்படுகிறது என்பதைப் "
+"பற்றி பேசத் தொடங்க வேண்டும். அதற்காக, ஈஎச்பி எடுத்துக்காட்டுக்கு "
+"திரும்புவோம். நாங்கள் பெற்ற உண்மையான தரவைப் புறக்கணிப்போம், இப்போதைக்கு, "
+"மற்றும் பரிசோதனையின் கட்டமைப்பைப் பற்றி சிந்தியுங்கள். உண்மையான எண்கள் என்ன "
+"என்பதைப் பொருட்படுத்தாமல், தரவின் * வடிவம் * * ஃச் * * n * இல் இருந்து "
+"மறைக்கப்பட்ட அட்டையின் நிறத்தை சரியாக அடையாளம் கண்டுள்ளது. மேலும், சுழிய "
+"கருதுகோள் உண்மையிலேயே உண்மை, எச்பி இல்லை என்பதையும், சரியான வண்ணத்தை எவரும் "
+"எடுக்கும் உண்மையான நிகழ்தகவுகளும் சரியாக * θ * = 0.5 என்று கருதலாம். தரவு "
+"எப்படி இருக்கும் என்று நாங்கள் எதிர்பார்க்கிறோம்? சரி, சரியான பதிலைச் "
+"செய்யும் நபர்களின் விகிதம் 50 \\%க்கு மிக அருகில் இருக்கும் என்று நாங்கள் "
+"எதிர்பார்க்கிறோம். அல்லது, இதை மேலும் கணித அடிப்படையில் சொற்றொடருக்கு, * ஃச்"
+" * / * n * தோராயமாக \\ 0.5 என்று நாங்கள் கூறுவோம். நிச்சயமாக, இந்த பகுதியே *"
+" சரியாக * \\ 0.5 இருக்கும் என்று நாங்கள் எதிர்பார்க்க மாட்டோம். "
+"எடுத்துக்காட்டாக, நாங்கள் * n * = 100 பேரை சோதித்தோம், அவர்களில் * ஃச் * = "
+"53 கேள்வியை சரியாகப் பெற்றிருந்தால், தரவு சுழிய கருதுகோளுடன் மிகவும் "
+"ஒத்துப்போகிறது என்பதை ஒப்புக்கொள்ள வேண்டிய கட்டாயத்தில் இருக்கலாம். "
+"மறுபுறம், எங்கள் பங்கேற்பாளர்களில் * ஃச் * = 99 கேள்வியை சரியாகப் பெற்றால், "
+"சுழிய கருதுகோள் தவறு என்று நாங்கள் நம்புகிறோம். இதேபோல், * ஃச் * = 3 "
+"பேருக்கு மட்டுமே பதில் கிடைத்தால், சுழியம் தவறு என்று நாங்கள் நம்புகிறோம். "
+"இதைப் பற்றி இன்னும் கொஞ்சம் தொழில்நுட்பமாக இருக்கட்டும். எங்கள் தரவைப் "
+"பார்த்து கணக்கிடக்கூடிய ஒரு அளவு * ஃச் * உள்ளது. * ஃச் * இன் மதிப்பைப் "
+"பார்த்த பிறகு, சுழிய கருதுகோள் சரியானது என்று நம்பலாமா, அல்லது "
+"மாற்றீட்டிற்கு ஆதரவாக சுழிய கருதுகோளை நிராகரிப்பது பற்றி ஒரு முடிவை "
+"எடுக்கிறோம். எங்கள் தேர்வுகளை வழிநடத்த நாங்கள் கணக்கிடும் இந்த விசயத்தின் "
+"பெயர் ** சோதனை புள்ளிவிவரம் **."
+
+#: ../../Ch09/Ch09_HypothesisTesting_03.rst:33
+#, rst-text
+msgid ""
+"Having chosen a test statistic, the next step is to state precisely which "
+"values of the test statistic would cause us to reject the null hypothesis, "
+"and which values would cause us to keep it. In order to do so we need to "
+"determine what the **sampling distribution of the test statistic** would be "
+"if the null hypothesis were actually true (we talked about sampling "
+"distributions earlier in :ref:`Sampling distribution of the mean "
+"<sampling_distribution_of_the_mean>`). Why do we need this? Because this "
+"distribution tells us exactly what values of *X* our null hypothesis would "
+"lead us to expect. And, therefore, we can use this distribution as a tool "
+"for assessing how closely the null hypothesis agrees with our data."
+msgstr ""
+"ஒரு சோதனை புள்ளிவிவரத்தைத் தேர்ந்தெடுத்த பின்னர், அடுத்த கட்டம் சோதனை "
+"புள்ளிவிவரத்தின் எந்த மதிப்புகள் சுழிய கருதுகோளை நிராகரிக்க வழிவகுக்கும் "
+"என்பதையும், எந்த மதிப்புகள் அதை வைத்திருக்க வழிவகுக்கும் என்பதையும் "
+"துல்லியமாகக் குறிப்பிடுவது. அவ்வாறு செய்ய, சுழிய கருதுகோள் உண்மையில் "
+"உண்மையாக இருந்தால், சோதனை புள்ளிவிவரத்தின் ** மாதிரி வழங்கல் ** என்னவாக "
+"இருக்கும் என்பதை நாம் தீர்மானிக்க வேண்டும் (நாங்கள் முன்பு மாதிரி "
+"விநியோகங்களைப் பற்றி பேசினோம்: குறிப்பு: `சராசரியின் மாதிரி வழங்கல் "
+"<sampling_distribution_the_mean> `). நமக்கு இது ஏன் தேவை? ஏனெனில் இந்த "
+"வழங்கல் * ஃச் * இன் மதிப்புகள் என்ன என்பதை சரியாகச் சொல்கிறது, எங்கள் சுழிய "
+"கருதுகோள் நம்மை எதிர்பார்க்க வழிவகுக்கும். எனவே, எங்கள் தரவுகளுடன் சுழிய "
+"கருதுகோள் எவ்வளவு நெருக்கமாக உடன்படுகிறது என்பதை மதிப்பிடுவதற்கான ஒரு "
+"கருவியாக இந்த விநியோகத்தை நாம் பயன்படுத்தலாம்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_03.rst:50
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Sampling distribution when the null hypothesis is true"
+msgstr "மாதிரி வழங்கல் சுழிய கருதுகோள் உண்மையாக இருக்கும்போது"
+
+#: ../../Ch09/Ch09_HypothesisTesting_03.rst:50
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"The sampling distribution for our test statistic X when the null hypothesis "
+"is true. For our ESP scenario this is a binomial distribution. Not "
+"surprisingly, since the null hypothesis says that the probability of a "
+"correct response is θ = 0.5, the sampling distribution says that the most "
+"likely value is 50 (out of 100) correct responses. Most of the probability "
+"mass lies between 40 and 60."
+msgstr ""
+"சுழிய கருதுகோள் உண்மையாக இருக்கும்போது எங்கள் சோதனை புள்ளிவிவர ஃச் க்கான "
+"மாதிரி வழங்கல். எங்கள் ஈஎச்பி காட்சிக்கு இது ஒரு இருமுனை வழங்கல். சரியான "
+"பதிலின் நிகழ்தகவு θ = 0.5 என்று சுழிய கருதுகோள் கூறுவதால், மாதிரி வழங்கல் "
+"பெரும்பாலும் மதிப்பு 50 (100 இல்) சரியான பதில்கள் என்று கூறுகிறது. நிகழ்தகவு"
+" வெகுசனத்தின் பெரும்பாலானவை 40 முதல் 60 வரை உள்ளன."
+
+#: ../../Ch09/Ch09_HypothesisTesting_03.rst:59
+#, rst-text
+msgid ""
+"How do we actually determine the sampling distribution of the test "
+"statistic? For a lot of hypothesis tests this step is actually quite "
+"complicated, and later on in the book you’ll see me being slightly evasive "
+"about it for some of the tests (some of them I don’t even understand "
+"myself). However, sometimes it’s very easy. And, fortunately for us, our ESP"
+" example provides us with one of the easiest cases. Our population parameter"
+" *θ* is just the overall probability that people respond correctly when "
+"asked the question, and our test statistic *X* is the *count* of the number "
+"of people who did so out of a sample size of *N*. We’ve seen a distribution "
+"like this before, in section :doc:`../Ch07/Ch07_Probability_4`, and that’s "
+"exactly what the binomial distribution describes! So, to use the notation "
+"and terminology that I introduced in that section, we would say that the "
+"null hypothesis predicts that *X* is binomially distributed, which is "
+"written:"
+msgstr ""
+"சோதனை புள்ளிவிவரத்தின் மாதிரி விநியோகத்தை உண்மையில் எவ்வாறு தீர்மானிப்பது? "
+"நிறைய கருதுகோள் சோதனைகளுக்கு இந்த படி உண்மையில் மிகவும் சிக்கலானது, பின்னர் "
+"புத்தகத்தில் சில சோதனைகளுக்கு நான் அதைப் பற்றி சற்று தவிர்க்கப்படுவதை "
+"நீங்கள் காண்பீர்கள் (அவற்றில் சில எனக்கு என்னைப் புரிந்து கொள்ளவில்லை). "
+"இருப்பினும், சில நேரங்களில் இது மிகவும் எளிதானது. மேலும், அதிர்ச்டவசமாக, "
+"எங்கள் ஈஎச்பி சான்று எங்களுக்கு எளிதான நிகழ்வுகளில் ஒன்றை வழங்குகிறது. "
+"எங்கள் மக்கள்தொகை அளவுரு *θ *என்பது கேள்வியைக் கேட்டபோது மக்கள் சரியாக "
+"பதிலளிக்கும் ஒட்டுமொத்த நிகழ்தகவு மட்டுமே, மேலும் எங்கள் சோதனை புள்ளிவிவரம் "
+"*x *என்பது *n *இன் மாதிரி அளவிலிருந்து அவ்வாறு செய்தவர்களின் எண்ணிக்கையில் "
+"*எண்ணிக்கை *. இதுபோன்ற ஒரு விநியோகத்தை நாங்கள் முன்பு பார்த்திருக்கிறோம், "
+"பிரிவில்: doc: `../ ch07/ch07_probability_4`, அதுதான் பைனோமியல் வழங்கல் "
+"விவரிக்கிறது! எனவே, அந்த பிரிவில் நான் அறிமுகப்படுத்திய குறியீடு மற்றும் "
+"சொற்களைப் பயன்படுத்த, * ஃச் * பைனோமிகல் விநியோகிக்கப்படுவதாக சுழிய கருதுகோள்"
+" கணிக்கிறது, இது எழுதப்பட்டுள்ளது:"
+
+#: ../../Ch09/Ch09_HypothesisTesting_03.rst:73
+#, ignore-inconsistent, ignore-long-untranslated, ignore-same, rst-text
+msgid "*X* ~ Binomial(θ, N)"
+msgstr "* X* ~ பைனோமியல் (i, n)"
+
+#: ../../Ch09/Ch09_HypothesisTesting_03.rst:75
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"Since the null hypothesis states that *θ* = 0.5 and our experiment has *N* ="
+" 100 people, we have the sampling distribution we need. This sampling "
+"distribution is plotted in :numref:`fig-samplingDist`. No surprises really, "
+"the null hypothesis says that *X* = 50 is the most likely outcome, and it "
+"says that we’re almost certain to see somewhere between 40 and 60 correct "
+"responses."
+msgstr ""
+"சுழிய கருதுகோள் * θ * = 0.5 மற்றும் எங்கள் பரிசோதனையில் * n * = 100 "
+"நபர்களைக் கொண்டிருப்பதால், நமக்குத் தேவையான மாதிரி வழங்கல் உள்ளது. இந்த "
+"மாதிரி வழங்கல் இதில் திட்டமிடப்பட்டுள்ளது: NumRef: `Fig-samplingdist`. "
+"உண்மையில் எந்த ஆச்சரியமும் இல்லை, சுழிய கருதுகோள் * ஃச் * = 50 என்பது "
+"பெரும்பாலும் விளைவு என்று கூறுகிறது, மேலும் 40 முதல் 60 வரை சரியான "
+"பதில்களுக்கு இடையில் எங்காவது பார்ப்பது உறுதி என்று அது கூறுகிறது."
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:4
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Making decisions"
+msgstr "முடிவுகளை எடுப்பது"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:6
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"Okay, we’re very close to being finished. We’ve constructed a test statistic"
+" (*X*) and we chose this test statistic in such a way that we’re pretty "
+"confident that if *X* is close to *N* / 2 then we should retain the null, "
+"and if not we should reject it. The question that remains is this. Exactly "
+"which values of the test statistic should we associate with the null "
+"hypothesis, and exactly which values go with the alternative hypothesis? In "
+"my ESP study, for example, I’ve observed a value of *X* = 62. What decision "
+"should I make? Should I choose to believe the null hypothesis or the "
+"alternative hypothesis?"
+msgstr ""
+"சரி, நாங்கள் முடிக்க மிகவும் நெருக்கமாக இருக்கிறோம். நாங்கள் ஒரு சோதனை "
+"புள்ளிவிவரத்தை (*x*) உருவாக்கியுள்ளோம், இந்த சோதனை புள்ளிவிவரத்தை நாங்கள் "
+"தேர்ந்தெடுத்தோம்,*x**n* / 2 க்கு நெருக்கமாக இருந்தால், நாம் பூச்யத்தைத் தக்க"
+" வைத்துக் கொள்ள வேண்டும், மற்றும் if நாம் அதை நிராகரிக்கக்கூடாது. "
+"எஞ்சியிருக்கும் கேள்வி இதுதான். சோதனை புள்ளிவிவரத்தின் எந்த மதிப்புகளை நாம் "
+"சுழிய கருதுகோளுடன் தொடர்புபடுத்த வேண்டும், மாற்று கருதுகோளுடன் எந்த "
+"மதிப்புகள் சரியாக செல்கின்றன? எனது ஈஎச்பி ஆய்வில், எடுத்துக்காட்டாக, * ஃச் *"
+" = 62 இன் மதிப்பை நான் கவனித்தேன். நான் என்ன முடிவை எடுக்க வேண்டும்? சுழிய "
+"கருதுகோள் அல்லது மாற்று கருதுகோளை நம்ப நான் தேர்வு செய்ய வேண்டுமா?"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:18
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Critical regions and critical values"
+msgstr "முக்கியமான பகுதிகள் மற்றும் முக்கியமான மதிப்புகள்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:20
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"To answer this question we need to introduce the concept of a **critical "
+"region** for the test statistic *X*. The critical region of the test "
+"corresponds to those values of *X* that would lead us to reject null "
+"hypothesis (which is why the critical region is also sometimes called the "
+"rejection region). How do we find this critical region? Well, let’s consider"
+" what we know:"
+msgstr ""
+"இந்த கேள்விக்கு பதிலளிக்க, சோதனை புள்ளிவிவரத்திற்கு ** முக்கியமான பிராந்திய "
+"** என்ற கருத்தை நாம் அறிமுகப்படுத்த வேண்டும்*x*. சோதனையின் முக்கியமான பகுதி "
+"* ஃச் * இன் மதிப்புகளுக்கு ஒத்திருக்கிறது, இது சுழிய கருதுகோளை நிராகரிக்க "
+"வழிவகுக்கும் (அதனால்தான் முக்கியமான பகுதி சில நேரங்களில் நிராகரிப்பு பகுதி "
+"என்றும் அழைக்கப்படுகிறது). இந்த முக்கியமான பகுதியை நாம் எவ்வாறு "
+"கண்டுபிடிப்பது? சரி, நமக்குத் தெரிந்ததைக் கருத்தில் கொள்வோம்:"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:27
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"*X* should be very big or very small in order to reject the null hypothesis."
+msgstr ""
+"* X* சுழிய கருதுகோளை நிராகரிக்க மிகப் பெரியதாகவோ அல்லது மிகச் சிறியதாகவோ "
+"இருக்க வேண்டும்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:30
+#, ignore-duplicate, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"If the null hypothesis is true, the sampling distribution of *X* is "
+"Binomial(0.5, N)."
+msgstr ""
+"சுழிய கருதுகோள் உண்மையாக இருந்தால், * ஃச் * இன் மாதிரி வழங்கல் பைனோமியல் "
+"(0.5, n) ஆகும்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:33
+#, ignore-python-format, rst-text
+msgid ""
+"If α = 0.05, the critical region must cover 5\\% of this sampling "
+"distribution."
+msgstr ""
+"Α = 0.05 என்றால், முக்கியமான பகுதி இந்த மாதிரி விநியோகத்தின் 5 \\% ஐ "
+"உள்ளடக்கியதாக இருக்க வேண்டும்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:36
+#, ignore-python-format, rst-text
+msgid ""
+"It’s important to make sure you understand this last point. The critical "
+"region corresponds to those values of *X* for which we would reject the null"
+" hypothesis, and the sampling distribution in question describes the "
+"probability that we would obtain a particular value of *X* if the null "
+"hypothesis were actually true. Now, let’s suppose that we chose a critical "
+"region that covers 20\\% of the sampling distribution, and suppose that the "
+"null hypothesis is actually true. What would be the probability of "
+"incorrectly rejecting the null? The answer is of course 20\\%. And, "
+"therefore, we would have built a test that had an α level of 0.2. If we want"
+" α = 0.05, the critical region is only *allowed* to cover 5\\% of the "
+"sampling distribution of our test statistic."
+msgstr ""
+"இந்த கடைசி புள்ளியை நீங்கள் புரிந்துகொண்டுள்ளீர்கள் என்பதை உறுதிப்படுத்துவது"
+" முதன்மை. முக்கியமான பகுதி * ஃச் * இன் மதிப்புகளுக்கு ஒத்திருக்கிறது, "
+"அதற்காக நாம் சுழிய கருதுகோளை நிராகரிப்போம், மேலும் கேள்விக்குரிய மாதிரி "
+"வழங்கல் சுழிய கருதுகோள் உண்மையில் உண்மையாக இருந்தால் * ஃச் * இன் ஒரு "
+"குறிப்பிட்ட மதிப்பைப் பெறுவோம் என்ற நிகழ்தகவை விவரிக்கிறது. இப்போது, "
+"​​மாதிரி விநியோகத்தின் 20 \\% ஐ உள்ளடக்கிய ஒரு முக்கியமான பகுதியை நாங்கள் "
+"தேர்ந்தெடுத்தோம் என்று வைத்துக்கொள்வோம், மேலும் சுழிய கருதுகோள் உண்மையில் "
+"உண்மை என்று வைத்துக்கொள்வோம். பூச்யத்தை தவறாக நிராகரிப்பதற்கான நிகழ்தகவு "
+"என்னவாக இருக்கும்? பதில் நிச்சயமாக 20 \\%ஆகும். எனவே, 0.2 நிலை கொண்ட ஒரு "
+"சோதனையை நாங்கள் உருவாக்கியிருப்போம். Α = 0.05 ஐ நாம் விரும்பினால், எங்கள் "
+"சோதனை புள்ளிவிவரத்தின் மாதிரி விநியோகத்தில் 5 \\% ஐ மறைக்க முக்கியமான பகுதி "
+"* அனுமதிக்கப்படுகிறது."
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:55
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Critical region associated with a two-sided test"
+msgstr "இரு பக்க சோதனையுடன் தொடர்புடைய முக்கியமான பகுதி"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:55
+#, ignore-python-format, rst-text
+msgid ""
+"The critical region associated with the hypothesis test for the ESP study, "
+"for a hypothesis test with a significance level of α = 0.05. The plot shows "
+"the sampling distribution of X under the null hypothesis (i.e., same as "
+":numref:`fig-samplingDist`). The grey bars correspond to those values of X "
+"for which we would retain the null hypothesis. The blue (darker shaded) bars"
+" show the critical region, those values of X for which we would reject the "
+"null. Because the alternative hypothesis is two-sided (i.e., allows both θ <"
+" 0.5 and θ > 0.5), the critical region covers both tails of the "
+"distribution. To ensure an α level of 0.05, we need to ensure that each of "
+"the two regions encompasses 2.5\\% of the sampling distribution."
+msgstr ""
+"ES = 0.05 முக்கியத்துவ மட்டத்துடன் ஒரு கருதுகோள் சோதனைக்கு, ஈ.எச்.பி "
+"ஆய்வுக்கான கருதுகோள் சோதனையுடன் தொடர்புடைய முக்கியமான பகுதி. சுழிய "
+"கருதுகோளின் கீழ் ஃச் இன் மாதிரி விநியோகத்தை சூழ்ச்சி காட்டுகிறது (அதாவது, "
+"அதே: எண்: `FIG-SAMPLINGDIST`). சாம்பல் பார்கள் ஃச் இன் மதிப்புகளுடன் "
+"ஒத்திருக்கும், அதற்காக நாம் சுழிய கருதுகோளைத் தக்க வைத்துக் கொள்வோம். நீல "
+"(இருண்ட நிழல்) பார்கள் முக்கியமான பகுதியைக் காட்டுகின்றன, ஃச் இன் "
+"மதிப்புகள், அதற்காக நாம் பூச்யத்தை நிராகரிப்போம். மாற்று கருதுகோள் இரு "
+"பக்கமாக இருப்பதால் (அதாவது, θ <0.5 மற்றும் θ> 0.5 இரண்டையும் அனுமதிக்கிறது),"
+" முக்கியமான பகுதி விநியோகத்தின் இரு வால்களையும் உள்ளடக்கியது. 0.05 α நிலை "
+"உறுதிப்படுத்த, இரண்டு பிராந்தியங்களிலும் ஒவ்வொன்றும் மாதிரி விநியோகத்தின் "
+"2.5 \\% ஐ உள்ளடக்கியது என்பதை உறுதிப்படுத்த வேண்டும்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:68
+#, rst-text
+msgid ""
+"As it turns out those three things uniquely solve the problem. Our critical "
+"region consists of the most *extreme values*, known as the **tails** of the "
+"distribution. This is illustrated in :numref:`fig-rejectionRegion1`. If we "
+"want α = 0.05 then our critical regions correspond to *X* ≤ 40` and *X* ≥ "
+"60.\\ [#]_ That is, if the number of people saying “true” is between 41 and "
+"59, then we should retain the null hypothesis. If the number is between 0 to"
+" 40, or between 60 to 100, then we should reject the null hypothesis. The "
+"numbers 40 and 60 are often referred to as the **critical values** since "
+"they define the edges of the critical region."
+msgstr ""
+"அந்த மூன்று விசயங்களும் பிரச்சினையை தனித்துவமாக தீர்க்கின்றன. எங்கள் "
+"முக்கியமான பகுதி விநியோகத்தின் ** வால்கள் ** என அழைக்கப்படும் மிக*தீவிர "
+"மதிப்புகள்*ஐக் கொண்டுள்ளது. இது இதில் விளக்கப்பட்டுள்ளது: NUMREF: `Fig-"
+"rugenction Region1`. Α = 0.05 ஐ நாம் விரும்பினால், எங்கள் முக்கியமான "
+"பகுதிகள் * ஃச் * ≤ 40` மற்றும் * ஃச் * ≥ 60. \\ [#] _ அதாவது “உண்மை” என்று "
+"கூறும் நபர்களின் எண்ணிக்கை 41 முதல் 59 வரை இருந்தால், நாங்கள் சுழிய "
+"கருதுகோளைத் தக்க வைத்துக் கொள்ள வேண்டும். எண் 0 முதல் 40 வரை அல்லது 60 முதல்"
+" 100 வரை இருந்தால், நாம் சுழிய கருதுகோளை நிராகரிக்க வேண்டும். 40 மற்றும் 60 "
+"எண்கள் பெரும்பாலும் ** முக்கியமான மதிப்புகள் ** என குறிப்பிடப்படுகின்றன, "
+"ஏனெனில் அவை முக்கியமான பிராந்தியத்தின் விளிம்புகளை வரையறுக்கின்றன."
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:78
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "At this point, our hypothesis test is essentially complete:"
+msgstr "இந்த கட்டத்தில், எங்கள் கருதுகோள் சோதனை அடிப்படையில் முடிந்தது:"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:80
+#, rst-text
+msgid "we choose an α level (e.g., α = 0.05;"
+msgstr "நாங்கள் ஒரு α நிலையைத் தேர்வு செய்கிறோம் (எ.கா., α = 0.05;"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:82
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"(2) come up with some test statistic (e.g., *X*) that does a good job (in "
+"some meaningful sense) of comparing H\\ :sub:`0` to H\\ :sub:`1`;"
+msgstr ""
+"(2) come மேலே with some தேர்வு statistic (e.g., *X*) that does a good பணி "
+"(in some meaningful sense) of comparing H\\ :sub:`0` பெறுநர் H\\ :sub:`1`;"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:86
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"(3) figure out the sampling distribution of the test statistic on the "
+"assumption that the null hypothesis is true (in this case, binomial); and "
+"then"
+msgstr ""
+"(3) சுழிய கருதுகோள் உண்மை என்ற அனுமானத்தின் அடிப்படையில் சோதனை "
+"புள்ளிவிவரத்தின் மாதிரி விநியோகத்தைக் கண்டுபிடி (இந்த விசயத்தில், "
+"பைனோமியல்); பின்னர்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:90
+#, rst-text
+msgid ""
+"(4) calculate the critical region that produces an appropriate α level (0-40"
+" and 60-100)."
+msgstr ""
+"(4) பொருத்தமான α நிலையை (0-40 மற்றும் 60-100) உருவாக்கும் முக்கியமான "
+"பகுதியைக் கணக்கிடுங்கள்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:93
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"All that we have to do now is calculate the value of the test statistic for "
+"the real data (e.g., *X* = 62) and then compare it to the critical values to"
+" make our decision. Since 62 is greater than the critical value of 60 we "
+"would reject the null hypothesis. Or, to phrase it slightly differently, we "
+"say that the test has produced a statistically **significant** result."
+msgstr ""
+"இப்போது நாம் செய்ய வேண்டியது உண்மையான தரவுகளுக்கான சோதனை புள்ளிவிவரத்தின் "
+"மதிப்பைக் கணக்கிடுவதுதான் (எ.கா., * ஃச் * = 62) பின்னர் அதை எங்கள் முடிவை "
+"எடுக்க முக்கியமான மதிப்புகளுடன் ஒப்பிடுங்கள். 60 இன் முக்கியமான மதிப்பை விட "
+"62 அதிகமாக இருப்பதால், சுழிய கருதுகோளை நிராகரிப்போம். அல்லது, அதை சற்று "
+"வித்தியாசமாக சொற்றொடருக்கு, சோதனை புள்ளிவிவர ரீதியாக ** குறிப்பிடத்தக்க ** "
+"முடிவை உருவாக்கியுள்ளது என்று நாங்கள் கூறுகிறோம்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:101
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "A note on statistical “significance”"
+msgstr "புள்ளிவிவர “முக்கியத்துவம்” பற்றிய குறிப்பு"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:0
+#, rst-text
+msgid ""
+"*Like other occult techniques of divination, the statistical method has a "
+"private jargon deliberately contrived to obscure its methods from non-"
+"practitioners*."
+msgstr ""
+"*கணிப்பின் பிற அமானுச்ய நுட்பங்களைப் போலவே, புள்ளிவிவர முறையும் ஒரு தனியார் "
+"வாசகங்களைக் கொண்டுள்ளது, அதன் முறைகளை பயிற்சியாளர்களிடமிருந்து மறைக்க "
+"வேண்டுமென்றே திட்டமிடப்பட்டுள்ளது*."
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:109
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Attributed to G. O. Ashley\\ [#]_"
+msgstr "சி. ஓ. ஆச்லே \\ [#] _"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:111
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"A very brief digression is in order at this point, regarding the word "
+"“significant”. The concept of statistical significance is actually a very "
+"simple one, but has a very unfortunate name. If the data allow us to reject "
+"the null hypothesis, we say that “the result is *statistically "
+"significant*”, which is often shortened to “the result is significant”. This"
+" terminology is rather old and dates back to a time when “significant” just "
+"meant something like “indicated”, rather than its modern meaning which is "
+"much closer to “important”. As a result, a lot of modern readers get very "
+"confused when they start learning statistics because they think that a "
+"“significant result” must be an important one. It doesn’t mean that at all. "
+"All that “statistically significant” means is that the data allowed us to "
+"reject a null hypothesis. Whether or not the result is actually important in"
+" the real world is a very different question, and depends on all sorts of "
+"other things."
+msgstr ""
+"\"குறிப்பிடத்தக்க\" என்ற வார்த்தையைப் பற்றி இந்த கட்டத்தில் மிகவும் "
+"சுருக்கமான திசைதிருப்பல் உள்ளது. புள்ளிவிவர முக்கியத்துவத்தின் கருத்து "
+"உண்மையில் மிகவும் எளிமையானது, ஆனால் மிகவும் துரதிர்ச்டவசமான பெயரைக் "
+"கொண்டுள்ளது. சுழிய கருதுகோளை நிராகரிக்க தரவு நம்மை அனுமதித்தால், “முடிவு "
+"*புள்ளிவிவர ரீதியாக முக்கியமானது *” என்று நாங்கள் சொல்கிறோம், இது "
+"பெரும்பாலும் “இதன் விளைவாக குறிப்பிடத்தக்கதாகும்” என்று சுருக்கப்படுகிறது. "
+"இந்த சொற்களஞ்சியம் மிகவும் பழையது மற்றும் \"குறிப்பிடத்தக்க\" என்பது அதன் "
+"நவீன அர்த்தத்தை விட \"சுட்டிக்காட்டப்பட்ட\" போன்ற ஒன்றைக் குறிக்கும் ஒரு "
+"காலத்திற்கு முந்தையது, இது \"முக்கியமானது\" உடன் மிக நெருக்கமாக உள்ளது. இதன்"
+" விளைவாக, நவீன வாசகர்கள் புள்ளிவிவரங்களைக் கற்கத் தொடங்கும் போது மிகவும் "
+"குழப்பமடைகிறார்கள், ஏனெனில் ஒரு “குறிப்பிடத்தக்க முடிவு” ஒரு முக்கியமான "
+"ஒன்றாக இருக்க வேண்டும் என்று அவர்கள் நினைக்கிறார்கள். அது ஒன்றும் "
+"அர்த்தமல்ல. \"புள்ளிவிவர ரீதியாக முக்கியமானது\" என்றால், சுழிய கருதுகோளை "
+"நிராகரிக்க தரவு எங்களுக்கு அனுமதித்தது. உண்மையான உலகில் உண்மையில் "
+"முக்கியத்துவம் வாய்ந்ததா இல்லையா என்பது மிகவும் மாறுபட்ட கேள்வி, மேலும் "
+"எல்லா வகையான பிற விசயங்களையும் பொறுத்தது."
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:129
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "The difference between one-sided and two-sided tests"
+msgstr "ஒருதலைப்பட்ச மற்றும் இரு பக்க சோதனைகளுக்கு இடையிலான வேறுபாடு"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:131
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"There’s one more thing I want to point out about the hypothesis test that "
+"I’ve just constructed. If we take a moment to think about the statistical "
+"hypotheses I’ve been using,"
+msgstr ""
+"நான் இப்போது கட்டியெழுப்பிய கருதுகோள் சோதனையைப் பற்றி சுட்டிக்காட்ட இன்னும் "
+"ஒரு சேதி இருக்கிறது. நான் பயன்படுத்தும் புள்ளிவிவர கருதுகோள்களைப் பற்றி "
+"சிந்திக்க சிறிது நேரம் எடுத்துக் கொண்டால்,"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:135
+#, ignore-inconsistent, ignore-long-untranslated, ignore-punctuation-spacing, rst-text
+msgid "H\\ :sub:`0`: *θ* = 0.5"
+msgstr "H \\: துணை: `0`: * θ * = 0.5"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:137
+#, ignore-inconsistent, ignore-long-untranslated, ignore-punctuation-spacing, rst-text
+msgid "H\\ :sub:`1`: *θ* ≠ 0.5"
+msgstr "H \\: துணை: `1`: * θ * ≠ 0.5"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:139
+#, ignore-python-format, rst-text
+msgid ""
+"we notice that the alternative hypothesis covers *both* the possibility that"
+" *θ* < 0.5 and the possibility that *θ* > 0.5. This makes sense if I really "
+"think that ESP could produce either better-than-chance performance *or* "
+"worse-than-chance performance (and there are some people who think that). In"
+" statistical language this is an example of a **two-sided test**. It’s "
+"called this because the alternative hypothesis covers the area on both "
+"“sides” of the null hypothesis, and as a consequence the critical region of "
+"the test covers both tails of the sampling distribution (2.5\\% on either "
+"side if α = 0.05), as illustrated earlier in :numref:`fig-rejectionRegion1`."
+msgstr ""
+"மாற்று கருதுகோள் * θ * <0.5 மற்றும் * θ *> 0.5 சாத்தியக்கூறுகள் இரண்டையும் "
+"உள்ளடக்கியது என்பதை நாங்கள் கவனிக்கிறோம். ஈஎச்பி-வாய்ப்பை விட சிறந்த "
+"செயல்திறனை * அல்லது *-மோசமான செயல்திறனை உருவாக்க முடியும் என்று நான் "
+"நினைத்தால் இது அர்த்தமுள்ளதாக இருந்தால் (மற்றும் அதை நினைக்கும் சிலர் "
+"உள்ளனர்). புள்ளிவிவர மொழியில் இது ஒரு ** இரு பக்க சோதனைக்கு ஒரு "
+"எடுத்துக்காட்டு **. இது இது என்று அழைக்கப்படுகிறது, ஏனெனில் மாற்று கருதுகோள்"
+" சுழிய கருதுகோளின் இரு “பக்கங்களிலும்” பகுதியை உள்ளடக்கியது, இதன் விளைவாக "
+"சோதனையின் முக்கியமான பகுதி மாதிரி விநியோகத்தின் இரு வால்களையும் உள்ளடக்கியது"
+" (α = 0.05 என்றால் இருபுறமும் 2.5 \\%), முன்னர் விளக்கப்பட்டுள்ளபடி: NUMREF:"
+" `Fig-frection Region1`."
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:150
+#, ignore-end-stop, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"However, that’s not the only possibility. I might only be willing to believe"
+" in ESP if it produces better than chance performance. If so, then my "
+"alternative hypothesis would only covers the possibility that *θ* > 0.5, and"
+" as a consequence the null hypothesis now becomes *θ* ≤ 0.5"
+msgstr ""
+"இருப்பினும், அது ஒரே சாத்தியம் அல்ல. வாய்ப்பு செயல்திறனை விட சிறந்ததாக "
+"இருந்தால் மட்டுமே நான் நம்புவதற்கு தயாராக இருக்கக்கூடும். அப்படியானால், எனது"
+" மாற்று கருதுகோள் * θ *> 0.5 என்ற வாய்ப்பை மட்டுமே உள்ளடக்கும், இதன் விளைவாக"
+" சுழிய கருதுகோள் இப்போது * θ * ≤ 0.5 ஆகிறது"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:156
+#, ignore-inconsistent, ignore-long-untranslated, ignore-punctuation-spacing, rst-text
+msgid "H\\ :sub:`1`: *θ* ≤ 0.5"
+msgstr "H \\: துணை: `1`: * θ * ≤ 0.5"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:158
+#, ignore-inconsistent, ignore-long-untranslated, ignore-punctuation-spacing, rst-text
+msgid "H\\ :sub:`1`: *θ* > 0.5"
+msgstr "H \\: துணை: `1`: * θ *> 0.5"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:160
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"When this happens, we have what’s called a **one-sided test** and the "
+"critical region only covers one tail of the sampling distribution. This is "
+"illustrated in :numref:`fig-rejectionRegion2`."
+msgstr ""
+"இது நிகழும்போது, ​​** ஒருதலைப்பட்ச சோதனை ** என்று அழைக்கப்படுகிறது, மேலும் "
+"முக்கியமான பகுதி மாதிரி விநியோகத்தின் ஒரு வால் மட்டுமே உள்ளடக்கியது. இது "
+"இதில் விளக்கப்பட்டுள்ளது: NUMREF: `Fig-rugenction Region2`."
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:170
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Critical region associated with a one-sided test"
+msgstr "ஒருதலைப்பட்ச சோதனையுடன் தொடர்புடைய முக்கியமான பகுதி"
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:170
+#, ignore-python-format, rst-text
+msgid ""
+"The critical region for a one-sided test. In this case, the alternative "
+"hypothesis is that θ = 0.5 so we would only reject the null hypothesis for "
+"large values of X. As a consequence, the critical region only covers the "
+"upper tail of the sampling distribution, specifically the upper 5\\% of the "
+"distribution. Contrast this to the two-sided version in :numref:`fig-"
+"rejectionRegion1`."
+msgstr ""
+"ஒருதலைப்பட்ச சோதனைக்கான முக்கியமான பகுதி. இந்த வழக்கில், மாற்று கருதுகோள் "
+"என்னவென்றால், θ = 0.5 எனவே ஃச் இன் பெரிய மதிப்புகளுக்கான சுழிய கருதுகோளை "
+"மட்டுமே நிராகரிப்போம். இதன் விளைவாக, முக்கியமான பகுதி மாதிரி விநியோகத்தின் "
+"மேல் வால் மட்டுமே, குறிப்பாக மேல் 5 \\% வழங்கல். இதில் இரு பக்க பதிப்பிற்கு "
+"மாறாக: NUMREF: `Fig-rugenction Region1`."
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:182
+#, ignore-python-format, rst-text
+msgid ""
+"Strictly speaking, the test I just constructed has α = 0.057, which is a bit"
+" too generous. However, if I’d chosen 39 and 61 to be the boundaries for the"
+" critical region then the critical region only covers 3.5\\% of the "
+"distribution. I figured that it makes more sense to use 40 and 60 as my "
+"critical values, and be willing to tolerate a 5.7\\% type I error rate, "
+"since that’s as close as I can get to a value of α = 0.05."
+msgstr ""
+"கண்டிப்பாகச் சொல்வதானால், நான் கட்டியெழுப்பிய சோதனையில் α = 0.057 உள்ளது, "
+"இது சற்று தாராளமானது. இருப்பினும், முக்கியமான பிராந்தியத்திற்கான எல்லைகளாக "
+"நான் 39 மற்றும் 61 ஐத் தேர்ந்தெடுத்தால், முக்கியமான பகுதி விநியோகத்தின் 3.5 "
+"\\% மட்டுமே. 40 மற்றும் 60 ஐ எனது முக்கியமான மதிப்புகளாகப் பயன்படுத்துவது "
+"அதிக அர்த்தமுள்ளதாக நான் கண்டறிந்தேன், மேலும் 5.7 \\% வகை I பிழை வீதத்தை "
+"பொறுத்துக்கொள்ள தயாராக இருக்கிறேன், ஏனெனில் இது α = 0.05 மதிப்பைப் "
+"பெறக்கூடிய அளவுக்கு நெருக்கமாக இருக்கிறது."
+
+#: ../../Ch09/Ch09_HypothesisTesting_04.rst:191
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"The internet seems fairly convinced that Ashley said this, though I can’t "
+"for the life of me find anyone willing to give a source for the claim."
+msgstr ""
+"ஆச்லே இதைச் சொன்னார் என்று இணையம் மிகவும் உறுதியாக நம்புகிறது, இருப்பினும் "
+"என் வாழ்க்கைக்காக என்னால் முடியாது என்றாலும், உரிமைகோரலுக்கு ஒரு ஆதாரத்தை "
+"வழங்க விரும்பும் எவரையும் கண்டுபிடிக்க முடியவில்லை."
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:4
+#, rst-text
+msgid "The *p*-value of a test"
+msgstr "ஒரு சோதனையின் *பி *மதிப்பு"
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:6
+#, rst-text
+msgid ""
+"In one sense, our hypothesis test is complete. We’ve constructed a test "
+"statistic, figured out its sampling distribution if the null hypothesis is "
+"true, and then constructed the critical region for the test. Nevertheless, "
+"I’ve actually omitted the most important number of all, **the p-value**. It "
+"is to this topic that we now turn. There are two somewhat different ways of "
+"interpreting a *p*-value, one proposed by Sir Ronald Fisher and the other by"
+" Jerzy Neyman. Both versions are legitimate, though they reflect very "
+"different ways of thinking about hypothesis tests. Most introductory "
+"textbooks tend to give Fisher’s version only, but I think that’s a bit of a "
+"shame. To my mind, Neyman’s version is cleaner and actually better reflects "
+"the logic of the null hypothesis test. You might disagree though, so I’ve "
+"included both. I’ll start with Neyman’s version."
+msgstr ""
+"ஒரு வகையில், எங்கள் கருதுகோள் சோதனை முடிந்தது. நாங்கள் ஒரு சோதனை "
+"புள்ளிவிவரத்தை உருவாக்கியுள்ளோம், சுழிய கருதுகோள் உண்மையாக இருந்தால் அதன் "
+"மாதிரி விநியோகத்தைக் கண்டுபிடித்தோம், பின்னர் சோதனைக்கு முக்கியமான பகுதியை "
+"உருவாக்கினோம். ஆயினும்கூட, எல்லாவற்றிலும் மிக முக்கியமான எண்ணிக்கையை நான் "
+"உண்மையில் தவிர்த்துவிட்டேன், ** பி-மதிப்பு **. இந்த தலைப்புக்கு தான் இப்போது"
+" நாம் திரும்புவோம். A *p *-value ஐ விளக்குவதற்கு சற்றே வித்தியாசமான வழிகள் "
+"உள்ளன, ஒன்று சர் ரொனால்ட் ஃபிசர் மற்றும் மற்றொன்று செர்சி நெய்மனால் "
+"முன்மொழியப்பட்டது. இரண்டு பதிப்புகளும் முறையானவை, இருப்பினும் அவை கருதுகோள் "
+"சோதனைகளைப் பற்றி சிந்திக்க மிகவும் மாறுபட்ட வழிகளை பிரதிபலிக்கின்றன. "
+"பெரும்பாலான அறிமுக பாடப்புத்தகங்கள் ஃபிசரின் பதிப்பை மட்டுமே கொடுக்க "
+"முனைகின்றன, ஆனால் இது கொஞ்சம் அவமானம் என்று நினைக்கிறேன். என் மனதில், "
+"நெய்மனின் பதிப்பு தூய்மையானது மற்றும் உண்மையில் சுழிய கருதுகோள் சோதனையின் "
+"தர்க்கத்தை சிறப்பாக பிரதிபலிக்கிறது. நீங்கள் உடன்படவில்லை, எனவே நான் "
+"இரண்டையும் சேர்த்துள்ளேன். நான் நெய்மனின் பதிப்பிலிருந்து தொடங்குவேன்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:21
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "A softer view of decision making"
+msgstr "முடிவெடுப்பதில் மென்மையான பார்வை"
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:23
+#, rst-text
+msgid ""
+"One problem with the hypothesis testing procedure that I’ve described is "
+"that it makes no distinction at all between a result that is “barely "
+"significant” and those that are “highly significant”. For instance, in my "
+"ESP study the data I obtained only just fell inside the critical region, so "
+"I did get a significant effect but it was a pretty near thing. In contrast, "
+"suppose that I’d run a study in which *X* = 97 out of my *N* = 100 "
+"participants got the answer right. This would obviously be significant too "
+"but by a much larger margin, such that there’s really no ambiguity about "
+"this at all. The procedure that I have already described makes no "
+"distinction between the two. If I adopt the standard convention of allowing "
+"α = 0.05 as my acceptable Type I error rate, then both of these are "
+"significant results."
+msgstr ""
+"நான் விவரித்த கருதுகோள் சோதனை நடைமுறையில் ஒரு சிக்கல் என்னவென்றால், இது "
+"\"மிகவும் குறிப்பிடத்தக்க\" மற்றும் \"மிகவும் முக்கியத்துவம் வாய்ந்தவை\" "
+"என்று ஒரு முடிவுக்கு இடையில் எந்த வேறுபாட்டையும் ஏற்படுத்தாது. உதாரணமாக, "
+"எனது ஈஎச்பி ஆய்வில் நான் பெற்ற தரவு முக்கியமான பிராந்தியத்திற்குள் மட்டுமே "
+"விழுந்தது, எனவே நான் ஒரு குறிப்பிடத்தக்க விளைவைப் பெற்றேன், ஆனால் அது ஒரு "
+"அழகான சேதி. இதற்கு நேர்மாறாக, நான் ஒரு ஆய்வை நடத்துவேன் என்று "
+"வைத்துக்கொள்வோம், அதில் எனது * n * = 100 பங்கேற்பாளர்களுக்கு * ஃச் * = 97 "
+"பதில் சரியானது. இது வெளிப்படையாக குறிப்பிடத்தக்கதாக இருக்கும், ஆனால் மிகப் "
+"பெரிய வித்தியாசத்தில், இதைப் பற்றி உண்மையில் தெளிவற்ற தன்மை இல்லை. நான் "
+"ஏற்கனவே விவரித்த செயல்முறை இரண்டிற்கும் இடையே எந்த வேறுபாட்டையும் "
+"ஏற்படுத்தாது. எனது ஏற்றுக்கொள்ளக்கூடிய வகை I பிழை வீதமாக α = 0.05 ஐ "
+"அனுமதிக்கும் நிலையான மாநாட்டை நான் ஏற்றுக்கொண்டால், இவை இரண்டும் "
+"குறிப்பிடத்தக்க முடிவுகள்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:36
+#, rst-text
+msgid ""
+"This is where the *p*-value comes in handy. To understand how it works, "
+"let’s suppose that we ran lots of hypothesis tests on the same data set, but"
+" with a different value of α in each case. When we do that for my original "
+"ESP data what we’d get is something like this:"
+msgstr ""
+"இங்குதான் *பி *-மதிப்பு கைக்கு வருகிறது. இது எவ்வாறு செயல்படுகிறது என்பதைப் "
+"புரிந்து கொள்ள, ஒரே தரவுத் தொகுப்பில் நாங்கள் நிறைய கருதுகோள் சோதனைகளை "
+"நடத்தினோம் என்று வைத்துக்கொள்வோம், ஆனால் ஒவ்வொரு விசயத்திலும் of இன் "
+"வேறுபட்ட மதிப்புடன். எனது அசல் ஈஎச்பி தரவுகளுக்காக நாங்கள் அதைச் "
+"செய்யும்போது, ​​நமக்கு கிடைக்கும் சேதி இதுபோன்றது:"
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:43
+#, rst-text
+msgid "Value of α"
+msgstr "Α இன் மதிப்பு"
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:43
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "0.05"
+msgstr "0.05"
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:43
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "0.04"
+msgstr "0.04"
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:43
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "0.03"
+msgstr "0.03"
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:43
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "0.02"
+msgstr "0.02"
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:43
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "0.01"
+msgstr "0.01"
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:45
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Reject the null?"
+msgstr "பூச்யத்தை நிராகரிக்கவா?"
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:45
+#, ignore-inconsistent, ignore-long-untranslated, ignore-reused, rst-text
+msgid "Yes"
+msgstr "ஆம்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:45
+#, ignore-inconsistent, ignore-long-untranslated, ignore-reused, rst-text
+msgid "No"
+msgstr "இல்லை"
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:48
+#, rst-text
+msgid ""
+"When we test the ESP data (*X* = 62 successes out of *N* = 100 "
+"observations), using α levels of 0.03 and above, we’d always find ourselves "
+"rejecting the null hypothesis. For α levels of 0.02 and below we always end "
+"up retaining the null hypothesis. Therefore, somewhere between 0.02 and 0.03"
+" there must be a smallest value of α that would allow us to reject the null "
+"hypothesis for this data. This is the *p*-value. As it turns out the ESP "
+"data has *p* = 0.021. In short,"
+msgstr ""
+"0.03 மற்றும் அதற்கு மேற்பட்ட α நிலைகளைப் பயன்படுத்தி, ESP தரவை (* X* = 62 "
+"வெற்றிகள்* n* = 100 அவதானிப்புகள்) சோதிக்கும்போது, ​​பூச்ய கருதுகோளை "
+"நிராகரிப்பதை நாங்கள் எப்போதும் காணலாம். 0.02 மற்றும் அதற்குக் கீழே α "
+"நிலைகளுக்கு நாம் எப்போதும் சுழிய கருதுகோளைத் தக்கவைத்துக்கொள்வோம். ஆகையால், "
+"0.02 மற்றும் 0.03 க்கு இடையில் எங்காவது α இன் மிகச்சிறிய மதிப்பு இருக்க "
+"வேண்டும், இது இந்த தரவுகளுக்கான சுழிய கருதுகோளை நிராகரிக்க அனுமதிக்கும். இது"
+" *பி *-மதிப்பு. ஈஎச்பி தரவு * பி * = 0.021 ஐக் கொண்டுள்ளது. சுருக்கமாக,"
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:57
+#, rst-text
+msgid ""
+"*p* is defined to be the smallest Type I error rate (α) that you have to be "
+"willing to tolerate if you want to reject the null hypothesis."
+msgstr ""
+"* பி* என்பது சிறிய வகை I பிழை வீதம் (α) என வரையறுக்கப்படுகிறது, நீங்கள் "
+"சுழிய கருதுகோளை நிராகரிக்க விரும்பினால் நீங்கள் பொறுத்துக்கொள்ள தயாராக "
+"இருக்க வேண்டும்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:61
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"If it turns out that *p* describes an error rate that you find intolerable, "
+"then you must retain the null. If you’re comfortable with an error rate "
+"equal to *p*, then it’s okay to reject the null hypothesis in favour of your"
+" preferred alternative."
+msgstr ""
+"நீங்கள் சகிக்கமுடியாததாகக் காணும் பிழை விகிதத்தை * p * விவரிக்கிறது என்று "
+"மாறிவிட்டால், நீங்கள் பூச்யத்தைத் தக்க வைத்துக் கொள்ள வேண்டும். *P *க்கு "
+"சமமான பிழை விகிதத்துடன் நீங்கள் வசதியாக இருந்தால், நீங்கள் விரும்பும் "
+"மாற்றீட்டிற்கு ஆதரவாக சுழிய கருதுகோளை நிராகரிப்பது சரி."
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:66
+#, rst-text
+msgid ""
+"In effect, *p* is a summary of all the possible hypothesis tests that you "
+"could have run, taken across all possible α values. And as a consequence it "
+"has the effect of “softening” our decision process. For those tests in which"
+" *p* ≤ α you would have rejected the null hypothesis, whereas for those "
+"tests in which *p* > α you would have retained the null. In my ESP study I "
+"obtained *X* = 62 and as a consequence I’ve ended up with *p* = 0.021. So "
+"the error rate I have to tolerate is 2.1\\%. In contrast, suppose my "
+"experiment had yielded *X* = 97. What happens to my *p*-value now? This time"
+" it’s shrunk to *p* = 1.36 · 10\\ :sup:`25`, which is a tiny, tiny\\ [#]_ "
+"Type I error rate. For this second case I would be able to reject the null "
+"hypothesis with a lot more confidence, because I only have to be “willing” "
+"to tolerate a type I error rate of about 1 in 10 trillion trillion in order "
+"to justify my decision to reject."
+msgstr ""
+"இதன் விளைவாக, * பி * என்பது நீங்கள் இயக்கக்கூடிய அனைத்து கருதுகோள் "
+"சோதனைகளின் சுருக்கமாகும், இது சாத்தியமான அனைத்து α மதிப்புகளிலும் "
+"எடுக்கப்பட்டது. இதன் விளைவாக இது எங்கள் முடிவு செயல்முறையை "
+"\"மென்மையாக்குவதன்\" விளைவைக் கொண்டுள்ளது. * P * ≤ frand நீங்கள் சுழிய "
+"கருதுகோளை நிராகரித்திருக்கும் அந்த சோதனைகளுக்கு, அந்த சோதனைகளுக்கு * p *> α "
+"நீங்கள் பூச்யத்தைத் தக்க வைத்துக் கொண்டிருப்பீர்கள். எனது ஈஎச்பி ஆய்வில் "
+"நான் * ஃச் * = 62 ஐப் பெற்றேன், இதன் விளைவாக நான் * p * = 0.021 உடன் "
+"முடிந்தது. எனவே நான் பொறுத்துக்கொள்ள வேண்டிய பிழை விகிதம் 2.1 \\%ஆகும். "
+"இதற்கு நேர்மாறாக, எனது சோதனை *x *= 97 ஐக் கொடுத்தது என்று வைத்துக்கொள்வோம். "
+"இப்போது எனது *p *-value க்கு என்ன நடக்கும்? இந்த நேரத்தில் அது * p * = 1.36 "
+"· 10 \\: sup: `25`, இது ஒரு சிறிய, சிறிய \\ [#] _ வகை I பிழை வீதமாகும். இந்த"
+" இரண்டாவது வழக்கில் நான் சுழிய கருதுகோளை அதிக நம்பிக்கையுடன் நிராகரிக்க "
+"முடியும், ஏனென்றால் நிராகரிப்பதற்கான எனது முடிவை நியாயப்படுத்த 10 "
+"டிரில்லியன் டிரில்லியன் டாலர்களில் 1 வகை I பிழை விகிதத்தை பொறுத்துக்கொள்ள "
+"நான் \"தயாராக இருக்க வேண்டும்\" ."
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:83
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "The probability of extreme data"
+msgstr "தீவிர தரவின் நிகழ்தகவு"
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:85
+#, ignore-duplicate, rst-text
+msgid ""
+"The second definition of the *p*-value comes from Sir Ronald Fisher, and "
+"it’s actually this one that you tend to see in most introductory statistics "
+"textbooks. Notice how, when I constructed the critical region, it "
+"corresponded to the *tails* (i.e., extreme values) of the sampling "
+"distribution? That’s not a coincidence, almost all “good” tests have this "
+"characteristic (good in the sense of minimising our type II error rate, β). "
+"The reason for that is that a good critical region almost always corresponds"
+" to those values of the test statistic that are least likely to be observed "
+"if the null hypothesis is true. If this rule is true, then we can define the"
+" *p*-value as the probability that we would have observed a test statistic "
+"that is at least as extreme as the one we actually did get. In other words, "
+"if the data are extremely implausible according to the null hypothesis, then"
+" the null hypothesis is probably wrong."
+msgstr ""
+"*பி *-மதிப்பின் இரண்டாவது வரையறை சர் ரொனால்ட் ஃபிசரிடமிருந்து வந்தது, "
+"உண்மையில் இது பெரும்பாலான அறிமுக புள்ளிவிவர பாடப்புத்தகங்களில் நீங்கள் காண "
+"முனைகிறீர்கள். முக்கியமான பகுதியை நான் கட்டியெழுப்பியபோது, ​​அது மாதிரி "
+"விநியோகத்தின் * வால்கள் * (அதாவது தீவிர மதிப்புகள்) உடன் எவ்வாறு "
+"ஒத்திருக்கிறது என்பதைக் கவனியுங்கள்? இது ஒரு தற்செயல் நிகழ்வு அல்ல, "
+"கிட்டத்தட்ட எல்லா “நல்ல” சோதனைகளும் இந்த பண்பைக் கொண்டுள்ளன (எங்கள் வகை II "
+"பிழை வீதத்தைக் குறைக்கும் பொருளில் நல்லது, β). அதற்கான காரணம் என்னவென்றால், "
+"ஒரு நல்ல முக்கியமான பகுதி எப்போதுமே சோதனை புள்ளிவிவரத்தின் மதிப்புகளுடன் "
+"ஒத்திருக்கிறது, இது சுழிய கருதுகோள் உண்மையாக இருந்தால் குறைந்தது கவனிக்கப்பட"
+" வாய்ப்புள்ளது. இந்த விதி உண்மையாக இருந்தால், *p *-value ஐ ஒரு சோதனை "
+"புள்ளிவிவரத்தை நாம் கவனித்திருக்கும் நிகழ்தகவாக வரையறுக்கலாம், இது நாம் "
+"உண்மையில் பெற்றதைப் போலவே தீவிரமானது. வேறு வார்த்தைகளில் கூறுவதானால், சுழிய "
+"கருதுகோளின் படி தரவு மிகவும் நம்பமுடியாததாக இருந்தால், சுழிய கருதுகோள் தவறாக"
+" இருக்கலாம்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:101
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "A common mistake"
+msgstr "ஒரு பொதுவான தவறு"
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:103
+#, ignore-duplicate, ignore-python-format, rst-text
+msgid ""
+"Okay, so you can see that there are two rather different but legitimate ways"
+" to interpret the *p*-value, one based on Neyman’s approach to hypothesis "
+"testing and the other based on Fisher’s. Unfortunately, there is a third "
+"explanation that people sometimes give, especially when they’re first "
+"learning statistics, and it is *absolutely and completely wrong*. This "
+"mistaken approach is to refer to the *p*-value as “the probability that the "
+"null hypothesis is true”. It’s an intuitively appealing way to think, but "
+"it’s wrong in two key respects. First, null hypothesis testing is a "
+"frequentist tool and the frequentist approach to probability does *not* "
+"allow you to assign probabilities to the null hypothesis. According to this "
+"view of probability, the null hypothesis is either true or it is not, it "
+"cannot have a “5\\% chance” of being true. Second, even within the Bayesian "
+"approach, which does let you assign probabilities to hypotheses, the "
+"*p*-value would not correspond to the probability that the null is true. "
+"This interpretation is entirely inconsistent with the mathematics of how the"
+" *p*-value is calculated. Put bluntly, despite the intuitive appeal of "
+"thinking this way, there is no justification for interpreting a *p*-value "
+"this way. Never do it."
+msgstr ""
+"சரி, எனவே *p *-value ஐ விளக்குவதற்கு இரண்டு வித்தியாசமான ஆனால் நியாயமான "
+"வழிகள் இருப்பதை நீங்கள் காணலாம், ஒன்று நெய்மனின் கருதுகோள் சோதனைக்கு "
+"அணுகுமுறையை அடிப்படையாகக் கொண்டது, மற்றொன்று ஃபிசரின் அடிப்படையில். "
+"துரதிர்ச்டவசமாக, மக்கள் சில நேரங்களில் கொடுக்கும் மூன்றாவது விளக்கம் உள்ளது,"
+" குறிப்பாக அவர்கள் முதலில் புள்ளிவிவரங்களைக் கற்றுக் கொள்ளும்போது, ​​அது "
+"*முற்றிலும் மற்றும் முற்றிலும் தவறானது *. இந்த தவறான அணுகுமுறை *p *-value ஐ "
+"“பூச்ய கருதுகோள் உண்மை என்ற நிகழ்தகவு” என்று குறிப்பிடுவதாகும். இது "
+"சிந்திக்க ஒரு உள்ளுணர்வாக ஈர்க்கும் வழியாகும், ஆனால் இது இரண்டு முக்கிய "
+"விசயங்களில் தவறு. முதலாவதாக, சுழிய கருதுகோள் சோதனை என்பது அடிக்கடி நிகழும் "
+"கருவியாகும், மேலும் நிகழ்தகவுக்கான அடிக்கடி அணுகுமுறை * சுழிய கருதுகோளுக்கு "
+"நிகழ்தகவுகளை ஒதுக்க உங்களை அனுமதிக்காது. நிகழ்தகவு பற்றிய இந்த "
+"பார்வையின்படி, சுழிய கருதுகோள் உண்மை அல்லது அது இல்லை, அதற்கு உண்மையாக "
+"இருப்பதற்கு “5 \\% வாய்ப்பு” இருக்க முடியாது. இரண்டாவதாக, பேய்சியன் "
+"அணுகுமுறைக்குள் கூட, இது கருதுகோள்களுக்கு நிகழ்தகவுகளை ஒதுக்க அனுமதிக்கிறது,"
+" *p *-மதிப்பு சுழியம் உண்மை என்ற நிகழ்தகவுடன் ஒத்துப்போகாது. இந்த விளக்கம் "
+"*பி *-மதிப்பு எவ்வாறு கணக்கிடப்படுகிறது என்பதற்கான கணிதத்துடன் முற்றிலும் "
+"முரணானது. அப்பட்டமாகச் சொல்லுங்கள், இந்த வழியில் சிந்திக்க உள்ளுணர்வு "
+"முறையீடு இருந்தபோதிலும், ஒரு *p *-value ஐ இந்த வழியில் விளக்குவதற்கு எந்த "
+"நியாயமும் இல்லை. அதை ஒருபோதும் செய்ய வேண்டாம்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_05.rst:126
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"That’s *p* = 0.000000000000000000000000136 for folks that don’t like "
+"scientific notation!"
+msgstr ""
+"விஞ்ஞான குறியீட்டை விரும்பாத எல்லோருக்கும் இது * ப * = "
+"0.0000000000000000000000136!"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:4
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Reporting the results of a hypothesis test"
+msgstr "ஒரு கருதுகோள் சோதனையின் முடிவுகளைப் புகாரளித்தல்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:6
+#, rst-text
+msgid ""
+"When writing up the results of a hypothesis test there’s usually several "
+"pieces of information that you need to report, but it varies a fair bit from"
+" test to test. Throughout the rest of the book I’ll spend a little time "
+"talking about how to report the results of different tests (see "
+"subsection :ref:`How to report the results of the test "
+"<how_to_report_tests>` for a particularly detailed example), so that you can"
+" get a feel for how it’s usually done. However, regardless of what test "
+"you’re doing, the one thing that you always have to do is say something "
+"about the *p*-value and whether or not the outcome was significant."
+msgstr ""
+"ஒரு கருதுகோள் சோதனையின் முடிவுகளை எழுதும் போது, ​​நீங்கள் புகாரளிக்க வேண்டிய"
+" பல தகவல்கள் வழக்கமாக இருக்கும், ஆனால் இது சோதனையிலிருந்து சோதனை வரை "
+"நியாயமான பிட் மாறுபடும். வெவ்வேறு சோதனைகளின் முடிவுகளை எவ்வாறு புகாரளிப்பது "
+"என்பது பற்றி பேசுவதற்கு புத்தகத்தின் மீதமுள்ளவை முழுவதும் நான் சிறிது நேரம் "
+"செலவிடுவேன் (துணைப்பிரிவைப் பார்க்கவும்: குறிப்பு: `சோதனையின் முடிவுகளை "
+"எவ்வாறு புகாரளிப்பது <how_to_report_tests>` குறிப்பாக விரிவான "
+"எடுத்துக்காட்டுக்கு), எனவே இது வழக்கமாக எவ்வாறு செய்யப்படுகிறது என்பதற்கான "
+"உணர்வை நீங்கள் பெறலாம். இருப்பினும், நீங்கள் என்ன சோதனையைச் செய்கிறீர்கள் "
+"என்பதைப் பொருட்படுத்தாமல், நீங்கள் எப்போதும் செய்ய வேண்டிய ஒரு சேதி *பி "
+"*-மதிப்பு பற்றி ஏதாவது சொல்வதோடு, விளைவு குறிப்பிடத்தக்கதா இல்லையா "
+"என்பதுதான்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:16
+#, rst-text
+msgid ""
+"The fact that you have to do this is unsurprising, it’s the whole point of "
+"doing the test. What might be surprising is the fact that there is some "
+"contention over exactly how you’re supposed to do it. Leaving aside those "
+"people who completely disagree with the entire framework underpinning null "
+"hypothesis testing, there’s a certain amount of tension that exists "
+"regarding whether or not to report the exact *p*-value that you obtained, or"
+" if you should state only that *p* < α for a significance level that you "
+"chose in advance (e.g., *p* < 0.05)."
+msgstr ""
+"நீங்கள் இதைச் செய்ய வேண்டும் என்பது ஆச்சரியமல்ல, இது சோதனையைச் செய்வதற்கான "
+"முழு புள்ளியாகும். வியப்பு என்னவென்றால், நீங்கள் அதை எவ்வாறு செய்ய வேண்டும் "
+"என்பதில் சில சர்ச்சைகள் உள்ளன. சுழிய கருதுகோள் சோதனைக்கு உட்பட்ட முழு "
+"கட்டமைப்பையும் முழுமையாக உடன்படாத நபர்களை ஒதுக்கி வைத்துவிட்டு, நீங்கள் "
+"பெற்ற சரியான *பி *மதிப்பைப் புகாரளிக்கலாமா வேண்டாமா என்பது குறித்து ஒரு "
+"குறிப்பிட்ட அளவு பதற்றம் உள்ளது, அல்லது நீங்கள் அந்த *பி மட்டுமே கூற "
+"வேண்டுமா? * <you நீங்கள் முன்கூட்டியே தேர்ந்தெடுத்த ஒரு முக்கியத்துவ "
+"நிலைக்கு (எ.கா., * ப * <0.05)."
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:26
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "The issue"
+msgstr "சிக்கல்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:28
+#, ignore-python-format, rst-text
+msgid ""
+"To see why this is an issue, the key thing to recognise is that *p*-values "
+"are *terribly* convenient. In practice, the fact that we can compute a "
+"*p*-value means that we don’t actually have to specify any α level at all in"
+" order to run the test. Instead, what you can do is calculate your *p*-value"
+" and interpret it directly. If you get *p* = 0.062, then it means that you’d"
+" have to be willing to tolerate a Type I error rate of 6.2\\% to justify "
+"rejecting the null. If you personally find 6.2\\% intolerable then you "
+"retain the null. Therefore, the argument goes, why don’t we just report the "
+"actual *p*-value and let the reader make up their own minds about what an "
+"acceptable Type I error rate is? This approach has the big advantage of "
+"“softening” the decision making process. In fact, if you accept the Neyman "
+"definition of the *p*-value, that’s the whole point of the *p*-value. We no "
+"longer have a fixed significance level of α = 0.05 as a bright line "
+"separating “accept” from “reject” decisions, and this removes the rather "
+"pathological problem of being forced to treat *p* = 0.051 in a fundamentally"
+" different way to *p* = 0.049."
+msgstr ""
+"இது ஏன் ஒரு சிக்கல் என்று பார்க்க, அங்கீகரிக்க வேண்டிய முக்கிய சேதி "
+"என்னவென்றால், *பி *-மதிப்புகள் *பயங்கரமான *வசதியானவை. நடைமுறையில், நாம் ஒரு "
+"*பி *-மதிப்பைக் கணக்கிட முடியும் என்பதன் பொருள், சோதனையை இயக்குவதற்கு எந்த α"
+" மட்டத்தையும் நாம் உண்மையில் குறிப்பிட வேண்டியதில்லை. அதற்கு பதிலாக, நீங்கள்"
+" என்ன செய்ய முடியும் என்பது உங்கள் *பி *-மதிப்பைக் கணக்கிட்டு அதை நேரடியாக "
+"விளக்குவதாகும். நீங்கள் * P * = 0.062 ஐப் பெற்றால், பூச்யத்தை நிராகரிப்பதை "
+"நியாயப்படுத்த 6.2 \\% வகை I பிழை விகிதத்தை பொறுத்துக்கொள்ள நீங்கள் தயாராக "
+"இருக்க வேண்டும் என்று பொருள். நீங்கள் தனிப்பட்ட முறையில் 6.2 \\% "
+"சகிக்கமுடியாததைக் கண்டால், நீங்கள் பூச்யத்தைத் தக்க வைத்துக் கொள்ளுங்கள். "
+"ஆகையால், உரையாடல் செல்கிறது, நாம் ஏன் உண்மையான *பி *-மதிப்பைப் "
+"புகாரளிக்கக்கூடாது, மேலும் ஏற்றுக்கொள்ளக்கூடிய வகை நான் பிழை விகிதம் என்ன "
+"என்பதைப் பற்றி வாசகர் தங்கள் மனதை உருவாக்க அனுமதிக்கக்கூடாது? இந்த அணுகுமுறை"
+" முடிவெடுக்கும் செயல்முறையை \"மென்மையாக்குவதன்\" பெரிய நன்மையைக் "
+"கொண்டுள்ளது. உண்மையில், *p *-value இன் நெய்மன் வரையறையை நீங்கள் "
+"ஏற்றுக்கொண்டால், அது *p *-value இன் முழு புள்ளியாகும். \"நிராகரிக்கவும்\" "
+"முடிவுகளிலிருந்து \"ஏற்றுக்கொள்\" பிரிக்கும் ஒரு பிரகாசமான வரியாக α = 0.05 "
+"என்ற நிலையான முக்கியத்துவ நிலை எங்களிடம் இல்லை, மேலும் இது * p * = 0.051 "
+"க்கு சிகிச்சையளிக்க நிர்பந்திக்கப்படுவதற்கான நோயியல் சிக்கலை நீக்குகிறது * "
+"பி* = 0.049."
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:47
+#, ignore-python-format, rst-text
+msgid ""
+"This flexibility is both the advantage and the disadvantage to the "
+"*p*-value. The reason why a lot of people don’t like the idea of reporting "
+"an exact *p*-value is that it gives the researcher a bit *too much* freedom."
+" In particular, it lets you change your mind about what error tolerance "
+"you’re willing to put up with *after* you look at the data. For instance, "
+"consider my ESP experiment. Suppose I ran my test and ended up with a "
+"*p*-value of 0.09. Should I accept or reject? Now, to be honest, I haven’t "
+"yet bothered to think about what level of Type I error I’m “really” willing "
+"to accept. I don’t have an opinion on that topic. But I *do* have an opinion"
+" about whether or not ESP exists, and I *definitely* have an opinion about "
+"whether my research should be published in a reputable scientific journal. "
+"And amazingly, now that I’ve looked at the data I’m starting to think that a"
+" 9\\% error rate isn’t so bad, especially when compared to how annoying it "
+"would be to have to admit to the world that my experiment has failed. So, to"
+" avoid looking like I just made it up after the fact, I now say that my α is"
+" 0.1, with the argument that a 10\\% type I error rate isn’t too bad and at "
+"that level my test is significant! I win."
+msgstr ""
+"இந்த நெகிழ்வுத்தன்மை *p *-value க்கு நன்மை மற்றும் தீமை. ஒரு துல்லியமான *p "
+"*-value ஐப் புகாரளிக்கும் யோசனையை நிறைய பேர் விரும்பாததற்கான காரணம், இது "
+"ஆராய்ச்சியாளருக்கு கொஞ்சம் *அதிக *சுதந்திரத்தை அளிக்கிறது. குறிப்பாக, தரவைப்"
+" பார்த்த பிறகு * நீங்கள் * உடன் வைக்க விரும்பும் பிழை சகிப்புத்தன்மையைப் "
+"பற்றி உங்கள் எண்ணத்தை மாற்ற இது உங்களை அனுமதிக்கிறது. உதாரணமாக, எனது ஈஎச்பி "
+"பரிசோதனையை கவனியுங்கள். நான் எனது சோதனையை ஓடி, 0.09 இன் *பி *-மதிப்புடன் "
+"முடிந்தது என்று வைத்துக்கொள்வோம். நான் ஏற்றுக்கொள்ள வேண்டுமா அல்லது "
+"நிராகரிக்க வேண்டுமா? இப்போது, ​​உண்மையைச் சொல்வதானால், நான் “உண்மையில்” "
+"ஏற்றுக்கொள்ள தயாராக இருக்கும் வகை வகை வகை பிழையின் பற்றி சிந்திக்க நான் "
+"இன்னும் கவலைப்படவில்லை. அந்த தலைப்பில் எனக்கு ஒரு கருத்து இல்லை. ஆனால் "
+"ஈஎச்பி இருக்கிறதா இல்லையா என்பது பற்றி எனக்கு ஒரு கருத்து உள்ளது, மேலும் "
+"எனது ஆராய்ச்சி ஒரு புகழ்பெற்ற அறிவியல் இதழில் வெளியிடப்பட வேண்டுமா என்பது "
+"குறித்து எனக்கு நிச்சயமாக ஒரு கருத்து உள்ளது. ஆச்சரியப்படும் விதமாக, இப்போது"
+" நான் தரவைப் பார்த்தேன், 9 \\% பிழை விகிதம் மிகவும் மோசமாக இல்லை என்று நான் "
+"நினைக்கத் தொடங்குகிறேன், குறிப்பாக எனது ஆய்வு உலகத்தை ஒப்புக்கொள்வது எவ்வளவு"
+" எரிச்சலூட்டும் போது ஒப்பிடும்போது தோல்வியுற்றது. எனவே, உண்மைக்குப் பிறகு "
+"நான் அதை உருவாக்கியதைப் போலவே இருப்பதைத் தவிர்ப்பதற்கு, 10 \\ \\% வகை I பிழை"
+" விகிதம் மிகவும் மோசமாக இல்லை, அந்த மட்டத்தில் எனது சோதனை "
+"குறிப்பிடத்தக்கதாகும் என்ற வாதத்துடன், எனது α 0.1 என்று இப்போது சொல்கிறேன்! "
+"நான் வெல்வேன்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:66
+#, ignore-duplicate, rst-text
+msgid ""
+"In other words, the worry here is that I might have the best of intentions, "
+"and be the most honest of people, but the temptation to just “shade” things "
+"a little bit here and there is really, really strong. As anyone who has ever"
+" run an experiment can attest, it’s a long and difficult process and you "
+"often get *very* attached to your hypotheses. It’s hard to let go and admit "
+"the experiment didn’t find what you wanted it to find. And that’s the danger"
+" here. If we use the “raw” *p*-value, people will start interpreting the "
+"data in terms of what they *want* to believe, not what the data are actually"
+" saying and, if we allow that, why are we even bothering to do science at "
+"all? Why not let everyone believe whatever they like about anything, "
+"regardless of what the facts are? Okay, that’s a bit extreme, but that’s "
+"where the worry comes from. According to this view, you really *must* "
+"specify your α value in advance and then only report whether the test was "
+"significant or not. It’s the only way to keep ourselves honest."
+msgstr ""
+"வேறு வார்த்தைகளில் கூறுவதானால், இங்குள்ள கவலை என்னவென்றால், நான் சிறந்த "
+"நோக்கங்களைக் கொண்டிருக்கலாம், மேலும் மக்களில் மிகவும் நேர்மையானவனாக "
+"இருக்கக்கூடும், ஆனால் இங்கே கொஞ்சம் விசயங்களை \"நிழலாடுவதற்கான\" சோதனையானது "
+"உண்மையில் உள்ளது, உண்மையில் மிகவும் வலுவானது. இதுவரை ஒரு பரிசோதனையை நடத்திய "
+"எவரும் சான்றளிக்க முடியும் என்பதால், இது ஒரு நீண்ட மற்றும் கடினமான "
+"செயல்முறையாகும், மேலும் உங்கள் கருதுகோள்களுடன் நீங்கள் அடிக்கடி * மிகவும் * "
+"இணைக்கப்பட்டுள்ளீர்கள். பரிசோதனையை நீங்கள் கண்டுபிடிக்க விரும்பியதைக் "
+"கண்டுபிடிக்கவில்லை என்பதை ஒப்புக்கொள்வது கடினம். அதுதான் இங்கே இடர். நாம் "
+"“ரா” *பி *-மதிப்பைப் பயன்படுத்தினால், மக்கள் தரவை அவர்கள் நம்ப வேண்டும் என்ற"
+" அடிப்படையில் தரவை விளக்கத் தொடங்குவார்கள், தரவு உண்மையில் என்ன சொல்கிறது "
+"என்பதல்ல, அதை அனுமதித்தால், நாம் ஏன் கவலைப்படுகிறோம் அறிவியல் செய்யுமா? "
+"உண்மைகள் என்னவென்று பொருட்படுத்தாமல், எதைப் பற்றியும் அவர்கள் விரும்பியதை "
+"ஏன் நம்பக்கூடாது? சரி, அது சற்று தீவிரமானது, ஆனால் கவலை எங்கிருந்து "
+"வருகிறது. இந்த பார்வையின்படி, நீங்கள் உண்மையிலேயே உங்கள் α மதிப்பை "
+"முன்கூட்டியே குறிப்பிட வேண்டும், பின்னர் சோதனை குறிப்பிடத்தக்கதா இல்லையா "
+"என்பதை மட்டுமே தெரிவிக்க வேண்டும். நம்மை நேர்மையாக வைத்திருக்க ஒரே வழி "
+"இதுதான்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:83
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Two proposed solutions"
+msgstr "இரண்டு முன்மொழியப்பட்ட தீர்வுகள்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:85
+#, rst-text
+msgid ""
+"In practice, it’s pretty rare for a researcher to specify a single α level "
+"ahead of time. Instead, the convention is that scientists rely on three "
+"standard significance levels: 0.05, 0.01 and .001. When reporting your "
+"results, you indicate which (if any) of these significance levels allow you "
+"to reject the null hypothesis. This is summarised in :numref:`tab-"
+"pvaltable`. This allows us to soften the decision rule a little bit, since "
+"*p* < 0.01 implies that the data meet a stronger evidential standard than "
+"*p* < 0.05 would. Nevertheless, since these levels are fixed in advance by "
+"convention, it does prevent people choosing their α level after looking at "
+"the data."
+msgstr ""
+"நடைமுறையில், ஒரு ஆராய்ச்சியாளர் ஒரு α நிலையை நேரத்திற்கு முன்பே "
+"குறிப்பிடுவது மிகவும் அரிது. அதற்கு பதிலாக, மாநாடு என்னவென்றால், விஞ்ஞானிகள்"
+" மூன்று நிலையான முக்கியத்துவ நிலைகளை நம்பியுள்ளனர்: 0.05, 0.01 மற்றும் .001."
+" உங்கள் முடிவுகளைப் புகாரளிக்கும் போது, ​​இந்த முக்கியத்துவ நிலைகளில் எந்த "
+"(ஏதேனும் இருந்தால்) சுழிய கருதுகோளை நிராகரிக்க உங்களை அனுமதிக்கிறது என்பதைக்"
+" குறிக்கிறது. இது சுருக்கமாக: numref: `TAB-PVALTABLE`. * P * <0.05 ஐ விட "
+"தரவு ஒரு வலுவான தெளிவான தரத்தை நிறைவு செய்கிறது என்பதை * p * <0.01 "
+"குறிக்கிறது என்பதால், முடிவு விதியை சிறிது மென்மையாக்க இது நம்மை "
+"அனுமதிக்கிறது. ஆயினும்கூட, இந்த நிலைகள் மாநாட்டின் மூலம் முன்கூட்டியே "
+"நிர்ணயிக்கப்பட்டிருப்பதால், தரவைப் பார்த்த பிறகு மக்கள் தங்கள் α அளவைத் "
+"தேர்ந்தெடுப்பதை இது தடுக்கிறது."
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:97
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"A commonly adopted convention for reporting *p* values: in many places it is"
+" conventional to report one of four different things (e.g., *p* < 0.05) as "
+"shown below. I’ve included the “significance stars” notation (i.e., a \\* "
+"indicates *p* < 0.05) because you sometimes see this notation produced by "
+"statistical software. It’s also worth noting that some people will write "
+"*n.s.* (not significant) rather than *p* > 0.05."
+msgstr ""
+"* பி * மதிப்புகளைப் புகாரளிப்பதற்கான பொதுவாக ஏற்றுக்கொள்ளப்பட்ட மாநாடு: பல "
+"இடங்களில் கீழே காட்டப்பட்டுள்ளபடி நான்கு வெவ்வேறு விசயங்களில் ஒன்றை (எ.கா., "
+"* ப * <0.05) புகாரளிப்பது வழக்கமானதாகும். நான் “முக்கியத்துவம் வாய்ந்த "
+"நட்சத்திரங்கள்” குறியீட்டைச் சேர்த்துள்ளேன் (அதாவது, a \\** p* <0.05 ஐ "
+"குறிக்கிறது) ஏனெனில் புள்ளிவிவர மென்பொருளால் தயாரிக்கப்பட்ட இந்த குறியீட்டை "
+"நீங்கள் சில நேரங்களில் பார்க்கிறீர்கள். * P *> 0.05 ஐ விட சிலர் * N.S. * "
+"(குறிப்பிடத்தக்கதாக இல்லை) எழுதுவார்கள் என்பதையும் கவனத்தில் கொள்ள வேண்டும்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:107
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Usual notation"
+msgstr "வழக்கமான குறியீடு"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:107
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Signif. stars"
+msgstr "சிக்னிஃப். நட்சத்திரங்கள்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:107
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "English translation"
+msgstr "ஆங்கில மொழிபெயர்ப்பு"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:107
+#, rst-text
+msgid "The null is…"
+msgstr "பூச்யம்…"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:110
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "*p* > 0.05"
+msgstr "* பி*> 0.05"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:110
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "The test wasn’t significant."
+msgstr "சோதனை குறிப்பிடத்தக்கதாக இல்லை."
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:110
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Retained"
+msgstr "தக்கவைத்தது"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:112
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "*p* < 0.05"
+msgstr "* பி* <0.05"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:112
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "\\*"
+msgstr "\\*"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:112
+#, rst-text
+msgid "The test was significant at α = 0.05; but not at α =.01 or α = 0.001."
+msgstr ""
+"சோதனை α = 0.05 இல் குறிப்பிடத்தக்கதாக இருந்தது; ஆனால் α = .01 அல்லது α = "
+"0.001 இல் இல்லை."
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:112
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:116
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:120
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Rejected"
+msgstr "நிராகரிக்கப்பட்டது"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:116
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "*p* < 0.01"
+msgstr "* பி* <0.01"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:116
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "\\*\\*"
+msgstr "\\*\\*"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:116
+#, rst-text
+msgid ""
+"The test was significant at α = 0.05 and α = 0.01; but not at α = 0.001."
+msgstr ""
+"சோதனை α = 0.05 மற்றும் α = 0.01 இல் குறிப்பிடத்தக்கதாக இருந்தது; ஆனால் α = "
+"0.001 இல் இல்லை."
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:120
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "*p* < 0.001"
+msgstr "* பி* <0.001"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:120
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "\\*\\*\\*"
+msgstr "\\*\\*\\*"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:120
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "The test was significant at all levels"
+msgstr "சோதனை அனைத்து மட்டங்களிலும் குறிப்பிடத்தக்கதாக இருந்தது"
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:124
+#, ignore-end-stop, rst-text
+msgid ""
+"Nevertheless, quite a lot of people still prefer to report exact *p*-values."
+" To many people, the advantage of allowing the reader to make up their own "
+"mind about how to interpret *p* = 0.06 outweighs any disadvantages. In "
+"practice, however, even among those researchers who prefer exact *p*-values "
+"it is quite common to just write *p* < 0.001 instead of reporting an exact "
+"value for small *p*. This is in part because a lot of software doesn’t "
+"actually print out the *p*-value when it’s that small (e.g., SPSS just "
+"writes *p* = 0.000 whenever *p* < 0.001), and in part because a very small "
+"*p*-value can be kind of misleading. The human mind sees a number like "
+"0.0000000001 and it’s hard to suppress the gut feeling that the evidence in "
+"favour of the alternative hypothesis is a near certainty. In practice "
+"however, this is usually wrong. Life is a big, messy, complicated thing, and"
+" every statistical test ever invented relies on simplifications, "
+"approximations and assumptions. As a consequence, it’s probably not "
+"reasonable to walk away from *any* statistical analysis with a feeling of "
+"confidence stronger than *p* < 0.001 implies. In other words, *p* < 0.001 is"
+" really code for “as far as *this test* is concerned, the evidence is "
+"overwhelming.”"
+msgstr ""
+"ஆயினும்கூட, நிறைய பேர் இன்னும் துல்லியமான *பி *-மதிப்புகளைப் புகாரளிக்க "
+"விரும்புகிறார்கள். பலருக்கு, * p * = 0.06 ஐ எவ்வாறு விளக்குவது என்பது பற்றி "
+"வாசகரை தங்கள் மனதை உருவாக்க அனுமதிப்பதன் நன்மை எந்தவொரு தீமைகளையும் விட "
+"அதிகமாக உள்ளது. இருப்பினும், நடைமுறையில், துல்லியமான *பி *மதிப்பை விரும்பும்"
+" ஆராய்ச்சியாளர்களிடையே கூட சிறிய *பி *க்கு சரியான மதிப்பைப் "
+"புகாரளிப்பதற்குப் பதிலாக *பி *<0.001 ஐ எழுதுவது மிகவும் பொதுவானது. இது ஒரு "
+"பகுதியாக உள்ளது, ஏனென்றால் நிறைய மென்பொருள்கள் உண்மையில் *p *-value ஐ "
+"அச்சிடாது, அது சிறியதாக இருக்கும்போது (எ.கா. சிறிய *பி *-மதிப்பு என்பது "
+"தவறாக வழிநடத்தும். மனித மனம் 0.0000000001 போன்ற ஒரு எண்ணைக் காண்கிறது, "
+"மேலும் மாற்று கருதுகோளுக்கு ஆதரவான சான்றுகள் ஒரு உறுதியானவை என்ற குடல் "
+"உணர்வை அடக்குவது கடினம். இருப்பினும் நடைமுறையில், இது பொதுவாக தவறு. வாழ்க்கை"
+" என்பது ஒரு பெரிய, குழப்பமான, சிக்கலான சேதி, மற்றும் இதுவரை "
+"கண்டுபிடிக்கப்பட்ட ஒவ்வொரு புள்ளிவிவர சோதனையும் எளிமைப்படுத்தல்கள், "
+"தோராயங்கள் மற்றும் அனுமானங்களை நம்பியுள்ளது. இதன் விளைவாக, * p * <0.001 ஐ "
+"விட வலுவான நம்பிக்கையுடன் * எந்த * புள்ளிவிவர பகுப்பாய்விலிருந்தும் விலகிச் "
+"செல்வது நியாயமானதல்ல. வேறு வார்த்தைகளில் கூறுவதானால், * ப * <0.001 உண்மையில்"
+" “இந்த சோதனை * ஐப் பொருத்தவரை, சான்றுகள் மிகப்பெரியவை” என்பதற்கான "
+"குறியீடாகும்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_06.rst:144
+#, rst-text
+msgid ""
+"In light of all this, you might be wondering exactly what you should do. "
+"There’s a fair bit of contradictory advice on the topic, with some people "
+"arguing that you should report the exact *p*-value, and other people arguing"
+" that you should use the tiered approach illustrated in :numref:`tab-"
+"pvaltable`. As a result, the best advice I can give is to suggest that you "
+"look at papers/reports written in your field and see what the convention "
+"seems to be. If there doesn’t seem to be any consistent pattern, then use "
+"whichever method you prefer."
+msgstr ""
+"இதையெல்லாம் வெளிச்சத்தில், நீங்கள் என்ன செய்ய வேண்டும் என்று நீங்கள் "
+"யோசித்துக்கொண்டிருக்கலாம். தலைப்பில் நியாயமான முரண்பாடான ஆலோசனைகள் உள்ளன, "
+"சிலர் நீங்கள் துல்லியமான *பி *-மதிப்பைப் புகாரளிக்க வேண்டும் என்று "
+"வாதிடுகின்றனர், மேலும் மற்றவர்கள் விளக்கப்பட்டுள்ள அடுக்கு அணுகுமுறையைப் "
+"பயன்படுத்த வேண்டும் என்று வாதிடுகின்றனர்: எண்ரெஃப்: `தாவல்-தூதர் '. இதன் "
+"விளைவாக, உங்கள் துறையில் எழுதப்பட்ட ஆவணங்கள்/அறிக்கைகளைப் பார்த்து, மாநாடு "
+"என்னவென்று பார்க்க வேண்டும் என்று பரிந்துரைப்பதே நான் கொடுக்கக்கூடிய சிறந்த "
+"அறிவுரை. எந்தவொரு நிலையான முறை இருப்பதாகத் தெரியவில்லை என்றால், நீங்கள் "
+"விரும்பும் எந்த முறையையும் பயன்படுத்தவும்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_07.rst:4
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Running the hypothesis test in practice"
+msgstr "நடைமுறையில் கருதுகோள் சோதனையை இயக்குகிறது"
+
+#: ../../Ch09/Ch09_HypothesisTesting_07.rst:6
+#, rst-text
+msgid ""
+"At this point some of you might be wondering if this is a “real” hypothesis "
+"test, or just a toy example that I made up. It’s real. In the previous "
+"discussion I built the test from first principles, thinking that it was the "
+"simplest possible problem that you might ever encounter in real life. "
+"However, this test already exists. It’s called the *binomial test*, and it’s"
+" implemented by jamovi as one of the statistical analyses available when you"
+" hit the ``Frequencies`` button. To test the null hypothesis that the "
+"response probability is one-half ``p = 0.5``,\\ [#]_ and using data in which"
+" ``x = 62`` of ``n = 100`` people made the correct response, available in "
+"the |binomialtest|_ data set, we get the results shown in :numref:`fig-"
+"binomialtest`."
+msgstr ""
+"இந்த கட்டத்தில் இது ஒரு “உண்மையான” கருதுகோள் சோதனை, அல்லது நான் உருவாக்கிய "
+"ஒரு பொம்மை எடுத்துக்காட்டு என்பதை உங்களில் சிலர் யோசித்துக்கொண்டிருக்கலாம். "
+"இது உண்மையானது. முந்தைய கலந்துரையாடலில் நான் முதல் கொள்கைகளிலிருந்து சோதனையை"
+" உருவாக்கினேன், இது நிச வாழ்க்கையில் நீங்கள் சந்திக்கும் எளிமையான சிக்கல் "
+"என்று நினைத்து. இருப்பினும், இந்த சோதனை ஏற்கனவே உள்ளது. இது *பைனோமியல் "
+"டெச்ட் *என்று அழைக்கப்படுகிறது, மேலும் நீங்கள் `` அதிர்வெண்கள்`` பொத்தானை "
+"அழுத்தும்போது கிடைக்கும் புள்ளிவிவர பகுப்பாய்வுகளில் ஒன்றாக இது சாமோவியால் "
+"செயல்படுத்தப்படுகிறது. மறுமொழி நிகழ்தகவு ஒரு பாதி `` p = 0.5``, \\ [#] _ "
+"மற்றும் `` n = 100`` இன் `` ஃச் = 62`` மக்கள் சரியானதைச் செய்த தரவைப் "
+"பயன்படுத்துதல் என்ற சுழிய கருதுகோளை சோதிக்க பதில், | binomialtest | _ தரவு "
+"தொகுப்பில் கிடைக்கிறது, காட்டப்பட்டுள்ள முடிவுகளைப் பெறுகிறோம்: numref: "
+"`fig-binomialtest`."
+
+#: ../../Ch09/Ch09_HypothesisTesting_07.rst:24
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Binomial test analysis and results in jamovi"
+msgstr "பைனோமியல் சோதனை பகுப்பாய்வு மற்றும் சாமோவியில் முடிவுகள்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_07.rst:28
+#, rst-text
+msgid ""
+"Right now, this output looks pretty unfamiliar to you, but you can see that "
+"it’s telling you more or less the right things. Specifically, the *p*-value "
+"of 0.02 is less than the usual choice of α = 0.05, so you can reject the "
+"null. We’ll talk a lot more about how to read this sort of output as we go "
+"along, and after a while you’ll hopefully find it quite easy to read and "
+"understand."
+msgstr ""
+"இப்போது, ​​இந்த வெளியீடு உங்களுக்கு மிகவும் அறிமுகமில்லாததாகத் தெரிகிறது, "
+"ஆனால் அது சரியான விசயங்களை அதிகமாகவோ அல்லது குறைவாகவோ சொல்கிறது என்பதை "
+"நீங்கள் காணலாம். குறிப்பாக, 0.02 இன் *பி *-மதிப்பு α = 0.05 வழக்கமான தேர்வை "
+"விட குறைவாக உள்ளது, எனவே நீங்கள் பூச்யத்தை நிராகரிக்கலாம். நாங்கள் "
+"செல்லும்போது இந்த வகையான வெளியீட்டை எவ்வாறு படிப்பது என்பது பற்றி நாங்கள் "
+"அதிகம் பேசுவோம், சிறிது நேரத்திற்குப் பிறகு நீங்கள் படித்து புரிந்துகொள்வது "
+"மிகவும் எளிதானது என்று நம்புகிறோம்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_07.rst:38
+#, rst-text
+msgid ""
+"Note that the ``p`` here has nothing to do with a *p*-value. The ``p`` "
+"argument in the jamovi binomial test corresponds to the probability of "
+"making a correct response, according to the null hypothesis. In other words,"
+" it’s the *θ* value."
+msgstr ""
+"`` P`` இங்கே ஒரு *p *-value உடன் எந்த தொடர்பும் இல்லை என்பதை நினைவில் கொள்க."
+" சமோவி பைனோமியல் சோதனையில் உள்ள `` p`` உரையாடல் சுழிய கருதுகோளின் படி, "
+"சரியான பதிலை ஏற்படுத்தும் நிகழ்தகவுக்கு ஒத்திருக்கிறது. வேறு வார்த்தைகளில் "
+"கூறுவதானால், இது * θ * மதிப்பு."
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:4
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Effect size, sample size and power"
+msgstr "விளைவு அளவு, மாதிரி அளவு மற்றும் ஆற்றல்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:6
+#, ignore-duplicate, ignore-python-format, rst-text
+msgid ""
+"In previous sections I’ve emphasised the fact that the major design "
+"principle behind statistical hypothesis testing is that we try to control "
+"our Type I error rate. When we fix α = 0.05 we are attempting to ensure that"
+" only 5\\% of true null hypotheses are incorrectly rejected. However, this "
+"doesn’t mean that we don’t care about Type II errors. In fact, from the "
+"researcher’s perspective, the error of failing to reject the null when it is"
+" actually false is an extremely annoying one. With that in mind, a secondary"
+" goal of hypothesis testing is to try to minimise β, the Type II error rate,"
+" although we don’t usually *talk* in terms of minimising Type II errors. "
+"Instead, we talk about maximising the *power* of the test. Since power is "
+"defined as 1 - β, this is the same thing."
+msgstr ""
+"முந்தைய பிரிவுகளில் புள்ளிவிவர கருதுகோள் சோதனையின் பின்னால் உள்ள முக்கிய "
+"வடிவமைப்புக் கொள்கை என்னவென்றால், எங்கள் வகை I பிழை வீதத்தைக் கட்டுப்படுத்த "
+"முயற்சிக்கிறோம். Α = 0.05 ஐ சரிசெய்யும்போது, ​​உண்மையான சுழிய கருதுகோள்களில்"
+" 5 \\% மட்டுமே தவறாக நிராகரிக்கப்படுவதை உறுதி செய்ய முயற்சிக்கிறோம். "
+"இருப்பினும், வகை II பிழைகள் குறித்து நாங்கள் கவலைப்படவில்லை என்று "
+"அர்த்தமல்ல. உண்மையில், ஆராய்ச்சியாளரின் பார்வையில், பூச்யமானது உண்மையில் "
+"பொய்யாக இருக்கும்போது நிராகரிக்கத் தவறியது மிகவும் எரிச்சலூட்டும் ஒன்றாகும்."
+" இதைக் கருத்தில் கொண்டு, கருதுகோள் சோதனையின் இரண்டாம் நிலை குறிக்கோள் வகை II"
+" பிழை வீதத்தைக் குறைக்க முயற்சிப்பதாகும், இருப்பினும் வகை II பிழைகளை "
+"குறைப்பதன் அடிப்படையில் நாம் வழக்கமாக * பேசுவதில்லை. அதற்கு பதிலாக, "
+"சோதனையின் * சக்தியை * அதிகரிப்பதைப் பற்றி பேசுகிறோம். ஆற்றல் 1 - β என "
+"வரையறுக்கப்படுவதால், இது ஒன்றே."
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:19
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "The power function"
+msgstr "ஆற்றல் செயல்பாடு"
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:27
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Sampling distribution under the alternative hypothesis, θ = 0.55"
+msgstr "மாற்று கருதுகோளின் கீழ் மாதிரி வழங்கல், θ = 0.55"
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:27
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"Sampling distribution under the alternative hypothesis for a population "
+"parameter value of θ = 0.55. A reasonable proportion of the distribution "
+"lies in the rejection region."
+msgstr ""
+"மாதிரி வழங்கல் θ = 0.55 இன் மக்கள்தொகை அளவுரு மதிப்புக்கான மாற்று "
+"கருதுகோளின் கீழ். விநியோகத்தின் நியாயமான விகிதம் நிராகரிப்பு பிராந்தியத்தில்"
+" உள்ளது."
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:33
+#, ignore-duplicate, rst-text
+msgid ""
+"Let’s take a moment to think about what a Type II error actually is. A Type "
+"II error occurs when the alternative hypothesis is true, but we are "
+"nevertheless unable to reject the null hypothesis. Ideally, we’d be able to "
+"calculate a single number β that tells us the Type II error rate, in the "
+"same way that we can set α = 0.05 for the Type I error rate. Unfortunately, "
+"this is a lot trickier to do. To see this, notice that in my ESP study the "
+"alternative hypothesis actually corresponds to lots of possible values of "
+"*θ*. In fact, the alternative hypothesis corresponds to every value of *θ* "
+"*except* 0.5. Let’s suppose that the true probability of someone choosing "
+"the correct response is 55\\% (i.e., *θ* = 0.55). If so, then the *true* "
+"sampling distribution for *X* is not the same one that the null hypothesis "
+"predicts, as the most likely value for *X* is now 55 out of 100. Not only "
+"that, the whole sampling distribution has now shifted, as shown in "
+":numref:`fig-rejectionRegion3`. The critical regions, of course, do not "
+"change. By definition the critical regions are based on what the null "
+"hypothesis predicts. What we’re seeing in this figure is the fact that when "
+"the null hypothesis is wrong, a much larger proportion of the sampling "
+"distribution distribution falls in the critical region. And of course that’s"
+" what should happen. The probability of rejecting the null hypothesis is "
+"larger when the null hypothesis is actually false! However *θ* = 0.55 is not"
+" the only possibility consistent with the alternative hypothesis. Let’s "
+"instead suppose that the true value of *θ* is actually 0.70. What happens to"
+" the sampling distribution when this occurs? The answer, shown in "
+":numref:`fig-rejectionRegion4`, is that almost the entirety of the sampling "
+"distribution has now moved into the critical region. Therefore, if *θ* = "
+"0.70, the probability of us correctly rejecting the null hypothesis (i.e., "
+"the power of the test) is much larger than if *θ* = 0.55. In short, while "
+"*θ* = 0.55 and *θ* = 0.70 are both part of the alternative hypothesis, the "
+"Type II error rate is different."
+msgstr ""
+"வகை II பிழை உண்மையில் என்ன என்பதைப் பற்றி சிந்திக்க சிறிது நேரம் "
+"ஒதுக்குவோம். மாற்று கருதுகோள் உண்மையாக இருக்கும்போது ஒரு வகை II பிழை "
+"ஏற்படுகிறது, ஆனால் நம்மால் சுழிய கருதுகோளை நிராகரிக்க முடியவில்லை. வெறுமனே, "
+"வகை I II பிழை வீதத்தை நமக்குச் சொல்லும் ஒற்றை எண்ணைக் கணக்கிட முடியும், அதே "
+"வழியில் வகை I பிழை விகிதத்திற்கு α = 0.05 ஐ அமைக்கலாம். துரதிர்ச்டவசமாக, இது"
+" செய்ய மிகவும் தந்திரமானது. இதைக் காண, எனது ஈஎச்பியில் மாற்று கருதுகோள் "
+"உண்மையில் *θ *இன் சாத்தியமான மதிப்புகளுக்கு ஒத்திருக்கிறது என்பதைக் "
+"கவனியுங்கள். உண்மையில், மாற்று கருதுகோள் * 0.5 தவிர * θ * * இன் ஒவ்வொரு "
+"மதிப்புக்கும் ஒத்திருக்கிறது. யாரோ சரியான பதிலைத் தேர்ந்தெடுப்பதன் உண்மையான "
+"நிகழ்தகவு 55 \\% (அதாவது, * θ * = 0.55) என்று வைத்துக்கொள்வோம். "
+"அப்படியானால், * ஃச் * க்கான * உண்மை * மாதிரி வழங்கல் சுழிய கருதுகோள் "
+"கணிக்கும் ஒன்றல்ல, * ஃச் * க்கான பெரும்பாலும் மதிப்பு இப்போது 100 இல் 55 ஆக "
+"உள்ளது. அது மட்டுமல்லாமல், முழு மாதிரி விநியோகமும் உள்ளது இப்போது "
+"காட்டப்பட்டுள்ளபடி இப்போது மாற்றப்பட்டது: NumRef: `Fig-rugenction Region3`. "
+"முக்கியமான பகுதிகள், நிச்சயமாக மாறாது. வரையறையின்படி முக்கியமான பகுதிகள் "
+"சுழிய கருதுகோள் கணித்ததை அடிப்படையாகக் கொண்டவை. இந்த படத்தில் நாம் "
+"காணக்கூடியது என்னவென்றால், சுழிய கருதுகோள் தவறாக இருக்கும்போது, ​​மாதிரி "
+"விநியோக விநியோகத்தின் மிகப் பெரிய விகிதம் முக்கியமான பிராந்தியத்தில் "
+"விழுகிறது. நிச்சயமாக அதுதான் நடக்க வேண்டும். சுழிய கருதுகோள் உண்மையில் "
+"தவறானது போது சுழிய கருதுகோளை நிராகரிப்பதற்கான நிகழ்தகவு பெரியது! இருப்பினும்"
+" * θ * = 0.55 மாற்று கருதுகோளுடன் ஒத்துப்போகும் ஒரே சாத்தியம் இல்லை. அதற்கு "
+"பதிலாக * θ * இன் உண்மையான மதிப்பு உண்மையில் 0.70 என்று வைத்துக்கொள்வோம். இது"
+" நிகழும்போது மாதிரி விநியோகத்திற்கு என்ன நடக்கும்? பதில், காட்டப்பட்டுள்ளது:"
+" NUMREF: `Fig-frogection Region4`, கிட்டத்தட்ட மாதிரி வழங்கல் முழுவதுமாக "
+"இப்போது முக்கியமான பகுதிக்கு நகர்ந்துள்ளது. ஆகையால், * θ * = 0.70 என்றால், "
+"சுழிய கருதுகோளை (அதாவது, சோதனையின் சக்தி) சரியாக நிராகரிப்பதற்கான நிகழ்தகவு "
+"* θ * = 0.55 ஐ விட மிகப் பெரியது. சுருக்கமாக, * θ * = 0.55 மற்றும் * θ * = "
+"0.70 இரண்டும் மாற்று கருதுகோளின் ஒரு பகுதியாகும், வகை II பிழை விகிதம் "
+"வேறுபட்டது."
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:68
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Sampling distribution under the alternative hypothesis, θ = 0.70"
+msgstr "மாற்று கருதுகோளின் கீழ் மாதிரி வழங்கல், θ = 0.70"
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:68
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"Sampling distribution under the alternative hypothesis for a population "
+"parameter value of θ = 0.70. Almost all of the distribution lies in the "
+"rejection region."
+msgstr ""
+"மாதிரி வழங்கல் θ = 0.70 இன் மக்கள்தொகை அளவுரு மதிப்புக்கான மாற்று "
+"கருதுகோளின் கீழ். கிட்டத்தட்ட அனைத்து விநியோகங்களும் நிராகரிப்பு "
+"பிராந்தியத்தில் உள்ளன."
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:74
+#, ignore-duplicate, rst-text
+msgid ""
+"What all this means is that the power of a test (i.e., 1 - β) depends on the"
+" true value of *θ*. To illustrate this, I’ve calculated the expected "
+"probability of rejecting the null hypothesis for all values of *θ*, and "
+"plotted it in :numref:`fig-powerTheta`. This plot describes what is usually "
+"called the **power function** of the test. It’s a nice summary of how good "
+"the test is, because it actually tells you the power (1 - β) for all "
+"possible values of *θ*. As you can see, when the true value of *θ* is very "
+"close to 0.5, the power of the test drops very sharply, but when it is "
+"further away, the power is large."
+msgstr ""
+"இவை அனைத்தும் என்னவென்றால், ஒரு சோதனையின் ஆற்றல் (அதாவது, 1 - β) *θ *இன் "
+"உண்மையான மதிப்பைப் பொறுத்தது. இதை விளக்குவதற்கு, *θ *இன் அனைத்து "
+"மதிப்புகளுக்கும் சுழிய கருதுகோளை நிராகரிப்பதற்கான எதிர்பார்க்கப்பட்ட "
+"நிகழ்தகவைக் கணக்கிட்டு, அதைத் திட்டமிட்டுள்ளேன்: எண்ரெஃப்: `Fig-"
+"poowertheta`. இந்த சூழ்ச்சி பொதுவாக சோதனையின் ** ஆற்றல் செயல்பாடு ** என்று "
+"அழைக்கப்படுகிறது. சோதனை எவ்வளவு சிறந்தது என்பதற்கான நல்ல சுருக்கம் இது, "
+"ஏனென்றால் *θ *இன் சாத்தியமான அனைத்து மதிப்புகளுக்கும் இது உண்மையில் சக்தியை "
+"(1 - β) உங்களுக்குச் சொல்கிறது. நீங்கள் பார்க்க முடியும் என, * θ * இன் "
+"உண்மையான மதிப்பு 0.5 க்கு மிக அருகில் இருக்கும்போது, ​​சோதனையின் ஆற்றல் "
+"மிகவும் கூர்மையாக குறைகிறது, ஆனால் அது மேலும் தொலைவில் இருக்கும்போது, "
+"​​சக்தி பெரியது."
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:91
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:228
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Probability to reject the null hypothesis as function of θ"
+msgstr "சுழிய கருதுகோளை of இன் செயல்பாடாக நிராகரிப்பதற்கான நிகழ்தகவு"
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:91
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"The probability that we will reject the null hypothesis, plotted as a "
+"function of the true value of θ. Obviously, the test is more powerful "
+"(greater chance of correct rejection) if the true value of θ is very "
+"different from the value that the null hypothesis specifies (i.e., θ = 0.5)."
+" Notice that when θ actually is equal to 0.5 (plotted as a black dot), the "
+"null hypothesis is in fact true and rejecting the null hypothesis in this "
+"instance would be a Type I error."
+msgstr ""
+"சுழிய கருதுகோளை நாம் நிராகரிப்பதற்கான நிகழ்தகவு, கோர் இன் உண்மையான மதிப்பின்"
+" செயல்பாடாக திட்டமிடப்பட்டுள்ளது. சுழிய கருதுகோள் குறிப்பிடும் (அதாவது, θ = "
+"0.5) θ இன் உண்மையான மதிப்பு மிகவும் வேறுபட்டதாக இருந்தால், சோதனை மிகவும் "
+"ஆற்றல் வாய்ந்தது (சரியான நிராகரிப்புக்கான அதிக வாய்ப்பு). Θ உண்மையில் 0.5 "
+"க்கு சமமாக இருக்கும்போது (கருப்பு புள்ளியாக திட்டமிடப்பட்டுள்ளது), சுழிய "
+"கருதுகோள் உண்மையில் உண்மை மற்றும் இந்த நிகழ்வில் சுழிய கருதுகோளை "
+"நிராகரிப்பது ஒரு வகை I பிழையாக இருக்கும்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:102
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Effect size"
+msgstr "விளைவு அளவு"
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:0
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"*Since all models are wrong the scientist must be alert to what is "
+"importantly wrong. It is inappropriate to be concerned with mice when there "
+"are tigers abroad*"
+msgstr ""
+"*எல்லா மாதிரிகள் தவறாக இருப்பதால், விஞ்ஞானி முக்கியமாக தவறு செய்ததை "
+"எச்சரிக்க வேண்டும். வெளிநாடுகளில் புலிகள் இருக்கும்போது எலிகளுடன் "
+"கவலைப்படுவது பொருத்தமற்றது*"
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:110
+#, rst-text
+msgid ":ref:`George Box (1976) <Box_1976>`"
+msgstr ": குறிப்பு: `சார்ச் பாக்ச் (1976) <பெட்டி_1976>`"
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:112
+#, rst-text
+msgid ""
+"The plot shown in :numref:`fig-powerTheta` captures a fairly basic point "
+"about hypothesis testing. If the true state of the world is very different "
+"from what the null hypothesis predicts then your power will be very high, "
+"but if the true state of the world is similar to the null (but not "
+"identical) then the power of the test is going to be very low. Therefore, "
+"it’s useful to be able to have some way of quantifying how “similar” the "
+"true state of the world is to the null hypothesis. A statistic that does "
+"this is called a measure of **effect size** (:ref:`Cohen, 1988 "
+"<Cohen_1988>`, :ref:`Ellis, 2010 <Ellis_2010>`)."
+msgstr ""
+"காட்டப்பட்டுள்ள சதி: NUMREF: `Fig-powertheta` கருதுகோள் சோதனை பற்றி மிகவும் "
+"அடிப்படை புள்ளியைப் பிடிக்கிறது. உலகின் உண்மையான நிலை சுழிய கருதுகோள் "
+"கணித்ததிலிருந்து மிகவும் வித்தியாசமாக இருந்தால், உங்கள் ஆற்றல் மிக அதிகமாக "
+"இருக்கும், ஆனால் உலகின் உண்மையான நிலை பூச்யத்திற்கு ஒத்ததாக இருந்தால் (ஆனால்"
+" ஒரே மாதிரியாக இல்லை) பின்னர் சோதனையின் ஆற்றல் போகிறது மிகக் குறைவாக இருக்க "
+"வேண்டும். ஆகையால், உலகின் உண்மையான நிலை சுழிய கருதுகோளுக்கு எவ்வளவு "
+"“ஒத்ததாக” இருக்கிறது என்பதை அளவிட சில வழிகளைக் கொண்டிருப்பது பயனுள்ளதாக "
+"இருக்கும். இதைச் செய்யும் ஒரு புள்ளிவிவரம் ** விளைவு அளவு ** (: குறிப்பு: "
+"`கோஅன், 1988 <கோஎன்_1988>`,: குறிப்பு: `எல்லிச், 2010 <liles_2010>`)."
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:121
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"Effect size is defined slightly differently in different contexts (and so "
+"this section just talks in general terms) but the qualitative idea that it "
+"tries to capture is always the same. How big is the difference between the "
+"*true* population parameters and the parameter values that are assumed by "
+"the null hypothesis? In our ESP example, if we let *θ*\\ :sub:`0` = 0.5 "
+"denote the value assumed by the null hypothesis and let *θ* denote the true "
+"value, then a simple measure of effect size could be something like the "
+"difference between the true value and null (i.e., *θ* - *θ*\\ :sub:`0`), or "
+"possibly just the magnitude of this difference, abs(*θ* - *θ*\\ :sub:`0`)."
+msgstr ""
+"விளைவு அளவு வெவ்வேறு சூழல்களில் சற்று வித்தியாசமாக வரையறுக்கப்படுகிறது (எனவே"
+" இந்த பிரிவு பொதுவான சொற்களில் பேசுகிறது) ஆனால் அது கைப்பற்ற முயற்சிக்கும் "
+"தரமான சிந்தனை எப்போதும் ஒரே மாதிரியாக இருக்கும். * உண்மை * மக்கள்தொகை "
+"அளவுருக்களுக்கும் சுழிய கருதுகோளால் கருதப்படும் அளவுரு மதிப்புகளுக்கும் "
+"இடையிலான வேறுபாடு எவ்வளவு பெரியது? எங்கள் ஈஎச்பி எடுத்துக்காட்டில், நாம் *θ "
+"*\\: துணை: `0` = 0.5 அனுமதித்தால் சுழிய கருதுகோளால் கருதப்பட்ட மதிப்பைக் "
+"குறிக்கிறது மற்றும் உண்மையான மதிப்பைக் குறிக்கட்டும் *θ *, பின்னர் விளைவு "
+"அளவின் எளிய அளவீடு போன்றதாக இருக்கலாம் உண்மையான மதிப்பு மற்றும் சுழியம் "
+"(அதாவது,*θ* -*θ*\\: துணை: `0`), அல்லது இந்த வேறுபாட்டின் அளவு, ஏபிஎச் (*θ* "
+"-*θ*\\: துணை:` 0 ஆகியவற்றுக்கு இடையேயான வேறுபாடு `)."
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:132
+#, ignore-duplicate, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"A crude guide to understanding the relationship between statistical "
+"significance and effect sizes. Basically, if you don’t have a significant "
+"result then the effect size is pretty meaningless because you don’t have any"
+" evidence that it’s even real. On the other hand, if you do have a "
+"significant effect but your effect size is small then there’s a pretty good "
+"chance that your result (although real) isn’t all that interesting. However,"
+" this guide is very crude. It depends a lot on what exactly you’re studying."
+" Small effects can be of massive practical importance in some situations. So"
+" don’t take this table too seriously. It’s a rough guide at best."
+msgstr ""
+"புள்ளிவிவர முக்கியத்துவம் மற்றும் விளைவு அளவுகளுக்கு இடையிலான உறவைப் "
+"புரிந்துகொள்வதற்கான ஒரு கச்சா வழிகாட்டி. அடிப்படையில், உங்களுக்கு ஒரு "
+"குறிப்பிடத்தக்க முடிவு இல்லையென்றால், விளைவு அளவு மிகவும் அர்த்தமற்றது, "
+"ஏனெனில் அது உண்மையானது என்பதற்கான எந்த ஆதாரமும் உங்களிடம் இல்லை. மறுபுறம், "
+"நீங்கள் ஒரு குறிப்பிடத்தக்க விளைவைக் கொண்டிருந்தால், ஆனால் உங்கள் விளைவு "
+"அளவு சிறியதாக இருந்தால், உங்கள் முடிவு (உண்மையானது என்றாலும்) அவ்வளவு "
+"சுவாரச்யமானதல்ல என்பதற்கு ஒரு நல்ல வாய்ப்பு உள்ளது. இருப்பினும், இந்த "
+"வழிகாட்டி மிகவும் கச்சா. நீங்கள் சரியாகப் படிக்கிறீர்கள் என்பதைப் பொறுத்தது."
+" சிறிய விளைவுகள் சில சூழ்நிலைகளில் மிகப்பெரிய நடைமுறை முக்கியத்துவம் "
+"வாய்ந்தவை. எனவே இந்த அட்டவணையை மிகவும் தீவிரமாக எடுத்துக் கொள்ள வேண்டாம். "
+"இது ஒரு கடினமான வழிகாட்டி."
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:144
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "big effect size"
+msgstr "பெரிய விளைவு அளவு"
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:144
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "small effect size"
+msgstr "சிறிய விளைவு அளவு"
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:146
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "significant result"
+msgstr "குறிப்பிடத்தக்க முடிவு"
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:146
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "difference is real, and of practical importance"
+msgstr "வேறுபாடு உண்மையானது, மற்றும் நடைமுறை முக்கியத்துவம் வாய்ந்தது"
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:146
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "difference is real, but might not be interesting"
+msgstr "வேறுபாடு உண்மையானது, ஆனால் சுவாரச்யமாக இருக்காது"
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:149
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "non-significant result"
+msgstr "குறிப்பிடத்தக்க முடிவு"
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:149
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "no effect observed"
+msgstr "எந்த விளைவும் காணப்படவில்லை"
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:152
+#, ignore-duplicate, ignore-python-format, rst-text
+msgid ""
+"Why calculate effect size? Let’s assume that you’ve run your experiment, "
+"collected the data, and gotten a significant effect when you ran your "
+"hypothesis test. Isn’t it enough just to say that you’ve gotten a "
+"significant effect? Surely that’s the *point* of hypothesis testing? Well, "
+"sort of. Yes, the point of doing a hypothesis test is to try to demonstrate "
+"that the null hypothesis is wrong, but that’s hardly the only thing we’re "
+"interested in. If the null hypothesis claimed that *θ* = 0.50 and we show "
+"that it’s wrong, we’ve only really told half of the story. Rejecting the "
+"null hypothesis implies that we believe that *θ* ≠ 0.50, but there’s a big "
+"difference between *θ* = 0.51 and *θ* = 0.80. If we find that *θ* = 0.80, "
+"then not only have we found that the null hypothesis is wrong, it appears to"
+" be *very* wrong. On the other hand, suppose we’ve successfully rejected the"
+" null hypothesis, but it looks like the true value of *θ* is only 0.51 (this"
+" would only be possible with a very large study). Sure, the null hypothesis "
+"is wrong but it’s not at all clear that we actually *care* because the "
+"effect size is so small. In the context of my ESP study we might still care "
+"since any demonstration of real psychic powers would actually be pretty "
+"cool,\\ [#]_ but in other contexts a 1\\% difference usually isn’t very "
+"interesting, even if it is a real difference. For instance, suppose we’re "
+"looking at differences in high school exam scores between males and females "
+"and it turns out that the female scores are 1\\% higher on average than the "
+"males. If I’ve got data from thousands of students then this difference will"
+" almost certainly be *statistically significant*, but regardless of how "
+"small the *p*-value is it’s just not very interesting. You’d hardly want to "
+"go around proclaiming a crisis in boys education on the basis of such a tiny"
+" difference would you? It’s for this reason that it is becoming more "
+"standard (slowly, but surely) to report some kind of standard measure of "
+"effect size along with the the results of the hypothesis test. The "
+"hypothesis test itself tells you whether you should believe that the effect "
+"you have observed is real (i.e., not just due to chance), whereas the effect"
+" size tells you whether or not you should care."
+msgstr ""
+"விளைவு அளவைக் கணக்கிட ஏன்? உங்கள் பரிசோதனையை நீங்கள் இயக்கியுள்ளீர்கள், "
+"தரவைச் சேகரித்தீர்கள், உங்கள் கருதுகோள் சோதனையை இயக்கும்போது குறிப்பிடத்தக்க"
+" விளைவைப் பெற்றுள்ளீர்கள் என்று வைத்துக் கொள்வோம். நீங்கள் ஒரு "
+"குறிப்பிடத்தக்க விளைவைப் பெற்றுள்ளீர்கள் என்று சொல்வது போதாதா? நிச்சயமாக இது"
+" கருதுகோள் சோதனையின் * புள்ளி *? சரி, வகை. ஆமாம், ஒரு கருதுகோள் சோதனையைச் "
+"செய்வதன் புள்ளி சுழிய கருதுகோள் தவறானது என்பதை நிரூபிக்க முயற்சிப்பதாகும், "
+"ஆனால் அதுதான் நாங்கள் ஆர்வமாக இல்லை. சுழிய கருதுகோள் * θ * = 0.50 என்று "
+"கூறினால் அது தவறு என்று நாங்கள் காட்டுகிறோம் , கதையின் பாதியை மட்டுமே "
+"நாங்கள் சொன்னோம். சுழிய கருதுகோளை நிராகரிப்பது * θ * ≠ 0.50 என்று நாங்கள் "
+"நம்புகிறோம் என்பதைக் குறிக்கிறது, ஆனால் * θ * = 0.51 மற்றும் * θ * = 0.80 "
+"க்கு இடையில் பெரிய வேறுபாடு உள்ளது. * Θ * = 0.80 என்று நாம் கண்டால், சுழிய "
+"கருதுகோள் தவறானது என்பதைக் கண்டறிந்துள்ளது மட்டுமல்லாமல், அது * மிகவும் * "
+"தவறு என்று தோன்றுகிறது. மறுபுறம், சுழிய கருதுகோளை நாங்கள் வெற்றிகரமாக "
+"நிராகரித்தோம் என்று வைத்துக்கொள்வோம், ஆனால் இது * θ * இன் உண்மையான மதிப்பு "
+"0.51 மட்டுமே என்று தெரிகிறது (இது மிகப் பெரிய ஆய்வில் மட்டுமே "
+"சாத்தியமாகும்). நிச்சயமாக, சுழிய கருதுகோள் தவறானது, ஆனால் நாம் உண்மையில் * "
+"அக்கறை * என்பது தெளிவாக இல்லை, ஏனெனில் விளைவு அளவு மிகவும் சிறியது. எனது "
+"ஈஎச்பி ஆய்வின் சூழலில், உண்மையான மனநல சக்திகளின் எந்தவொரு ஆர்ப்பாட்டமும் "
+"உண்மையில் மிகவும் அருமையாக இருக்கும் என்பதால், \\ [#] _ ஆனால் மற்ற "
+"சூழல்களில் 1 \\% வேறுபாடு பொதுவாக மிகவும் சுவாரச்யமானது அல்ல, அது ஒரு "
+"உண்மையான வேறுபாடு. உதாரணமாக, ஆண்களுக்கும் பெண்களுக்கும் இடையிலான உயர்நிலைப் "
+"பள்ளி தேர்வு மதிப்பெண்களில் உள்ள வேறுபாடுகளை நாங்கள் கவனித்து வருகிறோம் "
+"என்று வைத்துக்கொள்வோம், மேலும் பெண் மதிப்பெண்கள் ஆண்களை விட சராசரியாக 1 \\% "
+"அதிகம் என்று மாறிவிடும். ஆயிரக்கணக்கான மாணவர்களிடமிருந்து எனக்கு தரவு "
+"கிடைத்திருந்தால், இந்த வேறுபாடு நிச்சயமாக *புள்ளிவிவர ரீதியாக முக்கியத்துவம்"
+" வாய்ந்ததாக இருக்கும் *, ஆனால் *p *-மதிப்பு எவ்வளவு சிறியதாக இருந்தாலும் இது"
+" மிகவும் சுவாரச்யமானது அல்ல. இதுபோன்ற ஒரு சிறிய வித்தியாசத்தின் அடிப்படையில்"
+" சிறுவர்களின் கல்வியில் நெருக்கடியை அறிவிக்க நீங்கள் செல்ல விரும்பவில்லை? "
+"இந்த காரணத்திற்காகவே, கருதுகோள் சோதனையின் முடிவுகளுடன் விளைவு அளவின் ஒருவித "
+"நிலையான அளவைப் புகாரளிப்பது மிகவும் தரமாக (மெதுவாக, ஆனால் நிச்சயமாக) ஆகிறது."
+" நீங்கள் கவனித்த விளைவு உண்மையானது என்று நீங்கள் நம்ப வேண்டுமா என்று "
+"கருதுகோள் சோதனை உங்களுக்குக் கூறுகிறது (அதாவது, வாய்ப்பு காரணமாக மட்டுமல்ல),"
+" அதேசமயம் நீங்கள் அக்கறை கொள்ள வேண்டுமா இல்லையா என்பதை விளைவு அளவு "
+"உங்களுக்குக் கூறுகிறது."
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:188
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Increasing the power of your study"
+msgstr "உங்கள் ஆய்வின் சக்தியை அதிகரித்தல்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:190
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"Not surprisingly, scientists are fairly obsessed with maximising the power "
+"of their experiments. We want our experiments to work and so we want to "
+"maximise the chance of rejecting the null hypothesis if it is false (and of "
+"course we usually want to believe that it is false!). As we’ve seen, one "
+"factor that influences power is the effect size. So the first thing you can "
+"do to increase your power is to increase the effect size. In practice, what "
+"this means is that you want to design your study in such a way that the "
+"effect size gets magnified. For instance, in my ESP study I might believe "
+"that psychic powers work best in a quiet, darkened room with fewer "
+"distractions to cloud the mind. Therefore I would try to conduct my "
+"experiments in just such an environment. If I can strengthen people’s ESP "
+"abilities somehow then the true value of *θ* will go up\\ [#]_ and therefore"
+" my effect size will be larger. In short, clever experimental design is one "
+"way to boost power, because it can alter the effect size."
+msgstr ""
+"விஞ்ஞானிகள் தங்கள் சோதனைகளின் சக்தியை அதிகரிப்பதில் மிகவும் வெறித்தனமாக "
+"இருப்பதில் ஆச்சரியமில்லை. எங்கள் சோதனைகள் செயல்பட வேண்டும் என்று நாங்கள் "
+"விரும்புகிறோம், எனவே சுழிய கருதுகோள் தவறானது என்றால் அதை நிராகரிப்பதற்கான "
+"வாய்ப்பை அதிகரிக்க விரும்புகிறோம் (நிச்சயமாக அது தவறானது என்று நாங்கள் "
+"வழக்கமாக நம்ப விரும்புகிறோம்!). நாம் பார்த்தபடி, சக்தியை பாதிக்கும் ஒரு "
+"காரணி விளைவு அளவு. எனவே உங்கள் சக்தியை அதிகரிக்க நீங்கள் செய்யக்கூடிய முதல் "
+"சேதி விளைவு அளவை அதிகரிப்பதாகும். நடைமுறையில், இதன் பொருள் என்னவென்றால், "
+"விளைவு அளவு பெரிதாகிவிடும் வகையில் உங்கள் ஆய்வை வடிவமைக்க விரும்புகிறீர்கள்."
+" உதாரணமாக, எனது ஈஎச்பி ஆய்வில், மனநல சக்திகள் அமைதியான, இருண்ட அறையில் மனதை "
+"மேகமூட்ட குறைவான கவனச்சிதறல்களுடன் சிறப்பாக செயல்படுகின்றன என்று நான் "
+"நம்பலாம். எனவே எனது சோதனைகளை அத்தகைய சூழலில் நடத்த முயற்சிப்பேன். நான் "
+"எப்படியாவது மக்களின் ஈஎச்பி திறன்களை வலுப்படுத்த முடிந்தால், * θ * இன் "
+"உண்மையான மதிப்பு \\ [#] _ அதிகரிக்கும், எனவே எனது விளைவு அளவு பெரிதாக "
+"இருக்கும். சுருக்கமாக, புத்திசாலித்தனமான சோதனை வடிவமைப்பு சக்தியை "
+"அதிகரிப்பதற்கான ஒரு வழியாகும், ஏனெனில் இது விளைவு அளவை மாற்றும்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:206
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"Unfortunately, it’s often the case that even with the best of experimental "
+"designs you may have only a small effect. Perhaps, for example, ESP really "
+"does exist but even under the best of conditions it’s very very weak. Under "
+"those circumstances your best bet for increasing power is to increase the "
+"sample size. In general, the more observations that you have available, the "
+"more likely it is that you can discriminate between two hypotheses. If I ran"
+" my ESP experiment with 10 participants and 7 of them correctly guessed the "
+"colour of the hidden card you wouldn’t be terribly impressed. But if I ran "
+"it with 10,000 participants, and 7,000 of them got the answer right, you "
+"would be much more likely to think I had discovered something. In other "
+"words, power increases with the sample size. This is illustrated in "
+":numref:`fig-powerN`, which shows the power of the test for a true parameter"
+" of *θ* = 0.70 for all sample sizes *N* from 1 to 100, where I’m assuming "
+"that the null hypothesis predicts that *θ*\\ :sub:`0` = 0.5."
+msgstr ""
+"துரதிர்ச்டவசமாக, சிறந்த சோதனை வடிவமைப்புகளுடன் கூட நீங்கள் ஒரு சிறிய விளைவை "
+"மட்டுமே கொண்டிருக்கலாம். எடுத்துக்காட்டாக, எச்பி உண்மையில் உள்ளது, ஆனால் "
+"சிறந்த நிலைமைகளின் கீழ் கூட இது மிகவும் பலவீனமானது. அந்த சூழ்நிலைகளில் "
+"சக்தியை அதிகரிப்பதற்கான உங்கள் சிறந்த பந்தயம் மாதிரி அளவை அதிகரிப்பதாகும். "
+"பொதுவாக, உங்களிடம் அதிக அவதானிப்புகள் கிடைக்கின்றன, இரண்டு கருதுகோள்களுக்கு "
+"இடையில் நீங்கள் பாகுபாடு காட்ட வாய்ப்புள்ளது. நான் 10 பங்கேற்பாளர்களுடன் "
+"எனது ஈஎச்பி பரிசோதனையை இயக்கினால், அவர்களில் 7 பேர் மறைக்கப்பட்ட அட்டையின் "
+"நிறத்தை சரியாக யூகித்தால், நீங்கள் மிகவும் ஈர்க்கப்பட மாட்டீர்கள். ஆனால் "
+"நான் அதை 10,000 பங்கேற்பாளர்களுடன் ஓடினால், அவர்களில் 7,000 டாலர் பதிலைப் "
+"பெற்றால், நான் ஏதாவது கண்டுபிடித்தேன் என்று நீங்கள் நினைப்பீர்கள். வேறு "
+"வார்த்தைகளில் கூறுவதானால், மாதிரி அளவுடன் ஆற்றல் அதிகரிக்கிறது. இது இதில் "
+"விளக்கப்பட்டுள்ளது: NumRef: `Fig-powern`, இது 1 முதல் 100 வரை அனைத்து மாதிரி"
+" அளவுகளுக்கும் * n * இன் உண்மையான அளவுருவுக்கான சோதனையின் சக்தியைக் "
+"காட்டுகிறது, அங்கு நான் சுழியம் என்று கருதுகிறேன் கருதுகோள் *θ *\\: துணை: "
+"`0` = 0.5 என்று கணித்துள்ளது."
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:228
+#, rst-text
+msgid ""
+"The power of our test plotted as a function of the sample size N. In this "
+"case, the true value of θ is 0.7 but the null hypothesis is that θ = 0.5. "
+"Overall, larger *N* means greater power (the small zig-zags in this function"
+" occur because of some odd interactions between θ, α and the fact that the "
+"binomial distribution is discrete, it doesn’t matter for any serious "
+"purpose)."
+msgstr ""
+"எங்கள் சோதனையின் ஆற்றல் மாதிரி அளவு N இன் செயல்பாடாக திட்டமிடப்பட்டுள்ளது. "
+"இந்த விசயத்தில், θ இன் உண்மையான மதிப்பு 0.7 ஆகும், ஆனால் சுழிய கருதுகோள் θ ="
+" 0.5 ஆகும். ஒட்டுமொத்தமாக, பெரியது * n * என்பது அதிக ஆற்றல் என்று பொருள் "
+"(இந்த செயல்பாட்டில் உள்ள சிறிய சிக்-சாக்ச் α, binder க்கு இடையில் சில "
+"ஒற்றைப்படை தொடர்புகள் மற்றும் பைனோமியல் வழங்கல் தனித்தனியாக இருப்பதால், இது "
+"எந்தவொரு தீவிர நோக்கத்திற்கும் ஒரு பொருட்டல்ல)."
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:237
+#, ignore-duplicate, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"Because power is important, whenever you’re contemplating running an "
+"experiment it would be pretty useful to know how much power you’re likely to"
+" have. It’s never possible to know for sure since you can’t possibly know "
+"what your real effect size is. However, it’s often (well, sometimes) "
+"possible to guess how big it should be. If so, you can guess what sample "
+"size you need! This idea is called **power analysis**, and if it’s feasible "
+"to do it then it’s very helpful. It can tell you something about whether you"
+" have enough time or money to be able to run the experiment successfully. "
+"It’s increasingly common to see people arguing that power analysis should be"
+" a required part of experimental design, so it’s worth knowing about. I "
+"don’t discuss power analysis in this book, however. This is partly for a "
+"boring reason and partly for a substantive one. The boring reason is that I "
+"haven’t had time to write about power analysis yet. The substantive one is "
+"that I’m still a little suspicious of power analysis. Speaking as a "
+"researcher, I have very rarely found myself in a position to be able to do "
+"one. It’s either the case that (a) my experiment is a bit non-standard and I"
+" don’t know how to define effect size properly, or (b) I literally have so "
+"little idea about what the effect size will be that I wouldn’t know how to "
+"interpret the answers. Not only that, after extensive conversations with "
+"someone who does stats consulting for a living (my wife, as it happens), I "
+"can’t help but notice that in practice the *only* time anyone ever asks her "
+"for a power analysis is when she’s helping someone write a grant "
+"application. In other words, the only time any scientist ever seems to want "
+"a power analysis in real life is when they’re being forced to do it by "
+"bureaucratic process. It’s not part of anyone’s day to day work. In short, "
+"I’ve always been of the view that whilst power is an important concept, "
+"power *analysis* is not as useful as people make it sound, except in the "
+"rare cases where (a) someone has figured out how to calculate power for your"
+" actual experimental design and (b) you have a pretty good idea what the "
+"effect size is likely to be.\\ [#]_ Maybe other people have had better "
+"experiences than me, but I’ve personally never been in a situation where "
+"both (a) and (b) were true. Maybe I’ll be convinced otherwise in the future,"
+" and probably a future version of this book would include a more detailed "
+"discussion of power analysis, but for now this is about as much as I’m "
+"comfortable saying about the topic."
+msgstr ""
+"ஆற்றல் முக்கியமானது என்பதால், நீங்கள் ஒரு பரிசோதனையை நடத்துவதைப் பற்றி "
+"சிந்திக்கும்போதெல்லாம், உங்களுக்கு எவ்வளவு ஆற்றல் இருக்கக்கூடும் என்பதை "
+"அறிந்து கொள்வது மிகவும் பயனுள்ளதாக இருக்கும். உங்கள் உண்மையான விளைவு அளவு "
+"என்ன என்பதை நீங்கள் அறிய முடியாததால், ஒருபோதும் உறுதியாக அறிய முடியாது. "
+"இருப்பினும், இது எவ்வளவு பெரியதாக இருக்க வேண்டும் என்று யூகிப்பது "
+"பெரும்பாலும் (நன்றாக, சில நேரங்களில்) சாத்தியமாகும். அப்படியானால், "
+"உங்களுக்கு என்ன மாதிரி அளவு தேவை என்பதை நீங்கள் யூகிக்க முடியும்! இந்த "
+"சிந்தனை ** ஆற்றல் பகுப்பாய்வு ** என்று அழைக்கப்படுகிறது, மேலும் அதைச் "
+"செய்வது சாத்தியமானதாக இருந்தால், அது மிகவும் உதவியாக இருக்கும். பரிசோதனையை "
+"வெற்றிகரமாக இயக்க உங்களுக்கு போதுமான நேரம் அல்லது பணம் இருக்கிறதா என்பது "
+"பற்றி இது உங்களுக்கு ஏதாவது சொல்ல முடியும். ஆற்றல் பகுப்பாய்வு சோதனை "
+"வடிவமைப்பின் தேவையான பகுதியாக இருக்க வேண்டும் என்று மக்கள் வாதிடுவதைப் "
+"பார்ப்பது மிகவும் பொதுவானது, எனவே அதைப் பற்றி அறிந்து கொள்வது மதிப்பு. "
+"இருப்பினும், இந்த புத்தகத்தில் நான் ஆற்றல் பகுப்பாய்வு பற்றி "
+"விவாதிக்கவில்லை. இது ஓரளவு சலிப்பான காரணத்திற்காகவும், ஓரளவு கணிசமானதாகவும் "
+"உள்ளது. சலிப்பான காரணம் என்னவென்றால், ஆற்றல் பகுப்பாய்வு பற்றி இன்னும் எழுத "
+"எனக்கு நேரம் இல்லை. ஆற்றல் பகுப்பாய்வு குறித்து நான் இன்னும் கொஞ்சம் "
+"சந்தேகிக்கிறேன். ஒரு ஆராய்ச்சியாளராகப் பேசும்போது, ​​ஒன்றைச் செய்யக்கூடிய "
+"நிலையில் நான் மிகவும் அரிதாகவே இருப்பதைக் கண்டேன். (அ) ​​எனது சோதனை சற்று "
+"தரமற்றது, விளைவு அளவை எவ்வாறு சரியாக வரையறுப்பது என்று எனக்குத் தெரியவில்லை,"
+" அல்லது (ஆ) விளைவு அளவு என்னவாக இருக்கும் என்பது பற்றி எனக்கு மிகக் குறைவான "
+"சிந்தனை இருக்கிறது ' பதில்களை எவ்வாறு விளக்குவது என்று தெரியும். அது "
+"மட்டுமல்லாமல், ஒரு வாழ்க்கைக்காக (என் மனைவி, அது நடப்பது போல) "
+"புள்ளிவிவரங்களைச் செய்யும் ஒருவருடன் விரிவான உரையாடல்களுக்குப் பிறகு, எனக்கு"
+" உதவ முடியாது, ஆனால் நடைமுறையில் * ஒரு ஆற்றல் பகுப்பாய்வு எப்போது என்று "
+"யாராவது அவளிடம் கேட்கும் நேரம் என்பதை கவனிக்க முடியாது மானிய விண்ணப்பத்தை "
+"எழுத ஒருவருக்கு அவள் உதவுகிறாள். வேறு வார்த்தைகளில் கூறுவதானால், எந்தவொரு "
+"விஞ்ஞானியும் நிச வாழ்க்கையில் ஒரு ஆற்றல் பகுப்பாய்வை விரும்புவதாகத் "
+"தெரிகிறது, அவர்கள் அதிகாரத்துவ செயல்முறையால் அதைச் செய்ய "
+"நிர்பந்திக்கப்படுகிறார்கள். இது யாருடைய அன்றாட வேலையின் ஒரு பகுதியாக இல்லை. "
+"சுருக்கமாக, ஆற்றல் ஒரு முக்கியமான கருத்தாக இருக்கும்போது, ​​சக்தி * "
+"பகுப்பாய்வு * மக்கள் ஒலிப்பதைப் போல பயனுள்ளதாக இருக்காது, (அ) சக்தியை "
+"எவ்வாறு கணக்கிடுவது என்பதைக் கண்டுபிடித்த அரிய சந்தர்ப்பங்களில் தவிர, நான் "
+"எப்போதுமே பயனுள்ளதாக இருக்காது உங்கள் உண்மையான சோதனை வடிவமைப்பு மற்றும் (ஆ) "
+"விளைவு அளவு என்னவாக இருக்கக்கூடும் என்று உங்களுக்கு நல்ல சிந்தனை இருக்கிறது."
+" \\ [#] _ மற்றவர்கள் என்னை விட சிறந்த அனுபவங்களைக் கொண்டிருக்கலாம், ஆனால் "
+"நான் தனிப்பட்ட முறையில் ஒரு சூழ்நிலையில் இருந்ததில்லை (அ) ​​மற்றும் (ஆ) "
+"இரண்டும் உண்மைதான். எதிர்காலத்தில் நான் வேறுவிதமாக உறுதியாக நம்புவேன், "
+"மேலும் இந்த புத்தகத்தின் எதிர்கால பதிப்பில் ஆற்றல் பகுப்பாய்வு பற்றிய "
+"விரிவான கலந்துரையாடல் அடங்கும், ஆனால் இப்போதைக்கு இது தலைப்பைப் பற்றி நான் "
+"வசதியாக இருக்கும்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:277
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"Although in practice a very small effect size is worrying because even very "
+"minor methodological flaws might be responsible for the effect, and in "
+"practice no experiment is perfect so there are always methodological issues "
+"to worry about."
+msgstr ""
+"நடைமுறையில் மிகச் சிறிய விளைவு அளவு கவலைக்குரியது என்றாலும், மிகச் சிறிய "
+"முறையான குறைபாடுகள் கூட விளைவுக்கு காரணமாக இருக்கலாம், மேலும் நடைமுறையில் "
+"எந்தவொரு சோதனையும் சரியாக இல்லை, எனவே கவலைப்பட எப்போதும் முறையான சிக்கல்கள் "
+"உள்ளன."
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:283
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"Notice that the true population parameter *θ* doesn’t necessarily correspond"
+" to an immutable fact of nature. In this context *θ* is just the true "
+"probability that people would correctly guess the colour of the card in the "
+"other room. As such the population parameter can be influenced by all sorts "
+"of things. Of course, this is all on the assumption that ESP actually "
+"exists!"
+msgstr ""
+"உண்மையான மக்கள்தொகை அளவுரு * θ * இயற்கையின் மாறாத உண்மைக்கு பொருந்தாது "
+"என்பதைக் கவனியுங்கள். இந்த சூழலில் * θ * என்பது மற்ற அறையில் உள்ள அட்டையின் "
+"நிறத்தை மக்கள் சரியாக யூகிக்கும் உண்மையான நிகழ்தகவு மட்டுமே. எனவே மக்கள்தொகை"
+" அளவுரு அனைத்து வகையான விசயங்களாலும் பாதிக்கப்படலாம். நிச்சயமாக, இது "
+"உண்மையில் எச்பி உண்மையில் உள்ளது என்ற அனுமானத்தில் உள்ளது!"
+
+#: ../../Ch09/Ch09_HypothesisTesting_08.rst:291
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"One possible exception to this is when researchers study the effectiveness "
+"of a new medical treatment and they specify in advance what an important "
+"effect size would be to detect, for example over and above any existing "
+"treatment. In this way some information about the potential value of a new "
+"treatment can be obtained."
+msgstr ""
+"இதற்கு ஒரு சாத்தியமான விதிவிலக்கு என்னவென்றால், ஆராய்ச்சியாளர்கள் ஒரு புதிய "
+"மருத்துவ சிகிச்சையின் செயல்திறனைப் படிக்கும்போது, ​​ஒரு முக்கியமான விளைவு "
+"அளவைக் கண்டறிவது என்ன என்பதை அவர்கள் முன்கூட்டியே குறிப்பிடுகிறார்கள், "
+"எடுத்துக்காட்டாக தற்போதுள்ள எந்தவொரு சிகிச்சையையும் விடவும் அதற்கு மேல். "
+"இந்த வழியில் ஒரு புதிய சிகிச்சையின் சாத்தியமான மதிப்பைப் பற்றிய சில "
+"தகவல்களைப் பெறலாம்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_09.rst:4
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Some issues to consider"
+msgstr "கருத்தில் கொள்ள வேண்டிய சில சிக்கல்கள்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_09.rst:6
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"What I’ve described to you in this chapter is the orthodox framework for "
+"null hypothesis significance testing (NHST). Understanding how NHST works is"
+" an absolute necessity because it has been the dominant approach to "
+"inferential statistics ever since it came to prominence in the early 20th "
+"century. It’s what the vast majority of working scientists rely on for their"
+" data analysis, so even if you hate it you need to know it. However, the "
+"approach is not without problems. There are a number of quirks in the "
+"framework, historical oddities in how it came to be, theoretical disputes "
+"over whether or not the framework is right, and a lot of practical traps for"
+" the unwary. I’m not going to go into a lot of detail on this topic, but I "
+"think it’s worth briefly discussing a few of these issues."
+msgstr ""
+"இந்த அத்தியாயத்தில் நான் உங்களுக்கு விவரித்திருப்பது சுழிய கருதுகோள் "
+"முக்கியத்துவ சோதனைக்கான ஆர்த்தடாக்ச் கட்டமைப்பாகும் (என்.எச்.எச்.டி). "
+"என்எச்எச்டி எவ்வாறு செயல்படுகிறது என்பதைப் புரிந்துகொள்வது ஒரு முழுமையான "
+"தேவை, ஏனெனில் இது 20 ஆம் நூற்றாண்டின் முற்பகுதியில் முக்கியத்துவம் "
+"பெற்றதிலிருந்து அனுமான புள்ளிவிவரங்களுக்கான மேலாதிக்க அணுகுமுறையாகும். "
+"உழைக்கும் விஞ்ஞானிகளில் பெரும்பான்மையானவர்கள் தங்கள் தரவு பகுப்பாய்வை "
+"நம்பியிருக்கிறார்கள், எனவே நீங்கள் அதை வெறுக்கிறீர்கள் என்றாலும் அதை நீங்கள்"
+" அறிந்து கொள்ள வேண்டும். இருப்பினும், அணுகுமுறை சிக்கல்கள் இல்லாமல் இல்லை. "
+"கட்டமைப்பில் ஏராளமான நகைச்சுவைகள் உள்ளன, அது எப்படி வந்தது என்பதில் வரலாற்று"
+" விந்தைகள், கட்டமைப்பானது சரியானதா இல்லையா என்பது குறித்த தத்துவார்த்த "
+"மோதல்கள், மற்றும் தெரியாதவர்களுக்கு நிறைய நடைமுறை பொறிகள் உள்ளன. இந்த "
+"தலைப்பில் நான் நிறைய விவரங்களுக்குச் செல்லப் போவதில்லை, ஆனால் இந்த "
+"சிக்கல்களில் சிலவற்றை சுருக்கமாக விவாதிப்பது மதிப்பு என்று நான் "
+"நினைக்கிறேன்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_09.rst:20
+#, ignore-inconsistent, ignore-long-untranslated, ignore-same, rst-text
+msgid "Neyman versus Fisher"
+msgstr "நெய்மன் மற்றும் ஃபிசர்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_09.rst:22
+#, rst-text
+msgid ""
+"The first thing you should be aware of is that orthodox NHST is actually a "
+"mash-up of two rather different approaches to hypothesis testing, one "
+"proposed by Sir Ronald Fisher and the other proposed by Jerzy Neyman (see "
+":ref:`Lehmann, 2011 <Lehmann_2011>` for a historical summary). The history "
+"is messy because Fisher and Neyman were real people whose opinions changed "
+"over time, and at no point did either of them offer “the definitive "
+"statement” of how we should interpret their work many decades later. That "
+"said, here’s a quick summary of what I take these two approaches to be."
+msgstr ""
+"நீங்கள் அறிந்திருக்க வேண்டிய முதல் சேதி என்னவென்றால், ஆர்த்தடாக்ச் "
+"என்.எச்.எச்.டி உண்மையில் கருதுகோள் சோதனைக்கு இரண்டு மாறுபட்ட அணுகுமுறைகளின் "
+"மேச்-அப் ஆகும், ஒன்று சர் ரொனால்ட் ஃபிசர் முன்மொழியப்பட்டது, மற்றொன்று "
+"செர்சி நெய்மனால் முன்மொழியப்பட்டது (பார்க்க: குறிப்பு: `லெஅ்மன், 2011 < "
+"Lehmann_2011> `ஒரு வரலாற்று சுருக்கத்திற்கு). வரலாறு குழப்பமாக இருக்கிறது, "
+"ஏனென்றால் ஃபிசரும் நெய்மனும் உண்மையான மனிதர்களாக இருந்தனர், அதன் "
+"கருத்துக்கள் காலப்போக்கில் மாறியது, மேலும் எந்த நேரத்திலும் அவர்களில் ஒருவர்"
+" பல தசாப்தங்களுக்குப் பிறகு அவர்களின் வேலையை எவ்வாறு விளக்க வேண்டும் "
+"என்பதற்கான \"உறுதியான அறிக்கையை\" வழங்கவில்லை. இந்த இரண்டு அணுகுமுறைகளையும் "
+"நான் எடுத்துக்கொள்வதற்கான விரைவான சுருக்கம் இங்கே."
+
+#: ../../Ch09/Ch09_HypothesisTesting_09.rst:31
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"First, let’s talk about Fisher’s approach. As far as I can tell, Fisher "
+"assumed that you only had the one hypothesis (the null) and that what you "
+"want to do is find out if the null hypothesis is inconsistent with the data."
+" From his perspective, what you should do is check to see if the data are "
+"“sufficiently unlikely” according to the null. In fact, if you remember back"
+" to our earlier discussion, that’s how Fisher defines the *p*-value. "
+"According to Fisher, if the null hypothesis provided a very poor account of "
+"the data then you could safely reject it. But, since you don’t have any "
+"other hypotheses to compare it to, there’s no way of “accepting the "
+"alternative” because you don’t necessarily have an explicitly stated "
+"alternative. That’s more or less all there is to it."
+msgstr ""
+"முதலில், ஃபிசரின் அணுகுமுறையைப் பற்றி பேசலாம். என்னால் சொல்ல முடிந்தவரை, "
+"ஃபிசர் உங்களிடம் ஒரு கருதுகோள் (பூச்யம்) மட்டுமே இருப்பதாகவும், நீங்கள் "
+"செய்ய விரும்புவது சுழிய கருதுகோள் தரவுகளுடன் முரணாக இருக்கிறதா என்பதைக் "
+"கண்டுபிடிப்பதையும் கருதினார். அவரது கண்ணோட்டத்தில், நீங்கள் என்ன செய்ய "
+"வேண்டியது என்பது பூச்யத்தின் படி தரவு “போதுமான சாத்தியமில்லை” என்பதை "
+"சரிபார்க்க வேண்டும். உண்மையில், எங்கள் முந்தைய விவாதத்தை நீங்கள் நினைவில் "
+"வைத்திருந்தால், ஃபிசர் *பி *-மதிப்பை வரையறுக்கிறார். ஃபிசரின் கூற்றுப்படி, "
+"சுழிய கருதுகோள் தரவின் மிக மோசமான கணக்கை வழங்கினால், நீங்கள் அதை பாதுகாப்பாக"
+" நிராகரிக்கலாம். ஆனால், அதை ஒப்பிடுவதற்கு உங்களிடம் வேறு எந்த கருதுகோள்களும்"
+" இல்லை என்பதால், “மாற்றீட்டை ஏற்றுக்கொள்வதற்கான” வழி இல்லை, ஏனெனில் "
+"உங்களிடம் வெளிப்படையாகக் கூறப்பட்ட மாற்று இல்லை. அதுதான் அதிகமாகவோ அல்லது "
+"குறைவாகவோ இருக்கிறது."
+
+#: ../../Ch09/Ch09_HypothesisTesting_09.rst:44
+#, rst-text
+msgid ""
+"In contrast, Neyman thought that the point of hypothesis testing was as a "
+"guide to action and his approach was somewhat more formal than Fisher’s. His"
+" view was that there are multiple things that you could *do* (accept the "
+"null or accept the alternative) and the point of the test was to tell you "
+"which one the data support. From this perspective, it is critical to specify"
+" your alternative hypothesis properly. If you don’t know what the "
+"alternative hypothesis is, then you don’t know how powerful the test is, or "
+"even which action makes sense. His framework genuinely requires a "
+"competition between different hypotheses. For Neyman, the *p*-value didn’t "
+"directly measure the probability of the data (or data more extreme) under "
+"the null, it was more of an abstract description about which “possible "
+"tests” were telling you to accept the null, and which “possible tests” were "
+"telling you to accept the alternative."
+msgstr ""
+"இதற்கு நேர்மாறாக, கருதுகோள் சோதனையின் புள்ளி செயலுக்கான வழிகாட்டியாக "
+"இருந்தது என்றும் அவரது அணுகுமுறை ஃபிசரை விட சற்றே முறையானது என்றும் நெய்மன் "
+"நினைத்தார். அவரது கருத்து என்னவென்றால், நீங்கள் செய்யக்கூடிய பல விசயங்கள் "
+"உள்ளன * (பூச்யத்தை ஏற்றுக்கொள்ளுங்கள் அல்லது மாற்றீட்டை ஏற்றுக்கொள்ளுங்கள்) "
+"மற்றும் சோதனையின் புள்ளி எந்த தரவு உதவி உங்களுக்குச் சொல்வதுதான். இந்த "
+"கண்ணோட்டத்தில், உங்கள் மாற்று கருதுகோளை சரியாகக் குறிப்பிடுவது மிக முதன்மை. "
+"மாற்று கருதுகோள் என்னவென்று உங்களுக்குத் தெரியாவிட்டால், சோதனை எவ்வளவு "
+"ஆற்றல் வாய்ந்தது என்பது உங்களுக்குத் தெரியாது, அல்லது எந்த நடவடிக்கை "
+"அர்த்தமுள்ளதாக இருக்கிறது. அவரது கட்டமைப்பிற்கு உண்மையிலேயே வெவ்வேறு "
+"கருதுகோள்களுக்கு இடையில் ஒரு போட்டி தேவைப்படுகிறது. நெய்மானைப் பொறுத்தவரை, "
+"*பி *-மதிப்பு பூச்யத்தின் கீழ் தரவின் நிகழ்தகவை (அல்லது தரவு மிகவும் "
+"தீவிரமானது) நேரடியாக அளவிடவில்லை, இது ஒரு சுருக்க விளக்கமாக இருந்தது, இது "
+"\"சாத்தியமான சோதனைகள்\" பூச்யத்தை ஏற்றுக்கொள்ளச் சொல்கிறது, எந்த “சாத்தியமான"
+" சோதனைகள்” மாற்றீட்டை ஏற்றுக்கொள்ளச் சொல்லும்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_09.rst:59
+#, rst-text
+msgid ""
+"As you can see, what we have today is an odd mishmash of the two. We talk "
+"about having both a null hypothesis and an alternative (Neyman), but "
+"usually\\ [#]_ define the *p*-value in terms of extreme data (Fisher), but "
+"we still have α values (Neyman). Some of the statistical tests have "
+"explicitly specified alternatives (Neyman) but others are quite vague about "
+"it (Fisher). And, according to some people at least, we’re not allowed to "
+"talk about accepting the alternative (Fisher). It’s a mess, but I hope this "
+"at least explains why it’s a mess."
+msgstr ""
+"நீங்கள் பார்க்க முடியும் என, இன்று நம்மிடம் இருப்பது இருவரின் ஒற்றைப்படை "
+"மிச்மாச் ஆகும். ஒரு சுழிய கருதுகோள் மற்றும் மாற்று (நெய்மன்) இரண்டையும் "
+"கொண்டிருப்பதைப் பற்றி நாங்கள் பேசுகிறோம், ஆனால் வழக்கமாக \\ [#] _ தீவிர தரவு"
+" (ஃபிசர்) அடிப்படையில் *பி *-மதிப்பை வரையறுக்கவும், ஆனால் நம்மிடம் α "
+"மதிப்புகள் (நெய்மன்) உள்ளன. சில புள்ளிவிவர சோதனைகள் வெளிப்படையாகக் "
+"குறிப்பிடப்பட்ட மாற்று வழிகளைக் கொண்டுள்ளன (நெய்மன்) ஆனால் மற்றவை அதைப் "
+"பற்றி மிகவும் தெளிவற்றவை (ஃபிசர்). மேலும், சிலரின் கூற்றுப்படி, மாற்றீட்டை "
+"(ஃபிசர்) ஏற்றுக்கொள்வது பற்றி பேச எங்களுக்கு இசைவு இல்லை. இது ஒரு குழப்பம், "
+"ஆனால் இது ஏன் ஒரு குழப்பம் என்பதை இது விளக்குகிறது என்று நம்புகிறேன்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_09.rst:70
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Bayesians versus frequentists"
+msgstr "பேய்சியன் வெர்சச் அடிக்கடி"
+
+#: ../../Ch09/Ch09_HypothesisTesting_09.rst:72
+#, ignore-duplicate, rst-text
+msgid ""
+"Earlier on in this chapter I was quite emphatic about the fact that you "
+"*cannot* interpret the *p*-value as the probability that the null hypothesis"
+" is true. NHST is fundamentally a frequentist tool (see chapter "
+":doc:`../Ch07/Ch07_Probability`) and as such it does not allow you to assign"
+" probabilities to hypotheses. The null hypothesis is either true or it is "
+"not. The Bayesian approach to statistics interprets probability as a degree "
+"of belief, so it’s totally okay to say that there is a 10\\% chance that the"
+" null hypothesis is true. That’s just a reflection of the degree of "
+"confidence that you have in this hypothesis. You aren’t allowed to do this "
+"within the frequentist approach. Remember, if you’re a frequentist, a "
+"probability can only be defined in terms of what happens after a large "
+"number of independent replications (i.e., a long run frequency). If this is "
+"your interpretation of probability, talking about the “probability” that the"
+" null hypothesis is true is complete gibberish: a null hypothesis is either "
+"true or it is false. There’s no way you can talk about a long run frequency "
+"for this statement. To talk about “the probability of the null hypothesis” "
+"is as meaningless as “the colour of freedom”. It doesn’t have one!"
+msgstr ""
+"இந்த அத்தியாயத்தில் முன்னதாக நான் *p *-value ஐ சுழிய கருதுகோள் உண்மையாக "
+"இருப்பதற்கான நிகழ்தகவாக விளக்க முடியாது என்ற உண்மையைப் பற்றி நான் மிகவும் "
+"உறுதியாக இருந்தேன். NHST என்பது அடிப்படையில் அடிக்கடி நிகழும் கருவியாகும் "
+"(அத்தியாயம்: DOC: `../ ch07/ch07_probability`) மற்றும் கருதுகோள்களுக்கு "
+"நிகழ்தகவுகளை ஒதுக்க உங்களை அனுமதிக்காது. சுழிய கருதுகோள் உண்மை அல்லது அது "
+"இல்லை. புள்ளிவிவரங்களுக்கான பேய்சியன் அணுகுமுறை நிகழ்தகவை நம்பிக்கையின் "
+"அளவாக விளக்குகிறது, எனவே சுழிய கருதுகோள் உண்மையாக இருக்க 10 \\% வாய்ப்பு "
+"உள்ளது என்று சொல்வது முற்றிலும் சரி. இந்த கருதுகோளில் உங்களிடம் உள்ள "
+"நம்பிக்கையின் அளவின் பிரதிபலிப்பு இது. அடிக்கடி நிகழும் அணுகுமுறையில் இதைச் "
+"செய்ய உங்களுக்கு இசைவு இல்லை. நினைவில் கொள்ளுங்கள், நீங்கள் அடிக்கடி நிகழும்"
+" என்றால், அதிக எண்ணிக்கையிலான சுயாதீன பிரதிகளுக்குப் பிறகு (அதாவது நீண்ட கால"
+" அதிர்வெண்) என்ன நடக்கிறது என்பதன் அடிப்படையில் மட்டுமே நிகழ்தகவை வரையறுக்க "
+"முடியும். இது நிகழ்தகவு குறித்த உங்கள் விளக்கமாக இருந்தால், சுழிய கருதுகோள் "
+"உண்மை என்று “நிகழ்தகவு” பற்றி பேசுவது முழுமையான அபத்தமானது: ஒரு சுழிய "
+"கருதுகோள் உண்மை அல்லது அது தவறானது. இந்த அறிக்கைக்கு நீண்டகால அதிர்வெண் "
+"பற்றி நீங்கள் பேச வழி இல்லை. “பூச்ய கருதுகோளின் நிகழ்தகவு” பற்றி பேசுவது "
+"“சுதந்திரத்தின் நிறம்” போலவே அர்த்தமற்றது. அதற்கு ஒன்று இல்லை!"
+
+#: ../../Ch09/Ch09_HypothesisTesting_09.rst:90
+#, rst-text
+msgid ""
+"Most importantly, this *isn’t* a purely ideological matter. If you decide "
+"that you are a Bayesian and that you’re okay with making probability "
+"statements about hypotheses, you have to follow the Bayesian rules for "
+"calculating those probabilities. I’ll talk more about this in "
+"chapter :doc:`../Ch16/Ch16_Bayes`, but for now what I want to point out to "
+"you is the *p*-value is a *terrible* approximation to the probability that "
+"H\\ :sub:`0` is true. If what you want to know is the probability of the "
+"null, then the *p*-value is not what you’re looking for!"
+msgstr ""
+"மிக முக்கியமாக, இது * முற்றிலும் கருத்தியல் சேதி அல்ல. நீங்கள் ஒரு பேய்சியன்"
+" என்றும், கருதுகோள்களைப் பற்றிய நிகழ்தகவு அறிக்கைகளை வெளியிடுவதில் நீங்கள் "
+"சரி என்றும் நீங்கள் முடிவு செய்தால், அந்த நிகழ்தகவுகளைக் கணக்கிடுவதற்கு "
+"நீங்கள் பேய்சியன் விதிகளைப் பின்பற்ற வேண்டும். அத்தியாயத்தில் இதைப் பற்றி "
+"நான் அதிகம் பேசுவேன்: டாக்: `../ சி.எச் .16/சி.எச். \\: துணை: `0` உண்மை. "
+"நீங்கள் தெரிந்து கொள்ள விரும்புவது பூச்யத்தின் நிகழ்தகவு என்றால், *p "
+"*-மதிப்பு நீங்கள் தேடுவது அல்ல!"
+
+#: ../../Ch09/Ch09_HypothesisTesting_09.rst:100
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Traps"
+msgstr "பொறிகள்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_09.rst:102
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"As you can see, the theory behind hypothesis testing is a mess, and even now"
+" there are arguments in statistics about how it “should” work. However, "
+"disagreements among statisticians are not our real concern here. Our real "
+"concern is practical data analysis. And while the “orthodox” approach to "
+"null hypothesis significance testing has many drawbacks, even an unrepentant"
+" Bayesian like myself would agree that they can be useful if used "
+"responsibly. Most of the time they give sensible answers and you can use "
+"them to learn interesting things. Setting aside the various ideologies and "
+"historical confusions that we’ve discussed, the fact remains that the "
+"biggest danger in all of statistics is *thoughtlessness*. I don’t mean "
+"stupidity, I literally mean thoughtlessness. The rush to interpret a result "
+"without spending time thinking through what each test actually says about "
+"the data, and checking whether that’s consistent with how you’ve interpreted"
+" it. That’s where the biggest trap lies."
+msgstr ""
+"நீங்கள் பார்க்க முடியும் என, கருதுகோள் சோதனையின் பின்னால் உள்ள கோட்பாடு ஒரு "
+"குழப்பம், இப்போது கூட அது எவ்வாறு செயல்பட வேண்டும் என்பது பற்றிய "
+"புள்ளிவிவரங்களில் வாதங்கள் உள்ளன. இருப்பினும், புள்ளிவிவர நிபுணர்களிடையே "
+"கருத்து வேறுபாடுகள் இங்கே எங்கள் உண்மையான அக்கறை அல்ல. எங்கள் உண்மையான கவலை "
+"நடைமுறை தரவு பகுப்பாய்வு ஆகும். சுழிய கருதுகோள் முக்கியத்துவ சோதனைக்கான "
+"“ஆர்த்தடாக்ச்” அணுகுமுறை பல குறைபாடுகளைக் கொண்டிருந்தாலும், என்னைப் போன்ற "
+"ஒரு மனந்திரும்பாத பேய்சியன் கூட பொறுப்புடன் பயன்படுத்தினால் அவை பயனுள்ளதாக "
+"இருக்கும் என்பதை ஒப்புக் கொள்ளும். பெரும்பாலான நேரங்களில் அவர்கள் விவேகமான "
+"பதில்களைக் கொடுக்கிறார்கள், மேலும் சுவையான விசயங்களைக் கற்றுக்கொள்ள நீங்கள் "
+"அவற்றைப் பயன்படுத்தலாம். நாம் விவாதித்த பல்வேறு சித்தாந்தங்கள் மற்றும் "
+"வரலாற்று குழப்பங்களை ஒதுக்கி வைத்துக் கொண்டால், எல்லா புள்ளிவிவரங்களிலும் "
+"மிகப்பெரிய இடர் *சிந்தனையற்ற தன்மை *என்பதே உண்மை. நான் முட்டாள்தனத்தை "
+"அர்த்தப்படுத்தவில்லை, நான் உண்மையில் சிந்தனையற்ற தன்மையைக் குறிக்கிறேன். "
+"ஒவ்வொரு சோதனையும் தரவைப் பற்றி உண்மையில் என்ன சொல்கிறது என்பதை சிந்திக்காமல்"
+" நேரத்தை செலவிடாமல் ஒரு முடிவை விளக்குவதற்கான விரைவு, அதை நீங்கள் எவ்வாறு "
+"விளக்கினீர்கள் என்பதற்கு இது ஒத்ததாக இருக்கிறதா என்று சோதித்துப் பாருங்கள். "
+"அதுதான் மிகப்பெரிய பொறி உள்ளது."
+
+#: ../../Ch09/Ch09_HypothesisTesting_09.rst:118
+#, ignore-duplicate, rst-text
+msgid ""
+"To give an example of this, consider the following example (:ref:`Gelman & "
+"Stern, 2006 <Gelman_2006>`). Suppose I’m running my ESP study and I’ve "
+"decided to analyse the data separately for the male participants and the "
+"female participants. Of the male participants, 33 out of 50 guessed the "
+"colour of the card correctly. This is a significant effect (*p* = 0.03). Of "
+"the female participants, 29 out of 50 guessed correctly. This is not a "
+"significant effect (p = 0.32). Upon observing this, it is extremely tempting"
+" for people to start wondering why there is a difference between males and "
+"females in terms of their psychic abilities. However, this is wrong. If you "
+"think about it, we haven’t *actually* run a test that explicitly compares "
+"males to females. All we have done is compare males to chance (binomial test"
+" was significant) and compared females to chance (binomial test was non "
+"significant). If we want to argue that there is a real difference between "
+"the males and the females, we should probably run a test of the null "
+"hypothesis that there is no difference! We can do that using a different "
+"hypothesis test,\\ [#]_ but when we do that it turns out that we have no "
+"evidence that males and females are significantly different (*p* = 0.54). "
+"*Now* do you think that there’s anything fundamentally different between the"
+" two groups? Of course not. What’s happened here is that the data from both "
+"groups (male and female) are pretty borderline. By pure chance one of them "
+"happened to end up on the magic side of the *p* = 0.05 line, and the other "
+"one didn’t. That doesn’t actually imply that males and females are "
+"different. This mistake is so common that you should always be wary of it. "
+"The difference between significant and not-significant is *not* evidence of "
+"a real difference. If you want to say that there’s a difference between two "
+"groups, then you have to test for that difference!"
+msgstr ""
+"இதற்கு ஒரு எடுத்துக்காட்டு கொடுக்க, பின்வரும் உதாரணத்தைக் கவனியுங்கள் (: "
+"குறிப்பு: `கெல்மேன் & ச்டெர்ன், 2006 <gelman_2006>`). நான் எனது ஈஎச்பி ஆய்வை"
+" இயக்குகிறேன் என்று வைத்துக்கொள்வோம், ஆண் பங்கேற்பாளர்கள் மற்றும் பெண் "
+"பங்கேற்பாளர்களுக்கான தரவை தனித்தனியாக பகுப்பாய்வு செய்ய முடிவு செய்துள்ளேன்."
+" ஆண் பங்கேற்பாளர்களில், 50 பேரில் 33 பேர் அட்டையின் நிறத்தை சரியாக "
+"யூகித்தனர். இது ஒரு குறிப்பிடத்தக்க விளைவு (* ப* = 0.03). பெண் "
+"பங்கேற்பாளர்களில், 50 பேரில் 29 பேர் சரியாக யூகிக்கப்பட்டனர். இது ஒரு "
+"குறிப்பிடத்தக்க விளைவு அல்ல (ப = 0.32). இதைக் கவனித்தவுடன், ஆண்களுக்கும் "
+"பெண்களுக்கும் அவர்களின் மனநல திறன்களின் அடிப்படையில் ஏன் வேறுபாடு இருக்கிறது"
+" என்று மக்கள் யோசிக்கத் தொடங்குவது மிகவும் தூண்டுகிறது. இருப்பினும், இது "
+"தவறு. நீங்கள் இதைப் பற்றி சிந்தித்தால், ஆண்களை வெளிப்படையாக பெண்களுடன் "
+"ஒப்பிடும் ஒரு சோதனையை நாங்கள் உண்மையில் * இயக்கவில்லை. நாங்கள் செய்ததெல்லாம்"
+" ஆண்களை வாய்ப்புடன் ஒப்பிடுவது (பைனோமியல் சோதனை குறிப்பிடத்தக்கதாக இருந்தது)"
+" மற்றும் பெண்களை வாய்ப்புடன் ஒப்பிட்டுப் பார்த்தது (பைனோமியல் சோதனை "
+"குறிப்பிடத்தக்கதாக இல்லை). ஆண்களுக்கும் பெண்களுக்கும் இடையே உண்மையான "
+"வேறுபாடு இருப்பதாக நாம் வாதிட விரும்பினால், எந்த வித்தியாசமும் இல்லை என்ற "
+"சுழிய கருதுகோளின் சோதனையை நாம் இயக்க வேண்டும்! வேறுபட்ட கருதுகோள் சோதனையைப் "
+"பயன்படுத்தி நாம் அதைச் செய்யலாம், \\ [#] _ ஆனால் நாம் அவ்வாறு செய்யும்போது "
+"ஆண்களும் பெண்களும் கணிசமாக வேறுபட்டவர்கள் என்பதற்கு எங்களுக்கு எந்த ஆதாரமும்"
+" இல்லை (* ப* = 0.54). * இப்போது* இரு குழுக்களிடையே அடிப்படையில் வேறுபட்ட "
+"எதுவும் இருப்பதாக நீங்கள் நினைக்கிறீர்களா? நிச்சயமாக இல்லை. இங்கே நடந்தது "
+"என்னவென்றால், இரு குழுக்களிடமிருந்தும் (ஆண் மற்றும் பெண்) தரவு அழகான "
+"எல்லைக்கோடு. தூய்மையான வாய்ப்பால், அவர்களில் ஒருவர் * பி * = 0.05 வரியின் "
+"மந்திர பக்கத்தில் முடிவடைந்தது, மற்றொன்று அவ்வாறு செய்யவில்லை. ஆண்களும் "
+"பெண்களும் வேறுபட்டவர்கள் என்பதை இது உண்மையில் குறிக்கவில்லை. இந்த தவறு "
+"மிகவும் பொதுவானது, நீங்கள் எப்போதும் எச்சரிக்கையாக இருக்க வேண்டும். "
+"குறிப்பிடத்தக்க மற்றும் குறிப்பிடத்தக்கதாக இல்லாத வேறுபாடு உண்மையான "
+"வேறுபாட்டின் சான்றுகள் * அல்ல. இரண்டு குழுக்களிடையே வேறுபாடு இருப்பதாக "
+"நீங்கள் சொல்ல விரும்பினால், அந்த வித்தியாசத்தை நீங்கள் சோதிக்க வேண்டும்!"
+
+#: ../../Ch09/Ch09_HypothesisTesting_09.rst:145
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"The example above is just that, an example. I’ve singled it out because it’s"
+" such a common one, but the bigger picture is that data analysis can be "
+"tricky to get right. Think about what it is you want to test, why you want "
+"to test it, and whether or not the answers that your test gives could "
+"possibly make any sense in the real world."
+msgstr ""
+"மேலே உள்ள எடுத்துக்காட்டு அது, ஒரு எடுத்துக்காட்டு. இது மிகவும் பொதுவானது "
+"என்பதால் நான் அதைத் தனிமைப்படுத்தினேன், ஆனால் பெரிய படம் என்னவென்றால், தரவு "
+"பகுப்பாய்வு சரியாகப் பெற தந்திரமானதாக இருக்கும். நீங்கள் என்ன சோதிக்க "
+"விரும்புகிறீர்கள், அதை ஏன் சோதிக்க விரும்புகிறீர்கள், உங்கள் சோதனை அளிக்கும்"
+" பதில்கள் உண்மையான உலகில் எந்த அர்த்தத்தையும் ஏற்படுத்தக்கூடும் என்பதைப் "
+"பற்றி சிந்தியுங்கள்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_09.rst:154
+#, rst-text
+msgid ""
+"Although this book describes both Neyman’s and Fisher’s definition of the "
+"*p*-value, most don’t. Most introductory textbooks will only give you the "
+"Fisher version."
+msgstr ""
+"இந்த நூல் நெய்மன் மற்றும் *பி *-மதிப்பு பற்றிய ஃபிசரின் வரையறை இரண்டையும் "
+"விவரித்தாலும், பெரும்பாலானவை இல்லை. பெரும்பாலான அறிமுக பாடப்புத்தகங்கள் "
+"உங்களுக்கு ஃபிசர் பதிப்பை மட்டுமே வழங்கும்."
+
+#: ../../Ch09/Ch09_HypothesisTesting_09.rst:159
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid ""
+"In this case, the Pearson :doc:`χ²-test of independence "
+"<../Ch10/Ch10_ChiSquare_2>`"
+msgstr ""
+"இந்த வழக்கில், பியர்சன்: டாக்: ``² சுதந்திரத்தின் சோதனை <../ "
+"CH10/CH10_CHISQUARE_2>`"
+
+#: ../../Ch09/Ch09_HypothesisTesting_10.rst:4
+#, ignore-inconsistent, ignore-long-untranslated, rst-text
+msgid "Summary"
+msgstr "சுருக்கம்"
+
+#: ../../Ch09/Ch09_HypothesisTesting_10.rst:6
+#, rst-text
+msgid ""
+"Null hypothesis testing is one of the most ubiquitous elements to "
+"statistical theory. The vast majority of scientific papers report the "
+"results of some hypothesis test or another. As a consequence it is almost "
+"impossible to get by in science without having at least a cursory "
+"understanding of what a *p*-value means, making this one of the most "
+"important chapters in the book. As usual, I’ll end the chapter with a quick "
+"recapitulation of the key ideas that we’ve talked about:"
+msgstr ""
+"சுழிய கருதுகோள் சோதனை என்பது புள்ளிவிவரக் கோட்பாட்டிற்கு மிகவும் எங்கும் "
+"நிறைந்த கூறுகளில் ஒன்றாகும். விஞ்ஞான ஆவணங்களில் பெரும்பாலானவை சில கருதுகோள் "
+"சோதனையின் முடிவுகளை அல்லது இன்னொன்றைப் புகாரளிக்கின்றன. இதன் விளைவாக, ஒரு "
+"*பி *-மதிப்பு என்றால் என்ன என்பதைப் பற்றிய ஒரு புரிதலையாவது இல்லாமல் "
+"அறிவியலில் செல்வது கிட்டத்தட்ட சாத்தியமற்றது, இது புத்தகத்தின் மிக "
+"முக்கியமான அத்தியாயங்களில் ஒன்றாகும். வழக்கம் போல், நாங்கள் பேசிய முக்கிய "
+"யோசனைகளை விரைவாக மறுபரிசீலனை செய்வதன் மூலம் அத்தியாயத்தை முடிப்பேன்:"
+
+#: ../../Ch09/Ch09_HypothesisTesting_10.rst:14
+#, rst-text
+msgid ""
+":doc:`Research hypotheses and statistical hypotheses, Null and alternative "
+"hypotheses <Ch09_HypothesisTesting_01>`"
+msgstr ""
+":doc:`Research hypotheses and statistical hypotheses, Null and alternative "
+"hypotheses <Ch09_HypothesisTesting_01>`"
+
+#: ../../Ch09/Ch09_HypothesisTesting_10.rst:17
+#, rst-text
+msgid ":doc:`Type I and Type II errors <Ch09_HypothesisTesting_02>`"
+msgstr ":doc:`Type I and வகை II errors <Ch09_HypothesisTesting_02>`"
+
+#: ../../Ch09/Ch09_HypothesisTesting_10.rst:19
+#, rst-text
+msgid ":doc:`Ch09_HypothesisTesting_03`"
+msgstr ": DOC: `CH09_HYPOTHESISTESTING_03`"
+
+#: ../../Ch09/Ch09_HypothesisTesting_10.rst:21
+#, rst-text
+msgid ""
+":doc:`Hypothesis testing as a decision making process "
+"<Ch09_HypothesisTesting_04>`"
+msgstr ""
+":doc:`Hypothesis testing அச் a decision making process "
+"<Ch09_HypothesisTesting_04>`"
+
+#: ../../Ch09/Ch09_HypothesisTesting_10.rst:24
+#, rst-text
+msgid ":doc:`*p*-values as “soft” decisions <Ch09_HypothesisTesting_05>`"
+msgstr ":doc:`*p*-values ​​as “soft” decisions <Ch09_HypothesisTesting_05>`"
+
+#: ../../Ch09/Ch09_HypothesisTesting_10.rst:26
+#, rst-text
+msgid ""
+":doc:`Writing up the results of a hypothesis test "
+"<Ch09_HypothesisTesting_06>`"
+msgstr ""
+":doc:`Writing மேலே the முடிவுகள் of a hypothesis தேர்வு "
+"<Ch09_HypothesisTesting_06>`"
+
+#: ../../Ch09/Ch09_HypothesisTesting_10.rst:29
+#, rst-text
+msgid ":doc:`Ch09_HypothesisTesting_07`"
+msgstr ": டாக்: `CH09_HYPOTHESISTESTING_07`"
+
+#: ../../Ch09/Ch09_HypothesisTesting_10.rst:31
+#, rst-text
+msgid ":doc:`Ch09_HypothesisTesting_08`"
+msgstr ": டாக்: `CH09_HYPOTHESISTESTING_08`"
+
+#: ../../Ch09/Ch09_HypothesisTesting_10.rst:33
+#, rst-text
+msgid ""
+":doc:`Some issues to consider regarding hypothesis testing "
+"<Ch09_HypothesisTesting_09>`"
+msgstr ""
+":doc:`Some issues பெறுநர் consider regarding hypothesis testing "
+"<Ch09_HypothesisTesting_09>`"
+
+#: ../../Ch09/Ch09_HypothesisTesting_10.rst:36
+#, rst-text
+msgid ""
+"Later in the book, in chapter :doc:`../Ch16/Ch16_Bayes`, I’ll revisit the "
+"theory of null hypothesis tests from a Bayesian perspective and introduce a "
+"number of new tools that you can use if you aren’t particularly fond of the "
+"orthodox approach. But for now, though, we’re done with the abstract "
+"statistical theory, and we can start discussing specific data analysis "
+"tools."
+msgstr ""
+"பின்னர் புத்தகத்தில், அத்தியாயம்: டாக்: `../ சி.எச் .16/சி.எச். ஆர்த்தடாக்ச்"
+" அணுகுமுறையின் விருப்பம். ஆனால் இப்போதைக்கு, நாங்கள் சுருக்க புள்ளிவிவரக் "
+"கோட்பாட்டை முடித்துவிட்டோம், மேலும் குறிப்பிட்ட தரவு பகுப்பாய்வு கருவிகளைப் "
+"பற்றி விவாதிக்கத் தொடங்கலாம்."
