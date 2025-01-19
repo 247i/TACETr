@@ -1,0 +1,109 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tamil (mosparo)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-19 04:10+0200\n"
+"PO-Revision-Date: 2025-01-19 09:34+0530\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/mosparo/frontend/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
+
+#. This is the main sentence in the mosparo box. By clicking the checkbox, the
+#. user confirms that we can check the data for spam and store the data for 14
+#. days.
+msgctxt "label"
+msgid ""
+"I accept that the form entries are checked for spam and stored encrypted for"
+" 14 days."
+msgstr ""
+"படிவ உள்ளீடுகள் ச்பேமுக்கு சரிபார்க்கப்பட்டு 14 நாட்களுக்கு குறியாக்கம் "
+"செய்யப்பட்டுள்ளன என்பதை நான் ஏற்றுக்கொள்கிறேன்."
+
+#. Screen readers will read this sentence as soon as the user activates the
+#. checkbox. The user without a screen reader will see the loading animation
+#. in the box and does not need this additional sentence.
+msgctxt "accessibility->checkingData"
+msgid "The spam protection is verifying your data. Please wait."
+msgstr ""
+"ச்பேம் பாதுகாப்பு உங்கள் தரவை சரிபார்க்கிறது. தயவுசெய்து காத்திருங்கள்."
+
+#. Screen readers will read this sentence as soon as mosparo confirms that the
+#. data does not contain spam. Users without a screen reader will not see this
+#. sentence since the checkmark will show them the status of the check.
+msgctxt "accessibility->dataValid"
+msgid "Your data is valid. You can now submit the form."
+msgstr ""
+"உங்கள் தரவு செல்லுபடியாகும். நீங்கள் இப்போது படிவத்தை சமர்ப்பிக்கலாம்."
+
+#. The sentence helps a screen reader user to understand what the box is and
+#. what it does. This sentence is visible for screen readers, but only if the
+#. logo of the mosparo box is active.
+msgctxt "accessibility->protectedBy"
+msgid "This form is protected from spam by mosparo."
+msgstr "இந்த வடிவம் ச்பேமிலிருந்து மோச்பாரோவால் பாதுகாக்கப்படுகிறது."
+
+#. When this error appeared, mosparo did not correctly return a submit token.
+#. This can be a general error with mosparo or an issue with the security
+#. settings.
+msgctxt "error->gotNoToken"
+msgid "mosparo returned no submit token."
+msgstr "மோச்பாரோ சமர்ப்பிக்கும் கிள்ளாக்கை திருப்பித் தரவில்லை."
+
+#. This error will be displayed when something goes wrong in the connection to
+#. mosparo. There may be a problem with the internet connection or the
+#. connection to mosparo, or there is an error within mosparo.
+msgctxt "error->internalError"
+msgid "An error occurred. Please try again."
+msgstr "பிழை ஏற்பட்டது. மீண்டும் முயற்சிக்கவும்."
+
+#. It is possible to manipulate a form to skip the verification with mosparo.
+#. To prevent this, mosparo checks whether there is a submit token set. If the
+#. submit token is missing, this error message will be displayed.
+msgctxt "error->noSubmitTokenAvailable"
+msgid "No submit token available. Validation of this form is not possible."
+msgstr ""
+"சமர்ப்பிக்கும் கிள்ளாக்கு எதுவும் கிடைக்கவில்லை. இந்த படிவத்தின் சரிபார்ப்பு"
+" சாத்தியமில்லை."
+
+#. When mosparo finds something unacceptable in the data the user entered,
+#. mosparo will return an error, and the user cannot submit the form. To
+#. submit the form, the user must clean the data and remove the problematic
+#. part.
+msgctxt "error->spamDetected"
+msgid "Your data was caught by our spam protection."
+msgstr "எங்கள் ச்பேம் பாதுகாப்பால் உங்கள் தரவு பிடிபட்டது."
+
+#. With the automatic lock-out method, it is possible to block users who try
+#. to submit a form too often. mosparo will display the time after which the
+#. user can submit again.
+#, placeholders:%datetime%
+msgctxt "error->lockedOut"
+msgid "You are locked out. Please try again after %datetime%."
+msgstr ""
+"நீங்கள் பூட்டப்பட்டிருக்கிறீர்கள். %தேதிநேர %க்குப் பிறகு மீண்டும் "
+"முயற்சிக்கவும்."
+
+#. If the user tries to get a submit token too fast within a given time range,
+#. mosparo can delay the request by a specified amount of seconds. With this
+#. security measurement, it is possible to make sending spam harder because
+#. the user has to wait before he can submit it again. After the displayed
+#. time, the user can submit the form as usual.
+#, placeholders:%seconds%
+msgctxt "error->delay"
+msgid "Your request was delayed. Please wait for %seconds% seconds."
+msgstr ""
+"உங்கள் கோரிக்கை தாமதமானது. தயவுசெய்து % விநாடிகள் % விநாடிகள் காத்திருங்கள்."
+
+#. This sentence is the description of the hidden honeypot field. A honeypot
+#. field is a hidden field that tries to trick bots into the trap. Bots think
+#. the honeypot field is a normal form field and fill it out, while humans
+#. cannot see the field and, therefore, will not fill it out.
+msgctxt "hp->fieldTitle"
+msgid "Leave this field blank"
+msgstr "இந்த புலத்தை காலியாக விடவும்"
