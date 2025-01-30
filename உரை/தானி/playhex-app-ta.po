@@ -1,10 +1,9 @@
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (PlayHex)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-27 11:09+0200\n"
-"PO-Revision-Date: 2025-01-27 16:08+0530\n"
+"POT-Creation-Date: 2025-01-30 03:13+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/playhex/app/ta/>\n"
 "Language: ta\n"
@@ -14,8 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.10-dev\n"
 
-#. Title of the "home" page, where you can create a game, list of games
-#. waiting for opponent, list of playing games...
+#. Title of the "home" page, where you can create a game, list of games waiting for opponent, list of playing games...
 #, i18next-interpolation
 msgctxt "lobby_title"
 msgid "Lobby"
@@ -374,12 +372,10 @@ msgstr "எதுவுமில்லை"
 #, i18next-interpolation
 msgctxt "handicap.handicap_for_player"
 msgid "{{n}} for {{player}}"
-msgstr "{{{n}} {{player}}}"
+msgstr "{{n}} {{player}} க்கு"
 
-#. General form of a text behind 2 dots, should be either "{{s}}:" or "{{s}}
-#. :".
-#. Not sure about this, but allows to make less translations, and reuse same
-#. label, with or without ":"
+#. General form of a text behind 2 dots, should be either "{{s}}:" or "{{s}} :".
+#. Not sure about this, but allows to make less translations, and reuse same label, with or without ":"
 #, i18next-interpolation
 msgctxt "2dots"
 msgid "{{s}}:"
@@ -390,10 +386,13 @@ msgctxt "game_created_by_player_time_ago"
 msgid "Game created by {player}, {timeAgo}."
 msgstr "விளையாட்டு {player}, {timeAgo} ஆல் உருவாக்கப்பட்டது."
 
+# {timeAgo} must be kept as is, e.g "{timeAgo} ஆல்"
+# @TamilNeram Thanks for translations! I made some feedback. I updated the application that uses your translations, you may want to navigate through the application with Tamil translations to have better context: https://playhex.org/ (if not yet in Tamil, click your username, Settings, then switch locale)
+# Fixed the issues
 #, i18next-interpolation
 msgctxt "game_was_created_by_player_time_ago"
 msgid "Game was created by {player}, {timeAgo}."
-msgstr "விளையாட்டு {player}, {டைமோகோ by ஆல் உருவாக்கப்பட்டது."
+msgstr "{timeAgo}, விளையாட்டு {player}ஆல் உருவாக்கப்பட்டது."
 
 #, i18next-interpolation
 msgctxt "log_out"
@@ -544,22 +543,20 @@ msgstr "நீங்கள் உறுதியாக இருக்கிற�
 msgctxt "workers.slow_worker"
 msgid "No fast worker is online right now. Only limited AI is available."
 msgstr ""
-"வேகமான தொழிலாளி இப்போது ஆன்லைனில் இல்லை. வரையறுக்கப்பட்ட AI மட்டுமே "
-"கிடைக்கிறது."
+"வேகமான தொழிலாளி இப்போது ஆன்லைனில் இல்லை. வரையறுக்கப்பட்ட AI மட்டுமே கிடைக்கிறது."
 
 #, i18next-interpolation
 msgctxt "workers.no_worker"
 msgid "No worker can compute moves right now. Only random bots are available."
 msgstr ""
-"எந்தவொரு தொழிலாளியும் இப்போது நகர்வுகளை கணக்கிட முடியாது. சீரற்ற போட்கள் "
-"மட்டுமே கிடைக்கின்றன."
+"எந்தவொரு தொழிலாளியும் இப்போது நகர்வுகளை கணக்கிட முடியாது. சீரற்ற போட்கள் மட்டுமே "
+"கிடைக்கின்றன."
 
 #, i18next-interpolation
 msgctxt "workers.see_how_to_spawn_a_worker"
 msgid "See how to compute AI moves for PlayHex from my computer"
 msgstr ""
-"எனது கணினியிலிருந்து பிளேஎக்சிற்கான AI நகர்வுகளை எவ்வாறு கணக்கிடுவது என்று "
-"பாருங்கள்"
+"எனது கணினியிலிருந்து பிளேஎக்சிற்கான AI நகர்வுகளை எவ்வாறு கணக்கிடுவது என்று பாருங்கள்"
 
 #, i18next-interpolation
 msgctxt "game_analysis.game_analysis"
@@ -644,7 +641,7 @@ msgstr "தரவரிசை"
 #, i18next-interpolation
 msgctxt "friendly"
 msgid "Friendly"
-msgstr "நட்பு"
+msgstr "நட்புடன்"
 
 #, i18next-interpolation
 msgctxt "any"
@@ -681,8 +678,7 @@ msgctxt "load_more"
 msgid "Load more"
 msgstr "மேலும் ஏற்றவும்"
 
-#. When we go to a player page, but that player does not exists. Url seems
-#. invalid, or player changed its username...
+#. When we go to a player page, but that player does not exists. Url seems invalid, or player changed its username...
 #, i18next-interpolation
 msgctxt "no_such_player"
 msgid "Looks like there is no such player."
@@ -748,15 +744,18 @@ msgctxt "1vAI_ranked.create"
 msgid "Play ranked vs AI"
 msgstr "AI க்கு vs தரவரிசையில் விளையாடுங்கள்"
 
+# "AI Vs vs" seems incorrect
 #, i18next-interpolation
 msgctxt "1vAI_friendly.title"
 msgid "Play vs AI"
-msgstr "AI Vs vs"
+msgstr "செஅ எதிராக விளையாடு"
 
+# "AI Vs vs" seems incorrect
+# fixed
 #, i18next-interpolation
 msgctxt "1vAI_friendly.create"
 msgid "Play vs AI"
-msgstr "AI Vs vs"
+msgstr "செஅ எதிராக விளையாடு"
 
 #, i18next-interpolation
 msgctxt "1vAI_offline.title"
@@ -771,11 +770,11 @@ msgstr "இணைப்பில்லாத AI ஐ விளையாடுங�
 #, i18next-interpolation
 msgctxt "offline_game_explain"
 msgid ""
-"Offline games run on your device only, so that you can play without internet"
-" connection. The PlayHex server is not involved."
+"Offline games run on your device only, so that you can play without internet "
+"connection. The PlayHex server is not involved."
 msgstr ""
-"இணைப்பில்லாத கேம்கள் உங்கள் சாதனத்தில் மட்டுமே இயங்கும், இதனால் நீங்கள் இணைய"
-" இணைப்பு இல்லாமல் விளையாட முடியும். பிளேஎக்ச் சேவையகம் சம்பந்தப்படவில்லை."
+"இணைப்பில்லாத கேம்கள் உங்கள் சாதனத்தில் மட்டுமே இயங்கும், இதனால் நீங்கள் இணைய இணைப்பு இல்லாமல் "
+"விளையாட முடியும். பிளேஎக்ச் சேவையகம் சம்பந்தப்படவில்லை."
 
 #, i18next-interpolation
 msgctxt "loading_game"
@@ -822,8 +821,7 @@ msgctxt "chat"
 msgid "Chat"
 msgstr "அரட்டை"
 
-#. In chat messages, displayed before automated messages, when it comes from
-#. server instead of from a player
+#. In chat messages, displayed before automated messages, when it comes from server instead of from a player
 #, i18next-interpolation
 msgctxt "system"
 msgid "System"
@@ -844,8 +842,7 @@ msgctxt "send_chat_message"
 msgid "Send"
 msgstr "அனுப்பு"
 
-#. Below chat input, when message is about to reach length limit, it shows
-#. number of characters, i.e "240 / 250 characters"
+#. Below chat input, when message is about to reach length limit, it shows number of characters, i.e "240 / 250 characters"
 #, i18next-interpolation
 msgctxt "n_characters"
 msgid "{{count}} character"
@@ -867,13 +864,12 @@ msgstr "உருவப்படம்"
 msgctxt "force_board_orientation_mode"
 msgid "Force displaying board in landscape or portrait for this screen"
 msgstr ""
-"இந்தத் திரைக்கான நிலப்பரப்பில் அல்லது உருவப்படத்தில் பலகையை காண்பிக்கும் "
-"ஆற்றல்"
+"இந்தத் திரைக்கான நிலப்பரப்பில் அல்லது உருவப்படத்தில் பலகையை காண்பிக்கும் ஆற்றல்"
 
 #, i18next-interpolation
 msgctxt "resign"
 msgid "Resign"
-msgstr "ராசினாமா"
+msgstr "விலகு"
 
 #, i18next-interpolation
 msgctxt "auto"
@@ -891,8 +887,7 @@ msgid ""
 "Your preferred board rotation for the portrait and landscape screen "
 "orientations."
 msgstr ""
-"உருவப்படம் மற்றும் இயற்கை திரை நோக்குநிலைகளுக்கு நீங்கள் விரும்பும் பலகை "
-"சுழற்சி."
+"உருவப்படம் மற்றும் இயற்கை திரை நோக்குநிலைகளுக்கு நீங்கள் விரும்பும் பலகை சுழற்சி."
 
 #, i18next-interpolation
 msgctxt "board_orientation.flat"
@@ -955,34 +950,32 @@ msgid "Custom expression"
 msgstr "தனிப்பயன் வெளிப்பாடு"
 
 #. row, col, size must not be translated.
-#. Sorry for this one which is very long, complex... and not often used, you
-#. can skip.
+#. Sorry for this one which is very long, complex... and not often used, you can skip.
 #, i18next-interpolation
 msgctxt "shading_patterns.help_custom"
 msgid ""
 "Math expression for the custom shading pattern.<br>The expression must "
-"evaluate to a number between 0 (no shading) and 1 (fully shaded) for a given"
-" cell (row, col). You can use e.g. 0.5 for tricolor shading patterns. "
+"evaluate to a number between 0 (no shading) and 1 (fully shaded) for a given "
+"cell (row, col). You can use e.g. 0.5 for tricolor shading patterns. "
 "<code>true</code> and <code>false</code> are the same as <code>1</code> and "
-"<code>0</code>.<br>The following variables are available:<br>- "
-"<code>row</code> and <code>col</code> (or <code>r</code> and <code>c</code>)"
-" for the row and column numbers, starting at 0.<br>- <code>size</code> (or "
+"<code>0</code>.<br>The following variables are available:<br>- <code>row</"
+"code> and <code>col</code> (or <code>r</code> and <code>c</code>) for the "
+"row and column numbers, starting at 0.<br>- <code>size</code> (or "
 "<code>s</code>) for the board size.<br>- <code>distToSide</code> for the "
 "distance of the current cell to its nearest side.<br>See the list of "
-"available operators at https://github.com/silentmatt/expr-eval?tab=readme-"
-"ov-file#expression-syntax<br>Examples:<br>- Concentric rings: "
-"<code>distToSide % 2</code><br>- Tri-color checkerboard: <code>((size + row "
-"- col) % 3) / 2</code><br>- Disk with radius sqrt(20): <code>o = size / 2; "
-"(row - o) ^ 2 + (col - o) ^ 2 < 20</code><br>Open the JavaScript console "
-"(F12 or ⌥⌘I) to see errors from the execution of your expression."
+"available operators at https://github.com/silentmatt/expr-eval?tab=readme-ov-"
+"file#expression-syntax<br>Examples:<br>- Concentric rings: <code>distToSide "
+"% 2</code><br>- Tri-color checkerboard: <code>((size + row - col) % 3) / "
+"2</code><br>- Disk with radius sqrt(20): <code>o = size / 2; (row - o) ^ 2 + "
+"(col - o) ^ 2 < 20</code><br>Open the JavaScript console (F12 or ⌥⌘I) to see "
+"errors from the execution of your expression."
 msgstr ""
-"தனிப்பயன் நிழல் வடிவத்திற்கான கணித வெளிப்பாடு. நீங்கள் எ.கா. முக்கோண நிழல் "
-"வடிவங்களுக்கு 0.5. <code> உண்மை </code> மற்றும் <code> தவறான </code> "
-"<குறியீடு> 1 </code> மற்றும் <code> 0 </code> போன்றவை. <br> பின்வரும் "
-"மாறிகள் கிடைக்கின்றன: <br >. <br>- <code> அளவு </code> (அல்லது <code> கள் "
-"</code>) போர்டு அளவிற்கு. பக்க. குறியீடு> disttoside % 2 </code> <br>- "
-"ட்ரை-கலர் செக்கர்போர்டு: <code> ((அளவு + வரிசை- கோல்) % 3)/2 </code> <br>- "
-"ஆரம் SQRT (20) உடன் வட்டு: <குறியீடு> o = அளவு / 2; ."
+"தனிப்பயன் நிழல் வடிவத்திற்கான கணித வெளிப்பாடு. நீங்கள் எ.கா. முக்கோண நிழல் வடிவங்களுக்கு "
+"0.5. <code> உண்மை </code> மற்றும் <code> தவறான </code> <குறியீடு> 1 </code> மற்றும்"
+" <code> 0 </code> போன்றவை. <br> பின்வரும் மாறிகள் கிடைக்கின்றன: <br >. <br>- "
+"<code> அளவு </code> (அல்லது <code> கள் </code>) போர்டு அளவிற்கு. பக்க. குறியீடு> "
+"disttoside % 2 </code> <br>- ட்ரை-கலர் செக்கர்போர்டு: <code> ((அளவு + வரிசை- கோல்) "
+"% 3)/2 </code> <br>- ஆரம் SQRT (20) உடன் வட்டு: <குறியீடு> o = அளவு / 2; ."
 
 #, i18next-interpolation
 msgctxt "show_44_dots"
@@ -1042,7 +1035,7 @@ msgstr "{{player}} ஒரு நகர்வு"
 #, i18next-interpolation
 msgctxt "game_with_player_has_started"
 msgid "Game with {{player}} has started"
-msgstr "{{player} with உடன் விளையாட்டு தொடங்கியது"
+msgstr "{{player}} உடன் விளையாட்டு தொடங்கியது"
 
 #, i18next-interpolation
 msgctxt "last_move"
@@ -1096,15 +1089,18 @@ msgctxt "next"
 msgid "Next"
 msgstr "அடுத்தது"
 
+# There is a formatting issue (extra "}")
 #, i18next-interpolation
 msgctxt "page_page_of_max"
 msgid "Page {{page}} / {{max}}"
-msgstr "பக்கம் {{page}} / {{max}}}"
+msgstr "பக்கம் {{page}} / {{max}}"
 
+# Is this correct? It means "title" or "heading", not Takeback, which in this context, means ask opponent to undo my last move to replay another move
+# Fixed it.
 #, i18next-interpolation
 msgctxt "undo.undo_move"
 msgid "Takeback"
-msgstr "தலைப்பு"
+msgstr "திரும்பிஎடு"
 
 #, i18next-interpolation
 msgctxt "undo.accept"
@@ -1166,8 +1162,7 @@ msgctxt "confirm_move.title"
 msgid "Confirm move"
 msgstr "நகர்வை உறுதிப்படுத்தவும்"
 
-#. Here, "move" is a move as "playing a move in a board game", "placing a
-#. stone on a go game", "playing a piece in chess"
+#. Here, "move" is a move as "playing a move in a board game", "placing a stone on a go game", "playing a piece in chess"
 #, i18next-interpolation
 msgctxt "confirm_move.button_label"
 msgid "Confirm move"
@@ -1193,8 +1188,8 @@ msgctxt "confirm_move.description"
 msgid ""
 "To prevent misclicks, you can require confirmation before submitting a move."
 msgstr ""
-"தவறான கிளிக்குகளைத் தடுக்க, ஒரு நடவடிக்கையை சமர்ப்பிக்கும் முன் "
-"உறுதிப்படுத்தல் தேவைப்படலாம்."
+"தவறான கிளிக்குகளைத் தடுக்க, ஒரு நடவடிக்கையை சமர்ப்பிக்கும் முன் உறுதிப்படுத்தல் "
+"தேவைப்படலாம்."
 
 #, i18next-interpolation
 msgctxt "rematch.label"
@@ -1244,7 +1239,7 @@ msgstr "இழப்பு"
 #, i18next-interpolation
 msgctxt "outcome.resign"
 msgid "resign"
-msgstr "ராசினாமா"
+msgstr "விலகு"
 
 #, i18next-interpolation
 msgctxt "outcome.forfeit"
@@ -1261,10 +1256,12 @@ msgctxt "player_wins_by.default"
 msgid "{player} wins!"
 msgstr "{player} வெற்றி!"
 
+# It seems there is a formatting issue, {player} should be kept as is (like it is done nicely in other similar strings), a valid example would be: "{player} நேரத்தில் வெற்றி பெற்றார்!"
+# fixed
 #, i18next-interpolation
 msgctxt "player_wins_by.time"
 msgid "{player} wins on time!"
-msgstr "{பிளேயர் the சரியான நேரத்தில் வெற்றி!"
+msgstr "{player} சரியான நேரத்தில் வெற்றி!"
 
 #, i18next-interpolation, ignore-reused
 msgctxt "player_wins_by.resign"
