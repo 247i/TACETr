@@ -1,0 +1,142 @@
+; Login dialog
+[Login.dfm]
+; "&Find Site"
+; "Site" as in for example ManageSitePopupMenu.Shellicon1.Caption
+ActionList.SearchSiteStartAction.Caption="வலைதளம் தேடு"
+; "Search"
+; A noun
+ManageSitePopupMenu.Search1.Caption="தேடு"
+; "&Options"
+ManageSitePopupMenu.SearchOptions1.Caption="விருப்பங்கள்"
+
+; Menus and functions container
+[NonVisual.dfm]
+; "T&oolbar Icons Size"
+ExplorerActions.ToolbarIconSizeAction.Caption="கருவிப்பட்டி சின்னங்களின் அளவு"
+; "Change toolbar icons size"
+ExplorerActions.ToolbarIconSizeAction.Hint="கருவிப்பட்டி சின்னங்களின் அளவை மாற்று"
+; "&Normal"
+ExplorerActions.ToolbarIconSizeNormalAction.Caption="இயல்பு"
+; "Show normal toolbar icons"
+ExplorerActions.ToolbarIconSizeNormalAction.Hint="இயல்பு கருவிப்பட்டி சின்னங்களைக் காட்டு"
+; "&Large"
+ExplorerActions.ToolbarIconSizeLargeAction.Caption="பெரிய"
+; "Show large toolbar icons"
+ExplorerActions.ToolbarIconSizeLargeAction.Hint="பெரிய கருவிப்பட்டி சின்னங்களைக் காட்டு"
+; "&Very Large"
+ExplorerActions.ToolbarIconSizeVeryLargeAction.Caption="மிகப் பெரிய"
+; "Show very large toolbar icons"
+ExplorerActions.ToolbarIconSizeVeryLargeAction.Hint="மிகப் பெரிய கருவிப்பட்டி சின்னங்களைக் காட்டு"
+; "&Thumbnails"
+ExplorerActions.RemoteThumbnailAction.Caption="சிறுபடங்கள்"
+; "Thumbnails|View thumbnails"
+ExplorerActions.RemoteThumbnailAction.Hint="சிறுபடங்கள்|சிறுபடங்களைக் காண்க"
+
+; Preferences dialog
+[Preferences.dfm]
+; "Behaviour"
+MainPanel.PageControl.EditorInternalSheet.InternalEditorBehaviourGroup.Caption="நடத்தை"
+; "Disable s&mooth scrolling"
+MainPanel.PageControl.EditorInternalSheet.InternalEditorBehaviourGroup.EditorDisableSmoothScrollCheck.Caption="மென்மையான உருட்டுதலை முடக்கு"
+; "Search"
+MainPanel.PageControl.SearchSheet.SearchGroup.Caption="தேடல்"
+
+; Norton Commander interface window
+[ScpCommander.dfm]
+; "&View"
+; See NonVisual.dfm\ExplorerActions.RemoteCycleStyleAction.Caption
+TopDock.MenuToolbar.LocalMenuButton.TBXSubmenuItem17.Caption="காட்சி"
+; "Change directory view style"
+; Similar to NonVisual.dfm\ExplorerActions.RemoteCycleStyleAction.Hint
+TopDock.MenuToolbar.LocalMenuButton.TBXSubmenuItem17.Hint="கோப்பகக் காட்சி பாணியை மாற்று"
+
+; Advanced Site Settings dialog
+[SiteAdvanced.dfm]
+; "&Role ARN:"
+MainPanel.PageControl.S3Sheet.S3AuthenticationGroup.S3RoleArnLabel.Caption="A&RN பாத்திரம்:"
+
+; Synchronization checklist dialog
+[SynchronizeChecklist.dfm]
+; "&Tools"
+; See Login.dfm\SitesPanel.ToolsMenuButton.Caption
+Panel.ToolsMenuButton.Caption="கருவிகள்"
+; "Calc&ulate All"
+; See ActionList.CalculateSizeAction.Caption
+ActionList.CalculateSizeAllAction.Caption="அனைத்தையும் கணக்கிடு"
+; "&Find Move Candidate"
+; For "move" see ActionList.MoveAction.Caption
+ActionList.FindMoveCandidateAction.Caption="&நகர்த்தல் வேட்பாளரைக் கண்டறி"
+; "Start on &Background"
+; See FullSynchronize.dfm\OkMenu.Start1.Caption and NonVisual.dfm\ExplorerActions.RemoteCopyQueueAction.Caption
+OkPopupMenu.StartQueueItem.Caption="பின்னணியில் தொடங்கு"
+
+; Core library (SSH, SCP, SFTP, FTP, WebDAV) strings
+[TextsCore1.rc]
+; "Error assuming role '%s'."
+S3_ASSUME_ROLE_ERROR="'%s' பாத்திரத்தை ஏற்றுக்கொள்வதில் பிழை."
+; "Unexpected response to assume role request (%s)."
+S3_ASSUME_ROLE_RESPONSE_ERROR="பங்கு கோரிக்கையை ஏற்றுக்கொள்வதில் எதிர்பாராத பதில் (%s)."
+; "No sites found in \"%s\"."
+INI_NO_SITES="\"%s\" இல் எந்த தளங்களும் காணப்படவில்லை."
+; "The server is using unsupported protocol. Your WinSCP session is configured to use %s through %s. It can be configured to use %s through %s. Though, avoid using old insecure protocols, whenever possible."
+; "%s through %s" is a range ot SSL/TLS versions. For example "TLSv1.0 through TLSv1.3"
+TLS_UNSUPPORTED=; "சேவையகம் ஆதரிக்கப்படாத நெறிமுறையைப் பயன்படுத்துகிறது. உங்கள் WinSCP அமர்வு %s முதல் %s வரை பயன்படுத்த உள்ளமைக்கப்பட்டுள்ளது. இது %s முதல் %s வரை பயன்படுத்த உள்ளமைக்கப்படலாம். இருப்பினும், முடிந்த போதெல்லாம் பழைய பாதுகாப்பற்ற நெறிமுறைகளைப் பயன்படுத்துவதைத் தவிர்க்கவும்."
+; "%s முதல் %s வரை" என்பது SSL/TLS பதிப்புகளின் வரம்பாகும். எடுத்துக்காட்டாக "TLSv1.0 முதல் TLSv1.3 வரை"
+; "OpenSSL initialization failed"
+OPENSSL_INIT_ERROR="OpenSSL துவக்கம் தோல்வியடைந்தது"
+; "No private key found in %s file."
+NO_PRIVATE_KEY="%s கோப்பில் தனிப்பட்ட விசை எதுவும் காணப்படவில்லை."
+; "Browse for INI file to import sites from."
+INI_SELECT="தளங்களை இறக்குமதி செய்ய INI கோப்பிற்காக உலாவுக."
+; "Adding public key line to \"%s\" file:"
+PUBLIC_KEY_ADDING="\"%s\" கோப்பில் பொது விசை வரியைச் சேர்த்தல்:"
+; "Downloading current \"%s\" file..."
+PUBLIC_KEY_DOWNLOADING="தற்போதைய \"%s\" கோப்பைப் பதிவிறக்குகிறது..."
+; "\"%s\" file already contains public key line:"
+PUBLIC_KEY_CONTAINS="\"%s\" கோப்பில் ஏற்கனவே பொது விசை வரி உள்ளது:"
+; "\"%s\" file does not contain the public key line yet."
+PUBLIC_KEY_NOT_CONTAINS="\"%s\" கோப்பில் இன்னும் பொது விசை வரி இல்லை."
+; "Creating new \"%s\" file..."
+PUBLIC_KEY_NEW="புதிய \"%s\" கோப்பை உருவாக்குகிறது..."
+; "Uploading updated \"%s\" file..."
+PUBLIC_KEY_UPLOADING="புதுப்பிக்கப்பட்ட \"%s\" கோப்பைப் பதிவேற்றுகிறது..."
+
+; User interface strings
+[TextsWin1.rc]
+; "Identity/key file was not specified."
+COPYID_IDETITY_MISSING="அடையாளம்/விசை கோப்பு குறிப்பிடப்படவில்லை."
+; "Installs your public key in a server's authorized_keys."
+USAGE_COPYID="உங்கள் பொது விசையை சேவையகத்தின் அங்கீகரிக்கப்பட்ட_விசைகளில் நிறுவுகிறது."
+; "ML-KEM / Curve25519 hybrid kex"
+; Probably does not need translation
+KEX_NAME_MLKEM_25519_HYBRID="ML-KEM / Curve25519 ஐப்ரிட் கெக்சு"
+; "ML-KEM / NIST ECDH hybrid kex"
+; Probably does not need translation
+KEX_NAME_MLKEM_NIST_HYBRID="ML-KEM / NIST ECDH ஐப்ரிட் கெக்சு"
+; "Select file to import sites from"
+; Similar to IMPORT_CONF_TITLE
+IMPORT_INI_TITLE="தளங்களை இறக்குமதி செய்ய கோப்பைத் தேர்ந்தெடுக்கவும்"
+; "(start typing)"
+INC_SEARCH_TYPE="(தட்டச்சு செய்யத் தொடங்குங்கள்)"
+; "Search"
+SEARCH_EDIT="தேடல்"
+; "No search results found."
+SEARCH_NO_RESULTS="தேடல் முடிவுகள் எதுவும் கிடைக்கவில்லை."
+
+; WinSCP propagation strings (for use in Windows Store and other download sites)
+[Propagation.rc]
+; "WinSCP is a popular free file manager for Windows supporting SFTP, FTP, FTPS, SCP, S3, WebDAV and local-to-local file transfers. A powerful tool to enhance your productivity with a user-friendly interface and automation options like .NET assembly."
+; Some modifications comparing to previous DESCRIPTION_250_LETTERS3.
+DESCRIPTION_250_LETTERS4="WinSCP என்பது SFTP, FTP, FTPS, SCP, S3, WebDAV மற்றும் உள்ளக-உள்ளக கோப்பு பரிமாற்றங்களை ஆதரிக்கும் சாளரங்ளுக்கான புகழ்பெற்ற இலவச கோப்பு மேலாளர். பயனர் நட்பு இடைமுகம் மற்றும் .NET தொகுப்பு அல்லது தொகுதி கோப்பு கைஉரை போன்ற தானியங்கி விருப்பங்களுடன் உங்கள் உற்பத்தித்திறனை மேம்படுத்த ஒரு சக்திவாய்ந்த கருவி.
+; "WinSCP is a popular free file manager for Windows supporting SFTP, FTP, FTPS, SCP, S3, WebDAV and local-to-local file transfers. A powerful tool to enhance your productivity with a user-friendly interface and automation options like .NET assembly or batch file scripting. Use WinSCP also for file editing, directory synchronization and site management. WinSCP is open-source and well documented. It is available in English and many other languages."
+DESCRIPTION_450_LETTERS4="WinSCP என்பது SFTP, FTP, FTPS, SCP, S3, WebDAV மற்றும் உள்ளக-உள்ளக கோப்பு பரிமாற்றங்களை ஆதரிக்கும் சாளரங்ளுக்கான புகழ்பெற்ற இலவச கோப்பு மேலாளர். பயனர் நட்பு இடைமுகம் மற்றும் .NET தொகுப்பு அல்லது தொகுதி கோப்பு கைஉரை போன்ற தானியங்கி விருப்பங்களுடன் உங்கள் உற்பத்தித்திறனை மேம்படுத்த ஒரு சக்திவாய்ந்த கருவி. கோப்பு திருத்தி, அடைவு ஒத்திசைவு மற்றும் தள மேலாண்மைக்கும் WinSCP ஐப் பயன்படுத்தவும். WinSCP திறந்த மூலமாகும் மற்றும் நன்கு ஆவணப்படுத்தப்பட்டுள்ளது. இது தமிழ் மற்றும் பல மொழிகளில் கிடைக்கிறது."
+; "Thumbnail view in file panels"
+NEW_6_4_THUMBNAILS="கோப்புப் பலகங்களில் சிறுபடக் காட்சி"
+; "Slightly larger font and toolbar buttons"
+NEW_6_4_LARGER_UI="சற்று பெரிய எழுத்துரு மற்றும் கருவிப்பட்டி பொத்தான்கள்"
+; "Synchronization actions can be pushed to background queue"
+NEW_6_4_SYNCHRONIZATION="ஒத்திசைவு செயல்களை பின்னணி வரிசைக்குத் தள்ளலாம்"
+; "Optimized working with large local directories"
+NEW_6_4_LARGE_DIRS="பெரிய உள்ளூர் கோப்பகங்களுடன் பணிபுரிவதை மேம்படுத்தப்பட்டது"
+; "Allowed assuming IAM role in S3 sessions"
+NEW_6_4_S3_ROLE="S3 அமர்வுகளில் IAM பங்கை ஏற்றுக்கொள்ள அனுமதிக்கப்படுகிறது"
