@@ -8,12 +8,13 @@ import glob
 import polib
 import json
 import datetime
+import translators as ts
 from collections import OrderedDict
 
-try:
-    import translators as ts
-except Exception as e:
-    print(e)
+# try:
+#     import translators as ts
+# except Exception as e:
+#     print(e)
 
 ஃ = None
 ஔ = None
