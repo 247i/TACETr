@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Tamil (pypa)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-27 23:53+0200\n"
-"PO-Revision-Date: 2025-02-12 12:39+0530\n"
+"PO-Revision-Date: 2025-02-17 06:13+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/pypa/packaging-python-org/ta/>\n"
 "Language: ta\n"
@@ -10810,6 +10810,11 @@ msgid ""
 "to tap into that functionality. However, wrapping modules by hand is quite "
 "tedious, so a number of other alternative approaches should be considered."
 msgstr ""
+"சி பநிஇ (பயன்பாட்டு பைனரி இடைமுகம்) பல பயன்பாடுகளுக்கு இடையில் செயல்பாட்டைப்"
+" பகிர்வதற்கான பொதுவான தரமாகும். Cpython C பநிஇ (பயன்பாட்டு நிரலாக்க "
+"இடைமுகம்) இன் பலங்களில் ஒன்று பைத்தான் பயனர்களை அந்த செயல்பாட்டைத் தட்ட "
+"அனுமதிக்கிறது. இருப்பினும், தொகுதிகளை கையால் மடக்குவது மிகவும் கடினமானது, "
+"எனவே பல மாற்று அணுகுமுறைகள் கருத்தில் கொள்ளப்பட வேண்டும்."
 
 #: ../source/guides/packaging-binary-extensions.rst:156
 #, placeholders:BigQuery:easy_install:HTML:HTTP:Linux:pip:PSF:PyPI:Python:setuptools:venv:virtualenv:Windows:":pep:`440`":``pip``:``setuptools``:"::":|PyPUG|, rst-text
@@ -10818,6 +10823,9 @@ msgid ""
 "but they *can* significantly reduce the maintenance burden of keeping "
 "wrapper modules up to date."
 msgstr ""
+"கீழே விவரிக்கப்பட்டுள்ள அணுகுமுறைகள் விநியோக வழக்கை எளிதாக்குவதில்லை, ஆனால் "
+"அவை போர்வுற்ற தொகுதிகளை புதுப்பித்த நிலையில் வைத்திருப்பதற்கான பராமரிப்பு "
+"சுமையை கணிசமாகக் குறைக்க முடியும்."
 
 #: ../source/guides/packaging-binary-extensions.rst:160
 #, placeholders:BigQuery:easy_install:HTML:HTTP:Linux:pip:PSF:PyPI:Python:setuptools:venv:virtualenv:Windows:":pep:`440`":``pip``:``setuptools``:"::":|PyPUG|, rst-text
@@ -10831,6 +10839,15 @@ msgid ""
 "automatic wrapping with Cython. It also supports performance-oriented Python"
 " implementations that provide a CPython-like C-API, such as PyPy and Pyston."
 msgstr ""
+"முடுக்கி தொகுதிகள் உருவாக்க பயனுள்ளதாக இருப்பதோடு மட்டுமல்லாமல், சி அல்லது "
+"சி ++ ஏபிஐகளுக்கான ரேப்பர் தொகுதிகள் உருவாக்க சைதான் <https://cython.org/> "
+"__ __ பரவலாகப் பயன்படுத்தப்படுகிறது. இது இடைமுகங்களை கையால் போர்த்துவதை "
+"உள்ளடக்கியது, இது ரேப்பர் குறியீட்டை வடிவமைத்து மேம்படுத்துவதில் பரந்த "
+"அளவிலான சுதந்திரத்தை அளிக்கிறது, ஆனால் மிகப் பெரிய ஏபிஐக்களை விரைவாக "
+"மடக்குவதற்கு நல்ல தேர்வாக இருக்காது. மூன்றாம் தரப்பு கருவிகளின் பட்டியலைப் "
+"பார்க்கவும் <https://github.com/cython/cython/wiki/autopxd> `_ சைதனுடன் "
+"தானியங்கி மடக்குதல். பைபி மற்றும் பிச்டன் போன்ற சிபிதான் போன்ற சி-ஏபிஐ "
+"வழங்கும் செயல்திறன் சார்ந்த பைதான் செயலாக்கங்களையும் இது ஆதரிக்கிறது."
 
 #: ../source/guides/packaging-binary-extensions.rst:171
 #, placeholders:BigQuery:easy_install:HTML:HTTP:Linux:pip:PSF:PyPI:Python:setuptools:venv:virtualenv:Windows:":pep:`440`":``pip``:``setuptools``:"::":|PyPUG|, rst-text
@@ -10842,6 +10859,11 @@ msgid ""
 "<https://www.boost.org/doc/libs/1_76_0/libs/python/doc/html/index.html>`__, "
 "but doesn't require the Boost libraries or BJam."
 msgstr ""
+". இதற்கு முன் செயலாக்க படி தேவையில்லை; இது முற்றிலும் வார்ப்புரு சி ++ இல் "
+"எழுதப்பட்டுள்ளது. செட்டுப்டூல்கள் அல்லது செமேக் கட்டமைப்புகளுக்கு "
+"உதவியாளர்கள் சேர்க்கப்பட்டுள்ளனர். இது `boost.python "
+"<https://www.boost.org/doc/libs/1_76_0/libs/python/doc/html/index.html> __, "
+"ஆனால் பூச்ட் நூலகங்கள் அல்லது பிசாம் தேவையில்லை ."
 
 #: ../source/guides/packaging-binary-extensions.rst:178
 #, placeholders:BigQuery:easy_install:HTML:HTTP:Linux:pip:PSF:PyPI:Python:setuptools:venv:virtualenv:Windows:":pep:`440`":``pip``:``setuptools``:"::":|PyPUG|, rst-text
@@ -10852,6 +10874,8 @@ msgid ""
 "relatively straightforward to wrap a C module based on its header files, "
 "even if you don't know C yourself."
 msgstr ""
+". சி தொகுதியை அதன் தலைப்பு கோப்புகளின் அடிப்படையில் மடிக்க இது ஒப்பீட்டளவில்"
+" நேரடியானதாக அமைகிறது."
 
 #: ../source/guides/packaging-binary-extensions.rst:184
 #, placeholders:BigQuery:easy_install:HTML:HTTP:Linux:pip:PSF:PyPI:Python:setuptools:venv:virtualenv:Windows:":pep:`440`":``pip``:``setuptools``:"::":|PyPUG|, rst-text
@@ -10860,6 +10884,9 @@ msgid ""
 " JIT, allowing CFFI wrapper modules to participate fully in PyPy's tracing "
 "JIT optimisations."
 msgstr ""
+"`` Cffi`` இன் முக்கிய நன்மைகளில் ஒன்று, இது பைபி JIT உடன் இணக்கமானது, இது "
+"CFFI ரேப்பர் தொகுதிகள் பைபியின் தடமறியும் JIT மேம்படுத்தல்களில் முழுமையாக "
+"பங்கேற்க அனுமதிக்கிறது."
 
 #: ../source/guides/packaging-binary-extensions.rst:188
 #, placeholders:BigQuery:easy_install:HTML:HTTP:Linux:pip:PSF:PyPI:Python:setuptools:venv:virtualenv:Windows:":pep:`440`":``pip``:``setuptools``:"::":|PyPUG|, rst-text
@@ -10868,6 +10895,9 @@ msgid ""
 " a variety of programming languages, including Python, to interface with C "
 "and C++ code."
 msgstr ""
+"`ச்விக் <http://www.swig.org/> ____ என்பது ஒரு ரேப்பர் இடைமுக செனரேட்டர் "
+"ஆகும், இது பைதான் உள்ளிட்ட பல்வேறு நிரலாக்க மொழிகளை சி மற்றும் சி ++ "
+"குறியீட்டுடன் இடைமுகப்படுத்த அனுமதிக்கிறது."
 
 #: ../source/guides/packaging-binary-extensions.rst:192
 #, placeholders:BigQuery:easy_install:HTML:HTTP:Linux:pip:PSF:PyPI:Python:setuptools:venv:virtualenv:Windows:":pep:`440`":``pip``:``setuptools``:"::":|PyPUG|, rst-text
@@ -10884,11 +10914,22 @@ msgid ""
 "the same interface inconsistency problems as ``ctypes`` when it is used that"
 " way."
 msgstr ""
+"நிலையான நூலகத்தின் `` ctypes`` தொகுதி, தலைப்பு செய்தி கிடைக்காதபோது சி நிலை "
+"இடைமுகங்களை அணுகுவதற்கு பயனுள்ளதாக இருக்கும்போது, ​​அது சி பநிஇ மட்டத்தில் "
+"மட்டுமே இயங்குகிறது என்பதன் மூலம் பாதிக்கப்படுகிறது, இதனால் எந்த தானியங்கி "
+"நிலைத்தன்மையும் இல்லை இடைமுகம் உண்மையில் நூலகத்தால் ஏற்றுமதி செய்யப்படுகிறது"
+" மற்றும் பைதான் குறியீட்டில் அறிவிக்கப்பட்ட ஒன்று. இதற்கு நேர்மாறாக, மேலே "
+"உள்ள மாற்றுகள் அனைத்தும் சி * பநிஇ * மட்டத்தில் செயல்பட முடியும், சி தலைப்பு"
+" கோப்புகளைப் பயன்படுத்தி நூலகத்தால் ஏற்றுமதி செய்யப்படும் இடைமுகத்திற்கும் "
+"பைதான் ரேப்பர் தொகுதியால் எதிர்பார்க்கப்படுவதற்கும் இடையிலான நிலைத்தன்மையை "
+"உறுதிசெய்கிறது. `` Cffi`` * * சி பநிஇ மட்டத்தில் நேரடியாக செயல்பட முடியும் "
+"என்றாலும், அது அந்த வழியில் பயன்படுத்தப்படும்போது அதே இடைமுக முரண்பாடு "
+"சிக்கல்களால் `` ctypes`` போன்றவற்றால் பாதிக்கப்படுகிறது."
 
 #: ../source/guides/packaging-binary-extensions.rst:206
 #, placeholders:BigQuery:easy_install:HTML:HTTP:Linux:pip:PSF:PyPI:Python:setuptools:venv:virtualenv:Windows:":pep:`440`":``pip``:``setuptools``:"::":|PyPUG|, rst-text
 msgid "Alternatives for low level system access"
-msgstr ""
+msgstr "குறைந்த அளவிலான கணினி அணுகலுக்கான மாற்று வழிகள்"
 
 #: ../source/guides/packaging-binary-extensions.rst:208
 #, placeholders:BigQuery:easy_install:HTML:HTTP:Linux:pip:PSF:PyPI:Python:setuptools:venv:virtualenv:Windows:":pep:`440`":``pip``:``setuptools``:"::":|PyPUG|, rst-text
@@ -10901,6 +10942,14 @@ msgid ""
 "like ``ctypes`` or ``cffi`` is used to obtain access to the relevant C API "
 "interfaces."
 msgstr ""
+"குறைந்த அளவிலான கணினி அணுகல் தேவைப்படும் பயன்பாடுகளுக்கு (காரணத்தைப் "
+"பொருட்படுத்தாமல்), ஒரு பைனரி நீட்டிப்பு தொகுதி பெரும்பாலும் * அதைப் பற்றிச் "
+"செல்ல சிறந்த வழியாகும். சிபிதான் இயக்க நேரத்திற்கான குறைந்த அளவிலான "
+"அணுகலுக்கு இது குறிப்பாக உண்மை, ஏனெனில் சில செயல்பாடுகள் (உலகளாவிய "
+"மொழிபெயர்ப்பாளர் பூட்டை வெளியிடுவது போன்றவை) மொழிபெயர்ப்பாளர் குறியீட்டை "
+"இயக்கும்போது வெறுமனே செல்லாது, `` ctypes`` அல்லது `` cffi` போன்ற ஒரு தொகுதி "
+"கூட இருந்தாலும் கூட தொடர்புடைய சி பநிஇ இடைமுகங்களுக்கான அணுகலைப் பெற "
+"`பயன்படுத்தப்படுகிறது."
 
 #: ../source/guides/packaging-binary-extensions.rst:216
 #, placeholders:BigQuery:easy_install:HTML:HTTP:Linux:pip:PSF:PyPI:Python:setuptools:venv:virtualenv:Windows:":pep:`440`":``pip``:``setuptools``:"::":|PyPUG|, rst-text
