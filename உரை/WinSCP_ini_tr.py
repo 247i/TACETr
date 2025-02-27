@@ -1,23 +1,23 @@
 import pota
 
-file = open('/Users/apt/Documents/அறிவிலி/TACETranslation/பைத்தான்படிவங்கள்/வெறுமை/WinSCP-TA-6.2.2.ini', 'r')
-file2 = open('/Users/apt/Documents/அறிவிலி/TACETranslation/பைத்தான்படிவங்கள்/வெறுமை/WinSCP-TA-6.2.2-1.ini', 'w')
+file = open("வெறுமை/WinSCP-TA-6.2.2.ini", "r")
+file2 = open("வெறுமை/WinSCP-TA-6.2.2-1.ini", "w")
 try:
     for line in file.readlines():
-        if line.strip() == '':
+        if line.strip() == "":
             file2.write(line)
-        elif line.strip()[0] == ';':
+        elif line.strip()[0] == ";":
             com = line[1:].strip()
             if com[0] == '"':
                 en = com
             file2.write(line)
-        elif line.strip()[0] == '[':
+        elif line.strip()[0] == "[":
             file2.write(line)
         else:
-            k = line.split('=')
+            k = line.split("=")
             if k[1].strip() == "<translate>":
                 t, _ = pota.பொருள்_பெறு(en)
-                data = k[0] + '=' + t + "\n"
+                data = k[0] + "=" + t + "\n"
                 print(line)
                 print(data)
                 file2.write(data)
