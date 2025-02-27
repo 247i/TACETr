@@ -10,12 +10,13 @@ import json
 import datetime
 import translators as ts
 from collections import OrderedDict
-from google_trans_new import google_translator
+
+# from google_trans_new import google_translator
 
 ஃ = None
 ஔ = None
 நினைவில் = ""
-g_tr = google_translator()
+# g_tr = google_translator()
 
 
 def அகராதி_இருமபொருள்(பாதை):
