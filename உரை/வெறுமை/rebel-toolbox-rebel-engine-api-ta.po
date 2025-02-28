@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Tamil (Rebel Toolbox)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-28 07:29+0200\n"
-"PO-Revision-Date: 2025-02-28 22:00+0530\n"
+"PO-Revision-Date: 2025-02-28 22:14+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rebel-toolbox/rebel-engine-api/ta/>\n"
 "Language: ta\n"
@@ -7523,6 +7523,8 @@ msgid ""
 "If [code]true[/code], the given area overlaps the Area2D.\n"
 "[b]Note:[/b] The result of this test is not immediate after moving objects. For performance, the list of overlaps is updated once per frame and before the physics step. Consider using signals instead."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், கொடுக்கப்பட்ட பகுதி AREA2D ஐ ஒன்றுடன் ஒன்று சேர்க்கிறது.\n"
+" [b] குறிப்பு: [/b] இந்த சோதனையின் முடிவு பொருள்களை நகர்த்திய பிறகு உடனடியாக இல்லை. செயல்திறனைப் பொறுத்தவரை, ஒன்றுடன் ஒன்று பட்டியல் ஒரு சட்டகத்திற்கு ஒரு முறை மற்றும் இயற்பியல் படிக்கு முன் புதுப்பிக்கப்படுகிறது. அதற்கு பதிலாக சிக்னல்களைப் பயன்படுத்துவதைக் கவனியுங்கள்."
 
 #: docs/Area2D.xml
 msgid ""
@@ -7530,12 +7532,17 @@ msgid ""
 "[b]Note:[/b] The result of this test is not immediate after moving objects. For performance, list of overlaps is updated once per frame and before the physics step. Consider using signals instead.\n"
 "The [code]body[/code] argument can either be a [PhysicsBody2D] or a [TileMap] instance (while TileMaps are not physics bodies themselves, they register their tiles with collision shapes as a virtual physics body)."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், கொடுக்கப்பட்ட இயற்பியல் உடல் பகுதி 2 டி ஐ ஒன்றுடன் ஒன்று சேர்க்கிறது.\n"
+" [b] குறிப்பு: [/b] இந்த சோதனையின் முடிவு பொருள்களை நகர்த்திய பிறகு உடனடியாக இல்லை. செயல்திறனுக்காக, ஒன்றுடன் ஒன்று பட்டியல் ஒரு சட்டகத்திற்கு ஒரு முறை மற்றும் இயற்பியல் படிக்கு முன் புதுப்பிக்கப்படுகிறது. அதற்கு பதிலாக சிக்னல்களைப் பயன்படுத்துவதைக் கவனியுங்கள்.\n"
+" ."
 
 #: docs/Area2D.xml
 msgid ""
 "The rate at which objects stop spinning in this area. Represents the angular velocity lost per second.\n"
 "See [member ProjectSettings.physics/2d/default_angular_damp] for more details about damping."
 msgstr ""
+"இந்த பகுதியில் பொருள்கள் சுழற்றுவதை நிறுத்தும் விகிதம். நொடிக்கு இழந்த கோண வேகத்தைக் குறிக்கிறது.\n"
+" ஈரப்பதத்தைப் பற்றிய கூடுதல் விவரங்களுக்கு [உறுப்பினர் proctalsettings.physics/2d/default_angular_damp] ஐப் பார்க்கவும்."
 
 #: docs/Area2D.xml
 msgid ""
@@ -7543,24 +7550,33 @@ msgid ""
 "multiplies the gravity vector. This is useful to alter the force of gravity "
 "without altering its direction."
 msgstr ""
+"பகுதியின் ஈர்ப்பு தீவிரம் (வினாடிக்கு பிக்சல்களில்). இந்த மதிப்பு ஈர்ப்பு "
+"திசையனை பெருக்குகிறது. ஈர்ப்பு சக்தியை அதன் திசையை மாற்றாமல் மாற்ற இது "
+"பயனுள்ளதாக இருக்கும்."
 
 #: docs/Area2D.xml
 msgid ""
 "The rate at which objects stop moving in this area. Represents the linear velocity lost per second.\n"
 "See [member ProjectSettings.physics/2d/default_linear_damp] for more details about damping."
 msgstr ""
+"இந்த பகுதியில் பொருள்கள் நகர்வதை நிறுத்தும் விகிதம். நொடிக்கு இழந்த நேரியல் வேகத்தைக் குறிக்கிறது.\n"
+" ஈரப்பதத்தைப் பற்றிய கூடுதல் விவரங்களுக்கு [உறுப்பினர் proctayettings.physics/2d/default_linear_damp] ஐப் பார்க்கவும்."
 
 #: docs/Area2D.xml
 msgid ""
 "Emitted when another Area2D enters this Area2D. Requires [member monitoring] to be set to [code]true[/code].\n"
 "[code]area[/code] the other Area2D."
 msgstr ""
+"மற்றொரு பகுதி 2 டி இந்த ஏரியா 2 டி க்குள் நுழையும் போது உமிழப்படும். [குறியீடு] உண்மை [/குறியீடு] என அமைக்க [உறுப்பினர் கண்காணிப்பு] தேவை.\n"
+" [குறியீடு] பகுதி [/குறியீடு] மற்ற பகுதி 2 டி."
 
 #: docs/Area2D.xml
 msgid ""
 "Emitted when another Area2D exits this Area2D. Requires [member monitoring] to be set to [code]true[/code].\n"
 "[code]area[/code] the other Area2D."
 msgstr ""
+"மற்றொரு பகுதி 2 டி இந்த ஏரியா 2 டி. [குறியீடு] உண்மை [/குறியீடு] என அமைக்க [உறுப்பினர் கண்காணிப்பு] தேவை.\n"
+" [குறியீடு] பகுதி [/குறியீடு] மற்ற பகுதி 2 டி."
 
 #: docs/Area2D.xml
 msgid ""
@@ -7570,6 +7586,11 @@ msgid ""
 "[code]area_shape_index[/code] the index of the [Shape2D] of the other Area2D used by the [Physics2DServer]. Get the [CollisionShape2D] node with [code]area.shape_owner_get_owner(area_shape_index)[/code].\n"
 "[code]local_shape_index[/code] the index of the [Shape2D] of this Area2D used by the [Physics2DServer]. Get the [CollisionShape2D] node with [code]self.shape_owner_get_owner(local_shape_index)[/code]."
 msgstr ""
+"மற்றொரு பகுதி 2 டி இன் [சேப் 2 டி] எச் இந்த ஏரியா 2 டி [சேப் 2 டி] கள் ஒன்றில் நுழையும் போது உமிழப்படும். [குறியீடு] உண்மை [/குறியீடு] என அமைக்க [உறுப்பினர் கண்காணிப்பு] தேவை.\n"
+" .\n"
+" [குறியீடு] பகுதி [/குறியீடு] மற்ற பகுதி 2 டி.\n"
+" . [Collisionshape2d] முனையை [குறியீடு] பகுதி.\n"
+" . [Collisionshape2d] முனையை [குறியீடு] தன்வய."
 
 #: docs/Area2D.xml
 msgid ""
@@ -7579,18 +7600,27 @@ msgid ""
 "[code]area_shape_index[/code] the index of the [Shape2D] of the other Area2D used by the [Physics2DServer]. Get the [CollisionShape2D] node with [code]area.shape_owner_get_owner(area_shape_index)[/code].\n"
 "[code]local_shape_index[/code] the index of the [Shape2D] of this Area2D used by the [Physics2DServer]. Get the [CollisionShape2D] node with [code]self.shape_owner_get_owner(local_shape_index)[/code]."
 msgstr ""
+"மற்றொரு ஏரியா 2 டி இன் [சேப் 2 டி] கள் இந்த ஏரியா 2 டி [சேப் 2 டி] கள் ஒன்றில் இருந்து வெளியேறும்போது உமிழப்படும். [குறியீடு] உண்மை [/குறியீடு] என அமைக்க [உறுப்பினர் கண்காணிப்பு] தேவை.\n"
+" .\n"
+" [குறியீடு] பகுதி [/குறியீடு] மற்ற பகுதி 2 டி.\n"
+" . [Collisionshape2d] முனையை [குறியீடு] பகுதி.\n"
+" . [Collisionshape2d] முனையை [குறியீடு] தன்வய."
 
 #: docs/Area2D.xml
 msgid ""
 "Emitted when a [PhysicsBody2D] or [TileMap] enters this Area2D. Requires [member monitoring] to be set to [code]true[/code]. [TileMap]s are detected if the [TileSet] has Collision [Shape2D]s.\n"
 "[code]body[/code] the [Node], if it exists in the tree, of the other [PhysicsBody2D] or [TileMap]."
 msgstr ""
+"ஒரு [இயற்பியல் பாடி 2 டி] அல்லது [டில்மேப்] இந்த ஏரியா 2 டி -க்குள் நுழையும் போது உமிழப்படும். [குறியீடு] உண்மை [/குறியீடு] என அமைக்க [உறுப்பினர் கண்காணிப்பு] தேவை. [டிலேமேப்] கள் [டைல்செட்] மோதல் [சேப் 2 டி] கள் இருந்தால் கண்டறியப்படும்.\n"
+" [குறியீடு] உடல் [/குறியீடு] [முனை], அது மரத்தில் இருந்தால், மற்ற [இயற்பியல் பாடி 2 டி] அல்லது [டில்மேப்]."
 
 #: docs/Area2D.xml
 msgid ""
 "Emitted when a [PhysicsBody2D] or [TileMap] exits this Area2D. Requires [member monitoring] to be set to [code]true[/code]. [TileMap]s are detected if the [TileSet] has Collision [Shape2D]s.\n"
 "[code]body[/code] the [Node], if it exists in the tree, of the other [PhysicsBody2D] or [TileMap]."
 msgstr ""
+"ஒரு [இயற்பியல் பாடி 2 டி] அல்லது [டில்மேப்] இந்த ஏரியா 2 டி வெளியேறும்போது உமிழப்படும். [குறியீடு] உண்மை [/குறியீடு] என அமைக்க [உறுப்பினர் கண்காணிப்பு] தேவை. [டிலேமேப்] கள் [டைல்செட்] மோதல் [சேப் 2 டி] கள் இருந்தால் கண்டறியப்படும்.\n"
+" [குறியீடு] உடல் [/குறியீடு] [முனை], அது மரத்தில் இருந்தால், மற்ற [இயற்பியல் பாடி 2 டி] அல்லது [டில்மேப்]."
 
 #: docs/Area2D.xml
 msgid ""
@@ -7600,6 +7630,11 @@ msgid ""
 "[code]body_shape_index[/code] the index of the [Shape2D] of the [PhysicsBody2D] or [TileMap] used by the [Physics2DServer]. Get the [CollisionShape2D] node with [code]body.shape_owner_get_owner(body_shape_index)[/code].\n"
 "[code]local_shape_index[/code] the index of the [Shape2D] of this Area2D used by the [Physics2DServer]. Get the [CollisionShape2D] node with [code]self.shape_owner_get_owner(local_shape_index)[/code]."
 msgstr ""
+"[இயற்பியல் பாடி 2 டி] அல்லது [டில்மேப்] [சேப் 2 டி] கள் இந்த ஏரியா 2 டி இன் [சேப் 2 டி] கள் ஒன்றில் நுழையும் போது உமிழப்படும். [குறியீடு] உண்மை [/குறியீடு] என அமைக்க [உறுப்பினர் கண்காணிப்பு] தேவை. [டிலேமேப்] கள் [டைல்செட்] மோதல் [சேப் 2 டி] கள் இருந்தால் கண்டறியப்படும்.\n"
+" .\n"
+" [குறியீடு] உடல் [/குறியீடு] [முனை], அது மரத்தில் இருந்தால், [இயற்பியல் பாடி 2 டி] அல்லது [டில்மேப்].\n"
+" . [Collisionshape2d] முனையை [குறியீடு] உடலுடன் பெறுங்கள்.\n"
+" . [Collisionshape2d] முனையை [குறியீடு] தன்வய."
 
 #: docs/Area2D.xml
 msgid ""
@@ -7609,10 +7644,15 @@ msgid ""
 "[code]body_shape_index[/code] the index of the [Shape2D] of the [PhysicsBody2D] or [TileMap] used by the [Physics2DServer]. Get the [CollisionShape2D] node with [code]body.shape_owner_get_owner(body_shape_index)[/code].\n"
 "[code]local_shape_index[/code] the index of the [Shape2D] of this Area2D used by the [Physics2DServer]. Get the [CollisionShape2D] node with [code]self.shape_owner_get_owner(local_shape_index)[/code]."
 msgstr ""
+"ஒரு [இயற்பியல் பாடி 2 டி] அல்லது [டில்மேப்] இன் [சேப் 2 டி] இன் ஒன்று இந்த ஏரியா 2 டி இன் [சேப் 2 டி] கள் ஒன்றில் இருந்து வெளியேறும்போது உமிழப்படும். [குறியீடு] உண்மை [/குறியீடு] என அமைக்க [உறுப்பினர் கண்காணிப்பு] தேவை. [டிலேமேப்] கள் [டைல்செட்] மோதல் [சேப் 2 டி] கள் இருந்தால் கண்டறியப்படும்.\n"
+" .\n"
+" [குறியீடு] உடல் [/குறியீடு] [முனை], அது மரத்தில் இருந்தால், [இயற்பியல் பாடி 2 டி] அல்லது [டில்மேப்].\n"
+" . [Collisionshape2d] முனையை [குறியீடு] உடலுடன் பெறுங்கள்.\n"
+" . [Collisionshape2d] முனையை [குறியீடு] தன்வய."
 
 #: docs/Array.xml
 msgid "A generic array datatype."
-msgstr ""
+msgstr "ஒரு பொதுவான வரிசை தரவு."
 
 #: docs/Array.xml
 msgid ""
@@ -7636,34 +7676,53 @@ msgid ""
 "[b]Note:[/b] Arrays are always passed by reference. To get a copy of an array that can be modified independently of the original array, use [method duplicate].\n"
 "[b]Note:[/b] When declaring an array with [code]const[/code], the array itself can still be mutated by defining the values at individual indices or pushing/removing elements. Using [code]const[/code] will only prevent assigning the constant with another value after it was initialized."
 msgstr ""
+"எந்தவொரு வகையின் பல கூறுகளையும் கொண்டிருக்கக்கூடிய ஒரு பொதுவான வரிசை, 0 இல் தொடங்கி ஒரு எண் குறியீட்டால் அணுகக்கூடியது. எதிர்மறை குறியீடுகளை பின்புறத்திலிருந்து கணக்கிட பயன்படுத்தலாம், பைத்தானைப் போலவே (-1 என்பது கடைசி உறுப்பு, -2 என்பது இரண்டாவது முதல் கடைசி வரை).\n"
+" [b] எடுத்துக்காட்டு: [/b]\n"
+" [கோட் பிளாக்]\n"
+" var வரிசை = [\"ஒன்று\", 2, 3, \"நான்கு\"]\n"
+" அச்சு (வரிசை [0]) # ஒன்று.\n"
+" அச்சு (வரிசை [2]) # 3.\n"
+" அச்சு (வரிசை [-1]) # நான்கு.\n"
+" வரிசை [2] = \"மூன்று\"\n"
+" அச்சு (வரிசை [-2]) # மூன்று.\n"
+" [/codeBlock]\n"
+" [குறியீடு]+[/குறியீடு] ஆபரேட்டரைப் பயன்படுத்தி வரிசைகளை ஒருங்கிணைக்க முடியும்:\n"
+" [கோட் பிளாக்]\n"
+" var array1 = [\"ஒன்று\", 2]\n"
+" var array2 = [3, \"நான்கு\"]\n"
+" அச்சு (வரிசை 1 + வரிசை 2) # [\"ஒன்று\", 2, 3, \"நான்கு\"]\n"
+" [/codeBlock]\n"
+" . ஏற்கனவே உள்ள வரிசையில் மற்றொரு வரிசையைச் சேர்க்க விரும்பினால், [முறை Append_array] மிகவும் திறமையானது.\n"
+" [b] குறிப்பு: [/b] வரிசைகள் எப்போதும் குறிப்பு மூலம் அனுப்பப்படுகின்றன. அசல் வரிசையிலிருந்து சுயாதீனமாக மாற்றக்கூடிய ஒரு வரிசையின் நகலைப் பெற, [முறை நகல்] பயன்படுத்தவும்.\n"
+" . ."
 
 #: docs/Array.xml
 msgid "Constructs an array from a [PoolColorArray]."
-msgstr ""
+msgstr "ஒரு [பூலலோரார்] இலிருந்து ஒரு வரிசையை உருவாக்குகிறது."
 
 #: docs/Array.xml
 msgid "Constructs an array from a [PoolVector3Array]."
-msgstr ""
+msgstr "ஒரு [boolvector3array] இலிருந்து ஒரு வரிசையை உருவாக்குகிறது."
 
 #: docs/Array.xml
 msgid "Constructs an array from a [PoolVector2Array]."
-msgstr ""
+msgstr "[பூல்பெக்டர் 2ரே] இலிருந்து ஒரு வரிசையை உருவாக்குகிறது."
 
 #: docs/Array.xml
 msgid "Constructs an array from a [PoolStringArray]."
-msgstr ""
+msgstr "ஒரு [பூல்ச்ட்ரிங்கரே] இலிருந்து ஒரு வரிசையை உருவாக்குகிறது."
 
 #: docs/Array.xml
 msgid "Constructs an array from a [PoolRealArray]."
-msgstr ""
+msgstr "ஒரு [பூல்ரீலாரே] இலிருந்து ஒரு வரிசையை உருவாக்குகிறது."
 
 #: docs/Array.xml
 msgid "Constructs an array from a [PoolIntArray]."
-msgstr ""
+msgstr "[Pollintarray] இலிருந்து ஒரு வரிசையை உருவாக்குகிறது."
 
 #: docs/Array.xml
 msgid "Constructs an array from a [PoolByteArray]."
-msgstr ""
+msgstr "ஒரு [பூல்பைடெர்ரே] இலிருந்து ஒரு வரிசையை உருவாக்குகிறது."
 
 #: docs/Array.xml docs/PoolByteArray.xml docs/PoolColorArray.xml
 #: docs/PoolIntArray.xml docs/PoolRealArray.xml docs/PoolStringArray.xml
@@ -7671,6 +7730,8 @@ msgstr ""
 msgid ""
 "Appends an element at the end of the array (alias of [method push_back])."
 msgstr ""
+"வரிசையின் முடிவில் ஒரு உறுப்பைச் சேர்க்கிறது ([முறை புச்_பேக்] "
+"மாற்றுப்பெயர்)."
 
 #: docs/Array.xml
 msgid ""
@@ -7682,18 +7743,29 @@ msgid ""
 "print(array1) # Prints [1, 2, 3, 4, 5, 6].\n"
 "[/codeblock]"
 msgstr ""
+"இந்த வரிசையின் முடிவில் மற்றொரு வரிசையைச் சேர்க்கிறது.\n"
+" [கோட் பிளாக்]\n"
+" var array1 = [1, 2, 3]\n"
+" var array2 = [4, 5, 6]\n"
+" array1.append_array (array2)\n"
+" அச்சு (வரிசை 1) # அச்சிட்டுகள் [1, 2, 3, 4, 5, 6].\n"
+" [/codeBlock]"
 
 #: docs/Array.xml
 msgid ""
 "Returns the last element of the array. Prints an error and returns [code]null[/code] if the array is empty.\n"
 "[b]Note:[/b] Calling this function is not the same as writing [code]array[-1][/code]. If the array is empty, accessing by index will pause project execution when running from the editor."
 msgstr ""
+"வரிசையின் கடைசி உறுப்பை வழங்குகிறது. ஒரு பிழையை அச்சிட்டு, வரிசை காலியாக இருந்தால் [குறியீடு] சுழிய [/குறியீடு] ஐ வழங்குகிறது.\n"
+" [b] குறிப்பு: [/b] இந்த செயல்பாட்டை அழைப்பது [குறியீடு] வரிசை [-1] [/குறியீடு] எழுதுவதற்கு சமமானதல்ல. வரிசை காலியாக இருந்தால், குறியீட்டின் மூலம் அணுகுவது எடிட்டரிலிருந்து இயங்கும் போது திட்ட செயலாக்கத்தை இடைநிறுத்தும்."
 
 #: docs/Array.xml
 msgid ""
 "Finds the index of an existing value (or the insertion index that maintains sorting order, if the value is not yet present in the array) using binary search. Optionally, a [code]before[/code] specifier can be passed. If [code]false[/code], the returned index comes after all existing entries of the value in the array.\n"
 "[b]Note:[/b] Calling [method bsearch] on an unsorted array results in unexpected behavior."
 msgstr ""
+"பைனரி தேடலைப் பயன்படுத்தி ஏற்கனவே உள்ள மதிப்பின் குறியீட்டைக் கண்டறிந்து (அல்லது வரிசையாக்க வரிசையை பராமரிக்கும் செருகும் குறியீட்டை வரிசைப்படுத்தும் குறியீடு). விருப்பமாக, [/குறியீடு] விவரக்குறிப்புக்கு முன் ஒரு [குறியீடு] அனுப்பப்படலாம். [குறியீடு] தவறான [/குறியீடு] என்றால், வரிசையில் மதிப்பின் தற்போதுள்ள அனைத்து உள்ளீடுகளுக்குப் பிறகு திரும்பிய குறியீடு வருகிறது.\n"
+" ."
 
 #: docs/Array.xml
 msgid ""
@@ -7722,28 +7794,56 @@ msgid ""
 "[/codeblock]\n"
 "[b]Note:[/b] Calling [method bsearch_custom] on an unsorted array results in unexpected behavior."
 msgstr ""
+"பைனரி தேடலைப் பயன்படுத்தி ஏற்கனவே உள்ள மதிப்பின் குறியீட்டை (அல்லது வரிசையாக்க வரிசையை பராமரிக்கும் செருகும் குறியீட்டை பராமரிக்கும் குறியீடு) காண்கிறது மற்றும் [குறியீடு] OBJ [/code] இல் அறிவிக்கப்பட்ட தனிப்பயன் ஒப்பீட்டு முறை. விருப்பமாக, [/குறியீடு] விவரக்குறிப்புக்கு முன் ஒரு [குறியீடு] அனுப்பப்படலாம். [குறியீடு] தவறான [/குறியீடு] என்றால், வரிசையில் மதிப்பின் தற்போதுள்ள அனைத்து உள்ளீடுகளுக்குப் பிறகு திரும்பிய குறியீடு வருகிறது. தனிப்பயன் முறை இரண்டு வாதங்களைப் பெறுகிறது (வரிசையிலிருந்து ஒரு உறுப்பு மற்றும் தேடப்பட்ட மதிப்பு) மற்றும் முதல் உரையாடல் இரண்டாவதாக இருந்தால் [குறியீடு] உண்மை [/குறியீடு] திரும்ப வேண்டும், மேலும் [குறியீடு] தவறான [/குறியீடு] இல்லையெனில் திரும்ப வேண்டும்.\n"
+" [கோட் பிளாக்]\n"
+" func கார்டினல்_டோ_அல்செப்ராயிக் (அ):\n"
+" போட்டி A:\n"
+" \"ஒன்று\":\n"
+" திரும்ப 1\n"
+" \"இரண்டு\":\n"
+" திரும்ப 2\n"
+" \"மூன்று\":\n"
+" திரும்ப 3\n"
+" \"நான்கு\":\n"
+" திரும்ப 4\n"
+" _:\n"
+" திரும்ப 0\n"
+"\n"
+" func ஒப்பிடுக (அ, பி):\n"
+" கார்டினல்_டோ_அல்செப்ராயிக் (அ) <கார்டினல்_டோ_அல்செப்ராயிக் (பி) திரும்பவும்\n"
+"\n"
+" func _ready ():\n"
+" var a = [\"ஒரு\", \"இரண்டு\", \"மூன்று\", \"நான்கு\"]\n"
+" # `ஒப்பிட்டுப் பாருங்கள்` இந்த பொருளில் வரையறுக்கப்பட்டுள்ளது, எனவே` சுயத்தை` `OBJ` அளவுருவாகப் பயன்படுத்துகிறோம்.\n"
+" அச்சு (a.bsearch_custom (\"மூன்று\", தன்வய, \"ஒப்பிடுக\", உண்மை)) # எதிர்பார்க்கப்படும் மதிப்பு 2.\n"
+" [/codeBlock]\n"
+" ."
 
 #: docs/Array.xml
 msgid ""
 "Clears the array. This is equivalent to using [method resize] with a size of"
 " [code]0[/code]."
 msgstr ""
+"வரிசையை அழிக்கிறது. இது [குறியீடு] 0 [/குறியீடு] அளவுடன் [முறை மறுஅளவிடுதல்]"
+" பயன்படுத்துவதற்கு சமம்."
 
 #: docs/Array.xml
 msgid "Returns the number of times an element is in the array."
-msgstr ""
+msgstr "ஒரு உறுப்பு வரிசையில் இருக்கும் எண்ணிக்கையை எத்தனை முறை வழங்குகிறது."
 
 #: docs/Array.xml
 msgid ""
 "Returns a copy of the array.\n"
 "If [code]deep[/code] is [code]true[/code], a deep copy is performed: all nested arrays and dictionaries are duplicated and will not be shared with the original array. If [code]false[/code], a shallow copy is made and references to the original nested arrays and dictionaries are kept, so that modifying a sub-array or dictionary in the copy will also impact those referenced in the source array."
 msgstr ""
+"வரிசையின் நகலை வழங்குகிறது.\n"
+" . ."
 
 #: docs/Array.xml docs/PoolByteArray.xml docs/PoolColorArray.xml
 #: docs/PoolIntArray.xml docs/PoolRealArray.xml docs/PoolStringArray.xml
 #: docs/PoolVector2Array.xml docs/PoolVector3Array.xml
 msgid "Returns [code]true[/code] if the array is empty."
-msgstr ""
+msgstr "வரிசை காலியாக இருந்தால் [குறியீடு] உண்மை [/குறியீடு] ஐ வழங்குகிறது."
 
 #: docs/Array.xml
 msgid ""
@@ -7751,24 +7851,34 @@ msgid ""
 "[b]Note:[/b] This method acts in-place and doesn't return a value.\n"
 "[b]Note:[/b] On large arrays, this method will be slower if the removed element is close to the beginning of the array (index 0). This is because all elements placed after the removed element have to be reindexed."
 msgstr ""
+"வரிசையிலிருந்து ஒரு மதிப்பின் முதல் நிகழ்வை நீக்குகிறது. வரிசையில் மதிப்பு இல்லை என்றால், எதுவும் நடக்காது. குறியீட்டால் ஒரு உறுப்பை அகற்ற, அதற்கு பதிலாக [முறை அகற்று] பயன்படுத்தவும்.\n"
+" [b] குறிப்பு: [/b] இந்த முறை இடத்தில் செயல்படுகிறது மற்றும் ஒரு மதிப்பைத் தராது.\n"
+" [b] குறிப்பு: [/b] பெரிய வரிசைகளில், அகற்றப்பட்ட உறுப்பு வரிசையின் தொடக்கத்திற்கு (குறியீட்டு 0) நெருக்கமாக இருந்தால் இந்த முறை மெதுவாக இருக்கும். ஏனென்றால், அகற்றப்பட்ட உறுப்புக்குப் பிறகு வைக்கப்படும் அனைத்து கூறுகளும் மறுசீரமைக்கப்பட வேண்டும்."
 
 #: docs/Array.xml
 msgid ""
 "Searches the array for a value and returns its index or [code]-1[/code] if "
 "not found. Optionally, the initial search index can be passed."
 msgstr ""
+"ஒரு மதிப்புக்கான வரிசையைத் தேடுகிறது மற்றும் அதன் குறியீட்டு அல்லது "
+"[குறியீடு] -1 [/குறியீடு] கிடைக்கவில்லை என்றால் தருகிறது. விருப்பமாக, ஆரம்ப "
+"தேடல் குறியீட்டை அனுப்பலாம்."
 
 #: docs/Array.xml
 msgid ""
 "Searches the array in reverse order for a value and returns its index or "
 "[code]-1[/code] if not found."
 msgstr ""
+"ஒரு மதிப்புக்கு தலைகீழ் வரிசையில் வரிசையைத் தேடி, அதன் குறியீட்டு அல்லது "
+"[குறியீடு] -1 [/குறியீடு] கிடைக்கவில்லை என்றால் திருப்பித் தரவும்."
 
 #: docs/Array.xml
 msgid ""
 "Returns the first element of the array. Prints an error and returns [code]null[/code] if the array is empty.\n"
 "[b]Note:[/b] Calling this function is not the same as writing [code]array[0][/code]. If the array is empty, accessing by index will pause project execution when running from the editor."
 msgstr ""
+"வரிசையின் முதல் உறுப்பை வழங்குகிறது. ஒரு பிழையை அச்சிட்டு, வரிசை காலியாக இருந்தால் [குறியீடு] சுழிய [/குறியீடு] ஐ வழங்குகிறது.\n"
+" [b] குறிப்பு: [/b] இந்த செயல்பாட்டை அழைப்பது [குறியீடு] வரிசை [0] [/குறியீடு] எழுதுவதற்கு சமமானதல்ல. வரிசை காலியாக இருந்தால், குறியீட்டின் மூலம் அணுகுவது எடிட்டரிலிருந்து இயங்கும் போது திட்ட செயலாக்கத்தை இடைநிறுத்தும்."
 
 #: docs/Array.xml
 msgid ""
@@ -7786,12 +7896,27 @@ msgid ""
 "    pass\n"
 "[/codeblock]"
 msgstr ""
+"வரிசையில் கொடுக்கப்பட்ட மதிப்பைக் கொண்டிருந்தால் [குறியீடு] உண்மை [/குறியீடு].\n"
+" [கோட் பிளாக்]\n"
+" [\"உள்ளே\", 7] .has (\"உள்ளே\") # உண்மை\n"
+" [\"உள்ளே\", 7] .has (\"வெளியே\") # பொய்\n"
+" [\"உள்ளே\", 7] .has (7) # உண்மை\n"
+" [\"உள்ளே\", 7] .has (\"7\") # தவறு\n"
+" [/codeBlock]\n"
+" [b] குறிப்பு: [/b] இது [/குறியீடு] ஆபரேட்டரில் [குறியீடு] ஐப் பயன்படுத்துவதற்கு சமம்:\n"
+" [கோட் பிளாக்]\n"
+" # `உண்மை` என மதிப்பீடு செய்யும்.\n"
+" [2, 4, 6, 8] இல் 2 என்றால்:\n"
+" பாச்\n"
+" [/codeBlock]"
 
 #: docs/Array.xml
 msgid ""
 "Returns a hashed 32-bit integer value representing the array and its contents.\n"
 "[b]Note:[/b] [Array]s with equal content will always produce identical hash values. However, the reverse is not true. Returning identical hash values does [i]not[/i] imply the arrays are equal, because different arrays can have identical hash values due to hash collisions."
 msgstr ""
+"வரிசை மற்றும் அதன் உள்ளடக்கங்களைக் குறிக்கும் 32-பிட் முழு எண் மதிப்பை வழங்குகிறது.\n"
+" [b] குறிப்பு: [/b] [வரிசை] சமமான உள்ளடக்கத்துடன் கள் எப்போதும் ஒரே மாதிரியான ஆச் மதிப்புகளை உருவாக்கும். இருப்பினும், தலைகீழ் உண்மை இல்லை. ஒரே மாதிரியான ஆச் மதிப்புகளைத் திருப்பித் தருவது [i] [/i] வரிசைகள் சமமானவை என்பதைக் குறிக்காது, ஏனென்றால் வெவ்வேறு வரிசைகள் ஆச் மோதல்கள் காரணமாக ஒரே மாதிரியான ஆச் மதிப்புகளைக் கொண்டிருக்கலாம்."
 
 #: docs/Array.xml
 msgid ""
@@ -7799,12 +7924,15 @@ msgid ""
 "[b]Note:[/b] This method acts in-place and doesn't return a value.\n"
 "[b]Note:[/b] On large arrays, this method will be slower if the inserted element is close to the beginning of the array (index 0). This is because all elements placed after the newly inserted element have to be reindexed."
 msgstr ""
+"வரிசையில் ஒரு குறிப்பிட்ட நிலையில் ஒரு புதிய உறுப்பைச் செருகுகிறது. நிலை செல்லுபடியாகும், அல்லது வரிசையின் முடிவில் ([குறியீடு] POS == அளவு () [/குறியீடு]).\n"
+" [b] குறிப்பு: [/b] இந்த முறை இடத்தில் செயல்படுகிறது மற்றும் ஒரு மதிப்பைத் தராது.\n"
+" [b] குறிப்பு: [/b] பெரிய வரிசைகளில், செருகப்பட்ட உறுப்பு வரிசையின் தொடக்கத்திற்கு அருகில் இருந்தால் (குறியீட்டு 0) இந்த முறை மெதுவாக இருக்கும். ஏனென்றால், புதிதாக செருகப்பட்ட உறுப்புக்குப் பிறகு வைக்கப்பட்டுள்ள அனைத்து கூறுகளும் மறுசீரமைக்கப்பட வேண்டும்."
 
 #: docs/Array.xml docs/PoolByteArray.xml docs/PoolColorArray.xml
 #: docs/PoolIntArray.xml docs/PoolRealArray.xml docs/PoolStringArray.xml
 #: docs/PoolVector2Array.xml docs/PoolVector3Array.xml
 msgid "Reverses the order of the elements in the array."
-msgstr ""
+msgstr "வரிசையில் உள்ள உறுப்புகளின் வரிசையை மாற்றியமைக்கிறது."
 
 #: docs/Array.xml
 msgid ""
@@ -7812,6 +7940,9 @@ msgid ""
 "comparable types. If the elements can't be compared, [code]null[/code] is "
 "returned."
 msgstr ""
+"அனைத்து கூறுகளும் ஒப்பிடக்கூடிய வகைகளாக இருந்தால் வரிசையில் உள்ள அதிகபட்ச "
+"மதிப்பை வழங்குகிறது. உறுப்புகளை ஒப்பிட முடியாவிட்டால், [குறியீடு] சுழிய "
+"[/குறியீடு] திரும்பப் பெறப்படும்."
 
 #: docs/Array.xml
 msgid ""
@@ -7819,12 +7950,17 @@ msgid ""
 "comparable types. If the elements can't be compared, [code]null[/code] is "
 "returned."
 msgstr ""
+"அனைத்து கூறுகளும் ஒப்பிடக்கூடிய வகைகளாக இருந்தால் வரிசையில் உள்ள குறைந்தபட்ச"
+" மதிப்பை வழங்குகிறது. உறுப்புகளை ஒப்பிட முடியாவிட்டால், [குறியீடு] சுழிய "
+"[/குறியீடு] திரும்பப் பெறப்படும்."
 
 #: docs/Array.xml
 msgid ""
 "Removes and returns the element of the array at index [code]position[/code]. If negative, [code]position[/code] is considered relative to the end of the array. Leaves the array untouched and returns [code]null[/code] if the array is empty or if it's accessed out of bounds. An error message is printed when the array is accessed out of bounds, but not when the array is empty.\n"
 "[b]Note:[/b] On large arrays, this method can be slower than [method pop_back] as it will reindex the array's elements that are located after the removed element. The larger the array and the lower the index of the removed element, the slower [method pop_at] will be."
 msgstr ""
+"குறியீட்டு [குறியீடு] நிலையில் [/குறியீடு] வரிசையின் உறுப்பை அகற்றி வழங்குகிறது. எதிர்மறையாக இருந்தால், [குறியீடு] நிலை [/குறியீடு] வரிசையின் முடிவோடு தொடர்புடையதாகக் கருதப்படுகிறது. வரிசையை தீண்டாமல் விட்டுவிட்டு, வரிசை காலியாக இருந்தால் அல்லது அது எல்லைக்கு வெளியே அணுகப்பட்டால் [குறியீடு] சுழிய [/குறியீடு] ஐ வழங்குகிறது. வரிசை எல்லைக்கு வெளியே அணுகும்போது பிழை செய்தி அச்சிடப்படுகிறது, ஆனால் வரிசை காலியாக இருக்கும்போது அல்ல.\n"
+" . பெரிய வரிசை மற்றும் அகற்றப்பட்ட உறுப்பின் குறியீட்டைக் குறைத்து, மெதுவான [முறை POP_AT] இருக்கும்."
 
 #: docs/Array.xml
 msgid ""
@@ -7832,23 +7968,32 @@ msgid ""
 " if the array is empty, without printing an error message. See also [method "
 "pop_front]."
 msgstr ""
+"வரிசையின் கடைசி உறுப்பை அகற்றி வழங்குகிறது. பிழை செய்தியை அச்சிடாமல், வரிசை "
+"காலியாக இருந்தால் [குறியீடு] NULL [/code] ஐ வழங்குகிறது. [முறை POP_FRONT] "
+"ஐயும் காண்க."
 
 #: docs/Array.xml
 msgid ""
 "Removes and returns the first element of the array. Returns [code]null[/code] if the array is empty, without printing an error message. See also [method pop_back].\n"
 "[b]Note:[/b] On large arrays, this method is much slower than [method pop_back] as it will reindex all the array's elements every time it's called. The larger the array, the slower [method pop_front] will be."
 msgstr ""
+"வரிசையின் முதல் உறுப்பை அகற்றி வழங்குகிறது. பிழை செய்தியை அச்சிடாமல், வரிசை காலியாக இருந்தால் [குறியீடு] NULL [/code] ஐ வழங்குகிறது. [முறை POP_BACK] ஐயும் காண்க.\n"
+" . பெரிய வரிசை, மெதுவான [முறை பாப்_பிரண்ட்] இருக்கும்."
 
 #: docs/Array.xml
 msgid ""
 "Appends an element at the end of the array. See also [method push_front]."
 msgstr ""
+"வரிசையின் முடிவில் ஒரு உறுப்பைச் சேர்க்கிறது. [முறை புச்_பிரண்ட்] ஐயும் "
+"காண்க."
 
 #: docs/Array.xml
 msgid ""
 "Adds an element at the beginning of the array. See also [method push_back].\n"
 "[b]Note:[/b] On large arrays, this method is much slower than [method push_back] as it will reindex all the array's elements every time it's called. The larger the array, the slower [method push_front] will be."
 msgstr ""
+"வரிசையின் தொடக்கத்தில் ஒரு உறுப்பைச் சேர்க்கிறது. [முறை புச்_பேக்] ஐயும் காண்க.\n"
+" . பெரிய வரிசை, மெதுவான [முறை புச்_பிரண்ட்] இருக்கும்."
 
 #: docs/Array.xml
 msgid ""
@@ -7856,6 +8001,9 @@ msgid ""
 "[b]Note:[/b] This method acts in-place and doesn't return a value.\n"
 "[b]Note:[/b] On large arrays, this method will be slower if the removed element is close to the beginning of the array (index 0). This is because all elements placed after the removed element have to be reindexed."
 msgstr ""
+"குறியீட்டால் வரிசையிலிருந்து ஒரு உறுப்பை நீக்குகிறது. வரிசையில் குறியீடு இல்லை என்றால், எதுவும் நடக்காது. ஒரு உறுப்பை அதன் மதிப்பைத் தேடுவதன் மூலம் அகற்ற, அதற்கு பதிலாக [முறை அழிக்க] பயன்படுத்தவும்.\n"
+" [b] குறிப்பு: [/b] இந்த முறை இடத்தில் செயல்படுகிறது மற்றும் ஒரு மதிப்பைத் தராது.\n"
+" [b] குறிப்பு: [/b] பெரிய வரிசைகளில், அகற்றப்பட்ட உறுப்பு வரிசையின் தொடக்கத்திற்கு (குறியீட்டு 0) நெருக்கமாக இருந்தால் இந்த முறை மெதுவாக இருக்கும். ஏனென்றால், அகற்றப்பட்ட உறுப்புக்குப் பிறகு வைக்கப்படும் அனைத்து கூறுகளும் மறுசீரமைக்கப்பட வேண்டும்."
 
 #: docs/Array.xml
 msgid ""
@@ -7863,6 +8011,9 @@ msgid ""
 "size is smaller, elements are cleared, if bigger, new elements are "
 "[code]null[/code]."
 msgstr ""
+"வேறுபட்ட எண்ணிக்கையிலான உறுப்புகளைக் கொண்டிருக்க வரிசையை மறுஅளவிடுங்கள். "
+"வரிசை அளவு சிறியதாக இருந்தால், கூறுகள் அழிக்கப்படும், பெரியதாக இருந்தால், "
+"புதிய கூறுகள் [குறியீடு] NULL [/குறியீடு]."
 
 #: docs/Array.xml
 msgid ""
@@ -7870,6 +8021,9 @@ msgid ""
 " passed. If negative, the start index is considered relative to the end of "
 "the array."
 msgstr ""
+"தலைகீழ் வரிசையில் வரிசையைத் தேடுகிறது. விருப்பமாக, தொடக்க தேடல் குறியீட்டை "
+"அனுப்ப முடியும். எதிர்மறையாக இருந்தால், தொடக்கக் குறியீடு வரிசையின் முடிவோடு"
+" தொடர்புடையதாகக் கருதப்படுகிறது."
 
 #: docs/Array.xml
 msgid ""
@@ -7878,10 +8032,15 @@ msgid ""
 "@GDScript.randi]. Call [method @GDScript.randomize] to ensure that a new "
 "seed will be used each time if you want non-reproducible shuffling."
 msgstr ""
+"உருப்படிகளுக்கு ஒரு சீரற்ற ஆர்டர் இருக்கும் என்ற வரிசையை மாற்றுகிறது. இந்த "
+"முறை [முறை @gdscript.randi] போன்ற முறைகளுக்கு பொதுவான உலகளாவிய சீரற்ற எண் "
+"செனரேட்டரைப் பயன்படுத்துகிறது. மாற்றப்படாத மாற்றத்தை நீங்கள் விரும்பினால் "
+"ஒவ்வொரு முறையும் ஒரு புதிய விதை பயன்படுத்தப்படும் என்பதை உறுதிப்படுத்த [முறை"
+" @gdscript.randomize] ஐ அழைக்கவும்."
 
 #: docs/Array.xml
 msgid "Returns the number of elements in the array."
-msgstr ""
+msgstr "வரிசையில் உள்ள உறுப்புகளின் எண்ணிக்கையை வழங்குகிறது."
 
 #: docs/Array.xml
 msgid ""
@@ -7890,6 +8049,11 @@ msgid ""
 "and upper index are inclusive, with the [code]step[/code] describing the "
 "change between indices while slicing."
 msgstr ""
+"செயல்பாட்டில் விவரிக்கப்பட்டுள்ள துணைக்குழுவை நகலெடுத்து அதை ஒரு வரிசையில் "
+"திருப்பி, [குறியீடு] ஆழமான [/குறியீடு] [குறியீடு] உண்மை [/குறியீடு] என்றால் "
+"வரிசையை ஆழமாக நகலெடுக்கிறது. [குறியீடு] படி [/குறியீடு] வெட்டும் போது "
+"குறியீடுகளுக்கு இடையிலான மாற்றத்தை விவரிக்கும் குறைந்த மற்றும் மேல் குறியீடு"
+" உள்ளடக்கியது."
 
 #: docs/Array.xml
 msgid ""
@@ -7901,6 +8065,13 @@ msgid ""
 "print(strings) # Prints [string1, string10, string11, string2]\n"
 "[/codeblock]"
 msgstr ""
+"வரிசையை வரிசைப்படுத்துகிறது.\n"
+" [b] குறிப்பு: [/b] சரங்கள் அகர வரிசைப்படி வரிசைப்படுத்தப்படுகின்றன (இயற்கை ஒழுங்குக்கு மாறாக). எண்களின் வரிசையுடன் முடிவடையும் சரங்களின் வரிசையை வரிசைப்படுத்தும்போது இது எதிர்பாராத நடத்தைக்கு வழிவகுக்கும். பின்வரும் உதாரணத்தைக் கவனியுங்கள்:\n"
+" [கோட் பிளாக்]\n"
+" var சரங்கள் = [\"string1\", \"string2\", \"string10\", \"string11\"]\n"
+" strings.sort ()\n"
+" அச்சு (சரங்கள்) # அச்சிடுகிறது [சரம் 1, சரம் 10, சரம் 11, சரம் 2]\n"
+" [/codeBlock]"
 
 #: docs/Array.xml
 msgid ""
@@ -7919,11 +8090,27 @@ msgid ""
 "print(my_items) # Prints [[4, Tomato], [5, Potato], [9, Rice]].\n"
 "[/codeblock]"
 msgstr ""
+"தனிப்பயன் முறையைப் பயன்படுத்தி வரிசையை வரிசைப்படுத்துகிறது. வாதங்கள் முறையையும் அத்தகைய முறையின் பெயரையும் வைத்திருக்கும் ஒரு பொருள். தனிப்பயன் முறை இரண்டு வாதங்களைப் பெறுகிறது (வரிசையிலிருந்து ஒரு இணை உறுப்புகள்) மற்றும் [குறியீடு] உண்மை [/குறியீடு] அல்லது [குறியீடு] தவறான [/குறியீடு] ஐ வழங்க வேண்டும்.\n"
+" இரண்டு கூறுகளுக்கு [குறியீடு] ஒரு [/குறியீடு] மற்றும் [குறியீடு] பி [/குறியீடு], கொடுக்கப்பட்ட முறை [குறியீடு] உண்மை [/குறியீடு] ஐ வழங்கினால், உறுப்பு [குறியீடு] பி [/குறியீடு] வரிசையில் உறுப்பு [குறியீடு] ஒரு [/குறியீடு] க்குப் பிறகு இருக்கும்.\n"
+" . அவ்வாறு செய்வது எதிர்பாராத நடத்தைக்கு வழிவகுக்கும்.\n"
+" [கோட் பிளாக்]\n"
+" வகுப்பு MyCustomSorter:\n"
+" நிலையான FUNC Sort_ascend (A, B):\n"
+" A [0] <b [0] என்றால்:\n"
+" உண்மை திரும்பவும்\n"
+" தவறு திரும்பவும்\n"
+"\n"
+" var my_items = [[5, \"உருளைக்கிழங்கு\"], [9, \"அரிசி\"], [4, \"தக்காளி\"]]]\n"
+" my_items.sort_custom (MyCustomSorter, \"sort_ascending\")\n"
+" அச்சிடுக (my_items) # அச்சிடுகிறது [[4, தக்காளி], [5, உருளைக்கிழங்கு], [9, அரிசி]].\n"
+" [/codeBlock]"
 
 #: docs/ArrayMesh.xml
 msgid ""
 "[Mesh] type that provides utility for constructing a surface from arrays."
 msgstr ""
+"[கண்ணி] வரிசைகளிலிருந்து ஒரு மேற்பரப்பை உருவாக்குவதற்கான பயன்பாட்டை வழங்கும்"
+" வகை."
 
 #: docs/ArrayMesh.xml
 msgid ""
@@ -7948,17 +8135,41 @@ msgid ""
 "See also [ImmediateGeometry], [MeshDataTool] and [SurfaceTool] for procedural geometry generation.\n"
 "[b]Note:[/b] Rebel Engine uses clockwise [url=https://learnopengl.com/Advanced-OpenGL/Face-culling]winding order[/url] for front faces of triangle primitive modes."
 msgstr ""
+"பண்புகளை வரிசைகளாகக் குறிப்பிடுவதன் மூலம் [மெச்] ஐ உருவாக்க [அரேமேச்] பயன்படுத்தப்படுகிறது.\n"
+" ஒற்றை முக்கோணத்தை உருவாக்குவது மிக அடிப்படையான எடுத்துக்காட்டு:\n"
+" [கோட் பிளாக்]\n"
+" var செங்குத்துகள் = boolvector3array ()\n"
+" vertices.push_back (வெக்டர் 3 (0, 1, 0))\n"
+" vertices.push_back (வெக்டர் 3 (1, 0, 0))\n"
+" vertices.push_back (வெக்டர் 3 (0, 0, 1))\n"
+" # அரேமேசைத் தொடங்கவும்.\n"
+" var arr_mesh = arraymesh.new ()\n"
+" var வரிசைகள் = []\n"
+" வரிசைகள். Resize (arraymesh.array_max)\n"
+" வரிசைகள் [arraymesh.array_vertex] = செங்குத்துகள்\n"
+" # கண்ணி உருவாக்கவும்.\n"
+" arr_mesh.add_surface_from_arrays (mesh.primitive_triangles, வரிசைகள்)\n"
+" var m = meshinstance.new ()\n"
+" m.mesh = arr_mesh\n"
+" [/codeBlock]\n"
+" [மெசின்ச்டன்ச்] காட்டப்பட வேண்டிய [காட்சி] இல் சேர்க்க தயாராக உள்ளது.\n"
+" நடைமுறை வடிவியல் தலைமுறைக்கு [உடனடி சியோமெட்ரி], [மெச்தடாடூல்] மற்றும் [சர்ஃபாசெட்டூல்] ஐயும் காண்க.\n"
+" ."
 
 #: docs/ArrayMesh.xml
 msgid ""
 "https://docs.rebeltoolbox.com/en/latest/tutorials/3d/procedural_geometry/arraymesh.html"
 msgstr ""
+"https://docs.rebeltoolbox.com/en/latest/tutorials/3d/procedural_geometry/arraymesh.html"
 
 #: docs/ArrayMesh.xml
 msgid ""
 "Adds name for a blend shape that will be added with [method "
 "add_surface_from_arrays]. Must be called before surface is added."
 msgstr ""
+"[முறை Add_surface_from_arrays] உடன் சேர்க்கப்படும் கலப்பு வடிவத்திற்கான "
+"பெயரைச் சேர்க்கிறது. மேற்பரப்பு சேர்க்கப்படுவதற்கு முன்பு அழைக்கப்பட "
+"வேண்டும்."
 
 #: docs/ArrayMesh.xml
 msgid ""
@@ -7966,86 +8177,103 @@ msgid ""
 "Surfaces are created to be rendered using a [code]primitive[/code], which may be any of the types defined in [enum Mesh.PrimitiveType]. (As a note, when using indices, it is recommended to only use points, lines, or triangles.) [method Mesh.get_surface_count] will become the [code]surf_idx[/code] for this new surface.\n"
 "The [code]arrays[/code] argument is an array of arrays. See [enum ArrayType] for the values used in this array. For example, [code]arrays[0][/code] is the array of vertices. That first vertex sub-array is always required; the others are optional. Adding an index array puts this function into \"index mode\" where the vertex and other arrays become the sources of data and the index array defines the vertex order. All sub-arrays must have the same length as the vertex array or be empty, except for [constant ARRAY_INDEX] if it is used."
 msgstr ""
+"புதிய மேற்பரப்பை உருவாக்குகிறது.\n"
+" [குறியீடு] பழமையான [/குறியீடு] ஐப் பயன்படுத்தி மேற்பரப்புகள் உருவாக்கப்படுகின்றன, இது [enum mesh.primitivetype] இல் வரையறுக்கப்பட்ட வகைகளாக இருக்கலாம். .\n"
+" [குறியீடு] வரிசைகள் [/குறியீடு] உரையாடல் வரிசைகளின் வரிசை. இந்த வரிசையில் பயன்படுத்தப்படும் மதிப்புகளுக்கு [enum arrayType] ஐப் பார்க்கவும். எடுத்துக்காட்டாக, [குறியீடு] வரிசைகள் [0] [/குறியீடு] என்பது செங்குத்துகளின் வரிசை. அந்த முதல் வெர்டெக்ச் துணை வரிசை எப்போதும் தேவைப்படுகிறது; மற்றவர்கள் விருப்பமானவர்கள். ஒரு குறியீட்டு வரிசையைச் சேர்ப்பது இந்த செயல்பாட்டை \"குறியீட்டு பயன்முறையில்\" வைக்கிறது, அங்கு வெர்டெக்ச் மற்றும் பிற வரிசைகள் தரவுகளின் ஆதாரங்களாக மாறும் மற்றும் குறியீட்டு வரிசை வெர்டெக்ச் வரிசையை வரையறுக்கிறது. எல்லா துணை வரிசைகளும் வெர்டெக்ச் வரிசையின் அதே நீளத்தைக் கொண்டிருக்க வேண்டும் அல்லது காலியாக இருக்க வேண்டும், அது பயன்படுத்தப்பட்டால் [நிலையான வரிசை_இண்டெக்ச்] தவிர."
 
 #: docs/ArrayMesh.xml
 msgid "Removes all blend shapes from this [ArrayMesh]."
-msgstr ""
+msgstr "இந்த [அரேமேச்] இலிருந்து அனைத்து கலப்பு வடிவங்களையும் நீக்குகிறது."
 
 #: docs/ArrayMesh.xml
 msgid "Removes all surfaces from this [ArrayMesh]."
-msgstr ""
+msgstr "இந்த [அரேமேச்] இலிருந்து அனைத்து மேற்பரப்புகளையும் நீக்குகிறது."
 
 #: docs/ArrayMesh.xml
 msgid "Returns the number of blend shapes that the [ArrayMesh] holds."
-msgstr ""
+msgstr "[அரேமேச்] வைத்திருக்கும் கலப்பு வடிவங்களின் எண்ணிக்கையை வழங்குகிறது."
 
 #: docs/ArrayMesh.xml
 msgid "Returns the name of the blend shape at this index."
-msgstr ""
+msgstr "இந்த குறியீட்டில் கலவை வடிவத்தின் பெயரை வழங்குகிறது."
 
 #: docs/ArrayMesh.xml
 msgid ""
 "Will perform a UV unwrap on the [ArrayMesh] to prepare the mesh for "
 "lightmapping."
-msgstr ""
+msgstr "லைட்மாப்பிங்கிற்கான கண்ணி தயாரிக்க [அரேமேச்] இல் யு.வி."
 
 #: docs/ArrayMesh.xml
 msgid "Will regenerate normal maps for the [ArrayMesh]."
-msgstr ""
+msgstr "[அரேமேச்] க்கான சாதாரண வரைபடங்களை மீண்டும் உருவாக்கும்."
 
 #: docs/ArrayMesh.xml
 msgid ""
 "Returns the index of the first surface with this name held within this "
 "[ArrayMesh]. If none are found, -1 is returned."
 msgstr ""
+"இந்த [அரேமேச்] க்குள் இந்த பெயருடன் முதல் மேற்பரப்பின் குறியீட்டை "
+"வழங்குகிறது. எதுவும் கிடைக்கவில்லை என்றால், -1 திரும்பப் பெறப்படுகிறது."
 
 #: docs/ArrayMesh.xml
 msgid ""
 "Returns the length in indices of the index array in the requested surface "
 "(see [method add_surface_from_arrays])."
 msgstr ""
+"கோரப்பட்ட மேற்பரப்பில் குறியீட்டு வரிசையின் குறியீடுகளில் நீளத்தை "
+"வழங்குகிறது ([முறை ADD_SURFACE_FROM_ARRAYS] ஐப் பார்க்கவும்)."
 
 #: docs/ArrayMesh.xml
 msgid ""
 "Returns the length in vertices of the vertex array in the requested surface "
 "(see [method add_surface_from_arrays])."
 msgstr ""
+"கோரப்பட்ட மேற்பரப்பில் வெர்டெக்ச் வரிசையின் செங்குத்துகளில் நீளத்தை "
+"வழங்குகிறது ([முறை ADD_SURFACE_FROM_ARRAYS] ஐப் பார்க்கவும்)."
 
 #: docs/ArrayMesh.xml
 msgid ""
 "Returns the format mask of the requested surface (see [method "
 "add_surface_from_arrays])."
 msgstr ""
+"கோரப்பட்ட மேற்பரப்பின் வடிவமைப்பு முகமூடியை வழங்குகிறது ([முறை "
+"ADD_SURFACE_FROM_ARRAYS] ஐப் பார்க்கவும்)."
 
 #: docs/ArrayMesh.xml
 msgid "Gets the name assigned to this surface."
-msgstr ""
+msgstr "இந்த மேற்பரப்பில் ஒதுக்கப்பட்ட பெயரைப் பெறுகிறது."
 
 #: docs/ArrayMesh.xml
 msgid ""
 "Returns the primitive type of the requested surface (see [method "
 "add_surface_from_arrays])."
 msgstr ""
+"கோரப்பட்ட மேற்பரப்பின் பழமையான வகையை வழங்குகிறது ([முறை "
+"ADD_SURFACE_FROM_ARRAYS] ஐப் பார்க்கவும்)."
 
 #: docs/ArrayMesh.xml
 msgid ""
 "Removes a surface at position [code]surf_idx[/code], shifting greater "
 "surfaces one [code]surf_idx[/code] slot down."
 msgstr ""
+"ஒரு மேற்பரப்பை [குறியீடு] Surf_idx [/code] இல் நீக்குகிறது, அதிக "
+"மேற்பரப்புகளை ஒரு [குறியீடு] surf_idx [/code] ச்லாட்டைக் கீழே மாற்றுகிறது."
 
 #: docs/ArrayMesh.xml
 msgid "Sets a name for a given surface."
-msgstr ""
+msgstr "கொடுக்கப்பட்ட மேற்பரப்புக்கு ஒரு பெயரை அமைக்கிறது."
 
 #: docs/ArrayMesh.xml
 msgid ""
 "Updates a specified region of mesh arrays on the GPU.\n"
 "[b]Warning:[/b] Only use if you know what you are doing. You can easily cause crashes by calling this function with improper arguments."
 msgstr ""
+"GPU இல் கண்ணி வரிசைகளின் குறிப்பிட்ட பகுதியைப் புதுப்பிக்கிறது.\n"
+" [b] எச்சரிக்கை: [/b] நீங்கள் என்ன செய்கிறீர்கள் என்று உங்களுக்குத் தெரிந்தால் மட்டுமே பயன்படுத்தவும். இந்த செயல்பாட்டை முறையற்ற வாதங்களுடன் அழைப்பதன் மூலம் நீங்கள் எளிதில் செயலிழப்பை ஏற்படுத்தலாம்."
 
 #: docs/ArrayMesh.xml
 msgid "Sets the blend shape mode to one of [enum Mesh.BlendShapeMode]."
-msgstr ""
+msgstr "கலப்பு வடிவ பயன்முறையை [enum mesh.blendshapemode] க்கு அமைக்கிறது."
 
 #: docs/ArrayMesh.xml docs/PrimitiveMesh.xml
 msgid ""
@@ -8053,23 +8281,29 @@ msgid ""
 "Especially useful to avoid unexpected culling when using a shader to offset "
 "vertices."
 msgstr ""
+"[AABB] ஐ மீறுகிறது, பயனரால் வரையறுக்கப்பட்டுள்ளது. செங்குத்துகளை ஈடுசெய்ய "
+"ஒரு சேடரைப் பயன்படுத்தும் போது எதிர்பாராத குவிப்பைத் தவிர்ப்பதற்கு குறிப்பாக"
+" பயனுள்ளதாக இருக்கும்."
 
 #: docs/ArrayMesh.xml
 msgid "Default value used for index_array_len when no indices are present."
 msgstr ""
+"குறியீடுகள் இல்லாதபோது Index_array_len க்கு பயன்படுத்தப்படும் இயல்புநிலை "
+"மதிப்பு."
 
 #: docs/ArrayMesh.xml
 msgid "Amount of weights/bone indices per vertex (always 4)."
-msgstr ""
+msgstr "ஒரு வெர்டெக்சுக்கு எடைகள்/எலும்பு குறியீடுகளின் அளவு (எப்போதும் 4)."
 
 #: docs/ArrayMesh.xml
 msgid ""
 "[PoolVector3Array], [PoolVector2Array], or [Array] of vertex positions."
 msgstr ""
+"[PoolVector3Array], [PoolVector2Array], or [Array] of vertex positions."
 
 #: docs/ArrayMesh.xml
 msgid "[PoolVector3Array] of vertex normals."
-msgstr ""
+msgstr "வெர்டெக்ச் நார்மல்களின் [bolvecter3array]."
 
 #: docs/ArrayMesh.xml
 msgid ""
@@ -8077,28 +8311,34 @@ msgid ""
 "first 3 floats determine the tangent, and the last the binormal direction as"
 " -1 or 1."
 msgstr ""
+"வெர்டெக்ச் தொடுகோடுகளின் [பூல்ரியல்அரே]. 4 மிதவைகளின் குழுக்களில் உள்ள "
+"ஒவ்வொரு உறுப்பு, முதல் 3 மிதவைகள் தொடுகோடு தீர்மானிக்கின்றன, கடைசியாக "
+"பைனார்மல் திசையை -1 அல்லது 1 என."
 
 #: docs/ArrayMesh.xml
 msgid "[PoolColorArray] of vertex colors."
-msgstr ""
+msgstr "[பூலலோரரே] வெர்டெக்ச் வண்ணங்களின்."
 
 #: docs/ArrayMesh.xml
 msgid "[PoolVector2Array] for UV coordinates."
-msgstr ""
+msgstr "[Bolvecter2Array] புற ஊதா ஆயத்தொலைவுகளுக்கு."
 
 #: docs/ArrayMesh.xml
 msgid "[PoolVector2Array] for second UV coordinates."
-msgstr ""
+msgstr "[Boolvecter2Array] இரண்டாவது புற ஊதா ஆயத்தொலைவுகளுக்கு."
 
 #: docs/ArrayMesh.xml
 msgid ""
 "[PoolRealArray] or [PoolIntArray] of bone indices. Each element in groups of"
 " 4 floats."
 msgstr ""
+"[பூல்ரியல்அரே] அல்லது [பூலிண்டார்] எலும்பு குறியீடுகளின். 4 மிதவைகளின் "
+"குழுக்களில் ஒவ்வொரு உறுப்பு."
 
 #: docs/ArrayMesh.xml
 msgid "[PoolRealArray] of bone weights. Each element in groups of 4 floats."
 msgstr ""
+"எலும்பு எடையின் [பூல்ரீலார்ர்]. 4 மிதவைகளின் குழுக்களில் ஒவ்வொரு உறுப்பு."
 
 #: docs/ArrayMesh.xml
 msgid ""
