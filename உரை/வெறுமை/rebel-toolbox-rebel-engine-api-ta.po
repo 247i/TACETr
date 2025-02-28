@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Tamil (Rebel Toolbox)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-28 07:29+0200\n"
-"PO-Revision-Date: 2025-02-16 11:18+0530\n"
+"PO-Revision-Date: 2025-02-28 21:50+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rebel-toolbox/rebel-engine-api/ta/>\n"
 "Language: ta\n"
@@ -5981,16 +5981,21 @@ msgid ""
 "sub-animation and return once it finishes. Blend times for fading in and out"
 " can be customized, as well as filters."
 msgstr ""
+"[அனிமேசன்நோடெப்லெண்ட்ரீ] சேர்க்க ஒரு சான்று. இந்த முனை ஒரு துணை அனிமேசனை "
+"இயக்கும் மற்றும் அது முடிந்ததும் திரும்பும். உள்ளேயும் வெளியேயும் மறைவதற்கான"
+" கலப்பு நேரங்கள் தனிப்பயனாக்கப்படலாம், அதே போல் வடிப்பான்களும்."
 
 #: docs/AnimationNodeOneShot.xml
 msgid ""
 "If [code]true[/code], the sub-animation will restart automatically after "
 "finishing."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், முடித்த பிறகு துணை அனிமேசன் தானாக "
+"மறுதொடக்கம் செய்யும்."
 
 #: docs/AnimationNodeOneShot.xml
 msgid "The delay after which the automatic restart is triggered, in seconds."
-msgstr ""
+msgstr "தானியங்கி மறுதொடக்கம் தூண்டப்பட்ட நேரந்தவறுகை, நொடிகளில்."
 
 #: docs/AnimationNodeOneShot.xml
 msgid ""
@@ -5998,14 +6003,18 @@ msgid ""
 "seconds) between 0 and this value will be added to [member "
 "autorestart_delay]."
 msgstr ""
+"If [member autorestart] is [code]true[/code], a சீரற்ற additional சுணக்கம் "
+"(in seconds) between 0 and this மதிப்பு will be added பெறுநர் [member "
+"autorestart_delay]."
 
 #: docs/AnimationNodeOutput.xml
 msgid "Generic output node to be added to [AnimationNodeBlendTree]."
 msgstr ""
+"[அனிமேசன்நோடெப்லெண்ட்ரீ] இல் சேர்க்கப்பட வேண்டிய பொதுவான வெளியீட்டு முனை."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "State machine for control of animations."
-msgstr ""
+msgstr "அனிமேசன்களைக் கட்டுப்படுத்த மாநில இயந்திரம்."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid ""
@@ -6016,101 +6025,121 @@ msgid ""
 "state_machine.travel(\"some_state\")\n"
 "[/codeblock]"
 msgstr ""
+"அனிமேசன் நிலைகளைக் குறிக்கும் பல முனைகளைக் கொண்டுள்ளது, இது ஒரு வரைபடத்தில் இணைக்கப்பட்டுள்ளது. குறுகிய பாதை வழிமுறையைப் பயன்படுத்தி, முனை மாற்றங்களை தானாகவோ அல்லது குறியீடு வழியாகவோ கட்டமைக்க முடியும். [அனிமேசன்நோடெச்டேட்மச்சின் பிளே பேக்] பொருளை [அனிமேசன் ட்ரீ] முனையிலிருந்து நிரல் ரீதியாக கட்டுப்படுத்த மீட்டெடுக்கவும்.\n"
+" [b] எடுத்துக்காட்டு: [/b]\n"
+" [கோட் பிளாக்]\n"
+" var state_machine = $ animationtree.get (\"அளவுருக்கள்/பின்னணி\")\n"
+" state_machine.travel (\"some_state\")\n"
+" [/codeBlock]"
 
 #: docs/AnimationNodeStateMachine.xml
 msgid ""
 "Adds a new node to the graph. The [code]position[/code] is used for display "
 "in the editor."
 msgstr ""
+"வரைபடத்திற்கு புதிய முனையைச் சேர்க்கிறது. [குறியீடு] நிலை [/குறியீடு] "
+"எடிட்டரில் காட்சிக்கு பயன்படுத்தப்படுகிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Adds a transition between the given nodes."
-msgstr ""
+msgstr "கொடுக்கப்பட்ட முனைகளுக்கு இடையில் ஒரு மாற்றத்தை சேர்க்கிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Returns the graph's end node."
-msgstr ""
+msgstr "வரைபடத்தின் இறுதி முனையை வழங்குகிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Returns the draw offset of the graph. Used for display in the editor."
 msgstr ""
+"வரைபடத்தின் டிரா ஆஃப்செட்டை வழங்குகிறது. எடிட்டரில் காட்சிக்கு "
+"பயன்படுத்தப்படுகிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Returns the animation node with the given name."
-msgstr ""
+msgstr "கொடுக்கப்பட்ட பெயருடன் அனிமேசன் முனையை வழங்குகிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Returns the given animation node's name."
-msgstr ""
+msgstr "கொடுக்கப்பட்ட அனிமேசன் முனையின் பெயரை வழங்குகிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Returns the given node's coordinates. Used for display in the editor."
 msgstr ""
+"கொடுக்கப்பட்ட முனையின் ஒருங்கிணைப்புகளை வழங்குகிறது. எடிட்டரில் காட்சிக்கு "
+"பயன்படுத்தப்படுகிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Returns the given transition."
-msgstr ""
+msgstr "கொடுக்கப்பட்ட மாற்றத்தை வழங்குகிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Returns the number of connections in the graph."
-msgstr ""
+msgstr "வரைபடத்தில் இணைப்புகளின் எண்ணிக்கையை வழங்குகிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Returns the given transition's start node."
-msgstr ""
+msgstr "கொடுக்கப்பட்ட மாற்றத்தின் தொடக்க முனையை வழங்குகிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Returns the given transition's end node."
-msgstr ""
+msgstr "கொடுக்கப்பட்ட மாற்றத்தின் இறுதி முனையை வழங்குகிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Returns [code]true[/code] if the graph contains the given node."
 msgstr ""
+"வரைபடத்தில் கொடுக்கப்பட்ட முனை இருந்தால் [குறியீடு] உண்மை [/குறியீடு] "
+"திரும்பும்."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid ""
 "Returns [code]true[/code] if there is a transition between the given nodes."
 msgstr ""
+"கொடுக்கப்பட்ட முனைகளுக்கு இடையில் ஒரு மாற்றம் இருந்தால் [குறியீடு] உண்மை "
+"[/குறியீடு] திரும்பும்."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Deletes the given node from the graph."
-msgstr ""
+msgstr "கொடுக்கப்பட்ட முனையை வரைபடத்திலிருந்து நீக்குகிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Deletes the transition between the two specified nodes."
-msgstr ""
+msgstr "குறிப்பிட்ட இரண்டு முனைகளுக்கு இடையிலான மாற்றத்தை நீக்குகிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Deletes the given transition by index."
-msgstr ""
+msgstr "கொடுக்கப்பட்ட மாற்றத்தை குறியீட்டால் நீக்குகிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Renames the given node."
-msgstr ""
+msgstr "கொடுக்கப்பட்ட முனைக்கு மறுபெயரிடுகிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Replaces the node and keeps its transitions unchanged."
-msgstr ""
+msgstr "முனையை மாற்றி அதன் மாற்றங்களை மாற்றாமல் வைத்திருக்கிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Sets the given node as the graph end point."
-msgstr ""
+msgstr "கொடுக்கப்பட்ட முனையை வரைபட இறுதி புள்ளியாக அமைக்கிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Sets the draw offset of the graph. Used for display in the editor."
 msgstr ""
+"வரைபடத்தின் டிரா ஆஃப்செட்டை அமைக்கிறது. எடிட்டரில் காட்சிக்கு "
+"பயன்படுத்தப்படுகிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Sets the node's coordinates. Used for display in the editor."
 msgstr ""
+"முனையின் ஒருங்கிணைப்புகளை அமைக்கிறது. எடிட்டரில் காட்சிக்கு "
+"பயன்படுத்தப்படுகிறது."
 
 #: docs/AnimationNodeStateMachine.xml
 msgid "Sets the given node as the graph start point."
-msgstr ""
+msgstr "கொடுக்கப்பட்ட முனையை வரைபட தொடக்க புள்ளியாக அமைக்கிறது."
 
 #: docs/AnimationNodeStateMachinePlayback.xml
 msgid "Playback control for [AnimationNodeStateMachine]."
-msgstr ""
+msgstr "[அனிமேசன்நோடெச்டாடேமச்சின்] க்கான பின்னணி கட்டுப்பாடு."
 
 #: docs/AnimationNodeStateMachinePlayback.xml
 msgid ""
@@ -6121,37 +6150,46 @@ msgid ""
 "state_machine.travel(\"some_state\")\n"
 "[/codeblock]"
 msgstr ""
+"[அனிமேசன் ட்ரீ] [அனிமேசன்நோடெச்டாடேமச்சின்] உடன் உருவாக்கப்பட்ட மாநில இயந்திரங்களை கட்டுப்படுத்த அனுமதிக்கிறது. [குறியீடு] $ அனிமேசன் ட்ரீ.\n"
+" [b] எடுத்துக்காட்டு: [/b]\n"
+" [கோட் பிளாக்]\n"
+" var state_machine = $ animationtree.get (\"அளவுருக்கள்/பின்னணி\")\n"
+" state_machine.travel (\"some_state\")\n"
+" [/codeBlock]"
 
 #: docs/AnimationNodeStateMachinePlayback.xml
 msgid "Returns the currently playing animation state."
-msgstr ""
+msgstr "தற்போது விளையாடும் அனிமேசன் நிலையை வழங்குகிறது."
 
 #: docs/AnimationNodeStateMachinePlayback.xml
 msgid "Returns the playback position within the current animation state."
-msgstr ""
+msgstr "தற்போதைய அனிமேசன் நிலைக்குள் பின்னணி நிலையை வழங்குகிறது."
 
 #: docs/AnimationNodeStateMachinePlayback.xml
 msgid ""
 "Returns the current travel path as computed internally by the A* algorithm."
 msgstr ""
+"A* வழிமுறையால் உள்நாட்டில் கணக்கிடப்பட்ட தற்போதைய பயண பாதையை வழங்குகிறது."
 
 #: docs/AnimationNodeStateMachinePlayback.xml
 msgid "Returns [code]true[/code] if an animation is playing."
-msgstr ""
+msgstr "அனிமேசன் விளையாடினால் [குறியீடு] உண்மை [/குறியீடு] ஐ வழங்குகிறது."
 
 #: docs/AnimationNodeStateMachinePlayback.xml
 msgid "Starts playing the given animation."
-msgstr ""
+msgstr "கொடுக்கப்பட்ட அனிமேசனை இயக்கத் தொடங்குகிறது."
 
 #: docs/AnimationNodeStateMachinePlayback.xml
 msgid "Stops the currently playing animation."
-msgstr ""
+msgstr "தற்போது விளையாடும் அனிமேசனை நிறுத்துகிறது."
 
 #: docs/AnimationNodeStateMachinePlayback.xml
 msgid ""
 "Transitions from the current state to another one, following the shortest "
 "path."
 msgstr ""
+"குறுகிய பாதையைப் பின்பற்றி, தற்போதைய நிலையிலிருந்து இன்னொரு இடத்திற்கு "
+"மாற்றங்கள்."
 
 #: docs/AnimationNodeStateMachineTransition.xml
 msgid ""
@@ -6160,18 +6198,26 @@ msgid ""
 "$animation_tree[\"parameters/conditions/idle\"] = is_on_floor and (linear_velocity.x == 0)\n"
 "[/codeblock]"
 msgstr ""
+"இந்த நிலை அமைக்கப்படும்போது ஆட்டோ முன்கூட்டியே இயக்கவும். வழங்கப்பட்ட பெயர் குறியீட்டிலிருந்து கட்டுப்படுத்தக்கூடிய [அனிமேசன் ட்ரீ] இல் ஒரு பூலியன் அளவுருவாக மாறும் ([url = https: //docs.rebeltoolbox.com/en/latest/tutorials/animation/animation_tree.html#controlling-from-code] [/url]). எடுத்துக்காட்டாக, [உறுப்பினர் அனிமேசன் ட்ரீ.\n"
+" [கோட் பிளாக்]\n"
+" $ animation_tree [\"அளவுருக்கள்/நிபந்தனைகள்/செயலற்றது\"] = IS_ON_FLOOR மற்றும் (Lighate_velocity.x == 0)\n"
+" [/codeBlock]"
 
 #: docs/AnimationNodeStateMachineTransition.xml
 msgid ""
 "Turn on the transition automatically when this state is reached. This works "
 "best with [constant SWITCH_MODE_AT_END]."
 msgstr ""
+"இந்த நிலையை எட்டும்போது தானாகவே மாற்றத்தை இயக்கவும். இது [நிலையான "
+"Switch_Mode_at_end] உடன் சிறப்பாக செயல்படுகிறது."
 
 #: docs/AnimationNodeStateMachineTransition.xml
 msgid ""
 "Don't use this transition during [method "
 "AnimationNodeStateMachinePlayback.travel] or [member auto_advance]."
 msgstr ""
+"[முறை அனிமேசன்நோடெச்டேட்மச்சின் பிளே பேக். டிராவல்] அல்லது [உறுப்பினர் "
+"ஆட்டோ_அட்வன்ச்] போது இந்த மாற்றத்தைப் பயன்படுத்த வேண்டாம்."
 
 #: docs/AnimationNodeStateMachineTransition.xml
 msgid ""
@@ -6179,50 +6225,62 @@ msgid ""
 "via [method AnimationNodeStateMachinePlayback.travel] or [member "
 "auto_advance]."
 msgstr ""
+"[முறை அனிமேசன்நோடெச்டேட்மச்சின் பிளே பேக். டிராவல்] அல்லது [உறுப்பினர் "
+"ஆட்டோ_அட்வன்ச்] வழியாக மரத்தின் வழியாக பயணிக்கும்போது குறைந்த முன்னுரிமை "
+"மாற்றங்கள் விரும்பப்படுகின்றன."
 
 #: docs/AnimationNodeStateMachineTransition.xml
 msgid "The transition type."
-msgstr ""
+msgstr "மாற்றம் வகை."
 
 #: docs/AnimationNodeStateMachineTransition.xml
 msgid "The time to cross-fade between this state and the next."
-msgstr ""
+msgstr "இந்த நிலைக்கும் அடுத்த நிலைக்கும் இடையில் குறுக்கு மங்கலுக்கான நேரம்."
 
 #: docs/AnimationNodeStateMachineTransition.xml
 msgid "Emitted when [member advance_condition] is changed."
-msgstr ""
+msgstr "[உறுப்பினர் அட்வான்ச்_டிபிசன்] மாற்றப்படும் போது உமிழப்படும்."
 
 #: docs/AnimationNodeStateMachineTransition.xml
 msgid ""
 "Switch to the next state immediately. The current state will end and blend "
 "into the beginning of the new one."
 msgstr ""
+"உடனடியாக அடுத்த நிலைக்கு மாறவும். தற்போதைய நிலை புதிய ஒன்றின் தொடக்கத்தில் "
+"முடிவடைந்து கலக்கும்."
 
 #: docs/AnimationNodeStateMachineTransition.xml
 msgid ""
 "Switch to the next state immediately, but will seek the new state to the "
 "playback position of the old state."
 msgstr ""
+"உடனடியாக அடுத்த மாநிலத்திற்கு மாறவும், ஆனால் புதிய மாநிலத்தை பழைய "
+"மாநிலத்தின் பின்னணி நிலைக்கு தேடும்."
 
 #: docs/AnimationNodeStateMachineTransition.xml
 msgid ""
 "Wait for the current state playback to end, then switch to the beginning of "
 "the next state animation."
 msgstr ""
+"தற்போதைய நிலை பிளேபேக் முடிவடையும் வரை காத்திருங்கள், பின்னர் அடுத்த மாநில "
+"அனிமேசனின் தொடக்கத்திற்கு மாறவும்."
 
 #: docs/AnimationNodeTimeScale.xml
 msgid "A time-scaling animation node to be used with [AnimationTree]."
 msgstr ""
+"[அனிமேசன் ட்ரீ] உடன் பயன்படுத்த வேண்டிய நேரத்தை அளவிடுதல் அனிமேசன் முனை."
 
 #: docs/AnimationNodeTimeScale.xml
 msgid ""
 "Allows scaling the speed of the animation (or reversing it) in any children "
 "nodes. Setting it to 0 will pause the animation."
 msgstr ""
+"எந்த குழந்தை முனைகளிலும் அனிமேசனின் வேகத்தை (அல்லது அதை மாற்றியமைக்க) அளவிட "
+"அனுமதிக்கிறது. அதை 0 ஆக அமைப்பது அனிமேசனை இடைநிறுத்தும்."
 
 #: docs/AnimationNodeTimeSeek.xml
 msgid "A time-seeking animation node to be used with [AnimationTree]."
-msgstr ""
+msgstr "[அனிமேசன் ட்ரீ] உடன் பயன்படுத்த வேண்டிய நேரம் தேடும் அனிமேசன் முனை."
 
 #: docs/AnimationNodeTimeSeek.xml
 msgid ""
@@ -6239,10 +6297,22 @@ msgid ""
 "animation_tree[\"parameters/Seek/seek_position\"] = 12.0\n"
 "[/codeblock]"
 msgstr ""
+"அனிமேசன் வரைபடத்தின் எந்தவொரு துணை குழந்தைகளுக்கும் ஒரு சீக் கட்டளை ஏற்படுவதற்கு இந்த முனை பயன்படுத்தப்படலாம். தொடக்கத்திலிருந்தே [அனிமேசன்] அல்லது [அனிமேசன்நோடெப்லெண்ட்ரீ] க்குள் ஒரு குறிப்பிட்ட பின்னணி நிலையை இயக்க இந்த முனை வகையைப் பயன்படுத்தவும். நேரத்தை அமைத்து, அனிமேசன் பிளேபேக்கை மாற்றிய பின், சீக் முனை அதன் [குறியீடு] சீக்_போசிசன் [/குறியீடு] மதிப்பை [குறியீடு] -1.0 [/குறியீடு] க்கு அமைப்பதன் மூலம் அடுத்த செயல்முறை சட்டத்தில் தூக்க பயன்முறையில் தானாகவே செல்கிறது.\n"
+" [கோட் பிளாக்]\n"
+" # ஆரம்பத்தில் இருந்தே குழந்தை அனிமேசனை விளையாடுங்கள்.\n"
+" animation_tree.set (\"அளவுருக்கள்/தேடல்/சீக்_போசிசன்\", 0.0)\n"
+" # மாற்று தொடரியல் (மேலே உள்ள அதே முடிவு).\n"
+" அனிமேசன்_ ட்ரீ [\"அளவுருக்கள்/தேடல்/தேடல்_போசிசன்\"] = 0.0\n"
+"\n"
+" # 12 இரண்டாவது நேர முத்திரையிலிருந்து குழந்தை அனிமேசனை விளையாடுங்கள்.\n"
+" animation_tree.set (\"அளவுருக்கள்/தேடல்/சீக்_போசிசன்\", 12.0)\n"
+" # மாற்று தொடரியல் (மேலே உள்ள அதே முடிவு).\n"
+" அனிமேசன்_ ட்ரீ [\"அளவுருக்கள்/தேடல்/சீக்_போசிசன்\"] = 12.0\n"
+" [/codeBlock]"
 
 #: docs/AnimationNodeTransition.xml
 msgid "A generic animation transition node for [AnimationTree]."
-msgstr ""
+msgstr "[அனிமேசன் ட்ரீ] க்கான பொதுவான அனிமேசன் மாற்றம் முனை."
 
 #: docs/AnimationNodeTransition.xml
 msgid ""
@@ -6250,20 +6320,25 @@ msgid ""
 "[AnimationNodeStateMachine]. Animations can be connected to the inputs and "
 "transition times can be specified."
 msgstr ""
+"மேலும் மேம்பட்ட [அனிமேசன்நோடெச்டாடேமச்சின்] தேவையில்லாத நிகழ்வுகளுக்கான எளிய"
+" மாநில இயந்திரம். அனிமேசன்களை உள்ளீடுகளுடன் இணைக்க முடியும் மற்றும் மாற்றம் "
+"நேரங்களைக் குறிப்பிடலாம்."
 
 #: docs/AnimationNodeTransition.xml
 msgid "The number of available input ports for this node."
-msgstr ""
+msgstr "இந்த முனைக்கு கிடைக்கக்கூடிய உள்ளீட்டு துறைமுகங்களின் எண்ணிக்கை."
 
 #: docs/AnimationNodeTransition.xml
 msgid ""
 "Cross-fading time (in seconds) between each animation connected to the "
 "inputs."
 msgstr ""
+"உள்ளீடுகளுடன் இணைக்கப்பட்ட ஒவ்வொரு அனிமேசனுக்கும் இடையில் குறுக்கு மங்கலான "
+"நேரம் (விநாடிகளில்)."
 
 #: docs/AnimationPlayer.xml
 msgid "Container and player of [Animation] resources."
-msgstr ""
+msgstr "[அனிமேசன்] வளங்களின் கொள்கலன் மற்றும் வீரர்."
 
 #: docs/AnimationPlayer.xml
 msgid ""
@@ -6271,12 +6346,17 @@ msgid ""
 "[AnimationPlayer] is more suited than [Tween] for animations where you know the final values in advance. For example, fading a screen in and out is more easily done with an [AnimationPlayer] node thanks to the animation tools provided by the editor. That particular example can also be implemented with a [Tween] node, but it requires doing everything by code.\n"
 "Updating the target properties of animations occurs at process time."
 msgstr ""
+"[அனிமேசன்] வளங்களின் பொது நோக்கத்திற்கான பின்னணியில் ஒரு அனிமேசன் பிளேயர் பயன்படுத்தப்படுகிறது. இது அனிமேசன்களின் அகராதி (பெயரால் குறிப்பிடப்படுகிறது) மற்றும் அவற்றின் மாற்றங்களுக்கு இடையில் தனிப்பயன் கலப்பு நேரங்களைக் கொண்டுள்ளது. கூடுதலாக, அனிமேசன்களை வெவ்வேறு சேனல்களில் விளையாடலாம் மற்றும் கலக்கலாம்.\n"
+" [அனிமேசன் பிளேயர்] அனிமேசன்களுக்கு [ட்வீன்] ஐ விட மிகவும் பொருத்தமானது, அங்கு இறுதி மதிப்புகள் முன்கூட்டியே உங்களுக்குத் தெரியும். எடுத்துக்காட்டாக, ஒரு திரையை மங்கச் செய்வது ஒரு [அனிமேசன் பிளேயர்] முனை மூலம் ஆசிரியர் வழங்கிய அனிமேசன் கருவிகளுக்கு நன்றி. அந்த குறிப்பிட்ட எடுத்துக்காட்டு [இருபது] முனையுடன் செயல்படுத்தப்படலாம், ஆனால் அதற்கு எல்லாவற்றையும் குறியீடு மூலம் செய்ய வேண்டும்.\n"
+" அனிமேசன்களின் இலக்கு பண்புகளைப் புதுப்பிப்பது செயல்முறை நேரத்தில் நிகழ்கிறது."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "Adds [code]animation[/code] to the player accessible with the key "
 "[code]name[/code]."
 msgstr ""
+"விசை [குறியீடு] பெயர் [/குறியீடு] உடன் அணுகக்கூடிய பிளேயருக்கு [குறியீடு] "
+"அனிமேசன் [/குறியீடு] சேர்க்கிறது."
 
 #: docs/AnimationPlayer.xml
 msgid ""
@@ -6284,47 +6364,62 @@ msgid ""
 "animation. [code]delta[/code] is the time in seconds to shift. Events "
 "between the current frame and [code]delta[/code] are handled."
 msgstr ""
+"அனிமேசன் காலவரிசையில் நிலையை மாற்றி உடனடியாக அனிமேசனை புதுப்பிக்கிறது. "
+"[குறியீடு] டெல்டா [/குறியீடு] என்பது நொடிகளில் மாற்ற வேண்டிய நேரம். தற்போதைய"
+" சட்டகம் மற்றும் [குறியீடு] டெல்டா [/குறியீடு] ஆகியவற்றுக்கு இடையிலான "
+"நிகழ்வுகள் கையாளப்படுகின்றன."
 
 #: docs/AnimationPlayer.xml
 msgid "Returns the name of the next animation in the queue."
-msgstr ""
+msgstr "வரிசையில் அடுத்த அனிமேசனின் பெயரை வழங்குகிறது."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "Triggers the [code]anim_to[/code] animation when the [code]anim_from[/code] "
 "animation completes."
 msgstr ""
+"[குறியீடு] ANIM_TO [/குறியீடு] அனிமேசனை [குறியீடு] ANIM_FROM [/CODE] "
+"அனிமேசன் முடிந்ததும் தூண்டுகிறது."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "[AnimationPlayer] caches animated nodes. It may not notice if a node "
 "disappears; [method clear_caches] forces it to update the cache again."
 msgstr ""
+"[அனிமேசன் பிளேயர்] அனிமேசன் செய்யப்பட்ட முனைகளை தற்காலிகமாக சேமிக்கிறது. ஒரு"
+" முனை மறைந்துவிட்டால் அது கவனிக்காது; [முறை CLEAR_CACHES] தற்காலிக சேமிப்பை "
+"மீண்டும் புதுப்பிக்க கட்டாயப்படுத்துகிறது."
 
 #: docs/AnimationPlayer.xml
 msgid "Clears all queued, unplayed animations."
-msgstr ""
+msgstr "வரிசைப்படுத்தப்பட்ட, விளையாடப்படாத அனைத்து அனிமேசனையும் அழிக்கவும்."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "Returns the name of [code]animation[/code] or an empty string if not found."
 msgstr ""
+"[குறியீடு] அனிமேசன் [/code] அல்லது வெற்று சரம் கிடைக்கவில்லை என்றால் "
+"வழங்குகிறது."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "Returns the [Animation] with key [code]name[/code] or [code]null[/code] if "
 "not found."
 msgstr ""
+"[அனிமேசன்] ஐ விசை [குறியீடு] பெயர் [/குறியீடு] அல்லது [குறியீடு] சுழிய "
+"[/குறியீடு] உடன் கிடைக்கவில்லை."
 
 #: docs/AnimationPlayer.xml
 msgid "Returns the list of stored animation names."
-msgstr ""
+msgstr "சேமிக்கப்பட்ட அனிமேசன் பெயர்களின் பட்டியலை வழங்குகிறது."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "Gets the blend time (in seconds) between two animations, referenced by their"
 " names."
 msgstr ""
+"இரண்டு அனிமேசன்களுக்கு இடையில் கலப்பு நேரத்தை (நொடிகளில்) பெறுகிறது, "
+"அவற்றின் பெயர்களால் குறிப்பிடப்படுகிறது."
 
 #: docs/AnimationPlayer.xml
 msgid ""
@@ -6333,21 +6428,29 @@ msgid ""
 "[code]custom_speed[/code] argument specified when calling the [method play] "
 "method."
 msgstr ""
+"தற்போதைய அனிமேசனின் உண்மையான விளையாட்டு வேகத்தைப் பெறுகிறது அல்லது 0 "
+"விளையாடாவிட்டால் 0. இந்த விரைவு [குறியீடு] Custom_speed [/code] வாதத்தால் "
+"பெருக்கப்படும் [உறுப்பினர் பிளேபேக்_ச்பீட்] சொத்து [முறை விளையாட்டு] முறையை "
+"அழைக்கும்போது குறிப்பிடப்பட்டுள்ளது."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "Returns a list of the animation names that are currently queued to play."
 msgstr ""
+"தற்போது விளையாடுவதற்கு வரிசைப்படுத்தப்பட்ட அனிமேசன் பெயர்களின் பட்டியலை "
+"வழங்குகிறது."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "Returns [code]true[/code] if the [AnimationPlayer] stores an [Animation] "
 "with key [code]name[/code]."
 msgstr ""
+"[CODE] உண்மை [/குறியீடு] [அனிமேசன் பிளேயர்] ஒரு [அனிமேசனை] முக்கிய "
+"[குறியீடு] பெயர் [/குறியீடு] உடன் சேமித்தால்."
 
 #: docs/AnimationPlayer.xml
 msgid "Returns [code]true[/code] if playing an animation."
-msgstr ""
+msgstr "அனிமேசன் விளையாடினால் [குறியீடு] உண்மை [/குறியீடு] ஐ வழங்குகிறது."
 
 #: docs/AnimationPlayer.xml
 msgid ""
@@ -6355,28 +6458,37 @@ msgid ""
 "The [AnimationPlayer] keeps track of its current or last played animation with [member assigned_animation]. If this method is called with that same animation [code]name[/code], or with no [code]name[/code] parameter, the assigned animation will resume playing if it was paused, or restart if it was stopped (see [method stop] for both pause and stop). If the animation was already playing, it will keep playing.\n"
 "[b]Note:[/b] The animation will be updated the next time the [AnimationPlayer] is processed. If other variables are updated at the same time this is called, they may be updated too early. To perform the update immediately, call [code]advance(0)[/code]."
 msgstr ""
+"விசை [குறியீடு] பெயர் [/குறியீடு] உடன் அனிமேசனை இயக்குகிறது. தனிப்பயன் கலப்பு நேரங்களையும் வேகத்தையும் அமைக்கலாம். .\n"
+" [அனிமேசன் பிளேயர்] அதன் தற்போதைய அல்லது கடைசியாக விளையாடிய அனிமேசனை [உறுப்பினர் ஒதுக்கப்பட்ட_அனிமேசன்] உடன் கண்காணிக்கிறது. இந்த முறை அதே அனிமேசன் [குறியீடு] பெயர் [/குறியீடு], அல்லது [குறியீடு] பெயர் [/குறியீடு] அளவுரு இல்லாமல் என அழைக்கப்பட்டால், ஒதுக்கப்பட்ட அனிமேசன் இடைநிறுத்தப்பட்டால் மீண்டும் விளையாடும், அல்லது அது நிறுத்தப்பட்டால் மறுதொடக்கம் செய்யும் (இடைநிறுத்தம் மற்றும் நிறுத்த இரண்டிற்கும் [முறை நிறுத்தம்] பார்க்கவும்). அனிமேசன் ஏற்கனவே விளையாடிக் கொண்டிருந்தால், அது தொடர்ந்து விளையாடும்.\n"
+" [b] குறிப்பு: [/b] அடுத்த முறை [அனிமேசன் பிளேயர்] செயலாக்கப்படும் போது அனிமேசன் புதுப்பிக்கப்படும். இது அழைக்கப்படும் அதே நேரத்தில் மற்ற மாறிகள் புதுப்பிக்கப்பட்டால், அவை மிக விரைவாக புதுப்பிக்கப்படலாம். புதுப்பிப்பை உடனடியாகச் செய்ய, [குறியீடு] அட்வான்ச் (0) [/குறியீடு] ஐ அழைக்கவும்."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "Plays the animation with key [code]name[/code] in reverse.\n"
 "This method is a shorthand for [method play] with [code]custom_speed = -1.0[/code] and [code]from_end = true[/code], so see its description for more information."
 msgstr ""
+"விசை [குறியீடு] பெயர் [/குறியீடு] உடன் அனிமேசனை தலைகீழாக இயக்குகிறது.\n"
+" இந்த முறை [குறியீடு] Custom_speed = -1.0 [/code] மற்றும் [குறியீடு] இலிருந்து_எண்ட் = உண்மை [/குறியீடு] உடன் [முறை பிளே] க்கான சுருக்கெழுத்து ஆகும், எனவே மேலும் தகவலுக்கு அதன் விளக்கத்தைப் பார்க்கவும்."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "Queues an animation for playback once the current one is done.\n"
 "[b]Note:[/b] If a looped animation is currently playing, the queued animation will never play unless the looped animation is stopped somehow."
 msgstr ""
+"தற்போதைய ஒன்று முடிந்ததும் பிளேபேக்கிற்கான அனிமேசனை வரிசைப்படுத்துகிறது.\n"
+" ."
 
 #: docs/AnimationPlayer.xml
 msgid "Removes the animation with key [code]name[/code]."
-msgstr ""
+msgstr "விசை [குறியீடு] பெயர் [/குறியீடு] உடன் அனிமேசனை நீக்குகிறது."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "Renames an existing animation with key [code]name[/code] to "
 "[code]newname[/code]."
 msgstr ""
+"ஏற்கனவே உள்ள அனிமேசனை விசை [குறியீடு] பெயர் [/குறியீடு] உடன் [குறியீடு] "
+"புதிய பெயர் [/குறியீடு] என மறுபெயரிடுங்கள்."
 
 #: docs/AnimationPlayer.xml
 msgid ""
@@ -6385,18 +6497,27 @@ msgid ""
 "otherwise it updates at process time. Events between the current frame and "
 "[code]seconds[/code] are skipped."
 msgstr ""
+"[குறியீடு] விநாடிகள் [/குறியீடு] புள்ளியில் (விநாடிகளில்) அனிமேசனை "
+"நாடுகிறது. [குறியீடு] புதுப்பிப்பு [/குறியீடு] [குறியீடு] உண்மை [/குறியீடு] "
+"என்றால், அனிமேசன் புதுப்பிக்கிறது, இல்லையெனில் அது செயல்முறை நேரத்தில் "
+"புதுப்பிக்கப்படும். தற்போதைய சட்டகம் மற்றும் [குறியீடு] விநாடிகளுக்கு "
+"இடையிலான நிகழ்வுகள் [/குறியீடு] தவிர்க்கப்படுகின்றன."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "Specifies a blend time (in seconds) between two animations, referenced by "
 "their names."
 msgstr ""
+"இரண்டு அனிமேசன்களுக்கு இடையில் ஒரு கலப்பு நேரத்தை (நொடிகளில்) "
+"குறிப்பிடுகிறது, அவற்றின் பெயர்களால் குறிப்பிடப்படுகிறது."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "Stops or pauses the currently playing animation. If [code]reset[/code] is [code]true[/code], the animation position is reset to [code]0[/code] and the playback speed is reset to [code]1.0[/code].\n"
 "If [code]reset[/code] is [code]false[/code], the [member current_animation_position] will be kept and calling [method play] or [method play_backwards] without arguments or with the same animation name as [member assigned_animation] will resume the animation."
 msgstr ""
+"தற்போது விளையாடும் அனிமேசனை நிறுத்துகிறது அல்லது இடைநிறுத்துகிறது. .\n"
+" ."
 
 #: docs/AnimationPlayer.xml
 msgid ""
@@ -6404,44 +6525,53 @@ msgid ""
 "When set, would change the animation, but would not play it unless currently"
 " playing. See also [member current_animation]."
 msgstr ""
+"விளையாடினால், தற்போதைய அனிமேசன்; இல்லையெனில், அனிமேசன் கடைசியாக விளையாடியது."
+" அமைக்கப்பட்டால், அனிமேசனை மாற்றும், ஆனால் தற்போது விளையாடாவிட்டால் அதை "
+"இயக்காது. [உறுப்பினர் நடப்பு_அனிமேசன்] ஐயும் காண்க."
 
 #: docs/AnimationPlayer.xml
 msgid "The name of the animation to play when the scene loads."
-msgstr ""
+msgstr "காட்சி ஏற்றும்போது விளையாட அனிமேசனின் பெயர்."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "The name of the currently playing animation. If no animation is playing, the property's value is an empty string. Changing this value does not restart the animation. See [method play] for more information on playing animations.\n"
 "[b]Note:[/b] While this property appears in the inspector, it's not meant to be edited, and it's not saved in the scene. This property is mainly used to get the currently playing animation, and internally for animation playback tracks. For more information, see [Animation]."
 msgstr ""
+"தற்போது விளையாடும் அனிமேசனின் பெயர். அனிமேசன் எதுவும் இயங்கவில்லை என்றால், சொத்தின் மதிப்பு வெற்று சரம். இந்த மதிப்பை மாற்றுவது அனிமேசனை மறுதொடக்கம் செய்யாது. அனிமேசன்கள் விளையாடுவது பற்றிய கூடுதல் தகவலுக்கு [முறை ப்ளே] ஐப் பார்க்கவும்.\n"
+" [b] குறிப்பு: [/b] இந்த சொத்து இன்ச்பெக்டரில் தோன்றும் போது, ​​அது திருத்தப்பட வேண்டியதல்ல, அது காட்சியில் சேமிக்கப்படவில்லை. இந்த சொத்து முக்கியமாக தற்போது விளையாடும் அனிமேசனைப் பெற பயன்படுகிறது, மேலும் உள்நாட்டில் அனிமேசன் பிளேபேக் டிராக்குகளுக்கு. மேலும் தகவலுக்கு, [அனிமேசன்] ஐப் பார்க்கவும்."
 
 #: docs/AnimationPlayer.xml
 msgid "The length (in seconds) of the currently being played animation."
-msgstr ""
+msgstr "தற்போது விளையாடும் அனிமேசனின் நீளம் (நொடிகளில்)."
 
 #: docs/AnimationPlayer.xml
 msgid "The position (in seconds) of the currently playing animation."
-msgstr ""
+msgstr "தற்போது விளையாடும் அனிமேசனின் நிலை (நொடிகளில்)."
 
 #: docs/AnimationPlayer.xml
 msgid "The call mode to use for Call Method tracks."
-msgstr ""
+msgstr "அழைப்பு முறை தடங்களுக்கு பயன்படுத்த அழைப்பு முறை."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "If [code]true[/code], updates animations in response to process-related "
 "notifications."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், செயல்முறை தொடர்பான அறிவிப்புகளுக்கு "
+"பதிலளிக்கும் வகையில் அனிமேசன்களைப் புதுப்பிக்கிறது."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "The default time in which to blend animations. Ranges from 0 to 4096 with "
 "0.01 precision."
 msgstr ""
+"அனிமேசன்களைக் கலக்க இயல்புநிலை நேரம். 0 முதல் 4096 வரை 0.01 துல்லியத்துடன் "
+"இருக்கும்."
 
 #: docs/AnimationPlayer.xml
 msgid "The process notification in which to update animations."
-msgstr ""
+msgstr "அனிமேசன்களைப் புதுப்பிக்க செயல்முறை அறிவிப்பு."
 
 #: docs/AnimationPlayer.xml
 msgid ""
@@ -6449,52 +6579,65 @@ msgid ""
 "animation plays at normal speed. If it's 0.5, then it plays at half speed. "
 "If it's 2, then it plays at double speed."
 msgstr ""
+"வேக அளவிடுதல் விகிதம். உதாரணமாக, இந்த மதிப்பு 1 ஆக இருந்தால், அனிமேசன் "
+"சாதாரண வேகத்தில் விளையாடுகிறது. அது 0.5 என்றால், அது அரை வேகத்தில் "
+"விளையாடுகிறது. அது 2 என்றால், அது இரட்டை வேகத்தில் விளையாடுகிறது."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "This is used by the editor. If set to [code]true[/code], the scene will be saved with the effects of the reset animation applied (as if it had been seeked to time 0), then reverted after saving.\n"
 "In other words, the saved scene file will contain the \"default pose\", as defined by the reset animation, if any, with the editor keeping the values that the nodes had before saving."
 msgstr ""
+"இதை ஆசிரியர் பயன்படுத்துகிறார். [குறியீடு] உண்மை [/குறியீடு] என அமைக்கப்பட்டால், பயன்படுத்தப்பட்ட மீட்டமைப்பு அனிமேசனின் விளைவுகளுடன் காட்சி சேமிக்கப்படும் (இது நேரம் 0 க்கு தேடப்பட்டதைப் போல), பின்னர் சேமித்த பிறகு மாற்றப்பட்டது.\n"
+" வேறு வார்த்தைகளில் கூறுவதானால், சேமித்த காட்சி கோப்பில் \"இயல்புநிலை போச்\" இருக்கும், மீட்டமை அனிமேசனால் வரையறுக்கப்பட்டுள்ளது, ஏதேனும் இருந்தால், எடிட்டர் சேமிப்பதற்கு முன்பு முனைகள் வைத்திருந்த மதிப்புகளை வைத்திருக்கிறார்."
 
 #: docs/AnimationPlayer.xml
 msgid "The node from which node path references will travel."
-msgstr ""
+msgstr "முனை பாதை குறிப்புகள் பயணிக்கும் முனை."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "Emitted when a queued animation plays after the previous animation was finished. See [method queue].\n"
 "[b]Note:[/b] The signal is not emitted when the animation is changed via [method play] or from [AnimationTree]."
 msgstr ""
+"முந்தைய அனிமேசன் முடிந்தபின் வரிசைப்படுத்தப்பட்ட அனிமேசன் விளையாடும்போது உமிழப்படும். [முறை வரிசை] ஐப் பார்க்கவும்.\n"
+" ."
 
 #: docs/AnimationPlayer.xml
 msgid "Notifies when an animation finished playing."
-msgstr ""
+msgstr "அனிமேசன் விளையாடுவதை முடிக்கும்போது அறிவிக்கிறது."
 
 #: docs/AnimationPlayer.xml
 msgid "Notifies when an animation starts playing."
-msgstr ""
+msgstr "அனிமேசன் விளையாடத் தொடங்கும் போது அறிவிக்கிறது."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "Notifies when the caches have been cleared, either automatically, or "
 "manually via [method clear_caches]."
 msgstr ""
+"தேக்ககங்கள் அழிக்கப்படும்போது, ​​தானாகவே அல்லது கைமுறையாக [முறை "
+"கிளியர்_கேச்] வழியாக அறிவிக்கிறது."
 
 #: docs/AnimationPlayer.xml docs/AnimationTreePlayer.xml
 msgid ""
 "Process animation during the physics process. This is especially useful when"
 " animating physics bodies."
 msgstr ""
+"இயற்பியல் செயல்பாட்டின் போது அனிமேசன் செயல்முறை. இயற்பியல் உடல்களை அனிமேசன் "
+"செய்யும் போது இது மிகவும் பயனுள்ளதாக இருக்கும்."
 
 #: docs/AnimationPlayer.xml docs/AnimationTreePlayer.xml
 msgid "Process animation during the idle process."
-msgstr ""
+msgstr "செயலற்ற செயல்பாட்டின் போது அனிமேசனை செயல்முறை."
 
 #: docs/AnimationPlayer.xml
 msgid ""
 "Do not process animation. Use [method advance] to process the animation "
 "manually."
 msgstr ""
+"அனிமேசனை செயலாக்க வேண்டாம். அனிமேசனை கைமுறையாக செயலாக்க [முறை முன்கூட்டியே] "
+"பயன்படுத்தவும்."
 
 #: docs/AnimationPlayer.xml
 msgid ""
@@ -6502,26 +6645,35 @@ msgid ""
 "events are processed. This avoids bugs involving deleting nodes or modifying"
 " the AnimationPlayer while playing."
 msgstr ""
+"அனிமேசன் செயல்பாட்டின் போது தொகுதி முறை அழைப்புகள், பின்னர் நிகழ்வுகள் "
+"செயலாக்கப்பட்ட பிறகு அழைப்புகளைச் செய்யுங்கள். இது முனைகளை நீக்குவது அல்லது "
+"விளையாடும்போது அனிமேசன் பிளேயரை மாற்றியமைத்தல் சம்பந்தப்பட்ட பிழைகளைத் "
+"தவிர்க்கிறது."
 
 #: docs/AnimationPlayer.xml
 msgid "Make method calls immediately when reached in the animation."
-msgstr ""
+msgstr "அனிமேசனில் எட்டும்போது உடனடியாக முறை அழைப்புகளை உருவாக்குங்கள்."
 
 #: docs/AnimationTree.xml
 msgid ""
 "A node to be used for advanced animation transitions in an "
 "[AnimationPlayer]."
 msgstr ""
+"[அனிமேசன் பிளேயரில்] மேம்பட்ட அனிமேசன் மாற்றங்களுக்கு பயன்படுத்தப்பட வேண்டிய"
+" முனை."
 
 #: docs/AnimationTree.xml
 msgid ""
 "A node to be used for advanced animation transitions in an [AnimationPlayer].\n"
 "[b]Note:[/b] When linked with an [AnimationPlayer], several properties and methods of the corresponding [AnimationPlayer] will not function as expected. Playback and transitions should be handled using only the [AnimationTree] and its constituent [AnimationNode](s). The [AnimationPlayer] node should be used solely for adding, deleting, and editing animations."
 msgstr ""
+"[அனிமேசன் பிளேயரில்] மேம்பட்ட அனிமேசன் மாற்றங்களுக்கு பயன்படுத்தப்பட வேண்டிய முனை.\n"
+" [b] குறிப்பு: [/b] [அனிமேசன் பிளேயருடன்] இணைக்கப்படும்போது, ​​[அனிமேசன் பிளேயர்] இன் பல பண்புகள் மற்றும் முறைகள் எதிர்பார்த்தபடி செயல்படாது. [அனிமேசன் ட்ரீ] மற்றும் அதன் தொகுதி [அனிமேசன்நோட்] (கள்) ஆகியவற்றைப் பயன்படுத்தி பின்னணி மற்றும் மாற்றங்களை கையாள வேண்டும். [அனிமேசன் பிளேயர்] முனை அனிமேசன்களைச் சேர்ப்பதற்கும், நீக்குவதற்கும், திருத்துவதற்கும் மட்டுமே பயன்படுத்தப்பட வேண்டும்."
 
 #: docs/AnimationTree.xml
 msgid "Manually advance the animations by the specified time (in seconds)."
 msgstr ""
+"குறிப்பிட்ட நேரத்தால் (நொடிகளில்) அனிமேசன்களை கைமுறையாக முன்னேற்றுங்கள்."
 
 #: docs/AnimationTree.xml
 msgid ""
@@ -6530,52 +6682,71 @@ msgid ""
 "track of type [constant Animation.TYPE_TRANSFORM], returns an identity "
 "transformation. See also [member root_motion_track] and [RootMotionView]."
 msgstr ""
+"[உறுப்பினர் ரூட்_மொசன்_ டிராக்] இயக்கத்தை வேறு இடங்களில் பயன்படுத்தக்கூடிய "
+"[உருமாற்றம்] என மீட்டெடுக்கவும். [உறுப்பினர் ரூட்_மொசன்_டிராக்] வகை [நிலையான"
+" அனிமேசன்.யூபே_ டிரான்ச்ஃபார்ம்] பாதையின் பாதை அல்ல என்றால், அடையாள "
+"மாற்றத்தை அளிக்கிறது. [உறுப்பினர் ரூட்_மொசன்_டிராக்] மற்றும் [ரூட்மோசன்வியூ]"
+" மேலும் காண்க."
 
 #: docs/AnimationTree.xml
 msgid "If [code]true[/code], the [AnimationTree] will be processing."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், [அனிமேசன் ட்ரீ] செயலாக்கப்படும்."
 
 #: docs/AnimationTree.xml
 msgid "The path to the [AnimationPlayer] used for animating."
-msgstr ""
+msgstr "அனிமேசன் செய்ய பயன்படுத்தப்படும் [அனிமேசன் பிளேயர்] க்கான பாதை."
 
 #: docs/AnimationTree.xml
 msgid ""
 "The process mode of this [AnimationTree]. See [enum AnimationProcessMode] "
 "for available modes."
 msgstr ""
+"இந்த [அனிமேசன் ட்ரீ] செயல்முறை முறை. கிடைக்கக்கூடிய முறைகளுக்கு [enum "
+"animation processmode] ஐப் பார்க்கவும்."
 
 #: docs/AnimationTree.xml
 msgid ""
 "The path to the Animation track used for root motion. Paths must be valid scene-tree paths to a node, and must be specified starting from the parent node of the node that will reproduce the animation. To specify a track that controls properties or bones, append its name after the path, separated by [code]\":\"[/code]. For example, [code]\"character/skeleton:ankle\"[/code] or [code]\"character/mesh:transform/local\"[/code].\n"
 "If the track has type [constant Animation.TYPE_TRANSFORM], the transformation will be cancelled visually, and the animation will appear to stay in place. See also [method get_root_motion_transform] and [RootMotionView]."
 msgstr ""
+"ரூட் இயக்கத்திற்கு பயன்படுத்தப்படும் அனிமேசன் பாதையின் பாதை. பாதைகள் ஒரு முனைக்கு செல்லுபடியாகும் காட்சி-மர பாதைகளாக இருக்க வேண்டும், மேலும் அனிமேசனை இனப்பெருக்கம் செய்யும் முனையின் பெற்றோர் முனையிலிருந்து தொடங்கி குறிப்பிடப்பட வேண்டும். பண்புகள் அல்லது எலும்புகளைக் கட்டுப்படுத்தும் ஒரு பாதையைக் குறிப்பிட, பாதையின் பின்னர் அதன் பெயரைச் சேர்க்கவும், [குறியீடு] ஆல் பிரிக்கப்பட்டுள்ளது \":\" [/குறியீடு]. எடுத்துக்காட்டாக, [குறியீடு] \"எழுத்து/எலும்புக்கூடு: கணுக்கால்\" [/குறியீடு] அல்லது [குறியீடு] \"எழுத்து/கண்ணி: உருமாற்றம்/உள்ளூர்\" [/குறியீடு].\n"
+" பாதையில் வகை [நிலையான அனிமேசன். [முறை get_root_motion_transform] மற்றும் [rootmotionView] ஐயும் காண்க."
 
 #: docs/AnimationTree.xml
 msgid "The root animation node of this [AnimationTree]. See [AnimationNode]."
 msgstr ""
+"இந்த [அனிமேசன் ட்ரீ] இன் ரூட் அனிமேசன் முனை. [அனிமேசன்நோட்] ஐப் பார்க்கவும்."
 
 #: docs/AnimationTree.xml
 msgid ""
 "The animations will progress during the physics frame (i.e. [method "
 "Node._physics_process])."
 msgstr ""
+"இயற்பியல் சட்டகத்தின் போது அனிமேசன்கள் முன்னேறும் (அதாவது [முறை முனை "
+"._பிசிக்ச்_பிராசச்])."
 
 #: docs/AnimationTree.xml
 msgid ""
 "The animations will progress during the idle frame (i.e. [method "
 "Node._process])."
 msgstr ""
+"செயலற்ற சட்டகத்தின் போது அனிமேசன்கள் முன்னேறும் (அதாவது [முறை முனை "
+"._பிராசச்])."
 
 #: docs/AnimationTree.xml
 msgid "The animations will only progress manually (see [method advance])."
 msgstr ""
+"அனிமேசன்கள் கைமுறையாக மட்டுமே முன்னேறும் ([முறை முன்கூட்டியே] ஐப் "
+"பார்க்கவும்)."
 
 #: docs/AnimationTreePlayer.xml
 msgid ""
 "[i]Deprecated.[/i] Animation player that uses a node graph for blending "
 "animations. Superseded by [AnimationTree]."
 msgstr ""
+"[i] நீக்கப்பட்டது. [/i] அனிமேசன்களைக் கலப்பதற்கு ஒரு முனை வரைபடத்தைப் "
+"பயன்படுத்தும் அனிமேசன் பிளேயர். [அனிமேசன் ட்ரீ] ஆல் முறியடிக்கப்பட்டது."
 
 #: docs/AnimationTreePlayer.xml
 msgid ""
@@ -6583,10 +6754,15 @@ msgid ""
 "It takes [Animation]s from an [AnimationPlayer] node and mixes them depending on the graph.\n"
 "See [AnimationTree] for a more full-featured replacement of this node."
 msgstr ""
+"[i] நீக்கப்பட்டது. [/i] [அனிமேசன் பிளேயர்] உடன் பிணைக்கப்பட்ட பல அனிமேசன்களைக் கலப்பதற்கான முனை வரைபட கருவி. எழுத்துக்கள் அல்லது பிற எலும்புக்கூடு அடிப்படையிலான ரிக்குகளை அனிமேசன் செய்வதற்கு குறிப்பாக பயனுள்ளதாக இருக்கும். இது பல அனிமேசன்களை ஒன்றிணைத்து விரும்பிய போசை உருவாக்க முடியும்.\n"
+" இது ஒரு [அனிமேசன் பிளேயர்] முனையிலிருந்து [அனிமேசன்] களை எடுத்து வரைபடத்தைப் பொறுத்து அவற்றைக் கலக்கிறது.\n"
+" இந்த முனையின் முழு அம்சமான மாற்றீட்டிற்கு [அனிமேசன் ட்ரீ] ஐப் பார்க்கவும்."
 
 #: docs/AnimationTreePlayer.xml
 msgid "Adds a [code]type[/code] node to the graph with name [code]id[/code]."
 msgstr ""
+"[குறியீடு] ஐடி [/குறியீடு] என்ற பெயருடன் வரைபடத்திற்கு [குறியீடு] வகை "
+"[/குறியீடு] முனையைச் சேர்க்கிறது."
 
 #: docs/AnimationTreePlayer.xml
 msgid ""
@@ -6594,30 +6770,41 @@ msgid ""
 " seconds to shift. Events between the current frame and [code]delta[/code] "
 "are handled."
 msgstr ""
+"அனிமேசன் காலவரிசையில் மாற்றங்களை மாற்றுகிறது. [குறியீடு] டெல்டா [/குறியீடு] "
+"என்பது நொடிகளில் மாற்ற வேண்டிய நேரம். தற்போதைய சட்டகம் மற்றும் [குறியீடு] "
+"டெல்டா [/குறியீடு] ஆகியவற்றுக்கு இடையிலான நிகழ்வுகள் கையாளப்படுகின்றன."
 
 #: docs/AnimationTreePlayer.xml
 msgid ""
 "Returns the [AnimationPlayer]'s [Animation] bound to the "
 "[AnimationTreePlayer]'s animation node with name [code]id[/code]."
 msgstr ""
+"[அனிமேசன் பிளேயர்] இன் [அனிமேசன்] [அனிமேசன் ட்ரீ பிளேயர்] இன் அனிமேசன் "
+"முனையுடன் பெயர் [குறியீடு] ஐடி [/குறியீடு] உடன் செல்கிறது."
 
 #: docs/AnimationTreePlayer.xml
 msgid ""
 "Returns the name of the [member master_player]'s [Animation] bound to this "
 "animation node."
 msgstr ""
+"இந்த அனிமேசன் முனைக்கு கட்டுப்பட்ட [உறுப்பினர் மாச்டர்_பிளேயர்] இன் "
+"[அனிமேசன்] பெயரை வழங்குகிறது."
 
 #: docs/AnimationTreePlayer.xml
 msgid ""
 "Returns the absolute playback timestamp of the animation node with name "
 "[code]id[/code]."
 msgstr ""
+"அனிமேசன் முனையின் முழுமையான பிளேபேக் நேர முத்திரையை பெயர் [குறியீடு] ஐடி "
+"[/குறியீடு] உடன் வழங்குகிறது."
 
 #: docs/AnimationTreePlayer.xml
 msgid ""
 "Binds a new [Animation] from the [member master_player] to the "
 "[AnimationTreePlayer]'s animation node with name [code]id[/code]."
 msgstr ""
+"[உறுப்பினர் மாச்டர்_பிளேயர்] இலிருந்து [அனிமேசன் ட்ரீ பிளேயர்] இன் அனிமேசன் "
+"முனையுடன் [குறியீடு] ஐடி [/குறியீடு] புதிய [அனிமேசன்] ஐ பிணைக்கிறது."
 
 #: docs/AnimationTreePlayer.xml
 msgid ""
@@ -6625,22 +6812,29 @@ msgid ""
 "[code]id[/code] turns off the track modifying the property at "
 "[code]path[/code]. The modified node's children continue to animate."
 msgstr ""
+". மாற்றியமைக்கப்பட்ட முனையின் குழந்தைகள் தொடர்ந்து உயிரூட்டுகிறார்கள்."
 
 #: docs/AnimationTreePlayer.xml
 msgid ""
 "Binds the [Animation] named [code]source[/code] from [member master_player] "
 "to the animation node [code]id[/code]. Recalculates caches."
 msgstr ""
+"[உறுப்பினர் மாச்டர்_பிளேயர்] இலிருந்து அனிமேசன் முனை [குறியீடு] ஐடி "
+"[/குறியீடு] உடன் [அனிமேசன்] பெயரிடப்பட்ட [குறியீடு] மூல [/குறியீடு] ஐ "
+"பிணைக்கிறது. தற்காலிக சேமிப்புகளை மறுபரிசீலனை செய்கிறது."
 
 #: docs/AnimationTreePlayer.xml
 msgid ""
 "Returns whether node [code]id[/code] and [code]dst_id[/code] are connected "
 "at the specified slot."
 msgstr ""
+"முனை [குறியீடு] ஐடி [/குறியீடு] மற்றும் [குறியீடு] dst_id [/code] ஆகியவை "
+"குறிப்பிட்ட ச்லாட்டில் இணைக்கப்பட்டுள்ளதா என்பதை வழங்குகிறது."
 
 #: docs/AnimationTreePlayer.xml
 msgid "Returns the blend amount of a Blend2 node given its name."
 msgstr ""
+"அதன் பெயரைக் கொடுக்கும் ஒரு கலவை 2 முனையின் கலப்பு தொகையை வழங்குகிறது."
 
 #: docs/AnimationTreePlayer.xml
 msgid ""
@@ -6648,6 +6842,9 @@ msgid ""
 "A Blend2 node blends two animations (A and B) with the amount between 0 and 1.\n"
 "At 0, output is input A. Towards 1, the influence of A gets lessened, the influence of B gets raised. At 1, output is input B."
 msgstr ""
+"அதன் பெயர் மற்றும் மதிப்பைக் கொடுக்கும் ஒரு கலவை 2 முனையின் கலப்பு தொகையை அமைக்கிறது.\n"
+" ஒரு கலவை 2 முனை இரண்டு அனிமேசன்களை (A மற்றும் B) 0 மற்றும் 1 க்கு இடையிலான அளவுடன் கலக்கிறது.\n"
+" 0 இல், வெளியீடு என்பது உள்ளீடு A. 1 ஐ நோக்கி, A இன் செல்வாக்கு குறைகிறது, B இன் செல்வாக்கு உயர்த்தப்படுகிறது. 1 இல், வெளியீடு உள்ளீடு B."
 
 #: docs/AnimationTreePlayer.xml
 msgid ""
@@ -6655,10 +6852,12 @@ msgid ""
 "[code]id[/code] turns off the track modifying the property at "
 "[code]path[/code]. The modified node's children continue to animate."
 msgstr ""
+". மாற்றியமைக்கப்பட்ட முனையின் குழந்தைகள் தொடர்ந்து உயிரூட்டுகிறார்கள்."
 
 #: docs/AnimationTreePlayer.xml
 msgid "Returns the blend amount of a Blend3 node given its name."
 msgstr ""
+"அதன் பெயரைக் கொடுக்கும் ஒரு கலவை 3 முனையின் கலப்பு தொகையை வழங்குகிறது."
 
 #: docs/AnimationTreePlayer.xml
 msgid ""
@@ -6666,10 +6865,14 @@ msgid ""
 "A Blend3 Node blends three animations (A, B-, B+) with the amount between -1 and 1.\n"
 "At -1, output is input B-. From -1 to 0, the influence of B- gets lessened, the influence of A gets raised and the influence of B+ is 0. At 0, output is input A. From 0 to 1, the influence of A gets lessened, the influence of B+ gets raised and the influence of B+ is 0. At 1, output is input B+."
 msgstr ""
+"அதன் பெயர் மற்றும் மதிப்பைக் கொடுக்கும் ஒரு கலவை 3 முனையின் கலப்பு தொகையை அமைக்கிறது.\n"
+" ஒரு கலவை 3 முனை -1 மற்றும் 1 க்கு இடையிலான தொகையுடன் மூன்று அனிமேசன்களை (A, B-, B+) கலக்கிறது.\n"
+" -1 இல், வெளியீடு உள்ளீடு B-. -1 முதல் 0 வரை, B- இன் செல்வாக்கு குறைகிறது, A இன் செல்வாக்கு உயர்த்தப்படுகிறது மற்றும் B+ இன் செல்வாக்கு 0 ஆகும். 0, வெளியீடு உள்ளீடு A. 0 முதல் 1 வரை, A இன் செல்வாக்கு குறைகிறது, B+ இன் செல்வாக்கு உயர்த்தப்பட்டு B+ இன் செல்வாக்கு 0 ஆகும். 1 இல், வெளியீடு உள்ளீடு B+."
 
 #: docs/AnimationTreePlayer.xml
 msgid "Returns the blend amount of a Blend4 node given its name."
 msgstr ""
+"அதன் பெயரைக் கொடுக்கும் ஒரு கலவை 4 முனையின் கலப்பு தொகையை வழங்குகிறது."
 
 #: docs/AnimationTreePlayer.xml
 msgid ""
