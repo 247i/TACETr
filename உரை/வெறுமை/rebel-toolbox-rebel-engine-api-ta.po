@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Tamil (Rebel Toolbox)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-28 07:29+0200\n"
-"PO-Revision-Date: 2025-02-28 22:14+0530\n"
+"PO-Revision-Date: 2025-02-28 22:20+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rebel-toolbox/rebel-engine-api/ta/>\n"
 "Language: ta\n"
@@ -8345,50 +8345,52 @@ msgid ""
 "[PoolIntArray] of integers used as indices referencing vertices, colors, normals, tangents, and textures. All of those arrays must have the same number of elements as the vertex array. No index can be beyond the vertex array size. When this index array is present, it puts the function into \"index mode,\" where the index selects the *i*'th vertex, normal, tangent, color, UV, etc. This means if you want to have different normals or colors along an edge, you have to duplicate the vertices.\n"
 "For triangles, the index array is interpreted as triples, referring to the vertices of each triangle. For lines, the index array is in pairs indicating the start and end of each line."
 msgstr ""
+"செங்குத்துகள், வண்ணங்கள், இயல்பான, தொடுகோடுகள் மற்றும் அமைப்புகளைக் குறிக்கும் குறியீடுகளாகப் பயன்படுத்தப்படும் முழு எண்களின் [POLLINTARRAY]. அந்த வரிசைகள் அனைத்தும் வெர்டெக்ச் வரிசை போன்ற அதே எண்ணிக்கையிலான கூறுகளைக் கொண்டிருக்க வேண்டும். எந்த குறியீடும் வெர்டெக்ச் வரிசை அளவிற்கு அப்பால் இருக்க முடியாது. இந்த குறியீட்டு வரிசை இருக்கும்போது, ​​அது செயல்பாட்டை \"குறியீட்டு பயன்முறையில்\" வைக்கிறது, அங்கு குறியீடு *i *'வது வெர்டெக்ச், இயல்பான, தொடுகோடு, வண்ணம், புற ஊதா போன்றவற்றைத் தேர்ந்தெடுக்கும். இதன் பொருள் நீங்கள் ஒரு விளிம்பில் வெவ்வேறு இயல்புகள் அல்லது வண்ணங்களை வைத்திருக்க விரும்பினால், நீங்கள் செங்குத்துகளை நகலெடுக்க வேண்டும்.\n"
+" முக்கோணங்களைப் பொறுத்தவரை, குறியீட்டு வரிசை ஒவ்வொரு முக்கோணத்தின் செங்குத்துகளையும் குறிக்கிறது. வரிகளைப் பொறுத்தவரை, குறியீட்டு வரிசை ஒவ்வொரு வரியின் தொடக்கத்தையும் முடிவையும் குறிக்கும் சோடிகளாக உள்ளது."
 
 #: docs/ArrayMesh.xml docs/Mesh.xml docs/VisualServer.xml
 msgid "Represents the size of the [enum ArrayType] enum."
-msgstr ""
+msgstr "[Enum arrayType] enum இன் அளவைக் குறிக்கிறது."
 
 #: docs/ArrayMesh.xml
 msgid "Array format will include vertices (mandatory)."
-msgstr ""
+msgstr "வரிசை வடிவத்தில் செங்குத்துகள் (கட்டாய) அடங்கும்."
 
 #: docs/ArrayMesh.xml
 msgid "Array format will include normals."
-msgstr ""
+msgstr "வரிசை வடிவத்தில் இயல்பானவை இருக்கும்."
 
 #: docs/ArrayMesh.xml
 msgid "Array format will include tangents."
-msgstr ""
+msgstr "வரிசை வடிவத்தில் தொடுகோடுகள் இருக்கும்."
 
 #: docs/ArrayMesh.xml
 msgid "Array format will include a color array."
-msgstr ""
+msgstr "வரிசை வடிவத்தில் வண்ண வரிசை இருக்கும்."
 
 #: docs/ArrayMesh.xml
 msgid "Array format will include UVs."
-msgstr ""
+msgstr "வரிசை வடிவத்தில் UV கள் இருக்கும்."
 
 #: docs/ArrayMesh.xml
 msgid "Array format will include another set of UVs."
-msgstr ""
+msgstr "வரிசை வடிவத்தில் யு.வி.க்களின் மற்றொரு தொகுப்பு இருக்கும்."
 
 #: docs/ArrayMesh.xml
 msgid "Array format will include bone indices."
-msgstr ""
+msgstr "வரிசை வடிவத்தில் எலும்பு குறியீடுகள் இருக்கும்."
 
 #: docs/ArrayMesh.xml
 msgid "Array format will include bone weights."
-msgstr ""
+msgstr "வரிசை வடிவத்தில் எலும்பு எடைகள் இருக்கும்."
 
 #: docs/ArrayMesh.xml
 msgid "Index array will be used."
-msgstr ""
+msgstr "குறியீட்டு வரிசை பயன்படுத்தப்படும்."
 
 #: docs/ARVRAnchor.xml
 msgid "An anchor point in AR space."
-msgstr ""
+msgstr "AR இடத்தில் ஒரு நங்கூர புள்ளி."
 
 #: docs/ARVRAnchor.xml
 msgid ""
@@ -8396,16 +8398,22 @@ msgid ""
 "This node is mapped to one of the anchors through its unique ID. When you receive a signal that a new anchor is available, you should add this node to your scene for that anchor. You can predefine nodes and set the ID; the nodes will simply remain on 0,0,0 until a plane is recognized.\n"
 "Keep in mind that, as long as plane detection is enabled, the size, placing and orientation of an anchor will be updated as the detection logic learns more about the real world out there especially if only part of the surface is in view."
 msgstr ""
+"[Arvranchor] புள்ளி என்பது ஒரு இடஞ்சார்ந்த முனை ஆகும், இது AR தளத்தால் அடையாளம் காணப்பட்ட ஒரு உண்மையான உலக இருப்பிடத்தை விளையாட்டு உலகிற்குள் ஒரு நிலைக்கு வரைபடமாக்குகிறது. எடுத்துக்காட்டாக, ஆர்கிட்டில் வானூர்தி கண்டறிதல் இயங்கும் வரை, ஆர்கிட் விமானங்களின் நிலையை (அட்டவணைகள், தளங்கள் போன்றவை) அடையாளம் கண்டு புதுப்பித்து அவற்றுக்கான நங்கூரங்களை உருவாக்கும்.\n"
+" இந்த முனை அதன் தனித்துவமான ஐடி மூலம் நங்கூரங்களில் ஒன்றில் பொருத்தப்பட்டுள்ளது. ஒரு புதிய நங்கூரம் கிடைக்கக்கூடிய சமிக்ஞையை நீங்கள் பெறும்போது, ​​அந்த நங்கூரத்திற்காக இந்த முனையை உங்கள் காட்சியில் சேர்க்க வேண்டும். நீங்கள் முனைகளை முன்னிலைப்படுத்தி ஐடியை அமைக்கலாம்; ஒரு வானூர்தி அங்கீகரிக்கப்படும் வரை முனைகள் 0,0,0 இல் இருக்கும்.\n"
+" வானூர்தி கண்டறிதல் இயக்கப்பட்டிருக்கும் வரை, கண்டறிதல் வழக்கு உண்மையான உலகத்தைப் பற்றி மேலும் அறியும்போது, ​​குறிப்பாக மேற்பரப்பின் ஒரு பகுதி மட்டுமே பார்வையில் இருந்தால், ஒரு நங்கூரத்தின் அளவு, வைப்பது மற்றும் நோக்குநிலை புதுப்பிக்கப்படும் என்பதை நினைவில் கொள்ளுங்கள்."
 
 #: docs/ARVRAnchor.xml
 msgid "Returns the name given to this anchor."
-msgstr ""
+msgstr "இந்த நங்கூரத்திற்கு கொடுக்கப்பட்ட பெயரை வழங்குகிறது."
 
 #: docs/ARVRAnchor.xml
 msgid ""
 "Returns [code]true[/code] if the anchor is being tracked and "
 "[code]false[/code] if no anchor with this ID is currently known."
 msgstr ""
+"இந்த ஐடியுடன் எந்த நங்கூரமும் தற்போது அறியப்பட்டால், நங்கூரம் "
+"கண்காணிக்கப்பட்டு [/குறியீடு] பொய் [/குறியீடு] இருந்தால் [குறியீடு] உண்மை "
+"[/குறியீடு] திரும்பும்."
 
 #: docs/ARVRAnchor.xml
 msgid ""
@@ -8415,11 +8423,19 @@ msgid ""
 " can be used to create shadows/reflections on surfaces or for generating "
 "collision shapes."
 msgstr ""
+"[Arvrinterface] ஆல் வழங்கப்பட்டால், இது நங்கூரத்திற்கு ஒரு கண்ணி பொருளை "
+"வழங்குகிறது. ஒரு நங்கூரத்தைப் பொறுத்தவரை, இது கண்காணிக்கப்படும் பொருளுடன் "
+"தொடர்புடைய வடிவமாக இருக்கலாம் அல்லது இது நங்கூரத்துடன் தொடர்புடைய இடவியலை "
+"வழங்கும் ஒரு கண்ணி ஆக இருக்கலாம் மற்றும் மேற்பரப்புகளில் "
+"நிழல்கள்/பிரதிபலிப்புகளை உருவாக்க அல்லது மோதல் வடிவங்களை உருவாக்க "
+"பயன்படுத்தலாம்."
 
 #: docs/ARVRAnchor.xml
 msgid ""
 "Returns a plane aligned with our anchor; handy for intersection testing."
 msgstr ""
+"எங்கள் நங்கூரத்துடன் சீரமைக்கப்பட்ட ஒரு விமானத்தை வழங்குகிறது; "
+"குறுக்குவெட்டு சோதனைக்கு எளிது."
 
 #: docs/ARVRAnchor.xml
 msgid ""
@@ -8427,6 +8443,9 @@ msgid ""
 "anchor relates to a table in the real world, this is the estimated size of "
 "the surface of that table."
 msgstr ""
+"கண்டறியப்பட்ட விமானத்தின் மதிப்பிடப்பட்ட அளவை வழங்குகிறது. நங்கூரம் உண்மையான"
+" உலகில் ஒரு அட்டவணையுடன் தொடர்புடையதாக இருக்கும்போது, ​​இது அந்த அட்டவணையின்"
+" மேற்பரப்பின் மதிப்பிடப்பட்ட அளவு."
 
 #: docs/ARVRAnchor.xml
 msgid ""
@@ -8437,6 +8456,13 @@ msgid ""
 "when the AR server identifies that two anchors represent different parts of "
 "the same plane and merges them."
 msgstr ""
+"நங்கூரத்தின் ஐடி. நங்கூரம் இருப்பதற்கு முன்பு இதை நீங்கள் அமைக்கலாம். முதல் "
+"நங்கூரம் [குறியீடு] 1 [/குறியீடு] இன் ஐடியைப் பெறுகிறது, [குறியீடு] 2 "
+"[/குறியீடு] இன் இரண்டாவது ஐடி. நங்கூரர்கள் அகற்றப்படும்போது, ​​இயந்திரம் "
+"தொடர்புடைய ஐடியை புதிய நங்கூரங்களுக்கு ஒதுக்க முடியும். இரண்டு நங்கூரர்கள் "
+"ஒரே விமானத்தின் வெவ்வேறு பகுதிகளைக் குறிக்கின்றன என்பதை AR சேவையகம் அடையாளம்"
+" கண்டு அவற்றை ஒன்றிணைக்கும் போது நங்கூரங்கள் \"மறைந்துவிடும்\" என்ற பொதுவான "
+"சூழ்நிலை."
 
 #: docs/ARVRAnchor.xml
 msgid ""
@@ -8444,27 +8470,33 @@ msgid ""
 " available. This is especially important for topology that is constantly "
 "being [code]mesh_updated[/code]."
 msgstr ""
+"நங்கூரத்துடன் தொடர்புடைய கண்ணி மாறும்போது அல்லது ஒன்று கிடைக்கும்போது "
+"வெளிப்படும். தொடர்ந்து [குறியீடு] Mesh_updated [/code] ஆக இருக்கும் இடவியல் "
+"இது மிகவும் முக்கியமானது."
 
 #: docs/ARVRCamera.xml
 msgid ""
 "A camera node with a few overrules for AR/VR applied, such as location "
 "tracking."
 msgstr ""
+"இருப்பிட கண்காணிப்பு போன்ற AR/VR க்கான சில மேலோட்டங்களைக் கொண்ட கேமரா முனை."
 
 #: docs/ARVRCamera.xml
 msgid ""
 "This is a helper spatial node for our camera; note that, if stereoscopic rendering is applicable (VR-HMD), most of the camera properties are ignored, as the HMD information overrides them. The only properties that can be trusted are the near and far planes.\n"
 "The position and orientation of this node is automatically updated by the ARVR Server to represent the location of the HMD if such tracking is available and can thus be used by game logic. Note that, in contrast to the ARVR Controller, the render thread has access to the most up-to-date tracking data of the HMD and the location of the ARVRCamera can lag a few milliseconds behind what is used for rendering as a result."
 msgstr ""
+"இது எங்கள் கேமராவிற்கான உதவி இடஞ்சார்ந்த முனை; ச்டீரியோச்கோபிக் வழங்குதல் பொருந்தினால் (வி.ஆர்-எச்எம்டி), எச்எம்டி தகவல்கள் அவற்றை மீறுவதால், கேமரா பண்புகள் பெரும்பாலானவை புறக்கணிக்கப்படுகின்றன என்பதை நினைவில் கொள்க. நம்பக்கூடிய ஒரே பண்புகள் அருகிலுள்ள மற்றும் தொலைதூர விமானங்கள்.\n"
+" இந்த முனையின் நிலை மற்றும் நோக்குநிலை தானாகவே ARVR சேவையகத்தால் புதுப்பிக்கப்படும், இதுபோன்ற கண்காணிப்பு கிடைத்தால் HMD இன் இருப்பிடத்தைக் குறிக்க, இதனால் விளையாட்டு தர்க்கத்தால் பயன்படுத்தப்படலாம். ARVR கட்டுப்படுத்திக்கு மாறாக, வழங்குதல் நூல் HMD இன் மிகவும் புதுப்பித்த கண்காணிப்பு தரவுகளுக்கான அணுகலைக் கொண்டுள்ளது மற்றும் அர்வ்ர்கமேராவின் இருப்பிடம் இதன் விளைவாக வழங்குதல் செய்யப் பயன்படுத்தப்படுவதற்கு சில மில்லி விநாடிகளுக்கு பின்னால் பின்தங்கியிருக்கலாம்."
 
 #: docs/ARVRCamera.xml docs/ARVRController.xml docs/ARVRInterface.xml
 #: docs/ARVROrigin.xml docs/ARVRPositionalTracker.xml docs/ARVRServer.xml
 msgid "https://docs.rebeltoolbox.com/en/latest/tutorials/vr/index.html"
-msgstr ""
+msgstr "https://docs.rebeltoolbox.com/en/latest/tutorials/vr/index.html"
 
 #: docs/ARVRController.xml
 msgid "A spatial node representing a spatially-tracked controller."
-msgstr ""
+msgstr "இடஞ்சார்ந்த தடமறியும் கட்டுப்படுத்தியைக் குறிக்கும் இடஞ்சார்ந்த முனை."
 
 #: docs/ARVRController.xml
 msgid ""
@@ -8472,30 +8504,42 @@ msgid ""
 "Controllers are linked by their ID. You can create controller nodes before the controllers are available. If your game always uses two controllers (one for each hand), you can predefine the controllers with ID 1 and 2; they will become active as soon as the controllers are identified. If you expect additional controllers to be used, you should react to the signals and add ARVRController nodes to your scene.\n"
 "The position of the controller node is automatically updated by the [ARVRServer]. This makes this node ideal to add child nodes to visualize the controller."
 msgstr ""
+"இது ஒரு உதவி இடஞ்சார்ந்த முனை, இது கட்டுப்படுத்திகளின் கண்காணிப்புடன் இணைக்கப்பட்டுள்ளது. இது பொத்தான்களின் நிலைக்கு பல எளிமையான பாச்ட்ரூக்களையும் கட்டுப்படுத்திகளிலும் வழங்குகிறது.\n"
+" கட்டுப்படுத்திகள் அவற்றின் ஐடியால் இணைக்கப்பட்டுள்ளன. கட்டுப்படுத்திகள் கிடைப்பதற்கு முன்பு நீங்கள் கட்டுப்பாட்டு முனைகளை உருவாக்கலாம். உங்கள் விளையாட்டு எப்போதும் இரண்டு கட்டுப்படுத்திகளைப் பயன்படுத்தினால் (ஒவ்வொரு கைக்கும் ஒன்று), நீங்கள் ஐடி 1 மற்றும் 2 உடன் கட்டுப்படுத்திகளை முன்னரே வைக்கலாம்; கட்டுப்படுத்திகள் அடையாளம் காணப்பட்டவுடன் அவை செயலில் இருக்கும். கூடுதல் கட்டுப்படுத்திகள் பயன்படுத்தப்படும் என்று நீங்கள் எதிர்பார்த்தால், நீங்கள் சமிக்ஞைகளுக்கு எதிர்வினையாற்ற வேண்டும் மற்றும் உங்கள் காட்சியில் Arvrontroller முனைகளைச் சேர்க்க வேண்டும்.\n"
+" கட்டுப்படுத்தி முனையின் நிலை தானாகவே [arvrserver] புதுப்பிக்கப்படுகிறது. கட்டுப்படுத்தியைக் காட்சிப்படுத்த குழந்தை முனைகளைச் சேர்க்க இது இந்த முனையை ஏற்றது."
 
 #: docs/ARVRController.xml
 msgid ""
 "If active, returns the name of the associated controller if provided by the "
 "AR/VR SDK used."
 msgstr ""
+"செயலில் இருந்தால், பயன்படுத்தப்பட்ட AR/VR SDK ஆல் வழங்கப்பட்டால் தொடர்புடைய "
+"கட்டுப்படுத்தியின் பெயரை வழங்குகிறது."
 
 #: docs/ARVRController.xml
 msgid ""
 "Returns the hand holding this controller, if known. See [enum "
 "ARVRPositionalTracker.TrackerHand]."
 msgstr ""
+"தெரிந்தால், இந்த கட்டுப்படுத்தியை வைத்திருக்கும் கையை வழங்குகிறது. [Enum "
+"arvrpospositionaltracker.trackerhand] ஐப் பார்க்கவும்."
 
 #: docs/ARVRController.xml
 msgid ""
 "Returns [code]true[/code] if the bound controller is active. ARVR systems "
 "attempt to track active controllers."
 msgstr ""
+"பிணைக்கப்பட்ட கட்டுப்படுத்தி செயலில் இருந்தால் [குறியீடு] உண்மை [/குறியீடு] "
+"ஐ வழங்குகிறது. ARVR அமைப்புகள் செயலில் உள்ள கட்டுப்பாட்டாளர்களைக் கண்காணிக்க"
+" முயற்சிக்கின்றன."
 
 #: docs/ARVRController.xml
 msgid ""
 "Returns the value of the given axis for things like triggers, touchpads, "
 "etc. that are embedded into the controller."
 msgstr ""
+"கட்டுப்படுத்தியில் உட்பொதிக்கப்பட்ட தூண்டுதல்கள், டச்பேடுகள் போன்றவற்றுக்கு "
+"கொடுக்கப்பட்ட அச்சின் மதிப்பை வழங்குகிறது."
 
 #: docs/ARVRController.xml
 msgid ""
@@ -8506,12 +8550,21 @@ msgid ""
 " the AR/VR controllers. This ID is purely offered as information so you can "
 "link up the controller with its joystick entry."
 msgstr ""
+"இதனுடன் பிணைக்கப்பட்ட சாய்ச்டிக் பொருளின் ஐடியை வழங்குகிறது. பொத்தான்கள் "
+"மற்றும் அச்சைக் கொண்ட [Arvrserver] ஆல் கண்காணிக்கப்படும் ஒவ்வொரு "
+"கட்டுப்படுத்தியும் கிளர்ச்சி இயந்திரத்திற்குள் ஒரு சாய்ச்டிக் ஆக பதிவு "
+"செய்யப்படும். இதன் பொருள் அனைத்து சாதாரண சாய்ச்டிக் கண்காணிப்பு மற்றும் "
+"உள்ளீட்டு மேப்பிங் AR/VR கட்டுப்படுத்திகளில் காணப்படும் பொத்தான்கள் மற்றும் "
+"அச்சுகளுக்கு வேலை செய்யும். இந்த ஐடி முற்றிலும் தகவலாக வழங்கப்படுகிறது, எனவே"
+" நீங்கள் கட்டுப்படுத்தியை அதன் சாய்ச்டிக் நுழைவுடன் இணைக்க முடியும்."
 
 #: docs/ARVRController.xml
 msgid ""
 "If provided by the [ARVRInterface], this returns a mesh associated with the "
 "controller. This can be used to visualize the controller."
 msgstr ""
+"[Arvrinterface] ஆல் வழங்கப்பட்டால், இது கட்டுப்படுத்தியுடன் தொடர்புடைய ஒரு "
+"கண்ணி தருகிறது. கட்டுப்படுத்தியைக் காட்சிப்படுத்த இதைப் பயன்படுத்தலாம்."
 
 #: docs/ARVRController.xml
 msgid ""
@@ -8519,6 +8572,9 @@ msgid ""
 "pressed. See [enum JoystickList], in particular the [code]JOY_VR_*[/code] "
 "constants."
 msgstr ""
+"குறியீட்டு [குறியீடு] பொத்தான் [/குறியீடு] இல் உள்ள பொத்தானை அழுத்தினால் "
+"[குறியீடு] உண்மை [/code] ஐ வழங்குகிறது. [எனம் சாய்ச்டிக்லிச்ட்டை] காண்க, "
+"குறிப்பாக [குறியீடு] சாய்_விஆர் _*[/குறியீடு] மாறிலிகள்."
 
 #: docs/ARVRController.xml
 msgid ""
@@ -8527,20 +8583,26 @@ msgid ""
 "For any other controller that the [ARVRServer] detects, we continue with controller ID 3.\n"
 "When a controller is turned off, its slot is freed. This ensures controllers will keep the same ID even when controllers with lower IDs are turned off."
 msgstr ""
+"கட்டுப்படுத்தியின் ஐடி.\n"
+" 0 இன் கட்டுப்படுத்தி ஐடி வரம்பற்றது மற்றும் எப்போதும் செயலற்ற முனைக்கு வழிவகுக்கும். கட்டுப்பாட்டு ஐடி 1 முதல் கட்டுப்படுத்திக்கு ஒதுக்கப்பட்டுள்ளது, இது தன்னை இடது கை கட்டுப்படுத்தியாக அடையாளம் காட்டுகிறது மற்றும் ஐடி 2 முதல் கட்டுப்படுத்திக்கு ஒதுக்கப்பட்டுள்ளது, அது தன்னை வலது கை கட்டுப்படுத்தியாக அடையாளம் காட்டுகிறது.\n"
+" [Arvrserver] கண்டறிந்த வேறு எந்த கட்டுப்படுத்திக்கும், நாங்கள் கட்டுப்பாட்டு ஐடி 3 உடன் தொடர்கிறோம்.\n"
+" ஒரு கட்டுப்படுத்தி அணைக்கப்படும் போது, ​​அதன் ச்லாட் விடுவிக்கப்படுகிறது. குறைந்த ஐடிகளைக் கொண்ட கட்டுப்படுத்திகள் அணைக்கப்படும்போது கூட கட்டுப்பாட்டாளர்கள் அதே ஐடியை வைத்திருப்பதை இது உறுதி செய்கிறது."
 
 #: docs/ARVRController.xml
 msgid ""
 "The degree to which the controller vibrates. Ranges from [code]0.0[/code] to [code]1.0[/code] with precision [code].01[/code]. If changed, updates [member ARVRPositionalTracker.rumble] accordingly.\n"
 "This is a useful property to animate if you want the controller to vibrate for a limited duration."
 msgstr ""
+"கட்டுப்படுத்தி எந்த அளவிற்கு அதிர்வுறும். [குறியீடு] 0.0 [/குறியீடு] முதல் [குறியீடு] 1.0 [/குறியீடு] வரை துல்லியமான [குறியீடு] .01 [/குறியீடு] வரை வரம்புகள். மாற்றப்பட்டால், புதுப்பிப்புகள் [உறுப்பினர் arvrpositionaltracker.rumble] அதற்கேற்ப.\n"
+" கட்டுப்படுத்தி ஒரு வரையறுக்கப்பட்ட காலத்திற்கு அதிர்வுற வேண்டும் என்று நீங்கள் விரும்பினால் உயிரூட்ட இது ஒரு பயனுள்ள சொத்து."
 
 #: docs/ARVRController.xml
 msgid "Emitted when a button on this controller is pressed."
-msgstr ""
+msgstr "இந்த கட்டுப்படுத்தியில் ஒரு பொத்தானை அழுத்தும்போது உமிழப்படும்."
 
 #: docs/ARVRController.xml
 msgid "Emitted when a button on this controller is released."
-msgstr ""
+msgstr "இந்த கட்டுப்படுத்தியில் ஒரு பொத்தான் வெளியிடப்படும் போது உமிழப்படும்."
 
 #: docs/ARVRController.xml
 msgid ""
@@ -8548,16 +8610,20 @@ msgid ""
 "becomes available. Generally speaking this will be a static mesh after "
 "becoming available."
 msgstr ""
+"கட்டுப்படுத்தியுடன் தொடர்புடைய கண்ணி மாறும்போது அல்லது ஒன்று கிடைக்கும்போது "
+"உமிழும். பொதுவாக இது கிடைத்த பிறகு நிலையான கண்ணி இருக்கும்."
 
 #: docs/ARVRInterface.xml
 msgid "Base class for an AR/VR interface implementation."
-msgstr ""
+msgstr "AR/VR இடைமுக செயலாக்கத்திற்கான அடிப்படை வகுப்பு."
 
 #: docs/ARVRInterface.xml
 msgid ""
 "This class needs to be implemented to make an AR or VR platform available to Rebel Engine and these should be implemented as C++ modules or GDNative modules (note that for GDNative the subclass ARVRScriptInterface should be used). Part of the interface is exposed to GDScript so you can detect, enable and configure an AR or VR platform.\n"
 "Interfaces should be written in such a way that simply enabling them will give us a working setup. You can query the available interfaces through [ARVRServer]."
 msgstr ""
+"கிளர்ச்சி இயந்திரத்திற்கு AR அல்லது VR இயங்குதளத்தை கிடைக்கச் செய்ய இந்த வகுப்பு செயல்படுத்தப்பட வேண்டும், இவை C ++ தொகுதிகள் அல்லது Gdnative தொகுதிகள் என செயல்படுத்தப்பட வேண்டும் (Gdnative க்கு ArvrscriptInterface ஐப் பயன்படுத்த வேண்டும் என்பதை நினைவில் கொள்க). இடைமுகத்தின் ஒரு பகுதி GDSCRIPT க்கு வெளிப்படும், எனவே நீங்கள் AR அல்லது VR இயங்குதளத்தைக் கண்டறிந்து இயக்கலாம் மற்றும் உள்ளமைக்கலாம்.\n"
+" இடைமுகங்கள் எழுதப்பட வேண்டும், அவற்றை வெறுமனே செயல்படுத்துவது எங்களுக்கு ஒரு வேலை அமைப்பைக் கொடுக்கும். [Arvrserver] மூலம் கிடைக்கக்கூடிய இடைமுகங்களை நீங்கள் வினவலாம்."
 
 #: docs/ARVRInterface.xml
 msgid ""
@@ -8565,22 +8631,29 @@ msgid ""
 "background, this method returns the feed ID in the [CameraServer] for this "
 "interface."
 msgstr ""
+"இது ஒரு AR இடைமுகமாக இருந்தால், இது கேமரா ஊட்டத்தை பின்னணியாகக் காண்பிக்க "
+"வேண்டும், இந்த முறை இந்த இடைமுகத்திற்கான [கேமரேசர்] இல் ஊட்ட ஐடியை "
+"வழங்குகிறது."
 
 #: docs/ARVRInterface.xml
 msgid ""
 "Returns a combination of [enum Capabilities] flags providing information "
 "about the capabilities of this interface."
 msgstr ""
+"இந்த இடைமுகத்தின் திறன்களைப் பற்றிய தகவல்களை வழங்கும் [ENUM திறன்கள்] "
+"கொடிகளின் கலவையை வழங்குகிறது."
 
 #: docs/ARVRInterface.xml
 msgid "Returns the name of this interface (OpenVR, OpenHMD, ARKit, etc)."
-msgstr ""
+msgstr "இந்த இடைமுகத்தின் பெயரை (OpenVR, OpenHMD, ARKIT போன்றவை) வழங்குகிறது."
 
 #: docs/ARVRInterface.xml
 msgid ""
 "Returns the resolution at which we should render our intermediate results "
 "before things like lens distortion are applied by the VR platform."
 msgstr ""
+"லென்ச் விலகல் போன்ற விசயங்கள் வி.ஆர் இயங்குதளத்தால் பயன்படுத்தப்படுவதற்கு "
+"முன்பு எங்கள் இடைநிலை முடிவுகளை வழங்க வேண்டிய தீர்மானத்தை வழங்குகிறது."
 
 #: docs/ARVRInterface.xml
 msgid ""
