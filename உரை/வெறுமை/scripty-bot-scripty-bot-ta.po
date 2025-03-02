@@ -1,0 +1,2012 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tamil (Scripty)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-02 14:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/scripty-bot/"
+"scripty-bot/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10.3-dev\n"
+
+#. join command
+#. This and all attributes show up exclusively in the slash command picker when `join` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_join"
+msgid ""
+"join\n"
+".description = Join a voice chat. Transcripts will be logged to the channel "
+"you run this command in.\n"
+".voice_channel = voice_channel\n"
+".voice_channel-description = Voice chat to bind to.\n"
+".record_transcriptions = record_transcriptions\n"
+".record_transcriptions-description = Log all transcripts? Users will be DMed "
+"when Scripty leaves the channel. Defaults to false.\n"
+".target_channel = target_channel\n"
+".target_channel-description = Send transcripts here, instead of the current "
+"channel. Target a forum to create a new post.\n"
+".create_thread = create_thread\n"
+".create_thread-description = Create a new thread for this transcription? "
+"Defaults to false."
+msgstr ""
+
+#. join command
+#. This message is shown when the user is not in a voice channel, nor was a voice channel specified.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags, priority:10
+msgctxt "no-channel-specified"
+msgid ""
+"You're not in a voice chat, nor did you tell me a channel to join. Try `{ $"
+"contextPrefix }join <channel>` to specify a voice chat, or join a voice chat "
+"yourself and re-run this command."
+msgstr ""
+
+#. join command
+#. This message is shown on successfuly joining a voice channel.
+#. { $targetMention } is the mention of the channel the bot joined.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "join-success-description"
+msgid ""
+"Successfully joined { $voiceTargetMention }, and sending transcription "
+"output to { $outputChannelMention }."
+msgstr ""
+
+#. join command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "join-success-premium"
+msgid "You can check out this server's Premium status with `/premium info`."
+msgstr ""
+
+#. join command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "join-success-help-title"
+msgid "Need help?"
+msgstr ""
+
+#. join command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "join-success-help-description"
+msgid ""
+"You can either join the support server at { $supportServerInvite }, or DM "
+"the bot."
+msgstr ""
+
+#. join command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "join-success-footer-free-trial-upsell"
+msgid ""
+"This server is eligible for a free trial of Premium. DM the bot to request "
+"one."
+msgstr ""
+
+#. join command
+#. This message is shown when the user attempts to make Scripty join a voice channel, but there is no one in the channel.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags, priority:10
+msgctxt "join-no-one-in-channel"
+msgid ""
+"There's no one in { $targetMention }. I'm not joining if there's no one "
+"there, as that's a waste of limited resources."
+msgstr ""
+
+#. join command
+#. This message is shown when Discord tosses a Dropped or TimedOut error when trying to join a voice channel.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags, priority:10
+msgctxt "join-failed-dropped"
+msgid ""
+"Discord appears to be having issues, we cannot do anything about this. "
+"Please try again later."
+msgstr ""
+
+#. join command
+#. This message is shown when the bot does not have permissions for the voice channel it is trying to join.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags, priority:10
+msgctxt "join-no-permission"
+msgid ""
+"I don't have permission to join { $targetMention }. Please give me the View "
+"Channel and Join permissions, or join a different voice chat where I do have "
+"permissions."
+msgstr ""
+
+#. join command
+#. This message is shown when the user has told the bot to create a thread while in a thread.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags, priority:10
+msgctxt "join-create-thread-in-thread"
+msgid ""
+"I can't create a thread while in a thread. Please run this command in a "
+"normal channel, likely { $parentChannelMention }."
+msgstr ""
+
+#. join command
+#. If the user specifies they would like to create a thread, this is set as the thread name. { $timestamp } is the current timestamp, in ISO format.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags, priority:9
+msgctxt "join-thread-title"
+msgid "Transcription from { $timestamp }"
+msgstr ""
+
+#. join command
+#. If the user specifies they would like to create a forum post, this is the contents of the initial message. { $timestamp } will be a Discord formatted timestamp (20 April 2021 at 16:20), and { $authorMention } is the mention of the user who ran the command.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags, priority:9
+msgctxt "join-forum-thread-content"
+msgid "{ $authorMention } started a transcription { $timestamp }."
+msgstr ""
+
+#. join command
+#. When an automatic forum post is created by auto-join, this is the content of the initial message. { $timestamp } will be a Discord formatted timestamp (20 April 2021 at 16:20) rendered natively on the client side.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "join-forum-thread-content-auto"
+msgid "An automatic transcript was started { $timestamp }."
+msgstr ""
+
+#. join command
+#. Message shown when a user tries to use an ephemeral thread but cannot do so as a thread was not selected
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "join-ephemeral-not-thread"
+msgid ""
+"To use the ephemeral parameter, you must select a thread as the target, by "
+"either setting `create_thread` to true or by targeting a thread with "
+"`target_channel`."
+msgstr ""
+
+#. join command
+#. This message is shown when the user has told a bot to join a forum channel, but the forum requires tags. This is not possible for the bot to work around as it has no way of knowing what tags to use.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "join-forum-requires-tags"
+msgid ""
+"The forum channel you tried to make me use requires tags. I have no way of "
+"knowing what tags to use, so I cannot join that channel. Please use a "
+"different channel, or ask an admin to remove the tag requirement."
+msgstr ""
+
+#. join command
+#. This message is shown when the user has told the bot to send transcripts to a non-text-based channel (ie category). `target_channel` should be translated, as slash command arguments are localized.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "join-target-not-text-based"
+msgid ""
+"The channel you told me to send transcripts to ({ $targetMention }) is not a "
+"text-based channel. Please use a text-based channel, or pick a different "
+"channel in the `target_channel` argument."
+msgstr ""
+
+#. join command
+#. This message is shown when the user requests the bot create a new thread in a channel, but the channel doesn't support threads being created (usually voice channels)
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "join-create-thread-in-unsupported"
+msgid ""
+"Discord does not support threads in { $targetMention }. Please use a "
+"different channel, or do not create a thread."
+msgstr ""
+
+#. Leave command
+#. This and all attributes show up exclusively in the slash command picker when `leave` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_leave"
+msgid ""
+"leave\n"
+".description = Leave any current voice call."
+msgstr ""
+
+#. Leave command
+#. This is shown when the bot successfully leaves a voice call
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "leave-success"
+msgid "Left VC successfully."
+msgstr ""
+
+#. Help command
+#. This and all attributes show up exclusively in the slash command picker when `help` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_help"
+msgid ""
+"help\n"
+".description = Show this help menu\n"
+".command = command\n"
+".command-description = Specific command to show help about"
+msgstr ""
+
+#. transcribe_message command
+#. This and all attributes show up exclusively in the slash command picker when `transcribe_message` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_transcribe_message"
+msgid ""
+"transcribe_message\n"
+".description = Transcribe a message. Reply to a message to transcribe it."
+msgstr ""
+
+#. premium command
+#. This and all attributes show up exclusively in the slash command picker when `premium` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_premium"
+msgid ""
+"premium\n"
+".description = Premium commands"
+msgstr ""
+
+#. premium command
+#. This and all attributes show up exclusively in the slash command picker when `premium claim` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_premium_claim"
+msgid ""
+"claim\n"
+".description = Claim your premium within the server where this command is "
+"executed."
+msgstr ""
+
+#. premium command
+#. This and all attributes show up exclusively in the slash command picker when `premium remove` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_premium_remove"
+msgid ""
+"remove\n"
+".description = Remove your premium from the server where this command is "
+"executed."
+msgstr ""
+
+#. premium command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_premium_info"
+msgid ""
+"info\n"
+".description = Get information on this server's Scripty Premium status."
+msgstr ""
+
+#. premium command
+#. This is shown to the user when they are not subscribed to premium.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "premium-not-premium"
+msgid ""
+"You are not a premium subscriber. Subscribe at https://scripty.org/premium. "
+"If you know you are one, please DM the bot that way we can reinstate your "
+"premium."
+msgstr ""
+
+#. premium command
+#. This is shown to the user when they have too many used servers to add more.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "premium-too-many-guilds"
+msgid ""
+"You have claimed { $totalServers } premium keys. You cannot add any more, "
+"unless you upgrade your premium subscription at <https://dash.scripty.org/"
+"premium>, or remove some with the `{ $commandPrefix }premium remove` command."
+msgstr ""
+
+#. premium command
+#. This is shown when the user successfully claims one of their premium subscriptions.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "premium-claimed"
+msgid ""
+"You have successfully claimed premium on this server. If you would like to "
+"upgrade, or purchase more slots, head to <https://dash.scripty.org/premium>. "
+"If you would like to remove your premium from this guild, run `{ $"
+"commandPrefix }premium remove`."
+msgstr ""
+
+#. premium command
+#. This is shown when the user successfully removes their premium from this guild.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "premium-removed"
+msgid ""
+"If you are the user who had claimed Premium, you have now successfully "
+"removed your premium from this server. If you would like to upgrade, or "
+"purchase more slots, head to <https://dash.scripty.org/premium>."
+msgstr ""
+
+#. premium command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "premium-info-embed-title"
+msgid "Premium Status"
+msgstr ""
+
+#. premium command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "premium-info-embed-description-no-subscription"
+msgid ""
+"You can subscribe to Premium at <https://dash.scripty.org/premium>. On top "
+"of the perks you get, you also help us in our goal to make Scripty the best "
+"bot out there for speech-to-text :)"
+msgstr ""
+
+#. premium command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "premium-info-embed-description-has-subscription"
+msgid ""
+"You can manage your subscription at <https://dash.scripty.org/premium>. "
+"Thanks for supporting Scripty!"
+msgstr ""
+
+#. premium command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "premium-info-embed-current-tier"
+msgid "Current tier"
+msgstr ""
+
+#. premium command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "premium-info-embed-max-users"
+msgid "Maximum concurrent users"
+msgstr ""
+
+#. premium command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "premium-info-embed-max-duration"
+msgid "Maximum session duration (seconds)"
+msgstr ""
+
+#. premium command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "premium-info-embed-max-file-length"
+msgid "Maximum file length (seconds)"
+msgstr ""
+
+#. premium command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "premium-info-embed-trial-available-title"
+msgid "Want a free trial of Premium?"
+msgstr ""
+
+#. premium command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "premium-info-embed-trial-available-description"
+msgid "DM the bot to get started on setting up a 3 day trial of Premium."
+msgstr ""
+
+#. premium command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "premium-info-embed-manage-subscription-user-has-unclaimed-title"
+msgid "Looks like you purchased Premium!"
+msgstr ""
+
+#. premium command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "premium-info-embed-manage-subscription-user-has-unclaimed-description"
+msgid "To claim it in this server, run { $claimCommand }."
+msgstr ""
+
+#. config - verbose command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_config_verbose"
+msgid ""
+"verbose\n"
+".description = Toggle whether Scripty is verbose during transcriptions.\n"
+".verbose = verbose\n"
+".verbose-description = Defaults to false"
+msgstr ""
+
+#. config - verbose command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-verbose-enabled"
+msgid "Scripty will now be verbose during transcriptions."
+msgstr ""
+
+#. config - verbose command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-verbose-disabled"
+msgid "Scripty will no longer be verbose during transcriptions."
+msgstr ""
+
+#. config - transcribe voice messages command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config_transcribe_voice_messages"
+msgid ""
+"transcribe_voice_messages\n"
+".description = Toggle whether Scripty transcribes voice messages.\n"
+".transcribe_voice_messages = transcribe_voice_messages\n"
+".transcribe_voice_messages-description = Defaults to true"
+msgstr ""
+
+#. config - transcribe voice messages command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-transcribe-voice-messages-enabled"
+msgid "Scripty will now transcribe voice messages."
+msgstr ""
+
+#. config - transcribe voice messages command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-transcribe-voice-messages-disabled"
+msgid "Scripty will no longer transcribe voice messages."
+msgstr ""
+
+#. config - transcribe audio command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config_transcribe_audio"
+msgid ""
+"transcribe_audio\n"
+".description = Toggle whether Scripty transcribes arbitrary audio files. "
+"Requires premium.\n"
+".transcribe_audio = transcribe_audio\n"
+".transcribe_audio-description = Defaults to false"
+msgstr ""
+
+#. config - transcribe audio command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-transcribe-audio-enabled"
+msgid "Scripty will now transcribe audio files."
+msgstr ""
+
+#. config - transcribe audio command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-transcribe-audio-disabled"
+msgid "Scripty will no longer transcribe audio files."
+msgstr ""
+
+#. config - transcribe audio command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-transcribe-audio-requires-premium"
+msgid ""
+"Transcribing audio files is a Premium feature, as it is computationally "
+"expensive to transcode audio files.\n"
+"If you would like to upgrade to Premium, head to https://dash.scripty.org/"
+"premium. You can also request a free trial of Premium by DMing the bot.\n"
+"If this feature was enabled before, it is now disabled."
+msgstr ""
+
+#. config - transcribe video command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config_transcribe_video"
+msgid ""
+"transcribe_video\n"
+".description = Toggle whether Scripty transcribes arbitrary video files. "
+"Requires T2 premium.\n"
+".transcribe_video = transcribe_video\n"
+".transcribe_video-description = Defaults to false"
+msgstr ""
+
+#. config - transcribe video command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-transcribe-video-enabled"
+msgid "Scripty will now transcribe video files."
+msgstr ""
+
+#. config - transcribe video command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-transcribe-video-disabled"
+msgid "Scripty will no longer transcribe video files."
+msgstr ""
+
+#. config - transcribe video command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-transcribe-video-requires-premium"
+msgid ""
+"Transcribing video files is a Premium Tier 2 feature, as it is very "
+"computationally expensive to transcode video files.\n"
+"If you would like to upgrade to Premium Tier 2, head to https://"
+"dash.scripty.org/premium.\n"
+"If this feature was enabled before, it is now disabled."
+msgstr ""
+
+#. config - auto detect language command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config_auto_detect_lang"
+msgid ""
+"auto_detect_lang\n"
+".description = Try to automatically detect the language being spoken? Very "
+"inaccurate vs setting a language.\n"
+".auto_detect_lang = auto_detect_lang\n"
+".auto_detect_lang-description = Defaults to false"
+msgstr ""
+
+#. config - auto detect language command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-auto-detect-lang-enabled"
+msgid "Scripty will now automatically detect the language being spoken."
+msgstr ""
+
+#. config - auto detect language command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-auto-detect-lang-disabled"
+msgid "Scripty will no longer automatically detect the language being spoken."
+msgstr ""
+
+#. config - auto detect language command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-auto-detect-lang-requires-premium"
+msgid ""
+"Automatically detecting the language is a Premium feature, as it is "
+"extremely computationally expensive to re-run the model twice to figure out "
+"the language.\n"
+"If you would like to upgrade to Premium, head to https://dash.scripty.org/"
+"premium. You can also request a free trial of Premium by DMing the bot.\n"
+"If this feature was enabled before, it is now disabled."
+msgstr ""
+
+#. config - auto detect language command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_config_auto_join"
+msgid ""
+"auto_join\n"
+".description = Should Scripty automatically join a voice channel when "
+"someone joins it?\n"
+".auto_join = auto_join\n"
+".auto_join-description = Defaults to false"
+msgstr ""
+
+#. config - auto detect language command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-auto-join-enabled"
+msgid "Scripty will now automatically join VCs when a user does."
+msgstr ""
+
+#. config - auto detect language command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-auto-join-disabled"
+msgid "Scripty will no longer automatically join VCs when a use does."
+msgstr ""
+
+#. config - auto detect language command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-auto-join-needs-target-channel"
+msgid ""
+"Enabling auto-join requires a default target channel be set. Do that with `{ "
+"$contextPrefix }config default target_channel`."
+msgstr ""
+
+#. config - transcribe only role command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config_transcribe_only_role"
+msgid ""
+"transcribe_only_role\n"
+".description = Limit Scripty's transcriptions to only users with this role "
+"in a voice chat.\n"
+".transcribe_only_role = transcribe_only_role\n"
+".transcribe_only_role-description = Role to limit to: set empty to disable."
+msgstr ""
+
+#. config - transcribe only role command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-transcribe-only-role-enabled"
+msgid "Scripty will now only transcribe messages from users in { $roleId }."
+msgstr ""
+
+#. config - transcribe only role command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-transcribe-only-role-disabled"
+msgid "Scripty will now transcribe all users, regardless of role."
+msgstr ""
+
+#. config - translate command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config_translate"
+msgid ""
+"translate\n"
+".description = Automatically translate transcriptions to English?\n"
+".translate = translate\n"
+".translate-description = Defaults to false"
+msgstr ""
+
+#. config - translate command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-translate-enabled"
+msgid "Scripty will now translate transcriptions to English."
+msgstr ""
+
+#. config - translate command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-translate-disabled"
+msgid ""
+"Scripty will now attempt to match the phrases being spoken to English words, "
+"but will not translate."
+msgstr ""
+
+#. config - translate command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-translate-not-english"
+msgid ""
+"You must set your language to English to enable translation. Do so with `{ $"
+"contextPrefix }config language en`."
+msgstr ""
+
+#. config - enable_kiai command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config_enable_kiai"
+msgid ""
+"enable_kiai\n"
+".description = Enable Scripty's Kiai integration. Run this command with no "
+"arguments to get info on Kiai.\n"
+".enable_kiai = enable_kiai\n"
+".enable_kiai-description = Defaults to false"
+msgstr ""
+
+#. config - enable_kiai command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-kiai-enabled"
+msgid ""
+"Scripty will now send any voice XP gained to Kiai. Disable Kiai's voice XP "
+"leveling to prevent users getting double XP."
+msgstr ""
+
+#. config - enable_kiai command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-kiai-disabled"
+msgid "Scripty will no longer send any voice XP gained to Kiai's API."
+msgstr ""
+
+#. config - enable_kiai command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-kiai-info"
+msgid ""
+"You can find more info about Kiai at [kiai.app](https://www.kiai.app/"
+"?utm_source=scripty_info).\n"
+"{ \"\" }\n"
+"If you use this integration, be sure to disable Kiai's voice XP module as "
+"they will conflict."
+msgstr ""
+
+#. config - enable_kiai command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-kiai-missing-perms"
+msgid ""
+"Scripty is missing permissions to work in this server. Authorize it with the "
+"`/application authorize` command, using an application ID of "
+"`811652199100317726`, and giving Scripty the "
+"\"view and edit all levels and XP\" permission."
+msgstr ""
+
+#. config - enable_kiai command
+#. This and all attributes show up exclusively in the slash command picker when `guild_language` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_config_prefix"
+msgid ""
+"prefix\n"
+".description = Set this server's language to one of the available languages."
+"\n"
+".language = language\n"
+".language-description = The language you want to set your guild language to."
+msgstr ""
+
+#. config - enable_kiai command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-prefix-too-long"
+msgid ""
+"Prefixes must be at most eight characters. Try again with a shorter one."
+msgstr ""
+
+#. config - enable_kiai command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-prefix-unset"
+msgid ""
+"The custom prefix for this guild has been cleared. The default prefix (`{ $"
+"updatedPrefix }`) will now be used."
+msgstr ""
+
+#. config - enable_kiai command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-prefix-updated"
+msgid ""
+"Scripty will no longer respond to the default prefix in this guild, but only "
+"to `{ $updatedPrefix }`."
+msgstr ""
+
+#. config - default settings - ephemeral command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_config_default_settings_ephemeral"
+msgid ""
+"ephemeral\n"
+".description = Should Scripty, by default, create ephemeral transcripts that "
+"disappear when the last user has left?\n"
+".ephemeral = ephemeral\n"
+".ephemeral-description = Default value for ephemeral on the join command"
+msgstr ""
+
+#. config - default settings - ephemeral command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-default-ephemeral-cant-target-thread"
+msgid ""
+"Setting ephemeral when targeting a thread will delete it as soon as the "
+"transcription is over, leaving an invalid default channel. Either change the "
+"default target channel to a place where threads can be created, or don't use "
+"ephemeral."
+msgstr ""
+
+#. config - default settings - ephemeral command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-default-ephemeral-cant-use-voice-channels"
+msgid ""
+"Voice channels don't support threads, so ephemeral transcripts are "
+"impossible. Either change the default target channel, or don't use ephemeral."
+msgstr ""
+
+#. config - default settings - ephemeral command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-default-ephemeral-enabled"
+msgid "Scripty will now make all transcripts ephemeral."
+msgstr ""
+
+#. config - default settings - ephemeral command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-default-ephemeral-disabled"
+msgid "Scripty will no longer make all transcripts ephemeral."
+msgstr ""
+
+#. config - default settings - new_thread command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_config_default_settings_new_thread"
+msgid ""
+"new_thread\n"
+".description = Should Scripty, by default, create a new thread for all "
+"transcriptions?\n"
+".new_thread = new_thread\n"
+".new_thread-description = Default value for new_thread on the join command"
+msgstr ""
+
+#. config - default settings - new_thread command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-default-new-thread-cant-make-thread-in-thread"
+msgid ""
+"You can't make a thread in a thread. Either pick a different default target "
+"channel or don't enable new_thread."
+msgstr ""
+
+#. config - default settings - new_thread command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-default-new-thread-cant-make-thread-in-vc"
+msgid ""
+"Voice channels can't have threads. Either pick a different default target "
+"channel or don't enable new_thread."
+msgstr ""
+
+#. config - default settings - new_thread command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-default-new-thread-enabled"
+msgid "Scripty will now create a new thread for all transcriptions."
+msgstr ""
+
+#. config - default settings - new_thread command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-default-new-thread-disabled"
+msgid "Scripty will no longer create a new thread for all transcriptions."
+msgstr ""
+
+#. config - default settings - record_transcriptions command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_config_default_settings_record_transcriptions"
+msgid ""
+"record_transcriptions\n"
+".description = Should Scripty, by default, record all transcriptions to a "
+"text file?\n"
+".record_transcriptions = record_transcriptions\n"
+".record_transcriptions-description = Default value for record_transcriptions "
+"on the join command"
+msgstr ""
+
+#. config - default settings - record_transcriptions command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-default-record-transcriptions-enabled"
+msgid "Scripty will now record all transcriptions to a text file."
+msgstr ""
+
+#. config - default settings - record_transcriptions command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-default-record-transcriptions-disabled"
+msgid "Scripty will no longer record all transcriptions to a text file."
+msgstr ""
+
+#. config - default settings - target_channel command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_config_default_settings_target_channel"
+msgid ""
+"target_channel\n"
+".description = Set the default target channel where Scripty will output "
+"transcripts if none are specified.\n"
+".target_channel = target_channel\n"
+".target_channel-description = Default value for target_channel on the join "
+"command"
+msgstr ""
+
+#. config - default settings - target_channel command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-default-target-channel-enabled"
+msgid ""
+"Scripty will now, by default, send all transcripts to { $"
+"targetChannelMention }."
+msgstr ""
+
+#. config - default settings - target_channel command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-default-target-channel-disabled"
+msgid ""
+"Scripty will now, by default, send all transcripts to the channel where "
+"`/join` is executed."
+msgstr ""
+
+#. config - default settings - target_channel command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-default-target-channel-cant-disable-with-auto-join"
+msgid ""
+"You can't remove any default target channel if auto-join is enabled. Either "
+"disable auto-join or change the target channel instead of removing it."
+msgstr ""
+
+#. config - default settings - target_channel command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-default-target-channel-need-permissions"
+msgid ""
+"Scripty needs Send Messages and Manage Webhooks in the target channel. Give "
+"it those permissions and try again."
+msgstr ""
+
+#. debug command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_debug"
+msgid ""
+"debug\n"
+".description = Output debugging information about Scripty internal state."
+msgstr ""
+
+#. debug command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "debug-info-message"
+msgid ""
+"Forward this message to whoever in the Scripty support server is asking you "
+"for it."
+msgstr ""
+
+#. debug command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "debug-not-in-call"
+msgid "This command is useless if Scripty isn't in a VC."
+msgstr ""
+
+#. Help menu translation strings
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "command-not-found"
+msgid "No command with name `{ $commandName }` found."
+msgstr ""
+
+#. Help menu translation strings
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "command-not-found-suggestions"
+msgid "Did you mean `{ $suggestion }`?"
+msgstr ""
+
+#. Help menu translation strings
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "no-help-found"
+msgid "No help found for command `{ $commandName }`."
+msgstr ""
+
+#. Help menu translation strings
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "default-category-name"
+msgid "Commands"
+msgstr ""
+
+#. Context menu command translation strings
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "context-menu-command-title"
+msgid ""
+"{ \"\" }\n"
+"Context menu commands:\n"
+"{ \"\" }"
+msgstr ""
+
+#. Context menu command translation strings
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "context-menu-command-user"
+msgid ""
+"{ \"\" }\n"
+"{ $commandName } (on user)\n"
+"{ \"\" }"
+msgstr ""
+
+#. Context menu command translation strings
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "context-menu-command-message"
+msgid ""
+"{ \"\" }\n"
+"{ $commandName } (on message)\n"
+"{ \"\" }"
+msgstr ""
+
+#. Context menu command translation strings
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "context-menu-command-unknown"
+msgid ""
+"{ \"\" }\n"
+"{ $commandName } (on unknown)\n"
+"{ \"\" }"
+msgstr ""
+
+#. Context menu command translation strings
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "more-info-on-command"
+msgid ""
+"For more information on a specific command, type `{ $contextPrefix }help "
+"<name>`\n"
+"```"
+msgstr ""
+
+#. Language configuration strings
+#. This and all attributes show up exclusively in the slash command picker when `user_language` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_user_language"
+msgid ""
+"user\n"
+".description = Set your user language to one of the available languages.\n"
+".language = language\n"
+".language-description = The language you want to set your user language to."
+msgstr ""
+
+#. Language configuration strings
+#. This and all attributes show up exclusively in the slash command picker when `guild_language` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_config_server_language"
+msgid ""
+"guild\n"
+".description = Set this server's language to one of the available languages."
+"\n"
+".language = language\n"
+".language-description = The language you want to set your guild language to."
+msgstr ""
+
+#. Language configuration strings
+#. This message is shown as the embed title when the user sets their language successfully.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "user-language-set-success"
+msgid "User language set to `{ $language }`."
+msgstr ""
+
+#. Language configuration strings
+#. This message is shown as the embed description when the user sets their language successfully.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "user-language-set-success-description"
+msgid ""
+"To return to English, type `{ $contextPrefix }language user_language en`."
+msgstr ""
+
+#. Language configuration strings
+#. This message is shown as the embed title when the guild sets their language successfully.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "guild-language-set-success"
+msgid "Guild language set to `{ $language }`."
+msgstr ""
+
+#. Language configuration strings
+#. This message is shown as the embed description when the guild sets their language successfully.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "guild-language-set-success-description"
+msgid ""
+"To return to English, type `{ $contextPrefix }language guild_language en`."
+msgstr ""
+
+#. Language configuration strings
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "language-set-partially-translated-help"
+msgid ""
+"Want to help translate Scripty into your language? Check out the translation "
+"project at https://hosted.weblate.org/engage/scripty-bot/."
+msgstr ""
+
+#. Language configuration strings
+#. This message is shown as the embed title when an entity tries to set their language to an unsupported language.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "language-set-failure-title-unsupported"
+msgid "The language you specified is not supported by the bot."
+msgstr ""
+
+#. Language configuration strings
+#. This message is shown as the embed description when an entity tries to set their language to an unsupported language.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "language-set-failure-description-unsupported"
+msgid ""
+"If you'd like to help with adding support for this language, please join the "
+"support server at { $supportServerInvite }."
+msgstr ""
+
+#. Language configuration strings
+#. This message is shown as the embed title when an entity tries to set their language to an invalid language.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "language-set-failure-title-invalid"
+msgid "Language `{ $language }` not found."
+msgstr ""
+
+#. Language configuration strings
+#. This message is shown as the embed description when an entity tries to set their language to an invalid language.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "language-set-failure-description-invalid"
+msgid ""
+"The language you specified is an invalid language identifier. Reason: { $"
+"error }"
+msgstr ""
+
+#. Language configuration strings
+#. This message is shown as the embed title when the database returns an error when setting the language for an entity.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "language-set-failure-title-db"
+msgid "Database error."
+msgstr ""
+
+#. Language configuration strings
+#. This message is shown as the embed description when the database returns an error when setting the language for an entity.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "language-set-failure-description-db"
+msgid ""
+"The database encountered an error while attempting to set your language. "
+"This error has been reported, and we'll look into it. Please do not spam "
+"this command. (If you're curious, here's the error: { $error })"
+msgstr ""
+
+#. Language configuration strings
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "guild-language-set-failure-translate-enabled"
+msgid ""
+"Your server has auto-translation enabled. This is only supported when "
+"translating to English. Disable this feature if you want to set your "
+"language."
+msgstr ""
+
+#. Command invocation contexts
+#. This message is shown as the embed title when a user tries to invoke the root command of a group.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "root-command-invoked-title"
+msgid "This is a root command!"
+msgstr ""
+
+#. Command invocation contexts
+#. This message is shown as the embed description when a user tries to invoke the root command of a group.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "root-command-invoked-description"
+msgid ""
+"Please invoke only this command's subcommands to use it. See `{ $"
+"contextPrefix }help { $commandName }` for more info."
+msgstr ""
+
+#. ping command
+#. This and all attributes show up exclusively in the slash command picker when `ping` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_ping"
+msgid ""
+"ping\n"
+".description = Get the bot latency."
+msgstr ""
+
+#. ping command
+#. This message is shown when the user requests latency information.
+#. Note: the numbers here will be formatted according to the language set for the context.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "latency-description"
+msgid ""
+"WebSocket latency: { $wsLatencyMs }ms ({ $wsLatencyNs }ns)\n"
+"HTTP latency: { $httpLatencyMs }ms ({ $httpLatencyNs }ns)\n"
+"Database latency: { $pgLatencyMs }ms ({ $pgLatencyNs }ns)\n"
+"\n"
+"Note: if any latency is equal to 0ms, it means that specific latency could "
+"not be calculated right now.\n"
+"Try again later."
+msgstr ""
+
+#. data_storage command
+#. This and all attributes show up exclusively in the slash command picker when `data_storage` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_data_storage"
+msgid ""
+"data_storage\n"
+".description = Configure storage settings for your data"
+msgstr ""
+
+#. data_storage command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "data-storage-embed-title"
+msgid "Data Storage"
+msgstr ""
+
+#. data_storage command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "data-storage-embed-description"
+msgid ""
+"{ \"**\" }NOTE**: everything that follows is **entirely optional**, and "
+"opting out **will not**, in any way, affect your experience with Scripty.\n"
+"That said, here goes.\n"
+"\n"
+"Scripty requires a lot of audio and text data to train a proper speech-to-"
+"text model. Not everyone is able to donate or buy premium to help us out, so "
+"a big way you can help out is by allowing us to store your data like audio "
+"and messages for training a model.\n"
+"We understand this data can be extremely personal, so this is entirely opt-"
+"in and will not affect your experience in any way.\n"
+"\n"
+"Here's what we'd do with it:\n"
+"{ \"*\" } With stored messages, we would feed them into a scorer targeted to "
+"your language. This scorer would allow the algorithm to select the most "
+"likely words for a given set of sounds. Although immensely helpful, this "
+"isn't as important as audio. Note that this message data is encrypted with "
+"AES 256-bit encryption.\n"
+"{ \"*\" } With stored audio, we would feed it and the transcript of it into "
+"a model to increase the accuracy of the speech-to-text model. This is "
+"insanely helpful, even if you have a poor microphone and lots of background "
+"noise: in fact, the more noise, the better, as long as a human can still "
+"make out what you are saying.\n"
+"\n"
+"If you are opted in, and you decide later to opt out, your data is still "
+"stored, but you can request deletion of your voice data by running `{ $"
+"contextPrefix }delete_all_data`. However, it is impossible to delete your "
+"message data. This is because we do not store a link of what user sent what "
+"message.\n"
+"Your data is stored on servers that are locked down tightly. It would be "
+"extremely difficult for anyone attempting to gain access to successfully do "
+"so.\n"
+"\n"
+"You can toggle your choices using the below buttons."
+msgstr ""
+
+#. data_storage command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "data-storage-toggle-audio-btn"
+msgid "Toggle Audio Storage"
+msgstr ""
+
+#. data_storage command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "data-storage-toggle-msgs-btn"
+msgid "Toggle Message Storage"
+msgstr ""
+
+#. data_storage command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "data-storage-opted-in-audio"
+msgid "You are now opted into storing your audio for model training."
+msgstr ""
+
+#. data_storage command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "data-storage-opted-out-audio"
+msgid "You are now opted out of storing your audio for model training."
+msgstr ""
+
+#. data_storage command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "data-storage-opted-in-msgs"
+msgid "You are now opted into storing your messages for scorer training."
+msgstr ""
+
+#. data_storage command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "data-storage-opted-out-msgs"
+msgid "You are now opted out of storing your messages for scorer training."
+msgstr ""
+
+#. data_storage command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "data-storage-command-timed-out"
+msgid "Timed out. Rerun this command if you still want to manage settings."
+msgstr ""
+
+#. automod root command
+#. This and all attributes show up exclusively in the slash command picker when `automod` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_automod"
+msgid ""
+"automod\n"
+".description = Manage Scripty's automod"
+msgstr ""
+
+#. automod setup command
+#. This and all attributes show up exclusively in the slash command picker when `automod setup` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_setup"
+msgid ""
+"setup\n"
+".description = Get started with Scripty's automod.\n"
+".target_channel = target_channel\n"
+".target_channel-description = The channel to send automod logs to.\n"
+".log_recording = log_recording\n"
+".log_recording-description = Should a recording of offending speech be sent "
+"to the target channel? Defaults to false.\n"
+".auto_join = auto_join\n"
+".auto_join-description = Should the bot automatically join voice if a user "
+"joins? Defaults to true."
+msgstr ""
+
+#. automod setup command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-setup-embed-complete-title"
+msgid "Automod setup complete!"
+msgstr ""
+
+#. automod setup command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-setup-embed-complete-description"
+msgid ""
+"You can now use `{ $contextPrefix }automod rule add` to add an automod rule. "
+"{ $extraDetails }"
+msgstr ""
+
+#. automod setup command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-setup-embed-complete-free-limit"
+msgid ""
+"Note that free servers are limited to 25 rules. If you'd like to remove this "
+"limit, check out our Premium over at https://scripty.org/premium."
+msgstr ""
+
+#. automod setup command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-setup-embed-not-setup-title"
+msgid ""
+"You haven't agreed to Scripty's Terms of Service and Privacy Policy yet."
+msgstr ""
+
+#. automod setup command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-setup-embed-not-setup-description"
+msgid "Do so first by running `{ $contextPrefix } terms_of_service`."
+msgstr ""
+
+#. automod add rule command
+#. This and all attributes show up exclusively in the slash command picker when `automod add rule` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_add_rule"
+msgid ""
+"add_rule\n"
+".description = Add an automod rule.\n"
+".rule_type = rule_type\n"
+".rule_type-description = The type of rule to add. See `/automod rule_help` "
+"for more info.\n"
+".rule_type-choice-Regular = Regular\n"
+".content = content\n"
+".content-description = The rule content to add.\n"
+".action = action\n"
+".action-description = The action to take when the rule is triggered.\n"
+".action-choice-SilentDelete = Silent delete\n"
+".action-choice-DeleteAndLog = Delete and log\n"
+".action-choice-DeleteLogAndKick = Delete, log, and remove user from voice\n"
+".action-choice-DeleteLogAndSilence = Delete, log, and mute user"
+msgstr ""
+
+#. automod add rule command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-add-rule-embed-success-title"
+msgid "Rule { $ruleId } added!"
+msgstr ""
+
+#. automod add rule command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-add-rule-embed-success-description"
+msgid "{ $rulesLeft } rules left out of { $maxRules }. { $extraDetails }"
+msgstr ""
+
+#. automod add rule command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-add-rule-embed-extra-details-free-limit"
+msgid ""
+"Free servers are limited to 25 regular rules. If you'd like to increase this "
+"limit, check out our Premium over at https://scripty.org/premium."
+msgstr ""
+
+#. automod add rule command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-add-rule-embed-failure-title"
+msgid "Failed to add rule!"
+msgstr ""
+
+#. automod add rule command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-add-rule-embed-failure-description-free-limit"
+msgid ""
+"Free servers are limited to 25 regular rules. If you'd like to increase this "
+"limit, check out our Premium over at https://scripty.org/premium."
+msgstr ""
+
+#. automod add rule command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-add-rule-embed-failure-description-premium-limit"
+msgid ""
+"Premium tier { $tier } servers are limited to { $maxRules } rules. If you "
+"upgrade to tier { $nextTier }, you can add { $nextTierMaxRules } rules."
+msgstr ""
+
+#. automod add rule command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-add-rule-embed-failure-description-premium-limit-hard-cap"
+msgid ""
+"You've reached the absolute maximum number of rules ({ $hardCap }). This "
+"limit exists to ensure we don't add too much latency in a single message."
+msgstr ""
+
+#. automod add rule command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-add-rule-embed-failure-description-invalid-type"
+msgid ""
+"Invalid rule type. See `{ $contextPrefix }automod rule_help` for more info."
+msgstr ""
+
+#. automod add rule command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-add-rule-embed-failure-description-free-locked-type"
+msgid ""
+"Free servers can only use regular rules. If you'd like to use other rule "
+"types, check out our Premium over at https://scripty.org/premium."
+msgstr ""
+
+#. automod add rule command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-add-rule-embed-failure-description-not-setup"
+msgid "You must run `{ $contextPrefix }automod setup` before adding rules."
+msgstr ""
+
+#. automod remove rule command
+#. This and all attributes show up exclusively in the slash command picker when `automod remove rule` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_remove_rule"
+msgid ""
+"remove_rule\n"
+".description = Remove an automod rule.\n"
+".rule_id = rule_id\n"
+".rule_id-description = The rule ID to remove."
+msgstr ""
+
+#. automod remove rule command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-remove-rule-embed-success-title"
+msgid "Rule removed!"
+msgstr ""
+
+#. automod remove rule command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-remove-rule-embed-success-description"
+msgid "{ $rulesLeft } rules left out of { $maxRules }."
+msgstr ""
+
+#. automod remove rule command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-remove-rule-embed-failure-title"
+msgid "Failed to remove rule!"
+msgstr ""
+
+#. automod remove rule command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-remove-rule-embed-failure-description-invalid-id"
+msgid "Invalid rule ID. See `{ $contextPrefix }automod list` for more info."
+msgstr ""
+
+#. automod remove rule command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-remove-rule-embed-failure-description-not-setup"
+msgid "You must run `{ $contextPrefix }automod setup` before removing rules."
+msgstr ""
+
+#. automod list rules command
+#. This and all attributes show up exclusively in the slash command picker when `automod list rules` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_list_rules"
+msgid ""
+"list_rules\n"
+".description = List all automod rules.\n"
+".filter_by = filter_by\n"
+".filter_by-description = Filter rules by their content. Leave empty to show "
+"all rules."
+msgstr ""
+
+#. automod list rules command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-list-rules-embed-title"
+msgid "Automod rules"
+msgstr ""
+
+#. automod list rules command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-list-rules-embed-description"
+msgid "{ $rulesLeft } rules left out of { $maxRules }."
+msgstr ""
+
+#. automod list rules command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-list-rules-embed-field-name"
+msgid "Rule { $ruleId }"
+msgstr ""
+
+#. automod list rules command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-list-rules-embed-field-value"
+msgid ""
+"Type: { $ruleType }\n"
+"Content: { $ruleContent }\n"
+"Action: { $ruleAction }"
+msgstr ""
+
+#. automod list rules command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-list-rules-footer"
+msgid "Page { $page } of { $maxPage }"
+msgstr ""
+
+#. automod list rules command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "automod-list-rules-no-rules"
+msgid "You don't have any rules!"
+msgstr ""
+
+#. vote reminder command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_vote_reminder"
+msgid ""
+"vote_reminder\n"
+".description = Toggle whether Scripty will remind you to vote for the bot "
+"after the time limit has passed.\n"
+".enabled = enabled\n"
+".enabled-description = Enable vote reminders?"
+msgstr ""
+
+#. vote reminder command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "vote-reminders-enabled"
+msgid "Vote reminders enabled."
+msgstr ""
+
+#. vote reminder command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "vote-reminders-disabled"
+msgid "Vote reminders disabled."
+msgstr ""
+
+#. blocked entities description
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "blocked-entity-no-reason-given"
+msgid "No reason was given for the block."
+msgstr ""
+
+#. blocked entities description
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "blocked-entity-reason-given"
+msgid "Reason given for the block: { $reason }."
+msgstr ""
+
+#. blocked entities description
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "blocked-entity-guild"
+msgid ""
+"This guild is blocked from using Scripty. { $reason } You may attempt to "
+"appeal this block in the support server: { $supportServerInvite }."
+msgstr ""
+
+#. blocked entities description
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "blocked-entity-user"
+msgid ""
+"You are blocked from using Scripty. { $reason } You may attempt to appeal "
+"this block in the support server: { $supportServerInvite }."
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-internal-lib-error"
+msgid "library internal error"
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-host-io-error"
+msgid "host IO error"
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-proto-violation"
+msgid "library and discord disagreed on protocol"
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-timed-out"
+msgid "timed out waiting for connection"
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-ws-closed-no-reason"
+msgid "discord closed connection without reason"
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-ws-closed-unknown-opcode"
+msgid "discord closed connection due to unknown opcode"
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-ws-closed-invalid-payload"
+msgid "discord closed connection due to an invalid payload"
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-ws-closed-not-authenticated"
+msgid "discord closed connection due to not being authenticated"
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-ws-closed-authentication-failed"
+msgid "discord closed connection due to authentication failure"
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-ws-closed-already-authenticated"
+msgid "discord closed connection due to already being authenticated"
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-ws-closed-session-invalid"
+msgid "discord invalidated session"
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-ws-closed-session-timeout"
+msgid "session timed out"
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-ws-closed-server-not-found"
+msgid "voice server couldn't be found"
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-ws-closed-unknown-protocol"
+msgid "discord didn't recognize protocol"
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-ws-closed-server-crashed"
+msgid "discord voice server crashed"
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-ws-closed-unknown-encryption-mode"
+msgid "discord didn't recognize encryption scheme"
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-unknown"
+msgid "disconnected for unknown reason"
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-msg-no-reconnect"
+msgid "I had an issue ({ $reason }) and disconnected from the voice chat."
+msgstr ""
+
+#. voice connection errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "voice-connection-error-msg-reconnect"
+msgid ""
+"I had an issue ({ $reason }) and disconnected from the voice chat. I'll try "
+"reconnecting in 30 seconds."
+msgstr ""
+
+#. general errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "general-error-command-process-title"
+msgid "An error happened while processing { $command }."
+msgstr ""
+
+#. general errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "general-error-command-process-description"
+msgid ""
+"```\n"
+"{ $errorFmt }\n"
+"```\n"
+"This has been automatically reported. Please do not attempt to repeatedly "
+"use this command."
+msgstr ""
+
+#. general errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "general-error-invalid-args-title"
+msgid "Invalid arguments while parsing { $command }."
+msgstr ""
+
+#. general errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "general-error-invalid-args-description"
+msgid "Failed to parse `{ $input }` because `{ $error }`"
+msgstr ""
+
+#. general errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "general-error-invalid-structure-title"
+msgid "Invalid structure from Discord while parsing { $command }."
+msgstr ""
+
+#. general errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "general-error-invalid-structure-description"
+msgid ""
+"{ $description }\n"
+"\n"
+"{ \"**\" }Note**: this is a Discord error.\n"
+"The only fix for this is to wait for Discord to propagate slash commands, "
+"which can take up to one hour.\n"
+"If you do not want to wait this hour, you should use the prefix commands: "
+"run this command with `~{ $qualifiedName } { $args }`."
+msgstr ""
+
+#. general errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "general-error-cooldown-hit-title"
+msgid "Cooldown hit on { $command }"
+msgstr ""
+
+#. general errors
+#. Note $time will be a decimal with two digits of accuracy.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "general-error-cooldown-hit-description"
+msgid "{ $time } seconds left on cooldown."
+msgstr ""
+
+#. general errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "general-error-user-missing-perms-title"
+msgid "You are missing perms to run { $command }."
+msgstr ""
+
+#. general errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "general-error-user-missing-perms-description-known"
+msgid "Permissions missing: { $perms }"
+msgstr ""
+
+#. general errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "general-error-user-missing-perms-description-unknown"
+msgid "I'm not sure what permissions you're missing."
+msgstr ""
+
+#. general errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "general-error-user-missing-perms-description-not-owner"
+msgid "Not an owner of this bot."
+msgstr ""
+
+#. general errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "general-error-command-check-failed-title"
+msgid "A precondition for { $command } failed."
+msgstr ""
+
+#. general errors
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "general-error-command-check-failed-description-no-reason"
+msgid "no reason provided"
+msgstr ""
+
+#. transcription info - verbose mode
+#. This is shown as the number of transcriptions the algorithm has discovered.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcription-info-transcript-count"
+msgid "Transcript 1 of { $count }."
+msgstr ""
+
+#. transcription info - verbose mode
+#. This is shown as the title of the transcript
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcription-info-transcription-title"
+msgid "Transcript"
+msgstr ""
+
+#. transcription info - verbose mode
+#. This is shown as the percent accuracy of the transcription (roughly)
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcription-info-transcription-confidence"
+msgid "Confidence"
+msgstr ""
+
+#. transcription info - verbose mode
+#. This is shown as the user's SSRC (Synchonization Source)
+#. You do not need to translate this, but it is here if your language can provide a more accurate translation.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-same, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcription-info-transcription-ssrc"
+msgid "SSRC { $ssrc }"
+msgstr ""
+
+#. transcription info - verbose mode
+#. This is shown when the algorithm encounters an error
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcription-info-transcription-error"
+msgid ""
+"internal error: running stt algorithm failed with error: { $error }\n"
+"SSRC: { $ssrc }\n"
+"This has been logged and will be fixed as soon as possible.\n"
+"If possible, please contact the core devs in the support server: { $"
+"supportServerInvite }.\n"
+"Thanks!"
+msgstr ""
+
+#. Data deletion command
+#. This and all attributes show up exclusively in the slash command picker when `delete_all_data` is selected.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_delete_all_data"
+msgid ""
+"delete_all_data\n"
+".description = Delete all your data."
+msgstr ""
+
+#. Data deletion command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "delete-data-title"
+msgid "Delete data"
+msgstr ""
+
+#. Data deletion command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "delete-data-description"
+msgid ""
+"This will delete all of your data. This action is permanent, irreversible, "
+"and cannot be undone.\n"
+"\n"
+"When we say \"all of your data\" we mean *all* of it. This includes your "
+"voice data, and your user in the database.\n"
+"This however, *does not* include any messages we may have stored from you if "
+"you opted into that. We cannot delete those messages, simply because we "
+"don't know what user sent what message.\n"
+"\n"
+"If you would like to also be banned from using the bot after this action, "
+"that way you do not accidentally readd yourself, you can click the "
+"appropriate button below.\n"
+"Note that doing so will require us to store your user ID to keep a record of "
+"banned users.\n"
+"If at any point after this action you would like to be unbanned, you can "
+"contact the support server and ask for a manual unban.\n"
+"\n"
+"Are you sure you want to delete all of your data?"
+msgstr ""
+
+#. Data deletion command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "delete-data-confirm"
+msgid "Yes, delete all data"
+msgstr ""
+
+#. Data deletion command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "delete-data-confirm-banned"
+msgid "Yes, delete all data and ban myself"
+msgstr ""
+
+#. Data deletion command
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "delete-data-cancel"
+msgid "No, cancel"
+msgstr ""
+
+#. generic strings
+#. Message shown if a guild has not claimed their free trial of premium. Always appears on its own standalone line in the surrounding message.
+#.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "free-trial-upsell"
+msgid ""
+"We offer 3-day trials of Scripty Premium if you would like to try it out and "
+"see if it is right for you. Send the bot a DM to get started with a free "
+"trial."
+msgstr ""
