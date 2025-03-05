@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Tamil (Rebel Toolbox)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-28 07:29+0200\n"
-"PO-Revision-Date: 2025-03-05 08:26+0530\n"
+"PO-Revision-Date: 2025-03-05 09:00+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rebel-toolbox/rebel-engine-api/ta/>\n"
 "Language: ta\n"
@@ -35415,12 +35415,30 @@ msgid ""
 "print(max_int) # -9223372036854775808, we overflowed and wrapped around.\n"
 "[/codeblock]"
 msgstr ""
+"கையொப்பமிடப்பட்ட 64-பிட் முழு எண் வகை.\n"
+" இது இடைவெளியில் [குறியீடு] [-2^63, 2^63-1] [/குறியீடு], அதாவது [குறியீடு] [-922337203685475808, 9223372036854775807] [/குறியீடு]. அந்த எல்லைகளை மீறுவது சுற்றும்.\n"
+" [int] என்பது ஒரு [மாறுபாடு] வகையாகும், இதனால் ஒரு [மாறுபாடு] க்கு ஒரு முழு மதிப்பை ஒதுக்கும்போது பயன்படுத்தப்படும். இது [குறியீடு]: int [/code] வகை குறிப்பையும் செயல்படுத்தலாம்.\n"
+" [கோட் பிளாக்]\n"
+" var my_variant = 0 # int, மதிப்பு 0.\n"
+" my_variant += 4.2 # மிதவை, மதிப்பு 4.2.\n"
+" var my_int: int = 1 # int, மதிப்பு 1.\n"
+" my_int = 4.2 # int, மதிப்பு 4, சரியான மதிப்பு மறைமுகமாக int க்கு செலுத்தப்படுகிறது.\n"
+" my_int = int (\"6.7\") # int, மதிப்பு 6, சரம் வெளிப்படையாக int உடன் போடப்படுகிறது.\n"
+"\n"
+" var max_int = 9223372036854775807\n"
+" அச்சு (max_int) # 9223372036854775807, சரி.\n"
+" max_int += 1\n"
+" அச்சு (MAX_INT) # -9223372036854775808, நாங்கள் நிரம்பி வழிந்தோம்.\n"
+" [/codeBlock]"
 
 #: docs/int.xml
 msgid ""
 "Cast a [bool] value to an integer value, [code]int(true)[/code] will be "
 "equals to 1 and [code]int(false)[/code] will be equals to 0."
 msgstr ""
+"ஒரு [பூல்] மதிப்பை ஒரு முழு எண் மதிப்புக்கு அனுப்புங்கள், [குறியீடு] int "
+"(உண்மை) [/குறியீடு] 1 மற்றும் [குறியீடு] int (தவறான) [/குறியீடு] க்கு சமமாக "
+"இருக்கும்."
 
 #: docs/int.xml
 msgid ""
@@ -35430,6 +35448,11 @@ msgid ""
 "will be equals to 0 and [code]int(-2.7)[/code] will be equals to -2. This "
 "operation is also called truncation."
 msgstr ""
+"ஒரு முழு எண்ணுக்கு ஒரு மிதவை மதிப்பை வாருங்கள், இந்த முறை எண் பின்னங்களை "
+"(அதாவது [/குறியீட்டிலிருந்து] பூச்சியத்தை நோக்கி [குறியீடு] சுற்றுகள் "
+"[குறியீடு] [/குறியீடு] [/குறியீடு] 2 க்கு சமமாக இருக்கும், [குறியீடு] INT "
+"(0.1) [/குறியீடு] 0 மற்றும் [குறியீடு] [/குறியீடு] க்கு சமமாக இருக்கும். "
+"இந்த செயல்பாடு துண்டிப்பு என்றும் அழைக்கப்படுகிறது."
 
 #: docs/int.xml
 msgid ""
@@ -35439,40 +35462,53 @@ msgid ""
 "method will ignore all non-number characters, so calling "
 "[code]int('1e3')[/code] will return 13."
 msgstr ""
+"ஒரு [சரம்] மதிப்பை ஒரு முழு எண் மதிப்புக்கு அனுப்புங்கள், இந்த முறை ஒரு "
+"சரத்திலிருந்து ஒரு முழு எண் பாகுபடுத்தி, எனவே இந்த முறையை தவறான முழு சரம் "
+"மூலம் அழைப்பது 0 திரும்பும், செல்லுபடியாகும் சரம் [குறியீடு] '1.7' "
+"[/குறியீடு] போன்றதாக இருக்கும். இந்த முறை எண் அல்லாத அனைத்து "
+"எழுத்துக்களையும் புறக்கணிக்கும், எனவே [குறியீடு] INT ('1e3') [/code] ஐ "
+"அழைப்பது 13 திரும்பும்."
 
 #: docs/InterpolatedCamera.xml
 msgid "[i]Deprecated.[/i] Camera which moves toward another node."
-msgstr ""
+msgstr "[i] நீக்கப்பட்டது. [/i] மற்றொரு முனையை நோக்கி நகரும் கேமரா."
 
 #: docs/InterpolatedCamera.xml
 msgid ""
 "InterpolatedCamera is a [Camera] which smoothly moves to match a target node's position and rotation.\n"
 "If it is not [member enabled] or does not have a valid target set, InterpolatedCamera acts like a normal Camera."
 msgstr ""
+"இன்டர்போலேட்டட் கேமெரா என்பது ஒரு [கேமரா] ஆகும், இது இலக்கு முனையின் நிலை மற்றும் சுழற்சியுடன் பொருந்துவதற்கு சீராக நகர்கிறது.\n"
+" இது [உறுப்பினர் செயல்படுத்தப்படவில்லை] அல்லது சரியான இலக்கு தொகுப்பு இல்லையென்றால், இடைக்கணிப்பு கேமரா ஒரு சாதாரண கேமரா போல செயல்படுகிறது."
 
 #: docs/InterpolatedCamera.xml
 msgid "Sets the node to move toward and orient with."
-msgstr ""
+msgstr "நோக்கி நகர்த்தவும், நோக்குநிலையை அமைக்கவும் முனையை அமைக்கிறது."
 
 #: docs/InterpolatedCamera.xml
 msgid ""
 "If [code]true[/code], and a target is set, the camera will move "
 "automatically."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] மற்றும் ஒரு இலக்கு அமைக்கப்பட்டால், கேமரா தானாக"
+" நகரும்."
 
 #: docs/InterpolatedCamera.xml
 msgid ""
 "How quickly the camera moves toward its target. Higher values will result in"
 " tighter camera motion."
 msgstr ""
+"கேமரா அதன் இலக்கை நோக்கி எவ்வளவு விரைவாக நகர்கிறது. அதிக மதிப்புகள் "
+"இறுக்கமான கேமரா இயக்கத்தை ஏற்படுத்தும்."
 
 #: docs/InterpolatedCamera.xml
 msgid "The target's [NodePath]."
-msgstr ""
+msgstr "இலக்கு [நோட்பாத்]."
 
 #: docs/IP.xml
 msgid "Internet protocol (IP) support functions such as DNS resolution."
 msgstr ""
+"இணைய நெறிமுறை (ஐபி) டிஎன்எச் தீர்மானம் போன்ற செயல்பாடுகளை ஆதரிக்கிறது."
 
 #: docs/IP.xml
 msgid ""
@@ -35480,22 +35516,34 @@ msgid ""
 " is in different classes (see [StreamPeerTCP] and [TCP_Server]). IP provides"
 " DNS hostname resolution support, both blocking and threaded."
 msgstr ""
+"ஐபி இணைய நெறிமுறைக்கான உதவி செயல்பாடுகளைக் கொண்டுள்ளது (ஐபி). TCP/IP உதவி "
+"வெவ்வேறு வகுப்புகளில் உள்ளது ([ச்ட்ரீம்பெர்ட்.சி.பி] மற்றும் [TCP_SERVER] "
+"ஐப் பார்க்கவும்). ஐபி டிஎன்எச் ஓச்ட்பெயர் தெளிவுத்திறன் ஆதரவை வழங்குகிறது, "
+"இது தடுப்பு மற்றும் திரிக்கப்பட்டுள்ளது."
 
 #: docs/IP.xml
 msgid ""
 "Removes all of a [code]hostname[/code]'s cached references. If no "
 "[code]hostname[/code] is given, all cached IP addresses are removed."
 msgstr ""
+"[குறியீடு] ஓச்ட்பெயர் [/குறியீடு] இன் தற்காலிக சேமிப்பு குறிப்புகள் "
+"அனைத்தையும் நீக்குகிறது. [குறியீடு] ஓச்ட்பெயர் [/குறியீடு] வழங்கப்பட்டால், "
+"தற்காலிக சேமிப்பு ஐபி முகவரிகள் அகற்றப்படும்."
 
 #: docs/IP.xml
 msgid ""
 "Removes a given item [code]id[/code] from the queue. This should be used to "
 "free a queue after it has completed to enable more queries to happen."
 msgstr ""
+"கொடுக்கப்பட்ட உருப்படி [குறியீடு] ஐடி [/குறியீடு] வரிசையில் இருந்து "
+"நீக்குகிறது. அதிக வினவல்கள் நடக்க உதவும் வகையில் ஒரு வரிசையை விடுவிக்க இது "
+"பயன்படுத்தப்பட வேண்டும்."
 
 #: docs/IP.xml
 msgid "Returns all the user's current IPv4 and IPv6 addresses as an array."
 msgstr ""
+"பயனரின் தற்போதைய IPv4 மற்றும் IPv6 முகவரிகள் அனைத்தையும் ஒரு வரிசையாக "
+"வழங்குகிறது."
 
 #: docs/IP.xml
 msgid ""
@@ -35510,6 +35558,16 @@ msgid ""
 "}\n"
 "[/codeblock]"
 msgstr ""
+"அனைத்து பிணைய அடாப்டர்களையும் ஒரு வரிசையாக வழங்குகிறது.\n"
+" ஒவ்வொரு அடாப்டரும் வடிவத்தின் அகராதி:\n"
+" [கோட் பிளாக்]\n"
+" {\n"
+" \"குறியீட்டு\": \"1\", # இடைமுக அட்டவணை.\n"
+" \"பெயர்\": \"eth0\", # இடைமுக பெயர்.\n"
+" \"நட்பு\": \"ஈதர்நெட் ஒன்\", # ஒரு நட்பு பெயர் (காலியாக இருக்கலாம்).\n"
+" \"முகவரிகள்\": [\"192.168.1.101\"], # இந்த இடைமுகத்துடன் தொடர்புடைய ஐபி முகவரிகளின் வரிசை.\n"
+" }\n"
+" [/codeBlock]"
 
 #: docs/IP.xml
 msgid ""
@@ -35517,18 +35575,27 @@ msgid ""
 "Returns an empty string on error or if resolution hasn't happened yet (see "
 "[method get_resolve_item_status])."
 msgstr ""
+"அதன் வரிசை [குறியீடு] ஐடி [/குறியீடு] கொடுக்கப்பட்ட ஒரு வரிசைப்படுத்தப்பட்ட "
+"ஓச்ட்பெயரின் ஐபி முகவரியை வழங்குகிறது. பிழையில் வெற்று சரத்தை வழங்குகிறது "
+"அல்லது தெளிவுத்திறன் இன்னும் நடக்கவில்லை என்றால் ([முறை "
+"Get_Resolve_item_status] ஐப் பார்க்கவும்)."
 
 #: docs/IP.xml
 msgid ""
 "Return resolved addresses, or an empty array if an error happened or "
 "resolution didn't happen yet (see [method get_resolve_item_status])."
 msgstr ""
+"தீர்க்கப்பட்ட முகவரிகள் அல்லது ஒரு பிழை ஏற்பட்டால் அல்லது தீர்மானம் இன்னும் "
+"நடக்கவில்லை என்றால் திரும்பும் முகவரிகள் அல்லது வெற்று வரிசை (முறை [முறை "
+"get_resolve_item_status] ஐப் பார்க்கவும்)."
 
 #: docs/IP.xml
 msgid ""
 "Returns a queued hostname's status as a [enum ResolverStatus] constant, "
 "given its queue [code]id[/code]."
 msgstr ""
+"ஒரு வரிசையில் [குறியீடு] ஐடி [/குறியீடு] கொடுக்கப்பட்ட [enum rileverstatus] "
+"மாறிலி என வரிசைப்படுத்தப்பட்ட ஓச்ட்பெயரின் நிலையை வழங்குகிறது."
 
 #: docs/IP.xml
 msgid ""
@@ -35536,12 +35603,18 @@ msgid ""
 " method). The address type returned depends on the [enum Type] constant "
 "given as [code]ip_type[/code]."
 msgstr ""
+"கொடுக்கப்பட்ட ஓச்ட்பெயரின் ஐபிவி 4 அல்லது ஐபிவி 6 முகவரியை தீர்க்கும்போது "
+"(தடுப்பு-வகை முறை) வழங்குகிறது. திரும்பிய முகவரி வகை [குறியீடு] IP_TYPE "
+"[/code] எனக் கொடுக்கப்பட்ட [enum type] மாறிலி சார்ந்துள்ளது."
 
 #: docs/IP.xml
 msgid ""
 "Resolves a given hostname in a blocking way. Addresses are returned as an "
 "[Array] of IPv4 or IPv6 depending on [code]ip_type[/code]."
 msgstr ""
+"கொடுக்கப்பட்ட ஓச்ட்பெயரை ஒரு தடுப்பு வழியில் தீர்க்கிறது. [குறியீடு] IP_TYPE"
+" [/code] ஐப் பொறுத்து முகவரிகள் IPv4 அல்லது IPv6 இன் [வரிசை] ஆக திருப்பித் "
+"தரப்படுகின்றன."
 
 #: docs/IP.xml
 msgid ""
@@ -35549,56 +35622,67 @@ msgid ""
 "depending on the [enum Type] constant given as [code]ip_type[/code]. Returns"
 " the queue ID if successful, or [constant RESOLVER_INVALID_ID] on error."
 msgstr ""
+"[குறியீடு] IP_TYPE [/code] எனக் கொடுக்கப்பட்ட [ENUM TYPE] மாறிலியைப் "
+"பொறுத்து IPv4 அல்லது IPv6 முகவரிக்கு ஓச்ட்பெயரை தீர்க்க ஒரு வரிசை உருப்படியை"
+" உருவாக்குகிறது. வெற்றிகரமாக இருந்தால் வரிசை ஐடியை வழங்குகிறது, அல்லது "
+"[நிலையான Relorver_INVALID_ID] பிழையில்."
 
 #: docs/IP.xml
 msgid "DNS hostname resolver status: No status."
-msgstr ""
+msgstr "டிஎன்எச் ஓச்ட்பெயர் தீர்மானி நிலை: நிலை இல்லை."
 
 #: docs/IP.xml
 msgid "DNS hostname resolver status: Waiting."
-msgstr ""
+msgstr "டிஎன்எச் ஓச்ட்பெயர் தீர்மானி நிலை: காத்திருக்கிறது."
 
 #: docs/IP.xml
 msgid "DNS hostname resolver status: Done."
-msgstr ""
+msgstr "டிஎன்எச் ஓச்ட்பெயர் தீர்வு நிலை: முடிந்தது."
 
 #: docs/IP.xml
 msgid "DNS hostname resolver status: Error."
-msgstr ""
+msgstr "டிஎன்எச் ஓச்ட்பெயர் தீர்வு நிலை: பிழை."
 
 #: docs/IP.xml
 msgid ""
 "Maximum number of concurrent DNS resolver queries allowed, [constant "
 "RESOLVER_INVALID_ID] is returned if exceeded."
 msgstr ""
+"ஒரே நேரத்தில் டிஎன்எச் தீர்வி வினவல்களின் அதிகபட்ச எண்ணிக்கை "
+"அனுமதிக்கப்படுகிறது, [நிலையான தீர்வு_இன்அ்வாலிட்_ஐடி] மீறினால் திருப்பித் "
+"தரப்படுகிறது."
 
 #: docs/IP.xml
 msgid ""
 "Invalid ID constant. Returned if [constant RESOLVER_MAX_QUERIES] is "
 "exceeded."
 msgstr ""
+"தவறான ஐடி மாறிலி. [நிலையான தீர்வு_மாக்ச்_கெரிச்] மீறினால் திரும்பியது."
 
 #: docs/IP.xml
 msgid "Address type: None."
-msgstr ""
+msgstr "முகவரி வகை: எதுவுமில்லை."
 
 #: docs/IP.xml
 msgid "Address type: Internet protocol version 4 (IPv4)."
-msgstr ""
+msgstr "முகவரி வகை: இணைய நெறிமுறை பதிப்பு 4 (ஐபிவி 4)."
 
 #: docs/IP.xml
 msgid "Address type: Internet protocol version 6 (IPv6)."
-msgstr ""
+msgstr "முகவரி வகை: இணைய நெறிமுறை பதிப்பு 6 (ஐபிவி 6)."
 
 #: docs/IP.xml
 msgid "Address type: Any."
-msgstr ""
+msgstr "முகவரி வகை: ஏதேனும்."
 
 #: docs/ItemList.xml
 msgid ""
 "Control that provides a list of selectable items (and/or icons) in a single "
 "column, or optionally in multiple columns."
 msgstr ""
+"ஒற்றை நெடுவரிசையில் தேர்ந்தெடுக்கப்பட்ட உருப்படிகளின் (மற்றும்/அல்லது "
+"ஐகான்களின்) பட்டியலை வழங்கும் கட்டுப்பாடு, அல்லது விருப்பமாக பல "
+"நெடுவரிசைகளில்."
 
 #: docs/ItemList.xml
 msgid ""
@@ -35606,244 +35690,319 @@ msgid ""
 "Selectable items in the list may be selected or deselected and multiple selection may be enabled. Selection with right mouse button may also be enabled to allow use of popup context menus. Items may also be \"activated\" by double-clicking them or by pressing Enter.\n"
 "Item text only supports single-line strings, newline characters (e.g. [code]\\n[/code]) in the string won't produce a newline. Text wrapping is enabled in [constant ICON_MODE_TOP] mode, but column's width is adjusted to fully fit its content by default. You need to set [member fixed_column_width] greater than zero to wrap the text."
 msgstr ""
+"இந்த கட்டுப்பாடு உரை, ஐகான்கள் அல்லது உரை மற்றும் படவுரு ஆகிய இரண்டின் விருப்பத்துடன் ஒற்றை (அல்லது பல நெடுவரிசைகளில்) இருக்கக்கூடிய உருப்படிகளின் தேர்ந்தெடுக்கப்பட்ட பட்டியலை வழங்குகிறது. உதவிக்குறிப்புகள் ஆதரிக்கப்படுகின்றன மற்றும் பட்டியலில் உள்ள ஒவ்வொரு பொருளுக்கும் வித்தியாசமாக இருக்கலாம்.\n"
+" பட்டியலில் தேர்ந்தெடுக்கப்பட்ட உருப்படிகள் தேர்ந்தெடுக்கப்படலாம் அல்லது தேர்வுசெய்யப்படலாம் மற்றும் பல தேர்வுகள் இயக்கப்படலாம். பாப்அப் சூழல் மெனுக்களைப் பயன்படுத்த அனுமதிக்க வலது சுட்டி பொத்தானைக் கொண்ட தேர்வும் இயக்கப்படலாம். உருப்படிகள் அவற்றை இருமுறை சொடுக்கு செய்வதன் மூலமோ அல்லது ENTER ஐ அழுத்துவதன் மூலமோ \"செயல்படுத்தப்படலாம்\".\n"
+" உருப்படி உரை ஒற்றை-வரி சரங்களை மட்டுமே ஆதரிக்கிறது, சரத்தில் சரத்தில் புதிய வரி எழுத்துக்கள் (எ.கா. [குறியீடு] \\ n [/குறியீடு]) ஒரு புதிய வரியை உருவாக்காது. [நிலையான ஐகான்_மோட்_டோப்] பயன்முறையில் உரை மடக்குதல் இயக்கப்பட்டிருக்கிறது, ஆனால் நெடுவரிசையின் அகலம் இயல்பாக அதன் உள்ளடக்கத்தை முழுமையாக பொருத்தமாக சரிசெய்யப்படுகிறது. உரையை மடிக்க பூச்சியத்தை விட அதிகமாக [உறுப்பினர் நிலையான_சோலம்_ அகலம்] அமைக்க வேண்டும்."
 
 #: docs/ItemList.xml
 msgid "Adds an item to the item list with no text, only an icon."
 msgstr ""
+"உரை இல்லாத உருப்படி பட்டியலில் ஒரு உருப்படியைச் சேர்க்கிறது, ஒரு படவுரு "
+"மட்டுமே."
 
 #: docs/ItemList.xml
 msgid ""
 "Adds an item to the item list with specified text. Specify an [code]icon[/code], or use [code]null[/code] as the [code]icon[/code] for a list item with no icon.\n"
 "If selectable is [code]true[/code], the list item will be selectable."
 msgstr ""
+"குறிப்பிட்ட உரையுடன் உருப்படி பட்டியலில் ஒரு உருப்படியைச் சேர்க்கிறது. [குறியீடு] படவுரு [/குறியீடு] ஐக் குறிப்பிடவும், அல்லது படவுரு இல்லாத பட்டியல் உருப்படிக்கு [குறியீடு] சுழிய [/குறியீடு] ஐ [குறியீடு] ஐகானாக [/குறியீடு] பயன்படுத்தவும்.\n"
+" தேர்ந்தெடுக்கக்கூடியது [குறியீடு] உண்மை [/குறியீடு] என்றால், பட்டியல் உருப்படி தேர்ந்தெடுக்கப்படும்."
 
 #: docs/ItemList.xml
 msgid "Removes all items from the list."
-msgstr ""
+msgstr "பட்டியலிலிருந்து அனைத்து உருப்படிகளையும் நீக்குகிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "Ensure current selection is visible, adjusting the scroll position as "
 "necessary."
 msgstr ""
+"தற்போதைய தேர்வு தெரியும் என்பதை உறுதிப்படுத்தவும், உருள் நிலையை தேவையான அளவு"
+" சரிசெய்யவும்."
 
 #: docs/ItemList.xml
 msgid ""
 "Returns the item index at the given [code]position[/code].\n"
 "When there is no item at that point, -1 will be returned if [code]exact[/code] is [code]true[/code], and the closest item index will be returned otherwise."
 msgstr ""
+"கொடுக்கப்பட்ட [குறியீடு] நிலையில் [/குறியீடு] உருப்படி குறியீட்டை வழங்குகிறது.\n"
+" அந்த நேரத்தில் எந்த உருப்படியும் இல்லாதபோது, ​​[குறியீடு] துல்லியமான [/குறியீடு] [குறியீடு] உண்மை [/குறியீடு] என்றால் -1 திருப்பித் தரப்படும், மேலும் நெருங்கிய உருப்படி குறியீடு இல்லையெனில் திருப்பித் தரப்படும்."
 
 #: docs/ItemList.xml
 msgid "Returns the number of items currently in the list."
-msgstr ""
+msgstr "தற்போது பட்டியலில் உள்ள பொருட்களின் எண்ணிக்கையை வழங்குகிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "Returns the custom background color of the item specified by "
 "[code]idx[/code] index."
 msgstr ""
+"[குறியீடு] IDX [/code] குறியீட்டால் குறிப்பிடப்பட்ட உருப்படியின் தனிப்பயன் "
+"பின்னணி வண்ணத்தை வழங்குகிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "Returns the custom foreground color of the item specified by "
 "[code]idx[/code] index."
 msgstr ""
+"[குறியீடு] IDX [/code] குறியீட்டால் குறிப்பிடப்பட்ட உருப்படியின் தனிப்பயன் "
+"முன்புற வண்ணத்தை வழங்குகிறது."
 
 #: docs/ItemList.xml
 msgid "Returns the icon associated with the specified index."
-msgstr ""
+msgstr "குறிப்பிட்ட குறியீட்டுடன் தொடர்புடைய ஐகானை வழங்குகிறது."
 
 #: docs/ItemList.xml
 msgid "Returns a [Color] modulating item's icon at the specified index."
-msgstr ""
+msgstr "குறிப்பிட்ட குறியீட்டில் உருப்படியின் ஐகானை மாற்றியமைக்கும் [வண்ணம்]."
 
 #: docs/ItemList.xml
 msgid ""
 "Returns the region of item's icon used. The whole icon will be used if the "
 "region has no area."
 msgstr ""
+"பயன்படுத்தப்படும் உருப்படியின் ஐகானின் பகுதியை வழங்குகிறது. இப்பகுதிக்கு "
+"எந்த பகுதியும் இல்லையென்றால் முழு ஐகானும் பயன்படுத்தப்படும்."
 
 #: docs/ItemList.xml
 msgid "Returns the metadata value of the specified index."
-msgstr ""
+msgstr "குறிப்பிட்ட குறியீட்டின் மேனிலை தரவு மதிப்பை வழங்குகிறது."
 
 #: docs/ItemList.xml
 msgid "Returns the text associated with the specified index."
-msgstr ""
+msgstr "குறிப்பிட்ட குறியீட்டுடன் தொடர்புடைய உரையை வழங்குகிறது."
 
 #: docs/ItemList.xml
 msgid "Returns the tooltip hint associated with the specified index."
 msgstr ""
+"குறிப்பிட்ட குறியீட்டுடன் தொடர்புடைய உதவிக்குறிப்பு குறிப்பை வழங்குகிறது."
 
 #: docs/ItemList.xml
 msgid "Returns an array with the indexes of the selected items."
 msgstr ""
+"தேர்ந்தெடுக்கப்பட்ட பொருட்களின் குறியீடுகளுடன் ஒரு வரிசையை வழங்குகிறது."
 
 #: docs/ItemList.xml docs/RichTextLabel.xml
 msgid ""
 "Returns the vertical scrollbar.\n"
 "[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member CanvasItem.visible] property."
 msgstr ""
+"செங்குத்து சுருள்பட்டியைத் தருகிறது.\n"
+" [b] எச்சரிக்கை: [/b] இது தேவையான உள் முனை, அகற்றி அதை விடுவிப்பது விபத்துக்குள்ளாகும். நீங்கள் அதை மறைக்க விரும்பினால் அல்லது அதன் குழந்தைகளில் ஏதேனும் இருந்தால், அவர்களின் [உறுப்பினர் Canvasitem.visible] சொத்தைப் பயன்படுத்தவும்."
 
 #: docs/ItemList.xml
 msgid "Returns [code]true[/code] if one or more items are selected."
 msgstr ""
+"ஒன்று அல்லது அதற்கு மேற்பட்ட உருப்படிகள் தேர்ந்தெடுக்கப்பட்டால் [குறியீடு] "
+"உண்மை [/குறியீடு] ஐ வழங்குகிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "Returns [code]true[/code] if the item at the specified index is disabled."
 msgstr ""
+"குறிப்பிட்ட குறியீட்டில் உள்ள உருப்படி முடக்கப்பட்டிருந்தால் [குறியீடு] "
+"உண்மை [/குறியீடு] ஐ வழங்குகிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "Returns [code]true[/code] if the item icon will be drawn transposed, i.e. "
 "the X and Y axes are swapped."
 msgstr ""
+"வருமானம் [குறியீடு] உண்மை [/குறியீடு] உருப்படி படவுரு மாற்றப்பட்டால், அதாவது"
+" ஃச் மற்றும் ஒய் அச்சுகள் மாற்றப்படுகின்றன."
 
 #: docs/ItemList.xml
 msgid ""
 "Returns [code]true[/code] if the item at the specified index is selectable."
 msgstr ""
+"குறிப்பிட்ட குறியீட்டில் உள்ள உருப்படி தேர்ந்தெடுக்கப்பட்டால் [குறியீடு] "
+"உண்மை [/code] ஐ வழங்குகிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "Returns [code]true[/code] if the tooltip is enabled for specified item "
 "index."
 msgstr ""
+"குறிப்பிட்ட உருப்படி குறியீட்டுக்கு உதவிக்குறிப்பு இயக்கப்பட்டிருந்தால் "
+"[குறியீடு] உண்மை [/code] ஐ வழங்குகிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "Returns [code]true[/code] if the item at the specified index is currently "
 "selected."
 msgstr ""
+"குறிப்பிட்ட குறியீட்டில் உள்ள உருப்படி தற்போது தேர்ந்தெடுக்கப்பட்டால் "
+"[குறியீடு] உண்மை [/code] ஐ வழங்குகிறது."
 
 #: docs/ItemList.xml
 msgid "Moves item from index [code]from_idx[/code] to [code]to_idx[/code]."
 msgstr ""
+"குறியீட்டு [குறியீடு] இலிருந்து_ஐடிஎக்ச் [/குறியீடு] இலிருந்து [குறியீடு] "
+"to_idx [/code] க்கு உருப்படியை நகர்த்துகிறது."
 
 #: docs/ItemList.xml
 msgid "Removes the item specified by [code]idx[/code] index from the list."
 msgstr ""
+"பட்டியலிலிருந்து [குறியீடு] IDX [/code] குறியீட்டால் குறிப்பிடப்பட்ட "
+"உருப்படியை நீக்குகிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "Select the item at the specified index.\n"
 "[b]Note:[/b] This method does not trigger the item selection signal."
 msgstr ""
+"குறிப்பிட்ட குறியீட்டில் உருப்படியைத் தேர்ந்தெடுக்கவும்.\n"
+" [b] குறிப்பு: [/b] இந்த முறை உருப்படி தேர்வு சமிக்ஞையைத் தூண்டாது."
 
 #: docs/ItemList.xml
 msgid ""
 "Sets the background color of the item specified by [code]idx[/code] index to"
 " the specified [Color]."
 msgstr ""
+"[குறியீடு] IDX [/code] குறியீட்டால் குறிப்பிடப்பட்ட உருப்படியின் பின்னணி "
+"நிறத்தை குறிப்பிட்ட [வண்ணம்] க்கு அமைக்கிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "Sets the foreground color of the item specified by [code]idx[/code] index to"
 " the specified [Color]."
 msgstr ""
+"[குறியீடு] IDX [/code] குறியீட்டால் குறிப்பிடப்பட்ட உருப்படியின் முன்புற "
+"வண்ணத்தை குறிப்பிட்ட [வண்ணம்] க்கு அமைக்கிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "Disables (or enables) the item at the specified index.\n"
 "Disabled items cannot be selected and do not trigger activation signals (when double-clicking or pressing Enter)."
 msgstr ""
+"குறிப்பிட்ட குறியீட்டில் உள்ள உருப்படியை முடக்குகிறது (அல்லது செயல்படுத்துகிறது).\n"
+" முடக்கப்பட்ட உருப்படிகளைத் தேர்ந்தெடுக்க முடியாது மற்றும் செயல்படுத்தும் சமிக்ஞைகளைத் தூண்டாது (இரட்டை சொடுக்கு செய்யும்போது அல்லது ENTER ஐ அழுத்தும்போது)."
 
 #: docs/ItemList.xml
 msgid ""
 "Sets (or replaces) the icon's [Texture] associated with the specified index."
 msgstr ""
+"குறிப்பிட்ட குறியீட்டுடன் தொடர்புடைய ஐகானின் [அமைப்பு] அமைக்கிறது (அல்லது "
+"மாற்றுகிறது)."
 
 #: docs/ItemList.xml
 msgid ""
 "Sets a modulating [Color] of the item associated with the specified index."
 msgstr ""
+"குறிப்பிட்ட குறியீட்டுடன் தொடர்புடைய உருப்படியின் மாடுலேட்டிங் [வண்ணம்] "
+"அமைக்கிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "Sets the region of item's icon used. The whole icon will be used if the "
 "region has no area."
 msgstr ""
+"பயன்படுத்தப்படும் உருப்படிகளின் ஐகானின் பகுதியை அமைக்கவும். இப்பகுதிக்கு "
+"எந்த பகுதியும் இல்லையென்றால் முழு ஐகானும் பயன்படுத்தப்படும்."
 
 #: docs/ItemList.xml
 msgid "Sets whether the item icon will be drawn transposed."
-msgstr ""
+msgstr "உருப்படி படவுரு மாற்றப்படுமா என்பதை அமைக்கிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "Sets a value (of any type) to be stored with the item associated with the "
 "specified index."
 msgstr ""
+"குறிப்பிட்ட குறியீட்டுடன் தொடர்புடைய உருப்படியுடன் சேமிக்க ஒரு மதிப்பை "
+"(எந்தவொரு வகையிலும்) அமைக்கிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "Allows or disallows selection of the item associated with the specified "
 "index."
 msgstr ""
+"குறிப்பிட்ட குறியீட்டுடன் தொடர்புடைய உருப்படியைத் தேர்வுசெய்ய அனுமதிக்கிறது "
+"அல்லது அனுமதிக்கிறது."
 
 #: docs/ItemList.xml
 msgid "Sets text of the item associated with the specified index."
-msgstr ""
+msgstr "குறிப்பிட்ட குறியீட்டுடன் தொடர்புடைய உருப்படியின் உரையை அமைக்கிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "Sets the tooltip hint for the item associated with the specified index."
 msgstr ""
+"குறிப்பிட்ட குறியீட்டுடன் தொடர்புடைய உருப்படிக்கான உதவிக்குறிப்பு குறிப்பை "
+"அமைக்கிறது."
 
 #: docs/ItemList.xml
 msgid "Sets whether the tooltip hint is enabled for specified item index."
 msgstr ""
+"குறிப்பிட்ட உருப்படி குறியீட்டுக்கு உதவிக்குறிப்பு குறிப்பு இயக்கப்பட்டதா "
+"என்பதை அமைக்கிறது."
 
 #: docs/ItemList.xml
 msgid "Sorts items in the list by their text."
-msgstr ""
+msgstr "பட்டியலில் உள்ள உருப்படிகளை அவற்றின் உரையால் வரிசைப்படுத்துகிறது."
 
 #: docs/ItemList.xml
 msgid "Ensures the item associated with the specified index is not selected."
 msgstr ""
+"குறிப்பிட்ட குறியீட்டுடன் தொடர்புடைய உருப்படி தேர்ந்தெடுக்கப்படவில்லை என்பதை"
+" உறுதி செய்கிறது."
 
 #: docs/ItemList.xml
 msgid "Ensures there are no items selected."
-msgstr ""
+msgstr "உருப்படிகள் எதுவும் தேர்ந்தெடுக்கப்படவில்லை என்பதை உறுதி செய்கிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "If [code]true[/code], the currently selected item can be selected again."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், தற்போது தேர்ந்தெடுக்கப்பட்ட உருப்படியை"
+" மீண்டும் தேர்ந்தெடுக்கலாம்."
 
 #: docs/ItemList.xml
 msgid "If [code]true[/code], right mouse button click can select items."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், வலது மவுச் பொத்தான் சொடுக்கு "
+"உருப்படிகளைத் தேர்ந்தெடுக்கலாம்."
 
 #: docs/ItemList.xml
 msgid ""
 "If [code]true[/code], the control will automatically resize the height to "
 "fit its content."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், கட்டுப்பாடு அதன் உள்ளடக்கத்திற்கு "
+"ஏற்றவாறு உயரத்தை மறுஅளவாக்கும்."
 
 #: docs/ItemList.xml
 msgid ""
 "The width all columns will be adjusted to.\n"
 "A value of zero disables the adjustment, each item will have a width equal to the width of its content and the columns will have an uneven width."
 msgstr ""
+"அகலம் அனைத்து நெடுவரிசைகளும் சரிசெய்யப்படும்.\n"
+" பூச்சியத்தின் மதிப்பு சரிசெய்தலை முடக்குகிறது, ஒவ்வொரு உருப்படியும் அதன் உள்ளடக்கத்தின் அகலத்திற்கு சமமான அகலத்தைக் கொண்டிருக்கும் மற்றும் நெடுவரிசைகளுக்கு சீரற்ற அகலம் இருக்கும்."
 
 #: docs/ItemList.xml
 msgid ""
 "The size all icons will be adjusted to.\n"
 "If either X or Y component is not greater than zero, icon size won't be affected."
 msgstr ""
+"எல்லா ஐகான்களும் சரிசெய்யப்படும்.\n"
+" ஃச் அல்லது ஒய் கூறு பூச்சியத்தை விட அதிகமாக இல்லாவிட்டால், படவுரு அளவு பாதிக்கப்படாது."
 
 #: docs/ItemList.xml
 msgid ""
 "The icon position, whether above or to the left of the text. See the [enum "
 "IconMode] constants."
 msgstr ""
+"படவுரு நிலை, மேலே அல்லது உரையின் இடதுபுறமாக இருந்தாலும். [Enum iconmode] "
+"மாறிலிகளைக் காண்க."
 
 #: docs/ItemList.xml
 msgid ""
 "The scale of icon applied after [member fixed_icon_size] and transposing "
 "takes effect."
 msgstr ""
+"[உறுப்பினர் நிலையான_சிகான்_சிச்] மற்றும் இடமாற்றம் செய்யப்பட்ட பிறகு "
+"பயன்படுத்தப்படும் ஐகானின் அளவு நடைமுறைக்கு வருகிறது."
 
 #: docs/ItemList.xml
 msgid ""
@@ -35851,30 +36010,41 @@ msgid ""
 "If greater than zero, the content will be split among the specified columns.\n"
 "A value of zero means unlimited columns, i.e. all items will be put in the same row."
 msgstr ""
+"பட்டியலில் இருக்கும் அதிகபட்ச நெடுவரிசைகள்.\n"
+" பூச்சியத்தை விட அதிகமாக இருந்தால், குறிப்பிட்ட நெடுவரிசைகளில் உள்ளடக்கம் பிரிக்கப்படும்.\n"
+" பூச்சியத்தின் மதிப்பு வரம்பற்ற நெடுவரிசைகள் என்று பொருள், அதாவது அனைத்து பொருட்களும் ஒரே வரிசையில் வைக்கப்படும்."
 
 #: docs/ItemList.xml
 msgid ""
 "Maximum lines of text allowed in each item. Space will be reserved even when there is not enough lines of text to display.\n"
 "[b]Note:[/b] This property takes effect only when [member icon_mode] is [constant ICON_MODE_TOP]. To make the text wrap, [member fixed_column_width] should be greater than zero."
 msgstr ""
+"ஒவ்வொரு உருப்படியிலும் அனுமதிக்கப்பட்ட உரையின் அதிகபட்ச கோடுகள். காண்பிக்க போதுமான உரைகள் இல்லாதிருந்தாலும் கூட இடம் ஒதுக்கப்படும்.\n"
+" . உரை மடக்கு செய்ய, [உறுப்பினர் நிலையான_சோலம்_ அகலம்] பூச்சியத்தை விட அதிகமாக இருக்க வேண்டும்."
 
 #: docs/ItemList.xml
 msgid ""
 "Whether all columns will have the same width.\n"
 "If [code]true[/code], the width is equal to the largest column width of all columns."
 msgstr ""
+"எல்லா நெடுவரிசைகளுக்கும் ஒரே அகலம் இருக்குமா என்பது.\n"
+" [குறியீடு] உண்மை [/குறியீடு] என்றால், அகலம் அனைத்து நெடுவரிசைகளின் மிகப்பெரிய நெடுவரிசை அகலத்திற்கு சமம்."
 
 #: docs/ItemList.xml
 msgid ""
 "Allows single or multiple item selection. See the [enum SelectMode] "
 "constants."
 msgstr ""
+"ஒற்றை அல்லது பல உருப்படி தேர்வை அனுமதிக்கிறது. [Enum selectMode] மாறிலிகளைப்"
+" பார்க்கவும்."
 
 #: docs/ItemList.xml
 msgid ""
 "Triggered when specified list item is activated via double-clicking or by "
 "pressing Enter."
 msgstr ""
+"குறிப்பிட்ட பட்டியல் உருப்படி இரட்டை சொடுக்கு வழியாக அல்லது Enter ஐ "
+"அழுத்துவதன் மூலம் செயல்படுத்தப்படும் போது தூண்டப்படுகிறது."
 
 #: docs/ItemList.xml
 msgid ""
@@ -35882,129 +36052,162 @@ msgid ""
 "The click position is also provided to allow appropriate popup of context menus at the correct location.\n"
 "[member allow_rmb_select] must be enabled."
 msgstr ""
+"வலது சுட்டி சொடுக்கு வழியாக குறிப்பிட்ட பட்டியல் உருப்படி தேர்ந்தெடுக்கப்பட்டால் தூண்டப்படுகிறது.\n"
+" சூழல் மெனுக்களின் பொருத்தமான பாப்அப்பை சரியான இடத்தில் அனுமதிக்க சொடுக்கு நிலை வழங்கப்படுகிறது.\n"
+" [உறுப்பினர் Allow_RMB_SELECT] இயக்கப்பட வேண்டும்."
 
 #: docs/ItemList.xml
 msgid ""
 "Triggered when specified item has been selected.\n"
 "[member allow_reselect] must be enabled to reselect an item."
 msgstr ""
+"குறிப்பிட்ட உருப்படி தேர்ந்தெடுக்கப்பட்டால் தூண்டப்படுகிறது.\n"
+" [உறுப்பினர் Allow_reselect] ஒரு பொருளை மீண்டும் தேர்ந்தெடுக்க இயக்க வேண்டும்."
 
 #: docs/ItemList.xml
 msgid ""
 "Triggered when a multiple selection is altered on a list allowing multiple "
 "selection."
 msgstr ""
+"பல தேர்வை அனுமதிக்கும் பட்டியலில் பல தேர்வு மாற்றப்படும் போது "
+"தூண்டப்படுகிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "Triggered when a left mouse click is issued within the rect of the list but "
 "on empty space."
 msgstr ""
+"பட்டியலின் செவ்வகத்திற்குள் ஆனால் வெற்று இடத்தில் இடது சுட்டி சொடுக்கு "
+"வழங்கப்படும் போது தூண்டப்படுகிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "Triggered when a right mouse click is issued within the rect of the list but on empty space.\n"
 "[member allow_rmb_select] must be enabled."
 msgstr ""
+"பட்டியலின் செவ்வகத்திற்குள் ஆனால் வெற்று இடத்தில் வலது சுட்டி சொடுக்கு வழங்கப்படும்போது தூண்டப்படுகிறது.\n"
+" [உறுப்பினர் Allow_RMB_SELECT] இயக்கப்பட வேண்டும்."
 
 #: docs/ItemList.xml
 msgid "Icon is drawn above the text."
-msgstr ""
+msgstr "உரைக்கு மேலே படவுரு வரையப்படுகிறது."
 
 #: docs/ItemList.xml
 msgid "Icon is drawn to the left of the text."
-msgstr ""
+msgstr "உரையின் இடதுபுறத்தில் படவுரு வரையப்படுகிறது."
 
 #: docs/ItemList.xml
 msgid "Only allow selecting a single item."
-msgstr ""
+msgstr "ஒரு உருப்படியைத் தேர்ந்தெடுக்க மட்டுமே அனுமதிக்கவும்."
 
 #: docs/ItemList.xml
 msgid "Allows selecting multiple items by holding Ctrl or Shift."
 msgstr ""
+"கட்டுப்பாடு அல்லது உயர்த்து ஐ வைத்திருப்பதன் மூலம் பல உருப்படிகளைத் "
+"தேர்ந்தெடுக்க அனுமதிக்கிறது."
 
 #: docs/ItemList.xml docs/Tree.xml
 msgid "Default text [Color] of the item."
-msgstr ""
+msgstr "உருப்படியின் இயல்புநிலை உரை [நிறம்]."
 
 #: docs/ItemList.xml docs/Tree.xml
 msgid "Text [Color] used when the item is selected."
-msgstr ""
+msgstr "உருப்படி தேர்ந்தெடுக்கப்படும்போது உரை [வண்ணம்] பயன்படுத்தப்படுகிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "[Color] of the guideline. The guideline is a line drawn between each row of "
 "items."
 msgstr ""
+"வழிகாட்டுதலின் [நிறம்]. வழிகாட்டுதல் என்பது ஒவ்வொரு வரிசை உருப்படிகளுக்கும் "
+"இடையில் வரையப்பட்ட ஒரு வரி."
 
 #: docs/ItemList.xml
 msgid "The horizontal spacing between items."
-msgstr ""
+msgstr "உருப்படிகளுக்கு இடையில் கிடைமட்ட இடைவெளி."
 
 #: docs/ItemList.xml
 msgid "The spacing between item's icon and text."
-msgstr ""
+msgstr "உருப்படியின் ஐகானுக்கும் உரைக்கும் இடையிலான இடைவெளி."
 
 #: docs/ItemList.xml
 msgid "The vertical spacing between each line of text."
-msgstr ""
+msgstr "உரையின் ஒவ்வொரு வரிக்கும் இடையில் செங்குத்து இடைவெளி."
 
 #: docs/ItemList.xml
 msgid "The vertical spacing between items."
-msgstr ""
+msgstr "உருப்படிகளுக்கு இடையில் செங்குத்து இடைவெளி."
 
 #: docs/ItemList.xml docs/Tree.xml
 msgid "[Font] of the item's text."
-msgstr ""
+msgstr "உருப்படியின் உரையின் [எழுத்துரு]."
 
 #: docs/ItemList.xml
 msgid ""
 "Default [StyleBox] for the [ItemList], i.e. used when the control is not "
 "being focused."
 msgstr ""
+"[ITEMLIST] க்கான இயல்புநிலை [ச்டைல் ​​பாக்ச்], அதாவது கட்டுப்பாடு கவனம் "
+"செலுத்தப்படாதபோது பயன்படுத்தப்படுகிறது."
 
 #: docs/ItemList.xml
 msgid "[StyleBox] used when the [ItemList] is being focused."
 msgstr ""
+"[ச்டைல் ​​பாக்ச்] [உருப்படி பட்டியல்] கவனம் செலுத்தும்போது "
+"பயன்படுத்தப்படுகிறது."
 
 #: docs/ItemList.xml
 msgid "[StyleBox] used for the cursor, when the [ItemList] is being focused."
 msgstr ""
+"[ச்டைல் ​​பாக்ச்] கர்சருக்கு பயன்படுத்தப்படுகிறது, [உருப்படி பட்டியல்] கவனம்"
+" செலுத்தப்படும்போது."
 
 #: docs/ItemList.xml
 msgid ""
 "[StyleBox] used for the cursor, when the [ItemList] is not being focused."
 msgstr ""
+"[ச்டைல் ​​பாக்ச்] கர்சருக்கு பயன்படுத்தப்படுகிறது, [உருப்படி பட்டியல்] கவனம்"
+" செலுத்தப்படாதபோது."
 
 #: docs/ItemList.xml
 msgid ""
 "[StyleBox] for the selected items, used when the [ItemList] is not being "
 "focused."
 msgstr ""
+"[ச்டைல் ​​பாக்ச்] தேர்ந்தெடுக்கப்பட்ட உருப்படிகளுக்கு, [உருப்படி பட்டியல்] "
+"கவனம் செலுத்தப்படாதபோது பயன்படுத்தப்படுகிறது."
 
 #: docs/ItemList.xml
 msgid ""
 "[StyleBox] for the selected items, used when the [ItemList] is being "
 "focused."
 msgstr ""
+"[ச்டைல் ​​பாக்ச்] தேர்ந்தெடுக்கப்பட்ட உருப்படிகளுக்கு, [உருப்படி பட்டியல்] "
+"கவனம் செலுத்தும்போது பயன்படுத்தப்படுகிறது."
 
 #: docs/JavaScript.xml
 msgid ""
 "Singleton that connects the engine with the browser's JavaScript context in "
 "Web exports."
 msgstr ""
+"வலை ஏற்றுமதியில் உலாவியின் சாவாச்கிரிப்ட் சூழலுடன் இயந்திரத்தை இணைக்கும் "
+"சிங்கிள்டன்."
 
 #: docs/JavaScript.xml
 msgid ""
 "The JavaScript singleton is implemented only in the Web export. It's used to access the browser's JavaScript context. This allows interaction with embedding pages or calling third-party JavaScript APIs.\n"
 "[b]Note:[/b] This singleton can be disabled at build-time to improve security. By default, the JavaScript singleton is enabled. Official export templates also have the JavaScript singleton enabled. See [url=https://docs.rebeltoolbox.com/en/latest/development/compiling/compiling_for_web.html]Compiling for the Web[/url] in the documentation for more information."
 msgstr ""
+"சாவாச்கிரிப்ட் சிங்கிள்டன் வலை ஏற்றுமதியில் மட்டுமே செயல்படுத்தப்படுகிறது. உலாவியின் சாவாச்கிரிப்ட் சூழலை அணுக இது பயன்படுகிறது. இது பக்கங்களை உட்பொதித்தல் அல்லது மூன்றாம் தரப்பு சாவாச்கிரிப்ட் பநிஇ களை அழைப்பதன் மூலம் தொடர்பு கொள்ள அனுமதிக்கிறது.\n"
+" [b] குறிப்பு: [/b] பாதுகாப்பை மேம்படுத்த இந்த சிங்கிள்டனை உருவாக்க நேரத்தில் முடக்கலாம். இயல்பாக, சாவாச்கிரிப்ட் சிங்கிள்டன் இயக்கப்பட்டது. அதிகாரப்பூர்வ ஏற்றுமதி வார்ப்புருக்கள் சாவாச்கிரிப்ட் சிங்கிள்டன் இயக்கப்பட்டுள்ளன. [Url = https: //docs.rebeltoolbox.com/en/latest/development/compiling/compiling_for_web.html] வலையில் தொகுத்தல் [/url] மேலும் தகவலுக்கு."
 
 #: docs/JavaScript.xml
 msgid ""
 "https://docs.rebeltoolbox.com/en/latest/tutorials/export/exporting_for_web.html#calling-"
 "javascript-from-script"
 msgstr ""
+"https://docs.rebeltoolbox.com/en/latest/tutorials/export/exporting_for_web.html#calling-"
+"javascript-from-script"
 
 #: docs/JavaScript.xml
 msgid ""
@@ -36012,6 +36215,10 @@ msgid ""
 "JavaScript. The reference must be kept until the callback happens, or it "
 "won't be called at all. See [JavaScriptObject] for usage."
 msgstr ""
+"சாவாச்கிரிப்ட் மூலம் அழைப்பாகப் பயன்படுத்தக்கூடிய ச்கிரிப்ட் "
+"செயல்பாட்டிற்கான குறிப்பை உருவாக்குகிறது. அழைப்பு நிகழும் வரை குறிப்பு "
+"வைக்கப்பட வேண்டும், அல்லது அது அழைக்கப்படாது. பயன்பாட்டிற்கு "
+"[javascriptObject] ஐப் பார்க்கவும்."
 
 #: docs/JavaScript.xml
 msgid ""
@@ -36019,6 +36226,10 @@ msgid ""
 "[code]object[/code] must a valid property of the JavaScript "
 "[code]window[/code]. See [JavaScriptObject] for usage."
 msgstr ""
+"[குறியீடு] புதிய [/குறியீடு] கட்டமைப்பாளரைப் பயன்படுத்தி புதிய "
+"சாவாச்கிரிப்ட் பொருளை உருவாக்கவும். [குறியீடு] பொருள் [/குறியீடு] "
+"சாவாச்கிரிப்ட் [குறியீடு] சாளரத்தின் செல்லுபடியாகும் சொத்து [/குறியீடு]. "
+"பயன்பாட்டிற்கு [சாவாச்கிரிப்ட் பொருள்] பார்க்கவும்."
 
 #: docs/JavaScript.xml
 msgid ""
@@ -36027,12 +36238,18 @@ msgid ""
 "[b]Note:[/b] Browsers might block the download if [method download_buffer] is not being called from a user interaction (e.g. button click).\n"
 "[b]Note:[/b] Browsers might ask the user for permission or block the download if multiple download requests are made in a quick succession."
 msgstr ""
+"குறிப்பிட்ட [குறியீடு] இடையக [/குறியீடு] கொண்ட கோப்பைப் பதிவிறக்க பயனரைத் தூண்டுகிறது. கோப்பில் கொடுக்கப்பட்ட [குறியீடு] பெயர் [/குறியீடு] மற்றும் [குறியீடு] MIME [/குறியீடு] வகை இருக்கும்.\n"
+" .\n"
+" .\n"
+" [b] குறிப்பு: [/b] உலாவிகள் பயனரிடம் இசைவு கேட்கலாம் அல்லது பல பதிவிறக்க கோரிக்கைகள் விரைவாக அடுத்தடுத்து செய்யப்பட்டால் பதிவிறக்கத்தைத் தடுக்கலாம்."
 
 #: docs/JavaScript.xml
 msgid ""
 "Execute the string [code]code[/code] as JavaScript code within the browser window. This is a call to the actual global JavaScript function [code]eval()[/code].\n"
 "If [code]use_global_execution_context[/code] is [code]true[/code], the code will be evaluated in the global execution context. Otherwise, it is evaluated in the execution context of a function within the engine's runtime environment."
 msgstr ""
+"உலாவி சாளரத்திற்குள் சாவாச்கிரிப்ட் குறியீடாக சரம் [குறியீடு] குறியீட்டை [/குறியீடு] இயக்கவும். இது உண்மையான உலகளாவிய சாவாச்கிரிப்ட் செயல்பாட்டிற்கான அழைப்பு [குறியீடு] veal () [/code].\n"
+" [குறியீடு] USE_GLOBAL_EXECUTION_CONTEXT [/குறியீடு] [குறியீடு] உண்மை [/குறியீடு] என்றால், குறியீடு உலகளாவிய செயல்பாட்டு சூழலில் மதிப்பீடு செய்யப்படும். இல்லையெனில், இது இயந்திரத்தின் இயக்க நேர சூழலுக்குள் ஒரு செயல்பாட்டின் செயல்பாட்டு சூழலில் மதிப்பீடு செய்யப்படுகிறது."
 
 #: docs/JavaScript.xml
 msgid ""
@@ -36042,10 +36259,15 @@ msgid ""
 "which will contain the JavaScript [code]arguments[/code]. See "
 "[JavaScriptObject] for usage."
 msgstr ""
+"ச்கிரிப்ட்களால் பயன்படுத்தக்கூடிய சாவாச்கிரிப்ட் பொருளுக்கு ஒரு இடைமுகத்தை "
+"வழங்குகிறது. [குறியீடு] இடைமுகம் [/குறியீடு] சாவாச்கிரிப்ட் [குறியீடு] "
+"சாளரத்தின் [/குறியீடு] சரியான சொத்தாக இருக்க வேண்டும். திரும்பப்பெறுதல் ஒரு "
+"[வரிசை] வாதத்தை ஏற்க வேண்டும், அதில் சாவாச்கிரிப்ட் [குறியீடு] வாதங்கள் "
+"[/குறியீடு] இருக்கும். பயன்பாட்டிற்கு [javascriptObject] ஐப் பார்க்கவும்."
 
 #: docs/JavaScriptObject.xml
 msgid "A wrapper class for native JavaScript objects."
-msgstr ""
+msgstr "சொந்த சாவாச்கிரிப்ட் பொருள்களுக்கான ரேப்பர் வகுப்பு."
 
 #: docs/JavaScriptObject.xml
 msgid ""
@@ -36078,12 +36300,42 @@ msgid ""
 "[/codeblock]\n"
 "[b]Note:[/b] Only available in the Web platform."
 msgstr ""
+"[முறை javascript.get_interface], [முறை javascript.create_object], அல்லது [முறை javascript.create_callback] வழியாக மீட்டெடுக்கப்பட்ட அல்லது உருவாக்கப்பட்ட சாவாச்கிரிப்ட் பொருள்களுடன் தொடர்பு கொள்ள சாவாச்கிரிப்டோப்செக்ட் பயன்படுத்தப்படுகிறது.\n"
+" எடுத்துக்காட்டு:\n"
+" [கோட் பிளாக்]\n"
+" முனை நீட்டிக்கிறது\n"
+"\n"
+" var _my_js_callback = javascript.create_callback (சுய, \"MyCallback\") # இந்த குறிப்பு வைக்கப்பட வேண்டும்\n"
+" var console = javascript.get_interface (\"கன்சோல்\")\n"
+"\n"
+" func _init ():\n"
+" var buf = javascript.create_object (\"arraybuffer\", 10) # புதிய வரிசை பஃபர் (10)\n"
+" அச்சு (buf) # அச்சிடுகிறது [javascriptObject: object_id]\n"
+" var uint8arr = javascript.create_object (\"uint8array\", buf) # புதிய uint8array (buf)\n"
+" uint8arr [1] = 255\n"
+" அச்சிட்டு (uint8arr [1], uint8arr.bytelength) # அச்சிட்டு 255 10\n"
+" console.log (uint8arr) # உலாவி கன்சோலில் அச்சிடுகிறது \"UINT8ARRAY (10) [0, 255, 0, 0, 0, 0, 0, 0, 0, 0]\"\n"
+"\n"
+" # சாவாச்கிரிப்டுக்கு சமம்: வரிசை.\n"
+" Javascript.get_interface (\"வரிசை\").\n"
+"\n"
+" func MyCallback (args):\n"
+" # \"ஃபோரீச்\" அழைப்புக்கு அனுப்பப்பட்ட அளவுருக்கள் மூலம் அழைக்கப்படும்\n"
+" # [0, 0, [JavascriptObject: 1173]]\n"
+" # [255, 1, [சாவாச்கிரிப்டோப்செக்ட்: 1173]]\n"
+" # ...\n"
+" # [0, 9, [சாவாச்கிரிப்டோப்செக்ட்: 1180]]\n"
+" அச்சு (ஆர்க்ச்)\n"
+" [/codeBlock]\n"
+" [b] குறிப்பு: [/b] வலை தளத்தில் மட்டுமே கிடைக்கும்."
 
 #: docs/JNISingleton.xml
 msgid ""
 "Singleton that connects the engine with Android plugins to interface with "
 "native Android code."
 msgstr ""
+"சொந்த ஆண்ட்ராய்டு குறியீட்டுடன் இடைமுகப்படுத்த ஆண்ட்ராய்டு செருகுநிரல்களுடன்"
+" இயந்திரத்தை இணைக்கும் சிங்கிள்டன்."
 
 #: docs/JNISingleton.xml
 msgid ""
@@ -36094,15 +36346,22 @@ msgid ""
 "[url=https://en.wikipedia.org/wiki/Java_Native_Interface]Java Native "
 "Interface - Wikipedia[/url] for more information."
 msgstr ""
+"ஆண்ட்ராய்டு ஏற்றுமதியில் மட்டுமே Jnisingleton செயல்படுத்தப்படுகிறது. இது "
+"சாவா அல்லது கோட்லினில் எழுதப்பட்ட ஆண்ட்ராய்டு சொருகி இருந்து முறைகளை "
+"அழைக்கவும் சமிக்ஞைகளை இணைக்கவும் பயன்படுகிறது. முறைகள் மற்றும் சமிக்ஞைகளை "
+"அழைக்கவும், அது ஒரு முனை போல சினிசிள்டனுடன் இணைக்கவும் முடியும். மேலும் "
+"தகவலுக்கு [url = https: //en.wikipedia.org/wiki/java_native_interface] சாவா "
+"சொந்த இடைமுகம் - விக்கிபீடியா [/url] ஐப் பார்க்கவும்."
 
 #: docs/JNISingleton.xml
 msgid ""
 "https://docs.rebeltoolbox.com/en/latest/tutorials/platform/android/android_plugin.html"
 msgstr ""
+"https://docs.rebeltoolbox.com/en/latest/tutorials/platform/android/android_plugin.html"
 
 #: docs/Joint.xml
 msgid "Base class for all 3D joints."
-msgstr ""
+msgstr "அனைத்து 3D மூட்டுகளுக்கும் அடிப்படை வகுப்பு."
 
 #: docs/Joint.xml
 msgid ""
@@ -36110,36 +36369,45 @@ msgid ""
 "priority and can define if the bodies of the two attached nodes should be "
 "able to collide with each other."
 msgstr ""
+"இரண்டு இயற்பியல் உடல்களை ஒன்றாக பிணைக்க மூட்டுகள் பயன்படுத்தப்படுகின்றன. "
+"அவர்களுக்கு ஒரு தீர்வி முன்னுரிமை உள்ளது மற்றும் இணைக்கப்பட்ட இரண்டு "
+"முனைகளின் உடல்கள் ஒருவருக்கொருவர் மோத முடியுமா என்பதை வரையறுக்கலாம்."
 
 #: docs/Joint.xml
 msgid ""
 "If [code]true[/code], the two bodies of the nodes are not able to collide "
 "with each other."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், முனைகளின் இரண்டு உடல்களும் "
+"ஒருவருக்கொருவர் மோத முடியாது."
 
 #: docs/Joint.xml
 msgid "The node attached to the first side (A) of the joint."
-msgstr ""
+msgstr "மூட்டின் முதல் பக்க (அ) உடன் இணைக்கப்பட்ட முனை."
 
 #: docs/Joint.xml
 msgid "The node attached to the second side (B) of the joint."
-msgstr ""
+msgstr "மூட்டின் இரண்டாவது பக்க (பி) உடன் இணைக்கப்பட்ட முனை."
 
 #: docs/Joint.xml
 msgid ""
 "The priority used to define which solver is executed first for multiple "
 "joints. The lower the value, the higher the priority."
 msgstr ""
+"பல மூட்டுகளுக்கு முதலில் எந்த தீர்வி செயல்படுத்தப்படுகிறது என்பதை வரையறுக்க "
+"முன்னுரிமை பயன்படுத்தப்படுகிறது. குறைந்த மதிப்பு, அதிக முன்னுரிமை."
 
 #: docs/Joint2D.xml
 msgid "Base node for all joint constraints in 2D physics."
-msgstr ""
+msgstr "2 டி இயற்பியலில் உள்ள அனைத்து கூட்டு தடைகளுக்கும் அடிப்படை முனை."
 
 #: docs/Joint2D.xml
 msgid ""
 "Base node for all joint constraints in 2D physics. Joints take 2 bodies and "
 "apply a custom constraint."
 msgstr ""
+"2 டி இயற்பியலில் உள்ள அனைத்து கூட்டு தடைகளுக்கும் அடிப்படை முனை. மூட்டுகள் 2"
+" உடல்களை எடுத்து தனிப்பயன் தடையைப் பயன்படுத்துகின்றன."
 
 #: docs/Joint2D.xml
 msgid ""
@@ -36148,37 +36416,51 @@ msgid ""
 "original position. The lower the [code]bias[/code] the more the two bodies "
 "can pull on the joint."
 msgstr ""
+"[உறுப்பினர் Node_a] மற்றும் [உறுப்பினர் Node_B] வெவ்வேறு திசைகளில் நகரும் "
+"போது [குறியீடு] சார்பு [/குறியீடு] கூட்டு அவற்றை எவ்வளவு வேகமாக தங்கள் அசல் "
+"நிலைக்கு இழுக்கிறது என்பதைக் கட்டுப்படுத்துகிறது. குறைந்த [குறியீடு] சார்பு "
+"[/குறியீடு] இரண்டு உடல்களும் மூட்டு மீது இழுக்க முடியும்."
 
 #: docs/Joint2D.xml
 msgid ""
 "If [code]true[/code], [member node_a] and [member node_b] can not collide."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், [உறுப்பினர் Node_a] மற்றும் "
+"[உறுப்பினர் Node_B] மோத முடியாது."
 
 #: docs/Joint2D.xml
 msgid ""
 "The first body attached to the joint. Must derive from [PhysicsBody2D]."
 msgstr ""
+"மூட்டுடன் இணைக்கப்பட்ட முதல் உடல். [இயற்பியல் பாடி 2 டி] இலிருந்து பெற "
+"வேண்டும்."
 
 #: docs/Joint2D.xml
 msgid ""
 "The second body attached to the joint. Must derive from [PhysicsBody2D]."
 msgstr ""
+"மூட்டுடன் இணைக்கப்பட்ட இரண்டாவது உடல். [இயற்பியல் பாடி 2 டி] இலிருந்து பெற "
+"வேண்டும்."
 
 #: docs/JSON.xml
 msgid "Helper class for parsing JSON data."
-msgstr ""
+msgstr "சாதொபொகு தரவை பாகுபடுத்துவதற்கான உதவி வகுப்பு."
 
 #: docs/JSON.xml
 msgid ""
 "Helper class for parsing JSON data. For usage example and other important "
 "hints, see [JSONParseResult]."
 msgstr ""
+"சாதொபொகு தரவை பாகுபடுத்துவதற்கான உதவி வகுப்பு. பயன்பாட்டு எடுத்துக்காட்டு "
+"மற்றும் பிற முக்கியமான குறிப்புகளுக்கு, [jsonParsersult] ஐப் பார்க்கவும்."
 
 #: docs/JSON.xml
 msgid ""
 "Parses a JSON-encoded string and returns a [JSONParseResult] containing the "
 "result."
 msgstr ""
+"ஒரு JSON- குறியிடப்பட்ட சரத்தை பாகுபடுத்தி, முடிவைக் கொண்ட ஒரு "
+"[jsonParsersult] ஐ வழங்குகிறது."
 
 #: docs/JSON.xml
 msgid ""
@@ -36223,10 +36505,50 @@ msgid ""
 "}\n"
 "[/codeblock]"
 msgstr ""
+"ஒரு [மாறுபாடு] var ஐ சாதொபொகு உரையாக மாற்றி முடிவை வழங்குகிறது. நெட்வொர்க்கை சேமிக்க அல்லது அனுப்ப தரவை வரிசைப்படுத்துவதற்கு பயனுள்ளதாக இருக்கும்.\n"
+" [b] குறிப்பு: [/b] சாதொபொகு விவரக்குறிப்பு முழு எண் அல்லது மிதவை வகைகளை வரையறுக்காது, ஆனால் ஒரு [i] எண் [/i] வகை மட்டுமே. எனவே, ஒரு மாறுபாட்டை சாதொபொகு உரையாக மாற்றுவது அனைத்து எண் மதிப்புகளையும் [மிதவை] வகைகளாக மாற்றும்.\n"
+" [குறியீடு] இன்டென்ட் [/குறியீடு] அளவுரு ஏதேனும் உள்தள்ளப்பட்டால், இந்த அளவுருவுக்கு பயன்படுத்தப்படும் சரம் வெளியீட்டில் ஒரு உள்தள்ளல் இருக்க வேண்டும், [குறியீடு] \"\" [/குறியீடு] போன்ற இடங்கள் கூட பயன்படுத்தப்படும். .\n"
+" [b] எடுத்துக்காட்டு வெளியீடு: [/b]\n"
+" [கோட் பிளாக்]\n"
+" ## json.print (my_dictionary)\n"
+" {\"பெயர்\": \"my_dictionary\", \"பதிப்பு\": \"1.0.0\", \"நிறுவனங்கள்\": [{\"பெயர்\": \"நிறுவனம்_0\", \"மதிப்பு\": \"மதிப்பு_0\"}, {\"பெயர்\": \"நிறுவனம்_1\", \"மதிப்பு\": \"மதிப்பு_1\"}]}\n"
+"\n"
+" ## json.print (my_dictionary, \"\\ t\")\n"
+" {\n"
+" \"பெயர்\": \"my_dictionary\",\n"
+" \"பதிப்பு\": \"1.0.0\",\n"
+" \"நிறுவனங்கள்\": [\n"
+" {\n"
+" \"பெயர்\": \"நிறுவனம்_0\",\n"
+" \"மதிப்பு\": \"மதிப்பு_0\"\n"
+" },\n"
+" {\n"
+" \"பெயர்\": \"நிறுவனம்_1\",\n"
+" \"மதிப்பு\": \"மதிப்பு_1\"\n"
+" }\n"
+" ]]\n"
+" }\n"
+"\n"
+" ## json.print (my_dictionary, \"...\")\n"
+" {\n"
+" ... \"பெயர்\": \"my_dictionary\",\n"
+" ... \"பதிப்பு\": \"1.0.0\",\n"
+" ... \"நிறுவனங்கள்\": [\n"
+" ...... {\n"
+" ......... \"பெயர்\": \"நிறுவனம்_0\",\n"
+" ......... \"மதிப்பு\": \"மதிப்பு_0\"\n"
+" ......},\n"
+" ...... {\n"
+" ......... \"பெயர்\": \"நிறுவனம்_1\",\n"
+" ......... \"மதிப்பு\": \"மதிப்பு_1\"\n"
+" ......}\n"
+" ...]\n"
+" }\n"
+" [/codeBlock]"
 
 #: docs/JSONParseResult.xml
 msgid "Data class wrapper for decoded JSON."
-msgstr ""
+msgstr "டிகோட் செய்யப்பட்ட சாதொபொகு க்கான தரவு வகுப்பு ரேப்பர்."
 
 #: docs/JSONParseResult.xml
 msgid ""
@@ -36235,24 +36557,34 @@ msgid ""
 " check if the JSON source was successfully parsed with [code]if "
 "json_result.error == OK[/code]."
 msgstr ""
+"[முறை JSON.Parse] ஆல் திருப்பி, [JSONParserSult] சாதொபொகு சான்று வெற்றிகரமாக"
+" பாகுபடுத்தப்படாவிட்டால் டிகோட் செய்யப்பட்ட சாதொபொகு அல்லது பிழை தகவல்களைக் "
+"கொண்டுள்ளது. JSON_RESULT.ERROR == சரி [/code] என்றால் சாதொபொகு சான்று "
+"[குறியீடு] உடன் வெற்றிகரமாக பாகுபடுத்தப்பட்டதா என்பதை நீங்கள் "
+"சரிபார்க்கலாம்."
 
 #: docs/JSONParseResult.xml
 msgid ""
 "The error type if the JSON source was not successfully parsed. See the [enum"
 " Error] constants."
 msgstr ""
+"சாதொபொகு சான்று வெற்றிகரமாக பாகுபடுத்தப்படாவிட்டால் பிழை வகை. [Enum பிழை] "
+"மாறிலிகளைக் காண்க."
 
 #: docs/JSONParseResult.xml
 msgid ""
 "The line number where the error occurred if the JSON source was not "
 "successfully parsed."
 msgstr ""
+"சாதொபொகு சான்று வெற்றிகரமாக பாகுபடுத்தப்படாவிட்டால் பிழை ஏற்பட்ட வரி எண்."
 
 #: docs/JSONParseResult.xml
 msgid ""
 "The error message if the JSON source was not successfully parsed. See the "
 "[enum Error] constants."
 msgstr ""
+"சாதொபொகு சான்று வெற்றிகரமாக பாகுபடுத்தப்படாவிட்டால் பிழை செய்தி. [Enum பிழை]"
+" மாறிலிகளைக் காண்க."
 
 #: docs/JSONParseResult.xml
 msgid ""
@@ -36267,10 +36599,21 @@ msgid ""
 "    push_error(\"Unexpected results.\")\n"
 "[/codeblock]"
 msgstr ""
+"பாகுபடுத்தப்பட்ட சாதொபொகு ஐக் கொண்ட ஒரு [மாறுபாடு]. [முறை @gdscript.typeof] அல்லது [குறியீடு] என்பது [/குறியீடு] முக்கிய சொல்லைப் பயன்படுத்தவும். எடுத்துக்காட்டாக, சாதொபொகு சான்று சுருள் பிரேச்களுடன் ([குறியீடு]}} [/குறியீடு]) தொடங்கினால், ஒரு [அகராதி] திருப்பித் தரப்படும். சாதொபொகு சான்று அடைப்புக்குறிகளுடன் ([குறியீடு] [] [/குறியீடு]) தொடங்கினால், ஒரு [வரிசை] திரும்பப் பெறப்படும்.\n"
+" [b] குறிப்பு: [/b] சாதொபொகு விவரக்குறிப்பு முழு எண் அல்லது மிதவை வகைகளை வரையறுக்காது, ஆனால் ஒரு [i] எண் [/i] வகை மட்டுமே. எனவே, ஒரு சாதொபொகு உரையை பாகுபடுத்துவது அனைத்து எண் மதிப்புகளையும் [மிதவை] வகைகளாக மாற்றும்.\n"
+" . இதற்கு நேர்மாறாக, சாதொபொகு வரிசைகள் அவற்றின் கூறுகளின் வரிசையைத் தக்கவைத்துக்கொள்கின்றன:\n"
+" [கோட் பிளாக்]\n"
+" var p = json.Parse ('[\"அலோ\", \"உலகம்\", \"!\"]')\n"
+" typeof (p.Result) == type_array:\n"
+" அச்சிடுக (பி.\n"
+" வேறு:\n"
+" புச்_ரர் (\"எதிர்பாராத முடிவுகள்.\")\n"
+" [/codeBlock]"
 
 #: docs/JSONRPC.xml
 msgid "A helper to handle dictionaries which look like JSONRPC documents."
 msgstr ""
+"JSONRPC ஆவணங்களைப் போல தோற்றமளிக்கும் அகராதிகளைக் கையாள ஒரு உதவியாளர்."
 
 #: docs/JSONRPC.xml
 msgid ""
@@ -36281,6 +36624,11 @@ msgid ""
 "standard on top of [Dictionary]; you will have to convert between a "
 "[Dictionary] and [JSON] with other functions."
 msgstr ""
+". பொருள் ஒரு குறிப்பிட்ட கட்டமைப்பைக் கொண்டுள்ளது மற்றும் எந்த முறை என "
+"அழைக்கப்படுகிறது, அந்த செயல்பாட்டிற்கான அளவுருக்கள் என்று அடையாளம் "
+"காட்டுகிறது, மேலும் பதில்களைக் கண்காணிக்க ஒரு ஐடியைக் கொண்டுள்ளது. [அகராதி] "
+"மேல் அந்த தரத்தை இந்த வகுப்பு செயல்படுத்துகிறது; நீங்கள் ஒரு [அகராதி] "
+"மற்றும் [JSON] க்கு இடையில் பிற செயல்பாடுகளுடன் மாற்ற வேண்டும்."
 
 #: docs/JSONRPC.xml
 msgid ""
@@ -36288,6 +36636,9 @@ msgid ""
 "- [code]method[/code]: Name of the method being called.\n"
 "- [code]params[/code]: An array or dictionary of parameters being passed to the method."
 msgstr ""
+"JSON-RPC அறிவிப்பு வடிவத்தில் ஒரு அகராதியை வழங்குகிறது. அறிவிப்புகள் ஒரு காட்சி செய்திகள், அவை பதிலை எதிர்பார்க்கவில்லை.\n"
+" - [குறியீடு] முறை [/குறியீடு]: அழைக்கப்படும் முறையின் பெயர்.\n"
+" - [குறியீடு] அளவுருக்கள் [/குறியீடு]: அளவுருக்களின் வரிசை அல்லது அகராதி முறைக்கு அனுப்பப்படும்."
 
 #: docs/JSONRPC.xml
 msgid ""
@@ -36296,6 +36647,10 @@ msgid ""
 "- [code]params[/code]: An array or dictionary of parameters being passed to the method.\n"
 "- [code]id[/code]: Uniquely identifies this request. The server is expected to send a response with the same ID."
 msgstr ""
+"JSON-RPC கோரிக்கையின் வடிவத்தில் ஒரு அகராதியை வழங்குகிறது. பதிலின் எதிர்பார்ப்புடன் ஒரு சேவையகத்திற்கு கோரிக்கைகள் அனுப்பப்படுகின்றன. எந்த சரியான கோரிக்கைக்கு பதிலளிக்கிறது என்பதைக் குறிப்பிட சேவையகத்திற்கு ஐடி புலம் பயன்படுத்தப்படுகிறது.\n"
+" - [குறியீடு] முறை [/குறியீடு]: அழைக்கப்படும் முறையின் பெயர்.\n"
+" - [குறியீடு] அளவுருக்கள் [/குறியீடு]: அளவுருக்களின் வரிசை அல்லது அகராதி முறைக்கு அனுப்பப்படும்.\n"
+" - [குறியீடு] ஐடி [/குறியீடு]: இந்த கோரிக்கையை தனித்துவமாக அடையாளம் காட்டுகிறது. சேவையகம் அதே ஐடியுடன் பதிலை அனுப்பும் என்று எதிர்பார்க்கப்படுகிறது."
 
 #: docs/JSONRPC.xml
 msgid ""
@@ -36303,6 +36658,9 @@ msgid ""
 "- [code]result[/code]: The return value of the function which was called.\n"
 "- [code]id[/code]: The ID of the request this response is targeted to."
 msgstr ""
+"ஒரு சேவையகம் ஒரு கோரிக்கையைப் பெற்று செயலாக்கும்போது, ​​அது ஒரு பதிலை அனுப்பும் என்று எதிர்பார்க்கப்படுகிறது. நீங்கள் ஒரு பதிலை விரும்பவில்லை என்றால், அதற்கு பதிலாக நீங்கள் ஒரு அறிவிப்பை அனுப்ப வேண்டும்.\n"
+" - [குறியீடு] முடிவு [/குறியீடு]: அழைக்கப்பட்ட செயல்பாட்டின் வருவாய் மதிப்பு.\n"
+" - [குறியீடு] ஐடி [/குறியீடு]: கோரிக்கையின் ஐடி இந்த பதில் இலக்கு வைக்கப்பட்டுள்ளது."
 
 #: docs/JSONRPC.xml
 msgid ""
@@ -36311,6 +36669,10 @@ msgid ""
 "- [code]message[/code]: A custom message about this error.\n"
 "- [code]id[/code]: The request this error is a response to."
 msgstr ""
+"முந்தைய பதில் ஒருவிதத்தில் தோல்வியுற்றது என்பதைக் குறிக்கும் பதிலை உருவாக்குகிறது.\n"
+" - [குறியீடு] குறியீடு [/குறியீடு]: இது என்ன வகையான பிழை என்று தொடர்புடைய பிழைக் குறியீடு. [Enum errorCode] மாறிலிகளைக் காண்க.\n"
+" - [குறியீடு] செய்தி [/குறியீடு]: இந்த பிழையைப் பற்றிய தனிப்பயன் செய்தி.\n"
+" - [குறியீடு] ஐடி [/குறியீடு]: கோரிக்கை இந்த பிழை ஒரு பதில்."
 
 #: docs/JSONRPC.xml
 msgid ""
@@ -36318,16 +36680,21 @@ msgid ""
 "To add new supported methods extend the JSONRPC class and call [method process_action] on your subclass.\n"
 "[code]action[/code]: The action to be run, as a Dictionary in the form of a JSON-RPC request or notification."
 msgstr ""
+"JSON-RPC கோரிக்கையின் வடிவத்தை எடுக்கும் அகராதியைக் கொடுத்தால்: கோரிக்கையைத் திறந்து இயக்கவும். \"முறை\" என்று அழைக்கப்படும் புலத்தைப் பார்த்து, JSONRPC பொருளில் சமமாக பெயரிடப்பட்ட செயல்பாட்டைத் தேடுவதன் மூலம் முறைகள் தீர்க்கப்படுகின்றன. ஒருவர் கண்டுபிடிக்கப்பட்டால், அந்த முறை அழைக்கப்படுகிறது.\n"
+" புதிய உதவி முறைகளைச் சேர்க்க, JSONRPC வகுப்பை நீட்டித்து, உங்கள் துணைப்பிரிவில் [முறை செயல்முறை_சார்] ஐ அழைக்கவும்.\n"
+" [குறியீடு] செயல் [/குறியீடு]: JSON-RPC கோரிக்கை அல்லது அறிவிப்பின் வடிவத்தில் ஒரு அகராதியாக இயக்கப்பட வேண்டிய செயல்."
 
 #: docs/JSONRPC.xml
 msgid ""
 "A method call was requested but no function of that name existed in the "
 "JSONRPC subclass."
 msgstr ""
+"ஒரு முறை அழைப்பு கோரப்பட்டது, ஆனால் JSONRPC துணைப்பிரிவில் அந்த பெயரின் எந்த"
+" செயல்பாடும் இல்லை."
 
 #: docs/KinematicBody.xml
 msgid "Kinematic body 3D node."
-msgstr ""
+msgstr "இயக்கவியல் உடல் 3D முனை."
 
 #: docs/KinematicBody.xml
 msgid ""
@@ -36335,17 +36702,24 @@ msgid ""
 "[b]Simulated motion:[/b] When these bodies are moved manually, either from code or from an [AnimationPlayer] (with [member AnimationPlayer.playback_process_mode] set to \"physics\"), the physics will automatically compute an estimate of their linear and angular velocity. This makes them very useful for moving platforms or other AnimationPlayer-controlled objects (like a door, a bridge that opens, etc).\n"
 "[b]Kinematic characters:[/b] KinematicBody also has an API for moving objects (the [method move_and_collide] and [method move_and_slide] methods) while performing collision tests. This makes them really useful to implement characters that collide against a world, but don't require advanced physics."
 msgstr ""
+"இயக்கவியல் உடல்கள் சிறப்பு வகை உடல்கள் ஆகும், அவை பயனர் கட்டுப்பாட்டுடன் இருக்க வேண்டும். அவை இயற்பியலால் பாதிக்கப்படுவதில்லை; ஒரு பாத்திரம் அல்லது கடினமான உடல் போன்ற பிற வகை உடல்களுக்கு, இவை நிலையான உடலைப் போலவே இருக்கின்றன. இருப்பினும், அவர்களுக்கு இரண்டு முக்கிய பயன்பாடுகள் உள்ளன:\n"
+" . இது தளங்கள் அல்லது பிற அனிமேசன் பிளேயர்-கட்டுப்படுத்தப்பட்ட பொருள்களுக்கு (ஒரு கதவு, திறக்கும் பாலம் போன்றவை) நகர்த்துவதற்கு அவை மிகவும் பயனுள்ளதாக இருக்கும்.\n"
+" . இது ஒரு உலகத்திற்கு எதிராக மோதுகின்ற கதாபாத்திரங்களை செயல்படுத்த அவர்களுக்கு மிகவும் பயனுள்ளதாக இருக்கும், ஆனால் மேம்பட்ட இயற்பியல் தேவையில்லை."
 
 #: docs/KinematicBody.xml docs/KinematicBody2D.xml
 msgid ""
 "https://docs.rebeltoolbox.com/en/latest/tutorials/physics/kinematic_character_2d.html"
 msgstr ""
+"https://docs.rebeltoolbox.com/en/latest/tutorials/physics/kinematic_character_2d.html"
 
 #: docs/KinematicBody.xml
 msgid ""
 "Returns [code]true[/code] if the specified [code]axis[/code] is locked. See "
 "also [member move_lock_x], [member move_lock_y] and [member move_lock_z]."
 msgstr ""
+"குறிப்பிட்ட [குறியீடு] அச்சு [/குறியீடு] பூட்டப்பட்டிருந்தால் [குறியீடு] "
+"உண்மை [/குறியீடு] ஐ வழங்குகிறது. [உறுப்பினர் MOVE_LOCK_X], [உறுப்பினர் "
+"MOVE_LOCK_Y] மற்றும் [உறுப்பினர் move_lock_z] ஆகியோரையும் காண்க."
 
 #: docs/KinematicBody.xml
 msgid ""
@@ -36354,6 +36728,11 @@ msgid ""
 "This value is always positive and only valid after calling [method "
 "move_and_slide] and when [method is_on_floor] returns [code]true[/code]."
 msgstr ""
+"[குறியீடு] Up_direction [/code] இன் படி கடைசி மோதல் புள்ளியில் தரையின் மோதல்"
+" கோணத்தை வழங்குகிறது, இது முன்னிருப்பாக [குறியீடு] vecter3.up [/code] ஆகும்."
+" இந்த மதிப்பு எப்போதும் நேர்மறையானது மற்றும் [முறை move_and_slide] ஐ "
+"அழைத்தபின் மட்டுமே செல்லுபடியாகும், மேலும் [முறை IS_ON_FLOOR] [குறியீடு] "
+"உண்மை [/குறியீடு] திரும்பும் போது."
 
 #: docs/KinematicBody.xml docs/KinematicBody2D.xml
 msgid ""
@@ -36362,6 +36741,10 @@ msgid ""
 "move_and_slide_with_snap] and when [method is_on_floor] returns "
 "[code]true[/code]."
 msgstr ""
+"கடைசி மோதல் புள்ளியில் தரையின் மேற்பரப்பை இயல்பானதாக வழங்குகிறது. [முறை "
+"move_and_slide] அல்லது [முறை move_and_slide_with_snap] மற்றும் [முறை "
+"IS_ON_FLOOR] [குறியீடு] உண்மை [/குறியீடு] ஐ திரும்பும் போது மட்டுமே "
+"செல்லுபடியாகும்."
 
 #: docs/KinematicBody.xml docs/KinematicBody2D.xml
 msgid ""
@@ -36370,12 +36753,18 @@ msgid ""
 "move_and_slide_with_snap] and when [method is_on_floor] returns "
 "[code]true[/code]."
 msgstr ""
+"கடைசி மோதல் புள்ளியில் தரையின் நேரியல் வேகத்தை வழங்குகிறது. [முறை "
+"move_and_slide] அல்லது [முறை move_and_slide_with_snap] மற்றும் [முறை "
+"IS_ON_FLOOR] [குறியீடு] உண்மை [/குறியீடு] ஐ திரும்பும் போது மட்டுமே "
+"செல்லுபடியாகும்."
 
 #: docs/KinematicBody.xml
 msgid ""
 "Returns a [KinematicCollision], which contains information about the latest "
 "collision that occurred during the last call to [method move_and_slide]."
 msgstr ""
+"[முறையான MOVE_AND_Slide] க்கான கடைசி அழைப்பின் போது நிகழ்ந்த அண்மைக் கால "
+"மோதல் பற்றிய தகவல்களைக் கொண்டுள்ளது [கினெமாடிக் கோலிசன்] ஐ வழங்குகிறது."
 
 #: docs/KinematicBody.xml
 msgid ""
@@ -36385,6 +36774,11 @@ msgid ""
 "single call to [method move_and_slide], you must specify the index of the "
 "collision in the range 0 to ([method get_slide_count] - 1)."
 msgstr ""
+"[முறை MOVE_AND_SLIDE] அல்லது [முறை MOVE_AND_SLIDE_WITH_SNAP] க்கான கடைசி "
+"அழைப்பின் போது ஏற்பட்ட மோதல் பற்றிய தகவல்களைக் கொண்ட ஒரு [கினெமாடிக் "
+"கோலிசன்] ஐ வழங்குகிறது. [முறை move_and_slide] க்கு ஒற்றை அழைப்பில் உடல் பல "
+"முறை மோதக்கூடும் என்பதால், மோதலின் குறியீட்டை 0 முதல் ([முறை "
+"Get_slide_count] - 1) என்ற வரம்பில் குறிப்பிட வேண்டும்."
 
 #: docs/KinematicBody.xml docs/KinematicBody2D.xml
 msgid ""
@@ -36392,6 +36786,8 @@ msgid ""
 "the last call to [method move_and_slide] or [method "
 "move_and_slide_with_snap]."
 msgstr ""
+"[முறை move_and_slide] அல்லது [SNAP உடன் முறை move_and_slide] க்கு கடைசி "
+"அழைப்பின் போது உடல் மோதியெடுத்து திசையை மாற்றியமைக்கிறது."
 
 #: docs/KinematicBody.xml docs/KinematicBody2D.xml
 msgid ""
@@ -36399,6 +36795,9 @@ msgid ""
 "call of [method move_and_slide] or [method move_and_slide_with_snap]. "
 "Otherwise, returns [code]false[/code]."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] [முறை move_and_slide] அல்லது [முறை "
+"move_and_slide_with_snap] இன் கடைசி அழைப்பில் உடல் உச்சவரம்புடன் மோதினால். "
+"இல்லையெனில், [குறியீடு] தவறான [/குறியீடு] ஐ வழங்குகிறது."
 
 #: docs/KinematicBody.xml docs/KinematicBody2D.xml
 msgid ""
@@ -36406,6 +36805,9 @@ msgid ""
 "call of [method move_and_slide] or [method move_and_slide_with_snap]. "
 "Otherwise, returns [code]false[/code]."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] [முறை move_and_slide] அல்லது [முறை "
+"move_and_slide_with_snap] இன் கடைசி அழைப்பில் உடல் தரையுடன் மோதியிருந்தால். "
+"இல்லையெனில், [குறியீடு] தவறான [/குறியீடு] ஐ வழங்குகிறது."
 
 #: docs/KinematicBody.xml docs/KinematicBody2D.xml
 msgid ""
@@ -36413,12 +36815,17 @@ msgid ""
 "of [method move_and_slide] or [method move_and_slide_with_snap]. Otherwise, "
 "returns [code]false[/code]."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] [முறை move_and_slide] அல்லது [முறை "
+"move_and_slide_with_snap] இன் கடைசி அழைப்பில் உடல் ஒரு சுவருடன் மோதினால். "
+"இல்லையெனில், [குறியீடு] தவறான [/குறியீடு] ஐ வழங்குகிறது."
 
 #: docs/KinematicBody.xml
 msgid ""
 "Moves the body along the vector [code]rel_vec[/code]. The body will stop if it collides. Returns a [KinematicCollision], which contains information about the collision when stopped, or when touching another body along the motion.\n"
 "If [code]test_only[/code] is [code]true[/code], the body does not move but the would-be collision information is given."
 msgstr ""
+"திசையன் [குறியீடு] rel_vec [/code] உடன் உடலை நகர்த்துகிறது. அது மோதினால் உடல் நின்றுவிடும். ஒரு [கினெமாடிக் கோலிசன்] ஐத் தருகிறது, அதில் மோதல் பற்றிய தகவல்களை நிறுத்தும்போது அல்லது இயக்கத்துடன் மற்றொரு உடலைத் தொடும்போது.\n"
+" ."
 
 #: docs/KinematicBody.xml
 msgid ""
@@ -36433,12 +36840,24 @@ msgid ""
 "Returns the [code]linear_velocity[/code] vector, rotated and/or scaled if a slide collision occurred. To get detailed information about collisions that occurred, use [method get_slide_collision].\n"
 "When the body touches a moving platform, the platform's velocity is automatically added to the body motion. If a collision occurs due to the platform's motion, it will always be first in the slide collisions."
 msgstr ""
+"உடலை ஒரு திசையனுடன் நகர்த்துகிறது. உடல் இன்னொருவருடன் மோதினால், அது உடனடியாக நிறுத்தப்படுவதை விட மற்ற உடலுடன் சறுக்குகிறது. மற்ற உடல் ஒரு [கினெமடிக் பாடி] அல்லது [ரிகிட்போடி] என்றால், அது மற்ற உடலின் இயக்கத்தால் பாதிக்கப்படும். நகரும் மற்றும் சுழலும் தளங்களை உருவாக்க நீங்கள் இதைப் பயன்படுத்தலாம் அல்லது முனைகளை மற்ற முனைகளைத் தள்ளச் செய்யலாம்.\n"
+" இந்த முறை [முறை முனை. இல்லையெனில், உருவகப்படுத்துதல் தவறான வேகத்தில் இயங்கும்.\n"
+" [குறியீடு] லீனியர்_வெலோசிட்டி [/குறியீடு] என்பது திசைவேக திசையன் (பொதுவாக நொடிக்கு மீட்டர்). [முறை MOVE_AND_COLLIDE] ஐப் போலன்றி, நீங்கள் [i] [/i] ஐ [குறியீடு] டெல்டா [/குறியீடு] மூலம் பெருக்கக்கூடாது - இயற்பியல் இயந்திரம் வேகத்தைப் பயன்படுத்துகிறது.\n"
+" . [குறியீடு] திசையன் 3 (0, 0, 0) [/குறியீடு] இன் இயல்புநிலை மதிப்புக்கு அமைக்கப்பட்டால், எல்லாம் ஒரு சுவராக கருதப்படுகிறது.\n"
+" [குறியீடு] stop_on_slope [/code] [குறியீடு] உண்மை [/குறியீடு] என்றால், நீங்கள் [குறியீடு] நேரியல்_வலோசிட்டி [/குறியீடு] இல் ஈர்ப்பு சேர்க்கும்போது உடல் சரிவுகளில் சறுக்காது, உடல் அசையாமல் நிற்கிறது.\n"
+" உடல் மோதினால், அது திசையை அதிகபட்சமாக [குறியீடு] அதிகபட்சம்_ ச்லைடுகள் [/குறியீடு] நிறுத்துவதற்கு முன்பு மாற்றும்.\n"
+" . இயல்புநிலை மதிப்பு 45 டிகிரிக்கு சமம்.\n"
+" . [குறியீடு] பொய் [/குறியீடு] என்றால், அது [நிலையான பாடி] போன்ற [ரிகிட்போடி] முனைகளுடன் தொடர்பு கொள்ளும்.\n"
+" ச்லைடு மோதல் ஏற்பட்டால் [குறியீடு] நேரியல்_வலோசிட்டி [/குறியீடு] திசையன், சுழற்றப்பட்ட மற்றும்/அல்லது அளவிடப்படுகிறது. நிகழ்ந்த மோதல்களைப் பற்றிய விரிவான தகவல்களைப் பெற, [முறை Get_Slide_Collision] ஐப் பயன்படுத்தவும்.\n"
+" உடல் நகரும் தளத்தைத் தொடும்போது, ​​தளத்தின் விரைவு தானாகவே உடல் இயக்கத்தில் சேர்க்கப்படும். தளத்தின் இயக்கம் காரணமாக மோதல் ஏற்பட்டால், அது எப்போதும் ச்லைடு மோதல்களில் முதலில் இருக்கும்."
 
 #: docs/KinematicBody.xml
 msgid ""
 "Moves the body while keeping it attached to slopes. Similar to [method move_and_slide].\n"
 "As long as the [code]snap[/code] vector is in contact with the ground, the body will remain attached to the surface. This means you must disable snap in order to jump, for example. You can do this by setting [code]snap[/code] to [code](0, 0, 0)[/code] or by using [method move_and_slide] instead."
 msgstr ""
+"உடலை சரிவுகளுடன் இணைக்கும்போது நகர்த்துகிறது. [முறை mov_and_slide] க்கு ஒத்ததாகும்.\n"
+" [குறியீடு] ச்னாப் [/குறியீடு] திசையன் தரையுடன் தொடர்பு கொள்ளும் வரை, உடல் மேற்பரப்பில் இணைக்கப்பட்டிருக்கும். உதாரணமாக, நீங்கள் ச்னாப்பை முடக்க வேண்டும் என்பதே இதன் பொருள். [குறியீடு] [/குறியீடு] ஐ [குறியீடு] (0, 0, 0) [/குறியீடு] என அமைப்பதன் மூலமாகவோ அல்லது அதற்கு பதிலாக [முறை move_and_slide] ஐப் பயன்படுத்துவதன் மூலமாகவோ இதைச் செய்யலாம்."
 
 #: docs/KinematicBody.xml
 msgid ""
@@ -36446,24 +36865,29 @@ msgid ""
 "[code]lock[/code]. See also [member move_lock_x], [member move_lock_y] and "
 "[member move_lock_z]."
 msgstr ""
+"[குறியீடு] பூட்டின் மதிப்பைப் பொறுத்து குறிப்பிட்ட [குறியீடு] அச்சு "
+"[/குறியீடு] ஐ பூட்டுகிறது அல்லது திறக்கிறது. [உறுப்பினர் MOVE_LOCK_X], "
+"[உறுப்பினர் MOVE_LOCK_Y] மற்றும் [உறுப்பினர் move_lock_z] ஆகியோரையும் காண்க."
 
 #: docs/KinematicBody.xml
 msgid ""
 "Checks for collisions without moving the body. Virtually sets the node's position, scale and rotation to that of the given [Transform], then tries to move the body along the vector [code]rel_vec[/code]. Returns [code]true[/code] if a collision would stop the body from moving along the whole path.\n"
 "Use [method move_and_collide] instead for detecting collision with touching bodies."
 msgstr ""
+"உடலை நகர்த்தாமல் மோதல்களுக்கான காசோலைகள். கொடுக்கப்பட்ட [உருமாற்றம்] க்கு முனையின் நிலை, அளவு மற்றும் சுழற்சியை கிட்டத்தட்ட அமைக்கிறது, பின்னர் உடலை திசையன் [குறியீடு] rel_vec [/code] உடன் நகர்த்த முயற்சிக்கிறது. ஒரு மோதல் உடல் முழு பாதையிலும் நகர்வதைத் தடுக்கும் என்றால் [குறியீடு] உண்மை [/குறியீடு] திரும்பும்.\n"
+" தொடும் உடல்களுடன் மோதலைக் கண்டறிவதற்கு பதிலாக [முறை mov_and_collide] ஐப் பயன்படுத்தவும்."
 
 #: docs/KinematicBody.xml
 msgid "Lock the body's X axis movement."
-msgstr ""
+msgstr "உடலின் ஃச் அச்சு இயக்கத்தை பூட்டவும்."
 
 #: docs/KinematicBody.xml
 msgid "Lock the body's Y axis movement."
-msgstr ""
+msgstr "உடலின் ஒய் அச்சு இயக்கத்தை பூட்டவும்."
 
 #: docs/KinematicBody.xml
 msgid "Lock the body's Z axis movement."
-msgstr ""
+msgstr "உடலின் சட் அச்சு இயக்கத்தை பூட்டவும்."
 
 #: docs/KinematicBody.xml docs/KinematicBody2D.xml
 msgid ""
@@ -36472,6 +36896,10 @@ msgid ""
 "A higher value means it's more flexible for detecting collision, which helps with consistently detecting walls and floors.\n"
 "A lower value forces the collision algorithm to use more exact detection, so it can be used in cases that specifically require precision, e.g at very low scale to avoid visible jittering, or for stability with a stack of kinematic bodies."
 msgstr ""
+"இயக்க செயல்பாடுகளில் மோதல் மீட்டெடுப்பதற்கு கூடுதல் விளிம்பு பயன்படுத்தப்படுகிறது ([முறை move_and_collide], [முறை move_and_slide], [முறை mov_and_slide_with_snap]).\n"
+" உடல் குறைந்தபட்சம் இது வேறொரு உடலுக்கு நெருக்கமாக இருந்தால், அது அவர்களை மோதுவதாகக் கருதும், மேலும் உண்மையான இயக்கத்தை செய்வதற்கு முன்பு தள்ளப்படும்.\n"
+" அதிக மதிப்பு என்பது மோதலைக் கண்டறிவதற்கு இது மிகவும் நெகிழ்வானது, இது சுவர்கள் மற்றும் தளங்களை தொடர்ந்து கண்டறிய உதவுகிறது.\n"
+" குறைந்த மதிப்பு மோதல் வழிமுறையை மிகவும் துல்லியமான கண்டறிதலைப் பயன்படுத்த கட்டாயப்படுத்துகிறது, எனவே குறிப்பாக துல்லியம் தேவைப்படும் சந்தர்ப்பங்களில் இதைப் பயன்படுத்தலாம், எ.கா. காணக்கூடிய நடுக்கத்தைத் தவிர்ப்பதற்கு மிகக் குறைந்த அளவில் அல்லது இயக்கவியல் உடல்களின் அடுக்குடன் நிலைத்தன்மைக்கு."
 
 #: docs/KinematicBody.xml docs/KinematicBody2D.xml
 msgid ""
@@ -36480,28 +36908,39 @@ msgid ""
 " for example on moving platforms. Do [b]not[/b] use together with [method "
 "move_and_slide] or [method move_and_collide] functions."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், உடலின் இயக்கம் இயற்பியல் சட்டத்துடன் "
+"ஒத்திசைக்கப்படும். [அனிமேசன் பிளேயர்] வழியாக இயக்கத்தை அனிமேசன் செய்யும் "
+"போது இது பயனுள்ளதாக இருக்கும், எடுத்துக்காட்டாக தளங்களை நகர்த்துவதில். [B] "
+"[/b] [முறை move_and_slide] அல்லது [முறை move_and_collide] செயல்பாடுகளுடன் "
+"சேர்ந்து பயன்படுத்தவும்."
 
 #: docs/KinematicBody.xml
 msgid ""
 "Lock the body's X axis movement. Deprecated alias for [member "
 "axis_lock_motion_x]."
 msgstr ""
+"உடலின் ஃச் அச்சு இயக்கத்தை பூட்டவும். [உறுப்பினர் அச்சு_ லாக்_மோசன்_எக்ச்] "
+"க்கான மாற்றியமைக்கப்பட்ட மாற்றுப்பெயர்."
 
 #: docs/KinematicBody.xml
 msgid ""
 "Lock the body's Y axis movement. Deprecated alias for [member "
 "axis_lock_motion_y]."
 msgstr ""
+"உடலின் ஒய் அச்சு இயக்கத்தை பூட்டவும். [உறுப்பினர் அச்சு_ லாக்_மோசன்_ஒய்] "
+"க்கான மாற்றியமைக்கப்பட்ட மாற்றுப்பெயர்."
 
 #: docs/KinematicBody.xml
 msgid ""
 "Lock the body's Z axis movement. Deprecated alias for [member "
 "axis_lock_motion_z]."
 msgstr ""
+"உடலின் சட் அச்சு இயக்கத்தை பூட்டவும். [உறுப்பினர் AXIS_LOCK_MOTION_Z] க்கான "
+"மாற்றியமைக்கப்பட்ட மாற்றுப்பெயர்."
 
 #: docs/KinematicBody2D.xml
 msgid "Kinematic body 2D node."
-msgstr ""
+msgstr "இயக்கவியல் உடல் 2 டி முனை."
 
 #: docs/KinematicBody2D.xml
 msgid ""
@@ -36509,11 +36948,15 @@ msgid ""
 "[b]Simulated motion:[/b] When these bodies are moved manually, either from code or from an [AnimationPlayer] (with [member AnimationPlayer.playback_process_mode] set to \"physics\"), the physics will automatically compute an estimate of their linear and angular velocity. This makes them very useful for moving platforms or other AnimationPlayer-controlled objects (like a door, a bridge that opens, etc).\n"
 "[b]Kinematic characters:[/b] KinematicBody2D also has an API for moving objects (the [method move_and_collide] and [method move_and_slide] methods) while performing collision tests. This makes them really useful to implement characters that collide against a world, but don't require advanced physics."
 msgstr ""
+"இயக்கவியல் உடல்கள் சிறப்பு வகை உடல்கள் ஆகும், அவை பயனர் கட்டுப்பாட்டுடன் இருக்க வேண்டும். அவை இயற்பியலால் பாதிக்கப்படுவதில்லை; ஒரு பாத்திரம் அல்லது கடினமான உடல் போன்ற பிற வகை உடல்களுக்கு, இவை நிலையான உடலைப் போலவே இருக்கின்றன. இருப்பினும், அவர்களுக்கு இரண்டு முக்கிய பயன்பாடுகள் உள்ளன:\n"
+" . இது தளங்கள் அல்லது பிற அனிமேசன் பிளேயர்-கட்டுப்படுத்தப்பட்ட பொருள்களுக்கு (ஒரு கதவு, திறக்கும் பாலம் போன்றவை) நகர்த்துவதற்கு அவை மிகவும் பயனுள்ளதாக இருக்கும்.\n"
+" . இது ஒரு உலகத்திற்கு எதிராக மோதுகின்ற கதாபாத்திரங்களை செயல்படுத்த அவர்களுக்கு மிகவும் பயனுள்ளதாக இருக்கும், ஆனால் மேம்பட்ட இயற்பியல் தேவையில்லை."
 
 #: docs/KinematicBody2D.xml
 msgid ""
 "https://docs.rebeltoolbox.com/en/latest/tutorials/physics/using_kinematic_body_2d.html"
 msgstr ""
+"https://docs.rebeltoolbox.com/en/latest/tutorials/physics/using_kinematic_body_2d.html"
 
 #: docs/KinematicBody2D.xml
 msgid ""
@@ -36522,6 +36965,11 @@ msgid ""
 "This value is always positive and only valid after calling [method "
 "move_and_slide] and when [method is_on_floor] returns [code]true[/code]."
 msgstr ""
+"[குறியீடு] Up_direction [/code] இன் படி கடைசி மோதல் புள்ளியில் தரையின் மோதல்"
+" கோணத்தை வழங்குகிறது, இது இயல்பாக [குறியீடு] vecter2.up [/code] ஆகும். இந்த "
+"மதிப்பு எப்போதும் நேர்மறையானது மற்றும் [முறை move_and_slide] ஐ அழைத்தபின் "
+"மட்டுமே செல்லுபடியாகும், மேலும் [முறை IS_ON_FLOOR] [குறியீடு] உண்மை "
+"[/குறியீடு] திரும்பும் போது."
 
 #: docs/KinematicBody2D.xml
 msgid ""
@@ -36529,6 +36977,9 @@ msgid ""
 "latest collision that occurred during the last call to [method "
 "move_and_slide]."
 msgstr ""
+"[Ginematamcollision2d] ஐ வழங்குகிறது, இதில் [முறை move_and_slide] க்கான "
+"கடைசி அழைப்பின் போது ஏற்பட்ட அண்மைக் கால மோதல் பற்றிய தகவல்களைக் "
+"கொண்டுள்ளது."
 
 #: docs/KinematicBody2D.xml
 msgid ""
