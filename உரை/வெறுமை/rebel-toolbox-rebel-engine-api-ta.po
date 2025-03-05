@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Tamil (Rebel Toolbox)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-28 07:29+0200\n"
-"PO-Revision-Date: 2025-03-05 09:00+0530\n"
+"PO-Revision-Date: 2025-03-05 23:10+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rebel-toolbox/rebel-engine-api/ta/>\n"
 "Language: ta\n"
@@ -36991,12 +36991,21 @@ msgid ""
 "    print(\"Collided with: \", collision.collider.name)\n"
 "[/codeblock]"
 msgstr ""
+"[முறையான MOVE_AND_SLIDE] அல்லது [முறை MOVE_AND_SLIDE_WITH_SNAP] க்கான கடைசி அழைப்பின் போது ஏற்பட்ட மோதல் பற்றிய தகவல்களைக் கொண்ட [ginematatccollision2d] ஐ வழங்குகிறது. [முறை move_and_slide] க்கு ஒற்றை அழைப்பில் உடல் பல முறை மோதக்கூடும் என்பதால், மோதலின் குறியீட்டை 0 முதல் ([முறை Get_slide_count] - 1) என்ற வரம்பில் குறிப்பிட வேண்டும்.\n"
+" [b] எடுத்துக்காட்டு பயன்பாடு: [/b]\n"
+" [கோட் பிளாக்]\n"
+" Get_slide_count () இல் நான்:\n"
+" var மோதல் = get_slide_collision (i)\n"
+" அச்சு (\"மோதியது:\", collision.collider.name)\n"
+" [/codeBlock]"
 
 #: docs/KinematicBody2D.xml
 msgid ""
 "Moves the body along the vector [code]rel_vec[/code]. The body will stop if it collides. Returns a [KinematicCollision2D], which contains information about the collision when stopped, or when touching another body along the motion.\n"
 "If [code]test_only[/code] is [code]true[/code], the body does not move but the would-be collision information is given."
 msgstr ""
+"திசையன் [குறியீடு] rel_vec [/code] உடன் உடலை நகர்த்துகிறது. அது மோதினால் உடல் நின்றுவிடும். [Ginematiccollision2d] ஐ வழங்குகிறது, அதில் நிறுத்தப்படும்போது மோதல் பற்றிய தகவல்களைக் கொண்டுள்ளது, அல்லது இயக்கத்துடன் மற்றொரு உடலைத் தொடும் போது.\n"
+" ."
 
 #: docs/KinematicBody2D.xml
 msgid ""
@@ -37011,114 +37020,141 @@ msgid ""
 "Returns the [code]linear_velocity[/code] vector, rotated and/or scaled if a slide collision occurred. To get detailed information about collisions that occurred, use [method get_slide_collision].\n"
 "When the body touches a moving platform, the platform's velocity is automatically added to the body motion. If a collision occurs due to the platform's motion, it will always be first in the slide collisions."
 msgstr ""
+"உடலை ஒரு திசையனுடன் நகர்த்துகிறது. உடல் இன்னொருவருடன் மோதினால், அது உடனடியாக நிறுத்தப்படுவதை விட மற்ற உடலுடன் சறுக்குகிறது. மற்ற உடல் [ginematicbody2d] அல்லது [rigidbody2d] என்றால், அது மற்ற உடலின் இயக்கத்தால் பாதிக்கப்படும். நகரும் மற்றும் சுழலும் தளங்களை உருவாக்க நீங்கள் இதைப் பயன்படுத்தலாம் அல்லது முனைகளை மற்ற முனைகளைத் தள்ளச் செய்யலாம்.\n"
+" இந்த முறை [முறை முனை. இல்லையெனில், உருவகப்படுத்துதல் தவறான வேகத்தில் இயங்கும்.\n"
+" [குறியீடு] லீனியர்_வெலோசிட்டி [/குறியீடு] என்பது நொடிக்கு பிக்சல்களில் திசைவேக திசையன் ஆகும். [முறை MOVE_AND_COLLIDE] ஐப் போலன்றி, நீங்கள் [i] [/i] ஐ [குறியீடு] டெல்டா [/குறியீடு] மூலம் பெருக்கக்கூடாது - இயற்பியல் இயந்திரம் வேகத்தைப் பயன்படுத்துகிறது.\n"
+" . [குறியீடு] திசையன் 2 (0, 0) [/குறியீடு] இன் இயல்புநிலை மதிப்புக்கு அமைக்கப்பட்டால், எல்லாம் ஒரு சுவராக கருதப்படுகிறது. டாப் பேரூர் கேம்களுக்கு இது பயனுள்ளதாக இருக்கும்.\n"
+" [குறியீடு] stop_on_slope [/code] [குறியீடு] உண்மை [/குறியீடு] என்றால், நீங்கள் [குறியீடு] நேரியல்_வலோசிட்டி [/குறியீடு] இல் ஈர்ப்பு சேர்க்கும்போது உடல் சரிவுகளில் சறுக்காது, உடல் அசையாமல் நிற்கிறது.\n"
+" உடல் மோதினால், அது திசையை அதிகபட்சமாக [குறியீடு] அதிகபட்சம்_ ச்லைடுகள் [/குறியீடு] நிறுத்துவதற்கு முன்பு மாற்றும்.\n"
+" . இயல்புநிலை மதிப்பு 45 டிகிரிக்கு சமம்.\n"
+" . .\n"
+" ச்லைடு மோதல் ஏற்பட்டால் [குறியீடு] நேரியல்_வலோசிட்டி [/குறியீடு] திசையன், சுழற்றப்பட்ட மற்றும்/அல்லது அளவிடப்படுகிறது. நிகழ்ந்த மோதல்களைப் பற்றிய விரிவான தகவல்களைப் பெற, [முறை Get_Slide_Collision] ஐப் பயன்படுத்தவும்.\n"
+" உடல் நகரும் தளத்தைத் தொடும்போது, ​​தளத்தின் விரைவு தானாகவே உடல் இயக்கத்தில் சேர்க்கப்படும். தளத்தின் இயக்கம் காரணமாக மோதல் ஏற்பட்டால், அது எப்போதும் ச்லைடு மோதல்களில் முதலில் இருக்கும்."
 
 #: docs/KinematicBody2D.xml
 msgid ""
 "Moves the body while keeping it attached to slopes. Similar to [method move_and_slide].\n"
 "As long as the [code]snap[/code] vector is in contact with the ground, the body will remain attached to the surface. This means you must disable snap in order to jump, for example. You can do this by setting [code]snap[/code] to [code](0, 0)[/code] or by using [method move_and_slide] instead."
 msgstr ""
+"உடலை சரிவுகளுடன் இணைக்கும்போது நகர்த்துகிறது. [முறை mov_and_slide] க்கு ஒத்ததாகும்.\n"
+" [குறியீடு] ச்னாப் [/குறியீடு] திசையன் தரையுடன் தொடர்பு கொள்ளும் வரை, உடல் மேற்பரப்பில் இணைக்கப்பட்டிருக்கும். உதாரணமாக, நீங்கள் ச்னாப்பை முடக்க வேண்டும் என்பதே இதன் பொருள். [குறியீடு] ச்னாப் [/குறியீடு] ஐ [குறியீடு] (0, 0) [/குறியீடு] என அமைப்பதன் மூலமாகவோ அல்லது அதற்கு பதிலாக [முறை move_and_slide] ஐப் பயன்படுத்துவதன் மூலமாகவோ இதைச் செய்யலாம்."
 
 #: docs/KinematicBody2D.xml
 msgid ""
 "Checks for collisions without moving the body. Virtually sets the node's position, scale and rotation to that of the given [Transform2D], then tries to move the body along the vector [code]rel_vec[/code]. Returns [code]true[/code] if a collision would stop the body from moving along the whole path.\n"
 "Use [method move_and_collide] instead for detecting collision with touching bodies."
 msgstr ""
+"உடலை நகர்த்தாமல் மோதல்களுக்கான காசோலைகள். கொடுக்கப்பட்ட [உருமாற்றம் 2 டி] க்கு முனையின் நிலை, அளவு மற்றும் சுழற்சியை கிட்டத்தட்ட அமைக்கிறது, பின்னர் உடலை திசையன் [குறியீடு] rel_vec [/code] உடன் நகர்த்த முயற்சிக்கிறது. ஒரு மோதல் உடல் முழு பாதையிலும் நகர்வதைத் தடுக்கும் என்றால் [குறியீடு] உண்மை [/குறியீடு] திரும்பும்.\n"
+" தொடும் உடல்களுடன் மோதலைக் கண்டறிவதற்கு பதிலாக [முறை mov_and_collide] ஐப் பயன்படுத்தவும்."
 
 #: docs/KinematicCollision.xml
 msgid "Collision data for [KinematicBody] collisions."
-msgstr ""
+msgstr "[இயக்கவியல் உடல்] மோதலுக்கான மோதல் தரவு."
 
 #: docs/KinematicCollision.xml
 msgid ""
 "Contains collision data for [KinematicBody] collisions. When a [KinematicBody] is moved using [method KinematicBody.move_and_collide], it stops if it detects a collision with another body. If a collision is detected, a KinematicCollision object is returned.\n"
 "This object contains information about the collision, including the colliding object, the remaining motion, and the collision position. This information can be used to calculate a collision response."
 msgstr ""
+"[கினெமடிக் பாடி] மோதல்களுக்கான மோதல் தரவைக் கொண்டுள்ளது. [Ginematicbody] [முறை ginematicbody.move_and_collide] ஐப் பயன்படுத்தி நகர்த்தப்படும்போது, ​​அது மற்றொரு உடலுடன் மோதியதைக் கண்டறிந்தால் அது நிறுத்தப்படும். மோதல் கண்டறியப்பட்டால், ஒரு கினெமாடிக் கோலிசன் பொருள் திருப்பித் தரப்படுகிறது.\n"
+" இந்த பொருளில் மோதல் பற்றிய தகவல்கள் உள்ளன, இதில் மோதல் பொருள், மீதமுள்ள இயக்கம் மற்றும் மோதல் நிலை ஆகியவை அடங்கும். மோதல் பதிலைக் கணக்கிட இந்த செய்தி பயன்படுத்தப்படலாம்."
 
 #: docs/KinematicCollision.xml
 msgid ""
 "The collision angle according to [code]up_direction[/code], which is "
 "[code]Vector3.UP[/code] by default. This value is always positive."
 msgstr ""
+"[குறியீடு] Up_direction [/code] இன் படி மோதல் கோணம், இது இயல்பாக [குறியீடு] "
+"vecter3.up [/code] ஆகும். இந்த மதிப்பு எப்போதும் நேர்மறையானது."
 
 #: docs/KinematicCollision.xml docs/KinematicCollision2D.xml
 msgid "The colliding body."
-msgstr ""
+msgstr "மோதும் உடல்."
 
 #: docs/KinematicCollision.xml docs/KinematicCollision2D.xml
 msgid ""
 "The colliding body's unique instance ID. See [method "
 "Object.get_instance_id]."
 msgstr ""
+"மோதும் உடலின் தனித்துவமான நிகழ்வு ஐடி. [முறை பொருள். Get_Instance_id] ஐப் "
+"பார்க்கவும்."
 
 #: docs/KinematicCollision.xml docs/KinematicCollision2D.xml
 msgid "The colliding body's metadata. See [Object]."
-msgstr ""
+msgstr "மோதும் உடலின் மேனிலை தரவு. [பொருள்] பார்க்கவும்."
 
 #: docs/KinematicCollision.xml
 msgid "The colliding body's [RID] used by the [PhysicsServer]."
-msgstr ""
+msgstr "[இயற்பியல் சேவையகம்] பயன்படுத்தும் மோதல் உடலின் [UD]."
 
 #: docs/KinematicCollision.xml docs/KinematicCollision2D.xml
 msgid "The colliding body's shape."
-msgstr ""
+msgstr "மோதும் உடலின் வடிவம்."
 
 #: docs/KinematicCollision.xml
 msgid "The colliding shape's index. See [CollisionObject]."
-msgstr ""
+msgstr "மோதும் வடிவத்தின் குறியீடு. [CORLISIONOBJECT] ஐப் பார்க்கவும்."
 
 #: docs/KinematicCollision.xml docs/KinematicCollision2D.xml
 msgid "The colliding object's velocity."
-msgstr ""
+msgstr "மோதும் பொருளின் விரைவு."
 
 #: docs/KinematicCollision.xml docs/KinematicCollision2D.xml
 msgid "The moving object's colliding shape."
-msgstr ""
+msgstr "நகரும் பொருளின் மோதல் வடிவம்."
 
 #: docs/KinematicCollision.xml docs/KinematicCollision2D.xml
 msgid "The colliding body's shape's normal at the point of collision."
-msgstr ""
+msgstr "மோதலின் கட்டத்தில் மோதும் உடல் வடிவம் இயல்பானது."
 
 #: docs/KinematicCollision.xml docs/KinematicCollision2D.xml
 msgid "The point of collision, in global coordinates."
-msgstr ""
+msgstr "உலகளாவிய ஒருங்கிணைப்புகளில், மோதலின் புள்ளி."
 
 #: docs/KinematicCollision.xml docs/KinematicCollision2D.xml
 msgid "The moving object's remaining movement vector."
-msgstr ""
+msgstr "நகரும் பொருளின் மீதமுள்ள இயக்க திசையன்."
 
 #: docs/KinematicCollision.xml docs/KinematicCollision2D.xml
 msgid "The distance the moving object traveled before collision."
-msgstr ""
+msgstr "நகரும் பொருள் மோதலுக்கு முன் பயணித்த தூரம்."
 
 #: docs/KinematicCollision2D.xml
 msgid "Collision data for [KinematicBody2D] collisions."
-msgstr ""
+msgstr "[Ginematicbody2d] மோதல்களுக்கான மோதல் தரவு."
 
 #: docs/KinematicCollision2D.xml
 msgid ""
 "Contains collision data for [KinematicBody2D] collisions. When a [KinematicBody2D] is moved using [method KinematicBody2D.move_and_collide], it stops if it detects a collision with another body. If a collision is detected, a KinematicCollision2D object is returned.\n"
 "This object contains information about the collision, including the colliding object, the remaining motion, and the collision position. This information can be used to calculate a collision response."
 msgstr ""
+"[Ginematicbody2d] மோதல்களுக்கான மோதல் தரவைக் கொண்டுள்ளது. [Cinematicbody2d] [முறை ginematicbody2d.move_and_collide] ஐப் பயன்படுத்தி நகர்த்தப்படும்போது, ​​அது மற்றொரு உடலுடன் மோதியதைக் கண்டறிந்தால் அது நிறுத்தப்படும். மோதல் கண்டறியப்பட்டால், ஒரு ginematcatcolision2d பொருள் திருப்பித் தரப்படுகிறது.\n"
+" இந்த பொருளில் மோதல் பற்றிய தகவல்கள் உள்ளன, இதில் மோதல் பொருள், மீதமுள்ள இயக்கம் மற்றும் மோதல் நிலை ஆகியவை அடங்கும். மோதல் பதிலைக் கணக்கிட இந்த செய்தி பயன்படுத்தப்படலாம்."
 
 #: docs/KinematicCollision2D.xml
 msgid ""
 "The collision angle according to [code]up_direction[/code], which is "
 "[code]Vector2.UP[/code] by default. This value is always positive."
 msgstr ""
+"[குறியீடு] Up_direction [/code] இன் படி மோதல் கோணம், இது இயல்பாக [குறியீடு] "
+"vecter2.up [/code] ஆகும். இந்த மதிப்பு எப்போதும் நேர்மறையானது."
 
 #: docs/KinematicCollision2D.xml
 msgid "The colliding body's [RID] used by the [Physics2DServer]."
-msgstr ""
+msgstr "[இயற்பியல் 2server] பயன்படுத்தும் மோதல் உடலின் [UD]."
 
 #: docs/KinematicCollision2D.xml
 msgid "The colliding shape's index. See [CollisionObject2D]."
-msgstr ""
+msgstr "மோதும் வடிவத்தின் குறியீடு. [CollisionObject2d] ஐப் பார்க்கவும்."
 
 #: docs/Label.xml
 msgid ""
 "Displays plain text in a line or wrapped inside a rectangle. For formatted "
 "text, use [RichTextLabel]."
 msgstr ""
+"எளிய உரையை ஒரு வரியில் காட்டுகிறது அல்லது ஒரு செவ்வகத்திற்குள் "
+"மூடப்பட்டிருக்கும். வடிவமைக்கப்பட்ட உரைக்கு, [richtextLabel] ஐப் "
+"பயன்படுத்தவும்."
 
 #: docs/Label.xml
 msgid ""
@@ -37126,32 +37162,42 @@ msgid ""
 "[b]Note:[/b] Contrarily to most other [Control]s, Label's [member Control.mouse_filter] defaults to [constant Control.MOUSE_FILTER_IGNORE] (i.e. it doesn't react to mouse input events). This implies that a label won't display any configured [member Control.hint_tooltip], unless you change its mouse filter.\n"
 "[b]Note:[/b] Unicode characters after [code]0xffff[/code] (such as most emoji) are [i]not[/i] supported on Windows. They will display as unknown characters instead."
 msgstr ""
+"சிட்டை திரையில் எளிய உரையைக் காட்டுகிறது. இது கிடைமட்ட மற்றும் செங்குத்து சீரமைப்பு மீது கட்டுப்பாட்டை வழங்குகிறது மற்றும் முனையின் எல்லைக்குள் உரையை மடிக்க முடியும். இது தைரியமான, சாய்வு அல்லது பிற வடிவமைப்பை ஆதரிக்காது. அதற்காக, அதற்கு பதிலாக [ரிச் டெக்ச்ட்லேபிள்] ஐப் பயன்படுத்தவும்.\n"
+" [b] குறிப்பு: [/b] பிற [கட்டுப்பாடு] கள், லேபிளின் [உறுப்பினர் கட்டுப்பாடு. நீங்கள் அதன் சுட்டி வடிப்பானை மாற்றாவிட்டால், ஒரு சிட்டை கட்டமைக்கப்பட்ட [உறுப்பினர் கட்டுப்பாடு. Hint_tooltip] ஐக் காட்டாது என்பதை இது குறிக்கிறது.\n"
+" . அவை அதற்கு பதிலாக அறியப்படாத எழுத்துக்களாகக் காண்பிக்கப்படும்."
 
 #: docs/Label.xml
 msgid "Returns the amount of lines of text the Label has."
-msgstr ""
+msgstr "லேபிளின் உரையின் வரிகளின் அளவை வழங்குகிறது."
 
 #: docs/Label.xml
 msgid "Returns the font size in pixels."
-msgstr ""
+msgstr "எழுத்துரு அளவை பிக்சல்களில் வழங்குகிறது."
 
 #: docs/Label.xml
 msgid ""
 "Returns the total number of printable characters in the text (excluding "
 "spaces and newlines)."
 msgstr ""
+"உரையில் அச்சிடக்கூடிய மொத்த எழுத்துக்களின் எண்ணிக்கையை வழங்குகிறது "
+"(இடைவெளிகள் மற்றும் புதிய லைன்களைத் தவிர்த்து)."
 
 #: docs/Label.xml
 msgid ""
 "Returns the number of lines shown. Useful if the [Label]'s height cannot "
 "currently display all lines."
 msgstr ""
+"காட்டப்பட்டுள்ள வரிகளின் எண்ணிக்கையை வழங்குகிறது. [லேபிள்] இன் உயரம் தற்போது"
+" அனைத்து வரிகளையும் காட்ட முடியாவிட்டால் பயனுள்ளதாக இருக்கும்."
 
 #: docs/Label.xml
 msgid ""
 "Controls the text's horizontal align. Supports left, center, right, and "
 "fill, or justify. Set it to one of the [enum Align] constants."
 msgstr ""
+"உரையின் கிடைமட்ட சீரமைப்பைக் கட்டுப்படுத்துகிறது. இடது, நடுவண், வலது, "
+"மற்றும் நிரப்ப, அல்லது நியாயப்படுத்துதல் ஆகியவற்றை ஆதரிக்கிறது. [Enum align]"
+" மாறிலிகளில் ஒன்றை அமைக்கவும்."
 
 #: docs/Label.xml
 msgid ""
@@ -37159,22 +37205,30 @@ msgid ""
 "If you resize the node, it will change its height automatically to show all "
 "the text."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், உரையை முனையின் எல்லைக்குட்பட்ட "
+"செவ்வகத்திற்குள் மூடுகிறது. நீங்கள் முனையை அளவை மாற்றினால், எல்லா உரையையும் "
+"காட்ட அதன் உயரத்தை தானாக மாற்றும்."
 
 #: docs/Label.xml
 msgid ""
 "If [code]true[/code], the Label only shows the text that fits inside its "
 "bounding rectangle and will clip text horizontally."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், சிட்டை அதன் எல்லை செவ்வகத்திற்குள் "
+"பொருந்தக்கூடிய உரையை மட்டுமே காட்டுகிறது மற்றும் உரையை கிடைமட்டமாக கிளிப் "
+"செய்யும்."
 
 #: docs/Label.xml
 msgid ""
 "The node ignores the first [code]lines_skipped[/code] lines before it starts"
 " to display text."
 msgstr ""
+"உரையைக் காண்பிக்கத் தொடங்குவதற்கு முன்பு முதல் [குறியீடு] வரிகள்_ச்கி "
+"செய்யப்பட்ட [/குறியீடு] வரிகளை முனை புறக்கணிக்கிறது."
 
 #: docs/Label.xml
 msgid "Limits the lines of text the node shows on screen."
-msgstr ""
+msgstr "உரையின் வரிகளைக் கட்டுப்படுத்துகிறது முனை திரையில் காட்டுகிறது."
 
 #: docs/Label.xml
 msgid ""
@@ -37183,148 +37237,176 @@ msgid ""
 "characters will display on screen. Useful to animate the text in a dialog "
 "box."
 msgstr ""
+"புலப்படும் எழுத்துக்களின் அளவைக் கட்டுப்படுத்துகிறது. நீங்கள் [குறியீடு] "
+"சதவீதம்_சிபிள் [/குறியீட்டை] 0.5 ஆக அமைத்தால், உரையின் எழுத்துக்களில் பாதி "
+"வரை மட்டுமே திரையில் காண்பிக்கப்படும். உரையாடல் பெட்டியில் உரையை உயிரூட்ட "
+"பயனுள்ளதாக இருக்கும்."
 
 #: docs/Label.xml
 msgid "The text to display on screen."
-msgstr ""
+msgstr "திரையில் காண்பிக்கப்பட வேண்டிய உரை."
 
 #: docs/Label.xml
 msgid "If [code]true[/code], all the text displays as UPPERCASE."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், அனைத்து உரையும் பெரிய எழுத்துக்களாகக் "
+"காண்பிக்கப்படும்."
 
 #: docs/Label.xml
 msgid ""
 "Controls the text's vertical align. Supports top, center, bottom, and fill. "
 "Set it to one of the [enum VAlign] constants."
 msgstr ""
+"உரையின் செங்குத்து சீரமைப்பைக் கட்டுப்படுத்துகிறது. மேல், நடுவண், கீழ் "
+"மற்றும் நிரப்புதல் ஆகியவற்றை ஆதரிக்கிறது. [Enum Valign] மாறிலிகளில் ஒன்றை "
+"அமைக்கவும்."
 
 #: docs/Label.xml
 msgid "Restricts the number of characters to display. Set to -1 to disable."
 msgstr ""
+"காண்பிக்க எழுத்துக்களின் எண்ணிக்கையை கட்டுப்படுத்துகிறது. முடக்க -1 ஆக "
+"அமைக்கவும்."
 
 #: docs/Label.xml
 msgid "Align rows to the left (default)."
-msgstr ""
+msgstr "வரிசைகளை இடதுபுறமாக சீரமைக்கவும் (இயல்புநிலை)."
 
 #: docs/Label.xml
 msgid "Align rows centered."
-msgstr ""
+msgstr "வரிசைகளை மையமாகக் கொண்டு சீரமைக்கவும்."
 
 #: docs/Label.xml
 msgid "Align rows to the right."
-msgstr ""
+msgstr "வரிசைகளை வலதுபுறமாக சீரமைக்கவும்."
 
 #: docs/Label.xml
 msgid "Expand row whitespaces to fit the width."
-msgstr ""
+msgstr "அகலத்திற்கு ஏற்றவாறு வரிசை இடைவெளிகளை விரிவாக்குங்கள்."
 
 #: docs/Label.xml
 msgid "Align the whole text to the top."
-msgstr ""
+msgstr "முழு உரையையும் மேலே சீரமைக்கவும்."
 
 #: docs/Label.xml
 msgid "Align the whole text to the center."
-msgstr ""
+msgstr "முழு உரையையும் மையத்துடன் சீரமைக்கவும்."
 
 #: docs/Label.xml
 msgid "Align the whole text to the bottom."
-msgstr ""
+msgstr "முழு உரையையும் கீழே சீரமைக்கவும்."
 
 #: docs/Label.xml
 msgid "Align the whole text by spreading the rows."
-msgstr ""
+msgstr "வரிசைகளைப் பரப்புவதன் மூலம் முழு உரையையும் சீரமைக்கவும்."
 
 #: docs/Label.xml
 msgid "Default text [Color] of the [Label]."
-msgstr ""
+msgstr "[லேபிள்] இன் இயல்புநிலை உரை [வண்ணம்]."
 
 #: docs/Label.xml
 msgid "[Color] of the text's shadow effect."
-msgstr ""
+msgstr "உரையின் நிழல் விளைவின் [நிறம்]."
 
 #: docs/Label.xml
 msgid "The tint of [Font]'s outline. See [member DynamicFont.outline_color]."
-msgstr ""
+msgstr "[Font] இன் அவுட்லைன். [உறுப்பினர் டைனமிக்ஃபோன்ட்."
 
 #: docs/Label.xml
 msgid "Vertical space between lines in multiline [Label]."
-msgstr ""
+msgstr "மல்டிலைன் [லேபிள்] இல் உள்ள கோடுகளுக்கு இடையில் செங்குத்து இடைவெளி."
 
 #: docs/Label.xml
 msgid ""
 "Boolean value. If set to 1 ([code]true[/code]), the shadow will be displayed"
 " around the whole text as an outline."
 msgstr ""
+"பூலியன் மதிப்பு. 1 ([குறியீடு] உண்மை [/குறியீடு]) என அமைக்கப்பட்டால், நிழல் "
+"முழு உரையைச் சுற்றி ஒரு வெளிப்புறமாக காண்பிக்கப்படும்."
 
 #: docs/Label.xml
 msgid "The horizontal offset of the text's shadow."
-msgstr ""
+msgstr "உரையின் நிழலின் கிடைமட்ட ஆஃப்செட்."
 
 #: docs/Label.xml
 msgid "The vertical offset of the text's shadow."
-msgstr ""
+msgstr "உரையின் நிழலின் செங்குத்து ஆஃப்செட்."
 
 #: docs/Label.xml
 msgid "[Font] used for the [Label]'s text."
-msgstr ""
+msgstr "[எழுத்துரு] [லேபிள்] உரைக்கு பயன்படுத்தப்படுகிறது."
 
 #: docs/Label.xml
 msgid "Background [StyleBox] for the [Label]."
-msgstr ""
+msgstr "[லேபிள்] க்கான பின்னணி [ச்டைல் ​​பாக்ச்]."
 
 #: docs/LargeTexture.xml
 msgid ""
 "[i]Deprecated.[/i] A [Texture] capable of storing many smaller textures with"
 " offsets."
 msgstr ""
+"[i] நீக்கப்பட்டது. [/i] ஒரு [அமைப்பு] பல சிறிய அமைப்புகளை ஆஃப்செட்களுடன் "
+"சேமிக்கும் திறன் கொண்டது."
 
 #: docs/LargeTexture.xml
 msgid ""
 "A [Texture] capable of storing many smaller textures with offsets.\n"
 "You can dynamically add pieces ([Texture]s) to this [LargeTexture] using different offsets."
 msgstr ""
+"பல சிறிய அமைப்புகளை ஆஃப்செட்களுடன் சேமிக்கும் திறன் கொண்ட ஒரு [அமைப்பு].\n"
+" வெவ்வேறு ஆஃப்செட்களைப் பயன்படுத்தி இந்த [லார்செட் டெக்ச்டெர்] இல் துண்டுகளை ([அமைப்பு] கள்) மாறும் வகையில் சேர்க்கலாம்."
 
 #: docs/LargeTexture.xml
 msgid ""
 "Adds [code]texture[/code] to this [LargeTexture], starting on offset "
 "[code]ofs[/code]."
 msgstr ""
+"இந்த [லார்செட் டெக்ச்டெர்] இல் [குறியீடு] அமைப்பு [/குறியீடு] சேர்க்கிறது, "
+"ஆஃப்செட் [குறியீடு] OFS [/குறியீடு] இல் தொடங்குகிறது."
 
 #: docs/LargeTexture.xml
 msgid "Clears the [LargeTexture]."
-msgstr ""
+msgstr "[லார்செட் டெக்ச்டெர்] ஐ அழிக்கிறது."
 
 #: docs/LargeTexture.xml
 msgid "Returns the number of pieces currently in this [LargeTexture]."
 msgstr ""
+"இந்த [லார்செட் டெக்ச்டெர்] இல் தற்போது உள்ள துண்டுகளின் எண்ணிக்கையை "
+"வழங்குகிறது."
 
 #: docs/LargeTexture.xml
 msgid "Returns the offset of the piece with the index [code]idx[/code]."
 msgstr ""
+"குறியீட்டு [குறியீடு] IDX [/code] உடன் துண்டின் ஆஃப்செட்டை வழங்குகிறது."
 
 #: docs/LargeTexture.xml
 msgid "Returns the [Texture] of the piece with the index [code]idx[/code]."
 msgstr ""
+"குறியீட்டின் [கட்டமைப்பை] குறியீட்டு [குறியீடு] IDX [/code] உடன் "
+"வழங்குகிறது."
 
 #: docs/LargeTexture.xml
 msgid ""
 "Sets the offset of the piece with the index [code]idx[/code] to "
 "[code]ofs[/code]."
 msgstr ""
+"குறியீட்டின் ஆஃப்செட்டை குறியீட்டு [குறியீடு] IDX [/code] உடன் [குறியீடு] "
+"OFS [/code] க்கு அமைக்கிறது."
 
 #: docs/LargeTexture.xml
 msgid ""
 "Sets the [Texture] of the piece with index [code]idx[/code] to "
 "[code]texture[/code]."
 msgstr ""
+"குறியீட்டின் [அமைப்பு] ஐ குறியீட்டு [குறியீடு] IDX [/code] உடன் [குறியீடு] "
+"அமைப்புக்கு [/குறியீடு] அமைக்கிறது."
 
 #: docs/LargeTexture.xml
 msgid "Sets the size of this [LargeTexture]."
-msgstr ""
+msgstr "இந்த [லார்செட் டெக்ச்டெர்] அளவை அமைக்கிறது."
 
 #: docs/Light.xml
 msgid "Provides a base class for different kinds of light nodes."
-msgstr ""
+msgstr "பல்வேறு வகையான ஒளி முனைகளுக்கு ஒரு அடிப்படை வகுப்பை வழங்குகிறது."
 
 #: docs/Light.xml
 msgid ""
@@ -37333,53 +37415,65 @@ msgid ""
 " from it. Light contains the common variables and parameters used for "
 "lighting."
 msgstr ""
+"ஒளி என்பது [i] சுருக்கம் [/i] ஒளி முனைகளுக்கான அடிப்படை வகுப்பு. இதை நிறுவ "
+"முடியாது என்பதால், அதை நேரடியாகப் பயன்படுத்தக்கூடாது. பிற வகை ஒளி முனைகள் "
+"அதிலிருந்து பெறுகின்றன. ஒளியில் பயன்படுத்தப்படும் பொதுவான மாறிகள் மற்றும் "
+"அளவுருக்கள் ஒளியைக் கொண்டுள்ளன."
 
 #: docs/Light.xml
 msgid "Returns the value of the specified [enum Light.Param] parameter."
-msgstr ""
+msgstr "குறிப்பிட்ட [enum light.param] அளவுருவின் மதிப்பை வழங்குகிறது."
 
 #: docs/Light.xml
 msgid "Sets the value of the specified [enum Light.Param] parameter."
-msgstr ""
+msgstr "குறிப்பிட்ட [enum light.param] அளவுருவின் மதிப்பை அமைக்கிறது."
 
 #: docs/Light.xml
 msgid ""
 "If [code]true[/code], the light only appears in the editor and will not be "
 "visible at runtime."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், ஒளி எடிட்டரில் மட்டுமே தோன்றும் "
+"மற்றும் இயக்க நேரத்தில் தெரியவில்லை."
 
 #: docs/Light.xml
 msgid "The light's bake mode. See [enum BakeMode]."
-msgstr ""
+msgstr "ஒளியின் சுட்டுக்கொள்ள பயன்முறை. [Enum pakemode] ஐப் பார்க்கவும்."
 
 #: docs/Light.xml
 msgid ""
 "The light's color. An [i]overbright[/i] color can be used to achieve a "
 "result equivalent to increasing the light's [member light_energy]."
 msgstr ""
+"ஒளியின் நிறம். ஒளியின் [உறுப்பினர் லைட்_இனெர்சி] அதிகரிப்பதற்கு சமமான முடிவை"
+" அடைய ஒரு [i] ஓவர் பிரைட் [/i] வண்ணத்தைப் பயன்படுத்தலாம்."
 
 #: docs/Light.xml
 msgid "The light will affect objects in the selected layers."
-msgstr ""
+msgstr "தேர்ந்தெடுக்கப்பட்ட அடுக்குகளில் உள்ள பொருட்களை ஒளி பாதிக்கும்."
 
 #: docs/Light.xml
 msgid ""
 "The light's strength multiplier (this is not a physical unit). For "
 "[OmniLight] and [SpotLight], changing this value will only change the light "
 "color's intensity, not the light's radius."
-msgstr ""
+msgstr "ஒளியின் வலிமை பெருக்கி (இது ஒரு உடல் அலகு அல்ல). ."
 
 #: docs/Light.xml
 msgid ""
 "Secondary multiplier used with indirect light (light bounces). This works on"
 " both [BakedLightmap] and [GIProbe]."
 msgstr ""
+"மறைமுக ஒளியுடன் பயன்படுத்தப்படும் இரண்டாம் நிலை பெருக்கி (ஒளி பவுன்ச்). இது "
+"[வேகவைத்த லைட்மேப்] மற்றும் [கிப்ரோப்] இரண்டிலும் வேலை செய்கிறது."
 
 #: docs/Light.xml
 msgid ""
 "If [code]true[/code], the light's effect is reversed, darkening areas and "
 "casting bright shadows."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், ஒளியின் விளைவு தலைகீழாக "
+"மாற்றப்படுகிறது, இருண்ட பகுதிகள் மற்றும் பிரகாசமான நிழல்களை செலுத்துகிறது."
 
 #: docs/Light.xml
 msgid ""
@@ -37388,6 +37482,10 @@ msgid ""
 "BAKE_ALL]. Increasing this value will make the shadows appear blurrier. This"
 " can be used to simulate area lights to an extent."
 msgstr ""
+"கிளர்ச்சி இயந்திர அலகுகளில் ஒளியின் அளவு. வேகவைத்த லைட்மாப்களில் மட்டுமே "
+"கருதப்படுகிறது, [உறுப்பினர் லைட்_பேக்_மோட்] [நிலையான சுட்டுக்கொள்ள_அல்] என "
+"அமைக்கப்பட்டால் மட்டுமே. இந்த மதிப்பை அதிகரிப்பது நிழல்கள் மங்கலாகத் "
+"தோன்றும். பகுதி விளக்குகளை ஒரு அளவிற்கு உருவகப்படுத்த இதைப் பயன்படுத்தலாம்."
 
 #: docs/Light.xml
 msgid ""
@@ -37396,6 +37494,10 @@ msgid ""
 "emission, this can be used to avoid unrealistic reflections when placing "
 "lights above an emissive surface."
 msgstr ""
+"ஒளியால் பாதிக்கப்பட்ட பொருள்களில் ஏகப்பட்ட குமிழியின் தீவிரம். [குறியீடு] 0 "
+"[/குறியீடு] இல், ஒளி தூய பரவலான ஒளியாக மாறும். உமிழ்வை பேக்கிங் செய்யாதபோது,"
+" ​​ஒரு உமிழும் மேற்பரப்புக்கு மேலே விளக்குகளை வைக்கும்போது நம்பத்தகாத "
+"பிரதிபலிப்புகளைத் தவிர்க்க இது பயன்படுத்தப்படலாம்."
 
 #: docs/Light.xml
 msgid ""
