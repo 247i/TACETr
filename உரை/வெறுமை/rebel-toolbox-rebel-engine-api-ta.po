@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Tamil (Rebel Toolbox)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-28 07:29+0200\n"
-"PO-Revision-Date: 2025-03-05 07:02+0530\n"
+"PO-Revision-Date: 2025-03-05 08:26+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rebel-toolbox/rebel-engine-api/ta/>\n"
 "Language: ta\n"
@@ -32947,13 +32947,15 @@ msgstr ""
 
 #: docs/HTTPRequest.xml
 msgid "Returns the amount of bytes this HTTPRequest downloaded."
-msgstr ""
+msgstr "இந்த HTTP கோரிக்கை பதிவிறக்கம் பைட்டுகளின் அளவைத் தரவும்."
 
 #: docs/HTTPRequest.xml
 msgid ""
 "Returns the current status of the underlying [HTTPClient]. See [enum "
 "HTTPClient.Status]."
 msgstr ""
+"[Httpclient] இன் தற்போதைய நிலையை வழங்குகிறது. [Enum httpclient.status] ஐப் "
+"பார்க்கவும்."
 
 #: docs/HTTPRequest.xml
 msgid ""
@@ -32961,87 +32963,102 @@ msgid ""
 "Returns [constant OK] if request is successfully created. (Does not imply that the server has responded), [constant ERR_UNCONFIGURED] if not in the tree, [constant ERR_BUSY] if still processing previous request, [constant ERR_INVALID_PARAMETER] if given string is not a valid URL format, or [constant ERR_CANT_CONNECT] if not using thread and the [HTTPClient] cannot connect to host.\n"
 "[b]Note:[/b] When [code]method[/code] is [constant HTTPClient.METHOD_GET], the payload sent via [code]request_data[/code] might be ignored by the server or even cause the server to reject the request (check [url=https://datatracker.ietf.org/doc/html/rfc7231#section-4.3.1]RFC 7231 section 4.3.1[/url] for more details). As a workaround, you can send data as a query string in the URL. See [method String.http_escape] for an example."
 msgstr ""
+"[Httpclient] இல் கோரிக்கையை உருவாக்குகிறது. உள்ளமைவு பிழைகள் எதுவும் இல்லை என்றால், அது [முறை httpclient.connect_to_host] ஐப் பயன்படுத்தி இணைக்க முயற்சிக்கிறது மற்றும் அளவுருக்களை [முறை httpclient.request] இல் அனுப்புகிறது.\n"
+" கோரிக்கை வெற்றிகரமாக உருவாக்கப்பட்டால் [நிலையான சரி]. .\n"
+" . . ஒரு பணித்தொகுப்பாக, நீங்கள் முகவரி இல் வினவல் சரமாக தரவை அனுப்பலாம். எடுத்துக்காட்டுக்கு [முறை string.http_escape] ஐப் பார்க்கவும்."
 
 #: docs/HTTPRequest.xml
 msgid ""
 "Creates request on the underlying [HTTPClient] using a raw array of bytes for the request body. If there is no configuration errors, it tries to connect using [method HTTPClient.connect_to_host] and passes parameters onto [method HTTPClient.request].\n"
 "Returns [constant OK] if request is successfully created. (Does not imply that the server has responded), [constant ERR_UNCONFIGURED] if not in the tree, [constant ERR_BUSY] if still processing previous request, [constant ERR_INVALID_PARAMETER] if given string is not a valid URL format, or [constant ERR_CANT_CONNECT] if not using thread and the [HTTPClient] cannot connect to host."
 msgstr ""
+"கோரிக்கை உடலுக்கு பைட்டுகளின் மூல வரிசையைப் பயன்படுத்தி [httpclient] இல் கோரிக்கையை உருவாக்குகிறது. உள்ளமைவு பிழைகள் எதுவும் இல்லை என்றால், அது [முறை httpclient.connect_to_host] ஐப் பயன்படுத்தி இணைக்க முயற்சிக்கிறது மற்றும் அளவுருக்களை [முறை httpclient.request] இல் அனுப்புகிறது.\n"
+" கோரிக்கை வெற்றிகரமாக உருவாக்கப்பட்டால் [நிலையான சரி]. ."
 
 #: docs/HTTPRequest.xml
 msgid "Maximum allowed size for response bodies."
-msgstr ""
+msgstr "மறுமொழி அமைப்புகளுக்கு அதிகபட்சமாக அனுமதிக்கப்பட்ட அளவு."
 
 #: docs/HTTPRequest.xml
 msgid ""
 "The size of the buffer used and maximum bytes to read per iteration. See [member HTTPClient.read_chunk_size].\n"
 "Set this to a lower value (e.g. 4096 for 4 KiB) when downloading small files to decrease memory usage at the cost of download speeds."
 msgstr ""
+"பயன்படுத்தப்பட்ட இடையகத்தின் அளவு மற்றும் மறு செய்கைக்கு படிக்க அதிகபட்ச பைட்டுகள். [உறுப்பினர் httpclient.read_chunk_size] ஐப் பார்க்கவும்.\n"
+" பதிவிறக்க வேகத்தின் செலவில் நினைவக பயன்பாட்டைக் குறைக்க சிறிய கோப்புகளைப் பதிவிறக்கும்போது இதை குறைந்த மதிப்புக்கு (எ.கா. 4 KIB க்கு 4096) அமைக்கவும்."
 
 #: docs/HTTPRequest.xml
 msgid "The file to download into. Will output any received file into it."
 msgstr ""
+"பதிவிறக்கம் செய்ய வேண்டிய கோப்பு. பெறப்பட்ட எந்தவொரு கோப்பையும் அதில் "
+"வெளியிடும்."
 
 #: docs/HTTPRequest.xml
 msgid "Maximum number of allowed redirects."
-msgstr ""
+msgstr "அனுமதிக்கப்பட்ட வழிமாற்றுகளின் அதிகபட்ச எண்ணிக்கை."
 
 #: docs/HTTPRequest.xml
 msgid "If [code]true[/code], multithreading is used to improve performance."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், செயல்திறனை மேம்படுத்த மல்டித்ரெடிங் "
+"பயன்படுத்தப்படுகிறது."
 
 #: docs/HTTPRequest.xml
 msgid "Emitted when a request is completed."
-msgstr ""
+msgstr "கோரிக்கை முடிந்ததும் உமிழப்படும்."
 
 #: docs/HTTPRequest.xml
 msgid "Request successful."
-msgstr ""
+msgstr "வெற்றிகரமாக கோருங்கள்."
 
 #: docs/HTTPRequest.xml
 msgid "Request failed while connecting."
-msgstr ""
+msgstr "இணைக்கும்போது கோரிக்கை தோல்வியடைந்தது."
 
 #: docs/HTTPRequest.xml
 msgid "Request failed while resolving."
-msgstr ""
+msgstr "தீர்க்கும்போது கோரிக்கை தோல்வியடைந்தது."
 
 #: docs/HTTPRequest.xml
 msgid "Request failed due to connection (read/write) error."
-msgstr ""
+msgstr "இணைப்பு (படிக்க/எழுத) பிழை காரணமாக கோரிக்கை தோல்வியடைந்தது."
 
 #: docs/HTTPRequest.xml
 msgid "Request failed on SSL handshake."
-msgstr ""
+msgstr "எச்.எச்.எல் ஏண்ட்சேக்கில் கோரிக்கை தோல்வியடைந்தது."
 
 #: docs/HTTPRequest.xml
 msgid "Request does not have a response (yet)."
-msgstr ""
+msgstr "கோரிக்கைக்கு பதில் இல்லை (இன்னும்)."
 
 #: docs/HTTPRequest.xml
 msgid "Request exceeded its maximum size limit, see [member body_size_limit]."
 msgstr ""
+"கோரிக்கை அதன் அதிகபட்ச அளவு வரம்பை மீறியது, [உறுப்பினர் body_size_limit] ஐப்"
+" பார்க்கவும்."
 
 #: docs/HTTPRequest.xml
 msgid "Request failed (currently unused)."
-msgstr ""
+msgstr "கோரிக்கை தோல்வியுற்றது (தற்போது பயன்படுத்தப்படாதது)."
 
 #: docs/HTTPRequest.xml
 msgid "HTTPRequest couldn't open the download file."
-msgstr ""
+msgstr "பதிவிறக்க கோப்பைத் திறக்க முடியவில்லை."
 
 #: docs/HTTPRequest.xml
 msgid "HTTPRequest couldn't write to the download file."
-msgstr ""
+msgstr "பதிவிறக்க கோப்பில் httprequest எழுத முடியவில்லை."
 
 #: docs/HTTPRequest.xml
 msgid ""
 "Request reached its maximum redirect limit, see [member max_redirects]."
 msgstr ""
+"கோரிக்கை அதன் அதிகபட்ச வழிமாற்ற வரம்பை எட்டியது, [உறுப்பினர் MAX_REDIRECTS] "
+"ஐப் பார்க்கவும்."
 
 #: docs/Image.xml
 msgid "Image datatype."
-msgstr ""
+msgstr "பட தரவுத்தொகுப்பு."
 
 #: docs/Image.xml
 msgid ""
@@ -33049,17 +33066,23 @@ msgid ""
 "An [Image] cannot be assigned to a [code]texture[/code] property of an object directly (such as [Sprite]), and has to be converted manually to an [ImageTexture] first.\n"
 "[b]Note:[/b] The maximum image size is 16384×16384 pixels due to graphics hardware limitations. Larger images may fail to import."
 msgstr ""
+"சொந்த பட தரவுத்தொகுப்பு. படத் தரவைக் கொண்டுள்ளது, இது ஒரு [இமேச்டெக்ச்டெர்] ஆக மாற்றப்படலாம் மற்றும் பொதுவாகப் பயன்படுத்தப்படும் [i] பட செயலாக்க [/i] முறைகளை வழங்குகிறது. [பட] அதிகபட்ச அகலம் மற்றும் உயரம் [நிலையான அதிகபட்சம்_ அகலம்] மற்றும் [நிலையான அதிகபட்சம்_ஐட்].\n"
+" ஒரு பொருளின் [குறியீடு] அமைப்புக்கு [/குறியீடு] சொத்துக்கு ஒரு [படம்] ஒதுக்க முடியாது ([ச்பிரிட்] போன்றவை), முதலில் கைமுறையாக [இமேச்டெக்ச்டெர்] ஆக மாற்றப்பட வேண்டும்.\n"
+" [b] குறிப்பு: [/b] கிராபிக்ச் வன்பொருள் வரம்புகள் காரணமாக அதிகபட்ச பட அளவு 16384 × 16384 படப்புள்ளிகள் ஆகும். பெரிய படங்கள் இறக்குமதி செய்யத் தவறக்கூடும்."
 
 #: docs/Image.xml docs/ImageTexture.xml
 msgid ""
 "https://docs.rebeltoolbox.com/en/latest/tutorials/assets_pipeline/importing_images.html"
 msgstr ""
+"https://docs.rebeltoolbox.com/en/latest/tutorials/assets_pipeline/importing_images.html"
 
 #: docs/Image.xml
 msgid ""
 "Alpha-blends [code]src_rect[/code] from [code]src[/code] image to this image"
 " at coordinates [code]dest[/code]."
 msgstr ""
+"[குறியீடு] SRC [/code] படத்திலிருந்து இந்த படத்திற்கு [குறியீடு] [குறியீடு] "
+"SRC_RECT [/code] ஆல்பா-கலப்புகள் [குறியீடு] DEST [/code]."
 
 #: docs/Image.xml
 msgid ""
@@ -33071,12 +33094,18 @@ msgid ""
 "[code]mask[/code] image [b]must[/b] have the same size (width and height) "
 "but they can have different formats."
 msgstr ""
+"[குறியீடு] SRC [/code] படத்திலிருந்து இந்த படத்திற்கு [குறியீடு] முகமூடி "
+"[/குறியீடு] படத்தைப் பயன்படுத்தி [குறியீடு] SRC_RECT [/code] ஆல்பா-கலப்புகள்"
+" [குறியீடு] டிஎச்டி [/குறியீடு]. [குறியீடு] எச்.ஆர்.சி [/குறியீடு] மற்றும் "
+"[குறியீடு] முகமூடி [/குறியீடு] ஆகிய இரண்டிற்கும் ஆல்பா சேனல்கள் தேவை. ."
 
 #: docs/Image.xml
 msgid ""
 "Copies [code]src_rect[/code] from [code]src[/code] image to this image at "
 "coordinates [code]dst[/code]."
 msgstr ""
+"[குறியீடு] SRC_RECT [/code] ஐ [குறியீடு] SRC [/code] படத்திலிருந்து இந்த "
+"படத்திற்கு ஆயத்தொலைவுகள் [குறியீடு] DST [/code] இல் படங்களுக்கு."
 
 #: docs/Image.xml
 msgid ""
@@ -33087,16 +33116,22 @@ msgid ""
 "[b]must[/b] have the same size (width and height) but they can have "
 "different formats."
 msgstr ""
+"[குறியீடு] எச்.ஆர்.சி [/குறியீடு] படத்திலிருந்து [குறியீடு] டிஎச்டி "
+"[/குறியீடு] வழங்கிய ஆயத்தொகுப்புகளில் இந்த படத்திற்கு [குறியீடு] src_rect "
+"[/code] பகுதியை ஒளிரச் செய்யுங்கள். ."
 
 #: docs/Image.xml
 msgid ""
 "Converts a bumpmap to a normalmap. A bumpmap provides a height offset per-"
 "pixel, while a normalmap provides a normal direction per pixel."
 msgstr ""
+"ஒரு பம்ப் வரைபடத்தை ஒரு சாதாரண வரைபடமாக மாற்றுகிறது பம்ப் வரைபடம் ஒரு "
+"பிக்சலுக்கு உயர ஆஃப்செட் வழங்குகிறது, அதே நேரத்தில் ஒரு சாதாரண வரைபடம் "
+"பிக்சலுக்கு ஒரு சாதாரண திசையை வழங்குகிறது."
 
 #: docs/Image.xml
 msgid "Removes the image's mipmaps."
-msgstr ""
+msgstr "படத்தின் MIPMAPS ஐ நீக்குகிறது."
 
 #: docs/Image.xml
 msgid ""
@@ -33105,14 +33140,18 @@ msgid ""
 "is not available. See [enum CompressMode] and [enum CompressSource] "
 "constants."
 msgstr ""
+"குறைந்த நினைவகத்தைப் பயன்படுத்த படத்தை சுருக்குகிறது. படம் "
+"சுருக்கப்படும்போது படப்புள்ளி தரவை நேரடியாக அணுக முடியாது. "
+"தேர்ந்தெடுக்கப்பட்ட சுருக்க முறை கிடைக்கவில்லை என்றால் பிழையை வழங்குகிறது. "
+"[Enum compronmode] மற்றும் [enum crickSource] மாறிலிகளைக் காண்க."
 
 #: docs/Image.xml
 msgid "Converts the image's format. See [enum Format] constants."
-msgstr ""
+msgstr "பட வடிவமைப்பை மாற்றவும். மாறிலிகள் [enum] ஐப் பார்க்கவும்."
 
 #: docs/Image.xml
 msgid "Copies [code]src[/code] image to this image."
-msgstr ""
+msgstr "இந்த படத்திற்கு நகல்கள் [குறியீடு] SRC [/code] படம்."
 
 #: docs/Image.xml
 msgid ""
@@ -33120,6 +33159,10 @@ msgid ""
 "constants. If [code]use_mipmaps[/code] is [code]true[/code] then generate "
 "mipmaps for this image. See the [method generate_mipmaps]."
 msgstr ""
+"கொடுக்கப்பட்ட அளவு மற்றும் வடிவமைப்பின் வெற்று படத்தை உருவாக்குகிறது. [Enum "
+"format] மாறிலிகளைக் காண்க. [குறியீடு] USE_MIPMAPS [/குறியீடு] [குறியீடு] "
+"உண்மை [/குறியீடு] என்றால் இந்த படத்திற்கான MIPMAPS ஐ உருவாக்கவும். [முறை "
+"உருவாக்கம்_மிப்மாப்ச்] ஐப் பார்க்கவும்."
 
 #: docs/Image.xml
 msgid ""
@@ -33128,6 +33171,11 @@ msgid ""
 "[code]true[/code] then loads mipmaps for this image from [code]data[/code]. "
 "See [method generate_mipmaps]."
 msgstr ""
+"கொடுக்கப்பட்ட அளவு மற்றும் வடிவமைப்பின் புதிய படத்தை உருவாக்குகிறது. [Enum "
+"format] மாறிலிகளைக் காண்க. கொடுக்கப்பட்ட மூல தரவுகளுடன் படத்தை நிரப்புகிறது."
+" [குறியீடு] use_mipmaps [/code] [குறியீடு] உண்மை [/குறியீடு] என்றால், இந்த "
+"படத்திற்கான MIPMAP களை [குறியீடு] தரவிலிருந்து [/குறியீடு] ஏற்றுகிறது. [முறை"
+" உருவாக்கம்_மிப்மாப்ச்] ஐப் பார்க்கவும்."
 
 #: docs/Image.xml
 msgid ""
@@ -33135,12 +33183,17 @@ msgid ""
 "the specified size is larger than the current size, the extra area is filled"
 " with black pixels."
 msgstr ""
+"கொடுக்கப்பட்ட [குறியீடு] அகலம் [/குறியீடு] மற்றும் [குறியீடு] உயரம் "
+"[/குறியீடு] க்கு படத்தை பயிர்கள். குறிப்பிட்ட அளவு தற்போதைய அளவை விட "
+"பெரியதாக இருந்தால், கூடுதல் பகுதி கருப்பு பிக்சல்களால் நிரப்பப்படுகிறது."
 
 #: docs/Image.xml
 msgid ""
 "Decompresses the image if it is compressed. Returns an error if decompress "
 "function is not available."
 msgstr ""
+"படத்தை சுருக்கினால் அதை குறைக்கவும். Decompress செயல்பாடு கிடைக்கவில்லை "
+"என்றால் பிழையை வழங்குகிறது."
 
 #: docs/Image.xml
 msgid ""
@@ -33148,52 +33201,62 @@ msgid ""
 "Returns [constant ALPHA_BIT] if all the alpha values are stored in a single "
 "bit. Returns [constant ALPHA_NONE] if no data for alpha values is found."
 msgstr ""
+"படத்தில் ஆல்பா மதிப்புகளுக்கான தரவு இருந்தால் [நிலையான ஆல்பா_பிளெண்ட்] "
+"திரும்பும். அனைத்து ஆல்பா மதிப்புகளும் ஒரே பிட்டில் சேமிக்கப்பட்டால் "
+"[நிலையான ஆல்பா_பிட்] திரும்பும். ஆல்பா மதிப்புகளுக்கான தரவு எதுவும் "
+"காணப்படவில்லை என்றால் [நிலையான ஆல்பா_நோன்] திரும்பும்."
 
 #: docs/Image.xml
 msgid ""
 "Stretches the image and enlarges it by a factor of 2. No interpolation is "
 "done."
 msgstr ""
+"படத்தை நீட்டி, அதை ஒரு காரணி மூலம் விரிவுபடுத்துகிறது. இடைக்கணிப்பு எதுவும் "
+"செய்யப்படவில்லை."
 
 #: docs/Image.xml
 msgid "Fills the image with a given [Color]."
-msgstr ""
+msgstr "கொடுக்கப்பட்ட [வண்ணம்] மூலம் படத்தை நிரப்புகிறது."
 
 #: docs/Image.xml
 msgid "Blends low-alpha pixels with nearby pixels."
-msgstr ""
+msgstr "குறைந்த ஆல்பா பிக்சல்களை அருகிலுள்ள பிக்சல்களுடன் கலக்கிறது."
 
 #: docs/Image.xml
 msgid "Flips the image horizontally."
-msgstr ""
+msgstr "படத்தை கிடைமட்டமாக புரட்டுகிறது."
 
 #: docs/Image.xml
 msgid "Flips the image vertically."
-msgstr ""
+msgstr "படத்தை செங்குத்தாக புரட்டுகிறது."
 
 #: docs/Image.xml
 msgid ""
 "Generates mipmaps for the image. Mipmaps are precalculated lower-resolution copies of the image that are automatically used if the image needs to be scaled down when rendered. They help improve image quality and performance when rendering. This method returns an error if the image is compressed, in a custom format, or if the image's width/height is [code]0[/code].\n"
 "[b]Note:[/b] Mipmap generation is done on the CPU, is single-threaded and is [i]always[/i] done on the main thread. This means generating mipmaps will result in noticeable stuttering during gameplay, even if [method generate_mipmaps] is called from a [Thread]."
 msgstr ""
+"படத்திற்கான MIPMAPS ஐ உருவாக்குகிறது. MIPMAPS என்பது படத்தின் முன்கூட்டிய கணக்கிடப்பட்ட குறைந்த-தெளிவுத்திறன் நகல்கள், அவை வழங்கப்படும்போது படத்தை அளவிட வேண்டும் என்றால் தானாகவே பயன்படுத்தப்படும். வழங்குதல் செய்யும் போது படத்தின் தகுதி மற்றும் செயல்திறனை மேம்படுத்த அவை உதவுகின்றன. படம் சுருக்கப்பட்டிருந்தால், தனிப்பயன் வடிவத்தில், அல்லது படத்தின் அகலம்/உயரம் [குறியீடு] 0 [/குறியீடு] என்றால் இந்த முறை பிழையை வழங்குகிறது.\n"
+" . இதன் பொருள் MIPMAP களை உருவாக்குவது விளையாட்டின் போது குறிப்பிடத்தக்க தடுமாற்றத்தை ஏற்படுத்தும், [முறை உருவாக்கம்_மிப்மேப்ச்] ஒரு [நூல்] இலிருந்து அழைக்கப்பட்டாலும் கூட."
 
 #: docs/Image.xml
 msgid "Returns a copy of the image's raw data."
-msgstr ""
+msgstr "படத்தின் மூல தரவின் நகலை வழங்குகிறது."
 
 #: docs/Image.xml
 msgid "Returns the image's format. See [enum Format] constants."
-msgstr ""
+msgstr "படத்தின் வடிவமைப்பை வழங்குகிறது. [Enum format] மாறிலிகளைக் காண்க."
 
 #: docs/Image.xml
 msgid "Returns the image's height."
-msgstr ""
+msgstr "படத்தின் உயரத்தை வழங்குகிறது."
 
 #: docs/Image.xml
 msgid ""
 "Returns the offset where the image's mipmap with index [code]mipmap[/code] "
 "is stored in the [code]data[/code] dictionary."
 msgstr ""
+"குறியீட்டு [குறியீடு] MIPMAP [/code] உடன் படத்தின் MIPMAP [குறியீடு] தரவு "
+"[/குறியீடு] அகராதியில் சேமிக்கப்படும் இடத்தில் ஆஃப்செட்டை வழங்குகிறது."
 
 #: docs/Image.xml
 msgid ""
@@ -33202,6 +33265,10 @@ msgid ""
 " [code](0, 0, 0, 1.0)[/code]. This is the same as [method get_pixelv], but "
 "two integer arguments instead of a Vector2 argument."
 msgstr ""
+"படம் பூட்டப்பட்டால் [குறியீடு] (x, y) [/code] இல் பிக்சலின் நிறத்தை "
+"வழங்குகிறது. படம் திறக்கப்பட்டால், அது எப்போதும் [குறியீடு] (0, 0, 0, 1.0) "
+"[/குறியீடு] மதிப்புடன் [வண்ணத்தை] வழங்குகிறது. இது [முறை get_pixelv] "
+"போன்றது, ஆனால் வெக்டர் 2 வாதத்திற்கு பதிலாக இரண்டு முழு எண் வாதங்கள்."
 
 #: docs/Image.xml
 msgid ""
@@ -33210,44 +33277,56 @@ msgid ""
 "[code](0, 0, 0, 1.0)[/code]. This is the same as [method get_pixel], but "
 "with a Vector2 argument instead of two integer arguments."
 msgstr ""
+"படம் பூட்டப்பட்டால் [குறியீடு] SRC [/code] இல் பிக்சலின் நிறத்தை "
+"வழங்குகிறது. படம் திறக்கப்பட்டால், அது எப்போதும் [குறியீடு] (0, 0, 0, 1.0) "
+"[/குறியீடு] மதிப்புடன் [வண்ணத்தை] வழங்குகிறது. இது [முறை get_pixel] போன்றது,"
+" ஆனால் இரண்டு முழு எண் வாதங்களுக்குப் பதிலாக வெக்டர் 2 வாதத்துடன்."
 
 #: docs/Image.xml
 msgid ""
 "Returns a new image that is a copy of the image's area specified with "
 "[code]rect[/code]."
 msgstr ""
+"[குறியீடு] செவ்வகம் [/குறியீடு] உடன் குறிப்பிடப்பட்ட படத்தின் பகுதியின் "
+"நகலாக இருக்கும் புதிய படத்தை வழங்குகிறது."
 
 #: docs/Image.xml
 msgid "Returns the image's size (width and height)."
-msgstr ""
+msgstr "படத்தின் அளவை (அகலம் மற்றும் உயரம்) வழங்குகிறது."
 
 #: docs/Image.xml
 msgid ""
 "Returns a [Rect2] enclosing the visible portion of the image, considering "
 "each pixel with a non-zero alpha channel as visible."
 msgstr ""
+"பூச்சியமற்ற ஆல்பா சேனலுடன் ஒவ்வொரு பிக்சலையும் காணக்கூடியதாகக் கருதி, "
+"படத்தின் புலப்படும் பகுதியை உள்ளடக்கியது [rect2] ஐ வழங்குகிறது."
 
 #: docs/Image.xml
 msgid "Returns the image's width."
-msgstr ""
+msgstr "படத்தின் அகலத்தை வழங்குகிறது."
 
 #: docs/Image.xml
 msgid "Returns [code]true[/code] if the image has generated mipmaps."
 msgstr ""
+"படம் MIPMAPS ஐ உருவாக்கியிருந்தால் [குறியீடு] உண்மை [/குறியீடு] திரும்பும்."
 
 #: docs/Image.xml
 msgid "Returns [code]true[/code] if the image is compressed."
-msgstr ""
+msgstr "படம் சுருக்கப்பட்டால் [குறியீடு] உண்மை [/code] ஐ வழங்குகிறது."
 
 #: docs/Image.xml
 msgid "Returns [code]true[/code] if the image has no data."
 msgstr ""
+"படத்திற்கு தரவு இல்லை என்றால் [குறியீடு] உண்மை [/குறியீடு] ஐ வழங்குகிறது."
 
 #: docs/Image.xml
 msgid ""
 "Returns [code]true[/code] if all the image's pixels have an alpha value of "
 "0. Returns [code]false[/code] if any pixel has an alpha value higher than 0."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] அனைத்து படத்தின் பிக்சல்களிலும் 0. ஆல்பா "
+"மதிப்பு இருந்தால்."
 
 #: docs/Image.xml
 msgid ""
@@ -33255,34 +33334,42 @@ msgid ""
 "[b]Warning:[/b] This method should only be used in the editor or in cases when you need to load external images at run-time, such as images located at the [code]user://[/code] directory, and may not work in exported projects.\n"
 "See also [ImageTexture] description for usage examples."
 msgstr ""
+"கோப்பு [குறியீடு] பாதையிலிருந்து ஒரு படத்தை ஏற்றுகிறது [/குறியீடு]. உதவி பட வடிவங்கள் மற்றும் வரம்புகளின் பட்டியலுக்கு [url = https.rebeltoolbox.com/en/latest/assets_pipeline/importing_images.html#supported- image-formats] உதவி பட வடிவங்கள் [/url] ஐப் பார்க்கவும்.\n"
+" .\n"
+" பயன்பாட்டு எடுத்துக்காட்டுகளுக்கான [imageTexture] விளக்கத்தையும் காண்க."
 
 #: docs/Image.xml
 msgid ""
 "Loads an image from the binary contents of a BMP file.\n"
 "[b]Note:[/b] Rebel Engine's BMP module doesn't support 16-bit per pixel images. Only 1-bit, 4-bit, 8-bit, 24-bit, and 32-bit per pixel images are supported."
 msgstr ""
+"BMP கோப்பின் பைனரி உள்ளடக்கங்களிலிருந்து ஒரு படத்தை ஏற்றுகிறது.\n"
+" [b] குறிப்பு: [/b] கிளர்ச்சி இயந்திரத்தின் BMP தொகுதி ஒரு படப்புள்ளி படங்களுக்கு 16-பிட் ஆதரிக்காது. படப்புள்ளி படங்களுக்கு 1-பிட், 4-பிட், 8-பிட், 24-பிட் மற்றும் 32-பிட் மட்டுமே ஆதரிக்கப்படுகின்றன."
 
 #: docs/Image.xml
 msgid "Loads an image from the binary contents of a JPEG file."
-msgstr ""
+msgstr "JPEG கோப்பின் பைனரி உள்ளடக்கங்களிலிருந்து ஒரு படத்தை ஏற்றுகிறது."
 
 #: docs/Image.xml
 msgid "Loads an image from the binary contents of a PNG file."
-msgstr ""
+msgstr "பி.என்.சி கோப்பின் பைனரி உள்ளடக்கங்களிலிருந்து ஒரு படத்தை ஏற்றுகிறது."
 
 #: docs/Image.xml
 msgid "Loads an image from the binary contents of a TGA file."
-msgstr ""
+msgstr "டிசிஏ கோப்பின் பைனரி உள்ளடக்கங்களிலிருந்து ஒரு படத்தை ஏற்றுகிறது."
 
 #: docs/Image.xml
 msgid "Loads an image from the binary contents of a WebP file."
-msgstr ""
+msgstr "ஒரு வலை கோப்பின் பைனரி உள்ளடக்கங்களிலிருந்து ஒரு படத்தை ஏற்றுகிறது."
 
 #: docs/Image.xml
 msgid ""
 "Locks the data for reading and writing access. Sends an error to the console"
 " if the image is not locked when reading or writing a pixel."
 msgstr ""
+"அணுகலைப் படிப்பதற்கும் எழுதுவதற்கும் தரவைப் பூட்டுகிறது. பிக்சலைப் "
+"படிக்கும்போது அல்லது எழுதும் போது படம் பூட்டப்படாவிட்டால் கன்சோலுக்கு ஒரு "
+"பிழையை அனுப்புகிறது."
 
 #: docs/Image.xml
 msgid ""
@@ -33290,12 +33377,18 @@ msgid ""
 "used when the image represents a normalmap. A normalmap can add lots of "
 "detail to a 3D surface without increasing the polygon count."
 msgstr ""
+"3D விமானத்தில் ஒருங்கிணைப்புகளைக் குறிக்க படத்தின் தரவை மாற்றுகிறது. படம் "
+"ஒரு இயல்பான வரைபடத்தைக் குறிக்கும் போது இது பயன்படுத்தப்படுகிறது. ஒரு "
+"இயல்பான வரைபடம் பலகோண எண்ணிக்கையை அதிகரிக்காமல் 3D மேற்பரப்பில் நிறைய "
+"விவரங்களை சேர்க்கலாம்."
 
 #: docs/Image.xml
 msgid ""
 "Multiplies color values with alpha values. Resulting color values for a "
 "pixel are [code](color * alpha)/256[/code]."
 msgstr ""
+"ஆல்பா மதிப்புகளுடன் வண்ண மதிப்புகளை பெருக்குகிறது. இதன் விளைவாக ஒரு "
+"பிக்சலுக்கான வண்ண மதிப்புகள் [குறியீடு] (வண்ணம் * ஆல்பா)/256 [/குறியீடு]."
 
 #: docs/Image.xml
 msgid ""
@@ -33303,6 +33396,10 @@ msgid ""
 "New pixels are calculated using the [code]interpolation[/code] mode defined "
 "via [enum Interpolation] constants."
 msgstr ""
+"கொடுக்கப்பட்ட [குறியீடு] அகலம் [/குறியீடு] மற்றும் [குறியீடு] உயரம் "
+"[/குறியீடு] க்கு படத்தை மாற்றியமைக்கிறது. [குறியீடு] இடைக்கணிப்பு "
+"[/குறியீடு] பயன்முறையைப் பயன்படுத்தி புதிய படப்புள்ளிகள் கணக்கிடப்படுகின்றன "
+"[enum இடைக்கணிப்பு] மாறிலிகள் வழியாக வரையறுக்கப்படுகின்றன."
 
 #: docs/Image.xml
 msgid ""
@@ -33311,21 +33408,30 @@ msgid ""
 " same. New pixels are calculated using the [code]interpolation[/code] mode "
 "defined via [enum Interpolation] constants."
 msgstr ""
+"அகலம் மற்றும் உயரத்திற்கு 2 இன் அருகிலுள்ள சக்திக்கு படத்தை மறுஅளவிடுகிறது. "
+"[குறியீடு] நாற்கை [/குறியீடு] [குறியீடு] உண்மை [/குறியீடு] என்றால் அகலம் "
+"மற்றும் உயரத்தை ஒரே மாதிரியாக அமைக்கவும். [குறியீடு] இடைக்கணிப்பு "
+"[/குறியீடு] பயன்முறையைப் பயன்படுத்தி புதிய படப்புள்ளிகள் கணக்கிடப்படுகின்றன "
+"[enum இடைக்கணிப்பு] மாறிலிகள் வழியாக வரையறுக்கப்படுகின்றன."
 
 #: docs/Image.xml
 msgid ""
 "Converts a standard RGBE (Red Green Blue Exponent) image to an sRGB image."
 msgstr ""
+"ஒரு நிலையான RGBE (சிவப்பு பச்சை நீல அதிவேக) படத்தை ஒரு SRGB படமாக "
+"மாற்றுகிறது."
 
 #: docs/Image.xml
 msgid ""
 "Saves the image as an EXR file to [code]path[/code]. If [code]grayscale[/code] is [code]true[/code] and the image has only one channel, it will be saved explicitly as monochrome rather than one red channel. This function will return [constant ERR_UNAVAILABLE] if Rebel Engine was compiled without the TinyEXR module.\n"
 "[b]Note:[/b] The TinyEXR module is disabled in non-editor builds, which means [method save_exr] will return [constant ERR_UNAVAILABLE] when it is called from an exported project."
 msgstr ""
+"படத்தை ஒரு EXR கோப்பாக [குறியீடு] பாதைக்கு சேமிக்கிறது [/குறியீடு]. . டைனெக்ச்ஆர் தொகுதி இல்லாமல் கிளர்ச்சி இயந்திரம் தொகுக்கப்பட்டால் இந்த செயல்பாடு [நிலையான பிழை_யுனாவிலபிள்] திரும்பும்.\n"
+" ."
 
 #: docs/Image.xml
 msgid "Saves the image as a PNG file to [code]path[/code]."
-msgstr ""
+msgstr "[குறியீடு] பாதைக்கு [/குறியீடு] பி.என்.சி கோப்பாக படத்தை சேமிக்கிறது."
 
 #: docs/Image.xml
 msgid ""
@@ -33339,6 +33445,15 @@ msgid ""
 "img.set_pixel(x, y, color) # Does not have an effect\n"
 "[/codeblock]"
 msgstr ""
+"படம் பூட்டப்பட்டால் [குறியீடு] (x, y) [/code] இல் பிக்சலின் [வண்ணத்தை] அமைக்கிறது. எடுத்துக்காட்டு:\n"
+" [கோட் பிளாக்]\n"
+" var img = image.new ()\n"
+" img.create (img_width, img_height, false, image.format_rgba8)\n"
+" img.lock ()\n"
+" img.set_pixel (x, ஒய், color) # வேலை செய்கிறது\n"
+" img.unlock ()\n"
+" img.set_pixel (x, ஒய், color) # ஒரு விளைவைக் கொண்டிருக்கவில்லை\n"
+" [/codeBlock]"
 
 #: docs/Image.xml
 msgid ""
@@ -33352,150 +33467,200 @@ msgid ""
 "img.set_pixelv(Vector2(x, y), color) # Does not have an effect\n"
 "[/codeblock]"
 msgstr ""
+"படம் பூட்டப்பட்டால் [குறியீடு] (dst.x, dst.y) [/code] இல் பிக்சலின் [வண்ணத்தை] அமைக்கிறது. [குறியீடு] டிஎச்டி [/குறியீடு] மதிப்புகள் முழு எண்களாக இருக்க வேண்டும் என்பதை நினைவில் கொள்க. எடுத்துக்காட்டு:\n"
+" [கோட் பிளாக்]\n"
+" var img = image.new ()\n"
+" img.create (img_width, img_height, false, image.format_rgba8)\n"
+" img.lock ()\n"
+" img.set_pixelv (வெக்டர் 2 (x, y), வண்ணம்) # வேலை செய்கிறது\n"
+" img.unlock ()\n"
+" img.set_pixelv (வெக்டர் 2 (x, y), வண்ணம்) # ஒரு விளைவைக் கொண்டிருக்கவில்லை\n"
+" [/codeBlock]"
 
 #: docs/Image.xml
 msgid "Shrinks the image by a factor of 2."
-msgstr ""
+msgstr "படத்தை 2 காரணி மூலம் சுருக்கி."
 
 #: docs/Image.xml
 msgid "Converts the raw data from the sRGB colorspace to a linear scale."
 msgstr ""
+"மூல தரவை எச்.ஆர்.சி.பி கலர்ச்பேசிலிருந்து நேரியல் அளவிற்கு மாற்றுகிறது."
 
 #: docs/Image.xml
 msgid "Unlocks the data and prevents changes."
-msgstr ""
+msgstr "தரவைத் திறந்து மாற்றங்களைத் தடுக்கவும்."
 
 #: docs/Image.xml
 msgid ""
 "Holds all the image's color data in a given format. See [enum Format] "
 "constants."
 msgstr ""
+"படத்தின் அனைத்து வண்ண தரவையும் கொடுக்கப்பட்ட வடிவத்தில் வைத்திருக்கிறது. "
+"[Enum format] மாறிலிகளைக் காண்க."
 
 #: docs/Image.xml
 msgid "The maximal width allowed for [Image] resources."
-msgstr ""
+msgstr "[பட] வளங்களுக்கு அதிகபட்ச அகலம் அனுமதிக்கப்படுகிறது."
 
 #: docs/Image.xml
 msgid "The maximal height allowed for [Image] resources."
-msgstr ""
+msgstr "[பட] வளங்களுக்கு அதிகபட்ச உயரம் அனுமதிக்கப்படுகிறது."
 
 #: docs/Image.xml
 msgid "Texture format with a single 8-bit depth representing luminance."
-msgstr ""
+msgstr "ஒளிரும் ஒற்றை 8-பிட் ஆழத்துடன் அமைப்பு வடிவம்."
 
 #: docs/Image.xml
 msgid ""
 "OpenGL texture format with two values, luminance and alpha each stored with "
 "8 bits."
 msgstr ""
+"ஓபன்சிஎல் அமைப்பு வடிவம் இரண்டு மதிப்புகள், ஒளிர்வு மற்றும் ஆல்பா "
+"ஒவ்வொன்றும் 8 பிட்களுடன் சேமிக்கப்படுகின்றன."
 
 #: docs/Image.xml
 msgid ""
 "OpenGL texture format [code]RED[/code] with a single component and a bitdepth of 8.\n"
 "[b]Note:[/b] When using the GLES2 backend, this uses the alpha channel instead of the red channel for storage."
 msgstr ""
+"OpenGL அமைப்பு வடிவம் [குறியீடு] சிவப்பு [/குறியீடு] ஒற்றை கூறு மற்றும் 8 ஆழம் 8 உடன்.\n"
+" [b] குறிப்புகள்: [/b] GLES2 பின்தளத்தில் பயன்படுத்தும் போது, ​​இது சிவப்பு சேனலுக்கு பதிலாக ஆல்பா சேனலைப் பயன்படுத்துகிறது."
 
 #: docs/Image.xml
 msgid ""
 "OpenGL texture format [code]RG[/code] with two components and a bitdepth of "
 "8 for each."
 msgstr ""
+"OpenGL அமைப்பு வடிவம் [குறியீடு] g [/code] இரண்டு கூறுகளுடன் மற்றும் "
+"ஒவ்வொன்றிற்கும் 8 ஆழம்."
 
 #: docs/Image.xml
 msgid ""
 "OpenGL texture format [code]RGB[/code] with three components, each with a bitdepth of 8.\n"
 "[b]Note:[/b] When creating an [ImageTexture], an sRGB to linear color space conversion is performed."
 msgstr ""
+"ஓபன்சிஎல் அமைப்பு வடிவம் [குறியீடு] RGB [/code] மூன்று கூறுகளுடன், ஒவ்வொன்றும் 8 பிட்டெப்த்.\n"
+" ."
 
 #: docs/Image.xml
 msgid ""
 "OpenGL texture format [code]RGBA[/code] with four components, each with a bitdepth of 8.\n"
 "[b]Note:[/b] When creating an [ImageTexture], an sRGB to linear color space conversion is performed."
 msgstr ""
+"ஓபன்சிஎல் அமைப்பு வடிவம் [குறியீடு] RGBA [/code] நான்கு கூறுகளுடன், ஒவ்வொன்றும் 8 பிட்டெப்த்.\n"
+" ."
 
 #: docs/Image.xml
 msgid ""
 "OpenGL texture format [code]RGBA[/code] with four components, each with a "
 "bitdepth of 4."
 msgstr ""
+"ஓபன்சிஎல் அமைப்பு வடிவம் [குறியீடு] RGBA [/code] நான்கு கூறுகளுடன், "
+"ஒவ்வொன்றும் 4 பிட்டெப்ட்."
 
 #: docs/Image.xml
 msgid ""
 "OpenGL texture format [code]GL_RGB5_A1[/code] where 5 bits of depth for each"
 " component of RGB and one bit for alpha."
 msgstr ""
+"OpenGL அமைப்பு வடிவம் [குறியீடு] GL_RGB5_A1 [/code] அங்கு RGB இன் ஒவ்வொரு "
+"கூறுக்கும் 5 பிட்கள் ஆழம் மற்றும் ஆல்பாவுக்கு ஒரு பிட்."
 
 #: docs/Image.xml
 msgid ""
 "OpenGL texture format [code]GL_R32F[/code] where there's one component, a "
 "32-bit floating-point value."
 msgstr ""
+"OpenGL அமைப்பு வடிவம் [குறியீடு] GL_R32F [/code] அங்கு ஒரு கூறு உள்ளது, "
+"32-பிட் மிதக்கும்-புள்ளி மதிப்பு."
 
 #: docs/Image.xml
 msgid ""
 "OpenGL texture format [code]GL_RG32F[/code] where there are two components, "
 "each a 32-bit floating-point values."
 msgstr ""
+"OpenGL அமைப்பு வடிவம் [குறியீடு] GL_RG32F [/code] இரண்டு கூறுகள் உள்ளன, "
+"ஒவ்வொன்றும் 32-பிட் மிதக்கும்-புள்ளி மதிப்புகள்."
 
 #: docs/Image.xml
 msgid ""
 "OpenGL texture format [code]GL_RGB32F[/code] where there are three "
 "components, each a 32-bit floating-point values."
 msgstr ""
+"OpenGL அமைப்பு வடிவம் [குறியீடு] GL_RGB32F [/குறியீடு] அங்கு மூன்று கூறுகள் "
+"உள்ளன, ஒவ்வொன்றும் 32-பிட் மிதக்கும்-புள்ளி மதிப்புகள்."
 
 #: docs/Image.xml
 msgid ""
 "OpenGL texture format [code]GL_RGBA32F[/code] where there are four "
 "components, each a 32-bit floating-point values."
 msgstr ""
+"OpenGL அமைப்பு வடிவம் [குறியீடு] gl_rgba32f [/code] நான்கு கூறுகள் உள்ளன, "
+"ஒவ்வொன்றும் 32-பிட் மிதக்கும்-புள்ளி மதிப்புகள்."
 
 #: docs/Image.xml
 msgid ""
 "OpenGL texture format [code]GL_R32F[/code] where there's one component, a "
 "16-bit \"half-precision\" floating-point value."
 msgstr ""
+"OpenGL அமைப்பு வடிவம் [குறியீடு] GL_R32F [/code] அங்கு ஒரு கூறு உள்ளது, "
+"16-பிட் \"அரை துல்லியமான\" மிதக்கும்-புள்ளி மதிப்பு."
 
 #: docs/Image.xml
 msgid ""
 "OpenGL texture format [code]GL_RG32F[/code] where there are two components, "
 "each a 16-bit \"half-precision\" floating-point value."
 msgstr ""
+"OpenGL அமைப்பு வடிவம் [குறியீடு] GL_RG32F [/code] இரண்டு கூறுகள் உள்ளன, "
+"ஒவ்வொன்றும் 16-பிட் \"அரை துல்லியமான\" மிதக்கும்-புள்ளி மதிப்பு."
 
 #: docs/Image.xml
 msgid ""
 "OpenGL texture format [code]GL_RGB32F[/code] where there are three "
 "components, each a 16-bit \"half-precision\" floating-point value."
 msgstr ""
+"OpenGL அமைப்பு வடிவம் [குறியீடு] GL_RGB32F [/code] அங்கு மூன்று கூறுகள் "
+"உள்ளன, ஒவ்வொன்றும் 16-பிட் \"அரை துல்லியமான\" மிதக்கும்-புள்ளி மதிப்பு."
 
 #: docs/Image.xml
 msgid ""
 "OpenGL texture format [code]GL_RGBA32F[/code] where there are four "
 "components, each a 16-bit \"half-precision\" floating-point value."
 msgstr ""
+"OpenGL அமைப்பு வடிவம் [குறியீடு] gl_rgba32f [/code] நான்கு கூறுகள் உள்ளன, "
+"ஒவ்வொன்றும் 16-பிட் \"அரை துல்லியமான\" மிதக்கும்-புள்ளி மதிப்பு."
 
 #: docs/Image.xml
 msgid ""
 "A special OpenGL texture format where the three color components have 9 bits"
 " of precision and all three share a single 5-bit exponent."
 msgstr ""
+"மூன்று வண்ண கூறுகள் 9 பிட் துல்லியத்தைக் கொண்ட ஒரு சிறப்பு ஓபன்சிஎல் அமைப்பு"
+" வடிவம் மற்றும் மூன்றும் ஒற்றை 5-பிட் அடுக்கு பகிர்ந்து கொள்கின்றன."
 
 #: docs/Image.xml
 msgid ""
 "The [url=https://en.wikipedia.org/wiki/S3_Texture_Compression]S3TC[/url] texture format that uses Block Compression 1, and is the smallest variation of S3TC, only providing 1 bit of alpha and color data being premultiplied with alpha.\n"
 "[b]Note:[/b] When creating an [ImageTexture], an sRGB to linear color space conversion is performed."
 msgstr ""
+"[Url = https: //en.wikipedia.org/wiki/s3_texture_compression] s3tc [/url] தொகுதி சுருக்க 1 ஐப் பயன்படுத்தும் அமைப்பு வடிவம், மற்றும் S3TC இன் மிகச்சிறிய மாறுபாடாகும், இது ஆல்பா மற்றும் வண்ண தரவுகளை ஆல்பாவுடன் முதன்மையாக வழங்குகிறது.\n"
+" ."
 
 #: docs/Image.xml
 msgid ""
 "The [url=https://en.wikipedia.org/wiki/S3_Texture_Compression]S3TC[/url] texture format that uses Block Compression 2, and color data is interpreted as not having been premultiplied by alpha. Well suited for images with sharp alpha transitions between translucent and opaque areas.\n"
 "[b]Note:[/b] When creating an [ImageTexture], an sRGB to linear color space conversion is performed."
 msgstr ""
+"[Url = https: //en.wikipedia.org/wiki/s3_texture_compression] S3TC [/url] தொகுதி சுருக்க 2 ஐப் பயன்படுத்தும் அமைப்பு வடிவம், மற்றும் வண்ண தரவு ஆல்பாவால் ஆதரிக்கப்படவில்லை என்று விளக்கப்படுகிறது. கசியும் மற்றும் ஒளிபுகா பகுதிகளுக்கு இடையில் கூர்மையான ஆல்பா மாற்றங்களைக் கொண்ட படங்களுக்கு மிகவும் பொருத்தமானது.\n"
+" ."
 
 #: docs/Image.xml
 msgid ""
 "The [url=https://en.wikipedia.org/wiki/S3_Texture_Compression]S3TC[/url] texture format also known as Block Compression 3 or BC3 that contains 64 bits of alpha channel data followed by 64 bits of DXT1-encoded color data. Color data is not premultiplied by alpha, same as DXT3. DXT5 generally produces superior results for transparent gradients compared to DXT3.\n"
 "[b]Note:[/b] When creating an [ImageTexture], an sRGB to linear color space conversion is performed."
 msgstr ""
+". வண்ண தரவு ஆல்பாவால் முதன்மையானது அல்ல, இது DXT3 ஐப் போன்றது. DXT5 பொதுவாக DXT3 உடன் ஒப்பிடும்போது வெளிப்படையான சாய்வுகளுக்கு சிறந்த முடிவுகளை உருவாக்குகிறது.\n"
+" ."
 
 #: docs/Image.xml
 msgid ""
@@ -33504,6 +33669,10 @@ msgid ""
 "Green Texture Compression[/url], normalizing the red channel data using the "
 "same compression algorithm that DXT5 uses for the alpha channel."
 msgstr ""
+"[Url = https: //www.khronos.org/opengl/wiki/red_green_texture_compression] "
+"சிவப்பு பச்சை அமைப்பு சுருக்க [/url] ஐப் பயன்படுத்தும் அமைப்பு வடிவம், ஆல்பா"
+" சேனலுக்கு DXT5 பயன்படுத்தும் அதே அமுக்க வழிமுறையைப் பயன்படுத்தி சிவப்பு "
+"சேனல் தரவை இயல்பாக்குகிறது."
 
 #: docs/Image.xml
 msgid ""
@@ -33512,12 +33681,18 @@ msgid ""
 "Green Texture Compression[/url], normalizing the red and green channel data "
 "using the same compression algorithm that DXT5 uses for the alpha channel."
 msgstr ""
+"[Url = https: //www.khronos.org/opengl/wiki/red_green_texture_compression] "
+"சிவப்பு பச்சை அமைப்பு சுருக்க [/url] ஐப் பயன்படுத்தும் அமைப்பு வடிவம், ஆல்பா"
+" சேனலுக்கு DXT5 பயன்படுத்தும் அதே சுருக்க வழிமுறையைப் பயன்படுத்தி சிவப்பு "
+"மற்றும் பச்சை சேனல் தரவை இயல்பாக்குகிறது."
 
 #: docs/Image.xml
 msgid ""
 "Texture format that uses [url=https://www.khronos.org/opengl/wiki/BPTC_Texture_Compression]BPTC[/url] compression with unsigned normalized RGBA components.\n"
 "[b]Note:[/b] When creating an [ImageTexture], an sRGB to linear color space conversion is performed."
 msgstr ""
+"[Url = https: //www.khronos.org/opengl/wiki/bptc_texture_compression] பிபிடிசி [/url] கையொப்பமிடப்படாத இயல்பாக்கப்பட்ட RGBA கூறுகளுடன் சுருக்கம் பயன்படுத்தும் அமைப்பு வடிவம்.\n"
+" ."
 
 #: docs/Image.xml
 msgid ""
@@ -33525,6 +33700,9 @@ msgid ""
 "[url=https://www.khronos.org/opengl/wiki/BPTC_Texture_Compression]BPTC[/url]"
 " compression with signed floating-point RGB components."
 msgstr ""
+"[Url = https: //www.khronos.org/opengl/wiki/bptc_texture_compression] "
+"பிபிடிசி [/url] கையொப்பமிடப்பட்ட மிதக்கும்-புள்ளி RGB கூறுகளுடன் சுருக்கம் "
+"பயன்படுத்தும் அமைப்பு வடிவம்."
 
 #: docs/Image.xml
 msgid ""
@@ -33532,30 +33710,41 @@ msgid ""
 "[url=https://www.khronos.org/opengl/wiki/BPTC_Texture_Compression]BPTC[/url]"
 " compression with unsigned floating-point RGB components."
 msgstr ""
+"[Url = https: //www.khronos.org/opengl/wiki/bptc_texture_compression] "
+"பிபிடிசி [/url] கையொப்பமிடப்படாத மிதக்கும்-புள்ளி RGB கூறுகளுடன் சுருக்கம் "
+"பயன்படுத்தும் அமைப்பு வடிவம்."
 
 #: docs/Image.xml
 msgid ""
 "Texture format used on PowerVR-supported mobile platforms, uses 2-bit color depth with no alpha. More information can be found [url=https://en.wikipedia.org/wiki/PVRTC]here[/url].\n"
 "[b]Note:[/b] When creating an [ImageTexture], an sRGB to linear color space conversion is performed."
 msgstr ""
+"பவர்விஆர்-ஆதரவு மொபைல் தளங்களில் பயன்படுத்தப்படும் அமைப்பு வடிவம், ஆல்பா இல்லாத 2-பிட் வண்ண ஆழத்தைப் பயன்படுத்துகிறது. மேலும் தகவல்களைக் காணலாம் [url = https: //en.wikipedia.org/wiki/pvrtc] இங்கே [/url].\n"
+" ."
 
 #: docs/Image.xml
 msgid ""
 "Same as [url=https://en.wikipedia.org/wiki/PVRTC]PVRTC2[/url], but with an "
 "alpha component."
 msgstr ""
+"[Url = https: //en.wikipedia.org/wiki/pvrtc] pvrtc2 [/url], ஆனால் ஆல்பா "
+"கூறுகளுடன்."
 
 #: docs/Image.xml
 msgid ""
 "Similar to [url=https://en.wikipedia.org/wiki/PVRTC]PVRTC2[/url], but with "
 "4-bit color depth and no alpha."
 msgstr ""
+"[Url = https: //en.wikipedia.org/wiki/pvrtc] pvrtc2 [/url] ஐப் போன்றது, "
+"ஆனால் 4-பிட் வண்ண ஆழம் மற்றும் ஆல்பா இல்லை."
 
 #: docs/Image.xml
 msgid ""
 "Same as [url=https://en.wikipedia.org/wiki/PVRTC]PVRTC4[/url], but with an "
 "alpha component."
 msgstr ""
+"[Url = https: //en.wikipedia.org/wiki/pvrtc] pvrtc4 [/url], ஆனால் ஆல்பா "
+"கூறுடன்."
 
 #: docs/Image.xml
 msgid ""
@@ -33563,7 +33752,7 @@ msgid ""
 " Texture Compression format 1[/url], also referred to as \"ETC1\", and is "
 "part of the OpenGL ES graphics standard. This format cannot store an alpha "
 "channel."
-msgstr ""
+msgstr ". இந்த வடிவம் ஆல்பா சேனலை சேமிக்க முடியாது."
 
 #: docs/Image.xml
 msgid ""
@@ -33571,6 +33760,9 @@ msgid ""
 " Texture Compression format 2[/url] ([code]R11_EAC[/code] variant), which "
 "provides one channel of unsigned data."
 msgstr ""
+"[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#EAC]Ericsson"
+" Texture Compression வடிவம் 2[/url] ([code]R11_EAC[/code] variant), which "
+"provides one வாய்க்கால் of unsigned data."
 
 #: docs/Image.xml
 msgid ""
@@ -33578,6 +33770,9 @@ msgid ""
 " Texture Compression format 2[/url] ([code]SIGNED_R11_EAC[/code] variant), "
 "which provides one channel of signed data."
 msgstr ""
+"[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#EAC]Ericsson"
+" Texture Compression வடிவம் 2[/url] ([code]SIGNED_R11_EAC[/code] variant), "
+"which provides one வாய்க்கால் of signed data."
 
 #: docs/Image.xml
 msgid ""
@@ -33585,6 +33780,9 @@ msgid ""
 " Texture Compression format 2[/url] ([code]RG11_EAC[/code] variant), which "
 "provides two channels of unsigned data."
 msgstr ""
+"[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#EAC]Ericsson"
+" Texture Compression வடிவம் 2[/url] ([code]RG11_EAC[/code] variant), which "
+"provides two channels of unsigned data."
 
 #: docs/Image.xml
 msgid ""
@@ -33592,34 +33790,45 @@ msgid ""
 " Texture Compression format 2[/url] ([code]SIGNED_RG11_EAC[/code] variant), "
 "which provides two channels of signed data."
 msgstr ""
+"[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#EAC]Ericsson"
+" Texture Compression வடிவம் 2[/url] ([code]SIGNED_RG11_EAC[/code] variant), "
+"which provides two channels of signed data."
 
 #: docs/Image.xml
 msgid ""
 "[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2]Ericsson Texture Compression format 2[/url] ([code]RGB8[/code] variant), which is a follow-up of ETC1 and compresses RGB888 data.\n"
 "[b]Note:[/b] When creating an [ImageTexture], an sRGB to linear color space conversion is performed."
 msgstr ""
+".\n"
+" ."
 
 #: docs/Image.xml
 msgid ""
 "[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2]Ericsson Texture Compression format 2[/url] ([code]RGBA8[/code]variant), which compresses RGBA8888 data with full alpha support.\n"
 "[b]Note:[/b] When creating an [ImageTexture], an sRGB to linear color space conversion is performed."
 msgstr ""
+".\n"
+" ."
 
 #: docs/Image.xml
 msgid ""
 "[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2]Ericsson Texture Compression format 2[/url] ([code]RGB8_PUNCHTHROUGH_ALPHA1[/code] variant), which compresses RGBA data to make alpha either fully transparent or fully opaque.\n"
 "[b]Note:[/b] When creating an [ImageTexture], an sRGB to linear color space conversion is performed."
 msgstr ""
+".\n"
+" ."
 
 #: docs/Image.xml
 msgid "Represents the size of the [enum Format] enum."
-msgstr ""
+msgstr "[Enum format] enum இன் அளவைக் குறிக்கிறது."
 
 #: docs/Image.xml
 msgid ""
 "Performs nearest-neighbor interpolation. If the image is resized, it will be"
 " pixelated."
 msgstr ""
+"அருகிலுள்ள-அண்டை இடைக்கணிப்பை செய்கிறது. படம் மறுஅளவாக்கப்பட்டால், அது "
+"பிக்சலேட்டட் செய்யப்படும்."
 
 #: docs/Image.xml
 msgid ""
@@ -33627,6 +33836,9 @@ msgid ""
 " This mode is faster than [constant INTERPOLATE_CUBIC], but it results in "
 "lower quality."
 msgstr ""
+"பிலினியர் இடைக்கணிப்பை செய்கிறது. படம் மறுஅளவாக்கப்பட்டால், அது மங்கலாக "
+"இருக்கும். இந்த பயன்முறை [நிலையான இன்டர்போலேட்_கூபிக்] ஐ விட வேகமாக உள்ளது, "
+"ஆனால் இது குறைந்த தரத்தை விளைவிக்கிறது."
 
 #: docs/Image.xml
 msgid ""
@@ -33634,6 +33846,9 @@ msgid ""
 "This mode often gives better results compared to [constant "
 "INTERPOLATE_BILINEAR], at the cost of being slower."
 msgstr ""
+"கன இடைக்கணிப்பை செய்கிறது. படம் மறுஅளவாக்கப்பட்டால், அது மங்கலாக இருக்கும். "
+"இந்த முறை பெரும்பாலும் [நிலையான இன்டர்போலேட்_பிலினியர்] உடன் ஒப்பிடும்போது, "
+"​​மெதுவாக இருப்பதற்கான செலவில் சிறந்த முடிவுகளைத் தருகிறது."
 
 #: docs/Image.xml
 msgid ""
@@ -33643,68 +33858,80 @@ msgid ""
 "[b]Note:[/b] If you intend to scale multiple copies of the original image, it's better to call [method generate_mipmaps]] on it in advance, to avoid wasting processing power in generating them again and again.\n"
 "On the other hand, if the image already has mipmaps, they will be used, and a new set will be generated for the resulting image."
 msgstr ""
+"மிகவும் பொருத்தமான இரண்டு MIPMAP நிலைகளில் பிலினியர் தனித்தனியாகச் செய்கிறது, பின்னர் அவற்றுக்கிடையே நேர்கோட்டுடன் இடைக்கணிக்கிறது.\n"
+" இது [நிலையான இன்டர்போலேட்_பிலினியர்] ஐ விட மெதுவாக உள்ளது, ஆனால் மிகக் குறைந்த மாற்றுப்பெயர் கலைப்பொருட்களுடன் உயர்தர முடிவுகளை உருவாக்குகிறது.\n"
+" படத்தில் MIPMAP கள் இல்லையென்றால், அவை உருவாக்கப்பட்டு உள்நாட்டில் பயன்படுத்தப்படும், ஆனால் இதன் விளைவாக வரும் படத்தில் MIPMAP கள் உருவாக்கப்படாது.\n"
+" .\n"
+" மறுபுறம், படத்தில் ஏற்கனவே MIPMAPS இருந்தால், அவை பயன்படுத்தப்படும், இதன் விளைவாக வரும் படத்திற்கு ஒரு புதிய தொகுப்பு உருவாக்கப்படும்."
 
 #: docs/Image.xml
 msgid ""
 "Performs Lanczos interpolation. This is the slowest image resizing mode, but"
 " it typically gives the best results, especially when downscalng images."
 msgstr ""
+"லான்சோச் இடைக்கணிப்பை செய்கிறது. இது மெதுவான பட மறுஅளவாக்கும் "
+"பயன்முறையாகும், ஆனால் இது பொதுவாக சிறந்த முடிவுகளைத் தருகிறது, குறிப்பாக "
+"படங்களை குறைக்கும் போது."
 
 #: docs/Image.xml
 msgid "Image does not have alpha."
-msgstr ""
+msgstr "படத்திற்கு ஆல்பா இல்லை."
 
 #: docs/Image.xml
 msgid "Image stores alpha in a single bit."
-msgstr ""
+msgstr "படம் ஒரு பிட்டில் ஆல்பாவை சேமிக்கிறது."
 
 #: docs/Image.xml
 msgid "Image uses alpha."
-msgstr ""
+msgstr "படம் ஆல்பாவைப் பயன்படுத்துகிறது."
 
 #: docs/Image.xml
 msgid "Use S3TC compression."
-msgstr ""
+msgstr "S3TC சுருக்கத்தைப் பயன்படுத்தவும்."
 
 #: docs/Image.xml
 msgid "Use PVRTC2 compression."
-msgstr ""
+msgstr "PVRTC2 சுருக்கத்தைப் பயன்படுத்தவும்."
 
 #: docs/Image.xml
 msgid "Use PVRTC4 compression."
-msgstr ""
+msgstr "PVRTC4 சுருக்கத்தைப் பயன்படுத்தவும்."
 
 #: docs/Image.xml
 msgid "Use ETC compression."
-msgstr ""
+msgstr "போறவை சுருக்கம் பயன்படுத்தவும்."
 
 #: docs/Image.xml
 msgid "Use ETC2 compression."
-msgstr ""
+msgstr "ETC2 சுருக்கத்தைப் பயன்படுத்தவும்."
 
 #: docs/Image.xml
 msgid ""
 "Source texture (before compression) is a regular texture. Default for all "
 "textures."
 msgstr ""
+"மூல அமைப்பு (சுருக்கத்திற்கு முன்) ஒரு வழக்கமான அமைப்பு. எல்லா "
+"அமைப்புகளுக்கும் இயல்புநிலை."
 
 #: docs/Image.xml
 msgid "Source texture (before compression) is in sRGB space."
-msgstr ""
+msgstr "மூல அமைப்பு (சுருக்கத்திற்கு முன்) SRGB இடத்தில் உள்ளது."
 
 #: docs/Image.xml
 msgid ""
 "Source texture (before compression) is a normal texture (e.g. it can be "
 "compressed into two channels)."
 msgstr ""
+"மூல அமைப்பு (சுருக்கத்திற்கு முன்) ஒரு சாதாரண அமைப்பு (எ.கா. இதை இரண்டு "
+"சேனல்களாக சுருக்கலாம்)."
 
 #: docs/Image.xml
 msgid "Source texture (before compression) is a [TextureLayered]."
-msgstr ""
+msgstr "மூல அமைப்பு (சுருக்கத்திற்கு முன்) ஒரு [TextureLayered]."
 
 #: docs/ImageTexture.xml
 msgid "A [Texture] based on an [Image]."
-msgstr ""
+msgstr "[படத்தை] அடிப்படையாகக் கொண்ட ஒரு [அமைப்பு]."
 
 #: docs/ImageTexture.xml
 msgid ""
@@ -33731,12 +33958,36 @@ msgid ""
 "An [ImageTexture] is not meant to be operated from within the editor interface directly, and is mostly useful for rendering images on screen dynamically via code. If you need to generate images procedurally from within the editor, consider saving and importing images as custom texture resources implementing a new [EditorImportPlugin].\n"
 "[b]Note:[/b] The maximum texture size is 16384×16384 pixels due to graphics hardware limitations."
 msgstr ""
+"[படத்தை] அடிப்படையாகக் கொண்ட ஒரு [அமைப்பு]. ஒரு படம் காண்பிக்கப்படுவதற்கு, [முறை create_from_image] முறையைப் பயன்படுத்தி ஒரு [இமேச்டெக்ச்டெர்] அதிலிருந்து உருவாக்கப்பட வேண்டும்:\n"
+" [கோட் பிளாக்]\n"
+" var stexture = imageTexture.new ()\n"
+" var படம் = image.new ()\n"
+" image.load (\"res: //icon.png\")\n"
+" stecture.create_from_image (படம்)\n"
+" $ Sprite.texture = அமைப்பு\n"
+" [/codeBlock]\n"
+" இந்த வழியில், எடிட்டருக்குள்ளும் வெளிப்புறத்திலும் படங்களை ஏற்றுவதன் மூலம் அமைப்புகளை ரன்-நேரத்தில் உருவாக்க முடியும்.\n"
+" .\n"
+" [கோட் பிளாக்]\n"
+" var அமைப்பு = சுமை (\"res: //icon.png\")\n"
+" $ Sprite.texture = அமைப்பு\n"
+" [/codeBlock]\n"
+" ஏனென்றால், படங்களை [ச்ட்ரீம்டெக்ச்டூர்] ஆக முதலில் [முறை @gdscript.load] உடன் ஏற்ற வேண்டும். வேறு எந்த [வளத்தையும்] போலவே ஒரு படக் கோப்பையும் ஏற்ற விரும்பினால், அதற்கு பதிலாக அதை [பட] வளமாக இறக்குமதி செய்து, பின்னர் [முறை @gdscript.load] முறையைப் பயன்படுத்தி அதை ஏற்றவும்.\n"
+" ஆனால் படத் தரவை இறக்குமதி செய்யப்பட்ட அமைப்பிலிருந்து மீட்டெடுக்க முடியும் என்பதையும், [முறை அமைப்பு.\n"
+" [கோட் பிளாக்]\n"
+" var அமைப்பு = சுமை (\"res: //icon.png\")\n"
+" var படம்: படம் = stecture.get_data ()\n"
+" [/codeBlock]\n"
+" ஒரு [இமேச்டெக்ச்டெர்] எடிட்டர் இடைமுகத்திற்குள் இருந்து நேரடியாக இயக்கப்பட வேண்டியதல்ல, மேலும் குறியீடு வழியாக மாறும் வகையில் திரையில் படங்களை வழங்குவதற்கு இது பெரும்பாலும் பயனுள்ளதாக இருக்கும். எடிட்டருக்குள் இருந்து நீங்கள் படங்களை நடைமுறை ரீதியாக உருவாக்க வேண்டியிருந்தால், புதிய [எடிட்டோரிம்போர்ட்ட்ப்ளூசின்] செயல்படுத்தும் தனிப்பயன் அமைப்பு வளங்களாக படங்களை சேமித்து இறக்குமதி செய்வதைக் கவனியுங்கள்.\n"
+" [b] குறிப்பு: [/b] கிராபிக்ச் வன்பொருள் வரம்புகள் காரணமாக அதிகபட்ச அமைப்பு அளவு 16384 × 16384 படப்புள்ளிகள் ஆகும்."
 
 #: docs/ImageTexture.xml
 msgid ""
 "Create a new [ImageTexture] with [code]width[/code] and [code]height[/code].\n"
 "[code]format[/code] is a value from [enum Image.Format], [code]flags[/code] is any combination of [enum Texture.Flags]."
 msgstr ""
+"[குறியீடு] அகலம் [/குறியீடு] மற்றும் [குறியீடு] உயரம் [/குறியீடு] உடன் புதிய [imageTexture] ஐ உருவாக்கவும்.\n"
+" ."
 
 #: docs/ImageTexture.xml
 msgid ""
@@ -33744,16 +33995,21 @@ msgid ""
 "with [code]flags[/code] from [enum Texture.Flags]. An sRGB to linear color "
 "space conversion can take place, according to [enum Image.Format]."
 msgstr ""
+"[Enum strecuter.flags] இலிருந்து [குறியீடு] கொடிகள் [/குறியீடு] உடன் [பட] "
+"தரவை ஒதுக்கி மற்றும் அமைப்பதன் மூலம் அமைப்பைத் தொடங்குகிறது. [Enum "
+"image.format] இன் படி, நேரியல் வண்ண இடமாற்றத்திற்கு ஒரு SRGB நடைபெறலாம்."
 
 #: docs/ImageTexture.xml
 msgid "Returns the format of the texture, one of [enum Image.Format]."
-msgstr ""
+msgstr "[Enum image.format] ஒன்றான அமைப்பின் வடிவமைப்பை வழங்குகிறது."
 
 #: docs/ImageTexture.xml
 msgid ""
 "Loads an image from a file path and creates a texture from it.\n"
 "[b]Note:[/b] This method is deprecated, use [method Image.load] and [method create_from_image] instead."
 msgstr ""
+"ஒரு கோப்பு பாதையிலிருந்து ஒரு படத்தை ஏற்றி, அதிலிருந்து ஒரு அமைப்பை உருவாக்குகிறது.\n"
+" ."
 
 #: docs/ImageTexture.xml
 msgid ""
@@ -33761,36 +34017,41 @@ msgid ""
 "[b]Note:[/b] The texture has to be initialized first with the [method create_from_image] method before it can be updated. The new image dimensions, format, and mipmaps configuration should match the existing texture's image configuration, otherwise it has to be re-created with the [method create_from_image] method.\n"
 "Use this method over [method create_from_image] if you need to update the texture frequently, which is faster than allocating additional memory for a new texture each time."
 msgstr ""
+"அமைப்பின் தரவை புதிய [படம்] உடன் மாற்றுகிறது.\n"
+" . புதிய பட பரிமாணங்கள், வடிவம் மற்றும் MIPMAPS உள்ளமைவு ஏற்கனவே இருக்கும் அமைப்பின் பட உள்ளமைவுடன் பொருந்த வேண்டும், இல்லையெனில் அதை [முறை Create_from_image] முறையுடன் மீண்டும் உருவாக்க வேண்டும்.\n"
+" ஒவ்வொரு முறையும் ஒரு புதிய அமைப்புக்கு கூடுதல் நினைவகத்தை ஒதுக்குவதை விட வேகமான அமைப்பை நீங்கள் அடிக்கடி புதுப்பிக்க வேண்டியிருந்தால், இந்த முறையைப் பயன்படுத்தவும் [முறை create_from_image]."
 
 #: docs/ImageTexture.xml docs/VisualServer.xml
 msgid "Resizes the texture to the specified dimensions."
-msgstr ""
+msgstr "குறிப்பிட்ட பரிமாணங்களுக்கு அமைப்பை மறுஅளவிடுகிறது."
 
 #: docs/ImageTexture.xml
 msgid "The storage quality for [constant STORAGE_COMPRESS_LOSSY]."
-msgstr ""
+msgstr "[நிலையான சேமிப்பக_சம்பர்_லோசி] க்கான சேமிப்பக தகுதி."
 
 #: docs/ImageTexture.xml
 msgid "The storage type (raw, lossy, or compressed)."
-msgstr ""
+msgstr "சேமிப்பக வகை (மூல, இழப்பு அல்லது சுருக்கப்பட்ட)."
 
 #: docs/ImageTexture.xml
 msgid "[Image] data is stored raw and unaltered."
-msgstr ""
+msgstr "[படம்] தரவு பச்சையாகவும் மாற்றப்படாததாகவும் சேமிக்கப்படுகிறது."
 
 #: docs/ImageTexture.xml
 msgid ""
 "[Image] data is compressed with a lossy algorithm. You can set the storage "
 "quality with [member lossy_quality]."
 msgstr ""
+"[படம்] தரவு இழப்பு வழிமுறையுடன் சுருக்கப்படுகிறது. [உறுப்பினர் இழப்பு_ "
+"குவாலிட்டி] உடன் சேமிப்பக தரத்தை அமைக்கலாம்."
 
 #: docs/ImageTexture.xml
 msgid "[Image] data is compressed with a lossless algorithm."
-msgstr ""
+msgstr "[படம்] தரவு இழப்பற்ற வழிமுறையுடன் சுருக்கப்படுகிறது."
 
 #: docs/ImmediateGeometry.xml
 msgid "Draws simple geometry from code."
-msgstr ""
+msgstr "குறியீட்டிலிருந்து எளிய வடிவவியலை ஈர்க்கிறது."
 
 #: docs/ImmediateGeometry.xml
 msgid ""
@@ -33800,55 +34061,66 @@ msgid ""
 "[b]Note:[/b] Rebel Engine uses clockwise [url=https://learnopengl.com/Advanced-OpenGL/Face-culling]winding order[/url] for front faces of triangle primitive modes.\n"
 "[b]Note:[/b] In case of missing points when handling large amounts of mesh data, try increasing its buffer size limit under [member ProjectSettings.rendering/limits/buffers/immediate_buffer_size_kb]."
 msgstr ""
+"குறியீட்டிலிருந்து எளிய வடிவவியலை ஈர்க்கிறது. Opengl 1.x க்கு ஒத்த வரைதல் பயன்முறையைப் பயன்படுத்துகிறது.\n"
+" நடைமுறை வடிவியல் தலைமுறைக்கு [அரேமேச்], [மெச்தடடூல்] மற்றும் [சர்ஃபாசெட்டூல்] ஐயும் காண்க.\n"
+" . பெரிய அளவிலான கண்ணி தரவைக் கையாளும் போது இது மெதுவாக இருக்கும். கண்ணி தரவு அடிக்கடி மாறவில்லை என்றால், அதற்கு பதிலாக [அரேமெச்], [மெச்தடாடூல்] அல்லது [சர்பேசெட்டம்] பயன்படுத்தவும்.\n"
+" .\n"
+" ."
 
 #: docs/ImmediateGeometry.xml
 msgid ""
 "Simple helper to draw an UV sphere with given latitude, longitude and "
 "radius."
 msgstr ""
+"கொடுக்கப்பட்ட அட்சரேகை, தீர்க்கரேகை மற்றும் ஆரம் கொண்ட ஒரு புற ஊதா கோளத்தை "
+"வரைய எளிய உதவியாளர்."
 
 #: docs/ImmediateGeometry.xml
 msgid ""
 "Adds a vertex in local coordinate space with the currently set color/uv/etc."
 msgstr ""
+"தற்போது அமைக்கப்பட்ட வண்ணம்/UV/போன்றவற்றுடன் உள்ளக ஒருங்கிணைப்பு இடத்தில் "
+"ஒரு வெர்டெக்சை சேர்க்கிறது."
 
 #: docs/ImmediateGeometry.xml
 msgid ""
 "Begin drawing (and optionally pass a texture override). When done call [method end]. For more information on how this works, search for [code]glBegin()[/code] and [code]glEnd()[/code] references.\n"
 "For the type of primitive, see the [enum Mesh.PrimitiveType] enum."
 msgstr ""
+"வரைபடத்தைத் தொடங்குங்கள் (மற்றும் விருப்பமாக ஒரு அமைப்பு மேலெழுதலை அனுப்பவும்). முடிந்ததும் அழைக்கவும் [முறை முடிவு]. இது எவ்வாறு செயல்படுகிறது என்பது பற்றிய கூடுதல் தகவலுக்கு, [குறியீடு] glbegin () [/code] மற்றும் [குறியீடு] க்ளென்ட் () [/குறியீடு] குறிப்புகளைத் தேடுங்கள்.\n"
+" பழமையான வகைக்கு, [enum mesh.primitivetype] enum ஐப் பார்க்கவும்."
 
 #: docs/ImmediateGeometry.xml
 msgid "Clears everything that was drawn using begin/end."
-msgstr ""
+msgstr "தொடக்க/முடிவைப் பயன்படுத்தி வரையப்பட்ட அனைத்தையும் அழிக்கிறது."
 
 #: docs/ImmediateGeometry.xml
 msgid "Ends a drawing context and displays the results."
-msgstr ""
+msgstr "ஒரு வரைதல் சூழலை முடித்து முடிவுகளைக் காண்பிக்கும்."
 
 #: docs/ImmediateGeometry.xml
 msgid "The current drawing color."
-msgstr ""
+msgstr "தற்போதைய வரைதல் நிறம்."
 
 #: docs/ImmediateGeometry.xml
 msgid "The next vertex's normal."
-msgstr ""
+msgstr "அடுத்த வெர்டெக்சின் இயல்பானது."
 
 #: docs/ImmediateGeometry.xml
 msgid "The next vertex's tangent (and binormal facing)."
-msgstr ""
+msgstr "அடுத்த வெர்டெக்சின் தொடுகோடு (மற்றும் பைனார்மல் எதிர்கொள்ளும்)."
 
 #: docs/ImmediateGeometry.xml
 msgid "The next vertex's UV."
-msgstr ""
+msgstr "அடுத்த வெர்டெக்சின் புற ஊதா."
 
 #: docs/ImmediateGeometry.xml
 msgid "The next vertex's second layer UV."
-msgstr ""
+msgstr "அடுத்த வெர்டெக்சின் இரண்டாவது அடுக்கு புற ஊதா."
 
 #: docs/Input.xml
 msgid "A singleton that deals with inputs."
-msgstr ""
+msgstr "உள்ளீடுகளைக் கையாளும் சிங்கிள்டன்."
 
 #: docs/Input.xml
 msgid ""
@@ -33857,10 +34129,14 @@ msgid ""
 "set in the [b]Input Map[/b] tab in the [b]Project > Project Settings[/b], or"
 " with the [InputMap] class."
 msgstr ""
+"உள்ளீடுகளைக் கையாளும் சிங்கிள்டன். முக்கிய அச்சகங்கள், சுட்டி பொத்தான்கள் "
+"மற்றும் இயக்கம், சாய்பேடுகள் மற்றும் உள்ளீட்டு செயல்கள் இதில் அடங்கும். "
+"செயல்கள் மற்றும் அவற்றின் நிகழ்வுகள் [b] உள்ளீட்டு வரைபடம் [/b] தாவலில் [b] "
+"திட்ட> திட்ட அமைப்புகள் [/b] அல்லது [inputmap] வகுப்போடு அமைக்கப்படலாம்."
 
 #: docs/Input.xml
 msgid "https://docs.rebeltoolbox.com/en/latest/tutorials/inputs/index.html"
-msgstr ""
+msgstr "https://docs.rebeltoolbox.com/en/latest/tutorials/inputs/index.html"
 
 #: docs/Input.xml
 msgid ""
@@ -33868,22 +34144,29 @@ msgid ""
 "The strength can be used for non-boolean actions, it's ranged between 0 and 1 representing the intensity of the given action.\n"
 "[b]Note:[/b] This method will not cause any [method Node._input] calls. It is intended to be used with [method is_action_pressed] and [method is_action_just_pressed]. If you want to simulate [code]_input[/code], use [method parse_input_event] instead."
 msgstr ""
+"இது குறிப்பிட்ட செயலை அழுத்துவதை உருவகப்படுத்தும்.\n"
+" வலிமை அல்லாத செயல்களுக்கு வலிமையைப் பயன்படுத்தலாம், இது 0 மற்றும் 1 க்கு இடையில் கொடுக்கப்பட்ட செயலின் தீவிரத்தை குறிக்கிறது.\n"
+" . இது [முறை IS_ACTION_PERSED] மற்றும் [முறை IS_ACTION_JUST_PRESSED] உடன் பயன்படுத்தப்பட வேண்டும். நீங்கள் [குறியீடு] _input [/code] ஐ உருவகப்படுத்த விரும்பினால், அதற்கு பதிலாக [முறை parse_input_event] ஐப் பயன்படுத்தவும்."
 
 #: docs/Input.xml
 msgid "If the specified action is already pressed, this will release it."
-msgstr ""
+msgstr "குறிப்பிட்ட நடவடிக்கை ஏற்கனவே அழுத்தப்பட்டால், இது வெளியிடும்."
 
 #: docs/Input.xml
 msgid ""
 "Adds a new mapping entry (in SDL2 format) to the mapping database. "
 "Optionally update already connected devices."
 msgstr ""
+"மேப்பிங் தரவுத்தளத்தில் புதிய மேப்பிங் உள்ளீட்டை (SDL2 வடிவத்தில்) "
+"சேர்க்கிறது. ஏற்கனவே இணைக்கப்பட்ட சாதனங்களை விருப்பமாக புதுப்பிக்கவும்."
 
 #: docs/Input.xml
 msgid ""
 "Sends all input events which are in the current buffer to the game loop. These events may have been buffered as a result of accumulated input ([method set_use_accumulated_input]) or agile input flushing ([member ProjectSettings.input_devices/buffering/agile_event_flushing]).\n"
 "The engine will already do this itself at key execution points (at least once per frame). However, this can be useful in advanced cases where you want precise control over the timing of event handling."
 msgstr ""
+"தற்போதைய இடையகத்தில் உள்ள அனைத்து உள்ளீட்டு நிகழ்வுகளையும் விளையாட்டு வளையத்திற்கு அனுப்புகிறது. திரட்டப்பட்ட உள்ளீடு ([முறை set_use_accumulated_input]) அல்லது சுறுசுறுப்பான உள்ளீட்டு பறிப்பு ([உறுப்பினர் procetsettings.input_devices/buffering/agile_event_flushing] ஆகியவற்றின் விளைவாக இந்த நிகழ்வுகள் இடையகப்படுத்தப்பட்டிருக்கலாம்.\n"
+" இயந்திரம் ஏற்கனவே முக்கிய செயல்பாட்டு புள்ளிகளில் (ஒரு சட்டத்திற்கு ஒரு முறை) இதைச் செய்யும். இருப்பினும், நிகழ்வு கையாளுதலின் நேரத்தின் மீது துல்லியமான கட்டுப்பாட்டை நீங்கள் விரும்பும் மேம்பட்ட நிகழ்வுகளில் இது பயனுள்ளதாக இருக்கும்."
 
 #: docs/Input.xml
 msgid ""
@@ -33891,92 +34174,120 @@ msgid ""
 "Note this method returns an empty [Vector3] when running from the editor even when your device has an accelerometer. You must export your project to a supported device to read values from the accelerometer.\n"
 "[b]Note:[/b] This method only works on iOS, Android, and UWP. On other platforms, it always returns [constant Vector3.ZERO]. On Android the unit of measurement for each axis is m/s² while on iOS and UWP it's a multiple of the Earth's gravitational acceleration [code]g[/code] (~9.81 m/s²)."
 msgstr ""
+"சாதனத்தில் ஒன்று இருந்தால், சாதனத்தின் முடுக்கமானி சென்சாரின் முடுக்கம் வழங்குகிறது. இல்லையெனில், முறை திரும்பும் [நிலையான vecter3.zero].\n"
+" உங்கள் சாதனத்தில் முடுக்கமானி இருக்கும்போது கூட எடிட்டரிலிருந்து இயங்கும் போது இந்த முறை வெற்று [வெக்டர் 3] ஐ வழங்குகிறது என்பதை நினைவில் கொள்க. முடுக்கமானி இருந்து மதிப்புகளைப் படிக்க உங்கள் திட்டத்தை ஆதரிக்கப்பட்ட சாதனத்திற்கு ஏற்றுமதி செய்ய வேண்டும்.\n"
+" [b] குறிப்பு: [/b] இந்த முறை ஐஇமு, ஆண்ட்ராய்டு மற்றும் UWP இல் மட்டுமே வேலை செய்கிறது. மற்ற தளங்களில், இது எப்போதும் [நிலையான vecter3.zero] திரும்பும். ஆண்ட்ராய்டு இல் ஒவ்வொரு அச்சுக்கும் அளவீட்டு அலகு m/s² ஆகும், இது ஐஇமு மற்றும் UWP இல் இருக்கும்போது இது பூமியின் ஈர்ப்பு முடுக்கம் [குறியீடு] g [/code] (~ 9.81 m/s²)."
 
 #: docs/Input.xml
 msgid ""
 "Returns a value between 0 and 1 representing the raw intensity of the given action, ignoring the action's deadzone. In most cases, you should use [method get_action_strength] instead.\n"
 "If [code]exact[/code] is [code]false[/code], it ignores the input modifiers for [InputEventKey] and [InputEventMouseButton] events, and the direction for [InputEventJoypadMotion] events."
 msgstr ""
+"கொடுக்கப்பட்ட செயலின் மூல தீவிரத்தை குறிக்கும் 0 மற்றும் 1 க்கு இடையில் ஒரு மதிப்பை வழங்குகிறது, செயலின் டெட்சோனைப் புறக்கணிக்கிறது. பெரும்பாலான சந்தர்ப்பங்களில், நீங்கள் அதற்கு பதிலாக [முறை Get_action_strength] ஐப் பயன்படுத்த வேண்டும்.\n"
+" ."
 
 #: docs/Input.xml
 msgid ""
 "Returns a value between 0 and 1 representing the intensity of the given action. In a joypad, for example, the further away the axis (analog sticks or L2, R2 triggers) is from the dead zone, the closer the value will be to 1. If the action is mapped to a control that has no axis as the keyboard, the value returned will be 0 or 1.\n"
 "If [code]exact[/code] is [code]false[/code], it ignores the input modifiers for [InputEventKey] and [InputEventMouseButton] events, and the direction for [InputEventJoypadMotion] events."
 msgstr ""
+"கொடுக்கப்பட்ட செயலின் தீவிரத்தைக் குறிக்கும் 0 மற்றும் 1 க்கு இடையில் ஒரு மதிப்பை வழங்குகிறது. ஒரு சாய்பேடில், எடுத்துக்காட்டாக, அச்சு (அனலாக் குச்சிகள் அல்லது எல் 2, ஆர் 2 தூண்டுதல்கள்) இறந்த மண்டலத்திலிருந்து, மதிப்பு நெருக்கமாக இருக்கும்.\n"
+" ."
 
 #: docs/Input.xml
 msgid ""
 "Get axis input by specifying two actions, one negative and one positive.\n"
 "This is a shorthand for writing [code]Input.get_action_strength(\"positive_action\") - Input.get_action_strength(\"negative_action\")[/code]."
 msgstr ""
+"இரண்டு செயல்களைக் குறிப்பிடுவதன் மூலம் அச்சு உள்ளீட்டைப் பெறுங்கள், ஒரு எதிர்மறை மற்றும் ஒரு நேர்மறை.\n"
+" இது [குறியீடு] உள்ளீடு. Get_ACTION_STRENGTH (\"Position_action\") - உள்ளீடு."
 
 #: docs/Input.xml
 msgid ""
 "Returns an [Array] containing the device IDs of all currently connected "
 "joypads."
 msgstr ""
+"தற்போது இணைக்கப்பட்ட அனைத்து சாய்பேட்களின் சாதன ஐடிகளைக் கொண்ட ஒரு [வரிசை] ஐ"
+" வழங்குகிறது."
 
 #: docs/Input.xml
 msgid "Returns the currently assigned cursor shape (see [enum CursorShape])."
 msgstr ""
+"தற்போது ஒதுக்கப்பட்ட கர்சர் வடிவத்தை வழங்குகிறது ([எனம் கர்சர்சேப்] ஐப் "
+"பார்க்கவும்)."
 
 #: docs/Input.xml
 msgid ""
 "Returns the gravity of the device's accelerometer sensor, if the device has one. Otherwise, the method returns [constant Vector3.ZERO].\n"
 "[b]Note:[/b] This method only works on Android and iOS. On other platforms, it always returns [constant Vector3.ZERO]. On Android the unit of measurement for each axis is m/s² while on iOS it's a multiple of the Earth's gravitational acceleration [code]g[/code] (~9.81 m/s²)."
 msgstr ""
+"சாதனத்தில் ஒன்று இருந்தால், சாதனத்தின் முடுக்கமானி சென்சாரின் ஈர்ப்பை வழங்குகிறது. இல்லையெனில், முறை திரும்பும் [நிலையான vecter3.zero].\n"
+" [b] குறிப்பு: [/b] இந்த முறை ஆண்ட்ராய்டு மற்றும் ஐஇமு இல் மட்டுமே வேலை செய்கிறது. மற்ற தளங்களில், இது எப்போதும் [நிலையான vecter3.zero] திரும்பும். ஆண்ட்ராய்டு இல் ஒவ்வொரு அச்சுக்கும் அளவீட்டு அலகு m/s² ஆக இருக்கும், இது பூமியின் ஈர்ப்பு முடுக்கம் [குறியீடு] g [/code] (~ 9.81 m/s²) இன் பலமாகும்."
 
 #: docs/Input.xml
 msgid ""
 "Returns the rotation rate in rad/s around a device's X, Y, and Z axes of the gyroscope sensor, if the device has one. Otherwise, the method returns [constant Vector3.ZERO].\n"
 "[b]Note:[/b] This method only works on Android and iOS. On other platforms, it always returns [constant Vector3.ZERO]."
 msgstr ""
+"சாதனத்தில் ஒன்று இருந்தால், கைரோச்கோப் சென்சாரின் சாதனத்தின் ஃச், ஒய் மற்றும் சட் அச்சுகளைச் சுற்றி RAD/s இல் சுழற்சி வீதத்தை வழங்குகிறது. இல்லையெனில், முறை திரும்பும் [நிலையான vecter3.zero].\n"
+" [b] குறிப்பு: [/b] இந்த முறை ஆண்ட்ராய்டு மற்றும் ஐஇமு இல் மட்டுமே வேலை செய்கிறது. மற்ற தளங்களில், இது எப்போதும் [நிலையான vecter3.zero] திரும்பும்."
 
 #: docs/Input.xml
 msgid ""
 "Returns the current value of the joypad axis at given index (see [enum "
 "JoystickList])."
 msgstr ""
+"கொடுக்கப்பட்ட குறியீட்டில் சாய்பேட் அச்சின் தற்போதைய மதிப்பை வழங்குகிறது "
+"(பார்க்க [எனம் சாய்ச்டிக்லிச்ட்])."
 
 #: docs/Input.xml
 msgid "Returns the index of the provided axis name."
-msgstr ""
+msgstr "வழங்கப்பட்ட அச்சு பெயரின் குறியீட்டை வழங்குகிறது."
 
 #: docs/Input.xml
 msgid ""
 "Receives a [enum JoystickList] axis and returns its equivalent name as a "
 "string."
 msgstr ""
+"[எனம் சாய்ச்டிக்லிச்ட்] அச்சைப் பெறுகிறது மற்றும் அதன் சமமான பெயரை ஒரு சரமாக"
+" வழங்குகிறது."
 
 #: docs/Input.xml
 msgid "Returns the index of the provided button name."
-msgstr ""
+msgstr "வழங்கப்பட்ட பொத்தான் பெயரின் குறியீட்டை வழங்குகிறது."
 
 #: docs/Input.xml
 msgid ""
 "Receives a gamepad button from [enum JoystickList] and returns its "
 "equivalent name as a string."
 msgstr ""
+"[எனம் சாய்ச்டிக்லிச்ட்டில் இருந்து] கேம்பேட் பொத்தானைப் பெறுகிறது மற்றும் "
+"அதன் சமமான பெயரை ஒரு சரமாக வழங்குகிறது."
 
 #: docs/Input.xml
 msgid ""
 "Returns a SDL2-compatible device GUID on platforms that use gamepad "
 "remapping. Returns [code]\"Default Gamepad\"[/code] otherwise."
 msgstr ""
+"கேம்பேட் ரீமேப்பிங்கைப் பயன்படுத்தும் தளங்களில் எச்.டி.எல் 2-இணக்கமான சாதன "
+"வழிகாட்டலை வழங்குகிறது. இல்லையெனில் [குறியீடு] \"இயல்புநிலை கேம்பேட்\" "
+"[/குறியீடு] ஐ வழங்குகிறது."
 
 #: docs/Input.xml
 msgid "Returns the name of the joypad at the specified device index."
-msgstr ""
+msgstr "குறிப்பிட்ட சாதனக் குறியீட்டில் சாய்பேட்டின் பெயரை வழங்குகிறது."
 
 #: docs/Input.xml
 msgid "Returns the duration of the current vibration effect in seconds."
-msgstr ""
+msgstr "தற்போதைய அதிர்வு விளைவின் காலத்தை நொடிகளில் வழங்குகிறது."
 
 #: docs/Input.xml
 msgid ""
 "Returns the strength of the joypad vibration: x is the strength of the weak "
 "motor, and y is the strength of the strong motor."
 msgstr ""
+"சாய்பேட் அதிர்வின் வலிமையைத் தருகிறது: ஃச் என்பது பலவீனமான மோட்டரின் வலிமை, "
+"மற்றும் ஒய் என்பது வலுவான மோட்டரின் வலிமை."
 
 #: docs/Input.xml
 msgid ""
@@ -33985,22 +34296,30 @@ msgid ""
 "mouse is not moving, this function will still return the value of the last "
 "motion."
 msgstr ""
+"கர்சர் நகர்த்தப்பட்ட கடைசி நேரத்தில் சுட்டி வேகத்தை வழங்குகிறது, மேலும் இது "
+"சுட்டி நகரும் அடுத்த சட்டகம் வரை. இதன் பொருள் சுட்டி நகரவில்லை என்றாலும், "
+"இந்த செயல்பாடு கடைசி இயக்கத்தின் மதிப்பை இன்னும் திருப்பித் தரும்."
 
 #: docs/Input.xml
 msgid ""
 "Returns the magnetic field strength in micro-Tesla for all axes of the device's magnetometer sensor, if the device has one. Otherwise, the method returns [constant Vector3.ZERO].\n"
 "[b]Note:[/b] This method only works on Android, iOS and UWP. On other platforms, it always returns [constant Vector3.ZERO]."
 msgstr ""
+"சாதனத்தில் ஒன்று இருந்தால், சாதனத்தின் காந்தமாமீட்டர் சென்சாரின் அனைத்து அச்சுகளுக்கும் மைக்ரோ-டெச்லாவில் காந்தப்புல வலிமையை வழங்குகிறது. இல்லையெனில், முறை திரும்பும் [நிலையான vecter3.zero].\n"
+" [b] குறிப்பு: [/b] இந்த முறை ஆண்ட்ராய்டு, ஐஇமு மற்றும் UWP இல் மட்டுமே வேலை செய்கிறது. மற்ற தளங்களில், இது எப்போதும் [நிலையான vecter3.zero] திரும்பும்."
 
 #: docs/Input.xml
 msgid ""
 "Returns mouse buttons as a bitmask. If multiple mouse buttons are pressed at"
 " the same time, the bits are added together."
 msgstr ""
+"மவுச் பொத்தான்களை ஒரு பிட்மாச்காக வழங்குகிறது. ஒரே நேரத்தில் பல சுட்டி "
+"பொத்தான்கள் அழுத்தினால், பிட்கள் ஒன்றாக சேர்க்கப்படுகின்றன."
 
 #: docs/Input.xml
 msgid "Returns the mouse mode. See the constants for more information."
 msgstr ""
+"சுட்டி பயன்முறையை வழங்குகிறது. மேலும் தகவலுக்கு மாறிலிகளைப் பார்க்கவும்."
 
 #: docs/Input.xml
 msgid ""
@@ -34008,6 +34327,9 @@ msgid ""
 "This method is useful when getting vector input, such as from a joystick, directional pad, arrows, or WASD. The vector has its length limited to 1 and has a circular deadzone, which is useful for using vector input as movement.\n"
 "By default, the deadzone is automatically calculated from the average of the action deadzones. However, you can override the deadzone to be whatever you want (on the range of 0 to 1)."
 msgstr ""
+"நேர்மறை மற்றும் எதிர்மறை ஃச் மற்றும் ஒய் அச்சுகளுக்கு நான்கு செயல்களைக் குறிப்பிடுவதன் மூலம் உள்ளீட்டு திசையன் பெறுகிறது.\n"
+" சாய்ச்டிக், திசை திண்டு, அம்புகள் அல்லது WASD போன்ற திசையன் உள்ளீட்டைப் பெறும்போது இந்த முறை பயனுள்ளதாக இருக்கும். திசையன் அதன் நீளத்தை 1 ஆக வரையறுக்கப்பட்டுள்ளது மற்றும் வட்ட டெட்சோன் உள்ளது, இது திசையன் உள்ளீட்டை இயக்கமாக பயன்படுத்த பயனுள்ளதாக இருக்கும்.\n"
+" இயல்பாக, டெட்சோன் தானாகவே அதிரடி டெட்சோன்களின் சராசரியிலிருந்து கணக்கிடப்படுகிறது. இருப்பினும், நீங்கள் எதை வேண்டுமானாலும் (0 முதல் 1 வரம்பில்) இருக்க டெட்சோனை மேலெழுதலாம்."
 
 #: docs/Input.xml
 msgid ""
@@ -34016,12 +34338,18 @@ msgid ""
 "If [code]exact[/code] is [code]false[/code], it ignores the input modifiers for [InputEventKey] and [InputEventMouseButton] events, and the direction for [InputEventJoypadMotion] events.\n"
 "[b]Note:[/b] Due to keyboard ghosting, [method is_action_just_pressed] may return [code]false[/code] even if one of the action's keys is pressed. See [url=https://docs.rebeltoolbox.com/en/latest/tutorials/inputs/input_examples.html#keyboard-events]Input examples[/url] in the documentation for more information."
 msgstr ""
+"வருவாய் [குறியீடு] உண்மை [/குறியீடு] பயனர் செயல் நிகழ்வை அழுத்தத் தொடங்கும் போது, ​​அதாவது இது [குறியீடு] உண்மை [/குறியீடு] பயனர் பொத்தானை அழுத்திய சட்டத்தில் மட்டுமே.\n"
+" ஒவ்வொரு சட்டகத்திற்கும் பதிலாக, ஒவ்வொரு சட்டகத்திற்கும் பதிலாக, ஒரு செயல் அழுத்தும்போது ஒரு முறை மட்டுமே இயங்க வேண்டிய குறியீட்டிற்கு இது பயனுள்ளதாக இருக்கும்.\n"
+" .\n"
+" . [Url = https: //docs.rebeltoolbox.com/en/latest/tutorials/inputs/input_examples.html#keyboard-events] உள்ளீட்டு எடுத்துக்காட்டுகள் [/url] ஐப் பார்க்கவும்."
 
 #: docs/Input.xml
 msgid ""
 "Returns [code]true[/code] when the user stops pressing the action event, meaning it's [code]true[/code] only on the frame that the user released the button.\n"
 "If [code]exact[/code] is [code]false[/code], it ignores the input modifiers for [InputEventKey] and [InputEventMouseButton] events, and the direction for [InputEventJoypadMotion] events."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] பயனர் செயல் நிகழ்வை அழுத்துவதை நிறுத்தும்போது, ​​அதாவது இது [குறியீடு] உண்மை [/குறியீடு] பயனர் பொத்தானை வெளியிட்ட சட்டகத்தில் மட்டுமே.\n"
+" ."
 
 #: docs/Input.xml
 msgid ""
@@ -34029,12 +34357,17 @@ msgid ""
 "If [code]exact[/code] is [code]false[/code], it ignores the input modifiers for [InputEventKey] and [InputEventMouseButton] events, and the direction for [InputEventJoypadMotion] events.\n"
 "[b]Note:[/b] Due to keyboard ghosting, [method is_action_pressed] may return [code]false[/code] even if one of the action's keys is pressed. See [url=https://docs.rebeltoolbox.com/en/latest/tutorials/inputs/input_examples.html#keyboard-events]Input examples[/url] in the documentation for more information."
 msgstr ""
+"நீங்கள் செயல் நிகழ்வை அழுத்தினால் [குறியீடு] உண்மை [/குறியீடு] திரும்பும். ஒரு செயலில் பல பொத்தான்கள் ஒதுக்கப்பட்டிருந்தால், அவற்றில் ஒன்றுக்கு மேற்பட்டவை அழுத்தப்பட்டால், ஒரு பொத்தானை வெளியிடுவது செயலை வெளியிடும், இந்த செயலுக்கு ஒதுக்கப்பட்ட வேறு சில பொத்தான்கள் இன்னும் அழுத்தப்பட்டாலும் கூட.\n"
+" .\n"
+" . [Url = https: //docs.rebeltoolbox.com/en/latest/tutorials/inputs/input_examples.html#keyboard-events] உள்ளீட்டு எடுத்துக்காட்டுகள் [/url] ஐப் பார்க்கவும்."
 
 #: docs/Input.xml
 msgid ""
 "Returns [code]true[/code] if you are pressing the joypad button (see [enum "
 "JoystickList])."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] நீங்கள் சாய்பேட் பொத்தானை அழுத்தினால் ([எனம் "
+"சாய்ச்டிக்லிச்ட்] ஐப் பார்க்கவும்)."
 
 #: docs/Input.xml
 msgid ""
@@ -34043,6 +34376,12 @@ msgid ""
 "JoystickList]. Unknown joypads are not expected to match these constants, "
 "but you can still retrieve events from them."
 msgstr ""
+"குறிப்பிட்ட சாதனம் கணினிக்கு தெரிந்தால் [குறியீடு] உண்மை [/குறியீடு] "
+"வழங்குகிறது. [எனம் சாய்ச்டிக்லிச்ட்] இல் வரையறுக்கப்பட்டுள்ளபடி இது அனைத்து "
+"பொத்தான் மற்றும் அச்சு குறியீடுகளையும் அமைக்கிறது என்பதே இதன் பொருள். "
+"அறியப்படாத சாய்பேட்கள் இந்த மாறிலிகளுடன் பொருந்தும் என்று "
+"எதிர்பார்க்கப்படவில்லை, ஆனால் அவர்களிடமிருந்து நிகழ்வுகளை நீங்கள் இன்னும் "
+"மீட்டெடுக்க முடியும்."
 
 #: docs/Input.xml
 msgid ""
@@ -34050,12 +34389,17 @@ msgid ""
 "[method is_key_pressed] is only recommended over [method is_physical_key_pressed] in non-game applications. This ensures that shortcut keys behave as expected depending on the user's keyboard layout, as keyboard shortcuts are generally dependent on the keyboard layout in non-game applications. If in doubt, use [method is_physical_key_pressed].\n"
 "[b]Note:[/b] Due to keyboard ghosting, [method is_key_pressed] may return [code]false[/code] even if one of the action's keys is pressed. See [url=https://docs.rebeltoolbox.com/en/latest/tutorials/inputs/input_examples.html#keyboard-events]Input examples[/url] in the documentation for more information."
 msgstr ""
+"தற்போதைய விசைப்பலகை தளவமைப்பில் விசையை அழுத்தினால் [குறியீடு] உண்மை [/code] ஐ வழங்குகிறது. நீங்கள் ஒரு [enum keylist] மாறிலி கடந்து செல்லலாம்.\n"
+" [முறை is_key_pressed] விளையாட்டு அல்லாத பயன்பாடுகளில் [முறை is_physical_key_pressed] மீது மட்டுமே பரிந்துரைக்கப்படுகிறது. விசைப்பலகை குறுக்குவழிகள் பொதுவாக விளையாட்டு அல்லாத பயன்பாடுகளில் விசைப்பலகை தளவமைப்பைப் பொறுத்தது என்பதால், பயனரின் விசைப்பலகை தளவமைப்பைப் பொறுத்து குறுக்குவழி விசைகள் எதிர்பார்த்தபடி செயல்படுவதை இது உறுதி செய்கிறது. ஐயம் இருந்தால், [முறை is_physical_key_pressed] ஐப் பயன்படுத்தவும்.\n"
+" . [Url = https: //docs.rebeltoolbox.com/en/latest/tutorials/inputs/input_examples.html#keyboard-events] உள்ளீட்டு எடுத்துக்காட்டுகள் [/url] ஐப் பார்க்கவும்."
 
 #: docs/Input.xml
 msgid ""
 "Returns [code]true[/code] if you are pressing the mouse button specified "
 "with [enum ButtonList]."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] [ENUM பொத்தான் பட்டியல்] உடன் குறிப்பிடப்பட்ட "
+"சுட்டி பொத்தானை அழுத்தினால்."
 
 #: docs/Input.xml
 msgid ""
@@ -34063,12 +34407,17 @@ msgid ""
 "[method is_physical_key_pressed] is recommended over [method is_key_pressed] for in-game actions, as it will make W/A/S/D layouts work regardless of the user's keyboard layout. [method is_physical_key_pressed] will also ensure that the top row number keys work on any keyboard layout. If in doubt, use [method is_physical_key_pressed].\n"
 "[b]Note:[/b] Due to keyboard ghosting, [method is_physical_key_pressed] may return [code]false[/code] even if one of the action's keys is pressed. See [url=https://docs.rebeltoolbox.com/en/latest/tutorials/inputs/input_examples.html#keyboard-events]Input examples[/url] in the documentation for more information."
 msgstr ""
+"101/102-key US qwerty விசைப்பலகையில் இயற்பியல் இருப்பிடத்தில் விசையை அழுத்தினால் [குறியீடு] உண்மை [/குறியீடு] திரும்பும். நீங்கள் ஒரு [enum keylist] மாறிலி கடந்து செல்லலாம்.\n"
+" [முறை is_physical_key_pressed] விளையாட்டு செயல்களுக்கு [முறை IS_KEY_PRESSED] மீது பரிந்துரைக்கப்படுகிறது, ஏனெனில் இது பயனரின் விசைப்பலகை தளவமைப்பைப் பொருட்படுத்தாமல் W/A/S/D தளவமைப்புகளைச் செயல்படுத்தும். [முறை is_physical_key_pressed] எந்த விசைப்பலகை தளவமைப்பிலும் மேல் வரிசை எண் விசைகள் செயல்படுவதை உறுதி செய்யும். ஐயம் இருந்தால், [முறை is_physical_key_pressed] ஐப் பயன்படுத்தவும்.\n"
+" . [Url = https: //docs.rebeltoolbox.com/en/latest/tutorials/inputs/input_examples.html#keyboard-events] உள்ளீட்டு எடுத்துக்காட்டுகள் [/url] ஐப் பார்க்கவும்."
 
 #: docs/Input.xml
 msgid ""
 "Notifies the [Input] singleton that a connection has changed, to update the state for the [code]device[/code] index.\n"
 "This is used internally and should not have to be called from user scripts. See [signal joy_connection_changed] for the signal emitted when this is triggered internally."
 msgstr ""
+"[குறியீடு] சாதனம் [/குறியீடு] குறியீட்டிற்கான நிலையை புதுப்பிக்க, ஒரு இணைப்பு மாறிவிட்டது என்று [உள்ளீடு] சிங்கிள்டனுக்கு அறிவிக்கிறது.\n"
+" இது உள்நாட்டில் பயன்படுத்தப்படுகிறது மற்றும் பயனர் ச்கிரிப்ட்களிலிருந்து அழைக்கப்பட வேண்டியதில்லை. இது உள்நாட்டில் தூண்டப்படும்போது உமிழப்படும் சமிக்ஞைக்கு [சமிக்ஞை Joy_connection_changed] ஐப் பார்க்கவும்."
 
 #: docs/Input.xml
 msgid ""
@@ -34081,17 +34430,29 @@ msgid ""
 "Input.parse_input_event(a)\n"
 "[/codeblock]"
 msgstr ""
+"விளையாட்டுக்கு [உள்ளுணர்வு] உணவளிக்கிறது. குறியீட்டிலிருந்து உள்ளீட்டு நிகழ்வுகளை செயற்கையாக தூண்டுவதற்கு பயன்படுத்தலாம். [முறை node._input] அழைப்புகளையும் உருவாக்குகிறது.\n"
+" எடுத்துக்காட்டு:\n"
+" [கோட் பிளாக்]\n"
+" var a = inputeventaction.new ()\n"
+" A.ACTION = \"UI_CANCEL\"\n"
+" A.RESSERED = உண்மை\n"
+" Input.Parse_input_event (அ)\n"
+" [/codeBlock]"
 
 #: docs/Input.xml
 msgid ""
 "Removes all mappings from the internal database that match the given GUID."
 msgstr ""
+"கொடுக்கப்பட்ட வழிகாட்டியுடன் பொருந்தக்கூடிய உள் தரவுத்தளத்திலிருந்து அனைத்து"
+" வரைபடங்களையும் நீக்குகிறது."
 
 #: docs/Input.xml
 msgid ""
 "Sets the acceleration value of the accelerometer sensor. Can be used for debugging on devices without a hardware sensor, for example in an editor on a PC.\n"
 "[b]Note:[/b] This value can be immediately overwritten by the hardware sensor value on Android and iOS."
 msgstr ""
+"முடுக்கமானி சென்சாரின் முடுக்கம் மதிப்பை அமைக்கிறது. வன்பொருள் சென்சார் இல்லாமல் சாதனங்களில் பிழைத்திருத்தத்திற்கு பயன்படுத்தலாம், எடுத்துக்காட்டாக கணினியில் ஒரு எடிட்டரில்.\n"
+" [b] குறிப்பு: [/b] இந்த மதிப்பை ஆண்ட்ராய்டு மற்றும் ஐஇமு இல் உள்ள வன்பொருள் சென்சார் மதிப்பால் உடனடியாக மேலெழுதலாம்."
 
 #: docs/Input.xml
 msgid ""
@@ -34101,6 +34462,11 @@ msgid ""
 "[b]Note:[/b] [AnimatedTexture]s aren't supported as custom mouse cursors. If using an [AnimatedTexture], only the first frame will be displayed.\n"
 "[b]Note:[/b] Only images imported with the [b]Lossless[/b], [b]Lossy[/b] or [b]Uncompressed[/b] compression modes are supported. The [b]Video RAM[/b] compression mode can't be used for custom cursors."
 msgstr ""
+"தனிப்பயன் மவுச் கர்சர் படத்தை அமைக்கிறது, இது விளையாட்டு சாளரத்திற்குள் மட்டுமே தெரியும். ஆட்ச்பாட்டையும் குறிப்பிடலாம். பட அளவுருவுக்கு [குறியீடு] சுழிய [/குறியீடு] ஐ கணினி கர்சருக்கு மீட்டமைக்கிறது. வடிவங்களின் பட்டியலுக்கு [enum cursorshape] ஐப் பார்க்கவும்.\n"
+" [குறியீடு] படம் [/குறியீடு] இன் அளவு 256 × 256 ஐ விட குறைவாக இருக்க வேண்டும்.\n"
+" [குறியீடு] ஆட்ச்பாட் [/குறியீடு] [குறியீடு] படத்திற்குள் இருக்க வேண்டும் [/குறியீடு] இன் அளவு.\n"
+" [b] குறிப்பு: [/b] [அனிமேசன் டெக்ச்டூர்] கள் தனிப்பயன் சுட்டி கர்சர்களாக ஆதரிக்கப்படவில்லை. [அனிமேசன் டெக்ச்டூர்] ஐப் பயன்படுத்தினால், முதல் சட்டகம் மட்டுமே காண்பிக்கப்படும்.\n"
+" . தனிப்பயன் கர்சர்களுக்கு [b] வீடியோ ரேம் [/b] சுருக்க பயன்முறையைப் பயன்படுத்த முடியாது."
 
 #: docs/Input.xml
 msgid ""
@@ -34108,28 +34474,38 @@ msgid ""
 "[b]Note:[/b] If you want to change the default cursor shape for [Control]'s nodes, use [member Control.mouse_default_cursor_shape] instead.\n"
 "[b]Note:[/b] This method generates an [InputEventMouseMotion] to update cursor immediately."
 msgstr ""
+"[நிலையான கர்சர்_ஆரோ] க்கு பதிலாக காட்சியமைப்பில் பயன்படுத்தப்பட வேண்டிய இயல்புநிலை கர்சர் வடிவத்தை அமைக்கிறது.\n"
+" .\n"
+" ."
 
 #: docs/Input.xml
 msgid ""
 "Sets the gravity value of the accelerometer sensor. Can be used for debugging on devices without a hardware sensor, for example in an editor on a PC.\n"
 "[b]Note:[/b] This value can be immediately overwritten by the hardware sensor value on Android and iOS."
 msgstr ""
+"முடுக்கமானி சென்சாரின் ஈர்ப்பு மதிப்பை அமைக்கிறது. வன்பொருள் சென்சார் இல்லாமல் சாதனங்களில் பிழைத்திருத்தத்திற்கு பயன்படுத்தலாம், எடுத்துக்காட்டாக கணினியில் ஒரு எடிட்டரில்.\n"
+" [b] குறிப்பு: [/b] இந்த மதிப்பை ஆண்ட்ராய்டு மற்றும் ஐஇமு இல் உள்ள வன்பொருள் சென்சார் மதிப்பால் உடனடியாக மேலெழுதலாம்."
 
 #: docs/Input.xml
 msgid ""
 "Sets the value of the rotation rate of the gyroscope sensor. Can be used for debugging on devices without a hardware sensor, for example in an editor on a PC.\n"
 "[b]Note:[/b] This value can be immediately overwritten by the hardware sensor value on Android and iOS."
 msgstr ""
+"கைரோச்கோப் சென்சாரின் சுழற்சி விகிதத்தின் மதிப்பை அமைக்கிறது. வன்பொருள் சென்சார் இல்லாமல் சாதனங்களில் பிழைத்திருத்தத்திற்கு பயன்படுத்தலாம், எடுத்துக்காட்டாக கணினியில் ஒரு எடிட்டரில்.\n"
+" [b] குறிப்பு: [/b] இந்த மதிப்பை ஆண்ட்ராய்டு மற்றும் ஐஇமு இல் உள்ள வன்பொருள் சென்சார் மதிப்பால் உடனடியாக மேலெழுதலாம்."
 
 #: docs/Input.xml
 msgid ""
 "Sets the value of the magnetic field of the magnetometer sensor. Can be used for debugging on devices without a hardware sensor, for example in an editor on a PC.\n"
 "[b]Note:[/b] This value can be immediately overwritten by the hardware sensor value on Android and iOS."
 msgstr ""
+"காந்தமாமீட்டர் சென்சாரின் காந்தப்புலத்தின் மதிப்பை அமைக்கிறது. வன்பொருள் சென்சார் இல்லாமல் சாதனங்களில் பிழைத்திருத்தத்திற்கு பயன்படுத்தலாம், எடுத்துக்காட்டாக கணினியில் ஒரு எடிட்டரில்.\n"
+" [b] குறிப்பு: [/b] இந்த மதிப்பை ஆண்ட்ராய்டு மற்றும் ஐஇமு இல் உள்ள வன்பொருள் சென்சார் மதிப்பால் உடனடியாக மேலெழுதலாம்."
 
 #: docs/Input.xml
 msgid "Sets the mouse mode. See the constants for more information."
 msgstr ""
+"சுட்டி பயன்முறையை அமைக்கிறது. மேலும் தகவலுக்கு மாறிலிகளைப் பார்க்கவும்."
 
 #: docs/Input.xml
 msgid ""
@@ -34137,72 +34513,91 @@ msgid ""
 "Input accumulation can be disabled to get slightly more precise/reactive input at the cost of increased CPU usage. In applications where drawing freehand lines is required, input accumulation should generally be disabled while the user is drawing the line to get results that closely follow the actual input.\n"
 "[b]Note:[/b] Input accumulation is [i]disabled[/i] by default for backward compatibility reasons. It is however recommended to enable it for games which don't require very reactive input, as this will decrease CPU usage."
 msgstr ""
+"இயக்க முறைமை அனுப்பிய ஒத்த உள்ளீட்டு நிகழ்வுகளின் திரட்சியை செயல்படுத்துகிறது அல்லது முடக்குகிறது. உள்ளீட்டு குவிப்பு இயக்கப்பட்டால், ஒரு சட்டகத்தின் போது உருவாக்கப்படும் அனைத்து உள்ளீட்டு நிகழ்வுகளும் ஒன்றிணைக்கப்பட்டு, சட்டகம் வழங்குதல் செய்யப்படும்போது வெளியேற்றப்படும். எனவே, இது நொடிக்கு உள்ளீட்டு முறை அழைப்புகளின் எண்ணிக்கையை வழங்குதல் FPS க்கு கட்டுப்படுத்துகிறது.\n"
+" அதிகரித்த சிபியு பயன்பாட்டின் செலவில் சற்று துல்லியமான/எதிர்வினை உள்ளீட்டைப் பெற உள்ளீட்டு குவிப்பு முடக்கப்படலாம். ஃப்ரீஏண்ட் கோடுகள் வரைதல் தேவைப்படும் பயன்பாடுகளில், உண்மையான உள்ளீட்டைக் நெருக்கமாகப் பின்பற்றும் முடிவுகளைப் பெற பயனர் வரியை வரைவதற்குள் உள்ளீட்டு குவிப்பு பொதுவாக முடக்கப்பட வேண்டும்.\n"
+" . இருப்பினும் மிகவும் எதிர்வினை உள்ளீடு தேவையில்லாத விளையாட்டுகளுக்கு அதை இயக்க பரிந்துரைக்கப்படுகிறது, ஏனெனில் இது சிபியு பயன்பாட்டைக் குறைக்கும்."
 
 #: docs/Input.xml
 msgid ""
 "Starts to vibrate the joypad. Joypads usually come with two rumble motors, a strong and a weak one. [code]weak_magnitude[/code] is the strength of the weak motor (between 0 and 1) and [code]strong_magnitude[/code] is the strength of the strong motor (between 0 and 1). [code]duration[/code] is the duration of the effect in seconds (a duration of 0 will try to play the vibration indefinitely).\n"
 "[b]Note:[/b] Not every hardware is compatible with long effect durations; it is recommended to restart an effect if it has to be played for more than a few seconds."
 msgstr ""
+"சாய்பேட்டை அதிர்வுறத் தொடங்குகிறது. சாய்பேட்ச் வழக்கமாக இரண்டு ரம்பிள் மோட்டார்கள், வலுவான மற்றும் பலவீனமான ஒன்றைக் கொண்டு வரும். . [குறியீடு] காலம் [/குறியீடு] என்பது விநாடிகளில் விளைவின் காலமாகும் (0 இன் காலம் அதிர்வுகளை காலவரையின்றி இயக்க முயற்சிக்கும்).\n"
+" [b] குறிப்பு: [/b] ஒவ்வொரு வன்பொருளும் நீண்ட விளைவு காலங்களுடன் பொருந்தாது; சில வினாடிகளுக்கு மேல் விளையாட வேண்டுமானால் ஒரு விளைவை மறுதொடக்கம் செய்ய பரிந்துரைக்கப்படுகிறது."
 
 #: docs/Input.xml
 msgid "Stops the vibration of the joypad."
-msgstr ""
+msgstr "சாய்பேடின் அதிர்வுகளை நிறுத்துகிறது."
 
 #: docs/Input.xml
 msgid ""
 "Vibrate Android and iOS devices.\n"
 "[b]Note:[/b] It needs [code]VIBRATE[/code] permission for Android at export settings. iOS does not support duration."
 msgstr ""
+"ஆண்ட்ராய்டு மற்றும் ஐஇமு சாதனங்களை அதிர்வுறும்.\n"
+" . ஐஇமு காலத்தை ஆதரிக்கவில்லை."
 
 #: docs/Input.xml
 msgid ""
 "Sets the mouse position to the specified vector, provided in pixels and relative to an origin at the upper left corner of the game window.\n"
 "Mouse position is clipped to the limits of the screen resolution, or to the limits of the game window if [enum MouseMode] is set to [constant MOUSE_MODE_CONFINED]."
 msgstr ""
+"சுட்டி நிலையை குறிப்பிட்ட திசையனுக்கு அமைக்கிறது, இது பிக்சல்களில் வழங்கப்படுகிறது மற்றும் விளையாட்டு சாளரத்தின் மேல் இடது மூலையில் ஒரு தோற்றத்துடன் தொடர்புடையது.\n"
+" மவுச் நிலை திரை தெளிவுத்திறனின் வரம்புகளுக்கு அல்லது விளையாட்டு சாளரத்தின் வரம்புகளுக்கு [enum mousemode] [நிலையான Mouse_mode_confined] என அமைக்கப்பட்டால்."
 
 #: docs/Input.xml
 msgid "Emitted when a joypad device has been connected or disconnected."
-msgstr ""
+msgstr "சாய்பேட் சாதனம் இணைக்கப்பட்ட அல்லது துண்டிக்கப்பட்டால் உமிழப்படும்."
 
 #: docs/Input.xml
 msgid "Makes the mouse cursor visible if it is hidden."
-msgstr ""
+msgstr "மவுச் கர்சரை மறைக்கப்பட்டால் அது தெரியும்."
 
 #: docs/Input.xml
 msgid "Makes the mouse cursor hidden if it is visible."
-msgstr ""
+msgstr "மவுச் கர்சரைத் தெரிந்தால் மறைக்க வைக்கிறது."
 
 #: docs/Input.xml
 msgid ""
 "Captures the mouse. The mouse will be hidden and its position locked at the center of the screen.\n"
 "[b]Note:[/b] If you want to process the mouse's movement in this mode, you need to use [member InputEventMouseMotion.relative]."
 msgstr ""
+"சுட்டியைக் கைப்பற்றுகிறது. சுட்டி மறைக்கப்பட்டு அதன் நிலை திரையின் மையத்தில் பூட்டப்படும்.\n"
+" ."
 
 #: docs/Input.xml
 msgid "Makes the mouse cursor visible but confines it to the game window."
 msgstr ""
+"மவுச் கர்சரைத் தெரியும், ஆனால் அதை விளையாட்டு சாளரத்துடன் "
+"கட்டுப்படுத்துகிறது."
 
 #: docs/Input.xml
 msgid "Arrow cursor. Standard, default pointing cursor."
-msgstr ""
+msgstr "அம்பு கர்சர். நிலையான, இயல்புநிலை சுட்டிக்காட்டும் கர்சர்."
 
 #: docs/Input.xml
 msgid ""
 "I-beam cursor. Usually used to show where the text cursor will appear when "
 "the mouse is clicked."
 msgstr ""
+"ஐ-பீம் கர்சர். சுட்டி சொடுக்கு செய்யப்படும்போது உரை கர்சர் எங்கு தோன்றும் "
+"என்பதைக் காட்ட வழக்கமாகப் பயன்படுகிறது."
 
 #: docs/Input.xml
 msgid ""
 "Pointing hand cursor. Usually used to indicate the pointer is over a link or"
 " other interactable item."
 msgstr ""
+"கை கர்சரை சுட்டிக்காட்டுகிறது. சுட்டிக்காட்டி ஒரு இணைப்பு அல்லது பிற "
+"தொடர்புபடுத்தக்கூடிய உருப்படியைக் குறிக்க பொதுவாகப் பயன்படுகிறது."
 
 #: docs/Input.xml
 msgid ""
 "Cross cursor. Typically appears over regions in which a drawing operation "
 "can be performed or for selections."
 msgstr ""
+"குறுக்கு கர்சர். பொதுவாக ஒரு வரைபட செயல்பாட்டைச் செய்யக்கூடிய அல்லது "
+"தேர்வுகளுக்கு செய்யக்கூடிய பகுதிகளில் தோன்றும்."
 
 #: docs/Input.xml
 msgid ""
@@ -34210,6 +34605,9 @@ msgid ""
 " This cursor shape denotes that the application is still usable during the "
 "operation."
 msgstr ""
+"கர்சர் காத்திருங்கள். பயன்பாடு ஒரு செயல்பாட்டைச் செய்வதில் மும்முரமாக "
+"இருப்பதைக் குறிக்கிறது. இந்த கர்சர் வடிவம் செயல்பாட்டின் போது பயன்பாடு "
+"இன்னும் பயன்படுத்தக்கூடியது என்பதைக் குறிக்கிறது."
 
 #: docs/Input.xml
 msgid ""
@@ -34217,16 +34615,22 @@ msgid ""
 " This cursor shape denotes that the application isn't usable during the "
 "operation (e.g. something is blocking its main thread)."
 msgstr ""
+"பிசியான கர்சர். பயன்பாடு ஒரு செயல்பாட்டைச் செய்வதில் மும்முரமாக இருப்பதைக் "
+"குறிக்கிறது. இந்த கர்சர் வடிவம் செயல்பாட்டின் போது பயன்பாடு "
+"பயன்படுத்தப்படாது என்பதைக் குறிக்கிறது (எ.கா. ஏதோ அதன் முக்கிய நூலைத் "
+"தடுக்கிறது)."
 
 #: docs/Input.xml
 msgid "Drag cursor. Usually displayed when dragging something."
-msgstr ""
+msgstr "கர்சரை இழுக்கவும். பொதுவாக எதையாவது இழுக்கும்போது காண்பிக்கப்படும்."
 
 #: docs/Input.xml
 msgid ""
 "Can drop cursor. Usually displayed when dragging something to indicate that "
 "it can be dropped at the current position."
 msgstr ""
+"கர்சரை கைவிடலாம். வழக்கமாக எதையாவது இழுக்கும்போது காட்டப்படும் போது அது "
+"தற்போதைய நிலையில் கைவிடப்படலாம் என்பதைக் குறிக்கக் காட்டப்படும்."
 
 #: docs/Input.xml
 msgid ""
@@ -34234,18 +34638,25 @@ msgid ""
 "example, when dragging something) or that the control at a position is "
 "disabled."
 msgstr ""
+"தடைசெய்யப்பட்ட கர்சர். தற்போதைய நடவடிக்கை தடைசெய்யப்பட்டுள்ளது என்பதைக் "
+"குறிக்கிறது (எடுத்துக்காட்டாக, எதையாவது இழுக்கும்போது) அல்லது ஒரு நிலையில் "
+"உள்ள கட்டுப்பாடு முடக்கப்பட்டுள்ளது."
 
 #: docs/Input.xml
 msgid ""
 "Vertical resize mouse cursor. A double-headed vertical arrow. It tells the "
 "user they can resize the window or the panel vertically."
 msgstr ""
+"செங்குத்து மறுஅளவிடுதல் சுட்டி கர்சர். இரட்டை தலை செங்குத்து அம்பு. அவர்கள் "
+"சாளரத்தை அல்லது பேனலை செங்குத்தாக மறுஅளவாக்கலாம் என்று பயனரிடம் கூறுகிறது."
 
 #: docs/Input.xml
 msgid ""
 "Horizontal resize mouse cursor. A double-headed horizontal arrow. It tells "
 "the user they can resize the window or the panel horizontally."
 msgstr ""
+"கிடைமட்ட மறுஅளவிடுதல் சுட்டி கர்சர். இரட்டை தலை கிடைமட்ட அம்பு. அவர்கள் "
+"சாளரத்தை அல்லது பேனலை கிடைமட்டமாக மறுஅளவிடலாம் என்று பயனரிடம் கூறுகிறது."
 
 #: docs/Input.xml
 msgid ""
@@ -34253,6 +34664,9 @@ msgid ""
 "from the bottom left to the top right. It tells the user they can resize the"
 " window or the panel both horizontally and vertically."
 msgstr ""
+"சாளர மறுஅளவிடுதல் மவுச் கர்சர். கர்சர் என்பது இரட்டை தலை அம்பு ஆகும், இது "
+"கீழே இருந்து இடமிருந்து மேல் வலதுபுறம் செல்கிறது. கிடைமட்டமாகவும் "
+"செங்குத்தாகவும் சாளரம் அல்லது பேனலை மறுஅளவாக்கலாம் என்று பயனரிடம் கூறுகிறது."
 
 #: docs/Input.xml
 msgid ""
@@ -34261,34 +34675,43 @@ msgid ""
 "CURSOR_BDIAGSIZE]. It tells the user they can resize the window or the panel"
 " both horizontally and vertically."
 msgstr ""
+"சாளர மறுஅளவிடுதல் மவுச் கர்சர். கர்சர் என்பது இரட்டை தலை அம்பு ஆகும், இது "
+"மேல் இடமிருந்து கீழ் வலதுபுறம் செல்கிறது, [நிலையான கர்சர்_ப்டியாக்சைச்] க்கு"
+" நேர்மாறானது. கிடைமட்டமாகவும் செங்குத்தாகவும் சாளரம் அல்லது பேனலை "
+"மறுஅளவாக்கலாம் என்று பயனரிடம் கூறுகிறது."
 
 #: docs/Input.xml
 msgid "Move cursor. Indicates that something can be moved."
-msgstr ""
+msgstr "கர்சரை நகர்த்தவும். ஏதாவது நகர்த்த முடியும் என்பதைக் குறிக்கிறது."
 
 #: docs/Input.xml
 msgid ""
 "Vertical split mouse cursor. On Windows, it's the same as [constant "
 "CURSOR_VSIZE]."
 msgstr ""
+"செங்குத்து பிளவு மவுச் கர்சர். சாளரங்களில், இது [நிலையான கர்சர்_வ்சைச்] "
+"போன்றது."
 
 #: docs/Input.xml
 msgid ""
 "Horizontal split mouse cursor. On Windows, it's the same as [constant "
 "CURSOR_HSIZE]."
 msgstr ""
+"கிடைமட்ட பிளவு மவுச் கர்சர். சாளரங்களில், இது [நிலையான கர்சர்_எச்] போன்றது."
 
 #: docs/Input.xml
 msgid "Help cursor. Usually a question mark."
-msgstr ""
+msgstr "கர்சருக்கு உதவுங்கள். பொதுவாக ஒரு கேள்விக்குறி."
 
 #: docs/InputEvent.xml
 msgid "Generic input event."
-msgstr ""
+msgstr "பொதுவான உள்ளீட்டு நிகழ்வு."
 
 #: docs/InputEvent.xml
 msgid "Base class of all sort of input event. See [method Node._input]."
 msgstr ""
+"அனைத்து வகையான உள்ளீட்டு நிகழ்வின் அடிப்படை வகுப்பு. [முறை node._input] ஐப் "
+"பார்க்கவும்."
 
 #: docs/InputEvent.xml docs/InputEventJoypadButton.xml
 #: docs/InputEventJoypadMotion.xml docs/InputEventKey.xml
@@ -34297,28 +34720,35 @@ msgstr ""
 msgid ""
 "https://docs.rebeltoolbox.com/en/latest/tutorials/inputs/inputevent.html"
 msgstr ""
+"https://docs.rebeltoolbox.com/en/latest/tutorials/inputs/inputevent.html"
 
 #: docs/InputEvent.xml
 msgid ""
 "Returns [code]true[/code] if the given input event and this input event can be added together (only for events of type [InputEventMouseMotion]).\n"
 "The given input event's position, global position and speed will be copied. The resulting [code]relative[/code] is a sum of both events. Both events' modifiers have to be identical."
 msgstr ""
+"கொடுக்கப்பட்ட உள்ளீட்டு நிகழ்வு மற்றும் இந்த உள்ளீட்டு நிகழ்வை ஒன்றாகச் சேர்க்க முடிந்தால் (குறியீடு] உண்மை [/குறியீடு] திரும்பும் (வகை [INPUTEVENTMOUSEMOTION] நிகழ்வுகளுக்கு மட்டுமே).\n"
+" கொடுக்கப்பட்ட உள்ளீட்டு நிகழ்வின் நிலை, உலகளாவிய நிலை மற்றும் விரைவு நகலெடுக்கப்படும். இதன் விளைவாக [குறியீடு] உறவினர் [/குறியீடு] இரண்டு நிகழ்வுகளின் கூட்டுத்தொகையாகும். இரண்டு நிகழ்வுகளின் மாற்றிகளும் ஒரே மாதிரியாக இருக்க வேண்டும்."
 
 #: docs/InputEvent.xml
 msgid "Returns a [String] representation of the event."
-msgstr ""
+msgstr "நிகழ்வின் [சரம்] பிரதிநிதித்துவத்தை வழங்குகிறது."
 
 #: docs/InputEvent.xml
 msgid ""
 "Returns a value between 0.0 and 1.0 depending on the given actions' state. Useful for getting the value of events of type [InputEventJoypadMotion].\n"
 "If [code]exact_match[/code] is [code]false[/code], it ignores the input modifiers for [InputEventKey] and [InputEventMouseButton] events, and the direction for [InputEventJoypadMotion] events."
 msgstr ""
+"கொடுக்கப்பட்ட செயல்களின் நிலையைப் பொறுத்து 0.0 முதல் 1.0 வரை ஒரு மதிப்பை வழங்குகிறது. வகையின் நிகழ்வுகளின் மதிப்பைப் பெறுவதற்கு பயனுள்ளதாக இருக்கும் [inputeventjoypadmotion].\n"
+" ."
 
 #: docs/InputEvent.xml
 msgid ""
 "Returns [code]true[/code] if this input event matches a pre-defined action of any type.\n"
 "If [code]exact_match[/code] is [code]false[/code], it ignores the input modifiers for [InputEventKey] and [InputEventMouseButton] events, and the direction for [InputEventJoypadMotion] events."
 msgstr ""
+"இந்த உள்ளீட்டு நிகழ்வு எந்தவொரு வகையிலும் முன்பே வரையறுக்கப்பட்ட செயலுடன் பொருந்தினால் [குறியீடு] உண்மை [/குறியீடு] திரும்பும்.\n"
+" ."
 
 #: docs/InputEvent.xml
 msgid ""
@@ -34326,36 +34756,49 @@ msgid ""
 "If [code]exact_match[/code] is [code]false[/code], it ignores the input modifiers for [InputEventKey] and [InputEventMouseButton] events, and the direction for [InputEventJoypadMotion] events.\n"
 "[b]Note:[/b] Due to keyboard ghosting, [method is_action_pressed] may return [code]false[/code] even if one of the action's keys is pressed. See [url=https://docs.rebeltoolbox.com/en/latest/tutorials/inputs/input_examples.html#keyboard-events]Input examples[/url] in the documentation for more information."
 msgstr ""
+"கொடுக்கப்பட்ட செயல் அழுத்தப்பட்டால் [குறியீடு] உண்மை [/குறியீடு] திரும்பும் (மேலும் [INPUTEVENTKEY] நிகழ்வுகளுக்கான எதிரொலி நிகழ்வு அல்ல, [குறியீடு] Allow_echo [/code] [குறியீடு] உண்மை [/குறியீடு]). வகை [inputeventmousemotion] அல்லது [inputeventscreendrag] நிகழ்வுகளுக்கு பொருந்தாது.\n"
+" .\n"
+" . [Url = https: //docs.rebeltoolbox.com/en/latest/tutorials/inputs/input_examples.html#keyboard-events] உள்ளீட்டு எடுத்துக்காட்டுகள் [/url] ஐப் பார்க்கவும்."
 
 #: docs/InputEvent.xml
 msgid ""
 "Returns [code]true[/code] if the given action is released (i.e. not pressed). Not relevant for events of type [InputEventMouseMotion] or [InputEventScreenDrag].\n"
 "If [code]exact_match[/code] is [code]false[/code], it ignores the input modifiers for [InputEventKey] and [InputEventMouseButton] events, and the direction for [InputEventJoypadMotion] events."
 msgstr ""
+"கொடுக்கப்பட்ட செயல் வெளியிடப்பட்டால் [குறியீடு] உண்மை [/குறியீடு] திரும்பும் (அதாவது அழுத்தவில்லை). வகை [inputeventmousemotion] அல்லது [inputeventscreendrag] நிகழ்வுகளுக்கு பொருந்தாது.\n"
+" ."
 
 #: docs/InputEvent.xml
 msgid ""
 "Returns [code]true[/code] if this input event's type is one that can be "
 "assigned to an input action."
 msgstr ""
+"இந்த உள்ளீட்டு நிகழ்வு வகை உள்ளீட்டு செயலுக்கு ஒதுக்கக்கூடிய ஒன்றாகும் "
+"என்றால் [குறியீடு] உண்மை [/குறியீடு]."
 
 #: docs/InputEvent.xml
 msgid ""
 "Returns [code]true[/code] if this input event is an echo event (only for "
 "events of type [InputEventKey])."
 msgstr ""
+"இந்த உள்ளீட்டு நிகழ்வு ஒரு எதிரொலி நிகழ்வாக இருந்தால் [குறியீடு] உண்மை "
+"[/குறியீடு] (வகை [inputeventkey] நிகழ்வுகளுக்கு மட்டுமே)."
 
 #: docs/InputEvent.xml
 msgid ""
 "Returns [code]true[/code] if this input event is pressed. Not relevant for events of type [InputEventMouseMotion] or [InputEventScreenDrag].\n"
 "[b]Note:[/b] Due to keyboard ghosting, [method is_action_pressed] may return [code]false[/code] even if one of the action's keys is pressed. See [url=https://docs.rebeltoolbox.com/en/latest/tutorials/inputs/input_examples.html#keyboard-events]Input examples[/url] in the documentation for more information."
 msgstr ""
+"இந்த உள்ளீட்டு நிகழ்வு அழுத்தப்பட்டால் [குறியீடு] உண்மை [/குறியீடு] ஐ வழங்குகிறது. வகை [inputeventmousemotion] அல்லது [inputeventscreendrag] நிகழ்வுகளுக்கு பொருந்தாது.\n"
+" . [Url = https: //docs.rebeltoolbox.com/en/latest/tutorials/inputs/input_examples.html#keyboard-events] உள்ளீட்டு எடுத்துக்காட்டுகள் [/url] ஐப் பார்க்கவும்."
 
 #: docs/InputEvent.xml
 msgid ""
 "Returns [code]true[/code] if the specified [code]event[/code] matches this event. Only valid for action events i.e key ([InputEventKey]), button ([InputEventMouseButton] or [InputEventJoypadButton]), axis [InputEventJoypadMotion] or action ([InputEventAction]) events.\n"
 "If [code]exact_match[/code] is [code]false[/code], it ignores the input modifiers for [InputEventKey] and [InputEventMouseButton] events, and the direction for [InputEventJoypadMotion] events."
 msgstr ""
+"குறிப்பிட்ட [குறியீடு] நிகழ்வு [/குறியீடு] இந்த நிகழ்வுடன் பொருந்தினால் [குறியீடு] உண்மை [/குறியீடு] ஐ வழங்குகிறது. செயல் நிகழ்வுகளுக்கு மட்டுமே செல்லுபடியாகும், அதாவது விசை ([inputeventkey]), பொத்தான் ([INPUTEVENTMOUSEBUTTON] அல்லது [INPUTEVENTJOYPADBUTTON]), அச்சு [INPUTEVENTJOYPADMOTION] அல்லது செயல் ([INPUTEVENTACTIONACTION) நிகழ்வுகள்.\n"
+" ."
 
 #: docs/InputEvent.xml
 msgid ""
@@ -34365,16 +34808,24 @@ msgid ""
 "[InputEventScreenTouch], [InputEventScreenDrag], [InputEventMagnifyGesture] "
 "and [InputEventPanGesture]."
 msgstr ""
+"கொடுக்கப்பட்ட உள்ளீட்டு நிகழ்வின் நகலை வழங்குகிறது, இது [குறியீடு] "
+"லோக்கல்_ஃப்ச் [/குறியீடு] ஆல் ஈடுசெய்யப்பட்டு [குறியீடு] எக்ச்ஃபார்ம் "
+"[/குறியீடு] ஆல் மாற்றப்படுகிறது. வகை [INPUTEVENTMOUSEBUTTON], "
+"[INPUTEVENTMOUSEMOTION], [INPUTEVENTSCREENTOUCH], [INPUTEVENTSCREENDRAG], "
+"[InPuteVentVentMagnifeagleure] மற்றும் [INPUTEVENTPANGESTURE] ஆகியவற்றின் "
+"நிகழ்வுகளுக்கு பொருத்தமானது."
 
 #: docs/InputEvent.xml
 msgid ""
 "The event's device ID.\n"
 "[b]Note:[/b] This device ID will always be [code]-1[/code] for emulated mouse input from a touchscreen. This can be used to distinguish emulated mouse input from physical mouse input."
 msgstr ""
+"நிகழ்வின் சாதன ஐடி.\n"
+" [b] குறிப்பு: [/b] தொடுதிரையிலிருந்து பின்பற்றப்பட்ட சுட்டி உள்ளீட்டிற்கு இந்த சாதன ஐடி எப்போதும் [குறியீடு] -1 [/குறியீடு] ஆக இருக்கும். இயற்பியல் சுட்டி உள்ளீட்டிலிருந்து பின்பற்றப்பட்ட சுட்டி உள்ளீட்டை வேறுபடுத்துவதற்கு இதைப் பயன்படுத்தலாம்."
 
 #: docs/InputEventAction.xml
 msgid "Input event type for actions."
-msgstr ""
+msgstr "செயல்களுக்கான உள்ளீட்டு நிகழ்வு வகை."
 
 #: docs/InputEventAction.xml
 msgid ""
@@ -34382,21 +34833,27 @@ msgid ""
 "inputs. Actions can be created from the [b]Input Map[/b] tab in the "
 "[b]Project > Project Settings[/b] menu. See [method Node._input]."
 msgstr ""
+"பல வகையான உள்ளீடுகளிலிருந்து குறிவைக்கக்கூடிய பொதுவான செயலைக் கொண்டுள்ளது. "
+"[B] உள்ளீட்டு வரைபடம் [/b] தாவலில் இருந்து [b] திட்ட> திட்ட அமைப்புகள் [/b] "
+"பட்டியலில் செயல்களை உருவாக்க முடியும். [முறை node._input] ஐப் பார்க்கவும்."
 
 #: docs/InputEventAction.xml
 msgid ""
 "https://docs.rebeltoolbox.com/en/latest/tutorials/inputs/inputevent.html#actions"
 msgstr ""
+"https://docs.rebeltoolbox.com/en/latest/tutorials/inputs/inputevent.html#actions"
 
 #: docs/InputEventAction.xml
 msgid "The action's name. Actions are accessed via this [String]."
-msgstr ""
+msgstr "செயலின் பெயர். இந்த [சரம்] வழியாக செயல்கள் அணுகப்படுகின்றன."
 
 #: docs/InputEventAction.xml
 msgid ""
 "If [code]true[/code], the action's state is pressed. If [code]false[/code], "
 "the action's state is released."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், செயலின் நிலை அழுத்தப்படுகிறது. "
+"[குறியீடு] பொய் [/குறியீடு] என்றால், செயலின் நிலை வெளியிடப்படுகிறது."
 
 #: docs/InputEventAction.xml
 msgid ""
@@ -34405,10 +34862,15 @@ msgid ""
 "joypad motion events, by specifying how strongly the joypad axis is bent or "
 "pressed."
 msgstr ""
+"0 மற்றும் 1 க்கு இடையிலான செயலின் வலிமை. அழுத்தப்பட்டால் [குறியீடு] தவறானது "
+"[/குறியீடு] என்றால் இந்த மதிப்பு 0 க்கு சமமாக கருதப்படுகிறது. சாய்பேட் அச்சு"
+" எவ்வளவு வலுவாக வளைந்திருக்கிறது அல்லது அழுத்தப்படுகிறது என்பதைக் "
+"குறிப்பிடுவதன் மூலம், நிகழ்வு வலிமை அனலாக் சாய்பேட் இயக்க நிகழ்வுகளை "
+"அனுமதிக்கிறது."
 
 #: docs/InputEventGesture.xml
 msgid "Base class for touch control gestures."
-msgstr ""
+msgstr "தொடு கட்டுப்பாட்டு சைகைகளுக்கான அடிப்படை வகுப்பு."
 
 #: docs/InputEventGesture.xml
 msgid ""
@@ -34416,48 +34878,65 @@ msgid ""
 "Control._gui_input], the position is relative to the current [Control] that "
 "received this gesture."
 msgstr ""
+"[ViewPort] உடன் தொடர்புடைய உள்ளக சைகை நிலை. [முறை கட்டுப்பாடு ._GUI_INPUT] "
+"இல் பயன்படுத்தப்பட்டால், இந்த சைகையைப் பெற்ற தற்போதைய [கட்டுப்பாடு] உடன் "
+"நிலை தொடர்புடையது."
 
 #: docs/InputEventJoypadButton.xml
 msgid "Input event for gamepad buttons."
-msgstr ""
+msgstr "கேம்பேட் பொத்தான்களுக்கான உள்ளீட்டு நிகழ்வு."
 
 #: docs/InputEventJoypadButton.xml
 msgid ""
 "Input event type for gamepad buttons. For gamepad analog sticks and "
 "joysticks, see [InputEventJoypadMotion]."
 msgstr ""
+"கேம்பேட் பொத்தான்களுக்கான உள்ளீட்டு நிகழ்வு வகை. கேம்பேட் அனலாக் குச்சிகள் "
+"மற்றும் சாய்ச்டிக்சுக்கு, [inputeventjoypadmotion] ஐப் பார்க்கவும்."
 
 #: docs/InputEventJoypadButton.xml
 msgid "Button identifier. One of the [enum JoystickList] button constants."
 msgstr ""
+"பொத்தான் அடையாளங்காட்டி. [எனம் சாய்ச்டிக்லிச்ட்] பொத்தான் மாறிலிகளில் ஒன்று."
 
 #: docs/InputEventJoypadButton.xml
 msgid ""
 "If [code]true[/code], the button's state is pressed. If [code]false[/code], "
 "the button's state is released."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், பொத்தானின் நிலை அழுத்தப்படுகிறது. "
+"[குறியீடு] பொய் [/குறியீடு] என்றால், பொத்தானின் நிலை வெளியிடப்படும்."
 
 #: docs/InputEventJoypadButton.xml
 msgid ""
 "Represents the pressure the user puts on the button with their finger, if "
 "the controller supports it. Ranges from [code]0[/code] to [code]1[/code]."
 msgstr ""
+"கட்டுப்படுத்தி அதை ஆதரித்தால், பயனர் தங்கள் விரலால் பொத்தானை வைக்கும் "
+"அழுத்தத்தைக் குறிக்கிறது. [குறியீடு] 0 [/குறியீடு] முதல் [குறியீடு] 1 "
+"[/குறியீடு] வரையிலான வரம்புகள்."
 
 #: docs/InputEventJoypadMotion.xml
 msgid ""
 "Input event type for gamepad joysticks and other motions. For buttons, see "
 "[code]InputEventJoypadButton[/code]."
 msgstr ""
+"கேம்பேட் சாய்ச்டிக்ச் மற்றும் பிற இயக்கங்களுக்கான உள்ளீட்டு நிகழ்வு வகை. "
+"பொத்தான்களுக்கு, [குறியீடு] inputeventjoypadbutton [/code] ஐப் பார்க்கவும்."
 
 #: docs/InputEventJoypadMotion.xml
 msgid ""
 "Stores information about joystick motions. One [InputEventJoypadMotion] "
 "represents one axis at a time."
 msgstr ""
+"சாய்ச்டிக் இயக்கங்கள் பற்றிய தகவல்களை சேமிக்கிறது. ஒன்று "
+"[inputeventjoypadmotion] ஒரு நேரத்தில் ஒரு அச்சைக் குறிக்கிறது."
 
 #: docs/InputEventJoypadMotion.xml
 msgid "Axis identifier. Use one of the [enum JoystickList] axis constants."
 msgstr ""
+"அச்சு அடையாளங்காட்டி. [எனம் சாய்ச்டிக்லிச்ட்] அச்சு மாறிலிகளில் ஒன்றைப் "
+"பயன்படுத்தவும்."
 
 #: docs/InputEventJoypadMotion.xml
 msgid ""
@@ -34465,52 +34944,69 @@ msgid ""
 "[code]-1.0[/code] to [code]1.0[/code]. A value of [code]0[/code] means the "
 "axis is in its resting position."
 msgstr ""
+"கொடுக்கப்பட்ட அச்சில் சாய்ச்டிக்கின் தற்போதைய நிலை. மதிப்பு [குறியீடு] -1.0 "
+"[/குறியீடு] முதல் [குறியீடு] 1.0 [/குறியீடு] வரை இருக்கும். [குறியீடு] 0 "
+"[/குறியீடு] இன் மதிப்பு என்பது அச்சு அதன் ஓய்வு நிலையில் உள்ளது."
 
 #: docs/InputEventKey.xml
 msgid "Input event type for keyboard events."
-msgstr ""
+msgstr "விசைப்பலகை நிகழ்வுகளுக்கான உள்ளீட்டு நிகழ்வு வகை."
 
 #: docs/InputEventKey.xml
 msgid ""
 "Stores key presses on the keyboard. Supports key presses, key releases and "
 "[member echo] events."
 msgstr ""
+"விசைப்பலகையில் விசை அழுத்தங்களை சேமிக்கிறது. உதவி விசை அழுத்தியது, விசை "
+"வெளியிடப்பட்டது மற்றும் [உறுப்பினர் எதிரொலி] நிகழ்வுகள்."
 
 #: docs/InputEventKey.xml
 msgid ""
 "Returns the physical scancode combined with modifier keys such as [code]Shift[/code] or [code]Alt[/code]. See also [InputEventWithModifiers].\n"
 "To get a human-readable representation of the [InputEventKey] with modifiers, use [code]OS.get_scancode_string(event.get_physical_scancode_with_modifiers())[/code] where [code]event[/code] is the [InputEventKey]."
 msgstr ""
+"[குறியீடு] சிப்ட் [/குறியீடு] அல்லது [குறியீடு] மாற்று [/குறியீடு] போன்ற மாற்றியமைக்கும் விசைகளுடன் இணைந்து இயற்பியல் ச்கான்கோடை வழங்குகிறது. [Inputeventwithmodifiers] ஐயும் காண்க.\n"
+" மாற்றியமைப்பாளர்களுடன் [INPUTEVENTKEY] இன் மனித-படிக்கக்கூடிய பிரதிநிதித்துவத்தைப் பெற, [குறியீடு] OS.GET_SCANCODE_STRING (Event.get_Physical_scancode_with_modifiers ()) [/குறியீடு] [குறியீடு] நிகழ்வு [/குறியீடு] [ENPUTEVENTKEY] ஆகும்."
 
 #: docs/InputEventKey.xml
 msgid ""
 "Returns the scancode combined with modifier keys such as [code]Shift[/code] or [code]Alt[/code]. See also [InputEventWithModifiers].\n"
 "To get a human-readable representation of the [InputEventKey] with modifiers, use [code]OS.get_scancode_string(event.get_scancode_with_modifiers())[/code] where [code]event[/code] is the [InputEventKey]."
 msgstr ""
+"[குறியீடு] சிப்ட் [/குறியீடு] அல்லது [குறியீடு] ஆல்ட் [/குறியீடு] போன்ற மாற்றியமைக்கும் விசைகளுடன் இணைந்து ச்கான்கோடை வழங்குகிறது. [Inputeventwithmodifiers] ஐயும் காண்க.\n"
+" மாற்றியமைப்பாளர்களுடன் [INPUTEVENTKEY] இன் மனிதனால் படிக்கக்கூடிய பிரதிநிதித்துவத்தைப் பெற, [குறியீடு] OS.GET_SCANCODE_STRING (Event.get_scancode_with_modifiers ()) [/குறியீடு] [குறியீடு] நிகழ்வு [/குறியீடு] [INPUDEVENTKEY] ஐப் பயன்படுத்தவும்."
 
 #: docs/InputEventKey.xml
 msgid ""
 "If [code]true[/code], the key was already pressed before this event. It "
 "means the user is holding the key down."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், இந்த நிகழ்வுக்கு முன்பு விசை ஏற்கனவே "
+"அழுத்தப்பட்டது. இதன் பொருள் பயனர் விசையை கீழே வைத்திருக்கிறார்."
 
 #: docs/InputEventKey.xml
 msgid ""
 "Key physical scancode, which corresponds to one of the [enum KeyList] constants. Represent the physical location of a key on the 101/102-key US QWERTY keyboard.\n"
 "To get a human-readable representation of the [InputEventKey], use [code]OS.get_scancode_string(event.physical_scancode)[/code] where [code]event[/code] is the [InputEventKey]."
 msgstr ""
+"முக்கிய உடல் ச்கான்கோட், இது [எனம் கீலிச்ட்] மாறிலிகளில் ஒன்றிற்கு ஒத்திருக்கிறது. 101/102-key US qwerty விசைப்பலகையில் ஒரு விசையின் இயற்பியல் இருப்பிடத்தைக் குறிக்கும்.\n"
+" [Inputeventkey] இன் மனிதனால் படிக்கக்கூடிய பிரதிநிதித்துவத்தைப் பெற, [குறியீடு] OS.GET_SCANCODE_STRING (Event.Physical_scancode) [/குறியீடு] ஐப் பயன்படுத்தவும் [குறியீடு] நிகழ்வு [/குறியீடு] [உள்ளுணர்வு]."
 
 #: docs/InputEventKey.xml
 msgid ""
 "If [code]true[/code], the key's state is pressed. If [code]false[/code], the"
 " key's state is released."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், விசையின் நிலை அழுத்தப்படுகிறது. "
+"[குறியீடு] பொய் [/குறியீடு] என்றால், விசையின் நிலை வெளியிடப்படும்."
 
 #: docs/InputEventKey.xml
 msgid ""
 "The key scancode, which corresponds to one of the [enum KeyList] constants. Represent key in the current keyboard layout.\n"
 "To get a human-readable representation of the [InputEventKey], use [code]OS.get_scancode_string(event.scancode)[/code] where [code]event[/code] is the [InputEventKey]."
 msgstr ""
+"[Enum keylist] மாறிலிகளில் ஒன்றிற்கு ஒத்த முக்கிய ச்கான்கோட். தற்போதைய விசைப்பலகை தளவமைப்பில் விசையை குறிக்கும்.\n"
+" [Inputeventkey] இன் மனிதனால் படிக்கக்கூடிய பிரதிநிதித்துவத்தைப் பெற, [குறியீடு] OS.GET_SCANCODE_STRING (Event.Scancode) [/குறியீடு] ஐப் பயன்படுத்தவும் [குறியீடு] நிகழ்வு [/குறியீடு] [INPUTEVENTKEY]."
 
 #: docs/InputEventKey.xml
 msgid ""
@@ -34518,20 +35014,26 @@ msgid ""
 "composite characters and complex scripts may not be available unless IME "
 "input mode is active. See [method OS.set_ime_active] for more information."
 msgstr ""
+"முக்கிய யூனிகோட் அடையாளங்காட்டி (பொருத்தமான போது). IME உள்ளீட்டு முறை "
+"செயலில் இல்லாவிட்டால் கலப்பு எழுத்துக்கள் மற்றும் சிக்கலான "
+"ச்கிரிப்ட்களுக்கான யூனிகோட் அடையாளங்காட்டிகள் கிடைக்காது. மேலும் தகவலுக்கு "
+"[முறை os.set_ime_active] ஐப் பார்க்கவும்."
 
 #: docs/InputEventMouse.xml
 msgid "Base input event type for mouse events."
-msgstr ""
+msgstr "சுட்டி நிகழ்வுகளுக்கான அடிப்படை உள்ளீட்டு நிகழ்வு வகை."
 
 #: docs/InputEventMouse.xml
 msgid "Stores general mouse events information."
-msgstr ""
+msgstr "பொது சுட்டி நிகழ்வுகள் தகவல்களை சேமிக்கிறது."
 
 #: docs/InputEventMouse.xml
 msgid ""
 "The mouse button mask identifier, one of or a bitwise combination of the "
 "[enum ButtonList] button masks."
 msgstr ""
+"மவுச் பொத்தான் முகமூடி அடையாளங்காட்டி, [ENUM பொத்தான்ச்லிச்ட்] பொத்தான் "
+"முகமூடிகளின் ஒன்று அல்லது பிட்வைச் கலவையாகும்."
 
 #: docs/InputEventMouse.xml
 msgid ""
@@ -34539,6 +35041,9 @@ msgid ""
 "[method Control._gui_input] and if the current [Control] is not under the "
 "mouse, moving it will not update this value."
 msgstr ""
+"தற்போதைய [VIEWPORT] உடன் தொடர்புடைய உலகளாவிய சுட்டி நிலை. [முறை கட்டுப்பாடு "
+"._GUI_INPUT] இல் பயன்படுத்தப்பட்டால், தற்போதைய [கட்டுப்பாடு] சுட்டியின் கீழ்"
+" இல்லாவிட்டால், நகரும் இந்த மதிப்பை புதுப்பிக்காது."
 
 #: docs/InputEventMouse.xml
 msgid ""
@@ -34547,29 +35052,38 @@ msgid ""
 " is under the mouse. If the current [Control] is not under the mouse, moving"
 " it will not update this value."
 msgstr ""
+"[VIEWPORT] உடன் தொடர்புடைய உள்ளக சுட்டி நிலை. [முறை கட்டுப்பாடு ._GUI_INPUT]"
+" இல் பயன்படுத்தப்பட்டால், இந்த நிலை சுட்டியின் கீழ் உள்ள தற்போதைய "
+"[கட்டுப்பாடு] உடன் தொடர்புடையது. தற்போதைய [கட்டுப்பாடு] சுட்டியின் கீழ் "
+"இல்லாவிட்டால், அதை நகர்த்துவது இந்த மதிப்பைப் புதுப்பிக்காது."
 
 #: docs/InputEventMouseButton.xml
 msgid "Input event type for mouse button events."
-msgstr ""
+msgstr "மவுச் பொத்தான் நிகழ்வுகளுக்கான உள்ளீட்டு நிகழ்வு வகை."
 
 #: docs/InputEventMouseButton.xml
 msgid "Contains mouse click information. See [method Node._input]."
-msgstr ""
+msgstr "சுட்டி சொடுக்கு செய்தி உள்ளது. [முறை node._input] ஐப் பார்க்கவும்."
 
 #: docs/InputEventMouseButton.xml docs/InputEventMouseMotion.xml
 msgid ""
 "https://docs.rebeltoolbox.com/en/latest/tutorials/inputs/mouse_and_input_coordinates.html"
 msgstr ""
+"https://docs.rebeltoolbox.com/en/latest/tutorials/inputs/mouse_and_input_coordinates.html"
 
 #: docs/InputEventMouseButton.xml
 msgid ""
 "The mouse button identifier, one of the [enum ButtonList] button or button "
 "wheel constants."
 msgstr ""
+"மவுச் பொத்தான் அடையாளங்காட்டி, [ENUM பொத்தான் பட்டியல்] பொத்தான் அல்லது "
+"பொத்தான் சக்கர மாறிலிகளில் ஒன்று."
 
 #: docs/InputEventMouseButton.xml
 msgid "If [code]true[/code], the mouse button's state is a double-click."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், சுட்டி பொத்தானின் நிலை இரட்டை "
+"சொடுக்கல் ஆகும்."
 
 #: docs/InputEventMouseButton.xml
 msgid ""
@@ -34578,16 +35092,24 @@ msgid ""
 "only supported on some platforms; the reported sensitivity varies depending "
 "on the platform. May be [code]0[/code] if not supported."
 msgstr ""
+"நிகழ்வின் தொகை (அல்லது டெல்டா). அதிக துல்லியமான உருள் நிகழ்வுகளுக்குப் "
+"பயன்படுத்தும்போது, ​​இது உருள் அளவு (செங்குத்து அல்லது கிடைமட்ட) "
+"குறிக்கிறது. இது சில தளங்களில் மட்டுமே ஆதரிக்கப்படுகிறது; அறிக்கையிடப்பட்ட "
+"உணர்திறன் தளத்தைப் பொறுத்து மாறுபடும். ஆதரிக்கப்படாவிட்டால் [குறியீடு] 0 "
+"[/குறியீடு] இருக்கலாம்."
 
 #: docs/InputEventMouseButton.xml
 msgid ""
 "If [code]true[/code], the mouse button's state is pressed. If "
 "[code]false[/code], the mouse button's state is released."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், சுட்டி பொத்தானின் நிலை "
+"அழுத்தப்படுகிறது. [குறியீடு] பொய் [/குறியீடு] என்றால், சுட்டி பொத்தானின் "
+"நிலை வெளியிடப்படும்."
 
 #: docs/InputEventMouseMotion.xml
 msgid "Input event type for mouse motion events."
-msgstr ""
+msgstr "சுட்டி இயக்க நிகழ்வுகளுக்கான உள்ளீட்டு நிகழ்வு வகை."
 
 #: docs/InputEventMouseMotion.xml
 msgid ""
@@ -34595,22 +35117,29 @@ msgid ""
 "[b]Note:[/b] By default, this event can be emitted multiple times per frame rendered, allowing for precise input reporting, at the expense of CPU usage. You can call [method Input.set_use_accumulated_input] with [code]true[/code] to let multiple events merge into a single emitted event per frame.\n"
 "[b]Note:[/b] If you use InputEventMouseMotion to draw lines, consider implementing [url=https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm]Bresenham's line algorithm[/url] as well to avoid visible gaps in lines if the user is moving the mouse quickly."
 msgstr ""
+"சுட்டி மற்றும் பேனா இயக்கத் தகவல்களைக் கொண்டுள்ளது. உறவினர், முழுமையான நிலைகள் மற்றும் வேகத்தை ஆதரிக்கிறது. [முறை node._input] ஐப் பார்க்கவும்.\n"
+" . பல நிகழ்வுகள் ஒரு சட்டகத்திற்கு ஒரு வெளியேற்றப்பட்ட நிகழ்வாக ஒன்றிணைக்க அனுமதிக்க நீங்கள் [குறியீடு] உண்மை [/குறியீடு] உடன் [முறை உள்ளீடு.\n"
+" ."
 
 #: docs/InputEventMouseMotion.xml
 msgid ""
 "Represents the pressure the user puts on the pen. Ranges from "
 "[code]0.0[/code] to [code]1.0[/code]."
 msgstr ""
+"பயனர் பேனாவில் வைக்கும் அழுத்தத்தைக் குறிக்கிறது. [குறியீடு] 0.0 [/குறியீடு]"
+" முதல் [குறியீடு] 1.0 [/குறியீடு] வரையிலான வரம்புகள்."
 
 #: docs/InputEventMouseMotion.xml
 msgid ""
 "The mouse position relative to the previous position (position at the last frame).\n"
 "[b]Note:[/b] Since [InputEventMouseMotion] is only emitted when the mouse moves, the last event won't have a relative position of [code]Vector2(0, 0)[/code] when the user stops moving the mouse."
 msgstr ""
+"முந்தைய நிலையுடன் தொடர்புடைய சுட்டி நிலை (கடைசி சட்டகத்தில் நிலை).\n"
+" ."
 
 #: docs/InputEventMouseMotion.xml
 msgid "The mouse speed in pixels per second."
-msgstr ""
+msgstr "நொடிக்கு பிக்சல்களில் சுட்டி விரைவு."
 
 #: docs/InputEventMouseMotion.xml
 msgid ""
@@ -34619,94 +35148,112 @@ msgid ""
 "toward the user. Ranges from [code]-1.0[/code] to [code]1.0[/code] for both "
 "axes."
 msgstr ""
+"பேனாவின் சாய்வின் கோணங்களைக் குறிக்கிறது. நேர்மறை எக்ச்-ஒருங்கிணைப்பு "
+"மதிப்பு வலதுபுறத்தில் ஒரு சாய்வைக் குறிக்கிறது. நேர்மறை Y- ஒருங்கிணைப்பு "
+"மதிப்பு பயனருக்கு ஒரு சாய்வைக் குறிக்கிறது. [குறியீடு] -1.0 [/குறியீடு] "
+"முதல் [குறியீடு] 1.0 [/குறியீடு] வரை இரண்டு அச்சுகளுக்கும் வரம்புகள் உள்ளன."
 
 #: docs/InputEventScreenDrag.xml
 msgid ""
 "Input event type for screen drag events. Only available on mobile devices."
 msgstr ""
+"திரை இழுவை நிகழ்வுகளுக்கான உள்ளீட்டு நிகழ்வு வகை. மொபைல் சாதனங்களில் மட்டுமே"
+" கிடைக்கும்."
 
 #: docs/InputEventScreenDrag.xml
 msgid "Contains screen drag information. See [method Node._input]."
 msgstr ""
+"திரை இழுவை தகவல்களைக் கொண்டுள்ளது. [முறை node._input] ஐப் பார்க்கவும்."
 
 #: docs/InputEventScreenDrag.xml
 msgid "The drag event index in the case of a multi-drag event."
-msgstr ""
+msgstr "பல இழுவை நிகழ்வின் விசயத்தில் இழுவை நிகழ்வு குறியீடு."
 
 #: docs/InputEventScreenDrag.xml
 msgid "The drag position."
-msgstr ""
+msgstr "இழுவை நிலை."
 
 #: docs/InputEventScreenDrag.xml
 msgid ""
 "The drag position relative to the previous position (position at the last "
 "frame)."
-msgstr ""
+msgstr "முந்தைய நிலையுடன் தொடர்புடைய இழுவை நிலை (கடைசி சட்டகத்தில் நிலை)."
 
 #: docs/InputEventScreenDrag.xml
 msgid "The drag speed."
-msgstr ""
+msgstr "இழுவை விரைவு."
 
 #: docs/InputEventScreenTouch.xml
 msgid ""
 "Input event type for screen touch events.\n"
 "(only available on mobile devices)"
 msgstr ""
+"திரை தொடு நிகழ்வுகளுக்கான உள்ளீட்டு நிகழ்வு வகை.\n"
+" (மொபைல் சாதனங்களில் மட்டுமே கிடைக்கும்)"
 
 #: docs/InputEventScreenTouch.xml
 msgid ""
 "Stores multi-touch press/release information. Supports touch press, touch "
 "release and [member index] for multi-touch count and order."
 msgstr ""
+"மல்டி-டச் பிரச்/வெளியீட்டு தகவல்களை சேமிக்கிறது. மல்டி-டச் எண்ணிக்கை மற்றும்"
+" வரிசைக்கு டச் பிரச், டச் வெளியீடு மற்றும் [உறுப்பினர் குறியீட்டு] ஆகியவற்றை"
+" ஆதரிக்கிறது."
 
 #: docs/InputEventScreenTouch.xml
 msgid ""
 "The touch index in the case of a multi-touch event. One index = one finger."
 msgstr ""
+"மல்டி-டச் நிகழ்வின் விசயத்தில் தொடு அட்டவணை. ஒரு குறியீட்டு = ஒரு விரல்."
 
 #: docs/InputEventScreenTouch.xml
 msgid "The touch position."
-msgstr ""
+msgstr "தொடு நிலை."
 
 #: docs/InputEventScreenTouch.xml
 msgid ""
 "If [code]true[/code], the touch's state is pressed. If [code]false[/code], "
 "the touch's state is released."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] என்றால், தொடுதலின் நிலை அழுத்தப்படுகிறது. "
+"[குறியீடு] பொய் [/குறியீடு] என்றால், தொடுதலின் நிலை வெளியிடப்படுகிறது."
 
 #: docs/InputEventWithModifiers.xml
 msgid "Base class for keys events with modifiers."
-msgstr ""
+msgstr "மாற்றியமைப்பாளர்களுடன் கீச் நிகழ்வுகளுக்கான அடிப்படை வகுப்பு."
 
 #: docs/InputEventWithModifiers.xml
 msgid ""
 "Contains keys events information with modifiers support like "
 "[code]Shift[/code] or [code]Alt[/code]. See [method Node._input]."
 msgstr ""
+"[குறியீடு] சிப்ட் [/குறியீடு] அல்லது [குறியீடு] ஆல்ட் [/குறியீடு] போன்ற "
+"மாற்றியமைப்பாளர்களின் ஆதரவுடன் விசைகள் நிகழ்வுகள் தகவல்களைக் கொண்டுள்ளது. "
+"[முறை node._input] ஐப் பார்க்கவும்."
 
 #: docs/InputEventWithModifiers.xml
 msgid "State of the [code]Alt[/code] modifier."
-msgstr ""
+msgstr "[குறியீடு] மாற்று [/code] மாற்றியமைப்பின் நிலை."
 
 #: docs/InputEventWithModifiers.xml
 msgid "State of the [code]Command[/code] modifier."
-msgstr ""
+msgstr "[குறியீடு] கட்டளை [/குறியீடு] மாற்றியமைப்பின் நிலை."
 
 #: docs/InputEventWithModifiers.xml
 msgid "State of the [code]Ctrl[/code] modifier."
-msgstr ""
+msgstr "[குறியீடு] கட்டுப்பாடு [/code] மாற்றியமைப்பின் நிலை."
 
 #: docs/InputEventWithModifiers.xml
 msgid "State of the [code]Meta[/code] modifier."
-msgstr ""
+msgstr "[குறியீடு] மேவு [/குறியீடு] மாற்றியமைப்பின் நிலை."
 
 #: docs/InputEventWithModifiers.xml
 msgid "State of the [code]Shift[/code] modifier."
-msgstr ""
+msgstr "[குறியீடு] சிப்ட் [/குறியீடு] மாற்றியமைப்பின் நிலை."
 
 #: docs/InputMap.xml
 msgid "Singleton that manages [InputEventAction]."
-msgstr ""
+msgstr "[உள்ளுணர்வு] நிர்வகிக்கும் சிங்கிள்டன்."
 
 #: docs/InputMap.xml
 msgid ""
@@ -34715,92 +35262,113 @@ msgid ""
 "code with [method add_action] and [method action_add_event]. See [method "
 "Node._input]."
 msgstr ""
+"திட்ட அமைப்புகள் மெனுவிலிருந்து உருவாக்க/மாற்றியமைக்கக்கூடிய அனைத்து "
+"[உள்நோக்கி] நிர்வகிக்கிறது [b] திட்டம்> திட்ட அமைப்புகள்> உள்ளீட்டு வரைபடம் "
+"[/b] அல்லது [முறை ADD_ACTIO] மற்றும் [முறை ACTION_ADD_EVENT] உடன் "
+"குறியீட்டில். [முறை node._input] ஐப் பார்க்கவும்."
 
 #: docs/InputMap.xml
 msgid ""
 "https://docs.rebeltoolbox.com/en/latest/tutorials/inputs/inputevent.html#inputmap"
 msgstr ""
+"https://docs.rebeltoolbox.com/en/latest/tutorials/inputs/inputevent.html#inputmap"
 
 #: docs/InputMap.xml
 msgid ""
 "Adds an [InputEvent] to an action. This [InputEvent] will trigger the "
 "action."
 msgstr ""
+"ஒரு செயலில் [உள்ளீட்டு நிகழ்வு] சேர்க்கவும். இந்த [உள்ளீட்டு நிகழ்வு] "
+"செயலைத் தூண்டும்."
 
 #: docs/InputMap.xml
 msgid "Removes an [InputEvent] from an action."
-msgstr ""
+msgstr "ஒரு செயலிலிருந்து [உள்ளுணர்வு] நீக்குகிறது."
 
 #: docs/InputMap.xml
 msgid "Removes all events from an action."
-msgstr ""
+msgstr "அனைத்து நிகழ்வுகளையும் ஒரு செயலிலிருந்து நீக்குகிறது."
 
 #: docs/InputMap.xml
 msgid "Returns a deadzone value for the action."
-msgstr ""
+msgstr "செயலுக்கு டெட்சோன் மதிப்பை வழங்குகிறது."
 
 #: docs/InputMap.xml
 msgid ""
 "Returns [code]true[/code] if the action has the given [InputEvent] "
 "associated with it."
 msgstr ""
+"[குறியீடு] உண்மை [/குறியீடு] ஐத் தருகிறது, அதனுடன் தொடர்புடைய [உள்ளுணர்வு] "
+"செயலில் இருந்தால்."
 
 #: docs/InputMap.xml
 msgid "Sets a deadzone value for the action."
-msgstr ""
+msgstr "செயலுக்கு டெட்சோன் மதிப்பை அமைக்கிறது."
 
 #: docs/InputMap.xml
 msgid ""
 "Adds an empty action to the [InputMap] with a configurable [code]deadzone[/code].\n"
 "An [InputEvent] can then be added to this action with [method action_add_event]."
 msgstr ""
+"கட்டமைக்கக்கூடிய [குறியீடு] டெட்சோன் [/குறியீடு] உடன் [INPUTMAP] க்கு வெற்று செயலைச் சேர்க்கிறது.\n"
+" [INPUTEVENT] இந்த செயலில் [முறை Action_add_event] உடன் சேர்க்கப்படலாம்."
 
 #: docs/InputMap.xml
 msgid "Removes an action from the [InputMap]."
-msgstr ""
+msgstr "[InputMap] இலிருந்து ஒரு செயலை நீக்குகிறது."
 
 #: docs/InputMap.xml
 msgid ""
 "Returns [code]true[/code] if the given event is part of an existing action. This method ignores keyboard modifiers if the given [InputEvent] is not pressed (for proper release detection). See [method action_has_event] if you don't want this behavior.\n"
 "If [code]exact_match[/code] is [code]false[/code], it ignores the input modifiers for [InputEventKey] and [InputEventMouseButton] events, and the direction for [InputEventJoypadMotion] events."
 msgstr ""
+"கொடுக்கப்பட்ட நிகழ்வு ஏற்கனவே இருக்கும் செயலின் ஒரு பகுதியாக இருந்தால் [குறியீடு] உண்மை [/குறியீடு] திரும்பும். கொடுக்கப்பட்ட [உள்நோக்கி] அழுத்தப்படாவிட்டால் (சரியான வெளியீட்டு கண்டறிதலுக்கு) இந்த முறை விசைப்பலகை மாற்றிகளை புறக்கணிக்கிறது. இந்த நடத்தை நீங்கள் விரும்பவில்லை என்றால் [முறை அதிரடி_ஆச்_வென்ட்] ஐப் பார்க்கவும்.\n"
+" ."
 
 #: docs/InputMap.xml
 msgid ""
 "Returns an array of [InputEvent]s associated with a given action.\n"
 "[b]Note:[/b] When used in the editor (e.g. a tool script or [EditorPlugin]), this method will return events for the editor action. If you want to access your project's input binds from the editor, read the [code]input/*[/code] settings from [ProjectSettings]."
 msgstr ""
+"கொடுக்கப்பட்ட செயலுடன் தொடர்புடைய [உள்ளுணர்வு) வரிசையை வழங்குகிறது.\n"
+" . உங்கள் திட்டத்தின் உள்ளீடு எடிட்டரிலிருந்து பிணைப்புகளை அணுக விரும்பினால், [குறியீடு] உள்ளீடு/*[/குறியீடு] அமைப்புகளைப் படிக்கவும் [Proctricationsettings]."
 
 #: docs/InputMap.xml
 msgid "Returns an array of all actions in the [InputMap]."
-msgstr ""
+msgstr "[InputMap] இல் உள்ள அனைத்து செயல்களின் வரிசையையும் வழங்குகிறது."
 
 #: docs/InputMap.xml
 msgid ""
 "Returns [code]true[/code] if the [InputMap] has a registered action with the"
 " given name."
 msgstr ""
+"[InputMap] கொடுக்கப்பட்ட பெயருடன் பதிவுசெய்யப்பட்ட செயல் இருந்தால் "
+"[குறியீடு] உண்மை [/code] ஐ வழங்குகிறது."
 
 #: docs/InputMap.xml
 msgid ""
 "Clears all [InputEventAction] in the [InputMap] and load it anew from "
 "[ProjectSettings]."
 msgstr ""
+"[InputMap] இல் உள்ள அனைத்து [உள்ளுணர்வு] ஐ அழித்து, [ProjectAntings] "
+"இலிருந்து புதிதாக ஏற்றுகிறது."
 
 #: docs/InstancePlaceholder.xml
 msgid "Placeholder for the root [Node] of a [PackedScene]."
-msgstr ""
+msgstr "ஒரு [பேக்ச்கீன்] இன் ரூட் [முனை] க்கான ஒதுக்கிடர்."
 
 #: docs/InstancePlaceholder.xml
 msgid ""
 "Turning on the option [b]Load As Placeholder[/b] for an instanced scene in the editor causes it to be replaced by an InstancePlaceholder when running the game. This makes it possible to delay actually loading the scene until calling [method replace_by_instance]. This is useful to avoid loading large scenes all at once by loading parts of it selectively.\n"
 "The InstancePlaceholder does not have a transform. This causes any child nodes to be positioned relatively to the Viewport from point (0,0), rather than their parent as displayed in the editor. Replacing the placeholder with a scene with a transform will transform children relatively to their parent again."
 msgstr ""
+"எடிட்டரில் ஒரு நிறுவப்பட்ட காட்சிக்கான விருப்பத்தை [b] ஏற்றம் [/b] ஆக மாற்றுவது, விளையாட்டை இயக்கும் போது ஒரு நிகழ்வு பிளேச்ஓல்டரால் மாற்றப்படுவதற்கு காரணமாகிறது. [முறை மாற்றியமைத்தல்_பி_இன்ச்டன்ச்] ஐ அழைக்கும் வரை காட்சியை ஏற்றுவதை தாமதப்படுத்த இது சாத்தியமாக்குகிறது. பெரிய காட்சிகளை ஒரே நேரத்தில் ஏற்றுவதைத் தவிர்க்க இது பயனுள்ளதாக இருக்கும்.\n"
+" நிகழ்வு பிளேச்ஓல்டருக்கு ஒரு உருமாற்றம் இல்லை. இது எந்தவொரு குழந்தை முனைகளும் எடிட்டரில் காட்டப்பட்டுள்ளபடி பெற்றோரைக் காட்டிலும், புள்ளியிலிருந்து (0,0) காட்சிக்கு ஒப்பீட்டளவில் நிலைநிறுத்தப்படுவதற்கு காரணமாகிறது. ஒரு காட்சியுடன் ஒதுக்கிடத்தை மாற்றுவது குழந்தைகளை மீண்டும் பெற்றோருடன் ஒப்பீட்டளவில் மாற்றும்."
 
 #: docs/InstancePlaceholder.xml
 msgid ""
 "Not thread-safe. Use [method Object.call_deferred] if calling from a thread."
-msgstr ""
+msgstr "நூல்-பாதுகாப்பானது அல்ல. ஒரு நூலிலிருந்து அழைத்தால் [முறை பொருள்."
 
 #: docs/InstancePlaceholder.xml
 msgid ""
@@ -34808,6 +35376,9 @@ msgid ""
 "when calling [method replace_by_instance]. Not thread-safe. Use [method "
 "Object.call_deferred] if calling from a thread."
 msgstr ""
+"[முறை மாற்றியமைத்தல்_பி_இன்ச்டன்ச்] ஐ அழைக்கும்போது இயல்புநிலையாக "
+"ஏற்றப்படும் [பேக்ச்கீன்] வள கோப்பிற்கான பாதையைப் பெறுகிறது. "
+"நூல்-பாதுகாப்பானது அல்ல. ஒரு நூலிலிருந்து அழைத்தால் [முறை பொருள்."
 
 #: docs/InstancePlaceholder.xml
 msgid ""
@@ -34816,10 +35387,15 @@ msgid ""
 "loaded only if it's not loaded already. By manually loading the scene "
 "beforehand, delays caused by this function can be avoided."
 msgstr ""
+"எந்தவொரு வாதமும் வழங்கப்படாவிட்டால், இந்த ஒதுக்கிடத்தால் ஒரு வாதமாக "
+"வழங்கப்பட்ட காட்சியால் அல்லது அசல் காட்சியை மாற்றுகிறது. எல்லா ஆதாரங்களையும்"
+" பொறுத்தவரை, காட்சி ஏற்கனவே ஏற்றப்படாவிட்டால் மட்டுமே ஏற்றப்படும். காட்சியை "
+"கைமுறையாக முன்பே ஏற்றுவதன் மூலம், இந்த செயல்பாட்டின் காரணமாக ஏற்படும் "
+"தாமதங்களைத் தவிர்க்கலாம்."
 
 #: docs/int.xml
 msgid "Integer built-in type."
-msgstr ""
+msgstr "முழு எண் உள்ளமைக்கப்பட்ட வகை."
 
 #: docs/int.xml
 msgid ""
