@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Tamil (Tiled)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-09 18:07+0200\n"
-"PO-Revision-Date: 2025-03-13 07:50+0530\n"
+"PO-Revision-Date: 2025-03-13 08:04+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/tiled/manual/ta/>\n"
 "Language: ta\n"
@@ -5859,13 +5859,16 @@ msgid ""
 "and none of the parallax factors have any effect. The layers are rendered "
 "where they would have been, if parallax was disabled."
 msgstr ""
+"இடமாறு தோற்றம் பார்வையின் மையத்தில் இருந்தால், தூரம் (0,0) மற்றும் இடமாறு "
+"காரணிகள் எதுவும் எந்த விளைவையும் ஏற்படுத்தாது. இடமாறு முடக்கப்பட்டிருந்தால்,"
+" அடுக்குகள் அவை இருந்த இடத்தில் வழங்கப்படுகின்றன."
 
 #: ../../manual/layers.rst:175
 msgid ""
 "Now, when the map is scrolled right by 10 pixels, the distance between the "
 "parallax origin and the center of the view is 10. So a layer with a parallax"
 " factor of 0.7 will have moved just ``0.7 * 10 = 7`` pixels."
-msgstr ""
+msgstr "இப்போது."
 
 #: ../../manual/layers.rst:179
 msgid ""
@@ -5875,6 +5878,11 @@ msgid ""
 "factor directly, we now multiply by ``1 - parallaxFactor`` to get the layer "
 "position. For example:"
 msgstr ""
+"பெரும்பாலும், முழு வரைபடத்தையும் உருட்ட ஒரு காட்சியக மாற்றம் "
+"பயன்படுத்தப்படுகிறது. இந்த வழக்கில், ஒவ்வொரு அடுக்கின் நிலையை அதன் இடமாறு "
+"காரணியை கணக்கில் எடுத்துக்கொள்ள ஒருவர் சரிசெய்ய வேண்டியிருக்கலாம். இடமாறு "
+"காரணியுடன் நேரடியாக தூரத்தை பெருக்குவதற்குப் பதிலாக, அடுக்கு நிலையைப் பெற "
+"இப்போது `` 1 - இடமாறுஃபாக்டர்`` ஆல் பெருக்கப்படுகிறது. உதாரணமாக:"
 
 #: ../../manual/layers.rst:185
 msgid ""
@@ -5882,10 +5890,14 @@ msgid ""
 "pixels to the left (-10), so by positioning the layer at ``10 * (1 - 0.7) = "
 "3``, we're making sure that it only moves 7 pixels to the left."
 msgstr ""
+"கேமரா 10 படப்புள்ளிகள் வலதுபுறமாக நகரும் போது, ​​அடுக்கு 10 பிக்சல்களை "
+"இடதுபுறமாக (-10) நகர்த்தியிருக்கும், எனவே அடுக்கை `10 * (1 - 0.7) = 3`` இல் "
+"நிலைநிறுத்துவதன் மூலம், அது 7 பிக்சல்களை இடதுபுறமாக மட்டுமே நகர்த்துவதை "
+"உறுதிசெய்கிறோம்."
 
 #: ../../manual/layers.rst:197
 msgid "Tinting Layers"
-msgstr ""
+msgstr "சாய்க்கும் அடுக்குகள்"
 
 #: ../../manual/layers.rst:199
 msgid ""
@@ -5893,6 +5905,9 @@ msgid ""
 "images are rendered. This includes tiles, tile objects and the image of an "
 ":ref:`Image Layer <image-layers>`."
 msgstr ""
+"ஒரு அடுக்கின் * டின்ட் வண்ணம் * சொத்தை நீங்கள் அமைக்கும் போது, ​​இது படங்கள்"
+" வழங்கப்படும் முறையை பாதிக்கிறது. இதில் ஓடுகள், ஓடு பொருள்கள் மற்றும் ஒரு "
+"படம் அடங்கும்: ref: `பட அடுக்கு <பட-அடுக்கு>`."
 
 #: ../../manual/layers.rst:203
 msgid ""
@@ -5900,30 +5915,39 @@ msgid ""
 "darken or colorize your graphics in various ways without needing to set up "
 "separate images for it."
 msgstr ""
+"ஒவ்வொரு படப்புள்ளி வண்ண மதிப்பும் சாயல் நிறத்தால் பெருக்கப்படுகிறது. இந்த "
+"வழியில் உங்கள் கிராபிக்ச் தனித்தனி படங்களை அமைக்கத் தேவையில்லாமல் பல்வேறு "
+"வழிகளில் இருட்டடிக்க அல்லது வண்ணமயமாக்கலாம்."
 
 #: ../../manual/layers.rst:210
 msgid "Tint Color Example"
-msgstr ""
+msgstr "சாயல் வண்ண சான்று"
 
 #: ../../manual/layers.rst:210
 msgid "A gray tileset rendered in a different color for each layer."
 msgstr ""
+"ஒவ்வொரு அடுக்குக்கும் வெவ்வேறு நிறத்தில் வழங்கப்படும் சாம்பல் டைல்செட்."
 
 #: ../../manual/layers.rst:212
 msgid ""
 "The tint color can also be set on a :ref:`Group Layer <group-layers>`, in "
 "which case it is inherited by all layers in the group."
 msgstr ""
+"சாயல் வண்ணத்தை A: ref: `குழு அடுக்கு <குழு-லேயர்கள்>` என்ற எண்ணிலும் "
+"அமைக்கலாம், இந்த விசயத்தில் இது குழுவில் உள்ள அனைத்து அடுக்குகளாலும் "
+"மரபுரிமையாகும்."
 
 #: ../../manual/layers.rst:219
 msgid "There are many ways in which the layers can be made more powerful:"
-msgstr ""
+msgstr "அடுக்குகளை அதிக சக்திவாய்ந்ததாக மாற்ற பல வழிகள் உள்ளன:"
 
 #: ../../manual/layers.rst:221
 msgid ""
 "Ability to lock individual objects (`#828 "
 "<https://github.com/mapeditor/tiled/issues/828>`__)."
 msgstr ""
+"தனிப்பட்ட பொருள்களைப் பூட்டுவதற்கான திறன் (`#828 "
+"<https://github.com/mapeditor/tilled/issues/828>` __)."
 
 #: ../../manual/layers.rst:223
 msgid ""
@@ -5932,10 +5956,14 @@ msgid ""
 "one map could accommodate layers of different tile sizes and maybe even of "
 "different orientation."
 msgstr ""
+"சில வரைபட-குளோபல் பண்புகளை ஓடு அடுக்குக்கு நகர்த்துவது (`#149 "
+"<https://github.com/mapeditor/tilled/issues/149>` __). ஒரு வரைபடம் வெவ்வேறு "
+"ஓடு அளவுகளின் அடுக்குகளுக்கும் வெவ்வேறு நோக்குநிலைக்கும் கூட இடமளிக்க "
+"முடிந்தால் அது பயனுள்ளதாக இருக்கும்."
 
 #: ../../manual/objects.rst:2
 msgid "Working with Objects"
-msgstr ""
+msgstr "பொருள்களுடன் வேலை"
 
 #: ../../manual/objects.rst:4
 msgid ""
@@ -5944,6 +5972,11 @@ msgid ""
 "coordinates (like spawn points) in your source code or maintaining "
 "additional data files for storing gameplay elements."
 msgstr ""
+"பொருள்களைப் பயன்படுத்தி உங்கள் விளையாட்டில் பயன்படுத்த உங்கள் வரைபடத்தில் "
+"ஏராளமான தகவல்களைச் சேர்க்கலாம். உங்கள் மூலக் குறியீட்டில் ஆர்ட்கோடிங் "
+"ஆயத்தொகுதிகள் (ச்பான் புள்ளிகள் போன்றவை) போன்ற கடினமான மாற்றுகளை அவை "
+"மாற்றலாம் அல்லது விளையாட்டு கூறுகளை சேமிப்பதற்கான கூடுதல் தரவுக் கோப்புகளை "
+"பராமரிக்கலாம்."
 
 #: ../../manual/objects.rst:9
 msgid ""
@@ -5952,6 +5985,11 @@ msgid ""
 "they can replace the use of tile layers entirely, as demonstrated by the "
 "\"Sticker Knight\" example shipping with Tiled."
 msgstr ""
+"*ஓடு பொருள்களைப் பயன்படுத்துவதன் மூலம், பல்வேறு வகையான பொருள்களை அடையாளம் "
+"காண எளிதாக்கலாம் அல்லது அவை முற்றிலும் வரைகலை நோக்கங்களுக்காக "
+"பயன்படுத்தப்படலாம். சில சந்தர்ப்பங்களில், ஓடு அடுக்குகளின் பயன்பாட்டை "
+"முழுவதுமாக மாற்றலாம், இது \"ச்டிக்கர் நைட்\" எடுத்துக்காட்டு டைல்ட் மூலம் "
+"கப்பல் மூலம் நிரூபிக்கப்பட்டுள்ளது."
 
 #: ../../manual/objects.rst:14
 msgid ""
@@ -5959,20 +5997,25 @@ msgid ""
 " also be used to create :ref:`connections between objects <connecting-"
 "objects>`."
 msgstr ""
+"எல்லா பொருள்களிலும் இருக்கலாம்: டிஓசி: `தனிப்பயன் பண்புகள் "
+"<தனிப்பயன்-சொத்துக்கள்>`, இது உருவாக்கவும் பயன்படுத்தப்படலாம்: குறிப்பு: "
+"`பொருள்களுக்கு இடையிலான இணைப்புகள் <இணைக்கும்-பொருள்கள்>`."
 
 #: ../../manual/objects.rst:18
 msgid ""
 "To start using objects, add an :ref:`Object Layer <object-layer-"
 "introduction>` to your map."
 msgstr ""
+"பொருள்களைப் பயன்படுத்தத் தொடங்க, ஒரு: குறிப்பு: `பொருள் அடுக்கு "
+"<பொருள்-அடுக்கு-அறிமுகம்>` உங்கள் வரைபடத்தில் சேர்க்கவும்."
 
 #: ../../manual/objects.rst:22
 msgid "Placement Tools"
-msgstr ""
+msgstr "வேலை வாய்ப்பு கருவிகள்"
 
 #: ../../manual/objects.rst:24
 msgid "Each type of object has its own placement tool."
-msgstr ""
+msgstr "ஒவ்வொரு வகை பொருளுக்கும் அதன் சொந்த வேலை வாய்ப்பு கருவி உள்ளது."
 
 #: ../../manual/objects.rst:30
 msgid ""
@@ -5981,14 +6024,19 @@ msgid ""
 " cancel placement of the object. Press ``Escape`` again to switch to the "
 ":ref:`select-objects-tool` tool."
 msgstr ""
+"நீங்கள் வரைபடத்தில் வட்டமிடும்போது நீங்கள் வைக்கவிருக்கும் பொருளின் "
+"முன்னோட்டம் காட்டப்பட்டுள்ளது. ஒரு பொருளை வைக்கும் போது, ​​நீங்கள் `` "
+"தப்பிக்கவும்` அல்லது பொருளின் இடத்தை ரத்து செய்ய வலது சொடுக்கு செய்யலாம். ``"
+" எச்கேப்`` ஐ மீண்டும் அழுத்தவும்: ref: `தேர்ந்தெடுக்கப்பட்ட-பொருள்-கருவி` "
+"கருவி."
 
 #: ../../manual/objects.rst:38
 msgid "Insert Rectangle"
-msgstr ""
+msgstr "செவ்வகத்தை செருகவும்"
 
 #: ../../manual/objects.rst:40
 msgid "Shortcut: ``R``"
-msgstr ""
+msgstr "குறுக்குவழி: `` r``"
 
 #: ../../manual/objects.rst:42
 msgid ""
@@ -5997,6 +6045,11 @@ msgid ""
 "They are useful for marking rectangular areas and assigning custom "
 "properties to them. They are also often used for specifying collision boxes."
 msgstr ""
+"செவ்வகமானது டைல்ட் ஆதரிக்கும் முதல் வகை பொருளாகும், அதனால்தான் பொருள்கள் "
+"முன்னிருப்பாக செவ்வகங்கள்: doc: `/குறிப்பு/டிஎம்எக்ச்-மேப்-ஃபார்மாட்`. "
+"செவ்வக பகுதிகளைக் குறிப்பதற்கும் அவற்றுக்கு தனிப்பயன் பண்புகளை "
+"ஒதுக்குவதற்கும் அவை பயனுள்ளதாக இருக்கும். மோதல் பெட்டிகளைக் "
+"குறிப்பிடுவதற்கும் அவை பெரும்பாலும் பயன்படுத்தப்படுகின்றன."
 
 #: ../../manual/objects.rst:47
 msgid ""
@@ -6004,6 +6057,9 @@ msgid ""
 "``Shift`` makes it square and holding ``Ctrl`` snaps its size to the tile "
 "size."
 msgstr ""
+"எந்தவொரு திசையிலும் சொடுக்கு செய்வதன் மூலம் ஒரு செவ்வகத்தை வைக்கவும். `` "
+"சிப்ட்`` வைத்திருப்பது சதுரமாக்கி `` ctrl`` வைத்திருப்பது அதன் அளவை ஓடு "
+"அளவிற்கு ஒடிக்கிறது."
 
 #: ../../manual/objects.rst:51
 msgid ""
@@ -6012,14 +6068,18 @@ msgid ""
 "square around its position. This is mainly to keep it visible and "
 "selectable."
 msgstr ""
+"செவ்வக பொருள்கள் அவற்றின் தோற்றத்தை மேல் இடது. இருப்பினும், செவ்வகம் காலியாக"
+" இருந்தால் (அகலம் மற்றும் உயரம் இரண்டும் 0), அது அதன் நிலையைச் சுற்றி ஒரு "
+"சிறிய சதுரமாக வழங்கப்படுகிறது. இது முக்கியமாக இது தெரியும் மற்றும் "
+"தேர்ந்தெடுக்கக்கூடியதாக இருக்கும்."
 
 #: ../../manual/objects.rst:62
 msgid "Insert Point"
-msgstr ""
+msgstr "புள்ளி செருகவும்"
 
 #: ../../manual/objects.rst:64
 msgid "Shortcut: ``I``"
-msgstr ""
+msgstr "குறுக்குவழி: `` நான்`"
 
 #: ../../manual/objects.rst:66
 msgid ""
@@ -6027,14 +6087,17 @@ msgid ""
 "a location, and cannot be resized or rotated. Simply click on the map to "
 "position a point object."
 msgstr ""
+"புள்ளிகள் நீங்கள் ஒரு வரைபடத்தில் வைக்கக்கூடிய எளிய பொருள்கள். அவை ஒரு "
+"இருப்பிடத்தை மட்டுமே குறிக்கின்றன, மேலும் அவை அளவை மாற்றவோ அல்லது சுழற்றவோ "
+"முடியாது. ஒரு புள்ளி பொருளை நிலைநிறுத்த வரைபடத்தில் சொடுக்கு செய்க."
 
 #: ../../manual/objects.rst:73
 msgid "Insert Ellipse"
-msgstr ""
+msgstr "நீள்வட்டத்தை செருகவும்"
 
 #: ../../manual/objects.rst:75
 msgid "Shortcut: ``C``"
-msgstr ""
+msgstr "குறுக்குவழி: `` சி``"
 
 #: ../../manual/objects.rst:77
 msgid ""
@@ -6042,20 +6105,26 @@ msgid ""
 "that they are rendered as an ellipse. Useful for when your area or collision"
 " shape needs to represent a circle or ellipse."
 msgstr ""
+"நீள்வட்டங்கள் `செவ்வகங்கள் <#செருகும்-ரெக்டாங்கல்> __ __ போன்றவற்றைப் போலவே "
+"செயல்படுகின்றன, தவிர அவை நீள்வட்டமாக வழங்கப்படுகின்றன. உங்கள் பகுதி அல்லது "
+"மோதல் வடிவம் ஒரு வட்டம் அல்லது நீள்வட்டத்தைக் குறிக்கும்போது பயனுள்ளதாக "
+"இருக்கும்."
 
 #: ../../manual/objects.rst:84
 msgid "Insert Polygon"
-msgstr ""
+msgstr "பலகோணத்தை செருகவும்"
 
 #: ../../manual/objects.rst:86
 msgid "Shortcut: ``P``"
-msgstr ""
+msgstr "குறுக்குவழி: `` பி``"
 
 #: ../../manual/objects.rst:88
 msgid ""
 "Polygons are the most flexible way of defining the shape of an area. They "
 "are most commonly used for defining collision shapes."
 msgstr ""
+"பலகோணங்கள் ஒரு பகுதியின் வடிவத்தை வரையறுக்க மிகவும் நெகிழ்வான வழி. மோதல் "
+"வடிவங்களை வரையறுக்க அவை பொதுவாகப் பயன்படுத்தப்படுகின்றன."
 
 #: ../../manual/objects.rst:91
 msgid ""
@@ -6065,22 +6134,32 @@ msgid ""
 "have at least three points. Click the first point again to finish creating "
 "the polygon. You can press ``Escape`` to cancel the creation of the polygon."
 msgstr ""
+"பலகோணத்தை வைக்கும்போது, ​​முதல் சொடுக்கு பொருளின் இருப்பிடத்தையும் "
+"பலகோணத்தின் முதல் புள்ளியின் இருப்பிடத்தையும் தீர்மானிக்கிறது. பலகோணத்திற்கு"
+" கூடுதல் புள்ளிகளைச் சேர்க்க அடுத்தடுத்த கிளிக்குகள் பயன்படுத்தப்படுகின்றன. "
+"பலகோணங்களுக்கு குறைந்தது மூன்று புள்ளிகள் இருக்க வேண்டும். பலகோணத்தை "
+"உருவாக்குவதை முடிக்க முதல் புள்ளியைக் சொடுக்கு செய்க. பலகோணத்தின் "
+"உருவாக்கத்தை ரத்து செய்ய நீங்கள் `` எச்கேப்`` ஐ அழுத்தலாம்."
 
 #: ../../manual/objects.rst:98
 msgid ""
 "When you want to change a polygon after it has been placed, you need to use "
 "the :ref:`edit-polygons-tool` tool."
 msgstr ""
+"பலகோணத்தை வைக்கப்பட்ட பிறகு அதை மாற்ற விரும்பினால், நீங்கள்: ref: "
+"`திருத்து-பாலிகன்ச்-கருவி` கருவியைப் பயன்படுத்த வேண்டும்."
 
 #: ../../manual/objects.rst:102
 msgid "Polylines"
-msgstr ""
+msgstr "பாலிலின்கள்"
 
 #: ../../manual/objects.rst:104
 msgid ""
 "Polylines are created by not closing a polygon. Right-click or press Enter "
 "while creating a polygon to finish it as a polyline."
 msgstr ""
+"பலகோணத்தை மூடாததன் மூலம் பாலிலின்கள் உருவாக்கப்படுகின்றன. பலகோணத்தை "
+"உருவாக்கும் போது வலது சொடுக்கு செய்யவும் அல்லது ENTER ஐ அழுத்தவும்."
 
 #: ../../manual/objects.rst:107
 msgid ""
@@ -6088,6 +6167,9 @@ msgid ""
 " represent collision walls, they are also often used to represent paths to "
 "be followed."
 msgstr ""
+"பாலிலின்கள் ஒரு வரியாக வழங்கப்படுகின்றன மற்றும் இரண்டு புள்ளிகள் மட்டுமே "
+"தேவைப்படுகின்றன. அவை மோதல் சுவர்களைக் குறிக்க முடியும் என்றாலும், அவை "
+"பெரும்பாலும் பின்பற்றப்பட வேண்டிய பாதைகளைக் குறிக்கப் பயன்படுகின்றன."
 
 #: ../../manual/objects.rst:115
 msgid ""
@@ -6097,18 +6179,26 @@ msgid ""
 "other polyline object needs to be selected as well, since the interactive "
 "dots only show on selected polylines."
 msgstr ""
+"காண்பிக்கப்படும் புள்ளிகளைக் சொடுக்கு செய்வதன் மூலம், "
+"தேர்ந்தெடுக்கப்பட்டபோது, ​​ஏற்கனவே இருக்கும் பாலிலைன் இரு முனைகளிலும் "
+"நீட்டிக்கலாம். தற்போதுள்ள மற்றொரு பாலிலைன் பொருளின் முடிவோடு இணைப்பதன் மூலம்"
+" பாலிலைனை முடிக்க முடியும். மற்ற பாலிலைன் பொருளையும் தேர்ந்தெடுக்க வேண்டும்,"
+" ஏனெனில் ஊடாடும் புள்ளிகள் தேர்ந்தெடுக்கப்பட்ட பாலிலைன்களில் மட்டுமே "
+"காண்பிக்கப்படுகின்றன."
 
 #: ../../manual/objects.rst:121
 msgid "The :ref:`edit-polygons-tool` tool is used to edit polylines as well."
 msgstr ""
+"தி: ரெஃப்: `திருத்து-பாலிகன்ச்-கருவி` கருவி பாலிலின்களையும் திருத்தவும் "
+"பயன்படுத்தப்படுகிறது."
 
 #: ../../manual/objects.rst:126
 msgid "Insert Tile"
-msgstr ""
+msgstr "ஓடு செருகவும்"
 
 #: ../../manual/objects.rst:128
 msgid "Shortcut: ``T``"
-msgstr ""
+msgstr "குறுக்குவழி: `` t``"
 
 #: ../../manual/objects.rst:130
 msgid ""
@@ -6119,6 +6209,13 @@ msgid ""
 "special information, like a chest with defined contents or an NPC with "
 "defined script."
 msgstr ""
+"உங்கள் வரைபடத்தில் ஓடு படத்தை வைப்பதில், அளவிடுதல் மற்றும் சுழற்றுவதில் முழு"
+" நெகிழ்வுத்தன்மையைக் கொண்டிருக்கும் பொருட்களாக ஓடுகளை செருகலாம். எல்லா "
+"பொருள்களையும் போலவே, ஓடு பொருள்களும் அவற்றுடன் தொடர்புடைய தனிப்பயன் "
+"பண்புகளையும் கொண்டிருக்கலாம். வரையறுக்கப்பட்ட உள்ளடக்கங்களைக் கொண்ட மார்பு "
+"அல்லது வரையறுக்கப்பட்ட ச்கிரிப்டைக் கொண்ட NPC போன்ற சிறப்புத் தகவல்கள் "
+"தேவைப்படும் அடையாளம் காணக்கூடிய ஊடாடும் பொருள்களை வைப்பதற்கு இது பயனுள்ளதாக "
+"இருக்கும்."
 
 #: ../../manual/objects.rst:137
 msgid ""
@@ -6126,6 +6223,10 @@ msgid ""
 "*Tilesets* view. Then use the Left mouse button on the map to start placing "
 "the object, move to position it and release to finish placing the object."
 msgstr ""
+"ஒரு ஓடு பொருளை வைக்க, முதலில் நீங்கள் வைக்க விரும்பும் ஓடு * டைல்செட்ச் * "
+"பார்வையில் தேர்ந்தெடுக்கவும். பின்னர் பொருளை வைக்கத் தொடங்க வரைபடத்தில் இடது"
+" சுட்டி பொத்தானைப் பயன்படுத்தவும், அதை நிலைநிறுத்தவும், பொருளை வைப்பதை "
+"முடிக்கவும்."
 
 #: ../../manual/objects.rst:145
 msgid ""
@@ -6134,6 +6235,9 @@ msgid ""
 "click on a tile in the *Tilesets* view, and choose *Replace Tile of Selected"
 " Objects*."
 msgstr ""
+"ஏற்கனவே உள்ள ஓடு பொருள்களால் பயன்படுத்தப்படும் ஓடு மாற்ற, நீங்கள் மாற்ற "
+"விரும்பும் அனைத்து பொருட்களையும் தேர்ந்தெடுத்து: rew: "
+"`தேர்ந்தெடுக்கப்பட்ட-பொருள்களைத் தேர்ந்தெடுக்கவும்-கருவியாகும்."
 
 #: ../../manual/objects.rst:154
 msgid ""
@@ -6145,28 +6249,38 @@ msgid ""
 "alignment of tile objects consistent with that of :ref:`rectangle objects "
 "<insert-rectangle-tool>`."
 msgstr ""
+"*டைல்செட் *இல் *பொருள் சீரமைப்பு *சொத்தைப் பயன்படுத்தி ஓடு பொருள்களின் "
+"சீரமைப்பை நீங்கள் தனிப்பயனாக்கலாம். பொருந்தக்கூடிய காரணங்களுக்காக, இந்த "
+"சொத்து இயல்புநிலையாக * குறிப்பிடப்படாத * என அமைக்கப்பட்டுள்ளது, இந்நிலையில் "
+"ஓடு பொருள்கள் * ஐசோமெட்ரிக் * வரைபடங்களைத் தவிர அனைத்து நோக்குநிலைகளிலும் "
+"கீழ்-இடது-இடது-இடதுபுறமாக உள்ளன, அங்கு அவை கீழ்-மைய சீரமைக்கப்பட்டவை. இந்த "
+"சொத்தை * மேல் இடது * க்கு அமைப்பது ஓடு பொருள்களின் சீரமைப்புடன் "
+"ஒத்துப்போகிறது: குறிப்பு: `செவ்வக பொருள்கள் <செருகு-ரெக்டாங்கல்-கருவி>`."
 
 #: ../../manual/objects.rst:169
 msgid "Insert Template"
-msgstr ""
+msgstr "வார்ப்புருவைச் செருகவும்"
 
 #: ../../manual/objects.rst:171 ../../manual/using-templates.rst:50
 msgid "Shortcut: ``V``"
-msgstr ""
+msgstr "குறுக்குவழி: `` வி``"
 
 #: ../../manual/objects.rst:173
 msgid ""
 "Can be used to quickly insert multiple instances of the template selected in"
 " the Templates view. See :ref:`creating-template-instances`."
 msgstr ""
+"வார்ப்புருக்கள் பார்வையில் தேர்ந்தெடுக்கப்பட்ட வார்ப்புருவின் பல நிகழ்வுகளை "
+"விரைவாக செருக பயன்படுத்தலாம். காண்க: Ref: `உருவாக்கும்-தற்காலிக "
+"முன்னேற்றங்கள்`."
 
 #: ../../manual/objects.rst:179
 msgid "Insert Text"
-msgstr ""
+msgstr "உரையைச் செருகவும்"
 
 #: ../../manual/objects.rst:181
 msgid "Shortcut: ``X``"
-msgstr ""
+msgstr "குறுக்குவழி: `` x``"
 
 #: ../../manual/objects.rst:183
 msgid ""
@@ -6174,24 +6288,31 @@ msgid ""
 "can configure various font properties and the wrapping / clipping area, "
 "making them useful for both quick notes as well as text used in the game."
 msgstr ""
+"உங்கள் வரைபடங்களில் தன்னிச்சையான மல்டி-லைன் உரையைச் சேர்க்க உரை பொருள்களைப் "
+"பயன்படுத்தலாம். நீங்கள் பல்வேறு எழுத்துரு பண்புகள் மற்றும் மடக்குதல் / "
+"கிளிப்பிங் பகுதியை உள்ளமைக்கலாம், அவை விரைவான குறிப்புகள் மற்றும் "
+"விளையாட்டில் பயன்படுத்தப்படும் உரை இரண்டிற்கும் பயனுள்ளதாக இருக்கும்."
 
 #: ../../manual/objects.rst:191
 msgid "Select Objects"
-msgstr ""
+msgstr "பொருள்களைத் தேர்ந்தெடுக்கவும்"
 
 #: ../../manual/objects.rst:193
 msgid "Shortcut: ``S``"
-msgstr ""
+msgstr "குறுக்குவழி: `` எச்``"
 
 #: ../../manual/objects.rst:195
 msgid ""
 "When you're not inserting new objects, you're generally using the Select "
 "Objects tool. It packs a lot of functionality, which is outlined below."
 msgstr ""
+"நீங்கள் புதிய பொருள்களைச் செருகாதபோது, ​​நீங்கள் பொதுவாக தேர்ந்தெடுக்கப்பட்ட"
+" பொருள்களின் கருவியைப் பயன்படுத்துகிறீர்கள். இது நிறைய செயல்பாடுகளைக் "
+"கொண்டுள்ளது, இது கீழே கோடிட்டுக் காட்டப்பட்டுள்ளது."
 
 #: ../../manual/objects.rst:199
 msgid "Selecting and Deselecting"
-msgstr ""
+msgstr "தேர்ந்தெடுப்பது மற்றும் தேர்வுசெய்தல்"
 
 #: ../../manual/objects.rst:201
 msgid ""
@@ -6200,6 +6321,12 @@ msgid ""
 "``Ctrl`` while clicking, you can add/remove single objects to/from the "
 "selection. Press ``Escape`` to deselect all objects."
 msgstr ""
+"பொருள்களைக் சொடுக்கு செய்வதன் மூலமோ அல்லது ஒரு செவ்வக லாசோவை இழுப்பதன் "
+"மூலமோ, அதன் பகுதியுடன் வெட்டும் எந்தவொரு பொருளையும் தேர்ந்தெடுக்கவும் "
+"நீங்கள் தேர்ந்தெடுக்கலாம். சொடுக்கு செய்யும் போது `` சிப்ட்`` அல்லது `` "
+"ctrl`` ஐ வைத்திருப்பதன் மூலம், நீங்கள் தேர்விலிருந்து/ஒற்றை பொருள்களைச் "
+"சேர்க்கலாம்/அகற்றலாம். எல்லா பொருட்களையும் தேர்வுநீக்க `` எச்கேப்`` ஐ "
+"அழுத்தவும்."
 
 #: ../../manual/objects.rst:206
 msgid ""
@@ -6207,6 +6334,9 @@ msgid ""
 "When this prevents you from starting a rectangular selection, you can hold "
 "``Shift`` to force the selection rectangle."
 msgstr ""
+"ஒரு பொருளை அழுத்தி இழுக்கும்போது, ​​இந்த பொருள் தேர்ந்தெடுக்கப்பட்டு "
+"நகர்த்தப்படுகிறது. இது ஒரு செவ்வக தேர்வைத் தொடங்குவதைத் தடுக்கும்போது, "
+"​​தேர்வு செவ்வகத்தை கட்டாயப்படுத்த `` சிப்ட்`` வைத்திருக்கலாம்."
 
 #: ../../manual/objects.rst:214
 msgid ""
@@ -6217,22 +6347,35 @@ msgid ""
 "objects at the clicked location, so you may directly select the desired "
 "object."
 msgstr ""
+"இயல்பாக நீங்கள் மிக உயர்ந்த பொருளுடன் தொடர்பு கொள்கிறீர்கள். மற்றொரு "
+"பொருளின் கீழே ஒரு பொருளை நீங்கள் தேர்ந்தெடுக்க வேண்டியிருக்கும் போது, "
+"​​முதலில் உயர் பொருளைத் தேர்ந்தெடுத்து, பின்னர் `` alt`` ஐ வைத்திருங்கள், "
+"அதே இடத்தில் சொடுக்கு செய்யும் போது குறைந்த பொருள்களைத் தேர்ந்தெடுக்க. "
+"சொடுக்கு செய்யப்பட்ட இடத்தில் அனைத்து பொருள்களின் பட்டியலையும் பெற சூழல் "
+"மெனுவைத் திறக்கும்போது நீங்கள் `` ஆல்ட்`` வைத்திருக்கலாம், எனவே நீங்கள் "
+"விரும்பிய பொருளை நேரடியாக தேர்ந்தெடுக்கலாம்."
 
 #: ../../manual/objects.rst:225
 msgid ""
 "You can quickly switch to the :ref:`edit-polygons-tool` tool by double-"
 "clicking on the polygon or polyline you want to edit."
 msgstr ""
+"நீங்கள் விரைவாக மாறலாம்: ref: `நீங்கள் திருத்த விரும்பும் பலகோணம் அல்லது "
+"பாலிலைன் மீது இருமுறை சொடுக்கு செய்வதன் மூலம்` திருத்து-பாலிகன்ச்-டூல்` "
+"கருவி."
 
 #: ../../manual/objects.rst:229
 msgid "Moving"
-msgstr ""
+msgstr "நகரும்"
 
 #: ../../manual/objects.rst:231
 msgid ""
 "You can simply drag any single object, or drag already selected objects by "
 "dragging any one of them. Hold ``Ctrl`` to toggle snapping to the tile grid."
 msgstr ""
+"நீங்கள் வெறுமனே எந்தவொரு பொருளையும் இழுக்கலாம் அல்லது ஏற்கனவே "
+"தேர்ந்தெடுக்கப்பட்ட பொருள்களை அவற்றில் ஏதேனும் ஒன்றை இழுத்து இழுக்கலாம். ஓடு"
+" கட்டத்திற்கு ச்னாப்பிங் செய்ய `` ctrl`` ஐப் பிடிக்கவும்."
 
 #: ../../manual/objects.rst:235
 msgid ""
@@ -6240,6 +6383,10 @@ msgid ""
 "regardless of where you click on the map. This is useful when the selected "
 "objects are small or covered by other objects."
 msgstr ""
+"வரைபடத்தில் நீங்கள் எங்கு சொடுக்கு செய்தாலும், தற்போது தேர்ந்தெடுக்கப்பட்ட "
+"பொருள்களில் நகரும் செயல்பாட்டை கட்டாயப்படுத்த `` ஆல்ட்`` வைத்திருங்கள். "
+"தேர்ந்தெடுக்கப்பட்ட பொருள்கள் சிறியதாகவோ அல்லது பிற பொருள்களால் "
+"மூடப்பட்டிருக்கும் போது இது பயனுள்ளதாக இருக்கும்."
 
 #: ../../manual/objects.rst:239
 msgid ""
@@ -6247,10 +6394,14 @@ msgid ""
 "moves the objects pixel by pixel. Hold ``Shift`` while using the arrow keys "
 "to move the objects by distance of one tile."
 msgstr ""
+"தேர்ந்தெடுக்கப்பட்ட பொருள்களை அம்பு விசைகள் மூலம் நகர்த்தலாம். இயல்பாக இது "
+"படப்புள்ளி மூலம் பொருள்களின் பிக்சலை நகர்த்துகிறது. ஒரு ஓடு தூரத்தில் "
+"பொருள்களை நகர்த்த அம்பு விசைகளைப் பயன்படுத்தும் போது `` சிப்ட்`` "
+"வைத்திருங்கள்."
 
 #: ../../manual/objects.rst:244
 msgid "Resizing"
-msgstr ""
+msgstr "மறுஅளவிடுதல்"
 
 #: ../../manual/objects.rst:246
 msgid ""
@@ -6258,6 +6409,9 @@ msgid ""
 "``Ctrl`` to keep the aspect ratio of the object and/or ``Shift`` to place "
 "the resize origin in the center."
 msgstr ""
+"ஒன்று அல்லது அதற்கு மேற்பட்ட தேர்ந்தெடுக்கப்பட்ட பொருள்களை மறுஅளவிடுவதற்கு "
+"மறுஅளவிடுதல் கைப்பிடிகளைப் பயன்படுத்தலாம். மறுஅளவிடுதல் தோற்றத்தை மையத்தில் "
+"வைக்க பொருளின் விகித விகிதத்தை வைத்திருக்க `` ctrl`` ஐ வைத்திருங்கள்."
 
 #: ../../manual/objects.rst:250
 msgid ""
@@ -6266,10 +6420,14 @@ msgid ""
 "constant because there would be no way to make that work for rotated objects"
 " without full support for transformations."
 msgstr ""
+"ஒரு பொருளின் மறுஅளவிடும்போது நீங்கள் அகலத்தையும் உயரத்தையும் சுயாதீனமாக "
+"மாற்ற முடியும் என்பதை நினைவில் கொள்க. பல பொருள்களைத் தேர்ந்தெடுக்கும்போது, "
+"​​விகித விகிதம் நிலையானது, ஏனென்றால் உருமாற்றங்களுக்கு முழு உதவி இல்லாமல் "
+"சுழற்றப்பட்ட பொருள்களுக்கு அந்த வேலையை உருவாக்க வழி இருக்காது."
 
 #: ../../manual/objects.rst:256
 msgid "Rotating"
-msgstr ""
+msgstr "சுழலும்"
 
 #: ../../manual/objects.rst:258
 msgid ""
@@ -6278,16 +6436,23 @@ msgid ""
 "another position if necessary. Hold ``Shift`` to rotate in 15-degree "
 "increments. Click any selected object again to go back to resize mode."
 msgstr ""
+"சுழற்ற, மறுஅளவிடுதல் கைப்பிடிகளை சுழற்சி கைப்பிடிகளாக மாற்ற "
+"தேர்ந்தெடுக்கப்பட்ட எந்தவொரு பொருளையும் சொடுக்கு செய்க. சுழலும் முன், "
+"தேவைப்பட்டால் சுழற்சி தோற்றத்தை மற்றொரு நிலைக்கு இழுக்கலாம். 15 டிகிரி "
+"அதிகரிப்புகளில் சுழற்ற `` சிப்ட்`` வைத்திருங்கள். மறுஅளவிடுதல் "
+"பயன்முறைக்குச் செல்ல மீண்டும் தேர்ந்தெடுக்கப்பட்ட பொருளைக் சொடுக்கு செய்க."
 
 #: ../../manual/objects.rst:263
 msgid ""
 "You can also rotate the selected objects in 90-degree steps by pressing "
 "``Z`` or ``Shift + Z``."
 msgstr ""
+"`` Z`` அல்லது `சிப்ட் + z`` ஐ அழுத்துவதன் மூலம் தேர்ந்தெடுக்கப்பட்ட "
+"பொருள்களை 90 டிகிரி படிகளில் சுழற்றலாம்."
 
 #: ../../manual/objects.rst:267
 msgid "Changing Stacking Order"
-msgstr ""
+msgstr "ச்டாக்கிங் வரிசையை மாற்றுதல்"
 
 #: ../../manual/objects.rst:269
 msgid ""
@@ -6296,22 +6461,26 @@ msgid ""
 "control the stacking order of the selected objects within their object layer"
 " using the following keys:"
 msgstr ""
+"செயலில் இருந்தால்: ref: `பொருள் அடுக்கு <பொருள்-அடுக்கு-அறிமுகம்>` அதன் "
+"வரைபட ஒழுங்கு சொத்தை கையேட்டில் அமைத்துள்ளார் (இயல்புநிலை மேலே உள்ளது), "
+"பின்வரும் விசைகளைப் பயன்படுத்தி தேர்ந்தெடுக்கப்பட்ட பொருள்களின் அடுக்கி "
+"வைக்கும் வரிசையை நீங்கள் கட்டுப்படுத்தலாம்:"
 
 #: ../../manual/objects.rst:274
 msgid "``PgUp`` - Raise selected objects"
-msgstr ""
+msgstr "`` Pgup`` - தேர்ந்தெடுக்கப்பட்ட பொருள்களை உயர்த்தவும்"
 
 #: ../../manual/objects.rst:275
 msgid "``PgDown`` - Lower selected objects"
-msgstr ""
+msgstr "`` Pgdown`` - தேர்ந்தெடுக்கப்பட்ட பொருள்கள்"
 
 #: ../../manual/objects.rst:276
 msgid "``Home`` - Move selected objects to Top"
-msgstr ""
+msgstr "`` வீடு`` - தேர்ந்தெடுக்கப்பட்ட பொருட்களை மேலே நகர்த்தவும்"
 
 #: ../../manual/objects.rst:277
 msgid "``End`` - Move selected objects to Bottom"
-msgstr ""
+msgstr "`` முடிவு`` - தேர்ந்தெடுக்கப்பட்ட பொருட்களை கீழே நகர்த்தவும்"
 
 #: ../../manual/objects.rst:279
 msgid ""
@@ -6319,10 +6488,13 @@ msgid ""
 "Object Layers, the context menu also contains actions to move the selected "
 "objects to another layer."
 msgstr ""
+"இந்த செயல்களை சூழல் பட்டியலில் காணலாம். உங்களிடம் பல பொருள் அடுக்குகள் "
+"இருக்கும்போது, ​​தேர்ந்தெடுக்கப்பட்ட பொருள்களை மற்றொரு அடுக்குக்கு "
+"நகர்த்துவதற்கான செயல்களும் சூழல் பட்டியலில் உள்ளன."
 
 #: ../../manual/objects.rst:284
 msgid "Flipping Objects"
-msgstr ""
+msgstr "பொருள்களை புரட்டுகிறது"
 
 #: ../../manual/objects.rst:286
 msgid ""
@@ -6330,14 +6502,17 @@ msgid ""
 "vertically by pressing ``Y``. For tile objects, this also flips their "
 "images."
 msgstr ""
+"`` X`` அல்லது செங்குத்தாக `` y`` ஐ அழுத்துவதன் மூலம் தேர்ந்தெடுக்கப்பட்ட "
+"பொருள்களை கிடைமட்டமாக புரட்டலாம். ஓடு பொருள்களைப் பொறுத்தவரை, இது அவர்களின் "
+"படங்களையும் புரட்டுகிறது."
 
 #: ../../manual/objects.rst:293
 msgid "Edit Polygons"
-msgstr ""
+msgstr "பலகோணங்களைத் திருத்தவும்"
 
 #: ../../manual/objects.rst:295
 msgid "Shortcut: ``E``"
-msgstr ""
+msgstr "குறுக்குவழி: `` E``"
 
 #: ../../manual/objects.rst:297
 msgid ""
@@ -6348,6 +6523,13 @@ msgid ""
 "deselect all nodes, or to switch back to the :ref:`select-objects-tool` "
 "tool."
 msgstr ""
+"பலகோணங்கள் மற்றும் பாலிலின்கள் அவற்றின் சொந்த திருத்துதல் தேவைகளைக் "
+"கொண்டுள்ளன, மேலும் இது ஒரு தனி கருவியால் மூடப்பட்டிருக்கும், இது அவர்களின் "
+"முனைகளைத் தேர்ந்தெடுத்து நகர்த்த அனுமதிக்கிறது. ஒரே நேரத்தில் பல "
+"பலகோணங்களின் முனைகளைத் தேர்ந்தெடுத்து நகர்த்தலாம். இரு முனைகளிலும் முனைகளைத்"
+" தேர்ந்தெடுக்க ஒரு பகுதியைக் சொடுக்கு செய்க. எல்லா முனைகளையும் தேர்வுசெய்ய "
+"`` எச்கேப்`` ஐ அழுத்தவும், அல்லது மீண்டும்: ref: "
+"`தேர்ந்தெடுக்கப்பட்ட-பொருள்களைத் தேர்ந்தெடுக்கவும்-கருவி."
 
 #: ../../manual/objects.rst:304
 msgid ""
@@ -6355,6 +6537,10 @@ msgid ""
 "the context menu. The ``Delete`` key can also be used to delete the selected"
 " nodes, or the selected objects if no nodes are selected."
 msgstr ""
+"சூழல் மெனுவிலிருந்து அவற்றைத் தேர்ந்தெடுத்து \"முனைகளை நீக்கு\" என்பதைத் "
+"தேர்ந்தெடுப்பதன் மூலம் முனைகளை நீக்க முடியும். தேர்ந்தெடுக்கப்பட்ட முனைகளை "
+"நீக்க `` நீக்கு`` விசையும் பயன்படுத்தப்படலாம் அல்லது முனைகள் எதுவும் "
+"தேர்ந்தெடுக்கப்படாவிட்டால் தேர்ந்தெடுக்கப்பட்ட பொருள்களையும் பயன்படுத்தலாம்."
 
 #: ../../manual/objects.rst:308
 msgid ""
@@ -6364,6 +6550,11 @@ msgid ""
 "Segments\". Alternatively, you can simply double-click a segment to split it"
 " at that location."
 msgstr ""
+"ஒரே பலகோணத்தின் தொடர்ச்சியான பல முனைகளை நீங்கள் தேர்ந்தெடுத்தால், சூழல் "
+"மெனுவிலிருந்து \"சேர் முனைகளை\" தேர்ந்தெடுப்பதன் மூலம் நீங்கள் அவர்களுடன் "
+"சேரலாம். \"பிளவு பிரிவுகளை\" தேர்ந்தெடுப்பதன் மூலம் முனைகளுக்கு இடையில் உள்ள"
+" பகுதிகளையும் நீங்கள் பிரிக்கலாம். மாற்றாக, ஒரு பகுதியை அந்த இடத்தில் "
+"பிரிக்க நீங்கள் இருமுறை சொடுக்கு செய்யலாம்."
 
 #: ../../manual/objects.rst:314
 msgid ""
@@ -6372,6 +6563,10 @@ msgid ""
 "convert a polygon into a polyline, or turn one polyline object in two "
 "polyline objects."
 msgstr ""
+"சூழல் பட்டியலில் \"நீக்கு பிரிவை\" தேர்ந்தெடுப்பதன் மூலம் பலகோணத்தில் "
+"தொடர்ச்சியாக இரண்டு முனைகள் தேர்ந்தெடுக்கப்படும்போது நீங்கள் ஒரு பகுதியை "
+"நீக்கலாம். இது ஒரு பலகோணத்தை ஒரு பாலிலினாக மாற்றும், அல்லது ஒரு பாலிலைன் "
+"பொருளை இரண்டு பாலிலைன் பொருள்களாக மாற்றும்."
 
 #: ../../manual/objects.rst:323
 msgid ""
@@ -6380,10 +6575,14 @@ msgid ""
 ":ref:`insert-polygon-tool` tool and clicking on either end of an already "
 "selected polyline."
 msgstr ""
+"அந்த முனைகளை வலது சொடுக்கு செய்து, \"பாலிலைன் நீட்டிப்பு\" என்பதைத் "
+"தேர்ந்தெடுப்பதன் மூலமாகவோ அல்லது: yef: `இன்சர்ட்-பாலிகோன்-கருவி` "
+"கருவியாகவும், ஏற்கனவே தேர்ந்தெடுக்கப்பட்ட பாலிலைனின் இரு முனைகளையும் "
+"சொடுக்கு செய்வதன் மூலமும் இரு முனையிலும் ஒரு பாலிலைனை நீட்டிக்க முடியும்."
 
 #: ../../manual/objects.rst:336
 msgid "Connecting Objects"
-msgstr ""
+msgstr "பொருள்களை இணைக்கிறது"
 
 #: ../../manual/objects.rst:338
 msgid ""
@@ -6392,36 +6591,48 @@ msgid ""
 " do this, add a custom property of type ``object`` to the source object. "
 "This property can then be set to the desired target object in several ways."
 msgstr ""
+"ஒரு சுவிட்ச் ஒரு குறிப்பிட்ட கதவைத் திறக்க வேண்டும் அல்லது ஒரு NPC ஒரு "
+"குறிப்பிட்ட பாதையைப் பின்பற்ற வேண்டும் என்பது போன்ற ஒரு பொருளை இன்னொரு "
+"பொருளை மற்றொரு பொருளை இணைப்பது பெரும்பாலும் பயனுள்ளதாக இருக்கும். இதைச் "
+"செய்ய, மூலப் பொருளில் `` பொருள்` வகை தனிப்பயன் சொத்தை சேர்க்கவும். இந்த "
+"சொத்தை பல வழிகளில் விரும்பிய இலக்கு பொருளுக்கு அமைக்கலாம்."
 
 #: ../../manual/objects.rst:343
 msgid ""
 "Make sure the property value is selected, as seen on the following "
 "screenshot:"
 msgstr ""
+"பின்வரும் திரை சாட்டில் காணப்படுவது போல, சொத்து மதிப்பு "
+"தேர்ந்தெடுக்கப்பட்டதா என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்:"
 
 #: ../../manual/objects.rst:348
 msgid "Object Connection Property"
-msgstr ""
+msgstr "பொருள் இணைப்பு சொத்து"
 
 #: ../../manual/objects.rst:350
 msgid "Then, you can set the connection by either:"
-msgstr ""
+msgstr "பின்னர், நீங்கள் இணைப்பை அமைக்கலாம்:"
 
 #: ../../manual/objects.rst:352
 msgid "Typing in the ID of the target object."
-msgstr ""
+msgstr "இலக்கு பொருளின் ஐடியில் தட்டச்சு செய்க."
 
 #: ../../manual/objects.rst:354
 msgid ""
 "Clicking the icon with the window and magnifier, to open a dialog where you "
 "can filter all objects on the map to find your target object."
 msgstr ""
+"உங்கள் இலக்கு பொருளைக் கண்டுபிடிக்க வரைபடத்தில் உள்ள அனைத்து பொருட்களையும் "
+"வடிகட்டக்கூடிய ஒரு உரையாடலைத் திறக்க, சாளரம் மற்றும் உருப்பெருக்கி மூலம் "
+"ஐகானைக் சொடுக்கு செய்க."
 
 #: ../../manual/objects.rst:357
 msgid ""
 "Clicking the arrow icon and then clicking an object on the map to set it as "
 "the target object."
 msgstr ""
+"அம்பு ஐகானைக் சொடுக்கு செய்து, பின்னர் ஒரு பொருளை வரைபடத்தில் சொடுக்கு "
+"செய்து அதை இலக்கு பொருளாக அமைக்கவும்."
 
 #: ../../manual/objects.rst:360
 msgid ""
@@ -6431,18 +6642,28 @@ msgid ""
 "layer). You can toggle the display of these arrows using *View -> Show "
 "Object References*."
 msgstr ""
+"மேலே உள்ள ச்கிரீன்சாட்டில் காட்டப்பட்டுள்ளபடி, பொருள்களுக்கு இடையிலான "
+"எந்தவொரு தொடர்புகளும் அம்புகளாக வழங்கப்படுகின்றன, அவற்றின் இலக்கு பொருளின் "
+"நிறத்தை எடுத்துக்கொள்கின்றன (இதன் ஒரு பகுதியாக வரையறுக்கப்படுகிறது: "
+"குறிப்பு: `பொருள் வகுப்பு <தனிப்பயன்-வகுப்பு>` அல்லது பொருள் அடுக்கின் "
+"நிறத்தால்). *பார்வை -> பொருள் குறிப்புகளைக் காண்பி *ஐப் பயன்படுத்தி இந்த "
+"அம்புகளின் காட்சியை நீங்கள் மாற்றலாம்."
 
 #: ../../manual/objects.rst:366
 msgid ""
 "If you'd like to get to the target object, but it's very far away, you can "
 "jump there by right-clicking the property and selecting *Go to Object*."
 msgstr ""
+"நீங்கள் இலக்கு பொருளைப் பெற விரும்பினால், ஆனால் அது மிகவும் தொலைவில் உள்ளது,"
+" நீங்கள் சொத்தை வலது சொடுக்கு செய்து *பொருளுக்குச் செல்லுங்கள் *என்பதைத் "
+"தேர்ந்தெடுப்பதன் மூலம் அங்கு செல்லலாம்."
 
 #: ../../manual/objects.rst:372
 msgid ""
 "Here are some ideas about improvements that could be made to the above "
 "tools:"
 msgstr ""
+"மேற்கண்ட கருவிகளுக்கு செய்யக்கூடிய மேம்பாடுகள் பற்றிய சில சிந்தனைகள் இங்கே:"
 
 #: ../../manual/objects.rst:375
 msgid ""
@@ -6450,6 +6671,10 @@ msgid ""
 "and polylines, like allowing to rotate and scale the selected nodes (`#1487 "
 "<https://github.com/mapeditor/tiled/issues/1487>`__)."
 msgstr ""
+"தேர்ந்தெடுக்கப்பட்ட முனைகளை (`#1487 "
+"<https://github.com/mapeditor/tiled/issues/1487> __)) சுழற்றவும் அளவிடவும் "
+"அனுமதிப்பது போன்ற பலகோணங்கள் மற்றும் பாலிலின்களைத் திருத்துவதற்கான ஆதரவுக்கு"
+" சில மேம்பாடுகள் செய்யப்படலாம்."
 
 #: ../../manual/objects.rst:379
 msgid ""
