@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Tamil (UBports)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-13 04:21+0200\n"
-"PO-Revision-Date: 2025-03-13 09:19+0530\n"
+"PO-Revision-Date: 2025-03-13 09:52+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/ubports/doc-ubports-com/ta/>\n"
 "Language: ta\n"
@@ -1710,16 +1710,20 @@ msgid ""
 "At this point you should already be able to test with Clickable's desktop "
 "mode running ``clickable desktop``."
 msgstr ""
+"இந்த கட்டத்தில் நீங்கள் ஏற்கனவே சொடுக்கு செய்யக்கூடிய டெச்க்டாப் பயன்முறையை "
+"`` சொடுக்கு செய்யக்கூடிய டெச்க்டாப்`` உடன் சோதிக்க முடியும்."
 
 #: ../../appdev/guides/dependencies.rst:95
 msgid "Deployment"
-msgstr ""
+msgstr "வரிசைப்படுத்தல்"
 
 #: ../../appdev/guides/dependencies.rst:96
 msgid ""
 "If you linked the library statically, you can skip this step, as the "
 "library's binary is already inside your app's binary."
 msgstr ""
+"நீங்கள் நூலகத்தை சட்டப்பூர்வமாக இணைத்திருந்தால், நூலகத்தின் பைனரி ஏற்கனவே "
+"உங்கள் பயன்பாட்டின் பைனரிக்குள் இருப்பதால், இந்த படிநிலையைத் தவிர்க்கலாம்."
 
 #: ../../appdev/guides/dependencies.rst:98
 msgid ""
@@ -1728,6 +1732,11 @@ msgid ""
 "You should see an error message telling you which shared object file was "
 "missing."
 msgstr ""
+"எந்த பகிரப்பட்ட பொருள் கோப்புகள் (``*.SO``) நீங்கள் அனுப்ப வேண்டும் என்பதைக்"
+" கண்டறியவும். உங்கள் சாதனத்தில் பயன்பாட்டை `` சொடுக்கு செய்யக்கூடிய && "
+"சொடுக்கு செய்யக்கூடிய பதிவுகள்` வழியாகத் தொடங்குவதன் மூலம் நீங்கள் அவ்வாறு "
+"செய்யலாம். எந்த பகிரப்பட்ட பொருள் கோப்பு இல்லை என்று சொல்லும் பிழை செய்தியை "
+"நீங்கள் காண வேண்டும்."
 
 #: ../../appdev/guides/dependencies.rst:100
 msgid ""
@@ -1740,6 +1749,14 @@ msgid ""
 "with some error messages you can ignore). In general, ``/usr/lib``  is a "
 "good bet when looking for the shared object files."
 msgstr ""
+"பகிரப்பட்ட பொருள் கோப்புகளுக்கான பாதையைக் கண்டறியவும். சொடுக்கு செய்யக்கூடிய"
+" வழியாக கட்டப்பட்ட நூலகங்களுக்கு, அவை நூலகத்தின் நிறுவல் டி.ஐ.ஆரில் எங்காவது"
+" அமைந்துள்ளன, இது இயல்பாக நூலகத்தின் உருவாக்க டிர் உள்ளே அமைந்துள்ளது (எ.கா."
+" முன்பே கட்டப்பட்ட நூலகங்களுக்கு `` சொடுக்கு செய்யக்கூடிய ரன் \"கண்டுபிடி / "
+"-name 'libsomething.so'\" \"` `(` `libsomething.so`` ஐ மாற்றுவது நீங்கள் "
+"தேடும் கோப்பின் மூலம்) இயக்கவும். இது கோப்பிற்கான பாதையை அச்சிட வேண்டும் "
+"(நீங்கள் புறக்கணிக்கக்கூடிய சில பிழை செய்திகளுடன்). பொதுவாக, பகிரப்பட்ட "
+"பொருள் கோப்புகளைத் தேடும்போது ``/usr/lib`` ஒரு நல்ல பந்தயம்."
 
 #: ../../appdev/guides/dependencies.rst:102
 msgid ""
@@ -1747,6 +1764,9 @@ msgid ""
 "<https://clickable.bhdouglass.com/en/latest/project-config.html#install-"
 "lib>`_ key to your clickable.yaml:"
 msgstr ""
+"கோப்புகளை சொடுக்கு தொகுப்பில் பெற, `install_lib "
+"<https://clickable.bhdouglass.com/en/latest/project-config.html#install-"
+"lib>` _ _ உங்கள் சொடுக்கு செய்யக்கூடியது."
 
 #: ../../appdev/guides/dependencies.rst:115
 msgid ""
@@ -1755,22 +1775,31 @@ msgid ""
 " along with the actual library which are used to point to the current "
 "version."
 msgstr ""
+"மேலே உள்ள கோடுகளில் இரண்டு எடுத்துக்காட்டுகள் உள்ளன. முதல் ஒன்று சொடுக்கு "
+"செய்யக்கூடிய ஒரு நூலகத்தை நிறுவுகிறது. `` .SO*`` இல் உள்ள விண்மீன் தற்போதைய "
+"பதிப்பை சுட்டிக்காட்டப் பயன்படும் உண்மையான நூலகத்துடன் குறியீட்டு "
+"இணைப்புகளைப் பிடிக்க உதவுகிறது."
 
 #: ../../appdev/guides/dependencies.rst:117
 msgid ""
 "Depending on the library, you might need to ship some additional data. In "
 "that case consult the library's readme or install instructions."
 msgstr ""
+"நூலகத்தைப் பொறுத்து, நீங்கள் சில கூடுதல் தரவை அனுப்ப வேண்டியிருக்கும். "
+"அவ்வாறான நிலையில் நூலகத்தின் README ஐ அணுகவும் அல்லது வழிமுறைகளை நிறுவவும்."
 
 #: ../../appdev/guides/dependencies.rst:119
 msgid ""
 "You should be set up to build and install your click package on a device "
 "connected to your computer now by running ``clickable``."
 msgstr ""
+"`` சொடுக்கு செய்யக்கூடிய`` இயங்குவதன் மூலம் இப்போது உங்கள் கணினியுடன் "
+"இணைக்கப்பட்ட சாதனத்தில் உங்கள் சொடுக்கு தொகுப்பை உருவாக்க மற்றும் நிறுவ "
+"நீங்கள் அமைக்கப்பட வேண்டும்."
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:2
 msgid "Importing from Content Hub and URLdispatcher"
-msgstr ""
+msgstr "உள்ளடக்க நடுவண் மற்றும் urldispatcher இலிருந்து இறக்குமதி செய்தல்"
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:15
 msgid ""
@@ -1778,14 +1807,18 @@ msgid ""
 " In this guide we will see how ``URLdispatcher`` works and how to handle "
 "imported data from the Content Hub."
 msgstr ""
+"முந்தைய வழிகாட்டியில் உள்ளடக்க நடுவண் எவ்வாறு செயல்படுகிறது என்பதைப் பற்றி "
+"கொஞ்சம் பார்த்தோம். இந்த வழிகாட்டியில் `` urldispatcher`` எவ்வாறு "
+"செயல்படுகிறது மற்றும் உள்ளடக்க மையத்திலிருந்து இறக்குமதி செய்யப்பட்ட தரவை "
+"எவ்வாறு கையாள்வது என்பதைக் காண்போம்."
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:18
 msgid "Handle data from the Content Hub"
-msgstr ""
+msgstr "உள்ளடக்க மையத்திலிருந்து தரவைக் கையாளவும்"
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:23
 msgid "OpenStore app from open-store.io"
-msgstr ""
+msgstr "திறந்த-STORE.IO இலிருந்து OpenStore பயன்பாடு"
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:25
 msgid ""
@@ -1793,6 +1826,9 @@ msgid ""
 "yourself on Telegram, and opening that click file with the OpenStore through"
 " the Content Hub:"
 msgstr ""
+"ஒரு பயன்பாட்டைச் சோதிப்பதற்கான எளிதான வழிகளில் ஒன்று, டெலிகிராமில் ஒரு சோதனை"
+" கிளிக்கை உங்களுக்கு அனுப்புவதும், அந்தக் சொடுக்கு கோப்பை OpenStore உடன் "
+"உள்ளடக்க மையத்தின் மூலம் திறப்பதும் ஆகும்:"
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:30
 msgid ""
@@ -1801,6 +1837,12 @@ msgid ""
 " app <https://github.com/UbuntuOpenStore/openstore-"
 "app/blob/master/openstore/Main.qml#L85>`_ to see how it is done:"
 msgstr ""
+"நாங்கள் ஓபன்ச்டோர் பயன்பாட்டில் தட்டினால், அது திறக்கப்படும், மேலும் "
+"சொடுக்கு கோப்பை நிறுவ விரும்புகிறீர்களா என்று கேட்கும். பயன்பாட்டின் "
+"`main.qml குறியீட்டைப் பார்ப்போம் "
+"<https://github.com/ubuntuopenstore/openstore-"
+"app/blob/master/openstore/main.qml#l85>` _ இது எவ்வாறு செய்யப்படுகிறது "
+"என்பதைக் காண:"
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:49
 msgid ""
@@ -1809,10 +1851,13 @@ msgid ""
 " from the Content Hub (``transfer.items[0].url`` is the url of the first "
 "data sent) and open a ``PopUp`` element to let the user install the click."
 msgstr ""
+"ContentHub ஐ குறிவைக்கும் இணைப்புகள் உறுப்பை நீங்கள் காண்கிறீர்களா? இது "
+"சமிக்ஞை மேலோட்டத்தைப் பெறும்போது, ​​உள்ளடக்க மையத்திலிருந்து அனுப்பப்பட்ட "
+"தரவின் முகவரி ஐ அது எடுக்கும் (`` பரிமாற்றம்."
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:52
 msgid "What about the URLdispatcher?"
-msgstr ""
+msgstr "Urldispatcher பற்றி என்ன?"
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:54
 msgid ""
@@ -1822,12 +1867,20 @@ msgid ""
 " on an http protocol. If we tap on a map link it is handy to open it with "
 "uNav or to open a twitter link in the Twitter app! How does that work?"
 msgstr ""
+"முகவரி அனுப்பியவர் என்பது உள்ளடக்க மையத்தைப் போன்ற ஒரு மென்பொருளாகும், இது "
+"ஒரு குறிப்பிட்ட நெறிமுறைக்கு சரியான பயன்பாட்டைத் தேர்வுசெய்ய எங்கள் "
+"வாழ்க்கையை எளிதாக்குகிறது. எடுத்துக்காட்டாக: HTTP நெறிமுறையைத் தட்டும்போது "
+"வலை உலாவியைத் திறக்க விரும்புகிறோம். வரைபட இணைப்பில் நாம் தட்டினால், அதை "
+"USAV உடன் திறப்பது அல்லது ட்விட்டர் பயன்பாட்டில் ட்விட்டர் இணைப்பைத் "
+"திறப்பது எளிது! அது எவ்வாறு செயல்படுகிறது?"
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:56
 msgid ""
 "The ``URLdispatcher`` selects which app (according to their "
 "``manifest.json``) will open a certain link."
 msgstr ""
+"`` Urldispatcher`` எந்த பயன்பாட்டைத் தேர்ந்தெடுக்கிறது (அவற்றின் `` "
+"manifest.json`` இன் படி) ஒரு குறிப்பிட்ட இணைப்பைத் திறக்கும்."
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:61
 msgid ""
@@ -1836,6 +1889,9 @@ msgid ""
 "<https://bazaar.launchpad.net/~unav-"
 "devs/unav/trunk/view/head:/manifest.json#L9>`_:"
 msgstr ""
+"எங்கள் வழிசெலுத்தல் பயன்பாடு எவ்வாறு உள்ளே இருக்கும் என்று பார்ப்போம். அதன் "
+"`மேனிஃபெச்ட்.சான் குறியீட்டில்` `urldispatcher` க்கான சிறப்பு கொக்கிகள் UNAV"
+" இன் மேனிஃபெச்ட் காட்டுகிறது."
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:91
 msgid ""
@@ -1843,22 +1899,30 @@ msgid ""
 "be opened in uNav. And that’s defined in lines 2 and 3, where it looks for "
 "protocol http followed by map.unav.me."
 msgstr ""
+"இதன் பொருள் http://map.unav.me/xxxxx,எக்ச்எக்ச்எக்ச்எக்ச் போன்ற ஒரு இணைப்பு "
+"USAV இல் திறக்கப்படும். இது 2 மற்றும் 3 வரிகளில் வரையறுக்கப்பட்டுள்ளது, "
+"அங்கு இது நெறிமுறை http ஐத் தொடர்ந்து MAP.Unav.me."
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:93
 msgid ""
 "Also, a URI formatted geo:xxx,xxx should open in uNav, as it’s defined in "
 "line 11."
 msgstr ""
+"மேலும், ஒரு யூரி வடிவமைக்கப்பட்ட சியோ: XXX, XXX AVAV இல் திறக்கப்பட "
+"வேண்டும், ஏனெனில் இது 11 வது வரிசையில் வரையறுக்கப்பட்டுள்ளது."
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:96
 msgid "And how do we manage the received URL?"
-msgstr ""
+msgstr "பெறப்பட்ட முகவரி ஐ எவ்வாறு நிர்வகிப்பது?"
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:98
 msgid ""
 "After the ``URLdispatcher`` sends the link to the correspondent app, we need"
 " to handle that URL or URI in the targeted app. Let’s see how to do that:"
 msgstr ""
+"`` Urldispatcher`` அந்த இணைப்பை நிருபர் பயன்பாட்டிற்கு அனுப்பிய பிறகு, அந்த "
+"முகவரி அல்லது யூரி ஐ இலக்கு பயன்பாட்டில் கையாள வேண்டும். அதை எப்படி செய்வது "
+"என்று பார்ப்போம்:"
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:100
 msgid ""
@@ -1868,6 +1932,11 @@ msgid ""
 "linphone/linphone-simple/blob/master/qml/Main.qml#L212>`_ with a Connections"
 " element setting ``UriHandler`` as a target."
 msgstr ""
+"முதன்மையான QML கோப்பில், அனுப்பப்பட்ட முகவரி உடன் என்ன செய்வது என்பதை அறிய "
+"சில குறியீடுகளைச் சேர்க்க வேண்டும். யுஆர்ஐ ஏண்ட்லர் "
+"<https://gitlab.com/ubports-linphone/linbhone-"
+"simple/blob/master/qml/main.qml#l212> `_ ஒரு இணைப்பு அமைப்புடன்` "
+"`urihandlerler."
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:117
 msgid ""
@@ -1875,6 +1944,9 @@ msgid ""
 "the app is opened. But what do we need to do to handle this link when the "
 "app is closed?"
 msgstr ""
+"பயன்பாடு திறக்கப்படும் போது `` லின்ஃபோன்: // SIP: XXX@xxx.xx`` வடிவத்தில் "
+"இந்த குறியீடு ஒரு யூரி ஐ நிர்வகிக்கும். பயன்பாடு மூடப்படும் போது இந்த "
+"இணைப்பைக் கையாள நாம் என்ன செய்ய வேண்டும்?"
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:119
 msgid ""
@@ -1882,12 +1954,17 @@ msgid ""
 "linphone/linphone-simple/blob/master/qml/Main.qml#L76>`_ that will cover two"
 " cases: 1) We receive one URL 2) We receive more than one URL"
 msgstr ""
+"சிறிது `கூடுதல் குறியீட்டை <https://gitlab.com/ubports-linphone/linbhone-"
+"simple/blob/master/qml/main.qml#l 76>` _ இரண்டு நிகழ்வுகளை உள்ளடக்கும்: 1) "
+"நாம் ஒரு முகவரி 2 ஐ விட அதிகமாகப் பெறுகிறோம்"
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:123
 msgid ""
 "Let's check if ``Qt.application.arguments`` is not empty and if not, if any "
 "argument matches our URI format."
 msgstr ""
+"`` Qt.application.arguments`` காலியாக இல்லாவிட்டால், இல்லையென்றால், ஏதேனும் "
+"உரையாடல் எங்கள் யூரி வடிவத்துடன் பொருந்தினால்."
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:143
 msgid ""
@@ -1896,16 +1973,21 @@ msgid ""
 "<https://gitlab.com/ubports-linphone/linphone-"
 "simple/-/blob/master/linphone.desktop.in#L7>`_ file of the app."
 msgstr ""
+"`.Desktop <https://gitlab.com/ubports-linphone/linbhone-"
+"simple/-/blob/manter/manter/mantere/manternphone."
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:146
 msgid "Tools"
-msgstr ""
+msgstr "கருவிகள்"
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:148
 msgid ""
 "From command line, ``lomiri-url-dispatcher-dump`` command will give you the "
 "full list of registered protocol schemes and their corresponding app."
 msgstr ""
+"கட்டளை வரியிலிருந்து, `` லோமிரி-யுஆர்எல்-டிச்பாட்சர்-டம்ப்`` கட்டளை "
+"பதிவுசெய்யப்பட்ட நெறிமுறை திட்டங்களின் முழு பட்டியலையும் அவற்றுடன் "
+"தொடர்புடைய பயன்பாட்டையும் உங்களுக்கு வழங்கும்."
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:150
 msgid ""
@@ -1914,16 +1996,25 @@ msgid ""
 "app. e.g: ``lomiri-url-dispatcher https://youtu.be/CIX-a-i6B1w`` will launch"
 " youtube webapp."
 msgstr ""
+"மற்றொரு பயனுள்ள கருவி, ஆனால் சாதனங்களில் இயல்புநிலையாக நிறுவப்படாதது `` "
+"லோமிரி-யுஆர்எல்-டிச்பாட்சர்-டூல்ச்``, இது மூன்றாம் தரப்பு பயன்பாட்டின் "
+"அழைப்பை உருவகப்படுத்த உங்களை அனுமதிக்கிறது. எ.கா: `` "
+"லோமிரி-யுஆர்எல்-டிச்பாட்சர் https: // youtu.be/cix-a-i6b1w`` YouTube "
+"வெப்ஆப்பைத் தொடங்கும்."
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:152
 msgid ""
 "To install, it make your partition writable (``sudo mount -o rw,remount /``)"
 " and install it via ``sudo apt install lomiri-url-dispatcher-tools``"
 msgstr ""
+"நிறுவ, இது உங்கள் பகிர்வை எழுதக்கூடியதாக ஆக்குகிறது (`` sudo mount -o rw, "
+"remount /``) மற்றும் அதை `` sudo apt வழியாக நிறுவவும்"
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:157
 msgid "What happens if more than one app has the same URL type defined?"
 msgstr ""
+"ஒன்றுக்கு மேற்பட்ட பயன்பாட்டில் ஒரே முகவரி வகை வரையறுக்கப்பட்டால் என்ன "
+"ஆகும்?"
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:159
 msgid ""
@@ -1931,73 +2022,97 @@ msgid ""
 "a URL handled by the ``URLdispatcher`` as protocol ``http`` or the protocol "
 "``http://twitter``?"
 msgstr ""
+"ஒரு நல்ல கேள்வி. ட்விட்டர் இணைப்பில் தட்டினால் என்ன ஆகும்? அத்தகைய முகவரி ``"
+" urldispatcher`` ஆல் நெறிமுறை `` http`` அல்லது நெறிமுறை `` http: // "
+"twitter`` ஆகியவற்றால் எவ்வாறு கையாளப்படுகிறது?"
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:161
 msgid "What happens if two apps have the same defined protocol?"
 msgstr ""
+"இரண்டு பயன்பாடுகளில் ஒரே வரையறுக்கப்பட்ட நெறிமுறை இருந்தால் என்ன ஆகும்?"
 
 #: ../../appdev/guides/importing-CH-urldispatcher.rst:163
 msgid ""
 "Now it’s time to do some tests and share the results in the next guide."
 msgstr ""
+"இப்போது சில சோதனைகளைச் செய்து அடுத்த வழிகாட்டியில் முடிவுகளைப் பகிர்ந்து "
+"கொள்ள வேண்டிய நேரம் இது."
 
 #: ../../appdev/guides/index.rst:4
 msgid "Developer guides"
-msgstr ""
+msgstr "உருவாக்குபவர் வழிகாட்டிகள்"
 
 #: ../../appdev/guides/index.rst:6
 msgid ""
 "To get started with your first app check out the following developer guides:"
 msgstr ""
+"உங்கள் முதல் பயன்பாட்டுடன் தொடங்க பின்வரும் உருவாக்குபவர் வழிகாட்டிகளைப் "
+"பாருங்கள்:"
 
 #: ../../appdev/guides/index.rst:8
 msgid ""
 "`Qt programming course by mimecar for Ubuntu Touch "
 "<https://docs.innerzaurus.com>`__"
 msgstr ""
+"`உபுண்டு டச் <https://docs.innerzaurus.com> க்கான மைம்கார் எழுதிய கியுடி "
+"நிரலாக்க பாடநெறி __ __ __ __"
 
 #: ../../appdev/guides/index.rst:9
 msgid ""
 "`Application Templates by fulvio "
 "<https://github.com/fulvio999/ubports_app_templates>`__"
 msgstr ""
+"Fulvio இன் பயன்பாட்டு வார்ப்புருக்கள் "
+"<https://github.com/fulvio999/ubports_app_templates> __ __ __"
 
 #: ../../appdev/guides/index.rst:10
 msgid ""
 "`Python examples by pavelprosto "
 "<https://forums.ubports.com/topic/5525/python-examples>`__"
 msgstr ""
+"`பைதான் எடுத்துக்காட்டுகள் பாவெல்ரோச்டோ "
+"<https://forums.ubports.com/topic/5525/python-examples>` __"
 
 #: ../../appdev/guides/index.rst:11
 msgid ""
 "`QML templates by Joan CiberSheep <https://gitlab.com/cibersheep/qml-"
 "templates-for-ubuntutouch>`__."
 msgstr ""
+"`QML வார்ப்புருக்கள் சோன் சிபர்சீப் <https://gitlab.com/cibersheep/qml-"
+"templates-for-ubuntutouch> __."
 
 #: ../../appdev/guides/index.rst:12
 msgid "`First steps with QML <https://doc.qt.io/qt-5/qmlfirststeps.html>`__."
 msgstr ""
+"Q QML உடன் முதல் படிகள் <https://doc.qt.io/qt-5/qmlfirststeps.html> ____."
 
 #: ../../appdev/guides/index.rst:13
 msgid ""
 "`Qt examples and tutorials "
 "<https://doc.qt.io/qt-5.12/qtexamplesandtutorials.html>`__."
 msgstr ""
+"`Qt எடுத்துக்காட்டுகள் மற்றும் பயிற்சிகள் "
+"<https://doc.qt.io/qt-5.12/qtexamplesandtutorials.html> __."
 
 #: ../../appdev/guides/index.rst:15
 msgid ""
 "If you are interested in helping to create developer guides check out our "
 "`GitLab Project <https://gitlab.com/ubports/apps/development-resources>`__."
 msgstr ""
+"உருவாக்குபவர் வழிகாட்டிகளை உருவாக்க உதவுவதில் நீங்கள் ஆர்வமாக இருந்தால், "
+"எங்கள் `கிட்லாப் திட்டத்தை <https://gitlab.com/ubports/apps/development-"
+"resources> __."
 
 #: ../../appdev/guides/index.rst:18
 msgid ""
 "To get familiar with some more advanced concepts see the following sections:"
 msgstr ""
+"இன்னும் சில மேம்பட்ட கருத்துக்களை நன்கு அறிய பின்வரும் பிரிவுகளைப் "
+"பார்க்கவும்:"
 
 #: ../../appdev/guides/index.rst:33
 msgid "Playground"
-msgstr ""
+msgstr "விளையாட்டு மைதானம்"
 
 #: ../../appdev/guides/index.rst:35
 msgid ""
@@ -2007,6 +2122,11 @@ msgid ""
 "do exactly that: Explore. The purpose of this list is to show the unlimited "
 "possibilities of an open platform like Ubuntu Touch."
 msgstr ""
+"முற்றிலும் இலவச மற்றும் திறந்த மூல சமூகத்தில், சமூக உறுப்பினர்கள் பல "
+"திசைகளில் தளத்தின் வரம்புகளை ஆராய்வது இயல்பானது. இந்த பிரிவில் அதைச் "
+"சரியாகச் செய்யும் வெளிப்புற ஆதாரங்களுக்கான இணைப்புகளைக் காண்பீர்கள்: "
+"ஆராயுங்கள். இந்த பட்டியலின் நோக்கம் உபுண்டு டச் போன்ற திறந்த தளத்தின் "
+"வரம்பற்ற சாத்தியக்கூறுகளைக் காண்பிப்பதாகும்."
 
 #: ../../appdev/guides/index.rst:38
 msgid ""
@@ -2014,6 +2134,9 @@ msgid ""
 "endorsed way of developing applications for Ubuntu Touch, but are "
 "interesting experiments."
 msgstr ""
+"இங்கு பட்டியலிடப்பட்டுள்ள வளங்கள் உபுண்டு தொடுதலுக்கான விண்ணப்பங்களை "
+"உருவாக்குவதற்கான அதிகாரப்பூர்வமாக அங்கீகரிக்கப்பட்ட வழியைக் குறிக்கவில்லை, "
+"ஆனால் அவை சுவையான சோதனைகள்."
 
 #: ../../appdev/guides/index.rst:40
 msgid ""
@@ -2021,6 +2144,9 @@ msgid ""
 "<http://kriscode.blogspot.tw/2016/09/freepascal-development-for-ubuntu-"
 "phone.html>`__"
 msgstr ""
+"`உபுண்டு தொடுதலுக்கான இலவச பாச்கல் மேம்பாடு "
+"<http://kriscode.blogspot.tw/2016/09/freepascal- அபிவிருத்தி-bountu-"
+"phone.html>` __ __"
 
 #: ../../appdev/guides/index.rst:41
 msgid ""
@@ -2028,6 +2154,9 @@ msgid ""
 "<http://kriscode.blogspot.tw/2016/10/lazarus-development-for-ubuntu-"
 "phone.html>`__"
 msgstr ""
+"`உபுண்டு தொடுதலுக்கான லாசரச் மேம்பாடு "
+"<http://kriscode.blogspot.tw/2016/10/lazarus-development-bountu-phone.html>`"
+" __ __ __"
 
 #: ../../appdev/guides/index.rst:42
 msgid ""
@@ -2036,37 +2165,49 @@ msgid ""
 "<http://kriscode.blogspot.tw/2017/10/geany-on-ubuntu-touch-device-as-"
 "text.html>`__"
 msgstr ""
+"`உபுண்டு டச் சாதனத்தில் உரை எடிட்டராக, மூலக் குறியீடு எடிட்டர், "
+"பிழைத்திருத்தம் மற்றும் பல மொழிகளுக்கான கம்பைலர் "
+"<http://kriscode.blogspot.tw/2017/10"
 
 #: ../../appdev/guides/index.rst:43
 msgid ""
 "`Deploy your existing Qt QML app to Ubuntu Touch using QMake (Video) "
 "<https://youtu.be/ehqlwRNrfO0>`__"
 msgstr ""
+"Q உங்கள் இருக்கும் கியுடி QML பயன்பாட்டை Qmake (வீடியோ) ஐப் பயன்படுத்தி "
+"உபுண்டு தொடுதலுக்கு வரிசைப்படுத்தவும்"
 
 #: ../../appdev/guides/index.rst:44
 msgid ""
 "`Deploy your existing Qt QML app to Ubuntu Touch using CMake (Video) "
 "<https://youtu.be/c2sq6aLeGec>`__"
 msgstr ""
+"`உங்கள் இருக்கும் கியுடி QML பயன்பாட்டை cmake (Video) ஐப் பயன்படுத்தி "
+"உபுண்டு தொடுதலுக்கு வரிசைப்படுத்தவும் <https://youtu.be/c2sq6alegec>"
 
 #: ../../appdev/guides/index.rst:45
 msgid ""
 "`Getting started with Clickable (Video) <https://youtu.be/TE-s5522v0Y>`__"
 msgstr ""
+"`கிளிக் செய்யக்கூடிய (வீடியோ) <https://youtu.be/te-s5522v0y> __ __ __ உடன் "
+"தொடங்குதல்"
 
 #: ../../appdev/guides/index.rst:46
 msgid "`Content Hub overview (Video) <https://youtu.be/AihwC2sPIk0>`__"
 msgstr ""
+"`உள்ளடக்க மைய கண்ணோட்டம் (வீடியோ) <https://youtu.be/aihwc2spik0> ____ __ __"
 
 #: ../../appdev/guides/index.rst:47
 msgid ""
 "`Import files to your app with Content Hub (Video) "
 "<https://youtu.be/q6zzM16jw1U>`__"
 msgstr ""
+"உள்ளடக்க மையத்துடன் உங்கள் பயன்பாட்டிற்கு கோப்புகளை இறக்குமதி செய்யுங்கள் "
+"(வீடியோ) <https://youtu.be/q6zzm16jw1u>"
 
 #: ../../appdev/guides/port-to-focal.rst:2
 msgid "Porting Apps to Focal"
-msgstr ""
+msgstr "பயன்பாடுகளை குவியத்திற்கு போர்ட்டிங்"
 
 #: ../../appdev/guides/port-to-focal.rst:4
 msgid ""
@@ -2074,10 +2215,13 @@ msgid ""
 " order to ensure that the app will continue working, it is recommended to "
 "update your app to Focal."
 msgstr ""
+"குவியலுக்கான சுவிட்சின் போது பயன்பாட்டு சூழலில் சில மாற்றங்கள் செய்யப்பட்டன."
+" பயன்பாடு தொடர்ந்து செயல்படும் என்பதை உறுதிப்படுத்த, உங்கள் பயன்பாட்டை "
+"குவியத்திற்கு புதுப்பிக்க பரிந்துரைக்கப்படுகிறது."
 
 #: ../../appdev/guides/port-to-focal.rst:7
 msgid "QML"
-msgstr ""
+msgstr "QML"
 
 #: ../../appdev/guides/port-to-focal.rst:9
 msgid ""
@@ -2085,6 +2229,10 @@ msgid ""
 "were removed from QML Imports, and most QML classes. While there is a "
 "compatability layer, it is recommended to move to the Lomiri Modules."
 msgstr ""
+"எந்த QML கோப்புகளிலும் பெரும்பாலான மாற்றங்கள் செய்யப்பட வேண்டும். உபுண்டு "
+"பற்றிய குறிப்புகள் QML இறக்குமதியிலிருந்தும், பெரும்பாலான QML "
+"வகுப்புகளிலிருந்தும் அகற்றப்பட்டன. ஒரு பொருந்தக்கூடிய அடுக்கு இருக்கும்போது,"
+" ​​லோமிரி தொகுதிகளுக்கு செல்ல பரிந்துரைக்கப்படுகிறது."
 
 #: ../../appdev/guides/port-to-focal.rst:17
 msgid ""
@@ -2092,14 +2240,17 @@ msgid ""
 "`UbuntuColors` being renamed `LomiriColors`. These must also be updated. "
 "This can be somewhat automated:"
 msgstr ""
+"உபுண்டுவைப் பற்றிய பிற குறிப்புகள் லோமிரிக்கு மாற்றப்பட்டன, அதாவது "
+"`உபுண்டுகோலர்கள்`` லோமிரிகோலர்ச்` என மறுபெயரிடப்பட்டது. இவை புதுப்பிக்கப்பட "
+"வேண்டும். இது ஓரளவு தானியங்கிதாக இருக்கலாம்:"
 
 #: ../../appdev/guides/port-to-focal.rst:29
 msgid "Configuration Files"
-msgstr ""
+msgstr "உள்ளமைவு கோப்புகள்"
 
 #: ../../appdev/guides/port-to-focal.rst:32
 msgid "clickable.yaml"
-msgstr ""
+msgstr "Clickable.yaml"
 
 #: ../../appdev/guides/port-to-focal.rst:33
 msgid ""
@@ -2107,49 +2258,57 @@ msgid ""
 "file, it is recommended to first convert the JSON file to a YAML file. "
 "Afterwards, add the following:"
 msgstr ""
+"உங்கள் திட்டத்திற்கு `கிளிக் செய்யக்கூடியது` சொடுக்கு செய்யக்கூடியது. Yaml` "
+"கோப்புக்கு பதிலாக `Clickable.json` கோப்பு இருந்தால், முதலில் சாதொபொகு கோப்பை"
+" YAML கோப்பாக மாற்ற பரிந்துரைக்கப்படுகிறது. பின்னர், பின்வருவனவற்றைச் "
+"சேர்க்கவும்:"
 
 #: ../../appdev/guides/port-to-focal.rst:42
 msgid "AppArmor file"
-msgstr ""
+msgstr "Apparmor கோப்பு"
 
 #: ../../appdev/guides/port-to-focal.rst:43
 msgid "Update the policy version in the AppArmor file:"
-msgstr ""
+msgstr "Apparmor கோப்பில் கொள்கை பதிப்பைப் புதுப்பிக்கவும்:"
 
 #: ../../appdev/guides/port-to-focal.rst:57
 msgid "Desktop File"
-msgstr ""
+msgstr "டெச்க்டாப் கோப்பு"
 
 #: ../../appdev/guides/port-to-focal.rst:59
 msgid "Change `X-Ubuntu-Touch` to `X-Lomiri-Touch`:"
-msgstr ""
+msgstr "`X-bubuntu-touch` ஐ` x-lomiri-touch` ஆக மாற்றவும்:"
 
 #: ../../appdev/guides/port-to-focal.rst:73
 msgid "Build Files"
-msgstr ""
+msgstr "கோப்புகளை உருவாக்குங்கள்"
 
 #: ../../appdev/guides/port-to-focal.rst:76
 msgid "CMakeLists.txt"
-msgstr ""
+msgstr "Cmakelists.txt"
 
 #: ../../appdev/guides/port-to-focal.rst:77
 msgid ""
 "If the app is based on one of the App Templates, update the default Click "
 "Framework in the CMake file:"
 msgstr ""
+"பயன்பாடு பயன்பாட்டு வார்ப்புருக்களில் ஒன்றை அடிப்படையாகக் கொண்டால், CMAKE "
+"கோப்பில் இயல்புநிலை சொடுக்கு கட்டமைப்பைப் புதுப்பிக்கவும்:"
 
 #: ../../appdev/guides/port-to-focal.rst:91
 msgid ".gitlab-ci.yml"
-msgstr ""
+msgstr ".t.r-in.yl"
 
 #: ../../appdev/guides/port-to-focal.rst:92
 msgid "If you have a Gitlab CI file, you need to update it:"
 msgstr ""
+"உங்களிடம் அறிவிலிஆய்வு தொஒ கோப்பு இருந்தால், நீங்கள் அதை புதுப்பிக்க "
+"வேண்டும்:"
 
 #: ../../appdev/guides/pushnotifications.rst:2
 #: ../../appdev/platform/index.rst:11
 msgid "Push notifications"
-msgstr ""
+msgstr "அறிவிப்புகளை அழுத்தவும்"
 
 #: ../../appdev/guides/pushnotifications.rst:4
 msgid ""
@@ -2157,6 +2316,10 @@ msgid ""
 "the OpenStore. But now you want to be able to send Push Notifications to "
 "your users. First of all, you need to understand how this is working:"
 msgstr ""
+"சொடுக்கு செய்யக்கூடிய மற்றும் ஓபன்ச்டோரில் வெளியிடப்பட்ட ஒரு பயன்பாடு "
+"உங்களிடம் உள்ளது என்று வைத்துக் கொள்வோம். ஆனால் இப்போது நீங்கள் உங்கள் "
+"பயனர்களுக்கு புச் அறிவிப்புகளை அனுப்ப விரும்புகிறீர்கள். முதலாவதாக, இது "
+"எவ்வாறு செயல்படுகிறது என்பதை நீங்கள் புரிந்து கொள்ள வேண்டும்:"
 
 #: ../../appdev/guides/pushnotifications.rst:10
 msgid ""
@@ -2164,22 +2327,30 @@ msgid ""
 "identifies the user, the device and the app itself. The token is generated "
 "by the UBports Push Service."
 msgstr ""
+"புச் அறிவிப்புகளைப் பயன்படுத்தும் ஒவ்வொரு பயன்பாடும் ஒரு தனித்துவமான "
+"கிள்ளாக்கைப் பெற்றுள்ளது. இந்த கிள்ளாக்கு பயனர், சாதனம் மற்றும் பயன்பாட்டை "
+"அடையாளம் காட்டுகிறது. கிள்ளாக்கு யுபோர்ட்ச் புச் சேவையால் "
+"உருவாக்கப்படுகிறது."
 
 #: ../../appdev/guides/pushnotifications.rst:11
 msgid ""
 "You will need the token to send a push notification. So the app sends its "
 "token to the app developer's server."
 msgstr ""
+"புச் அறிவிப்பை அனுப்ப உங்களுக்கு கிள்ளாக்கு தேவைப்படும். எனவே பயன்பாடு அதன் "
+"கிள்ளாக்கை பயன்பாட்டு டெவலப்பரின் சேவையகத்திற்கு அனுப்புகிறது."
 
 #: ../../appdev/guides/pushnotifications.rst:12
 msgid ""
 "With the token you can send a HTTP request to the UBports Push Server which "
 "will forward the notification the user's device."
 msgstr ""
+"கிள்ளாக்கு மூலம் நீங்கள் யுபோர்ட்ச் புச் சேவையகத்திற்கு ஒரு HTTP கோரிக்கையை "
+"அனுப்பலாம், இது பயனரின் சாதனத்தின் அறிவிப்பை அனுப்பும்."
 
 #: ../../appdev/guides/pushnotifications.rst:14
 msgid "Let's practice this step-by-step."
-msgstr ""
+msgstr "இந்த படிப்படியான படிப்பைப் பயிற்சி செய்வோம்."
 
 #: ../../appdev/guides/pushnotifications.rst:17
 msgid ""
@@ -2188,26 +2359,34 @@ msgid ""
 "the user about the communication with your server by providing a privacy "
 "policy!"
 msgstr ""
+"பின்வரும் எடுத்துக்காட்டில் நாங்கள் ஒரு சேவையகத்தை செயல்படுத்த மாட்டோம். "
+"உங்கள் பயன்பாட்டிற்கும் உங்கள் சேவையகத்திற்கும் இடையிலான தொடர்பு "
+"உங்களுடையது. தனியுரிமைக் கொள்கையை வழங்குவதன் மூலம் உங்கள் சேவையகத்துடனான "
+"தகவல்தொடர்பு குறித்து பயனருக்கு தெரிவிக்கவும்!"
 
 #: ../../appdev/guides/pushnotifications.rst:20
 msgid "Make the app ready for push notifications"
-msgstr ""
+msgstr "புச் அறிவிப்புகளுக்கு பயன்பாட்டை ஆயத்தம் செய்யுங்கள்"
 
 #: ../../appdev/guides/pushnotifications.rst:23
 msgid "Implementing the PushClient"
-msgstr ""
+msgstr "புச்க்ளியனை செயல்படுத்துகிறது"
 
 #: ../../appdev/guides/pushnotifications.rst:25
 msgid ""
 "First we need to add the policy group \"push-notification-client\". Your "
 "apparmor file could look like this:"
 msgstr ""
+"முதலில் நாம் கொள்கைக் குழுவை \"புச்-நோடிஃபிகேசன்-கிளையன்ட்\" சேர்க்க "
+"வேண்டும். உங்கள் Apparmor கோப்பு இப்படி இருக்கும்:"
 
 #: ../../appdev/guides/pushnotifications.rst:38
 msgid ""
 "In the next step we need to modify the Qml parts. We need to add a "
 "pushclient component:"
 msgstr ""
+"அடுத்த கட்டத்தில் நாம் QML பகுதிகளை மாற்ற வேண்டும். நாம் ஒரு புச்க்ளியண்ட் "
+"கூறுகளைச் சேர்க்க வேண்டும்:"
 
 #: ../../appdev/guides/pushnotifications.rst:54
 msgid ""
@@ -2219,10 +2398,18 @@ msgid ""
 "terminal. But the app is not yet ready to receive a push notification. For "
 "this we need something called a pushhelper!"
 msgstr ""
+"நீங்கள் சரியான பயன்பாட்டை அமைக்க வேண்டும்! உங்கள் மேனிஃபெச்ட் கோப்பில் உள்ள "
+"பயன்பாட்டு பெயர் myapp.yourname மற்றும் முதன்மையான ஊக்கின் பெயர் (.desktop "
+"கோப்பைக் கையாளும் ஒன்று) ஊக் பெயர் என்றால், appid: myapp.yourname_hookname. "
+"நாங்கள் இப்போது பயன்பாட்டைத் தொடங்கும்போது, ​​அது ஒரு கிள்ளாக்கைப் பெற்று "
+"இந்த கிள்ளாக்கை பதிவுகளில் அச்சிடும். சொடுக்கு செய்யக்கூடிய பதிவுகள் மூலம் "
+"இந்த கிள்ளாக்கை முனையத்திலிருந்து நகலெடுக்க முடியும். ஆனால் பயன்பாடு இன்னும்"
+" புச் அறிவிப்பைப் பெற தயாராக இல்லை. இதற்காக நமக்கு புச்எல்பர் என்று ஒன்று "
+"தேவை!"
 
 #: ../../appdev/guides/pushnotifications.rst:58
 msgid "Implementing the pushhelper"
-msgstr ""
+msgstr "புச்எல்பரை செயல்படுத்துகிறது"
 
 #: ../../appdev/guides/pushnotifications.rst:60
 msgid ""
@@ -2232,6 +2419,12 @@ msgid ""
 "json-file in the correct format. The pushhelper is seperated from the app. "
 "So we need a new hook in the manifest. It could look like this:"
 msgstr ""
+"புச்எல்பர் என்பது பயன்பாட்டின் ஒரு பகுதியாகும், இது அனைத்து புச் "
+"அறிவிப்புகளையும் பெற்று அவற்றை கணினி அறிவிப்பு மையத்திற்கு அனுப்புவதற்கு "
+"முன்பு அவற்றை செயலாக்கும். இது ஒரு JSON-FILE ஐப் பெறும், மேலும் மற்றொரு "
+"JSON-FILE ஐ சரியான வடிவத்தில் வெளியிட வேண்டும். புச்எல்பர் "
+"பயன்பாட்டிலிருந்து பிரிக்கப்பட்டுள்ளது. எனவே எங்களுக்கு ஒரு புதிய கொக்கி "
+"தேவை. இது போல் தோன்றலாம்:"
 
 #: ../../appdev/guides/pushnotifications.rst:83
 msgid ""
@@ -2239,30 +2432,39 @@ msgid ""
 "different executable file. The **push-apparmor.json** file must only contain"
 " the policy group push-notification-client and should look like this:"
 msgstr ""
+"எங்களுக்கு இப்போது வேறு APPARMOR கோப்பு மற்றும் வேறு இயங்கக்கூடிய கோப்பு "
+"தேவை என்பது தெளிவாக இருக்க வேண்டும். ** push-apparmor.json ** கோப்பில் "
+"கொள்கை குழு புச்-அறிவிப்பு-கிளையன்ட் மட்டுமே இருக்க வேண்டும், மேலும் "
+"இதுபோன்று இருக்க வேண்டும்:"
 
 #: ../../appdev/guides/pushnotifications.rst:95
 msgid "The **push.json** is for redirecting to the executable file:"
-msgstr ""
+msgstr "** push.json ** என்பது இயங்கக்கூடிய கோப்பிற்கு திருப்பி விடுவதாகும்:"
 
 #: ../../appdev/guides/pushnotifications.rst:103
 msgid ""
 "In our tutorial we will use python to create a executable named **pushexec**"
 " which will forward the notification without changing anything:"
 msgstr ""
+"எங்கள் டுடோரியலில் நாம் பைத்தானைப் பயன்படுத்துவோம் ** புசெக்செக் ** என்ற "
+"பெயரிடப்பட்ட ஒரு இயங்கக்கூடியது, இது எதையும் மாற்றாமல் அறிவிப்பை அனுப்பும்:"
 
 #: ../../appdev/guides/pushnotifications.rst:115
 msgid ""
 "We also need to add this new files to the **CMakeLists.txt** and make the "
 "pushexec executable::"
 msgstr ""
+"இந்த புதிய கோப்புகளை ** cmakelists.txt ** இல் சேர்க்க வேண்டும் மற்றும் "
+"புசெக்செக் இயங்கக்கூடியதாக மாற்ற வேண்டும் ::"
 
 #: ../../appdev/guides/pushnotifications.rst:125
 msgid "Now the app is ready to receive and process push notifications!"
 msgstr ""
+"இப்போது பயன்பாடு புச் அறிவிப்புகளைப் பெறவும் செயலாக்கவும் தயாராக உள்ளது!"
 
 #: ../../appdev/guides/pushnotifications.rst:128
 msgid "Using the Push Service API"
-msgstr ""
+msgstr "புச் பணி பநிஇ ஐப் பயன்படுத்துதல்"
 
 #: ../../appdev/guides/pushnotifications.rst:130
 msgid ""
@@ -2272,10 +2474,16 @@ msgid ""
 "application/json and it must fit in the correct format. A example in "
 "javascript could look like this:"
 msgstr ""
+"எனவே இப்போது உங்களிடம் கிள்ளாக்கு உள்ளது மற்றும் பயன்பாடு புச் "
+"அறிவிப்புகளைப் பெறவும் செயலாக்கவும் தயாராக உள்ளது. ஒரு அறிவிப்பை அனுப்ப, "
+"நீங்கள் இந்த முகவரிக்கு ஒரு HTTP கோரிக்கையை அனுப்ப வேண்டும்: "
+"https://push.ubports.com/ உள்ளடக்க வகை பயன்பாடு/json ஆக இருக்க வேண்டும், அது"
+" சரியான வடிவத்தில் பொருந்த வேண்டும். சாவாச்கிரிப்டில் ஒரு எடுத்துக்காட்டு "
+"இப்படி இருக்கக்கூடும்:"
 
 #: ../../appdev/guides/pushnotifications.rst:167
 msgid "Push Notification Object"
-msgstr ""
+msgstr "அறிவிப்பு பொருளை அழுத்தவும்"
 
 #: ../../appdev/guides/pushnotifications.rst:170
 #: ../../appdev/guides/pushnotifications.rst:195
@@ -2284,7 +2492,7 @@ msgstr ""
 #: ../../appdev/guides/pushnotifications.rst:261
 #: ../../appdev/guides/pushnotifications.rst:275
 msgid "Parameter"
-msgstr ""
+msgstr "கூறளவு"
 
 #: ../../appdev/guides/pushnotifications.rst:170
 #: ../../appdev/guides/pushnotifications.rst:195
@@ -2293,11 +2501,11 @@ msgstr ""
 #: ../../appdev/guides/pushnotifications.rst:261
 #: ../../appdev/guides/pushnotifications.rst:275
 msgid "Type"
-msgstr ""
+msgstr "வகை"
 
 #: ../../appdev/guides/pushnotifications.rst:172
 msgid "appid"
-msgstr ""
+msgstr "Appid"
 
 #: ../../appdev/guides/pushnotifications.rst:172
 #: ../../appdev/guides/pushnotifications.rst:175
@@ -2308,203 +2516,211 @@ msgstr ""
 #: ../../appdev/guides/pushnotifications.rst:235
 #: ../../appdev/guides/pushnotifications.rst:243
 msgid "string"
-msgstr ""
+msgstr "சரம்"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "Required. ID of the application that will receive the notification,"
-msgstr ""
+msgstr "தேவை. அறிவிப்பைப் பெறும் பயன்பாட்டின் ஐடி,"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "as described in the client side documentation."
-msgstr ""
+msgstr "கிளையன்ட் பக்க ஆவணத்தில் விவரிக்கப்பட்டுள்ளபடி."
 
 #: ../../appdev/guides/pushnotifications.rst:175
 msgid "expire_on"
-msgstr ""
+msgstr "காலாவதியாகும்"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "Required. Expiration date/time for this message, in"
-msgstr ""
+msgstr "தேவை. இந்த செய்திக்கான காலாவதி தேதி/நேரம், இல்"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "`ISO8601 Extendendformat <https://www.w3.org/TR/NOTE-datetime>`_."
-msgstr ""
+msgstr "`Iso8601 expendendformat <https://www.w3.org/tr/note-datetime>` _."
 
 #: ../../appdev/guides/pushnotifications.rst:178
 msgid "token"
-msgstr ""
+msgstr "கிள்ளாக்கு"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid ""
 "Required. The token identifying the user+device to which the message is"
-msgstr ""
+msgstr "தேவை. செய்தி இருக்கும் பயனர்+சாதனத்தை அடையாளம் காணும் கிள்ளாக்கு"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "directed, as described in the client side documentation."
-msgstr ""
+msgstr "கிளையன்ட் பக்க ஆவணத்தில் விவரிக்கப்பட்டுள்ளபடி இயக்கப்பட்டது."
 
 #: ../../appdev/guides/pushnotifications.rst:181
 msgid "clear_pending"
-msgstr ""
+msgstr "clear_pending"
 
 #: ../../appdev/guides/pushnotifications.rst:181
 #: ../../appdev/guides/pushnotifications.rst:250
 #: ../../appdev/guides/pushnotifications.rst:252
 #: ../../appdev/guides/pushnotifications.rst:279
 msgid "bool"
-msgstr ""
+msgstr "பூல்"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "Discards all previous pending notifications. Usually in response to"
 msgstr ""
+"முந்தைய நிலுவையில் உள்ள அனைத்து அறிவிப்புகளையும் நிராகரிக்கிறது. பொதுவாக "
+"பதிலளிக்கும்"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "getting a \"too-many-pending\" error. Defaults to false."
-msgstr ""
+msgstr "\"மிகவும் நிலுவையில் உள்ள\" பிழையைப் பெறுதல். இயல்புநிலைகள் பொய்."
 
 #: ../../appdev/guides/pushnotifications.rst:184
 msgid "replace_tag"
-msgstr ""
+msgstr "மாற்றியமைக்க_டாக்"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "If there's a pending notification with the same tag, delete it before"
 msgstr ""
+"அதே குறிச்சொல்லுடன் நிலுவையில் உள்ள அறிவிப்பு இருந்தால், அதை முன் நீக்கு"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "queuing this new one."
-msgstr ""
+msgstr "இந்த புதிய ஒன்றை வரிசைப்படுத்துதல்."
 
 #: ../../appdev/guides/pushnotifications.rst:187
 msgid "data"
-msgstr ""
+msgstr "தகவல்கள்"
 
 #: ../../appdev/guides/pushnotifications.rst:187
 #: ../../appdev/guides/pushnotifications.rst:192
 msgid "Data"
-msgstr ""
+msgstr "தகவல்கள்"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid ""
 "A JSON object. The contents of the data field are arbitrary. We can use"
 msgstr ""
+"ஒரு சாதொபொகு பொருள். தரவு புலத்தின் உள்ளடக்கங்கள் தன்னிச்சையானவை. நாம் "
+"பயன்படுத்தலாம்"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "it to send any data to the app."
-msgstr ""
+msgstr "பயன்பாட்டிற்கு எந்த தரவையும் அனுப்ப இது."
 
 #: ../../appdev/guides/pushnotifications.rst:197
 msgid "notification"
-msgstr ""
+msgstr "அறிவிப்பு"
 
 #: ../../appdev/guides/pushnotifications.rst:197
 #: ../../appdev/guides/pushnotifications.rst:203
 msgid "Notification"
-msgstr ""
+msgstr "அறிவிப்பு"
 
 #: ../../appdev/guides/pushnotifications.rst:197
 msgid "A JSON object which defines how this notification will be presented."
 msgstr ""
+"இந்த அறிவிப்பு எவ்வாறு வழங்கப்படும் என்பதை வரையறுக்கும் சாதொபொகு பொருள்."
 
 #: ../../appdev/guides/pushnotifications.rst:199
 msgid "message"
-msgstr ""
+msgstr "செய்தி"
 
 #: ../../appdev/guides/pushnotifications.rst:199
 msgid "object"
-msgstr ""
+msgstr "பொருள்"
 
 #: ../../appdev/guides/pushnotifications.rst:199
 msgid "A JSON object that is passed as-is to the application via PopAll."
 msgstr ""
+"ஒரு சாதொபொகு பொருள்-கடந்து செல்லப்படுகிறது-இது போபால் வழியாக பயன்பாட்டிற்கு."
 
 #: ../../appdev/guides/pushnotifications.rst:208
 msgid "tag"
-msgstr ""
+msgstr "குறிச்சொல்"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "The tag of the push notification."
-msgstr ""
+msgstr "புச் அறிவிப்பின் குறிச்சொல்."
 
 #: ../../appdev/guides/pushnotifications.rst:210
 msgid "sound"
-msgstr ""
+msgstr "ஒலி"
 
 #: ../../appdev/guides/pushnotifications.rst:210
 msgid "bool or string"
-msgstr ""
+msgstr "பூல் அல்லது சரம்"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "This is either a boolean (play a predetermined sound) or the"
-msgstr ""
+msgstr "இது ஒரு பூலியன் (முன்னரே தீர்மானிக்கப்பட்ட ஒலி) அல்லது"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "path to a sound file. The user can disable it, so don't rely"
-msgstr ""
+msgstr "ஒலி கோப்பிற்கான பாதை. பயனர் அதை முடக்க முடியும், எனவே நம்ப வேண்டாம்"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "on it exclusively. Defaults to empty (no sound). The path is"
-msgstr ""
+msgstr "அதன் மீது பிரத்தியேகமாக. இயல்புநிலை காலியாக உள்ளது (ஒலி இல்லை). பாதை"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "relative, and will be looked up in (a) the application's"
-msgstr ""
+msgstr "உறவினர், மற்றும் (அ) பயன்பாட்டில் பார்க்கப்படும்"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "``.local/share/<pkgname>``, and (b) standard xdg dirs."
-msgstr ""
+msgstr "`."
 
 #: ../../appdev/guides/pushnotifications.rst:216
 msgid "vibrate"
-msgstr ""
+msgstr "அதிர்வு"
 
 #: ../../appdev/guides/pushnotifications.rst:216
 msgid "bool or Vibrate"
-msgstr ""
+msgstr "பூல் அல்லது அதிர்வு"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "The notification can contain a vibrate field, causing haptic"
-msgstr ""
+msgstr "அறிவிப்பில் ஒரு அதிர்வு புலம் இருக்கலாம், இதனால் ஆப்டிக் ஏற்படுகிறது"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "feedback, which can be either a boolean (if true, vibrate a"
-msgstr ""
+msgstr "கருத்து, இது ஒரு பூலியன் ஆக இருக்கலாம் (உண்மையாக இருந்தால், அதிர்வு a"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "predetermined way) or an Vibrate object."
-msgstr ""
+msgstr "முன்னரே தீர்மானிக்கப்பட்ட வழி) அல்லது அதிர்வுறும் பொருள்."
 
 #: ../../appdev/guides/pushnotifications.rst:220
 msgid "emblem-counter"
-msgstr ""
+msgstr "சின்னம்-கவுண்டர்"
 
 #: ../../appdev/guides/pushnotifications.rst:220
 msgid "Emblem-counter"
-msgstr ""
+msgstr "சின்னம்-கவுண்டர்"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "A JSON object, which defines how to display the emblem"
 msgstr ""
+"ஒரு சாதொபொகு பொருள், இது சின்னத்தை எவ்வாறு காண்பிப்பது என்பதை வரையறுக்கிறது"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "counter."
-msgstr ""
+msgstr "கவுண்டர்."
 
 #: ../../appdev/guides/pushnotifications.rst:223
 msgid "card"
-msgstr ""
+msgstr "அட்டை"
 
 #: ../../appdev/guides/pushnotifications.rst:223
 #: ../../appdev/guides/pushnotifications.rst:227
 msgid "Card"
-msgstr ""
+msgstr "அட்டை"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "A JSON object with information about the notification card."
-msgstr ""
+msgstr "அறிவிப்பு அட்டை பற்றிய தகவல்களைக் கொண்ட சாதொபொகு பொருள்."
 
 #: ../../appdev/guides/pushnotifications.rst:232
 msgid "summary"
-msgstr ""
+msgstr "சுருக்கம்"
 
 #: ../../appdev/guides/pushnotifications.rst:0
 msgid "Required. A title. The card will not be presented if this is"
