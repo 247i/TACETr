@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: Tamil (UBports)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-13 04:21+0200\n"
-"PO-Revision-Date: 2025-03-14 08:30+0530\n"
+"PO-Revision-Date: 2025-03-14 09:29+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/ubports/doc-ubports-com/ta/>\n"
 "Language: ta\n"
@@ -12869,16 +12869,20 @@ msgid ""
 "Create a directory (outside your halium source tree) for the kernel source "
 "from which you will pull the newer drivers::"
 msgstr ""
+"கர்னல் மூலத்திற்கு ஒரு கோப்பகத்தை (உங்கள் ஆலியம் மூல மரத்திற்கு வெளியே) "
+"உருவாக்கவும், அதில் இருந்து நீங்கள் புதிய டிரைவர்களை இழுப்பீர்கள் ::"
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:82
 msgid "Now clone the kernel source for v4.2::"
-msgstr ""
+msgstr "இப்போது V4.2 க்கான கர்னல் மூலத்தை நகலி செய்யுங்கள் ::"
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:90
 msgid ""
 "Navigate to your backports scripts directory and issue the command below "
 "(using Python2 as shown)::"
 msgstr ""
+"உங்கள் பேக் போர்ட்ச் ச்கிரிப்ட்ச் கோப்பகத்திற்கு செல்லவும், கீழே உள்ள "
+"கட்டளையை வழங்கவும் (காட்டப்பட்டுள்ளபடி பைதான் 2 ஐப் பயன்படுத்துதல்) ::"
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:94
 msgid ""
@@ -12889,6 +12893,13 @@ msgid ""
 "changes that did not complete successfully, but which you can apply "
 "yourself. These need to be completed before proceeding with the build."
 msgstr ""
+"இந்த கட்டத்தின் போது பிழைகள் உள்ளன என்று எதிர்பார்க்க வேண்டும். நீங்கள் "
+"காரணத்தை தீர்மானிக்க வேண்டும், அதை சரிசெய்து மீண்டும் முயற்சிக்கவும். கடைசி "
+"பிழை செய்தி மேக்ஃபைலைப் பற்றியது மற்றும் `` Makefile.rej`` என்ற கோப்பை "
+"உருவாக்கியதைப் பற்றிய தகவலை உள்ளடக்கியது, இதன் பொருள் வெற்றிகரமாக முடிக்காத "
+"மாற்றங்கள் குறித்து இந்த கோப்பில் தகவல்களைக் காண்பீர்கள், ஆனால் நீங்கள் "
+"அதைப் பயன்படுத்தலாம். கட்டமைப்போடு தொடர்வதற்கு முன் இவை முடிக்கப்பட "
+"வேண்டும்."
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:99
 msgid ""
@@ -12896,12 +12907,16 @@ msgid ""
 "<https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/patch/?id=8a7b081660857a80c3efc463b3da790c4fa0c801>`_"
 " needs to be applied."
 msgstr ""
+"கூடுதல் `பொதுவான பாதுகாப்பு ஒட்டு "
+"<https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/patch/?id=8A7B081660857A80C3EFC3BC463B3DA790C4FA0C4FA0C4FA0C4FA0C4FA0C4FA0C4FA0C4FA."
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:104
 msgid ""
 "Your kernel config file (defconfig) needs to be modified in order for the "
 "backported driver and protocol code to be activated."
 msgstr ""
+"பின்னடைவு இயக்கி மற்றும் நெறிமுறை குறியீடு செயல்படுத்தப்படுவதற்கு உங்கள் "
+"கர்னல் கட்டமைப்பு கோப்பு (DEFCONFIG) மாற்றப்பட வேண்டும்."
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:106
 msgid ""
@@ -12909,6 +12924,9 @@ msgid ""
 "the end of the file. Collecting them there makes the subsequent steps "
 "somewhat easier by helping to keep track of the changes you make."
 msgstr ""
+"`` Config_bt_`` உடன் தொடங்கி அனைத்து வரிகளையும் கண்டுபிடித்து கோப்பின் "
+"முடிவில் நகர்த்தவும். அவற்றை அங்கு சேகரிப்பது, நீங்கள் செய்யும் மாற்றங்களைக்"
+" கண்காணிக்க உதவுவதன் மூலம் அடுத்தடுத்த படிகளை ஓரளவு எளிதாக்குகிறது."
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:108
 msgid ""
@@ -12916,18 +12934,22 @@ msgid ""
 " by inserting this leading ``#``. At the same time, for each one, add a "
 "corresponding one beginning with ``CONFIG_BACKPORT_BT_``, *e.g.*::"
 msgstr ""
+"அடுத்து, செயல்படுத்தப்பட்ட அனைத்தையும் செயலிழக்கச் செய்யுங்கள், * அதாவது * "
+"இந்த முன்னணி ``#`` ஐச் செருகுவதன் மூலம் ஒரு முன்னணி ``#`` இல்லை. அதே "
+"நேரத்தில், ஒவ்வொன்றிற்கும், தொடர்புடைய ஒரு தொடக்கத்தை `` "
+"config_backport_bt_``, *எ.கா. *::"
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:112
 msgid "becomes::"
-msgstr ""
+msgstr "ஆகிறது ::"
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:116
 msgid "and then insert the corresponding line for backports::"
-msgstr ""
+msgstr "பின்னர் பின்னணியில் தொடர்புடைய வரியைச் செருகவும் ::"
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:120
 msgid "Now add these settings::"
-msgstr ""
+msgstr "இப்போது இந்த அமைப்புகளைச் சேர்க்கவும் ::"
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:138
 msgid ""
@@ -12938,6 +12960,11 @@ msgid ""
 "settings will no longer have any effect and must be pulled into the build in"
 " the following manner:"
 msgstr ""
+"இந்த கட்டத்தில், நீங்கள் மீதமுள்ள அமைப்புகளைச் சரிபார்க்கவும்: ref: `உங்கள் "
+"அசல் டெஃப்கான்ஃபிக் <bt- டிரைவர்>`, அவை `` config_bt = y`` ஐப் பொறுத்தது "
+"மற்றும் அதனுடன் தொடர்புடைய `` config_backport_bt_xxx = y`` அமைப்பால் "
+"மாற்றப்படவில்லை. இத்தகைய அமைப்புகள் இனி எந்த விளைவையும் ஏற்படுத்தாது, மேலும்"
+" பின்வரும் முறையில் கட்டமைப்பிற்கு இழுக்கப்பட வேண்டும்:"
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:140
 msgid ""
@@ -12948,12 +12975,19 @@ msgid ""
 "built. Check the corresponding files in the original location for the "
 "necessary settings."
 msgstr ""
+"தொடர்புடைய மூல கோப்பு (கள்) அவற்றின் அசல் இருப்பிடத்திலிருந்து தொடர்புடைய "
+"இடத்திற்கு `` பேக்போர்ட்ச்/டிரைவர்கள்/புளூடூத்/`` ஆகியவற்றின் கீழ் இடம்பெயர "
+"வேண்டும். காணாமல் போன இந்த அமைப்பைச் சேர்க்க `` MakeFile`` மற்றும் `` "
+"Kconfig`` கோப்புகள் திருத்தப்பட வேண்டும், இல்லையெனில் அவை கட்டப்படாது. "
+"தேவையான அமைப்புகளுக்கு அசல் இடத்தில் தொடர்புடைய கோப்புகளை சரிபார்க்கவும்."
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:142
 msgid ""
 "Once the above is complete, add the following lines and edit as necessary, "
 "following the directions below::"
 msgstr ""
+"மேலே உள்ளவை முடிந்ததும், கீழேயுள்ள திசைகளைப் பின்பற்றி, பின்வரும் வரிகளைச் "
+"சேர்த்து தேவையான அளவு திருத்தவும் ::"
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:170
 msgid ""
@@ -12962,43 +12996,60 @@ msgid ""
 "lower kernel versions enable each line specifying a version above the "
 "device's kernel version by removing the leading ``#`` on these lines."
 msgstr ""
+"உதாரணமாக, கர்னல் 4.2 இலிருந்து கர்னல் பதிப்பு 3.18 உடன் ஒரு சாதனத்திற்கு "
+"பின்னோக்கிச் செல்வதற்கு இணங்க மேலே உள்ள கோடுகள் திருத்தப்பட்டுள்ளன. குறைந்த "
+"கர்னல் பதிப்புகளை இயக்கும் சாதனங்களுக்கு, இந்த வரிகளில் முன்னணி ``#`` "
+"ஆகியவற்றை அகற்றுவதன் மூலம் சாதனத்தின் கர்னல் பதிப்பிற்கு மேலே ஒரு பதிப்பைக் "
+"குறிப்பிடும் ஒவ்வொரு வரியையும் இயக்கவும்."
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:172
 msgid "You are now ready to build."
-msgstr ""
+msgstr "நீங்கள் இப்போது கட்ட தயாராக உள்ளீர்கள்."
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:177
 msgid "Return to the root of your BUILDDIR and build::"
-msgstr ""
+msgstr "உங்கள் பில்டிரின் வேருக்கு திரும்பி உருவாக்கு ::"
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:181
 msgid ""
 "Build errors may occur and will vary depending on device. Handle them one at"
 " a time, :ref:`seeking help <Getting-community-help>` as necessary."
 msgstr ""
+"உருவாக்க பிழைகள் ஏற்படலாம் மற்றும் சாதனத்தைப் பொறுத்து மாறுபடும். ஒரு "
+"நேரத்தில் அவற்றைக் கையாளுங்கள்,: reh: `உதவியை நாடுவது <கம்யூனிட்டி-எல்ப்>` "
+"தேவைக்கேற்ப."
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:183
 msgid ""
 "After building and flashing halium-boot, check the output of ``dmesg`` on "
 "the device to see that bluetooth has been enabled::"
 msgstr ""
+"ஆலியம்-துவக்கத்தை உருவாக்கி ஒளிரச் செய்த பிறகு, ஊடலை இயக்கப்பட்டிருப்பதைக் "
+"காண சாதனத்தில் `` dmesg`` வெளியீட்டைச் சரிபார்க்கவும் ::"
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:187
 msgid ""
 "Your output should resemble the following (from the Samsung Galaxy S7)::"
 msgstr ""
+"உங்கள் வெளியீடு பின்வருவனவற்றை ஒத்திருக்க வேண்டும் (சாம்சங் கேலக்சி எச் 7 "
+"இலிருந்து) ::"
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:214
 msgid ""
 "If you do not get similar output, something has gone wrong. Check that you "
 "completed all steps above as described and seek help as needed."
 msgstr ""
+"நீங்கள் ஒத்த வெளியீட்டைப் பெறவில்லை என்றால், ஏதோ தவறு ஏற்பட்டுள்ளது. "
+"விவரிக்கப்பட்டுள்ளபடி மேலே உள்ள அனைத்து படிகளையும் நீங்கள் "
+"முடித்துவிட்டீர்களா என்பதைச் சரிபார்த்து, தேவைக்கேற்ப உதவியை நாடுங்கள்."
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:216
 msgid ""
 "You have now rebuilt your halium-boot.img to include updated bluetooth "
 "drivers and only one final step remains."
 msgstr ""
+"புதுப்பிக்கப்பட்ட ஊடலை இயக்கிகளைச் சேர்க்க உங்கள் ஆலியம்-பூட்.img ஐ இப்போது "
+"மீண்டும் கட்டியெழுப்பியுள்ளீர்கள், ஒரு இறுதி கட்டம் மட்டுமே உள்ளது."
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:221
 msgid ""
@@ -13006,6 +13057,9 @@ msgid ""
 "bluetooth adapted to your device. On the completed build, this file is "
 "located at::"
 msgstr ""
+"உங்கள் சாதனத்திற்கு ஏற்ற புளூடூத்துக்கான உள்ளமைவு ச்கிரிப்ட் மூலம் கணினி "
+"படத்தை மீண்டும் உருவாக்க வேண்டும். நிறைவு செய்யப்பட்ட கட்டமைப்பில், இந்த "
+"கோப்பு :: இல் அமைந்துள்ளது"
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:225
 msgid ""
@@ -13013,26 +13067,34 @@ msgid ""
 "<https://github.com/Flohack74/android_device_huawei_angler/blob/halium-7.1/ubuntu/bluetooth/bluetooth-"
 "touch-android.conf>`_. Make sure to adapt as necessary."
 msgstr ""
+"`ஒரு எடுத்துக்காட்டு ச்கிரிப்டை இங்கே காணலாம் "
+"<https://github.com/flohack74/android_device_huawei_angler/blob/halium-7.1/ubuntu/bluetooth/bluetooth-"
+"touch-android.conf>` _. தேவையானதை மாற்றியமைக்கவும்."
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:227
 msgid ""
 "Place this script in your ``device/[VENDOR]/[DEVICE]/ubuntu`` directory and "
 "inject it using the :ref:`overlay file method <Overlay>`."
 msgstr ""
+"இந்த ச்கிரிப்டை உங்கள் `` சாதனம்/[விற்பனையாளர்]/[சாதனம்]/உபுண்டு`` "
+"கோப்பகத்தில் வைத்து, அதைப் பயன்படுத்தி அதை செலுத்தவும்: ref: `மேலடுக்கு "
+"கோப்பு முறை <மேலடுக்கு>`."
 
 #: ../../porting/configure_test_fix/Bluetooth.rst:229
 msgid "Rebuild and flash your ``system.img``."
-msgstr ""
+msgstr "உங்கள் `` system.img`` ஐ மீண்டும் உருவாக்கி ஒளிரச் செய்யுங்கள்."
 
 #: ../../porting/configure_test_fix/Display.rst:4
 msgid "Display settings"
-msgstr ""
+msgstr "அமைப்புகளைக் காண்பி"
 
 #: ../../porting/configure_test_fix/Display.rst:6
 msgid ""
 "There are two variables that set the content scaling for Lomiri and Ubuntu "
 "Touch applications: ``GRID_UNIT_PX`` and ``QTWEBKIT_DPR``."
 msgstr ""
+"லோமிரி மற்றும் உபுண்டு தொடு பயன்பாடுகளுக்கான உள்ளடக்க அளவீட்டை அமைக்கும் "
+"இரண்டு மாறிகள் உள்ளன: `` `` kide_unit_px`` மற்றும் `` qtwebkit_dpr``."
 
 #: ../../porting/configure_test_fix/Display.rst:8
 msgid ""
@@ -13040,6 +13102,10 @@ msgid ""
 "on your device's form factor. These are mentioned below and explained in "
 "depth :ref:`in the section on display settings<Display-settings>`."
 msgstr ""
+"உங்கள் சாதனத்தின் படிவக் காரணியைப் பொறுத்து உங்களுக்கு பயனுள்ளதாக இருக்கும் "
+"பிற விருப்பங்களும் உள்ளன. இவை கீழே குறிப்பிடப்பட்டுள்ளன மற்றும் ஆழமாக "
+"விளக்கப்பட்டுள்ளன: ref: `காட்சி அமைப்புகளில் உள்ள பிரிவில் "
+"<காட்சி-அமைப்புகள்>`."
 
 #: ../../porting/configure_test_fix/Display.rst:10
 msgid ""
@@ -13050,12 +13116,21 @@ msgid ""
 "session.d/android.conf`` specifying them. For example, this is the file for "
 "the Nexus 7 tablet::"
 msgstr ""
+"இந்த அமைப்புகள் அனைத்தும் எதுவும் அமைக்கப்படாவிட்டால் ஒற்றுமை 8 ஆல் "
+"யூகிக்கப்படுகின்றன. இருப்பினும், பல சந்தர்ப்பங்கள் உள்ளன, இருப்பினும், "
+"உய்த்துணர்தல் தவறாக உள்ளது (எடுத்துக்காட்டாக, மிக உயர்ந்த தெளிவுத்திறன் "
+"கொண்ட தொலைபேசி காட்சிகள் டெச்க்டாப் கணினிகளாக அடையாளம் காணப்படும்). இந்த "
+"மாறிகளுக்கு ஒரு மதிப்பை கைமுறையாக அமைக்க, கோப்பை `` "
+"போன்றவை/உபுண்டு-டச்-அமர்வு. எடுத்துக்காட்டாக, இது நெக்சச் 7 டேப்லெட்டுக்கான "
+"கோப்பு ::"
 
 #: ../../porting/configure_test_fix/Display.rst:18
 msgid ""
 "The method for deriving values for these variables :ref:`is explained below."
 " <Display-settings>`"
 msgstr ""
+"இந்த மாறிகளுக்கான மதிப்புகளைப் பெறுவதற்கான முறை: ref: `கீழே "
+"விளக்கப்பட்டுள்ளது. <காட்சி-அமைப்புகள்> `"
 
 #: ../../porting/configure_test_fix/Display.rst:20
 msgid ""
@@ -13064,6 +13139,10 @@ msgid ""
 "Follow :ref:`the overlay file method <Overlay-steps>` corresponding to your "
 "Halium version."
 msgstr ""
+"உங்கள் சாதனத்திற்குத் தேவையான காட்சி அமைப்புகளுக்கு `` android.conf`` கோப்பை"
+" சரிசெய்தவுடன், இந்த கோப்பு உங்கள் கட்டமைப்பில் இணைக்கப்பட வேண்டும். "
+"பின்தொடர்: குறிப்பு: `மேலடுக்கு கோப்பு முறை <மேலடுக்கு-படிகள்>` உங்கள் "
+"ஆலியம் பதிப்போடு தொடர்புடையது."
 
 #: ../../porting/configure_test_fix/Display.rst:23
 msgid ""
@@ -13072,14 +13151,18 @@ msgid ""
 "set both configurations (``android.conf`` as well as :ref:`DeviceInfo "
 "<DeviceInfo>`)."
 msgstr ""
+"இந்த உள்ளமைவின் வழி மரபு என்று கருதப்படுகிறது, மேலும் இது மாற்றப்படும்: "
+"குறிப்பு: `DeviceInfo <seviceInfo>` எதிர்காலத்தில். இடம்பெயர்வு "
+"நோக்கங்களுக்காக தயவுசெய்து இரண்டு உள்ளமைவுகளையும் அமைக்கவும் (`` "
+"android.conf`` மற்றும் அத்துடன்: குறிப்பு: `DeviceInfo <seviceInfo>`)."
 
 #: ../../porting/configure_test_fix/Display.rst:29
 msgid "Determining the correct display settings"
-msgstr ""
+msgstr "சரியான காட்சி அமைப்புகளைத் தீர்மானித்தல்"
 
 #: ../../porting/configure_test_fix/Display.rst:32
 msgid "Display scaling"
-msgstr ""
+msgstr "காட்சி அளவிடுதல்"
 
 #: ../../porting/configure_test_fix/Display.rst:34
 msgid ""
@@ -13092,12 +13175,23 @@ msgid ""
 "and laptops are the same distance and that they are held at 1.235 times the "
 "distance phones tend to be held at."
 msgstr ""
+"`` GRID_UNIT_PX`` (ஒரு கட்டம் அலகு அல்லது PX/GU க்கு பிக்சல்கள்) ஒவ்வொரு "
+"சாதனத்திற்கும் குறிப்பிட்டது. கணினியின் பயனர் இடைமுகத்தையும் அதன் "
+"பயன்பாடுகளையும் அவை காண்பிக்கும் சாதனத்தைப் பொருட்படுத்தாமல் அதே * உணரப்பட்ட"
+" * அளவு ஆகியவற்றை உருவாக்குவதே இதன் குறிக்கோள். இது முதன்மையாக சாதனத்தின் "
+"திரையின் படப்புள்ளி அடர்த்தி மற்றும் பயனர் இருக்கும் திரைக்கான தூரம் "
+"ஆகியவற்றைப் பொறுத்தது. பிந்தைய மதிப்பை தானாகவே கண்டறிய முடியாது மற்றும் இது "
+"இயூரிச்டிக்சை அடிப்படையாகக் கொண்டது. டேப்லெட்டுகள் மற்றும் மடிக்கணினிகள் ஒரே"
+" தூரம் என்றும் அவை தொலைதூர தொலைபேசிகளை விட 1.235 மடங்காக வைக்கப்படுகின்றன "
+"என்றும் நாங்கள் கருதுகிறோம்."
 
 #: ../../porting/configure_test_fix/Display.rst:36
 msgid ""
 "``QTWEBKIT_DPR`` sets the display scaling for the Oxide web engine, so "
 "changes to this value will affect the scale of the browser and webapps."
 msgstr ""
+"`` Qtwebkit_dpr`` ஆக்சைடு வலை இயந்திரத்திற்கான காட்சி அளவை அமைக்கிறது, எனவே "
+"இந்த மதிப்பில் மாற்றங்கள் உலாவி மற்றும் வெப்ஆப்புகளின் அளவை பாதிக்கும்."
 
 #: ../../porting/configure_test_fix/Display.rst:38
 msgid ""
@@ -13107,177 +13201,183 @@ msgid ""
 "*perceived* size rather than *physical* size. Here are some values for other"
 " devices so you may derive the correct one for yours:"
 msgstr ""
+"ஒரு குறிப்பு சாதனம் தேர்வு செய்யப்பட்டுள்ளது, இதிலிருந்து மற்ற எல்லா "
+"சாதனங்களுக்கும் மதிப்புகளைப் பெறுகிறோம். குறிப்பு சாதனம் 120 பிபிஐ திரை "
+"கொண்ட மடிக்கணினி. இருப்பினும், இந்த விருப்பங்கள் * உடல் * அளவைக் காட்டிலும் "
+"* உணரப்பட்ட * அளவிற்கு அமைக்கப்பட்டிருப்பதால் சரியான தேற்றம் இல்லை. மற்ற "
+"சாதனங்களுக்கான சில மதிப்புகள் இங்கே, எனவே உங்களுக்கான சரியான ஒன்றை நீங்கள் "
+"பெறலாம்:"
 
 #: ../../porting/configure_test_fix/Display.rst:41
 msgid "Resolution"
-msgstr ""
+msgstr "பகுத்தல்"
 
 #: ../../porting/configure_test_fix/Display.rst:41
 msgid "Display Size"
-msgstr ""
+msgstr "காட்சி அளவு"
 
 #: ../../porting/configure_test_fix/Display.rst:41
 msgid "PPI"
-msgstr ""
+msgstr "பிபிஐ"
 
 #: ../../porting/configure_test_fix/Display.rst:41
 msgid "Px/GU"
-msgstr ""
+msgstr "Px/gu"
 
 #: ../../porting/configure_test_fix/Display.rst:41
 msgid "QtWebKit DPR"
-msgstr ""
+msgstr "Qtwebkit dpr"
 
 #: ../../porting/configure_test_fix/Display.rst:43
 msgid "'Normal' density laptop"
-msgstr ""
+msgstr "'சாதாரண' அடர்த்தி மடிக்கணினி"
 
 #: ../../porting/configure_test_fix/Display.rst:43
 #: ../../porting/configure_test_fix/Display.rst:45
 msgid "N/A"
-msgstr ""
+msgstr "இதற்கில்லை"
 
 #: ../../porting/configure_test_fix/Display.rst:43
 msgid "96-150"
-msgstr ""
+msgstr "96-150"
 
 #: ../../porting/configure_test_fix/Display.rst:43
 msgid "8"
-msgstr ""
+msgstr "8"
 
 #: ../../porting/configure_test_fix/Display.rst:43
 msgid "1.0"
-msgstr ""
+msgstr "1.0"
 
 #: ../../porting/configure_test_fix/Display.rst:44
 msgid "ASUS Nexus 7"
-msgstr ""
+msgstr "ஆசச் நெக்சச் 7"
 
 #: ../../porting/configure_test_fix/Display.rst:44
 msgid "1280x800"
-msgstr ""
+msgstr "1280x800"
 
 #: ../../porting/configure_test_fix/Display.rst:44
 msgid "7\""
-msgstr ""
+msgstr "7 \""
 
 #: ../../porting/configure_test_fix/Display.rst:44
 msgid "216"
-msgstr ""
+msgstr "216"
 
 #: ../../porting/configure_test_fix/Display.rst:44
 msgid "12"
-msgstr ""
+msgstr "12"
 
 #: ../../porting/configure_test_fix/Display.rst:44
 #: ../../porting/configure_test_fix/Display.rst:46
 #: ../../porting/configure_test_fix/Display.rst:47
 #: ../../porting/configure_test_fix/Display.rst:48
 msgid "2.0"
-msgstr ""
+msgstr "2.0"
 
 #: ../../porting/configure_test_fix/Display.rst:45
 msgid "'High' density laptop"
-msgstr ""
+msgstr "'உயர்' அடர்த்தி மடிக்கணினி"
 
 #: ../../porting/configure_test_fix/Display.rst:45
 msgid "150-250"
-msgstr ""
+msgstr "150-250"
 
 #: ../../porting/configure_test_fix/Display.rst:45
 msgid "16"
-msgstr ""
+msgstr "16"
 
 #: ../../porting/configure_test_fix/Display.rst:46
 msgid "Samsung Galaxy Nexus"
-msgstr ""
+msgstr "சாம்சங் கேலக்சி நெக்சச்"
 
 #: ../../porting/configure_test_fix/Display.rst:46
 msgid "1280x720"
-msgstr ""
+msgstr "1280x720"
 
 #: ../../porting/configure_test_fix/Display.rst:46
 msgid "4.65\""
-msgstr ""
+msgstr "4.65 \""
 
 #: ../../porting/configure_test_fix/Display.rst:46
 msgid "316"
-msgstr ""
+msgstr "316"
 
 #: ../../porting/configure_test_fix/Display.rst:46
 #: ../../porting/configure_test_fix/Display.rst:47
 msgid "18"
-msgstr ""
+msgstr "18"
 
 #: ../../porting/configure_test_fix/Display.rst:47
 msgid "LG Nexus 4"
-msgstr ""
+msgstr "எல்சி நெக்சச் 4"
 
 #: ../../porting/configure_test_fix/Display.rst:47
 msgid "1280x768"
-msgstr ""
+msgstr "1280x768"
 
 #: ../../porting/configure_test_fix/Display.rst:47
 msgid "4.7\""
-msgstr ""
+msgstr "4.7 \""
 
 #: ../../porting/configure_test_fix/Display.rst:47
 msgid "320"
-msgstr ""
+msgstr "320"
 
 #: ../../porting/configure_test_fix/Display.rst:48
 msgid "Samsung Nexus 10"
-msgstr ""
+msgstr "சாம்சங் நெக்சச் 10"
 
 #: ../../porting/configure_test_fix/Display.rst:48
 msgid "2560x1600"
-msgstr ""
+msgstr "2560x1600"
 
 #: ../../porting/configure_test_fix/Display.rst:48
 msgid "10.1\""
-msgstr ""
+msgstr "10.1 \""
 
 #: ../../porting/configure_test_fix/Display.rst:48
 msgid "299"
-msgstr ""
+msgstr "299"
 
 #: ../../porting/configure_test_fix/Display.rst:48
 msgid "20"
-msgstr ""
+msgstr "20"
 
 #: ../../porting/configure_test_fix/Display.rst:49
 msgid "Fairphone 2"
-msgstr ""
+msgstr "ஃபேர்போன் 2"
 
 #: ../../porting/configure_test_fix/Display.rst:49
 #: ../../porting/configure_test_fix/Display.rst:50
 msgid "1080x1920"
-msgstr ""
+msgstr "1080x1920"
 
 #: ../../porting/configure_test_fix/Display.rst:49
 msgid "5\""
-msgstr ""
+msgstr "5 \""
 
 #: ../../porting/configure_test_fix/Display.rst:49
 msgid "440"
-msgstr ""
+msgstr "440"
 
 #: ../../porting/configure_test_fix/Display.rst:49
 #: ../../porting/configure_test_fix/Display.rst:50
 msgid "23"
-msgstr ""
+msgstr "23"
 
 #: ../../porting/configure_test_fix/Display.rst:50
 msgid "LG Nexus 5"
-msgstr ""
+msgstr "எல்சி நெக்சச் 5"
 
 #: ../../porting/configure_test_fix/Display.rst:50
 msgid "4.95\""
-msgstr ""
+msgstr "4.95 \""
 
 #: ../../porting/configure_test_fix/Display.rst:50
 msgid "445"
-msgstr ""
+msgstr "445"
 
 #: ../../porting/configure_test_fix/Display.rst:53
 msgid ""
@@ -13286,14 +13386,18 @@ msgid ""
 "the best, share some pictures (including some object for scale) along with "
 "the device specs with us."
 msgstr ""
+"மற்ற சாதனங்களில் உபுண்டு தொடு அனுபவத்துடன் ஒப்பிடும்போது நன்றாக இருக்கும் "
+"ஒன்றைக் கண்டுபிடிக்க சில மதிப்புகளுடன் ஆய்வு செய்யுங்கள். இது சிறந்தது என்று"
+" உங்களுக்குத் தெரியாவிட்டால், சாதன விவரக்குறிப்புகளுடன் சில படங்களை "
+"(அளவிற்கான சில பொருள் உட்பட) பகிர்ந்து கொள்ளுங்கள்."
 
 #: ../../porting/configure_test_fix/Display.rst:55
 msgid "There are two other settings that may be of interest to you:"
-msgstr ""
+msgstr "உங்களுக்கு ஆர்வமாக இருக்கும் வேறு இரண்டு அமைப்புகள் உள்ளன:"
 
 #: ../../porting/configure_test_fix/Display.rst:58
 msgid "Form factor"
-msgstr ""
+msgstr "உருவம் காரணி"
 
 #: ../../porting/configure_test_fix/Display.rst:60
 msgid ""
@@ -13304,10 +13408,17 @@ msgid ""
 " For more information on the Chassis, see the freedesktop.org hostnamed "
 "specification."
 msgstr ""
+"`` `` Form_factor`` சாதனத்தின் படிவக் காரணியைக் குறிப்பிடுகிறது. இந்த "
+"மதிப்பு சாதனத்தின் சேசாக அமைக்கப்பட்டுள்ளது, இது `` Hastnamectl`` ஐ "
+"இயக்குவதன் மூலம் நீங்கள் காணலாம். ஏற்றுக்கொள்ளக்கூடிய மதிப்புகள் `` "
+"கைபேசி``, `` டேப்லெட்`, `` லேப்டாப்`` மற்றும் `` டெச்க்டாப்``. கேலரி போன்ற "
+"பயன்பாடுகள் அவற்றின் செயல்பாட்டை மாற்ற இந்த தகவலைப் பயன்படுத்துகின்றன. சேச் "
+"பற்றிய கூடுதல் தகவலுக்கு, redesktop.org ஓச்டாமிங் விவரக்குறிப்பைப் "
+"பார்க்கவும்."
 
 #: ../../porting/configure_test_fix/Display.rst:63
 msgid "Native orientation"
-msgstr ""
+msgstr "சொந்த நோக்குநிலை"
 
 #: ../../porting/configure_test_fix/Display.rst:65
 msgid ""
@@ -13318,10 +13429,17 @@ msgid ""
 "laptops, and desktops; and ``portrait``, which is usually used for phone "
 "handsets."
 msgstr ""
+"`` நேட்டிவ்_ஓண்டேசன்`` சாதனத்தின் உள்ளமைக்கப்பட்ட திரைக்கான காட்சி "
+"நோக்குநிலையை அமைக்கிறது. ஆட்டோரோடேசன் சரியாக செயல்படாத போதெல்லாம் அல்லது "
+"சாதனத்தின் சொந்த நோக்குநிலைக்கு ஒரு பயன்பாடு பூட்டப்பட விரும்பும் போது இந்த "
+"மதிப்பு பயன்படுத்தப்படுகிறது. ஏற்றுக்கொள்ளக்கூடிய மதிப்புகள் `` "
+"லேண்ட்ச்கேப்`` ஆகும், இது பொதுவாக டேப்லெட்டுகள், மடிக்கணினிகள் மற்றும் "
+"டெச்க்டாப்புகளுக்கு பயன்படுத்தப்படுகிறது; மற்றும் `` உருவப்படம்``, இது "
+"பொதுவாக தொலைபேசி கைபேசிகளுக்கு பயன்படுத்தப்படுகிறது."
 
 #: ../../porting/configure_test_fix/Lomiri.rst:4
 msgid "Lomiri - the graphical UI"
-msgstr ""
+msgstr "லோமிரி - வரைகலை இடைமுகம்"
 
 #: ../../porting/configure_test_fix/Lomiri.rst:6
 msgid ""
@@ -13330,10 +13448,14 @@ msgid ""
 "functional on your device. The first is to add udev rules which are required"
 " for the graphical UI to be able to launch."
 msgstr ""
+"இப்போது நீங்கள் புதிதாக துவக்கப்பட்ட சாதனத்திற்கான அணுகலைப் பெற்றுள்ளீர்கள்,"
+" உங்கள் சாதனத்தில் உபுண்டு டச் முழுமையாக செயல்படும் முன் பல விசயங்கள் "
+"கட்டமைக்கப்பட வேண்டும். முதலாவது, வரைகலை இடைமுகம் ஐத் தொடங்குவதற்கு தேவையான "
+"உடேவ் விதிகளைச் சேர்ப்பது."
 
 #: ../../porting/configure_test_fix/Lomiri.rst:9
 msgid "What are udev rules?"
-msgstr ""
+msgstr "உடேவ் விதிகள் என்றால் என்ன?"
 
 #: ../../porting/configure_test_fix/Lomiri.rst:11
 msgid ""
@@ -13344,10 +13466,17 @@ msgid ""
 "These rules must observe a specific format and they are stored in a file "
 "which needs to be generated for each specific device."
 msgstr ""
+"உங்கள் இயங்கும் அமைப்பில், தொடர்ந்து இயங்கும் உடேவ் டீமான் உள்ளது, இது புற "
+"சாதனங்களில் நிகழ்வுகளை கணினி எவ்வாறு கையாளுகிறது என்பதை நிர்வகிக்கிறது, * "
+"எ.கா. * சாதனத்தை யூ.எச்.பி கேபிள் வழியாக கணினியுடன் இணைக்கிறது. இந்த "
+"டீமனுக்கு ஒரு விதிமுறைகள் தேவை, *udev விதிகள் *, சாத்தியமான ஒவ்வொரு "
+"நிகழ்விற்கும் என்ன செய்ய வேண்டும் என்று சொல்ல. இந்த விதிகள் ஒரு குறிப்பிட்ட "
+"வடிவமைப்பைக் கவனிக்க வேண்டும், அவை ஒவ்வொரு குறிப்பிட்ட சாதனத்திற்கும் "
+"உருவாக்கப்பட வேண்டிய கோப்பில் சேமிக்கப்படுகின்றன."
 
 #: ../../porting/configure_test_fix/Lomiri.rst:14
 msgid "Add udev rules"
-msgstr ""
+msgstr "உடேவ் விதிகளைச் சேர்க்கவும்"
 
 #: ../../porting/configure_test_fix/Lomiri.rst:16
 msgid ""
@@ -13357,10 +13486,15 @@ msgid ""
 "necessary to complete subsequent steps, you can use the method detailed here"
 " for first time setup."
 msgstr ""
+"இதைச் செய்வதற்கான சரியான வழி, இந்த அமைப்புகளை மேலடுக்கு கோப்புகளில் "
+"சேமிப்பதன் மூலம் (: ref: `மேலடுக்கு`), மற்றும் கீழே விவரிக்கப்பட்டுள்ளபடி "
+"ரூட் கோப்பகத்தை எழுதுவதன் மூலம் அல்ல. எவ்வாறாயினும், அடுத்தடுத்த படிகளை "
+"முடிக்க தேவையான யுடேவ் விதிகளை விரைவாக அமைக்க, முதல் முறையாக அமைப்பதற்கு "
+"இங்கே விவரிக்கப்பட்ட முறையைப் பயன்படுத்தலாம்."
 
 #: ../../porting/configure_test_fix/Lomiri.rst:19
 msgid "Make / (root) writable"
-msgstr ""
+msgstr "உருவாக்கு / (ரூட்) எழுதக்கூடியது"
 
 #: ../../porting/configure_test_fix/Lomiri.rst:21
 msgid ""
@@ -13368,28 +13502,40 @@ msgid ""
 "next steps), you'll need to remount your root directory (/) with write "
 "permissions. Do this by running the following command::"
 msgstr ""
+"நீங்கள் ரூட்எஃப்எச்சில் ஏதேனும் மாற்றங்களைச் செய்வதற்கு முன் (இது அடுத்த "
+"படிகளுக்கு தேவைப்படும்), உங்கள் ரூட் கோப்பகத்தை (/) எழுதும் அனுமதிகளுடன் "
+"மறுபரிசீலனை செய்ய வேண்டும். பின்வரும் கட்டளையை இயக்குவதன் மூலம் இதைச் "
+"செய்யுங்கள் ::"
 
 #: ../../porting/configure_test_fix/Lomiri.rst:26
 msgid "Create and add udev rules"
-msgstr ""
+msgstr "உடேவ் விதிகளை உருவாக்கி சேர்க்கவும்"
 
 #: ../../porting/configure_test_fix/Lomiri.rst:28
 msgid ""
 "You must create some udev rules to allow Ubuntu Touch software to access "
 "your hardware."
 msgstr ""
+"உங்கள் வன்பொருளை அணுக உபுண்டு டச் மென்பொருளை அனுமதிக்க நீங்கள் சில உட் "
+"விதிகளை உருவாக்க வேண்டும்."
 
 #: ../../porting/configure_test_fix/Lomiri.rst:30
 msgid ""
 "If you are building a Halium-7.1 based port, run the following command, "
 "replacing [CODENAME] with your device's codename::"
 msgstr ""
+"நீங்கள் ஒரு ஆலியம் -7.1 அடிப்படையிலான துறைமுகத்தை உருவாக்குகிறீர்கள் "
+"என்றால், பின்வரும் கட்டளையை இயக்கவும், [குறியீட்டு பெயரை] உங்கள் சாதனத்தின் "
+"குறியீட்டு பெயருடன் மாற்றவும் ::"
 
 #: ../../porting/configure_test_fix/Lomiri.rst:35
 msgid ""
 "For a Halium-9.0 based port you should use the commands below, again "
 "replacing [CODENAME] with your device's codename::"
 msgstr ""
+"ஆலியம் -9.0 அடிப்படையிலான துறைமுகத்திற்கு நீங்கள் கீழே உள்ள கட்டளைகளைப் "
+"பயன்படுத்த வேண்டும், மீண்டும் [குறியீட்டு பெயர்] உங்கள் சாதனத்தின் "
+"குறியீட்டு பெயர் ::"
 
 #: ../../porting/configure_test_fix/Lomiri.rst:42
 msgid ""
@@ -13398,6 +13544,10 @@ msgid ""
 "error. Simply edit and remove the following string from the command: "
 "``/vendor/ueventd*.rc``."
 msgstr ""
+"ட்ரெபிள் அல்லாத சாதனத்திற்கான ஆலியம் -9.0 அடிப்படையிலான துறைமுகத்தை நீங்கள் "
+"உருவாக்குகிறீர்கள் என்றால், அதாவது தனி விற்பனையாளர் பகிர்வு இல்லாத சாதனம், "
+"மேலே உள்ள கட்டளை பிழையைக் கொடுக்கும். கட்டளையிலிருந்து பின்வரும் சரத்தைத் "
+"திருத்தி அகற்றவும்: ``/விற்பனையாளர்/ueventd*.rc``."
 
 #: ../../porting/configure_test_fix/Lomiri.rst:44
 msgid ""
@@ -13405,6 +13555,9 @@ msgid ""
 "Ubuntu Touch spinner followed by Unity 8. Your lock password is the same as "
 "you set for SSH."
 msgstr ""
+"இப்போது, ​​சாதனத்தை மீண்டும் துவக்கவும். எல்லாம் சரியாகிவிட்டால், நீங்கள் "
+"இறுதியில் உபுண்டு டச் ச்பின்னரைப் பார்ப்பீர்கள், அதைத் தொடர்ந்து யூனிட்டி 8."
+" உங்கள் பூட்டு கடவுச்சொல் நீங்கள் பாஓடு க்கு அமைத்ததைப் போலவே இருக்கும்."
 
 #: ../../porting/configure_test_fix/Lomiri.rst:46
 msgid ""
@@ -13412,10 +13565,13 @@ msgid ""
 "that everything is very small. The :ref:`Display` section describes how to "
 "deal with this."
 msgstr ""
+"உங்கள் சாதனத்தில் யூனிட்டி 8 முதன்முதலில் வளர்க்கப்படும்போது, ​​எல்லாம் "
+"மிகச் சிறியது என்பதை நீங்கள் கவனிப்பீர்கள். தி: ரெஃப்: `டிச்ப்ளே` பிரிவு இதை"
+" எவ்வாறு கையாள்வது என்பதை விவரிக்கிறது."
 
 #: ../../porting/configure_test_fix/Overlay.rst:4
 msgid "Overlay file method"
-msgstr ""
+msgstr "மேலடுக்கு கோப்பு முறை"
 
 #: ../../porting/configure_test_fix/Overlay.rst:9
 msgid ""
@@ -13427,6 +13583,13 @@ msgid ""
 "scripts for specific needs. Overlay files provide a solution for replacing "
 "existing or adding new files to the file system."
 msgstr ""
+"காட்சி அளவிடுதல், ஒலி, ஊடலை மற்றும் பல அம்சங்களுக்கான இயல்புநிலை உள்ளமைவு "
+"கோப்புகளின் தொகுப்பை UBPORTS ரூட் கோப்பு முறைமை படம் வழங்குகிறது. இந்த "
+"கோப்புகள் போர்ட்டிங் இலக்கின் சாதன-குறிப்பிட்ட அம்சங்களுக்கு ஏற்றதாக "
+"இருக்காது, எனவே சரிசெய்யப்பட வேண்டியிருக்கும். மேலும், கூடுதல் உள்ளமைவு "
+"கோப்புகளையும் குறிப்பிட்ட தேவைகளுக்கான ச்கிரிப்ட்களையும் சேர்க்கவும் "
+"அவசியமாக இருக்கலாம். மேலடுக்கு கோப்புகள் ஏற்கனவே இருக்கும் அல்லது புதிய "
+"கோப்புகளை கோப்பு முறைமையில் மாற்றுவதற்கான தீர்வை வழங்குகின்றன."
 
 #: ../../porting/configure_test_fix/Overlay.rst:11
 msgid ""
@@ -13436,6 +13599,12 @@ msgid ""
 "filesystem image precludes the use of overlay files since it does not "
 "provide a mechanism for that."
 msgstr ""
+"மேலடுக்கு கோப்புகள் எவ்வாறு செயல்படுத்தப்படுகின்றன மற்றும் அவற்றின் "
+"வரம்புகள் உருவாக்க முறைகள் மற்றும் உபுண்டு தொடுதலின் வெவ்வேறு பதிப்புகள் "
+"ஆகியவற்றில் வேறுபடுகின்றன. பதிவிறக்கம் செய்யப்பட்ட சி.எச்.ஐ மற்றும் ரூட் "
+"கோப்பு முறைமை படத்தின் அடிப்படையில் ஒரு கட்டமைப்பை நிறுவ ஆலியம்-இன்ச்டால் "
+"ச்கிரிப்டைப் பயன்படுத்துவது மேலடுக்கு கோப்புகளைப் பயன்படுத்துவதைத் "
+"தடுக்கிறது, ஏனெனில் அது ஒரு பொறிமுறையை வழங்காது."
 
 #: ../../porting/configure_test_fix/Overlay.rst:13
 msgid ""
@@ -13456,6 +13625,26 @@ msgid ""
 "detail below before describing how overlay files are included into the build"
 " process in full system image builds and builds based on GitLab CI scripts."
 msgstr ""
+"பொதுவாக, மேலடுக்கு கோப்புகளை செயல்படுத்த இரண்டு முறைகள் உள்ளன, ஒன்று அவற்றை "
+"நேரடியாக இருக்கும் கோப்புகளை மேலெழுதும் இலக்கு பாதைக்கு நேரடியாக "
+"நகலெடுப்பது, மற்றொன்று அவற்றை ஒரு நியமிக்கப்பட்ட அடிப்படை கோப்பகத்தில் "
+"வைப்பது, பின்னர் அவை துவக்க செயல்பாட்டின் போது அவற்றின் இலக்கு பாதையில் "
+"ஏற்றப்படும். அறிவிலிஆய்வு தொஒ ச்கிரிப்ட்களைப் பயன்படுத்தி கட்டடங்களைச் "
+"செய்யும்போது மட்டுமே முந்தையது சாத்தியமாகும். உபுண்டு டச் 16.04 விசயத்தில் "
+"இது கிடைக்கக்கூடிய ஒரே மேலடுக்கை பொறிமுறையாகும். `` System.img`` உருவாக்க "
+"செயல்முறை கட்டமைக்கப்பட்ட ஆண்ட்ராய்டு சிச்டம் பகிர்வில் கோப்புகளை மேலெழுத "
+"அனுமதிக்கும் போது, ​​ரூட் கோப்பு முறைமையில் அவ்வாறு செய்ய எந்த வழியும் "
+"இல்லை. உபுண்டு டச் 16.04 இருப்பினும் மவுண்ட் அடிப்படையிலான மேலடுக்கு "
+"கோப்புகளுக்கு மட்டுப்படுத்தப்பட்ட ஆதரவை வழங்குகிறது. உபுண்டு டச் 20.04 "
+"இலிருந்து தொடங்கி, உருவாக்க முறையைப் பொருட்படுத்தாமல் விற்பனையாளர் மற்றும் "
+"ஆண்ட்ராய்டு படங்களில் உள்ள கோப்புகள் மற்றும் கோப்பகங்கள் இரண்டையும் "
+"மேலெழுதும் அடிப்படையில் மவுண்ட் அடிப்படையிலான மேலடுக்கு கோப்புகளை "
+"செயல்படுத்துவது மிகவும் சக்திவாய்ந்ததாகிவிட்டது. டெல்டா OTA புதுப்பிப்புகளை "
+"அனுமதிப்பதால் மவுண்ட் அடிப்படையிலான மேலடுக்கு கோப்புகளின் பயன்பாடு பொதுவாக "
+"விரும்பத்தக்கது. GITLAB தொஒ ச்கிரிப்ட்களின் அடிப்படையில் முழு கணினி படத்தை "
+"உருவாக்கி உருவாக்குகிறது மற்றும் உருவாக்கும் கட்டமைப்பில் மேலடுக்கு "
+"கோப்புகள் எவ்வாறு சேர்க்கப்படுகின்றன என்பதை விவரிப்பதற்கு முன் இரண்டு "
+"வழிமுறைகளும் கீழே விரிவாக விவாதிக்கப்படும்."
 
 #: ../../porting/configure_test_fix/Overlay.rst:17
 msgid ""
@@ -13466,18 +13655,26 @@ msgid ""
 "not be possible using this build method. This practice is strongly "
 "discouraged for a several reasons:"
 msgstr ""
+"அறிவிலிஆய்வு சிஐ-அடிப்படையிலான உருவாக்க முறையைப் பயன்படுத்தி உபுண்டு டச் "
+"16.04 இன் சில துறைமுகங்கள் தனிப்பயன் ச்கிரிப்ட்கள் அல்லது உள்ளமைவு "
+"கோப்புகளைச் சேர்க்கவும் (எ.கா. இந்த உருவாக்க முறையைப் பயன்படுத்தி இது "
+"சாத்தியமில்லை. இந்த நடைமுறை பல காரணங்களுக்காக கடுமையாக ஊக்கமளிக்கிறது:"
 
 #: ../../porting/configure_test_fix/Overlay.rst:19
 msgid ""
 "overwriting a system script prevents the port from receiving future updates "
 "of that script"
 msgstr ""
+"கணினி ச்கிரிப்டை மேலெழுதும் துறைமுகம் அந்த ச்கிரிப்ட்டின் எதிர்கால "
+"புதுப்பிப்புகளைப் பெறுவதைத் தடுக்கிறது"
 
 #: ../../porting/configure_test_fix/Overlay.rst:20
 msgid ""
 "different ports coming up with custom solutions creates confusion among new "
 "porters and contributors"
 msgstr ""
+"தனிப்பயன் தீர்வுகளுடன் வரும் வெவ்வேறு துறைமுகங்கள் புதிய போர்ட்டர்கள் "
+"மற்றும் பங்களிப்பாளர்களிடையே குழப்பத்தை உருவாக்குகின்றன"
 
 #: ../../porting/configure_test_fix/Overlay.rst:22
 msgid ""
@@ -13485,70 +13682,82 @@ msgid ""
 "``/android/system.img`` may want to consider using the full ``system.img`` "
 "build method instead."
 msgstr ""
+"சி.எச்.ஐ அடிப்படையிலான ``/Android/system.img`` க்குள் கோப்புகளை மேலெழுத "
+"வேண்டிய போர்ட்டர்கள் அதற்கு பதிலாக முழு `` system.img`` உருவாக்க முறையைப் "
+"பயன்படுத்துவதை பரிசீலிக்க விரும்பலாம்."
 
 #: ../../porting/configure_test_fix/Overlay.rst:24
 msgid "The implementations and limitations can be summarized as follows:"
-msgstr ""
+msgstr "செயலாக்கங்கள் மற்றும் வரம்புகளை பின்வருமாறு சுருக்கமாகக் கூறலாம்:"
 
 #: ../../porting/configure_test_fix/Overlay.rst:27
 msgid "Build method"
-msgstr ""
+msgstr "உருவாக்க முறை"
 
 #: ../../porting/configure_test_fix/Overlay.rst:27
 #: ../../porting/configure_test_fix/Overlay.rst:42
 msgid "Ubuntu Touch 16.04"
-msgstr ""
+msgstr "உபுண்டு டச் 16.04"
 
 #: ../../porting/configure_test_fix/Overlay.rst:27
 msgid "Ubuntu Touch 20.04"
-msgstr ""
+msgstr "உபுண்டு டச் 20.04"
 
 #: ../../porting/configure_test_fix/Overlay.rst:29
 msgid "full ``system.img`` build"
-msgstr ""
+msgstr "முழு `` system.img`` உருவாக்க"
 
 #: ../../porting/configure_test_fix/Overlay.rst:29
 msgid "add/overwrite files below ``/android/system``"
 msgstr ""
+"``/Android/system`` க்குக் கீழே உள்ள கோப்புகளைச் சேர்க்கவும்/மேலெழுதவும்"
 
 #: ../../porting/configure_test_fix/Overlay.rst:30
 msgid "overlay existing files on the root filesystem"
-msgstr ""
+msgstr "ரூட் கோப்பு முறைமையில் இருக்கும் கோப்புகளை மேலெழுதவும்"
 
 #: ../../porting/configure_test_fix/Overlay.rst:31
 msgid "no new files on the root filesystem"
-msgstr ""
+msgstr "ரூட் கோப்பு முறைமையில் புதிய கோப்புகள் இல்லை"
 
 #: ../../porting/configure_test_fix/Overlay.rst:30
 msgid ""
 "overlay existing files on the root filesystem, android and vendor filesystem"
 msgstr ""
+"ரூட் கோப்பு முறைமை, ஆண்ட்ராய்டு மற்றும் விற்பனையாளர் கோப்பு முறைமையில் "
+"இருக்கும் கோப்புகளை மேலெழுதவும்"
 
 #: ../../porting/configure_test_fix/Overlay.rst:31
 #: ../../porting/configure_test_fix/Overlay.rst:35
 msgid "new files and directories via merged or replaced overlay directories"
 msgstr ""
+"இணைக்கப்பட்ட அல்லது மாற்றப்பட்ட மேலடுக்கு கோப்பகங்கள் வழியாக புதிய கோப்புகள்"
+" மற்றும் கோப்பகங்கள்"
 
 #: ../../porting/configure_test_fix/Overlay.rst:33
 msgid "GitLab CI-based build"
-msgstr ""
+msgstr "அறிவிலிஆய்வு சிஐ-அடிப்படையிலான உருவாக்க"
 
 #: ../../porting/configure_test_fix/Overlay.rst:33
 msgid "add/overwrite files on the root file system"
-msgstr ""
+msgstr "ரூட் கோப்பு முறைமையில் கோப்புகளைச் சேர்க்கவும்/மேலெழுதவும்"
 
 #: ../../porting/configure_test_fix/Overlay.rst:33
 msgid "add/overwrite files on the root file system (use overlays instead)"
 msgstr ""
+"ரூட் கோப்பு முறைமையில் கோப்புகளைச் சேர்க்கவும்/மேலெழுதவும் (அதற்கு பதிலாக "
+"மேலடுக்குகளைப் பயன்படுத்தவும்)"
 
 #: ../../porting/configure_test_fix/Overlay.rst:34
 msgid ""
 "overlay mounts for existing files on the root, android and vendor filesystem"
 msgstr ""
+"ரூட், ஆண்ட்ராய்டு மற்றும் விற்பனையாளர் கோப்பு முறைமையில் இருக்கும் "
+"கோப்புகளுக்கான மேலடுக்கு ஏற்றுகிறது"
 
 #: ../../porting/configure_test_fix/Overlay.rst:39
 msgid "How mount-based overlay files work"
-msgstr ""
+msgstr "மவுண்ட் அடிப்படையிலான மேலடுக்கு கோப்புகள் எவ்வாறு செயல்படுகின்றன"
 
 #: ../../porting/configure_test_fix/Overlay.rst:44
 msgid ""
@@ -13557,6 +13766,10 @@ msgid ""
 "must actually exist on the root filesystem partition, adding new files is "
 "not possible."
 msgstr ""
+"உபுண்டு டச் 16.04 முழு `` system.img``- அடிப்படையிலான கட்டமைப்பின் "
+"விசயத்தில் மவுண்ட் அடிப்படையிலான மேலடுக்கு கோப்புகளை மட்டுமே வழங்குகிறது, "
+"மேலடுக்கு கோப்புகள் உண்மையில் ரூட் கோப்பு முறைமை பகிர்வில் இருக்க வேண்டும் "
+"என்ற வரம்புடன், புதிய கோப்புகளைச் சேர்ப்பது சாத்தியமில்லை."
 
 #: ../../porting/configure_test_fix/Overlay.rst:46
 msgid ""
@@ -13572,10 +13785,20 @@ msgid ""
 "overlay file can be placed there by the build system will be described "
 "below."
 msgstr ""
+"சாதனத்தில் ``/Android/System/Halium`` இல் பொருத்தப்பட்டுள்ள நியமிக்கப்பட்ட "
+"அடிப்படை கோப்பகத்திற்கு கீழே ஆண்ட்ராய்டு கணினி பகிர்வில் மேலடுக்கு கோப்புகள்"
+" வைக்கப்பட வேண்டும். அந்த அடிப்படை கோப்பகத்திற்கு கீழே மேலடுக்கு கோப்புகளைக்"
+" கொண்ட அடைவு மரம் ரூட் கோப்பு முறைமையின் கட்டமைப்பை பிரதிபலிக்கிறது, இது "
+"ரூட் கோப்பு முறைமையில் மேலடுக்கு கோப்பின் இலக்கு பாதை, அதன் "
+"இருப்பிடத்திலிருந்து அடிப்படை கோப்பகத்துடன் தொடர்புடையது. எடுத்துக்காட்டாக, "
+"UDEV விதிகள் கோப்பை ``/lib/udev/விதிகள் .D/70-android.rules`` கடைசி "
+"கட்டத்தில் உருவாக்கியது ``/Android/System/Halium/lib/udev/rext.d/`` `. "
+"உருவாக்க முறை மூலம் மேலடுக்கு கோப்பை எவ்வாறு வைக்க முடியும் என்பதற்கான "
+"பிரத்தியேகங்கள் கீழே விவரிக்கப்படும்."
 
 #: ../../porting/configure_test_fix/Overlay.rst:49
 msgid "Ubuntu Touch 20.04 and later"
-msgstr ""
+msgstr "உபுண்டு டச் 20.04 மற்றும் அதற்குப் பிறகு"
 
 #: ../../porting/configure_test_fix/Overlay.rst:51
 msgid ""
@@ -13587,6 +13810,14 @@ msgid ""
 "the Ubuntu Touch root partition but can also overlay files and directories "
 "in vendor and Android partitions."
 msgstr ""
+"உபுண்டு டச் 20.04, பின்னர் மிகவும் நெகிழ்வான செயலாக்கத்தை வழங்குகிறது, இது "
+"முழு `` சிச்டம்.ஐஎம்சி`-அடிப்படையிலான கட்டடங்கள் மற்றும் அறிவிலிஆய்வு தொஒ "
+"ச்கிரிப்ட் அடிப்படையிலான கட்டடங்களுக்கும் கிடைக்கிறது. இது தனிப்பட்ட "
+"கோப்புகளை மேலெழுத அனுமதிப்பது மட்டுமல்லாமல், அடிப்படை கோப்பு முறைமையை "
+"மாற்றாமல் ஏற்கனவே உள்ள கோப்பகங்களை மாற்றவும் அல்லது ஒன்றிணைக்கவும் "
+"அனுமதிக்கிறது. மேலும், இது உபுண்டு டச் ரூட் பகிர்வுக்கு "
+"மட்டுப்படுத்தப்படவில்லை, ஆனால் விற்பனையாளர் மற்றும் ஆண்ட்ராய்டு பகிர்வுகளில்"
+" உள்ள கோப்புகள் மற்றும் கோப்பகங்களையும் மேலடுக்கலாம்."
 
 #: ../../porting/configure_test_fix/Overlay.rst:53
 msgid ""
@@ -13599,6 +13830,14 @@ msgid ""
 " overlay directory tree will be traversed in depth-first order during boot "
 "according to the following rules:"
 msgstr ""
+"உருவாக்க முறையைப் பொறுத்து, நியமிக்கப்பட்ட அடிப்படை அடைவு சாதனத்தில் "
+"``/opt/halium-overlay`` அல்லது `/android/system/halium`` ஆகும். அடிப்படை "
+"கோப்பகத்திற்குக் கீழே உள்ள அடைவு மரம் ரூட் கோப்பு முறைமை மற்றும் இலக்கு "
+"பாதைகள் ஒரு அடைவு அல்லது கோப்பின் அடிப்படை கோப்பகத்தின் ஒப்பீட்டு "
+"இருப்பிடத்தின் அடிப்படையில் பெறப்படுகின்றன. இலக்கு பாதையின் கீழ் உள்ள "
+"கோப்புகள் அல்லது கோப்பகங்கள் எழுதக்கூடியதாக இருக்கக்கூடாது அல்லது மவுண்ட் "
+"தங்களை சுட்டிக்காட்டக்கூடாது என்பதை நினைவில் கொள்க. மேலடுக்கு அடைவு மரம் "
+"பின்வரும் விதிகளின்படி துவக்கத்தின் போது ஆழமான-முதல் வரிசையில் பயணிக்கும்:"
 
 #: ../../porting/configure_test_fix/Overlay.rst:55
 msgid ""
@@ -13607,6 +13846,10 @@ msgid ""
 "contents of the underlying directory and its descendants will no longer be "
 "accessible."
 msgstr ""
+"ஒரு துணை அடைவில் `` .அலியம்-ஓவர்ரைடு-டி.ஐ.ஆர்`` என்ற சிறப்புக் கோப்பைக் "
+"கொண்டிருந்தால், அந்த அடைவு இலக்கு அடைவு மரத்தை மாற்றும், அதாவது அடிப்படை "
+"கோப்பகத்தின் உள்ளடக்கங்கள் மற்றும் அதன் சந்ததியினர் இனி அணுகப்பட "
+"மாட்டார்கள்."
 
 #: ../../porting/configure_test_fix/Overlay.rst:57
 msgid ""
@@ -13620,6 +13863,16 @@ msgid ""
 "<https://www.kernel.org/doc/html/latest/filesystems/overlayfs.html>`_ for "
 "the technical details)."
 msgstr ""
+"ஒரு துணை அடைவில் `` .அலியம்-ஓவர்லே-டிர்`` என்ற சிறப்புக் கோப்பைக் "
+"கொண்டிருந்தால், அது இலக்கு கோப்பகத்துடன் இணைக்கப்படும். மேலெழுதும் அடைவு "
+"மரத்தில் ஒரே இலக்கு பாதையுடன் எந்த கோப்பும் இல்லை என்றால், அடிப்படை "
+"கோப்பகத்தில் உள்ள எந்த கோப்பும் அல்லது அதன் சந்ததியினர் அணுகக்கூடியவர்களாக "
+"இருக்கிறார்கள். மேலடுக்கு மட்டுமே இருக்கும் கோப்புகள் மற்றும் முழு "
+"கோப்பகங்கள் அந்தந்த இலக்கு பாதைகளில் அணுகக்கூடியவை. இது மேலடுக்கு எஃப்எச் "
+"கோப்பு முறைமையைப் பயன்படுத்தி செயல்படுத்தப்படுகிறது (`மேலடுக்கு எஃப்எச் "
+"ஆவணங்கள் "
+"<https://www.kernel.org/doc/html/latest/filesystems/overlayfs.html>` _ "
+"தொழில்நுட்ப விவரங்களுக்கு) ஐப் பார்க்கவும்)."
 
 #: ../../porting/configure_test_fix/Overlay.rst:59
 msgid ""
@@ -13628,40 +13881,49 @@ msgid ""
 "prefix. Subdirectories will be further traversed and evaluated according to "
 "the outlined rules."
 msgstr ""
+"மேலே உள்ள சிறப்புக் கோப்புகள் எதுவும் கொண்ட கோப்பகங்களில் உள்ள கோப்புகள் "
+"மேலே உள்ள முன்னொட்டுகளை அகற்றுவதன் மூலம் பெறப்பட்ட ஒரு முழுமையான பாதையுடன் "
+"கோப்புகள் மீது பிணைக்கப்பட்டுள்ளன. கோடிட்டுக் காட்டப்பட்ட விதிகளின்படி துணை "
+"அடைவுகள் மேலும் பயணித்து மதிப்பீடு செய்யப்படும்."
 
 #: ../../porting/configure_test_fix/Overlay.rst:61
 msgid ""
 "The specifics on how an overlay file or directory can be placed there "
 "depends on the used build system and will be described below."
 msgstr ""
+"மேலடுக்கு கோப்பு அல்லது கோப்பகத்தை எவ்வாறு அங்கு வைக்க முடியும் என்பதற்கான "
+"பிரத்தியேகங்கள் பயன்படுத்தப்பட்ட உருவாக்க முறையைப் பொறுத்தது மற்றும் கீழே "
+"விவரிக்கப்படும்."
 
 #: ../../porting/configure_test_fix/Overlay.rst:64
 #: ../../porting/configure_test_fix/Overlay.rst:125
 #: ../../porting/configure_test_fix/Overlay.rst:156
 msgid "Example"
-msgstr ""
+msgstr "எடுத்துக்காட்டு"
 
 #: ../../porting/configure_test_fix/Overlay.rst:66
 msgid "Contents of ``overlay/system/halium``::"
-msgstr ""
+msgstr "உள்ளடக்கங்கள் `` மேலடுக்கு/அமைப்பு/ஆலியம்` ::"
 
 #: ../../porting/configure_test_fix/Overlay.rst:83
 msgid "Contents of the underlying filesystem image::"
-msgstr ""
+msgstr "அடிப்படை கோப்பு முறைமை படத்தின் உள்ளடக்கங்கள் ::"
 
 #: ../../porting/configure_test_fix/Overlay.rst:97
 msgid "The resulting combined filesystem the looks as follows::"
-msgstr ""
+msgstr "இதன் விளைவாக ஒருங்கிணைந்த கோப்பு முறைமை பின்வருமாறு தோற்றம் ::"
 
 #: ../../porting/configure_test_fix/Overlay.rst:113
 msgid ""
 "The directory ``/etc/foo`` has been merged, whereas the ``/etc/bar`` "
 "directory and the file ``/etc/bazrc`` have been replaced."
 msgstr ""
+"``/Etc/foo`` கோப்பகம் ஒன்றிணைக்கப்பட்டுள்ளது, அதேசமயம் ``/etc/bar`` கோப்பகம்"
+" மற்றும் ``/etc/bazrc` கோப்பு மாற்றப்பட்டுள்ளன."
 
 #: ../../porting/configure_test_fix/Overlay.rst:118
 msgid "Overlay files in full system.img builds"
-msgstr ""
+msgstr "முழு system.img உருவாக்கும் கோப்புகளை மேலடுக்கு"
 
 #: ../../porting/configure_test_fix/Overlay.rst:120
 msgid ""
@@ -13676,6 +13938,17 @@ msgid ""
 "relative to its default mountpoint ``/android/system`` referred to as "
 "``$(TARGET_COPY_OUT_SYSTEM)``."
 msgstr ""
+"முழு `` system.img`- அடிப்படையிலான கட்டமைப்பின் விசயத்தில் அனைத்து "
+"ஆதரிக்கப்பட்ட ஆலியம் பதிப்புகளும் `` தயாரிப்பு_கோபி_ஃபைல்கள்` மேக்ரோவின் "
+"உள்ளீடுகளைச் சேர்ப்பதன் மூலம் உருவாக்க செயல்முறையின் போது ஆண்ட்ராய்டு கணினி "
+"கோப்பு முறைமை படத்திற்கு மேலடுக்கு கோப்புகளை நகலெடுக்க அனுமதிக்கின்றன. "
+"ஒவ்வொரு நுழைவும் ஒரு கோப்பின் மூல மற்றும் இலக்கு பாதையைக் கொண்டுள்ளது, இது "
+"“` `:` `” மூலம் பிரிக்கப்பட்டுள்ளது. மாநாட்டின் ஒரு விசயமாக, அனைத்து "
+"மேலடுக்கு கோப்புகளும் களஞ்சியத்தின் மூல பாதைக்குக் கீழே `` உபுண்டு`` "
+"கோப்பகத்தில் வைக்கப்பட வேண்டும். இந்த கோப்பகத்தை `` $ "
+"(லோக்கல்_பாத்)/உபுண்டு`` என குறிப்பிடலாம். இலக்கு அடைவு அதன் இயல்புநிலை "
+"மவுண்ட் பாயிண்ட் ``/Android/system`` உடன் ஒப்பிடும்போது குறிப்பிடப்பட "
+"வேண்டும் `` $ (target_copy_out_system) ``."
 
 #: ../../porting/configure_test_fix/Overlay.rst:122
 msgid ""
@@ -13686,6 +13959,13 @@ msgid ""
 "Ubuntu 16.04 it is only possible to add new files via overlay or override "
 "directories available in Ubuntu 20.04 or later."
 msgstr ""
+"இதனால் ``/android/system`` க்குக் கீழே உள்ள கோப்புகளைச் சேர்க்க அல்லது "
+"மேலெழுதும் மட்டுமே சாத்தியமாகும். மவுண்ட் அடிப்படையிலான மேலடுக்கு "
+"கோப்புகளைப் பயன்படுத்துவதற்காக அவை மேலே விவரிக்கப்பட்டுள்ளபடி நியமிக்கப்பட்ட"
+" அடிப்படை அடைவு ``/ஆண்ட்ராய்டு/சிச்டம்/ஆலியம்`` கீழே வைக்கப்பட வேண்டும். "
+"உபுண்டு 16.04 இல் உள்ள வரம்புகள் காரணமாக, உபுண்டு 20.04 அல்லது அதற்குப் "
+"பிறகு கிடைக்கும் மேலடுக்கு அல்லது மேலெழுதும் கோப்பகங்கள் வழியாக புதிய "
+"கோப்புகளை மட்டுமே சேர்க்க முடியும்."
 
 #: ../../porting/configure_test_fix/Overlay.rst:127
 msgid ""
@@ -13698,17 +13978,25 @@ msgid ""
 "``/android/system/halium/lib/udev/rules.d/70-android.rules`` and "
 "``/android/system/halium/etc/ubuntu-touch-session.d/android.conf``"
 msgstr ""
+"பொதுவாக குறைந்த பட்சம் `/lib/Udev/rovess.d/70-android.ruloid.rules`` "
+"லோமிரியைக் கொண்டுவரும் போது உருவாக்கப்பட்டது (பார்க்க: ref:` லோமிரி`) "
+"மற்றும் கோப்பு ``/etc/ubuntu-touch-session.d/android.conf`` கோப்பு ஆகியவை "
+"முடிவெடுப்பதன் மூலம் சேர்க்கப்பட வேண்டும். உபுண்டு டச் 16.04 மற்றும் 20.04 "
+"இரண்டின் பிணைப்பு மவுண்ட் பொறிமுறையானது, கோப்புகள் நியமிக்கப்பட்ட அடிப்படை "
+"அடைவு ``/ஆண்ட்ராய்டு/சிச்டம்/ஆலியம்`` கீழே வைக்கப்பட வேண்டும், அதாவது "
+"``/ஆண்ட்ராய்டு/சிச்டம்/ஆலியம்/ஆலியம்/லிப்/உடேவ்/விதிகள். "
+"``/android/system/halium/etc/ubuntu-touch-session.d/android.conf``"
 
 #: ../../porting/configure_test_fix/Overlay.rst:129
 msgid ""
 "Both ``70-android.rules`` and ``android.conf`` should be placed in the "
 "subdirectory ``ubuntu`` of the repository and the following lines need to be"
 " added to ``device.mk`` in order to copy them onto the generated image::"
-msgstr ""
+msgstr "`` 70-ஆண்ட்ராய்டு."
 
 #: ../../porting/configure_test_fix/Overlay.rst:140
 msgid "Rebuilding system.img"
-msgstr ""
+msgstr "மறுகட்டமைப்பு System.img"
 
 #: ../../porting/configure_test_fix/Overlay.rst:142
 msgid ""
@@ -13720,6 +14008,15 @@ msgid ""
 "in the directory ``BUILDDIR/out/target/product/CODENAME/system`` should be "
 "removed manually before rebuilding."
 msgstr ""
+"ஏதேனும் மாற்றங்களுக்குப் பிறகு `` சிச்டம்.இம்`` `` எம்.கே.ஏ சுத்தமான`` "
+"மற்றும் `எம்.கே.ஏ சிச்டம்இமேச்`` ஆகியவற்றைப் பயன்படுத்தி மீண்டும் கட்டப்பட "
+"வேண்டும். சிறிய மாற்றங்களுக்குப் பிறகு கணினி படத்தை மீண்டும் மீண்டும் "
+"கட்டியெழுப்பும்போது, ​​முதலில் `` mka சுத்தமான`` வழங்காமல் அதிகரிக்கும் "
+"கட்டடங்களைச் செய்ய முடியும். இருப்பினும், "
+"தயாரிப்பு_பிராபர்ட்டி_ஓவர்ரைடுகளுக்கான மாற்றங்கள் உருவாக்க அமைப்பால் "
+"கண்டறியப்படாது. அவ்வாறான நிலையில் `` பில்ட்.பிராப்`` கோப்பகத்தில் `` பில்ட் "
+"டிர்/அவுட்/இலக்கு/தயாரிப்பு/குறியீட்டு பெயர்/சிச்டம்` `மீண்டும் "
+"கட்டியெழுப்பப்படுவதற்கு முன் கைமுறையாக அகற்றப்பட வேண்டும்."
 
 #: ../../porting/configure_test_fix/Overlay.rst:144
 msgid ""
@@ -13729,10 +14026,18 @@ msgid ""
 "``/android/system/halium`` will be mounted onto their final locations which "
 "are derived from their path relative to the designated base directory."
 msgstr ""
+"வெற்றிகரமான கட்டமைப்பிற்குப் பிறகு, இதன் விளைவாக `` system.img`` யுபோர்ட்ச் "
+"ரூட் கோப்பு முறைமையுடன் சேர்ந்து மறுசீரமைக்கப்பட வேண்டும். துவக்க "
+"கோப்புகளில் மற்றும் - உபுண்டு டச் 20.04 அல்லது அதற்குப் பிறகு - "
+"``/ஆண்ட்ராய்டு/சிச்டம்/ஆலியம்`` இல் குறிக்கப்பட்ட கோப்பகங்கள் அவற்றின் இறுதி"
+" இடங்களில் பொருத்தப்படும், அவை அவற்றின் பாதையிலிருந்து நியமிக்கப்பட்ட "
+"அடிப்படை கோப்பகத்துடன் தொடர்புடையவை."
 
 #: ../../porting/configure_test_fix/Overlay.rst:147
 msgid "Overlay files in Gitlab CI script-based builds"
 msgstr ""
+"அறிவிலிஆய்வு தொஒ ச்கிரிப்ட் அடிப்படையிலான கட்டமைப்புகளில் மேலடுக்கு "
+"கோப்புகள்"
 
 #: ../../porting/configure_test_fix/Overlay.rst:149
 msgid ""
@@ -13741,6 +14046,10 @@ msgid ""
 "``overlay/system`` in a directory tree mirroring the structure of the root "
 "filesystem."
 msgstr ""
+"அறிவிலிஆய்வு தொஒ ச்கிரிப்ட் அடிப்படையிலான கட்டடங்களைப் பயன்படுத்தும் போது "
+"(பார்க்க: குறிப்பு: `கிட்லாப்-சிஐ`) மேலடுக்கு கோப்புகள் மற்றும் கோப்பகங்கள்`"
+" `மேலடுக்கு/கணினி`` கீழே உள்ள களஞ்சியத்தில் ரூட் கோப்பு முறைமையின் "
+"கட்டமைப்பை பிரதிபலிக்கும் ஒரு அடைவு மரத்தில் வைக்க வேண்டும்."
 
 #: ../../porting/configure_test_fix/Overlay.rst:151
 msgid ""
@@ -13749,6 +14058,11 @@ msgid ""
 "but can cause problem when the overlaid file gets updated in the base system"
 " as part of the delta upgrade. Ubuntu Touch 16.04 supports only this mode."
 msgstr ""
+"இயல்பாக, பில்ட் சிச்டம் கோப்பை நேரடியாக கோப்பு முறைமையில் மேலெழுதும். இது "
+"ரூட்எஃப்எச்சில் தன்னிச்சையான கோப்புகளைச் சேர்க்க அனுமதிக்கிறது, ஆனால் டெல்டா"
+" மேம்படுத்தலின் ஒரு பகுதியாக அடிப்படை அமைப்பில் மேலெழுதப்பட்ட கோப்பு "
+"புதுப்பிக்கப்படும்போது சிக்கலை ஏற்படுத்தும். உபுண்டு டச் 16.04 இந்த "
+"பயன்முறையை மட்டுமே ஆதரிக்கிறது."
 
 #: ../../porting/configure_test_fix/Overlay.rst:153
 msgid ""
@@ -13762,6 +14076,17 @@ msgid ""
 "``/opt/halium-overlay`` in the system, and gets mounted in the same way as "
 "``system.img`` builds. Thus, the same config and limitations apply."
 msgstr ""
+"உபுண்டு டச் 16.04 கோப்புகளை மேலெழுதுவதன் மூலம் மேலெழுதும் மட்டுமே "
+"அனுமதிக்கிறது, உபுண்டு டச் 20.04 அல்லது அதற்குப் பிறகு பதிப்புகளின் "
+"விசயத்தில் மவுண்ட் அடிப்படையிலான மேலடுக்கு கோப்புகள் அதற்கு பதிலாக "
+"பயன்படுத்தப்பட வேண்டும். துறைமுகத்தின் `` DeviceInfo`` இல் `` "
+"DeviceInfo_use_overlayStore = \"உண்மை\" `` என்பதைக் குறிப்பிடுவதன் மூலம் "
+"இதைச் செய்யலாம். துறைமுகம் பகிரப்பட்ட கட்டிட ச்கிரிப்டைப் பயன்படுத்தவில்லை "
+"என்றால், அது பகிரப்பட்ட உருவாக்க ச்கிரிப்டுக்கும் மாற வேண்டும் (பார்க்க: "
+"குறிப்பு: `UpdatePortsfor2004`). விருப்பம் அமைக்கப்படும்போது, ​​கணினியில் "
+"``/opt/halium-overlay`` க்குள் கோப்பு முடிவடைவதை உருவாக்க ச்கிரிப்ட் உறுதி "
+"செய்கிறது, மேலும் `` system.img`` உருவாக்கும் அதே வழியில் ஏற்றப்படுகிறது. "
+"இதனால், அதே கட்டமைப்பு மற்றும் வரம்புகள் பொருந்தும்."
 
 #: ../../porting/configure_test_fix/Overlay.rst:158
 msgid ""
@@ -13772,6 +14097,10 @@ msgid ""
 "``overlay/system/etc/ubuntu-touch-session.d/android.conf`` in the "
 "repository."
 msgstr ""
+"மேலே உள்ள எடுத்துக்காட்டைப் பின்பற்றி, `/lib/udev/roves.d/70-android.rules``"
+" மற்றும்` `/etc/ubuntu-touch-session.d/android.conf`` "
+"`மேலடுக்கு/சிச்டம்/லிப்/யு.டி. `` மேலடுக்கு/கணினி/etc/ubuntu-touch-"
+"session.d/android.conf`` களஞ்சியத்தில்."
 
 #: ../../porting/configure_test_fix/Overlay.rst:160
 msgid ""
@@ -13779,6 +14108,9 @@ msgid ""
 " 20.04, the files will end up in ``/opt/halium-overlay/``, and will be bind-"
 "mounted into their respective places."
 msgstr ""
+"`` Deviceinfo_use_overlaystore = \"உண்மை\" `` உபுண்டு டச் 20.04 உடன் "
+"இயங்கும் துறைமுகங்களுக்கு, கோப்புகள் ``/opt/Halium-overlay/`` இல் "
+"முடிவடையும், மேலும் அந்தந்த இடங்களில் பொருத்தப்படும்."
 
 #: ../../porting/configure_test_fix/Overlay.rst:162
 msgid ""
@@ -13786,10 +14118,13 @@ msgid ""
 "``deviceinfo_use_overlaystore=\"true\"``, the files on the root filesystem "
 "will be overwritten due to the lack of mount-based overlay files."
 msgstr ""
+"`` DeviceInfo_use_overlayStore = \"உண்மை\" `` இல்லாமல் உபுண்டு டச் 16.04 "
+"அல்லது துறைமுகம் விசயத்தில், ரூட் கோப்பு முறைமையில் உள்ள கோப்புகள் மவுண்ட் "
+"அடிப்படையிலான மேலடுக்கு கோப்புகள் இல்லாததால் மேலெழுதப்படும்."
 
 #: ../../porting/configure_test_fix/Overlay.rst:165
 msgid "Building on GitLab CI"
-msgstr ""
+msgstr "அறிவிலிஆய்வு சி.ஐ."
 
 #: ../../porting/configure_test_fix/Overlay.rst:167
 msgid ""
@@ -13801,10 +14136,18 @@ msgid ""
 "overlay`` will be mounted onto their final locations which are derived from "
 "their path relative to the designated base directory."
 msgstr ""
+"மேலடுக்கு கோப்புகளைச் சேர்த்த பிறகு அல்லது மாற்றிய பின் அறிவிலிஆய்வு தொஒ "
+"ச்கிரிப்ட்களை `படி இயக்க வேண்டும் <https://gitlab.com/ubports/community-"
+"ports/android9/xiaomi-redmi-pro-p-pro/xiaomi-"
+"violet//blob/plob/plob/master/master/master/matmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmdmy."
+" துவக்க கோப்புகளில் மற்றும்-உபுண்டு டச் 20.04 அல்லது அதற்குப் "
+"பிறகு-``/opt/Halium-overlay`` இல் குறிக்கப்பட்ட கோப்பகங்கள் அவற்றின் இறுதி "
+"இடங்களில் பொருத்தப்படும், அவை நியமிக்கப்பட்ட அடிப்படை கோப்பகத்துடன் "
+"தொடர்புடைய பாதையிலிருந்து பெறப்படுகின்றன."
 
 #: ../../porting/configure_test_fix/Sound.rst:2
 msgid "Sound"
-msgstr ""
+msgstr "ஒலி"
 
 #: ../../porting/configure_test_fix/Sound.rst:4
 msgid ""
@@ -13814,6 +14157,11 @@ msgid ""
 "in the `Ubuntu manpages "
 "<https://manpages.ubuntu.com/manpages/focal/man1/pulseaudio.1.html>`_"
 msgstr ""
+"உபுண்டு டச் பல்சியுடியோவை ஒலி சேவையகமாகப் பயன்படுத்துகிறது. ஆவணங்களை "
+"`fredesktop.org "
+"<https://www.freedesktop.org/wiki/software/pulseaudio/documentation/> _ _ "
+"மற்றும்` உபுண்டு மனிதப் பேச்களில் காணலாம் "
+"<https://manpages.ubuntu.com/manpages/focal/man1/pulseaudio.1.html>"
 
 #: ../../porting/configure_test_fix/Sound.rst:6
 msgid ""
@@ -13823,18 +14171,23 @@ msgid ""
 "and copy it to the ``ubuntu`` directory you created in your device repo (see"
 " :ref:`Overlay`)."
 msgstr ""
+"உபுண்டு தொடுதலில் பயன்படுத்தப்படும் இயல்புநிலை உள்ளமைவு கோப்பு `` "
+"douch.pa``. இந்த கோப்பு உங்கள் சாதனத்தில் ``/etc/wulse`` கோப்பகத்தில் "
+"அமைந்துள்ளது, மேலும் ஒலி சரியாக செயல்படுவதற்கு சரிசெய்தல் தேவைப்படும். "
+"கோப்பைப் பிரித்தெடுத்து, உங்கள் சாதன ரெப்போவில் நீங்கள் உருவாக்கிய `` "
+"உபுண்டு`` கோப்பகத்திற்கு நகலெடுக்கவும் (பார்க்க: குறிப்பு: `மேலடுக்கு`)."
 
 #: ../../porting/configure_test_fix/Sound.rst:8
 msgid "Locate the line::"
-msgstr ""
+msgstr "வரியைக் கண்டுபிடி ::"
 
 #: ../../porting/configure_test_fix/Sound.rst:12
 msgid "and replace it with this::"
-msgstr ""
+msgstr "இதை மாற்றவும் ::"
 
 #: ../../porting/configure_test_fix/Sound.rst:16
 msgid "At the end of the file, append this::"
-msgstr ""
+msgstr "கோப்பின் முடிவில், இதைச் சேர்க்கவும் ::"
 
 #: ../../porting/configure_test_fix/Sound.rst:23
 msgid ""
@@ -13842,10 +14195,13 @@ msgid ""
 "Follow :ref:`the overlay file method <Overlay-steps>` corresponding to your "
 "Halium version."
 msgstr ""
+"உங்கள் மாற்றியமைக்கப்பட்ட `` douch.pa`` கோப்பு இப்போது உங்கள் கட்டமைப்பில் "
+"சேர்க்கப்பட வேண்டும். பின்தொடர்: குறிப்பு: `மேலடுக்கு கோப்பு முறை "
+"<மேலடுக்கு-படிகள்>` உங்கள் ஆலியம் பதிப்போடு தொடர்புடையது."
 
 #: ../../porting/configure_test_fix/USBModed.rst:4
 msgid "Configuring usb-moded"
-msgstr ""
+msgstr "யூ.எச்.பி-பயமுறுத்திய கட்டமைத்தல்"
 
 #: ../../porting/configure_test_fix/USBModed.rst:7
 msgid ""
@@ -13853,6 +14209,9 @@ msgid ""
 "20.04. To make your port support Ubuntu Touch 20.04, see "
 ":ref:`UpdatePortsFor2004`."
 msgstr ""
+"உபுண்டு டச் 20.04 ஐ ஆதரிக்கும் துறைமுகங்களுக்கு இந்த பக்கத்தில் உள்ள "
+"தகவல்கள் பொருந்தும். உங்கள் துறைமுக ஆதரவை உபுண்டு டச் 20.04 ஆக மாற்ற, காண்க:"
+" குறிப்பு: `UpdatePortsfor2004`."
 
 #: ../../porting/configure_test_fix/USBModed.rst:9
 msgid ""
@@ -13860,6 +14219,11 @@ msgid ""
 "between USB modes e.g. MTP and developer mode. It replaces a number of ad-"
 "hoc Upstart jobs on 16.04, and ``setupusb`` script used by recent ports."
 msgstr ""
+"யூ.எச்.பி-மோடட் என்பது உபுண்டு டச் 20.04 இல் ஒரு புதிய டீமான் ஆகும், இது "
+"யூ.எச்.பி முறைகளுக்கு இடையிலான மாற்றங்களைக் கையாளுகிறது எ.கா. எம்டிபி "
+"மற்றும் உருவாக்குபவர் பயன்முறை. இது 16.04 இல் பல தற்காலிக அப்ச்டார்ட் "
+"வேலைகளையும், அண்மைக் கால துறைமுகங்களால் பயன்படுத்தப்படும் `` setupusb`` "
+"ச்கிரிப்டையும் மாற்றுகிறது."
 
 #: ../../porting/configure_test_fix/USBModed.rst:11
 msgid ""
@@ -13867,10 +14231,13 @@ msgid ""
 "work best, we encouraged porters to give some configurations to ensure best "
 "experience for porters."
 msgstr ""
+"கணினி பெரும்பாலான முக்கியமான அமைப்புகளைக் கண்டறிய முடியும். ஆனால் "
+"யூ.எச்.பி-பயமுறுத்தியதற்கு, போர்ட்டர்களுக்கு சிறந்த அனுபவத்தை உறுதிப்படுத்த "
+"சில உள்ளமைவுகளை வழங்க போர்ட்டர்களை ஊக்குவித்தோம்."
 
 #: ../../porting/configure_test_fix/USBModed.rst:14
 msgid "History of the USB mode handling"
-msgstr ""
+msgstr "யூ.எச்.பி பயன்முறை கையாளுதலின் வரலாறு"
 
 #: ../../porting/configure_test_fix/USBModed.rst:16
 msgid ""
@@ -13878,6 +14245,9 @@ msgid ""
 "phone's USB configuration. This worked well in the past, but today it "
 "doesn't work anymore:"
 msgstr ""
+"உபுண்டு டச் 16.04 இல், தொலைபேசியின் யூ.எச்.பி உள்ளமைவை சேமித்து அமைக்க "
+"ஆண்ட்ராய்டு பண்புகளைப் பயன்படுத்தினோம். இது கடந்த காலத்தில் நன்றாக வேலை "
+"செய்தது, ஆனால் இன்று அது இனி வேலை செய்யாது:"
 
 #: ../../porting/configure_test_fix/USBModed.rst:18
 msgid ""
@@ -13885,12 +14255,17 @@ msgid ""
 "Upstart to drive state transition is not going in. Besides, the signal "
 "concept doesn't seem to exist in Systemd."
 msgstr ""
+"ஆலியம் 7.1 இலிருந்து, அண்ட்ராய்டு பக்கத்தில் உள்ள கூறு, நிலை மாற்றத்தை "
+"இயக்குவதற்கு சிக்னலை அனுப்பும் சிக்னலை அனுப்புகிறது. தவிர, சிக்னல் கருத்து "
+"சிச்டம்.டி.யில் இருப்பதாகத் தெரியவில்லை."
 
 #: ../../porting/configure_test_fix/USBModed.rst:19
 msgid ""
 "From Android 8, USB mode configuration code moved into a vendor-controlled "
 "HAL process which talks over HIDL."
 msgstr ""
+"இருந்து ஆண்ட்ராய்டு 8, USB பயன்முறை உள்ளமைவு குறியீடு moved into a vendor-"
+"controlled HAL process which talks வீச்சலகு HIDL."
 
 #: ../../porting/configure_test_fix/USBModed.rst:21
 msgid ""
@@ -13898,6 +14273,10 @@ msgid ""
 "which runs at boot to configure the USB mode once. And when a basic things "
 "like this gets pushed to porters, inevitably it leads to fragmentation."
 msgstr ""
+"இது போர்ட்டர்கள் `` setupusb`` போன்ற தற்காலிக ச்கிரிப்டை நாட வழிவகுத்தது, "
+"இது யூ.எச்.பி பயன்முறையை ஒரு முறை கட்டமைக்க துவக்கத்தில் இயங்குகிறது. இது "
+"போன்ற ஒரு அடிப்படை விசயங்கள் போர்ட்டர்களுக்குத் தள்ளப்படும்போது, ​​தவிர்க்க "
+"முடியாமல் அது துண்டு துண்டாக வழிவகுக்கிறது."
 
 #: ../../porting/configure_test_fix/USBModed.rst:23
 msgid ""
@@ -13907,10 +14286,16 @@ msgid ""
 "detect many of those settings, but it cannot detect everything. So, some "
 "configuration from the porters is still required."
 msgstr ""
+"உபுண்டு டச் 20.04 இல், நாங்கள் யூ.எச்.பி-பயமுறுத்தியதாக மாறுகிறோம், இது "
+"படகில் இருந்து தோன்றும் ஒரு டீமான் ஆகும். டீமான் ஆண்ட்ராய்டு பண்புகளை "
+"நம்பவில்லை, ஆனால் உள்ளமைவு தேவைப்படுகிறது. அந்த அமைப்புகளில் பலவற்றை தானாக "
+"கண்டறியும் ஒரு \"உள்ளமைவாளரை\" நாங்கள் உருவாக்கியுள்ளோம், ஆனால் அது "
+"எல்லாவற்றையும் கண்டறிய முடியாது. எனவே, போர்ட்டர்களிடமிருந்து சில உள்ளமைவுகள்"
+" இன்னும் தேவை."
 
 #: ../../porting/configure_test_fix/USBModed.rst:26
 msgid "The basic configurations"
-msgstr ""
+msgstr "அடிப்படை உள்ளமைவுகள்"
 
 #: ../../porting/configure_test_fix/USBModed.rst:28
 msgid ""
@@ -13919,14 +14304,17 @@ msgid ""
 "The file is in a simple ``<key>=<value>`` format. An example of it is as "
 "below:"
 msgstr ""
+"முக்கிய உள்ளமைவு ``/etc/USB-moded.d/device- குறிப்பிட்ட-config.conf`` இல் "
+"உள்ளது. கோப்பு எளிமையான `` <விசை> = <மதிப்பு> `` வடிவத்தில் உள்ளது. அதற்கு "
+"ஒரு எடுத்துக்காட்டு கீழே உள்ளது:"
 
 #: ../../porting/configure_test_fix/USBModed.rst:39
 msgid "The following can be configure:"
-msgstr ""
+msgstr "பின்வருபவை உள்ளமைக்கப்படலாம்:"
 
 #: ../../porting/configure_test_fix/USBModed.rst:42
 msgid "USB vendor & product IDs"
-msgstr ""
+msgstr "யூ.எச்.பி விற்பனையாளர் மற்றும் தயாரிப்பு ஐடிகள்"
 
 #: ../../porting/configure_test_fix/USBModed.rst:44
 msgid ""
@@ -13934,50 +14322,58 @@ msgid ""
 "the system will fallback to the test code from `pid.codes project "
 "<https://pid.codes/pids/>`_."
 msgstr ""
+"பின்வரும் உள்ளமைவுகள் அமைக்க மிகவும் பரிந்துரைக்கப்பட்டுள்ளன. இது இல்லாமல், "
+"கணினி `pid.codes திட்டத்திலிருந்து <https://pid.codes/pids/> _ _ இலிருந்து "
+"சோதனைக் குறியீட்டைக் குறைக்கும்."
 
 #: ../../porting/configure_test_fix/USBModed.rst:46
 msgid "IDVENDOR"
-msgstr ""
+msgstr "Idvendor"
 
 #: ../../porting/configure_test_fix/USBModed.rst:47
 msgid "IDPRODUCT_MTP"
-msgstr ""
+msgstr "Idproduct_mtp"
 
 #: ../../porting/configure_test_fix/USBModed.rst:48
 msgid "IDPRODUCT_MTP_ADB"
-msgstr ""
+msgstr "Idproduct_mtp_adb"
 
 #: ../../porting/configure_test_fix/USBModed.rst:49
 msgid "IDPRODUCT_RNDIS"
-msgstr ""
+msgstr "Idproduct_rndis"
 
 #: ../../porting/configure_test_fix/USBModed.rst:50
 msgid "IDPRODUCT_RNDIS_ADB"
-msgstr ""
+msgstr "Idproduct_rndis_adb"
 
 #: ../../porting/configure_test_fix/USBModed.rst:52
 msgid ""
 "It accepts the IDs in hexadecimal without ``0x`` prefix. The IDs could be "
 "found in:"
 msgstr ""
+"இது `` 0x`` முன்னொட்டு இல்லாமல் ஐடிகளை எக்சாடெசிமலில் ஏற்றுக்கொள்கிறது. "
+"ஐடிகளை இதில் காணலாம்:"
 
 #: ../../porting/configure_test_fix/USBModed.rst:54
 msgid "Your device's ``init.<device>.rc`` or ``init.<chipset>.rc``."
-msgstr ""
+msgstr "உங்கள் சாதனத்தின் `` init. <device> .rc`` அல்லது `` init."
 
 #: ../../porting/configure_test_fix/USBModed.rst:55
 msgid "Your device's USB HAL source code, if it happens to ship one."
 msgstr ""
+"உங்கள் சாதனத்தின் யூ.எச்.பி ஆல் மூலக் குறியீடு, ஒன்றை அனுப்ப நேர்ந்தால்."
 
 #: ../../porting/configure_test_fix/USBModed.rst:56
 msgid "Your device's ``setupusb`` script, if available."
-msgstr ""
+msgstr "உங்கள் சாதனத்தின் `` setupusb`` ச்கிரிப்ட் கிடைத்தால்."
 
 #: ../../porting/configure_test_fix/USBModed.rst:58
 msgid ""
 "Failing that, you might have to probe how your device shows up when booted "
 "on Android."
 msgstr ""
+"அது தோல்வியுற்றால், ஆண்ட்ராய்டு இல் துவக்கும்போது உங்கள் சாதனம் எவ்வாறு "
+"காண்பிக்கப்படும் என்பதை நீங்கள் ஆராய வேண்டும்."
 
 #: ../../porting/configure_test_fix/USBModed.rst:61
 msgid ""
@@ -13986,10 +14382,15 @@ msgid ""
 "<https://gitlab.com/ubports/development/core/packaging/usb-"
 "moded/-/issues/5>`_."
 msgstr ""
+"சில சாதனங்கள் வெவ்வேறு முறைகளுக்கு வெவ்வேறு விற்பனையாளர் ஐடிகளைப் "
+"பயன்படுத்துகின்றன என்பதை நாங்கள் அறிவோம். உங்கள் சாதனம் அவற்றில் ஒன்று "
+"என்றால், தயவுசெய்து `இந்த சிக்கலை அறிவிலிஆய்வு "
+"<https://gitlab.com/ubports/development/core/packaging/usb-"
+"moded/-/issues/5>` _."
 
 #: ../../porting/configure_test_fix/USBModed.rst:64
 msgid "Devices' pretty name"
-msgstr ""
+msgstr "சாதனங்களின் அழகான பெயர்"
 
 #: ../../porting/configure_test_fix/USBModed.rst:66
 msgid ""
@@ -13998,18 +14399,22 @@ msgid ""
 "not correct or you would like the device to display differently, it can be "
 "configured here."
 msgstr ""
+"கணினியில் செருகப்படும்போது இது காண்பிக்கப்படும் பெயர். பெரும்பாலான "
+"நேரங்களில், இதை நாங்கள் ஆண்ட்ராய்டு பண்புகளிலிருந்து கண்டறிய முடியும், ஆனால்"
+" கண்டறிதல் சரியாக இல்லாவிட்டால் அல்லது சாதனம் வித்தியாசமாகக் காண்பிக்க "
+"விரும்பினால், அதை இங்கே கட்டமைக்க முடியும்."
 
 #: ../../porting/configure_test_fix/USBModed.rst:68
 msgid "MANUFACTURER"
-msgstr ""
+msgstr "உற்பத்தியாளர்"
 
 #: ../../porting/configure_test_fix/USBModed.rst:69
 msgid "PRODUCT"
-msgstr ""
+msgstr "தயாரிப்பு"
 
 #: ../../porting/configure_test_fix/USBModed.rst:72
 msgid "usb-moded's arguments"
-msgstr ""
+msgstr "யூ.எச்.பி-பயமுறுத்திய வாதங்கள்"
 
 #: ../../porting/configure_test_fix/USBModed.rst:74
 msgid ""
@@ -14020,14 +14425,21 @@ msgid ""
 "it's recommended that porters config this value to the blank value to "
 "disable the rescue mode."
 msgstr ""
+"இந்த உள்ளமைவு யூ.எச்.பி-பயமுறுத்தும் டீமனின் ஏவல் கொடியைக் "
+"கட்டுப்படுத்துகிறது. பெரும்பாலான நேரங்களில், யூ.எச்.பி-மாடல் எந்த கொடியும் "
+"இல்லாமல் வேலை செய்ய வேண்டும். இருப்பினும், ரூட்எஃப்எச் இயல்புநிலையை `` -r`` "
+"உடன் அனுப்புகிறது, இது துவக்கத்தின் போது மீட்பு பயன்முறையை செயல்படுத்துகிறது"
+" (கீழே காண்க). மீட்பு பயன்முறையின் நடத்தை இறுதி பயனர்களுக்கு குழப்பத்தை "
+"ஏற்படுத்தும், எனவே மீட்பு பயன்முறையை முடக்க போர்ட்டர்கள் இந்த மதிப்பை வெற்று"
+" மதிப்புக்கு உள்ளமைக்க பரிந்துரைக்கப்படுகிறது."
 
 #: ../../porting/configure_test_fix/USBModed.rst:76
 msgid "USB_MODED_ARGS"
-msgstr ""
+msgstr "USB_MODED_ARGS"
 
 #: ../../porting/configure_test_fix/USBModed.rst:79
 msgid "About usb-moded's rescue mode"
-msgstr ""
+msgstr "யூ.எச்.பி-பயமுறுத்தும் மீட்பு முறை பற்றி"
 
 #: ../../porting/configure_test_fix/USBModed.rst:81
 msgid ""
@@ -14038,6 +14450,13 @@ msgid ""
 "debug issues during the development, and thus it will stay in that mode "
 "until the cable is re-plugged."
 msgstr ""
+"யூ.எச்.பி-பயமுறுத்தும் மீட்பு முறை ஐப்ரிச்-யு.எச்.பியின் யூ.எச்.பி-டெதரிங் "
+"பயன்முறையைப் போன்றது. இது தொலைபேசியின் யூ.எச்.பி ஒரு பிணைய இடைமுகமாக செயல்பட"
+" உதவுகிறது, மேலும் டி.எச்.சி.பி சேவையகத்தைத் தொடங்குகிறது. தொலைபேசி "
+"10.15.19.82 இல் கிடைக்கும், மேலும் அவசரகால பாஓடு சேவையகம் துறைமுகம் 8022 இல்"
+" கிடைக்கும். இது வளர்ச்சியின் போது போர்ட்டர்கள் சிக்கல்களை பிழைத்திருத்த "
+"வேண்டும், எனவே கேபிள் மீண்டும் சறுக்கப்படும் வரை அந்த பயன்முறையில் "
+"இருக்கும்."
 
 #: ../../porting/configure_test_fix/USBModed.rst:83
 msgid ""
@@ -14046,6 +14465,10 @@ msgid ""
 "before making the port available to users by overriding ``USB_MODED_ARGS`` "
 "as discussed above."
 msgstr ""
+"இந்த நடத்தை போர்ட்டர்களுக்கு உதவியாக இருக்கும். இருப்பினும், துறைமுகம் "
+"அனுப்பப்படும்போது இது இறுதி பயனர்களுக்கு குழப்பத்தை ஏற்படுத்தும். எனவே மேலே "
+"விவாதிக்கப்பட்டபடி `` USB_MODED_ARGS`` ஐ மீறுவதன் மூலம் பயனர்களுக்குக் "
+"கிடைக்கச் செய்வதற்கு முன் இந்த பயன்முறையை முடக்க பரிந்துரைக்கிறேன்."
 
 #: ../../porting/configure_test_fix/USBModed.rst:85
 msgid ""
@@ -14055,16 +14478,23 @@ msgid ""
 " translate to ``/data/.force-ssh`` or ``/data/.force-adb`` in the recovery),"
 " and the system will make sure the correct mode is enabled."
 msgstr ""
+"கிடைக்கக்கூடிய மற்றொரு மீட்பு நற்பொருத்தம், யூ.எச்.பி-பயமுறுத்தியதை \"மீட்பு"
+" முறை\" க்குச் செல்ல அல்லது ஒவ்வொரு துவக்கத்திலும் ADB ஐ இயக்க "
+"கட்டாயப்படுத்தும் திறன். வெற்று கோப்பை ``/பயனர் டேட்டா/.ஃபோர்ச்-எச்.எச்.எச்`"
+" அல்லது ``/பயனர் டேட்டா/.ஃபோர்ச்-ஏடிபி`` (இது ``/தரவு/.ஃபோர்ச்-எச்.எச்.எச்` "
+"அல்லது ``/தரவு/."
 
 #: ../../porting/configure_test_fix/USBModed.rst:88
 msgid ""
 "If using ADB, you may also have to disable ADB authorization prompt. See "
 ":ref:`AdbdAuthz`."
 msgstr ""
+"ADB ஐப் பயன்படுத்தினால், நீங்கள் ADB அங்கீகார வரியில் முடக்க "
+"வேண்டியிருக்கும். காண்க: குறிப்பு: `adbdauthz`."
 
 #: ../../porting/configure_test_fix/USBModed.rst:91
 msgid "Configuring usb-moded directly"
-msgstr ""
+msgstr "யூ.எச்.பி-பயமுறுத்தியதை நேரடியாக கட்டமைத்தல்"
 
 #: ../../porting/configure_test_fix/USBModed.rst:93
 msgid ""
@@ -14076,30 +14506,43 @@ msgid ""
 "moded's docs <https://github.com/sailfishos/usb-"
 "moded/blob/master/docs/usb_moded-doc.txt>` for the syntax."
 msgstr ""
+"உள்ளமைவு ச்கிரிப்டுக்கான முறுக்குதல் விருப்பங்களைத் தவிர, போர்ட்டர்கள் "
+"யூ.எச்.பி-பயமுறுத்திய விருப்பங்களை நேரடியாக ``/etc/USB- "
+"பொருத்தப்பட்ட/90-DEVICE- குறிப்பிட்ட-config.ini`` வழியாக அமைக்கலாம். "
+"இருப்பினும், தானியங்கி கண்டறிதல் தோல்வியுற்றால் இது ஒரு தப்பிக்கும் அட்ச் என"
+" கருதப்படுகிறது, மேலும் இந்த கோப்பைப் பயன்படுத்த வேண்டும் என்று நீங்கள் "
+"கண்டறிந்தால், யூ.எச்.பி-பயமுறுத்தும் பேக்கேசிங் களஞ்சியத்தில் சிக்கலை "
+"தாக்கல் செய்வதைக் கவனியுங்கள். தொடரியல் `யூ.எச்.பி-மாடட் டாக்ச் "
+"<https://github.com/sailfishos/usb-moded/blob/master/docs/usb_moded-"
+"doc.txt>` ஐப் பார்க்கவும்."
 
 #: ../../porting/configure_test_fix/Wifi.rst:2
 msgid "Wifi"
-msgstr ""
+msgstr "வைஃபை"
 
 #: ../../porting/configure_test_fix/Wifi.rst:4
 msgid ""
 "For the time being, refer to `the Halium porting guide. "
 "<https://docs.halium.org/en/latest/porting/debug-build/wifi.html>`_"
 msgstr ""
+"தற்போதைக்கு, `ஆலியம் போர்ட்டிங் வழிகாட்டியைப் பார்க்கவும். "
+"<https://docs.halium.org/en/latest/porting/debug-build/wifi.html> `_"
 
 #: ../../porting/configure_test_fix/device_info/Ayatana-indicator-power.rst:4
 msgid "Ayatana-indicator-power"
-msgstr ""
+msgstr "அயாதானா-எச்கேட்டர்-பவர்"
 
 #: ../../porting/configure_test_fix/device_info/Ayatana-indicator-power.rst:6
 msgid "All deviceinfo keys used by ayatana-indicator-power are given below::"
 msgstr ""
+"அயாதானா-ஐச்கேட்டர்-சக்தி பயன்படுத்தும் அனைத்து சாதனத்தின் விசைகளும் கீழே "
+"கொடுக்கப்பட்டுள்ளன ::"
 
 #: ../../porting/configure_test_fix/device_info/Ayatana-indicator-power.rst:13
 #: ../../porting/configure_test_fix/device_info/HfdService.rst:12
 #: ../../porting/configure_test_fix/device_info/Repowerd.rst:15
 msgid "Device quirks"
-msgstr ""
+msgstr "சாதன வினோதங்கள்"
 
 #: ../../porting/configure_test_fix/device_info/Ayatana-indicator-power.rst:16
 #: ../../porting/configure_test_fix/device_info/HfdService.rst:15
@@ -14107,7 +14550,7 @@ msgstr ""
 #: ../../porting/configure_test_fix/device_info/Repowerd.rst:18
 #: ../../porting/configure_test_fix/device_info/index.rst:41
 msgid "Key"
-msgstr ""
+msgstr "விசை"
 
 #: ../../porting/configure_test_fix/device_info/Ayatana-indicator-power.rst:16
 #: ../../porting/configure_test_fix/device_info/HfdService.rst:15
@@ -14115,105 +14558,115 @@ msgstr ""
 #: ../../porting/configure_test_fix/device_info/Repowerd.rst:18
 #: ../../porting/configure_test_fix/device_info/index.rst:41
 msgid "Value(s)"
-msgstr ""
+msgstr "மதிப்பு (கள்)"
 
 #: ../../porting/configure_test_fix/device_info/Ayatana-indicator-power.rst:18
 msgid "FlashlightSysfsPath"
-msgstr ""
+msgstr "ஒளிரும் விளக்கு SYSFS பாதை"
 
 #: ../../porting/configure_test_fix/device_info/Ayatana-indicator-power.rst:18
 msgid ""
 "Specifies the path to flashlight node for Flashlight toggle in indicator."
-msgstr ""
+msgstr "ஒளிரும் விளக்குக்கு ஒளிரும் விளக்குக்கான பாதையை காட்டுகிறது."
 
 #: ../../porting/configure_test_fix/device_info/Ayatana-indicator-power.rst:18
 msgid "Path to flashlight node in /sys."
-msgstr ""
+msgstr "/Sys இல் ஒளிரும் விளக்குக்கான பாதை."
 
 #: ../../porting/configure_test_fix/device_info/Ayatana-indicator-power.rst:19
 msgid "FlashlightSwitchPath"
-msgstr ""
+msgstr "ஃப்ளாச்லைட்ச்விட்ச்பாத்"
 
 #: ../../porting/configure_test_fix/device_info/Ayatana-indicator-power.rst:19
 msgid ""
 "Specifies the path to the flashlight switch node needed for the kernel "
 "driver to actually turn on flashlight."
 msgstr ""
+"கர்னல் டிரைவர் உண்மையில் ஒளிரும் விளக்கை இயக்க தேவையான ஒளிரும் சுவிட்ச் "
+"முனைக்கான பாதையை குறிப்பிடுகிறது."
 
 #: ../../porting/configure_test_fix/device_info/Ayatana-indicator-power.rst:19
 msgid "Path to flashlight switch node in /sys."
-msgstr ""
+msgstr "ஒளிரும் விளக்கு சுவிட்ச் முனைக்கு /sys இல் பாதை."
 
 #: ../../porting/configure_test_fix/device_info/Ayatana-indicator-power.rst:25
 #: ../../porting/configure_test_fix/device_info/HfdService.rst:23
 #: ../../porting/configure_test_fix/device_info/Mir.rst:65
 #: ../../porting/configure_test_fix/device_info/Repowerd.rst:27
 msgid "Device ``sample`` using:"
-msgstr ""
+msgstr "சாதனம் `` மாதிரி`` பயன்படுத்துதல்:"
 
 #: ../../porting/configure_test_fix/device_info/Ayatana-indicator-power.rst:27
 msgid ""
 "Change flashlight path to \"/sys/class/leds/led:torch_0/brightness\" to "
 "resolve the issue where ayatana-indicator-power will choose the wrong node."
 msgstr ""
+"ஒளிரும் விளக்கு பாதையை \"/sys/class/Leds/Led: torch_0/பிரகாசம்” என "
+"மாற்றவும், அயடானா-கண்டறியும் ஆற்றல் தவறான முனையைத் தேர்ந்தெடுக்கும் "
+"சிக்கலைத் தீர்க்க."
 
 #: ../../porting/configure_test_fix/device_info/Ayatana-indicator-power.rst:28
 msgid "Change flashlight switch path so flashlight will actually turn on."
 msgstr ""
+"ஒளிரும் விளக்கு சுவிட்ச் பாதையை மாற்றவும், இதனால் ஒளிரும் விளக்கு உண்மையில் "
+"இயக்கப்படும்."
 
 #: ../../porting/configure_test_fix/device_info/Ayatana-indicator-power.rst:30
 #: ../../porting/configure_test_fix/device_info/HfdService.rst:27
 #: ../../porting/configure_test_fix/device_info/Mir.rst:72
 #: ../../porting/configure_test_fix/device_info/Repowerd.rst:33
 msgid "Config file::"
-msgstr ""
+msgstr "கட்டமைப்பு கோப்பு ::"
 
 #: ../../porting/configure_test_fix/device_info/HfdService.rst:4
 msgid "hfd-service"
-msgstr ""
+msgstr "எச்.எஃப்.டி-சேவை"
 
 #: ../../porting/configure_test_fix/device_info/HfdService.rst:6
 msgid "Overview of all hfd-service keys::"
-msgstr ""
+msgstr "அனைத்து HFD-சேவை விசைகளின் கண்ணோட்டம் ::"
 
 #: ../../porting/configure_test_fix/device_info/HfdService.rst:17
 msgid "VibrateDurationExtraMs"
-msgstr ""
+msgstr "வைப்ரேட்டரேசன் எக்ச்ட்ராம்கள்"
 
 #: ../../porting/configure_test_fix/device_info/HfdService.rst:17
 msgid "Milliseconds to extend all vibration calls by"
-msgstr ""
+msgstr "அனைத்து அதிர்வு அழைப்புகளையும் நீட்டிக்க மில்லி விநாடிகள்"
 
 #: ../../porting/configure_test_fix/device_info/HfdService.rst:17
 msgid "Any integer number"
-msgstr ""
+msgstr "எந்த முழு எண் எண்"
 
 #: ../../porting/configure_test_fix/device_info/HfdService.rst:25
 msgid ""
 "Extend vibrations by 50 milliseconds to feel the on-screen keyboard haptics "
 "on devices with simpler on/off vibration motors"
 msgstr ""
+"அதிர்வு மோட்டார்கள் எளிமையான/ஆஃப் அதிர்வு மோட்டார்கள் கொண்ட சாதனங்களில் "
+"திரையில் உள்ள விசைப்பலகை ஆப்டிக்சை உணர 50 மில்லி விநாடிகளால் அதிர்வுகளை "
+"நீட்டிக்கவும்"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:4
 msgid "Mir"
-msgstr ""
+msgstr "மிர்"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:6
 msgid "Overview of all Mir keys::"
-msgstr ""
+msgstr "அனைத்து மிர் விசைகளின் கண்ணோட்டம் ::"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:17
 msgid "mir-platform-android"
-msgstr ""
+msgstr "மைஆர்-பிளாட்ஃபார்ம்-ஆண்ட்ராய்டு"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:20
 msgid "Default value"
-msgstr ""
+msgstr "இயல்புநிலை மதிப்பு"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:22
 #: ../../porting/configure_test_fix/device_info/Mir.rst:31
 msgid "MirAndroidPlatformClientEglFlush"
-msgstr ""
+msgstr "மிரான்ட்ராய்டு பிளாட்ஃபார்ம் கிளியண்டெக்ல்ஃப்ச்"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:22
 #: ../../porting/configure_test_fix/device_info/Mir.rst:23
@@ -14222,168 +14675,188 @@ msgstr ""
 #: ../../porting/configure_test_fix/device_info/Mir.rst:26
 #: ../../porting/configure_test_fix/device_info/Mir.rst:27
 msgid "See below"
-msgstr ""
+msgstr "கீழே காண்க"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:22
 #: ../../porting/configure_test_fix/device_info/Mir.rst:23
 msgid "Comma-separated list (or special value \"all\")"
-msgstr ""
+msgstr "கமாவால் பிரிக்கப்பட்ட பட்டியல் (அல்லது சிறப்பு மதிப்பு \"அனைத்தும்\")"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:22
 #: ../../porting/configure_test_fix/device_info/Mir.rst:23
 msgid "Empty"
-msgstr ""
+msgstr "காலி"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:23
 #: ../../porting/configure_test_fix/device_info/Mir.rst:36
 msgid "MirAndroidPlatformClientFenceSync"
-msgstr ""
+msgstr "Mirandroidplatformclientfencesync"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:24
 #: ../../porting/configure_test_fix/device_info/Mir.rst:41
 msgid "MirAndroidPlatformServerBackpressure"
-msgstr ""
+msgstr "மிரான்ட்ராய்டு இயங்குதள சர்வர் பேக் அழுத்தம்"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:24
 #: ../../porting/configure_test_fix/device_info/Mir.rst:25
 #: ../../porting/configure_test_fix/device_info/Mir.rst:26
 #: ../../porting/configure_test_fix/device_info/Mir.rst:27
 msgid "Boolean"
-msgstr ""
+msgstr "பூலியன்"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:24
 #: ../../porting/configure_test_fix/device_info/Mir.rst:25
 #: ../../porting/configure_test_fix/device_info/Mir.rst:27
 msgid "False"
-msgstr ""
+msgstr "தவறு"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:25
 #: ../../porting/configure_test_fix/device_info/Mir.rst:46
 msgid "MirAndroidPlatformServerClearFbFence"
-msgstr ""
+msgstr "Mirandroidplatformserverclearfffence"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:26
 #: ../../porting/configure_test_fix/device_info/Mir.rst:51
 msgid "MirAndroidPlatformServerEglSync"
-msgstr ""
+msgstr "மிரான்ட்ராய்டு இயங்குதள சேவையக ஒத்திசைவு"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:26
 msgid "Launcher argument (``default``)"
-msgstr ""
+msgstr "துவக்கி உரையாடல் (`` இயல்புநிலை``)"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:27
 #: ../../porting/configure_test_fix/device_info/Mir.rst:58
 msgid "MirAndroidPlatformServerPartialUpdates"
-msgstr ""
+msgstr "Mirandroidplatformserverpartialupdates"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:33
 msgid ""
 "Force GL command buffer flush on eglSwapBuffers, in case the driver doesn't "
 "follow the spec."
 msgstr ""
+"இயக்கி விவரக்குறிப்பைப் பின்பற்றாவிட்டால், எக்எல்ச்வாப் பஃபர்சில் சி.எல் "
+"கட்டளை இடையக பறிப்பு."
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:38
 msgid "Classic fence-only synchronization without GL command buffer flushing."
-msgstr ""
+msgstr "சி.எல் கட்டளை இடையக பறிப்பு இல்லாமல் கிளாசிக் வேலி-மட்டும் ஒத்திசைவு."
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:43
 msgid ""
 "Allows redrawing to be skipped or not after a missed frame, similarly to "
 "SurfaceFlinger."
 msgstr ""
+"மேற்பரப்பு ஃபிங்கிங்கரைப் போலவே, தவறவிட்ட சட்டகத்திற்குப் பிறகு "
+"மறுவடிவமைப்பதைத் தவிர்க்கவோ இல்லையா?"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:48
 msgid ""
 "Framebuffer changes only continue after the fence has been successfully "
 "waited on."
 msgstr ""
+"வேலி வெற்றிகரமாக காத்திருந்த பின்னரே பிரேம் பஃபர் மாற்றங்கள் தொடர்கின்றன."
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:53
 msgid ""
 "Allow or avoid synchronization using EGL fencing primitives when drawing the"
 " screen."
 msgstr ""
+"திரையை வரையும்போது ஈசிஎல் ஃபென்சிங் ஆதிமனிதர்களைப் பயன்படுத்தி ஒத்திசைவை "
+"அனுமதிக்கவும் அல்லது தவிர்க்கவும்."
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:55
 msgid "Overrules existing launcher argument."
-msgstr ""
+msgstr "தற்போதுள்ள துவக்கி வாதத்தை மீறுகிறது."
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:60
 msgid "Allow partial redraws to HWC-assigned server-side buffers."
 msgstr ""
+"HWC- ஒதுக்கப்பட்ட சேவையக பக்க இடையகங்களுக்கு பகுதி மறுவடிவமைப்புகளை "
+"அனுமதிக்கவும்."
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:67
 msgid ""
 "Enabling egl flushing for every client except for ``lomiri`` and ``unity8``"
 msgstr ""
+"`` லோமிரி`` மற்றும் `` ஒற்றுமை 8`` தவிர ஒவ்வொரு வாடிக்கையாளருக்கும் ஈசிஎல் "
+"ஃப்ளசிங்கை செயல்படுத்துகிறது"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:68
 msgid ""
 "Note that you can use ``!`` to invert conditions and turn the `allow` into a"
 " `deny` list."
 msgstr ""
+"நிபந்தனைகளைத் தலைகீழாக மாற்றவும், `அனுமதி` ஒரு` மறுப்பு` பட்டியலாக மாற்றவும்"
+" நீங்கள் ``! `` பயன்படுத்தலாம் என்பதை நினைவில் கொள்க."
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:69
 msgid "Disabling egl sync for the server"
-msgstr ""
+msgstr "சேவையகத்திற்கான ஈசிஎல் ஒத்திசைவை முடக்குதல்"
 
 #: ../../porting/configure_test_fix/device_info/Mir.rst:70
 msgid "Enabling partial updates for the server"
-msgstr ""
+msgstr "சேவையகத்திற்கான பகுதி புதுப்பிப்புகளை செயல்படுத்துகிறது"
 
 #: ../../porting/configure_test_fix/device_info/Repowerd.rst:4
 msgid "Repowerd"
-msgstr ""
+msgstr "மறுபிரவேசம்"
 
 #: ../../porting/configure_test_fix/device_info/Repowerd.rst:6
 msgid "Overview of all repowerd keys::"
-msgstr ""
+msgstr "அனைத்து மறுபிரவேச விசைகளின் கண்ணோட்டம் ::"
 
 #: ../../porting/configure_test_fix/device_info/Repowerd.rst:20
 msgid "BacklightSysfsPath"
-msgstr ""
+msgstr "பின்னணியில் உள்ள பின்னணியில்"
 
 #: ../../porting/configure_test_fix/device_info/Repowerd.rst:20
 msgid "File path to backlight device"
-msgstr ""
+msgstr "பின்னொளி சாதனத்திற்கு கோப்பு பாதை"
 
 #: ../../porting/configure_test_fix/device_info/Repowerd.rst:20
 msgid "File path"
-msgstr ""
+msgstr "கோப்பு பாதை"
 
 #: ../../porting/configure_test_fix/device_info/Repowerd.rst:21
 msgid "DoubleTapToWake"
-msgstr ""
+msgstr "டபுள் டாப்டோஅக்"
 
 #: ../../porting/configure_test_fix/device_info/Repowerd.rst:21
 msgid "Configuration for toggling DT2W"
-msgstr ""
+msgstr "DT2W ஐ மாற்றுவதற்கான உள்ளமைவு"
 
 #: ../../porting/configure_test_fix/device_info/Repowerd.rst:21
 msgid "List of formatted strings: ``<path>|<enable>|<disable>``"
 msgstr ""
+"வடிவமைக்கப்பட்ட சரங்களின் பட்டியல்: `` <பாதை> | <இயக்கு> | <முடக்கு> ``"
 
 #: ../../porting/configure_test_fix/device_info/Repowerd.rst:29
 msgid ""
 "Custom backlight sysfs path to disable autodetection of the path controlling"
 " the backlight"
 msgstr ""
+"தனிப்பயன் பின்னொளி SYSF கள் பின்னொளியைக் கட்டுப்படுத்தும் பாதையின் "
+"தன்னியக்கத்தை முடக்குவதற்கான பாதை"
 
 #: ../../porting/configure_test_fix/device_info/Repowerd.rst:30
 msgid ""
 "Double Tap to Wake (DT2W) configuration to allow double tapping to wake the "
 "device, specifing two potential paths"
 msgstr ""
+"சாதனத்தை எழுப்ப இரட்டை தட்டுதல் அனுமதிக்க, இரண்டு சாத்தியமான பாதைகளைக் "
+"குறிப்பிடும் இரட்டை தட்டுவதற்கு இரட்டை தட்டவும் (DT2W) உள்ளமைவு"
 
 #: ../../porting/configure_test_fix/device_info/Repowerd.rst:31
 msgid ""
 "It is allowed to specify multiple entries, invalid or non-existant paths "
 "will be removed"
 msgstr ""
+"பல உள்ளீடுகளைக் குறிப்பிட இது அனுமதிக்கப்படுகிறது, தவறான அல்லது இல்லாத "
+"பாதைகள் அகற்றப்படும்"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:4
 msgid "DeviceInfo"
-msgstr ""
+msgstr "DeviceInfo"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:6
 msgid ""
@@ -14391,10 +14864,13 @@ msgid ""
 "accessed in an uniform way using `libdeviceinfo "
 "<https://gitlab.com/ubports/development/core/deviceinfo>`_."
 msgstr ""
+"சாதனத்தின் குறிப்பிட்ட உள்ளமைவை அமைக்க DeviceInfo அனுமதிக்கிறது, இதை "
+"`libdeviceinfo <https://gitlab.com/ubports/development/core/deviceinfo>` _ "
+"ஆகியவற்றைப் பயன்படுத்தி ஒரே மாதிரியான வழியில் அணுகலாம்."
 
 #: ../../porting/configure_test_fix/device_info/index.rst:9
 msgid "Device specific overrides"
-msgstr ""
+msgstr "சாதனம் குறிப்பிட்ட மேலெழுதல்கள்"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:11
 msgid ""
@@ -14403,12 +14879,19 @@ msgid ""
 "correct configuration to load based on model of the device, using android "
 "props for halium/android devices and dtb for native linux devices."
 msgstr ""
+"ஒரு சாதனத்திற்கு உள்ளமைவு கோப்புகள் ``/etc/deviceInfo/சாதனங்கள்/[சாதனம்] "
+".yaml`` இல் அமைந்துள்ளன. சாதனத்தின் மாதிரியின் அடிப்படையில் ஏற்றுவதற்கு "
+"சரியான உள்ளமைவை தானியங்கு/ஆண்ட்ராய்டு சாதனங்களுக்கான ஆண்ட்ராய்டு முட்டுகள் "
+"மற்றும் சொந்த லினக்ச் சாதனங்களுக்கான டிடிபி ஆகியவற்றைப் பயன்படுத்த "
+"முயற்சிக்கும்."
 
 #: ../../porting/configure_test_fix/device_info/index.rst:16
 msgid ""
 "This file needs to be all lowercase, as any autodetected device name will be"
 " converted to lowercase."
 msgstr ""
+"இந்த கோப்பு அனைத்து சிறிய எழுத்துக்களாக இருக்க வேண்டும், ஏனெனில் எந்தவொரு "
+"தன்னியக்க சாதனப் பெயரும் சிறிய எழுத்துக்கு மாற்றப்படும்."
 
 #: ../../porting/configure_test_fix/device_info/index.rst:18
 msgid ""
@@ -14416,6 +14899,9 @@ msgid ""
 "``/etc/deviceinfo/devices/flo.yaml`` and needs to start with the device's "
 "name::"
 msgstr ""
+"எடுத்துக்காட்டாக, நெக்சச் 7 டேப்லெட் (FLO) க்கான கோப்பு "
+"``/etc/deviceInfo/சாதனங்கள்/flo.yaml`` இல் அமைந்திருக்கும், மேலும் "
+"சாதனத்தின் பெயருடன் தொடங்க வேண்டும் ::"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:28
 msgid ""
@@ -14424,6 +14910,11 @@ msgid ""
 "`configuration bringup for bonito/sargo "
 "<https://github.com/fredldotme/android_device_google_bonito/commit/d0ca48aadcde0b74840c3394ac86042033d7f846>`_."
 msgstr ""
+"நீங்கள் ரூட்எஃப்எச்சில் புதிய கோப்பைச் சேர்க்க முடியாவிட்டால், நீங்கள் "
+"``/etc/deviceInfo/சாதனங்கள்/halium.yaml`` ஐ பிணைக்கலாம். ஒரு குறிப்புக்கு, "
+"போனிடோ/சர்கோ "
+"<https://github.com/fredldotme/android_device_google_bonito/commit/d0ca48aadcde0b74840c3394ac860420420333D7F46>"
+" ஐக் காண்க."
 
 #: ../../porting/configure_test_fix/device_info/index.rst:31
 msgid ""
@@ -14432,6 +14923,11 @@ msgid ""
 "``/etc/deviceinfo/default.yaml``. Keep your configuration simple and try to "
 "not duplicate any entries, which are already defined in ``default.yaml``."
 msgstr ""
+"சாதன கட்டமைப்பிற்கு எந்த சாதன குறிப்பிட்ட உள்ளமைவும் இல்லை அல்லது ஒரு விசை "
+"குறிப்பிடப்படவில்லை எனில், சாதனம் இன்ஃபோ ``/etc/deviceInfo/default.yaml`` "
+"க்கு குறைகிறது. உங்கள் உள்ளமைவை எளிமையாக வைத்திருங்கள், ஏற்கனவே `` "
+"இயல்புநிலை.யாம்ல்`` இல் வரையறுக்கப்பட்டுள்ள எந்த உள்ளீடுகளையும் நகலெடுக்க "
+"வேண்டாம்."
 
 #: ../../porting/configure_test_fix/device_info/index.rst:34
 msgid ""
@@ -14439,59 +14935,62 @@ msgid ""
 "allows for a lot of flexibility, however keys should be properly documented "
 "in order to not duplicate keys."
 msgstr ""
+"எந்தவொரு விசையும் சாதனத்தைப் பயன்படுத்துவதற்கு தேவையில்லாமல் சேர்க்கலாம். "
+"இது நிறைய நெகிழ்வுத்தன்மையை அனுமதிக்கிறது, இருப்பினும் விசைகளை நகலெடுக்காமல்"
+" இருக்க விசைகள் சரியாக ஆவணப்படுத்தப்பட வேண்டும்."
 
 #: ../../porting/configure_test_fix/device_info/index.rst:38
 msgid "Built-in config keys"
-msgstr ""
+msgstr "உள்ளமைக்கப்பட்ட கட்டமைப்பு விசைகள்"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:43
 msgid "Device name / codename"
-msgstr ""
+msgstr "சாதனத்தின் பெயர் / குறியீட்டு பெயர்"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:43
 #: ../../porting/configure_test_fix/device_info/index.rst:44
 msgid "Any string"
-msgstr ""
+msgstr "எந்த சரம்"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:44
 msgid "PrettyName"
-msgstr ""
+msgstr "அழகான பெயர்"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:44
 msgid "Pretty name of the device"
-msgstr ""
+msgstr "சாதனத்தின் அழகான பெயர்"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:45
 msgid "DeviceType"
-msgstr ""
+msgstr "Devicetype"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:45
 msgid "Sets device type"
-msgstr ""
+msgstr "சாதன வகையை அமைக்கிறது"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:45
 msgid "desktop, tablet, phone"
-msgstr ""
+msgstr "டெச்க்டாப், டேப்லெட், தொலைபேசி"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:46
 msgid "GridUnit"
-msgstr ""
+msgstr "கட்டம்"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:46
 msgid "Sets scale units"
-msgstr ""
+msgstr "அளவிலான அலகுகளை அமைக்கிறது"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:46
 msgid "Any integer"
-msgstr ""
+msgstr "எந்த முழு எண்"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:47
 msgid "SupportedOrientations"
-msgstr ""
+msgstr "துணை நிறுவனங்கள்"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:47
 msgid "Orientations supported by the device"
-msgstr ""
+msgstr "சாதனத்தால் ஆதரிக்கப்படும் நோக்குநிலைகள்"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:47
 #: ../../porting/configure_test_fix/device_info/index.rst:48
@@ -14500,55 +14999,55 @@ msgstr ""
 #: ../../porting/configure_test_fix/device_info/index.rst:51
 #: ../../porting/configure_test_fix/device_info/index.rst:52
 msgid "Portrait, InvertedPortrait, Landscape, InvertedLandscape"
-msgstr ""
+msgstr "உருவப்படம், தலைகீழ் நபர்கள், நிலப்பரப்பு, தலைகீழ் நிலப்பரப்பு"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:48
 msgid "PrimaryOrientation"
-msgstr ""
+msgstr "முதன்மை சார்ந்த"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:48
 msgid "Primary orientation of the device"
-msgstr ""
+msgstr "சாதனத்தின் முதன்மை நோக்குநிலை"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:49
 msgid "PortraitOrientation"
-msgstr ""
+msgstr "உருவப்படம்"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:49
 msgid "Orientation of the device when in portrait mode"
-msgstr ""
+msgstr "உருவப்பட பயன்முறையில் இருக்கும்போது சாதனத்தின் நோக்குநிலை"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:50
 msgid "InvertedPortraitOrientation"
-msgstr ""
+msgstr "தலைகீழ் உருவப்படம் நோக்குநிலை"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:50
 msgid "Orientation of the device when in inverted portrait mode"
-msgstr ""
+msgstr "தலைகீழ் உருவப்படம் பயன்முறையில் இருக்கும்போது சாதனத்தின் நோக்குநிலை"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:51
 msgid "LandscapeOrientation"
-msgstr ""
+msgstr "நிலப்பரப்பு"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:51
 msgid "Orientation of the device when in landscape mode"
-msgstr ""
+msgstr "சாதனத்தின் நோக்குநிலை இயற்கை பயன்முறையில் இருக்கும்போது"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:52
 msgid "InvertedLandscapeOrientation"
-msgstr ""
+msgstr "தலைகீழ் இயற்கை நோக்குநிலை"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:52
 msgid "Orientation of the device when in inverted landscape mode"
-msgstr ""
+msgstr "தலைகீழ் இயற்கை பயன்முறையில் இருக்கும்போது சாதனத்தின் நோக்குநிலை"
 
 #: ../../porting/configure_test_fix/device_info/index.rst:55
 msgid "Other keys are documented in the component specific subpages."
-msgstr ""
+msgstr "பிற விசைகள் கூறு குறிப்பிட்ட துணைப்பாடுகளில் ஆவணப்படுத்தப்பட்டுள்ளன."
 
 #: ../../porting/configure_test_fix/index.rst:2
 msgid "Configuring, testing and fixing"
-msgstr ""
+msgstr "கட்டமைத்தல், சோதனை மற்றும் சரிசெய்தல்"
 
 #: ../../porting/configure_test_fix/index.rst:4
 msgid ""
@@ -14557,6 +15056,10 @@ msgid ""
 "functionality that needs configuring. This section explains how to perform "
 "these tasks."
 msgstr ""
+"இப்போது நீங்கள் உங்கள் கட்டமைப்பை வெற்றிகரமாக துவக்கிவிட்டீர்கள், நீங்கள் "
+"வரைகலை இடைமுகம் ஐ கொண்டு வரவும், உங்கள் துறைமுகத்தில் Apparmor ஐ "
+"ஒன்றிணைக்கவும், கட்டமைக்க வேண்டிய மீதமுள்ள செயல்பாட்டைப் பார்க்கவும் தயாராக "
+"உள்ளீர்கள். இந்த பணிகளை எவ்வாறு செய்வது என்பதை இந்த பிரிவு விளக்குகிறது."
 
 #: ../../porting/configure_test_fix/index.rst:6
 msgid ""
@@ -14569,12 +15072,24 @@ msgid ""
 "function properly, you may have to resort to building a device-specific "
 "``system.img`` in order to reach your goal."
 msgstr ""
+"நீங்கள் ஒரு சி.எச்.ஐ போர்ட்டைச் செய்கிறீர்கள் என்றால், எல்லா சாதன "
+"அம்சங்களும் இல்லையென்றால், நீங்கள் லோமிரியை வளர்த்து, அப்பார்மரைச் "
+"சேர்த்தவுடன் 'பெட்டியிலிருந்து வெளியே' ஏற்கனவே வேலை செய்ய வேண்டும். இந்த "
+"காரணத்திற்காக, ஆலியம் -9/சி.எச்.ஐ போர்ட்டிங் மற்றும் முழுமையான கர்னல் "
+"கட்டடங்களை அடிப்படையாகக் கொண்ட போர்ட்டிங் பொதுவாக யுடேவ் விதிகள், "
+"அப்பார்மோர் திட்டுகள் மற்றும் ஏதேனும் இருந்தால், மேலடுக்கு கோப்பு முறையைப் "
+"பயன்படுத்தி கட்டமைக்க மட்டுமே தேவைப்பட வேண்டும். இந்த பணிகளைச் செய்த "
+"போதிலும், உங்கள் சி.எச்.ஐ அடிப்படையிலான கட்டமைப்பானது இன்னும் சரியாக "
+"செயல்படவில்லை என்றால், உங்கள் இலக்கை அடைய சாதனத்தில் குறிப்பிட்ட "
+"`சிச்டம்.இ.எம்.சி`` ஐ உருவாக்க நீங்கள் நாட வேண்டியிருக்கும்."
 
 #: ../../porting/configure_test_fix/index.rst:8
 msgid ""
 "On the other hand, Halium 7.1 porting and Halium-9.0 porting (when building "
 "the full device-specific ``system.img``) will require the most work."
 msgstr ""
+"மறுபுறம், ஆலியம் 7.1 போர்ட்டிங் மற்றும் ஆலியம் -9.0 போர்ட்டிங் (முழு "
+"சாதனத்தை உருவாக்கும் போது-குறிப்பிட்ட `system.img``) அதிக வேலை தேவைப்படும்."
 
 #: ../../porting/configure_test_fix/index.rst:10
 msgid ""
@@ -14582,6 +15097,10 @@ msgid ""
 "AppArmor. The remaining steps can be performed in arbitrary order and some "
 "may not apply to your particular port."
 msgstr ""
+"லோமிரியைக் கொண்டுவருவதன் மூலமும், தேவைக்கேற்ப காட்சியை சரிசெய்வதன் மூலமும், "
+"அப்பார்மோரைச் சேர்ப்பதன் மூலமும் தொடங்கவும். மீதமுள்ள படிகள் தன்னிச்சையான "
+"வரிசையில் செய்யப்படலாம், மேலும் சில உங்கள் குறிப்பிட்ட துறைமுகத்திற்கு "
+"பொருந்தாது."
 
 #: ../../porting/configure_test_fix/index.rst:12
 msgid ""
@@ -14592,10 +15111,15 @@ msgid ""
 "linked here. <https://gitlab.com/ubports/infrastructure/devices.ubuntu-"
 "touch.io/-/blob/main/README.md>`_"
 msgstr ""
+"நீங்கள் செல்லும்போது, ​​என்ன வேலை செய்கிறது, என்ன பிழைத்திருத்தம் மற்றும் "
+"சரிசெய்தல் தேவை என்பதைச் சரிபார்க்கும்போது சாதன செயல்பாடுகளின் பட்டியலைக் "
+"கொண்டிருப்பது உதவியாக இருக்கும். இந்த பட்டியல், உபுண்டு தொடுதலை இயக்கக்கூடிய"
+" சாதனங்களின் பட்டியலில் உங்கள் சாதனத்தை எவ்வாறு சேர்ப்பது என்பதற்கான "
+"வழிமுறைகளுடன், இங்கே இணைக்கப்பட்ட `தகவல் README.MD கோப்பில் காணலாம். இப்போது"
 
 #: ../../porting/finalize/UBports_installer.rst:4
 msgid "Configuring the UBports installer"
-msgstr ""
+msgstr "UBPORTS நிறுவியை உள்ளமைத்தல்"
 
 #: ../../porting/finalize/UBports_installer.rst:6
 msgid ""
