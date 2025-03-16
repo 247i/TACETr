@@ -48,7 +48,7 @@ def எபொநேரம்():
     இப்பொழுது = datetime.datetime.now()
     # இப்பொழுது.year += 31
     # இப்பொழுது.day += 15
-    இ = இப்பொழுது.strftime("%Y-%m-%d %H:%M+0530")
+    இ = இப்பொழுது.strftime("%Y-%m-%d %H:%M")
     print(இ)
     return இ
 
