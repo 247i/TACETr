@@ -470,8 +470,14 @@ def எடுபொருள்மொழிபெயர்(அனைத்து
         முன் = அ.percent_translated()
         print(கோப்பு, "முன் : ", முன், "%")
         if முன் != 100:
-            for பதிவு in அ.untranslated_entries():
-                இ, _ = பொருள்_பெறு(பதிவு.msgid)
+            tr_entries = அ.untranslated_entries()
+            if அனைத்தும்:
+                tr_entries.append(அ.translated_entries())
+            for பதிவு in tr_entries:
+                src = பதிவு.msgid
+                if src == "":
+                    src = பதிவு.msgctxt
+                இ, _ = பொருள்_பெறு(src)
                 if பதிவு.msgid_plural:
                     பதிவு.msgstr_plural[0] = இ
                     ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural)
@@ -485,31 +491,6 @@ def எடுபொருள்மொழிபெயர்(அனைத்து
                     பதிவு.msgstr = இ
                     print(பதிவு.msgid, பதிவு.msgstr)
                 அகராதி_சேமி(அ, இருமம்)
-            if அனைத்தும்:
-                for பதிவு in அ.translated_entries():
-                    if பதிவு.msgid_plural:
-                        if பதிவு.msgid == பதிவு.msgstr_plural[0]:
-                            இ, _ = பொருள்_பெறு(பதிவு.msgid)
-                            பதிவு.msgstr_plural[0] = இ
-                        if பதிவு.msgid_plural == பதிவு.msgstr_plural[1]:
-                            ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural)
-                            பதிவு.msgstr_plural[0] = ஈ
-                            # பதிவு.msgstr_plural = {0: இ, 1: ஈ}
-                            if 2 in பதிவு.msgstr_plural:
-                                பதிவு.msgstr_plural[2] = ஈ
-                                # பதிவு.msgstr_plural = {0: இ, 1: ஈ, 2: ஈ}
-                            print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
-
-                    else:
-                        if பதிவு.msgid == பதிவு.msgstr:
-                            இ, _ = பொருள்_பெறு(பதிவு.msgid)
-                            பதிவு.msgstr = இ
-                            print(பதிவு.msgid, பதிவு.msgstr)
-
-            அகராதி_சேமி(அ, இருமம்)
-            print("பின் : ", அ.percent_translated(), "%")
-        elif இருமம்:
-            அகராதி_சேமி(அ, இருமம்)
 
 
 def சரங்கள்மொழிபெயர்(பாதை="./வெறுமை/*.strings"):
