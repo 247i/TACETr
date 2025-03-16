@@ -700,3 +700,45 @@ def இனிமொழிபெயர்(பாதை="./வெறுமை/*.in
                 ஆ.write(வரி)
         அ.close()
         ஆ.close()
+
+
+class அகராதிஏற்று:
+    def __init__(ஐ, பாதை="./நினைவு/முடிந்தது.po"):
+        ஐ.தரவு = அகராதி_திற(பாதை)
+
+    def தேடு(ஐ, வாக்கியம்):
+        if ஐ.தரவு[வாக்கியம்] is not None:
+            return ஐ.தரவு[வாக்கியம்]
+        else:
+            return ""
+
+
+def எடுபொருள்மொழி(அனைத்தும்=False, இருமம்=False, பாதை="./வெறுமை/*.po"):
+    a = அகராதிஏற்று()
+    கோப்புகள் = glob.glob(பாதை)
+    for கோப்பு in கோப்புகள்:
+        if அனைத்தும்:
+            அகராதி_குழப்பம்நீக்கு(கோப்பு, True)
+        அ = அகராதி_திற(கோப்பு)
+        முன் = அ.percent_translated()
+        print(கோப்பு, "முன் : ", முன், "%")
+        if முன் != 100:
+            tr_entries = அ.untranslated_entries()
+            if அனைத்தும்:
+                tr_entries.add(அ.translated_entries())
+            for பதிவு in tr_entries:
+                இ = a.தேடு(பதிவு.msgid)
+                if பதிவு.msgid_plural:
+                    பதிவு.msgstr_plural[0] = இ
+                    ஈ = a.தேடு(பதிவு.msgid_plural)
+                    பதிவு.msgstr_plural[1] = ஈ
+                    # பதிவு.msgstr_plural = {0: இ, 1: ஈ}
+                    if 2 in பதிவு.msgstr_plural:
+                        பதிவு.msgstr_plural[2] = ஈ
+                        # பதிவு.msgstr_plural = {0: இ, 1: ஈ, 2: ஈ}
+                    print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
+                else:
+                    பதிவு.msgstr = இ
+                    print(பதிவு.msgid, பதிவு.msgstr)
+                அகராதி_சேமி(அ, இருமம்)
+            print("பின் : ", அ.percent_translated(), "%")
