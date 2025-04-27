@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (CalyxOS)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-21 22:23+0200\n"
-"PO-Revision-Date: 2024-11-30 21:38+0530\n"
+"POT-Creation-Date: 2025-04-27 05:08+0200\n"
+"PO-Revision-Date: 2025-04-27 10:49\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/calyxos/seedvault_storage/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9-dev\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 #, java-printf-format
 msgctxt "content_images"
@@ -46,8 +46,8 @@ msgstr "கூட்டு"
 
 #, java-printf-format
 msgctxt "notification_backup_title"
-msgid "Storage backup"
-msgstr "சேமிப்பக காப்புப்பிரதி"
+msgid "File backup"
+msgstr "கோப்பு காப்புப்பிரதி"
 
 #, java-printf-format
 msgctxt "notification_backup_scanning"
@@ -66,10 +66,10 @@ msgstr "பழைய காப்புப்பிரதிகளை நீக�
 
 #, java-printf-format
 msgctxt "notification_restore_channel_title"
-msgid "Storage restore"
-msgstr "சேமிப்பக மீட்டமை"
+msgid "File restore"
+msgstr "கோப்பு மீட்டமை"
 
-#, java-printf-format
+#, ignore-inconsistent, java-printf-format
 msgctxt "notification_restore_title"
 msgid "Restoring files…"
 msgstr "கோப்புகளை மீட்டமைத்தல்…"
@@ -95,18 +95,58 @@ msgid "%1$d files had errors."
 msgstr "%1$d கோப்புகள் பிழைகள் இருந்தன."
 
 #, java-printf-format
+msgctxt "notification_check_channel_title"
+msgid "File backup integrity check"
+msgstr "காப்புப்பிரதி ஒருமைப்பாடு சோதனை"
+
+#, java-printf-format
+msgctxt "notification_check_title"
+msgid "Checking file backups…"
+msgstr "கோப்பு காப்புப்பிரதிகளைச் சரிபார்க்கிறது…"
+
+#, java-printf-format
+msgctxt "notification_check_text"
+msgid "Retrieving available backup data."
+msgstr "கிடைக்கக்கூடிய காப்புப்பிரதி தரவை மீட்டெடுக்கிறது."
+
+#, java-printf-format
+msgctxt "notification_check_finished_title"
+msgid "File backup integrity verified"
+msgstr "கோப்பு காப்புப்பிரதி ஒருமைப்பாடு சரிபார்க்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "notification_check_finished_text"
+msgid "Successfully checked %1$s at an average speed of %2$s."
+msgstr "%2$s வேகத்தில் %1$s ஐ வெற்றிகரமாக சரிபார்க்கவும்."
+
+#, java-printf-format
+msgctxt "notification_check_error_title"
+msgid "File backup errors found"
+msgstr "கோப்பு காப்புப்பிரதி பிழைகள் காணப்படுகின்றன"
+
+#, java-printf-format
+msgctxt "notification_check_error_text"
+msgid "Tap for details. We checked %1$s at an average speed of %2$s."
+msgstr "விவரங்களுக்கு தட்டவும். %1$s சராசரியாக %2$s வேகத்தில் சோதித்தோம்."
+
+#, java-printf-format
+msgctxt "notification_check_action"
+msgid "Details"
+msgstr "விவரங்கள்"
+
+#, java-printf-format
 msgctxt "snapshots_title"
-msgid "Available storage backups"
-msgstr "கிடைக்கும் சேமிப்பக காப்புப்பிரதிகள்"
+msgid "Available file backups"
+msgstr "கிடைக்கும் கோப்பு காப்புப்பிரதிகள்"
 
 #, java-printf-format
 msgctxt "snapshots_empty"
 msgid ""
-"No storage backups found\n"
+"No file backups found\n"
 "\n"
 "Sorry, but there is nothing that can be restored."
 msgstr ""
-"சேமிப்பக காப்புப்பிரதிகள் எதுவும் கிடைக்கவில்லை\n"
+"கோப்பு காப்புப்பிரதிகள் எதுவும் கிடைக்கவில்லை\n"
 "\n"
 " மன்னிக்கவும், ஆனால் மீட்டெடுக்க எதுவும் இல்லை."
 
@@ -129,3 +169,78 @@ msgstr "%1$d கோப்பு (கள்)"
 msgctxt "select_files_button_restore"
 msgid "Restore selected files"
 msgstr "தேர்ந்தெடுக்கப்பட்ட கோப்புகளை மீட்டெடுங்கள்"
+
+#, java-printf-format
+msgctxt "check_success_intro"
+msgid ""
+"%1$d snapshots were found and %2$d%% of their data (%3$s) successfully "
+"verified:"
+msgstr ""
+"%1$d ச்னாப்சாட்கள் காணப்பட்டன மற்றும் அவற்றின் தரவின்%2$d %% (%3$s) "
+"வெற்றிகரமாக சரிபார்க்கப்பட்டது:"
+
+#, java-printf-format
+msgctxt "check_error_title"
+msgid "@string/notification_check_error_title"
+msgstr "@string/அறிவிப்பு_செக்_நெர்ர்_டிடில்"
+
+#, java-printf-format
+msgctxt "check_error_no_snapshots"
+msgid ""
+"We could not find any backup. Please run a successful backup first and then "
+"try checking again."
+msgstr ""
+"எங்களால் எந்த காப்புப்பிரதியும் கண்டுபிடிக்க முடியவில்லை. முதலில் "
+"வெற்றிகரமான காப்புப்பிரதியை இயக்கவும், பின்னர் மீண்டும் சரிபார்க்க "
+"முயற்சிக்கவும்."
+
+#, java-printf-format
+msgctxt "check_error_only_broken_snapshots"
+msgid ""
+"We found %1$d backup snapshots. However, all of them were corrupted. Please "
+"run a successful backup and then try checking again."
+msgstr ""
+"%1$d காப்பு ச்னாப்சாட்களைக் கண்டோம். இருப்பினும், அவை அனைத்தும் சிதைந்தன. "
+"தயவுசெய்து ஒரு வெற்றிகரமான காப்புப்பிரதியை இயக்கவும், பின்னர் மீண்டும் "
+"சரிபார்க்க முயற்சிக்கவும்."
+
+#, java-printf-format
+msgctxt "check_error_has_snapshots"
+msgid ""
+"We found %1$d backup snapshots, some of them are corrupted or have errors. "
+"Below are the backups that can (partly) be restored."
+msgstr ""
+"%1$d காப்புப்பிரதி ச்னாப்சாட்களை நாங்கள் கண்டறிந்தோம், அவற்றில் சில "
+"சிதைந்தவை அல்லது பிழைகள் உள்ளன. (ஓரளவு) மீட்டெடுக்கக்கூடிய காப்புப்பிரதிகள் "
+"கீழே உள்ளன."
+
+#, java-printf-format
+msgctxt "check_error_no_result"
+msgid ""
+"We lost the detailed results. Did a long time pass since running the check? "
+"Try running again."
+msgstr ""
+"விரிவான முடிவுகளை இழந்தோம். காசோலையை இயக்கியதிலிருந்து நீண்ட நேரம் "
+"கடந்துவிட்டதா? மீண்டும் இயங்க முயற்சிக்கவும்."
+
+#, java-printf-format
+msgctxt "check_error_snapshot"
+msgid "This backup has some errors. You may be able to restore it partly."
+msgstr ""
+"இந்த காப்புப்பிரதியில் சில பிழைகள் உள்ளன. நீங்கள் அதை ஓரளவு மீட்டெடுக்க "
+"முடியும்."
+
+#, java-printf-format
+msgctxt "check_files_title"
+msgid "Files in this backup"
+msgstr "இந்த காப்புப்பிரதியில் உள்ள கோப்புகள்"
+
+#, java-printf-format
+msgctxt "check_files_text"
+msgid "The \"%s\" includes the following files:"
+msgstr "\"%s\" பின்வரும் கோப்புகளை உள்ளடக்கியது:"
+
+#, java-printf-format
+msgctxt "check_files_error"
+msgid "Backup data is corrupted. File won't fully restore."
+msgstr "காப்பு தரவு சிதைந்துள்ளது. கோப்பு முழுமையாக மீட்டெடுக்காது."
