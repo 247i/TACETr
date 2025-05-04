@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Dicio)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-19 03:26+0200\n"
-"PO-Revision-Date: 2024-12-19 11:06+0530\n"
+"POT-Creation-Date: 2025-05-04 11:50+0200\n"
+"PO-Revision-Date: 2025-05-04 16:30\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/dicio-android/strings/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9.2-dev\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 #, java-printf-format
 msgctxt "app_name"
@@ -135,6 +135,11 @@ msgid "Listening…"
 msgstr "கேட்பது…"
 
 #, java-printf-format
+msgctxt "waiting"
+msgid "Waiting…"
+msgstr "காத்திருக்கிறது…"
+
+#, java-printf-format
 msgctxt "start_listening"
 msgid "Start listening"
 msgstr "கேட்கத் தொடங்குங்கள்"
@@ -142,7 +147,7 @@ msgstr "கேட்கத் தொடங்குங்கள்"
 #, java-printf-format
 msgctxt "downloaded"
 msgid "Downloaded"
-msgstr "பதிவிறக்கம்"
+msgstr "பதிவிறக்கபட்டது"
 
 #, java-printf-format
 msgctxt "loaded"
@@ -294,8 +299,8 @@ msgid ""
 "fixing the actual bug."
 msgstr ""
 "உங்கள் விபத்து பற்றி விவாதிக்கும் சிக்கல் ஏற்கனவே இருக்கிறதா என்று "
-"சரிபார்க்கவும். நகல் டிக்கெட்டுகளை உருவாக்கும்போது, ​​உண்மையான பிழையை "
-"சரிசெய்ய நாங்கள் செலவழிக்கக்கூடிய எங்களிடமிருந்து நீங்கள் நேரத்தை "
+"சரிபார்க்கவும். நகல் டிக்கெட்டுகளை உருவாக்கும்போது, உண்மையான பிழையை சரிசெய்ய"
+" நாங்கள் செலவழிக்கக்கூடிய எங்களிடமிருந்து நீங்கள் நேரத்தை "
 "எடுத்துக்கொள்கிறீர்கள்."
 
 #, java-printf-format
@@ -439,6 +444,27 @@ msgid "Vosk offline speech recognition"
 msgstr "வோச்க் இணைப்பில்லாத பேச்சு ஏற்பு"
 
 #, java-printf-format
+msgctxt "pref_input_method_vosk_summary"
+msgid "Downloads and runs a Vosk SpeechToText model offline inside Dicio"
+msgstr ""
+"டிசியோவுக்குள் ஆஃப்லைனில் ஒரு வோச்க் ச்பீச் டோடெக்ச்ட் மாதிரி பதிவிறக்கம் "
+"செய்து இயக்குகிறது"
+
+#, java-printf-format
+msgctxt "pref_input_method_external_popup"
+msgid "External SpeechToText popup"
+msgstr "வெளிப்புற ச்பீச் டோடெக்ச்ட் மேல்தோன்றல்"
+
+#, java-printf-format
+msgctxt "pref_input_method_external_popup_summary"
+msgid ""
+"Opens the UI of another app through ACTION​_​RECOGNIZE​_​SPEECH, for example"
+" whisperIME, Kõnele, Futo Voice Input"
+msgstr ""
+"செயலின் மூலம் மற்றொரு பயன்பாட்டின் இடைமுகம் ஐத் திறக்கிறது _ அங்கீகரிக்க _ "
+"பேச்சை, எடுத்துக்காட்டாக விச்பரைம், கோனேல், புட்டோ குரல் உள்ளீடு"
+
+#, java-printf-format
 msgctxt "pref_speech_output_method"
 msgid "Speech output method"
 msgstr "பேச்சு வெளியீட்டு முறை"
@@ -476,11 +502,11 @@ msgstr "வேர் வேர்ட் அங்கீகார முறை"
 #, java-printf-format
 msgctxt "pref_wake_method_summary"
 msgid ""
-"Choose the service to use to listen for the ey Dicio wakeup word in the "
-"background"
+"Choose the service to use to listen for the \"Hey Dicio\" wakeup word in the"
+" background"
 msgstr ""
-"பின்னணியில் EY DICIO விழித்தெழு வார்த்தையைக் கேட்க பயன்படுத்த சேவையைத் "
-"தேர்வுசெய்க"
+"பின்னணியில் \"வணக்கம் அகராதி\" விழித்தெழு சொல்லைக் கேட்கப் பயன்படுத்தச் "
+"சேவையைத் தேர்வுசெய்க"
 
 #, java-printf-format
 msgctxt "pref_wake_method_disabled"
@@ -491,6 +517,32 @@ msgstr "முடக்கப்பட்டது"
 msgctxt "pref_wake_method_openwakeword"
 msgid "OpenWakeWord offline audio processing"
 msgstr "OpenWakeWord இணைப்பில்லாத ஆடியோ செயலாக்கம்"
+
+#, java-printf-format
+msgctxt "pref_wake_custom_delete"
+msgid "Delete custom wake word"
+msgstr "தனிப்பயன் விழித்தெழு வார்த்தையை நீக்கு"
+
+#, java-printf-format
+msgctxt "pref_wake_custom_delete_summary"
+msgid "Return to default \"Hey Dicio\" wake word"
+msgstr "இயல்புநிலைக்குத் திரும்பு \"ஏ டிசியோ\" வேக் வேர்ட்"
+
+#, java-printf-format
+msgctxt "pref_wake_custom_import"
+msgid "Import custom wake word"
+msgstr "தனிப்பயன் விழிப்புணர்வு வார்த்தையை இறக்குமதி செய்க"
+
+#, java-printf-format
+msgctxt "pref_wake_custom_import_summary_oww"
+msgid ""
+"Replace the default \"Hey Dicio\" wake word with a custom TFLite model; you "
+"can download some custom models from "
+"github.com/dscripka/openWakeWord/releases"
+msgstr ""
+"தனிப்பயன் டிஃப்ளைட் மாதிரியுடன் இயல்புநிலை \"ஏ டிசியோ\" விழித்தெழு "
+"வார்த்தையை மாற்றவும்; Github.com/dscripka/openwakeword/relaess இலிருந்து சில"
+" தனிப்பயன் மாதிரிகளை நீங்கள் பதிவிறக்கம் செய்யலாம்"
 
 #, java-printf-format
 msgctxt "pref_skill_not_available"
@@ -612,14 +664,24 @@ msgid "Do not play sound"
 msgstr "ஒலி விளையாட வேண்டாம்"
 
 #, java-printf-format
+msgctxt "perm_read_contacts"
+msgid "read your contacts"
+msgstr "உங்கள் தொடர்புகளைப் படியுங்கள்"
+
+#, java-printf-format
+msgctxt "perm_call_phone"
+msgid "directly call phone numbers"
+msgstr "தொலைபேசி எண்களை நேரடியாக அழைக்கவும்"
+
+#, java-printf-format
 msgctxt "settings_description_with_value"
 msgid "%1$s — %2$s"
 msgstr "%1$s - %2$s"
 
 #, java-printf-format
 msgctxt "eval_missing_permissions"
-msgid "The skill 1$s needs these permissions to work: %2$s"
-msgstr "திறமை 1 $ s வேலை செய்ய இந்த அனுமதிகள் தேவை: %2$s"
+msgid "The skill \"%1$s\" needs these permissions to work: %2$s"
+msgstr "திறமை \"%1$s\" வேலை செய்ய இந்த அனுமதிகள் தேவை: %2$s"
 
 #, java-printf-format
 msgctxt "eval_fatal_error"
@@ -641,8 +703,13 @@ msgstr ""
 
 #, java-printf-format
 msgctxt "eval_no_match"
-msgid "I did not understand, could you repeat?"
-msgstr "எனக்கு புரியவில்லை, நீங்கள் மீண்டும் செய்ய முடியுமா?"
+msgid "I did not understand"
+msgstr "எனக்குப் புரியவில்லை"
+
+#, java-printf-format
+msgctxt "eval_no_match_repeat"
+msgid "Could you repeat?"
+msgstr "நீங்கள் மீண்டும் செய்ய முடியுமா?"
 
 #, java-printf-format
 msgctxt "stt_say_something"
@@ -698,6 +765,16 @@ msgstr "பயன்பாட்டு திறப்பாளர்"
 msgctxt "skill_sentence_example_open"
 msgid "Open NewPipe"
 msgstr "நியூ பைப்பைத் திறக்கவும்"
+
+#, java-printf-format
+msgctxt "skill_name_media"
+msgid "Media control"
+msgstr "ஊடக கட்டுப்பாடு"
+
+#, java-printf-format
+msgctxt "skill_sentence_example_media"
+msgid "Next song"
+msgstr "அடுத்த பாடல்"
 
 #, java-printf-format
 msgctxt "skill_name_calculator"
@@ -779,6 +856,11 @@ msgstr ""
 "மீண்டும் என்னிடம் சொல்ல முயற்சிக்கவும்"
 
 #, java-printf-format
+msgctxt "skill_search_no_results_stop"
+msgid "The search returned no results"
+msgstr "தேடல் எந்த முடிவுகளையும் அளிக்கவில்லை"
+
+#, java-printf-format
 msgctxt "skill_search_what_question"
 msgid "What do you want to search for?"
 msgstr "நீங்கள் எதைத் தேட விரும்புகிறீர்கள்?"
@@ -790,24 +872,24 @@ msgstr "நகர %1$s கண்டுபிடிக்க முடியவ�
 
 #, java-printf-format
 msgctxt "skill_weather_in_city_there_is_description"
-msgid "Currently in %1$s there is %2$s"
-msgstr "தற்போது %1$s இல் %2$s உள்ளது"
+msgid "There is %2$s and %3$s degrees in %1$s right now"
+msgstr "தற்போது %2$s மற்றும் %3$s டிகிரி %1$s இல் உள்ளது"
 
 #, java-printf-format
 msgctxt "skill_weather_description_temperature"
-msgid "%1$s · %2$.1f°C"
-msgstr "%1$s · %2 $ .1f ° C."
+msgid "%1$s · %2$.1f%3$s"
+msgstr "%1$s · %2$.1f%3$s"
 
 #, java-printf-format
 msgctxt "skill_weather_min_max_wind"
 msgid ""
-"Minimum temperature: %1$.1f°C\n"
-"Maximum temperature: %2$.1f°C\n"
-"Wind speed: %3$.1fm/s"
+"Minimum temperature: %1$.1f%4$s\n"
+"Maximum temperature: %2$.1f%4$s\n"
+"Wind speed: %3$.1f%5$s"
 msgstr ""
-"குறைந்தபட்ச வெப்பநிலை: %1 $ .1f ° C.\n"
-" அதிகபட்ச வெப்பநிலை: %2 $ .1f ° C.\n"
-" காற்றின் வேகம்: %3 $ .1fm/s"
+"குறைந்தபட்ச வெப்பநிலை: %1$.1f%4$s\n"
+"அதிகபட்ச வெப்பநிலை: %2$.1f%4$s\n"
+"காற்றின் வேகம்: %3$.1f%5$s"
 
 #, java-printf-format
 msgctxt "skill_lyrics_song_not_found"
@@ -833,6 +915,31 @@ msgstr "தெரியாத பயன்பாடு %1$s"
 msgctxt "skill_open_opening"
 msgid "Opening %1$s…"
 msgstr "%1$s ஐ திறக்கிறது…"
+
+#, java-printf-format
+msgctxt "skill_media_playing"
+msgid "Playing media…"
+msgstr "மீடியா விளையாடுவது…"
+
+#, java-printf-format
+msgctxt "skill_media_pausing"
+msgid "Pausing media…"
+msgstr "இடைநிறுத்தப்பட்ட ஊடகங்கள்…"
+
+#, java-printf-format
+msgctxt "skill_media_previous"
+msgid "Previous media…"
+msgstr "முந்தைய ஊடகங்கள்…"
+
+#, java-printf-format
+msgctxt "skill_media_next"
+msgid "Next media…"
+msgstr "அடுத்த மீடியா…"
+
+#, java-printf-format
+msgctxt "skill_media_no_media_session"
+msgid "No media session is active"
+msgstr "எந்த ஊடக அமர்வும் செயலில் இல்லை"
 
 #, java-printf-format
 msgctxt "skill_calculator_could_not_calculate"
@@ -867,7 +974,7 @@ msgstr "சரி, நான் யாரையும் அழைக்கவ�
 #, java-printf-format
 msgctxt "skill_time_current_time"
 msgid "Right now, it is %1$s"
-msgstr "இப்போது, ​​இது %1$s ஆகும்"
+msgstr "இப்போது, இது %1$s ஆகும்"
 
 #, java-printf-format
 msgctxt "skill_timer_how_much_time"
@@ -950,6 +1057,11 @@ msgid "Dicio offline speech recognition"
 msgstr "இணைப்பில்லாத பாப் அங்கீகாரத்தைத் தேர்ந்தெடுங்கள்"
 
 #, java-printf-format
+msgctxt "notification_listener_label"
+msgid "Dicio notification event listener"
+msgstr "டிசியோ அறிவிப்பு நிகழ்வு கேட்பவர்"
+
+#, java-printf-format
 msgctxt "wake_service_label"
 msgid "Dicio wake word service"
 msgstr "டிசியோ வேக் வேர்ட் பணி"
@@ -965,8 +1077,13 @@ msgstr ""
 
 #, java-printf-format
 msgctxt "wake_service_foreground_notification"
-msgid "Listening for the ey Dicio wake-up word"
-msgstr "EY DICIO விழித்தெழுந்த வார்த்தையை கேட்பது"
+msgid "Listening for the \"Hey Dicio\" wake-up word"
+msgstr "\"வணக்கம் அகராதி\" விழித்தெழு சொல்லைக் கேட்பது"
+
+#, java-printf-format
+msgctxt "wake_custom_service_foreground_notification"
+msgid "Listening for custom wake-up word"
+msgstr "தனிப்பயன் விழித்தெழுந்த வார்த்தையைக் கேட்பது"
 
 #, java-printf-format
 msgctxt "wake_service_start_notification"
@@ -1004,15 +1121,15 @@ msgstr "விழித்தெழு வார்த்தையை அமை�
 #, java-printf-format
 msgctxt "wake_word_setup_description"
 msgid ""
-"Dicio will wake up automatically whenever you say ey Dicio This works by "
-"starting a service that always listens in the background. All speech "
+"Dicio will wake up automatically whenever you say \"Hey Dicio\". This works "
+"by starting a service that always listens in the background. All speech "
 "processing happens locally, that's why you need to download the AI model in "
 "advance."
 msgstr ""
-"நீங்கள் EY DICIO என்று சொல்லும்போதெல்லாம் டிசியோ தானாகவே எழுந்திருக்கும், "
-"இது பின்னணியில் எப்போதும் கேட்கும் ஒரு சேவையைத் தொடங்குவதன் மூலம் இது "
-"செயல்படும். அனைத்து பேச்சு செயலாக்கமும் உள்நாட்டில் நடக்கிறது, அதனால்தான் "
-"நீங்கள் AI மாதிரியை முன்கூட்டியே பதிவிறக்கம் செய்ய வேண்டும்."
+"நீங்கள் \"வணக்கம் அகராதி\" என்று சொல்லும்போதெல்லாம் அகராதி தானாகவே "
+"எழுந்திருக்கும், இது பின்னணியில் எப்போதும் கேட்கும் ஒரு சேவையைத் தொடங்குவதன்"
+" மூலம் இது செயல்படும். அனைத்து பேச்சு செயலாக்கமும் உள்நாட்டில் நடக்கிறது, "
+"அதனால்தான் நீங்கள் செநு மாதிரியை முன்கூட்டியே பதிவிறக்கம் செய்ய வேண்டும்."
 
 #, java-printf-format
 msgctxt "wake_word_error_downloading"
@@ -1051,3 +1168,77 @@ msgstr "நிறுத்து"
 msgctxt "grant_permissions"
 msgid "Grant permissions"
 msgstr "அனுமதிகள் வழங்கவும்"
+
+#, java-printf-format
+msgctxt "pref_weather_temperature_unit"
+msgid "Temperature unit"
+msgstr "வெப்பநிலை அலகு"
+
+#, java-printf-format
+msgctxt "use_system_default"
+msgid "Use system default"
+msgstr "கணினி இயல்புநிலையைப் பயன்படுத்தவும்"
+
+#, java-printf-format
+msgctxt "pref_weather_unit_system_instructions"
+msgid ""
+"Uses the unit configured in \"System settings > System > Languages & input >"
+" Regional preferences\""
+msgstr ""
+"\"கணினி அமைப்புகள்> கணினி> மொழிகள் மற்றும் உள்ளீடு> பிராந்திய "
+"விருப்பத்தேர்வுகள்\" இல் கட்டமைக்கப்பட்ட அலகு பயன்படுத்துகிறது"
+
+#, java-printf-format
+msgctxt "pref_weather_temperature_unit_celsius"
+msgid "Celsius (°C)"
+msgstr "செல்சியச் (° C)"
+
+#, java-printf-format
+msgctxt "pref_weather_temperature_unit_fahrenheit"
+msgid "Fahrenheit (°F)"
+msgstr "பாரன்ஈட் (° F)"
+
+#, java-printf-format
+msgctxt "pref_weather_temperature_unit_kelvin"
+msgid "Kelvin (K)"
+msgstr "கெல்வின் (கே)"
+
+#, java-printf-format
+msgctxt "pref_weather_length_unit"
+msgid "Length unit"
+msgstr "நீள அலகு"
+
+#, java-printf-format
+msgctxt "pref_weather_length_unit_metric"
+msgid "Metric"
+msgstr "மெட்ரிக்"
+
+#, java-printf-format
+msgctxt "pref_weather_length_unit_imperial"
+msgid "Imperial"
+msgstr "ஏகாதிபத்திய"
+
+#, java-printf-format
+msgctxt "skill_weather_celsius"
+msgid "°C"
+msgstr ". C."
+
+#, java-printf-format
+msgctxt "skill_weather_fahrenheit"
+msgid "°F"
+msgstr "° f"
+
+#, java-printf-format
+msgctxt "skill_weather_kelvin"
+msgid "K"
+msgstr "கே"
+
+#, java-printf-format
+msgctxt "skill_weather_meters_per_second"
+msgid "m/s"
+msgstr "எம்/கள்"
+
+#, java-printf-format
+msgctxt "skill_weather_miles_per_hour"
+msgid "mph"
+msgstr "எம்.பி.எச்"
