@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (< polycule >)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-27 13:49+0200\n"
-"PO-Revision-Date: 2025-01-27 19:34+0530\n"
+"POT-Creation-Date: 2025-05-04 17:58+0200\n"
+"PO-Revision-Date: 2025-05-05 16:13\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/polycule/polycule-client/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 #, icu-message-format
 msgctxt "appName"
@@ -108,7 +108,7 @@ msgstr "{homeserver} உடன் இணைக்கிறது…"
 #, case-insensitive, icu-message-format, placeholders:$HOMESERVER$
 msgctxt "welcomeToHomeserver"
 msgid "Welcome to {homeserver} !"
-msgstr "{ஓம்சர்வர் க்கு க்கு வருக!"
+msgstr "{homeserver} க்கு வருக!"
 
 #, icu-message-format
 msgctxt "howWouldYouLikeToConnect"
@@ -119,6 +119,11 @@ msgstr "நீங்கள் எவ்வாறு இணைக்க விர
 msgctxt "loginPassword"
 msgid "Login using password"
 msgstr "கடவுச்சொல்லைப் பயன்படுத்தி உள்நுழைக"
+
+#, icu-message-format
+msgctxt "loginLegacySso"
+msgid "Login using legacy SSO"
+msgstr "மரபு ஒருகைஉள் ஐப் பயன்படுத்தி உள்நுழைக"
 
 #, icu-message-format
 msgctxt "username"
@@ -172,6 +177,13 @@ msgstr ""
 msgctxt "clientDisplayName"
 msgid "< polycule > on {platform}"
 msgstr "<பாலிகுல்> {platform}"
+
+#. Describes the device in the list of devices. The parameter is a localized
+#. phrase like `web` or `Linux`.
+#, case-insensitive, icu-message-format, placeholders:$HOSTNAME$:$PLATFORM$
+msgctxt "clientDisplayNameHostname"
+msgid "< polycule > on {hostname} ({platform})"
+msgstr "{hostname} ({platform}) இல் <பாலிகுல்>"
 
 #, icu-message-format
 msgctxt "platformWeb"
@@ -236,7 +248,7 @@ msgstr "ஏற்பு தேவை"
 #, case-insensitive, icu-message-format, placeholders:$MXID$
 msgctxt "authenticateForAccount"
 msgid "Please authenticate with your credentials for {mxid}."
-msgstr "{MXID க்கு க்கான உங்கள் சான்றுகளுடன் அங்கீகரிக்கவும்."
+msgstr "{mxid} க்கான உங்கள் சான்றுகளுடன் அங்கீகரிக்கவும்."
 
 #, case-insensitive, icu-message-format, placeholders:$USERNAME$:$FORMATTEDDATE$
 msgctxt "replyUserSentDate"
@@ -314,17 +326,22 @@ msgstr "எனது சாதனம் கிடைக்கவில்லை.
 
 #, icu-message-format
 msgctxt "compareSasNumbers"
-msgid "Compare security numbers"
-msgstr "பாதுகாப்பு எண்களை ஒப்பிடுக"
+msgid "Compare SAS security numbers"
+msgstr "Compare SAS security numbers"
+
+#, icu-message-format
+msgctxt "compareSasEmojis"
+msgid "Compare SAS security emojis"
+msgstr "SAS பாதுகாப்பு ஈமோசிகளை ஒப்பிடுக"
 
 #, icu-message-format
 msgctxt "compareSasExplanation"
 msgid ""
-"Check if the numbers on your device are identical with the numbers on the "
-"other device requesting the verification."
+"Check if the SAS on your device are identical with the SAS on the other "
+"device requesting the verification."
 msgstr ""
-"உங்கள் சாதனத்தில் உள்ள எண்கள் சரிபார்ப்பைக் கோரும் மற்ற சாதனத்தின் எண்களுடன்"
-" ஒத்ததா என்று சரிபார்க்கவும்."
+"உங்கள் சாதனத்தில் உள்ள SAS சரிபார்ப்பைக் கோரும் மற்ற சாதனத்தில் SAS உடன் "
+"ஒத்ததா என்று சரிபார்க்கவும்."
 
 #, icu-message-format
 msgctxt "incomingVerificationRequest"
@@ -388,8 +405,8 @@ msgstr "உங்கள் சாதனத்தை சரிபார்க்�
 
 #, icu-message-format
 msgctxt "keyVerificationErrorUser"
-msgid "The verification was rejected."
-msgstr "சரிபார்ப்பு நிராகரிக்கப்பட்டது."
+msgid "The verification was canceled."
+msgstr "சரிபார்ப்பு ரத்து செய்யப்பட்டது."
 
 #, icu-message-format
 msgctxt "close"
@@ -403,8 +420,8 @@ msgstr "முக்கிய சரிபார்ப்பு வெற்ற�
 
 #, icu-message-format
 msgctxt "verifyLogin"
-msgid "Verify your new login"
-msgstr "உங்கள் புதிய உள்நுழைவை சரிபார்க்கவும்"
+msgid "Verify your key material"
+msgstr "உங்கள் முக்கிய பொருளை சரிபார்க்கவும்"
 
 #, icu-message-format
 msgctxt "finish"
@@ -478,7 +495,7 @@ msgstr "அழைக்கவும்"
 #, case-insensitive, icu-message-format, placeholders:$ROOMNAME$
 msgctxt "inviteLongRoom"
 msgid "You are invited to join the room : « {roomname} »."
-msgstr "அறையில் சேர நீங்கள் அழைக்கப்படுகிறீர்கள்: {{roomname} »."
+msgstr "அறையில் சேர நீங்கள் அழைக்கப்படுகிறீர்கள்: « {roomname} »."
 
 #, icu-message-format
 msgctxt "inviteLongDM"
@@ -491,8 +508,8 @@ msgid ""
 "{participants, plural, =0{No participants} =1{1 participant} "
 "other{{participants} participants}}"
 msgstr ""
-"{பங்கேற்பாளர்கள், பன்மை, = 0 {No participants} = 1 {1 participant} பிற "
-"{{participants} பங்கேற்பாளர்கள்}}"
+"{participants, plural, =0{பங்கேற்பாளர் இல்லை} =1{ஒரு பங்கேற்பாளர்} "
+"other{{participants} பங்கேற்பாளர்கள்}}"
 
 #, icu-message-format
 msgctxt "joinRoom"
@@ -618,8 +635,8 @@ msgid ""
 "{files, plural, =0{Sending no files.} =1{One file} other{{files} files}} "
 "sending ...}"
 msgstr ""
-"{கோப்புகள், பன்மை, = 0 {Sending no files.} = 1 {One file} மற்ற {{files} "
-"கோப்புகள்} அனுப்புதல் ...}"
+"{files, plural, =0{அனுப்ப கோப்பு இல்லை.} =1{ஒரு கோப்பு} other{{files} "
+"கோப்புகள்}} அனுப்புதல் ...}"
 
 #, icu-message-format
 msgctxt "noFilesSelected"
@@ -803,7 +820,7 @@ msgstr "தொடர கணக்கைத் தேர்ந்தெடுக�
 msgctxt "sharingFiles"
 msgid "Sending {files, plural, =1{a file} other{{files} files}}."
 msgstr ""
-"{கோப்புகள், பன்மை, = 1 {a file} பிற {{files} கோப்புகள்}} அனுப்புகிறது."
+"{files, plural, =1{ஒரு கோப்பு} other{{files} கோப்புகள்}} அனுப்புகிறது."
 
 #, icu-message-format
 msgctxt "sharingText"
@@ -826,8 +843,8 @@ msgid ""
 "{size, plural, =0{Total send size : 0 bytes} =1{Total send size : 1 byte} "
 "other{Total send size : {size} bytes}}}"
 msgstr ""
-"{அளவு, பன்மை, = 0 {Total send size : 0 bytes} = 1 {Total send size : 1 byte}"
-" பிற {மொத்த அனுப்பு அளவு: {size} பைட்டுகள்}}}"
+"{size, plural, =0{மொத்த அனுப்பு அளவு : 0 பைட்டுகள்} =1{மொத்த அனுப்பு அளவு : "
+"1 பைட்} other{மொத்த அனுப்பு அளவு: {size} பைட்டுகள்}}"
 
 #, case-insensitive, icu-message-format, placeholders:$SIZE$
 msgctxt "fileSize"
@@ -835,8 +852,8 @@ msgid ""
 "{size, plural, =0{File size : 0 bytes} =1{File size : 1 byte} other{File "
 "size : {size} bytes}}}"
 msgstr ""
-"{அளவு, பன்மை, = 0 {File size : 0 bytes} = 1 {File size : 1 byte} பிற {கோப்பு"
-" அளவு: {size} பைட்டுகள்}}}"
+"{size, plural, =0{கோப்பு அளவு : 0 பைட்டுகள்} =1{கோப்பு அளவு : 1 பைட்} "
+"other{கோப்பு அளவு: {size} பைட்டுகள்}}"
 
 #, case-insensitive, icu-message-format, placeholders:$MIMETYPE$
 msgctxt "mimeType"
@@ -846,12 +863,12 @@ msgstr "கோப்பு வகை: {mimeType}"
 #, case-insensitive, icu-message-format, placeholders:$ROOMNAME$
 msgctxt "matrixRoomShareSubject"
 msgid "Join the room « {roomname} » on [matrix]"
-msgstr "[மேட்ரிக்ச்] இல் «{அறை பெயர்» »அறையில் சேரவும்"
+msgstr "[மேட்ரிக்ச்] இல் «{roomname} »அறையில் சேரவும்"
 
 #, case-insensitive, icu-message-format, placeholders:$MXID$
 msgctxt "matrixUserShareSubject"
 msgid "Contact « {mxid} » on [matrix]"
-msgstr "[மேட்ரிக்ச்] இல் «{mxid» »ஐ தொடர்பு கொள்ளவும்"
+msgstr "[மேட்ரிக்ச்] இல் «{mxid} »ஐ தொடர்பு கொள்ளவும்"
 
 #, case-insensitive, icu-message-format, placeholders:$NAME$
 msgctxt "fileDownloadedTo"
@@ -929,8 +946,8 @@ msgid ""
 "Currently, < polycule > only supports push notifications on Android. Linux "
 "support is planned."
 msgstr ""
-"தற்போது, ​​<licicule> ஆண்ட்ராய்டு இல் புச் அறிவிப்புகளை மட்டுமே ஆதரிக்கிறது."
-" லினக்ச் உதவி திட்டமிடப்பட்டுள்ளது."
+"தற்போது, <licicule> ஆண்ட்ராய்டு இல் புச் அறிவிப்புகளை மட்டுமே ஆதரிக்கிறது. "
+"லினக்ச் உதவி திட்டமிடப்பட்டுள்ளது."
 
 #, icu-message-format
 msgctxt "unifiedPushAbout"
@@ -1010,7 +1027,7 @@ msgstr "Redact நிகழ்வு"
 msgctxt "redactEventLong"
 msgid "Do you permanently want to redact the event {eventId} ?"
 msgstr ""
-"நிகழ்வை {eventid inder ஐ மாற்றியமைக்க நீங்கள் நிரந்தரமாக விரும்புகிறீர்களா?"
+"நிகழ்வை {eventId} ஐ மாற்றியமைக்க நீங்கள் நிரந்தரமாக விரும்புகிறீர்களா?"
 
 #, icu-message-format
 msgctxt "logoutCommandSyntax"
@@ -1040,7 +1057,7 @@ msgstr "உங்கள் மனநிலையை விவரிக்கவ�
 #, icu-message-format
 msgctxt "dmCommandSyntax"
 msgid "Create a DM room. [mxid] [--no-encryption?]"
-msgstr "ஒரு டி.எம் அறையை உருவாக்கவும். ."
+msgstr "ஒரு டி.எம் அறையை உருவாக்கவும். [mxid] [--no-encryption?]"
 
 #, icu-message-format
 msgctxt "createCommandSyntax"
@@ -1560,3 +1577,291 @@ msgstr "அறை விவரங்கள்"
 msgctxt "errorSendingSticker"
 msgid "Error sending custom sticker."
 msgstr "தனிப்பயன் ச்டிக்கரை அனுப்புவதில் பிழை."
+
+#, icu-message-format
+msgctxt "viewSourceCode"
+msgid "View source code"
+msgstr "மூல குறியீடு பார்"
+
+#, icu-message-format
+msgctxt "eventSourceCode"
+msgid "Event source code"
+msgstr "நிகழ்வு மூல குறியீடு"
+
+#, icu-message-format
+msgctxt "eventSourceContent"
+msgid "Event content"
+msgstr "நிகழ்வு உள்ளடக்கம்"
+
+#, icu-message-format
+msgctxt "eventSourceJson"
+msgid "Full JSON"
+msgstr "முழு சாதொபொகு"
+
+#, icu-message-format
+msgctxt "eventSourceOriginal"
+msgid "Original event"
+msgstr "அசல் நிகழ்வு"
+
+#, icu-message-format
+msgctxt "eventSourceBodyRaw"
+msgid "Event body (raw)"
+msgstr "நிகழ்வு உடல் (பச்சையாக)"
+
+#, icu-message-format
+msgctxt "eventSourceBodyHtml"
+msgid "Event body (HTML)"
+msgstr "நிகழ்வு உடல் (உஉகுமொ)"
+
+#, icu-message-format
+msgctxt "eventSourceUnsigned"
+msgid "Unsigned content"
+msgstr "கையொப்பமிடாத உள்ளடக்கம்"
+
+#, icu-message-format
+msgctxt "eventRendered"
+msgid "Rendered event"
+msgstr "வழங்கப்பட்ட நிகழ்வு"
+
+#, icu-message-format
+msgctxt "eventQuoted"
+msgid "Quoted event"
+msgstr "மேற்கோள் நிகழ்வு"
+
+#, icu-message-format
+msgctxt "eventPreview"
+msgid "Event preview"
+msgstr "நிகழ்வு முன்னோட்டம்"
+
+#, icu-message-format
+msgctxt "blurHash"
+msgid "Blur hash"
+msgstr "மங்கலான கொத்து"
+
+#, icu-message-format
+msgctxt "linuxOidcWorkaround"
+msgid ""
+"In case your web browser won't prompt you to open < polycule > after logging"
+" in, please ensure you granted to handle OAuth2.0 redirects in < polycule > "
+"by launching the following command in a terminal emulator :"
+msgstr ""
+"உள்நுழைந்த பிறகு <பாலிகுல்> ஐ திறக்க உங்கள் வலை உலாவி உங்களைத் தூண்டாது "
+"என்றால், ஒரு முனைய முன்மாதிரியில் பின்வரும் கட்டளையைத் தொடங்குவதன் மூலம் "
+"<licicule> இல் OAuth2.0 ஐக் கையாள உங்களுக்கு வழங்கப்பட்டுள்ளீர்கள் என்பதை "
+"உறுதிப்படுத்தவும்:"
+
+#, icu-message-format
+msgctxt "linuxOidcWorkaroundSnippet"
+msgid "gio mime x-scheme-handler/im.polycule business.braid.polycule.desktop"
+msgstr ""
+"சியோ மைம் எக்ச்-சீம்-ஏண்ட்லர்/இம்.போலிகுல் "
+"பிசினச்.பிராட்.போலிகுல்.டெச்க்டாப்"
+
+#, icu-message-format
+msgctxt "setupSSSSLoading"
+msgid "Encryption setup running. This might take a while."
+msgstr "குறியாக்க அமைப்பு இயங்கும். இதற்கு சிறிது நேரம் ஆகலாம்."
+
+#, icu-message-format
+msgctxt "sessionId"
+msgid "Session ID"
+msgstr "அமர்வு அடையாளம்"
+
+#, icu-message-format
+msgctxt "sessionIpAddress"
+msgid "Last IP address"
+msgstr "கடைசி ஐபி முகவரி"
+
+#, icu-message-format
+msgctxt "sessionLastSeen"
+msgid "Last seen"
+msgstr "கடைசியாக பார்த்தேன்"
+
+#, icu-message-format
+msgctxt "delete"
+msgid "Delete"
+msgstr "நீக்கு"
+
+#, icu-message-format
+msgctxt "verify"
+msgid "Verify"
+msgstr "சரிபார்"
+
+#, icu-message-format
+msgctxt "verifyAgain"
+msgid "Verify again"
+msgstr "மீண்டும் சரிபார்"
+
+#, icu-message-format
+msgctxt "rename"
+msgid "Rename"
+msgstr "மறுபெயரிடு"
+
+#, icu-message-format
+msgctxt "renameDevice"
+msgid "Rename device"
+msgstr "சாதனம் மறுபெயரிடு"
+
+#, icu-message-format
+msgctxt "deviceName"
+msgid "Device display name"
+msgstr "சாதன காட்சி பெயர்"
+
+#, icu-message-format
+msgctxt "renameDeviceHint"
+msgid "Leave blank to remove display name"
+msgstr "காட்சி பெயரை அகற்ற காலியாக விடவும்"
+
+#, icu-message-format
+msgctxt "openInIDP"
+msgid "Open in identity provider"
+msgstr "அடையாள வழங்குநரில் திற"
+
+#, icu-message-format
+msgctxt "deviceNoEncryption"
+msgid "Does not support encryption"
+msgstr "குறியாக்கத்தை ஆதரிக்காது"
+
+#, icu-message-format
+msgctxt "deviceVerified"
+msgid "Keys verified"
+msgstr "விசைகள் சரிபார்க்கப்பட்டன"
+
+#, icu-message-format
+msgctxt "deviceUnverified"
+msgid "Keys unverified"
+msgstr "விசைகள் சரிபார்க்கப்படாதவை"
+
+#, icu-message-format
+msgctxt "deviceBlocked"
+msgid "Device blocked"
+msgstr "சாதனம் தடுக்கப்பட்டது"
+
+#, icu-message-format
+msgctxt "logout"
+msgid "Logout"
+msgstr "வெளியேற்றம்"
+
+#, icu-message-format
+msgctxt "logoutWarning"
+msgid "Confirm logout"
+msgstr "வெளியேறுவதை உறுதிப்படுத்தவும்"
+
+#, icu-message-format
+msgctxt "logoutWarningLong"
+msgid ""
+"When you log out and neither have any other session nor your recovery "
+"phrase, you will lose access to all you [matrix] messages."
+msgstr ""
+"நீங்கள் வெளியேறும்போது, ​​வேறு எந்த அமர்வோ அல்லது உங்கள் மீட்பு சொற்றொடரோ "
+"இல்லாதபோது, ​​நீங்கள் [மேட்ரிக்ச்] செய்திகளுக்கான அணுகலை இழப்பீர்கள்."
+
+#, icu-message-format
+msgctxt "keyBackupAvailable"
+msgid "SSSS backup"
+msgstr "எச்எச்எச்எச் காப்புப்பிரதி"
+
+#, icu-message-format
+msgctxt "keyBackupExplanation"
+msgid ""
+"Use Secure Secret Storage and Sharing to securely backup message keys for "
+"all your devices."
+msgstr ""
+"உங்கள் எல்லா சாதனங்களுக்கும் செய்தி விசைகளை பாதுகாப்பாக காப்புப் பிரதி "
+"எடுக்க பாதுகாப்பான ரகசிய சேமிப்பு மற்றும் பகிர்வைப் பயன்படுத்தவும்."
+
+#, icu-message-format
+msgctxt "ssssRecoveryKey"
+msgid "SSSS recovery key"
+msgstr "எச்எச்எச்எச் மீட்பு விசை"
+
+#, icu-message-format
+msgctxt "ssssRecoveryKeyExplanation"
+msgid ""
+"Carefully store your Secure Secret Storage and Sharing recovery key at a "
+"secure place. Without your recovery key, all past messages will be lost "
+"forever."
+msgstr ""
+"உங்கள் பாதுகாப்பான ரகசிய சேமிப்பு மற்றும் மீட்பு விசையை ஒரு பாதுகாப்பான "
+"இடத்தில் கவனமாக சேமிக்கவும். உங்கள் மீட்பு விசை இல்லாமல், கடந்த கால "
+"செய்திகளும் என்றென்றும் இழக்கப்படும்."
+
+#, icu-message-format
+msgctxt "confirmSSSSKeyStored"
+msgid "Key stored"
+msgstr "விசை சேமிக்கப்பட்டது"
+
+#, icu-message-format
+msgctxt "yourCurrentDevice"
+msgid "Your current device"
+msgstr "உங்கள் தற்போதைய சாதனம்"
+
+#, icu-message-format
+msgctxt "moveClientTooltip"
+msgid "Move here"
+msgstr "இங்கே செல்"
+
+#, icu-message-format
+msgctxt "displayName"
+msgid "Display name"
+msgstr "காட்சி பெயர்"
+
+#, icu-message-format
+msgctxt "yourDisplayName"
+msgid "Your display name"
+msgstr "உங்கள் காட்சி பெயர்"
+
+#, icu-message-format
+msgctxt "displayNameHint"
+msgid "This is shown on your public profile."
+msgstr "இது உங்கள் பொது தன்விவரத்தில் காட்டப்பட்டுள்ளது."
+
+#, icu-message-format
+msgctxt "changeDisplayName"
+msgid "Change display name"
+msgstr "காட்சி பெயரை மாற்று"
+
+#, icu-message-format
+msgctxt "scanQrCode"
+msgid "Scan QR code"
+msgstr "விப குறியீட்டை வருடு"
+
+#, icu-message-format
+msgctxt "compareSas"
+msgid "Compare SAS secret"
+msgstr "SAS ரகசியத்தை ஒப்பிடுக"
+
+#, icu-message-format
+msgctxt "confirmQrScanned"
+msgid "QR code successfully scanned."
+msgstr "விப குறியீடு வெற்றிகரமாக வருடப்பட்டது."
+
+#, icu-message-format
+msgctxt "confirm"
+msgid "Confirm"
+msgstr "உறுதிப்படுத்து"
+
+#, icu-message-format
+msgctxt "scanQrWithOtherDevice"
+msgid "Scan this QR code with your other device."
+msgstr "இந்த QR குறியீட்டை உங்கள் பிற சாதனத்துடன் வருடு."
+
+#, icu-message-format
+msgctxt "clientSwitcher"
+msgid "Switch account"
+msgstr "கணக்கை மாற்று"
+
+#, icu-message-format
+msgctxt "block"
+msgid "Block"
+msgstr "தடை"
+
+#, icu-message-format
+msgctxt "unblock"
+msgid "Unblock"
+msgstr "தடைநீக்கு"
+
+#, icu-message-format
+msgctxt "sessions"
+msgid "Sessions"
+msgstr "அமர்வுகள்"
