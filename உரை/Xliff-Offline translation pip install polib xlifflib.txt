@@ -1,0 +1,47 @@
+pip install polib xlifflib
+
+Now, let's create a Python script to read multiple .po files and perform a translation lookup for an XLIFF file:
+
+import os
+import xlifflib
+import polib
+
+def read_po_files(directory_path):
+    po_files = []
+    for filename in os.listdir(directory_path):
+        if filename.endswith(".po"):
+            file_path = os.path.join(directory_path, filename)
+            po_files.append(polib.pofile(file_path))
+    return po_files
+
+def lookup_translation(xliff, po_files):
+    for transmission in xliff.transmissions:
+        for unit in transmission.units:
+            for po_file in po_files:
+                for entry in po_file:
+                    if entry.msgid == unit.id:
+                        unit.text = entry.msgstr
+                        break
+
+def read_xliff_file(file_path):
+    xliff = xlifflib.Xliff()
+    xliff.load(file_path)
+    return xliff
+
+# Example usage
+input_file_path = "input.xliff"
+output_file_path = "output.xliff"
+po_directory_path = "po_files"
+
+# Read the XLIFF file
+xliff = read_xliff_file(input_file_path)
+
+# Read all .po files from the directory
+po_files = read_po_files(po_directory_path)
+
+# Perform translation lookup
+lookup_translation(xliff, po_files)
+
+# Write the XLIFF file
+write_xliff_file(xliff, output_file_path)
+
