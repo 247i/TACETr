@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Tor Project)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-04 15:21+0200\n"
-"PO-Revision-Date: 2024-11-04 21:00+0530\n"
+"POT-Creation-Date: 2025-06-11 06:01+0200\n"
+"PO-Revision-Date: 2025-06-11 10:29\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/tor/tor-browser/tb-base-browser/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.2\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 #. Language notification
 #. $language (String) - The language Tor Browser is displayed in (already
@@ -38,11 +38,12 @@ msgstr ""
 "{-பிரான்ட்-சார்ட்-பெயர் your உங்கள் காட்சி மொழியை {$ மொழி க்கு க்கு "
 "அமைத்துள்ளது."
 
+# Suggested in Weblate: மொழியை மாற்றவும்
 #. Language notification
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
 msgctxt "language-notification-button"
 msgid "Change Language…"
-msgstr "மொழியை மாற்றவும்"
+msgstr "மொழியை மாற்றவும்…"
 
 #. Fullscreen/maximization notification shown when letterboxing is disabled
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
@@ -67,6 +68,27 @@ msgstr "மீட்டமை"
 msgctxt "basebrowser-rfp-restore-window-size-button-ak"
 msgid "R"
 msgstr "R"
+
+#. Letterboxing size indicator.
+#. Shows the current tab's Letterboxing dimensions in the bottom corner when
+#. resizing the window.
+#. The word "Letterboxing" is the proper noun for the Tor Browser feature, and
+#. is therefore capitalised.
+#. "Letterboxing" should be treated as a feature/product name, and likely not
+#. changed in other languages.
+#. The "×" symbol is a unicode (U+00D7) symbol for multiply.
+#. $width (Number) - The window width. The "NUMBER" function will format this
+#. number to the same locale, and the "useGrouping" option will remove
+#. grouping symbols, like thousand separators.
+#. $height (Number) - The window height.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags, placeholders:"{ NUMBER($width, useGrouping: \"false\") }", useGrouping: \"false\") }":"{ NUMBER($height
+msgctxt "letterboxing-size-status"
+msgid ""
+"Letterboxing size: { NUMBER($width, useGrouping: \"false\") } × { "
+"NUMBER($height, useGrouping: \"false\") }"
+msgstr ""
+"லெட்டர்பாக்சிங் அளவு: {எண் ($ அகலம், பயன்பாட்டு குழு: \"பொய்\")} × {எண் ($ "
+"உயரம், பயன்பாட்டு குழு: \"பொய்\")}"
 
 #. Tooltip for the about:addons recommended badge
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
@@ -127,8 +149,8 @@ msgid ""
 ".label = New Identity\n"
 ".accesskey = I"
 msgstr ""
-".லாபல் = புதிய அடையாளம்\n"
-" .accesskey = i"
+".லாபல் = புதிய அடையாளம் \n"
+".accesskey = i"
 
 #. New identity.
 #. App menu (hamburger menu) items use sentence case for English (US).
@@ -149,8 +171,8 @@ msgid ""
 ".label = New identity\n"
 ".tooltiptext = { toolbar-new-identity.label }"
 msgstr ""
-".லாபல் = புதிய அடையாளம்\n"
-" .tooltiptext = {கருவிப்பட்டி-புதிய-அடையாளம். லேபல்}"
+".லாபல் = புதிய அடையாளம் \n"
+".tooltiptext = {கருவிப்பட்டி-புதிய-அடையாளம். லேபல்}"
 
 #. New identity dialog.
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
@@ -189,8 +211,8 @@ msgid ""
 "{ -brand-short-name } blocked your homepage ({ $url }) from loading because "
 "it might recognize your previous session."
 msgstr ""
-"{-பிராண்ட்-சார்ட்-பெயர் your உங்கள் முகப்புப்பக்கத்தை ({$ url}) ஏற்றுவதைத் "
-"தடுத்தது, ஏனெனில் இது உங்கள் முந்தைய அமர்வை அங்கீகரிக்கக்கூடும்."
+"{ -brand-short-name } உங்கள் முகப்புப் பக்கத்தை ஏற்றாமல் தடுத்துவிட்டது, "
+"ஏனெனில் ({ $url }) உங்கள் முந்தைய அமர்வை அடையாளம் கண்டிருக்கலாம்."
 
 #. New identity: blocked home page notification.
 #. Button to continue loading the home page, despite the warning message.
@@ -221,9 +243,9 @@ msgid ""
 "at specific sizes, making it harder to single out users on the basis of "
 "their window or screen size."
 msgstr ""
-"{-பிரண்ட்-சார்ட்-பெயர்} இன் லெட்டர்பாக்சிங் நற்பொருத்தம் வலைத்தளங்களை "
-"குறிப்பிட்ட அளவுகளில் காண்பிப்பதை கட்டுப்படுத்துகிறது, இது பயனர்களின் சாளரம்"
-" அல்லது திரை அளவின் அடிப்படையில் ஒற்றை அவுட் செய்வது கடினமானது."
+"{ -brand-short-name } 'மடற்கட்டுதல்' அம்சம், வலைத்தளங்களை குறிப்பிட்ட "
+"அளவுகளில் மட்டும் காண்பிக்கிறது. இதனால் பயனரின் விண்டோ அல்லது திரை அளவை "
+"அடிப்படையாக வைத்து அவரை தனியாக கண்டறிவது கடினமாகிறது."
 
 #. Preferences - Letterboxing.
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
@@ -244,8 +266,8 @@ msgid ""
 ".label = Reuse last window size when opening a new window\n"
 ".accesskey = R"
 msgstr ""
-".லாபல் = புதிய சாளரத்தைத் திறக்கும்போது கடைசி சாளர அளவை மீண்டும் பயன்படுத்தவும்\n"
-" .accesskey = r"
+".லாபல் = புதிய சாளரத்தைத் திறக்கும்போது கடைசி சாளர அளவை மீண்டும் பயன்படுத்தவும் \n"
+".accesskey = r"
 
 #. Preferences - Letterboxing.
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
@@ -303,8 +325,8 @@ msgid ""
 ".label = Security level\n"
 ".tooltiptext = Security level: Standard"
 msgstr ""
-".லாபல் = பாதுகாப்பு நிலை\n"
-" .tooltiptext = பாதுகாப்பு நிலை: தரநிலை"
+".லாபல் = பாதுகாப்பு நிலை \n"
+".tooltiptext = பாதுகாப்பு நிலை: தரநிலை"
 
 #. Security level toolbar button.
 #. Uses sentence case in English (US).
@@ -316,8 +338,8 @@ msgid ""
 ".label = Security level\n"
 ".tooltiptext = Security level: Safer"
 msgstr ""
-".லாபல் = பாதுகாப்பு நிலை\n"
-" .tooltiptext = பாதுகாப்பு நிலை: பாதுகாப்பானது"
+".லாபல் = பாதுகாப்பு நிலை \n"
+".tooltiptext = பாதுகாப்பு நிலை: பாதுகாப்பானது"
 
 #. Security level toolbar button.
 #. Uses sentence case in English (US).
@@ -329,8 +351,8 @@ msgid ""
 ".label = Security level\n"
 ".tooltiptext = Security level: Safest"
 msgstr ""
-".லாபல் = பாதுகாப்பு நிலை\n"
-" .tooltiptext = பாதுகாப்பு நிலை: பாதுகாப்பானது"
+".லாபல் = பாதுகாப்பு நிலை \n"
+".tooltiptext = பாதுகாப்பு நிலை: பாதுகாப்பானது"
 
 #. Security level toolbar button.
 #. Uses sentence case in English (US).
@@ -344,8 +366,8 @@ msgid ""
 ".label = Security level\n"
 ".tooltiptext = Security level: Custom"
 msgstr ""
-".லாபல் = பாதுகாப்பு நிலை\n"
-" .tooltiptext = பாதுகாப்பு நிலை: தனிப்பயன்"
+".லாபல் = பாதுகாப்பு நிலை \n"
+".tooltiptext = பாதுகாப்பு நிலை: தனிப்பயன்"
 
 #. Security level popup panel.
 #. Uses sentence case in English (US).
@@ -356,34 +378,17 @@ msgstr "தனிக் நிலை"
 
 #. Security level popup panel.
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
-msgctxt "security-level-panel-level-standard"
-msgid "Standard"
-msgstr "வழக்கமான"
-
-#. Security level popup panel.
-#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
-msgctxt "security-level-panel-level-safer"
-msgid "Safer"
-msgstr "பாதுகாப்பான"
-
-#. Security level popup panel.
-#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
-msgctxt "security-level-panel-level-safest"
-msgid "Safest"
-msgstr "மிக பாதுகாப்பான"
-
-#. Security level popup panel.
-#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
 msgctxt "security-level-panel-learn-more-link"
 msgid "Learn more"
 msgstr "மேலும் அறிய"
 
+# Suggested in Weblate: அமைப்புகள்…
 #. Security level popup panel.
 #. Button to open security level settings.
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
 msgctxt "security-level-panel-open-settings-button"
 msgid "Settings…"
-msgstr "செட்டிங்ஸ்"
+msgstr "அமைப்புகள்…"
 
 #. Security level settings.
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
@@ -408,25 +413,93 @@ msgid "Learn more"
 msgstr "மேலும் அறிய"
 
 #. Security level settings.
+#. Text for a badge that labels the currently active security level.
+#. The text in between '<span>' and '</span>' should contain some kind of
+#. bracket, like '(' and ')', or other punctuation used in your language to
+#. separate out text from its surrounding context. This will not be visible,
+#. but will be use for screen readers to make it clear that the text is not
+#. part of the same sentence. For example, in US English this would be read as
+#. "(Current level)", and the full line of text would be read as "Safest
+#. (Current level)".
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
+msgctxt "security-level-preferences-current-badge"
+msgid "<span>(</span>Current level<span>)</span>"
+msgstr "<span> (</span> தற்போதைய நிலை <span>) </span>"
+
+# Suggested in Weblate: மாற்றம்…
+#. Security level settings.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
+msgctxt "security-level-preferences-change-button"
+msgid "Change…"
+msgstr "மாற்றம்…"
+
+#. Security level settings dialog.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
+msgctxt "security-level-dialog-window"
+msgid ".title = Change security level"
+msgstr ".title = பாதுகாப்பு அளவை மாற்றவும்"
+
+#. Security level settings dialog.
+#. '-brand-short-name' is the localized browser name, like "Tor Browser".
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
+msgctxt "security-level-dialog-restart-description"
+msgid ""
+"You will need to restart { -brand-short-name } to apply any changes. This "
+"will close all windows and tabs."
+msgstr ""
+"ஏதேனும் மாற்றங்களைப் பயன்படுத்த நீங்கள் {-பிரண்ட்-சார்ட்-பெயர் beten ஐ "
+"மறுதொடக்கம் செய்ய வேண்டும். இது அனைத்து சாளரங்களையும் தாவல்களையும் "
+"மூடிவிடும்."
+
+#. Security level settings dialog.
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
 msgctxt "security-level-preferences-level-standard"
 msgid ".label = Standard"
 msgstr ".label = வழக்கமான"
 
-#. Security level settings.
+#. Security level settings dialog.
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
 msgctxt "security-level-preferences-level-safer"
 msgid ".label = Safer"
 msgstr ".label = பாதுகாப்பான"
 
-#. Security level settings.
+#. Security level settings dialog.
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
 msgctxt "security-level-preferences-level-safest"
 msgid ".label = Safest"
 msgstr ".label = மிக பாதுகாப்பான"
 
-# Suggested in Weblate: எல்லா Tor உலாவி மற்றும் வலைத்தள அம்சங்களும்
-# செயல்படுத்தப்படுகின்றன.
+#. Security level settings dialog.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
+msgctxt "security-level-dialog-save-restart"
+msgid ".label = Save and restart"
+msgstr ".லாபல் = சேமித்து மறுதொடக்கம் செய்யுங்கள்"
+
+#. Security level names shown in the security panel and settings.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
+msgctxt "security-level-panel-level-standard"
+msgid "Standard"
+msgstr "வழக்கமான"
+
+#. Security level names shown in the security panel and settings.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
+msgctxt "security-level-panel-level-safer"
+msgid "Safer"
+msgstr "பாதுகாப்பான"
+
+#. Security level names shown in the security panel and settings.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
+msgctxt "security-level-panel-level-safest"
+msgid "Safest"
+msgstr "மிக பாதுகாப்பான"
+
+# Suggested in Weblate: தனிப்பயன்
+#. Security level names shown in the security panel and settings.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
+msgctxt "security-level-panel-level-custom"
+msgid "Custom"
+msgstr "தனிப்பயன்"
+
 #. Security level summaries shown in security panel and settings.
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
 msgctxt "security-level-summary-standard"
@@ -474,7 +547,8 @@ msgstr "சில எழுத்துகள் மற்றும் கணி
 msgctxt "security-level-preferences-bullet-limit-media"
 msgid "Audio and video (HTML5 media), and WebGL are click-to-play."
 msgstr ""
-"செவ்வியமும் விழியமும் (HTML5 ஊடகம்) WebGL-உம் இயக்க-சுட்டுக என்றவாறு உள்ளன"
+"ஆடியோ மற்றும் வீடியோ (HTML5 மீடியா), மற்றும் வெப்சிஎல் ஆகியவை "
+"கிளிக்-க்கு-விளையாடுகின்றன."
 
 #. Security level feature bullet points.
 #. Shown in the settings under the security level when it is selected.
@@ -495,25 +569,6 @@ msgstr ""
 #. Custom security level.
 #. Some custom preferences configuration has placed the user outside one of
 #. the standard three levels.
-#. Shown in the security level panel as an orange badge next to the expected
-#. level.
-#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
-msgctxt "security-level-panel-custom-badge"
-msgid "Custom"
-msgstr "விருப்ப"
-
-#. Custom security level.
-#. Some custom preferences configuration has placed the user outside one of
-#. the standard three levels.
-#. Shown in the security level settings in a warning box.
-#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
-msgctxt "security-level-preferences-custom-heading"
-msgid "Custom security level configured"
-msgstr "தனிப்பயன் பாதுகாப்பு நிலை கட்டமைக்கப்பட்டுள்ளது"
-
-#. Custom security level.
-#. Some custom preferences configuration has placed the user outside one of
-#. the standard three levels.
 #. Description of custom state and recommended action.
 #. Shown in the security level panel and settings.
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
@@ -527,6 +582,65 @@ msgstr ""
 "காரணமாகிவிட்டது. பாதுகாப்பு மற்றும் தனியுரிமை காரணங்களுக்காக, நீங்கள் இயல்பு"
 " பாதுகாப்பு நிலைகளில் ஒன்றைத் தேர்ந்தெடுக்குமாறு பரிந்துரைக்கிறோம்."
 
+#. Security level restart prompt.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
+msgctxt "security-level-restart-prompt-title"
+msgid "Your security level settings require a restart"
+msgstr "உங்கள் பாதுகாப்பு நிலை அமைப்புகளுக்கு மறுதொடக்கம் தேவை"
+
+#. Security level restart prompt.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
+msgctxt "security-level-restart-prompt-body"
+msgid ""
+"You must restart { -brand-short-name } for your security level settings to "
+"be applied. This will close all your windows and tabs."
+msgstr ""
+"உங்கள் பாதுகாப்பு நிலை அமைப்புகள் பயன்படுத்த {-பிரண்ட்-சார்ட்-பெயர்} ஐ "
+"மறுதொடக்கம் செய்ய வேண்டும். இது உங்கள் அனைத்து சாளரங்களையும் தாவல்களையும் "
+"மூடிவிடும்."
+
+# Suggested in Weblate: மறுதொடக்கம்
+#. Security level restart prompt.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
+msgctxt "security-level-restart-prompt-button-restart"
+msgid "Restart"
+msgstr "மறுதொடக்கம்"
+
+# Suggested in Weblate: புறக்கணிக்கவும்
+#. Security level restart prompt.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
+msgctxt "security-level-restart-prompt-button-ignore"
+msgid "Ignore"
+msgstr "புறக்கணிக்கவும்"
+
+#. Unused in Tor Browser 14.5!
+#. Custom security level.
+#. Some custom preferences configuration has placed the user outside one of
+#. the standard three levels.
+#. Shown in the security level panel as an orange badge next to the expected
+#. level.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
+msgctxt "security-level-panel-custom-badge"
+msgid "Custom"
+msgstr "விருப்ப"
+
+#. Unused in Tor Browser 14.5!
+#. Custom security level.
+#. Some custom preferences configuration has placed the user outside one of
+#. the standard three levels.
+#. Shown in the security level settings in a warning box.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
+msgctxt "security-level-preferences-custom-heading"
+msgid "Custom security level configured"
+msgstr "தனிப்பயன் பாதுகாப்பு நிலை கட்டமைக்கப்பட்டுள்ளது"
+
+#. Unused in Tor Browser 14.5!
+#. Custom security level.
+#. Some custom preferences configuration has placed the user outside one of
+#. the standard three levels.
+#. Button to undo custom changes to the security level and place the user in
+#. one of the standard security levels.
+#. Shown in the security level panel and settings.
 #. Custom security level.
 #. Some custom preferences configuration has placed the user outside one of
 #. the standard three levels.
@@ -538,7 +652,7 @@ msgctxt "security-level-restore-defaults-button"
 msgid "Restore defaults"
 msgstr "இயல்பிருப்புகளை மீட்டெடு"
 
-#. Unused in Tor Browser 14.0!
+#. Unused in Tor Browser 14.5!
 #. Notification for dropped operating system support.
 #. "{ -brand-short-name }" will be replaced with the localized name of the
 #. browser, e.g. "Tor Browser".
@@ -555,7 +669,7 @@ msgstr ""
 "இந்த பதிப்பை ஆதரிக்காது. முக்கியமான பாதுகாப்பு புதுப்பிப்புகளைப் பெற "
 "தொடர்ந்து MACOS 10.15 அல்லது அதற்குப் பிறகு மேம்படுத்தவும்."
 
-#. Unused in Tor Browser 14.0!
+#. Unused in Tor Browser 14.5!
 #. Notification for dropped operating system support.
 #. "{ -brand-short-name }" will be replaced with the localized name of the
 #. browser, e.g. "Tor Browser".
@@ -571,7 +685,7 @@ msgstr ""
 " பாதுகாப்பு புதுப்பிப்புகளைப் பெறுவதற்கு தயவுசெய்து MACOS 10.15 அல்லது "
 "அதற்குப் பிறகு மேம்படுத்தவும்."
 
-#. Unused in Tor Browser 14.0!
+#. Unused in Tor Browser 14.5!
 #. Notification for dropped operating system support.
 #. "{ -brand-short-name }" will be replaced with the localized name of the
 #. browser, e.g. "Tor Browser".
@@ -588,7 +702,7 @@ msgstr ""
 "இந்த பதிப்பை ஆதரிக்காது. முக்கியமான பாதுகாப்பு புதுப்பிப்புகளைப் பெற "
 "தொடர்ந்து சாளரங்கள் 10 அல்லது அதற்குப் பிறகு மேம்படுத்தவும்."
 
-#. Unused in Tor Browser 14.0!
+#. Unused in Tor Browser 14.5!
 #. Notification for dropped operating system support.
 #. "{ -brand-short-name }" will be replaced with the localized name of the
 #. browser, e.g. "Tor Browser".
@@ -604,7 +718,7 @@ msgstr ""
 "முக்கியமான பாதுகாப்பு புதுப்பிப்புகளைப் பெறுவதற்கு சாளரங்கள் 10 அல்லது "
 "அதற்குப் பிறகு மேம்படுத்தவும்."
 
-#. Unused in Tor Browser 14.0!
+#. Unused in Tor Browser 14.5!
 #. Notification for dropped operating system support.
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-translated, ignore-xml-invalid, ignore-xml-tags
 msgctxt "dropped-support-notification-dismiss-button"
