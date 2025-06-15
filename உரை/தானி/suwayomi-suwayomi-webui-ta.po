@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Suwayomi)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-06 01:56+0200\n"
-"PO-Revision-Date: 2025-03-20 06:08\n"
+"POT-Creation-Date: 2025-06-14 20:27+0200\n"
+"PO-Revision-Date: 2025-06-15 05:51\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/suwayomi/suwayomi-webui/ta/>\n"
 "Language: ta\n"
@@ -12,17 +12,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.3-dev\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 #, i18next-interpolation
 msgctxt "category.dialog.title.edit_category"
 msgid "Edit category"
-msgstr "வகையைத் திருத்து"
+msgid_plural "Edit categories"
+msgstr[0] "வகையைத் திருத்து"
+msgstr[1] "வகைகளைத் திருத்து"
 
 #, i18next-interpolation
 msgctxt "category.dialog.title.new_category"
 msgid "New category"
 msgstr "புதிய வகை"
+
+#, i18next-interpolation
+msgctxt "category.error.label.create_failure"
+msgid "Could not create category"
+msgstr "வகையை உருவாக்க முடியவில்லை"
 
 #, i18next-interpolation
 msgctxt "category.error.label.empty"
@@ -70,6 +77,11 @@ msgstr[1] "வகைகள்"
 msgctxt "category.title.set_categories"
 msgid "Set categories"
 msgstr "வகைகளை அமைக்கவும்"
+
+#, i18next-interpolation
+msgctxt "category.value"
+msgid "{{count}} $t(category.title.category, lowercase)"
+msgstr "{{count}} $ t (category.title.category, Lowers)"
 
 #, i18next-interpolation
 msgctxt "chapter.action.bookmark.add.button.selected"
@@ -132,12 +144,12 @@ msgstr "பதிவிறக்கம்"
 #, i18next-interpolation
 msgctxt "chapter.action.download.add.label.ahead"
 msgid "$t(download.settings.download_ahead.title) ({{count}})"
-msgstr "$ t (download.settings.download_ahead.title) ({{count}})"
+msgstr "$t(download.settings.download_ahead.title)({{count}})"
 
 #, i18next-interpolation
 msgctxt "chapter.action.download.add.label.all"
 msgid "$t(extension.language.all)"
-msgstr "$ t (existion.language.all)"
+msgstr "$t(extension.language.all)"
 
 #, i18next-interpolation
 msgctxt "chapter.action.download.add.label.error"
@@ -149,7 +161,7 @@ msgstr[1] "பதிவிறக்கங்களைச் சேர்க்�
 #, i18next-interpolation
 msgctxt "chapter.action.download.add.label.next"
 msgid "$t(reader.button.next_chapter)"
-msgstr "$ t (reader.putton.next_chapter)"
+msgstr "$t(reader.button.next_chapter)"
 
 #, i18next-interpolation
 msgctxt "chapter.action.download.add.label.next_five"
@@ -176,7 +188,7 @@ msgstr[1] "{{count}} பதிவிறக்கங்கள் சேர்க�
 #, i18next-interpolation
 msgctxt "chapter.action.download.add.label.unread"
 msgid "$t(global.filter.label.unread)"
-msgstr "$ t (global.filter.label.unread)"
+msgstr "$t(global.filter.label.unread)"
 
 #, i18next-interpolation
 msgctxt "chapter.action.download.delete.button.selected"
@@ -276,6 +288,13 @@ msgid "No chapters matching filter"
 msgstr "வடிகட்டியுடன் பொருந்தக்கூடிய அத்தியாயங்கள் இல்லை"
 
 #, i18next-interpolation
+msgctxt "chapter.missing"
+msgid "Missing {{count}} chapter"
+msgid_plural "Missing {{count}} chapters"
+msgstr[0] "காணவில்லை {{count}} அத்தியாயம்"
+msgstr[1] "காணவில்லை {{count}} அத்தியாயங்கள்"
+
+#, i18next-interpolation
 msgctxt "chapter.option.display.label.chapter_number"
 msgid "Chapter number"
 msgstr "அத்தியாயம் எண்"
@@ -286,6 +305,11 @@ msgid "Source title"
 msgstr "மூல தலைப்பு"
 
 #, i18next-interpolation
+msgctxt "chapter.option.exclude_scanlators"
+msgid "Exclude scanlators"
+msgstr "ச்கேன்லேட்டர்களை விலக்கு"
+
+#, i18next-interpolation
 msgctxt "chapter.status.label.downloaded"
 msgid "Downloaded"
 msgstr "பதிவிறக்கம்"
@@ -294,8 +318,15 @@ msgstr "பதிவிறக்கம்"
 msgctxt "chapter.title"
 msgid "Chapter"
 msgid_plural "Chapters"
-msgstr[0] "பாடங்கள்"
+msgstr[0] "பாடம்"
 msgstr[1] "பாடங்கள்"
+
+#, i18next-interpolation
+msgctxt "chapter.value"
+msgid "{{count}} chapter"
+msgid_plural "{{count}} chapters"
+msgstr[0] "{{count}} அத்தியாயம்"
+msgstr[1] "{{count}} அத்தியாயங்கள்"
 
 #, i18next-interpolation
 msgctxt "download.queue.error.label.failed_delete_all"
@@ -311,6 +342,16 @@ msgstr "வரிசையில் இருந்து பதிவிறக�
 msgctxt "download.queue.error.label.failed_to_retry"
 msgid "Could not retry failed download."
 msgstr "பதிவிறக்கம் தோல்வியுற்றது."
+
+#, i18next-interpolation
+msgctxt "download.queue.info.paused"
+msgid "Paused — $t(download.queue.info.remaining)"
+msgstr "இடைநிறுத்தப்பட்டது - $ t (download.queue.info.reminaing)"
+
+#, i18next-interpolation
+msgctxt "download.queue.info.remaining"
+msgid "{{count}} remaining"
+msgstr "{{count}} மீதமுள்ளது"
 
 #, i18next-interpolation
 msgctxt "download.queue.label.delete_all"
@@ -436,7 +477,7 @@ msgstr "பதிவிறக்கம் செய்யப்படாத அ�
 #, i18next-interpolation
 msgctxt "download.settings.download_ahead.label.value"
 msgid "{{chapters}} $t(chapter.title)"
-msgstr "{{chapters}} $ t (அத்தியாயம்.டிடில்)"
+msgstr "{{chapters}} $t(அத்தியாயம்.டிடில்)"
 
 #, i18next-interpolation
 msgctxt "download.settings.download_ahead.label.while_reading"
@@ -468,11 +509,6 @@ msgid "Save as CBZ archive"
 msgstr "சிபிஇசட் காப்பகமாக சேமிக்கவும்"
 
 #, i18next-interpolation
-msgctxt "download.settings.title"
-msgid "Download settings"
-msgstr "அமைப்புகளை பதிவிறக்கவும்"
-
-#, i18next-interpolation
 msgctxt "download.state.label.downloading"
 msgid "Downloading"
 msgstr "பதிவிறக்குகிறது"
@@ -485,7 +521,7 @@ msgstr "பிழை"
 #, i18next-interpolation
 msgctxt "download.state.label.finished"
 msgid "$t(global.label.finished)"
-msgstr "$ t (global.label.finished)"
+msgstr "$t(global.label.finished)"
 
 #, i18next-interpolation
 msgctxt "download.state.label.queued"
@@ -493,9 +529,14 @@ msgid "Queued"
 msgstr "வரிசையில்"
 
 #, i18next-interpolation
-msgctxt "download.title"
+msgctxt "download.title.download"
 msgid "Downloads"
 msgstr "பதிவிறக்கங்கள்"
+
+#, i18next-interpolation
+msgctxt "download.title.queue"
+msgid "Download queue"
+msgstr "வரிசையைப் பதிவிறக்கவும்"
 
 #, i18next-interpolation
 msgctxt "extension.action.label.install"
@@ -571,6 +612,11 @@ msgstr "அனைத்தும்"
 msgctxt "extension.language.other"
 msgid "Other"
 msgstr "மற்றொன்று"
+
+#, i18next-interpolation
+msgctxt "extension.settings.dialog.title"
+msgid "Per-language extension settings"
+msgstr "ஒவ்வொரு மொழி நீட்டிப்பு அமைப்புகளும்"
 
 #, i18next-interpolation
 msgctxt "extension.settings.repositories.custom.dialog.action.button.add"
@@ -909,6 +955,15 @@ msgid "Invalid input"
 msgstr "தவறான உள்ளீடு"
 
 #, i18next-interpolation
+msgctxt "global.error.label.unrecoverable_error"
+msgid ""
+"Something went wrong\n"
+"An error occurred that we cannot recover from"
+msgstr ""
+"ஏதோ தவறு நடந்தது \n"
+"எங்களால் மீட்க முடியாது என்று பிழை ஏற்பட்டது"
+
+#, i18next-interpolation
 msgctxt "global.error.label.update_failed"
 msgid "Could not check for updates"
 msgstr "புதுப்பிப்புகளை சரிபார்க்க முடியவில்லை"
@@ -1089,6 +1144,16 @@ msgid "Information"
 msgstr "தகவல்"
 
 #, i18next-interpolation
+msgctxt "global.label.large"
+msgid "Large"
+msgstr "பெரிய"
+
+#, i18next-interpolation
+msgctxt "global.label.last_used"
+msgid "Last used"
+msgstr "கடைசியாக பயன்படுத்தப்பட்டது"
+
+#, i18next-interpolation
 msgctxt "global.label.left"
 msgid "Left"
 msgstr "இடது"
@@ -1119,6 +1184,11 @@ msgid "Logged in"
 msgstr "உள்நுழைந்தது"
 
 #, i18next-interpolation
+msgctxt "global.label.medium"
+msgid "Medium"
+msgstr "சராசரி"
+
+#, i18next-interpolation
 msgctxt "global.label.menu"
 msgid "Menu"
 msgstr "பட்டியல்"
@@ -1127,6 +1197,11 @@ msgstr "பட்டியல்"
 msgctxt "global.label.mobile"
 msgid "Mobile"
 msgstr "மொபைல்"
+
+#, i18next-interpolation
+msgctxt "global.label.more"
+msgid "More"
+msgstr "மேலும்"
 
 #, i18next-interpolation
 msgctxt "global.label.never"
@@ -1159,6 +1234,11 @@ msgid "Password"
 msgstr "கடவுச்சொல்"
 
 #, i18next-interpolation
+msgctxt "global.label.pinned"
+msgid "Pinned"
+msgstr "பின்"
+
+#, i18next-interpolation
 msgctxt "global.label.placeholder"
 msgid "Placeholder"
 msgstr "இடம் வைத்திருப்பவர்"
@@ -1174,9 +1254,19 @@ msgid "Right"
 msgstr "வலது"
 
 #, i18next-interpolation
+msgctxt "global.label.scanlator"
+msgid "Scanlator"
+msgstr "ச்கேன்லேட்டர்"
+
+#, i18next-interpolation
 msgctxt "global.label.share"
 msgid "Share"
 msgstr "பங்கு"
+
+#, i18next-interpolation
+msgctxt "global.label.small"
+msgid "Small"
+msgstr "சிறிய"
 
 #, i18next-interpolation
 msgctxt "global.label.sort"
@@ -1194,6 +1284,11 @@ msgid "Started"
 msgstr "தொடங்கியது"
 
 #, i18next-interpolation
+msgctxt "global.label.stopped"
+msgid "Stopped"
+msgstr "நிறுத்தப்பட்டது"
+
+#, i18next-interpolation
 msgctxt "global.label.success"
 msgid "Success"
 msgstr "செய்"
@@ -1202,6 +1297,11 @@ msgstr "செய்"
 msgctxt "global.label.system"
 msgid "System"
 msgstr "மண்டலம்"
+
+#, i18next-interpolation
+msgctxt "global.label.tiny"
+msgid "Tiny"
+msgstr "சிறிய"
 
 #, i18next-interpolation
 msgctxt "global.label.type"
@@ -1375,6 +1475,21 @@ msgid "{{value}}{{unit}}"
 msgstr "{{value}} {{unit}}"
 
 #, i18next-interpolation
+msgctxt "history.error.label.no_history_available"
+msgid "You have not read any series yet."
+msgstr "நீங்கள் இதுவரை எந்த தொடரும் படிக்கவில்லை."
+
+#, i18next-interpolation
+msgctxt "history.settings.hide"
+msgid "Hide history"
+msgstr "வரலாற்றை மறைக்க"
+
+#, i18next-interpolation
+msgctxt "history.title"
+msgid "History"
+msgstr "வரலாறு"
+
+#, i18next-interpolation
 msgctxt "hotkeys.create.dialog.label"
 msgid "Recorded keys: <Keys/>"
 msgstr "பதிவுசெய்யப்பட்ட விசைகள்: <விசைகள்/>"
@@ -1405,6 +1520,11 @@ msgid "Keybind"
 msgid_plural "Keybinds"
 msgstr[0] "Keybind"
 msgstr[1] "கீபிண்ட்ச்"
+
+#, i18next-interpolation
+msgctxt "library.action.label.search_globally"
+msgid "Search for \"{{query}}\" globally"
+msgstr "உலகளவில் \"{{query}}\" ஐத் தேடுங்கள்"
 
 #, i18next-interpolation
 msgctxt "library.action.label.stop_update"
@@ -1667,11 +1787,6 @@ msgid "Global update"
 msgstr "உலகளாவிய புதுப்பிப்பு"
 
 #, i18next-interpolation
-msgctxt "library.settings.title"
-msgid "Library Settings"
-msgstr "நூலக அமைப்புகள்"
-
-#, i18next-interpolation
 msgctxt "library.title"
 msgid "Library"
 msgstr "நூலகம்"
@@ -1898,6 +2013,36 @@ msgid "Manga"
 msgid_plural "Manga"
 msgstr[0] "மங்கா"
 msgstr[1] "மங்கா"
+
+#, i18next-interpolation
+msgctxt "manga.type.comic"
+msgid "Comic"
+msgstr "காமிக்"
+
+#, i18next-interpolation
+msgctxt "manga.type.long_strip"
+msgid "Long strip"
+msgstr "நீண்ட துண்டு"
+
+#, i18next-interpolation
+msgctxt "manga.type.manga"
+msgid "$t(manga.title_one)"
+msgstr "$ t (manga.title_one)"
+
+#, i18next-interpolation
+msgctxt "manga.type.manhua"
+msgid "Manhua"
+msgstr "மன்உவா"
+
+#, i18next-interpolation
+msgctxt "manga.type.manhwa"
+msgid "Manhwa"
+msgstr "மன்அ்வா"
+
+#, i18next-interpolation
+msgctxt "manga.type.webtoon"
+msgid "$t(reader.settings.reader_type.label.webtoon)"
+msgstr "$ t (reader.settings.reader_type.label.webtoon)"
 
 #, i18next-interpolation
 msgctxt "migrate.dialog.action.button.show_entry"
@@ -2329,9 +2474,29 @@ msgid "Preload images"
 msgstr "படங்களை முன்னரே ஏற்றவும்"
 
 #, i18next-interpolation
+msgctxt "reader.settings.infinite_scroll.description"
+msgid ""
+"Keep previous and upcoming chapters visible while reading in continuous "
+"reading modes, allowing seamless scrolling between chapters."
+msgstr ""
+"தொடர்ச்சியான வாசிப்பு முறைகளில் படிக்கும்போது முந்தைய மற்றும் வரவிருக்கும் "
+"அத்தியாயங்களைத் தெரிந்துகொள்ளவும், அத்தியாயங்களுக்கு இடையில் தடையற்ற "
+"ச்க்ரோலிங் அனுமதிக்கிறது."
+
+#, i18next-interpolation
+msgctxt "reader.settings.infinite_scroll.title"
+msgid "Continuous chapter display"
+msgstr "தொடர்ச்சியான அத்தியாயம் காட்சி"
+
+#, i18next-interpolation
 msgctxt "reader.settings.label.behaviour"
 msgid "Behaviour"
 msgstr "நடத்தை"
+
+#, i18next-interpolation
+msgctxt "reader.settings.label.custom_scroll_amount"
+msgid "Custom scroll amount"
+msgstr "தனிப்பயன் உருள் தொகை"
 
 #, i18next-interpolation
 msgctxt "reader.settings.label.fit_page_to_window"
@@ -2515,6 +2680,16 @@ msgid "Right to left"
 msgstr "வலமிருந்து இடமாக"
 
 #, i18next-interpolation
+msgctxt "reader.settings.scroll_amount"
+msgid "Scroll amount"
+msgstr "உருள் தொகை"
+
+#, i18next-interpolation
+msgctxt "reader.settings.show_transition_page"
+msgid "Show transition page"
+msgstr "மாற்றம் பக்கத்தைக் காட்டு"
+
+#, i18next-interpolation
 msgctxt "reader.settings.source_series"
 msgid "Series settings"
 msgstr "தொடர் அமைப்புகள்"
@@ -2555,9 +2730,9 @@ msgid "Quick settings"
 msgstr "விரைவான அமைப்புகள்"
 
 #, i18next-interpolation
-msgctxt "reader.settings.title.reader_settings"
-msgid "Reader Settings"
-msgstr "வாசகர் அமைப்புகள்"
+msgctxt "reader.settings.title.reader"
+msgid "Reader"
+msgstr "வாசகர்"
 
 #, i18next-interpolation
 msgctxt "reader.title"
@@ -2613,6 +2788,11 @@ msgstr "இயல்புநிலை தேடல் அமைப்புக�
 msgctxt "search.error.label.source_search_failed"
 msgid "Could not search source"
 msgstr "மூலத்தைத் தேட முடியவில்லை"
+
+#, i18next-interpolation
+msgctxt "search.filter.has_results"
+msgid "Has results"
+msgstr "முடிவுகள் உள்ளன"
 
 #, i18next-interpolation
 msgctxt "search.title.global_search"
@@ -2994,11 +3174,6 @@ msgid "Backup"
 msgstr "காப்புப்பிரதி"
 
 #, i18next-interpolation
-msgctxt "settings.browse.title"
-msgid "Browse settings"
-msgstr "அமைப்புகளை உலாவுக"
-
-#, i18next-interpolation
 msgctxt "settings.clear_cache.label.description"
 msgid ""
 "The cache of the client (browser, electron) should get cleared alongside it,"
@@ -3065,11 +3240,6 @@ msgstr ""
 msgctxt "settings.device.title.device"
 msgid "Device"
 msgstr "சாதனம்"
-
-#, i18next-interpolation
-msgctxt "settings.device.title.settings"
-msgid "Device settings"
-msgstr "சாதன அமைப்புகள்"
 
 #, i18next-interpolation
 msgctxt "settings.label.hide_library_entries"
@@ -3350,11 +3520,6 @@ msgid "Server"
 msgstr "சேவையகம்"
 
 #, i18next-interpolation
-msgctxt "settings.server.title.settings"
-msgid "Server Settings"
-msgstr "சேவையக அமைப்புகள்"
-
-#, i18next-interpolation
 msgctxt "settings.title"
 msgid "Settings"
 msgstr "அமைப்புகள்"
@@ -3504,11 +3669,6 @@ msgstr ""
 "சேவையகத்தைத் தொடங்கும்போது $ t (settings.webui.title.webui) ஐத் திறக்கவும்"
 
 #, i18next-interpolation
-msgctxt "settings.webui.title.settings"
-msgid "$t(settings.webui.title.webui) Settings"
-msgstr "$ t (settings.webui.title.webui) அமைப்புகள்"
-
-#, i18next-interpolation
 msgctxt "settings.webui.title.webui"
 msgid "WebUI"
 msgstr "பின்னப்பட்ட"
@@ -3566,6 +3726,16 @@ msgid "Local source"
 msgstr "உள்ளக மூல"
 
 #, i18next-interpolation
+msgctxt "source.pin.add"
+msgid "Pin source"
+msgstr "பின் மூல"
+
+#, i18next-interpolation
+msgctxt "source.pin.remove"
+msgid "Unpin source"
+msgstr "Unpin மூல"
+
+#, i18next-interpolation
 msgctxt "source.title"
 msgid "Source"
 msgid_plural "Sources"
@@ -3612,6 +3782,81 @@ msgstr ""
 " \"எனது: <titlow>\" (எ.கா. \"மை: ஒன் பீச்\") வழியாக உங்கள் பட்டியல்களுக்கு தேடலைக் கட்டுப்படுத்துங்கள்"
 
 #, i18next-interpolation
+msgctxt "tracking.publishing.status.cancelled"
+msgid "$(manga.status.cancelled)"
+msgstr "$ (manga.status.cancelled)"
+
+#, i18next-interpolation
+msgctxt "tracking.publishing.status.currently_publishing"
+msgid "Currently publishing"
+msgstr "தற்போது வெளியீடு"
+
+#, i18next-interpolation
+msgctxt "tracking.publishing.status.finished"
+msgid "$t(global.label.finished)"
+msgstr "$ t (global.label.finished)"
+
+#, i18next-interpolation
+msgctxt "tracking.publishing.status.hiatus"
+msgid "$(manga.status.hiatus)"
+msgstr "$ (manga.status.hiatus)"
+
+#, i18next-interpolation
+msgctxt "tracking.publishing.status.not_yet_published"
+msgid "Not yet published"
+msgstr "இன்னும் வெளியிடப்படவில்லை"
+
+#, i18next-interpolation
+msgctxt "tracking.publishing.status.not_yet_released"
+msgid "Not yet released"
+msgstr "இன்னும் வெளியிடப்படவில்லை"
+
+#, i18next-interpolation
+msgctxt "tracking.publishing.status.releasing"
+msgid "Releasing"
+msgstr "வெளியீடு"
+
+#, i18next-interpolation
+msgctxt "tracking.publishing.type.doujinshi"
+msgid "Doujinshi"
+msgstr "டூசின்சி"
+
+#, i18next-interpolation
+msgctxt "tracking.publishing.type.manga"
+msgid "$t(manga.title_one)"
+msgstr "$ t (manga.title_one)"
+
+#, i18next-interpolation
+msgctxt "tracking.publishing.type.manhua"
+msgid "$t(manga.type.manhua)"
+msgstr "$ T (manga.type.manua)"
+
+#, i18next-interpolation
+msgctxt "tracking.publishing.type.manhwa"
+msgid "$t(manga.type.manhwa)"
+msgstr "$ T (manga.type.manhwa)"
+
+#, i18next-interpolation
+msgctxt "tracking.publishing.type.novel"
+msgid "Novel"
+msgstr "நாவல்"
+
+#, i18next-interpolation
+msgctxt "tracking.publishing.type.oel"
+msgid "OEL"
+msgstr "எண்ணெய்"
+
+#, i18next-interpolation
+msgctxt "tracking.publishing.type.one_shot"
+msgid "Oneshot"
+msgstr "ஒன்சாட்"
+
+#, i18next-interpolation
+msgctxt "tracking.publishing.type.unknown"
+msgid "$t(global.label.unknown)"
+msgstr "$ T (Global.label.unknown)"
+
+#, i18next-interpolation
 msgctxt "tracking.settings.dialog.title.log_in"
 msgid "Log in to {{name}}"
 msgstr "{{name}} இல் உள்நுழைக"
@@ -3635,11 +3880,6 @@ msgstr "படித்த பிறகு முன்னேற்றத்த�
 msgctxt "tracking.settings.label.update_progress_reading_description"
 msgid "Does not work when marking multiple manga as read at once"
 msgstr "பல மங்காவை ஒரே நேரத்தில் படிக்கும்போது வேலை செய்யாது"
-
-#, i18next-interpolation
-msgctxt "tracking.settings.title.settings"
-msgid "Tracking settings"
-msgstr "கண்காணிப்பு அமைப்புகள்"
 
 #, i18next-interpolation
 msgctxt "tracking.settings.title.trackers"

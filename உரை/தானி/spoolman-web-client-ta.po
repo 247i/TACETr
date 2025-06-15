@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Spoolman)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-05 04:07+0200\n"
-"PO-Revision-Date: 2025-03-05 09:18+0530\n"
+"POT-Creation-Date: 2025-06-15 01:56+0200\n"
+"PO-Revision-Date: 2025-06-15 05:27\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/spoolman/web-client/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.3-dev\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 #, i18next-interpolation
 msgctxt "actions.list"
@@ -195,7 +195,7 @@ msgstr "வெற்றிகரமாக நீக்கப்பட்டத�
 #, i18next-interpolation
 msgctxt "notifications.deleteError"
 msgid "Error when deleting {{resource}} (status code: {{statusCode}})"
-msgstr "{{resource}} (நிலைக் குறியீடு: {{statusCode}}) நீக்கும்போது பிழை பிழை"
+msgstr "{{resource}} நீக்கும்போது பிழை (நிலைக் குறியீடு: {{statusCode}})"
 
 #, i18next-interpolation
 msgctxt "notifications.editSuccess"
@@ -205,7 +205,7 @@ msgstr "வெற்றிகரமாக திருத்தப்பட்�
 #, i18next-interpolation
 msgctxt "notifications.editError"
 msgid "Error when editing {{resource}} (status code: {{statusCode}})"
-msgstr "{{resource}} (நிலை குறியீடு: {{statusCode}}) திருத்தும்போது பிழை பிழை"
+msgstr "{{resource}} திருத்தும்போது பிழை (நிலை குறியீடு: {{statusCode}})"
 
 #, i18next-interpolation
 msgctxt "notifications.importProgress"
@@ -604,7 +604,7 @@ msgstr "நீங்கள் எந்த ச்பூல்களையும�
 #, i18next-interpolation
 msgctxt "printing.spoolSelect.selectAll"
 msgid "Select/Unselect All"
-msgstr "அனைத்தையும் தேர்ந்தெடுக்கவும்/தேர்ந்தெடுக்கவும்"
+msgstr "அனைத்தையும் தேர்ந்தெடு/தேர்வுநீக்கு"
 
 #, i18next-interpolation
 msgctxt "printing.spoolSelect.selectedTotal"
@@ -1175,10 +1175,10 @@ msgid ""
 " form.<br><br>A Manufacturer object will be created automatically when you "
 "click Ok, if necessary."
 msgstr ""
-"அதன் விவரங்களை இழை உருவாக்கும் வடிவத்தில் தானாக விரிவுபடுத்த பட்டியலில் ஒரு "
-"இழை தேர்ந்தெடுக்கவும். இது நீங்கள் படிவத்தில் உள்ளிட்ட எந்த தரவையும் "
-"மேலெழுதும். <br> <br> தேவைப்பட்டால், சரி என்பதைக் சொடுக்கு செய்யும் போது ஒரு"
-" உற்பத்தியாளர் பொருள் தானாக உருவாக்கப்படும்."
+"அதன் விவரங்களை இழை உருவாக்கும் வடிவத்தில் தானாக விரிவுபடுத்தப் பட்டியலில் "
+"ஒரு இழை தேர்ந்தெடுக்கவும். இது நீங்கள் படிவத்தில் உள்ளிட்ட எந்தத் தரவையும் "
+"மேலெழுதும். <br> <br> தேவைப்பட்டால், சரி என்பதைக் சொடுக்கு செய்யும்போது ஒரு "
+"உற்பத்தியாளர் பொருள் தானாக உருவாக்கப்படும்."
 
 #, i18next-interpolation
 msgctxt "filament.buttons.add_spool"
@@ -1268,6 +1268,20 @@ msgstr ""
 msgctxt "home.home"
 msgid "Home"
 msgstr "வீடு"
+
+#, i18next-interpolation
+msgctxt "home.welcome"
+msgid "Welcome to your Spoolman instance!"
+msgstr "உங்கள் ச்பூல்மேன் உதாரணத்திற்கு வருக!"
+
+#, i18next-interpolation
+msgctxt "home.description"
+msgid ""
+"It looks like you haven't added any spools yet. See the <helpPageLink>Help "
+"page</helpPageLink> for help getting started."
+msgstr ""
+"நீங்கள் இதுவரை எந்த ச்பூல்களையும் சேர்க்கவில்லை என்று தெரிகிறது. "
+"தொடங்குவதற்கு <எல்பேசெலிங்க்> உதவி பக்கம் </எல்பேசெலிங்க்> ஐப் பார்க்கவும்."
 
 #, i18next-interpolation
 msgctxt "help.help"
@@ -1455,7 +1469,7 @@ msgstr "முழு எண்"
 #, i18next-interpolation
 msgctxt "settings.extra_fields.field_type.integer_range"
 msgid "Integer Range"
-msgstr "முழு எண்"
+msgstr "முழு எண் வரம்பு"
 
 #. "Float" type extra field, a number with decimals
 #, i18next-interpolation
@@ -1536,7 +1550,7 @@ msgstr "ச்பூல்மேன்"
 #, i18next-interpolation
 msgctxt "documentTitle.suffix"
 msgid " | Spoolman"
-msgstr "| ச்பூல்மேன்"
+msgstr " | ச்பூல்மேன்"
 
 #, i18next-interpolation
 msgctxt "documentTitle.home.list"
