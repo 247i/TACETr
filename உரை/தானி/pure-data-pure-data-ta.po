@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (pure-data)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-28 00:07+0200\n"
-"PO-Revision-Date: 2025-01-28 07:45+0530\n"
+"POT-Creation-Date: 2025-06-15 07:32+0200\n"
+"PO-Revision-Date: 2025-06-15 11:07\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/pure-data/pure-data/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 msgid "linear"
 msgstr "நேரியல்"
@@ -283,6 +283,9 @@ msgstr "விளிம்பு:"
 msgid "Y range: from"
 msgstr "ஒய் வரம்பு: இருந்து"
 
+msgid "Object:"
+msgstr "பொருள்:"
+
 msgid "Data Properties"
 msgstr "தரவு பண்புகள்"
 
@@ -323,7 +326,7 @@ msgstr "மூடு"
 
 #, tcl-format
 msgid "%s Font"
-msgstr "%எழுத்துரு"
+msgstr "%s எழுத்துரு"
 
 msgid "Font"
 msgstr "எழுத்துரு"
@@ -676,7 +679,7 @@ msgstr "அதிகபட்ச உரை கோப்புகள் (.mxt)"
 
 #, tcl-format
 msgid "detected font: %s"
-msgstr "எழுத்துருக்களைக் கண்டறியவும்"
+msgstr "எழுத்துருக்களைக் கண்டறியவும்: %s"
 
 #, tcl-format
 msgid "WARNING: font family '%1$s' not found, using default (%2$s)"
@@ -725,15 +728,15 @@ msgid "Failed to start Pd-core"
 msgstr "பி.டி."
 
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
-msgstr "(டி.சி.எல்) நெருங்கிய அடைப்புக்குறி '}' ஐக் காணவில்லை:"
+msgstr "(டி.சி.எல்) நெருங்கிய அடைப்புக்குறி '}' ஐக் காணவில்லை: "
 
 #, ignore-same
 msgid "(Tcl) INVALID COMMAND NAME: "
-msgstr "(டி.சி.எல்) தவறான கட்டளை பெயர்:"
+msgstr "(டி.சி.எல்) தவறான கட்டளை பெயர்: "
 
 #, ignore-same
 msgid "(Tcl) UNHANDLED ERROR: "
-msgstr "(டி.சி.எல்) தடையற்ற பிழை:"
+msgstr "(டி.சி.எல்) தடையற்ற பிழை: "
 
 #, tcl-format
 msgid "[deken] installed version [%1$s] > %2$s...skipping!"
@@ -783,7 +786,7 @@ msgstr "2. உள்ளடக்கங்களை %s ஆக நகலெடு�
 
 #, tcl-format
 msgid "3. Remove %s. (optional)"
-msgstr "3. %களை அகற்று. (விரும்பினால்)"
+msgstr "3. %s களை அகற்று. (விரும்பினால்)"
 
 #, tcl-format
 msgid "Removing '%s'"
@@ -836,11 +839,23 @@ msgstr "தவறான கோப்பை '%s' அகற்ற முடிய�
 msgid "Unable to rename downloaded file to '%s'"
 msgstr "பதிவிறக்கம் செய்யப்பட்ட கோப்பை '%s' என்று மறுபெயரிட முடியவில்லை"
 
+msgid "Search URLs:"
+msgstr "URLS ஐத் தேடுங்கள்:"
+
+msgid "Additional search URLs"
+msgstr "கூடுதல் தேடல் முகவரி கள்"
+
+msgid "Ephemeral search URLs"
+msgstr "இடைக்கால தேடல் முகவரி கள்"
+
 msgid "Create"
 msgstr "உருவாக்கு"
 
 msgid "Check"
 msgstr "சரிபார்"
+
+msgid "Deken Installation Target"
+msgstr "நிறுவல் இலக்கு சிதைவு"
 
 msgid "Installation options:"
 msgstr "நிறுவல் விருப்பங்கள்:"
@@ -913,6 +928,21 @@ msgstr "தார் கோப்புகள்"
 
 msgid "All Files"
 msgstr "அனைத்து கோப்புகள்"
+
+#, tcl-format
+msgid "Installing incompatible architecture of '%s'."
+msgstr "'%s' இன் பொருந்தாத கட்டமைப்பை நிறுவுதல்."
+
+msgid "Replacing library with incompatible architecture!"
+msgstr "பொருந்தாத கட்டிடக்கலையுடன் நூலகத்தை மாற்றுதல்!"
+
+#, tcl-format
+msgid ""
+"Do you want to replace the library '%1$s' in '%2$s' with a version that is "
+"incompatible with your computer?"
+msgstr ""
+"உங்கள் கணினியுடன் பொருந்தாத ஒரு பதிப்போடு '%2$s' இல் '%1$s' நூலகத்தை மாற்ற "
+"விரும்புகிறீர்களா?"
 
 #, tcl-format
 msgid "Uninstalling previous installation of '%s'"
@@ -1027,7 +1057,7 @@ msgid "Preferences..."
 msgstr "விருப்பத்தேர்வுகள் ..."
 
 msgid "Search for: "
-msgstr "தேடு:"
+msgstr "தேடு: "
 
 msgid "libraries"
 msgstr "நூலகங்கள்"
@@ -1114,12 +1144,12 @@ msgstr "'%s' இன் பதிவிறக்கத்தை ரத்து �
 msgid "Installing to non-existent directory failed"
 msgstr "இல்லாத கோப்பகத்தை நிறுவுவது தோல்வியடைந்தது"
 
+msgid "Directory does not exist!"
+msgstr "அடைவு இல்லை!"
+
 #, tcl-format
 msgid "Unable to install to '%s'"
 msgstr "'%s' க்கு நிறுவ முடியவில்லை"
-
-msgid "Directory does not exist!"
-msgstr "அடைவு இல்லை!"
 
 msgid "Directory is not writable!"
 msgstr "அடைவு எழுத முடியாதது அல்ல!"
@@ -1158,6 +1188,10 @@ msgstr "[deken] deken-plugin.tcl (Pd externals search) loaded இருந்த
 #, tcl-format
 msgid "[deken] Platform detected: %s"
 msgstr "[டெக்கன்] இயங்குதளம் கண்டறியப்பட்டது: %s"
+
+#, tcl-format
+msgid "Could not find a menu for adding '%s'"
+msgstr "'%s' சேர்ப்பதற்கான மெனுவைக் கண்டுபிடிக்க முடியவில்லை"
 
 #, tcl-format
 msgid "Searching on %s..."
@@ -1822,6 +1856,16 @@ msgstr "(இயல்புநிலை மொழி: %s)"
 msgid "Print..."
 msgstr "அச்சிடுக ..."
 
+msgid "single precision"
+msgstr "ஒற்றை துல்லியம்"
+
+msgid "double precision"
+msgstr "இரட்டை துல்லியம்"
+
+#, tcl-format
+msgid "%dbit-floats"
+msgstr "%dbit-flotats"
+
 #, tcl-format
 msgid "ignoring '%s': doesn't exist"
 msgstr "'%s' ஐ புறக்கணித்து: இல்லை"
@@ -1833,23 +1877,41 @@ msgstr "பி.டி பற்றி"
 msgid "couldn't read \"%s\" document"
 msgstr "\"%s\" ஆவணத்தைப் படிக்க முடியவில்லை"
 
+msgid "New"
+msgstr "புதிய"
+
+msgid "Open"
+msgstr "திற"
+
+msgid "Open Recent"
+msgstr "அண்மைக் கால திறப்பு"
+
 msgid "Save"
 msgstr "சேமி"
 
 msgid "Save As..."
 msgstr "சேமி ..."
 
+msgid "Quit"
+msgstr "வெளியேறு"
+
+msgid "Undo"
+msgstr "செயல்தவிர்"
+
+msgid "Redo"
+msgstr "மீண்டும்செய்"
+
+msgid "Cut"
+msgstr "வெட்டு"
+
 msgid "Paste Replace"
 msgstr "மாற்றவும்"
 
+msgid "Select All"
+msgstr "அனைத்தையும் தெரிவுசெய்"
+
 msgid "Duplicate"
 msgstr "நகல்"
-
-msgid "Zoom In"
-msgstr "பெரிதாக்கு"
-
-msgid "Zoom Out"
-msgstr "சிறிதாக்கு"
 
 msgid "Tidy Up"
 msgstr "நேர்த்தியாக"
@@ -1860,32 +1922,17 @@ msgstr "(Dis) தேர்வை இணைக்கவும்"
 msgid "Triggerize"
 msgstr "தூண்டுதல்"
 
-msgid "Edit Mode"
-msgstr "திருத்து பயன்முறை"
+msgid "Zoom In"
+msgstr "பெரிதாக்கு"
 
-msgid "Undo"
-msgstr "செயல்தவிர்"
-
-msgid "Redo"
-msgstr "மீண்டும்செய்"
-
-msgid "New"
-msgstr "புதிய"
-
-msgid "Open"
-msgstr "திற"
-
-msgid "Message..."
-msgstr "செய்தி ..."
-
-msgid "Cut"
-msgstr "வெட்டு"
-
-msgid "Select All"
-msgstr "அனைத்தையும் தெரிவுசெய்"
+msgid "Zoom Out"
+msgstr "சிறிதாக்கு"
 
 msgid "Clear Console"
 msgstr "தெளிவான கன்சோல்"
+
+msgid "Edit Mode"
+msgstr "திருத்து பயன்முறை"
 
 msgid "Object"
 msgstr "பொருள்"
@@ -1950,8 +1997,14 @@ msgstr "அடுத்த சாளரம்"
 msgid "Previous Window"
 msgstr "முந்தைய சாளரம்"
 
+msgid "Close subwindows"
+msgstr "துணைப்பிரிவை மூடு"
+
 msgid "Parent Window"
 msgstr "பெற்றோர் சாளரம்"
+
+msgid "Message..."
+msgstr "செய்தி ..."
 
 msgid "HTML Manual..."
 msgstr "உஉகுமொ கையேடு ..."
@@ -2005,12 +2058,6 @@ msgstr "அனைத்தையும் மறந்து விடுங்�
 msgid "Tabbed preferences"
 msgstr "தாவலாக்கப்பட்ட விருப்பத்தேர்வுகள்"
 
-msgid "Open Recent"
-msgstr "அண்மைக் கால திறப்பு"
-
-msgid "Quit"
-msgstr "வெளியேறு"
-
 #, tcl-format
 msgid "Do you want to save the changes you made in '%s'?"
 msgstr "'%s' இல் நீங்கள் செய்த மாற்றங்களைச் சேமிக்க விரும்புகிறீர்களா?"
@@ -2042,6 +2089,9 @@ msgstr "ஆடியோ ஆன்"
 
 msgid "Audio off"
 msgstr "ஆடியோ ஆஃப்"
+
+msgid "Find source"
+msgstr "மூலத்தைக் கண்டறியவும்"
 
 msgid "Pd"
 msgstr "பி.டி."

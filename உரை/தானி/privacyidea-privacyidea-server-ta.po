@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (privacyIDEA)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-27 19:18+0200\n"
-"PO-Revision-Date: 2025-01-28 00:42+0530\n"
+"POT-Creation-Date: 2025-06-15 07:59+0200\n"
+"PO-Revision-Date: 2025-06-15 11:39\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/privacyidea/privacyidea-server/ta/>\n"
 "Language: ta\n"
@@ -12,19 +12,39 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
-
-#: api/auth.py:227
-#, python-brace-format, python-format
-msgid "Authentication failure. Unknown realm: {0!s}."
-msgstr "அங்கீகார தோல்வி. அறியப்படாத சாம்ராச்யம்: {0! S}."
+"X-Generator: Weblate 5.12-dev\n"
 
 #: api/auth.py:231
+#, python-brace-format, python-format
+msgid "Authentication with passkey disabled."
+msgstr "பாச்கி முடக்கப்பட்ட ஏற்பு."
+
+#: api/auth.py:236
+#, python-brace-format, python-format
+msgid "Authentication failure. The passkey is not registered."
+msgstr "அங்கீகார தோல்வி. பாச்கி பதிவு செய்யப்படவில்லை."
+
+#: api/auth.py:239
+#, python-brace-format, python-format
+msgid "Authentication failure. Token has no user."
+msgstr "அங்கீகார தோல்வி. உங்கள் கிள்ளாக்கு காலாவதியானது."
+
+#: api/auth.py:250
+#, python-brace-format, python-format
+msgid "Authentication failure using passkey."
+msgstr "பாச்கியைப் பயன்படுத்தி அங்கீகார தோல்வி."
+
+#: api/auth.py:255
+#, python-brace-format, python-format
+msgid "Authentication failure. Unknown realm:"
+msgstr "அங்கீகார தோல்வி. அறியப்படாத சாம்ராச்யம்:"
+
+#: api/auth.py:259
 #, python-brace-format, python-format
 msgid "Authentication failure. Missing Username"
 msgstr "அங்கீகார தோல்வி. பயனர்பெயர் காணவில்லை"
 
-#: api/auth.py:352
+#: api/auth.py:378
 #, python-brace-format, python-format
 msgid "Authentication failure. Wrong credentials"
 msgstr "அங்கீகார தோல்வி. தவறான நற்சான்றிதழ்கள்"
@@ -39,7 +59,12 @@ msgstr "கொடுக்கப்பட்ட முனை இல்லை!"
 msgid "Could not verify data in request!"
 msgstr "கோரிக்கையில் தரவை சரிபார்க்க முடியவில்லை!"
 
-#: api/lib/postpolicy.py:86
+#: api/validate.py:467 lib/token.py:2608
+#, python-brace-format, python-format
+msgid "Found matching challenge"
+msgstr "பொருந்தக்கூடிய அறைகூவல் காணப்பட்டது"
+
+#: api/lib/postpolicy.py:90
 #, python-brace-format, python-format
 msgid ""
 "\n"
@@ -60,55 +85,55 @@ msgstr ""
 " சந்தாதாரர்: {subscriber_name}\n"
 " சந்தாக்கள்: {subscriptions}\n"
 
-#: api/lib/prepolicy.py:2329
+#: api/lib/prepolicy.py:2478
 #, python-brace-format, python-format
 msgid "Missing description for {} token."
-msgstr "}} டோக்கனுக்கான விளக்கம்."
+msgstr "{} டோக்கனுக்கான விளக்கம்."
 
-#: api/lib/prepolicy.py:2330
+#: api/lib/prepolicy.py:2479
 #, python-brace-format, python-format
 msgid "Description required for {} token."
 msgstr "விளக்கம் {} டோக்கனுக்கு தேவை."
 
-#: api/lib/utils.py:345
+#: api/lib/utils.py:400
 #, python-brace-format, python-format
 msgid "Authentication failure. Missing Authorization header."
 msgstr "அங்கீகார தோல்வி. அங்கீகார தலைப்பு இல்லை."
 
-#: api/lib/utils.py:351 api/lib/utils.py:384
+#: api/lib/utils.py:405 api/lib/utils.py:436
 #, python-brace-format, python-format
-msgid "Authentication failure. Error during decoding your token: {0!s}"
-msgstr ""
-"அங்கீகார தோல்வி. உங்கள் கிள்ளாக்கை டிகோடிங் செய்யும் போது பிழை: {0! S}"
+msgid "Authentication failure. Error decoding the Authorization token:"
+msgstr "அங்கீகார தோல்வி. உங்கள் கிள்ளாக்கை டிகோடிங் செய்யும் போது பிழை:"
 
-#: api/lib/utils.py:377 api/lib/utils.py:387
+#: api/lib/utils.py:429 api/lib/utils.py:439
 #, python-brace-format, python-format
-msgid "Authentication failure. Your token has expired: {0!s}"
-msgstr "அங்கீகார தோல்வி. உங்கள் கிள்ளாக்கு காலாவதியானது: {0! S}"
+msgid "Authentication failure. Your token has expired:"
+msgstr "அங்கீகார தோல்வி. உங்கள் கிள்ளாக்கு காலாவதியானது:"
 
-#: api/lib/utils.py:391
-#, python-brace-format, python-format
-msgid ""
-"Authentication failure. The username {0!s} is not allowed to impersonate via"
-" JWT."
-msgstr ""
-"அங்கீகார தோல்வி. {0! கள் பயனர்பெயர் JWT வழியாக ஆள்மாறாட்டம் செய்ய "
-"அனுமதிக்கப்படவில்லை."
-
-#: api/lib/utils.py:395
+#: api/lib/utils.py:442
 #, python-brace-format, python-format
 msgid ""
-"Authentication failure. You do not have the necessary role ({0!s}) to access"
-" this resource!"
+"Authentication failure. The username {wrong_username} is not allowed to "
+"impersonate via JWT."
 msgstr ""
-"அங்கீகார தோல்வி. இந்த வளத்தை அணுக உங்களுக்கு தேவையான பங்கு ({0! S}) இல்லை!"
+"அங்கீகார தோல்வி. {wrong_username} கள் பயனர்பெயர் JWT வழியாக ஆள்மாறாட்டம் "
+"செய்ய அனுமதிக்கப்படவில்லை."
 
-#: api/lib/utils.py:413
+#: api/lib/utils.py:447
 #, python-brace-format, python-format
-msgid "'{0!s}' is an invalid policy name."
-msgstr "'{0! S}' என்பது தவறான கொள்கை பெயர்."
+msgid ""
+"Authentication failure. You do not have the necessary role ({required_role})"
+" to access this resource!"
+msgstr ""
+"அங்கீகார தோல்வி. இந்த வளத்தை அணுக உங்களுக்கு தேவையான பங்கு ({required_role})"
+" இல்லை!"
 
-#: api/lib/utils.py:416
+#: api/lib/utils.py:464
+#, python-brace-format, python-format
+msgid "Invalid policy name:"
+msgstr "என்பது தவறான கொள்கை பெயர்:"
+
+#: api/lib/utils.py:467
 #, python-brace-format, python-format
 msgid "The name of the policy may only contain the characters a-zA-Z0-9_. -"
 msgstr "கொள்கையின் பெயரில் A-ZA-Z0-9_ எழுத்துக்கள் மட்டுமே இருக்கலாம். -"
@@ -129,7 +154,7 @@ msgid "To resync your token, please enter the next OTP value"
 msgstr ""
 "உங்கள் கிள்ளாக்கை மீண்டும் மாற்ற, தயவுசெய்து அடுத்த OTP மதிப்பை உள்ளிடவும்"
 
-#: lib/containerclass.py:446
+#: lib/containerclass.py:802
 #, python-brace-format, python-format
 msgid ""
 "General purpose container that can hold any type and any number of token."
@@ -137,47 +162,57 @@ msgstr ""
 "எந்தவொரு வகை மற்றும் எந்தவொரு டோக்கனையும் வைத்திருக்கக்கூடிய பொது நோக்கக் "
 "கொள்கலன்."
 
-#: lib/decorators.py:41 lib/token.py:2359
+#: lib/decorators.py:43 lib/token.py:2468
 #, python-brace-format, python-format
 msgid "This action is not possible, since the token is locked"
 msgstr "கிள்ளாக்கு பூட்டப்பட்டிருப்பதால் இந்த நடவடிக்கை சாத்தியமில்லை"
 
-#: lib/decorators.py:85
+#: lib/decorators.py:87
 #, python-brace-format, python-format
 msgid "You either need to provide user or serial"
 msgstr "நீங்கள் பயனர் அல்லது சீரியலை வழங்க வேண்டும்"
 
-#: lib/decorators.py:111
+#: lib/decorators.py:114
 #, python-brace-format, python-format
-msgid "You need to specify a serial or a user."
-msgstr "நீங்கள் ஒரு தொடர் அல்லது பயனரைக் குறிப்பிட வேண்டும்."
+msgid "You need to specify a serial, user or credential_id."
+msgstr ""
+"நீங்கள் ஒரு தொடர், பயனர் அல்லது நற்சான்றிதழ்_ஐடியைக் குறிப்பிட வேண்டும்."
 
-#: lib/decorators.py:113
+#: lib/decorators.py:116
 #, python-brace-format, python-format
 msgid "Invalid serial number."
 msgstr "தவறான வரிசை எண்."
 
-#: lib/decorators.py:115
+#: lib/decorators.py:118
 #, python-brace-format, python-format
 msgid "Invalid user."
 msgstr "தவறான பயனர்."
 
-#: lib/policy.py:1412
+#: lib/policy.py:205
+#, python-brace-format, python-format
+msgid ""
+"Note: If you use a comma in the message, you need to escape it with a "
+"backslash."
+msgstr ""
+"குறிப்பு: நீங்கள் செய்தியில் கமாவைப் பயன்படுத்தினால், நீங்கள் அதை ஒரு "
+"பின்சாய்வுடன் தப்பிக்க வேண்டும்."
+
+#: lib/policy.py:1455
 #, python-brace-format, python-format
 msgid "Invalid client definition!"
 msgstr "தவறான கிளையன்ட் வரையறை!"
 
-#: lib/policy.py:1606
+#: lib/policy.py:1650
 #, python-brace-format, python-format
 msgid "Define in which resolver the user should be registered."
 msgstr "பயனரை எந்த தீர்மானத்தில் பதிவு செய்ய வேண்டும் என்பதை வரையறுக்கவும்."
 
-#: lib/policy.py:1610
+#: lib/policy.py:1654
 #, python-brace-format, python-format
 msgid "Define in which realm the user should be registered."
 msgstr "பயனர் எந்த சாம்ராச்யத்தை பதிவு செய்ய வேண்டும் என்பதை வரையறுக்கவும்."
 
-#: lib/policy.py:1614
+#: lib/policy.py:1658
 #, python-brace-format, python-format
 msgid ""
 "The SMTP server configuration, that should be used to send the registration "
@@ -185,7 +220,7 @@ msgid ""
 msgstr ""
 "SMTP சேவையக உள்ளமைவு, இது பதிவு மின்னஞ்சலை அனுப்ப பயன்படுத்தப்பட வேண்டும்."
 
-#: lib/policy.py:1618
+#: lib/policy.py:1662
 #, python-brace-format, python-format
 msgid ""
 "Only users with this email address are allowed to register. This is a "
@@ -194,7 +229,7 @@ msgstr ""
 "இந்த மின்னஞ்சல் முகவரியைக் கொண்ட பயனர்கள் மட்டுமே பதிவு செய்ய "
 "அனுமதிக்கப்படுகிறார்கள். இது ஒரு வழக்கமான வெளிப்பாடு."
 
-#: lib/policy.py:1623
+#: lib/policy.py:1667
 #, python-brace-format, python-format
 msgid ""
 "The body of the registration email. Use '{regkey}' as tag for the "
@@ -203,68 +238,68 @@ msgstr ""
 "பதிவு மின்னஞ்சலின் உடல். பதிவு விசைக்கு குறிச்சொல்லாக '{regkey}' ஐப் "
 "பயன்படுத்தவும்."
 
-#: lib/policy.py:1629
+#: lib/policy.py:1673
 #, python-brace-format, python-format
 msgid "Admin is allowed to enable tokens."
 msgstr "டோக்கன்களை இயக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1633
+#: lib/policy.py:1677
 #, python-brace-format, python-format
 msgid "Admin is allowed to disable tokens."
 msgstr "டோக்கன்களை முடக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1637
+#: lib/policy.py:1682
 #, python-brace-format, python-format
 msgid "Admin is allowed to set token properties."
 msgstr "கிள்ளாக்கு பண்புகளை அமைக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1642
+#: lib/policy.py:1686
 #, python-brace-format, python-format
 msgid "The admin is allowed to set the token description."
 msgstr "கிள்ளாக்கு விளக்கத்தை அமைக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1646
+#: lib/policy.py:1691
 #, python-brace-format, python-format
 msgid "Admin is allowed to set the OTP PIN of tokens."
 msgstr "டோக்கன்களின் OTP முள் அமைக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1652
+#: lib/policy.py:1696
 #, python-brace-format, python-format
 msgid "Admin is allowed to set a random OTP PIN of tokens."
 msgstr "டோக்கன்களின் சீரற்ற OTP முள் அமைக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1656
+#: lib/policy.py:1700
 #, python-brace-format, python-format
 msgid "Admin is allowed to manually set and delete token info."
 msgstr ""
 "கிள்ளாக்கு தகவலை கைமுறையாக அமைத்து நீக்க நிர்வாகம் அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1660
+#: lib/policy.py:1704
 #, python-brace-format, python-format
 msgid "Admin is allowed to set the OTP PIN during enrollment."
 msgstr "சேர்க்கையின் போது OTP முள் அமைக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1665
+#: lib/policy.py:1709
 #, python-brace-format, python-format
 msgid "Admin is allowed to resync tokens."
 msgstr "டோக்கன்களை மீண்டும் ஒத்திசைக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1669
+#: lib/policy.py:1714
 #, python-brace-format, python-format
 msgid "Admin is allowed to reset the Failcounter of a token."
 msgstr "ஒரு டோக்கனின் தோல்வியை மீட்டமைக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1675
+#: lib/policy.py:1719
 #, python-brace-format, python-format
 msgid "Admin is allowed to revoke a token"
 msgstr "நிர்வாகி ஒரு கிள்ளாக்கை ரத்து செய்ய அனுமதிக்கப்படுகிறது"
 
-#: lib/policy.py:1679
+#: lib/policy.py:1724
 #, python-brace-format, python-format
 msgid "Admin is allowed to assign a token to a user."
 msgstr "ஒரு பயனருக்கு கிள்ளாக்கை ஒதுக்க நிர்வாகம் அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1685
+#: lib/policy.py:1730
 #, python-brace-format, python-format
 msgid ""
 "Admin is allowed to remove the token from a user, i.e. unassign a token."
@@ -272,34 +307,34 @@ msgstr ""
 "ஒரு பயனரிடமிருந்து கிள்ளாக்கை அகற்ற நிர்வாகி அனுமதிக்கப்படுகிறது, அதாவது ஒரு"
 " கிள்ளாக்கை ஒதுக்கவும்."
 
-#: lib/policy.py:1691
+#: lib/policy.py:1736
 #, python-brace-format, python-format
 msgid "Admin is allowed to import token files."
 msgstr "கிள்ளாக்கு கோப்புகளை இறக்குமதி செய்ய நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1696
+#: lib/policy.py:1741
 #, python-brace-format, python-format
 msgid "Admin is allowed to remove tokens from the database."
 msgstr "தரவுத்தளத்திலிருந்து டோக்கன்களை அகற்ற நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1702
+#: lib/policy.py:1747
 #, python-brace-format, python-format
 msgid "Admin is allowed to view the list of the users."
 msgstr "பயனர்களின் பட்டியலைக் காண நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1708
+#: lib/policy.py:1752
 #, python-brace-format, python-format
 msgid "The Admin is allowed to list the machines."
 msgstr "நிர்வாகி இயந்திரங்களை பட்டியலிட அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1713
+#: lib/policy.py:1757
 #, python-brace-format, python-format
 msgid "The Admin is allowed to attach and detach tokens to machines."
 msgstr ""
 "டோக்கன்களை இயந்திரங்களுடன் இணைக்கவும் பிரிக்கவும் நிர்வாகி "
 "அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1720
+#: lib/policy.py:1764
 #, python-brace-format, python-format
 msgid ""
 "The Admin is allowed to fetch authentication items of tokens assigned to "
@@ -308,38 +343,38 @@ msgstr ""
 "இயந்திரங்களுக்கு ஒதுக்கப்பட்ட டோக்கன்களின் அங்கீகார உருப்படிகளைப் பெற "
 "நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1725
+#: lib/policy.py:1769
 #, python-brace-format, python-format
 msgid "Admin is allowed to manage the realms of a token."
 msgstr "ஒரு டோக்கனின் பகுதிகளை நிர்வகிக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1730
+#: lib/policy.py:1774
 #, python-brace-format, python-format
 msgid "Admin is allowed to list tokens."
 msgstr "நிர்வாகி டோக்கன்களை பட்டியலிட அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1734
+#: lib/policy.py:1778
 #, python-brace-format, python-format
 msgid "Admin is allowed to retrieve a serial for a given OTP value."
 msgstr ""
 "கொடுக்கப்பட்ட OTP மதிப்புக்கு ஒரு சீரியலை மீட்டெடுக்க நிர்வாகி "
 "அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1739
+#: lib/policy.py:1783
 #, python-brace-format, python-format
 msgid "Admin is allowed to retrieve random keys from privacyIDEA."
 msgstr ""
 "தனியுரிமைடியாவிலிருந்து சீரற்ற விசைகளை மீட்டெடுக்க நிர்வாகி "
 "அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1743
+#: lib/policy.py:1788
 #, python-brace-format, python-format
 msgid "Admin is allowed to copy the PIN of one token to another token."
 msgstr ""
 "ஒரு டோக்கனின் முள் மற்றொரு டோக்கனுக்கு நகலெடுக்க நிர்வாகம் "
 "அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1748
+#: lib/policy.py:1793
 #, python-brace-format, python-format
 msgid ""
 "Admin is allowed to copy the assigned user to another token, i.e. assign a "
@@ -348,28 +383,28 @@ msgstr ""
 "ஒதுக்கப்பட்ட பயனரை மற்றொரு டோக்கனுக்கு நகலெடுக்க நிர்வாகம் "
 "அனுமதிக்கப்படுகிறது, அதாவது ஒரு பயனரை மற்றொரு டோக்கனுக்கு நியமிக்கவும்."
 
-#: lib/policy.py:1754
+#: lib/policy.py:1798
 #, python-brace-format, python-format
 msgid "Admin is allowed to trigger the lost token workflow."
 msgstr ""
 "இழந்த கிள்ளாக்கு பணிப்பாய்வுகளைத் தூண்ட நிர்வாகம் அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1760
+#: lib/policy.py:1804
 #, python-brace-format, python-format
 msgid "Admin is allowed to write and modify the system configuration."
 msgstr "கணினி உள்ளமைவை எழுதவும் மாற்றவும் நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1765
+#: lib/policy.py:1809
 #, python-brace-format, python-format
 msgid "Admin is allowed to delete keys in the system configuration."
 msgstr "கணினி உள்ளமைவில் விசைகளை நீக்க நிர்வாகம் அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1771
+#: lib/policy.py:1815
 #, python-brace-format, python-format
 msgid "Admin is allowed to read basic system configuration."
 msgstr "நிர்வாகம் அடிப்படை கணினி உள்ளமைவைப் படிக்க அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1776
+#: lib/policy.py:1820
 #, python-brace-format, python-format
 msgid ""
 "Admin is allowed to export a documentation of the complete configuration "
@@ -378,22 +413,22 @@ msgstr ""
 "தீர்வுகள் மற்றும் சாம்ராச்யம் உள்ளிட்ட முழுமையான உள்ளமைவின் ஆவணங்களை "
 "ஏற்றுமதி செய்ய நிர்வாகம் அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1784
+#: lib/policy.py:1828
 #, python-brace-format, python-format
 msgid "Admin is allowed to write and modify the policies."
 msgstr "கொள்கைகளை எழுதவும் மாற்றவும் நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1789
+#: lib/policy.py:1833
 #, python-brace-format, python-format
 msgid "Admin is allowed to delete policies."
 msgstr "கொள்கைகளை நீக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1794
+#: lib/policy.py:1838
 #, python-brace-format, python-format
 msgid "Admin is allowed to read policies."
 msgstr "கொள்கைகளைப் படிக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1798
+#: lib/policy.py:1842
 #, python-brace-format, python-format
 msgid ""
 "Admin is allowed to write and modify the resolver and realm configuration."
@@ -401,17 +436,17 @@ msgstr ""
 "தீர்வு மற்றும் ரியல்ம் உள்ளமைவை எழுதவும் மாற்றவும் நிர்வாகி "
 "அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1805
+#: lib/policy.py:1849
 #, python-brace-format, python-format
 msgid "Admin is allowed to delete resolvers and realms."
 msgstr "தீர்வுகள் மற்றும் பகுதிகளை நீக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1810
+#: lib/policy.py:1854
 #, python-brace-format, python-format
 msgid "Admin is allowed to read resolvers."
 msgstr "நிர்வாகிகள் தீர்வுகளைப் படிக்க அனுமதிக்கப்படுகிறார்கள்."
 
-#: lib/policy.py:1814
+#: lib/policy.py:1858
 #, python-brace-format, python-format
 msgid ""
 "Admin is allowed to create new CA Connector definitions and modify existing "
@@ -420,42 +455,42 @@ msgstr ""
 "புதிய CA இணைப்பான் வரையறைகளை உருவாக்க மற்றும் ஏற்கனவே உள்ளவற்றை மாற்ற "
 "நிர்வாகம் அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1820
+#: lib/policy.py:1864
 #, python-brace-format, python-format
 msgid "Admin is allowed to delete CA Connector definitions."
 msgstr "CA இணைப்பான் வரையறைகளை நீக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1825
+#: lib/policy.py:1869
 #, python-brace-format, python-format
 msgid "Admin is allowed to read CA Connector definitions."
 msgstr "நிர்வாகம் CA இணைப்பான் வரையறைகளைப் படிக்க அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1830
+#: lib/policy.py:1874
 #, python-brace-format, python-format
 msgid "Admin is allowed to write and modify the machine resolvers."
 msgstr "இயந்திரத் தீர்வுகளை எழுதவும் மாற்றவும் நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1836
+#: lib/policy.py:1880
 #, python-brace-format, python-format
 msgid "Admin is allowed to delete machine resolvers."
 msgstr "இயந்திர தீர்வுகளை நீக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1842
+#: lib/policy.py:1886
 #, python-brace-format, python-format
 msgid "Admin is allowed to read machine resolvers."
 msgstr "இயந்திரத் தீர்வுகளைப் படிக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1849 lib/policy.py:2174
+#: lib/policy.py:1893 lib/policy.py:2231
 #, python-brace-format, python-format
 msgid "Set the maximum allowed length of the OTP PIN."
 msgstr "OTP முள் அதிகபட்சமாக அனுமதிக்கப்பட்ட நீளத்தை அமைக்கவும்."
 
-#: lib/policy.py:1854 lib/policy.py:2179
+#: lib/policy.py:1898 lib/policy.py:2235
 #, python-brace-format, python-format
 msgid "Set the minimum required length of the OTP PIN."
 msgstr "OTP முள் தேவையான குறைந்தபட்ச நீளத்தை அமைக்கவும்."
 
-#: lib/policy.py:1858 lib/policy.py:2183
+#: lib/policy.py:1902
 #, python-brace-format, python-format
 msgid ""
 "Specifiy the required contents of the OTP PIN. (c)haracters, (n)umeric, "
@@ -465,141 +500,141 @@ msgstr ""
 " மாற்றியமைப்பாளர்களைப் பயன்படுத்தவும் +/- அல்லது அனுமதிக்கப்பட்ட "
 "எழுத்துக்களின் பட்டியல் [1234567890]"
 
-#: lib/policy.py:1867
+#: lib/policy.py:1911
 #, python-brace-format, python-format
 msgid "The length of a random PIN set by the administrator."
 msgstr "நிர்வாகியால் அமைக்கப்பட்ட ஒரு சீரற்ற முள் நீளம்."
 
-#: lib/policy.py:1870
+#: lib/policy.py:1914
 #, python-brace-format, python-format
 msgid "Admin is allowed to view the Audit log."
 msgstr "தணிக்கை பதிவைக் காண நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1874
+#: lib/policy.py:1918
 #, python-brace-format, python-format
 msgid "The admin will only see audit entries of the last 10d, 3m or 2y."
 msgstr ""
 "நிர்வாகி கடைசி 10 டி, 3 மீ அல்லது 2y இன் தணிக்கை உள்ளீடுகளை மட்டுமே "
 "காண்பார்."
 
-#: lib/policy.py:1879
+#: lib/policy.py:1923
 #, python-brace-format, python-format
 msgid "The admin will not see the specified columns in the audit."
 msgstr "நிர்வாகி தணிக்கையில் குறிப்பிட்ட நெடுவரிசைகளைக் காண மாட்டார்."
 
-#: lib/policy.py:1884
+#: lib/policy.py:1928
 #, python-brace-format, python-format
 msgid "The admin is allowed to download the complete auditlog."
 msgstr "நிர்வாகி முழுமையான தணிக்கையை பதிவிறக்கம் செய்ய அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1889
+#: lib/policy.py:1933
 #, python-brace-format, python-format
 msgid "Admin is allowed to add users in a userstore/UserIdResolver."
 msgstr ""
 "ஒரு யுஎச்ச்டோர்/பயனர் ஐட்ரெசால்வரில் பயனர்களைச் சேர்க்க நிர்வாகம் "
 "அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1894
+#: lib/policy.py:1938
 #, python-brace-format, python-format
 msgid "Admin is allowed to update the users data in a userstore."
 msgstr ""
 "பயனர்கள் தரவை ஒரு யுஎச்ச்டோரில் புதுப்பிக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1899
+#: lib/policy.py:1943
 #, python-brace-format, python-format
 msgid "Admin is allowed to delete a user object in a userstore."
 msgstr ""
 "ஒரு பயனர் பொருளை ஒரு யுஎச்ச்டோரில் நீக்க நிர்வாகம் அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1904
+#: lib/policy.py:1948
 #, python-brace-format, python-format
 msgid "Admin is allowed to set the password of the HSM/Security Module."
 msgstr ""
 "HSM/பாதுகாப்பு தொகுதியின் கடவுச்சொல்லை அமைக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1908
+#: lib/policy.py:1952
 #, python-brace-format, python-format
 msgid "Admin is allowed to retrieve the list of active challenges."
 msgstr ""
 "செயலில் உள்ள சவால்களின் பட்டியலை மீட்டெடுக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1914
+#: lib/policy.py:1958
 #, python-brace-format, python-format
 msgid "Admin is allowed to write new SMTP server definitions."
 msgstr "புதிய SMTP சேவையக வரையறைகளை எழுத நிர்வாகம் அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1919
+#: lib/policy.py:1963
 #, python-brace-format, python-format
 msgid "Admin is allowed to read SMTP server definitions."
 msgstr "நிர்வாகி SMTP சேவையக வரையறைகளைப் படிக்க அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1924
+#: lib/policy.py:1968
 #, python-brace-format, python-format
 msgid "Admin is allowed to write new RADIUS server definitions."
 msgstr "நிர்வாகி புதிய ஆரம் சேவையக வரையறைகளை எழுத அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1930
+#: lib/policy.py:1974
 #, python-brace-format, python-format
 msgid "Admin is allowed to read RADIUS server definitions."
 msgstr "ஆரம் சேவையக வரையறைகளைப் படிக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1935
+#: lib/policy.py:1979
 #, python-brace-format, python-format
 msgid "Admin is allowed to write remote privacyIDEA server definitions."
 msgstr ""
 "நிர்வாகம் தொலைநிலை தனியுரிமைடியா சேவையக வரையறைகளை எழுத அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1942
+#: lib/policy.py:1986
 #, python-brace-format, python-format
 msgid "Admin is allowed to read remote privacyIDEA server definitions."
 msgstr ""
 "நிர்வாகம் தொலைநிலை தனியுரிமைடியா சேவையக வரையறைகளைப் படிக்க "
 "அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1949
+#: lib/policy.py:1993
 #, python-brace-format, python-format
 msgid "Admin is allowed to write periodic task definitions."
 msgstr "நிர்வாகம் அவ்வப்போது பணி வரையறைகளை எழுத அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1954
+#: lib/policy.py:1998
 #, python-brace-format, python-format
 msgid "Admin is allowed to read periodic task definitions."
 msgstr "நிர்வாகம் அவ்வப்போது பணி வரையறைகளைப் படிக்க அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1959
+#: lib/policy.py:2003
 #, python-brace-format, python-format
 msgid "Admin is allowed to read statistics data."
 msgstr "புள்ளிவிவர தரவைப் படிக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1962
+#: lib/policy.py:2006
 #, python-brace-format, python-format
 msgid "Admin is allowed to delete statistics data."
 msgstr "புள்ளிவிவர தரவை நீக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1965
+#: lib/policy.py:2009
 #, python-brace-format, python-format
 msgid "Admin is allowed to write and modify the event handling configuration."
 msgstr ""
 "நிகழ்வு கையாளுதல் உள்ளமைவை எழுதவும் மாற்றவும் நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1971
+#: lib/policy.py:2015
 #, python-brace-format, python-format
 msgid "Admin is allowed to read event handling configuration."
 msgstr "நிகழ்வு கையாளுதல் உள்ளமைவைப் படிக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1976
+#: lib/policy.py:2020
 #, python-brace-format, python-format
 msgid "Admin is allowed to write and modify SMS gateway definitions."
 msgstr ""
 "எச்எம்எச் நுழைவாயில் வரையறைகளை எழுதவும் மாற்றவும் நிர்வாகி "
 "அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1982
+#: lib/policy.py:2026
 #, python-brace-format, python-format
 msgid "Admin is allowed to read SMS gateway definitions."
 msgstr "நிர்வாகி எச்எம்எச் நுழைவாயில் வரையறைகளைப் படிக்க அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1987
+#: lib/policy.py:2031
 #, python-brace-format, python-format
 msgid ""
 "Admin is allowed to get the list of authenticated clients and their types."
@@ -607,17 +642,17 @@ msgstr ""
 "அங்கீகரிக்கப்பட்ட வாடிக்கையாளர்களின் பட்டியலையும் அவற்றின் வகைகளையும் பெற "
 "நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:1994
+#: lib/policy.py:2038
 #, python-brace-format, python-format
 msgid "Admin is allowed to add and delete component subscriptions."
 msgstr "கூறு சந்தாக்களைச் சேர்க்கவும் நீக்கவும் நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2000
+#: lib/policy.py:2044
 #, python-brace-format, python-format
 msgid "The Admin is allowed to trigger a challenge for e.g. SMS OTP token."
 msgstr "எ.கா. SMS OTP கிள்ளாக்கு."
 
-#: lib/policy.py:2006
+#: lib/policy.py:2050
 #, python-brace-format, python-format
 msgid ""
 "The Admin is allowed to set certain custom user attributes. If the Admin "
@@ -628,7 +663,7 @@ msgstr ""
 "பண்புகளையும் அமைக்க நிர்வாகியை அனுமதிக்க வேண்டும் என்றால், இதை '*:*' என "
 "அமைக்கவும். மேலும் விவரங்களுக்கு, ஆவணங்களை சரிபார்க்கவும்."
 
-#: lib/policy.py:2014
+#: lib/policy.py:2058
 #, python-brace-format, python-format
 msgid ""
 "The Admin is allowed to delete certain custom user attributes. If the Admin "
@@ -639,7 +674,7 @@ msgstr ""
 "பண்புகளையும் நீக்க நிர்வாகி அனுமதிக்கப்பட வேண்டும் என்றால், இதை '*' என "
 "அமைக்கவும். மேலும் விவரங்களுக்கு, ஆவணங்களை சரிபார்க்கவும்."
 
-#: lib/policy.py:2022
+#: lib/policy.py:2066
 #, python-brace-format, python-format
 msgid ""
 "A whitespace-separated list of tokeninfo fields which are not displayed to "
@@ -648,100 +683,138 @@ msgstr ""
 "நிர்வாகிக்கு காட்டப்படாத டோக்கன்ஃபோ புலங்களின் இடைவெளியால் பிரிக்கப்பட்ட "
 "பட்டியல்."
 
-#: lib/policy.py:2027
+#: lib/policy.py:2071
 #, python-brace-format, python-format
 msgid "The Admin is allowed list the available tokengroups."
 msgstr ""
 "கிடைக்கக்கூடிய கிள்ளாக்கு குழுக்களை பட்டியலிட நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2032
+#: lib/policy.py:2076
 #, python-brace-format, python-format
 msgid "The Admin is allowed to add a new tokengroup."
 msgstr "நிர்வாகி ஒரு புதிய கிள்ளாக்கு குழுவைச் சேர்க்க அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2037
+#: lib/policy.py:2081
 #, python-brace-format, python-format
 msgid "The Admin is allowed delete a tokengroup."
 msgstr "ஒரு கிள்ளாக்கு குழுவை நீக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2042
+#: lib/policy.py:2086
 #, python-brace-format, python-format
 msgid "The Admin is allowed list the available service ID definitions."
 msgstr ""
 "கிடைக்கக்கூடிய பணி ஐடி வரையறைகளை பட்டியலிட நிர்வாகம் அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2047
+#: lib/policy.py:2091
 #, python-brace-format, python-format
 msgid "The Admin is allowed to add a new service ID definition."
 msgstr "புதிய பணி ஐடி வரையறையைச் சேர்க்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2052
+#: lib/policy.py:2096
 #, python-brace-format, python-format
 msgid "The Admin is allowed delete a service ID definition."
 msgstr "ஒரு பணி ஐடி வரையறையை நீக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2057
+#: lib/policy.py:2101
 #, python-brace-format, python-format
 msgid "The Admin is allowed to manage the tokengroups of a token."
 msgstr ""
 "ஒரு டோக்கனின் கிள்ளாக்கு குழுக்களை நிர்வகிக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2061
+#: lib/policy.py:2105
 #, python-brace-format, python-format
 msgid "Admin is allowed to edit the container info."
 msgstr "கொள்கலன் தகவலைத் திருத்த நிர்வாகம் அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2065
+#: lib/policy.py:2109
 #, python-brace-format, python-format
 msgid "Admin is allowed to edit the container state."
 msgstr "கொள்கலன் நிலையைத் திருத்த நிர்வாகம் அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2069
+#: lib/policy.py:2113
 #, python-brace-format, python-format
 msgid "Admin is allowed to edit the container description."
 msgstr "கொள்கலன் விளக்கத்தைத் திருத்த நிர்வாகம் அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2073
+#: lib/policy.py:2117
 #, python-brace-format, python-format
 msgid "Admin is allowed to create containers."
 msgstr "நிர்வாகி கொள்கலன்களை உருவாக்க அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2077
+#: lib/policy.py:2121
 #, python-brace-format, python-format
 msgid "Admin is allowed to delete containers."
 msgstr "நிர்வாகி கொள்கலன்களை நீக்க அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2081
+#: lib/policy.py:2125
 #, python-brace-format, python-format
 msgid "Admin is allowed to add tokens to containers."
 msgstr "கொள்கலன்களில் டோக்கன்களைச் சேர்க்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2085
+#: lib/policy.py:2129
 #, python-brace-format, python-format
 msgid "Admin is allowed to remove tokens from containers."
 msgstr "கொள்கலன்களிலிருந்து டோக்கன்களை அகற்ற நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2089
+#: lib/policy.py:2133
 #, python-brace-format, python-format
 msgid "Admin is allowed to assign users to containers."
 msgstr "பயனர்களை கொள்கலன்களுக்கு ஒதுக்க நிர்வாகம் அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2093
+#: lib/policy.py:2137
 #, python-brace-format, python-format
 msgid "Admin is allowed to unassign users from containers."
 msgstr "கொள்கலன்களிலிருந்து பயனர்களை ஒதுக்க நிர்வாகம் அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2097
+#: lib/policy.py:2141
 #, python-brace-format, python-format
 msgid "Admin is allowed to set the realm of containers."
 msgstr "கொள்கலன்களின் சாம்ராச்யத்தை அமைக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2101
+#: lib/policy.py:2145
 #, python-brace-format, python-format
 msgid "Admin is allowed to list containers."
 msgstr "கொள்கலன்களை பட்டியலிட நிர்வாகி அனுமதிக்கப்படுகிறது."
 
-#: lib/policy.py:2108
+#: lib/policy.py:2149
+#, python-brace-format, python-format
+msgid "Admin is allowed to register containers."
+msgstr "நிர்வாகி கொள்கலன்களை பதிவு செய்ய அனுமதிக்கப்படுகிறது."
+
+#: lib/policy.py:2153
+#, python-brace-format, python-format
+msgid "Admin is allowed to unregister containers."
+msgstr "நிர்வாகி கொள்கலன்களை பதிவு செய்ய அனுமதிக்கப்படுகிறது."
+
+#: lib/policy.py:2157
+#, python-brace-format, python-format
+msgid ""
+"Admin is allowed to perform a container rollover including a rollover of all"
+" contained tokens."
+msgstr ""
+"அனைத்து டோக்கன்களின் ரோல்ஓவர் உட்பட ஒரு கொள்கலன் ரோல்ஓவர் செய்ய நிர்வாகம் "
+"அனுமதிக்கப்படுகிறது."
+
+#: lib/policy.py:2162
+#, python-brace-format, python-format
+msgid "Admin is allowed to create and edit container templates."
+msgstr ""
+"கொள்கலன் வார்ப்புருக்களை உருவாக்க மற்றும் திருத்த நிர்வாகம் "
+"அனுமதிக்கப்படுகிறது."
+
+#: lib/policy.py:2166
+#, python-brace-format, python-format
+msgid "Admin is allowed to delete templates."
+msgstr "வார்ப்புருக்கள் நீக்க நிர்வாகி அனுமதிக்கப்படுகிறது."
+
+#: lib/policy.py:2170
+#, python-brace-format, python-format
+msgid "Admin is allowed to list templates and view their details."
+msgstr ""
+"நிர்வாகி வார்ப்புருக்களை பட்டியலிடவும் அவற்றின் விவரங்களைக் காணவும் "
+"அனுமதிக்கப்படுகிறது."
+
+#: lib/policy.py:2177
 #, python-brace-format, python-format
 msgid ""
 "The user is allowed to assign an existing token that is not yet assigned "
@@ -750,88 +823,98 @@ msgstr ""
 "கிள்ளாக்கு வரிசை எண்ணைப் பயன்படுத்தி இன்னும் ஒதுக்கப்படாத கிள்ளாக்கை ஒதுக்க "
 "பயனர் அனுமதிக்கப்படுகிறார்."
 
-#: lib/policy.py:2114
+#: lib/policy.py:2183
 #, python-brace-format, python-format
 msgid "The user is allowed to disable his own tokens."
 msgstr "பயனர் தனது சொந்த டோக்கன்களை முடக்க அனுமதிக்கப்படுகிறார்."
 
-#: lib/policy.py:2120
+#: lib/policy.py:2187
 #, python-brace-format, python-format
 msgid "The user is allowed to enable his own tokens."
 msgstr "பயனர் தனது சொந்த டோக்கன்களை இயக்க அனுமதிக்கப்படுகிறார்."
 
-#: lib/policy.py:2126
+#: lib/policy.py:2191
 #, python-brace-format, python-format
 msgid "The user is allowed to delete his own tokens."
 msgstr "பயனர் தனது சொந்த டோக்கன்களை நீக்க அனுமதிக்கப்படுகிறார்."
 
-#: lib/policy.py:2132
+#: lib/policy.py:2195
 #, python-brace-format, python-format
 msgid "The user is allowed to unassign his own tokens."
 msgstr "பயனர் தனது சொந்த டோக்கன்களை ஒதுக்க அனுமதிக்கப்படுகிறார்."
 
-#: lib/policy.py:2137
+#: lib/policy.py:2199
 #, python-brace-format, python-format
-msgid "The user is allowed to resyncronize his tokens."
-msgstr "பயனர் தனது டோக்கன்களை மீண்டும் இணைக்க அனுமதிக்கப்படுகிறார்."
+msgid "The user is allowed to resynchronize his tokens."
+msgstr "பயனர் தனது டோக்கன்களை மீண்டும் ஒத்திசைக்க அனுமதிக்கப்படுகிறார்."
 
-#: lib/policy.py:2142
+#: lib/policy.py:2203
 #, python-brace-format, python-format
 msgid "The user is allowed to revoke a token"
 msgstr "கிள்ளாக்கை ரத்து செய்ய பயனர் அனுமதிக்கப்படுகிறார்"
 
-#: lib/policy.py:2147
+#: lib/policy.py:2207
 #, python-brace-format, python-format
 msgid "The user is allowed to reset the failcounter of his tokens."
 msgstr "பயனர் தனது டோக்கன்களின் தோல்வியை மீட்டமைக்க அனுமதிக்கப்படுகிறார்."
 
-#: lib/policy.py:2152
+#: lib/policy.py:2211
 #, python-brace-format, python-format
 msgid "The user is allowed to set the OTP PIN of his tokens."
 msgstr "பயனர் தனது டோக்கன்களின் OTP முள் அமைக்க அனுமதிக்கப்படுகிறார்."
 
-#: lib/policy.py:2157
+#: lib/policy.py:2215
 #, python-brace-format, python-format
 msgid "The user is allowed to set a random OTP PIN of his tokens."
 msgstr "பயனர் தனது டோக்கன்களின் சீரற்ற OTP முள் அமைக்க அனுமதிக்கப்படுகிறார்."
 
-#: lib/policy.py:2162
+#: lib/policy.py:2220
 #, python-brace-format, python-format
 msgid "The length of a random PIN set by the user."
 msgstr "பயனரால் அமைக்கப்பட்ட சீரற்ற முள் நீளம்."
 
-#: lib/policy.py:2165
+#: lib/policy.py:2223
 #, python-brace-format, python-format
 msgid "The user is allowed to set the token description."
 msgstr "கிள்ளாக்கு விளக்கத்தை அமைக்க பயனர் அனுமதிக்கப்படுகிறார்."
 
-#: lib/policy.py:2169
+#: lib/policy.py:2227
 #, python-brace-format, python-format
 msgid "The user is allowed to set the OTP PIN during enrollment."
 msgstr "சேர்க்கையின் போது OTP முள் அமைக்க பயனர் அனுமதிக்கப்படுகிறார்."
 
-#: lib/policy.py:2191
+#: lib/policy.py:2238
+#, python-brace-format, python-format
+msgid ""
+"Specify the required contents of the OTP PIN. (c)haracters, (n)umeric, "
+"(s)pecial. Use modifiers +/- or a list of allowed characters [1234567890]"
+msgstr ""
+"OTP முள் தேவையான உள்ளடக்கங்களைக் குறிப்பிடவும். (எழுத்துக்கள், (எண்கள், "
+"(சிறப்பு. மாற்றியமைப்பாளர்களைப் பயன்படுத்தவும் +/- அல்லது அனுமதிக்கப்பட்ட "
+"எழுத்துக்களின் பட்டியல் [1234567890]"
+
+#: lib/policy.py:2244
 #, python-brace-format, python-format
 msgid "Allow the user to view his own token history."
 msgstr "பயனரை தனது சொந்த கிள்ளாக்கு வரலாற்றைக் காண அனுமதிக்கவும்."
 
-#: lib/policy.py:2194
+#: lib/policy.py:2247
 #, python-brace-format, python-format
 msgid "The user will only see audit entries of the last 10d, 3m or 2y."
 msgstr ""
 "கடைசி 10 டி, 3 மீ அல்லது 2y இன் தணிக்கை உள்ளீடுகளை மட்டுமே பயனர் காண்பார்."
 
-#: lib/policy.py:2198
+#: lib/policy.py:2250
 #, python-brace-format, python-format
 msgid "The user will not see the specified columns in the audit."
 msgstr "தணிக்கையில் குறிப்பிட்ட நெடுவரிசைகளை பயனர் பார்க்க மாட்டார்."
 
-#: lib/policy.py:2203
+#: lib/policy.py:2254
 #, python-brace-format, python-format
 msgid "The user is allowed to view his own user information."
 msgstr "பயனர் தனது சொந்த பயனர் தகவலைக் காண அனுமதிக்கப்படுகிறார்."
 
-#: lib/policy.py:2207
+#: lib/policy.py:2257
 #, python-brace-format, python-format
 msgid ""
 "The user is allowed to update his own user information, like changing his "
@@ -840,7 +923,7 @@ msgstr ""
 "பயனர் தனது கடவுச்சொல்லை மாற்றுவது போன்ற தனது சொந்த பயனர் தகவல்களைப் "
 "புதுப்பிக்க அனுமதிக்கப்படுகிறார்."
 
-#: lib/policy.py:2212
+#: lib/policy.py:2262
 #, python-brace-format, python-format
 msgid ""
 "The user is allowed to do a password reset in an editable UserIdResolver."
@@ -848,7 +931,7 @@ msgstr ""
 "திருத்தக்கூடிய USERIDRESOLVER இல் கடவுச்சொல் மீட்டமைப்பை செய்ய பயனர் "
 "அனுமதிக்கப்படுகிறார்."
 
-#: lib/policy.py:2218
+#: lib/policy.py:2267
 #, python-brace-format, python-format
 msgid ""
 "The user is allowed to set certain custom user attributes. If the user "
@@ -860,7 +943,7 @@ msgstr ""
 "அமைக்கவும். எச்சரிக்கையுடன் '*' ஐப் பயன்படுத்துங்கள்! மேலும் விவரங்களுக்கு, "
 "ஆவணங்களை சரிபார்க்கவும்."
 
-#: lib/policy.py:2226
+#: lib/policy.py:2274
 #, python-brace-format, python-format
 msgid ""
 "The user is allowed to delete certain custom user attributes. If the user "
@@ -872,7 +955,7 @@ msgstr ""
 "எச்சரிக்கையுடன் '*' ஐப் பயன்படுத்துங்கள்! மேலும் விவரங்களுக்கு, ஆவணங்களை "
 "சரிபார்க்கவும்."
 
-#: lib/policy.py:2234
+#: lib/policy.py:2282
 #, python-brace-format, python-format
 msgid ""
 "A whitespace-separated list of tokeninfo fields which are not displayed to "
@@ -881,38 +964,38 @@ msgstr ""
 "பயனருக்கு காட்டப்படாத டோக்கன்ஃபோ புலங்களின் இடைவெளியால் பிரிக்கப்பட்ட "
 "பட்டியல்."
 
-#: lib/policy.py:2240
+#: lib/policy.py:2288
 #, python-brace-format, python-format
 msgid "Users are allowed to edit the state of their own containers."
 msgstr ""
 "பயனர்கள் தங்கள் சொந்த கொள்கலன்களின் நிலையைத் திருத்த "
 "அனுமதிக்கப்படுகிறார்கள்."
 
-#: lib/policy.py:2244
+#: lib/policy.py:2293
 #, python-brace-format, python-format
 msgid "Users are allowed to edit the description of their own containers."
 msgstr ""
 "பயனர்கள் தங்கள் சொந்த கொள்கலன்களின் விளக்கத்தைத் திருத்த "
 "அனுமதிக்கப்படுகிறார்கள்."
 
-#: lib/policy.py:2249
+#: lib/policy.py:2297
 #, python-brace-format, python-format
 msgid "Users are allowed to create containers."
 msgstr "பயனர்கள் கொள்கலன்களை உருவாக்க அனுமதிக்கப்படுகிறார்கள்."
 
-#: lib/policy.py:2253
+#: lib/policy.py:2301
 #, python-brace-format, python-format
 msgid "Users are allowed to delete their own containers."
 msgstr "பயனர்கள் தங்கள் சொந்த கொள்கலன்களை நீக்க அனுமதிக்கப்படுகிறார்கள்."
 
-#: lib/policy.py:2257
+#: lib/policy.py:2306
 #, python-brace-format, python-format
 msgid "Users are allowed to add their own tokens to their own containers."
 msgstr ""
 "பயனர்கள் தங்கள் சொந்த கொள்கலன்களில் தங்கள் சொந்த டோக்கன்களைச் சேர்க்க "
 "அனுமதிக்கப்படுகிறார்கள்."
 
-#: lib/policy.py:2262
+#: lib/policy.py:2310
 #, python-brace-format, python-format
 msgid ""
 "Users are allowed to remove their own tokens from their own containers."
@@ -920,51 +1003,92 @@ msgstr ""
 "பயனர்கள் தங்கள் சொந்த கொள்கலன்களிலிருந்து தங்கள் சொந்த டோக்கன்களை அகற்ற "
 "அனுமதிக்கப்படுகிறார்கள்."
 
-#: lib/policy.py:2267
+#: lib/policy.py:2315
 #, python-brace-format, python-format
 msgid "Users are allowed to assign themselves to containers without an owner."
 msgstr ""
 "உரிமையாளர் இல்லாமல் கொள்கலன்களுக்கு தங்களை நியமிக்க பயனர்கள் "
 "அனுமதிக்கப்படுகிறார்கள்."
 
-#: lib/policy.py:2272
+#: lib/policy.py:2320
 #, python-brace-format, python-format
 msgid "Users are allowed to unassign themselves from containers."
 msgstr "பயனர்கள் கொள்கலன்களிலிருந்து தங்களை ஒதுக்க அனுமதிக்கப்படுகிறார்கள்."
 
-#: lib/policy.py:2276
+#: lib/policy.py:2324
 #, python-brace-format, python-format
 msgid "Users are allowed to list their own containers."
 msgstr "பயனர்கள் தங்கள் சொந்த கொள்கலன்களை பட்டியலிட அனுமதிக்கப்படுகிறார்கள்."
 
-#: lib/policy.py:2283
+#: lib/policy.py:2329
+#, python-brace-format, python-format
+msgid "Users are allowed to register their own containers."
+msgstr ""
+"பயனர்கள் தங்கள் சொந்த கொள்கலன்களை பதிவு செய்ய அனுமதிக்கப்படுகிறார்கள்."
+
+#: lib/policy.py:2333
+#, python-brace-format, python-format
+msgid "Users are allowed to unregister containers."
+msgstr "கொள்கலன்களை பதிவு செய்ய பயனர்கள் அனுமதிக்கப்படுகிறார்கள்."
+
+#: lib/policy.py:2337
+#, python-brace-format, python-format
+msgid ""
+"Users are allowed to perform a container rollover of their own containers. "
+"This includes a rollover of all contained tokens even if the user is not the"
+" owner of a contained token."
+msgstr ""
+"பயனர்கள் தங்கள் சொந்த கொள்கலன்களின் கொள்கலன் ரோல்ஓவர் செய்ய "
+"அனுமதிக்கப்படுகிறார்கள். பயனர் அடங்கிய டோக்கனின் உரிமையாளராக இல்லாவிட்டாலும்"
+" கூட, அனைத்து டோக்கன்களின் ரோல்ஓவரும் இதில் அடங்கும்."
+
+#: lib/policy.py:2343
+#, python-brace-format, python-format
+msgid "Users are allowed to create and edit container templates."
+msgstr ""
+"கொள்கலன் வார்ப்புருக்களை உருவாக்க மற்றும் திருத்த பயனர்கள் "
+"அனுமதிக்கப்படுகிறார்கள்."
+
+#: lib/policy.py:2347
+#, python-brace-format, python-format
+msgid "Users are allowed to delete templates."
+msgstr "பயனர்கள் வார்ப்புருக்கள் நீக்க அனுமதிக்கப்படுகிறார்கள்."
+
+#: lib/policy.py:2351
+#, python-brace-format, python-format
+msgid "Users are allowed to list templates and view their details."
+msgstr ""
+"பயனர்கள் வார்ப்புருக்களை பட்டியலிடவும் அவர்களின் விவரங்களைக் காணவும் "
+"அனுமதிக்கப்படுகிறார்கள்."
+
+#: lib/policy.py:2358
 #, python-brace-format, python-format
 msgid "Limit the number of allowed tokens in a realm."
 msgstr ""
 "அனுமதிக்கப்பட்ட டோக்கன்களின் எண்ணிக்கையை ஒரு உலகில் கட்டுப்படுத்துங்கள்."
 
-#: lib/policy.py:2287
+#: lib/policy.py:2362
 #, python-brace-format, python-format
 msgid ""
 "During the rollout process, this policy makes the description required for "
 "all selected tokentypes."
 msgstr ""
-"ரோல்அவுட் செயல்பாட்டின் போது, ​​இந்தக் கொள்கை தேர்ந்தெடுக்கப்பட்ட அனைத்து "
+"ரோல்அவுட் செயல்பாட்டின் போது, இந்தக் கொள்கை தேர்ந்தெடுக்கப்பட்ட அனைத்து "
 "டோக்கன்டைப்புகளுக்கும் தேவையான விளக்கத்தை உருவாக்குகிறது."
 
-#: lib/policy.py:2295
+#: lib/policy.py:2370
 #, python-brace-format, python-format
 msgid "Limit the number of tokens a user may have assigned."
 msgstr "ஒரு பயனர் ஒதுக்கிய டோக்கன்களின் எண்ணிக்கையை கட்டுப்படுத்துங்கள்."
 
-#: lib/policy.py:2300
+#: lib/policy.py:2375
 #, python-brace-format, python-format
 msgid "Limit the number of active tokens a user may have assigned."
 msgstr ""
 "ஒரு பயனர் ஒதுக்கியிருக்கக்கூடிய செயலில் உள்ள டோக்கன்களின் எண்ணிக்கையைக் "
 "கட்டுப்படுத்துங்கள்."
 
-#: lib/policy.py:2305
+#: lib/policy.py:2380
 #, python-brace-format, python-format
 msgid ""
 "Set a random OTP PIN with this length for a token during the enrollment "
@@ -973,14 +1097,14 @@ msgstr ""
 "சேர்க்கை செயல்பாட்டின் போது ஒரு டோக்கனுக்கு இந்த நீளத்துடன் சீரற்ற OTP முள் "
 "அமைக்கவும்."
 
-#: lib/policy.py:2310
+#: lib/policy.py:2385
 #, python-brace-format, python-format
 msgid "In case of a random OTP PIN use this python module to process the PIN."
 msgstr ""
 "ஒரு சீரற்ற OTP முள் ஏற்பட்டால், முள் செயலாக்க இந்த பைதான் தொகுதியைப் "
 "பயன்படுத்தவும்."
 
-#: lib/policy.py:2315
+#: lib/policy.py:2390
 #, python-brace-format, python-format
 msgid ""
 "If the administrator sets the OTP PIN during enrollment or later, the user "
@@ -989,7 +1113,7 @@ msgstr ""
 "நிர்வாகி சேர்க்கையின் போது அல்லது அதற்குப் பிறகு OTP முள் அமைத்தால், முதல் "
 "பயன்பாட்டின் போது பயனர் முள் மாற்ற வேண்டும்."
 
-#: lib/policy.py:2322
+#: lib/policy.py:2397
 #, python-brace-format, python-format
 msgid ""
 "The user needs to change his PIN on a regular basis. To change the PIN every"
@@ -998,7 +1122,7 @@ msgstr ""
 "பயனர் தனது முள் ஒரு வழக்கமான அடிப்படையில் மாற்ற வேண்டும். ஒவ்வொரு 180 "
 "நாட்களுக்கும் முள் மாற்ற, '180 டி' உள்ளிடவும்."
 
-#: lib/policy.py:2329
+#: lib/policy.py:2404
 #, python-brace-format, python-format
 msgid ""
 "The OTP PIN can be hashed or encrypted. Hashing the PIN is the default "
@@ -1007,7 +1131,7 @@ msgstr ""
 "OTP முள் ஏச் செய்யப்படலாம் அல்லது குறியாக்கம் செய்யப்படலாம். முள் ஏசிங் "
 "என்பது இயல்புநிலை நடத்தை."
 
-#: lib/policy.py:2334
+#: lib/policy.py:2409
 #, python-brace-format, python-format
 msgid ""
 "The label for a new enrolled Smartphone token. Possible tags are "
@@ -1018,17 +1142,18 @@ msgstr ""
 "குறிச்சொற்கள் <code> {user} </code>, <code> {realm} </code>, <code> {serial}"
 " </code>, <code> {givenname} </code> மற்றும் <code> {surname} </code>."
 
-#: lib/policy.py:2340
+#: lib/policy.py:2415
 #, python-brace-format, python-format
 msgid ""
 "The issuer label for new enrolled Smartphone token.Possible tags are "
 "<code>{user}</code>, <code>{realm}</code>, <code>{serial}</code>, "
 "<code>{givenname}</code> and <code>{surname}</code>."
 msgstr ""
-"புதிய பதிவுசெய்யப்பட்ட ச்மார்ட்போன் கிள்ளாக்கு. } </code> மற்றும் <code> "
-"{user} </code>."
+"புதிய பதிவுசெய்யப்பட்ட ச்மார்ட்போன் கிள்ளாக்கு. மற்றும் <code> {user} "
+"</code>, <code>{realm}</code>, <code>{serial}</code>, "
+"<code>{givenname}</code>, <code>{surname}</code>."
 
-#: lib/policy.py:2347
+#: lib/policy.py:2422
 #, python-brace-format, python-format
 msgid ""
 "This is the URL to the token image for the privacyIDEA Authenticator and "
@@ -1038,7 +1163,7 @@ msgstr ""
 "ஃப்ரீஓடிபி போன்ற சில பயன்பாடுகள் (ஆதரவு கோப்பு வடிவங்கள்: பி.என்.சி, "
 "சே.பி.சி மற்றும் சி.ஐ.எஃப்)."
 
-#: lib/policy.py:2354
+#: lib/policy.py:2429
 #, python-brace-format, python-format
 msgid ""
 "Users can assign a token just by using the unassigned token to authenticate."
@@ -1046,12 +1171,12 @@ msgstr ""
 "அங்கீகரிக்க ஒதுக்கப்படாத கிள்ளாக்கைப் பயன்படுத்தி பயனர்கள் ஒரு கிள்ளாக்கை "
 "ஒதுக்கலாம்."
 
-#: lib/policy.py:2360
+#: lib/policy.py:2435
 #, python-brace-format, python-format
 msgid "The length of the password in case of temporary token (lost token)."
 msgstr "தற்காலிக கிள்ளாக்கு (இழந்த டோக்கன்) விசயத்தில் கடவுச்சொல்லின் நீளம்."
 
-#: lib/policy.py:2364
+#: lib/policy.py:2439
 #, python-brace-format, python-format
 msgid ""
 "The contents of the temporary password, described by the characters C, c, n,"
@@ -1060,17 +1185,17 @@ msgstr ""
 "சி, சி, என், எச், 8 எழுத்துக்களால் விவரிக்கப்பட்ட தற்காலிக கடவுச்சொல்லின் "
 "உள்ளடக்கங்கள்."
 
-#: lib/policy.py:2369
+#: lib/policy.py:2444
 #, python-brace-format, python-format
 msgid "The length of the validity for the temporary token (in days)."
 msgstr "தற்காலிக டோக்கனுக்கான செல்லுபடியாகும் நீளம் (நாட்களில்)."
 
-#: lib/policy.py:2374
+#: lib/policy.py:2449
 #, python-brace-format, python-format
 msgid "Set the length of registration codes."
 msgstr "பதிவு குறியீடுகளின் நீளத்தை அமைக்கவும்."
 
-#: lib/policy.py:2378
+#: lib/policy.py:2453
 #, python-brace-format, python-format
 msgid ""
 "Specify the required contents of the registration code. (c)haracters, "
@@ -1081,13 +1206,13 @@ msgstr ""
 "(எண்கள், (சிறப்பு. மாற்றியமைப்பாளர்களைப் பயன்படுத்தவும் +/- அல்லது "
 "அனுமதிக்கப்பட்ட எழுத்துக்களின் பட்டியல் [1234567890]"
 
-#: lib/policy.py:2387
+#: lib/policy.py:2462
 #, python-brace-format, python-format
 msgid "Set the length of the password of generated password tokens."
 msgstr ""
 "உருவாக்கப்பட்ட கடவுச்சொல் டோக்கன்களின் கடவுச்சொல்லின் நீளத்தை அமைக்கவும்."
 
-#: lib/policy.py:2391
+#: lib/policy.py:2466
 #, python-brace-format, python-format
 msgid ""
 "Specify the required contents of the password of a password token. "
@@ -1098,7 +1223,7 @@ msgstr ""
 "(எழுத்து, (எண், (சிறப்பு. மாற்றியமைப்பாளர்களைப் பயன்படுத்தவும் +/- அல்லது "
 "அனுமதிக்கப்பட்ட எழுத்துக்களின் பட்டியல் [1234567890]"
 
-#: lib/policy.py:2399
+#: lib/policy.py:2474
 #, python-brace-format, python-format
 msgid ""
 "Specify the email validator that should be used to validate email addresses "
@@ -1107,7 +1232,7 @@ msgstr ""
 "சேர்க்கையின் போது மின்னஞ்சல் முகவரிகளை சரிபார்க்க பயன்படுத்த வேண்டிய "
 "மின்னஞ்சல் வேலிடேட்டரைக் குறிப்பிடவும்."
 
-#: lib/policy.py:2405
+#: lib/policy.py:2480
 #, python-brace-format, python-format
 msgid ""
 "Specify the list of token types, that must be verified during enrollment."
@@ -1115,7 +1240,7 @@ msgstr ""
 "கிள்ளாக்கு வகைகளின் பட்டியலைக் குறிப்பிடவும், அவை சேர்க்கையின் போது "
 "சரிபார்க்கப்பட வேண்டும்."
 
-#: lib/policy.py:2418
+#: lib/policy.py:2493
 #, python-brace-format, python-format
 msgid ""
 "Either use the Token PIN , use the Userstore Password or use no fixed "
@@ -1124,7 +1249,7 @@ msgstr ""
 "கிள்ளாக்கு முள் பயன்படுத்தவும், யுஎச்ச்டோர் கடவுச்சொல்லைப் பயன்படுத்தவும் "
 "அல்லது நிலையான கடவுச்சொல் கூறுகளைப் பயன்படுத்தவும்."
 
-#: lib/policy.py:2423
+#: lib/policy.py:2498
 #, python-brace-format, python-format
 msgid ""
 "Specify the list of token types, that must be used with challenge response."
@@ -1132,7 +1257,7 @@ msgstr ""
 "கிள்ளாக்கு வகைகளின் பட்டியலைக் குறிப்பிடவும், அது அறைகூவல் பதிலுடன் "
 "பயன்படுத்தப்பட வேண்டும்."
 
-#: lib/policy.py:2431
+#: lib/policy.py:2506
 #, python-brace-format, python-format
 msgid ""
 "Use an alternative challenge text for telling the user to enter an OTP "
@@ -1143,7 +1268,7 @@ msgstr ""
 "தானியங்கு மாற்றீட்டிற்கான குறிச்சொற்களையும் பயன்படுத்தலாம். மேலும் "
 "விவரங்களுக்கு ஆவணங்களைப் பாருங்கள்."
 
-#: lib/policy.py:2438
+#: lib/policy.py:2513
 #, python-brace-format, python-format
 msgid ""
 "If there are several different challenges, this text precedes the list of "
@@ -1152,7 +1277,7 @@ msgstr ""
 "பல்வேறு சவால்கள் இருந்தால், இந்த உரை அறைகூவல் நூல்களின் பட்டியலுக்கு "
 "முந்தியுள்ளது."
 
-#: lib/policy.py:2443
+#: lib/policy.py:2518
 #, python-brace-format, python-format
 msgid ""
 "If there are several different challenges, this text follows the list of the"
@@ -1161,7 +1286,7 @@ msgstr ""
 "பல்வேறு சவால்கள் இருந்தால், இந்த உரை அறைகூவல் நூல்களின் பட்டியலைப் "
 "பின்பற்றுகிறது."
 
-#: lib/policy.py:2448
+#: lib/policy.py:2523
 #, python-brace-format, python-format
 msgid ""
 "If the PIN of a token is to be changed, this will allow the user to change "
@@ -1170,7 +1295,7 @@ msgstr ""
 "ஒரு டோக்கனின் முள் மாற்றப்பட வேண்டுமானால், இது அறைகூவல் / பதில் வழியாக ஒரு "
 "சரிபார்ப்பு / காசோலை கோரிக்கையின் போது பயனரை முள் மாற்ற அனுமதிக்கும்."
 
-#: lib/policy.py:2453
+#: lib/policy.py:2528
 #, python-brace-format, python-format
 msgid ""
 "The autoresync of a token can be done via a challenge response message.You "
@@ -1180,7 +1305,7 @@ msgstr ""
 "செய்யப்படலாம்.நீங்கள் பொது அமைப்புகளில் 'தானியங்கி மறுசீரமைப்பை' செயல்படுத்த"
 " வேண்டும்!"
 
-#: lib/policy.py:2458
+#: lib/policy.py:2533
 #, python-brace-format, python-format
 msgid ""
 "In case of a successful authentication the following tokentype is enrolled. "
@@ -1189,12 +1314,12 @@ msgstr ""
 "வெற்றிகரமான அங்கீகாரத்தின் போது பின்வரும் டோக்கென்டைப் சேர்க்கப்படுகிறது. "
 "ஒரு பயனருக்கான அதிகபட்ச டோக்கன்களின் எண்ணிக்கை சரிபார்க்கப்படுகிறது."
 
-#: lib/policy.py:2464
+#: lib/policy.py:2539
 #, python-brace-format, python-format
 msgid "Change the default text that is shown during enrolling a token."
 msgstr "டோக்கனைச் சேர்ப்பதன் போது காட்டப்படும் இயல்புநிலை உரையை மாற்றவும்."
 
-#: lib/policy.py:2469
+#: lib/policy.py:2544
 #, python-brace-format, python-format
 msgid ""
 "If set, the user in this realm will be authenticated against the userstore "
@@ -1204,7 +1329,7 @@ msgstr ""
 "கொடுக்கப்பட்ட ஆரம் உள்ளமைவுக்கு எதிராக அங்கீகரிக்கப்படுவார், பயனருக்கு "
 "டோக்கன்கள் இல்லை என்றால்."
 
-#: lib/policy.py:2476
+#: lib/policy.py:2551
 #, python-brace-format, python-format
 msgid ""
 "This allows to automatically assign a Token within privacyIDEA, if the user "
@@ -1218,7 +1343,7 @@ msgstr ""
 "பயன்படுத்தப்படுகிறது. OTP மதிப்பின் நீளத்தை உள்ளிடவும், முள் 8: முள் அல்லது "
 "முள்: 6 போல அமைக்கப்படும் இடத்தை உள்ளிடவும்."
 
-#: lib/policy.py:2483
+#: lib/policy.py:2558
 #, python-brace-format, python-format
 msgid ""
 "If the user has no token, the authentication request for this user will "
@@ -1227,7 +1352,7 @@ msgstr ""
 "பயனருக்கு கிள்ளாக்கு இல்லை என்றால், இந்த பயனருக்கான அங்கீகார கோரிக்கை "
 "எப்போதும் உண்மையாக இருக்கும்."
 
-#: lib/policy.py:2488
+#: lib/policy.py:2563
 #, python-brace-format, python-format
 msgid ""
 "If the user user does not exist, the authentication request for this non-"
@@ -1236,7 +1361,7 @@ msgstr ""
 "பயனர் பயனர் இல்லை என்றால், இந்த இல்லாத இந்த பயனருக்கான அங்கீகார கோரிக்கை "
 "எப்போதும் உண்மையாக இருக்கும்."
 
-#: lib/policy.py:2494
+#: lib/policy.py:2569
 #, python-brace-format, python-format
 msgid ""
 "Can be used to modify the parameters pass, user and realm in an "
@@ -1245,7 +1370,7 @@ msgstr ""
 "அங்கீகார கோரிக்கையில் அளவுருக்கள் பாச், பயனர் மற்றும் சாம்ராச்யத்தை மாற்ற "
 "பயன்படுத்தலாம். ஒரு எடுத்துக்காட்டுக்கு ஆவணங்களைப் பார்க்கவும்."
 
-#: lib/policy.py:2500
+#: lib/policy.py:2575
 #, python-brace-format, python-format
 msgid ""
 "If a user authenticates successfully reset the failcounter of all of his "
@@ -1254,7 +1379,7 @@ msgstr ""
 "ஒரு பயனர் தனது டோக்கன்கள் அனைத்தையும் தோல்வியுற்றதை வெற்றிகரமாக "
 "மீட்டமைத்தால்."
 
-#: lib/policy.py:2505
+#: lib/policy.py:2580
 #, python-brace-format, python-format
 msgid ""
 "Increase the failcounter for all the tokens, for which a challenge has been "
@@ -1263,7 +1388,7 @@ msgstr ""
 "அனைத்து டோக்கன்களுக்கும் தோல்வியுற்றதை அதிகரிக்கவும், இதற்காக ஒரு அறைகூவல் "
 "தூண்டப்பட்டுள்ளது."
 
-#: lib/policy.py:2509
+#: lib/policy.py:2584
 #, python-brace-format, python-format
 msgid ""
 "Cache the password used for authentication and allow authentication with the"
@@ -1274,7 +1399,7 @@ msgstr ""
 "குறிப்பிட்ட நேரத்திற்கு அதே நற்சான்றிதழ்களுடன் அங்கீகாரத்தை அனுமதிக்கவும். "
 "4H அல்லது 4H/5M போன்ற காலக்கெடுவைக் குறிப்பிடவும்."
 
-#: lib/policy.py:2516
+#: lib/policy.py:2591
 #, python-brace-format, python-format
 msgid ""
 "You can set the client modes in the order that you prefer. For example: "
@@ -1285,7 +1410,7 @@ msgstr ""
 " \"ஊடாடும் WebAuthn Poll U2F\". ஏற்றுக்கொள்ளப்பட்ட மதிப்புகள்: <code> "
 "ஊடாடும் வெபாஅ்ன் வாக்கெடுப்பு U2F </code>"
 
-#: lib/policy.py:2522
+#: lib/policy.py:2597
 #, python-brace-format, python-format
 msgid ""
 "When enabled, authentication attempts will be interpreted as either the PIN "
@@ -1296,16 +1421,28 @@ msgstr ""
 "விளக்கப்படும். OTP உடன் இணைந்த முள் இனி பயன்படுத்த முடியாது! பயனர்பெயருடன் "
 "அங்கீகரிக்கும்போது மட்டுமே செயல்படும்."
 
-#: lib/policy.py:2530
+#: lib/policy.py:2603
+#, python-brace-format, python-format
+msgid ""
+"Store the last used token type per user and application in the custom user "
+"attributes. For the next authentication the last used token type is used to "
+"identify the preferred client mode."
+msgstr ""
+"தனிப்பயன் பயனர் பண்புகளில் ஒரு பயனருக்கு கடைசியாக பயன்படுத்தப்பட்ட "
+"கிள்ளாக்கு வகை மற்றும் பயன்பாட்டை சேமிக்கவும். அடுத்த அங்கீகாரத்திற்கு "
+"விருப்பமான கிளையன்ட் பயன்முறையை அடையாளம் காண கடைசியாக பயன்படுத்தப்பட்ட "
+"கிள்ளாக்கு வகை பயன்படுத்தப்படுகிறது."
+
+#: lib/policy.py:2611
 #, python-brace-format, python-format
 msgid ""
 "Allow the user to authenticate (default). If set to '{0!s}', the "
 "authentication of the user will be denied."
 msgstr ""
-"அங்கீகரிக்க பயனரை அனுமதிக்கவும் (இயல்புநிலை). '{0! S}' என அமைக்கப்பட்டால், "
+"அங்கீகரிக்க பயனரை அனுமதிக்கவும் (இயல்புநிலை). '{0!s}' என அமைக்கப்பட்டால், "
 "பயனரின் ஏற்பு மறுக்கப்படும்."
 
-#: lib/policy.py:2537
+#: lib/policy.py:2618
 #, python-brace-format, python-format
 msgid ""
 "Allow the application to choose which token types should be used for "
@@ -1317,7 +1454,7 @@ msgstr ""
 "அமைக்கலாம். சரிபார்ப்பு/சரிபார்க்கவும், சரிபார்க்கவும்/SAMLCHECK மற்றும் "
 "சரிபார்க்க/தூண்டுதல்/தூண்டுதல்/தூண்டுதல்."
 
-#: lib/policy.py:2544
+#: lib/policy.py:2625
 #, python-brace-format, python-format
 msgid ""
 "You can specify how many successful authentication requests a user is "
@@ -1329,7 +1466,7 @@ msgstr ""
 "கள், மீ, எச் இரண்டாவது, மணித்துளி மற்றும் மணிநேரம் போன்றவற்றைக் "
 "குறிப்பிடவும்."
 
-#: lib/policy.py:2552
+#: lib/policy.py:2633
 #, python-brace-format, python-format
 msgid ""
 "You can specify how many failed authentication requests a user is allowed to"
@@ -1341,7 +1478,7 @@ msgstr ""
 "கள், மீ, எச் இரண்டாவது, மணித்துளி மற்றும் மணிநேரம் போன்றவற்றைக் "
 "குறிப்பிடவும்."
 
-#: lib/policy.py:2560
+#: lib/policy.py:2641
 #, python-brace-format, python-format
 msgid ""
 "You can specify in which time frame the user needs to authenticate again "
@@ -1352,12 +1489,12 @@ msgstr ""
 "கட்டமைப்பில் நீங்கள் குறிப்பிடலாம். பயனர் பின்னர் அங்கீகரித்தால், ஏற்பு "
 "தோல்வியடையும். 30h, 7d அல்லது 1y போன்றவற்றைக் குறிப்பிடவும்."
 
-#: lib/policy.py:2568
+#: lib/policy.py:2649
 #, python-brace-format, python-format
 msgid "The user will only be authenticated with this very tokentype."
 msgstr "இந்த டோக்கென்டைப் மூலம் மட்டுமே பயனர் அங்கீகரிக்கப்படுவார்."
 
-#: lib/policy.py:2575
+#: lib/policy.py:2656
 #, python-brace-format, python-format
 msgid ""
 "The user will only be authenticated if the serial number of the token "
@@ -1366,7 +1503,7 @@ msgstr ""
 "டோக்கனின் வரிசை எண் இந்த Regexp உடன் பொருந்தினால் மட்டுமே பயனர் "
 "அங்கீகரிக்கப்படுவார்."
 
-#: lib/policy.py:2581
+#: lib/policy.py:2662
 #, python-brace-format, python-format
 msgid ""
 "The user will only be authenticated if the tokeninfo field matches the "
@@ -1375,7 +1512,7 @@ msgstr ""
 "கிள்ளாக்கு இன்ஃபோ புலம் Regexp (key/& lt; regexp & gt;/) உடன் பொருந்தினால் "
 "மட்டுமே பயனர் அங்கீகரிக்கப்படுவார்."
 
-#: lib/policy.py:2588
+#: lib/policy.py:2669
 #, python-brace-format, python-format
 msgid ""
 "The Realm of the user is set to this very realm. This is important if the "
@@ -1385,7 +1522,7 @@ msgstr ""
 " பயனர் இல்லை மற்றும் அவரது சாம்ராச்யத்தை கடக்க முடியாவிட்டால் இது "
 "முக்கியமானது."
 
-#: lib/policy.py:2595
+#: lib/policy.py:2676
 #, python-brace-format, python-format
 msgid ""
 "In case of successful authentication additional no detail information will "
@@ -1394,7 +1531,7 @@ msgstr ""
 "வெற்றிகரமான அங்கீகாரத்தின் போது கூடுதல் எந்த விரிவும் தகவல்களும் திரும்பப் "
 "பெறப்படாது."
 
-#: lib/policy.py:2601
+#: lib/policy.py:2683
 #, python-brace-format, python-format
 msgid ""
 "In case of failed authentication additional no detail information will be "
@@ -1403,7 +1540,7 @@ msgstr ""
 "தோல்வியுற்ற அங்கீகாரத்தின் போது கூடுதல் எந்த விரிவும் தகவல்களும் திரும்பப் "
 "பெறப்படாது."
 
-#: lib/policy.py:2607
+#: lib/policy.py:2690
 #, python-brace-format, python-format
 msgid ""
 "In case of successful authentication user data will be added in the detail "
@@ -1412,16 +1549,16 @@ msgstr ""
 "வெற்றிகரமான அங்கீகாரத்தின் போது பயனர் தரவு அங்கீகார பதிலின் விவரம் கிளையில் "
 "சேர்க்கப்படும்."
 
-#: lib/policy.py:2614
+#: lib/policy.py:2697
 #, python-brace-format, python-format
 msgid ""
 "In case of successful authentication the user resolver and realm will be "
 "added in the detail branch of the authentication response."
 msgstr ""
-"வெற்றிகரமான அங்கீகாரத்தின் போது, ​​பயனர் தீர்மானம் மற்றும் சாம்ராச்யம் "
+"வெற்றிகரமான அங்கீகாரத்தின் போது, பயனர் தீர்மானம் மற்றும் சாம்ராச்யம் "
 "அங்கீகார பதிலின் விவரம் கிளையில் சேர்க்கப்படும்."
 
-#: lib/policy.py:2621
+#: lib/policy.py:2704
 #, python-brace-format, python-format
 msgid ""
 "The sending of an API Auth Key is required duringauthentication. This avoids"
@@ -1431,7 +1568,7 @@ msgstr ""
 "/சரிபார்ப்பு /காசோலை இடைமுகத்திற்கு எதிரான முரட்டு அங்கீகார கோரிக்கைகளைத் "
 "தவிர்க்கிறது."
 
-#: lib/policy.py:2631
+#: lib/policy.py:2713
 #, python-brace-format, python-format
 msgid ""
 "If set, administrators will see a dashboard as start screen when logging in "
@@ -1440,7 +1577,7 @@ msgstr ""
 "அமைக்கப்பட்டால், நிர்வாகிகள் தனியுரிமைடியா வெப்யூயில் உள்நுழையும்போது "
 "தொடக்கத் திரையாக ஒரு டாச்போர்டைப் பார்ப்பார்கள்."
 
-#: lib/policy.py:2636
+#: lib/policy.py:2719
 #, python-brace-format, python-format
 msgid ""
 "If set to \"privacyIDEA\" the users and admins need to authenticate against "
@@ -1450,7 +1587,7 @@ msgstr ""
 "இடைமுகம் இல் உள்நுழையும்போது தனியுரிமை இடத்திற்கு எதிராக அங்கீகரிக்க "
 "வேண்டும். இயல்புநிலை \"யுஎச்ச்டோர்\"."
 
-#: lib/policy.py:2645
+#: lib/policy.py:2727
 #, python-brace-format, python-format
 msgid ""
 "An alternative text to display on the WebUI login dialog instead of \"Please"
@@ -1459,15 +1596,15 @@ msgstr ""
 "\"தயவுசெய்து உள்நுழைக\" என்பதற்குப் பதிலாக வெபுஐ உள்நுழைவு உரையாடலில் "
 "காண்பிக்க ஒரு மாற்று உரை."
 
-#: lib/policy.py:2649
+#: lib/policy.py:2731
 #, python-brace-format, python-format
 msgid ""
 "When searching in the user list, the search will only performed when "
 "pressing enter."
 msgstr ""
-"பயனர் பட்டியலில் தேடும்போது, ​​Enter ஐ அழுத்தும்போது மட்டுமே தேடல் நிகழும்."
+"பயனர் பட்டியலில் தேடும்போது, Enter ஐ அழுத்தும்போது மட்டுமே தேடல் நிகழும்."
 
-#: lib/policy.py:2654
+#: lib/policy.py:2736
 #, python-brace-format, python-format
 msgid ""
 "The action taken when a user is idle beyond the logout_time limit. Defaults "
@@ -1476,7 +1613,7 @@ msgstr ""
 "ஒரு பயனர் LOGOUT_TIME வரம்பைத் தாண்டி சும்மா இருக்கும்போது எடுக்கப்பட்ட "
 "நடவடிக்கை. \"பூட்டு திரை\" க்கு இயல்புநிலை."
 
-#: lib/policy.py:2662
+#: lib/policy.py:2744
 #, python-brace-format, python-format
 msgid ""
 "The REMOTE_USER set by the webserver can be used to login to privacyIDEA or "
@@ -1485,7 +1622,7 @@ msgstr ""
 "வெப்சர்வர் அமைத்த ரிமோட்_யூசர் தனியுரிமைக்கு உள்நுழைய பயன்படுத்தப்படலாம் "
 "அல்லது அது புறக்கணிக்கப்படும். \"முடக்க\" இயல்புநிலை."
 
-#: lib/policy.py:2668
+#: lib/policy.py:2750
 #, python-brace-format, python-format
 msgid ""
 "Set the time in seconds after which the user will be logged out from the "
@@ -1494,7 +1631,7 @@ msgstr ""
 "WebUI இலிருந்து பயனர் வெளியேற்றப்படும் நொடிகளில் நேரத்தை அமைக்கவும். "
 "இயல்புநிலை: 120"
 
-#: lib/policy.py:2673
+#: lib/policy.py:2755
 #, python-brace-format, python-format
 msgid ""
 "privacyIDEA issues a JWT when the user or admins logs in to the WebUI. The "
@@ -1505,21 +1642,21 @@ msgstr ""
 "வெளியிடுகிறது. இயல்புநிலை செல்லுபடியாகும் 1 மணி நேரம். நீங்கள் வெவ்வேறு "
 "செல்லுபடியாகும் நேரங்களை நொடிகளில் குறிப்பிடலாம்."
 
-#: lib/policy.py:2678
+#: lib/policy.py:2760
 #, python-brace-format, python-format
 msgid "Set how many tokens should be displayed in the token view on one page."
 msgstr ""
 "ஒரு பக்கத்தில் கிள்ளாக்கு பார்வையில் எத்தனை டோக்கன்கள் காட்டப்பட வேண்டும் "
 "என்பதை அமைக்கவும்."
 
-#: lib/policy.py:2683
+#: lib/policy.py:2765
 #, python-brace-format, python-format
 msgid "Set how many users should be displayed in the user view on one page."
 msgstr ""
 "ஒரு பக்கத்தில் பயனர் பார்வையில் எத்தனை பயனர்கள் காட்டப்பட வேண்டும் என்பதை "
 "அமைக்கவும்."
 
-#: lib/policy.py:2688
+#: lib/policy.py:2770
 #, python-brace-format, python-format
 msgid ""
 "Set how many audit entries should be displayed in the audit view on one "
@@ -1528,31 +1665,31 @@ msgstr ""
 "ஒரு பக்கத்தில் தணிக்கை காட்சியில் எத்தனை தணிக்கை உள்ளீடுகள் காட்டப்பட "
 "வேண்டும் என்பதை அமைக்கவும்."
 
-#: lib/policy.py:2693
+#: lib/policy.py:2775
 #, python-brace-format, python-format
 msgid "Use your own html template for the web UI menu."
 msgstr ""
 "வலை இடைமுகம் மெனுவுக்கு உங்கள் சொந்த உஉகுமொ வார்ப்புருவைப் பயன்படுத்தவும்."
 
-#: lib/policy.py:2697
+#: lib/policy.py:2779
 #, python-brace-format, python-format
 msgid "Use your own html template for the web UI baseline/footer."
 msgstr ""
 "வலை இடைமுகம் அடிப்படை/அடிக்குறிப்புக்கு உங்கள் சொந்த உஉகுமொ வார்ப்புருவைப் "
 "பயன்படுத்தவும்."
 
-#: lib/policy.py:2701
+#: lib/policy.py:2783
 #, python-brace-format, python-format
 msgid "Link your privacy statement to be displayed in the baseline/footer."
 msgstr "உங்கள் தனியுரிமை அறிக்கையை அடிப்படை/அடிக்குறிப்பில் காட்ட இணைக்கவும்."
 
-#: lib/policy.py:2705
+#: lib/policy.py:2787
 #, python-brace-format, python-format
 msgid ""
 "Whether the user ID and the resolver should be displayed in the token list."
 msgstr "கிள்ளாக்கு பட்டியலில் பயனர் ஐடி மற்றும் தீர்வை காட்ட வேண்டுமா."
 
-#: lib/policy.py:2710
+#: lib/policy.py:2792
 #, python-brace-format, python-format
 msgid ""
 "The URL of a repository, where the policy templates can be found.  (Default "
@@ -1560,7 +1697,7 @@ msgid ""
 "/master/templates/)"
 msgstr "கொள்கை வார்ப்புருக்கள் காணக்கூடிய ஒரு களஞ்சியத்தின் முகவரி. ."
 
-#: lib/policy.py:2717
+#: lib/policy.py:2799
 #, python-brace-format, python-format
 msgid ""
 "The URL of an SSO provider for redirect at logout.(The URL must start with "
@@ -1569,7 +1706,7 @@ msgstr ""
 "வெளியேறும் ஒரு ஒருகைஉள் வழங்குநரின் முகவரி. (URL http: // அல்லது https: // "
 "உடன் தொடங்க வேண்டும்)"
 
-#: lib/policy.py:2722
+#: lib/policy.py:2804
 #, python-brace-format, python-format
 msgid ""
 "As long as a user has no token, he will only see a token wizard in the UI."
@@ -1577,7 +1714,7 @@ msgstr ""
 "ஒரு பயனருக்கு கிள்ளாக்கு இல்லாத வரை, அவர் இடைமுகம் இல் ஒரு கிள்ளாக்கு "
 "வழிகாட்டி மட்டுமே பார்ப்பார்."
 
-#: lib/policy.py:2727
+#: lib/policy.py:2810
 #, python-brace-format, python-format
 msgid ""
 "The tokenwizard will be displayed in the token menu, even if the user "
@@ -1586,7 +1723,7 @@ msgstr ""
 "பயனருக்கு ஏற்கனவே ஒரு கிள்ளாக்கு இருந்தாலும் டோக்கன்விசார்ட் கிள்ளாக்கு "
 "பட்டியலில் காண்பிக்கப்படும்."
 
-#: lib/policy.py:2732
+#: lib/policy.py:2816
 #, python-brace-format, python-format
 msgid ""
 "This is a whitespace separated list of tokentypes, for which a rollover "
@@ -1595,19 +1732,24 @@ msgstr ""
 "இது டோக்கென்டைப்புகளின் இடைவெளி பிரிக்கப்பட்ட பட்டியல், இதற்காக கிள்ளாக்கு "
 "விவரங்களில் ரோல்ஓவர் பொத்தான் காட்டப்படும்."
 
-#: lib/policy.py:2739
+#: lib/policy.py:2823
 #, python-brace-format, python-format
 msgid ""
 "The welcome dialog will be displayed if the user has no tokens assigned."
 msgstr ""
 "பயனருக்கு டோக்கன்கள் ஒதுக்கப்படாவிட்டால் வரவேற்பு உரையாடல் காண்பிக்கப்படும்."
 
-#: lib/policy.py:2743
+#: lib/policy.py:2827
 #, python-brace-format, python-format
 msgid "This is the default token type in the token enrollment dialog."
 msgstr "கிள்ளாக்கு பதிவு உரையாடலில் இயல்புநிலை கிள்ளாக்கு வகை இது."
 
-#: lib/policy.py:2749
+#: lib/policy.py:2833
+#, python-brace-format, python-format
+msgid "This is the default container type in the container create dialog."
+msgstr "இது கொள்கலன் உருவாக்கு உரையாடலில் இயல்புநிலை கொள்கலன் வகை."
+
+#: lib/policy.py:2838
 #, python-brace-format, python-format
 msgid ""
 "A list of realm names, which are displayed in a drop down menu in the WebUI "
@@ -1616,24 +1758,25 @@ msgstr ""
 "WebUI உள்நுழைவு திரையில் ஒரு கீழ்தோன்றும் பட்டியலில் காட்டப்படும் சாம்ராச்ய "
 "பெயர்களின் பட்டியல். பகுதிகள் வெள்ளை இடங்களால் பிரிக்கப்படுகின்றன."
 
-#: lib/policy.py:2755
+#: lib/policy.py:2844
 #, python-brace-format, python-format
 msgid ""
-"If this checked, the administrator will not see the welcome dialog anymore."
+"If this is checked, the administrator will not see the welcome dialog "
+"anymore."
 msgstr ""
 "இது சரிபார்க்கப்பட்டால், நிர்வாகி இனி வரவேற்பு உரையாடலைக் காண மாட்டார்."
 
-#: lib/policy.py:2760
+#: lib/policy.py:2849
 #, python-brace-format, python-format
 msgid ""
 "Per default disabled actions result in disabled buttons. When checking this "
 "action, buttons of disabled actions are hidden."
 msgstr ""
 "இயல்புநிலை முடக்கப்பட்ட செயல்களுக்கு முடக்கப்பட்ட பொத்தான்கள் விளைகின்றன. "
-"இந்த செயலைச் சரிபார்க்கும்போது, ​​முடக்கப்பட்ட செயல்களின் பொத்தான்கள் "
+"இந்த செயலைச் சரிபார்க்கும்போது, முடக்கப்பட்ட செயல்களின் பொத்தான்கள் "
 "மறைக்கப்படுகின்றன."
 
-#: lib/policy.py:2765
+#: lib/policy.py:2854
 #, python-brace-format, python-format
 msgid ""
 "If this is checked, there will be a confirmation prompt when deleting "
@@ -1642,14 +1785,14 @@ msgstr ""
 "இது சரிபார்க்கப்பட்டால், கொள்கைகள், நிகழ்வு, தீர்வி, தீர்வி அல்லது "
 "அவ்வப்போது பணிகளை நீக்கும்போது உறுதிப்படுத்தல் வரியில் இருக்கும்!"
 
-#: lib/policy.py:2770
+#: lib/policy.py:2859
 #, python-brace-format, python-format
 msgid ""
 "If this is checked, the seed will be displayed as text during enrollment."
 msgstr ""
 "இது சரிபார்க்கப்பட்டால், சேர்க்கையின் போது விதை உரையாக காண்பிக்கப்படும்."
 
-#: lib/policy.py:2775
+#: lib/policy.py:2864
 #, python-brace-format, python-format
 msgid ""
 "If this is checked, the privacyIDEA Node name will be displayed in the menu "
@@ -1658,7 +1801,7 @@ msgstr ""
 "இது சரிபார்க்கப்பட்டால், பட்டியல் பட்டியில் தனியுரிமைடியா முனை பெயர் "
 "காண்பிக்கப்படும்."
 
-#: lib/policy.py:2780
+#: lib/policy.py:2869
 #, python-brace-format, python-format
 msgid ""
 "If this is checked, the enrollment page for HOTP, TOTP and Push tokens will "
@@ -1669,7 +1812,7 @@ msgstr ""
 "பக்கத்தில் Google Play Store இல் தனியுரிமைடியா அங்கீகாரத்திற்கு வழிவகுக்கும்"
 " QR குறியீடு இருக்கும்."
 
-#: lib/policy.py:2787
+#: lib/policy.py:2876
 #, python-brace-format, python-format
 msgid ""
 "If this is checked, the enrollment page for HOTP, TOTP and Push tokens will "
@@ -1680,7 +1823,7 @@ msgstr ""
 "பக்கத்தில் ஐஇமு ஆப் ச்டோரில் தனியுரிமைடியா அங்கீகாரத்திற்கு வழிவகுக்கும் QR "
 "குறியீடு இருக்கும்."
 
-#: lib/policy.py:2794
+#: lib/policy.py:2883
 #, python-brace-format, python-format
 msgid ""
 "This action adds a QR code in the enrollment page for HOTP, TOTP and Push "
@@ -1689,7 +1832,134 @@ msgstr ""
 "இந்த நடவடிக்கை HOTP, TOTP மற்றும் புச் டோக்கன்களுக்கான பதிவு பக்கத்தில் ஒரு "
 "QR குறியீட்டை சேர்க்கிறது, இது இந்த கொடுக்கப்பட்ட முகவரி க்கு வழிவகுக்கிறது."
 
-#: lib/policy.py:2838
+#: lib/policy.py:2888
+#, python-brace-format, python-format
+msgid ""
+"The RSS feeds fetched for the user defined in the format: "
+"<code>'Title':'URL'-'Title':'URL'</code> "
+msgstr ""
+"வடிவமைப்பில் வரையறுக்கப்பட்ட பயனருக்காக பெறப்பட்ட ஆர்எச்எச் ஊட்டங்கள்: "
+"<code> 'தலைப்பு': 'url'-'தலைப்பு': 'url' </code>"
+
+#: lib/policy.py:2891
+#, python-brace-format, python-format
+msgid ""
+"The age of the RSS feed entries in days. Use <code>0</code> to hide the news"
+" feed. For admins the default is 180 days and for users 0 days."
+msgstr ""
+"நாட்களில் ஆர்.எச்.எச். செய்தி ஊட்டத்தை மறைக்க <குறியீடு> 0 </code> ஐப் "
+"பயன்படுத்தவும். நிர்வாகிகளுக்கு இயல்புநிலை 180 நாட்கள் மற்றும் பயனர்களுக்கு "
+"0 நாட்கள்."
+
+#: lib/policy.py:2895
+#, python-brace-format, python-format
+msgid ""
+"Container type to be created with the container wizard. It is required to "
+"set at least this option to enable the container wizard. As long as the user"
+" has no container assigned he will only see the container wizard in the UI."
+msgstr ""
+"கொள்கலன் வகை கொள்கலன் வழிகாட்டி மூலம் உருவாக்கப்பட வேண்டும். கொள்கலன் "
+"வழிகாட்டியை இயக்க குறைந்தபட்சம் இந்த விருப்பத்தையாவது அமைக்க வேண்டும். "
+"பயனருக்கு கொள்கலன் ஒதுக்கப்படாத வரை, அவர் இடைமுகம் இல் கொள்கலன் வழிகாட்டி "
+"மட்டுமே பார்ப்பார்."
+
+#: lib/policy.py:2902
+#, python-brace-format, python-format
+msgid ""
+"Name of the container template to be used to create a container in the "
+"container wizard (optional). Note that the template must be of the same type"
+" as selected in the container_wizard_type."
+msgstr ""
+"கொள்கலன் வழிகாட்டி (விரும்பினால்) ஒரு கொள்கலனை உருவாக்க பயன்படுத்த வேண்டிய "
+"கொள்கலன் வார்ப்புருவின் பெயர். வார்ப்புரு கொள்கலன்_விசார்ட்_ டைப்பில் "
+"தேர்ந்தெடுக்கப்பட்ட அதே வகையாக இருக்க வேண்டும் என்பதை நினைவில் கொள்க."
+
+#: lib/policy.py:2908
+#, python-brace-format, python-format
+msgid ""
+"In the container wizard, a QR code will be generated to register the new "
+"container on the smartphone. (Only applicable for smartphone containers)"
+msgstr ""
+"கொள்கலன் வழிகாட்டி, ச்மார்ட்போனில் புதிய கொள்கலனை பதிவு செய்ய QR குறியீடு "
+"உருவாக்கப்படும். (ச்மார்ட்போன் கொள்கலன்களுக்கு மட்டுமே பொருந்தும்)"
+
+#: lib/policy.py:2916
+#, python-brace-format, python-format
+msgid ""
+"The URL of your privacyIDEA server, e.g. <code>https://pi/</code>. It is "
+"used to build URLs the container can contact for registration and "
+"synchronization."
+msgstr ""
+"உங்கள் தனியுரிமை சேவையகத்தின் URL, எ.கா. <code> https: // pi/</code>. பதிவு "
+"மற்றும் ஒத்திசைவுக்கு கொள்கலன் தொடர்பு கொள்ளக்கூடிய முகவரி களை உருவாக்க இது "
+"பயன்படுகிறது."
+
+#: lib/policy.py:2922
+#, python-brace-format, python-format
+msgid ""
+"The time in minutes the client has to do the second step of the "
+"registration. The default is ten minutes."
+msgstr ""
+"நிமிடங்களில் நேரம் வாடிக்கையாளர் பதிவின் இரண்டாவது படி செய்ய வேண்டும். "
+"இயல்புநிலை பத்து நிமிடங்கள்."
+
+#: lib/policy.py:2928
+#, python-brace-format, python-format
+msgid ""
+"After the client (a registered container) has challenged an action such as "
+"synchronization or unregistration, this defines the time in minutes the "
+"client has to complete the action. The default is two minutes."
+msgstr ""
+"வாடிக்கையாளர் (பதிவுசெய்யப்பட்ட கொள்கலன்) ஒத்திசைவு அல்லது பதிவு செய்யாதது "
+"போன்ற ஒரு செயலை அறைகூவல் செய்த பிறகு, கிளையன்ட் செயலை முடிக்க வேண்டிய "
+"நிமிடங்களில் நேரத்தை இது வரையறுக்கிறது. இயல்புநிலை இரண்டு நிமிடங்கள்."
+
+#: lib/policy.py:2937
+#, python-brace-format, python-format
+msgid ""
+"The container needs to verify the SSL certificate of the privacyIDEA server "
+"during registration and synchronization. (default True)"
+msgstr ""
+"பதிவு மற்றும் ஒத்திசைவின் போது தனியுரிமிடியா சேவையகத்தின் எச்எச்எல் "
+"சான்றிதழை கொள்கலன் சரிபார்க்க வேண்டும். (இயல்புநிலை உண்மை)"
+
+#: lib/policy.py:2944
+#, python-brace-format, python-format
+msgid ""
+"The client is allowed to perform a rollover of the container and the "
+"included tokens."
+msgstr ""
+"வாடிக்கையாளர் கொள்கலன் மற்றும் சேர்க்கப்பட்ட டோக்கன்களின் ரோல்ஓவர் செய்ய "
+"அனுமதிக்கப்படுகிறது."
+
+#: lib/policy.py:2949
+#, python-brace-format, python-format
+msgid ""
+"During the first synchronization, the server automatically adds the clients "
+"tokens existing in privacyIDEA to the container. This allows to register "
+"devices with existing tokens as container without having to manually add the"
+" tokens on the device to the container."
+msgstr ""
+"முதல் ஒத்திசைவின் போது, ​​சேவையகம் தானாகவே தனியார்மிடியாவில் இருக்கும் "
+"வாடிக்கையாளர்களின் டோக்கன்களை கொள்கலனில் சேர்க்கிறது. சாதனத்தில் உள்ள "
+"டோக்கன்களை கொள்கலனில் கைமுறையாக சேர்க்காமல் இருக்கும் டோக்கன்களுடன் "
+"சாதனங்களை கொள்கலனாக பதிவு செய்ய இது அனுமதிக்கிறது."
+
+#: lib/policy.py:2956
+#, python-brace-format, python-format
+msgid "The user is not allowed to delete tokens locally on the smartphone."
+msgstr "ச்மார்ட்போனில் உள்ளூரில் டோக்கன்களை நீக்க பயனர் அனுமதிக்கப்படவில்லை."
+
+#: lib/policy.py:2961
+#, python-brace-format, python-format
+msgid ""
+"The client is not allowed to unregister the container. The user can not "
+"delete the container locally on the smartphone."
+msgstr ""
+"கொள்கலனை பதிவு செய்ய கிளையன்ட் அனுமதிக்கப்படவில்லை. ச்மார்ட்போனில் உள்ளூரில்"
+" கொள்கலனை பயனர் நீக்க முடியாது."
+
+#: lib/policy.py:3006
 #, python-brace-format, python-format
 msgid ""
 "The policy only matches if certain conditions on the user info are "
@@ -1698,7 +1968,7 @@ msgstr ""
 "பயனர் தகவலில் சில நிபந்தனைகள் நிறைவு செய்யப்பட்டால் மட்டுமே கொள்கை "
 "பொருந்துகிறது."
 
-#: lib/policy.py:2841
+#: lib/policy.py:3009
 #, python-brace-format, python-format
 msgid ""
 "The policy only matches if certain conditions of the token attributes are "
@@ -1707,7 +1977,7 @@ msgstr ""
 "கிள்ளாக்கு பண்புகளின் சில நிபந்தனைகள் நிறைவு செய்யப்பட்டால் மட்டுமே கொள்கை "
 "பொருந்துகிறது."
 
-#: lib/policy.py:2844
+#: lib/policy.py:3012
 #, python-brace-format, python-format
 msgid ""
 "The policy only matches if certain conditions on the token info are "
@@ -1716,7 +1986,7 @@ msgstr ""
 "கிள்ளாக்கு தகவலில் சில நிபந்தனைகள் நிறைவு செய்யப்பட்டால் மட்டுமே கொள்கை "
 "பொருந்துகிறது."
 
-#: lib/policy.py:2847
+#: lib/policy.py:3015
 #, python-brace-format, python-format
 msgid ""
 "The policy only matches if certain conditions on the HTTP Request header are"
@@ -1725,7 +1995,7 @@ msgstr ""
 "HTTP கோரிக்கை தலைப்பில் சில நிபந்தனைகள் நிறைவு செய்யப்பட்டால் மட்டுமே கொள்கை"
 " பொருந்துகிறது."
 
-#: lib/policy.py:2850
+#: lib/policy.py:3018
 #, python-brace-format, python-format
 msgid ""
 "The policy only matches if certain conditions on the HTTP Environment are "
@@ -1744,187 +2014,201 @@ msgstr "ஆரம் மறைபொருள் மிக நீளமானத
 msgid "My subscription has expired."
 msgstr "எனது சந்தா காலாவதியானது."
 
-#: lib/token.py:159
+#: lib/token.py:169
 #, python-brace-format, python-format
 msgid "create_tokenclass_object failed:  {0!r}"
-msgstr "create_tokenclass_object தோல்வியுற்றது: {0! r}"
+msgstr "create_tokenclass_object தோல்வியுற்றது: {0!r}"
 
-#: lib/token.py:325
+#: lib/token.py:335
 #, python-brace-format, python-format
 msgid "I can only create SQL filters from tokeninfo of length 1."
 msgstr ""
 "நீளம் 1 இன் கிள்ளாக்கு இன்ஃபோவிலிருந்து மட்டுமே நான் கவிமொ வடிப்பான்களை "
 "மட்டுமே உருவாக்க முடியும்."
 
-#: lib/token.py:718
+#: lib/token.py:349
+#, python-brace-format, python-format
+msgid "No container with the serial {container_serial} exists."
+msgstr "சீரியல் {கொள்கலன்_சீரியல் with உடன் கொள்கலன் இல்லை."
+
+#: lib/token.py:742
 #, python-brace-format, python-format
 msgid "The requested token could not be found."
 msgstr "கோரப்பட்ட டோக்கனைக் கண்டுபிடிக்க முடியவில்லை."
 
-#: lib/token.py:723
+#: lib/token.py:747
 #, python-brace-format, python-format
 msgid "More than one matching token was found."
 msgstr "ஒன்றுக்கு மேற்பட்ட பொருந்தக்கூடிய கிள்ளாக்கு கண்டுபிடிக்கப்பட்டது."
 
-#: lib/token.py:1035
+#: lib/token.py:1051
 #, python-brace-format, python-format
 msgid "multiple tokens are matching this OTP value!"
 msgstr "பல டோக்கன்கள் இந்த OTP மதிப்புடன் பொருந்துகின்றன!"
 
-#: lib/token.py:1195
+#: lib/token.py:1270
 #, python-brace-format, python-format
-msgid "init token failed: unknown token type {0!r}"
-msgstr "INIT கிள்ளாக்கு தோல்வியுற்றது: தெரியாத கிள்ளாக்கு வகை {0! R}"
+msgid "init token failed. Unknown token type:"
+msgstr "INIT கிள்ளாக்கு தோல்வியுற்றது: தெரியாத கிள்ளாக்கு வகை:"
 
-#: lib/token.py:1216
+#: lib/token.py:1290
 #, python-brace-format, python-format
-msgid "initToken failed: {0!s}"
-msgstr "inittoken தோல்வியுற்றது: {0! S}"
+msgid ""
+"Token {serial} already exists with type {old_type}. Can not initialize token"
+" with new type {token_type}"
+msgstr ""
+"கிள்ளாக்கு {serial} ஏற்கனவே {old_type} உடன் உள்ளது. புதிய வகை {டோக்கன்_ டைப்"
+" with உடன் கிள்ளாக்கை துவக்க முடியாது"
 
-#: lib/token.py:1376
+#: lib/token.py:1294
 #, python-brace-format, python-format
-msgid "Token already assigned to user {0!r}"
-msgstr "கிள்ளாக்கு ஏற்கனவே பயனருக்கு ஒதுக்கப்பட்டுள்ளது {0! R}"
+msgid "init token failed:"
+msgstr "inittoken தோல்வியுற்றது:"
 
-#: lib/token.py:1390
+#: lib/token.py:1470
+#, python-brace-format, python-format
+msgid "Token already assigned to user {old_user!r}"
+msgstr "கிள்ளாக்கு ஏற்கனவே பயனருக்கு ஒதுக்கப்பட்டுள்ளது {old_user!r}"
+
+#: lib/token.py:1484
 #, python-brace-format, python-format
 msgid "Token assign failed for {0!r}/{1!s} : {2!r}"
-msgstr "கிள்ளாக்கு பணி {0! R}/{1! S}: {2! R} க்கு தோல்வியுற்றது"
+msgstr "கிள்ளாக்கு பணி {0!r}/{1!s}: {2!r} க்கு தோல்வியுற்றது"
 
-#: lib/token.py:1418
+#: lib/token.py:1512
 #, python-brace-format, python-format
-msgid "Token unassign failed for {0!r}/{1!r}: {2!r}"
-msgstr "{0! R}/{1! R}: {2! R}"
+msgid "Token unassign failed for"
+msgstr "கிள்ளாக்கு யுனிசைன் தோல்வியுற்றது"
 
-#: lib/token.py:1494
+#: lib/token.py:1592
 #, python-brace-format, python-format
-msgid "Parameter user must not be a string: {0!r}"
-msgstr "அளவுரு பயனர் ஒரு சரமாக இருக்கக்கூடாது: {0! R}"
+msgid "Parameter user must not be a string:"
+msgstr "அளவுரு பயனர் ஒரு சரமாக இருக்கக்கூடாது:"
 
-#: lib/token.py:2047
+#: lib/token.py:2148
 #, python-brace-format, python-format
 msgid "You can only define a lost token for an assigned token."
 msgstr ""
 "ஒதுக்கப்பட்ட டோக்கனுக்கு இழந்த கிள்ளாக்கை மட்டுமே நீங்கள் வரையறுக்க "
 "முடியும்."
 
-#: lib/token.py:2073
+#: lib/token.py:2174
 #, python-brace-format, python-format
 msgid "temporary replacement for {0!s}"
-msgstr "{0! S க்கு க்கு தற்காலிக மாற்றீடு"
+msgstr "{0!s} க்கு க்கு தற்காலிக மாற்றீடு"
 
-#: lib/token.py:2129
+#: lib/token.py:2230
 #, python-brace-format, python-format
 msgid "There is no active and assigned token in this realm"
 msgstr "இந்த உலகில் செயலில் மற்றும் ஒதுக்கப்பட்ட கிள்ளாக்கு இல்லை"
 
-#: lib/token.py:2141
+#: lib/token.py:2242
 #, python-brace-format, python-format
 msgid ""
 "There is no active and assigned token in this realm, included types: {0!s}, "
 "excluded types: {1!s}"
 msgstr ""
 "இந்த உலகில் செயலில் மற்றும் ஒதுக்கப்பட்ட கிள்ளாக்கு எதுவும் இல்லை, "
-"சேர்க்கப்பட்டுள்ளது வகைகள்: {0! கள்}, விலக்கப்பட்ட வகைகள்: {1! S}"
+"சேர்க்கப்பட்டுள்ளது வகைகள்: {0!s}, விலக்கப்பட்ட வகைகள்: {1!s}"
 
-#: lib/token.py:2194
+#: lib/token.py:2295
 #, python-brace-format, python-format
 msgid "OTP verification failed."
 msgstr "OTP சரிபார்ப்பு தோல்வியடைந்தது."
 
-#: lib/token.py:2228
+#: lib/token.py:2329
 #, python-brace-format, python-format
 msgid "The user has no tokens assigned"
 msgstr "பயனருக்கு டோக்கன்கள் ஒதுக்கப்படவில்லை"
 
-#: lib/token.py:2443
+#: lib/token.py:2550
 #, python-brace-format, python-format
 msgid "matching {0:d} tokens"
 msgstr "பொருந்தும் {0:d} டோக்கன்கள்"
 
-#: lib/token.py:2495
+#: lib/token.py:2598
 #, python-brace-format, python-format
 msgid "Challenge matches, but token is not fit for challenge"
 msgstr "அறைகூவல் போட்டிகள், ஆனால் கிள்ளாக்கு சவாலுக்கு பொருந்தாது"
 
-#: lib/token.py:2505
-#, python-brace-format, python-format
-msgid "Found matching challenge"
-msgstr "பொருந்தக்கூடிய அறைகூவல் காணப்பட்டது"
-
-#: lib/token.py:2547
+#: lib/token.py:2647
 #, python-brace-format, python-format
 msgid "Response did not match the challenge."
 msgstr "பதில் சவாலுடன் பொருந்தவில்லை."
 
-#: lib/token.py:2549
+#: lib/token.py:2649
 #, python-brace-format, python-format
 msgid "Response did not match for {0!s} tokens."
-msgstr "பதில் {0! S} டோக்கன்களுக்கு பொருந்தவில்லை."
+msgstr "பதில் {0!s} டோக்கன்களுக்கு பொருந்தவில்லை."
 
-#: lib/token.py:2557
+#: lib/token.py:2656
 #, python-brace-format, python-format
 msgid "No active challenge response token found"
 msgstr "செயலில் அறைகூவல் மறுமொழி கிள்ளாக்கு கிடைக்கவில்லை"
 
-#: lib/token.py:2573
+#: lib/token.py:2672
 #, python-brace-format, python-format
 msgid "wrong otp value"
 msgstr "தவறான OTP மதிப்பு"
 
-#: lib/token.py:2580
+#: lib/token.py:2679
 #, python-brace-format, python-format
 msgid ". previous otp used again"
 msgstr ". முந்தைய OTP மீண்டும் பயன்படுத்தப்பட்டது"
 
-#: lib/token.py:2594
+#: lib/token.py:2693
 #, python-brace-format, python-format
 msgid "wrong otp pin"
 msgstr "தவறான OTP முள்"
 
-#: lib/token.py:2602
+#: lib/token.py:2701
 #, python-brace-format, python-format
 msgid "No suitable token found for authentication."
 msgstr "அங்கீகாரத்திற்கு பொருத்தமான கிள்ளாக்கு எதுவும் கிடைக்கவில்லை."
 
-#: lib/token.py:2627
+#: lib/token.py:2726
 #, python-brace-format, python-format
 msgid "Admin is allowed to initialize {0!s} tokens."
-msgstr "நிர்வாகி {0! S} டோக்கன்களைத் தொடங்க அனுமதிக்கப்படுகிறது."
+msgstr "நிர்வாகி {0!s} டோக்கன்களைத் தொடங்க அனுமதிக்கப்படுகிறது."
 
-#: lib/token.py:2635
+#: lib/token.py:2734
 #, python-brace-format, python-format
 msgid "The user is allowed to enroll a {0!s} token."
-msgstr "பயனர் ஒரு {0! S} கிள்ளாக்கை சேர்க்க அனுமதிக்கப்படுகிறார்."
+msgstr "பயனர் ஒரு {0!s} கிள்ளாக்கை சேர்க்க அனுமதிக்கப்படுகிறார்."
 
-#: lib/token.py:2666
+#: lib/token.py:2765
 #, python-brace-format, python-format
 msgid "Set the maximum allowed PIN length of the {0!s} token."
-msgstr "{0! S} டோக்கனின் அதிகபட்ச அனுமதிக்கப்பட்ட முள் நீளத்தை அமைக்கவும்."
+msgstr "{0!s} டோக்கனின் அதிகபட்ச அனுமதிக்கப்பட்ட முள் நீளத்தை அமைக்கவும்."
 
-#: lib/token.py:2673
+#: lib/token.py:2772
 #, python-brace-format, python-format
 msgid "Set the minimum required PIN length of the {0!s} token."
-msgstr "{0! S} டோக்கனின் குறைந்தபட்ச தேவையான முள் நீளத்தை அமைக்கவும்."
+msgstr "{0!s} டோக்கனின் குறைந்தபட்ச தேவையான முள் நீளத்தை அமைக்கவும்."
 
-#: lib/token.py:2679
+#: lib/token.py:2778
 #, python-brace-format, python-format
 msgid ""
 "Specifiy the required PIN contents of the {0!s} token. (c)haracters, "
 "(n)umeric, (s)pecial, (o)thers. [+/-]!"
 msgstr ""
-"{0! S} டோக்கனின் தேவையான முள் உள்ளடக்கங்களைக் குறிப்பிடவும். (இ) எழுத்து, "
+"{0!s} டோக்கனின் தேவையான முள் உள்ளடக்கங்களைக் குறிப்பிடவும். (இ) எழுத்து, "
 "(எண், (சிறப்பு, (ஓ) தேர்கள். [+/-]!"
 
-#: lib/token.py:2724 lib/token.py:2740
+#: lib/token.py:2823 lib/token.py:2839
 #, python-brace-format, python-format
 msgid "The tokengroup does not exist."
 msgstr "கிள்ளாக்கு குழு இல்லை."
 
-#: lib/tokenclass.py:1691
+#: lib/token.py:2976
+#, python-brace-format, python-format
+msgid " Please press: {presence_answer}"
+msgstr "தயவுசெய்து அழுத்தவும்: {presence_answer}"
+
+#: lib/tokenclass.py:1698
 #, python-brace-format, python-format
 msgid "please enter otp: "
-msgstr "தயவுசெய்து OTP ஐ உள்ளிடவும்:"
+msgstr "தயவுசெய்து OTP ஐ உள்ளிடவும்: "
 
 #: lib/applications/ssh.py:105
 #, python-brace-format, python-format
@@ -1939,7 +2223,25 @@ msgid ""
 msgstr ""
 "பாஓடு சேவையகத்தின் பணி ஐடி. பல சேவையகங்கள் ஒரே பணி ஐடியைக் கொண்டிருக்கலாம்."
 
-#: lib/eventhandler/base.py:169
+#: lib/containers/smartphone.py:123
+#, python-brace-format, python-format
+msgid "A smartphone that uses an authenticator app."
+msgstr "அங்கீகார பயன்பாட்டைப் பயன்படுத்தும் ச்மார்ட்போன்."
+
+#: lib/containers/smartphone.py:219
+#, python-brace-format, python-format
+msgid "URL for privacyIDEA Container Registration"
+msgstr "தனியுரிமைடியா கொள்கலன் பதிவுக்கான முகவரி"
+
+#: lib/containers/yubikey.py:62
+#, python-brace-format, python-format
+msgid ""
+"Yubikey hardware device that can hold HOTP, certificate and webauthn token"
+msgstr ""
+"HOTP, சான்றிதழ் மற்றும் வெப்அத்ன் கிள்ளாக்கை வைத்திருக்கக்கூடிய யூபிகே "
+"வன்பொருள் சாதனம்"
+
+#: lib/eventhandler/base.py:175
 #, python-brace-format, python-format
 msgid ""
 "The challenge session matches the string or regular expression (like "
@@ -1948,12 +2250,12 @@ msgstr ""
 "அறைகூவல் அமர்வு சரம் அல்லது வழக்கமான வெளிப்பாட்டுடன் பொருந்துகிறது "
 "('சேலஞ்ச்_டெக் செய்யப்பட்ட' அல்லது 'பதிவு' போன்றவை)"
 
-#: lib/eventhandler/base.py:176
+#: lib/eventhandler/base.py:182
 #, python-brace-format, python-format
 msgid "The challenge of a token during the authentication process is expired."
 msgstr "அங்கீகார செயல்பாட்டின் போது ஒரு டோக்கனின் அறைகூவல் காலாவதியாகிறது."
 
-#: lib/eventhandler/base.py:184
+#: lib/eventhandler/base.py:190
 #, python-brace-format, python-format
 msgid ""
 "The rollout_state of the token has a certain value like 'clientwait' or "
@@ -1962,62 +2264,62 @@ msgstr ""
 "டோக்கனின் ரோல்அவுட்_ச்டேட் 'கிளையன்ட் வெயிட்' அல்லது 'பதிவுசெய்யப்பட்ட' "
 "போன்ற ஒரு குறிப்பிட்ட மதிப்பைக் கொண்டுள்ளது."
 
-#: lib/eventhandler/base.py:190
+#: lib/eventhandler/base.py:196
 #, python-brace-format, python-format
 msgid "The realm of the user, for which this event should apply."
 msgstr "பயனரின் சாம்ராச்யம், இந்த நிகழ்வு பொருந்த வேண்டும்."
 
-#: lib/eventhandler/base.py:197
+#: lib/eventhandler/base.py:203
 #, python-brace-format, python-format
 msgid "The resolver of the user, for which this event should apply."
 msgstr "பயனரின் தீர்வி, இந்த நிகழ்வு பொருந்த வேண்டும்."
 
-#: lib/eventhandler/base.py:204
+#: lib/eventhandler/base.py:210
 #, python-brace-format, python-format
 msgid "The realm of the token, for which this event should apply."
 msgstr "டோக்கனின் சாம்ராச்யம், இந்த நிகழ்வு பொருந்த வேண்டும்."
 
-#: lib/eventhandler/base.py:212
+#: lib/eventhandler/base.py:218
 #, python-brace-format, python-format
 msgid "The resolver of the token, for which this event should apply."
 msgstr "டோக்கனின் தீர்க்குபவர், இந்த நிகழ்வு பொருந்தும்."
 
-#: lib/eventhandler/base.py:220
+#: lib/eventhandler/base.py:226
 #, python-brace-format, python-format
 msgid "The type of the token."
 msgstr "டோக்கனின் வகை."
 
-#: lib/eventhandler/base.py:227
+#: lib/eventhandler/base.py:233
 #, python-brace-format, python-format
 msgid "The logged in user is of the following type."
 msgstr "உள்நுழைந்த பயனரில் பின்வரும் வகை."
 
-#: lib/eventhandler/base.py:234
+#: lib/eventhandler/base.py:240
 #, python-brace-format, python-format
 msgid "The result.value within the response is True or False."
 msgstr "முடிவு. பதிலுக்குள் மதிப்பு உண்மை அல்லது தவறானது."
 
-#: lib/eventhandler/base.py:242
+#: lib/eventhandler/base.py:248
 #, python-brace-format, python-format
 msgid "The result.status within the response is True or False."
 msgstr "முடிவு. பதிலுக்குள் உள்ள நிலை உண்மை அல்லது தவறானது."
 
-#: lib/eventhandler/base.py:250
+#: lib/eventhandler/base.py:256
 #, python-brace-format, python-format
 msgid "The result.authentication within the response is the given value."
 msgstr "முடிவு. பதிலுக்குள் ஏற்பு கொடுக்கப்பட்ட மதிப்பு."
 
-#: lib/eventhandler/base.py:258
+#: lib/eventhandler/base.py:264
 #, python-brace-format, python-format
 msgid "Check if the max failcounter of the token is reached."
 msgstr "டோக்கனின் அதிகபட்ச தோல்வி அடைந்ததா என்பதை சரிபார்க்கவும்."
 
-#: lib/eventhandler/base.py:266
+#: lib/eventhandler/base.py:272
 #, python-brace-format, python-format
 msgid "The token has a user assigned."
 msgstr "டோக்கனில் ஒரு பயனர் ஒதுக்கப்பட்டுள்ளது."
 
-#: lib/eventhandler/base.py:273
+#: lib/eventhandler/base.py:279
 #, python-brace-format, python-format
 msgid ""
 "The token has a user assigned, but the user does not exist in the userstore "
@@ -2026,31 +2328,34 @@ msgstr ""
 "டோக்கனில் ஒரு பயனர் ஒதுக்கப்பட்டுள்ளார், ஆனால் பயனர் இனி யுஎச்ச்டோரில் "
 "இல்லை."
 
-#: lib/eventhandler/base.py:281
+#: lib/eventhandler/base.py:287
 #, python-brace-format, python-format
 msgid "Check if the token is within its validity period."
 msgstr ""
 "கிள்ளாக்கு அதன் செல்லுபடியாகும் காலத்திற்குள் இருக்கிறதா என்று "
 "சரிபார்க்கவும்."
 
-#: lib/eventhandler/base.py:288
+#: lib/eventhandler/base.py:294
 #, python-brace-format, python-format
 msgid "Action is triggered, if the serial matches this regular expression."
 msgstr ""
 "தொடர் இந்த வழக்கமான வெளிப்பாட்டுடன் பொருந்தினால், செயல் தூண்டப்படுகிறது."
 
-#: lib/eventhandler/base.py:295
+#: lib/eventhandler/base.py:301
 #, python-brace-format, python-format
 msgid "The token is in a container."
 msgstr "கிள்ளாக்கு ஒரு கொள்கலனில் உள்ளது."
 
-#: lib/eventhandler/base.py:302
+#: lib/eventhandler/base.py:308
 #, python-brace-format, python-format
-msgid "Action is triggered, if the user has this number of tokens assigned."
+msgid ""
+"Action is triggered, if the user has this number of tokens assigned. > and <"
+" can be used, like <8."
 msgstr ""
-"பயனருக்கு இந்த டோக்கன்கள் ஒதுக்கப்பட்டிருந்தால், செயல் தூண்டப்படுகிறது."
+"பயனருக்கு இந்த டோக்கன்கள் ஒதுக்கப்பட்டிருந்தால், செயல் தூண்டப்படுகிறது. > "
+"மற்றும் <8 போன்ற <8 ஐப் பயன்படுத்தலாம்."
 
-#: lib/eventhandler/base.py:309
+#: lib/eventhandler/base.py:315
 #, python-brace-format, python-format
 msgid ""
 "Action is triggered, if the user has this number of containers assigned."
@@ -2058,7 +2363,7 @@ msgstr ""
 "பயனருக்கு இந்த எண்ணிக்கையிலான கொள்கலன்கள் ஒதுக்கப்பட்டிருந்தால், செயல் "
 "தூண்டப்படுகிறது."
 
-#: lib/eventhandler/base.py:316
+#: lib/eventhandler/base.py:322
 #, python-brace-format, python-format
 msgid ""
 "Action is triggered, if the counter of the token equals this setting. Can "
@@ -2067,7 +2372,7 @@ msgstr ""
 "டோக்கனின் கவுண்டர் இந்த அமைப்பிற்கு சமமாக இருந்தால், செயல் தூண்டப்படுகிறது. "
 "சரியான பொருத்தத்திற்கு '> 100' அல்லது '<99' ஆகவும் இருக்கலாம்."
 
-#: lib/eventhandler/base.py:324
+#: lib/eventhandler/base.py:330
 #, python-brace-format, python-format
 msgid ""
 "Action is triggered, if the last authentication of the token is older than "
@@ -2076,7 +2381,7 @@ msgstr ""
 "டோக்கனின் கடைசி ஏற்பு 7h, 10d அல்லது 1y ஐ விட பழையதாக இருந்தால், நடவடிக்கை "
 "தூண்டப்படுகிறது."
 
-#: lib/eventhandler/base.py:331
+#: lib/eventhandler/base.py:337
 #, python-brace-format, python-format
 msgid ""
 "This can be '>100', '<99', or '=100', to trigger the action, if the "
@@ -2087,7 +2392,7 @@ msgstr ""
 "'count_auth' கிள்ளாக்கு இன்ஃபோ புலம் 100 ஐ விட பெரியதாக இருந்தால், 99 அல்லது"
 " சரியாக 100 க்கும் குறைவாக இருந்தால்."
 
-#: lib/eventhandler/base.py:339
+#: lib/eventhandler/base.py:345
 #, python-brace-format, python-format
 msgid ""
 "This can be '>100', '<99', or '=100', to trigger the action, if the "
@@ -2098,7 +2403,7 @@ msgstr ""
 "'count_auth_success' கிள்ளாக்கு இன்ஃபோ புலம் 100 ஐ விட பெரியதாக இருந்தால், "
 "99 அல்லது சரியாக 100 க்கும் குறைவாக இருந்தால்."
 
-#: lib/eventhandler/base.py:348
+#: lib/eventhandler/base.py:354
 #, python-brace-format, python-format
 msgid ""
 "This can be '>100', '<99', or '=100', to trigger the action, if the "
@@ -2109,7 +2414,7 @@ msgstr ""
 "'COUNT_AUTH' மற்றும் 'count_auth_success ஆகியவற்றுக்கு இடையேயான வேறுபாடு 100"
 " ஐ விட பெரியது, 99 க்கும் குறைவாகவோ அல்லது சரியாக 100 ஆகவோ இருந்தால்."
 
-#: lib/eventhandler/base.py:357
+#: lib/eventhandler/base.py:363
 #, python-brace-format, python-format
 msgid ""
 "This can be '>9', '<9', or '=10', to trigger the action, if the failcounter "
@@ -2120,7 +2425,7 @@ msgstr ""
 "இது '> 9', '<9' அல்லது '= 10' ஆக இருக்கலாம். MAX_FAILCOUNT ஐ அடைந்தால், "
 "தோல்வி அதிகரிப்பதை நிறுத்துகிறது என்பதை நினைவில் கொள்க."
 
-#: lib/eventhandler/base.py:366
+#: lib/eventhandler/base.py:372
 #, python-brace-format, python-format
 msgid ""
 "This condition can check any arbitrary tokeninfo field. You need to enter "
@@ -2131,7 +2436,7 @@ msgstr ""
 "'<fieldName> == <FieldValue>', '<fieldName>> <fieldValue>' அல்லது "
 "'<fieldname> <<fieldValue>' போன்ற ஒன்றை நீங்கள் உள்ளிட வேண்டும்."
 
-#: lib/eventhandler/base.py:375
+#: lib/eventhandler/base.py:381
 #, python-brace-format, python-format
 msgid ""
 "This condition can check the value of an arbitrary event counter and compare"
@@ -2141,7 +2446,7 @@ msgstr ""
 "'MyCounter == 1000', 'MyCounter> 1000' அல்லது 'MyCounter <1000' போன்றவற்றை "
 "ஒப்பிடலாம்."
 
-#: lib/eventhandler/base.py:383
+#: lib/eventhandler/base.py:389
 #, python-brace-format, python-format
 msgid ""
 "Here you can enter a regular expression. The condition only applies if the "
@@ -2150,7 +2455,7 @@ msgstr ""
 "இங்கே நீங்கள் ஒரு வழக்கமான வெளிப்பாட்டை உள்ளிடலாம். வழக்கமான வெளிப்பாடு "
 "விவரம்-> பிழை-> செய்தியுடன் பொருந்தினால் மட்டுமே இந்த நிலை பொருந்தும்."
 
-#: lib/eventhandler/base.py:391
+#: lib/eventhandler/base.py:397
 #, python-brace-format, python-format
 msgid ""
 "Here you can enter a regular expression. The condition only applies if the "
@@ -2159,12 +2464,12 @@ msgstr ""
 "இங்கே நீங்கள் ஒரு வழக்கமான வெளிப்பாட்டை உள்ளிடலாம். வழக்கமான வெளிப்பாடு "
 "பதிலில் விவரம்-> செய்தியுடன் பொருந்தினால் மட்டுமே இந்த நிலை பொருந்தும்."
 
-#: lib/eventhandler/base.py:399
+#: lib/eventhandler/base.py:405
 #, python-brace-format, python-format
 msgid "Trigger the action, if the client IP matches."
 msgstr "கிளையன்ட் ஐபி பொருந்தினால், செயலைத் தூண்டும்."
 
-#: lib/eventhandler/base.py:405
+#: lib/eventhandler/base.py:411
 #, python-brace-format, python-format
 msgid ""
 "The container is in the specified states, but can additionally be in other "
@@ -2173,63 +2478,135 @@ msgstr ""
 "கொள்கலன் குறிப்பிட்ட மாநிலங்களில் உள்ளது, ஆனால் கூடுதலாக மற்ற மாநிலங்களில் "
 "இருக்கலாம்."
 
-#: lib/eventhandler/base.py:412
+#: lib/eventhandler/base.py:418
 #, python-brace-format, python-format
 msgid "The container is only in the specified states."
 msgstr "கொள்கலன் குறிப்பிட்ட மாநிலங்களில் மட்டுமே உள்ளது."
 
-#: lib/eventhandler/base.py:419
+#: lib/eventhandler/base.py:425
 #, python-brace-format, python-format
 msgid "The container has a user assigned."
 msgstr "கொள்கலனில் ஒரு பயனர் ஒதுக்கப்பட்டுள்ளது."
 
-#: lib/eventhandler/base.py:426
+#: lib/eventhandler/base.py:432
 #, python-brace-format, python-format
 msgid "The container has at least one token assigned."
 msgstr "கொள்கலனில் குறைந்தது ஒரு கிள்ளாக்கு ஒதுக்கப்பட்டுள்ளது."
 
-#: lib/eventhandler/base.py:433
+#: lib/eventhandler/base.py:439
 #, python-brace-format, python-format
 msgid "The container is of a certain type."
 msgstr "கொள்கலன் ஒரு குறிப்பிட்ட வகை."
 
-#: lib/eventhandler/containerhandler.py:93
+#: lib/eventhandler/base.py:446
+#, python-brace-format, python-format
+msgid ""
+"The container is in this realm or in no realm at all. If multiple realms are"
+" selected, the condition is fulfilled if the container is in at least one "
+"realm of the list. The condition is not checked if the container has no "
+"realm, hence the action would be triggered."
+msgstr ""
+"கொள்கலன் இந்த உலகில் அல்லது எந்த சாம்ராச்யத்திலும் இல்லை. பல பகுதிகள் "
+"தேர்ந்தெடுக்கப்பட்டால், கொள்கலன் பட்டியலில் குறைந்தது ஒரு உலகில் இருந்தால் "
+"நிலை நிறைவு செய்யப்படும். கொள்கலனுக்கு சாம்ராச்யம் இல்லையென்றால் நிபந்தனை "
+"சரிபார்க்கப்படவில்லை, எனவே நடவடிக்கை தூண்டப்படும்."
+
+#: lib/eventhandler/base.py:456
+#, python-brace-format, python-format
+msgid ""
+"An owner of the container is in this resolver. If multiple resolvers are "
+"selected, the condition is fulfilled if at least one owner is in one "
+"resolver. The condition is not checked if the container has no owner, hence "
+"the action would be triggered."
+msgstr ""
+"கொள்கலனின் உரிமையாளர் இந்த தீர்வில் இருக்கிறார். பல தீர்வுகள் "
+"தேர்ந்தெடுக்கப்பட்டால், குறைந்தது ஒரு உரிமையாளர் ஒரு தீர்வில் இருந்தால் நிலை"
+" நிறைவு செய்யப்படும். கொள்கலனுக்கு உரிமையாளர் இல்லையென்றால் நிபந்தனை "
+"சரிபார்க்கப்படவில்லை, எனவே நடவடிக்கை தூண்டப்படும்."
+
+#: lib/eventhandler/base.py:465
+#, python-brace-format, python-format
+msgid ""
+"This condition can check any arbitrary container info field. You need to "
+"enter something like 'fieldname == fieldvalue', 'fieldname > fieldvalue' or "
+"'fieldname < fieldvalue'."
+msgstr ""
+"இந்த நிலை எந்த தன்னிச்சையான கொள்கலன் செய்தி புலத்தையும் சரிபார்க்கலாம். "
+"நீங்கள் 'ஃபீல்ட்நேம் == ஃபீல்ட்வல்யூ', 'ஃபீல்ட்நேம்> ஃபீல்ட் மதிப்பு' அல்லது"
+" 'ஃபீல்ட் பெயர் <ஃபீல்ட் மதிப்பு' போன்ற ஒன்றை உள்ளிட வேண்டும்."
+
+#: lib/eventhandler/base.py:474
+#, python-brace-format, python-format
+msgid ""
+"Action is triggered, if the last authentication of the container is older "
+"than the specified time. The time value has to be an integer followed by a "
+"time unit. Supported units are 'y' (years), 'd' (days), 'h' (hours), 'm' "
+"(minutes), 's' (seconds). Only one unit is allowed. Examples: '8h', '7d', "
+"'1y'"
+msgstr ""
+"கொள்கலனின் கடைசி ஏற்பு குறிப்பிட்ட நேரத்தை விட பழையதாக இருந்தால், செயல் "
+"தூண்டப்படுகிறது. நேர மதிப்பு ஒரு நேர அலகு ஒரு முழு எண்ணாக இருக்க வேண்டும். "
+"ஆதரிக்கப்படும் அலகுகள் 'y' (ஆண்டுகள்), 'டி' (நாட்கள்), 'எச்' (மணிநேரம்), "
+"'எம்' (நிமிடங்கள்), 'கள்' (விநாடிகள்). ஒரு அலகு மட்டுமே அனுமதிக்கப்படுகிறது."
+" எடுத்துக்காட்டுகள்: '8H', '7d', '1y'"
+
+#: lib/eventhandler/base.py:485
+#, python-brace-format, python-format
+msgid ""
+"Action is triggered, if the last synchronization of the container is older "
+"than the specified time. The time value has to be an integer followed by a "
+"time unit. Supported units are 'y' (years), 'd' (days), 'h' (hours), 'm' "
+"(minutes), 's' (seconds). Only one unit is allowed. Examples: '8h', '7d', "
+"'1y'"
+msgstr ""
+"கொள்கலனின் கடைசி ஒத்திசைவு குறிப்பிட்ட நேரத்தை விட பழையதாக இருந்தால், செயல் "
+"தூண்டப்படுகிறது. நேர மதிப்பு ஒரு நேர அலகு ஒரு முழு எண்ணாக இருக்க வேண்டும். "
+"ஆதரிக்கப்படும் அலகுகள் 'y' (ஆண்டுகள்), 'டி' (நாட்கள்), 'எச்' (மணிநேரம்), "
+"'எம்' (நிமிடங்கள்), 'கள்' (விநாடிகள்). ஒரு அலகு மட்டுமே அனுமதிக்கப்படுகிறது."
+" எடுத்துக்காட்டுகள்: '8H', '7d', '1y'"
+
+#: lib/eventhandler/containerhandler.py:89
+#, python-brace-format, python-format
+msgid "Set the state {state}"
+msgstr "மாநிலத்தை அமைக்கவும் {state}"
+
+#: lib/eventhandler/containerhandler.py:96
 #, python-brace-format, python-format
 msgid "Container type to create"
 msgstr "உருவாக்க கொள்கலன் வகை"
 
-#: lib/eventhandler/containerhandler.py:99
-#: lib/eventhandler/containerhandler.py:121
+#: lib/eventhandler/containerhandler.py:102
+#: lib/eventhandler/containerhandler.py:124
 #, python-brace-format, python-format
 msgid "Description of the container"
 msgstr "கொள்கலனின் விளக்கம்"
 
-#: lib/eventhandler/containerhandler.py:104
+#: lib/eventhandler/containerhandler.py:107
 #, python-brace-format, python-format
 msgid "Assign container to user in request or to token/container owner"
 msgstr ""
 "கோரிக்கையில் அல்லது டோக்கன்/கொள்கலன் உரிமையாளருக்கு பயனருக்கு கொள்கலனை "
 "நியமிக்கவும்"
 
-#: lib/eventhandler/containerhandler.py:109
+#: lib/eventhandler/containerhandler.py:112
 #, python-brace-format, python-format
 msgid "Add token from request to container"
 msgstr "கொள்கலனுக்கான கோரிக்கையிலிருந்து டோக்கனைச் சேர்க்கவும்"
 
-#: lib/eventhandler/containerhandler.py:129
+#: lib/eventhandler/containerhandler.py:132
 #, python-brace-format, python-format
 msgid "Set this container info key (deletes all existing keys)."
 msgstr ""
 "இந்த கொள்கலன் செய்தி விசையை அமைக்கவும் (இருக்கும் அனைத்து விசைகளையும் "
 "நீக்குகிறது)."
 
-#: lib/eventhandler/containerhandler.py:133
-#: lib/eventhandler/containerhandler.py:143
+#: lib/eventhandler/containerhandler.py:136
+#: lib/eventhandler/containerhandler.py:146
 #, python-brace-format, python-format
 msgid "Set the value for the key above."
 msgstr "மேலே உள்ள விசைக்கான மதிப்பை அமைக்கவும்."
 
-#: lib/eventhandler/containerhandler.py:139
+#: lib/eventhandler/containerhandler.py:142
 #, python-brace-format, python-format
 msgid "Add this key to the container info."
 msgstr "கொள்கலன் தகவலுக்கு இந்த விசையைச் சேர்க்கவும்."
@@ -2322,17 +2699,17 @@ msgstr "பதிவுக்கு எழுத சரம்"
 msgid "The logging level for this logging notification"
 msgstr "இந்த பதிவு அறிவிப்புக்கான பதிவு நிலை"
 
-#: lib/eventhandler/requestmangler.py:98
+#: lib/eventhandler/requestmangler.py:87
 #, python-brace-format, python-format
 msgid "The parameter that should be deleted."
 msgstr "நீக்கப்பட வேண்டிய அளவுரு."
 
-#: lib/eventhandler/requestmangler.py:104
+#: lib/eventhandler/requestmangler.py:93
 #, python-brace-format, python-format
 msgid "The parameter that should be added or modified."
 msgstr "சேர்க்கப்பட வேண்டிய அல்லது மாற்றியமைக்க வேண்டிய அளவுரு."
 
-#: lib/eventhandler/requestmangler.py:109
+#: lib/eventhandler/requestmangler.py:98
 #, python-brace-format, python-format
 msgid ""
 "The new value of the parameter. Can contain tags like {0}, {1} for the "
@@ -2341,12 +2718,12 @@ msgstr ""
 "அளவுருவின் புதிய மதிப்பு. பொருந்திய துணை சரங்களுக்கு {0}, {1} போன்ற "
 "குறிச்சொற்களைக் கொண்டிருக்கலாம்."
 
-#: lib/eventhandler/requestmangler.py:114
+#: lib/eventhandler/requestmangler.py:103
 #, python-brace-format, python-format
 msgid "The parameter, that should match some values."
 msgstr "அளவுரு, அவை சில மதிப்புகளுடன் பொருந்த வேண்டும்."
 
-#: lib/eventhandler/requestmangler.py:118
+#: lib/eventhandler/requestmangler.py:107
 #, python-brace-format, python-format
 msgid ""
 "The value of the match_parameter. It can contain a regular expression and "
@@ -2354,6 +2731,16 @@ msgid ""
 msgstr ""
 "மேட்ச்_பாரமீட்டரின் மதிப்பு. புதிய அளவுருவுக்கு மதிப்புகளை மாற்ற இது ஒரு "
 "வழக்கமான வெளிப்பாடு மற்றும் '()' ஆகியவற்றைக் கொண்டிருக்கலாம்."
+
+#: lib/eventhandler/requestmangler.py:112
+#, python-brace-format, python-format
+msgid ""
+"If the parameter is 'username', 'user' or 'realm', the user will be reset. "
+"This can have an effect on any further actions on the user!"
+msgstr ""
+"அளவுரு 'பயனர்பெயர்', 'பயனர்' அல்லது 'சாம்ராச்யம்' என்றால், பயனர் "
+"மீட்டமைக்கப்படுவார். இது பயனருக்கு மேலதிக செயல்களில் ஒரு தாக்கத்தை "
+"ஏற்படுத்தும்!"
 
 #: lib/eventhandler/responsemangler.py:79
 #, python-brace-format, python-format
@@ -2383,7 +2770,7 @@ msgstr "மதிப்பின் வகை."
 msgid "The value of the JSON key that should be set."
 msgstr "அமைக்க வேண்டிய சாதொபொகு விசையின் மதிப்பு."
 
-#: lib/eventhandler/scripthandler.py:94
+#: lib/eventhandler/scripthandler.py:92
 #: lib/smsprovider/ScriptSMSProvider.py:121
 #, python-brace-format, python-format
 msgid ""
@@ -2394,12 +2781,12 @@ msgstr ""
 "HTTP கோரிக்கையை முன்கூட்டியே திருப்பித் தரும் அல்லது கோரிக்கையைத் "
 "தடுக்கலாம்."
 
-#: lib/eventhandler/scripthandler.py:102
+#: lib/eventhandler/scripthandler.py:100
 #, python-brace-format, python-format
 msgid "On script error raise exception in HTTP request."
 msgstr "ச்கிரிப்ட் பிழையில் HTTP கோரிக்கையில் விதிவிலக்கு எழுப்புங்கள்."
 
-#: lib/eventhandler/scripthandler.py:106
+#: lib/eventhandler/scripthandler.py:104
 #, python-brace-format, python-format
 msgid ""
 "Finish current transaction before running the script. This is useful if "
@@ -2410,22 +2797,22 @@ msgstr ""
 "தரவுத்தளத்தில் மாற்றங்கள் ச்கிரிப்ட் அல்லது இயங்கும் கோரிக்கைக்கு கிடைக்க "
 "வேண்டும் என்றால் இது பயனுள்ளதாக இருக்கும்."
 
-#: lib/eventhandler/scripthandler.py:113
+#: lib/eventhandler/scripthandler.py:111
 #, python-brace-format, python-format
 msgid "Add '--serial <serial number>' as script parameter."
 msgstr "ச்கிரிப்ட் அளவுருவாக '--சீரியல் <வரிசை எண்>' ஐச் சேர்க்கவும்."
 
-#: lib/eventhandler/scripthandler.py:118
+#: lib/eventhandler/scripthandler.py:116
 #, python-brace-format, python-format
 msgid "Add '--user <username>' as script parameter."
 msgstr "ச்கிரிப்ட் அளவுருவாக '--user <பயனர்பெயர்>' ஐச் சேர்க்கவும்."
 
-#: lib/eventhandler/scripthandler.py:123
+#: lib/eventhandler/scripthandler.py:121
 #, python-brace-format, python-format
 msgid "Add '--realm <realm>' as script parameter."
 msgstr "ச்கிரிப்ட் அளவுருவாக '-realm <ermal>' ஐச் சேர்க்கவும்."
 
-#: lib/eventhandler/scripthandler.py:128
+#: lib/eventhandler/scripthandler.py:126
 #, python-brace-format, python-format
 msgid ""
 "Add the username of the logged in user as script parameter like '--"
@@ -2434,7 +2821,7 @@ msgstr ""
 "'--logged_in_user <பயனர்பெயர்>' போன்ற ச்கிரிப்ட் அளவுருவாக உள்நுழைந்த "
 "பயனரின் பயனர்பெயரைச் சேர்க்கவும்."
 
-#: lib/eventhandler/scripthandler.py:134
+#: lib/eventhandler/scripthandler.py:132
 #, python-brace-format, python-format
 msgid ""
 "Add the role (either admin or user) of the logged in user as script "
@@ -2517,7 +2904,7 @@ msgstr ""
 "சேர்க்கையின் போது MOTP டோக்கனின் MOTP முள் அமைக்கவும். MOTP டோக்கன்களைச் "
 "சேர்ப்பதற்கு இது தேவையான மதிப்பு."
 
-#: lib/eventhandler/tokenhandler.py:243
+#: lib/eventhandler/tokenhandler.py:244
 #, python-brace-format, python-format
 msgid ""
 "Add the token to the container if there is one identifiable in the request."
@@ -2625,7 +3012,7 @@ msgstr "நீங்கள் கிள்ளாக்கை இணைக்க 
 msgid "Set the service_id for an SSH application."
 msgstr "பாஓடு பயன்பாட்டிற்கு service_id ஐ அமைக்கவும்."
 
-#: lib/eventhandler/tokenhandler.py:397
+#: lib/eventhandler/tokenhandler.py:398
 #, python-brace-format, python-format
 msgid ""
 "Set a token application like 'offline' or 'SSH'. Note: Not all tokens work "
@@ -2644,69 +3031,108 @@ msgstr "இணைப்பில்லாத OTP மதிப்புகளி�
 msgid "The number of rounds for password hashing"
 msgstr "கடவுச்சொல் ஏசிங்கிற்கான சுற்றுகளின் எண்ணிக்கை"
 
-#: lib/eventhandler/usernotification.py:123
+#: lib/eventhandler/usernotification.py:146
 #, python-brace-format, python-format
 msgid "Send notification email via this email server."
 msgstr "இந்த மின்னஞ்சல் சேவையகம் வழியாக அறிவிப்பு மின்னஞ்சலை அனுப்பவும்."
 
-#: lib/eventhandler/usernotification.py:127
+#: lib/eventhandler/usernotification.py:150
 #, python-brace-format, python-format
 msgid "Either send email as plain text or HTML."
 msgstr "மின்னஞ்சலை எளிய உரையாக அல்லது உஉகுமொ ஆக அனுப்பவும்."
 
-#: lib/eventhandler/usernotification.py:131
+#: lib/eventhandler/usernotification.py:154
 #, python-brace-format, python-format
 msgid "Send QR-Code image as an attachment (cid URL: token_image)"
 msgstr "QR-குறியீடு படத்தை ஒரு இணைப்பாக அனுப்பவும் (CID URL: TOKEN_IMAGE)"
 
-#: lib/eventhandler/usernotification.py:136
+#: lib/eventhandler/usernotification.py:159
 #, python-brace-format, python-format
 msgid "The subject of the mail that is sent."
 msgstr "அனுப்பப்பட்ட அஞ்சலின் பொருள்."
 
-#: lib/eventhandler/usernotification.py:140
+#: lib/eventhandler/usernotification.py:163
 #, python-brace-format, python-format
 msgid "The Reply-To header in the sent email."
 msgstr "அனுப்பப்பட்ட மின்னஞ்சலில் பதில்-க்கு தலைப்பு."
 
-#: lib/eventhandler/usernotification.py:162
-#: lib/eventhandler/usernotification.py:194
+#: lib/eventhandler/usernotification.py:185
+#: lib/eventhandler/usernotification.py:224
 #, python-brace-format, python-format
 msgid "Any email address, to which the notification should be sent."
 msgstr "எந்த மின்னஞ்சல் முகவரியும், அறிவிப்பு அனுப்பப்பட வேண்டும்."
 
-#: lib/eventhandler/usernotification.py:169
+#: lib/eventhandler/usernotification.py:192
 #, python-brace-format, python-format
-msgid "The body of the mail that is sent."
-msgstr "அனுப்பப்பட்ட அஞ்சலின் உடல்."
+msgid ""
+"The template of the mail body that will be sent. It may contain the "
+"following tags as specified in the documentation: <code>{admin}, {realm}, "
+"{action}, {serial}, {url}, {user}, {givenname}, {surname}, {username}, "
+"{userrealm}, {tokentype}, {tokendescription}, {registrationcode}, "
+"{recipient_givenname}, {recipient_surname}, {googleurl_value}, "
+"{googleurl_img}, {pushurl_value}, {pushurl_img}, {container_url_value}, "
+"{container_url_img}, {time}, {date}, {client_ip}, {ua_browser}, {ua_string},"
+" {pin}.</code>"
+msgstr ""
+"அனுப்பப்படும் அஞ்சல் உடலின் வார்ப்புரு. ஆவணத்தில் குறிப்பிடப்பட்டுள்ளபடி "
+"பின்வரும் குறிச்சொற்களைக் கொண்டிருக்கலாம்: <code> {admin}, {realm}, "
+"{action}, {serial}, {url}, {user}, {givenname}, {usernmeam {surname}, "
+"{username}, {userrealm}, {tokentype}, {tokendescription}, "
+"{registrationcode}, {recipient_givenname}, {recipient_surname}, "
+"{googleurl_value}, { {googleurl_img}, {pushurl_value}, {pushurl_img}, "
+"{container_url_value}. </code>"
 
-#: lib/eventhandler/usernotification.py:173
-#: lib/eventhandler/usernotification.py:211
+#: lib/eventhandler/usernotification.py:203
+#: lib/eventhandler/usernotification.py:248
 #, python-brace-format, python-format
 msgid "Send notification to this user."
 msgstr "இந்த பயனருக்கு அறிவிப்பை அனுப்பவும்."
 
-#: lib/eventhandler/usernotification.py:203
+#: lib/eventhandler/usernotification.py:233
 #, python-brace-format, python-format
 msgid "Send the user notification via a predefined SMS gateway."
 msgstr ""
 "முன் வரையறுக்கப்பட்ட எச்எம்எச் நுழைவாயில் வழியாக பயனர் அறிவிப்பை அனுப்பவும்."
 
-#: lib/eventhandler/usernotification.py:208
-#, python-brace-format, python-format
-msgid "The text of the SMS."
-msgstr "எச்எம்எச் உரை."
-
-#: lib/eventhandler/usernotification.py:218
+#: lib/eventhandler/usernotification.py:238
 #, python-brace-format, python-format
 msgid ""
-"This is the template content of the new file. Can contain the tags as "
-"specified in the documentation."
+"The text template of the SMS. It may contain the following tags as specified"
+" in the documentation: <code>{admin}, {realm}, {action}, {serial}, {url}, "
+"{user}, {givenname}, {surname}, {username}, {userrealm}, {tokentype}, "
+"{tokendescription}, {registrationcode}, {recipient_givenname}, "
+"{recipient_surname}, {googleurl_value}, {googleurl_img}, {pushurl_value}, "
+"{pushurl_img}, {container_url_value}, {container_url_img}, {time}, {date}, "
+"{client_ip}, {ua_browser}, {ua_string}, {pin}.</code>"
+msgstr ""
+"எச்எம்எச் உரை வார்ப்புரு. ஆவணத்தில் குறிப்பிடப்பட்டுள்ளபடி பின்வரும் "
+"குறிச்சொற்களைக் கொண்டிருக்கலாம்: <code> {admin}, {realm}, {action}, "
+"{serial}, {url}, {user}, {givenname}, {usernmeam {surname}, {username}, "
+"{userrealm}, {tokentype}, {tokendescription}, {registrationcode}, "
+"{recipient_givenname}, {recipient_surname}, {googleurl_value}, { "
+"{googleurl_img}, {pushurl_value}, {pushurl_img}, {container_url_value}. "
+"</code>"
+
+#: lib/eventhandler/usernotification.py:255
+#, python-brace-format, python-format
+msgid ""
+"This is the template content of the new file. It may contain the following "
+"tags as specified in the documentation: <code>{admin}, {realm}, {action}, "
+"{serial}, {url}, {user}, {givenname}, {surname}, {username}, {userrealm}, "
+"{tokentype}, {tokendescription}, {registrationcode}, {recipient_givenname}, "
+"{recipient_surname}, {googleurl_value}, {googleurl_img}, {pushurl_value}, "
+"{pushurl_img}, {container_url_value}, {container_url_img}, {time}, {date}, "
+"{client_ip}, {ua_browser}, {ua_string}, {pin}.</code>"
 msgstr ""
 "இது புதிய கோப்பின் வார்ப்புரு உள்ளடக்கம். ஆவணத்தில் குறிப்பிடப்பட்டுள்ளபடி "
-"குறிச்சொற்களைக் கொண்டிருக்கலாம்."
+"பின்வரும் குறிச்சொற்களைக் கொண்டிருக்கலாம்: <code> {admin}, {realm}, "
+"{action}, {serial}, {url}, {user}, {givenname}, {usernmeam {surname}, "
+"{username}, {userrealm}, {tokentype}, {tokendescription}, "
+"{registrationcode}, {recipient_givenname}, {recipient_surname}, "
+"{googleurl_value}, { {googleurl_img}, {pushurl_value}, {pushurl_img}, "
+"{container_url_value}. </code>"
 
-#: lib/eventhandler/usernotification.py:224
+#: lib/eventhandler/usernotification.py:266
 #, python-brace-format, python-format
 msgid ""
 "The filename of the notification. Existing files are overwritten. The name "
@@ -2715,22 +3141,28 @@ msgid ""
 msgstr ""
 "அறிவிப்பின் கோப்பு பெயர். தற்போதுள்ள கோப்புகள் மேலெழுதப்படுகின்றன. ஆவணத்தில்"
 " குறிப்பிடப்பட்டுள்ளபடி இந்த பெயரில் குறிச்சொற்கள் இருக்கலாம் மற்றும் "
-"{சீரற்ற the குறிச்சொல்லையும் கொண்டிருக்கலாம்."
+"{random} குறிச்சொல்லையும் கொண்டிருக்கலாம்."
 
-#: lib/eventhandler/webhookeventhandler.py:84
+#: lib/eventhandler/webhookeventhandler.py:82
 #, python-brace-format, python-format
 msgid "The URL the WebHook is posted to"
 msgstr "வெப்ஊக் வெளியிடப்பட்ட முகவரி"
 
-#: lib/eventhandler/webhookeventhandler.py:89
+#: lib/eventhandler/webhookeventhandler.py:87
 #, python-brace-format, python-format
 msgid "The encoding that is sent to the WebHook, for example json"
 msgstr "வெப்ஊக்கிற்கு அனுப்பப்படும் குறியாக்கம், எடுத்துக்காட்டாக சாதொபொகு"
 
-#: lib/eventhandler/webhookeventhandler.py:97
+#: lib/eventhandler/webhookeventhandler.py:95
 #, python-brace-format, python-format
-msgid "You can replace placeholder like {logged_in_user}"
-msgstr "நீங்கள் {logged_in_user} போன்ற ஒதுக்கிடத்தை மாற்றலாம்"
+msgid ""
+"You can use the following placeholders: {logged_in_user}, {realm}, "
+"{surname}, {token_owner}, {user_realm}, {token_serial}. However, tag "
+"availability is depending on the endpoint."
+msgstr ""
+"நீங்கள் பின்வரும் ஒதுக்கிடங்களைப் பயன்படுத்தலாம்: {logged_in_user}, {realm},"
+" {surname}, {token_owner}, {user_realm}, {token_serial}. இருப்பினும், "
+"குறிச்சொல் கிடைப்பது இறுதிப் புள்ளியைப் பொறுத்தது."
 
 #: lib/eventhandler/webhookeventhandler.py:102
 #, python-brace-format, python-format
@@ -2744,20 +3176,21 @@ msgstr ""
 "உங்கள் LDAP கட்டமைப்பு சரியாக இருப்பதாகத் தெரிகிறது, %i இயந்திர பொருள்கள் "
 "காணப்படுகின்றன."
 
-#: lib/resolvers/LDAPIdResolver.py:1130
+#: lib/resolvers/LDAPIdResolver.py:1158
 #, python-brace-format, python-format
 msgid ""
-"Your LDAP config found {0!s} user objects, but only {1!s} with the specified"
-" uidtype"
+"Your LDAP config found {0!s} user objects in {2:.4f}s, but only {1!s} with "
+"the specified uidtype."
 msgstr ""
-"உங்கள் LDAP கட்டமைப்பு {0! S} பயனர் பொருள்களைக் கண்டறிந்தது, ஆனால் "
-"குறிப்பிட்ட UIDTYPE உடன் {1! S} மட்டுமே"
+"உங்கள் LDAP கட்டமைப்பு {0!s} பயனர் பொருள்களைக் கண்டறிந்தது, ஆனால் "
+"குறிப்பிட்ட UIDTYPE உடன் {1!s} மட்டுமே ({2:.4f})"
 
-#: lib/resolvers/LDAPIdResolver.py:1133
+#: lib/resolvers/LDAPIdResolver.py:1162
 #, python-brace-format, python-format
-msgid "Your LDAP config seems to be OK, {0!s} user objects found."
+msgid "Your LDAP config seems to be OK, {0!s} user objects found in {1:.4f}s."
 msgstr ""
-"உங்கள் LDAP கட்டமைப்பு சரியாக இருப்பதாக தெரிகிறது, {0! S} பயனர் பொருள்கள்."
+"உங்கள் LDAP கட்டமைப்பு சரியாக இருப்பதாக தெரிகிறது, {0!s} பயனர் பொருள்கள். "
+"{1:.4f}."
 
 #: lib/smsprovider/FirebaseProvider.py:199
 #, python-brace-format, python-format
@@ -2773,52 +3206,52 @@ msgstr ""
 msgid "Proxy setting for HTTPS connections to googleapis.com."
 msgstr "Googleapis.com க்கு HTTPS இணைப்புகளுக்கான பதிலாள் அமைப்பு."
 
-#: lib/smsprovider/HttpSMSProvider.py:242
+#: lib/smsprovider/HttpSMSProvider.py:249
 #, python-brace-format, python-format
 msgid "The base URL of the HTTP Gateway"
 msgstr "HTTP நுழைவாயிலின் அடிப்படை முகவரி"
 
-#: lib/smsprovider/HttpSMSProvider.py:245
+#: lib/smsprovider/HttpSMSProvider.py:252
 #, python-brace-format, python-format
 msgid "Should the HTTP Gateway be connected via an HTTP GET or POST request."
 msgstr ""
 "HTTP நுழைவாயில் ஒரு HTTP GET அல்லது POST கோரிக்கை வழியாக இணைக்கப்பட "
 "வேண்டும்."
 
-#: lib/smsprovider/HttpSMSProvider.py:250
+#: lib/smsprovider/HttpSMSProvider.py:257
 #, python-brace-format, python-format
 msgid ""
 "Specify a substring, that indicates, that the SMS was delivered "
 "successfully."
 msgstr "எச்எம்எச் வெற்றிகரமாக வழங்கப்பட்டது என்பதைக் குறிக்கிறது."
 
-#: lib/smsprovider/HttpSMSProvider.py:254
+#: lib/smsprovider/HttpSMSProvider.py:261
 #, python-brace-format, python-format
 msgid ""
 "Specify a substring, that indicates, that the SMS failed to be delivered."
 msgstr "எச்எம்எச் வழங்கத் தவறிவிட்டது என்பதைக் குறிக்கிறது."
 
-#: lib/smsprovider/HttpSMSProvider.py:258
+#: lib/smsprovider/HttpSMSProvider.py:265
 #, python-brace-format, python-format
 msgid "Username in case of basic authentication."
 msgstr "அடிப்படை அங்கீகாரத்தின் போது பயனர்பெயர்."
 
-#: lib/smsprovider/HttpSMSProvider.py:262
+#: lib/smsprovider/HttpSMSProvider.py:269
 #, python-brace-format, python-format
 msgid "Password in case of basic authentication."
 msgstr "அடிப்படை அங்கீகாரத்தின் போது கடவுச்சொல்."
 
-#: lib/smsprovider/HttpSMSProvider.py:267
+#: lib/smsprovider/HttpSMSProvider.py:274
 #, python-brace-format, python-format
 msgid "Should the SSL certificate be verified."
 msgstr "SSL சான்றிதழ் சரிபார்க்கப்பட வேண்டும்."
 
-#: lib/smsprovider/HttpSMSProvider.py:273
+#: lib/smsprovider/HttpSMSProvider.py:280
 #, python-brace-format, python-format
 msgid "Should the data in a POST Request be sent as JSON."
 msgstr "இடுகை கோரிக்கையில் உள்ள தரவு சாதொபொகு ஆக அனுப்பப்பட வேண்டுமா?"
 
-#: lib/smsprovider/HttpSMSProvider.py:280
+#: lib/smsprovider/HttpSMSProvider.py:287
 #, python-brace-format, python-format
 msgid ""
 "An optional proxy string. DEPRECATED. Do not use this anymore. Rather use "
@@ -2829,17 +3262,17 @@ msgstr ""
 "மாறாக HTTP_PROXY ஐப் பயன்படுத்தவும் HTTP இணைப்புகள் மற்றும் HTTPS "
 "இணைப்புக்கு https_proxy. பதிலாள் விருப்பம் எதிர்காலத்தில் அகற்றப்படும்."
 
-#: lib/smsprovider/HttpSMSProvider.py:285
+#: lib/smsprovider/HttpSMSProvider.py:292
 #, python-brace-format, python-format
 msgid "Proxy setting for HTTP connections."
 msgstr "HTTP இணைப்புகளுக்கான பதிலாள் அமைப்பு."
 
-#: lib/smsprovider/HttpSMSProvider.py:286
+#: lib/smsprovider/HttpSMSProvider.py:293
 #, python-brace-format, python-format
 msgid "Proxy setting for HTTPS connections."
 msgstr "HTTPS இணைப்புகளுக்கான பதிலாள் அமைப்பு."
 
-#: lib/smsprovider/HttpSMSProvider.py:287
+#: lib/smsprovider/HttpSMSProvider.py:294
 #, python-brace-format, python-format
 msgid "The timeout in seconds."
 msgstr "விநாடிகளில் நேரம் முடிந்தது."
@@ -2985,17 +3418,17 @@ msgstr ""
 "பயனர் இந்த அதிகபட்ச எண்ணிக்கையிலான செயலில் உள்ள பயன்பாட்டு குறிப்பிட்ட "
 "கடவுச்சொல் டோக்கன்களை மட்டுமே வைத்திருக்க முடியும்."
 
-#: lib/tokens/certificatetoken.py:280
+#: lib/tokens/certificatetoken.py:287
 #, python-brace-format, python-format
 msgid "Certificate: Enroll an x509 Certificate Token."
 msgstr "சான்றிதழ்: x509 சான்றிதழ் டோக்கனைச் சேர்க்கவும்."
 
-#: lib/tokens/certificatetoken.py:291
+#: lib/tokens/certificatetoken.py:298
 #, python-brace-format, python-format
 msgid "The user may only have this maximum number of certificates assigned."
 msgstr "பயனருக்கு இந்த அதிகபட்ச சான்றிதழ்கள் மட்டுமே ஒதுக்கப்பட்டிருக்கலாம்."
 
-#: lib/tokens/certificatetoken.py:296
+#: lib/tokens/certificatetoken.py:303
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active certificates assigned."
@@ -3003,7 +3436,7 @@ msgstr ""
 "பயனருக்கு இந்த அதிகபட்ச எண்ணிக்கையிலான செயலில் சான்றிதழ்கள் மட்டுமே "
 "ஒதுக்கப்படலாம்."
 
-#: lib/tokens/certificatetoken.py:301
+#: lib/tokens/certificatetoken.py:308
 #, python-brace-format, python-format
 msgid ""
 "Enrolling a certificate token can require an attestation certificate. "
@@ -3012,17 +3445,17 @@ msgstr ""
 "சான்றிதழ் டோக்கனைச் சேர்ப்பதற்கு சான்றிதழ் சான்றிதழ் தேவைப்படலாம். "
 "(இயல்புநிலை: புறக்கணிக்கவும்)"
 
-#: lib/tokens/certificatetoken.py:310
+#: lib/tokens/certificatetoken.py:317
 #, python-brace-format, python-format
 msgid "The CA connector that should be used during certificate enrollment."
 msgstr "சான்றிதழ் சேர்க்கையின் போது பயன்படுத்தப்பட வேண்டிய CA இணைப்பு."
 
-#: lib/tokens/certificatetoken.py:316
+#: lib/tokens/certificatetoken.py:323
 #, python-brace-format, python-format
 msgid "The template that should be used to issue a certificate."
 msgstr "சான்றிதழை வழங்க பயன்படுத்த வேண்டிய வார்ப்புரு."
 
-#: lib/tokens/certificatetoken.py:321
+#: lib/tokens/certificatetoken.py:328
 #, python-brace-format, python-format
 msgid ""
 "This takes a space separated list of elements to be added to the subject. "
@@ -3031,22 +3464,22 @@ msgstr ""
 "இந்த விசயத்தில் சேர்க்கப்பட வேண்டிய உறுப்புகளின் இடத்தை இது எடுக்கும். "
 "'மின்னஞ்சல்' மற்றும் 'சாம்ராச்யம்' ஆக இருக்கலாம்."
 
-#: lib/tokens/certificatetoken.py:329 lib/tokens/certificatetoken.py:336
+#: lib/tokens/certificatetoken.py:336 lib/tokens/certificatetoken.py:343
 #, python-brace-format, python-format
 msgid "The directory containing attestation certificate chains."
 msgstr "சான்றிதழ் சான்றிதழ் சங்கிலிகளைக் கொண்ட அடைவு."
 
-#: lib/tokens/daplugtoken.py:122
+#: lib/tokens/daplugtoken.py:124
 #, python-brace-format, python-format
 msgid "event based OTP token using the HOTP algorithm"
 msgstr "HOTP வழிமுறையைப் பயன்படுத்தி நிகழ்வு அடிப்படையிலான OTP கிள்ளாக்கு"
 
-#: lib/tokens/daplugtoken.py:128
+#: lib/tokens/daplugtoken.py:130
 #, python-brace-format, python-format
 msgid "The user may only have this maximum number of daplug tokens assigned."
 msgstr "பயனருக்கு இந்த அதிகபட்ச டாப்லக் டோக்கன்களை மட்டுமே ஒதுக்கலாம்."
 
-#: lib/tokens/daplugtoken.py:133
+#: lib/tokens/daplugtoken.py:135
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active daplug tokens assigned."
@@ -3054,12 +3487,12 @@ msgstr ""
 "பயனர் இந்த அதிகபட்ச எண்ணிக்கையிலான செயலில் உள்ள டாப்லக் டோக்கன்களை மட்டுமே "
 "வைத்திருக்கலாம்."
 
-#: lib/tokens/daypasswordtoken.py:34
+#: lib/tokens/daypasswordtoken.py:35
 #, python-brace-format, python-format
 msgid "Specify the time step of the DayPassword token. For example: \"24h\""
 msgstr "டேபாச் வேர்ட் டோக்கனின் நேர படியைக் குறிப்பிடவும். உதாரணமாக: \"24 எச்\""
 
-#: lib/tokens/daypasswordtoken.py:82
+#: lib/tokens/daypasswordtoken.py:83
 #, python-brace-format, python-format
 msgid ""
 "DayPassword: A time-based token with a variable timestep and the possibility"
@@ -3068,22 +3501,22 @@ msgstr ""
 "டேச்பாச்வேர்ட்: மாறி நேர அட்டவணையுடன் ஒரு நேர அடிப்படையிலான கிள்ளாக்கு "
 "மற்றும் OTP ஐ ஒன்றுக்கு மேற்பட்ட முறை பயன்படுத்துவதற்கான வாய்ப்பு."
 
-#: lib/tokens/daypasswordtoken.py:119 lib/tokens/hotptoken.py:173
-#: lib/tokens/totptoken.py:159
+#: lib/tokens/daypasswordtoken.py:120 lib/tokens/hotptoken.py:173
+#: lib/tokens/totptoken.py:158
 #, python-brace-format, python-format
 msgid "Enforce setting an app pin for the privacyIDEA Authenticator App"
 msgstr ""
 "தனியுரிமைடியா அங்கீகார பயன்பாட்டிற்கான பயன்பாட்டு முள் அமைப்பதை "
 "அமல்படுத்துங்கள்"
 
-#: lib/tokens/daypasswordtoken.py:124
+#: lib/tokens/daypasswordtoken.py:125
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of daypassword tokens assigned."
 msgstr ""
 "பயனருக்கு இந்த அதிகபட்ச டேபாச் வேர்ட் டோக்கன்கள் மட்டுமே ஒதுக்கப்படலாம்."
 
-#: lib/tokens/daypasswordtoken.py:130
+#: lib/tokens/daypasswordtoken.py:131
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active daypassword tokens "
@@ -3092,19 +3525,19 @@ msgstr ""
 "பயனர் இந்த அதிகபட்ச எண்ணிக்கையிலான செயலில் உள்ள டேபாச் டோக்கன்களை மட்டுமே "
 "வைத்திருக்கலாம்."
 
-#: lib/tokens/emailtoken.py:155
+#: lib/tokens/emailtoken.py:156
 #, python-brace-format, python-format
 msgid "EMail Token"
 msgstr "மின்னஞ்சல் கிள்ளாக்கு"
 
-#: lib/tokens/emailtoken.py:157
+#: lib/tokens/emailtoken.py:158
 #, python-brace-format, python-format
 msgid "EMail: Send a One Time Password to the users email address."
 msgstr ""
 "மின்னஞ்சல்: பயனர்களின் மின்னஞ்சல் முகவரிக்கு ஒரு முறை கடவுச்சொல்லை "
 "அனுப்பவும்."
 
-#: lib/tokens/emailtoken.py:165
+#: lib/tokens/emailtoken.py:166
 #, python-brace-format, python-format
 msgid ""
 "The text that will be sent via EMail for an EMail-token. Several tags like "
@@ -3115,7 +3548,7 @@ msgstr ""
 "{serial} போன்ற பல குறிச்சொற்களை அளவுருக்களாகப் பயன்படுத்தலாம். ஒரு கோப்பு "
 "பெயரை \"கோப்பு:\" உடன் தொடங்கும் மின்னஞ்சல் வார்ப்புருவாகவும் குறிப்பிடலாம்."
 
-#: lib/tokens/emailtoken.py:172
+#: lib/tokens/emailtoken.py:175
 #, python-brace-format, python-format
 msgid ""
 "The subject of the EMail for an EMail token. Use tags like {otp} and "
@@ -3124,7 +3557,7 @@ msgstr ""
 "மின்னஞ்சல் டோக்கனுக்கான மின்னஞ்சலின் பொருள். {otp} மற்றும் {serial} போன்ற "
 "குறிச்சொற்களை அளவுருக்களாகப் பயன்படுத்தவும்."
 
-#: lib/tokens/emailtoken.py:177
+#: lib/tokens/emailtoken.py:180
 #, python-brace-format, python-format
 msgid ""
 "If set, a new EMail OTP will be sent after successful authentication with "
@@ -3133,7 +3566,7 @@ msgstr ""
 "அமைக்கப்பட்டால், ஒரு மின்னஞ்சல் OTP உடன் வெற்றிகரமான அங்கீகாரத்திற்குப் "
 "பிறகு ஒரு புதிய மின்னஞ்சல் OTP அனுப்பப்படும்."
 
-#: lib/tokens/emailtoken.py:182
+#: lib/tokens/emailtoken.py:185
 #, python-brace-format, python-format
 msgid ""
 "Use an alternative challenge text for telling the user to enter the code "
@@ -3144,12 +3577,12 @@ msgstr ""
 "உரையைப் பயன்படுத்தவும். தானியங்கு மாற்றீட்டிற்கான குறிச்சொற்களையும் "
 "பயன்படுத்தலாம். மேலும் விவரங்களுக்கு ஆவணங்களைப் பாருங்கள்."
 
-#: lib/tokens/emailtoken.py:191
+#: lib/tokens/emailtoken.py:195
 #, python-brace-format, python-format
 msgid "The user may only have this maximum number of email tokens assigned."
 msgstr "பயனருக்கு இந்த அதிகபட்ச மின்னஞ்சல் டோக்கன்கள் மட்டுமே ஒதுக்கப்படலாம்."
 
-#: lib/tokens/emailtoken.py:196
+#: lib/tokens/emailtoken.py:200
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active email tokens assigned."
@@ -3157,22 +3590,22 @@ msgstr ""
 "பயனருக்கு இந்த அதிகபட்ச எண்ணிக்கையிலான செயலில் உள்ள மின்னஞ்சல் டோக்கன்கள் "
 "மட்டுமே ஒதுக்கப்படலாம்."
 
-#: lib/tokens/emailtoken.py:278
+#: lib/tokens/emailtoken.py:282
 #, python-brace-format, python-format
 msgid "Enter the OTP from the Email"
 msgstr "மின்னஞ்சலில் இருந்து OTP ஐ உள்ளிடவும்"
 
-#: lib/tokens/emailtoken.py:317
+#: lib/tokens/emailtoken.py:324
 #, python-brace-format, python-format
 msgid "The PIN was correct, but the EMail could not be sent!"
 msgstr "முள் சரியாக இருந்தது, ஆனால் மின்னஞ்சலை அனுப்ப முடியவில்லை!"
 
-#: lib/tokens/emailtoken.py:552
+#: lib/tokens/emailtoken.py:561
 #, python-brace-format, python-format
 msgid "Please enter your new email address!"
 msgstr "உங்கள் புதிய மின்னஞ்சல் முகவரியை உள்ளிடவும்!"
 
-#: lib/tokens/emailtoken.py:592
+#: lib/tokens/emailtoken.py:601
 #, python-brace-format, python-format
 msgid "The email address is not valid!"
 msgstr "மின்னஞ்சல் முகவரி செல்லுபடியாகாது!"
@@ -3199,7 +3632,7 @@ msgstr ""
 "பயனர் இந்த அதிகபட்ச எண்ணிக்கையிலான செயலில் 4eyes டோக்கன்களை மட்டுமே "
 "வைத்திருக்க முடியும்."
 
-#: lib/tokens/hotptoken.py:82
+#: lib/tokens/hotptoken.py:84
 #, python-brace-format, python-format
 msgid "Please enter a valid OTP value of the new token."
 msgstr "புதிய டோக்கனின் செல்லுபடியாகும் OTP மதிப்பை உள்ளிடவும்."
@@ -3260,17 +3693,17 @@ msgstr ""
 "பயனர் இந்த அதிகபட்ச எண்ணிக்கையிலான செயலில் உள்ள HOTP டோக்கன்களை மட்டுமே "
 "வைத்திருக்க முடியும்."
 
-#: lib/tokens/hotptoken.py:158 lib/tokens/totptoken.py:148
+#: lib/tokens/hotptoken.py:158 lib/tokens/totptoken.py:147
 #, python-brace-format, python-format
 msgid "The size of the OTP seed part contributed by the client (in bytes)"
 msgstr "வாடிக்கையாளரால் பங்களித்த OTP விதை பகுதியின் அளவு (பைட்டுகளில்)"
 
-#: lib/tokens/hotptoken.py:163 lib/tokens/totptoken.py:151
+#: lib/tokens/hotptoken.py:163 lib/tokens/totptoken.py:150
 #, python-brace-format, python-format
 msgid "The size of the OTP seed part contributed by the server (in bytes)"
 msgstr "OTP விதை பகுதியின் அளவு சேவையகத்தால் பங்களித்தது (பைட்டுகளில்)"
 
-#: lib/tokens/hotptoken.py:168 lib/tokens/totptoken.py:154
+#: lib/tokens/hotptoken.py:168 lib/tokens/totptoken.py:153
 #, python-brace-format, python-format
 msgid ""
 "The difficulty factor used for the OTP seed generation (should be at least "
@@ -3284,34 +3717,34 @@ msgstr ""
 msgid "URL for google Authenticator"
 msgstr "Google Authenticator க்கான முகவரி"
 
-#: lib/tokens/hotptoken.py:292
+#: lib/tokens/hotptoken.py:291
 #, python-brace-format, python-format
 msgid "URL for OATH token"
 msgstr "சத்திய டோக்கனுக்கான முகவரி"
 
-#: lib/tokens/hotptoken.py:842
+#: lib/tokens/hotptoken.py:840
 #, python-brace-format, python-format
 msgid "Please scan the QR code and enter the OTP value!"
 msgstr "தயவுசெய்து QR குறியீட்டை ச்கேன் செய்து OTP மதிப்பை உள்ளிடவும்!"
 
-#: lib/tokens/indexedsecrettoken.py:49
+#: lib/tokens/indexedsecrettoken.py:50
 #, python-brace-format, python-format
 msgid "Please enter the positions {0!s} from your secret."
-msgstr "உங்கள் ரகசியத்திலிருந்து {0! கள்} நிலைகளை உள்ளிடவும்."
+msgstr "உங்கள் ரகசியத்திலிருந்து {0!s} நிலைகளை உள்ளிடவும்."
 
-#: lib/tokens/indexedsecrettoken.py:98
+#: lib/tokens/indexedsecrettoken.py:99
 #, python-brace-format, python-format
 msgid "Indexed Secret Token"
 msgstr "குறியிடப்பட்ட ரகசிய கிள்ளாக்கு"
 
-#: lib/tokens/indexedsecrettoken.py:100
+#: lib/tokens/indexedsecrettoken.py:101
 #, python-brace-format, python-format
 msgid ""
 "IndexedSecret: Request certain positions of a shared secret from the user."
 msgstr ""
 "IndexedSecret: பயனரிடமிருந்து பகிரப்பட்ட ரகசியத்தின் சில நிலைகளை கோருங்கள்."
 
-#: lib/tokens/indexedsecrettoken.py:107
+#: lib/tokens/indexedsecrettoken.py:109
 #, python-brace-format, python-format
 msgid ""
 "Use an alternative challenge text for telling the user which positions of "
@@ -3322,30 +3755,30 @@ msgstr ""
 " அறைகூவல் உரையைப் பயன்படுத்தவும். தானியங்கு மாற்றீட்டிற்கான "
 "குறிச்சொற்களையும் பயன்படுத்தலாம். மேலும் விவரங்களுக்கு ஆவணங்களைப் பாருங்கள்."
 
-#: lib/tokens/indexedsecrettoken.py:115
+#: lib/tokens/indexedsecrettoken.py:117
 #, python-brace-format, python-format
 msgid "Number of necessary positions to be answered by the user."
 msgstr "பயனரால் பதிலளிக்க தேவையான பதவிகளின் எண்ணிக்கை."
 
-#: lib/tokens/indexedsecrettoken.py:122
+#: lib/tokens/indexedsecrettoken.py:124
 #, python-brace-format, python-format
 msgid "Preset the enrollment with the value of the given attribute."
 msgstr ""
 "கொடுக்கப்பட்ட பண்புக்கூறின் மதிப்புடன் சேர்க்கையை முன்னமைக்கப்பட்டுள்ளது."
 
-#: lib/tokens/indexedsecrettoken.py:129 lib/tokens/indexedsecrettoken.py:136
+#: lib/tokens/indexedsecrettoken.py:131 lib/tokens/indexedsecrettoken.py:138
 #, python-brace-format, python-format
 msgid "The attribute whose value should be force set during enrollment."
 msgstr "சேர்க்கையின் போது அதன் மதிப்பு கட்டாயமாக அமைக்கப்பட வேண்டும்."
 
-#: lib/tokens/indexedsecrettoken.py:143
+#: lib/tokens/indexedsecrettoken.py:145
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of indexed secret tokens "
 "assigned."
 msgstr "பயனர் இந்த அதிகபட்ச குறியீட்டு ரகசிய டோக்கன்களை மட்டுமே ஒதுக்கலாம்."
 
-#: lib/tokens/indexedsecrettoken.py:148
+#: lib/tokens/indexedsecrettoken.py:150
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active indexed secret tokens "
@@ -3397,29 +3830,80 @@ msgstr ""
 "பயனர் இந்த அதிகபட்ச எண்ணிக்கையிலான செயலில் உள்ள OCRA டோக்கன்களை மட்டுமே "
 "வைத்திருக்க முடியும்."
 
-#: lib/tokens/papertoken.py:96
+#: lib/tokens/papertoken.py:93
 #, python-brace-format, python-format
 msgid "PPR: One Time Passwords printed on a sheet of paper."
 msgstr "பிபிஆர்: ஒரு முறை கடவுச்சொற்கள் ஒரு தாளில் அச்சிடப்பட்டுள்ளன."
 
-#: lib/tokens/papertoken.py:107 lib/tokens/tantoken.py:106
+#: lib/tokens/papertoken.py:104 lib/tokens/tantoken.py:106
 #, python-brace-format, python-format
 msgid "The number of OTP values, which are printed on the paper."
 msgstr "OTP மதிப்புகளின் எண்ணிக்கை, அவை காகிதத்தில் அச்சிடப்படுகின்றன."
 
-#: lib/tokens/papertoken.py:112
+#: lib/tokens/papertoken.py:109
 #, python-brace-format, python-format
 msgid "The user may only have this maximum number of paper tokens assigned."
 msgstr ""
 "பயனர் இந்த அதிகபட்ச எண்ணிக்கையிலான காகித டோக்கன்களை மட்டுமே ஒதுக்கலாம்."
 
-#: lib/tokens/papertoken.py:117
+#: lib/tokens/papertoken.py:114
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active paper tokens assigned."
 msgstr ""
 "பயனர் இந்த அதிகபட்ச எண்ணிக்கையிலான செயலில் உள்ள காகித டோக்கன்களை மட்டுமே "
 "வைத்திருக்க முடியும்."
+
+#: lib/tokens/passkeytoken.py:95
+#, python-brace-format, python-format
+msgid "Passkey: A secret stored on a device, unlocked with biometrics."
+msgstr ""
+"பாச்கி: ஒரு சாதனத்தில் சேமிக்கப்பட்ட ஒரு மறைபொருள், பயோமெட்ரிக்சுடன் "
+"திறக்கப்பட்டது."
+
+#: lib/tokens/passkeytoken.py:104
+#, python-brace-format, python-format
+msgid ""
+"Alternative challenge message to use when authenticating with a passkey.You "
+"can also use tags for replacement, check the documentation for more details."
+msgstr ""
+"பாச்கியுடன் அங்கீகரிக்கும்போது பயன்படுத்த மாற்று அறைகூவல் செய்தி.நீங்கள் "
+"மாற்றுவதற்கான குறிச்சொற்களையும் பயன்படுத்தலாம், மேலும் விவரங்களுக்கு "
+"ஆவணங்களை சரிபார்க்கவும்."
+
+#: lib/tokens/passkeytoken.py:110
+#, python-brace-format, python-format
+msgid ""
+"When enabled, passkey token can be triggered with the PIN or via the "
+"/validate/triggerchallenge endpoint. For privacyIDEA plugins, this is not "
+"recommended. It is advised to use a condition, for example on a user-agent, "
+"with this policy."
+msgstr ""
+"இயக்கப்பட்டால், பாச்கி கிள்ளாக்கை முள் அல்லது /சரிபார்ப்பு /தூண்டுதல் "
+"/தூண்டுதல் இறுதிப்புள்ளி வழியாக தூண்டலாம். தனியுரிமைடா செருகுநிரல்களுக்கு, "
+"இது பரிந்துரைக்கப்படவில்லை. இந்தக் கொள்கையுடன் ஒரு நிபந்தனையைப் பயன்படுத்த "
+"அறிவுறுத்தப்படுகிறது."
+
+#: lib/tokens/passkeytoken.py:119
+#, python-brace-format, python-format
+msgid ""
+"Request attestation from the authenticator during the registration. The "
+"attestation certificate will be saved in the token info. The default value "
+"is 'none'."
+msgstr ""
+"பதிவின் போது அங்கீகாரத்திலிருந்து சான்றளிக்கக் கோருங்கள். சான்றிதழ் "
+"சான்றிதழ் கிள்ளாக்கு தகவலில் சேமிக்கப்படும். இயல்புநிலை மதிப்பு "
+"'எதுவுமில்லை'."
+
+#: lib/tokens/passkeytoken.py:400
+#, python-brace-format, python-format
+msgid "Please authenticate with your passkey!"
+msgstr "உங்கள் பாச்கியுடன் அங்கீகரிக்கவும்!"
+
+#: lib/tokens/passkeytoken.py:404
+#, python-brace-format, python-format
+msgid "Please confirm the registration with your passkey!"
+msgstr "உங்கள் பாச்கியுடன் பதிவை உறுதிப்படுத்தவும்!"
 
 #: lib/tokens/passwordtoken.py:113
 #, python-brace-format, python-format
@@ -3464,22 +3948,22 @@ msgstr ""
 msgid "Do you want to confirm the login?"
 msgstr "உள்நுழைவை உறுதிப்படுத்த விரும்புகிறீர்களா?"
 
-#: lib/tokens/pushtoken.py:368
+#: lib/tokens/pushtoken.py:372
 #, python-brace-format, python-format
 msgid "PUSH Token"
 msgstr "கிள்ளாக்கு புச்"
 
-#: lib/tokens/pushtoken.py:370
+#: lib/tokens/pushtoken.py:374
 #, python-brace-format, python-format
 msgid "PUSH: Send a push notification to a smartphone."
 msgstr "புச்: ச்மார்ட்போனுக்கு புச் அறிவிப்பை அனுப்பவும்."
 
-#: lib/tokens/pushtoken.py:379
+#: lib/tokens/pushtoken.py:383
 #, python-brace-format, python-format
 msgid "The configuration of your Firebase application."
 msgstr "உங்கள் ஃபயர்பேச் பயன்பாட்டின் உள்ளமைவு."
 
-#: lib/tokens/pushtoken.py:387
+#: lib/tokens/pushtoken.py:391
 #, python-brace-format, python-format
 msgid ""
 "The URL the Push App should contact in the second enrollment step. Usually "
@@ -3488,7 +3972,7 @@ msgstr ""
 "முகவரி புச் பயன்பாடு இரண்டாவது சேர்க்கை படியில் தொடர்பு கொள்ள வேண்டும். "
 "வழக்கமாக இது தனியுரிமைடியா சேவையகத்தின் இறுதிப் புள்ளி /TTYPE /புச் ஆகும்."
 
-#: lib/tokens/pushtoken.py:393
+#: lib/tokens/pushtoken.py:397
 #, python-brace-format, python-format
 msgid ""
 "The second enrollment step must be completed within this time (in minutes)."
@@ -3496,19 +3980,19 @@ msgstr ""
 "இரண்டாவது சேர்க்கை படி இந்த நேரத்திற்குள் (நிமிடங்களில்) முடிக்கப்பட "
 "வேண்டும்."
 
-#: lib/tokens/pushtoken.py:397
+#: lib/tokens/pushtoken.py:401
 #, python-brace-format, python-format
 msgid "The smartphone needs to verify SSL during the enrollment. (default 1)"
 msgstr ""
 "சேர்க்கையின் போது ச்மார்ட்போன் எச்.எச்.எல் சரிபார்க்க வேண்டும். (இயல்புநிலை "
 "1)"
 
-#: lib/tokens/pushtoken.py:403
+#: lib/tokens/pushtoken.py:407
 #, python-brace-format, python-format
 msgid "The user may only have this maximum number of Push tokens assigned."
 msgstr "பயனருக்கு இந்த அதிகபட்ச புச் டோக்கன்கள் மட்டுமே ஒதுக்கப்படலாம்."
 
-#: lib/tokens/pushtoken.py:408
+#: lib/tokens/pushtoken.py:412
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active Push tokens assigned."
@@ -3516,13 +4000,13 @@ msgstr ""
 "பயனர் இந்த அதிகபட்ச எண்ணிக்கையிலான செயலில் உள்ள புச் டோக்கன்களை மட்டுமே "
 "வைத்திருக்கலாம்."
 
-#: lib/tokens/pushtoken.py:414
+#: lib/tokens/pushtoken.py:418
 #, python-brace-format, python-format
 msgid "Require to unlock the Smartphone before Push requests can be accepted"
 msgstr ""
 "புச் கோரிக்கைகளை ஏற்றுக்கொள்வதற்கு முன்பு ச்மார்ட்போனைத் திறக்க வேண்டும்"
 
-#: lib/tokens/pushtoken.py:420
+#: lib/tokens/pushtoken.py:425
 #, python-brace-format, python-format
 msgid ""
 "The question the user sees on his mobile phone. Several tags like {serial} "
@@ -3531,55 +4015,58 @@ msgstr ""
 "பயனர் தனது மொபைல் தொலைபேசியில் பார்க்கும் கேள்வி. {serial} மற்றும் "
 "{client_ip} போன்ற பல குறிச்சொற்களை அளவுருக்களாகப் பயன்படுத்தலாம்."
 
-#: lib/tokens/pushtoken.py:427
+#: lib/tokens/pushtoken.py:431
 #, python-brace-format, python-format
 msgid "The title of the notification, the user sees on his mobile phone."
 msgstr "அறிவிப்பின் தலைப்பு, பயனர் தனது மொபைல் தொலைபேசியில் பார்க்கிறார்."
 
-#: lib/tokens/pushtoken.py:432
+#: lib/tokens/pushtoken.py:436
 #, python-brace-format, python-format
 msgid "The smartphone needs to verify SSL during authentication. (default 1)"
 msgstr ""
 "ச்மார்ட்போன் அங்கீகாரத்தின் போது SSL ஐ சரிபார்க்க வேண்டும். (இயல்புநிலை 1)"
 
-#: lib/tokens/pushtoken.py:438
+#: lib/tokens/pushtoken.py:442
 #, python-brace-format, python-format
 msgid "Require the user to confirm the login with a presence check."
 msgstr "இருப்பு காசோலை மூலம் உள்நுழைவை உறுதிப்படுத்த பயனர் தேவை."
 
-#: lib/tokens/pushtoken.py:443
+#: lib/tokens/pushtoken.py:447
 #, python-brace-format, python-format
 msgid ""
 "The options that can be presented to the user to confirm the login. "
 "<code>ALPHABETIC</code>: A-Z, <code>NUMERIC</code>: 01-99, "
-"<code>CUSTOM</code>: user defined. "
+"<code>CUSTOM</code>: user defined. Does only apply if <em>{0!s}</em> is set."
 msgstr ""
 "உள்நுழைவை உறுதிப்படுத்த பயனருக்கு வழங்கக்கூடிய விருப்பங்கள். <code> "
 "ஆல்பாபெடிக் </code>: A-Z, <code> எண் </code>: 01-99, <code> தனிப்பயன் "
-"</code>: பயனர் வரையறுக்கப்பட்டுள்ளது."
+"</code>: பயனர் வரையறுக்கப்பட்டுள்ளது. <em> {0! S} </em> அமைக்கப்பட்டால் "
+"மட்டுமே பொருந்தும்."
 
-#: lib/tokens/pushtoken.py:452
+#: lib/tokens/pushtoken.py:457
 #, python-brace-format, python-format
 msgid ""
 "Custom options that can be presented to the user to confirm the login. The "
 "string must contain at least 2 options and should be unique. The options are"
-" separated by <code>:</code>. e.g.: <code>01:02:03:1A:1B:1C</code>. to "
-"<code>CUSTOM</code>."
+" separated by <code>:</code>. e.g.: <code>01:02:03:1A:1B:1C</code>. Does "
+"only apply if <em>{0!s}</em> is set to <code>CUSTOM</code>."
 msgstr ""
 "உள்நுழைவை உறுதிப்படுத்த பயனருக்கு வழங்கக்கூடிய தனிப்பயன் விருப்பங்கள். சரம் "
 "குறைந்தது 2 விருப்பங்களைக் கொண்டிருக்க வேண்டும் மற்றும் தனித்துவமாக இருக்க "
 "வேண்டும். விருப்பங்கள் <குறியீடு>: </code> ஆல் பிரிக்கப்படுகின்றன. எ.கா .: "
-"<குறியீடு> 01: 02: 03: 1 அ: 1 பி: 1 சி </code>. <code> தனிப்பயன் </code> "
-"க்கு."
+"<குறியீடு> 01: 02: 03: 1 அ: 1 பி: 1 சி </code>. <em> {0! S} </em> <code> "
+"தனிப்பயன் </code> என அமைக்கப்பட்டால் மட்டுமே பொருந்தும்."
 
-#: lib/tokens/pushtoken.py:462
+#: lib/tokens/pushtoken.py:467
 #, python-brace-format, python-format
 msgid ""
-"The number of options the user is presented with to confirm the login. "
+"The number of options the user is presented with to confirm the login. Does "
+"only apply if <em>{0!s}</em> is set."
 msgstr ""
-"உள்நுழைவை உறுதிப்படுத்த பயனருக்கு வழங்கப்பட்ட விருப்பங்களின் எண்ணிக்கை."
+"உள்நுழைவை உறுதிப்படுத்த பயனருக்கு வழங்கப்பட்ட விருப்பங்களின் எண்ணிக்கை. <em>"
+" {0! S} </em> அமைக்கப்பட்டால் மட்டுமே பொருந்தும்."
 
-#: lib/tokens/pushtoken.py:469
+#: lib/tokens/pushtoken.py:475
 #, python-brace-format, python-format
 msgid ""
 "Wait for number of seconds for the user to confirm the challenge in the "
@@ -3588,19 +4075,19 @@ msgstr ""
 "முதல் கோரிக்கையில் சவாலை உறுதிப்படுத்த பயனருக்கு வினாடிகள் எண்ணிக்கையில் "
 "காத்திருங்கள்."
 
-#: lib/tokens/pushtoken.py:475
+#: lib/tokens/pushtoken.py:481
 #, python-brace-format, python-format
 msgid "Configure whether to allow push tokens to poll for challenges"
 msgstr ""
 "சவால்களுக்காக புச் டோக்கன்களை வாக்கெடுப்புக்கு அனுமதிக்கலாமா என்பதை "
 "உள்ளமைக்கவும்"
 
-#: lib/tokens/pushtoken.py:610
+#: lib/tokens/pushtoken.py:616
 #, python-brace-format, python-format
 msgid "URL for privacyIDEA Push Token"
 msgstr "தனியுரிமைக்கான முகவரி புச் கிள்ளாக்கு"
 
-#: lib/tokens/pushtoken.py:1201
+#: lib/tokens/pushtoken.py:1195
 #, python-brace-format, python-format
 msgid "Please scan the QR code!"
 msgstr "QR குறியீட்டை ச்கேன் செய்யுங்கள்!"
@@ -3648,7 +4135,7 @@ msgstr "ஆரம்: ஆரம் சேவையகத்திற்கு �
 msgid "The user may only have this maximum number of RADIUS tokens assigned."
 msgstr "பயனருக்கு இந்த அதிகபட்ச ஆரம் டோக்கன்கள் மட்டுமே ஒதுக்கப்படலாம்."
 
-#: lib/tokens/radiustoken.py:120
+#: lib/tokens/radiustoken.py:121
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active RADIUS tokens assigned."
@@ -3671,7 +4158,7 @@ msgid ""
 "The user may only have this maximum number of registration tokens assigned."
 msgstr "பயனருக்கு இந்த அதிகபட்ச பதிவு டோக்கன்களை மட்டுமே ஒதுக்கலாம்."
 
-#: lib/tokens/registrationtoken.py:144
+#: lib/tokens/registrationtoken.py:145
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active registration tokens "
@@ -3687,12 +4174,12 @@ msgstr ""
 "தொலைநிலை டோக்கன்: மற்றொரு சேவையகத்திற்கு அங்கீகார கோரிக்கையை முன்னோக்கி "
 "அனுப்பவும்."
 
-#: lib/tokens/remotetoken.py:121 lib/tokens/totptoken.py:164
+#: lib/tokens/remotetoken.py:121 lib/tokens/totptoken.py:163
 #, python-brace-format, python-format
 msgid "The user may only have this maximum number of remote tokens assigned."
 msgstr "பயனருக்கு இந்த அதிகபட்ச தொலைநிலை டோக்கன்கள் மட்டுமே ஒதுக்கப்படலாம்."
 
-#: lib/tokens/remotetoken.py:126 lib/tokens/totptoken.py:169
+#: lib/tokens/remotetoken.py:127 lib/tokens/totptoken.py:169
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active remote tokens assigned."
@@ -3700,18 +4187,18 @@ msgstr ""
 "பயனர் இந்த அதிகபட்ச எண்ணிக்கையிலான செயலில் உள்ள தொலைநிலை டோக்கன்களை மட்டுமே "
 "வைத்திருக்கலாம்."
 
-#: lib/tokens/smstoken.py:198
+#: lib/tokens/smstoken.py:195
 #, python-brace-format, python-format
 msgid "SMS Token"
 msgstr "எச்எம்எச் கிள்ளாக்கு"
 
-#: lib/tokens/smstoken.py:200
+#: lib/tokens/smstoken.py:197
 #, python-brace-format, python-format
 msgid "SMS: Send a One Time Password to the users mobile phone."
 msgstr ""
 "எச்எம்எச்: பயனர்களின் மொபைல் தொலைபேசியில் ஒரு முறை கடவுச்சொல்லை அனுப்பவும்."
 
-#: lib/tokens/smstoken.py:209
+#: lib/tokens/smstoken.py:206
 #, python-brace-format, python-format
 msgid ""
 "The text that will be send via SMS for an SMS token. Use tags like {otp} and"
@@ -3720,7 +4207,7 @@ msgstr ""
 "எச்எம்எச் டோக்கனுக்காக எச்எம்எச் வழியாக அனுப்பப்படும் உரை. {otp} மற்றும் "
 "{serial} போன்ற குறிச்சொற்களை அளவுருக்களாகப் பயன்படுத்தவும்."
 
-#: lib/tokens/smstoken.py:214
+#: lib/tokens/smstoken.py:213
 #, python-brace-format, python-format
 msgid ""
 "If set, a new SMS OTP will be sent after successful authentication with one "
@@ -3729,7 +4216,7 @@ msgstr ""
 "அமைக்கப்பட்டால், ஒரு புதிய எச்எம்எச் OTP உடன் வெற்றிகரமான அங்கீகாரத்திற்குப்"
 " பிறகு அனுப்பப்படும்."
 
-#: lib/tokens/smstoken.py:219
+#: lib/tokens/smstoken.py:218
 #, python-brace-format, python-format
 msgid ""
 "Use an alternative challenge text for telling the user to enter the code "
@@ -3757,7 +4244,7 @@ msgstr ""
 "பயனருக்கு இந்த அதிகபட்ச எண்ணிக்கையிலான எச்எம்எச் டோக்கன்கள் மட்டுமே "
 "ஒதுக்கப்படலாம்."
 
-#: lib/tokens/smstoken.py:249
+#: lib/tokens/smstoken.py:250
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active SMS tokens assigned."
@@ -3770,12 +4257,12 @@ msgstr ""
 msgid "Enter the OTP from the SMS:"
 msgstr "எச்எம்எச்சிலிருந்து OTP ஐ உள்ளிடவும்:"
 
-#: lib/tokens/smstoken.py:357
+#: lib/tokens/smstoken.py:360
 #, python-brace-format, python-format
 msgid "The PIN was correct, but the SMS could not be sent!"
 msgstr "முள் சரியாக இருந்தது, ஆனால் எச்எம்எச் அனுப்ப முடியவில்லை!"
 
-#: lib/tokens/smstoken.py:606
+#: lib/tokens/smstoken.py:611
 #, python-brace-format, python-format
 msgid "Please enter your new phone number!"
 msgstr "உங்கள் புதிய தொலைபேசி எண்ணை உள்ளிடவும்!"
@@ -3790,7 +4277,7 @@ msgstr "SPASS: எளிய பாச் கிள்ளாக்கு. நி�
 msgid "The user may only have this maximum number of SPASS tokens assigned."
 msgstr "பயனருக்கு இந்த அதிகபட்ச ச்பாச் டோக்கன்களை மட்டுமே ஒதுக்கலாம்."
 
-#: lib/tokens/spasstoken.py:103
+#: lib/tokens/spasstoken.py:104
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active SPASS tokens assigned."
@@ -3808,7 +4295,7 @@ msgstr "பாஓடு பொது விசை: பொது பாஓடு 
 msgid "The user may only have this maximum number of SSH keys assigned."
 msgstr "இந்த அதிகபட்ச பாஓடு விசைகள் மட்டுமே ஒதுக்கப்பட்டிருக்கலாம்."
 
-#: lib/tokens/sshkeytoken.py:96
+#: lib/tokens/sshkeytoken.py:97
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active SSH keys assigned."
@@ -3826,7 +4313,7 @@ msgstr "டான்: ஒரு தாளில் அச்சிடப்ப�
 msgid "The user may only have this maximum number of TAN tokens assigned."
 msgstr "பயனருக்கு இந்த அதிகபட்ச டான் டோக்கன்கள் மட்டுமே ஒதுக்கப்படலாம்."
 
-#: lib/tokens/tantoken.py:116
+#: lib/tokens/tantoken.py:117
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active TAN tokens assigned."
@@ -3845,7 +4332,7 @@ msgid "The user may only have this maximum number of TiQR tokens assigned."
 msgstr ""
 "பயனர் இந்த அதிகபட்ச எண்ணிக்கையிலான TIQR டோக்கன்களை மட்டுமே வைத்திருக்கலாம்."
 
-#: lib/tokens/tiqrtoken.py:171
+#: lib/tokens/tiqrtoken.py:172
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active TiQR tokens assigned."
@@ -3863,12 +4350,12 @@ msgstr "TIQR சேர்க்கைக்கான முகவரி"
 msgid "Please scan the QR Code"
 msgstr "QR குறியீட்டை ச்கேன் செய்யுங்கள்"
 
-#: lib/tokens/totptoken.py:60
+#: lib/tokens/totptoken.py:59
 #, python-brace-format, python-format
 msgid "Specify the time step of the time-based OTP token."
 msgstr "நேர அடிப்படையிலான OTP டோக்கனின் நேர படியைக் குறிப்பிடவும்."
 
-#: lib/tokens/totptoken.py:107
+#: lib/tokens/totptoken.py:106
 #, python-brace-format, python-format
 msgid "TOTP: Time based One Time Passwords."
 msgstr "TOTP: நேரம் அடிப்படையிலான ஒரு முறை கடவுச்சொற்கள்."
@@ -3895,30 +4382,30 @@ msgstr ""
 "பயன்படுத்தவும். தானியங்கு மாற்றீட்டிற்கான குறிச்சொற்களையும் பயன்படுத்தலாம். "
 "மேலும் விவரங்களுக்கு ஆவணங்களைப் பாருங்கள்."
 
-#: lib/tokens/u2ftoken.py:271
+#: lib/tokens/u2ftoken.py:272
 #, python-brace-format, python-format
 msgid "Only specified U2F tokens are authorized."
 msgstr "குறிப்பிடப்பட்ட U2F டோக்கன்கள் மட்டுமே அங்கீகரிக்கப்பட்டுள்ளன."
 
-#: lib/tokens/u2ftoken.py:279
+#: lib/tokens/u2ftoken.py:280
 #, python-brace-format, python-format
 msgid "Only specified U2F tokens are allowed to be registered."
 msgstr ""
 "குறிப்பிடப்பட்ட U2F டோக்கன்கள் மட்டுமே பதிவு செய்ய அனுமதிக்கப்படுகின்றன."
 
-#: lib/tokens/u2ftoken.py:284
+#: lib/tokens/u2ftoken.py:285
 #, python-brace-format, python-format
 msgid "Do not verify the U2F attestation certificate."
 msgstr "U2F சான்றிதழ் சான்றிதழை சரிபார்க்க வேண்டாம்."
 
-#: lib/tokens/u2ftoken.py:289
+#: lib/tokens/u2ftoken.py:290
 #, python-brace-format, python-format
 msgid "The user may only have this maximum number of U2F tokens assigned."
 msgstr ""
 "பயனருக்கு இந்த அதிகபட்ச எண்ணிக்கையிலான U2F டோக்கன்கள் மட்டுமே "
 "ஒதுக்கப்படலாம்."
 
-#: lib/tokens/u2ftoken.py:294
+#: lib/tokens/u2ftoken.py:296
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active U2F tokens assigned."
@@ -3926,15 +4413,15 @@ msgstr ""
 "பயனர் இந்த அதிகபட்ச எண்ணிக்கையிலான செயலில் உள்ள U2F டோக்கன்களை மட்டுமே "
 "வைத்திருக்கலாம்."
 
-#: lib/tokens/u2ftoken.py:379
+#: lib/tokens/u2ftoken.py:380
 #, python-brace-format, python-format
 msgid "You need to define the appId in the token config!"
 msgstr "கிள்ளாக்கு உள்ளமைவில் Appid ஐ நீங்கள் வரையறுக்க வேண்டும்!"
 
-#: lib/tokens/u2ftoken.py:443
+#: lib/tokens/u2ftoken.py:444
 #, python-brace-format, python-format
 msgid "Please confirm with your U2F token ({0!s})"
-msgstr "உங்கள் U2F கிள்ளாக்கு ({0! S}) உடன் உறுதிப்படுத்தவும்"
+msgstr "உங்கள் U2F கிள்ளாக்கு ({0!s}) உடன் உறுதிப்படுத்தவும்"
 
 #: lib/tokens/vascotoken.py:99
 #, python-brace-format, python-format
@@ -3948,7 +4435,7 @@ msgstr ""
 "பயனருக்கு இந்த அதிகபட்ச எண்ணிக்கையிலான வாச்கோ டோக்கன்கள் மட்டுமே "
 "ஒதுக்கப்படலாம்."
 
-#: lib/tokens/vascotoken.py:113
+#: lib/tokens/vascotoken.py:114
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active Vasco tokens assigned."
@@ -3956,27 +4443,27 @@ msgstr ""
 "பயனர் இந்த அதிகபட்ச எண்ணிக்கையிலான செயலில் உள்ள வாச்கோ டோக்கன்களை மட்டுமே "
 "வைத்திருக்கலாம்."
 
-#: lib/tokens/webauthntoken.py:458
+#: lib/tokens/webauthntoken.py:462
 #, python-brace-format, python-format
 msgid "Generic WebAuthn Token"
 msgstr "பொதுவான வெபாஅ்ன் கிள்ளாக்கு"
 
-#: lib/tokens/webauthntoken.py:468
+#: lib/tokens/webauthntoken.py:472
 #, python-brace-format, python-format
 msgid "Please confirm with your WebAuthn token ({0!s})"
-msgstr "உங்கள் WebAuthn கிள்ளாக்கு ({0! S}) உடன் உறுதிப்படுத்தவும்"
+msgstr "உங்கள் WebAuthn கிள்ளாக்கு ({0!s}) உடன் உறுதிப்படுத்தவும்"
 
-#: lib/tokens/webauthntoken.py:469
+#: lib/tokens/webauthntoken.py:473
 #, python-brace-format, python-format
 msgid "Please confirm with your WebAuthn token"
 msgstr "உங்கள் வெப்அத்ன் டோக்கனுடன் உறுதிப்படுத்தவும்"
 
-#: lib/tokens/webauthntoken.py:596
+#: lib/tokens/webauthntoken.py:554
 #, python-brace-format, python-format
 msgid "WebAuthn: Enroll a Web Authentication token."
 msgstr "வெப்அத்ன்: வலை அங்கீகார டோக்கனைச் சேர்க்கவும்."
 
-#: lib/tokens/webauthntoken.py:606
+#: lib/tokens/webauthntoken.py:564
 #, python-brace-format, python-format
 msgid ""
 "A list of transports to prefer to communicate with WebAuthn tokens. Default:"
@@ -3986,7 +4473,7 @@ msgstr ""
 "பட்டியல். இயல்புநிலை: USB BLE NFC Internal (அனைத்து நிலையான "
 "போக்குவரத்துகளும்)"
 
-#: lib/tokens/webauthntoken.py:611
+#: lib/tokens/webauthntoken.py:569
 #, python-brace-format, python-format
 msgid ""
 "The time in seconds the user has to confirm authorization on his WebAuthn "
@@ -3997,7 +4484,7 @@ msgstr ""
 "வேண்டும். குறிப்பு: இதனுடன் சேலஞ்ச் வாலிட் டைம் அதிகரிக்க நீங்கள் "
 "விரும்புவீர்கள். இயல்புநிலை: 60"
 
-#: lib/tokens/webauthntoken.py:617
+#: lib/tokens/webauthntoken.py:575
 #, python-brace-format, python-format
 msgid ""
 "Whether the user's identity should be verified when authenticating with a "
@@ -4008,7 +4495,7 @@ msgstr ""
 "வேண்டுமா. இயல்புநிலை: விரும்பப்படுகிறது (டோக்கனால் ஆதரிக்கப்பட்டால் பயனரை "
 "சரிபார்க்கவும்)"
 
-#: lib/tokens/webauthntoken.py:627
+#: lib/tokens/webauthntoken.py:585
 #, python-brace-format, python-format
 msgid ""
 "Use an alternative challenge text for telling the user to confirm the login "
@@ -4019,7 +4506,7 @@ msgstr ""
 "மாற்று அறைகூவல் உரையைப் பயன்படுத்தவும். தானியங்கு மாற்றீட்டிற்கான "
 "குறிச்சொற்களையும் பயன்படுத்தலாம். மேலும் விவரங்களுக்கு ஆவணங்களைப் பாருங்கள்."
 
-#: lib/tokens/webauthntoken.py:636
+#: lib/tokens/webauthntoken.py:594
 #, python-brace-format, python-format
 msgid ""
 "A list of WebAuthn authenticators acceptable for authorization, given as a "
@@ -4030,26 +4517,26 @@ msgstr ""
 "விண்வெளியால் பிரிக்கப்பட்ட AAGUIDS பட்டியலாக வழங்கப்படுகிறது. இயல்புநிலைக்கு"
 " அனைத்து அங்கீகாரங்களும் ஏற்றுக்கொள்ளத்தக்கவை."
 
-#: lib/tokens/webauthntoken.py:642
+#: lib/tokens/webauthntoken.py:600
 #, python-brace-format, python-format
 msgid "Only the specified WebAuthn-tokens are authorized."
 msgstr "குறிப்பிட்ட வெபதின்-டோக்கன்கள் மட்டுமே அங்கீகரிக்கப்பட்டுள்ளன."
 
-#: lib/tokens/webauthntoken.py:649
+#: lib/tokens/webauthntoken.py:607
 #, python-brace-format, python-format
 msgid "One webauthn token can not be registered to a user more than once."
 msgstr ""
 "ஒரு வெப்அத்ன் கிள்ளாக்கை ஒரு பயனருக்கு ஒன்றுக்கு மேற்பட்ட முறை பதிவு செய்ய "
 "முடியாது."
 
-#: lib/tokens/webauthntoken.py:654
+#: lib/tokens/webauthntoken.py:612
 #, python-brace-format, python-format
 msgid ""
 "A human-readable name for the organization rolling out WebAuthn tokens."
 msgstr ""
 "வெபதன் டோக்கன்களை உருட்டும் அமைப்புக்கான மனிதனால் படிக்கக்கூடிய பெயர்."
 
-#: lib/tokens/webauthntoken.py:659
+#: lib/tokens/webauthntoken.py:617
 #, python-brace-format, python-format
 msgid ""
 "A domain name that is a subset of the respective FQDNs for all the "
@@ -4059,7 +4546,7 @@ msgstr ""
 "டொமைன் பெயர் பயனர்கள் வெபாவ்ன் டோக்கன்களைப் பயன்படுத்துவதில் உள்நுழைய "
 "முடியும்."
 
-#: lib/tokens/webauthntoken.py:665
+#: lib/tokens/webauthntoken.py:623
 #, python-brace-format, python-format
 msgid ""
 "The time in seconds the user has to confirm enrollment on his WebAuthn "
@@ -4070,7 +4557,7 @@ msgstr ""
 "குறிப்பு: இதனுடன் சேலஞ்ச் வாலிட் டைம் அதிகரிக்க நீங்கள் விரும்புவீர்கள். "
 "இயல்புநிலை: 60"
 
-#: lib/tokens/webauthntoken.py:672
+#: lib/tokens/webauthntoken.py:630
 #, python-brace-format, python-format
 msgid ""
 "Whether to limit roll out of WebAuthn tokens to either only platform "
@@ -4079,7 +4566,7 @@ msgstr ""
 "வெப்அத்ன் டோக்கன்களை மேடையில் அங்கீகாரிகளுக்கு மட்டுமே கட்டுப்படுத்தலாமா, "
 "அல்லது குறுக்கு-தளம் அங்கீகாரிகள் மட்டுமே. இயல்புநிலை: ஒன்று"
 
-#: lib/tokens/webauthntoken.py:683
+#: lib/tokens/webauthntoken.py:641
 #, python-brace-format, python-format
 msgid ""
 "A list of WebAuthn authenticators acceptable for enrollment, given as a "
@@ -4090,7 +4577,7 @@ msgstr ""
 "விண்வெளியால் பிரிக்கப்பட்ட AAGUIDS பட்டியலாக வழங்கப்படுகிறது. இயல்புநிலைக்கு"
 " அனைத்து அங்கீகாரங்களும் ஏற்றுக்கொள்ளத்தக்கவை."
 
-#: lib/tokens/webauthntoken.py:689
+#: lib/tokens/webauthntoken.py:647
 #, python-brace-format, python-format
 msgid ""
 "Whether the user's identity should be verified when rolling out a new "
@@ -4101,16 +4588,16 @@ msgstr ""
 "வேண்டுமா. இயல்புநிலை: விரும்பப்படுகிறது (டோக்கனால் ஆதரிக்கப்பட்டால் பயனரை "
 "சரிபார்க்கவும்)"
 
-#: lib/tokens/webauthntoken.py:703
+#: lib/tokens/webauthntoken.py:658
 #, python-brace-format, python-format
 msgid ""
 "Which algorithm are available to use for creating public key credentials for"
 " WebAuthn tokens. (Default: [{0!s}], Order: [{1!s}])"
 msgstr ""
 "WebAuthn டோக்கன்களுக்கான பொது முக்கிய சான்றுகளை உருவாக்க எந்த வழிமுறை "
-"பயன்படுத்தப்படுகிறது. (இயல்புநிலை: [{0! S}], ஆர்டர்: [{1! S}])"
+"பயன்படுத்தப்படுகிறது. (இயல்புநிலை: [{0!s}], ஆர்டர்: [{1!s}])"
 
-#: lib/tokens/webauthntoken.py:710
+#: lib/tokens/webauthntoken.py:668
 #, python-brace-format, python-format
 msgid ""
 "Whether to request attestation data when enrolling a new WebAuthn token. "
@@ -4121,7 +4608,7 @@ msgstr ""
 "குறிப்பு: U2F_REQ WebAuthn உடன் பணிபுரிய, இதை எதுவும் அமைக்க முடியாது. "
 "இயல்புநிலை: நேரடி (பெயர் குறிப்பிடப்படாத சான்றளிப்பு தரவைக் கேளுங்கள்)"
 
-#: lib/tokens/webauthntoken.py:722
+#: lib/tokens/webauthntoken.py:680
 #, python-brace-format, python-format
 msgid ""
 "Whether and how strictly to check authenticator attestation data. Note: If "
@@ -4134,25 +4621,25 @@ msgstr ""
 "இருக்கக்கூடாது. இயல்புநிலை: நம்பத்தகாதது (சான்றளிப்பு தேவை, ஆனால் "
 "தெரியவில்லை அல்லது தன்வய கையொப்பமிடலாம்)"
 
-#: lib/tokens/webauthntoken.py:734
+#: lib/tokens/webauthntoken.py:692
 #, python-brace-format, python-format
 msgid "Only the specified WebAuthn-tokens are allowed to be registered."
 msgstr "குறிப்பிட்ட WebAuthn-tokens மட்டுமே பதிவு செய்ய அனுமதிக்கப்படுகின்றன."
 
-#: lib/tokens/webauthntoken.py:739
+#: lib/tokens/webauthntoken.py:697
 #, python-brace-format, python-format
 msgid "The user may only have this number of WebAuthn tokens assigned."
 msgstr ""
 "பயனருக்கு இந்த எண்ணிக்கையிலான வெபாஅ் டோக்கன்கள் மட்டுமே ஒதுக்கப்படலாம்."
 
-#: lib/tokens/webauthntoken.py:744
+#: lib/tokens/webauthntoken.py:702
 #, python-brace-format, python-format
 msgid "The user may only have this number of active WebAuthn tokens assigned."
 msgstr ""
 "பயனர் இந்த எண்ணிக்கையிலான செயலில் உள்ள வெபாஅ் டோக்கன்களை மட்டுமே "
 "வைத்திருக்கலாம்."
 
-#: lib/tokens/webauthntoken.py:749
+#: lib/tokens/webauthntoken.py:707
 #, python-brace-format, python-format
 msgid ""
 "Use an alternative challenge text for telling the user to confirm the "
@@ -4174,7 +4661,7 @@ msgstr ""
 msgid "The user may only have this maximum number of Yubico tokens assigned."
 msgstr "பயனருக்கு இந்த அதிகபட்ச யூபிகோ டோக்கன்கள் மட்டுமே ஒதுக்கப்படலாம்."
 
-#: lib/tokens/yubicotoken.py:115
+#: lib/tokens/yubicotoken.py:116
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active Yubico tokens assigned."
@@ -4182,17 +4669,17 @@ msgstr ""
 "பயனர் இந்த அதிகபட்ச எண்ணிக்கையிலான செயலில் உள்ள யூபிகோ டோக்கன்களை மட்டுமே "
 "வைத்திருக்கலாம்."
 
-#: lib/tokens/yubikeytoken.py:160
+#: lib/tokens/yubikeytoken.py:164
 #, python-brace-format, python-format
 msgid "Yubikey AES mode: One Time Passwords with Yubikey."
 msgstr "யூபிகே ஏஇஎச் பயன்முறை: யூபிகியுடன் ஒரு முறை கடவுச்சொற்கள்."
 
-#: lib/tokens/yubikeytoken.py:169
+#: lib/tokens/yubikeytoken.py:173
 #, python-brace-format, python-format
 msgid "The user may only have this maximum number of Yubikey tokens assigned."
 msgstr "பயனருக்கு இந்த அதிகபட்ச யூபிகே டோக்கன்கள் மட்டுமே ஒதுக்கப்படலாம்."
 
-#: lib/tokens/yubikeytoken.py:174
+#: lib/tokens/yubikeytoken.py:179
 #, python-brace-format, python-format
 msgid ""
 "The user may only have this maximum number of active Yubikey tokens "
@@ -4201,7 +4688,7 @@ msgstr ""
 "பயனருக்கு இந்த அதிகபட்ச எண்ணிக்கையிலான செயலில் யூபிகே டோக்கன்கள் மட்டுமே "
 "ஒதுக்கப்படலாம்."
 
-#: lib/tokens/yubikeytoken.py:180
+#: lib/tokens/yubikeytoken.py:184
 #, python-brace-format, python-format
 msgid ""
 "The Yubikey access code can be read by an enrollment client to initialize "
