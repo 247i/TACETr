@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (NeverTooManyBooks)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-19 16:22+0200\n"
-"PO-Revision-Date: 2025-01-19 23:44+0530\n"
+"POT-Creation-Date: 2025-06-20 18:10+0200\n"
+"PO-Revision-Date: 2025-06-20 22:40\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/nevertoomanybooks/main/ta/>\n"
 "Language: ta\n"
@@ -12,12 +12,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #.  region ========== Plurals.
-#.  displayed in the header of booklist
 #, java-printf-format
-msgctxt "displaying_n_books"
+msgctxt "n_books"
 msgid "%1$d book"
 msgid_plural "%1$d books"
 msgstr[0] "%1$d நூல்"
@@ -30,13 +29,39 @@ msgid_plural "%1$d books found"
 msgstr[0] "%1$d நூல் காணப்பட்டது"
 msgstr[1] "%1$d புத்தகங்கள் கிடைத்தன"
 
-#.  Short text for 'n stars'
+#.  Rating of a book is measured in 0 (not rated) or 1..5 stars
 #, java-printf-format
 msgctxt "n_stars"
 msgid "%1$s star"
 msgid_plural "%1$s stars"
 msgstr[0] "%1$s விண்மீன்"
 msgstr[1] "%1$s நட்சத்திரங்கள்"
+
+#, java-printf-format
+msgctxt "n_tags"
+msgid "%1$d tag"
+msgid_plural "%1$d tags"
+msgstr[0] "%1$d குறிச்சொல்"
+msgstr[1] "%1$d குறிச்சொற்கள்"
+
+#.  A request for confirmation in a dialog asking the user to "Remove" or
+#. "Search"
+#.          a list of ISBN number previously scanned.
+#.         Param 1: the amount of ISBN number in the queue.
+#, java-printf-format
+msgctxt "confirm_queue_has_x_items"
+msgid ""
+"There is %1$d previously entered ISBN code. Would you like to start a search"
+" for it, or should it be removed?"
+msgid_plural ""
+"There are %1$d previously entered ISBN codes. Would you like to start "
+"searches for them, or should they be removed?"
+msgstr[0] ""
+"முன்னர் ISBN குறியீட்டில் நுழைந்த %1$d உள்ளது. அதற்கான தேடலைத் தொடங்க "
+"விரும்புகிறீர்களா, அல்லது அதை அகற்ற வேண்டுமா?"
+msgstr[1] ""
+"முன்னர் நுழைந்த %1$d உள்ளது. அவற்றுக்கான தேடல்களைத் தொடங்க "
+"விரும்புகிறீர்களா, அல்லது அவை அகற்றப்பட வேண்டுமா?"
 
 #.  endregion
 #.  region ========== Order formatters.
@@ -66,6 +91,19 @@ msgctxt "name_colon_value"
 msgid "%1$s: %2$s"
 msgstr "%1$s: %2$s"
 
+#.  show text between brackets. Some languages use different bracket
+#. characters.
+#, java-printf-format
+msgctxt "brackets"
+msgid "(%1$s)"
+msgstr "(%1$s)"
+
+#.  show text between quotes. Some languages use different quote characters.
+#, java-printf-format
+msgctxt "quoted"
+msgid "“%1$s”"
+msgstr "“%1$s”"
+
 #.  Append (or prepend) the ellipsis character to another string.
 #.          Support for RTL languages;
 #.          Allows translations to use language specific ellipsis character.
@@ -82,7 +120,7 @@ msgstr "%1$s…"
 #, java-printf-format
 msgctxt "list_semicolon"
 msgid "; "
-msgstr ";"
+msgstr "; "
 
 #.  When text is displayed in a list (without using HTML) each line will be
 #. formatted using this pattern.
@@ -126,23 +164,35 @@ msgid "%1$s et al."
 msgstr "%1$s et al."
 
 #.  Same as "and_others" but with the number of items added.
-#.          HTML string, must be between a CDATA tag/brackets;
+#.          HTML string, must be inside a CDATA section;
 #.          Support for RTL languages
 #, java-printf-format
 msgctxt "and_others_plus"
 msgid "<![CDATA[%1$s… <small>[+%2$d]</small>]]>"
-msgstr "<!"
+msgstr "<![CDATA[%1$s… <small>[+%2$d]</small>]]>"
 
 #.  Should internal formatting of price/currency fail, then this fallback
 #. format is used.
 #.          Currency: %1$s
-#.          Value: %2$.2f
+#.          Value: %2$.2f, translators should adjust/remove the decimal part
+#. (.2) as needed.
 #.         English: "[currency] [value]" with 2 decimal digits.
 #.         Most other languages: "[value] [currency]" with 2 decimal digits.
 #, java-printf-format
 msgctxt "fallback_currency_format"
 msgid "%1$s %2$.2f"
-msgstr "%1$s %2 $ .2f"
+msgstr "%1$s %2$.2f"
+
+#.  Short notation for prices when there is no known currency.
+#.          This symbol is a standard placeholder symbol for an unspecified or
+#. unknown currency.
+#.          Support for RTL languages.
+#.           Param 1: the price, translators should adjust/remove the decimal
+#. part as needed.
+#, java-printf-format
+msgctxt "unknown_currency"
+msgid "¤%1$.2f"
+msgstr "¤%1$.2f"
 
 #.  endregion
 #.  region ========== System Notification channel names.
@@ -164,11 +214,15 @@ msgstr "தகவல்"
 
 #.  endregion
 #.  region ========== Fatal/Crash/Debug messages.
+#.  Crash-report dialog: asking the user which data should be included.
 #, java-printf-format
 msgctxt "debug_select_items"
 msgid "Select what you would like to include:"
 msgstr "நீங்கள் என்ன சேர்க்க விரும்புகிறீர்கள் என்பதைத் தேர்ந்தெடுக்கவும்:"
 
+#.  Crash-report dialog
+#.         "&APP_NAME;" will be automatically populated.
+#.         Param 1: always "create"; the button name
 #, java-printf-format
 msgctxt "acra_dialog_message"
 msgid ""
@@ -176,10 +230,11 @@ msgid ""
 "location of your choice. You can use this report to report a new issue on "
 "the project website."
 msgstr ""
-"இது & app_name; செயலிழந்தது. உங்களுக்கு விருப்பமான இடத்திற்கு ஒரு "
-"அறிக்கையைச் சேமிக்க “%1$s” ஐத் தட்டவும். திட்ட இணையதளத்தில் புதிய சிக்கலைப் "
-"புகாரளிக்க இந்த அறிக்கையைப் பயன்படுத்தலாம்."
+"இது &APP_NAME; செயலிழந்தது. உங்களுக்கு விருப்பமான இடத்திற்கு ஒரு அறிக்கையைச்"
+" சேமிக்க “%1$s” ஐத் தட்டவும். திட்ட இணையதளத்தில் புதிய சிக்கலைப் புகாரளிக்க "
+"இந்த அறிக்கையைப் பயன்படுத்தலாம்."
 
+#.  Crash-report dialog
 #, java-printf-format
 msgctxt "acra_report_saved"
 msgid ""
@@ -371,10 +426,9 @@ msgctxt "error_search_x_failed_y"
 msgid "Searching on %1$s failed: %2$s"
 msgstr "%1$s இல் தேடுவது தோல்வியுற்றது: %2$s"
 
-#.  STARTING a search has failed / no attempt to search was possible; this is
-#. an error!
+#.  STARTING a search has failed to start due to an ERROR.
 #, java-printf-format
-msgctxt "error_search_could_not_be_started"
+msgctxt "error_book_search_failed"
 msgid "Searching for the book failed."
 msgstr "புத்தகத்தைத் தேடுவது தோல்வியடைந்தது."
 
@@ -395,6 +449,8 @@ msgctxt "error_unknown_host"
 msgid "There was a connection problem to the service on “%1$s”."
 msgstr "“%1$s” இல் சேவைக்கு இணைப்பு சிக்கல் இருந்தது."
 
+#.  The app tried to download the content-table of a book but failed to find
+#. any.
 #, java-printf-format
 msgctxt "error_auto_toc_population_failed"
 msgid "Automatic Population of Titles Failed."
@@ -474,7 +530,7 @@ msgstr ""
 #, java-printf-format
 msgctxt "error_import_csv_line"
 msgid "Unknown error in row %1$d"
-msgstr "1 $ டி வரிசையில் தெரியாத பிழை"
+msgstr "%1$d வரிசையில் தெரியாத பிழை"
 
 #.  CSV import fails: the line was to long to be handled (not enough memory
 #. available)
@@ -517,6 +573,7 @@ msgstr "ஆதரிக்கப்படவில்லை: %1$s…"
 
 #.  endregion
 #.  region ========== Warning messages.
+#.  Importing a CSV book list; Warning shown BEFORE the import is started.
 #, java-printf-format
 msgctxt "warning_import_csv"
 msgid ""
@@ -540,7 +597,7 @@ msgstr ""
 #, java-printf-format
 msgctxt "warning_import_csv_unescaped_quote"
 msgid "Unescaped quote at row %1$d, position %2$d"
-msgstr "1 $ டி வரிசையில் வெளியிடப்படாத மேற்கோள், நிலை %2$d"
+msgstr "%1$d வரிசையில் வெளியிடப்படாத மேற்கோள், நிலை %2$d"
 
 #.  Importing a list of books partially failed. This text is displayed as a
 #. header above a list of failures.
@@ -647,7 +704,7 @@ msgstr "ஒரு தளத்தைத் தேர்ந்தெடுத்�
 
 #, java-printf-format
 msgctxt "warning_cannot_delete_1st_bs"
-msgid "The first Bookshelf cannot be deleted."
+msgid "The first bookshelf cannot be deleted."
 msgstr "முதல் புத்தக அலமாரியை நீக்க முடியாது."
 
 #.  When the user tries to add e.g. an Author which is already listed on the
@@ -657,11 +714,17 @@ msgctxt "warning_already_in_list"
 msgid "Already in the list!"
 msgstr "ஏற்கனவே பட்டியலில்!"
 
-#.  result of a search
+#.  result of a search.
 #, java-printf-format
 msgctxt "warning_no_matching_book_found"
 msgid "No matching book found"
 msgstr "பொருந்தக்கூடிய நூல் எதுவும் கிடைக்கவில்லை"
+
+#.  result of a search.
+#, java-printf-format
+msgctxt "warning_no_extra_info_found"
+msgid "No (additional) info found"
+msgstr "(கூடுதல்) தகவல் எதுவும் கிடைக்கவில்லை."
 
 #.  the ISBN (or similar codes) entered is not valid
 #, java-printf-format
@@ -798,6 +861,22 @@ msgctxt "vldt_blank_required_for_x"
 msgid "Empty value required for “%1$s”"
 msgstr "“%1$s” க்கு தேவைப்படும் வெற்று மதிப்பு"
 
+#.  The field must either be blank, or a valid URL
+#, java-printf-format
+msgctxt "vldt_blank_or_valid_url_required"
+msgid "Empty value or valid URL required"
+msgstr "வெற்று மதிப்பு அல்லது செல்லுபடியாகும் URL தேவை."
+
+#.  The field must either be blank, the literal string "%s", or a valid URL
+#. with a single "%s" embedded
+#, java-printf-format
+msgctxt "vldt_blank_or_valid_uri_with_1s_param_required"
+msgid ""
+"Empty value or valid “https” URL with a single “%s” id placeholder required"
+msgstr ""
+"ஒற்றை “%s” ஐடி இடம்-பிடிப்புடன் காலியான மதிப்பு அல்லது செல்லுபடியாகும் "
+"“https” URL தேவை."
+
 #.  Specific to a check on the "reading started" versus "reading ended" dates.
 #, java-printf-format
 msgctxt "vldt_read_start_after_end"
@@ -825,6 +904,8 @@ msgctxt "progress_msg_loading"
 msgid "Loading…"
 msgstr "ஏற்றுகிறது…"
 
+#.  Shown when information is downloaded from a website one web-page after
+#. another
 #, java-printf-format
 msgctxt "progress_msg_loading_page"
 msgid "Loading page %1$d…"
@@ -899,28 +980,28 @@ msgctxt "progress_msg_skip_s"
 msgid "Skipping “%1$s”"
 msgstr "“%1$s” ஐத் தவிர்ப்பது"
 
-#.  Progress message displayed when importing: the number of books/covers
+#.  Progress message displayed when importing: the number of books/images
 #. created so far.
 #, java-printf-format
 msgctxt "progress_msg_x_created"
 msgid "%1$d created"
 msgstr "%1$d உருவாக்கப்பட்டது"
 
-#.  Progress message displayed when importing: the number of books/covers
+#.  Progress message displayed when importing: the number of books/images
 #. updated so far.
 #, java-printf-format
 msgctxt "progress_msg_x_updated"
 msgid "%1$d updated"
 msgstr "%1$d புதுப்பிக்கப்பட்டது"
 
-#.  Progress message displayed when importing: the number of books/covers
+#.  Progress message displayed when importing: the number of books/images
 #. skipped so far.
 #, java-printf-format
 msgctxt "progress_msg_x_skipped"
 msgid "%1$d skipped"
 msgstr "%1$d தவிர்க்கப்பட்டது"
 
-#.  Progress message displayed when importing: the number of books/covers
+#.  Progress message displayed when importing: the number of books/images
 #. deleted so far.
 #, java-printf-format
 msgctxt "progress_msg_x_deleted"
@@ -1000,8 +1081,21 @@ msgstr "தேர்ந்தெடுக்க தட்டவும்."
 #.  Header/help text in the tag-editor dialog
 #, java-printf-format
 msgctxt "info_tap_to_move_tag"
-msgid "Tap a tag to move it to/from the Book"
-msgstr "ஒரு குறிச்சொல்லை புத்தகத்திலிருந்து/நகர்த்தத் தட்டவும்"
+msgid "Tap a tag to move it to/from the book."
+msgstr "ஒரு குறிச்சொல்லை புத்தகத்திலிருந்து/நகர்த்தத் தட்டவும்."
+
+#.  Menu option to add/edit a tag-substitution rule.
+#, java-printf-format
+msgctxt "lbl_add_or_edit_substitution"
+msgid "Add/Edit a substitution rule"
+msgstr "மாற்று விதியைச் சேர்க்கவும்/திருத்தவும்"
+
+#.  hint/label above a multi-line txt field where the user should
+#.          enter one Substitution text on each line.
+#, java-printf-format
+msgctxt "info_substitutions_one_per_line"
+msgid "Add one substitution per line"
+msgstr "ஒரு வரிக்கு ஒரு மாற்று சேர்க்கவும்"
 
 #, java-printf-format
 msgctxt "info_download_successful"
@@ -1009,6 +1103,8 @@ msgid "Download successful"
 msgstr "வெற்றிகரமாக பதிவிறக்கவும்"
 
 #.  See GitHub docs... there is optional code to be added to Calibre.
+#.          The product name IS translated. We follow the translation as used
+#. by the product itself.
 #, java-printf-format
 msgctxt "info_calibre_content_server_extension"
 msgid ""
@@ -1030,6 +1126,16 @@ msgstr "இந்த பட்டியலை மறுதொடக்கம் 
 msgctxt "cd_clear_text_end_icon"
 msgid "Clear text"
 msgstr "உரையை அழிக்கவும்"
+
+#.  Displayed on a date-picker where the usr can pick a YYYY, or YYYY-MM, or
+#. YYYY-MM-DD
+#.          for fields like the publication date of a book.
+#, java-printf-format
+msgctxt "info_partial_date_picker"
+msgid "Tap a previously selected month or day to unselect it."
+msgstr ""
+"முன்னர் தேர்ந்தெடுக்கப்பட்ட மாதம் அல்லது நாளைத் தேர்ந்தெடுத்ததை நீக்க அதைத் "
+"தட்டவும்."
 
 #.  ISFDB specific
 #.      Some functionality is limited to the ISFDB web site only.
@@ -1055,69 +1161,108 @@ msgctxt "info_site_search_field_optional"
 msgid "Optional. Not supported by all web sites."
 msgstr "விரும்பினால். எல்லா வலைத்தளங்களும் ஆதரிக்கவில்லை."
 
-#.  website info: languages.
+#.  Param 1: url to the documentation.
+#.          HTML string, must be inside a CDATA section;
+#, java-printf-format
+msgctxt "info_identifier_editor"
+msgid ""
+"<![CDATA[Please read the <a href=\"%1$s\">documentation</a> on Identifiers "
+"before editing.]]>"
+msgstr ""
+"<![CDATA[திருத்துவதற்கு முன் அடையாளங்காட்டிகளில் உள்ள <a "
+"href=\"%1$s\">ஆவணத்தைப்</a> படிக்கவும்.]]>"
+
+#.  website info: short description in which language(s) a search-site
+#. provides book data in.
 #, java-printf-format
 msgctxt "site_description_various_languages"
 msgid "Various languages"
 msgstr "பல்வேறு மொழிகள்"
 
+#.  website info: short description in which language(s) a search-site
+#. provides book data in.
 #, java-printf-format
 msgctxt "site_description_chinese"
 msgid "Chinese"
 msgstr "சீன"
 
+#.  website info: short description in which language(s) a search-site
+#. provides book data in.
+#, java-printf-format
+msgctxt "site_description_czech"
+msgid "Czech and more"
+msgstr "செக் மற்றும் பல"
+
+#.  website info: short description in which language(s) a search-site
+#. provides book data in.
 #, java-printf-format
 msgctxt "site_description_dutch_and_more"
 msgid "Dutch and more"
 msgstr "டச்சு மற்றும் பல"
 
+#.  website info: short description in which language(s) a search-site
+#. provides book data in.
 #, java-printf-format
 msgctxt "site_description_english_and_more"
 msgid "English and more"
 msgstr "ஆங்கிலம் மற்றும் பல"
 
+#.  website info: short description in which language(s) a search-site
+#. provides book data in.
 #, java-printf-format
 msgctxt "site_description_french"
 msgid "French"
 msgstr "பிரஞ்சு"
 
+#.  website info: short description in which language(s) a search-site
+#. provides book data in.
 #, java-printf-format
 msgctxt "site_description_french_and_more"
 msgid "French and more"
 msgstr "பிரஞ்சு மற்றும் பல"
 
+#.  website info: short description in which language(s) a search-site
+#. provides book data in.
 #, java-printf-format
 msgctxt "site_description_german"
 msgid "German"
 msgstr "செர்மன்"
 
+#.  website info: short description in which language(s) a search-site
+#. provides book data in.
 #, java-printf-format
 msgctxt "site_description_portuguese_and_more"
 msgid "Portuguese and more"
 msgstr "போர்த்துகீசியம் மற்றும் பல"
 
-#.  website info: type.
+#.  website info: short description of the type of search-site.
 #, java-printf-format
 msgctxt "site_description_shop"
 msgid "Shop"
 msgstr "கடை"
 
+#.  website info: short description of the type of search-site.
 #, java-printf-format
 msgctxt "site_description_catalog"
 msgid "Catalog"
 msgstr "பட்டியல்"
 
-#.  website info: specifics genres.
+#.  website info: short description of the specifics genres a search-site
+#. provides book data on.
 #, java-printf-format
 msgctxt "site_description_comics"
 msgid "Comics"
 msgstr "காமிக்ச்"
 
+#.  website info: short description of the specifics genres a search-site
+#. provides book data on.
 #, java-printf-format
 msgctxt "site_description_eu_comics"
 msgid "European Comics"
 msgstr "ஐரோப்பிய காமிக்ச்"
 
+#.  website info: short description of the specifics genres a search-site
+#. provides book data on.
 #, java-printf-format
 msgctxt "site_description_fsf"
 msgid "Fantasy and Science Fiction"
@@ -1390,20 +1535,23 @@ msgstr "(நாள் அமைக்கப்படவில்லை)"
 #.  endregion
 #.  region ========== Size measurements.
 #.  Size of a file: MB/kB/B refer to the IEC decimal notation 1kB == 1000B
+#.  Size of a file: MB/kB/B refer to the IEC decimal notation 1kB == 1000B
 #, java-printf-format
 msgctxt "size_megabytes"
 msgid "%1$.2fMB"
-msgstr "%1 $ .2fmb"
+msgstr "%1$.2fமெபை"
 
+#.  Size of a file: MB/kB/B refer to the IEC decimal notation 1kB == 1000B
 #, java-printf-format
 msgctxt "size_kilobytes"
 msgid "%1$.2fkB"
-msgstr "$ 1 %."
+msgstr "%1$.2fகிபை"
 
+#.  Size of a file: MB/kB/B refer to the IEC decimal notation 1kB == 1000B
 #, java-printf-format
 msgctxt "size_bytes"
 msgid "%1$.0fB"
-msgstr "%1 $ .0fb"
+msgstr "%1$.0fபை"
 
 #.  Cover sizes
 #, java-printf-format
@@ -1481,11 +1629,13 @@ msgctxt "book_format_softcover_oblong"
 msgid "Softcover - Oblong"
 msgstr "சாப்ட்கவர் - நீளமானது"
 
+#.  -book format - The typical american/british size of a comic.
 #, java-printf-format
 msgctxt "book_format_comic"
 msgid "Comic"
 msgstr "காமிக்"
 
+#.  -book format
 #, java-printf-format
 msgctxt "book_format_other"
 msgid "Other"
@@ -1540,20 +1690,20 @@ msgid "Bicolored"
 msgstr "பிகோலர்"
 
 #.  endregion
-#.  region ========== Names of builtin styles.
-#.  builtin style name
+#.  region ========== Names of built-in styles.
+#.  built-in style name
 #, java-printf-format
 msgctxt "style_builtin_author_series"
 msgid "Author, Series"
 msgstr "ஆசிரியர், தொடர்"
 
-#.  builtin style name
+#.  built-in style name
 #, java-printf-format
 msgctxt "style_builtin_author_year"
 msgid "Author, Year"
 msgstr "ஆசிரியர், ஆண்டு"
 
-#.  builtin style name
+#.  built-in style name
 #, java-printf-format
 msgctxt "style_builtin_bookshelf"
 msgid "@string/lbl_bookshelf"
@@ -1669,11 +1819,13 @@ msgstr "(* இயல்புநிலை பாணிகள்)"
 
 #.  endregion
 #.  region ========== Booklist Group names.
-#.  Booklist Group name
+#.  Booklist Group name:
+#.          2 groups, one for the books you have read, the other for the books
+#. you have not read yet.
 #, java-printf-format
 msgctxt "lbl_group_read_and_unread"
 msgid "Read & Unread"
-msgstr "படிக்கவும் படிக்கவும்"
+msgstr "படித்த மற்றும் படிக்காத புத்தகங்கள்"
 
 #.  Booklist Group name
 #, java-printf-format
@@ -1793,36 +1945,43 @@ msgstr "புத்தக கிளப் பதிப்பு"
 
 #.  endregion
 #.  region ========== Book / Dust cover condition values.
+#.  Book / Dust cover condition
 #, java-printf-format
 msgctxt "lbl_condition_fine"
 msgid "As new"
 msgstr "புதியது"
 
+#.  Book / Dust cover condition
 #, java-printf-format
 msgctxt "lbl_condition_very_good"
 msgid "Very good"
 msgstr "மிகவும் நல்லது"
 
+#.  Book / Dust cover condition
 #, java-printf-format
 msgctxt "lbl_condition_good"
 msgid "Good"
 msgstr "நல்லது"
 
+#.  Book / Dust cover condition
 #, java-printf-format
 msgctxt "lbl_condition_fair"
 msgid "Acceptable"
 msgstr "ஏற்றுக்கொள்ளத்தக்கது"
 
+#.  Book / Dust cover condition
 #, java-printf-format
 msgctxt "lbl_condition_reading_copy"
 msgid "Reading copy"
 msgstr "நகல் படித்தல்"
 
+#.  Book / Dust cover condition
 #, java-printf-format
 msgctxt "lbl_condition_dust_cover_missing_or_bad"
 msgid "Missing/Fair"
 msgstr "காணவில்லை/நியாயமானது"
 
+#.  Book / Dust cover condition
 #, java-printf-format
 msgctxt "lbl_condition_dust_cover_none"
 msgid "None"
@@ -1840,11 +1999,17 @@ msgctxt "lbl_author_type_translator"
 msgid "Translator"
 msgstr "மொழிபெயர்"
 
+#.  Examples: The person who selected short stories from different Authors for
+#. an anthology;
+#.          or The person who coordinates a non-fiction book to which multiple
+#. writers contributed.
 #, ignore-reused, java-printf-format
 msgctxt "lbl_author_type_editor"
 msgid "Editor"
 msgstr "திருத்தி"
 
+#.  Co-author; someone who contributed to the content, but is not considered
+#. (one of) the main authors(s).
 #, java-printf-format
 msgctxt "lbl_author_type_contributor"
 msgid "Contributor"
@@ -1865,48 +2030,63 @@ msgctxt "lbl_author_type_afterword"
 msgid "@string/lbl_author_type_intro"
 msgstr "@string/lbl_author_type_intro"
 
+#.  audiobooks
 #, java-printf-format
 msgctxt "lbl_author_type_narrator"
 msgid "Narrator"
 msgstr "கதை"
 
-#.  Interior art / illustrations
+#.  Interior art / illustrations / photos / comics
 #, java-printf-format
 msgctxt "lbl_author_type_artist"
 msgid "Illustrations"
 msgstr "எடுத்துக்காட்டுகள்"
 
+#.  Comics: the artist who did the (typical) black ink drawing.
+#.          Can be different from the "lbl_author_type_artist" who may only do
+#. the pencil sketches.
 #, java-printf-format
 msgctxt "lbl_author_type_inking"
 msgid "Inking"
 msgstr "இன்கிங்"
 
+#.  Comics: the artist who coloured in the original ink drawing.
 #, java-printf-format
 msgctxt "lbl_author_type_colorist"
 msgid "Colorist"
 msgstr "வண்ணமயமான"
 
+#.  Books based on movies. Typically the steps are:
+#.          "story writer" -> "Screenplay" and/or "Storyboard" -> "book
+#. adaptation"
 #, java-printf-format
 msgctxt "lbl_author_type_storyboard"
 msgid "Storyboard"
 msgstr "ச்டோரிபோர்டு"
 
+#.  Comics: the person who puts the text into/on the text-balloons.
 #, java-printf-format
 msgctxt "lbl_author_type_lettering"
 msgid "Lettering"
 msgstr "கடிதம்"
 
-#.  Cover art / Cover illustration
+#.  Cover art / Cover illustration / Cover photo, composition, ...
 #, ignore-reused, java-printf-format
 msgctxt "lbl_author_type_cover_artist"
 msgid "Cover art"
 msgstr "கவர் கலை"
 
+#.  Comics: the artist who did the (typical) black ink drawing.
+#.         (if different from the interior of the comic)
 #, java-printf-format
 msgctxt "lbl_author_type_cover_inking"
 msgid "Cover inking"
 msgstr "கவர் மை"
 
+#.  Comics: the artist who coloured in the original cover ink drawing.
+#.         (if different from the interior of the comic)
+#.         Can be different from the "lbl_author_type_cover_artist" who may
+#. only do the pencil sketches.
 #, java-printf-format
 msgctxt "lbl_author_type_cover_colorist"
 msgid "Cover colorist"
@@ -1944,6 +2124,12 @@ msgstr "சரியான எச்டி கார்டை விட்டு
 msgctxt "option_sort_and_style_ellipsis"
 msgid "Sorting & Styles…"
 msgstr "வரிசையாக்கம் & பாணிகள்…"
+
+#.  Booklist menu option
+#, java-printf-format
+msgctxt "lbl_select_style"
+msgid "Select Style"
+msgstr "ஸ்டைலைத் தேர்ந்தெடுக்கவும்"
 
 #.  Booklist menu option
 #, java-printf-format
@@ -2073,62 +2259,63 @@ msgid "Crop"
 msgstr "பயிர்"
 
 #.  [VERIFIED] from "platform_frameworks_base_strings.xml#replace"
-#.         Context menu for a cover image submenu title
+#.         Image context menu option - submenu title
 #, java-printf-format
-msgctxt "option_cover_replace"
+msgctxt "option_image_replace"
 msgid "Replace…"
 msgstr "மாற்றவும்…"
 
-#.  Cover image context menu option
+#.  Image context menu option
 #, java-printf-format
-msgctxt "option_cover_replace_from_gallery"
+msgctxt "option_image_replace_from_gallery"
 msgid "From Gallery…"
 msgstr "கேலரியில் இருந்து…"
 
-#.  Cover image context menu option
+#.  Image context menu option
 #, java-printf-format
-msgctxt "option_cover_replace_from_camera"
+msgctxt "option_image_replace_from_camera"
 msgid "From Camera…"
 msgstr "கேமராவிலிருந்து…"
 
-#.  Cover image context menu option
+#.  Book cover image context menu option
 #, java-printf-format
 msgctxt "option_cover_replace_from_alt_editions"
 msgid "From Other Editions…"
 msgstr "மற்ற பதிப்புகளிலிருந்து…"
 
-#.  Context menu for a cover image submenu title
+#.  Image context menu option - submenu title
 #, java-printf-format
-msgctxt "option_cover_rotate"
+msgctxt "option_image_rotate"
 msgid "Rotate…"
 msgstr "சுழற்றுங்கள்…"
 
-#.  [VERIFIED] Cover image context menu option
+#.  [VERIFIED] Image context menu option
 #, java-printf-format
-msgctxt "option_cover_rotate_automatic"
+msgctxt "option_image_rotate_automatic"
 msgid "Automatic"
 msgstr "தானியங்கி"
 
-#.  Cover image context menu option
+#.  Image context menu option
 #, java-printf-format
-msgctxt "option_cover_rotate_cw"
+msgctxt "option_image_rotate_cw"
 msgid "Clockwise"
 msgstr "கடிகார திசையில்"
 
-#.  Cover image context menu option
+#.  Image context menu option
 #, java-printf-format
-msgctxt "option_cover_rotate_ccw"
+msgctxt "option_image_rotate_ccw"
 msgid "Anti-Clockwise"
 msgstr "கடிகார எதிர்ப்பு"
 
-#.  Cover image context menu option
+#.  Image context menu option
 #, java-printf-format
-msgctxt "option_cover_rotate_180"
+msgctxt "option_image_rotate_180"
 msgid "180°"
 msgstr "180 °"
 
+#.  Image context menu option
 #, java-printf-format
-msgctxt "option_restore_cover"
+msgctxt "option_image_restore"
 msgid "Restore previous image"
 msgstr "முந்தைய படத்தை மீட்டமைக்கவும்"
 
@@ -2194,6 +2381,7 @@ msgctxt "btn_just_this_shelf"
 msgid "This shelf only"
 msgstr "இந்த அலமாரி மட்டுமே"
 
+#.  menu option
 #, java-printf-format
 msgctxt "btn_show_list"
 msgid "Show list"
@@ -2317,72 +2505,6 @@ msgstr ""
 "உங்களிடம் நேர்மையற்ற மாற்றங்கள் உள்ளன, நீங்கள் இப்போது வெளியேறினால் அவை "
 "இழக்கப்படும்."
 
-#.  Param 1: Series name
-#, java-printf-format
-msgctxt "confirm_delete_series"
-msgid ""
-"Delete the series “%1$s”?\n"
-"\n"
-"The books themselves will not be deleted.\n"
-"\n"
-"Consider editing the series and changing the series name to that of another series to preserve this data."
-msgstr ""
-"“%1$s” தொடரை நீக்கவா?\n"
-"\n"
-" புத்தகங்கள் தானே நீக்கப்படாது.\n"
-"\n"
-" இந்தத் தரவைப் பாதுகாக்க தொடரைத் திருத்தி, தொடர் பெயரை மற்றொரு தொடருக்கு மாற்றுவதைக் கவனியுங்கள்."
-
-#.  Param 1: Publisher name
-#, java-printf-format
-msgctxt "confirm_delete_publisher"
-msgid ""
-"Delete the publisher “%1$s”?\n"
-"\n"
-"The books themselves will not be deleted.\n"
-"\n"
-"Consider editing the publisher and changing the publisher name to that of another publisher to preserve this data."
-msgstr ""
-"வெளியீட்டாளரை “%1$s” நீக்கவா?\n"
-"\n"
-" புத்தகங்கள் தானே நீக்கப்படாது.\n"
-"\n"
-" இந்தத் தரவைப் பாதுகாக்க வெளியீட்டாளரைத் திருத்துவதையும் வெளியீட்டாளரின் பெயரை மற்றொரு வெளியீட்டாளருக்கு மாற்றுவதையும் கவனியுங்கள்."
-
-#.  Param 1: Bookshelf name
-#.          Param 2: the "All books" bookshelf name
-#, java-printf-format
-msgctxt "confirm_delete_bookshelf"
-msgid ""
-"Delete the bookshelf “%1$s”? The books themselves will not be deleted. They "
-"will still be present on any other shelves, or on the “%2$s” shelf."
-msgstr ""
-"புத்தக அலமாரியை “%1$s” நீக்கவா? புத்தகங்கள் தானே நீக்கப்படாது. அவை இன்னும் "
-"வேறு எந்த அலமாரிகளிலும் அல்லது “%2$s” அலமாரியில் இருக்கும்."
-
-#.  Param 1: Tag name
-#, java-printf-format
-msgctxt "confirm_delete_tag"
-msgid ""
-"Delete the tag “%1$s”?\n"
-"\n"
-"It will be deleted from all books on which it is set. The books themselves will not be deleted."
-msgstr ""
-"“%1$s” என்ற குறிச்சொல்லை நீக்கவா?\n"
-"\n"
-" அது அமைக்கப்பட்ட அனைத்து புத்தகங்களிலிருந்தும் இது நீக்கப்படும். புத்தகங்கள் தானே நீக்கப்படாது."
-
-#.  Param 1: TOC entry title
-#.          Param 2: author name
-#, java-printf-format
-msgctxt "confirm_delete_toc_entry_everywhere"
-msgid ""
-"Really delete the title “%1$s” by %2$s? It will be deleted from all books in"
-" which it is listed. The books themselves will not be deleted."
-msgstr ""
-"“ %1$s” என்ற தலைப்பை %2$s ஆல் நீக்கவா? இது பட்டியலிடப்பட்ட அனைத்து "
-"புத்தகங்களிலிருந்தும் நீக்கப்படும். புத்தகங்கள் தானே நீக்கப்படாது."
-
 #.  Param 1: book title
 #.          Param 2: author name
 #, java-printf-format
@@ -2420,13 +2542,118 @@ msgstr ""
 "\n"
 " நீங்கள் தொடர விரும்புகிறீர்களா?"
 
+#.  Param 1: TOC entry title
+#.          Param 2: author name
+#.          Param 3: content of plural "n_books", e.g.: "It will be removed
+#. from 5 books."
+#, java-printf-format
+msgctxt "confirm_delete_toc_entry_from_x_books"
+msgid ""
+"Delete “%1$s” by %2$s?\n"
+"\n"
+"It will be removed from %3$s. The books themselves will not be deleted."
+msgstr ""
+"“ %1$s” என்ற தலைப்பை %2$s ஆல் நீக்கவா?\n"
+"\n"
+" இது %3$s இலிருந்து நீக்கப்படும். புத்தகங்கள் தானே நீக்கப்படாது."
+
+#.  Param 1: Bookshelf name
+#.          Param 2: content of plural "n_books", e.g.: "It will be removed
+#. from 5 books."
+#.          Param 3: the "All books" bookshelf name
+#, java-printf-format
+msgctxt "confirm_delete_bookshelf_from_x_books"
+msgid ""
+"Delete the bookshelf “%1$s”?\n"
+"\n"
+"It will be removed from %2$s. The books themselves will not be deleted. They will still be present on any other shelves, or on the “%3$s” shelf."
+msgstr ""
+"புத்தக அலமாரியை “%1$s” நீக்கவா?\n"
+"\n"
+" இது %2$s இலிருந்து நீக்கப்படும். புத்தகங்கள் தானே நீக்கப்படாது. அவை இன்னும் வேறு எந்த அலமாரிகளிலும் அல்லது “%3$s” அலமாரியில் இருக்கும்."
+
+#.  Param 1: Series name
+#.          Param 2: content of plural "n_books", e.g.: "It will be removed
+#. from 5 books."
+#, java-printf-format
+msgctxt "confirm_delete_series_from_x_books"
+msgid ""
+"Delete the series “%1$s”?\n"
+"\n"
+"It will be removed from %2$s. The books themselves will not be deleted. Consider editing the series and changing the series name to that of another series to preserve this data."
+msgstr ""
+"“%1$s” தொடரை நீக்கவா?\n"
+"\n"
+" இது %2$s இலிருந்து நீக்கப்படும். புத்தகங்கள் தானே நீக்கப்படாது. இந்தத் தரவைப் பாதுகாக்க தொடரைத் திருத்தி, தொடர் பெயரை மற்றொரு தொடருக்கு மாற்றுவதைக் கவனியுங்கள்."
+
+#.  Param 1: Publisher name
+#.          Param 2: content of plural "n_books", e.g.: "It will be removed
+#. from 5 books."
+#, java-printf-format
+msgctxt "confirm_delete_publisher_from_x_books"
+msgid ""
+"Delete the publisher “%1$s”?\n"
+"\n"
+"It will be removed from %2$s. The books themselves will not be deleted. Consider editing the publisher and changing the publisher name to that of another publisher to preserve this data."
+msgstr ""
+"வெளியீட்டாளரை “%1$s” நீக்கவா?\n"
+"\n"
+" இது %2$s இலிருந்து நீக்கப்படும். புத்தகங்கள் தானே நீக்கப்படாது. இந்தத் தரவைப் பாதுகாக்க வெளியீட்டாளரைத் திருத்துவதையும் வெளியீட்டாளரின் பெயரை மற்றொரு வெளியீட்டாளருக்கு மாற்றுவதையும் கவனியுங்கள்."
+
+#.  Param 1: Tag name
+#, java-printf-format
+msgctxt "X_confirm_delete_tag"
+msgid ""
+"Delete the tag “%1$s”?\n"
+"\n"
+"It will be removed from all books. The books themselves will not be deleted."
+msgstr ""
+"“%1$s” என்ற குறிச்சொல்லை நீக்கவா?\n"
+"\n"
+" அது அமைக்கப்பட்ட அனைத்து புத்தகங்களிலிருந்தும் இது நீக்கப்படும். புத்தகங்கள் தானே நீக்கப்படாது."
+
+#.  Param 1: Tag name
+#.          Param 2: content of plural "n_books", e.g.: "It will be removed
+#. from 5 books."
+#, java-printf-format
+msgctxt "confirm_delete_tag_from_x_books"
+msgid ""
+"Delete the tag “%1$s”?\n"
+"\n"
+"It will be removed from %2$s. The books themselves will not be deleted."
+msgstr ""
+"“%1$s” என்ற குறிச்சொல்லை நீக்கவா?\n"
+"\n"
+" இது %2$s இலிருந்து நீக்கப்படும். புத்தகங்கள் தானே நீக்கப்படாது."
+
+#.  Param 1: Identifier name
+#.          Param 2: content of plural "n_books", e.g.: "It will be removed
+#. from 5 books."
+#, java-printf-format
+msgctxt "confirm_delete_identifier_from_x_books"
+msgid ""
+"Delete the identifier “%1$s”?\n"
+"\n"
+"It will be removed from %2$s. The books themselves will not be deleted."
+msgstr ""
+"\"%1$s\" என்ற அடையாளங்காட்டியை நீக்கவா?\n"
+"\n"
+" இது %2$s இலிருந்து நீக்கப்படும். புத்தகங்கள் தானே நீக்கப்படாது."
+
+#.  context: substitution of one item to another item
+#.          Param 1: Tag name
+#, java-printf-format
+msgctxt "confirm_delete_substitutions"
+msgid "Delete the substitutions for “%1$s”?"
+msgstr "“%1$s”க்கான மாற்றுகளை நீக்கவா?"
+
 #.  Param 1: style name
 #, java-printf-format
 msgctxt "confirm_delete_style"
 msgid "Delete the style “%1$s”?"
 msgstr "“%1$s” பாணியை நீக்கவா?"
 
-#.  TODO: these 4 could do with a better/clearer message. We're proposing to
+#.  TODO: these 5 could do with a better/clearer message. We're proposing to
 #. move the books from nr 1 to nr 2 and delete nr 1.
 #, ignore-reused, java-printf-format
 msgctxt "confirm_merge_bookshelves"
@@ -2515,7 +2742,7 @@ msgstr ""
 " “%2$s”\n"
 "\n"
 " இந்த மாற்றத்தை எவ்வாறு பயன்படுத்த விரும்புகிறீர்கள்?\n"
-" குறிப்பு: “%3$s” தேர்வு உடனடியாக பயன்படுத்தப்படும். நீங்கள் “ %4 $ s” ஐ தேர்வுசெய்தால், புதிய %5 $ S உருவாக்கப்படும்."
+" குறிப்பு: “%3$s” தேர்வு உடனடியாக பயன்படுத்தப்படும். நீங்கள் “%4$s” ஐ தேர்வுசெய்தால், புதிய %5$s உருவாக்கப்படும்."
 
 #.  offer to send the exported file as an email attachment
 #, java-printf-format
@@ -2555,6 +2782,15 @@ msgid "All books below this row have covers. Search again from the top?"
 msgstr ""
 "இந்த வரிசைக்கு கீழே உள்ள அனைத்து புத்தகங்களிலும் அட்டைகள் உள்ளன. மேலே "
 "இருந்து மீண்டும் தேடவா?"
+
+#.  Shown on the admin page where the user can edit and apply rules to
+#. automatically substitute tags with others.
+#, java-printf-format
+msgctxt "confirm_apply_substitutions"
+msgid "Apply the substitution rules? All applicable books will be updated."
+msgstr ""
+"மாற்று விதிகளைப் பயன்படுத்தவா? பொருந்தக்கூடிய அனைத்து புத்தகங்களும் "
+"புதுப்பிக்கப்படும்."
 
 #.  Displayed when the user changes their sorting preference.
 #.          When doing this, the sorting information in the database needs to
@@ -2635,6 +2871,12 @@ msgstr "திருத்து…"
 msgctxt "action_edit_defaults"
 msgid "Edit default settings"
 msgstr "இயல்புநிலை அமைப்புகளைத் திருத்தவும்"
+
+#.  [VERIFIED]
+#, java-printf-format
+msgctxt "action_apply"
+msgid "Apply"
+msgstr "பயன்படுத்து"
 
 #.  [VERIFIED]
 #, java-printf-format
@@ -2838,6 +3080,11 @@ msgctxt "action_stop_scanning"
 msgid "Stop scanning"
 msgstr "ச்கேன் செய்வதை நிறுத்துங்கள்"
 
+#, java-printf-format
+msgctxt "action_stop_searching"
+msgid "Stop searching"
+msgstr "தேடுவதை நிறுத்துங்கள்"
+
 #.  The user wants to permanently hide a particular message/alert/...
 #, java-printf-format
 msgctxt "action_disable_message"
@@ -2861,17 +3108,23 @@ msgctxt "action_synchronize"
 msgid "Synchronize"
 msgstr "ஒத்திசைக்கவும்"
 
-#.  Small screens. Ideally 3-5 characters long.
+#.  Small screens; Button text; Ideally 3-5 characters long.
 #, java-printf-format
 msgctxt "action_show_toc"
 msgid "@string/lbl_table_of_content_short"
 msgstr "@string/lbl_table_of_content_short"
 
-#.  Large screens; max 25 chars
+#.  Large screens; Button text; max 25 chars
 #, java-printf-format
 msgctxt "action_show_toc_long"
 msgid "Show Table Of Content"
 msgstr "உள்ளடக்க அட்டவணையைக் காட்டு"
+
+#.  Menu option
+#, java-printf-format
+msgctxt "action_restore_default_identifiers"
+msgid "Restore the default Identifiers"
+msgstr "இயல்புநிலை அடையாளங்காட்டிகளை மீட்டமை"
 
 #.  endregion
 #.  region ========== Toolbar, Activity and Dialog titles.
@@ -2891,7 +3144,7 @@ msgstr "புத்தகத்தைச் சேர்க்கவும்"
 #, java-printf-format
 msgctxt "lbl_edit_style"
 msgid "Edit style"
-msgstr "பாணி ​​திருத்து"
+msgstr "பாணி திருத்து"
 
 #.  Toolbar/Screen title.
 #, java-printf-format
@@ -2968,6 +3221,8 @@ msgstr "நகரும் தரவு"
 
 #.  [VERIFIED] Dialog title - Calibre specific. https://manual.calibre-
 #. ebook.com/server.html
+#.          The product name IS translated. We follow the translation as used
+#. by the product itself.
 #, java-printf-format
 msgctxt "lbl_calibre_content_server"
 msgid "Calibre Content Server"
@@ -3178,6 +3433,18 @@ msgctxt "lbl_covers_long"
 msgid "Cover images"
 msgstr "படங்களை மறைக்கவும்"
 
+#.  [VERIFIED] Generic image (singular).
+#, java-printf-format
+msgctxt "lbl_image"
+msgid "Image"
+msgstr "படம்"
+
+#.  [VERIFIED] Generic images (plural).
+#, java-printf-format
+msgctxt "lbl_images"
+msgid "Images"
+msgstr "படங்கள்"
+
 #.  number of pages; this is a field-label + also used for a radio button
 #. text.
 #, java-printf-format
@@ -3274,6 +3541,12 @@ msgctxt "lbl_tags"
 msgid "Tags"
 msgstr "குறிச்சொற்கள்"
 
+#.  screen/menu title: substitutions of one item to another item
+#, java-printf-format
+msgctxt "lbl_substitutions"
+msgid "Substitutions"
+msgstr "மாற்றுகள்"
+
 #.  is this book signed by the author?
 #, java-printf-format
 msgctxt "lbl_signed"
@@ -3306,6 +3579,12 @@ msgctxt "lbl_original_title_long"
 msgid "Original title if this book is a translation"
 msgstr "இந்த நூல் மொழிபெயர்ப்பாக இருந்தால் அசல் தலைப்பு"
 
+#.  Field label: the original language of a translated book.
+#, java-printf-format
+msgctxt "lbl_original_language"
+msgid "Original language"
+msgstr "மூல மொழி"
+
 #, java-printf-format
 msgctxt "lbl_barcode"
 msgid "Barcode"
@@ -3335,6 +3614,15 @@ msgstr "இடம்"
 msgctxt "lbl_location_long"
 msgid "Location of the book"
 msgstr "புத்தகத்தின் இடம்"
+
+#.  The location (where is the book?) field as a single unicode 9.0
+#. character/symbol.
+#.          By default: 📍 == u+0001f4cd or in utf16: \ud83d\udccd
+#.          (the color will be set by the app theme)
+#, java-printf-format
+msgctxt "lbl_location_symbol"
+msgid "📍"
+msgstr "📍"
 
 #.  Header for a screen section which groups all publication data.
 #, java-printf-format
@@ -3392,13 +3680,38 @@ msgid "Identifiers"
 msgstr "அடையாளங்காட்டிகள்"
 
 #.  Small suffix for a site to indicate the field is an identifier.
-#.          HTML string, must be between a CDATA tag/brackets;
+#.          HTML string, must be inside a CDATA section;
 #.          Example:  "Goodreads ID"  (with ID in a smaller font)
 #.          The "ID" string should be very short, maximum 3 or 4 characters.
 #, java-printf-format
 msgctxt "lbl_identifier_suffix"
 msgid "<![CDATA[%1$s <small>ID</small>]]>"
-msgstr "<!"
+msgstr "<![CDATA[%1$s <small>ஐடி</small>]]>"
+
+#, java-printf-format
+msgctxt "lbl_identifier_key"
+msgid "@string/lbl_identifier"
+msgstr "@string/lbl_identifier"
+
+#, java-printf-format
+msgctxt "lbl_book_uri"
+msgid "Book URL"
+msgstr "புத்தக URL"
+
+#, java-printf-format
+msgctxt "lbl_author_uri"
+msgid "Author URL"
+msgstr "ஆசிரியர் URL"
+
+#.         The "claim" or "P" number which Wikidata uses for an author-id as
+#.          defined by a given website.
+#.          TRANSLATORS: please only translate the part "code for the author
+#. id",
+#.           and leave "Wikidata “claim/P”" untranslated!
+#, java-printf-format
+msgctxt "lbl_wikidata_claim_author_id"
+msgid "Wikidata “claim/P” code for the author id"
+msgstr "ஆசிரியர் ஐடிக்கான விக்கிடேட்டா “claim/P” குறியீடு."
 
 #.  endregion
 #.  region ========== All date related labels.
@@ -3424,6 +3737,15 @@ msgstr "நாள்"
 msgctxt "lbl_date_added"
 msgid "Date Added"
 msgstr "தேதி சேர்க்கப்பட்டது"
+
+#.  "The date the book was last updated." as a single unicode 9.0
+#. character/symbol.
+#.          By default:  ➕  \u2795
+#.          (the color will be set by the app theme)
+#, java-printf-format
+msgctxt "lbl_date_added_as_single_char"
+msgid "➕"
+msgstr "➕"
 
 #, ignore-reused, java-printf-format
 msgctxt "lbl_date_added_year"
@@ -3477,6 +3799,15 @@ msgctxt "lbl_date_last_updated"
 msgid "Date last updated"
 msgstr "தேதி கடைசியாக புதுப்பிக்கப்பட்டது"
 
+#.  "The date the book was last updated." as a single unicode 9.0
+#. character/symbol.
+#.          By default:  🔄  u+0001f504 or in utf16: \ud83d\udd04
+#.          (the color will be set by the app theme)
+#, java-printf-format
+msgctxt "lbl_date_last_updated_as_single_char"
+msgid "🔄"
+msgstr "🔄"
+
 #, java-printf-format
 msgctxt "lbl_date_last_updated_year"
 msgid "Year last updated"
@@ -3497,6 +3828,15 @@ msgstr "கடைசி நாள் புதுப்பிக்கப்ப�
 msgctxt "lbl_date_acquired"
 msgid "Date Acquired"
 msgstr "பெறப்பட்ட தேதி"
+
+#.  "The date a user acquired the book." as a single unicode 9.0
+#. character/symbol.
+#.          By default:  🏠  == u+0001f3e0 or in utf16: \ud83c\udfe0
+#.          (the color will be set by the app theme)
+#, java-printf-format
+msgctxt "lbl_date_acquired_as_single_char"
+msgid "🏠"
+msgstr "🏠"
 
 #, java-printf-format
 msgctxt "lbl_date_acquired_year"
@@ -3529,12 +3869,20 @@ msgctxt "lbl_date_published_month"
 msgid "Publication Month"
 msgstr "வெளியீட்டு மாதம்"
 
-#.  First Publication Date for the CONTENT of the book. (e.g. magazine pub...
+#.  First Publication Date for the CONTENT of the book. e.g. magazine pub...
 #. etc...
 #, java-printf-format
 msgctxt "lbl_date_first_publication"
 msgid "First Publication"
 msgstr "முதல் வெளியீடு"
+
+#.  "First Publication Date" as a single unicode 9.0 character/symbol.
+#.          By default:  1️⃣  == \u0031\ufe0f\u20e3
+#.          (the color will be set by the app theme)
+#, java-printf-format
+msgctxt "lbl_date_first_publication_as_single_char"
+msgid "1️⃣"
+msgstr "1️⃣"
 
 #, java-printf-format
 msgctxt "lbl_date_first_publication_year"
@@ -3545,6 +3893,18 @@ msgstr "முதல் பப். ஆண்டு"
 msgctxt "lbl_date_first_publication_month"
 msgid "First Pub. Month"
 msgstr "முதல் பப். மாதம்"
+
+#.  Author birth date
+#, java-printf-format
+msgctxt "lbl_date_born"
+msgid "Born"
+msgstr "பிறந்தது"
+
+#.  Author death date
+#, java-printf-format
+msgctxt "lbl_date_died"
+msgid "Died"
+msgstr "இறந்தார்"
 
 #.  endregion
 #.  region ========== Backup, Export and Import.
@@ -3833,11 +4193,6 @@ msgctxt "pt_website_search_order_and_enable"
 msgid "Priority, enable & disable"
 msgstr "முன்னுரிமை, இயக்கு மற்றும் முடக்கு"
 
-#, java-printf-format
-msgctxt "pt_covers"
-msgid "@string/lbl_covers_long"
-msgstr "@string/lbl_covers_long"
-
 #.  Preference Category
 #, java-printf-format
 msgctxt "pt_barcode_scanner"
@@ -3912,7 +4267,7 @@ msgstr "தலைப்புகளை வரிசைப்படுத்த�
 #, java-printf-format, read-only
 msgctxt "pv_reformat_titles_prefixes"
 msgid "a|A|an|An|the|The"
-msgstr "a | a | an | an | the | தி"
+msgstr "|"
 
 #.         TRANSLATORS: FIRST READ the information for the string
 #. "pv_reformat_titles_prefixes".
@@ -4112,16 +4467,40 @@ msgctxt "pt_collect_series_info_from_toc"
 msgid "Collect Series info from content table"
 msgstr "உள்ளடக்க அட்டவணையில் இருந்து தொடர் தகவல்களை சேகரிக்கவும்"
 
+#.  Option to fetch extra author information (pen-names, photo,...)
+#.          Uses the same website on which the book is found.
 #, java-printf-format
-msgctxt "pt_search_resolve_authors_bedetheque"
-msgid "Resolve author pen-names using the Bedetheque website"
-msgstr ""
-"பெடெத்தெக் வலைத்தளத்தைப் பயன்படுத்தி ஆசிரியர் பேனா-பெயர்களை தீர்க்கவும்"
+msgctxt "pt_fetch_author_info"
+msgid "Fetch author information"
+msgstr "ஆசிரியர் தகவலைப் பெறுங்கள்"
 
+#.  Option to fetch extra author information (pen-names, photo,...)
+#.          Uses a secondary website.
+#.          Param 1: the website name.
+#, java-printf-format
+msgctxt "pt_fetch_author_info_using_site_x"
+msgid "Fetch author information from %1$s"
+msgstr "%1$s இலிருந்து ஆசிரியர் தகவலைப் பெறுக"
+
+#.  option to resolve author pen-names
+#, java-printf-format
+msgctxt "pt_search_resolve_authors"
+msgid "Resolve author pen-names"
+msgstr "ஆசிரியர் புனைப்பெயர்களைத் தீர்க்கவும்"
+
+#.  option to enable resolving author pen-names using another website.
+#.          Param 1: a website name.
+#, java-printf-format
+msgctxt "pt_search_resolve_authors_using_site_x"
+msgid "Resolve author pen-names using the %1$s website"
+msgstr "%1$s வலைத்தளத்தைப் பயன்படுத்தி ஆசிரியர் புனைப்பெயர்களைத் தீர்க்கவும்."
+
+#.  French users/speakers usually want to preserve the French "format" names
+#. as used by the site Bedetheque.
 #, java-printf-format
 msgctxt "pt_bedetheque_search_resolve_formats"
 msgid "Preserve Bedetheque (french) format naming"
-msgstr "பெடெதெக் (பிரஞ்சு) வடிவத்தை பெயரிடுதல்"
+msgstr "Bedetheque (பிரெஞ்சு) வடிவப் பெயரிடலைப் பாதுகாக்கவும்."
 
 #.  MultiSelectListPreference title
 #, java-printf-format
@@ -4552,6 +4931,40 @@ msgstr ""
 "பயன்பாட்டு டெவலப்பரால் அவ்வாறு செய்ய வெளிப்படையாக கோரப்படாவிட்டால் "
 "தயவுசெய்து கீழேயுள்ள விருப்பங்களை இயக்க வேண்டாம்."
 
+#.  Option (checkbox)
+#, java-printf-format
+msgctxt "lbl_tag_mapper_apply_mappings"
+msgid "@string/lbl_substitutions"
+msgstr "@string/lbl_substitutions"
+
+#.  Label to report the result of "lbl_tag_mapper_apply_mappings".
+#.          On the screen followed with ": x books"
+#, java-printf-format
+msgctxt "lbl_tag_mapper_apply_mappings_result"
+msgid "@string/lbl_substitutions"
+msgstr "@string/lbl_substitutions"
+
+#.  Option (checkbox)
+#, java-printf-format
+msgctxt "lbl_tag_mapper_apply_merge_case"
+msgid "Merge tags which only differ in upper and lower case"
+msgstr ""
+"பெரிய எழுத்து மற்றும் சிறிய எழுத்துக்களில் மட்டுமே வேறுபடும் குறிச்சொற்களை "
+"ஒன்றிணைக்கவும்"
+
+#.  Label to report the result of "lbl_tag_mapper_apply_merge_case".
+#.          On the screen followed with ": x books"
+#, java-printf-format
+msgctxt "lbl_tag_mapper_apply_merge_case_result"
+msgid "Upper/lower case merging"
+msgstr "பெரிய/சிறிய எழுத்து இணைப்பு"
+
+#.  Option (checkbox)
+#, java-printf-format
+msgctxt "lbl_tag_mapper_apply_purge_unused"
+msgid "Delete unused tags"
+msgstr "பயன்படுத்தப்படாத குறிச்சொற்களை நீக்கு"
+
 #.  endregion
 #.  region ========== Website settings.
 #, java-printf-format
@@ -4654,8 +5067,8 @@ msgstr "பட்டியலில் காட்டப்பட்டுள�
 #.  MultiSelectListPreference - Determines what is show in booklist header
 #, java-printf-format
 msgctxt "pt_bob_header"
-msgid "Summary details in header"
-msgstr "தலைப்பில் சுருக்கமான விவரங்கள்"
+msgid "Header"
+msgstr "தலைப்பு"
 
 #.  Option to show in the booklist header
 #, java-printf-format
@@ -4739,7 +5152,7 @@ msgstr "நான் படிக்கிறேன்…"
 #, java-printf-format
 msgctxt "citation_share_book_im_reading"
 msgid "I’m reading “%1$s” %2$s by %3$s %4$s"
-msgstr "நான் “ %1$s” %2$s ஐ %3$s %4 $ s ஐப் படிக்கிறேன்"
+msgstr "நான் “%1$s” %2$s ஐ %3$s %4$s ஐப் படிக்கிறேன்"
 
 #.  ListPreference - How to open the book menu for a book in BoB grid-mode.
 #.          Will have the option(s) listed underneath.
@@ -4781,8 +5194,8 @@ msgstr "வரி இடைவெளி"
 #.  SeekBarPreference
 #, java-printf-format
 msgctxt "pt_bob_list_state_expansion_level"
-msgid "Default booklist expansion"
-msgstr "இயல்புநிலை புத்தக பட்டியல் விரிவாக்கம்"
+msgid "Default expand level"
+msgstr "இயல்புநிலை விரிவாக்க நிலை"
 
 #.  Preference summary strings on how to SORT an Author name.
 #.          Translator: use your favourite Author in your country.
@@ -4828,49 +5241,87 @@ msgstr ""
 "முதலில் குடும்பப் பெயருடன் காண்பி,\n"
 " .e.g. “வில்லிச், கோனி”"
 
-#.  SwitchPreference - option title
+#. Style option: on the book-list: should the number of books be displayed on
+#. grouping level (or not).
+#, java-printf-format
+msgctxt "pt_bob_show_group_book_count"
+msgid "Show the number of books in each group."
+msgstr "ஒவ்வொரு குழுவிலும் உள்ள புத்தகங்களின் எண்ணிக்கையைக் காட்டு."
+
+#.  Style option.
+#.       Options see:
+#.       - pt_bob_books_under_multiple_authors
+#.       - ps_bob_books_under_multiple_authors_main_only
 #, java-printf-format
 msgctxt "pt_bob_books_under_multiple_authors"
 msgid "Show books with multiple authors"
 msgstr "பல ஆசிரியர்களுடன் புத்தகங்களைக் காட்டு"
 
+#.  If a book has multiple authors:
+#.          Display the book only under its primary author.
 #, java-printf-format
 msgctxt "ps_bob_books_under_multiple_authors_main_only"
 msgid "under their primary author only"
 msgstr "அவர்களின் முதன்மை எழுத்தாளரின் கீழ் மட்டுமே"
 
+#.  If a book has multiple authors:
+#.          Display the book multiple times, under each of its authors.
 #, java-printf-format
 msgctxt "ps_bob_books_under_multiple_authors_each"
 msgid "under each author"
 msgstr "ஒவ்வொரு எழுத்தாளரின் கீழும்"
 
-#.  SwitchPreference - option title
+#.  Style option.
+#.       This is a special situation where a book/comic can be part of
+#. multiple series.
+#.       For example, it can be part of it's own series, i.e. a writer just
+#. writes multiple books in a series.
+#.       But at the SAME TIME , those same books could be part of a publisher
+#. series.
+#.       Let's say author series "My Detective", nr 5.
+#.       But at the same time "Great detectives", nr 1234, i.e. ALL detectives
+#. this publisher does.
+#.       It is the SAME book though.
+#.       Options see:
+#.       - pt_bob_books_under_multiple_series
+#.       - ps_bob_books_under_multiple_series_main_only
 #, java-printf-format
 msgctxt "pt_bob_books_under_multiple_series"
 msgid "Show books in multiple series"
 msgstr "பல தொடர்களில் புத்தகங்களைக் காட்டு"
 
+#.  If a book has multiple Series:
+#.          Display the book only under its primary Series.
 #, java-printf-format
 msgctxt "ps_bob_books_under_multiple_series_main_only"
 msgid "under their primary series only"
 msgstr "அவர்களின் முதன்மை தொடரின் கீழ் மட்டுமே"
 
+#.  If a book has multiple authors:
+#.          Display the book multiple times, under each of its authors.
 #, java-printf-format
 msgctxt "ps_bob_books_under_multiple_series_each"
 msgid "under each series"
 msgstr "ஒவ்வொரு தொடரின் கீழும்"
 
-#.  SwitchPreference - option title
+#.  Style option.
+#.       Options see:
+#.       - ps_bob_books_under_multiple_publishers_main_only
+#.       - ps_bob_books_under_multiple_publishers_each
 #, java-printf-format
 msgctxt "pt_bob_books_under_multiple_publishers"
 msgid "Show books with multiple publishers"
 msgstr "பல வெளியீட்டாளர்களுடன் புத்தகங்களைக் காட்டு"
 
+#.  If a book has multiple publishers (cooperating):
+#.          Display the book only under its primary publisher.
 #, java-printf-format
 msgctxt "ps_bob_books_under_multiple_publishers_main_only"
 msgid "under their primary publisher only"
 msgstr "அவர்களின் முதன்மை வெளியீட்டாளரின் கீழ் மட்டுமே"
 
+#.  If a book has multiple publishers (cooperating):
+#.          Display the book multiple times, under each of its publishers.
 #, java-printf-format
 msgctxt "ps_bob_books_under_multiple_publishers_each"
 msgid "under each publisher"
@@ -4971,6 +5422,14 @@ msgstr "புலங்களைப் புதுப்பிக்கவு�
 msgctxt "menu_update_books"
 msgid "Update books"
 msgstr "புத்தகங்களைப் புதுப்பிக்கவும்"
+
+#.  Context/options menu.
+#.          Search the internet for updates for one or more books, authors,
+#. ...
+#, java-printf-format
+msgctxt "menu_search_updates"
+msgid "Search for updates"
+msgstr "புதுப்பிப்புகளைத் தேடு"
 
 #.  Booklist screen - context menu - Update Fields from internet for a set of
 #. books
@@ -5384,6 +5843,7 @@ msgctxt "lbl_owned"
 msgid "Owned"
 msgstr "சொந்தமானது"
 
+#.  Label.
 #, java-printf-format
 msgctxt "lbl_table_of_content"
 msgid "Table Of Content"
@@ -5395,11 +5855,13 @@ msgctxt "lbl_table_of_content_short"
 msgid "Content"
 msgstr "உள்ளடக்கம்"
 
+#.  An entry in the table-of-content; i.e. a title, chapter, ...
 #, java-printf-format
 msgctxt "lbl_table_of_content_entry"
 msgid "Content Entry"
 msgstr "உள்ளடக்க நுழைவு"
 
+#.  menu/screen title. List of websites (site settings).
 #, java-printf-format
 msgctxt "lbl_websites"
 msgid "Websites"
@@ -5489,6 +5951,12 @@ msgctxt "lbl_settings"
 msgid "Settings"
 msgstr "அமைப்புகள்"
 
+#.  Show the user what the default value is
+#, java-printf-format
+msgctxt "lbl_default_x"
+msgid "Default: %1$s"
+msgstr "இயல்பு: %1$s"
+
 #.  endregion
 #.  region ========== Unused, but not removing as we have translations which
 #. might be useful later.
@@ -5524,12 +5992,6 @@ msgstr "பொது"
 
 #.  [VERIFIED]
 #, java-printf-format
-msgctxt "X_lbl_image"
-msgid "Image"
-msgstr "படம்"
-
-#.  [VERIFIED]
-#, java-printf-format
 msgctxt "X_lbl_system"
 msgid "(System)"
 msgstr "(அமைப்பு)"
@@ -5559,7 +6021,7 @@ msgctxt "X_option_bob_filter_read_no"
 msgid "Books Unread"
 msgstr "புத்தகங்கள் படிக்கவில்லை"
 
-#.  The global default values used as defaults for the builtin styles.
+#.  The global default values used as defaults for the built-in styles.
 #, java-printf-format
 msgctxt "X_style_type_defaults"
 msgid "Styles default settings"
@@ -5595,7 +6057,8 @@ msgstr "அதைத் தேர்ந்தெடுக்க பெரிய 
 
 #.  Tip text displayed when user enters the 'Update fields from internet'
 #. screen
-#.      The referred "View on…" is "option_view_book_at"
+#.      The referred "View on…" should match the text from the string
+#. "option_view_book_at"
 #.      TODO: “View on…” should be a parameter. But that means modifying the
 #. Tip class
 #, java-printf-format
@@ -5636,12 +6099,19 @@ msgstr ""
 
 #.  NOT FINAL, DO NOT TRANSLATE YET
 #, java-printf-format
-msgctxt "lbl_numeric"
-msgid "Numeric"
-msgstr "எண் வரிசை"
+msgctxt "option_tuning"
+msgid "Tuning"
+msgstr "டியூனிங்"
 
 #.  NOT FINAL, DO NOT TRANSLATE YET
+#.         Param 1: name of the website with a url to the registration page
+#.         Param 2: will be set to "Learn more" with a url to the
+#. documentation;
 #, java-printf-format
-msgctxt "lbl_text"
-msgid "Text"
-msgstr "உரை"
+msgctxt "info_registration_benefits"
+msgid ""
+"This feature benefits from registration at %1$s.\n"
+"This is <b>optional</b>. %2$s"
+msgstr ""
+"இந்த நற்பொருத்தம் %1$s இல் பதிவு செய்வதிலிருந்து பயனடைகிறது. \n"
+"இது <b> விரும்பினால் </b>. %2$s"
