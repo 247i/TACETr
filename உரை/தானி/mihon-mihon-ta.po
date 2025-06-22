@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Mihon)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-18 06:18+0200\n"
-"PO-Revision-Date: 2025-01-18 11:27+0530\n"
+"POT-Creation-Date: 2025-06-22 07:02+0200\n"
+"PO-Revision-Date: 2025-06-22 13:17\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/mihon/mihon/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #, java-printf-format
 msgctxt "app_name"
@@ -176,6 +176,11 @@ msgstr "இயல்புநிலை"
 msgctxt "label_warning"
 msgid "Warning"
 msgstr "எச்சரிக்கை"
+
+#, java-printf-format
+msgctxt "label_auto"
+msgid "Auto"
+msgstr "தானி"
 
 #.  Shared labels
 #, java-printf-format
@@ -441,16 +446,6 @@ msgid "Delete category"
 msgstr "வகையை நீக்கு"
 
 #, java-printf-format
-msgctxt "action_sort_category"
-msgid "Sort categories"
-msgstr "வகைகளை வரிசைப்படுத்துங்கள்"
-
-#, java-printf-format
-msgctxt "sort_category_confirmation"
-msgid "Would you like to sort the categories alphabetically?"
-msgstr "வகைகளை அகர வரிசைப்படி வரிசைப்படுத்த விரும்புகிறீர்களா?"
-
-#, java-printf-format
 msgctxt "action_edit_cover"
 msgid "Edit cover"
 msgstr "கவர் திருத்து"
@@ -529,7 +524,7 @@ msgstr "வெப்வியூவில் திறக்கவும்"
 #, java-printf-format
 msgctxt "action_web_view"
 msgid "WebView"
-msgstr "வெப் வியூ"
+msgstr "வெப்வியூ"
 
 #, java-printf-format
 msgctxt "action_migrate"
@@ -570,6 +565,11 @@ msgstr "கவர்-மட்டும் கட்டம்"
 msgctxt "action_display_download_badge"
 msgid "Downloaded chapters"
 msgstr "பதிவிறக்கம் செய்யப்பட்ட அத்தியாயங்கள்"
+
+#, java-printf-format
+msgctxt "action_display_unread_badge"
+msgid "Unread chapters"
+msgstr "படிக்காத அத்தியாயங்கள்"
 
 #, java-printf-format
 msgctxt "action_display_local_badge"
@@ -692,6 +692,16 @@ msgid "Move series to bottom"
 msgstr "தொடரை கீழே நகர்த்தவும்"
 
 #, java-printf-format
+msgctxt "action_notes"
+msgid "Notes"
+msgstr "குறிப்புகள்"
+
+#, java-printf-format
+msgctxt "action_edit_notes"
+msgid "Edit notes"
+msgstr "குறிப்புகளைத் திருத்து"
+
+#, java-printf-format
 msgctxt "action_install"
 msgid "Install"
 msgstr "நிறுவவும்"
@@ -771,11 +781,6 @@ msgstr "இப்போது இல்லை"
 msgctxt "action_add_anyway"
 msgid "Add anyway"
 msgstr "எப்படியும் சேர்க்கவும்"
-
-#, java-printf-format
-msgctxt "action_migrate_duplicate"
-msgid "Migrate existing entry"
-msgstr "இருக்கும் நுழைவு இடம்பெயரவும்"
 
 #.  Operations
 #, java-printf-format
@@ -1056,6 +1061,11 @@ msgid "Dynamic"
 msgstr "மாறும்"
 
 #, java-printf-format
+msgctxt "theme_catppuccin"
+msgid "Catppuccin"
+msgstr "Catppuccin"
+
+#, java-printf-format
 msgctxt "theme_greenapple"
 msgid "Green Apple"
 msgstr "பச்சை ஆப்பிள்"
@@ -1069,6 +1079,11 @@ msgstr "சுகந்தி"
 msgctxt "theme_midnightdusk"
 msgid "Midnight Dusk"
 msgstr "நள்ளிரவு அந்தி"
+
+#, java-printf-format
+msgctxt "theme_monochrome"
+msgid "Monochrome"
+msgstr "ஒரே வண்ணமுடைய"
 
 #, java-printf-format
 msgctxt "theme_nord"
@@ -1118,8 +1133,8 @@ msgstr "உறவினர் நேர முத்திரைகள்"
 #.  "Today" instead of "2023-12-31"
 #, java-printf-format
 msgctxt "pref_relative_format_summary"
-msgid "\"%1$s\" instead of \"%2$s\\"
-msgstr "\"%2$s க்கு க்கு பதிலாக\"%1$s \""
+msgid "\"%1$s\" instead of \"%2$s\""
+msgstr "\"%2$s\" க்கு பதிலாக \"%1$s\""
 
 #, java-printf-format
 msgctxt "pref_date_format"
@@ -1231,13 +1246,8 @@ msgstr "காட்சி"
 
 #, java-printf-format
 msgctxt "pref_library_columns"
-msgid "Grid size"
-msgstr "கட்டம் அளவு"
-
-#, java-printf-format
-msgctxt "pref_library_columns_per_row"
-msgid "%d per row"
-msgstr "ஒரு வரிசையில் %d"
+msgid "Items per row"
+msgstr "ஒரு வரிசையில் உருப்படிகள்"
 
 #, java-printf-format
 msgctxt "portrait"
@@ -1405,21 +1415,41 @@ msgid "Exclude: %s"
 msgstr "விலக்கு: %s"
 
 #, java-printf-format
-msgctxt "pref_chapter_swipe"
-msgid "Chapter swipe"
-msgstr "அத்தியாயம் ச்வைப்"
+msgctxt "pref_behavior"
+msgid "Behavior"
+msgstr "நடத்தை"
 
 #.  This should be to the left for RTL locales
 #, java-printf-format
 msgctxt "pref_chapter_swipe_end"
-msgid "Swipe to right action"
-msgstr "சரியான செயலுக்கு ச்வைப் செய்யுங்கள்"
+msgid "Chapter on swipe to right"
+msgstr "ச்விப் டு ரைட் பற்றிய அத்தியாயம்"
 
 #.  This should be to the right for RTL locales
 #, java-printf-format
 msgctxt "pref_chapter_swipe_start"
-msgid "Swipe to left action"
-msgstr "இடது செயலுக்கு ச்வைப் செய்யவும்"
+msgid "Chapter on swipe to left"
+msgstr "இடதுபுறமாக ச்வைப் பற்றிய அத்தியாயம்"
+
+#, java-printf-format
+msgctxt "pref_mark_duplicate_read_chapter_read"
+msgid "Mark duplicate read chapter as read"
+msgstr "மார்க் டூப்ளிகேட் வாசிப்பு அத்தியாயத்தைப் படிக்க"
+
+#, java-printf-format
+msgctxt "pref_mark_duplicate_read_chapter_read_existing"
+msgid "After reading a chapter"
+msgstr "ஒரு அத்தியாயத்தைப் படித்த பிறகு"
+
+#, java-printf-format
+msgctxt "pref_mark_duplicate_read_chapter_read_new"
+msgid "After fetching new chapter"
+msgstr "புதிய அத்தியாயத்தைப் பெற்ற பிறகு"
+
+#, java-printf-format
+msgctxt "pref_hide_missing_chapter_indicators"
+msgid "Hide missing chapter indicators"
+msgstr "காணாமல் போன அத்தியாயம் குறிகாட்டிகளை மறைக்கவும்"
 
 #.  Extension section
 #, java-printf-format
@@ -1834,9 +1864,9 @@ msgstr ""
 " தேர்ந்தெடுக்கப்பட்டது: %s"
 
 #, java-printf-format
-msgctxt "pref_always_decode_long_strip_with_ssiv"
-msgid "Always decode long strip images with SSIV"
-msgstr "SSIV உடன் எப்போதும் நீண்ட துண்டு படங்களை டிகோட் செய்யுங்கள்"
+msgctxt "pref_always_decode_long_strip_with_ssiv_2"
+msgid "Use legacy decoder for long strip reader"
+msgstr "லாங் உரி ரீடருக்கு மரபு டிகோடரைப் பயன்படுத்தவும்"
 
 #, java-printf-format
 msgctxt "pref_always_decode_long_strip_with_ssiv_summary"
@@ -2224,23 +2254,23 @@ msgstr "பூட்டப்பட்ட நிலப்பரப்பு"
 
 #, java-printf-format
 msgctxt "color_filter_r_value"
-msgid "R"
-msgstr "R"
+msgid "Red"
+msgstr "சிவப்பு"
 
 #, java-printf-format
 msgctxt "color_filter_g_value"
-msgid "G"
-msgstr "G"
+msgid "Green"
+msgstr "பச்சை"
 
 #, java-printf-format
 msgctxt "color_filter_b_value"
-msgid "B"
-msgstr "B"
+msgid "Blue"
+msgstr "நீலம்"
 
 #, java-printf-format
 msgctxt "color_filter_a_value"
-msgid "A"
-msgstr "A"
+msgid "Alpha"
+msgstr "அகர"
 
 #, java-printf-format
 msgctxt "pref_always_show_chapter_transition"
@@ -2327,6 +2357,16 @@ msgstr "சேமிப்பக இருப்பிடம் இல்லை"
 msgctxt "invalid_location"
 msgid "Invalid location: %s"
 msgstr "தவறான இடம்: %s"
+
+#, java-printf-format
+msgctxt "storage_failed_to_create_download_directory"
+msgid "Failed to create download directory"
+msgstr "பதிவிறக்க கோப்பகத்தை உருவாக்குவதில் தோல்வி"
+
+#, java-printf-format
+msgctxt "storage_failed_to_create_directory"
+msgid "Failed to create directory: %s"
+msgstr "கோப்பகத்தை உருவாக்குவதில் தோல்வி: %s"
 
 #, java-printf-format
 msgctxt "disabled"
@@ -2464,11 +2504,6 @@ msgid ""
 msgstr ""
 "குறிப்பிட்ட மூலங்களுக்கான மேம்பட்ட அம்சங்களை வழங்குகிறது. உங்கள் நூலகத்தில் "
 "சேர்க்கும்போது உள்ளீடுகள் தானாகவே கண்காணிக்கப்படும்."
-
-#, java-printf-format
-msgctxt "action_track"
-msgid "Track"
-msgstr "மின்தடம்"
 
 #, java-printf-format
 msgctxt "track_activity_name"
@@ -2728,6 +2763,21 @@ msgctxt "pref_auto_clear_chapter_cache"
 msgid "Clear chapter cache on app launch"
 msgstr "பயன்பாட்டு வெளியீட்டில் அத்தியாயம் கேச் அழிக்கவும்"
 
+#, java-printf-format
+msgctxt "export"
+msgid "Export"
+msgstr "ஏற்றுமதி"
+
+#, java-printf-format
+msgctxt "library_list"
+msgid "Library List"
+msgstr "நூலக பட்டியல்"
+
+#, java-printf-format
+msgctxt "library_exported"
+msgid "Library Exported"
+msgstr "நூலகம் ஏற்றுமதி செய்யப்பட்டது"
+
 #.  Sync section
 #, java-printf-format
 msgctxt "syncing_library"
@@ -2816,12 +2866,19 @@ msgid "%1$d non-library entries in database"
 msgstr "தரவுத்தளத்தில் %1$d நூலகமற்ற உள்ளீடுகள்"
 
 #, java-printf-format
-msgctxt "clear_database_confirmation"
-msgid ""
-"Are you sure? Read chapters and progress of non-library entries will be lost"
-msgstr ""
-"நீங்கள் உறுதியாக இருக்கிறீர்களா? அத்தியாயங்கள் மற்றும் நூலகமற்ற உள்ளீடுகளின்"
-" முன்னேற்றம் இழக்கப்படும்"
+msgctxt "clear_database_text"
+msgid "You’re about to remove entries from the database"
+msgstr "தரவுத்தளத்திலிருந்து உள்ளீடுகளை அகற்றப் போகிறீர்கள்"
+
+#, java-printf-format
+msgctxt "clear_database_history_warning"
+msgid "Read chapters and progress of non-library entries will be lost"
+msgstr "அத்தியாயங்கள் மற்றும் நூலகமற்ற உள்ளீடுகளின் முன்னேற்றம் இழக்கப்படும்"
+
+#, java-printf-format
+msgctxt "clear_db_exclude_read"
+msgid "Keep entries with read chapters"
+msgstr "வாசிப்பு அத்தியாயங்களுடன் உள்ளீடுகளை வைத்திருங்கள்"
 
 #, java-printf-format
 msgctxt "clear_database_completed"
@@ -2934,6 +2991,20 @@ msgstr ""
 msgctxt "pref_debug_info"
 msgid "Debug info"
 msgstr "பிழைத்திருத்த செய்தி"
+
+#, java-printf-format
+msgctxt "pref_update_library_manga_titles"
+msgid "Update library manga titles to match source"
+msgstr "மூலத்துடன் பொருந்தக்கூடிய நூலக மங்கா தலைப்புகளைப் புதுப்பிக்கவும்"
+
+#, java-printf-format
+msgctxt "pref_update_library_manga_titles_summary"
+msgid ""
+"Warning: if a manga is renamed, it will be removed from the download queue "
+"(if present)."
+msgstr ""
+"எச்சரிக்கை: ஒரு மங்கா மறுபெயரிடப்பட்டால், அது பதிவிறக்க வரிசையில் இருந்து "
+"அகற்றப்படும் (இருந்தால்)."
 
 #.  About section
 #, java-printf-format
@@ -3053,6 +3124,11 @@ msgstr "கடவுச்சொல்"
 msgctxt "login"
 msgid "Login"
 msgstr "புகுபதிவு"
+
+#, java-printf-format
+msgctxt "logging_in"
+msgid "Logging in…"
+msgstr "உள்நுழைவு…"
 
 #, java-printf-format
 msgctxt "login_success"
@@ -3219,6 +3295,16 @@ msgctxt "unknown_author"
 msgid "Unknown author"
 msgstr "தெரியாத ஆசிரியர்"
 
+#, java-printf-format
+msgctxt "author"
+msgid "Author"
+msgstr "நூலாசிரியர்"
+
+#, java-printf-format
+msgctxt "artist"
+msgid "Artist"
+msgstr "கலைஞர்"
+
 #.  reserved for #6163
 #, java-printf-format
 msgctxt "unknown_status"
@@ -3267,15 +3353,20 @@ msgid "Unknown title"
 msgstr "தெரியாத தலைப்பு"
 
 #, java-printf-format
-msgctxt "confirm_add_duplicate_manga"
+msgctxt "possible_duplicates_title"
+msgid "Possible duplicates"
+msgstr "சாத்தியமான நகல்கள்"
+
+#, java-printf-format
+msgctxt "possible_duplicates_summary"
 msgid ""
-"You have an entry in your library with the same name.\n"
+"You have entries in your library with a similar name.\n"
 "\n"
-"Do you still wish to continue?"
+"Select an entry to migrate or add anyway."
 msgstr ""
-"அதே பெயருடன் உங்கள் நூலகத்தில் ஒரு நுழைவு உள்ளது.\n"
+"இதேபோன்ற பெயருடன் உங்கள் நூலகத்தில் உள்ளீடுகள் உள்ளன. \n"
 "\n"
-" நீங்கள் இன்னும் தொடர விரும்புகிறீர்களா?"
+"இடம்பெயர ஒரு உள்ளீட்டைத் தேர்ந்தெடுக்கவும் அல்லது எப்படியும் சேர்க்கவும்."
 
 #, java-printf-format
 msgctxt "manga_added_library"
@@ -3519,6 +3610,11 @@ msgid "Add tracking"
 msgstr "கண்காணிப்பைச் சேர்க்கவும்"
 
 #, java-printf-format
+msgctxt "action_track"
+msgid "Track"
+msgstr "மின்தடம்"
+
+#, java-printf-format
 msgctxt "unread"
 msgid "Unread"
 msgstr "படிக்காதது"
@@ -3612,6 +3708,21 @@ msgstr "தொடக்க தேதி"
 msgctxt "track_finished_reading_date"
 msgid "Finish date"
 msgstr "தேதியை முடிக்க"
+
+#, java-printf-format
+msgctxt "tracked_privately"
+msgid "Tracked privately"
+msgstr "தனிப்பட்ட முறையில் கண்காணிக்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "action_toggle_private_on"
+msgid "Track privately"
+msgstr "தனிப்பட்ட முறையில் கண்காணிக்கவும்"
+
+#, java-printf-format
+msgctxt "action_toggle_private_off"
+msgid "Track publicly"
+msgstr "பகிரங்கமாக கண்காணிக்கவும்"
 
 #, java-printf-format
 msgctxt "track_type"
@@ -4214,16 +4325,6 @@ msgctxt "update_check_notification_update_available"
 msgid "New version available!"
 msgstr "புதிய பதிப்பு கிடைக்கிறது!"
 
-#, java-printf-format
-msgctxt "update_check_fdroid_migration_info"
-msgid ""
-"A new version is available from the official releases. Tap to learn how to "
-"migrate from unofficial F-Droid releases."
-msgstr ""
-"அதிகாரப்பூர்வ வெளியீடுகளிலிருந்து புதிய பதிப்பு கிடைக்கிறது. "
-"அதிகாரப்பூர்வமற்ற எஃப்-டிராய்டு வெளியீடுகளிலிருந்து எவ்வாறு குடியேறுவது "
-"என்பதை அறிய தட்டவும்."
-
 #.  Information Text
 #, java-printf-format
 msgctxt "information_no_downloads"
@@ -4431,3 +4532,209 @@ msgstr "இணைய இணைப்பு இல்லை"
 msgctxt "exception_unknown_host"
 msgid "Couldn't reach %s"
 msgstr "%s ஐ அடைய முடியவில்லை"
+
+#.  Notes screen
+#, java-printf-format
+msgctxt "notes_placeholder"
+msgid "Enjoyed the part where…"
+msgstr "எங்கே பகுதியை அனுபவித்தேன்…"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.selectedHeader"
+msgid "Selected"
+msgstr "தேர்ந்தெடுக்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.availableHeader"
+msgid "Available"
+msgstr "கிடைக்கிறது"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.selectAllLabel"
+msgid "Select all"
+msgstr "அனைத்தையும் தெரிவுசெய்"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.selectNoneLabel"
+msgid "Select none"
+msgstr "எதுவுமில்லை என்பதைத் தேர்ந்தெடுக்கவும்"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.selectEnabledLabel"
+msgid "Select enabled sources"
+msgstr "இயக்கப்பட்ட ஆதாரங்களைத் தேர்ந்தெடுக்கவும்"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.selectPinnedLabel"
+msgid "Select pinned sources"
+msgstr "பின் செய்யப்பட்ட ஆதாரங்களைத் தேர்ந்தெடுக்கவும்"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.continueButtonText"
+msgid "Continue"
+msgstr "தொடரவும்"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.dataToMigrateHeader"
+msgid "Data to migrate"
+msgstr "இடம்பெயர தரவு"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.removeDownloadsTitle"
+msgid "Delete downloads of current entry after migration"
+msgstr "இடம்பெயர்வுக்குப் பிறகு தற்போதைய நுழைவின் பதிவிறக்கங்களை நீக்கு"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.additionalSearchQueryLabel"
+msgid "Additional keywords (optional)"
+msgstr "கூடுதல் முக்கிய வார்த்தைகள் (விரும்பினால்)"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.additionalSearchQuerySupportingText"
+msgid "Helps narrow down search results by adding additional keywords"
+msgstr "கூடுதல் சொற்களைச் சேர்ப்பதன் மூலம் தேடல் முடிவுகளை குறைக்க உதவுகிறது"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.hideUnmatchedTitle"
+msgid "Hide entries without a match"
+msgstr "போட்டி இல்லாமல் உள்ளீடுகளை மறைக்கவும்"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.hideWithoutUpdatesTitle"
+msgid "Hide entries without newer chapters"
+msgstr "புதிய அத்தியாயங்கள் இல்லாமல் உள்ளீடுகளை மறைக்கவும்"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.hideWithoutUpdatesSubtitle"
+msgid "Only show entry if the match has additional chapters"
+msgstr "போட்டியில் கூடுதல் அத்தியாயங்கள் இருந்தால் மட்டுமே நுழைவைக் காட்டு"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.enhancedOptionsWarning"
+msgid ""
+"These options are slow and dangerous and may lead to restrictions from "
+"sources"
+msgstr ""
+"இந்த விருப்பங்கள் மெதுவான மற்றும் ஆபத்தானவை மற்றும் மூலங்களிலிருந்து "
+"கட்டுப்பாடுகளுக்கு வழிவகுக்கும்"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.deepSearchModeTitle"
+msgid "Advanced search mode"
+msgstr "மேம்பட்ட தேடல் முறை"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.deepSearchModeSubtitle"
+msgid "Breaks down the title into keywords for a wider search"
+msgstr "பரந்த தேடலுக்கான தலைப்பை முக்கிய வார்த்தைகளாக உடைக்கிறது"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.prioritizeByChaptersTitle"
+msgid "Match based on chapter number"
+msgstr "அத்தியாய எண்ணின் அடிப்படையில் பொருந்தவும்"
+
+#, java-printf-format
+msgctxt "migrationConfigScreen.prioritizeByChaptersSubtitle"
+msgid ""
+"If enabled, chooses the match furthest ahead. Otherwise, picks the first "
+"match by source priority."
+msgstr ""
+"இயக்கப்பட்டால், போட்டியை மிக முன்னால் தேர்வுசெய்கிறது. இல்லையெனில், மூல "
+"முன்னுரிமையால் முதல் போட்டியைத் தேர்ந்தெடுக்கிறது."
+
+#, java-printf-format
+msgctxt "migrationListScreenTitle"
+msgid "Migration"
+msgstr "குடிபெயர்வு"
+
+#, java-printf-format
+msgctxt "migrationListScreenTitleWithProgress"
+msgid "Migration (%1$d/%2$d)"
+msgstr "இடம்பெயர்வு (%1$d/%2$d)"
+
+#, java-printf-format
+msgctxt "migrationListScreen.copyActionLabel"
+msgid "Copy"
+msgstr "நகலெடு"
+
+#, java-printf-format
+msgctxt "migrationListScreen.migrateActionLabel"
+msgid "Migrate"
+msgstr "இடம்பெயர்வு"
+
+#, java-printf-format
+msgctxt "migrationListScreen.noMatchFoundText"
+msgid "No alternatives found"
+msgstr "மாற்று வழிகள் எதுவும் கிடைக்கவில்லை"
+
+#, java-printf-format
+msgctxt "migrationListScreen.latestChapterLabel"
+msgid "Latest: %1$s"
+msgstr "சமீபத்திய: %1$s"
+
+#, java-printf-format
+msgctxt "migrationListScreen.unknownLatestChapter"
+msgid "Unknown"
+msgstr "தெரியவில்லை"
+
+#, java-printf-format
+msgctxt "migrationListScreen.searchManuallyActionLabel"
+msgid "Search manually"
+msgstr "கைமுறையாக தேடுங்கள்"
+
+#, java-printf-format
+msgctxt "migrationListScreen.skipActionLabel"
+msgid "Don't migrate"
+msgstr "குடியேற வேண்டாம்"
+
+#, java-printf-format
+msgctxt "migrationListScreen.migrateNowActionLabel"
+msgid "Migrate now"
+msgstr "இப்போது குடியேறவும்"
+
+#, java-printf-format
+msgctxt "migrationListScreen.copyNowActionLabel"
+msgid "Copy now"
+msgstr "இப்போது நகலெடுக்கவும்"
+
+#, java-printf-format
+msgctxt "migrationListScreen.exitDialogTitle"
+msgid "Stop migrating?"
+msgstr "குடியேறுவதை நிறுத்தவா?"
+
+#, java-printf-format
+msgctxt "migrationListScreen.exitDialog.stopLabel"
+msgid "Stop"
+msgstr "நிறுத்து"
+
+#, java-printf-format
+msgctxt "migrationListScreen.exitDialog.cancelLabel"
+msgid "Cancel"
+msgstr "ரத்துசெய்"
+
+#, java-printf-format
+msgctxt "migrationListScreen.migrateDialog.copyLabel"
+msgid "Copy"
+msgstr "நகலெடு"
+
+#, java-printf-format
+msgctxt "migrationListScreen.migrateDialog.migrateLabel"
+msgid "Migrate"
+msgstr "இடம்பெயர்வு"
+
+#, java-printf-format
+msgctxt "migrationListScreen.migrateDialog.cancelLabel"
+msgid "Cancel"
+msgstr "ரத்துசெய்"
+
+#, java-printf-format
+msgctxt "migrationListScreen.progressDialog.cancelLabel"
+msgid "Cancel"
+msgstr "ரத்துசெய்"
+
+#, java-printf-format
+msgctxt "migrationListScreen.matchWithoutChapterToast"
+msgid "No chapters found, this entry cannot be used for migration"
+msgstr ""
+"அத்தியாயங்கள் எதுவும் கிடைக்கவில்லை, இந்த உள்ளீட்டை இடம்பெயர்வுக்கு "
+"பயன்படுத்த முடியாது"
