@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Guardian Project)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-04 15:02+0200\n"
-"PO-Revision-Date: 2024-12-01 03:50+0530\n"
+"POT-Creation-Date: 2025-06-29 00:49+0200\n"
+"PO-Revision-Date: 2025-06-29 09:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/guardianproject/orbot/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.2\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #, java-printf-format
 msgctxt "app_name"
@@ -41,8 +41,13 @@ msgstr ""
 
 #, java-printf-format
 msgctxt "menu_settings"
-msgid "Settings"
-msgstr "அமைப்புகள்"
+msgid "Orbot Settings"
+msgstr "சுற்றுப்பாதை அமைப்புகள்"
+
+#, java-printf-format
+msgctxt "system_vpn_settings"
+msgid "Android VPN Settings"
+msgstr "ஆண்ட்ராய்டு VPN அமைப்புகள்"
 
 #, java-printf-format
 msgctxt "menu_log"
@@ -308,52 +313,6 @@ msgctxt "use_bridges"
 msgid "Use Bridges"
 msgstr "பாலங்களைப் பயன்படுத்துங்கள்"
 
-# Suggested in Weblate: ரிலேக்கள்
-#, java-printf-format
-msgctxt "relays"
-msgid "Relays"
-msgstr "ரிலேக்கள்"
-
-#, java-printf-format
-msgctxt "relaying"
-msgid "Relaying"
-msgstr "ரிலே"
-
-#, java-printf-format
-msgctxt "enable_your_device_to_be_a_non_exit_relay"
-msgid "Enable your device to be a non-exit relay"
-msgstr "உங்கள் சாதனம் வெளியேற்றப்படாத ரிலேவாக இருக்க இயக்கவும்"
-
-#, java-printf-format
-msgctxt "relay_port"
-msgid "Relay Port"
-msgstr "ரிலே துறைமுகம்"
-
-#, java-printf-format
-msgctxt "listening_port_for_your_tor_relay"
-msgid "Listening port for your Tor relay"
-msgstr "உங்கள் டோர் ரிலேவுக்கான துறைமுகம்"
-
-#, java-printf-format
-msgctxt "enter_or_port"
-msgid "Enter OR port"
-msgstr "உள்ளிடவும் அல்லது துறைமுகம் செய்யவும்"
-
-#, java-printf-format
-msgctxt "relay_nickname"
-msgid "Relay nickname"
-msgstr "ரிலே புனைப்பெயர்"
-
-#, java-printf-format
-msgctxt "the_nickname_for_your_tor_relay"
-msgid "The nickname for your Tor relay"
-msgstr "உங்கள் டோர் ரிலேவுக்கான புனைப்பெயர்"
-
-#, java-printf-format
-msgctxt "enter_a_custom_relay_nickname"
-msgid "Enter a custom relay nickname"
-msgstr "தனிப்பயன் ரிலே புனைப்பெயரை உள்ளிடவும்"
-
 #, java-printf-format
 msgctxt "reachable_addresses"
 msgid "Reachable Addresses"
@@ -405,13 +364,13 @@ msgstr "https://github.com/guardianproject/orbot/"
 
 #, java-printf-format
 msgctxt "tor_url"
-msgid "Tor: https://www.torproject.org"
-msgstr "TOR: https://www.torproject.org"
+msgid "Tor v%s: https://www.torproject.org"
+msgstr "%C இல் சுற்றுப்பயணம்: https: // vvv. Turproject.org"
 
 #, java-printf-format
 msgctxt "obfs4_url"
 msgid ""
-"lyrebird v%s: https://gitlab.torproject.org/tpo/anti-censorship/pluggable-"
+"Lyrebird v%s: https://gitlab.torproject.org/tpo/anti-censorship/pluggable-"
 "transports/lyrebird"
 msgstr ""
 "Lyrebird v%s: https://gitlab.torproject.org/tpo/anti-censorship/pluggable-"
@@ -574,9 +533,9 @@ msgstr "டோர் டிஎன்எச் துறைமுகம்"
 
 #, java-printf-format
 msgctxt "pref_dnsport_summary"
-msgid "Port that Tor offers its DNS on (default: 5400 or 0 to disable)"
+msgid "Port that Tor offers its DNS on (default: 9053 or 0 to disable)"
 msgstr ""
-"டோர் அதன் டி.என்.எச்சை வழங்கும் துறைமுகம் (இயல்புநிலை: 5400 அல்லது 0 முடக்க)"
+"டோர் அதன் டி.என்.எச்சை வழங்கும் துறைமுகம் (இயல்புநிலை: 9053 அல்லது 0 முடக்க)"
 
 #, java-printf-format
 msgctxt "pref_dnsport_dialog"
@@ -753,11 +712,11 @@ msgstr "கிளிப்போர்டுக்கு முகவரிய�
 #, java-printf-format
 msgctxt "backup_service"
 msgid ""
-"Backup Service <i>(Warning: This Could Expose Your Service Configuration to "
-"Other Apps)</i>"
+"Backup Service (Warning: This Could Expose Your Service Configuration to "
+"Other Apps)"
 msgstr ""
-"காப்புப்பிரதி பணி <i> (எச்சரிக்கை: இது உங்கள் பணி உள்ளமைவை மற்ற "
-"பயன்பாடுகளுக்கு அம்பலப்படுத்தக்கூடும்) </i>"
+"காப்புப்பிரதி பணி (எச்சரிக்கை: இது உங்கள் பணி உள்ளமைவை மற்ற பயன்பாடுகளுக்கு "
+"வெளிப்படுத்தக்கூடும்)"
 
 #, java-printf-format
 msgctxt "delete_service"
@@ -872,6 +831,20 @@ msgstr "கிளையன்ட் நெறிமுறைகளை தனி�
 msgctxt "pref_isolate_protocol_summary"
 msgid "Use a different circuit for each connecting protocol"
 msgstr "இணைக்கும் ஒவ்வொரு நெறிமுறைக்கும் வெவ்வேறு சுற்று பயன்படுத்தவும்"
+
+#, java-printf-format
+msgctxt "pref_isolate_keep_alive"
+msgid "Keep isolated circuits alive"
+msgstr "தனிமைப்படுத்தப்பட்ட சுற்றுகளை உயிரோடு வைத்திருங்கள்"
+
+#, java-printf-format
+msgctxt "pref_isolate_keep_alive_summary"
+msgid ""
+"Keep isolated circuits alive that have at least one stream with SOCKS "
+"authentication active"
+msgstr ""
+"தனிமைப்படுத்தப்பட்ட சுற்றுகளை உயிருடன் வைத்திருங்கள், அவை சாக்ச் "
+"அங்கீகாரத்துடன் குறைந்தது ஒரு ச்ட்ரீம் கொண்டவை"
 
 #, java-printf-format
 msgctxt "pref_connection_padding"
@@ -1053,7 +1026,7 @@ msgctxt "configure_custom_bridges"
 msgid "Configure Custom Bridges"
 msgstr "தனிப்பயன் பாலங்களை உள்ளமைக்கவும்"
 
-#.  CustomBridgesActivity
+#.  CustomBridgesFragment
 #, java-printf-format
 msgctxt "use_custom_bridges"
 msgid "Use Custom Bridges"
@@ -1089,6 +1062,13 @@ msgid "Connect through other Tor users using Snowflake (Method 2 - AMP)"
 msgstr ""
 "ச்னோஃப்ளேக்கைப் பயன்படுத்தி பிற டோர் பயனர்கள் மூலம் இணைக்கவும் (முறை 2 - "
 "ஆம்ப்)"
+
+#, java-printf-format
+msgctxt "bridge_snowflake_sqs"
+msgid "Connect through other Tor users using Snowflake (Method 3 - SQS)"
+msgstr ""
+"ச்னோஃப்ளேக்கைப் பயன்படுத்தி பிற டோர் பயனர்கள் மூலம் இணைக்கவும் (முறை 3 - "
+"SQS)"
 
 #, java-printf-format
 msgctxt "snowflake_proxy_msg_title"
@@ -1169,7 +1149,6 @@ msgctxt "btn_tor_off"
 msgid "Turn Tor off"
 msgstr "அணைக்கவும்"
 
-# Suggested in Weblate: இல்லை, நன்றி
 #, java-printf-format
 msgctxt "no_thx"
 msgid "No Thanks"
@@ -1317,13 +1296,18 @@ msgstr "TOR உடன் இணைக்க சிறந்த வழி. டோ
 
 #, java-printf-format
 msgctxt "snowflake"
-msgid "Snowflake (Original)"
-msgstr "ச்னோஃப்ளேக் (அசல்)"
+msgid "Snowflake"
+msgstr "ச்னோஃப்ளேக்"
 
 #, ignore-same, java-printf-format
 msgctxt "snowflake_amp"
-msgid "Snowflake (AMP)"
-msgstr "ச்னோஃப்ளேக் (ஆம்ப்)"
+msgid "Snowflake AMP"
+msgstr "ச்னோஃப்ளேக் ஆம்ப்"
+
+#, java-printf-format
+msgctxt "snowflake_sqs"
+msgid "Snowflake SQS"
+msgstr "ச்னோஃப்ளேக் சதுர"
 
 #, java-printf-format
 msgctxt "snowflake_subtitle"
@@ -1507,7 +1491,6 @@ msgctxt "no_internet_subtitle"
 msgid "You need an internet connection to use Orbot."
 msgstr "ஆர்போட்டைப் பயன்படுத்த உங்களுக்கு இணைய இணைப்பு தேவை."
 
-# Suggested in Weblate: அமைப்புகள்
 #. Adjust when to run Kindness mode: Only when charging, or only on wifi
 #, java-printf-format
 msgctxt "kindness_adjust_title"
@@ -1515,7 +1498,7 @@ msgid "Settings"
 msgstr "அமைப்புகள்"
 
 #, java-printf-format
-msgctxt "kindess_config_detail"
+msgctxt "kindness_config_detail"
 msgid ""
 "Configure how and when your device can act as a Snowflake proxy for other "
 "Tor users."
@@ -1597,3 +1580,151 @@ msgstr ""
 msgctxt "pref_detect_root_title"
 msgid "Root Detection"
 msgstr "ரூட் கண்டறிதல்"
+
+#, java-printf-format
+msgctxt "pref_enable_rotation_summary"
+msgid "Enable device rotation (requires restart)"
+msgstr "சாதன சுழற்சியை இயக்கவும் (மறுதொடக்கம் தேவை)"
+
+#, java-printf-format
+msgctxt "pref_enable_rotation_title"
+msgid "Device Rotation"
+msgstr "சாதன சுழற்சி"
+
+#, java-printf-format
+msgctxt "app_icon_chooser_label_night_watch"
+msgid "Night Watch"
+msgstr "இரவு கடிகாரம்"
+
+#, java-printf-format
+msgctxt "app_icon_chooser_label_assistant"
+msgid "Assistant"
+msgstr "உதவியாளர்"
+
+#, java-printf-format
+msgctxt "app_icon_chooser_label_paint"
+msgid "Paint"
+msgstr "வண்ணப்பூச்சு"
+
+#, java-printf-format
+msgctxt "app_icon_chooser_label_tetras"
+msgid "Tetras"
+msgstr "டெட்ராச்"
+
+#, java-printf-format
+msgctxt "app_icon_chooser_label_todo"
+msgid "To-Do"
+msgstr "செய்ய வேண்டியவை"
+
+#, java-printf-format
+msgctxt "app_icon_chooser_label_fit_grit"
+msgid "FitGrit"
+msgstr "Fitgrit"
+
+#, java-printf-format
+msgctxt "app_icon_chooser_label_birdie"
+msgid "Birdie"
+msgstr "பறவை"
+
+#, java-printf-format
+msgctxt "camo_dialog_title"
+msgid "Camouflage as %1$s"
+msgstr "உருமறைப்பு %1$s"
+
+#, java-printf-format
+msgctxt "camo_dialog_enable_confirm_msg"
+msgid ""
+"Orbot will camouflage itself as the app %1$s. This will hide all notification details about Tor and change how the appearance of Orbot on your home screen.\n"
+"\n"
+"Camouflaging as %2$s will restart Orbot."
+msgstr ""
+"ஆர்போட் தன்னை %1$s ஆக மறைக்கும். இது TOR பற்றிய அனைத்து அறிவிப்பு விவரங்களையும் மறைத்து, உங்கள் முகப்புத் திரையில் ஆர்போட்டின் தோற்றத்தை எவ்வாறு மாற்றும். \n"
+"\n"
+"%2$s என உருமறைப்பது ஆர்போட்டை மறுதொடக்கம் செய்யும்."
+
+#, java-printf-format
+msgctxt "camo_dialog_disable_confirm_msg"
+msgid ""
+"Orbot will resume displaying notification information about your Tor connection and will appear as normal on your home screen.\n"
+"\n"
+"Disabling Camouflage Mode will restart Orbot."
+msgstr ""
+"ஆர்போட் உங்கள் TOR இணைப்பு பற்றிய அறிவிப்பு தகவல்களைக் காண்பிக்கும் மற்றும் உங்கள் முகப்புத் திரையில் இயல்பானதாகத் தோன்றும். \n"
+"\n"
+"உருமறைப்பு பயன்முறையை முடக்குவது சுற்றுப்பாதையை மறுதொடக்கம் செய்யும்."
+
+#, java-printf-format
+msgctxt "camo_dialog_disable_title"
+msgid "Disable Camouflage Mode"
+msgstr "உருமறைப்பு பயன்முறையை முடக்கு"
+
+#, java-printf-format
+msgctxt "pref_camo_mode_title"
+msgid "Camouflage Mode"
+msgstr "உருமறைப்பு முறை"
+
+#, java-printf-format
+msgctxt "pref_camo_mode_description"
+msgid ""
+"Disguise how Orbot's icon, label and notification text will appear on your "
+"device"
+msgstr ""
+"உங்கள் சாதனத்தில் ஆர்போட்டின் படவுரு, சிட்டை மற்றும் அறிவிப்பு உரை எவ்வாறு "
+"தோன்றும் என்பதை மறைக்கவும்"
+
+#, java-printf-format
+msgctxt "power_user_mode_permission"
+msgid "Alarms & Reminders Permission Needed for Power User Mode"
+msgstr "பவர் பயனர் பயன்முறைக்கு அலாரங்கள் மற்றும் நினைவூட்டல் இசைவு தேவை"
+
+#, java-printf-format
+msgctxt "power_user_mode_permission_msg"
+msgid ""
+"Please allow Orbot to set alarms and reminders in order to use power user "
+"mode. This won't actually set any alarms on your device. This permission is "
+"needed to have the system keep OrbotService running when Orbot is not being "
+"used as a system-wide VPN."
+msgstr ""
+"ஆற்றல் பயனர் பயன்முறையைப் பயன்படுத்த அலாரங்கள் மற்றும் நினைவூட்டல்களை அமைக்க"
+" ஆர்போட்டை அனுமதிக்கவும். இது உண்மையில் உங்கள் சாதனத்தில் எந்த அலாரங்களையும்"
+" அமைக்காது. கணினி அளவிலான VPN ஆக ஆர்போட் பயன்படுத்தப்படாதபோது, ​​கணினி "
+"ஆர்போட்சர்வீசை இயக்குவதற்கு இந்த இசைவு தேவை."
+
+#, java-printf-format
+msgctxt "pref_require_password"
+msgid "Device Password Lock"
+msgstr "சாதன கடவுச்சொல் பூட்டு"
+
+#, java-printf-format
+msgctxt "pref_require_password_description"
+msgid ""
+"Prevent access to Orbot until you enter your device's password. This can be "
+"combined with Camouflage Mode to help hide that Orbot is installed on your "
+"device"
+msgstr ""
+"உங்கள் சாதனத்தின் கடவுச்சொல்லை உள்ளிடும் வரை ஆர்போட்டிற்கான அணுகலைத் "
+"தடுக்கவும். உங்கள் சாதனத்தில் ஆர்போட் நிறுவப்பட்டுள்ளது என்பதை மறைக்க உதவும்"
+" உருமறைப்பு பயன்முறையுடன் இதை இணைக்கலாம்"
+
+#, java-printf-format
+msgctxt "error_no_password_set"
+msgid ""
+"Please set a password on your device in order to use Device Password Lock"
+msgstr ""
+"சாதன கடவுச்சொல் பூட்டைப் பயன்படுத்த உங்கள் சாதனத்தில் கடவுச்சொல்லை "
+"அமைக்கவும்"
+
+#, java-printf-format
+msgctxt "unlock_app_msg"
+msgid "Your device password is needed to unlock %s"
+msgstr "%s ஐ திறக்க உங்கள் சாதன கடவுச்சொல் தேவை"
+
+#, java-printf-format
+msgctxt "invalid_bridge_format"
+msgid "Invalid bridge format"
+msgstr "தவறான பாலம் வடிவம்"
+
+#, java-printf-format
+msgctxt "error_asking_tor_for_bridges"
+msgid "Error asking Tor how to connect"
+msgstr "எவ்வாறு இணைப்பது என்று டோர் கேட்பது"

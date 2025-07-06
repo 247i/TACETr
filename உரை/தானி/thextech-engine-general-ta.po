@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (TheXTech Engine)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-09 16:38+0200\n"
-"PO-Revision-Date: 2025-03-13 06:53+0530\n"
+"POT-Creation-Date: 2025-07-03 00:56+0200\n"
+"PO-Revision-Date: 2025-07-03 09:41\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/thextech/engine-general/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.3-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. The name of the option exclusive for the flip-block only. It allows to
 #. enable the old behaviour of the block to make it behave like a typical
@@ -20,7 +20,7 @@ msgstr ""
 #, ignore-end-stop, max-length:11
 msgctxt "editor.block.canBreak"
 msgid "Can Break"
-msgstr "உடைக்க முடியும்"
+msgstr "உடையும்"
 
 #. The tooltip that explains the "Can break" option which enables the old
 #. behaviour of the flip block, making it work as a typical brick.
@@ -71,7 +71,7 @@ msgstr "தொகுதி உள்ளடக்கங்களைத் தே�
 #, ignore-end-stop, max-length:7
 msgctxt "editor.block.slick"
 msgid "Slick"
-msgstr "மென்மையாய்"
+msgstr "மென்மை"
 
 #. The question to overwrite a filename during the file saving.
 #. Where the {0} is an argument that contains a file name.
@@ -549,7 +549,7 @@ msgstr "நீங்கள் நிச்சயமாக {0} செய்ய �
 #, python-brace-format
 msgctxt "editor.file.confirmConvertFormatTo"
 msgid "Convert format to {0}?"
-msgstr "வடிவத்தை {0 க்கு ஆக மாற்றவா?"
+msgstr "வடிவத்தை {0} ஆக மாற்றவா?"
 
 #. This is a template which is used for the file saving prompt before
 #. peforming an action. The {0} is an argument that contains a name of the
@@ -775,7 +775,7 @@ msgstr "உ"
 #, ignore-end-stop, max-length:12
 msgctxt "editor.level.alwaysVis"
 msgid "Always Vis"
-msgstr "எப்போதும் பார்வையிடவும்"
+msgstr "எப்போதும் காண்"
 
 #. The shortened "Big Background" label for the checkbox at the world map, at
 #. level enter points. It enables the showing a bigger path picture under the
@@ -783,7 +783,7 @@ msgstr "எப்போதும் பார்வையிடவும்"
 #, max-length:12
 msgctxt "editor.level.bigBG"
 msgid "Big BG"
-msgstr "பெரிய பி.சி."
+msgstr "பெரிய பின்னணி"
 
 #. The shortened "Game start" label for the checkbox at the world map, at
 #. level enter points. It marks this level enter point as a game start point.
@@ -791,7 +791,7 @@ msgstr "பெரிய பி.சி."
 #, max-length:12
 msgctxt "editor.level.gameStart"
 msgid "Game Start"
-msgstr "விளையாட்டு தொடக்க"
+msgstr "விளையாடத் தொடக்கு"
 
 #. The label for a level name that will be shown at the world map when player
 #. stands on this level enter point.
@@ -805,7 +805,7 @@ msgstr "நிலை பெயர்"
 #, max-length:12
 msgctxt "editor.level.pathBG"
 msgid "Path BG"
-msgstr "பாதை பி.சி."
+msgstr "பாதை பின்னணி"
 
 #. The label for the list of path unlocks conditions: once player completes
 #. level by a specific exit type, the given path direction(s) will be opened.
@@ -983,7 +983,7 @@ msgstr "பிரிவு விரிவாக்க"
 #, python-brace-format
 msgctxt "editor.pageBlankOfBlank"
 msgid "Page {0} of {1}"
-msgstr "{1 of இன் பக்கம் {0}"
+msgstr "{1} இன் பக்கம் {0}"
 
 #. The confirmation question given on attempt to perform some actions like
 #. deletion of layers or events.
@@ -1090,7 +1090,7 @@ msgstr "நீருக்கடியில்"
 
 msgctxt "editor.select.allSectPropBlankForEventN"
 msgid "All Sect {0} for {1}"
-msgstr "{1 க்கு க்கு அனைத்து பிரிவு {0}"
+msgstr "{1} க்கு அனைத்து தேர்வு {0}"
 
 #, ignore-end-colon, python-brace-format
 msgctxt "editor.select.pathBlankUnlock"
@@ -1099,7 +1099,7 @@ msgstr "பாதை {0} திறக்கவும்"
 
 msgctxt "editor.select.sectBlankPropBlankForEventN"
 msgid "Sect {0} {1} for {2}"
-msgstr "{2 க்கு க்கு பிரிவு {0} {1}"
+msgstr "{2} க்கு தேர்வு {0} {1}"
 
 #, python-brace-format
 msgctxt "editor.select.sectionBlankPropBlank"
@@ -1715,11 +1715,19 @@ msgctxt "game.msgbox.sysInfoWarning"
 msgid "Warning!"
 msgstr "எச்சரிக்கை!"
 
-#. The native name of your language (will be shown in the language selection
-#. menu).
+#. The label that gets shown at the screen centre when game window is out of
+#. focus to indicate the fact that game is suspended.
+msgctxt "game.screenPaused"
+msgid "Paused"
+msgstr "இடைநிறுத்தப்பட்டது"
+
+#. Write the native language name here. For example, if your language is
+#. German, you should write "Deutsch", or if your language is Japanese, you
+#. should write "日本語". This name will be shown in the languages selection
+#. menu.
 msgctxt "languageName"
 msgid "English"
-msgstr "ஆங்கிலம்"
+msgstr "தமிழ்"
 
 msgctxt "menu.abbrevMilliseconds"
 msgid "MS"
@@ -2229,7 +2237,7 @@ msgstr "கிளாசிக்"
 
 msgctxt "menu.controls.wii.typeNunchuck"
 msgid "Nunchuck"
-msgstr "Nunchuck"
+msgstr "சங்கிலித் தண்டுகள்"
 
 #, ignore-same
 msgctxt "menu.controls.wii.typeWiimote"
@@ -2533,7 +2541,7 @@ msgstr "எச்சரிக்கை"
 
 msgctxt "menu.options.advanced.record-gameplay-data"
 msgid "Record gameplay"
-msgstr "விளையாட்டு விளையாட்டு"
+msgstr "விளையாட்டுப் பதிவு"
 
 msgctxt "menu.options.advanced.render._name"
 msgid "Render mode"
@@ -2682,25 +2690,77 @@ msgctxt "menu.options.advanced.fullscreen-type._name"
 msgid "Fullscreen type"
 msgstr "முழுத்திரை வகை"
 
+#. Type of the full-screen mode ("desktop" without changing real screen's
+#. resolution or "exclusive" with full seizing of monitor for game's render
+#. and changing the video mode including colour format).
 msgctxt "menu.options.advanced.fullscreen-type.auto"
 msgid "Auto"
 msgstr "தானி"
 
+#. Type of the full-screen mode: "desktop" is a mode that doesn't affects the
+#. screen's resolution, the window will be stretched to the current screen
+#. resolution and will be shown over other desktop environment elements.
 msgctxt "menu.options.advanced.fullscreen-type.desktop"
 msgid "Desktop"
 msgstr "டெச்க்டாப்"
 
+#. Description for the type of the full-screen mode: "desktop" is a mode that
+#. doesn't affects the screen's resolution, the window will be stretched to
+#. the current screen resolution and will be shown over other desktop
+#. environment elements.
 msgctxt "menu.options.advanced.fullscreen-type.desktop-tip"
 msgid "Keep the current screen resolution"
 msgstr "தற்போதைய திரை தெளிவுத்திறனை வைத்திருங்கள்"
 
-msgctxt "menu.options.advanced.fullscreen-type.real"
+#. Type of the full-screen mode: "exclusive" is a mode where whole monitor
+#. will be seized by the game, and the physical resolution and colour mode
+#. will be installed. This mode is suggested for old or slow video cards and
+#. computers which are unable to keep the stable and enough framerate for
+#. comfortable gameplay.
+msgctxt "menu.options.advanced.fullscreen-type.exclusive"
 msgid "Exclusive"
 msgstr "பிரத்தியேக"
 
-msgctxt "menu.options.advanced.fullscreen-type.real-tip"
+#. Description for the type of the full-screen mode: "exclusive" is a mode
+#. where whole monitor will be seized by the game, and the physical resolution
+#. and colour mode will be installed. This mode is suggested for old or slow
+#. video cards and computers which are unable to keep the stable and enough
+#. framerate for comfortable gameplay.
+msgctxt "menu.options.advanced.fullscreen-type.exclusive-tip"
 msgid "Set physical screen resolution"
 msgstr "உடல் திரை தெளிவுத்திறனை அமைக்கவும்"
+
+#. Colour depth for the exclusive video mode (16-bit colour mode works quicker
+#. on old video cards, however, colours might be slightly distorted).
+msgctxt "menu.options.advanced.fullscreen-depth.16"
+msgid "16-bit"
+msgstr "16-பிட்"
+
+#. Colour depth for the exclusive video mode (32-bit colour mode allows
+#. display the same colours as original defines, however, this mode might work
+#. way slower on old video cards, or even install the limit of the maximum
+#. resolution).
+msgctxt "menu.options.advanced.fullscreen-depth.32"
+msgid "32-bit"
+msgstr "32-பிட்"
+
+#. Option that sets the colour depth for the exclusive video mode (depending
+#. on the colour depth, the colours quality and the performance on old video
+#. card will be different).
+msgctxt "menu.options.advanced.fullscreen-depth._name"
+msgid "Exclusive bit depth"
+msgstr "பிரத்யேக பிட் ஆழம்"
+
+#. Value of the colour depth option. Colour depth will be chosen
+#. automatically.
+msgctxt "menu.options.advanced.fullscreen-depth.auto"
+msgid "Auto"
+msgstr "தானி"
+
+#. Option that sets the physical resolution of the exclusive full-screen mode.
+msgctxt "menu.options.advanced.fullscreen-res"
+msgid "Exclusive res"
+msgstr "பிரத்யேக ரெச்"
 
 msgctxt "menu.options.audio._header"
 msgid "Audio"
@@ -3064,6 +3124,12 @@ msgstr "முழு"
 msgctxt "menu.options.video.scale-mode.center"
 msgid "Center"
 msgstr "நடுவண்"
+
+#. Video scale mode: 3x factor
+#, ignore-same
+msgctxt "menu.options.video.scale-mode.3x"
+msgid "3x"
+msgstr "Zks"
 
 msgctxt "menu.options.video.show-episode-title._name"
 msgid "Episode name"

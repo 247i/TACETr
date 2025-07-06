@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Pachli)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-24 13:29+0200\n"
-"PO-Revision-Date: 2025-06-14 06:57\n"
+"POT-Creation-Date: 2025-07-05 03:55+0200\n"
+"PO-Revision-Date: 2025-07-05 16:19\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/pachli/app-main/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #, java-printf-format
 msgctxt "error_empty"
@@ -22,7 +22,7 @@ msgstr "இது காலியாக இருக்க கூடாது."
 #, java-printf-format
 msgctxt "error_no_web_browser_found"
 msgid "Couldn't find a web browser to use."
-msgstr "வலை உலாவிகள் ஏதுமில்லை"
+msgstr "வலை உலாவிகள் ஏதுமில்லை."
 
 #, java-printf-format
 msgctxt "error_compose_character_limit"
@@ -67,7 +67,7 @@ msgstr "பதிவேற்றம் தோல்வியுற்றது."
 #, java-printf-format
 msgctxt "error_sender_account_gone"
 msgid "Error sending post."
-msgstr "டூத் அனுப்புவதில் பிழை ஏற்பட்டுள்ளது"
+msgstr "அறிவிப்பு அனுப்புவதில் பிழை ஏற்பட்டுள்ளது."
 
 #, java-printf-format
 msgctxt "error_following_hashtag_format"
@@ -255,6 +255,32 @@ msgid "Followed hashtags"
 msgstr "ஏச்டேக்குகளைத் தொடர்ந்து"
 
 #, java-printf-format
+msgctxt "followed_hashtags_posts_count_fmt"
+msgid "%1$d post"
+msgid_plural "%1$d posts"
+msgstr[0] "%1$d post"
+msgstr[1] "%1$d posts"
+
+#, java-printf-format
+msgctxt "followed_hashtags_accounts_count_fmt"
+msgid "%1$d account"
+msgid_plural "%1$d accounts"
+msgstr[0] "%1$d கணக்கு"
+msgstr[1] "%1$d accounts"
+
+#, java-printf-format
+msgctxt "followed_hashtags_days_count_fmt"
+msgid "%1$d day"
+msgid_plural "%1$d days"
+msgstr[0] "%1$d நாள்"
+msgstr[1] "%1$d நாட்கள்"
+
+#, java-printf-format
+msgctxt "followed_hashtags_summary_fmt"
+msgid "%1$s from %2$s (last %3$s)"
+msgstr "%2$s இலிருந்து %1$s (கடைசி %3$s)"
+
+#, java-printf-format
 msgctxt "title_edits"
 msgid "Edits"
 msgstr "திருத்தங்கள்"
@@ -390,18 +416,38 @@ msgid "Unknown reason"
 msgstr "தெரியாத காரணம்"
 
 #, java-printf-format
+msgctxt "notification_severed_relationships_domain_block_fmt"
+msgid "An admin of %1$s blocked <b>%2$s</b>"
+msgstr "%1$s இன் நிர்வாகி <b> %2$s </b>"
+
+#, java-printf-format
+msgctxt "notification_severed_relationships_user_domain_block_fmt"
+msgid "You blocked <b>%1$s</b>"
+msgstr "You blocked <b>%1$s</b>"
+
+#, java-printf-format
+msgctxt "notification_severed_relationships_account_suspension_fmt"
+msgid "An admin of %1$s blocked <b>%2$s</b>"
+msgstr "%1$s இன் நிர்வாகி <b> %2$s </b>"
+
+#, java-printf-format
+msgctxt "notification_severed_relationships_unknown_fmt"
+msgid "<b>%1$s</b> is blocked (unknown reason)"
+msgstr "<b>%1$s </b> தடுக்கப்பட்டுள்ளது (அறியப்படாத காரணம்)"
+
+#, java-printf-format
 msgctxt "notification_severed_relationships_summary_followers_fmt"
-msgid "%1$s follower removed"
-msgid_plural "%1$s followers removed"
-msgstr[0] "%1$s பின்தொடர்பவர் அகற்றப்பட்டார்"
-msgstr[1] "%1$s பின்தொடர்பவர்கள் அகற்றப்பட்டனர்"
+msgid "%1$s follower removed."
+msgid_plural "%1$s followers removed."
+msgstr[0] "%1$s பின்தொடர்பவர் அகற்றப்பட்டார்."
+msgstr[1] "%1$s பின்தொடர்பவர்கள் அகற்றப்பட்டனர்."
 
 #, java-printf-format
 msgctxt "notification_severed_relationships_summary_following_fmt"
-msgid "%1$s account you follow removed"
-msgid_plural "%1$s accounts you follow removed"
-msgstr[0] "நீங்கள் பின்பற்றிய %1$s கணக்கு அகற்றப்பட்டது"
-msgstr[1] "நீங்கள் பின்பற்றிய %1$s கணக்குகள் அகற்றப்பட்டன"
+msgid "%1$s account you follow removed."
+msgid_plural "%1$s accounts you follow removed."
+msgstr[0] "%1$s account you follow removed."
+msgstr[1] "%1$s accounts you follow removed."
 
 #, java-printf-format
 msgctxt "notification_unknown"
@@ -415,8 +461,10 @@ msgstr "%s %s"
 
 #, java-printf-format
 msgctxt "notification_summary_report_format"
-msgid "%s · %d posts attached"
-msgstr "%s · %d பதிவுகள் இணைக்கப்பட்டுள்ளன"
+msgid "%1$s · %2$d post attached"
+msgid_plural "%1$s · %2$d posts attached"
+msgstr[0] "%1$s · %2$d இடுகை இணைக்கப்பட்டுள்ளது"
+msgstr[1] "%1$s · %2$d பதிவுகள் இணைக்கப்பட்டுள்ளன"
 
 #, java-printf-format
 msgctxt "report_username_format"
@@ -472,18 +520,6 @@ msgstr "புத்தகக்குறியை அகற்று"
 msgctxt "action_compose"
 msgid "Compose"
 msgstr "எழுது"
-
-#, java-printf-format
-msgctxt "action_logout"
-msgid "Log out"
-msgstr "வெளியேறு"
-
-#, java-printf-format
-msgctxt "action_logout_confirm"
-msgid ""
-"Are you sure you want to log out of %1$s? This will delete all local data of"
-" the account, including drafts and preferences."
-msgstr "நீங்கள் %1$s கணக்கிலிருந்து வெளியேற விரும்புகிறீர்களா?"
 
 #, java-printf-format
 msgctxt "action_post_failed"
@@ -616,6 +652,26 @@ msgstr "டூட்"
 msgctxt "action_send_public"
 msgid "TOOT!"
 msgstr "டூட்!"
+
+#, java-printf-format
+msgctxt "action_send_public_content_description"
+msgid "Send public post"
+msgstr "பொது பதவியை அனுப்பவும்"
+
+#, java-printf-format
+msgctxt "action_send_unlisted_content_description"
+msgid "Send unlisted post"
+msgstr "பட்டியலிடப்படாத இடுகையை அனுப்பவும்"
+
+#, java-printf-format
+msgctxt "action_send_private_content_description"
+msgid "Send followers-only post"
+msgstr "பின்தொடர்பவர்களுக்கு மட்டுமே இடுகையை அனுப்பவும்"
+
+#, java-printf-format
+msgctxt "action_send_direct_content_description"
+msgid "Send direct message"
+msgstr "நேரடி செய்தியை அனுப்பவும்"
 
 #, java-printf-format
 msgctxt "action_view_preferences"
@@ -868,9 +924,9 @@ msgid "Copy the link"
 msgstr "இணைப்பை நகலெடுக்கவும்"
 
 #, java-printf-format
-msgctxt "action_share_as"
-msgid "Share as …"
-msgstr "பகிர்ந்து கொள்ளுங்கள்…"
+msgctxt "action_refresh_account"
+msgid "Refresh account"
+msgstr "கணக்கைப் புதுப்பிக்கவும்"
 
 #, java-printf-format
 msgctxt "download_media"
@@ -940,7 +996,7 @@ msgstr "#%s மறைக்கப்பட்டுள்ளன"
 #, java-printf-format
 msgctxt "confirmation_hashtag_unmuted"
 msgid "#%s unhidden"
-msgstr "#% S நிறுத்தங்கள்"
+msgstr "#%s மறைநீக்கம்"
 
 #, java-printf-format
 msgctxt "confirmation_hashtag_unfollowed"
@@ -981,6 +1037,11 @@ msgstr "சுயவிவரம்"
 msgctxt "hint_search"
 msgid "Search…"
 msgstr "தேடல்…"
+
+#, java-printf-format
+msgctxt "hint_search_emojis"
+msgid "Search emojis…"
+msgstr "ஈமோசிகளைத் தேடுங்கள்…"
 
 #, java-printf-format
 msgctxt "hint_description"
@@ -1146,53 +1207,58 @@ msgstr "எனக்கு தெரிவி எப்போதெனில்"
 
 #, java-printf-format
 msgctxt "pref_title_notification_filter_mentions"
-msgid "mentioned"
-msgstr "என்னை குறிபிடும்போது"
+msgid "Mentioned"
+msgstr "குறிப்பிடப்பட்டுள்ளது"
 
 #, java-printf-format
 msgctxt "pref_title_notification_filter_follows"
-msgid "followed"
-msgstr "என்னை பின்பற்றினால்"
+msgid "Followed"
+msgstr "தொடர்ந்து"
 
 #, java-printf-format
 msgctxt "pref_title_notification_filter_follow_requests"
-msgid "follow requested"
+msgid "Follow requested"
 msgstr "கோரப்பட்டதைப் பின்தொடரவும்"
 
 #, java-printf-format
 msgctxt "pref_title_notification_filter_reblogs"
-msgid "my posts are boosted"
-msgstr "என் பதிவுகள் அதிகரிக்கப்பட்டால்"
+msgid "My posts are boosted"
+msgstr "எனது பதிவுகள் உயர்த்தப்பட்டுள்ளன"
 
 #, java-printf-format
 msgctxt "pref_title_notification_filter_favourites"
-msgid "my posts are favorited"
-msgstr "என் பதிவுகள் பிடித்தவையானால்"
+msgid "My posts are favorited"
+msgstr "எனது பதிவுகள் பிடித்தவை"
 
 #, java-printf-format
 msgctxt "pref_title_notification_filter_poll"
-msgid "polls have ended"
+msgid "Polls have ended"
 msgstr "கருத்துக் கணிப்புகள் முடிந்துவிட்டன"
 
 #, java-printf-format
 msgctxt "pref_title_notification_filter_subscriptions"
-msgid "somebody I'm subscribed to published a new post"
+msgid "Somebody I'm subscribed to published a new post"
 msgstr "யாரோ ஒரு புதிய இடுகையை வெளியிட நான் சந்தா செலுத்தியுள்ளேன்"
 
 #, java-printf-format
 msgctxt "pref_title_notification_filter_sign_ups"
-msgid "somebody signed up"
+msgid "Somebody signed up"
 msgstr "யாரோ ஒருவர் கையெழுத்திட்டார்"
 
 #, java-printf-format
 msgctxt "pref_title_notification_filter_updates"
-msgid "a post I've interacted with is edited"
+msgid "A post I've interacted with is edited"
 msgstr "நான் தொடர்பு கொண்ட ஒரு இடுகை திருத்தப்பட்டது"
 
 #, java-printf-format
 msgctxt "pref_title_notification_filter_reports"
-msgid "there's a new report"
+msgid "There's a new report"
 msgstr "ஒரு புதிய அறிக்கை உள்ளது"
+
+#, java-printf-format
+msgctxt "pref_title_notification_filter_severed_relationships"
+msgid "A follow/following relationship is severed"
+msgstr "பின்தொடர்/பின்வரும் உறவு துண்டிக்கப்படுகிறது"
 
 #, java-printf-format
 msgctxt "pref_title_appearance_settings"
@@ -1231,8 +1297,18 @@ msgstr "உலாவி"
 
 #, java-printf-format
 msgctxt "pref_title_custom_tabs"
-msgid "Use Chrome Custom Tabs"
-msgstr "Chrome தனிப்பயன் கீற்றை பயன்படுத்து"
+msgid "Open links in Custom Tabs"
+msgstr "தனிப்பயன் தாவல்களில் இணைப்புகளைத் திறக்கவும்"
+
+#, java-printf-format
+msgctxt "pref_custom_tabs_true"
+msgid "Faster, your preferred browser in Pachli"
+msgstr "வேகமாக, பச்லியில் நீங்கள் விரும்பும் உலாவி"
+
+#, java-printf-format
+msgctxt "pref_custom_tabs_false"
+msgid "Slower, uses your preferred browser"
+msgstr "மெதுவாக, உங்களுக்கு விருப்பமான உலாவியைப் பயன்படுத்துகிறது"
 
 #, java-printf-format
 msgctxt "pref_title_hide_follow_button"
@@ -1457,7 +1533,7 @@ msgstr "ஊக்கியாக"
 #, java-printf-format
 msgctxt "notification_boost_description"
 msgid "Notifications when your posts get boosted"
-msgstr "எமது toot மேலேற்றும் போது தெரிவி."
+msgstr "எமது அறிவிப்பு மேலேற்றும்போது தெரிவி"
 
 #, java-printf-format
 msgctxt "notification_favourite_name"
@@ -1467,7 +1543,7 @@ msgstr "பிடித்தவைகள்"
 #, java-printf-format
 msgctxt "notification_favourite_description"
 msgid "Notifications when your posts get marked as favorite"
-msgstr "எமது toot பிடித்தவையானால் தெரிவி."
+msgstr "எமது அறிவிப்பு பிடித்தவையானால் தெரிவி"
 
 #, java-printf-format
 msgctxt "notification_poll_name"
@@ -1587,11 +1663,6 @@ msgctxt "description_account_locked"
 msgid "Locked Account"
 msgstr "கணக்கு மூடப்பட்டது"
 
-#, java-printf-format
-msgctxt "about_pachli_version"
-msgid "Pachli %s"
-msgstr "Pachli(டஸ்கி) %s"
-
 #.  note to translators:
 #.          * you should think of “free” as in “free speech,” not as in “free
 #. beer”.
@@ -1610,11 +1681,6 @@ msgstr "Toot உள்ளடக்கத்தைப் பகிர்"
 msgctxt "post_share_link"
 msgid "Share link to post"
 msgstr "Toot இணைப்பைப் பகிர்"
-
-#, java-printf-format
-msgctxt "post_media_image"
-msgid "Image"
-msgstr "படம்"
 
 #, java-printf-format
 msgctxt "post_media_images"
@@ -1735,9 +1801,9 @@ msgid "Media"
 msgstr "ஊடகம்"
 
 #, java-printf-format
-msgctxt "replying_to"
-msgid "Replying to @%s"
-msgstr "@%s -க்கு பதிலளி"
+msgctxt "pref_title_public_filter_home_and_lists"
+msgid "Home and lists"
+msgstr "வீடு மற்றும் பட்டியல்கள்"
 
 #, java-printf-format
 msgctxt "pref_title_public_filter_keywords"
@@ -1746,8 +1812,8 @@ msgstr "பொது காலவரிசைகள்"
 
 #, java-printf-format
 msgctxt "pref_title_thread_filter_keywords"
-msgid "Threads"
-msgstr "நூல்கள்"
+msgid "Conversations"
+msgstr "உரையாடல்கள்"
 
 #, java-printf-format
 msgctxt "pref_title_account_filter_keywords"
@@ -1785,7 +1851,7 @@ msgid ""
 "When the keyword or phrase is alphanumeric only, it will only be applied if "
 "it matches the whole word"
 msgstr ""
-"முக்கிய சொல் அல்லது சொற்றொடர் எண்ணெழுத்து மட்டுமே இருக்கும்போது, ​​அது முழு "
+"முக்கிய சொல் அல்லது சொற்றொடர் எண்ணெழுத்து மட்டுமே இருக்கும்போது, அது முழு "
 "வார்த்தையுடனும் பொருந்தினால் மட்டுமே அது பயன்படுத்தப்படும்"
 
 #, java-printf-format
@@ -1799,14 +1865,14 @@ msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #, java-printf-format
-msgctxt "add_account_name"
-msgid "Add Account"
-msgstr "கணக்கை சேர்க்க"
+msgctxt "add_account_description"
+msgid "Add new Mastodon account"
+msgstr "புதிய மாச்டோடன் கணக்கைச் சேர்க்கவும்"
 
 #, java-printf-format
-msgctxt "add_account_description"
-msgid "Add new Mastodon Account"
-msgstr "புதிய Mastodon கணக்கைச் சேர்க்க"
+msgctxt "manage_accounts_name"
+msgid "Manage accounts"
+msgstr "கணக்குகளை நிர்வகிக்கவும்"
 
 #, java-printf-format
 msgctxt "manage_lists"
@@ -1819,14 +1885,6 @@ msgid "Posting as %1$s"
 msgstr "%1$s கணக்குடன் பதிவிட"
 
 #, java-printf-format
-msgctxt "hint_describe_for_visually_impaired"
-msgid "Describe content for the visually impaired (%d character limit)"
-msgid_plural ""
-"Describe contents for the visually impaired (%d character limit)"
-msgstr[0] "பார்வையற்றோருக்கான உள்ளடக்கத்தை விவரிக்கவும் (%d எழுத்து வரம்பு)"
-msgstr[1] "பார்வையற்றோருக்கான உள்ளடக்கங்களை விவரிக்கவும் (%d எழுத்து வரம்பு)"
-
-#, java-printf-format
 msgctxt "set_focus_description"
 msgid ""
 "Tap or drag the circle to choose the focal point which will always be "
@@ -1834,11 +1892,6 @@ msgid ""
 msgstr ""
 "சிறுபடங்களில் எப்போதும் காணப்படும் மைய புள்ளியைத் தேர்வுசெய்ய வட்டத்தைத் "
 "தட்டவும் அல்லது இழுக்கவும்."
-
-#, java-printf-format
-msgctxt "action_set_caption"
-msgid "Set caption"
-msgstr "தலைப்பை அமை"
 
 #, java-printf-format
 msgctxt "action_set_focus"
@@ -1924,6 +1977,11 @@ msgstr "தங்கள் %s instance(களம்)-ல் எந்தவொ�
 msgctxt "emoji_style"
 msgid "Emoji style"
 msgstr "Emoji பாணி"
+
+#, java-printf-format
+msgctxt "label_emoji_no_category"
+msgid "No category"
+msgstr "வகை இல்லை"
 
 #, java-printf-format
 msgctxt "system_default"
@@ -2141,7 +2199,7 @@ msgstr "நேரடி"
 #, java-printf-format
 msgctxt "description_poll"
 msgid "Poll with choices: %1$s, %2$s, %3$s, %4$s; %5$s"
-msgstr "தேர்வுகளுடன் வாக்கெடுப்பு: %1$s, %2$s, %3$s, %4 $ s; %5 $ கள்"
+msgstr "தேர்வுகளுடன் வாக்கெடுப்பு: %1$s, %2$s, %3$s, %4$s; %5$s"
 
 #, java-printf-format
 msgctxt "description_post_language"
@@ -2236,12 +2294,12 @@ msgstr "உங்கள் எல்லா அறிவிப்புகளை�
 #, java-printf-format
 msgctxt "compose_preview_image_description"
 msgid "Actions for image %s"
-msgstr "படங்களுக்கான செயல்கள்"
+msgstr "படங்களுக்கான செயல்கள் %s"
 
 #, java-printf-format
 msgctxt "poll_info_format"
 msgid "<!-- 15 votes • 1 hour left -->%1$s • %2$s"
-msgstr "<!-15 வாக்குகள் • 1 மணிநேரம் மீதமுள்ளது-> %1$s • %2$s"
+msgstr "<!-- 15 வாக்குகள் • 1 மணிநேரம் மீதமுள்ளது--> %1$s • %2$s"
 
 #, java-printf-format
 msgctxt "poll_info_votes"
@@ -2255,7 +2313,7 @@ msgctxt "poll_info_people"
 msgid "%s person"
 msgid_plural "%s people"
 msgstr[0] "%s நபர்"
-msgstr[1] "%மக்கள்"
+msgstr[1] "%s நபர்கள்"
 
 #, java-printf-format
 msgctxt "poll_info_time_absolute"
@@ -2300,7 +2358,7 @@ msgctxt "poll_timespan_hours"
 msgid "%d hour left"
 msgid_plural "%d hours left"
 msgstr[0] "%d மணிநேரம் மீதமுள்ளது"
-msgstr[1] "%d மணிநேரம் மீதமுள்ளது"
+msgstr[1] "%d மணிநேரங்கள் மீதமுள்ளது"
 
 #, java-printf-format
 msgctxt "poll_timespan_minutes"
@@ -2315,11 +2373,6 @@ msgid "%d second left"
 msgid_plural "%d seconds left"
 msgstr[0] "%d இரண்டாவது இடது"
 msgstr[1] "%d விநாடிகள் எஞ்சியுள்ளன"
-
-#, java-printf-format
-msgctxt "button_continue"
-msgid "Continue"
-msgstr "தொடரவும்"
 
 #, java-printf-format
 msgctxt "button_back"
@@ -2675,6 +2728,11 @@ msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #, java-printf-format
+msgctxt "title_report_category_fmt"
+msgid "Category: %1$s"
+msgstr "வகை: %1$s"
+
+#, java-printf-format
 msgctxt "report_category_violation"
 msgid "Rule violation"
 msgstr "விதி மீறல்"
@@ -2688,6 +2746,11 @@ msgstr "ச்பேம்"
 msgctxt "report_category_other"
 msgid "Other"
 msgstr "மற்றொன்று"
+
+#, java-printf-format
+msgctxt "title_report_comment"
+msgid "Comment from reporter"
+msgstr "நிருபரிடமிருந்து கருத்து"
 
 #, java-printf-format
 msgctxt "action_unfollow_hashtag_format"
@@ -2719,7 +2782,7 @@ msgid ""
 msgstr ""
 "இந்த இடுகை திருத்தப்பட்டது என்பது உங்கள் சேவையகத்தைத் தெரியும், ஆனால் திருத்தங்களின் நகல் இல்லை, எனவே அவற்றை உங்களுக்குக் காட்ட முடியாது.\n"
 "\n"
-" இது <a href = \"https://github.com/mastodon/mastodon/issues/25398\"> மாச்டோடன் வெளியீடு #25398 </a>."
+" இது <a href=\"https://github.com/mastodon/mastodon/issues/25398\"> மாச்டோடன் வெளியீடு #25398 </a>."
 
 #, java-printf-format
 msgctxt "a11y_label_loading_thread"
@@ -2942,21 +3005,6 @@ msgid "Tell me about new Pachli versions"
 msgstr "புதிய பச்ச்லி பதிப்புகள் பற்றி சொல்லுங்கள்"
 
 #, java-printf-format
-msgctxt "pref_update_notification_frequency_never"
-msgid "Never"
-msgstr "ஒருபோதும்"
-
-#, java-printf-format
-msgctxt "pref_update_notification_frequency_once_per_version"
-msgid "Once per version"
-msgstr "ஒரு பதிப்பிற்கு ஒரு முறை"
-
-#, java-printf-format
-msgctxt "pref_update_notification_frequency_always"
-msgid "Always"
-msgstr "எப்போதும்"
-
-#, java-printf-format
 msgctxt "update_dialog_title"
 msgid "An update is available"
 msgstr "புதுப்பிப்பு கிடைக்கிறது"
@@ -3073,42 +3121,6 @@ msgid "Battery optimisation does not need to be disabled."
 msgstr "பேட்டரி தேர்வுமுறை முடக்கப்பட வேண்டிய அவசியமில்லை."
 
 #, java-printf-format
-msgctxt "pref_notification_method_push"
-msgid "Push"
-msgstr "புச்"
-
-#, java-printf-format
-msgctxt "pref_notification_method_pull"
-msgid "Pull"
-msgstr "இழுக்கவும்"
-
-#, java-printf-format
-msgctxt "pref_notification_fetch_method_title"
-msgid "Notification method"
-msgstr "அறிவிப்பு முறை"
-
-#, java-printf-format
-msgctxt "pref_notification_fetch_ok_timestamp_fmt"
-msgid "✔ %1$s ago @ %2$s"
-msgstr "✔ %1$s ago @ %2$s"
-
-#, java-printf-format
-msgctxt "pref_notification_fetch_err_timestamp_fmt"
-msgid "✖ %1$s ago @ %2$s"
-msgstr "✖ %1$s ago @ %2$s"
-
-#, java-printf-format
-msgctxt "pref_notification_fetch_needs_push"
-msgid ""
-"Account does not have \"push\" scope. Logging out and back in may fix this."
-msgstr "கணக்கில் \"புச்\" நோக்கம் இல்லை. வெளியேறி மறுநிகழ்வு இதை சரிசெய்யலாம்."
-
-#, java-printf-format
-msgctxt "pref_notification_fetch_server_rejected"
-msgid "%1$s rejected push registration"
-msgstr "%1$s நிராகரிக்கப்பட்ட புச் பதிவு"
-
-#, java-printf-format
 msgctxt "pref_title_change_unified_push_distributor"
 msgid "Change Unified Push distributor"
 msgstr "ஒருங்கிணைந்த புச் விநியோகச்தரை மாற்றவும்"
@@ -3146,8 +3158,8 @@ msgstr "அடுத்த திட்டமிடப்பட்ட காச�
 
 #, java-printf-format
 msgctxt "error_media_download"
-msgid "Could not download %1$s: %2$d %3$s"
-msgstr "%1$s ஐ பதிவிறக்கம் செய்ய முடியவில்லை: %2$d %3$s"
+msgid "Could not download %1$s: %2$s"
+msgstr "%1$s ஐ பதிவிறக்கம் செய்ய முடியவில்லை: %2$s"
 
 #, java-printf-format
 msgctxt "action_add_to_tab"
@@ -3788,49 +3800,13 @@ msgstr "சேவையகத்தால் அறியப்பட்ட ப�
 #, java-printf-format
 msgctxt "upload_failed_msg_fmt"
 msgid ""
-"The upload will be retried when you send the post. If it fails again the post will be saved in your drafts.\n"
+"Uploading attachment failed. The upload will be retried when you send the post. If it fails again the post will be saved in your drafts.\n"
 "\n"
 "The error was: %1$s"
 msgstr ""
-"நீங்கள் இடுகையை அனுப்பும்போது பதிவேற்றம் மீண்டும் செய்யப்படும். அது மீண்டும் தோல்வியுற்றால், உங்கள் வரைவுகளில் இடுகை சேமிக்கப்படும்.\n"
+"பதிவேற்றும் இணைப்பு தோல்வியடைந்தது. நீங்கள் இடுகையை அனுப்பும்போது பதிவேற்றம் மீண்டும் செய்யப்படும். அது மீண்டும் தோல்வியுற்றால், உங்கள் வரைவுகளில் இடுகை சேமிக்கப்படும். \n"
 "\n"
-" பிழை: %1$s"
-
-#, java-printf-format
-msgctxt "upload_failed_modify_attachment"
-msgid "Modify attachment"
-msgstr "இணைப்பை மாற்றவும்"
-
-#, java-printf-format
-msgctxt "main_viewmodel_error_set_active_account"
-msgid ""
-"Trying to log in failed with the following error:\n"
-"\n"
-"%1$s"
-msgstr ""
-"உள்நுழைய முயற்சிப்பது பின்வரும் பிழையுடன் தோல்வியுற்றது:\n"
-"\n"
-" %1$s"
-
-#, java-printf-format
-msgctxt "main_viewmodel_error_refresh_account"
-msgid ""
-"Refreshing account failed with the following error:\n"
-"\n"
-"%1$s\n"
-"\n"
-"You can continue, but your lists and filters may be incomplete."
-msgstr ""
-"புத்துணர்ச்சியூட்டும் கணக்கு பின்வரும் பிழையுடன் தோல்வியடைந்தது:\n"
-"\n"
-" %1$s\n"
-"\n"
-" நீங்கள் தொடரலாம், ஆனால் உங்கள் பட்டியல்கள் மற்றும் வடிப்பான்கள் முழுமையடையாது."
-
-#, java-printf-format
-msgctxt "action_relogin"
-msgid "Re-login"
-msgstr "மறு உள்நுழைவு"
+"பிழை: %1$s"
 
 #, java-printf-format
 msgctxt "pref_title_account_notification_filters"
@@ -3854,6 +3830,36 @@ msgstr "… கடந்த 30 நாட்களில் உருவாக்
 
 #, java-printf-format
 msgctxt "pref_account_notification_filters_label_limited_by_server"
+msgid "… limited by your moderators"
+msgstr "… உங்கள் மதிப்பீட்டாளர்களால் வரையறுக்கப்பட்டுள்ளது"
+
+#, java-printf-format
+msgctxt "pref_title_account_conversation_filters"
+msgid "Conversation filters"
+msgstr "உரையாடல் வடிப்பான்கள்"
+
+#, java-printf-format
+msgctxt "pref_summary_account_conversation_filters"
+msgid "Your server does not support conversation filters"
+msgstr "உங்கள் சேவையகம் உரையாடல் வடிப்பான்களை ஆதரிக்காது"
+
+#, java-printf-format
+msgctxt "pref_account_conversation_filters_subtitle"
+msgid "What should happen to conversations started by accounts…"
+msgstr "கணக்குகளால் தொடங்கப்பட்ட உரையாடல்களுக்கு என்ன நடக்க வேண்டும்…"
+
+#, java-printf-format
+msgctxt "pref_account_conversation_filters_label_not_followed"
+msgid "… you don't follow"
+msgstr "… நீங்கள் பின்பற்றவில்லை"
+
+#, java-printf-format
+msgctxt "pref_account_conversation_filters_label_younger_30d"
+msgid "… created in last 30 days"
+msgstr "… கடந்த 30 நாட்களில் உருவாக்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "pref_account_conversation_filters_label_limited_by_server"
 msgid "… limited by your moderators"
 msgstr "… உங்கள் மதிப்பீட்டாளர்களால் வரையறுக்கப்பட்டுள்ளது"
 
@@ -3902,3 +3908,28 @@ msgctxt "account_filter_placeholder_label_limited_by_server"
 msgid "Filtered because: <b>limited by your moderators</b>"
 msgstr ""
 "வடிகட்டப்பட்டது: <b> உங்கள் மதிப்பீட்டாளர்களால் வரையறுக்கப்பட்டுள்ளது </b>"
+
+#, java-printf-format
+msgctxt "account_filter_placeholder_type_conversation"
+msgid "A user @<b>%1$s</b> started a conversation"
+msgstr "ஒரு பயனர் @<b>%1$s </b> உரையாடலைத் தொடங்கினார்"
+
+#, java-printf-format
+msgctxt "ui_error_reload_reply_fmt"
+msgid "Could not load post: %1$s"
+msgstr "இடுகையை ஏற்ற முடியவில்லை: %1$s"
+
+#, java-printf-format
+msgctxt "export_preferences_ok_fmt"
+msgid "Preferences exported to %1$s"
+msgstr "விருப்பத்தேர்வுகள் %1$s க்கு ஏற்றுமதி செய்யப்படுகின்றன"
+
+#, java-printf-format
+msgctxt "error_export_preferences_fmt"
+msgid "Could not export preferences to %1$s: %2$s"
+msgstr "விருப்பங்களை %1$s க்கு ஏற்றுமதி செய்ய முடியவில்லை: %2$s"
+
+#, java-printf-format
+msgctxt "error_import_preferences_fmt"
+msgid "Could not import preferences from %1$s: %2$s"
+msgstr "%1$s இலிருந்து விருப்பங்களை இறக்குமதி செய்ய முடியவில்லை: %2$s"

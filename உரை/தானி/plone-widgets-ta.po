@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (plone)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-27 11:12+0200\n"
-"PO-Revision-Date: 2025-01-27 18:13+0530\n"
+"POT-Creation-Date: 2025-07-05 02:43+0200\n"
+"PO-Revision-Date: 2025-07-05 11:22\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/plone/widgets/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
+
+#: pat/structure/js/views/app.js
+msgid "${current} of ${total} selected"
+msgstr "$ {current} தேர்ந்தெடுக்கப்பட்ட $ {தற்போதைய"
+
+#: pat/contentbrowser/src/ContentBrowser.svelte
+msgid "${item_count} items selected"
+msgstr "{{item_count} தேர்ந்தெடுக்கப்பட்ட உருப்படிகள்"
 
 #: pat/structure/templates/actionmenu.xml
 msgid "Actions"
@@ -46,6 +54,10 @@ msgstr "உலாவு"
 msgid "Cancel"
 msgstr "ரத்துசெய்"
 
+#: pat/structure/js/views/selectionwell.js
+msgid "Cancel selection"
+msgstr "தேர்வை நீக்கறல்"
+
 #: pat/upload/templates/upload.xml
 msgid "Choose File"
 msgstr "கோப்பைத் தேர்வுசெய்க"
@@ -72,7 +84,7 @@ msgstr "நகலெடுக்கப்பட்டது"
 
 #: pat/structure/js/actionmenu.js
 msgid "Copy"
-msgstr "நகலெடு"
+msgstr "நகல்"
 
 #: pat/relateditems/relateditems.js
 msgid "Current path:"
@@ -81,6 +93,10 @@ msgstr "தற்போதைய பாதை:"
 #: pat/structure/js/actionmenu.js
 msgid "Cut"
 msgstr "வெட்டு"
+
+#: pat/contentbrowser/src/ContentBrowser.svelte
+msgid "Description"
+msgstr "விவரம்"
 
 #: pat/formunloadalert/formunloadalert.js
 msgid ""
@@ -107,7 +123,7 @@ msgstr "கோப்புகளை இங்கே விடுங்கள் 
 
 #: pat/structure/js/actionmenu.js
 msgid "Edit"
-msgstr "தொகு"
+msgstr "எடிட்"
 
 #: pat/tinymce/tinymce.js
 msgid "Email Address"
@@ -177,7 +193,7 @@ msgstr ""
 msgid "Favorites"
 msgstr "பிடித்தவை"
 
-#: pat/structure/js/views/selectionwell.js
+#: pat/structure/js/views/textfilter.js
 msgid "Filter"
 msgstr "வடிப்பி"
 
@@ -185,9 +201,13 @@ msgstr "வடிப்பி"
 msgid "Go one level up"
 msgstr "ஒரு நிலை மேலே செல்லுங்கள்"
 
+#: pat/contentbrowser/src/ContentBrowser.svelte
+msgid "Id"
+msgstr "ஐடி"
+
 #: pat/tinymce/tinymce.js
 msgid "Image"
-msgstr "படம்"
+msgstr "பிம்பம்"
 
 #: pat/tinymce/tinymce.js
 msgid "Image Caption"
@@ -377,13 +397,13 @@ msgstr "தளத்தில் உருப்படியைத் தேட�
 msgid "Select"
 msgstr "தேர்ந்தெடு"
 
-#: pat/structure/templates/table.xml
-msgid "Select all"
-msgstr "அனைத்தையும் தெரிவுசெய்"
+#: pat/structure/js/views/selectionwell.js
+msgid "Select all items in the folder"
+msgstr "கோப்புறையில் உள்ள அனைத்து பொருட்களையும் தேர்ந்தெடுக்கவும்"
 
-#: pat/structure/js/actionmenu.js
-msgid "Select all contained items"
-msgstr "உள்ள அனைத்து உருப்படிகளையும் தேர்ந்தெடுக்கவும்"
+#: pat/structure/js/views/selectionwell.js
+msgid "Select all items on this page"
+msgstr "இந்த பக்கத்தில் உள்ள அனைத்து உருப்படிகளையும் தேர்ந்தெடுக்கவும்"
 
 #: pat/tinymce/tinymce.js
 msgid "Select an anchor"
@@ -404,10 +424,6 @@ msgstr "காண்பிக்க, இழுத்து, மறுவரி�
 #: pat/querystring/querystring.js
 msgid "Select criteria"
 msgstr "அளவுகோல்களைத் தேர்ந்தெடுக்கவும்"
-
-#: pat/structure/js/views/app.js
-msgid "Selected"
-msgstr "தேர்ந்தெடுக்கப்பட்டது"
 
 #: pat/structure/js/actionmenu.js
 msgid "Set as default page"
@@ -490,7 +506,7 @@ msgstr ""
 "இது இந்த கோப்புறையில் உள்ள பொருட்களின் வரிசையை நிரந்தரமாக மாற்றுகிறது. இந்த "
 "செயல்பாடு கோப்புறையின் அளவைப் பொறுத்து நீண்ட நேரம் ஆகலாம்."
 
-#: pat/structure/templates/table.xml
+#: pat/contentbrowser/src/ContentBrowser.svelte
 msgid "Title"
 msgstr "தலைப்பு"
 
@@ -526,9 +542,17 @@ msgstr ""
 msgid "add selected items"
 msgstr "தேர்ந்தெடுக்கப்பட்ட உருப்படிகளைச் சேர்க்கவும்"
 
+#: pat/contentbrowser/src/ContentBrowser.svelte
+msgid "clear filter"
+msgstr "தெளிவான வடிகட்டி"
+
 #: pat/structure/js/actions.js
 msgid "copying"
 msgstr "நகலெடுக்கும்"
+
+#: pat/contentbrowser/src/ContentBrowser.svelte
+msgid "created"
+msgstr "உருவாக்கப்பட்டது"
 
 #: pat/relateditems/relateditems.js
 msgid "current directory:"
@@ -551,12 +575,28 @@ msgid "found"
 msgstr "காணப்பட்டது"
 
 #: pat/contentbrowser/src/ContentBrowser.svelte
+msgid "grid view"
+msgstr "கட்டம் பார்வை"
+
+#: pat/contentbrowser/src/ContentBrowser.svelte
+msgid "level filter"
+msgstr "நிலை வடிகட்டி"
+
+#: pat/contentbrowser/src/ContentBrowser.svelte
+msgid "list view"
+msgstr "பட்டியல் பார்வை"
+
+#: pat/contentbrowser/src/ContentBrowser.svelte
 msgid "loading content items"
 msgstr "உள்ளடக்க உருப்படிகளை ஏற்றுகிறது"
 
 #: pat/contentbrowser/src/SelectedItems.svelte
 msgid "loading selected items"
 msgstr "தேர்ந்தெடுக்கப்பட்ட உருப்படிகளை ஏற்றுகிறது"
+
+#: pat/contentbrowser/src/ContentBrowser.svelte
+msgid "modified"
+msgstr "மாற்றியமைக்கப்பட்ட"
 
 #: pat/contentbrowser/src/ContentBrowser.svelte
 msgid "no results found"
@@ -570,13 +610,13 @@ msgstr "of"
 msgid "operation url ${url} is not valid"
 msgstr "செயல்பாட்டு முகவரி $ {url} செல்லுபடியாகாது"
 
-#: pat/structure/js/views/selectionwell.js
-msgid "remove all"
-msgstr "அனைத்தையும் அகற்று"
-
 #: pat/livesearch/livesearch.js
 msgid "results"
 msgstr "முடிவுகள்"
+
+#: pat/contentbrowser/src/ContentBrowser.svelte
+msgid "review_state"
+msgstr "விமர்சனம்_ச்டேட்"
 
 #: pat/livesearch/livesearch.js
 msgid "searching…"

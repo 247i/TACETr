@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (kitshn (for Tandoor))\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-08 06:10+0200\n"
-"PO-Revision-Date: 2025-01-08 10:41+0530\n"
+"POT-Creation-Date: 2025-06-28 11:58+0200\n"
+"PO-Revision-Date: 2025-06-28 17:40\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/kitshn/app/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #, java-printf-format
 msgctxt "acra_comment_helper"
@@ -72,6 +72,11 @@ msgid "Add"
 msgstr "கூட்டு"
 
 #, java-printf-format
+msgctxt "action_add_ingredient"
+msgid "Add ingredient"
+msgstr "மூலப்பொருள் சேர்க்கவும்"
+
+#, java-printf-format
 msgctxt "action_add_to_favorites"
 msgid "Add to favorites"
 msgstr "பிடித்தவைகளில் சேர்க்கவும்"
@@ -107,6 +112,11 @@ msgid "Back"
 msgstr "பின்"
 
 #, java-printf-format
+msgctxt "action_clear"
+msgid "Clear"
+msgstr "தெளிவான"
+
+#, java-printf-format
 msgctxt "action_click_to_upload_image"
 msgid "Click to upload an image."
 msgstr "படத்தை பதிவேற்ற சொடுக்கு செய்க."
@@ -116,6 +126,7 @@ msgctxt "action_close"
 msgid "Close"
 msgstr "மூடு"
 
+#. This is used with a button when combining recipe steps.
 #, java-printf-format
 msgctxt "action_combine"
 msgid "Combine"
@@ -130,6 +141,12 @@ msgstr "உறுதிப்படுத்தவும்"
 msgctxt "action_continue"
 msgid "Continue"
 msgstr "தொடரவும்"
+
+#. Expandable FAB which links to the cooking mode.
+#, java-printf-format
+msgctxt "action_cook"
+msgid "Cook"
+msgstr "சமையல்காரர்"
 
 #, java-printf-format
 msgctxt "action_create"
@@ -152,6 +169,11 @@ msgid "New recipe book"
 msgstr "புதிய செய்முறை நூல்"
 
 #, java-printf-format
+msgctxt "action_create_step"
+msgid "New step"
+msgstr "புதிய படி"
+
+#, java-printf-format
 msgctxt "action_delete"
 msgid "Delete"
 msgstr "நீக்கு"
@@ -160,34 +182,6 @@ msgstr "நீக்கு"
 msgctxt "action_delete_from_meal_plan"
 msgid "Delete from meal plan"
 msgstr "உணவு திட்டத்திலிருந்து நீக்கு"
-
-#, java-printf-format
-msgctxt "action_delete_recipe_book_entries"
-msgid "Delete entry"
-msgid_plural "Delete entries"
-msgstr[0] "நுழைவை நீக்கு"
-msgstr[1] "உள்ளீடுகளை நீக்கு"
-
-#, java-printf-format
-msgctxt "action_delete_recipe_book_entries_description"
-msgid "Do you really want to delete this entry?"
-msgid_plural "Do you really want to delete these entries?"
-msgstr[0] "இந்த உள்ளீட்டை நீக்க விரும்புகிறீர்களா?"
-msgstr[1] "இந்த உள்ளீடுகளை நீக்க விரும்புகிறீர்களா?"
-
-#, java-printf-format
-msgctxt "action_delete_recipe_books"
-msgid "Delete book"
-msgid_plural "Delete books"
-msgstr[0] "புத்தகத்தை நீக்கு"
-msgstr[1] "புத்தகங்களை நீக்கு"
-
-#, java-printf-format
-msgctxt "action_delete_recipe_books_description"
-msgid "Do you really want to delete this book?"
-msgid_plural "Do you really want to delete these books?"
-msgstr[0] "இந்த புத்தகத்தை நீக்க விரும்புகிறீர்களா?"
-msgstr[1] "இந்த புத்தகங்களை நீக்க விரும்புகிறீர்களா?"
 
 #, java-printf-format
 msgctxt "action_download"
@@ -214,6 +208,12 @@ msgctxt "action_edit_recipe_book"
 msgid "Edit recipe book"
 msgstr "செய்முறை புத்தகத்தைத் திருத்து"
 
+#, java-printf-format
+msgctxt "action_edit_step"
+msgid "Edit step"
+msgstr "படி திருத்து"
+
+#. Content description for expanding icon button (accessibility)
 #, java-printf-format
 msgctxt "action_expand_less"
 msgid "Expand less"
@@ -264,6 +264,8 @@ msgctxt "action_no"
 msgid "No"
 msgstr "இல்லை"
 
+#. Context: It's a link to create a new GitHub issue. It's basically a way for
+#. users to give app feedback like bug reports and feature requests.
 #, java-printf-format
 msgctxt "action_open_issue"
 msgid "Create issue"
@@ -279,6 +281,7 @@ msgctxt "action_open_source"
 msgid "View source"
 msgstr "மூலத்தைக் காண்க"
 
+#. Content description for increase servings icon button (accessibility)
 #, java-printf-format
 msgctxt "action_plus"
 msgid "Upper"
@@ -350,6 +353,34 @@ msgid "Start cooking mode"
 msgstr "சமையல் பயன்முறையைத் தொடங்கவும்"
 
 #, java-printf-format
+msgctxt "action_start_shopping_mode"
+msgid "Start shopping mode"
+msgstr "சாப்பிங் பயன்முறையைத் தொடங்கவும்"
+
+#. This is used as a button. It means support in terms of donations.
+#, java-printf-format
+msgctxt "action_support"
+msgid "Support"
+msgstr "உதவி"
+
+#, java-printf-format
+msgctxt "action_switch_camera"
+msgid "Switch camera"
+msgstr "சுவிட்ச் கேமரா"
+
+#, java-printf-format
+msgctxt "action_switch_space"
+msgid "Switch space"
+msgstr "இடத்தை மாற்றவும்"
+
+#, java-printf-format
+msgctxt "action_take_photo"
+msgid "Take photo"
+msgstr "புகைப்படம் எடுக்கவும்"
+
+#. Content description for icon when uploading images/files, for example as
+#. cover image (accessibility)
+#, java-printf-format
 msgctxt "action_upload"
 msgid "Upload"
 msgstr "பதிவேற்றும்"
@@ -365,6 +396,53 @@ msgid "kitshn"
 msgstr "கிட்ச்ன்"
 
 #, java-printf-format
+msgctxt "beta_dialog_title"
+msgid "kitshn Beta"
+msgstr "சமையலறை பீட்டா"
+
+#, java-printf-format
+msgctxt "beta_dialog_description"
+msgid ""
+"Thank you for trying out the kitshn Beta. This version might still contain compatibility issues. You can report bugs and errors using any of the contact options listed at » Settings / About «.\n"
+"\n"
+"Have fun while cooking with kitshn! 😄"
+msgstr ""
+"கிட்ச்ன் பீட்டாவை முயற்சித்ததற்கு நன்றி. இந்த பதிப்பில் இன்னும் பொருந்தக்கூடிய சிக்கல்கள் இருக்கலாம். »அமைப்புகள் / பற்றி பட்டியலிடப்பட்ட எந்தவொரு தொடர்பு விருப்பங்களையும் பயன்படுத்தி பிழைகள் மற்றும் பிழைகள் புகாரளிக்கலாம். \n"
+"\n"
+"கிட்ச்னுடன் சமைக்கும்போது வேடிக்கையாக இருங்கள்! ."
+
+#, java-printf-format
+msgctxt "bugsnag_dialog_button_negative"
+msgid "No, don't allow"
+msgstr "இல்லை, அனுமதிக்க வேண்டாம்"
+
+#, java-printf-format
+msgctxt "bugsnag_dialog_button_positive"
+msgid "Yes, allow"
+msgstr "ஆம், அனுமதிக்கவும்"
+
+#, java-printf-format
+msgctxt "bugsnag_dialog_message"
+msgid ""
+"kitshn for iOS depends on crash reporting to be improved. The app uses the Bugsnag library/platform to accomplish that. Are you fine with automatically uploading details about crashes and bugs?\n"
+"\n"
+"This choice can be changed in Settings/Behavior."
+msgstr ""
+"ஐஇமு க்கான கிட்ச்ன் செயலிழப்பு அறிக்கையிடலை மேம்படுத்துவதைப் பொறுத்தது. பயன்பாடு அதை நிறைவேற்ற பிழைத்திருத்த நூலகம்/தளத்தைப் பயன்படுத்துகிறது. செயலிழப்புகள் மற்றும் பிழைகள் பற்றிய விவரங்களை தானாக பதிவேற்றுவதில் நீங்கள் நன்றாக இருக்கிறீர்களா? \n"
+"\n"
+"இந்த தேர்வை அமைப்புகள்/நடத்தையில் மாற்றலாம்."
+
+#, java-printf-format
+msgctxt "bugsnag_dialog_title"
+msgid "Allow crash reporting?"
+msgstr "செயலிழப்பு அறிக்கையை அனுமதிக்கவா?"
+
+#, java-printf-format
+msgctxt "common_account"
+msgid "Account"
+msgstr "கணக்கு"
+
+#, java-printf-format
 msgctxt "common_add_to_shopping_list"
 msgid "Add to shopping list"
 msgstr "சாப்பிங் பட்டியலில் சேர்க்கவும்"
@@ -375,10 +453,21 @@ msgid "Allocate ingredients"
 msgstr "பொருட்களை ஒதுக்க"
 
 #, java-printf-format
+msgctxt "common_amount"
+msgid "Amount"
+msgstr "தொகை"
+
+#, java-printf-format
 msgctxt "common_api_token"
 msgid "API token"
 msgstr "பநிஇ கிள்ளாக்கு"
 
+#, java-printf-format
+msgctxt "common_category"
+msgid "Category"
+msgstr "வகை"
+
+#. Used in crash report dialog; label for a text field.
 #, java-printf-format
 msgctxt "common_comment"
 msgid "Comment"
@@ -408,6 +497,16 @@ msgstr "எண்ணுங்கள்"
 msgctxt "common_create_argument"
 msgid "Create » %1$s «"
 msgstr "» %1$s« ஐ உருவாக்கவும்"
+
+#, java-printf-format
+msgctxt "common_creator"
+msgid "Creator"
+msgstr "உருவாக்கியவர்"
+
+#, java-printf-format
+msgctxt "common_custom_headers"
+msgid "Custom headers"
+msgstr "தனிப்பயன் தலைப்புகள்"
 
 #, java-printf-format
 msgctxt "common_day_after_tomorrow"
@@ -466,6 +565,31 @@ msgid "Favorites"
 msgstr "பிடித்தவை"
 
 #, java-printf-format
+msgctxt "common_field"
+msgid "Field"
+msgstr "புலம்"
+
+#, java-printf-format
+msgctxt "common_food"
+msgid "Food"
+msgstr "உணவு"
+
+#, java-printf-format
+msgctxt "common_group_by"
+msgid "Group by"
+msgstr "குழு"
+
+#, java-printf-format
+msgctxt "common_hour_short"
+msgid "h"
+msgstr "ம"
+
+#, java-printf-format
+msgctxt "common_image"
+msgid "Image"
+msgstr "படம்"
+
+#, java-printf-format
 msgctxt "common_import_recipe"
 msgid "Import recipe"
 msgstr "இறக்குமதி செய்முறை"
@@ -491,6 +615,11 @@ msgid "Keywords"
 msgstr "முக்கிய வார்த்தைகள்"
 
 #, java-printf-format
+msgctxt "common_learn_more"
+msgid "Learn more"
+msgstr "மேலும் அறிக"
+
+#, java-printf-format
 msgctxt "common_loading"
 msgid "Loading"
 msgstr "ஏற்றுகிறது"
@@ -499,6 +628,11 @@ msgstr "ஏற்றுகிறது"
 msgctxt "common_loading_short"
 msgid "Loading …"
 msgstr "ஏற்றுகிறது…"
+
+#, java-printf-format
+msgctxt "common_manage_space"
+msgid "Manage Space"
+msgstr "இடத்தை நிர்வகிக்கவும்"
 
 #, java-printf-format
 msgctxt "common_meal_type"
@@ -520,6 +654,9 @@ msgctxt "common_minutes"
 msgid "minutes"
 msgstr "நிமிடங்கள்"
 
+#. Name of the recipe.
+#. Used in search when sorting after recipe name and as text field label in
+#. recipe edit dialog.
 #, java-printf-format
 msgctxt "common_name"
 msgid "Name"
@@ -530,10 +667,21 @@ msgctxt "common_new"
 msgid "New"
 msgstr "புதிய"
 
+#. Used in shopping list group by dialog.
+#, java-printf-format
+msgctxt "common_none"
+msgid "None"
+msgstr "எதுவுமில்லை"
+
 #, java-printf-format
 msgctxt "common_not_reachable"
 msgid "Not reachable"
 msgstr "அடைய முடியாது"
+
+#, java-printf-format
+msgctxt "common_not_supported"
+msgid "Not supported"
+msgstr "ஆதரிக்கப்படவில்லை"
 
 #, java-printf-format
 msgctxt "common_note"
@@ -564,27 +712,6 @@ msgstr "கடவுச்சொல்"
 msgctxt "common_per_serving"
 msgid "per serving"
 msgstr "ஒரு சேவைக்கு"
-
-#, java-printf-format
-msgctxt "common_plural_minute"
-msgid "one minute"
-msgid_plural "%1$d minutes"
-msgstr[0] "ஒரு மணித்துளி"
-msgstr[1] "%1$d நிமிடங்கள்"
-
-#, java-printf-format
-msgctxt "common_plural_portion"
-msgid "one serving"
-msgid_plural "%1$d servings"
-msgstr[0] "ஒரு பணி"
-msgstr[1] "%1$d பரிமாணங்கள்"
-
-#, java-printf-format
-msgctxt "common_plural_wo_count"
-msgid "Portion"
-msgid_plural "Portionen"
-msgstr[0] "பகுதி"
-msgstr[1] "பகுதிகள்"
 
 #, java-printf-format
 msgctxt "common_portions"
@@ -647,6 +774,16 @@ msgid "Selected"
 msgstr "தேர்ந்தெடுக்கப்பட்டது"
 
 #, java-printf-format
+msgctxt "common_select_users_for_sharing"
+msgid "Select users for sharing"
+msgstr "பகிர்வுக்கு பயனர்களைத் தேர்ந்தெடுக்கவும்"
+
+#, java-printf-format
+msgctxt "common_select_users_for_sharing_empty"
+msgid "Select the users you want to share this with."
+msgstr "இதைப் பகிர விரும்பும் பயனர்களைத் தேர்ந்தெடுக்கவும்."
+
+#, java-printf-format
 msgctxt "common_shared_recipe"
 msgid "Shared recipe"
 msgstr "பகிரப்பட்ட செய்முறை"
@@ -655,6 +792,11 @@ msgstr "பகிரப்பட்ட செய்முறை"
 msgctxt "common_shopping"
 msgid "Shopping"
 msgstr "சாப்பிங்"
+
+#, java-printf-format
+msgctxt "common_shopping_mode"
+msgid "Shopping mode"
+msgstr "சாப்பிங் பயன்முறை"
 
 #, java-printf-format
 msgctxt "common_sorting"
@@ -680,6 +822,11 @@ msgstr "படி %1$s"
 msgctxt "common_steps"
 msgid "Steps"
 msgstr "படிகள்"
+
+#, java-printf-format
+msgctxt "common_supermarket"
+msgid "Supermarket"
+msgstr "சூப்பர் மார்க்கெட்"
 
 #, java-printf-format
 msgctxt "common_tags"
@@ -722,6 +869,16 @@ msgid "total"
 msgstr "மொத்தம்"
 
 #, java-printf-format
+msgctxt "common_ungrouped"
+msgid "Ungrouped"
+msgstr "குழுவாக"
+
+#, java-printf-format
+msgctxt "common_unit"
+msgid "Unit"
+msgstr "அலகு"
+
+#, java-printf-format
 msgctxt "common_unknown"
 msgid "Unknown"
 msgstr "தெரியவில்லை"
@@ -754,6 +911,11 @@ msgstr ""
 msgctxt "common_username"
 msgid "Username"
 msgstr "பயனர்பெயர்"
+
+#, java-printf-format
+msgctxt "common_value"
+msgid "Value"
+msgstr "மதிப்பு"
 
 #, java-printf-format
 msgctxt "common_version"
@@ -793,6 +955,20 @@ msgid ""
 msgstr ""
 "நீங்கள் இணைக்க முயற்சிக்கும் நிகழ்வு இந்த பயன்பாட்டின் உள்ளே "
 "கட்டமைக்கப்படவில்லை."
+
+#, java-printf-format
+msgctxt "error_outdated_v1_instance_title"
+msgid "Unsupported instance"
+msgstr "ஆதரிக்கப்படாத நிகழ்வு"
+
+#, java-printf-format
+msgctxt "error_outdated_v1_instance"
+msgid ""
+"This version of kitshn does not support Tandoor v1. Please either update to "
+"Tandoor v2 or install an older version of kitshn."
+msgstr ""
+"கிட்ச்னின் இந்த பதிப்பு தந்தூர் வி 1 ஐ ஆதரிக்கவில்லை. தயவுசெய்து தந்தூர் வி "
+"2 க்கு புதுப்பிக்கவும் அல்லது கிட்சினின் பழைய பதிப்பை நிறுவவும்."
 
 #, java-printf-format
 msgctxt "error_recipe_could_not_be_loaded"
@@ -886,15 +1062,22 @@ msgctxt "greeting_good_night"
 msgid "Good night 🌚"
 msgstr "நல்ல இரவு"
 
+#. Greeting at noon.
+#. Can also be another regional greeting if it's fitting! :)
 #, java-printf-format
 msgctxt "greeting_noon"
 msgid "Howdy 🤠"
 msgstr "அவுடி"
 
 #, java-printf-format
-msgctxt "home_meal_plan_promotion_title"
+msgctxt "home_meal_plan_promotion_today_title"
 msgid "Up next today"
 msgstr "அடுத்து இன்று"
+
+#, java-printf-format
+msgctxt "home_meal_plan_promotion_tomorrow_title"
+msgid "Tomorrow's menu"
+msgstr "நாளைய பட்டியல்"
 
 #, java-printf-format
 msgctxt "home_search_empty"
@@ -1028,6 +1211,40 @@ msgid "Favorites from kitshn"
 msgstr "சமையலறையிலிருந்து பிடித்தவை"
 
 #, java-printf-format
+msgctxt "ios_support_badge"
+msgid "Supporter subscription"
+msgstr "ஆதரவாளர் சந்தா"
+
+#, java-printf-format
+msgctxt "ios_support_manage_subscription_description"
+msgid "Manage your supporter subscription"
+msgstr "உங்கள் ஆதரவாளர் சந்தாவை நிர்வகிக்கவும்"
+
+#, java-printf-format
+msgctxt "ios_support_manage_subscription_label"
+msgid "Manage subscription"
+msgstr "சந்தாவை நிர்வகிக்கவும்"
+
+#, java-printf-format
+msgctxt "ios_support_thanks"
+msgid ""
+"Thank you for supporting kitshn! Your contribution helps to keep this "
+"project alive."
+msgstr ""
+"கிட்சனை ஆதரித்ததற்கு நன்றி! இந்த திட்டத்தை உயிரோடு வைத்திருக்க உங்கள் "
+"பங்களிப்பு உதவுகிறது."
+
+#, java-printf-format
+msgctxt "kofi_support_description"
+msgid "You can support kitshn's development on Ko-Fi"
+msgstr "KO-Fi இல் கிட்ச்னின் வளர்ச்சியை நீங்கள் ஆதரிக்கலாம்"
+
+#, java-printf-format
+msgctxt "kofi_support_label"
+msgid "Support on Ko-Fi"
+msgstr "கோ-ஃபை உதவி"
+
+#, java-printf-format
 msgctxt "lorem_ipsum_medium"
 msgid ""
 "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy "
@@ -1063,6 +1280,18 @@ msgstr "சாப்பிங் பட்டியலில் தேவைய�
 msgctxt "meal_plan_form_error_entry_needs_title_or_recipe"
 msgid "The entry needs either a title or a specified recipe."
 msgstr "நுழைவுக்கு ஒரு தலைப்பு அல்லது குறிப்பிட்ட செய்முறை தேவை."
+
+#, java-printf-format
+msgctxt "meal_plan_form_review_add_to_shopping_list_description"
+msgid "Check which ingredients should be actually added to the shopping list."
+msgstr ""
+"சாப்பிங் பட்டியலில் உண்மையில் எந்தெந்த பொருட்கள் சேர்க்கப்பட வேண்டும் என்பதை"
+" சரிபார்க்கவும்."
+
+#, java-printf-format
+msgctxt "meal_plan_form_review_add_to_shopping_list_label"
+msgid "Review items before adding to shopping"
+msgstr "சாப்பிங்கில் சேர்ப்பதற்கு முன் பொருட்களை மதிப்பாய்வு செய்யவும்"
 
 #, java-printf-format
 msgctxt "meal_plan_no_recipes_for_this_day"
@@ -1125,6 +1354,15 @@ msgid "Login failed. Please check your inputs!"
 msgstr "உள்நுழைவு தோல்வியடைந்தது. உங்கள் உள்ளீடுகளை சரிபார்க்கவும்!"
 
 #, java-printf-format
+msgctxt "onboarding_sign_in_ios_social_login_unsupported"
+msgid ""
+"This app does not support Social Login. Please generate an API-Token or use "
+"username/password authentication."
+msgstr ""
+"இந்த பயன்பாடு சமூக உள்நுழைவை ஆதரிக்காது. தயவுசெய்து ஒரு API- கிள்ளாக்கு "
+"உருவாக்கவும் அல்லது பயனர்பெயர்/கடவுச்சொல் அங்கீகாரத்தைப் பயன்படுத்தவும்."
+
+#, java-printf-format
 msgctxt "onboarding_sign_in_title"
 msgid "Log in to Tandoor"
 msgstr "தந்தூரில் உள்நுழைக"
@@ -1137,14 +1375,18 @@ msgstr "வலை உலாவியைப் பயன்படுத்தி 
 #, java-printf-format
 msgctxt "onboarding_welcome"
 msgid ""
-"Have fun cooking with kitshn. Please note that the app is currently in alpha"
-" phase. For bugs, feedback, and feature ideas, please check the » About « "
-"page in the settings for contact options."
+"Have fun cooking with kitshn. For bugs, feedback, and feature ideas, please "
+"check the » About « page in the settings for contact options."
 msgstr ""
-"சமையலறையுடன் வேடிக்கையாக சமைக்க வேண்டும். பயன்பாடு தற்போது ஆல்பா கட்டத்தில் "
-"உள்ளது என்பதை நினைவில் கொள்க. பிழைகள், பின்னூட்டங்கள் மற்றும் அம்ச "
-"யோசனைகளுக்கு, தொடர்பு விருப்பங்களுக்கான அமைப்புகளில் »பற்றி« பக்கத்தை "
+"சமையலறையுடன் வேடிக்கையாக சமைக்க வேண்டும். பிழைகள், பின்னூட்டங்கள் மற்றும் "
+"அம்ச யோசனைகளுக்கு, தொடர்பு விருப்பங்களுக்கான அமைப்புகளில் »பற்றி« பக்கத்தை "
 "சரிபார்க்கவும்."
+
+#, java-printf-format
+msgctxt "permissions_camera_alert"
+msgid "Please allow kitshn to access your camera to use this feature."
+msgstr ""
+"இந்த அம்சத்தைப் பயன்படுத்த உங்கள் கேமராவை அணுக கிட்ச்னை அனுமதிக்கவும்."
 
 #, java-printf-format
 msgctxt "recipe_book_empty"
@@ -1196,6 +1438,27 @@ msgid "Divide steps by line breaks"
 msgstr "வரி முறிவுகளால் படிகளைப் பிரிக்கவும்"
 
 #, java-printf-format
+msgctxt "recipe_import_type_ai_label"
+msgid "Import with AI"
+msgstr "AI உடன் இறக்குமதி செய்யுங்கள்"
+
+#, java-printf-format
+msgctxt "recipe_import_type_ai_description"
+msgid "Upload images or enter a recipe in text form"
+msgstr "படங்களை பதிவேற்றவும் அல்லது உரை வடிவத்தில் செய்முறையை உள்ளிடவும்"
+
+#, java-printf-format
+msgctxt "recipe_import_type_url_label"
+msgid "Import from Website"
+msgstr "வலைத்தளத்திலிருந்து இறக்குமதி"
+
+#, java-printf-format
+msgctxt "recipe_import_type_url_description"
+msgid "Enter an URL and import a recipe from the web"
+msgstr ""
+"ஒரு முகவரி ஐ உள்ளிட்டு வலையிலிருந்து ஒரு செய்முறையை இறக்குமதி செய்யுங்கள்"
+
+#, java-printf-format
 msgctxt "recipe_not_found"
 msgid "This recipe could not be found."
 msgstr "இந்த செய்முறையைக் கண்டுபிடிக்க முடியவில்லை."
@@ -1220,6 +1483,7 @@ msgctxt "recipe_sorting_last_viewed"
 msgid "Last time viewed"
 msgstr "கடைசியாக பார்க்கப்பட்டது"
 
+#. Used in sorting screenshot on search screen.
 #, java-printf-format
 msgctxt "recipe_sorting_relevance"
 msgid "Relevance"
@@ -1229,6 +1493,18 @@ msgstr "பொருத்தமானது"
 msgctxt "recipe_step_timer_created"
 msgid "Timer has been created."
 msgstr "நேரங்குறிகருவி உருவாக்கப்பட்டது."
+
+#, java-printf-format
+msgctxt "recipe_step_timer_error_no_app"
+msgid "You need to install a supported timer app for this action!"
+msgstr ""
+"இந்த செயலுக்கு நீங்கள் ஆதரிக்கப்பட்ட நேரங்குறிகருவி பயன்பாட்டை நிறுவ "
+"வேண்டும்!"
+
+#, java-printf-format
+msgctxt "search_categories"
+msgid "Search categories"
+msgstr "வகைகளைத் தேடுங்கள்"
 
 #, java-printf-format
 msgctxt "search_food_including_all_description"
@@ -1296,6 +1572,11 @@ msgid "Select the tags you want to search for."
 msgstr "நீங்கள் தேட விரும்பும் குறிச்சொற்களைத் தேர்ந்தெடுக்கவும்."
 
 #, java-printf-format
+msgctxt "search_users"
+msgid "Search users"
+msgstr "பயனர்களைத் தேடுங்கள்"
+
+#, java-printf-format
 msgctxt "select_recipe"
 msgid "Select recipe"
 msgstr "செய்முறையைத் தேர்ந்தெடுக்கவும்"
@@ -1324,12 +1605,59 @@ msgstr ""
 #, java-printf-format
 msgctxt "settings_section_about_item_review_description"
 msgid "Rate kitshn in the Play Store"
-msgstr "பிளே ச்டோரில் KITSHN ஐ மதிப்பிடுங்கள்"
+msgstr "பிளே ச்டோரில் kitshn ஐ மதிப்பிடுங்கள்"
+
+#, java-printf-format
+msgctxt "settings_section_about_item_review_ios_description"
+msgid "Rate kitshn in the App Store"
+msgstr "ஆப் ச்டோரில் கிட்சனை மதிப்பிடுங்கள்"
 
 #, java-printf-format
 msgctxt "settings_section_about_label"
 msgid "About"
 msgstr "பற்றி"
+
+#, java-printf-format
+msgctxt "settings_section_appearance_color_scheme_cupertino_label"
+msgid "» Cupertino « color scheme"
+msgstr "»குப்பெர்டினோ« வண்ணத் திட்டம்"
+
+#, java-printf-format
+msgctxt ""
+"settings_section_appearance_color_scheme_custom_from_image_error_message"
+msgid ""
+"Could not extract seed color from selected image. Please try another image "
+"or use a predefined scheme."
+msgstr ""
+"தேர்ந்தெடுக்கப்பட்ட படத்திலிருந்து விதை நிறத்தைப் பிரித்தெடுக்க முடியவில்லை."
+" தயவுசெய்து வேறு படத்தை முயற்சிக்கவும் அல்லது முன் வரையறுக்கப்பட்ட "
+"திட்டத்தைப் பயன்படுத்தவும்."
+
+#, java-printf-format
+msgctxt ""
+"settings_section_appearance_color_scheme_custom_from_image_error_title"
+msgid "Error while applying custom scheme"
+msgstr "தனிப்பயன் திட்டத்தைப் பயன்படுத்தும்போது பிழை"
+
+#, java-printf-format
+msgctxt "settings_section_appearance_color_scheme_custom_from_image_label"
+msgid "Custom theme based on image"
+msgstr "படத்தின் அடிப்படையில் தனிப்பயன் கருப்பொருள்"
+
+#, java-printf-format
+msgctxt "settings_section_appearance_color_scheme_description"
+msgid "Choose a color scheme matching your style"
+msgstr "உங்கள் பாணியுடன் பொருந்தக்கூடிய வண்ணத் திட்டத்தைத் தேர்வுசெய்க"
+
+#, java-printf-format
+msgctxt "settings_section_appearance_color_scheme_dynamic_label"
+msgid "Dynamic color scheme"
+msgstr "மாறும் வண்ணத் திட்டம்"
+
+#, java-printf-format
+msgctxt "settings_section_appearance_color_scheme_label"
+msgid "Color scheme"
+msgstr "வண்ணத் திட்டம்"
 
 #, java-printf-format
 msgctxt "settings_section_appearance_dark_mode_description"
@@ -1347,14 +1675,14 @@ msgid "Change color scheme and dynamic theming"
 msgstr "வண்ணத் திட்டம் மற்றும் மாறும் தீமிங் ஆகியவற்றை மாற்றவும்"
 
 #, java-printf-format
-msgctxt "settings_section_appearance_dynamic_color_description"
-msgid "Use the dynamic color scheme of your operating system"
-msgstr "உங்கள் இயக்க முறைமையின் மாறும் வண்ணத் திட்டத்தைப் பயன்படுத்தவும்"
+msgctxt "settings_section_appearance_enlarge_shopping_mode_description"
+msgid "Provides better legibility in shopping mode"
+msgstr "சாப்பிங் பயன்முறையில் சிறந்த தெளிவை வழங்குகிறது"
 
 #, java-printf-format
-msgctxt "settings_section_appearance_dynamic_color_label"
-msgid "Dynamic color scheme"
-msgstr "மாறும் வண்ணத் திட்டம்"
+msgctxt "settings_section_appearance_enlarge_shopping_mode_label"
+msgid "Enlarge shopping mode"
+msgstr "சாப்பிங் பயன்முறையை பெரிதாக்குங்கள்"
 
 #, java-printf-format
 msgctxt "settings_section_appearance_follow_system_description"
@@ -1380,6 +1708,36 @@ msgstr "கிட்ச்னின் நடத்தையை மாற்ற�
 msgctxt "settings_section_behavior_enable_crash_reporting"
 msgid "Enable crash reporting"
 msgstr "செயலிழப்பு அறிக்கையை இயக்கவும்"
+
+#, java-printf-format
+msgctxt "settings_section_behavior_enable_dynamic_home_screen_description"
+msgid "Show recommendations based on time of day and year"
+msgstr "நாள் மற்றும் ஆண்டு நேரத்தின் அடிப்படையில் பரிந்துரைகளைக் காட்டு"
+
+#, java-printf-format
+msgctxt "settings_section_behavior_enable_dynamic_home_screen_label"
+msgid "Enable dynamic home screen"
+msgstr "மாறும் முகப்புத் திரையை இயக்கவும்"
+
+#, java-printf-format
+msgctxt "settings_section_behavior_enable_meal_plan_promotion_description"
+msgid "Either show today's or tomorrow's entries"
+msgstr "இன்றைய அல்லது நாளைய உள்ளீடுகளைக் காட்டுங்கள்"
+
+#, java-printf-format
+msgctxt "settings_section_behavior_enable_meal_plan_promotion_label"
+msgid "Enable promoting the meal plan on home"
+msgstr "வீட்டில் உணவு திட்டத்தை ஊக்குவிக்க உதவுகிறது"
+
+#, java-printf-format
+msgctxt "settings_section_behavior_hide_funding_banner_this_year_description"
+msgid "Hide the funding banner for the current year"
+msgstr "நடப்பு ஆண்டிற்கான பொருள் பதாகையை மறைக்கவும்"
+
+#, java-printf-format
+msgctxt "settings_section_behavior_hide_funding_banner_this_year_label"
+msgid "Hide funding banner"
+msgstr "பொருள் பேனரை மறைக்கவும்"
 
 #, java-printf-format
 msgctxt ""
@@ -1410,6 +1768,16 @@ msgid "Behavior"
 msgstr "நடத்தை"
 
 #, java-printf-format
+msgctxt "settings_section_behavior_promote_tomorrows_meal_plan_description"
+msgid "Show the entries of tomorrow instead of today's entries"
+msgstr "இன்றைய உள்ளீடுகளுக்கு பதிலாக நாளைய உள்ளீடுகளைக் காட்டுங்கள்"
+
+#, java-printf-format
+msgctxt "settings_section_behavior_promote_tomorrows_meal_plan_label"
+msgid "Promote tomorrow's meal plan instead"
+msgstr "அதற்கு பதிலாக நாளைய உணவு திட்டத்தை ஊக்குவிக்கவும்"
+
+#, java-printf-format
 msgctxt ""
 "settings_section_behavior_properties_show_fractional_values_description"
 msgid "Might be easier to read but also less accurate"
@@ -1430,6 +1798,35 @@ msgstr ""
 msgctxt "settings_section_behavior_use_share_wrapper_label"
 msgid "Share wrapper"
 msgstr "ரேப்பரைப் பகிரவும்"
+
+#, java-printf-format
+msgctxt "settings_section_server_delete_and_manage_data_description"
+msgid "You can only manage your data on the webpage"
+msgstr "வலைப்பக்கத்தில் உங்கள் தரவை மட்டுமே நிர்வகிக்க முடியும்"
+
+#, java-printf-format
+msgctxt "settings_section_server_delete_and_manage_data_dialog_line_1"
+msgid ""
+"You can delete and manage your space data on the website of your instance. "
+"Please contact the provider of your instance to request account deletion."
+msgstr ""
+"உங்கள் நிகழ்வின் இணையதளத்தில் உங்கள் விண்வெளி தரவை நீக்கி நிர்வகிக்கலாம். "
+"கணக்கு நீக்குதலைக் கோர உங்கள் நிகழ்வின் வழங்குநரைத் தொடர்பு கொள்ளவும்."
+
+#, java-printf-format
+msgctxt "settings_section_server_delete_and_manage_data_dialog_line_2"
+msgid "You can request account deletion by mailing"
+msgstr "அஞ்சல் மூலம் கணக்கு நீக்குமாறு கோரலாம்"
+
+#, java-printf-format
+msgctxt "settings_section_server_delete_and_manage_data_dialog_line_3"
+msgid "since you are using the official public instance."
+msgstr "நீங்கள் அதிகாரப்பூர்வ பொது நிகழ்வைப் பயன்படுத்துகிறீர்கள் என்பதால்."
+
+#, java-printf-format
+msgctxt "settings_section_server_delete_and_manage_data_label"
+msgid "Delete and manage data"
+msgstr "தரவை நீக்கி நிர்வகிக்கவும்"
 
 #, java-printf-format
 msgctxt "settings_section_server_description"
@@ -1466,24 +1863,24 @@ msgid "Use share wrapper?"
 msgstr "பங்கு ரேப்பரைப் பயன்படுத்தவா?"
 
 #, java-printf-format
+msgctxt "shopping_list_dialog_clear_title"
+msgid "Clear shopping list"
+msgstr "சாப்பிங் பட்டியல் தெளிவான"
+
+#, java-printf-format
+msgctxt "shopping_list_dialog_clear_only_done"
+msgid "Only delete entries marked as » Done «"
+msgstr "»முடிந்தது« எனக் குறிக்கப்பட்ட உள்ளீடுகளை மட்டுமே நீக்கு"
+
+#, java-printf-format
 msgctxt "shopping_list_empty"
 msgid "There are currently no items on the shopping list."
 msgstr "சாப்பிங் பட்டியலில் தற்போது எந்த உருப்படிகளும் இல்லை."
 
 #, java-printf-format
-msgctxt "shopping_list_entry_create_placeholder_amount"
-msgid "250"
-msgstr "250"
-
-#, java-printf-format
-msgctxt "shopping_list_entry_create_placeholder_food"
-msgid "Mushrooms"
-msgstr "காளான்கள்"
-
-#, java-printf-format
-msgctxt "shopping_list_entry_create_placeholder_unit"
-msgid "g"
-msgstr "g"
+msgctxt "shopping_list_items_done"
+msgid "Done"
+msgstr "முடிந்தது"
 
 #, java-printf-format
 msgctxt "shortcuts_new_instance_label_long"

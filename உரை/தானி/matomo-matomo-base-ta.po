@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Matomo)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-13 04:50+0200\n"
-"PO-Revision-Date: 2025-06-14 06:57\n"
+"POT-Creation-Date: 2025-06-23 16:45+0200\n"
+"PO-Revision-Date: 2025-06-23 20:53\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/matomo/matomo-base/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.12HourClock"
@@ -134,7 +134,7 @@ msgstr "சராசரி அளவு"
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.AverageX"
 msgid "Avg. %s"
-msgstr "ஏ.வி.சி. கள்"
+msgstr "சராசரி %s"
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.BackToPiwik"
@@ -210,7 +210,7 @@ msgstr "சுத்தப்படுத்து"
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.ClickHere"
 msgid "Click here for more information."
-msgstr "மேலதிக தகவல்களுக்கு இங்கே சொடுக்குக"
+msgstr "மேலதிக தகவல்களுக்கு இங்கே சொடுக்குக."
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.ClickToRemoveComp"
@@ -325,8 +325,16 @@ msgstr "உருமாற்ற விகிதம்"
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.ColumnConversionRateDocumentation"
-msgid "The percentage of visits that triggered a goal conversion."
-msgstr "இலக்கு மாற்றத்தைத் தூண்டிய வருகைகளின் விழுக்காடு."
+msgid ""
+"The percentage of visits that triggered a conversion. The conversion rate is"
+" calculated using the number of visits that converted at least one goal. "
+"Visits converting multiple goals are only counted once in the conversion "
+"rate."
+msgstr ""
+"மாற்றத்தைத் தூண்டிய வருகைகளின் விழுக்காடு.மாற்று விகிதம் குறைந்தது ஒரு "
+"இலக்கை மாற்றும் வருகைகளின் எண்ணிக்கையைப் பயன்படுத்தி கணக்கிடப்படுகிறது. பல "
+"இலக்குகளை மாற்றும் வருகைகள் மாற்று விகிதத்தில் ஒரு முறை மட்டுமே "
+"கணக்கிடப்படுகின்றன."
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.ColumnDestinationPage"
@@ -493,6 +501,11 @@ msgid "%% Visits"
 msgstr "%% வருகைகள்"
 
 #, ignore-optional-plural, php-format, safe-html
+msgctxt "General.ColumnPercentageVisitsDocumentation"
+msgid "The percentage of total visits."
+msgstr "மொத்த வருகைகளின் விழுக்காடு."
+
+#, ignore-optional-plural, php-format, safe-html
 msgctxt "General.ColumnRevenue"
 msgid "Revenue"
 msgstr "வருமானம்"
@@ -540,6 +553,15 @@ msgstr ""
 msgctxt "General.ColumnValuePerVisit"
 msgid "Revenue per Visit"
 msgstr "ஒரு வருகைக்கான வருமானம்"
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "General.ColumnValuePerVisitDocumentation"
+msgid ""
+"Average revenue generated per visit. The total revenue from Ecommerce Orders"
+" and Goal Conversions divided by the number of visits."
+msgstr ""
+"ஒரு வருகைக்கு சராசரி வருவாய். இணையவழி ஆர்டர்கள் மற்றும் இலக்கு மாற்றங்களின் "
+"மொத்த வருவாய் வருகைகளின் எண்ணிக்கையால் வகுக்கப்படுகிறது."
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.ColumnValuePerEntry"
@@ -591,8 +613,8 @@ msgstr "ஒப்பிடுக:"
 msgctxt "General.ComparisonCardTooltip1"
 msgid "'%1$s' on %2$s contains %3$s of all visits (%4$s out of %5$s total)."
 msgstr ""
-"%2$s இல் ' %1$s' அனைத்து வருகைகளிலும் %3$s ஐக் கொண்டுள்ளது (மொத்தம் 5 $ s "
-"இல் %4 $ s)."
+"%2$s இல் ' %1$s' அனைத்து வருகைகளிலும் %3$s ஐக் கொண்டுள்ளது (மொத்தம் %5$s இல்"
+" %4$s)."
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.ComparisonCardTooltip2"
@@ -825,7 +847,7 @@ msgstr "திகதி"
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.DateRange"
 msgid "Date range:"
-msgstr "திகதி வீச்சு"
+msgstr "திகதி வீச்சு:"
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.DateRangeFrom"
@@ -950,7 +972,7 @@ msgstr "பதிவிறக்கங்கள்"
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.DownloadFail_FileExists"
 msgid "The file %s already exists!"
-msgstr "%s கூப்பு ஏற்கனவே உள்ளது"
+msgstr "%s கோப்பு ஏற்கனவே உள்ளது!"
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.DownloadFail_FileExistsContinue"
@@ -1031,10 +1053,10 @@ msgid ""
 "try again. If this error occurs repeatedly please %1$scontact your Matomo "
 "administrator%2$s for assistance."
 msgstr ""
-"அச்சச்சோ… கோரிக்கையின் போது ஒரு சிக்கல் இருந்தது. சேவையகத்திற்கு ஒரு "
-"தற்காலிக சிக்கல் இருக்கலாம், அல்லது அதிக தரவைக் கொண்ட அறிக்கையை நீங்கள் "
-"கோரலாம். மீண்டும் முயற்சிக்கவும். இந்த பிழை மறுநிகழ்வு ஏற்பட்டால், "
-"தயவுசெய்து %1 $ உதவிக்காக உங்கள் மாடோமோ நிர்வாகி %2$s ச்கான்ட் செய்யுங்கள்."
+"அச்சச்சோ… கோரிக்கையின்போது ஒரு சிக்கல் இருந்தது. சேவையகத்திற்கு ஒரு தற்காலிக"
+" சிக்கல் இருக்கலாம், அல்லது அதிக தரவைக் கொண்ட அறிக்கையை நீங்கள் கோரலாம். "
+"மீண்டும் முயற்சிக்கவும். இந்தப் பிழை மீண்டும் மீண்டும் ஏற்பட்டால், "
+"தயவுசெய்து %1$s உதவிக்காக உங்கள் மாடோமோ நிர்வாகி %2$s ச்கான்ட் செய்யுங்கள்."
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.ErrorRateLimit"
@@ -1083,7 +1105,7 @@ msgstr ""
 msgctxt "General.ExceptionCheckUserHasSuperUserAccessOrIsTheUser"
 msgid "The user has to be either a Super User or the user '%s' itself."
 msgstr ""
-"பயனர் ஒரு சூப்பர் பயனராக இருக்க வேண்டும் அல்லது பயனராக இருக்க வேண்டும்."
+"பயனர் ஒரு சூப்பர் பயனராக இருக்க வேண்டும் அல்லது '%s' பயனராக இருக்க வேண்டும்."
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.ExceptionConfigurationFileExistsButNotReadable"
@@ -1723,8 +1745,8 @@ msgstr ""
 "திட்டமாகும், இது%7 $ ச்மாடோமோ குழு%8 J உறுப்பினர்கள் மற்றும் உலகெங்கிலும் "
 "உள்ள பல பங்களிப்பாளர்களால் உங்களிடம் கொண்டு வரப்பட்டது. <br/> நீங்கள் "
 "மாடோமோவின் ரசிகராக இருந்தால், நீங்கள் உதவலாம்: அடுத்த பெரிய மாடோமோ "
-"வெளியீட்டிற்கு நிதியளிக்க உதவுவதற்காக MATOMO %4 $ S, அல்லது %5 $ SDONATE %6 "
-"$ S இல் பங்கேற்க %3 $ காண்பி என்பதைக் கண்டறியவும் !"
+"வெளியீட்டிற்கு நிதியளிக்க உதவுவதற்காக மாடோமோ %4 $ s, அல்லது %5 $ sdonate %6 "
+"$ s இல் பங்கேற்க %3 $ காண்பி!"
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.MaximumNumberOfPeriodsComparedIs"
@@ -1840,7 +1862,7 @@ msgstr "%தனித்துவமான பார்வையாளர்க�
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.NUsers"
 msgid "%s users"
-msgstr "%பயனர்கள்"
+msgstr "%s பயனர்கள்"
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.NVisits"
@@ -1893,8 +1915,8 @@ msgid ""
 "When Matomo archiving is not triggered by the browser, new reports will be "
 "processed by the crontab."
 msgstr ""
-"உலாவியால் மாடோமோ காப்பகத்தைத் தூண்டாதபோது, ​​புதிய அறிக்கைகள் க்ரோன்டாப் "
-"மூலம் செயலாக்கப்படும்."
+"உலாவியால் மாடோமோ காப்பகத்தைத் தூண்டாதபோது, புதிய அறிக்கைகள் க்ரோன்டாப் மூலம்"
+" செயலாக்கப்படும்."
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.NewUpdatePiwikX"
@@ -2151,6 +2173,31 @@ msgstr "El paràmetre %1$s ha de ser un enter entre %2$s i %3$s"
 msgctxt "General.Password"
 msgid "Password"
 msgstr "கடவுச்சொல்"
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "General.PasswordStrengthValidationLength"
+msgid "At least 12 characters"
+msgstr "குறைந்தது 12 எழுத்துக்கள்"
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "General.PasswordStrengthValidationLowercase"
+msgid "Contains a lowercase letter"
+msgstr "ஒரு சிறிய எழுத்து கடிதம் உள்ளது"
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "General.PasswordStrengthValidationUppercase"
+msgid "Contains an uppercase letter"
+msgstr "ஒரு பெரிய கடிதம் உள்ளது"
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "General.PasswordStrengthValidationNumber"
+msgid "Contains a number"
+msgstr "ஒரு எண் உள்ளது"
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "General.PasswordStrengthValidationSpecialChar"
+msgid "Contains a special character"
+msgstr "ஒரு சிறப்பு பாத்திரம் உள்ளது"
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.Period"
@@ -2891,6 +2938,11 @@ msgstr "வருகை"
 msgctxt "General.VisitConvertedGoal"
 msgid "Visit converted at least one Goal"
 msgstr "குறைந்தது ஒரு இலக்கை மாற்றவும்"
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "General.VisitConvertedGoalDocumentation"
+msgid "Number of visits where at least one goal was successfully converted."
+msgstr "குறைந்தது ஒரு கோல் வெற்றிகரமாக மாற்றப்பட்ட வருகைகளின் எண்ணிக்கை."
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "General.VisitConvertedGoalId"
