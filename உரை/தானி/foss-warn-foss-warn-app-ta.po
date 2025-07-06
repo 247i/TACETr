@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (FOSS Warn)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-26 14:42+0200\n"
-"PO-Revision-Date: 2024-12-27 06:49+0530\n"
+"POT-Creation-Date: 2025-07-01 04:37+0200\n"
+"PO-Revision-Date: 2025-07-06 21:03\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/foss-warn/foss-warn-app/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #, icu-message-format
 msgctxt "main_nav_bar_all_warnings"
@@ -23,6 +23,11 @@ msgstr "அனைத்து எச்சரிக்கைகள்"
 msgctxt "main_nav_bar_my_places"
 msgid "My places"
 msgstr "என் இடங்கள்"
+
+#, icu-message-format
+msgctxt "main_nav_bar_map"
+msgid "Map"
+msgstr "வரைபடம்"
 
 #, icu-message-format
 msgctxt "main_dot_menu_settings"
@@ -69,6 +74,12 @@ msgctxt "all_warnings_no_places_chosen_text"
 msgid "Please press the plus to add a place"
 msgstr "ஒரு இடத்தைச் சேர்க்க பிளசை அழுத்தவும்"
 
+#. Main message shown when retrieving alerts failed
+#, icu-message-format
+msgctxt "all_warnings_failed_to_fetch_alerts"
+msgid "Failed to fetch alerts"
+msgstr "விழிப்பூட்டல்களைப் பெறுவதில் தோல்வி"
+
 #, icu-message-format
 msgctxt "all_warnings_nothing_to_show"
 msgid "Nothing to see here"
@@ -93,11 +104,6 @@ msgstr "உங்களுக்கு எந்த எச்சரிக்க�
 msgctxt "all_warnings_reload"
 msgid "Reload"
 msgstr "ஏற்றவும்"
-
-#, icu-message-format
-msgctxt "my_places_no_warning_found"
-msgid "No warnings found"
-msgstr "எந்த எச்சரிக்கையும் கிடைக்கவில்லை"
 
 #, icu-message-format
 msgctxt "my_place_warning_found"
@@ -230,16 +236,6 @@ msgid "Advanced settings"
 msgstr "மேம்பட்ட அமைப்புகள்"
 
 #, icu-message-format
-msgctxt "settings_alertSwiss"
-msgid "Activate AlertSwiss"
-msgstr "AlertSwiss ஐ செயல்படுத்தவும்"
-
-#, icu-message-format
-msgctxt "settings_alertSwiss_subtitle"
-msgid "Warnings for Switzerland"
-msgstr "சுவிட்சர்லாந்திற்கான எச்சரிக்கைகள்"
-
-#, icu-message-format
 msgctxt "settings_show_welcome_dialog"
 msgid "Show welcome dialogue again"
 msgstr "வரவேற்பு உரையாடலை மீண்டும் காட்டு"
@@ -255,9 +251,49 @@ msgid "Tags"
 msgstr "குறிச்சொற்கள்"
 
 #, icu-message-format
-msgctxt "warning_from"
+msgctxt "warning_from_title"
 msgid "Message from"
 msgstr "இருந்து செய்தி"
+
+#, icu-message-format
+msgctxt "warning_region_title"
+msgid "Region"
+msgstr "பகுதி"
+
+#, icu-message-format
+msgctxt "warning_type_title"
+msgid "Type"
+msgstr "வகை"
+
+#, icu-message-format
+msgctxt "warning_severity_title"
+msgid "Severity"
+msgstr "தீவிரம்"
+
+#, icu-message-format
+msgctxt "warning_description_title"
+msgid "Description"
+msgstr "விவரம்"
+
+#, icu-message-format
+msgctxt "warning_recommended_action_title"
+msgid "Recommended action"
+msgstr "பரிந்துரைக்கப்பட்ட செயல்"
+
+#, icu-message-format
+msgctxt "warning_source_title"
+msgid "Source"
+msgstr "மூலம்"
+
+#, case-insensitive, icu-message-format, placeholders:$DATETIME$
+msgctxt "warning_from"
+msgid "Message from: {datetime}"
+msgstr "இருந்து செய்தி: {datetime}"
+
+#, icu-message-format
+msgctxt "warning_context_information"
+msgid "Context information:"
+msgstr "சூழல் தகவல்:"
 
 #, icu-message-format
 msgctxt "warning_effective"
@@ -289,20 +325,28 @@ msgctxt "warning_open_picture_with_browser"
 msgid "Open picture with browser"
 msgstr "உலாவியுடன் படத்தைத் திறக்கவும்"
 
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$WARNINGTYPE$
 msgctxt "warning_type"
-msgid "Type"
-msgstr "வகை"
+msgid ""
+"Type:\n"
+"{warningType}"
+msgstr ""
+"தட்டச்சு: \n"
+"{warningType}"
 
 #, icu-message-format
 msgctxt "warning_event"
 msgid "Event"
 msgstr "நிகழ்வு"
 
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$SEVERITY$
 msgctxt "warning_severity"
-msgid "Severity"
-msgstr "தீவிரம்"
+msgid ""
+"Severity:\n"
+"{severity}"
+msgstr ""
+"தீவிரம்: \n"
+"{severity}"
 
 #, icu-message-format
 msgctxt "warning_urgency"
@@ -349,35 +393,51 @@ msgctxt "warning_appendix"
 msgid "Appendix"
 msgstr "பின் இணைப்பு"
 
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$REGION$
 msgctxt "warning_region"
-msgid "Region"
-msgstr "பகுதி"
+msgid ""
+"Region\n"
+"{region}"
+msgstr ""
+"பகுதி \n"
+"{region}"
 
 #, icu-message-format
 msgctxt "warning_places"
 msgid "Places"
 msgstr "இடங்கள்"
 
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$DESCRIPTION$
 msgctxt "warning_description"
-msgid "Description"
-msgstr "விவரம்"
+msgid ""
+"Description\n"
+"{description}"
+msgstr ""
+"விளக்கம் \n"
+"{description}"
 
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$RECOMMENDEDACTION$
 msgctxt "warning_recommended_action"
-msgid "Recommended Action"
-msgstr "பரிந்துரைக்கப்பட்ட செயல்"
+msgid ""
+"Recommended action\n"
+"{recommendedAction}"
+msgstr ""
+"பரிந்துரைக்கப்பட்ட செயல் \n"
+"{recommendedAction}"
 
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$SOURCE$
 msgctxt "warning_source"
-msgid "Source"
-msgstr "மூலம்"
+msgid ""
+"Source\n"
+"{source}"
+msgstr ""
+"சான்று \n"
+"{source}"
 
 #, icu-message-format
-msgctxt "warning_contact_website"
-msgid "Contact & Website"
-msgstr "தொடர்பு & வலைத்தளம்"
+msgctxt "warning_contact"
+msgid "Contact"
+msgstr "தொடர்பு"
 
 #, icu-message-format
 msgctxt "warning_website"
@@ -412,16 +472,6 @@ msgstr ""
 "மேம்படுத்தலாம் அல்லது நீங்கள் அனுபவித்த பிழைகள் குறித்த அறிக்கைகள் "
 "வரவேற்கப்படுகின்றன. இந்த பயன்பாட்டை நீங்கள் விரும்பினால், பயனுள்ளதாக "
 "இருந்தால், அதைப் பற்றி கேட்க விரும்புகிறேன்."
-
-#, icu-message-format
-msgctxt "about_source"
-msgid "Source"
-msgstr "மூலம்"
-
-#, icu-message-format
-msgctxt "about_source_subtitle"
-msgid "Sources used for retrieving the messages"
-msgstr "செய்திகளை மீட்டெடுக்க பயன்படுத்தப்படும் ஆதாரங்கள்"
 
 #, icu-message-format
 msgctxt "about_official_source"
@@ -531,23 +581,15 @@ msgstr "தனியுரிமை"
 #, icu-message-format
 msgctxt "privacy_main_text"
 msgid ""
-"FOSS Warn does not send any information about its usage but only connects to warnung.bund.de at regular intervals and downloads the latest warnings. The locations you have saved (at district level) are visible to the operator of the API.\n"
-"\n"
-"For the list of localities, FOSS Warn loads once at the first startup a list from the Github repository. This is only temporary and will be changed in the next version.\n"
-"\n"
-"FOSSWarn uses OpenStreetMap to display the area of an alert on a map.\n"
-"\n"
-"FOSS Warn transmits only the technically necessary data.\n"
-"FOSS Warn does not influence the server-side processing."
+"FOSS Warn does not send any information about its usage and only connects to the following services:\n"
+" - the FPAS server: this server handles the subscriptions, sends push notifications and can be selected in the settings. \n"
+" - opensteetmap.org: Used to display the map and to search for places. \n"
+"FOSS Warn transmits only the technically necessary data."
 msgstr ""
-"FOSS WARN அதன் பயன்பாடு குறித்த எந்த தகவலையும் அனுப்பாது, ஆனால் வார்னுங்.பண்ட்.டீ உடன் மட்டுமே வழக்கமான இடைவெளியில் இணைகிறது மற்றும் அண்மைக் கால எச்சரிக்கைகளைப் பதிவிறக்குகிறது. நீங்கள் சேமித்த இடங்கள் (மாவட்ட அளவில்) பநிஇ இன் ஆபரேட்டருக்கு தெரியும்.\n"
-"\n"
-" வட்டாரங்களின் பட்டியலைப் பொறுத்தவரை, முதல் தொடக்கத்தில் அறிவிலிமையம் களஞ்சியத்திலிருந்து ஒரு பட்டியல் FOSS எச்சரிக்கை சுமைகளை எச்சரிக்கை செய்கிறது. இது தற்காலிகமானது மற்றும் அடுத்த பதிப்பில் மாற்றப்படும்.\n"
-"\n"
-" ஒரு வரைபடத்தில் எச்சரிக்கையின் பகுதியைக் காண்பிக்க ஃபோச்வர்ன் ஓபன்ச்ட்ரீட்மேப்பைப் பயன்படுத்துகிறது.\n"
-"\n"
-" FOSS எச்சரிக்கை தொழில்நுட்ப ரீதியாக தேவையான தரவை மட்டுமே கடத்துகிறது.\n"
-" FOSS எச்சரிக்கை சேவையக பக்க செயலாக்கத்தை பாதிக்காது."
+"FOSS முன்னறிவிப்பு அதன் பயன்பாடு பற்றிய எந்த தகவலையும் அனுப்பாது, மேலும் பின்வரும் சேவைகளுடன் மட்டுமே இணைகிறது: \n"
+"- FPAS சேவையகம்: இந்த சேவையகம் சந்தாக்களைக் கையாளுகிறது, புச் அறிவிப்புகளை அனுப்புகிறது மற்றும் அமைப்புகளில் தேர்ந்தெடுக்கப்படலாம். \n"
+"- OpenSteetMap.org: வரைபடத்தைக் காண்பிப்பதற்கும் இடங்களைத் தேடுவதற்கும் பயன்படுகிறது. \n"
+"FOSS முன்னறிவிப்பு தொழில்நுட்ப ரீதியாக தேவையான தரவை மட்டுமே கடத்துகிறது."
 
 #, icu-message-format
 msgctxt "privacy_link_to_privacy"
@@ -574,11 +616,6 @@ msgid "Source"
 msgstr "மூலம்"
 
 #, icu-message-format
-msgctxt "source_mowas_title"
-msgid "Mowas (Modular Warning System)"
-msgstr "மோவாச் (மட்டு எச்சரிக்கை அமைப்பு)"
-
-#, icu-message-format
 msgctxt "source_mowas_description"
 msgid ""
 "Federal Office of Civil Protection and Disaster Assistance - warns of "
@@ -591,24 +628,6 @@ msgstr ""
 msgctxt "source_biwapp_title"
 msgid "Biwapp (Citizen Info & Warning App)"
 msgstr "BWAPP (குடிமக்கள் செய்தி மற்றும் எச்சரிக்கை பயன்பாடு)"
-
-#, icu-message-format
-msgctxt "source_biwapp_description"
-msgid ""
-"regional warning and information system of many municipalities - warns e.g. "
-"of: Bomb discovery, chemical accident, fire, flood, landslide / avalanche, "
-"major damage situation, severe weather, traffic accident, lesson "
-"cancellation and epidemic."
-msgstr ""
-"பல நகராட்சிகளின் பிராந்திய எச்சரிக்கை மற்றும் செய்தி அமைப்பு - எச்சரிக்கிறது"
-" எ.கா. of: வெடிகுண்டு கண்டுபிடிப்பு, இரசாயன விபத்து, தீ, வெள்ளம், நிலச்சரிவு"
-" / பனிச்சரிவு, பெரிய சேத நிலைமை, கடுமையான வானிலை, போக்குவரத்து விபத்து, "
-"பாடம் ரத்து மற்றும் தொற்றுநோய்."
-
-#, icu-message-format
-msgctxt "source_katwarn_title"
-msgid "Katwarn"
-msgstr "விடாமுயற்சி"
 
 #, icu-message-format
 msgctxt "source_katwarn_description"
@@ -625,29 +644,9 @@ msgid "DWD (German Weather Service)"
 msgstr "டி.டபிள்யூ.டி (செர்மன் வானிலை சேவை)"
 
 #, icu-message-format
-msgctxt "source_dwd_description"
-msgid "Federal agency - warns of severe weather"
-msgstr "ஃபெடரல் ஏசென்சி - கடுமையான வானிலை குறித்து எச்சரிக்கிறது"
-
-#, icu-message-format
 msgctxt "source_lhp_title"
 msgid "LHP (Interstate Flood Portal)"
 msgstr "எல்.எச்.பி (இன்டர்ச்டேட் வெள்ள போர்டல்)"
-
-#, icu-message-format
-msgctxt "source_lhp_description"
-msgid "A joint initiative of the German federal states warns of flooding"
-msgstr "சேர்மன் கூட்டாட்சி நாடுகளின் கூட்டு முயற்சி வெள்ளத்தை எச்சரிக்கிறது"
-
-#, icu-message-format
-msgctxt "source_alertswiss_title"
-msgid "Alert Swiss (experimental)"
-msgstr "எச்சரிக்கை சுவிச் (சோதனை)"
-
-#, icu-message-format
-msgctxt "source_alertswiss_description"
-msgid "Alerts for Switzerland"
-msgstr "சுவிட்சர்லாந்திற்கான விழிப்பூட்டல்கள்"
 
 #, icu-message-format
 msgctxt "status_headline"
@@ -745,16 +744,6 @@ msgid "Manually runs the background service once"
 msgstr "கைமுறையாக பின்னணி சேவையை ஒரு முறை இயக்குகிறது"
 
 #, icu-message-format
-msgctxt "dev_settings_restart_background_service"
-msgid "Restart background service"
-msgstr "பின்னணி சேவையை மறுதொடக்கம் செய்யுங்கள்"
-
-#, icu-message-format
-msgctxt "dev_settings_restart_background_service_text"
-msgid "Restarts the background service. May help to fix problems"
-msgstr "பின்னணி சேவையை மறுதொடக்கம் செய்கிறது. சிக்கல்களை சரிசெய்ய உதவலாம்"
-
-#, icu-message-format
 msgctxt "dev_settings_delete_list_of_read_warnings"
 msgid "Delete list of read warnings"
 msgstr "வாசிப்பு எச்சரிக்கைகளின் பட்டியலை நீக்கு"
@@ -780,16 +769,6 @@ msgstr ""
 "பட்டியலை கைமுறையாக அழிக்கிறது."
 
 #, icu-message-format
-msgctxt "dev_settings_call_alert_swiss"
-msgid "Call Alert Swiss"
-msgstr "எச்சரிக்கை சுவிச் அழைக்கவும்"
-
-#, icu-message-format
-msgctxt "dev_settings_call_alert_swiss_text"
-msgid "Runs the method once and adds the messages."
-msgstr "முறையை ஒரு முறை இயக்குகிறது மற்றும் செய்திகளைச் சேர்க்கிறது."
-
-#, icu-message-format
 msgctxt "dev_settings_load_cached_warnings"
 msgid "Load cached warnings"
 msgstr "தற்காலிக சேமிப்பு எச்சரிக்கைகளை ஏற்றவும்"
@@ -798,26 +777,6 @@ msgstr "தற்காலிக சேமிப்பு எச்சரிக�
 msgctxt "dev_settings_load_cached_warnings_text"
 msgid "Loads the cached messages"
 msgstr "தற்காலிக சேமிப்பு செய்திகளை ஏற்றுகிறது"
-
-#, icu-message-format
-msgctxt "dev_settings_test_geocode"
-msgid "Test geocode"
-msgstr "சியோகோட் சோதனை"
-
-#, icu-message-format
-msgctxt "dev_settings_test_geocode_text"
-msgid "Loads the geocodes for the list"
-msgstr "பட்டியலுக்கான சியோகோட்களை ஏற்றுகிறது"
-
-#, icu-message-format
-msgctxt "dev_settings_delete_warnings"
-msgid "Delete warnings"
-msgstr "எச்சரிக்கைகளை நீக்கு"
-
-#, icu-message-format
-msgctxt "dev_settings_delete_warnings_text"
-msgid "Clears the list with warnings"
-msgstr "எச்சரிக்கையுடன் பட்டியலை அழிக்கிறது"
 
 #, icu-message-format
 msgctxt "dev_settings_success"
@@ -835,6 +794,41 @@ msgid "Glad you want to use FOSS Warn. Swipe to start the introduction."
 msgstr ""
 "நீங்கள் FOSS எச்சரிக்கையைப் பயன்படுத்த விரும்பியதில் மகிழ்ச்சி. அறிமுகத்தைத்"
 " தொடங்க ச்வைப் செய்யவும்."
+
+#, icu-message-format
+msgctxt "welcome_view_foss_server_selection_headline"
+msgid "FOSS Public Alert Server"
+msgstr "பொது முன்னறிவிப்பு சேவையகத்தைப் பயன்படுத்துங்கள்"
+
+#, icu-message-format
+msgctxt "welcome_view_foss_server_selection_text"
+msgid ""
+"FOSSWarn now uses the FOSS Public Alert Server (FPAS) to receive alerts. "
+"This server allows to get push notifications about emergency alerts for a "
+"large number of countries in the world. The default server is operated by "
+"KDE and is hosted in Germany. You can change the selected server in the "
+"settings and use any other FPAS server. This version is an alpha test "
+"version of FOSSWarn with FPAS support. This version is not yet ready for "
+"production."
+msgstr ""
+"ஃபோச்வர்ன் இப்போது விழிப்பூட்டல்களைப் பெற FOSS பொது முன்னறிவிப்பு சேவையகத்தை"
+" (FPAS) பயன்படுத்துகிறது. இந்த சேவையகம் உலகில் அதிக எண்ணிக்கையிலான "
+"நாடுகளுக்கான அவசர எச்சரிக்கைகள் குறித்த புச் அறிவிப்புகளைப் பெற "
+"அனுமதிக்கிறது. இயல்புநிலை சேவையகம் KDE ஆல் இயக்கப்படுகிறது மற்றும் "
+"செர்மனியில் புரவலன் செய்யப்படுகிறது. அமைப்புகளில் தேர்ந்தெடுக்கப்பட்ட "
+"சேவையகத்தை மாற்றலாம் மற்றும் வேறு எந்த FPAS சேவையகத்தையும் பயன்படுத்தலாம். "
+"இந்த பதிப்பு FPAS ஆதரவுடன் ஃபோச்வர்னின் ஆல்பா சோதனை பதிப்பாகும். இந்த "
+"பதிப்பு இன்னும் தயாரிப்புக்கு தயாராக இல்லை."
+
+#, icu-message-format
+msgctxt "welcome_view_foss_server_selection_select_instance_helptext"
+msgid "Learn more about the FPAS"
+msgstr "FPAS பற்றி மேலும் அறிக"
+
+#, icu-message-format
+msgctxt "welcome_view_permission_action"
+msgid "Request permission"
+msgstr "இசைவு கோருங்கள்"
 
 #, icu-message-format
 msgctxt "welcome_view_important_headline"
@@ -864,12 +858,22 @@ msgstr ""
 "அனுப்ப, FOSS எச்சரிக்கைக்கான பேட்டரி தேர்வுமுறை முடக்கப்பட வேண்டும்."
 
 #, icu-message-format
+msgctxt "welcome_view_battery_optimisation_verifying"
+msgid "Verifying battery optimization state..."
+msgstr "பேட்டரி தேர்வுமுறை நிலையை சரிபார்க்கிறது ..."
+
+#, icu-message-format
 msgctxt "welcome_view_battery_optimisation_action"
 msgid "Disable"
 msgstr "முடக்கு"
 
 #, icu-message-format
 msgctxt "welcome_view_battery_optimisation_action_success"
+msgid "Success"
+msgstr "செய்"
+
+#, icu-message-format
+msgctxt "welcome_view_action_success"
 msgid "Success"
 msgstr "செய்"
 
@@ -881,18 +885,16 @@ msgstr "என் இடங்கள்"
 #, icu-message-format
 msgctxt "welcome_view_my_places_text"
 msgid ""
-"In the app, you have the option of storing locations for which you want to "
-"receive notifications. The matching to see if there are alerts for this "
-"location takes place locally. If your location is not listed, you can try "
-"your county or the next larger location. If you tap on a location for a long"
-" time, you can delete it again."
+"To receive alerts, you have to subscribe to an area of interest. You can "
+"subscribe to any area in the world. We currently support around 100 "
+"countries. You will receive push notifications for every subscription. To "
+"unsubscribe, you can long-press the location and click on delete."
 msgstr ""
-"பயன்பாட்டில், நீங்கள் அறிவிப்புகளைப் பெற விரும்பும் இடங்களை சேமிக்கும் "
-"விருப்பம் உங்களுக்கு உள்ளது. இந்த இருப்பிடத்திற்கு எச்சரிக்கைகள் உள்ளதா "
-"என்பதைப் பார்ப்பதற்கான பொருத்தம் உள்நாட்டில் நடைபெறுகிறது. உங்கள் இருப்பிடம்"
-" பட்டியலிடப்படவில்லை என்றால், உங்கள் மாவட்டத்தையோ அல்லது அடுத்த பெரிய "
-"இடத்தையோ முயற்சி செய்யலாம். நீங்கள் நீண்ட நேரம் ஒரு இருப்பிடத்தைத் "
-"தட்டினால், அதை மீண்டும் நீக்கலாம்."
+"விழிப்பூட்டல்களைப் பெற, நீங்கள் ஆர்வமுள்ள பகுதிக்கு குழுசேர வேண்டும். உலகின்"
+" எந்தவொரு பகுதிக்கும் நீங்கள் குழுசேரலாம். நாங்கள் தற்போது சுமார் 100 "
+"நாடுகளை ஆதரிக்கிறோம். ஒவ்வொரு சந்தாவிற்கும் புச் அறிவிப்புகளைப் பெறுவீர்கள்."
+" குழுவிலக, நீங்கள் இருப்பிடத்தை நீண்ட அழுத்தி நீக்கு என்பதைக் சொடுக்கு "
+"செய்யலாம்."
 
 #, icu-message-format
 msgctxt "welcome_view_warning_steps_headline"
@@ -930,9 +932,55 @@ msgid "End"
 msgstr "முடிவு"
 
 #, icu-message-format
+msgctxt "welcome_view_unifiedpush_headline"
+msgid "Push Notifications"
+msgstr "அறிவிப்புகளை அழுத்தவும்"
+
+#, icu-message-format
+msgctxt "welcome_view_unifiedpush_text"
+msgid ""
+"FOSSWarn uses UnifiedPush to receive push notifications about new emergency "
+"alerts. UnifiedPush is a decentralized push notification system that lets "
+"you choose the service you want to use. It’s designed to be privacy-"
+"friendly, flexible, and open. To use UnifiedPush, you must install an "
+"additional app that acts as a distributor."
+msgstr ""
+"புதிய அவசர எச்சரிக்கைகள் பற்றிய புச் அறிவிப்புகளைப் பெற ஃபோச்வர்ன் யுனிஃபைட்"
+" புசைப் பயன்படுத்துகிறது. UNIFIDEPUSH என்பது ஒரு பரவலாக்கப்பட்ட புச் "
+"அறிவிப்பு அமைப்பாகும், இது நீங்கள் பயன்படுத்த விரும்பும் சேவையைத் "
+"தேர்வுசெய்ய உதவுகிறது. இது தனியுரிமை நட்பு, நெகிழ்வான மற்றும் திறந்ததாக "
+"வடிவமைக்கப்பட்டுள்ளது. UNIFIDEPUSH ஐப் பயன்படுத்த, விநியோகச்தராக செயல்படும் "
+"கூடுதல் பயன்பாட்டை நீங்கள் நிறுவ வேண்டும்."
+
+#, icu-message-format
+msgctxt "welcome_view_unifiedpush_learn_more_button"
+msgid "Learn more about UnifiedPush."
+msgstr "ஒருங்கிணைந்த புச் பற்றி மேலும் அறிக."
+
+#, icu-message-format
+msgctxt "welcome_view_navigation_previous"
+msgid "Previous"
+msgstr "முந்தைய"
+
+#, icu-message-format
+msgctxt "welcome_view_navigation_next"
+msgid "Next"
+msgstr "அடுத்தது"
+
+#, icu-message-format
 msgctxt "connection_error_no_internet"
 msgid "No server connection"
 msgstr "சேவையக இணைப்பு இல்லை"
+
+#, icu-message-format
+msgctxt "connection_error_app_error"
+msgid "Ups Something went wrong. Please contact the developer"
+msgstr "யுபிஎச் ஏதோ தவறு நடந்தது. டெவலப்பரைத் தொடர்பு கொள்ளவும்"
+
+#, icu-message-format
+msgctxt "connection_error_subscription_expired"
+msgid "Some of your subscriptions have expired."
+msgstr "உங்கள் சில சந்தாக்கள் காலாவதியானன."
 
 #, icu-message-format
 msgctxt "font_size_headline"
@@ -967,33 +1015,23 @@ msgstr "மறுப்பு"
 #, icu-message-format
 msgctxt "disclaimer_text"
 msgid ""
-"This app was created in the hope that it will be useful, comes\n"
-"but comes WITHOUT ANY WARRANTY. The developer cannot at any time \n"
-"guarantee at any time that the app will function without error or that it will\n"
-"display all warnings at all times. The interfaces used\n"
-"may change at any time, which may cause the app to stop working for the\n"
-"no longer works. Also, the developer does not assume any warranty \n"
-"for the topicality, correctness and completeness of the displayed messages. \n"
-"messages. Therefore, do NOT rely on this app at ANY TIME. \n"
-"on this app. Also, the warnings are always received with a certain\n"
-"DELAY received in the background. This app does not use \n"
-"push services, but loads the latest messages at a certain interval and \n"
-"latest messages and then notifies when necessary.\n"
-"By using FOSS Warn, you agree that."
+"This app was created in the hope that it will be helpful, but it comes "
+"WITHOUT ANY WARRANTY. The developer cannot guarantee that the app will "
+"function without errors or that it will display all warnings at all times. "
+"Also, the developer does not assume any warranty for the topicality, "
+"correctness, and completeness of the displayed messages. Therefore, do NOT "
+"rely on this app at ANY TIME. Also, the warnings may received with a certain"
+" DELAY. You agree to this by using FOSS Warn."
 msgstr ""
-"இந்த பயன்பாடு பயனுள்ளதாக இருக்கும் என்ற நம்பிக்கையில் உருவாக்கப்பட்டது, வருகிறது\n"
-" ஆனால் எந்த உத்தரவாதமும் இல்லாமல் வருகிறது. டெவலப்பரால் எந்த நேரத்திலும் முடியாது\n"
-" பயன்பாடு பிழை இல்லாமல் செயல்படும் அல்லது அது எந்த நேரத்திலும் பொறுப்பு\n"
-" எல்லா எச்சரிக்கைகளையும் எல்லா நேரங்களிலும் காண்பி. பயன்படுத்தப்படும் இடைமுகங்கள்\n"
-" எந்த நேரத்திலும் மாறலாம், இது பயன்பாட்டிற்கு வேலை செய்வதை நிறுத்தக்கூடும்\n"
-" இனி வேலை செய்யாது. மேலும், உருவாக்குபவர் எந்த உத்தரவாதத்தையும் ஏற்கவில்லை\n"
-" காட்டப்படும் செய்திகளின் மேற்பூச்சு, சரியான தன்மை மற்றும் முழுமைக்கு.\n"
-" செய்திகள். எனவே, இந்த பயன்பாட்டை எந்த நேரத்திலும் நம்ப வேண்டாம்.\n"
-" இந்த பயன்பாட்டில். மேலும், எச்சரிக்கைகள் எப்போதும் ஒரு குறிப்பிட்டவருடன் பெறப்படுகின்றன\n"
-" பின்னணியில் பெறப்பட்ட நேரந்தவறுகை. இந்த பயன்பாடு பயன்படுத்தாது\n"
-" சேவைகளை அழுத்துங்கள், ஆனால் அண்மைக் கால செய்திகளை ஒரு குறிப்பிட்ட இடைவெளியில் ஏற்றும்\n"
-" அண்மைக் கால செய்திகள் மற்றும் தேவைப்படும்போது அறிவிக்கும்.\n"
-" FOSS எச்சரிக்கையைப் பயன்படுத்துவதன் மூலம், நீங்கள் அதை ஒப்புக்கொள்கிறீர்கள்."
+"இந்த பயன்பாடு இது உதவியாக இருக்கும் என்ற நம்பிக்கையில் உருவாக்கப்பட்டது, "
+"ஆனால் அது எந்த உத்தரவாதமும் இல்லாமல் வருகிறது. பயன்பாடு பிழைகள் இல்லாமல் "
+"செயல்படும் அல்லது அது எல்லா நேரங்களிலும் அனைத்து எச்சரிக்கைகளையும் "
+"காண்பிக்கும் என்று உருவாக்குபவர் பொறுப்பு அளிக்க முடியாது. மேலும், "
+"காண்பிக்கப்படும் செய்திகளின் மேற்பூச்சு, சரியான தன்மை மற்றும் முழுமைக்கான "
+"எந்தவொரு உத்தரவாதத்தையும் உருவாக்குபவர் கருதவில்லை. எனவே, இந்த பயன்பாட்டை "
+"எந்த நேரத்திலும் நம்ப வேண்டாம். மேலும், எச்சரிக்கைகள் ஒரு குறிப்பிட்ட "
+"தாமதத்துடன் பெறப்படலாம். FOSS எச்சரிக்கையைப் பயன்படுத்தி இதை "
+"ஒப்புக்கொள்கிறீர்கள்."
 
 #, icu-message-format
 msgctxt "sorting_headline"
@@ -1111,6 +1149,16 @@ msgid "Information with other messages"
 msgstr "பிற செய்திகளுடன் செய்தி"
 
 #, icu-message-format
+msgctxt "explanation_transport"
+msgid "Transport"
+msgstr "போக்குவரத்து"
+
+#, icu-message-format
+msgctxt "explanation_rescue"
+msgid "Rescue"
+msgstr "மீட்பு"
+
+#, icu-message-format
 msgctxt "delete_place_headline"
 msgid "Delete place?"
 msgstr "இடத்தை நீக்கவா?"
@@ -1129,6 +1177,11 @@ msgstr "நீக்கு"
 msgctxt "delete_place_cancel"
 msgid "Cancel"
 msgstr "ரத்துசெய்"
+
+#, icu-message-format
+msgctxt "delete_place_error"
+msgid "Can not remove place. Please check your internet connection."
+msgstr "இடத்தை அகற்ற முடியாது. உங்கள் இணைய இணைப்பை சரிபார்க்கவும்."
 
 #, icu-message-format
 msgctxt "explanation_warning_level_headline"
@@ -1170,19 +1223,24 @@ msgstr ""
 "எச்சரிக்கை இப்போது நீக்கப்பட்டுள்ளது."
 
 #, icu-message-format
-msgctxt "my_place_there_are"
-msgid "There are"
-msgstr "உள்ளன"
+msgctxt "explanation_warning_level_ack"
+msgid "Acknowledged"
+msgstr "ஒப்புக்கொள்ளப்பட்டது"
 
 #, icu-message-format
-msgctxt "my_place_warnings_more_then_one"
-msgid "warnings"
-msgstr "எச்சரிக்கைகள்"
+msgctxt "explanation_warning_level_error"
+msgid "Error"
+msgstr "பிழை"
 
-#, icu-message-format
-msgctxt "my_place_warnings_only_one"
-msgid "warning"
-msgstr "எச்சரிக்கை"
+#. Tells how many warnings there are for a place
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
+msgctxt "my_place_warnings_count"
+msgid ""
+"There {count, plural, =0{are no warnings} =1{is one warning} other{are "
+"{count} warnings}}"
+msgstr ""
+"அங்கு {எண்ணிக்கை, பன்மை, = 0 {are no warnings} = 1 {is one warning} மற்றவை "
+"{{count} எச்சரிக்கைகள்}}"
 
 #, icu-message-format
 msgctxt "warning_widget_and"
@@ -1226,11 +1284,6 @@ msgstr "எக்ச்ட்ரீம்"
 msgctxt "notification_settings_slidervalue_moderate"
 msgid "moderate"
 msgstr "மிதமான"
-
-#, icu-message-format
-msgctxt "notification_settings_source_disabled"
-msgid "Source disabled - you won't get a notification"
-msgstr "மூல முடக்கப்பட்டது - உங்களுக்கு அறிவிப்பு கிடைக்காது"
 
 #, icu-message-format
 msgctxt "notification_settings_slidervalue_severe"
@@ -1391,9 +1444,49 @@ msgid "actual"
 msgstr "உண்மையான"
 
 #, icu-message-format
+msgctxt "warning_status_exercise"
+msgid "excercise"
+msgstr "உடற்பயிற்சி"
+
+#, icu-message-format
+msgctxt "warning_status_system"
+msgid "system"
+msgstr "மண்டலம்"
+
+#, icu-message-format
+msgctxt "warning_status_test"
+msgid "test"
+msgstr "தேர்வு"
+
+#, icu-message-format
+msgctxt "warning_status_draft"
+msgid "draft"
+msgstr "வரைவு"
+
+#, icu-message-format
 msgctxt "warning_urgency_immediate"
 msgid "immediate"
 msgstr "உடனடியாக"
+
+#, icu-message-format
+msgctxt "warning_urgency_expected"
+msgid "expected"
+msgstr "எதிர்பார்க்கப்படுகிறது"
+
+#, icu-message-format
+msgctxt "warning_urgency_future"
+msgid "future"
+msgstr "எதிர்காலம்"
+
+#, icu-message-format
+msgctxt "warning_urgency_past"
+msgid "past"
+msgstr "கடந்த"
+
+#, icu-message-format
+msgctxt "warning_urgency_unknown"
+msgid "unknown"
+msgstr "தெரியவில்லை"
 
 #, icu-message-format
 msgctxt "add_my_place_with_map_add_place_button"
@@ -1404,6 +1497,46 @@ msgstr "இடம் சேர்க்கவும்"
 msgctxt "warning_certainty_observed"
 msgid "observed"
 msgstr "கவனிக்கப்பட்டது"
+
+#, icu-message-format
+msgctxt "warning_certainty_likely"
+msgid "likely"
+msgstr "நிகழக்கூடிய"
+
+#, icu-message-format
+msgctxt "warning_certainty_possible"
+msgid "possible"
+msgstr "நிகழக்கூடிய"
+
+#, icu-message-format
+msgctxt "warning_certainty_unlikely"
+msgid "unlikely"
+msgstr "சாத்தியமில்லை"
+
+#, icu-message-format
+msgctxt "warning_certainty_unknown"
+msgid "unknown"
+msgstr "தெரியவில்லை"
+
+#, icu-message-format
+msgctxt "warning_certainty_other"
+msgid "other"
+msgstr "மற்றொன்று"
+
+#, icu-message-format
+msgctxt "warning_scope_public"
+msgid "Public"
+msgstr "பொது"
+
+#, icu-message-format
+msgctxt "warning_scope_restricted"
+msgid "Restricted"
+msgstr "தடைசெய்யப்பட்டது"
+
+#, icu-message-format
+msgctxt "warning_scope_private"
+msgid "Private"
+msgstr "தனிப்பட்ட"
 
 #, icu-message-format
 msgctxt "map_view_warning_overview_no_alerts"
@@ -1486,3 +1619,287 @@ msgstr "ஆட்டோ இடம்பெயர்வு தொடங்கவ�
 msgctxt "add_my_place_with_map_loading_screen_search_error"
 msgid "Something went wrong. Please try it again later."
 msgstr "ஏதோ தவறு நடந்தது. தயவுசெய்து பின்னர் மீண்டும் முயற்சிக்கவும்."
+
+#, icu-message-format
+msgctxt "error_dialog_text_privacy"
+msgid ""
+"The log does not contain any privacy sensitive information beside maybe your"
+" selected place. FOSS Warn also does not send any log information to a "
+"server."
+msgstr ""
+"பதிவில் நீங்கள் தேர்ந்தெடுக்கப்பட்ட இடத்தைத் தவிர வேறு எந்த தனியுரிமை "
+"முக்கியமான தகவல்களும் இல்லை. Foss எச்சரிக்கையும் ஒரு சேவையகத்திற்கு எந்த "
+"பதிவு தகவலையும் அனுப்பாது."
+
+#, icu-message-format
+msgctxt "error_dialog_text_introduction"
+msgid ""
+"FOSS Warn has noticed an error. If this error persists, please contact the "
+"developer and attach the following log:"
+msgstr ""
+"ஃபோச் முன்னறிவிப்பு ஒரு பிழையைக் கவனித்துள்ளது. இந்த பிழை தொடர்ந்தால், "
+"தயவுசெய்து டெவலப்பரைத் தொடர்புகொண்டு பின்வரும் பதிவை இணைக்கவும்:"
+
+#, icu-message-format
+msgctxt "app_error_message"
+msgid "Ups. Something went wrong. Please contact the developer"
+msgstr "யுபிஎச். ஏதோ தவறு நடந்தது. டெவலப்பரைத் தொடர்பு கொள்ளவும்"
+
+#, icu-message-format
+msgctxt "error_dialog_headline"
+msgid "Oh no - something went wrong :("
+msgstr "ஓ இல்லை - ஏதோ தவறு நடந்தது :("
+
+#, icu-message-format
+msgctxt "error_dialog_text_instructions_text"
+msgid ""
+"- Check your internet connection\n"
+"- Check if the issue is persistent\n"
+"- write an E-Mail to: foss-warn@posteo.de\n"
+"- or open an Github Issue"
+msgstr ""
+"- உங்கள் இணைய இணைப்பை சரிபார்க்கவும் \n"
+"- சிக்கல் தொடர்ந்து இருக்கிறதா என்று சரிபார்க்கவும் \n"
+"-இதற்கு ஒரு மின்னஞ்சல் எழுதுங்கள்: foss-warn@posteo.de \n"
+"- அல்லது ஒரு அறிவிலிமையம் சிக்கலைத் திறக்கவும்"
+
+#, icu-message-format
+msgctxt "error_dialog_text_instructions_headline"
+msgid "What should I do now?"
+msgstr "நான் இப்போது என்ன செய்ய வேண்டும்?"
+
+#, icu-message-format
+msgctxt "welcome_view_foss_public_alert_server_headline"
+msgid "FOSS Public Alert Server"
+msgstr "பொது முன்னறிவிப்பு சேவையகத்தைப் பயன்படுத்துங்கள்"
+
+#, icu-message-format
+msgctxt "welcome_view_foss_public_alert_server_text"
+msgid ""
+"FOSS Warn now uses the FOSS Public Alert Server as the backend. This allows "
+"us to deliver push notifications and support more areas worldwide. The FOSS "
+"Public Alert Server is developed by the FOSS Warn team in cooperation with "
+"KDE."
+msgstr ""
+"FOSS முன்னறிவிப்பு இப்போது FOSS பொது முன்னறிவிப்பு சேவையகத்தை பின்தளத்தில் "
+"பயன்படுத்துகிறது. இது புச் அறிவிப்புகளை வழங்கவும், உலகளவில் அதிகமான பகுதிகளை"
+" ஆதரிக்கவும் அனுமதிக்கிறது. FOSS பொது முன்னறிவிப்பு சேவையகம் KDE உடன் "
+"ஒத்துழைப்புடன் FOSS முன்னறிவிப்பு குழுவால் உருவாக்கப்பட்டது."
+
+#, icu-message-format
+msgctxt "welcome_view_notification_permission_text"
+msgid ""
+"FOSSWarn needs your permission to send you notifications in case there are "
+"alerts for your area. Press the button below to open the permission dialog."
+msgstr ""
+"உங்கள் பகுதிக்கு எச்சரிக்கைகள் இருந்தால் உங்களுக்கு அறிவிப்புகளை அனுப்ப "
+"ஃபோச்வர்ன் உங்கள் இசைவு தேவை. இசைவு உரையாடலைத் திறக்க கீழே உள்ள பொத்தானை "
+"அழுத்தவும்."
+
+#, icu-message-format
+msgctxt "welcome_view_foss_public_alert_server_select_instance"
+msgid "Select server instance"
+msgstr "சேவையக உதாரணத்தைத் தேர்ந்தெடுக்கவும்"
+
+#, icu-message-format
+msgctxt "welcome_view_notification_permission_headline"
+msgid "Notification permission"
+msgstr "அறிவிப்பு இசைவு"
+
+#, icu-message-format
+msgctxt "welcome_view_alarm_permission_headline"
+msgid "Alarm permission"
+msgstr "அலாரம் இசைவு"
+
+#, icu-message-format
+msgctxt "welcome_view_alarm_permission_text"
+msgid ""
+"FOSSWarn needs your permission to schedule exact alarms. Press on the button"
+" below to open the permission dialog."
+msgstr ""
+"சரியான அலாரங்களை திட்டமிட ஃபோச்வர்னுக்கு உங்கள் இசைவு தேவை. இசைவு உரையாடலைத்"
+" திறக்க கீழே உள்ள பொத்தானை அழுத்தவும்."
+
+#, icu-message-format
+msgctxt "welcome_view_foss_public_alert_server_select_instance_helptext"
+msgid "Why do I need to select a server?"
+msgstr "நான் ஏன் ஒரு சேவையகத்தைத் தேர்ந்தெடுக்க வேண்டும்?"
+
+#, icu-message-format
+msgctxt "welcome_view_request_permission"
+msgid "Request permission"
+msgstr "இசைவு கோருங்கள்"
+
+#, icu-message-format
+msgctxt "settings_foss_public_alert_server_enter_url_label_text"
+msgid "Enter FPAS Server URL"
+msgstr "FPAS சேவையக முகவரி ஐ உள்ளிடவும்"
+
+#, icu-message-format
+msgctxt "settings_foss_public_alert_server_enter_url_error"
+msgid "Invalid Server URL"
+msgstr "தவறான சேவையக முகவரி"
+
+#, icu-message-format
+msgctxt "welcome_view_foss_public_alert_server_server_operator"
+msgid "This server is operated by:"
+msgstr "இந்த சேவையகம் இயக்கப்படுகிறது:"
+
+#, icu-message-format
+msgctxt "welcome_view_foss_public_alert_server_use_custom_server"
+msgid "Use custom server"
+msgstr "தனிப்பயன் சேவையகத்தைப் பயன்படுத்தவும்"
+
+#, icu-message-format
+msgctxt "welcome_view_foss_public_alert_server_confirm_button"
+msgid "Confirm"
+msgstr "உறுதிப்படுத்தவும்"
+
+#, icu-message-format
+msgctxt "welcome_view_foss_public_alert_server_confirm_success"
+msgid "Confirmed"
+msgstr "உறுதிப்படுத்தப்பட்டது"
+
+#, icu-message-format
+msgctxt "welcome_view_foss_public_alert_server_use_default_server"
+msgid "Use default server"
+msgstr "இயல்புநிலை சேவையகத்தைப் பயன்படுத்தவும்"
+
+#. Shown on the alert detail screen when the publisher of an alert is unknown
+#, icu-message-format
+msgctxt "alert_publisher_unknown"
+msgid "Unknown"
+msgstr "தெரியவில்லை"
+
+#, icu-message-format
+msgctxt "failed_to_open_url"
+msgid "Failed to open URL"
+msgstr "முகவரி ஐ திறக்கத் தவறிவிட்டது"
+
+#, icu-message-format
+msgctxt "error_dialog_description"
+msgid ""
+"FOSSWarn has noticed an error. Please report the error and attach the "
+"following log."
+msgstr ""
+"ஃபோச்வர்ன் ஒரு பிழையை கவனித்திருக்கிறார். பிழையைப் புகாரளித்து பின்வரும் "
+"பதிவை இணைக்கவும்."
+
+#, icu-message-format
+msgctxt "error_dialog_privacy"
+msgid ""
+"The log does not contain any privacy-sensitive information besides maybe "
+"your selected places. FOSSWarn does not send any logs to a server."
+msgstr ""
+"நீங்கள் தேர்ந்தெடுக்கப்பட்ட இடங்களைத் தவிர வேறு எந்த தனியுரிமை-உணர்திறன் "
+"தகவலும் பதிவில் இல்லை. ஃபோச்வர்ன் எந்த பதிவுகளையும் ஒரு சேவையகத்திற்கு "
+"அனுப்பாது."
+
+#, icu-message-format
+msgctxt "error_dialog_instruction_headline"
+msgid "What should I do now?"
+msgstr "நான் இப்போது என்ன செய்ய வேண்டும்?"
+
+#, icu-message-format
+msgctxt "error_dialog_instruction_body"
+msgid ""
+"1. Check if the error is just because of a missing internet connection\n"
+"2. Check if there is already an open issue on GitHub\n"
+"3. Find the relevant part of the log. If the same error message occurs multiple times in the log, sending just one error message is enough.\n"
+"4. Open a new issue or write an email to foss-warn@posteo.de"
+msgstr ""
+"1. இணைய இணைப்பு காணாமல் போனதால் பிழை இருக்கிறதா என்று சரிபார்க்கவும் \n"
+"2. கிட்அப்பில் ஏற்கனவே திறந்த சிக்கல் இருக்கிறதா என்று சோதிக்கவும் \n"
+"3. பதிவின் தொடர்புடைய பகுதியைக் கண்டறியவும். பதிவில் அதே பிழை செய்தி பல முறை ஏற்பட்டால், ஒரு பிழை செய்தியை அனுப்புவது போதுமானது. \n"
+"4. ஒரு புதிய சிக்கலைத் திறக்கவும் அல்லது foss-warn@posteo.de க்கு மின்னஞ்சல் எழுதவும்"
+
+#, icu-message-format
+msgctxt "error_dialog_hide_error_bar"
+msgid "Hide error bar"
+msgstr "பிழை பட்டியை மறைக்கவும்"
+
+#, icu-message-format
+msgctxt "error_dialog_copy"
+msgid "copy error log"
+msgstr "பிழை பதிவை நகலெடுக்கவும்"
+
+#, icu-message-format
+msgctxt "error_dialog_copy_success"
+msgid "copied"
+msgstr "நகலெடுக்கப்பட்டது"
+
+#, icu-message-format
+msgctxt "error_log_viewer_title"
+msgid "Log file Viewer"
+msgstr "பதிவு கோப்பு பார்வையாளர்"
+
+#, icu-message-format
+msgctxt "error_log_viewer_headline"
+msgid "Here you can read the error log for FOSSWarn"
+msgstr "ஃபோச்வர்னுக்கான பிழை பதிவை இங்கே படிக்கலாம்"
+
+#, icu-message-format
+msgctxt "error_log_button_delete"
+msgid "Delete"
+msgstr "நீக்கு"
+
+#, icu-message-format
+msgctxt "error_log_button_share"
+msgid "Share logfile"
+msgstr "உள்நுழைவு பகிர்வு"
+
+#, icu-message-format
+msgctxt "error_log_share_info"
+msgid "Error log shared from FOSSWarn"
+msgstr "ஃபோச்வர்னில் இருந்து பகிரப்பட்ட பிழை பதிவு"
+
+#, icu-message-format
+msgctxt "dev_settings_subscribe_for_test_alert"
+msgid "Subscribe for technical test alerts from the FOSS Public Alert Server"
+msgstr ""
+"FOSS பொது முன்னறிவிப்பு சேவையகத்திலிருந்து தொழில்நுட்ப சோதனை "
+"விழிப்பூட்டல்களுக்கு குழுசேரவும்"
+
+#, icu-message-format
+msgctxt "invalid_subscription_dialog_headline"
+msgid "Renew expired subscriptions"
+msgstr "காலாவதியான சந்தாக்களை புதுப்பிக்கவும்"
+
+#, icu-message-format
+msgctxt "invalid_subscription_dialog_text"
+msgid ""
+"Some of your subscriptions have expired. Click on resubscribe to get push "
+"notifications again"
+msgstr ""
+"உங்கள் சில சந்தாக்கள் காலாவதியானன. புச் அறிவிப்புகளை மீண்டும் பெற "
+"retubscribe இல் சொடுக்கு செய்க"
+
+#, icu-message-format
+msgctxt "invalid_subscription_dialog_resubscribe_button"
+msgid "resubscribe"
+msgstr "மறுபயன்பாடு"
+
+#, icu-message-format
+msgctxt "invalid_subscription_dialog_loading_indicator_replace_places"
+msgid "replacing the old places..."
+msgstr "பழைய இடங்களை மாற்றுவது ..."
+
+#, icu-message-format
+msgctxt "invalid_subscription_dialog_error_body"
+msgid "Oh no, failed to resubscribe."
+msgstr "ஓ, மறுபரிசீலனை செய்யத் தவறிவிட்டது."
+
+#, case-insensitive, icu-message-format, placeholders:$STATUS_CODE$
+msgctxt "invalid_subscription_dialog_error_status_code"
+msgid "HTTP Status code: {status_code}"
+msgstr "HTTP நிலை code: {status_code}"
+
+#, case-insensitive, icu-message-format, placeholders:$MESSAGE$
+msgctxt "invalid_subscription_dialog_error_message"
+msgid "Error message: {message}"
+msgstr "பிழை செய்தி: {message}"
+
+#, icu-message-format
+msgctxt "invalid_subscription_dialog_successfully_resubscribed"
+msgid "Successfully resubscribed"
+msgstr "வெற்றிகரமாக மறுபரிசீலனை செய்யப்பட்டது"
