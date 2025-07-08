@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (OpenKAT)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-29 10:50+0200\n"
-"PO-Revision-Date: 2025-05-31 08:17\n"
+"POT-Creation-Date: 2025-07-05 07:14+0200\n"
+"PO-Revision-Date: 2025-07-08 21:59\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/openkat/nl-kat-coordination/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: account/admin.py
 msgid "Permissions"
@@ -22,7 +22,8 @@ msgstr "அனுமதிகள்"
 msgid "Important dates"
 msgstr "முக்கியமான தேதிகள்"
 
-#: account/forms/account_setup.py katalogus/templates/katalogus_settings.html
+#: account/forms/account_setup.py crisis_room/forms.py
+#: katalogus/templates/katalogus_settings.html
 #: katalogus/templates/plugin_container_image.html
 #: reports/report_types/dns_report/report.html
 #: reports/report_types/tls_report/report.html
@@ -73,14 +74,8 @@ msgid "--- Please select one of the available options ----"
 msgstr "--- கிடைக்கக்கூடிய விருப்பங்களில் ஒன்றைத் தேர்ந்தெடுக்கவும் ----"
 
 #: account/forms/account_setup.py
-msgid "Account Type"
+msgid "Account type"
 msgstr "கணக்கு வகை"
-
-#: account/forms/account_setup.py
-msgid "Every member of OpenKAT must be part of an account type."
-msgstr ""
-"OpenKAT இன் ஒவ்வொரு உறுப்பினரும் கணக்கு வகையின் ஒரு பகுதியாக இருக்க "
-"வேண்டும்."
 
 #: account/forms/account_setup.py
 msgid "Please select an account type to proceed."
@@ -161,9 +156,8 @@ msgstr "இசைவு நிலைகளை மாற்ற நம்பப்
 msgid "Acknowledged to change Clearance Levels."
 msgstr "இசைவு அளவை மாற்ற ஒப்புக் கொள்ளப்பட்டது."
 
-#: account/forms/account_setup.py
+#: account/forms/account_setup.py rocky/forms.py
 #: rocky/templates/organizations/organization_member_list.html
-#: rocky/views/organization_member_list.py
 msgid "Blocked"
 msgstr "தடுக்கப்பட்டது"
 
@@ -578,7 +572,7 @@ msgstr " கடிதங்கள்"
 msgid ""
 " special characters such as: {str(validators.get('special_characters',''))}"
 msgstr ""
-"போன்ற சிறப்பு எழுத்துக்கள்: {சரம் (Validators.get ('சிறப்பு எழுத்துக்கள்', "
+" போன்ற சிறப்பு எழுத்துக்கள்: {சரம் (Validators.get ('சிறப்பு எழுத்துக்கள்', "
 "''))}"
 
 #: account/validators.py
@@ -623,6 +617,10 @@ msgid "Close modal"
 msgstr "மோடல் மூடு"
 
 #: components/modal/template.html
+#: crisis_room/templates/partials/delete_dashboard_item_modal.html
+#: crisis_room/templates/partials/delete_dashboard_modal.html
+#: crisis_room/templates/partials/new_dashboard_item_modal.html
+#: crisis_room/templates/partials/new_dashboard_modal.html
 #: katalogus/templates/change_clearance_level.html
 #: katalogus/templates/confirmation_clone_settings.html
 #: katalogus/templates/plugin_settings_delete.html
@@ -632,17 +630,91 @@ msgstr "மோடல் மூடு"
 #: rocky/templates/oois/ooi_mute_finding.html
 #: rocky/templates/organizations/organization_edit.html
 #: rocky/templates/organizations/organization_member_edit.html
+#: rocky/templates/partials/mute_findings_modal.html
 #: rocky/templates/two_factor/_wizard_actions.html
 msgid "Cancel"
 msgstr "ரத்துசெய்"
 
+#: crisis_room/forms.py
+msgid "Title on dashboard"
+msgstr "டாச்போர்டில் தலைப்பு"
+
+#: crisis_room/forms.py
+msgid "Number of rows in list"
+msgstr "பட்டியலில் வரிசைகளின் எண்ணிக்கை"
+
+#: crisis_room/forms.py
+msgid "Dashboard item size"
+msgstr "டாச்போர்டு உருப்படி அளவு"
+
+#: crisis_room/forms.py
+msgid "Full width"
+msgstr "முழு அகலம்"
+
+#: crisis_room/forms.py
+msgid "Half width"
+msgstr "அரை அகலம்"
+
+#: crisis_room/forms.py
+msgid "An item with that name already exists. Try a different title."
+msgstr ""
+"அந்த பெயரைக் கொண்ட ஒரு உருப்படி ஏற்கனவே உள்ளது. வேறு தலைப்பை முயற்சிக்கவும்."
+
+#: crisis_room/forms.py
+msgid "An error occurred while adding dashboard item."
+msgstr "டாச்போர்டு உருப்படியைச் சேர்க்கும்போது பிழை ஏற்பட்டது."
+
+#: crisis_room/forms.py
+msgid "List sorting by"
+msgstr "வழங்கியவர்"
+
+#: crisis_room/forms.py
+msgid "Type (A-Z)"
+msgstr "வகை (A-Z)"
+
+#: crisis_room/forms.py
+msgid "Type (Z-A)"
+msgstr "வகை (Z-A)"
+
+#: crisis_room/forms.py
+msgid "Clearance level (Low-High)"
+msgstr "இசைவு நிலை (குறைந்த உயர்)"
+
+#: crisis_room/forms.py
+msgid "Clearance level (High-Low)"
+msgstr "இசைவு நிலை (உயர்-குறைந்த)"
+
+#: crisis_room/forms.py
+msgid "Show table columns"
+msgstr "அட்டவணை நெடுவரிசைகளைக் காட்டு"
+
+#: crisis_room/forms.py
+msgid "Severity (Low-High)"
+msgstr "தீவிரம் (குறைந்த உயர்)"
+
+#: crisis_room/forms.py
+msgid "Severity (High-Low)"
+msgstr "தீவிரம் (உயர்-குறைந்த)"
+
+#: crisis_room/forms.py
+msgid "Finding (A-Z)"
+msgstr "கண்டுபிடிப்பு (A-Z)"
+
+#: crisis_room/forms.py
+msgid "Finding (Z-A)"
+msgstr "கண்டுபிடிப்பு (z-a)"
+
+#: crisis_room/models.py
+msgid "Findings Dashboard"
+msgstr "கண்டுபிடிப்புகள் டாச்போர்டு"
+
 #: crisis_room/models.py
 msgid ""
-"Where on the dashboard do you want to show the data? Position 1 is the most "
-"top level and the max position is 16."
+"Where on the dashboard do you want to show the data? Position {} is the most"
+" top level and the max position is {}."
 msgstr ""
-"டாச்போர்டில் நீங்கள் தரவைக் காட்ட விரும்புகிறீர்கள்? நிலை 1 மிக உயர்ந்த நிலை"
-" மற்றும் அதிகபட்ச நிலை 16 ஆகும்."
+"டாச்போர்டில் நீங்கள் தரவைக் காட்ட விரும்புகிறீர்கள்? நிலை {} மிக உயர்ந்த "
+"நிலை மற்றும் அதிகபட்ச நிலை {} ஆகும்."
 
 #: crisis_room/models.py
 msgid "Will be displayed on the general crisis room, for all organizations."
@@ -657,14 +729,42 @@ msgid "Will be displayed on the findings dashboard for all organizations"
 msgstr ""
 "அனைத்து நிறுவனங்களுக்கும் கண்டுபிடிப்புகள் டாச்போர்டில் காண்பிக்கப்படும்"
 
-#: crisis_room/templates/crisis_room.html rocky/templates/403.html
-#: rocky/templates/404.html
-msgid "Crisis Room"
+#: crisis_room/models.py
+msgid "Can change position up or down of a dashboard item."
+msgstr "டாச்போர்டு உருப்படியின் நிலையை மாற்றலாம்."
+
+#: crisis_room/models.py
+msgid "You have to choose between a recipe or a query, but not both."
+msgstr ""
+"நீங்கள் ஒரு செய்முறை அல்லது வினவலுக்கு இடையில் தேர்வு செய்ய வேண்டும், ஆனால் "
+"இரண்டுமே இல்லை."
+
+#: crisis_room/models.py
+msgid "You have set a query and not where it is from. Also set the source."
+msgstr ""
+"நீங்கள் ஒரு வினவலை அமைத்துள்ளீர்கள், அது எங்கிருந்து இல்லை. மூலத்தையும் "
+"அமைக்கவும்."
+
+#: crisis_room/models.py
+msgid ""
+"DashboardItem must contain at least a 'recipe' or a 'source' with a 'query'."
+msgstr ""
+"டாச்போர்டிடெமில் குறைந்தது ஒரு 'செய்முறை' அல்லது 'வினவல்' கொண்ட 'மூலத்தை' "
+"கொண்டிருக்க வேண்டும்."
+
+#: crisis_room/models.py
+msgid "Max dashboard items reached."
+msgstr "மேக்ச் டாச்போர்டு உருப்படிகள் அடைந்தன."
+
+#: crisis_room/templates/crisis_room.html
+#: crisis_room/templates/organization_crisis_room.html
+#: rocky/templates/header.html
+msgid "Crisis room"
 msgstr "நெருக்கடி அறை"
 
 #: crisis_room/templates/crisis_room.html
-msgid "Crisis Room overview for all organizations"
-msgstr "அனைத்து அமைப்புகளுக்கும் நெருக்கடி அறை கண்ணோட்டம்"
+msgid "Crisis room overview for all organizations."
+msgstr "அனைத்து அமைப்புகளுக்கும் நெருக்கடி அறை கண்ணோட்டம்."
 
 #: crisis_room/templates/crisis_room_dashboards.html
 msgid "Dashboards"
@@ -678,8 +778,9 @@ msgid ""
 "                    "
 msgstr ""
 "\n"
-"இந்த பக்கத்தில் நீங்கள் அனைத்து நிறுவனங்களுக்கும் டாச்போர்டுகளின் கண்ணோட்டத்தைக் காணலாம். \n"
-"** மேலும் சூழலை இங்கே எழுதலாம் **"
+"                        இந்த பக்கத்தில் நீங்கள் அனைத்து நிறுவனங்களுக்கும் டாச்போர்டுகளின் கண்ணோட்டத்தைக் காணலாம். \n"
+"** மேலும் சூழலை இங்கே எழுதலாம் **\n"
+"                    "
 
 #: crisis_room/templates/crisis_room_dashboards.html
 msgid "dashboards"
@@ -706,10 +807,11 @@ msgid ""
 "                        "
 msgstr ""
 "\n"
-"இந்த கண்ணோட்டம் மொத்த கண்டுபிடிப்புகளின் எண்ணிக்கையைக் காட்டுகிறது \n"
+"                            இந்த கண்ணோட்டம் மொத்த கண்டுபிடிப்புகளின் எண்ணிக்கையைக் காட்டுகிறது \n"
 "அனைத்து நிறுவனங்களுக்கும் அடையாளம் காணப்பட்ட தீவிரம். \n"
 "இந்த தரவு அண்மைக் கால நெருக்கடி அறை கண்டுபிடிப்புகள் அறிக்கையை அடிப்படையாகக் கொண்டது \n"
-"ஒவ்வொரு அமைப்பிலும்."
+"ஒவ்வொரு அமைப்பிலும்.\n"
+"                        "
 
 #: crisis_room/templates/crisis_room_findings.html
 msgid "Findings per organization"
@@ -725,38 +827,44 @@ msgid ""
 "                        "
 msgstr ""
 "\n"
-"இந்த அட்டவணை ஒவ்வொரு நிறுவனத்திற்கும் அடையாளம் காணப்பட்ட கண்டுபிடிப்புகளைக் காட்டுகிறது, \n"
+"                            இந்த அட்டவணை ஒவ்வொரு நிறுவனத்திற்கும் அடையாளம் காணப்பட்ட கண்டுபிடிப்புகளைக் காட்டுகிறது, \n"
 "கண்டுபிடிப்பு வகைகளால் வரிசைப்படுத்தப்பட்டு நிறுவனங்களால் தொகுக்கப்பட்டுள்ளது. \n"
 "இந்த தரவு அண்மைக் கால நெருக்கடி அறை கண்டுபிடிப்புகள் அறிக்கையை அடிப்படையாகக் கொண்டது \n"
-"ஒவ்வொரு அமைப்பிலும்."
+"ஒவ்வொரு அமைப்பிலும்.\n"
+"                        "
+
+#: crisis_room/templates/crisis_room_findings.html
+#: reports/report_types/findings_report/report.html
+msgid ""
+"\n"
+"                    No findings have been identified yet. As soon as they have been\n"
+"                    identified, they will be shown on this page.\n"
+"                "
+msgstr ""
+"\n"
+"                    கண்டுபிடிப்புகள் இதுவரை அடையாளம் காணப்படவில்லை. அவர்கள் இருந்தவுடன் \n"
+"                    அடையாளம் காணப்பட்ட, அவை இந்தப் பக்கத்தில் காண்பிக்கப்படும்.\n"
+"                "
 
 #: crisis_room/templates/crisis_room_findings.html
 msgid ""
 "\n"
-"                No findings have been identified yet. As soon as they have been\n"
-"                identified, they will be shown on this page.\n"
+"                There are no organizations yet. After creating an organization,\n"
+"                the identified findings will be shown here.\n"
 "            "
 msgstr ""
 "\n"
-"கண்டுபிடிப்புகள் இதுவரை அடையாளம் காணப்படவில்லை. அவர்கள் இருந்தவுடன் \n"
-"அடையாளம் காணப்பட்ட, அவை இந்த பக்கத்தில் காண்பிக்கப்படும்."
-
-#: crisis_room/templates/crisis_room_findings.html
-msgid ""
-"\n"
-"            There are no organizations yet. After creating an organization,\n"
-"            the identified findings will be shown here.\n"
-"        "
-msgstr ""
-"\n"
-"இதுவரை எந்த அமைப்புகளும் இல்லை. ஒரு அமைப்பை உருவாக்கிய பிறகு, \n"
-"அடையாளம் காணப்பட்ட கண்டுபிடிப்புகள் இங்கே காண்பிக்கப்படும்."
+"                இதுவரை எந்த அமைப்புகளும் இல்லை. ஒரு அமைப்பை உருவாக்கியபிறகு, \n"
+"                    அடையாளம் காணப்பட்ட கண்டுபிடிப்புகள் இங்கே காண்பிக்கப்படும்.\n"
+"            "
 
 #: crisis_room/templates/crisis_room_header.html
-msgid "Crisis Room Navigation"
+#: crisis_room/templates/organization_crisis_room_header.html
+msgid "Crisis room navigation"
 msgstr "நெருக்கடி அறை வழிசெலுத்தல்"
 
 #: crisis_room/templates/crisis_room_header.html
+#: crisis_room/templates/partials/new_dashboard_item_action_button.html
 #: reports/report_types/aggregate_organisation_report/report.html
 #: reports/report_types/aggregate_organisation_report/system_specific.html
 #: reports/report_types/findings_report/report.html
@@ -779,6 +887,375 @@ msgstr "நெருக்கடி அறை வழிசெலுத்தல�
 #: rocky/views/ooi_view.py
 msgid "Findings"
 msgstr "கண்டுபிடிப்புகள்"
+
+#: crisis_room/templates/organization_crisis_room.html
+msgid ""
+"There are no dashboards yet. Click on \"Add dashboard\" to create a new "
+"dashboard."
+msgstr ""
+"டாச்போர்டுகள் இதுவரை இல்லை. புதிய டாச்போர்டை உருவாக்க \"டாச்போர்டைச் சேர்\" "
+"என்பதைக் சொடுக்கு செய்க."
+
+#: crisis_room/templates/organization_crisis_room_dashboards.html
+msgid "Options for dashboard"
+msgstr "டாச்போர்டுக்கான விருப்பங்கள்"
+
+#: crisis_room/templates/organization_crisis_room_dashboards.html
+#: crisis_room/templates/partials/delete_dashboard_modal.html
+msgid "Delete dashboard"
+msgstr "டாச்போர்டை நீக்கு"
+
+#: crisis_room/templates/organization_crisis_room_dashboards.html
+#: katalogus/templates/partials/objects_to_scan.html
+#: rocky/templates/forms/widgets/checkbox_group_table.html
+#: rocky/templates/oois/ooi_list.html
+msgid "Object list"
+msgstr "பொருள் பட்டியல்"
+
+#: crisis_room/templates/organization_crisis_room_dashboards.html
+msgid "Finding list"
+msgstr "பட்டியலைக் கண்டறிதல்"
+
+#: crisis_room/templates/organization_crisis_room_dashboards.html
+msgid "Options for dashboard items"
+msgstr "டாச்போர்டு உருப்படிகளுக்கான விருப்பங்கள்"
+
+#: crisis_room/templates/organization_crisis_room_dashboards.html
+msgid "Position up"
+msgstr "நிலை"
+
+#: crisis_room/templates/organization_crisis_room_dashboards.html
+msgid "Position down"
+msgstr "கீழே நிலை"
+
+#: crisis_room/templates/organization_crisis_room_dashboards.html
+#: crisis_room/templates/partials/delete_dashboard_item_modal.html
+msgid "Delete item"
+msgstr "நீக்கு item"
+
+#: crisis_room/templates/organization_crisis_room_dashboards.html
+msgid ""
+"There are no dashboard items added yet. You can add dashboard items via the "
+"filters on the objects and findings page."
+msgstr ""
+"டாச்போர்டு உருப்படிகள் இதுவரை சேர்க்கப்படவில்லை. பொருள்கள் மற்றும் "
+"கண்டுபிடிப்புகள் பக்கத்தில் உள்ள வடிப்பான்கள் வழியாக டாச்போர்டு உருப்படிகளை "
+"நீங்கள் சேர்க்கலாம்."
+
+#: crisis_room/templates/organization_crisis_room_dashboards.html
+msgid "Add objects"
+msgstr "பொருளைச் சேர்"
+
+#: crisis_room/templates/organization_crisis_room_dashboards.html
+msgid "Add findings"
+msgstr "கண்டுபிடிப்புகளைச் சேர்"
+
+#: crisis_room/templates/organization_crisis_room_dashboards.html
+msgid ""
+"Dashboard does not exist. Choose an existing dashboard or create a new one."
+msgstr ""
+"டாச்போர்டு இல்லை. ஏற்கனவே உள்ள டாச்போர்டைத் தேர்வுசெய்க அல்லது புதிய ஒன்றை "
+"உருவாக்கவும்."
+
+#: crisis_room/templates/organization_crisis_room_header.html
+#: crisis_room/templates/partials/new_dashboard_modal.html
+msgid "Add dashboard"
+msgstr "டாச்போர்டைச் சேர்க்கவும்"
+
+#: crisis_room/templates/partials/dashboard_finding_list.html
+#: rocky/templates/findings/finding_list.html
+#, python-format
+msgid ""
+"An overview of all findings OpenKAT found for organization "
+"<strong>%(organization_name)s</strong>. Each finding relates to an object. "
+"Click a finding for additional information."
+msgstr ""
+"அமைப்பு <strong>%(organization_name)s </strong> க்கான அனைத்து "
+"கண்டுபிடிப்புகளின் கண்ணோட்டம். ஒவ்வொரு கண்டுபிடிப்பும் ஒரு பொருளுடன் "
+"தொடர்புடையது. கூடுதல் தகவலுக்கு கண்டுபிடிப்பைக் சொடுக்கு செய்க."
+
+#: crisis_room/templates/partials/dashboard_finding_list.html
+#, python-format
+msgid "Showing %(length)s findings"
+msgstr "%(length)s கண்டுபிடிப்புகளைக் காட்டுகிறது"
+
+#: crisis_room/templates/partials/dashboard_finding_list.html
+msgid "Go to findings"
+msgstr "கண்டுபிடிப்புகளுக்குச் செல்லுங்கள்"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: rocky/templates/findings/finding_list.html
+msgid "Findings table "
+msgstr "கண்டுபிடிப்புகள் அட்டவணை "
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: crisis_room/templates/partials/dashboard_ooi_list_table.html
+#: rocky/templates/findings/finding_list.html
+#: rocky/templates/oois/ooi_list.html
+msgid "column headers with buttons are sortable"
+msgstr "பொத்தான்கள் கொண்ட நெடுவரிசை தலைப்புகள் வரிசைப்படுத்தக்கூடியவை"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: reports/report_types/dns_report/report.html
+#: reports/report_types/findings_report/report.html
+#: reports/report_types/vulnerability_report/report.html
+#: reports/templates/partials/report_findings_table.html
+#: reports/templates/report_overview/scheduled_reports_table.html
+#: reports/templates/summary/selected_plugins.html
+#: rocky/templates/findings/finding_list.html
+#: rocky/templates/partials/ooi_report_findings_block_table.html
+#: rocky/templates/tasks/boefjes.html rocky/templates/tasks/normalizers.html
+#: rocky/templates/tasks/ooi_detail_task_list.html
+#: rocky/templates/tasks/plugin_detail_task_list.html
+msgid "Details"
+msgstr "விவரங்கள்"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: rocky/templates/findings/finding_list.html
+#, python-format
+msgid "Show details for %(finding)s"
+msgstr "%(finding)s விவரங்களைக் காட்டு"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: rocky/templates/findings/finding_list.html
+#: rocky/templates/oois/ooi_page_tabs.html
+#: rocky/templates/partials/elements/ooi_tree_condensed_table.html
+#: rocky/templates/partials/elements/ooi_tree_condensed_table_row.html
+#: rocky/views/mixins.py
+msgid "Tree"
+msgstr "மரம்"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: rocky/templates/findings/finding_list.html
+#: rocky/templates/oois/ooi_page_tabs.html
+#: rocky/templates/partials/elements/ooi_tree_condensed_table.html
+#: rocky/templates/partials/elements/ooi_tree_condensed_table_row.html
+#: rocky/views/mixins.py
+msgid "Graph"
+msgstr "வரைபடம்"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: katalogus/templates/plugin_container_image.html
+#: reports/report_types/dns_report/report.html
+#: reports/report_types/findings_report/report.html
+#: reports/report_types/vulnerability_report/report.html
+#: reports/templates/partials/report_findings_table.html
+#: reports/templates/report_overview/scheduled_reports_table.html
+#: reports/templates/summary/selected_plugins.html
+#: rocky/templates/findings/finding_list.html
+#: rocky/templates/tasks/boefjes.html rocky/templates/tasks/normalizers.html
+#: rocky/templates/tasks/ooi_detail_task_list.html
+#: rocky/templates/tasks/plugin_detail_task_list.html
+msgid "Close details"
+msgstr "விவரங்களை மூடு"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: katalogus/templates/plugin_container_image.html
+#: reports/report_types/dns_report/report.html
+#: reports/report_types/findings_report/report.html
+#: reports/report_types/vulnerability_report/report.html
+#: reports/templates/partials/report_findings_table.html
+#: reports/templates/report_overview/scheduled_reports_table.html
+#: reports/templates/summary/selected_plugins.html
+#: rocky/templates/findings/finding_list.html
+#: rocky/templates/tasks/boefjes.html rocky/templates/tasks/normalizers.html
+#: rocky/templates/tasks/ooi_detail_task_list.html
+#: rocky/templates/tasks/plugin_detail_task_list.html
+msgid "Open details"
+msgstr "திறந்த விவரங்கள்"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: reports/report_types/dns_report/report.html
+#: rocky/templates/oois/ooi_detail_findings_list.html
+#: rocky/templates/oois/ooi_detail_findings_overview.html
+#: rocky/views/mixins.py
+msgid "Severity"
+msgstr "தீவிரம்"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: reports/report_types/dns_report/report.html
+#: reports/templates/partials/report_findings_table.html
+#: rocky/templates/findings/finding_add.html
+#: rocky/templates/partials/ooi_report_findings_block_table_expanded_row.html
+#: rocky/views/mixins.py
+msgid "Finding"
+msgstr "கண்டுபிடிப்பு"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: rocky/templates/findings/finding_list.html
+#: rocky/templates/partials/ooi_report_findings_block_table.html
+msgid "Finding type"
+msgstr "வகை கண்டுபிடிப்பு"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: rocky/templates/findings/finding_list.html
+#, python-format
+msgid "Show details for %(finding_type)s"
+msgstr "%(finding_type)s விவரங்களைக் காட்டு"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: rocky/templates/findings/finding_list.html
+msgid "OOI type"
+msgstr "OOI வகை"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: rocky/templates/findings/finding_list.html
+#, python-format
+msgid "Show %(ooi_type)s objects"
+msgstr "%(ooi_type)s பொருள்களைக் காட்டு"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: rocky/views/mixins.py
+msgid "Location"
+msgstr "இடம்"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#, python-format
+msgid "Show details for %(ooi)s"
+msgstr "%(ooi)s விவரங்களைக் காட்டு"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: rocky/templates/findings/finding_list.html
+msgid "Risk score"
+msgstr "இடர் மதிப்பெண்"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: katalogus/templates/normalizer_detail.html
+#: reports/report_types/aggregate_organisation_report/appendix.html
+#: reports/report_types/dns_report/report.html
+#: reports/report_types/vulnerability_report/report.html
+#: reports/templates/partials/report_findings_table.html
+#: reports/templates/summary/report_asset_overview.html tools/forms/boefje.py
+#: tools/forms/finding_type.py rocky/templates/findings/finding_list.html
+#: rocky/templates/oois/ooi_detail.html
+#: rocky/templates/oois/ooi_detail_findings_list.html
+#: rocky/templates/scan.html
+msgid "Description"
+msgstr "விவரம்"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: reports/report_types/multi_organization_report/recommendations.html
+#: reports/templates/partials/report_findings_table.html
+#: reports/templates/partials/report_severity_totals_table.html
+#: rocky/templates/findings/finding_list.html
+msgid "Recommendation"
+msgstr "பரிந்துரை"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: reports/report_types/vulnerability_report/report.py
+#: reports/templates/partials/report_findings_table.html
+#: rocky/templates/findings/finding_list.html
+#: rocky/templates/oois/ooi_detail_origins_inference.html
+#: rocky/templates/oois/ooi_detail_origins_observations.html
+#: rocky/templates/partials/ooi_report_findings_block_table_expanded_row.html
+msgid "Source"
+msgstr "மூலம்"
+
+#: crisis_room/templates/partials/dashboard_finding_list_table.html
+#: reports/templates/partials/report_findings_table.html
+#: rocky/templates/findings/finding_list.html
+msgid "Impact"
+msgstr "தாக்கம்"
+
+#: crisis_room/templates/partials/dashboard_ooi_list.html
+#: rocky/templates/oois/ooi_list.html
+#, python-format
+msgid ""
+"An overview of objects found for organization "
+"<strong>%(organization_name)s</strong>. Objects can be added manually or by "
+"running Boefjes. Click an object for additional information."
+msgstr ""
+"அமைப்பு <strong>%(organization_name)s </strong> க்கான பொருள்களின் "
+"கண்ணோட்டம். பொருள்களை கைமுறையாக அல்லது போஃப்செசை இயக்குவதன் மூலம் "
+"சேர்க்கலாம். கூடுதல் தகவலுக்கு ஒரு பொருளைக் சொடுக்கு செய்க."
+
+#: crisis_room/templates/partials/dashboard_ooi_list.html
+#, python-format
+msgid "Showing %(length)s objects"
+msgstr "%(length)s பொருள்களைக் காட்டுகிறது"
+
+#: crisis_room/templates/partials/dashboard_ooi_list.html
+msgid "Go to objects"
+msgstr "பொருள்களுக்குச் செல்"
+
+#: crisis_room/templates/partials/dashboard_ooi_list_table.html
+#: rocky/templates/oois/ooi_list.html
+msgid "Objects "
+msgstr "பொருள்கள் "
+
+#: crisis_room/templates/partials/delete_dashboard_item_modal.html
+#, python-format
+msgid "Are you sure you want to delete '%(name)s' from this dashboard?"
+msgstr "இந்த டாச்போர்டிலிருந்து '%(name)s' ஐ நீக்க விரும்புகிறீர்களா?"
+
+#: crisis_room/templates/partials/delete_dashboard_item_modal.html
+#: crisis_room/templates/partials/delete_dashboard_modal.html
+#: katalogus/templates/plugin_settings_delete.html
+#: katalogus/views/plugin_settings_delete.py
+#: reports/templates/report_overview/modal_partials/delete_modal.html
+#: reports/templates/report_overview/report_history_table.html
+#: reports/templates/report_overview/scheduled_reports_table.html
+#: rocky/templates/admin/delete_confirmation.html rocky/views/ooi_delete.py
+msgid "Delete"
+msgstr "நீக்கு"
+
+#: crisis_room/templates/partials/delete_dashboard_modal.html
+#, python-format
+msgid ""
+"Are you sure you want to delete dashboard '%(dashboard)s'? All the items on "
+"the dashboard will be deleted as well."
+msgstr ""
+"டாச்போர்டு '%(dashboard)s' நீக்க விரும்புகிறீர்களா? டாச்போர்டில் உள்ள "
+"அனைத்து பொருட்களும் நீக்கப்படும்."
+
+#: crisis_room/templates/partials/new_dashboard_item_action_button.html
+msgid "Actions for adding dashboard items"
+msgstr "டாச்போர்டு உருப்படிகளைச் சேர்ப்பதற்கான செயல்கள்"
+
+#: crisis_room/templates/partials/new_dashboard_item_action_button.html
+msgid "Add item"
+msgstr "உருப்படியைச் சேர்க்கவும்"
+
+#: crisis_room/templates/partials/new_dashboard_item_action_button.html
+#: reports/templates/partials/report_ooi_list.html
+#: reports/templates/report_overview/report_history_table.html
+#: reports/templates/summary/ooi_selection.html tools/forms/ooi.py
+#: tools/view_helpers.py rocky/templates/admin/delete_confirmation.html
+#: rocky/templates/admin/delete_selected_confirmation.html
+#: rocky/templates/dashboard_client.html
+#: rocky/templates/dashboard_redteam.html rocky/templates/header.html
+#: rocky/views/ooi_add.py rocky/views/ooi_list.py rocky/views/ooi_view.py
+#: rocky/views/upload_csv.py rocky/views/upload_raw.py
+msgid "Objects"
+msgstr "பொருள்கள்"
+
+#: crisis_room/templates/partials/new_dashboard_item_modal.html
+#, python-format
+msgid ""
+"\n"
+"            Add %(item_type)s to dashboard\n"
+"        "
+msgstr ""
+"\n"
+"டாச்போர்டில் %(item_type)s சேர்க்கவும்"
+
+#: crisis_room/templates/partials/new_dashboard_item_modal.html
+#, python-format
+msgid ""
+"\n"
+"        Add these %(item_type)s with the selected filters\n"
+"        to the dashboard of your choice.\n"
+"    "
+msgstr ""
+"\n"
+"தேர்ந்தெடுக்கப்பட்ட வடிப்பான்களுடன் இந்த %(item_type)s சேர்க்கவும் \n"
+"உங்களுக்கு விருப்பமான டாச்போர்டுக்கு."
+
+#: crisis_room/templates/partials/new_dashboard_item_modal.html
+#: rocky/templates/findings/finding_list.html
+#: rocky/templates/oois/ooi_list.html
+msgid "Add to dashboard"
+msgstr "டாச்போர்டில் சேர்க்கவும்"
 
 #: katalogus/client.py
 msgid ""
@@ -803,6 +1280,46 @@ msgstr "இந்த பெயருடன் போஃப்சே ஏற்க
 #: katalogus/client.py
 msgid "Boefje with this ID already exists."
 msgstr "இந்த ஐடியுடன் போஃப்சே ஏற்கனவே உள்ளது."
+
+#: katalogus/client.py
+msgid "Access to resource not allowed"
+msgstr "வளத்திற்கான அணுகல் அனுமதிக்கப்படவில்லை"
+
+#: katalogus/client.py
+msgid "User is not allowed to see plugin settings"
+msgstr "சொருகி அமைப்புகளைக் காண பயனருக்கு இசைவு இல்லை"
+
+#: katalogus/client.py
+msgid "User is not allowed to set plugin settings"
+msgstr "சொருகி அமைப்புகளை அமைக்க பயனர் அனுமதிக்கப்படவில்லை"
+
+#: katalogus/client.py
+msgid "User is not allowed to delete plugin settings"
+msgstr "சொருகி அமைப்புகளை நீக்க பயனர் அனுமதிக்கப்படவில்லை"
+
+#: katalogus/client.py
+msgid "User is not allowed to view plugin settings"
+msgstr "சொருகி அமைப்புகளைக் காண பயனருக்கு இசைவு இல்லை"
+
+#: katalogus/client.py
+msgid "User is not allowed to access the other organization"
+msgstr "மற்ற நிறுவனத்தை அணுக பயனர் அனுமதிக்கப்படவில்லை"
+
+#: katalogus/client.py
+msgid "User is not allowed to enable plugins"
+msgstr "செருகுநிரல்களை இயக்க பயனர் அனுமதிக்கப்படவில்லை"
+
+#: katalogus/client.py
+msgid "User is not allowed to disable plugins"
+msgstr "செருகுநிரல்களை முடக்க பயனர் அனுமதிக்கப்படவில்லை"
+
+#: katalogus/client.py
+msgid "User is not allowed to create plugins"
+msgstr "செருகுநிரல்களை உருவாக்க பயனர் அனுமதிக்கப்படவில்லை"
+
+#: katalogus/client.py
+msgid "User is not allowed to edit plugins"
+msgstr "செருகுநிரல்களைத் திருத்த பயனர் அனுமதிக்கப்படவில்லை"
 
 #: katalogus/forms/katalogus_filter.py
 msgid "Show all"
@@ -942,20 +1459,15 @@ msgstr "தொகு"
 msgid "Boefje setup"
 msgstr "போஃப்சே அமைப்பு"
 
-# Suggested in Weblate: நீங்கள் ஒரு புதிய போஃப்சேவை உருவாக்கலாம். இது குறித்த
-# கூடுதல் தகவல்களை நீங்கள் விரும்பினால்,
-#  நீங்கள் <a href =
-# "https://docs.openkat.nl/developer_documentation/development_tutorial/creating_a_boefje.html">
-# ஆவணங்கள் </a> ஐப் பார்க்கலாம்.
 #: katalogus/templates/boefje_setup.html
 msgid ""
 "You can create a new Boefje. If you want more information on this, you can "
 "check out the <a "
 "href=\"https://docs.openkat.nl/developer_documentation/development_tutorial/creating_a_boefje.html\">documentation</a>."
 msgstr ""
-"நீங்கள் ஒரு புதிய போஃப்சேவை உருவாக்கலாம். இதைப் பற்றிய கூடுதல் தகவல்களை "
-"நீங்கள் விரும்பினால், நீங்கள் <a href = "
-"\"https://docs.openkat.nl/developer_documentation/development_tutorial/creating_a_boefje.html\">"
+"நீங்கள் ஒரு புதிய போஃப்சேவை உருவாக்கலாம். இதைக் குறித்த கூடுதல் தகவல்களை "
+"நீங்கள் விரும்பினால், நீங்கள் <a "
+"href=\"https://docs.openkat.nl/developer_documentation/development_tutorial/creating_a_boefje.html\">"
 " ஆவணங்கள் </a> ஐப் பார்க்கலாம்."
 
 #: katalogus/templates/boefje_setup.html
@@ -1030,17 +1542,15 @@ msgstr "தேர்ந்தெடுக்கப்பட்ட பொரு�
 
 #: katalogus/templates/change_clearance_level.html
 #: reports/templates/report_overview/report_history_table.html
-#: reports/templates/summary/ooi_selection.html
-#: rocky/templates/oois/ooi_list.html
+#: reports/templates/summary/ooi_selection.html rocky/views/mixins.py
 msgid "Object"
 msgstr "பொருள்"
 
 #: katalogus/templates/change_clearance_level.html onboarding/forms.py
 #: reports/templates/partials/report_ooi_list.html
 #: reports/templates/summary/ooi_selection.html tools/forms/boefje.py
-#: tools/forms/ooi.py rocky/templates/oois/ooi_list.html
-#: rocky/templates/oois/ooi_page_tabs.html
-#: rocky/templates/partials/explanations.html
+#: tools/forms/ooi.py rocky/templates/oois/ooi_page_tabs.html
+#: rocky/templates/partials/explanations.html rocky/views/mixins.py
 msgid "Clearance level"
 msgstr "இசைவு நிலை"
 
@@ -1058,11 +1568,6 @@ msgstr "ச்கேன்"
 msgid "Clone settings"
 msgstr "நகலி அமைப்புகள்"
 
-# Suggested in Weblate: தேர்ந்தெடுக்கப்பட்ட நிறுவனத்திற்கு
-# <i>%(current_organization)s </i> இலிருந்து அமைப்புகளை நகலி செய்ய கீழே உள்ள
-# படிவத்தைப் பயன்படுத்தவும்.
-#  இது கேட்-அலோகச் அமைப்புகள் மற்றும் இயக்கப்பட்ட மற்றும் முடக்கப்பட்ட
-# செருகுநிரல்கள் இரண்டையும் உள்ளடக்கியது.
 #: katalogus/templates/clone_settings.html
 #, python-format
 msgid ""
@@ -1072,7 +1577,7 @@ msgid ""
 "plugins."
 msgstr ""
 "தேர்ந்தெடுக்கப்பட்ட நிறுவனத்திற்கு <strong>%(current_organization)s "
-"</strong> இலிருந்து அமைப்புகளை நகலி செய்ய கீழே உள்ள படிவத்தைப் "
+"</strong> இலிருந்து அமைப்புகளை நகலி செய்யக் கீழே உள்ள படிவத்தைப் "
 "பயன்படுத்தவும். இது கேட்-அலோகச் அமைப்புகள் மற்றும் இயக்கப்பட்ட மற்றும் "
 "முடக்கப்பட்ட செருகுநிரல்கள் இரண்டையும் உள்ளடக்கியது."
 
@@ -1084,13 +1589,10 @@ msgstr "நகலி"
 msgid "All plugins"
 msgstr "அனைத்து செருகுநிரல்களும்"
 
-# Suggested in Weblate: கேட்-அலோகச் அமைப்புகள்
 #: katalogus/templates/katalogus_settings.html
 msgid "KAT-alogus settings"
 msgstr "கேட்-அலோகச் அமைப்புகள்"
 
-# Suggested in Weblate: தற்போது அமைப்புகள் வரையறுக்கப்படவில்லை. சொருகி விவரம்
-# பக்கத்தில் அமைப்புகளைச் சேர்க்கவும்.
 #: katalogus/templates/katalogus_settings.html
 msgid ""
 "There are currently no settings defined. Add settings at the plugin detail "
@@ -1122,19 +1624,6 @@ msgstr "சொருகு"
 #: rocky/templates/oois/ooi_delete.html
 msgid "Value"
 msgstr "மதிப்பு"
-
-#: katalogus/templates/normalizer_detail.html
-#: reports/report_types/aggregate_organisation_report/appendix.html
-#: reports/report_types/dns_report/report.html
-#: reports/report_types/vulnerability_report/report.html
-#: reports/templates/partials/report_findings_table.html
-#: reports/templates/summary/report_asset_overview.html tools/forms/boefje.py
-#: tools/forms/finding_type.py rocky/templates/findings/finding_list.html
-#: rocky/templates/oois/ooi_detail.html
-#: rocky/templates/oois/ooi_detail_findings_list.html
-#: rocky/templates/scan.html
-msgid "Description"
-msgstr "விவரம்"
 
 #: katalogus/templates/normalizer_detail.html
 #, python-format
@@ -1258,13 +1747,6 @@ msgstr "செருகுநிரல்களை இயக்க/முடக�
 #: katalogus/templates/partials/no_enabling_permission_message.html
 msgid "Contact your administrator to request permission."
 msgstr "இசைவு கோர உங்கள் நிர்வாகியைத் தொடர்பு கொள்ளுங்கள்."
-
-#: katalogus/templates/partials/objects_to_scan.html
-#: rocky/templates/forms/widgets/checkbox_group_table.html
-#: rocky/templates/oois/ooi_list.html
-#: rocky/templates/organizations/organization_crisis_room.html
-msgid "Object list"
-msgstr "பொருள் பட்டியல்"
 
 #: katalogus/templates/partials/objects_to_scan.html
 #, python-format
@@ -1419,9 +1901,6 @@ msgstr "இந்த போஃப்சேவுக்கான கொள்க�
 msgid "Variants"
 msgstr "மாறுபாடுகள்"
 
-# Suggested in Weblate: ஒரே கொள்கலன் படத்தைப் பயன்படுத்தும் போஃப்சே வகைகள்.
-# மேலும்
-#  போஃப்சே வகைகளைப் பற்றிய தகவல்கள் நீங்கள் ஆவணங்களைப் படிக்கலாம்.
 #: katalogus/templates/plugin_container_image.html
 msgid ""
 "Boefje variants that use the same container image. For more information "
@@ -1490,36 +1969,6 @@ msgid "Default system scan frequency"
 msgstr "இயல்புநிலை கணினி ச்கேன் அதிர்வெண்"
 
 #: katalogus/templates/plugin_container_image.html
-#: reports/report_types/dns_report/report.html
-#: reports/report_types/findings_report/report.html
-#: reports/report_types/vulnerability_report/report.html
-#: reports/templates/partials/report_findings_table.html
-#: reports/templates/report_overview/scheduled_reports_table.html
-#: reports/templates/summary/selected_plugins.html
-#: rocky/templates/findings/finding_list.html
-#: rocky/templates/organizations/organization_crisis_room.html
-#: rocky/templates/tasks/boefjes.html rocky/templates/tasks/normalizers.html
-#: rocky/templates/tasks/ooi_detail_task_list.html
-#: rocky/templates/tasks/plugin_detail_task_list.html
-msgid "Close details"
-msgstr "விவரங்களை மூடு"
-
-#: katalogus/templates/plugin_container_image.html
-#: reports/report_types/dns_report/report.html
-#: reports/report_types/findings_report/report.html
-#: reports/report_types/vulnerability_report/report.html
-#: reports/templates/partials/report_findings_table.html
-#: reports/templates/report_overview/scheduled_reports_table.html
-#: reports/templates/summary/selected_plugins.html
-#: rocky/templates/findings/finding_list.html
-#: rocky/templates/organizations/organization_crisis_room.html
-#: rocky/templates/tasks/boefjes.html rocky/templates/tasks/normalizers.html
-#: rocky/templates/tasks/ooi_detail_task_list.html
-#: rocky/templates/tasks/plugin_detail_task_list.html
-msgid "Open details"
-msgstr "திறந்த விவரங்கள்"
-
-#: katalogus/templates/plugin_container_image.html
 msgid "Boefje ID"
 msgstr "போஃப்சே ஐடி"
 
@@ -1560,18 +2009,16 @@ msgstr ""
 "You can make a variant and change the arguments and சாதொபொகு Schema பெறுநர் "
 "customize it பெறுநர் fit your needs."
 
-# Suggested in Weblate: , விளம்பர அமைப்புகள்
 #: katalogus/templates/plugin_settings_add.html
 msgid "Add setting"
 msgid_plural "Add settings"
-msgstr[0] "விளம்பர அமைப்புகள்"
-msgstr[1] "விளம்பர அமைப்புகள்"
+msgstr[0] "அமைப்பு சேர்"
+msgstr[1] "அமைப்புகள் சேர்"
 
-# Suggested in Weblate: , அமைப்புகள்
 #: katalogus/templates/plugin_settings_add.html
 msgid "Setting"
 msgid_plural "Settings"
-msgstr[0] "அமைத்தல்"
+msgstr[0] "அமைப்பு"
 msgstr[1] "அமைப்புகள்"
 
 #: katalogus/templates/plugin_settings_add.html
@@ -1590,15 +2037,6 @@ msgid ""
 "Are you sure you want to delete all settings for the plugin %(plugin_name)s?"
 msgstr ""
 "சொருகி %(plugin_name)s அனைத்து அமைப்புகளையும் நீக்க விரும்புகிறீர்களா?"
-
-#: katalogus/templates/plugin_settings_delete.html
-#: katalogus/views/plugin_settings_delete.py
-#: reports/templates/report_overview/modal_partials/delete_modal.html
-#: reports/templates/report_overview/report_history_table.html
-#: reports/templates/report_overview/scheduled_reports_table.html
-#: rocky/templates/admin/delete_confirmation.html rocky/views/ooi_delete.py
-msgid "Delete"
-msgstr "நீக்கு"
 
 #: katalogus/templates/plugin_settings_list.html
 msgid ""
@@ -2385,11 +2823,11 @@ msgstr "முகவரி"
 #: reports/templates/report_overview/modal_partials/delete_modal.html
 #: reports/templates/report_overview/modal_partials/rerun_modal.html
 #: reports/templates/summary/ooi_selection.html tools/forms/ooi.py
-#: rocky/templates/oois/ooi_list.html
 #: rocky/templates/partials/elements/ooi_tree_condensed_table.html
 #: rocky/templates/partials/explanations.html
 #: rocky/templates/partials/ooi_detail_related_object.html
 #: rocky/templates/partials/ooi_report_findings_block_table_expanded_row.html
+#: rocky/views/mixins.py
 msgid "Type"
 msgstr "வகை"
 
@@ -2489,17 +2927,13 @@ msgstr ""
 "ஐக் கொண்டுள்ளது. இதன் பொருள் உங்கள் பொருளில் குறைந்தபட்சம் ஒரு நிலை 3 இசைவு "
 "நிலை அமைக்கப்பட வேண்டும்."
 
-# Suggested in Weblate: ஓபன்காட் நிர்வாகிகளை அனுமதிக்கும் இசைவு அமைப்பு உள்ளது
-#  எந்த பயனர்கள் ஒரு குறிப்பிட்ட இசைவு அளவை அமைக்க முடியும் என்பதை
-# உள்ளமைக்கவும். உறுதி செய்யும்
-#  நம்பகமான பயனர்கள் மட்டுமே மிகவும் ஆக்ரோசமான ச்கேன்களைத் தொடங்க முடியும்.
 #: onboarding/templates/step_3e_trusted_acknowledge_clearance_level.html
 msgid ""
 "OpenKAT has a permission system that allows administrators to configure "
 "which users can set a certain clearance level. The will make sure that only "
 "users that are trusted can start the more aggressive scans."
 msgstr ""
-"OpenKAT ஒரு இசைவு முறையைக் கொண்டுள்ளது, இது எந்த பயனர்கள் ஒரு குறிப்பிட்ட "
+"OpenKAT ஒரு இசைவு முறையைக் கொண்டுள்ளது, இது எந்தப் பயனர்கள் ஒரு குறிப்பிட்ட "
 "இசைவு அளவை அமைக்க முடியும் என்பதை உள்ளமைக்க நிர்வாகிகளை அனுமதிக்கிறது. "
 "நம்பகமான பயனர்கள் மட்டுமே மிகவும் ஆக்ரோசமான ச்கேன்களைத் தொடங்க முடியும் "
 "என்பதை உறுதி செய்யும்."
@@ -2508,18 +2942,6 @@ msgstr ""
 msgid "Acknowledge clearance level"
 msgstr "இசைவு அளவை ஒப்புக் கொள்ளுங்கள்"
 
-# Suggested in Weblate: ஒரு உறுப்பினருக்கு ஒரு பொருளின் மீது இசைவு நிலைகளை
-# நிர்ணயிக்கும் திறன் வழங்கப்படுவதற்கு முன்பு,
-#  நிர்வாகிகள் நிர்ணயித்த இசைவு அளவை அவர்கள் முதலில் ஒப்புக் கொண்டு
-# ஏற்றுக்கொள்ள வேண்டும்.
-#  ஒரு உறுப்பினருக்கு அனுமதிக்கப்பட்ட அதிகபட்ச ச்கேனிங் நிலை நம்பகமான இசைவு
-# மட்டத்துடன் ஒத்துப்போகிறது.
-#  நம்பகமான இசைவு அளவை ஒப்புக்கொள்வதன் மூலம், இந்த உறுப்பினர் முறையாக
-# கட்டுப்பட ஒப்புக்கொள்கிறார்
-#  இந்த இசைவு மற்றும் இந்த நம்பகமான இசைவு நிலை வரை மட்டுமே ச்கேன் செய்யும்
-# திறனைப் பெறுகிறது.
-#  இந்த இரண்டு-படி செயல்முறை உறுப்பினர் அங்கீகரிக்கப்பட்ட எல்லைகளுக்குள்
-# செயல்படுவதை உறுதி செய்கிறது.
 #: onboarding/templates/step_3e_trusted_acknowledge_clearance_level.html
 msgid ""
 "Before a member is granted the ability to set clearance levels on an object,"
@@ -2536,7 +2958,7 @@ msgstr ""
 "ஒப்புக் கொண்டு ஏற்றுக்கொள்ள வேண்டும். ஒரு உறுப்பினருக்கு அனுமதிக்கப்பட்ட "
 "அதிகபட்ச ச்கேனிங் நிலை நம்பகமான இசைவு மட்டத்துடன் ஒத்துப்போகிறது. நம்பகமான "
 "இசைவு அளவை ஒப்புக்கொள்வதன் மூலம், இந்த உறுப்பினர் இந்த அனுமதியைக் "
-"கடைப்பிடிக்க முறையாக ஒப்புக்கொள்கிறார், மேலும் இந்த நம்பகமான இசைவு நிலை வரை "
+"கடைப்பிடிக்க முறையாக ஒப்புக்கொள்கிறார், மேலும் இந்த நம்பகமான இசைவு நிலைவரை "
 "மட்டுமே வருடு செய்யும் திறனைப் பெறுகிறார். இந்த இரண்டு-படி செயல்முறை "
 "உறுப்பினர் அங்கீகரிக்கப்பட்ட எல்லைகளுக்குள் செயல்படுவதை உறுதி செய்கிறது."
 
@@ -2544,15 +2966,6 @@ msgstr ""
 msgid "What is my clearance level?"
 msgstr "எனது இசைவு நிலை என்ன?"
 
-# Suggested in Weblate: துரதிர்ச்டவசமாக நீங்கள் ஆன் போர்டிங் தொடர முடியாது.
-# </br>
-#                                 உங்கள் நிர்வாகி <strong> எல்%(tcl)s
-# </strong> இன் இசைவு மட்டத்துடன் உங்களை நம்பியுள்ளார். </br>
-#                                 <strong>
-# %(dns_report_least_clearance_level)s </strong> இன் இசைவு அளவையாவது
-# உங்களுக்குத் தேவை <strong>%(ooi)s</strong> ஐ வருடுவதற்கு </br>
-#                                 அதிக இசைவு பெற உங்கள் நிர்வாகியைத் தொடர்பு
-# கொள்ளுங்கள்.
 #: onboarding/templates/step_3e_trusted_acknowledge_clearance_level.html
 #, python-format
 msgid ""
@@ -2564,11 +2977,11 @@ msgid ""
 "higher clearance."
 msgstr ""
 "எதிர்பாராதவிதமாக நீங்கள் ஆன் போர்டிங் தொடர முடியாது. </br> உங்கள் நிர்வாகி "
-"<strong> எல்%(டி.சி.எல்) கள் </strong> இன் இசைவு மட்டத்துடன் உங்களை "
-"நம்பியுள்ளார். </br> உங்களுக்கு குறைந்தபட்சம் ஒரு இசைவு நிலை தேவை <strong> "
-"எல்%(tcl)s </strong> வருடு செய்ய "
-"<strong>%(dns_report_least_clearance_level)s </strong> </br> அதிக அனுமதியைப்"
-" பெற உங்கள் நிர்வாகியை தொடர்பு கொள்ளவும்."
+"<strong> எல்%(tcl)s </strong> இன் இசைவு மட்டத்துடன் உங்களை நம்பியுள்ளார். "
+"</br> உங்களுக்குக் குறைந்தபட்சம் ஒரு இசைவு நிலை தேவை <strong> "
+"எல்%(dns_report_least_clearance_level)s </strong> வருடு செய்ய "
+"<strong>%(ooi)s </strong> </br> அதிக அனுமதியைப் பெற உங்கள் நிர்வாகியைத் "
+"தொடர்பு கொள்ளவும்."
 
 #: onboarding/templates/step_3e_trusted_acknowledge_clearance_level.html
 #, python-format
@@ -2577,14 +2990,10 @@ msgid ""
 "<strong>L%(tcl)s</strong>. </br> You must first accept this clearance level "
 "to continue."
 msgstr ""
-"உங்கள் நிர்வாகி <strong> எல்%(டி.சி.எல்) எச் </strong> இன் இசைவு மட்டத்துடன்"
-" உங்களை நம்பியுள்ளார். </br> தொடர இந்த இசைவு அளவை நீங்கள் முதலில் "
-"ஏற்றுக்கொள்ள வேண்டும்."
+"உங்கள் நிர்வாகி <strong> எல்%(tcl)s </strong> இன் இசைவு மட்டத்துடன் உங்களை "
+"நம்பியுள்ளார். </br> தொடர இந்த இசைவு அளவை நீங்கள் முதலில் ஏற்றுக்கொள்ள "
+"வேண்டும்."
 
-# Suggested in Weblate: உங்கள் நிர்வாகி <strong> நம்பகமான </strong> <strong>
-# எல்%(tcl)s </strong> இன் இசைவு அளவைக் கொண்டுள்ளது. </br>
-#  <strong> எல்%(acl)s</strong> இன் இந்த இசைவு அளவைப் பயன்படுத்த நீங்கள்
-# <strong> ஒப்புக்கொள்ளப்பட்ட </strong> உள்ளது.
 #: onboarding/templates/step_3e_trusted_acknowledge_clearance_level.html
 #, python-format
 msgid ""
@@ -2593,9 +3002,9 @@ msgid ""
 "<strong>acknowledged</strong> to use this clearance level of "
 "<strong>L%(acl)s</strong>."
 msgstr ""
-"உங்கள் நிர்வாகி <strong> நம்பகமான </strong> <strong> எல்%(டி.சி.எல்) எச் "
-"</strong> இன் இசைவு அளவைக் கொண்டுள்ளது. </br> <strong> ஒப்புக் கொள்ளப்பட்ட "
-"</strong> இந்த இசைவு அளவைப் பயன்படுத்த <strong> எல்%(tcl)s </strong>."
+"உங்கள் நிர்வாகி <strong> நம்பகமான </strong> <strong> எல்%(tcl)s</strong> இன்"
+" இசைவு அளவைக் கொண்டுள்ளது. </br> <strong> ஒப்புக் கொள்ளப்பட்ட </strong> இந்த"
+" இசைவு அளவைப் பயன்படுத்த <strong> எல்%(acl)s </strong>."
 
 #: onboarding/templates/step_3e_trusted_acknowledge_clearance_level.html
 #: onboarding/templates/step_3f_set_clearance_level.html
@@ -3184,8 +3593,9 @@ msgid ""
 "                            "
 msgstr ""
 "\n"
-"இந்த அத்தியாயத்தில் அடையாளம் காணப்பட்ட கண்டுபிடிப்புகள் பற்றிய தகவல்கள் உள்ளன \n"
-"இந்த அமைப்புக்கு."
+"                                இந்த அத்தியாயத்தில் அடையாளம் காணப்பட்ட கண்டுபிடிப்புகள் பற்றிய தகவல்கள் உள்ளன \n"
+"இந்த அமைப்புக்கு.\n"
+"                            "
 
 #: reports/report_types/aggregate_organisation_report/report.py
 msgid "Aggregate Organisation Report"
@@ -3336,11 +3746,6 @@ msgstr ""
 "செய்வதற்கும் இந்த சொத்துக்களை அடையாளம் காணுதல், வகைப்படுத்துதல் மற்றும் "
 "பாதுகாத்தல் ஆகியவற்றை உள்ளடக்கியது."
 
-# Suggested in Weblate: ஒரு ஐபி முகவரியைத் தீர்க்கும் பல ஓச்ட்பெயர்கள், அங்கு
-# ஓச்ட்பெயர்கள் அல்லது ஐபி முகவரியில் குறைந்தபட்சம் ஒன்று அறிவிக்கப்பட்ட
-# ச்கேன் அளவைக் கொண்டுள்ளது, இது குறைந்தபட்சம் எல் 1 ஆகும். Systemen zijn
-# வெப்சர்வர்ச், மெயில்சர்வர்கள், என் பெயர்செர்வர்ச் (டிஎன்எச்) என தட்டச்சு
-# செய்க.
 #: reports/report_types/aggregate_organisation_report/term_overview.html
 msgid ""
 "Multiple hostnames that resolve to one IP address where at least one of the "
@@ -3492,38 +3897,6 @@ msgid "Other findings found"
 msgstr "பிற கண்டுபிடிப்புகள் காணப்படுகின்றன"
 
 #: reports/report_types/dns_report/report.html
-#: rocky/templates/findings/finding_list.html
-#: rocky/templates/oois/ooi_detail_findings_list.html
-#: rocky/templates/oois/ooi_detail_findings_overview.html
-#: rocky/templates/organizations/organization_crisis_room.html
-msgid "Severity"
-msgstr "தீவிரம்"
-
-#: reports/report_types/dns_report/report.html
-#: reports/templates/partials/report_findings_table.html
-#: rocky/templates/findings/finding_add.html
-#: rocky/templates/findings/finding_list.html
-#: rocky/templates/organizations/organization_crisis_room.html
-#: rocky/templates/partials/ooi_report_findings_block_table_expanded_row.html
-msgid "Finding"
-msgstr "கண்டுபிடிப்பு"
-
-#: reports/report_types/dns_report/report.html
-#: reports/report_types/findings_report/report.html
-#: reports/report_types/vulnerability_report/report.html
-#: reports/templates/partials/report_findings_table.html
-#: reports/templates/report_overview/scheduled_reports_table.html
-#: reports/templates/summary/selected_plugins.html
-#: rocky/templates/findings/finding_list.html
-#: rocky/templates/organizations/organization_crisis_room.html
-#: rocky/templates/partials/ooi_report_findings_block_table.html
-#: rocky/templates/tasks/boefjes.html rocky/templates/tasks/normalizers.html
-#: rocky/templates/tasks/ooi_detail_task_list.html
-#: rocky/templates/tasks/plugin_detail_task_list.html
-msgid "Details"
-msgstr "விவரங்கள்"
-
-#: reports/report_types/dns_report/report.html
 msgid "Findings information"
 msgstr "கண்டுபிடிப்புகள் செய்தி"
 
@@ -3594,9 +3967,10 @@ msgid ""
 "                                            "
 msgstr ""
 "\n"
-"இந்த அட்டவணை முதல் 25 முக்கியமான மற்றும் உயர் கண்டுபிடிப்புகளைக் காட்டுகிறது \n"
+"                                                இந்த அட்டவணை முதல் 25 முக்கியமான மற்றும் உயர் கண்டுபிடிப்புகளைக் காட்டுகிறது \n"
 "இந்த அமைப்புக்காக அடையாளம் காணப்பட்டது, வகைகளைக் கண்டுபிடிப்பதன் மூலம் தொகுக்கப்பட்டுள்ளது. \n"
-"அடையாளம் காணப்பட்ட அனைத்து கண்டுபிடிப்புகளையும் கொண்ட ஒரு அட்டவணையை கண்டுபிடிப்புகள் அறிக்கையில் காணலாம்."
+"அடையாளம் காணப்பட்ட அனைத்து கண்டுபிடிப்புகளையும் கொண்ட ஒரு அட்டவணையை கண்டுபிடிப்புகள் அறிக்கையில் காணலாம்.\n"
+"                                            "
 
 #: reports/report_types/findings_report/report.html
 msgid "No findings have been identified. Check report for more details."
@@ -3612,6 +3986,20 @@ msgstr "கண்டுபிடிப்புகள் அறிக்கை�
 #: reports/templates/report_overview/scheduled_reports_table.html
 msgid "Edit report recipe"
 msgstr "அறிக்கை செய்முறையைத் திருத்து"
+
+#: reports/report_types/findings_report/report.html
+msgid ""
+"\n"
+"                This table shows the top 25 critical and high findings that have\n"
+"                been identified for this organization, grouped by finding types.\n"
+"                A table with all the identified findings can be found in the Findings Report.\n"
+"            "
+msgstr ""
+"\n"
+"                இந்த அட்டவணை முதல் 25 முக்கியமான மற்றும் உயர் கண்டுபிடிப்புகளைக் காட்டுகிறது \n"
+"                இந்த அமைப்புக்காக அடையாளம் காணப்பட்டது, வகைகளைக் கண்டுபிடிப்பதன் மூலம் தொகுக்கப்பட்டுள்ளது. \n"
+"                அடையாளம் காணப்பட்ட அனைத்து கண்டுபிடிப்புகளையும் கொண்ட ஒரு அட்டவணையைக் கண்டுபிடிப்புகள் அறிக்கையில் காணலாம்.\n"
+"            "
 
 #: reports/report_types/findings_report/report.py
 msgid "Findings Report"
@@ -3809,19 +4197,11 @@ msgid "Overview of recommendations"
 msgstr "பரிந்துரைகளின் கண்ணோட்டம்"
 
 #: reports/report_types/multi_organization_report/recommendations.html
-#: reports/templates/partials/report_findings_table.html
-#: reports/templates/partials/report_severity_totals_table.html
-#: rocky/templates/findings/finding_list.html
-msgid "Recommendation"
-msgstr "பரிந்துரை"
-
-#: reports/report_types/multi_organization_report/recommendations.html
 #: rocky/templates/partials/ooi_report_findings_block_table_expanded_row.html
 msgid "Occurrence"
 msgstr "நிகழ்வு"
 
 #: reports/report_types/multi_organization_report/report.html
-#: rocky/templates/organizations/organization_crisis_room.html
 msgid "No findings have been identified yet."
 msgstr "கண்டுபிடிப்புகள் இதுவரை அடையாளம் காணப்படவில்லை."
 
@@ -4167,15 +4547,6 @@ msgid "Vulnerabilities found are grouped for each system."
 msgstr "காணப்படும் பாதிப்புகள் ஒவ்வொரு அமைப்பிற்கும் தொகுக்கப்பட்டுள்ளன."
 
 #: reports/report_types/vulnerability_report/report.py
-#: reports/templates/partials/report_findings_table.html
-#: rocky/templates/findings/finding_list.html
-#: rocky/templates/oois/ooi_detail_origins_inference.html
-#: rocky/templates/oois/ooi_detail_origins_observations.html
-#: rocky/templates/partials/ooi_report_findings_block_table_expanded_row.html
-msgid "Source"
-msgstr "மூலம்"
-
-#: reports/report_types/vulnerability_report/report.py
 msgid "First seen"
 msgstr "முதலில் பார்த்தேன்"
 
@@ -4293,38 +4664,57 @@ msgid ""
 "href=\"https://strftime.org/\" target=\"_blank\" rel=\"noopener\">Python "
 "strftime code</a>."
 msgstr ""
-"அறிக்கைகளை உருவாக்கும் போது, ​​அறிக்கைக்கு ஒரு பெயரைக் கொடுக்க முடியும். "
-"பெயர் நிலையான அல்லது மாறும். ஒரு அறிக்கையின் இயல்புநிலை வடிவம் $ "
-"{oois_count} பொருள்களுக்கான '$ {report_type} ஆகும். இந்த ஒதுக்கிடங்கள் "
-"அறிக்கை விவரங்களின் அடிப்படையில் தானாகவே மாற்றியமைக்கின்றன. இந்த வடிவம் "
+"அறிக்கைகளை உருவாக்கும்போது, அறிக்கைக்கு ஒரு பெயரைக் கொடுக்க முடியும். பெயர் "
+"நிலையான அல்லது மாறும். ஒரு அறிக்கையின் இயல்புநிலை வடிவம் $ {oois_count} "
+"பொருள்களுக்கான '$ {report_type} ஆகும். இந்த ஒதுக்கிடங்கள் அறிக்கை "
+"விவரங்களின் அடிப்படையில் தானாகவே மாற்றியமைக்கின்றன. இந்த வடிவம் "
 "எடுத்துக்காட்டாக '15 பொருள்களுக்கான மொத்த அறிக்கையை' திரும்பப் பெற முடியும்."
 " பயன்படுத்தக்கூடிய மற்றொரு ஒதுக்கிடர் '$ {ooi}', இது ஒரே ஒரு பொருள் "
-"இருக்கும்போது பொருளின் பெயரைக் காண்பிக்கும். <A href = "
-"\"https://strftime.org/\" இலக்கு = \"_ வெற்று\" rel = \"noopener\"> பைதான் "
+"இருக்கும்போது பொருளின் பெயரைக் காண்பிக்கும்.<a "
+"href=\"https://strftime.org/\" target=\"_blank\" rel=\"noopener\"> பைதான் "
 "ச்ட்ராஃப்டைம் குறியீடு </a>."
 
 #: reports/templates/partials/export_report_settings.html
-#: reports/templates/report_overview/report_overview_header.html
+#: reports/templates/partials/generate_report_header.html
+#: reports/templates/partials/new_report_action_button.html
 #: reports/views/generate_report.py
 msgid "Generate report"
 msgstr "அறிக்கையை உருவாக்குங்கள்"
+
+#: reports/templates/partials/generate_report_header.html
+msgid "To generate an aggregate report, complete the following steps."
+msgstr "மொத்த அறிக்கையை உருவாக்க, பின்வரும் படிகளை முடிக்கவும்."
+
+#: reports/templates/partials/generate_report_header.html
+msgid "To generate a multi report, complete the following steps."
+msgstr "பல அறிக்கையை உருவாக்க, பின்வரும் படிகளை முடிக்கவும்."
+
+#: reports/templates/partials/generate_report_header.html
+msgid "To generate separate report(s), complete the following steps."
+msgstr "தனி அறிக்கை (களை) உருவாக்க, பின்வரும் படிகளை முடிக்கவும்."
 
 #: reports/templates/partials/generate_report_sidemenu.html
 #: reports/templates/partials/report_sidemenu.html
 msgid "Table of contents"
 msgstr "உள்ளடக்க அட்டவணை"
 
-#: reports/templates/partials/main_navigation.html
-msgid "Generate a report"
-msgstr "ஒரு அறிக்கையை உருவாக்குங்கள்"
+#: reports/templates/partials/new_report_action_button.html
+msgid "Actions for creating a new report"
+msgstr "புதிய அறிக்கையை உருவாக்குவதற்கான நடவடிக்கைகள்"
 
-#: reports/templates/partials/main_navigation.html
-msgid ""
-"To generate a report you can start by selecting report types or by selecting"
-" objects."
-msgstr ""
-"ஒரு அறிக்கையை உருவாக்க நீங்கள் அறிக்கை வகைகளைத் தேர்ந்தெடுப்பதன் மூலமாகவோ "
-"அல்லது பொருள்களைத் தேர்ந்தெடுப்பதன் மூலமாகவோ தொடங்கலாம்."
+#: reports/templates/partials/new_report_action_button.html
+msgid "Separate report(s)"
+msgstr "தனி அறிக்கை (கள்)"
+
+#: reports/templates/partials/new_report_action_button.html
+#: reports/views/aggregate_report.py
+msgid "Aggregate report"
+msgstr "மொத்த அறிக்கை"
+
+#: reports/templates/partials/new_report_action_button.html
+#: reports/views/multi_report.py
+msgid "Multi report"
+msgstr "பல அறிக்கை"
 
 #: reports/templates/partials/plugin_overview_table.html
 #: reports/templates/partials/report_sidemenu.html
@@ -4365,11 +4755,12 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"இந்த அட்டவணை வருடு செய்யப்பட்ட கண்டறிந்த கண்டுபிடிப்புகளின் கண்ணோட்டத்தை வழங்குகிறது \n"
+"            இந்த அட்டவணை வருடு செய்யப்பட்ட கண்டறிந்த கண்டுபிடிப்புகளின் கண்ணோட்டத்தை வழங்குகிறது \n"
 "அமைப்புகள். ஒவ்வொரு கண்டுபிடிப்பு வகைக்கும் இது இடர் நிலை, நிகழ்வுகளின் எண்ணிக்கை ஆகியவற்றைக் காட்டுகிறது \n"
 "கண்டுபிடிப்பின் முதல் அறியப்பட்ட நிகழ்வு. உங்கள் குறிப்பிட்ட சூழலுக்கு இடர் நிலை வேறுபட்டிருக்கலாம். \n"
 "ஒரு வரிசையை விரிவுபடுத்தும்போது விவரங்களைக் காணலாம். ஒரு விளக்கம், கண்டுபிடிப்பின் மூல, தாக்கம் மற்றும் பரிந்துரை \n"
-"இங்கே காணலாம். கண்டுபிடிப்பு வகை எந்த கண்டுபிடிப்புகள் நிகழ்ந்தன என்பதையும் இது காட்டுகிறது."
+"இங்கே காணலாம். கண்டுபிடிப்பு வகை எந்த கண்டுபிடிப்புகள் நிகழ்ந்தன என்பதையும் இது காட்டுகிறது.\n"
+"        "
 
 #: reports/templates/partials/report_findings_table.html
 msgid "First known occurrence"
@@ -4378,11 +4769,6 @@ msgstr "முதலில் அறியப்பட்ட நிகழ்வ�
 #: reports/templates/partials/report_findings_table.html
 msgid "Open in report"
 msgstr "அறிக்கையில் திறந்திருக்கும்"
-
-#: reports/templates/partials/report_findings_table.html
-#: rocky/templates/findings/finding_list.html
-msgid "Impact"
-msgstr "தாக்கம்"
 
 #: reports/templates/partials/report_findings_table.html
 msgid ""
@@ -4439,7 +4825,7 @@ msgstr "செய்முறை உருவாக்கியவர்:"
 #: reports/templates/partials/report_header.html
 #, python-format
 msgid "This sector contains %(length)s scanned organizations."
-msgstr "இந்தத் துறையில் %(நீளம்) வருடு செய்யப்பட்ட அமைப்புகள் உள்ளன."
+msgstr "இந்தத் துறையில் %(length)s வருடு செய்யப்பட்ட அமைப்புகள் உள்ளன."
 
 #: reports/templates/partials/report_header.html
 msgid "Of these organizations"
@@ -4453,11 +4839,10 @@ msgstr "நிறுவனங்கள் குறிச்சொல்லை�
 msgid "The basic security scores are around "
 msgstr "அடிப்படை பாதுகாப்பு மதிப்பெண்கள் உள்ளன "
 
-# Suggested in Weblate: சிக்கலான பாதிப்புகள் அடையாளம் காணப்பட்டுள்ளன.
 #: reports/templates/partials/report_header.html
 #, python-format
 msgid "A total of %(total)s critical vulnerabilities have been identified."
-msgstr "மொத்தம் %(மொத்தம்) முக்கியமான பாதிப்புகள் அடையாளம் காணப்பட்டுள்ளன."
+msgstr "மொத்தம் %(total)s முக்கியமான பாதிப்புகள் அடையாளம் காணப்பட்டுள்ளன."
 
 #: reports/templates/partials/report_introduction.html
 msgid ""
@@ -4476,7 +4861,6 @@ msgstr ""
 msgid "Report names:"
 msgstr "பெயர்களைப் புகாரளிக்கவும்:"
 
-# Suggested in Weblate: (தேவை)
 #: reports/templates/partials/report_names_form.html
 #: rocky/templates/forms/widgets/checkbox_group_table.html
 #: rocky/templates/oois/ooi_detail_add_related_object.html
@@ -4517,55 +4901,20 @@ msgstr "திங்கள்"
 msgid "Year"
 msgstr "ஆண்டு"
 
-#: reports/templates/partials/report_navigation.html
-msgid "Report Navigation"
-msgstr "வழிசெலுத்தலைப் புகாரளிக்கவும்"
-
-#: reports/templates/partials/report_navigation.html
-#: rocky/templates/partials/ooi_detail_toolbar.html
-msgid "Generate Report"
-msgstr "அறிக்கையை உருவாக்குங்கள்"
-
-#: reports/templates/partials/report_navigation.html
-msgid "Aggregate Report"
-msgstr "மொத்த அறிக்கை"
-
-#: reports/templates/partials/report_navigation.html
-msgid "Multi Report"
-msgstr "பல அறிக்கை"
-
 #: reports/templates/partials/report_ooi_list.html
 msgid "Object selection"
 msgstr "பொருள் தேர்வு"
 
-# Suggested in Weblate: உங்கள் அறிக்கையில் நீங்கள் எந்த பொருள்களைச் சேர்க்க
-# விரும்புகிறீர்கள் என்பதைத் தேர்ந்தெடுக்கவும். நீங்கள் தொடரலாம்
-#  ஒரு நேரடி தொகுப்புடன் அல்லது கீழேயுள்ள அட்டவணையில் இருந்து கைமுறையாக
-# பொருட்களைத் தேர்ந்தெடுக்கலாம்.
 #: reports/templates/partials/report_ooi_list.html
 msgid ""
 "Select which objects you want to include in your report. You can either "
 "continue with a live set or you can select the objects manually from the "
 "table below."
 msgstr ""
-"உங்கள் அறிக்கையில் நீங்கள் எந்த பொருள்களைச் சேர்க்க விரும்புகிறீர்கள் "
+"உங்கள் அறிக்கையில் நீங்கள் எந்தப் பொருள்களைச் சேர்க்க விரும்புகிறீர்கள் "
 "என்பதைத் தேர்ந்தெடுக்கவும். நீங்கள் ஒரு நேரடி தொகுப்பைத் தொடரலாம் அல்லது "
-"கீழேயுள்ள அட்டவணையில் இருந்து கைமுறையாக பொருட்களைத் தேர்ந்தெடுக்கலாம்."
+"கீழேயுள்ள அட்டவணையிலிருந்து கைமுறையாகப் பொருட்களைத் தேர்ந்தெடுக்கலாம்."
 
-# Suggested in Weblate: ஒரு நேரடி தொகுப்பு என்பது பயன்படுத்தப்பட்ட
-# வடிப்பான்களின் அடிப்படையில் பொருள்களின் தொகுப்பாகும்.
-#  இந்த பயன்படுத்தப்பட்ட வடிப்பானுடன் (இப்போது அல்லது எதிர்காலத்தில்)
-# பொருந்தக்கூடிய எந்தவொரு பொருளும் பயன்படுத்தப்படும்
-#  திட்டமிடப்பட்ட அறிக்கைக்கான உள்ளீடு. உங்கள் நேரடி தொகுப்பு வடிகட்டி என்றால்
-# (எ.கா. 'ஓச்ட்பெயம்ச்' உடன்
-#  'அறிவிக்கப்பட்ட' 'எல் 2 அனுமதி') இன்று வடிகட்டியுடன் பொருந்தக்கூடிய 2
-# ஓச்ட்பெயர்களைக் காட்டுகிறது,
-#  திட்டமிடப்பட்ட அறிக்கை அந்த 2 புரவலன் பெயர்களுக்காக இயங்கும். நீங்கள்
-# மேலும் 3 ஓச்ட்பெயர்களைச் சேர்த்தால்
-#  நாளை (அதே வடிகட்டி அளவுகோல்களுடன்), உங்கள் அடுத்த திட்டமிடப்பட்ட
-# அறிக்கையில் இருக்கும்
-#  5 ஓச்ட்பெயர்கள். நீங்கள் செல்லும்போது உங்கள் நேரடி தொகுப்பு
-# புதுப்பிக்கப்படும்.
 #: reports/templates/partials/report_ooi_list.html
 msgid ""
 "A live set is a set of objects based on the applied filters. Any object that"
@@ -4577,19 +4926,15 @@ msgid ""
 " report will contain 5 hostnames. Your live set will update as you go."
 msgstr ""
 "ஒரு நேரடி தொகுப்பு என்பது பயன்படுத்தப்பட்ட வடிப்பான்களின் அடிப்படையில் "
-"பொருள்களின் தொகுப்பாகும். இந்த பயன்பாட்டு வடிப்பானுடன் (இப்போது அல்லது "
+"பொருள்களின் தொகுப்பாகும். இந்தப் பயன்பாட்டு வடிப்பானுடன் (இப்போது அல்லது "
 "எதிர்காலத்தில்) பொருந்தக்கூடிய எந்தவொரு பொருளும் திட்டமிடப்பட்ட அறிக்கைக்கான"
-" உள்ளீடாக பயன்படுத்தப்படும். உங்கள் லைவ் செட் வடிகட்டி (எ.கா. 'எல் 2 இசைவு' "
-"கொண்ட 'ஓச்ட்பெயம்ச்' 'அறிவிக்கப்பட்ட') இன்று வடிகட்டியுடன் பொருந்தக்கூடிய 2 "
-"ஓச்ட்பெயர்களைக் காட்டினால், திட்டமிடப்பட்ட அறிக்கை அந்த 2 ஓச்ட்பெயர்களுக்காக"
-" இயங்கும். நாளை மேலும் 3 ஓச்ட்பெயர்களைச் சேர்த்தால் (அதே வடிகட்டி "
-"அளவுகோல்களுடன்), உங்கள் அடுத்த திட்டமிடப்பட்ட அறிக்கையில் 5 ஓச்ட்பெயர்கள் "
-"இருக்கும். நீங்கள் செல்லும்போது உங்கள் நேரடி தொகுப்பு புதுப்பிக்கப்படும்."
-
-#: reports/templates/partials/report_ooi_list.html
-#: reports/templates/partials/report_types_selection.html
-msgid "Applied filters:"
-msgstr "பயன்பாட்டு வடிப்பான்கள்:"
+" உள்ளீடாகப் பயன்படுத்தப்படும். உங்கள் லைவ் செட் வடிகட்டி (எ.கா. 'எல் 2 "
+"இசைவு' கொண்ட 'ஓச்ட்பெயம்ச்' 'அறிவிக்கப்பட்ட') இன்று வடிகட்டியுடன் "
+"பொருந்தக்கூடிய 2 ஓச்ட்பெயர்களைக் காட்டினால், திட்டமிடப்பட்ட அறிக்கை அந்த 2 "
+"ஓச்ட்பெயர்களுக்காக இயங்கும். நாளை மேலும் 3 ஓச்ட்பெயர்களைச் சேர்த்தால் (அதே "
+"வடிகட்டி அளவுகோல்களுடன்), உங்கள் அடுத்த திட்டமிடப்பட்ட அறிக்கையில் 5 "
+"ஓச்ட்பெயர்கள் இருக்கும். நீங்கள் செல்லும்போது உங்கள் நேரடி தொகுப்பு "
+"புதுப்பிக்கப்படும்."
 
 #: reports/templates/partials/report_ooi_list.html
 msgid ""
@@ -4621,24 +4966,11 @@ msgstr[0] "அனைத்து %(total_oois)s பொருளையும் �
 msgstr[1] "அனைத்து %(total_oois)s பொருள்களையும் தேர்ந்தெடுக்கவும்"
 
 #: reports/templates/partials/report_ooi_list.html
-#: reports/templates/report_overview/report_history_table.html
-#: reports/templates/summary/ooi_selection.html tools/forms/ooi.py
-#: tools/view_helpers.py rocky/templates/admin/delete_confirmation.html
-#: rocky/templates/admin/delete_selected_confirmation.html
-#: rocky/templates/dashboard_client.html
-#: rocky/templates/dashboard_redteam.html rocky/templates/header.html
-#: rocky/views/ooi_add.py rocky/views/ooi_list.py rocky/views/ooi_view.py
-#: rocky/views/upload_csv.py rocky/views/upload_raw.py
-msgid "Objects"
-msgstr "பொருள்கள்"
-
-#: reports/templates/partials/report_ooi_list.html
 msgid "Object name"
 msgstr "பொருள் பெயர்"
 
 #: reports/templates/partials/report_ooi_list.html
-#: reports/templates/summary/ooi_selection.html
-#: rocky/templates/oois/ooi_list.html
+#: reports/templates/summary/ooi_selection.html rocky/views/mixins.py
 msgid "Clearance type"
 msgstr "இசைவு வகை"
 
@@ -4774,7 +5106,6 @@ msgstr "மேலும் பரிந்துரைக்கப்பட்�
 msgid "There are no optional plugins."
 msgstr "விருப்ப செருகுநிரல்கள் எதுவும் இல்லை."
 
-# Suggested in Weblate: செருகுநிரல்களை இயக்கி தொடரவும்
 #: reports/templates/partials/report_setup_scan.html
 msgid "Enable selected plugins and continue"
 msgstr "தேர்ந்தெடுக்கப்பட்ட செருகுநிரல்களை இயக்கவும், தொடரவும்"
@@ -4787,14 +5118,14 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"இந்த கண்ணோட்டம் மொத்த கண்டுபிடிப்புகளின் எண்ணிக்கையைக் காட்டுகிறது \n"
-"இந்த அமைப்புக்கு அடையாளம் காணப்பட்ட தீவிரம்."
+"            இந்த கண்ணோட்டம் மொத்த கண்டுபிடிப்புகளின் எண்ணிக்கையைக் காட்டுகிறது \n"
+"இந்த அமைப்புக்கு அடையாளம் காணப்பட்ட தீவிரம்.\n"
+"        "
 
 #: reports/templates/partials/report_severity_totals_table.html
 msgid "Total per severity overview"
 msgstr "தீவிரமான கண்ணோட்டத்திற்கு மொத்தம்"
 
-# Suggested in Weblate: விமர்சன
 #: reports/templates/partials/report_severity_totals_table.html
 msgid "Critical"
 msgstr "விமர்சன"
@@ -4803,7 +5134,6 @@ msgstr "விமர்சன"
 msgid "High"
 msgstr "உயர்ந்த"
 
-# Suggested in Weblate: சராசரி
 #: reports/templates/partials/report_severity_totals_table.html
 msgid "Medium"
 msgstr "சராசரி"
@@ -4821,7 +5151,6 @@ msgstr "நிலுவையில் உள்ளது"
 msgid "Unknown"
 msgstr "தெரியவில்லை"
 
-# Suggested in Weblate: மொத்தம்
 #: reports/templates/partials/report_severity_totals_table.html
 msgid "Total"
 msgstr "மொத்தம்"
@@ -4873,8 +5202,12 @@ msgid ""
 "dataset, this live set results in %(total_oois)s objects."
 msgstr ""
 "முந்தைய கட்டத்தில் ஒரு நேரடி தொகுப்பை நீங்கள் தேர்ந்தெடுத்துள்ளீர்கள். "
-"தற்போதைய தரவுத்தொகுப்பின் அடிப்படையில், இந்த நேரடி தொகுப்பு %(மொத்த_ஓஐஎச்) "
+"தற்போதைய தரவுத்தொகுப்பின் அடிப்படையில், இந்த நேரடி தொகுப்பு %(total_oois)s "
 "பொருள்களில் விளைகிறது."
+
+#: reports/templates/partials/report_types_selection.html
+msgid "Applied filters:"
+msgstr "பயன்பாட்டு வடிப்பான்கள்:"
 
 #: reports/templates/partials/report_types_selection.html
 msgid "No filters applied"
@@ -4884,9 +5217,10 @@ msgstr "வடிப்பான்கள் எதுவும் பயன்�
 #, python-format
 msgid "You have selected %(total_oois)s object in the previous step."
 msgid_plural "You have selected %(total_oois)s objects in the previous step."
-msgstr[0] "முந்தைய கட்டத்தில் %(மொத்த_OOIS) பொருளைத் தேர்ந்தெடுத்துள்ளீர்கள்."
+msgstr[0] ""
+"முந்தைய கட்டத்தில் %(total_oois)s பொருளைத் தேர்ந்தெடுத்துள்ளீர்கள்."
 msgstr[1] ""
-"முந்தைய கட்டத்தில் %(மொத்த_OOIS) பொருள்களைத் தேர்ந்தெடுத்துள்ளீர்கள்."
+"முந்தைய கட்டத்தில் %(total_oois)s பொருள்களைத் தேர்ந்தெடுத்துள்ளீர்கள்."
 
 #: reports/templates/partials/report_types_selection.html
 msgid "Change selection"
@@ -4914,10 +5248,6 @@ msgstr "%(btn_text)s"
 msgid "Delete the following report(s):"
 msgstr "பின்வரும் அறிக்கை (களை) நீக்கு:"
 
-# Suggested in Weblate: நீக்கப்பட்ட தருணத்திலிருந்து நீக்கப்பட்ட அறிக்கைகள்
-# பார்வையில் அகற்றப்படுகின்றன. நீக்குவதற்கு முன்பு நேர முத்திரைகளில் அறிக்கையை
-# அணுகலாம். அறிக்கை மட்டுமே பார்வையில் இருந்து அகற்றப்படுகிறது, அது
-# அடிப்படையாகக் கொண்ட தரவு அல்ல.
 #: reports/templates/report_overview/modal_partials/delete_modal.html
 #: reports/templates/report_overview/modal_partials/share_modal.html
 msgid ""
@@ -4930,9 +5260,6 @@ msgstr ""
 "அறிக்கை மட்டுமே பார்வையில் இருந்து அகற்றப்படுகிறது, அது அடிப்படையாகக் கொண்ட "
 "தரவு அல்ல."
 
-# Suggested in Weblate: அதே தேதிக்கு ஒரு புதிய அறிக்கையை உருவாக்குவது இன்னும்
-# சாத்தியமாகும். அறிக்கை ஒருங்கிணைந்த அறிக்கையின் ஒரு பகுதியாக இருந்தால், அது
-# ஒருங்கிணைந்த அறிக்கையில் கிடைக்கும்.
 #: reports/templates/report_overview/modal_partials/delete_modal.html
 #: reports/templates/report_overview/modal_partials/share_modal.html
 msgid ""
@@ -4987,8 +5314,6 @@ msgstr "மறுபெயரிடுங்கள்"
 msgid "Rerun the following report(s):"
 msgstr "பின்வரும் அறிக்கை (களை) மீண்டும் இயக்கவும்:"
 
-# Suggested in Weblate: சமர்ப்பிப்பதன் மூலம், தற்போதைய தரவைப் பயன்படுத்தி,
-# தேர்ந்தெடுக்கப்பட்ட அறிக்கைகளை மீண்டும் உருவாக்குகிறீர்கள்.
 #: reports/templates/report_overview/modal_partials/rerun_modal.html
 msgid ""
 "By submitting you're generating the selected reports again, using the "
@@ -5030,7 +5355,6 @@ msgstr "அறிக்கைகள்:"
 msgid "Shows parent report details"
 msgstr "பெற்றோர் அறிக்கை விவரங்களைக் காட்டுகிறது"
 
-# Suggested in Weblate: மூடு குழந்தைகள் பொருள் விவரங்களைப் புகாரளிக்கவும்
 #: reports/templates/report_overview/report_history_table.html
 msgid "Close asset report object details"
 msgstr "சொத்து அறிக்கை பொருள் விவரங்களை மூடு"
@@ -5064,7 +5388,6 @@ msgstr[1] ""
 msgid "Asset reports"
 msgstr "சொத்து அறிக்கைகள்"
 
-# Suggested in Weblate: அறிக்கை விவரங்களைக் காட்டுகிறது
 #: reports/templates/report_overview/report_history_table.html
 msgid "Shows asset report details"
 msgstr "சொத்து அறிக்கை விவரங்களைக் காட்டுகிறது"
@@ -5106,7 +5429,7 @@ msgstr ""
 #: reports/templates/report_overview/scheduled_reports_table.html
 #, python-format
 msgid "Showing %(length)s of %(total)s schedules"
-msgstr "%(நீளம்) % %(மொத்த) அட்டவணைகளைக் காட்டுகிறது"
+msgstr "%(length)s /%(total)s அட்டவணைகளைக் காட்டுகிறது"
 
 #: reports/templates/report_overview/scheduled_reports_table.html
 msgid "Scheduled reports:"
@@ -5174,6 +5497,11 @@ msgstr "உள்ளீட்டு பொருள்"
 #: reports/templates/report_schedules/delete_recipe_modal.html
 msgid "Delete report recipe"
 msgstr "அறிக்கை செய்முறையை நீக்கு"
+
+#: reports/templates/report_schedules/delete_recipe_modal.html
+#, python-format
+msgid "Are you sure you want to delete report recipe \"%(name)s\"?"
+msgstr "அறிக்கை செய்முறையை \"%(name)s\" ஐ நீக்க விரும்புகிறீர்களா?"
 
 #: reports/templates/report_schedules/delete_recipe_modal.html
 msgid ""
@@ -5262,10 +5590,6 @@ msgstr ""
 "தேர்ந்தெடுக்கப்பட்ட அறிக்கை வகைகளுக்கு தேவையான அல்லது விருப்ப செருகுநிரல்கள்"
 " தேவையில்லை."
 
-#: reports/views/aggregate_report.py
-msgid "Aggregate report"
-msgstr "மொத்த அறிக்கை"
-
 #: reports/views/aggregate_report.py reports/views/generate_report.py
 #: reports/views/multi_report.py
 msgid "Select objects"
@@ -5303,10 +5627,6 @@ msgid ""
 "%(date)s."
 msgstr ""
 "%(date)sு தரவு எதுவும் கிடைக்கவில்லை. பொருள் (கள்) %(தேதி) களில் இல்லை."
-
-#: reports/views/multi_report.py
-msgid "Multi report"
-msgstr "பல அறிக்கை"
 
 #: reports/views/multi_report.py
 msgid "View report"
@@ -5354,9 +5674,6 @@ msgstr "அறிக்கையை விட பிற OOI வகை தேர�
 msgid "Deletion successful."
 msgstr "நீக்குதல் வெற்றிகரமாக."
 
-# Suggested in Weblate: பல அமைப்பு அறிக்கைகளை மாற்றியமைக்க முடியாது. இது
-# வெவ்வேறு நிறுவனங்களிலிருந்து இறக்குமதி செய்யப்பட்ட தரவைக் கொண்டுள்ளது, ஆனால்
-# புதிய உருவாக்கப்பட்ட தரவின் அடிப்படையில் அல்ல.
 #: reports/views/report_overview.py
 msgid ""
 "Multi organization reports cannot be rescheduled. It consists of imported "
@@ -5373,6 +5690,15 @@ msgid ""
 msgstr ""
 "வெற்றிகரமாக மீண்டும் இணைக்கவும். புதிய அறிக்கை உருவாக்கப்படுவதற்கு ஒரு கணம் "
 "ஆகலாம்."
+
+#: reports/views/report_overview.py
+#, python-format
+msgid ""
+"Couldn't rerun %s, since the recipe for this report has been disabled or "
+"deleted."
+msgstr ""
+"இந்த அறிக்கைக்கான செய்முறை முடக்கப்பட்டுள்ளது அல்லது நீக்கப்பட்டது என்பதால் "
+"%s மீண்டும் இயக்க முடியவில்லை."
 
 #: reports/views/report_overview.py
 msgid "Renaming failed. Empty report name found."
@@ -5438,15 +5764,12 @@ msgstr "வெளியீட்டு மைம் வகைகள்"
 
 #: tools/forms/boefje.py
 msgid "Scan type"
-msgstr "வகை"
+msgstr "வருடல் வகை"
 
 #: tools/forms/boefje.py
 msgid "Interval amount"
 msgstr "இடைவெளி தொகை"
 
-# Suggested in Weblate: இந்த போஃப்சேவுக்கான ச்கேனிங் அதிர்வெண்ணை நிமிடங்களில்
-# குறிப்பிடவும். இயல்புநிலை 24 மணிநேரம். உதாரணமாக: ஒவ்வொரு 5 நிமிடங்களுக்கும்
-# 5 நிமிடங்கள் போஃப்சே ச்கேன் செய்ய அனுமதிக்கும்.
 #: tools/forms/boefje.py
 msgid ""
 "Specify the scanning interval for this Boefje. The default is 24 hours. For "
@@ -5470,7 +5793,7 @@ msgid ""
 "object. "
 msgstr ""
 "ஒரு பொருளை உருவாக்கி மற்றும்/அல்லது மாற்றிய பின் சிறுவன் ஓட வேண்டுமா "
-"என்பதைத் தேர்வுசெய்க."
+"என்பதைத் தேர்வுசெய்க. "
 
 #: tools/forms/finding_type.py
 msgid "KAT-ID"
@@ -5636,6 +5959,10 @@ msgstr "போஃப்செச் ச்கேன் அளவை நிறை
 #: tools/forms/ooi.py
 msgid "Show Boefjes that exceed the objects clearance level."
 msgstr "பொருள்களின் இசைவு அளவை மீறும் போஃப்ச்களைக் காட்டு."
+
+#: tools/forms/ooi.py
+msgid "Expires by (UTC)"
+msgstr "(UTC) இல் காலாவதியாகிறது"
 
 #: tools/forms/ooi_form.py
 msgid "option"
@@ -5846,7 +6173,7 @@ msgid ""
 msgstr ""
 "இந்த போஃப்சே எப்போது பொருள்களை வருடு செய்யும் என்பதைத் தேர்வுசெய்க. இது ஒரு "
 "குறிப்பிட்ட இடைவெளியில் இயங்க முடியும் அல்லது ஒவ்வொரு முறையும் ஒரு பொருள் "
-"உருவாக்கப்பட்ட அல்லது மாற்றப்படும்போது அது இயக்க முடியும்."
+"உருவாக்கப்பட்ட அல்லது மாற்றப்படும்போது அது இயக்க முடியும். "
 
 #: tools/forms/settings.py
 msgid "Depth of the tree."
@@ -5921,6 +6248,10 @@ msgid "Upload raw file"
 msgstr "மூல கோப்பைப் பதிவேற்றவும்"
 
 #: tools/forms/upload_raw.py
+msgid "Input or Scan OOI"
+msgstr "உள்ளீடு அல்லது வருடு OOI"
+
+#: tools/forms/upload_raw.py
 msgid "Click to select one of the available options, or type one yourself"
 msgstr ""
 "கிடைக்கக்கூடிய விருப்பங்களில் ஒன்றைத் தேர்ந்தெடுக்க சொடுக்கு செய்க, அல்லது "
@@ -5963,6 +6294,26 @@ msgstr "தெரியாத பயனர்"
 #: rocky/views/organization_member_edit.py
 msgid "Members"
 msgstr "உறுப்பினர்கள்"
+
+#: rocky/forms.py
+msgid "Current status"
+msgstr "தற்போதைய நிலை"
+
+#: rocky/forms.py rocky/templates/organizations/organization_member_list.html
+msgid "Active"
+msgstr "செயலில்"
+
+#: rocky/forms.py rocky/templates/organizations/organization_member_list.html
+msgid "New"
+msgstr "புதிய"
+
+#: rocky/forms.py
+msgid "Account status"
+msgstr "கணக்கு நிலை"
+
+#: rocky/forms.py
+msgid "Not blocked"
+msgstr "தடுக்கப்படவில்லை"
 
 #: rocky/messaging.py
 msgid ""
@@ -6141,6 +6492,10 @@ msgstr "உங்கள் கணினி நிர்வாகியை தொ
 msgid "You may want to go back to the"
 msgstr "நீங்கள் மீண்டும் செல்ல விரும்பலாம்"
 
+#: rocky/templates/403.html rocky/templates/404.html
+msgid "Crisis Room"
+msgstr "நெருக்கடி அறை"
+
 #: rocky/templates/404.html
 msgid "Error code 404: Page not found"
 msgstr "பிழைக் குறியீடு 404: பக்கம் கிடைக்கவில்லை"
@@ -6303,7 +6658,7 @@ msgstr "முதன்மையான வழிசெலுத்தல்"
 
 #: rocky/templates/dashboard_client.html
 msgid "Indemnifications"
-msgstr "இழப்பீடு"
+msgstr "இழப்பீடுகள்"
 
 #: rocky/templates/dashboard_client.html
 #: rocky/templates/dashboard_redteam.html
@@ -6362,106 +6717,17 @@ msgstr "கண்டுபிடிப்புகள் @ "
 
 #: rocky/templates/findings/finding_list.html
 #, python-format
-msgid ""
-"An overview of all findings OpenKAT found for organization "
-"<strong>%(organization_name)s</strong>. Each finding relates to an object. "
-"Click a finding for additional information."
-msgstr ""
-"அமைப்பு <strong>%(organization_name)s </strong> க்கான அனைத்து "
-"கண்டுபிடிப்புகளின் கண்ணோட்டம். ஒவ்வொரு கண்டுபிடிப்பும் ஒரு பொருளுடன் "
-"தொடர்புடையது. கூடுதல் தகவலுக்கு கண்டுபிடிப்பைக் சொடுக்கு செய்க."
-
-#: rocky/templates/findings/finding_list.html
-#, python-format
 msgid "Showing %(length)s of %(total)s findings"
 msgstr "%(length)sண்டுபிடிப்புகளின் %(total)s"
 
 #: rocky/templates/findings/finding_list.html
-msgid "Findings table "
-msgstr "கண்டுபிடிப்புகள் அட்டவணை "
-
-#: rocky/templates/findings/finding_list.html
-#: rocky/templates/oois/ooi_list.html
-msgid "column headers with buttons are sortable"
-msgstr "பொத்தான்கள் கொண்ட நெடுவரிசை தலைப்புகள் வரிசைப்படுத்தக்கூடியவை"
-
-#: rocky/templates/findings/finding_list.html
-msgid "Location"
-msgstr "இடம்"
-
-#: rocky/templates/findings/finding_list.html
-#: rocky/templates/oois/ooi_page_tabs.html
-#: rocky/templates/partials/elements/ooi_tree_condensed_table.html
-#: rocky/templates/partials/elements/ooi_tree_condensed_table_row.html
-msgid "Tree"
-msgstr "மரம்"
-
-#: rocky/templates/findings/finding_list.html
-#: rocky/templates/oois/ooi_page_tabs.html
-#: rocky/templates/partials/elements/ooi_tree_condensed_table.html
-#: rocky/templates/partials/elements/ooi_tree_condensed_table_row.html
-msgid "Graph"
-msgstr "வரைபடம்"
-
-#: rocky/templates/findings/finding_list.html
-#: rocky/templates/organizations/organization_crisis_room.html
-#, python-format
-msgid "Show details for %(finding)s"
-msgstr "%(finding)s விவரங்களைக் காட்டு"
-
-#: rocky/templates/findings/finding_list.html
-#: rocky/templates/partials/ooi_report_findings_block_table.html
-msgid "Finding type"
-msgstr "வகை கண்டுபிடிப்பு"
-
-#: rocky/templates/findings/finding_list.html
-#: rocky/templates/organizations/organization_crisis_room.html
-#, python-format
-msgid "Show details for %(finding_type)s"
-msgstr "%(finding_type)s விவரங்களைக் காட்டு"
-
-#: rocky/templates/findings/finding_list.html
-msgid "OOI type"
-msgstr "OOI வகை"
-
-#: rocky/templates/findings/finding_list.html
-#: rocky/templates/organizations/organization_crisis_room.html
-#, python-format
-msgid "Show %(ooi_type)s objects"
-msgstr "%(ooi_type)s பொருள்களைக் காட்டு"
-
-#: rocky/templates/findings/finding_list.html
-msgid "Source OOI"
-msgstr "Sororce oi"
-
-#: rocky/templates/findings/finding_list.html
-#, python-format
-msgid "Show details for %(ooi)s"
-msgstr "%(ooi)s விவரங்களைக் காட்டு"
-
-#: rocky/templates/findings/finding_list.html
-msgid "Risk score"
-msgstr "இடர் மதிப்பெண்"
-
-#: rocky/templates/findings/finding_list.html
+#: rocky/templates/partials/mute_findings_modal.html
 msgid "Mute findings"
 msgstr "முடக்கு கண்டுபிடிப்புகள்"
 
 #: rocky/templates/findings/finding_list.html
-msgid "Reason:"
-msgstr "காரணம்:"
-
-#: rocky/templates/findings/finding_list.html
-msgid "Expires by (UTC):"
-msgstr "(UTC) காலாவதியாகிறது:"
-
-#: rocky/templates/findings/finding_list.html
-msgid "Unmute Findings"
-msgstr "ஊடுருவல் கண்டுபிடிப்புகள்"
-
-#: rocky/templates/findings/finding_list.html
-msgid "Mute Findings"
-msgstr "முடக்கு கண்டுபிடிப்புகள்"
+msgid "Unmute findings"
+msgstr "கண்டுபிடிப்புகள் ஒலிக்கவும்"
 
 #: rocky/templates/findings/findings_filter.html
 #: rocky/templates/partials/elements/ooi_list_settings_form.html
@@ -6499,12 +6765,6 @@ msgstr "பட்டியல்"
 #: rocky/templates/header.html
 msgid "OpenKAT logo, go to the homepage of OpenKAT"
 msgstr "OpenKAT லோகோ, OpenKat இன் முகப்புப்பக்கத்திற்குச் செல்லுங்கள்"
-
-#: rocky/templates/header.html
-#: rocky/templates/organizations/organization_crisis_room.html
-#: rocky/views/finding_list.py
-msgid "Crisis room"
-msgstr "நெருக்கடி அறை"
 
 #: rocky/templates/header.html rocky/templates/tasks/ooi_detail_task_list.html
 #: rocky/templates/tasks/partials/tasks_overview_header.html
@@ -6676,8 +6936,11 @@ msgid "Add %(display_type)s"
 msgstr "%(display_type)s சேர்"
 
 #: rocky/templates/oois/ooi_add_type_select.html
-msgid "Manual creation"
-msgstr "கையேடு உருவாக்கம்"
+#: rocky/templates/oois/ooi_detail_add_related_object.html
+#: rocky/templates/partials/elements/ooi_add_type_select_form.html
+#: rocky/templates/partials/ooi_list_toolbar.html rocky/views/ooi_add.py
+msgid "Add object"
+msgstr "பொருளைச் சேர்க்கவும்"
 
 #: rocky/templates/oois/ooi_add_type_select.html
 msgid "Select the type of object you want to create."
@@ -6696,7 +6959,7 @@ msgstr "நீங்கள் உறுதியாக இருக்கிற�
 #: rocky/templates/oois/ooi_delete.html
 #, python-format
 msgid "Here you can delete the %(display_type)s."
-msgstr "இங்கே நீங்கள் %(display_type)s நீக்கலாம்."
+msgstr "இங்கே நீங்கள் %(display_type)sகளை நீக்கலாம்."
 
 #: rocky/templates/oois/ooi_delete.html
 msgid "To be deleted object(s)"
@@ -6723,7 +6986,6 @@ msgid "using boefjes"
 msgstr "போஃப்செசைப் பயன்படுத்துதல்"
 
 #: rocky/templates/oois/ooi_detail.html
-#: rocky/templates/organizations/organization_crisis_room.html
 #: rocky/templates/organizations/organization_settings.html
 msgid "indemnification warning"
 msgstr "இழப்பீடு எச்சரிக்கை"
@@ -6736,8 +6998,8 @@ msgid ""
 "page</a> to add one."
 msgstr ""
 "<strong> எச்சரிக்கை: </strong> இந்த அமைப்புக்கு இழப்பீடு இல்லை. ஒன்றைச் "
-"சேர்க்க <a href = \"%(organization_settings)s\"> அமைப்பு அமைப்புகள் "
-"பக்கத்திற்குச் செல்லவும்."
+"சேர்க்க <a href=\"%(organization_settings)s\"> அமைப்பு அமைப்புகள் "
+"பக்கத்திற்குச்</a> செல்லவும்."
 
 #: rocky/templates/oois/ooi_detail.html
 msgid "Permission warning"
@@ -6752,6 +7014,7 @@ msgstr ""
 "உங்களுக்கு சரியான இசைவு இல்லை. உங்கள் நிர்வாகியைத் தொடர்பு கொள்ளுங்கள்."
 
 #: rocky/templates/oois/ooi_detail.html
+#: rocky/templates/scan_profiles/scan_profile_detail.html
 msgid "Scan warning"
 msgstr "முன்னறிவிப்பு வருடு"
 
@@ -6812,7 +7075,6 @@ msgstr "தொடர்புடைய பொருளைச் சேர்க�
 
 #: rocky/templates/oois/ooi_detail_add_related_object.html
 #: rocky/templates/oois/ooi_detail_object.html
-#: rocky/templates/partials/elements/ooi_add_type_select_form.html
 msgid "Object details"
 msgstr "பொருள் விவரங்கள்"
 
@@ -6830,12 +7092,6 @@ msgstr "சேர்க்க ஒரு பொருள் வகையைத்
 #: rocky/templates/partials/elements/ooi_add_type_select_form.html
 msgid "Select an object type to add."
 msgstr "சேர்க்க ஒரு பொருள் வகையைத் தேர்ந்தெடுக்கவும்."
-
-#: rocky/templates/oois/ooi_detail_add_related_object.html
-#: rocky/templates/partials/elements/ooi_add_type_select_form.html
-#: rocky/templates/partials/ooi_list_toolbar.html rocky/views/ooi_add.py
-msgid "Add object"
-msgstr "பொருளைச் சேர்க்கவும்"
 
 #: rocky/templates/oois/ooi_detail_findings_list.html
 #: rocky/templates/oois/ooi_findings.html
@@ -6933,6 +7189,7 @@ msgstr ""
 "சுட்டிக்காட்டக்கூடும்"
 
 #: rocky/templates/oois/ooi_detail_origins_observations.html
+#: rocky/templates/scan_profiles/scan_profile_detail.html
 msgid "Warning"
 msgstr "எச்சரிக்கை"
 
@@ -6955,21 +7212,6 @@ msgid "Currently no findings have been identified for OOI"
 msgstr "தற்போது OOI க்கு கண்டுபிடிப்புகள் எதுவும் அடையாளம் காணப்படவில்லை"
 
 #: rocky/templates/oois/ooi_list.html
-#, python-format
-msgid ""
-"An overview of objects found for organization "
-"<strong>%(organization_name)s</strong>. Objects can be added manually or by "
-"running Boefjes. Click an object for additional information."
-msgstr ""
-"அமைப்பு <strong>%(organization_name)s </strong> க்கான பொருள்களின் "
-"கண்ணோட்டம். பொருள்களை கைமுறையாக அல்லது போஃப்செசை இயக்குவதன் மூலம் "
-"சேர்க்கலாம். கூடுதல் தகவலுக்கு ஒரு பொருளைக் சொடுக்கு செய்க."
-
-#: rocky/templates/oois/ooi_list.html
-msgid "Objects "
-msgstr "பொருள்கள் "
-
-#: rocky/templates/oois/ooi_list.html
 msgid "Delete object(s)"
 msgstr "பொருளை (களை) நீக்கு"
 
@@ -6984,6 +7226,8 @@ msgstr ""
 "காரணத்தைக் கூறுங்கள்."
 
 #: rocky/templates/oois/ooi_mute_finding.html
+#: rocky/templates/partials/mute_findings_modal.html
+#: rocky/templates/partials/ooi_detail_toolbar.html
 msgid "Mute finding"
 msgstr "முடக்கு கண்டுபிடிப்பு"
 
@@ -7063,58 +7307,6 @@ msgstr "இதனுடைய"
 msgid "shows the same objects."
 msgstr "அதே பொருள்களைக் காட்டுகிறது."
 
-#: rocky/templates/organizations/organization_crisis_room.html
-#, python-format
-msgid ""
-"<strong>Warning:</strong> Indemnification is not set for this organization. "
-"Go to the <a href=\"%(organization_settings)s\">organization settings "
-"page</a> to add one."
-msgstr ""
-"<strong> எச்சரிக்கை: </strong> இந்த அமைப்புக்கு இழப்பீடு அமைக்கப்படவில்லை. "
-"ஒன்றைச் சேர்க்க <a href = \"%(organization_settings)s\"> அமைப்பு அமைப்புகள் "
-"பக்கத்திற்குச் செல்லவும்."
-
-#: rocky/templates/organizations/organization_crisis_room.html
-msgid ""
-"An overview of the top 10 most severe findings OpenKAT found. Check the "
-"detail section for additional severity information."
-msgstr ""
-"ஓபன்காட் கண்டுபிடிக்கப்பட்ட முதல் 10 மிக கடுமையான கண்டுபிடிப்புகள் பற்றிய "
-"கண்ணோட்டம். கூடுதல் தீவிரத்தன்மை தகவலுக்கு விவரம் பகுதியைச் சரிபார்க்கவும்."
-
-#: rocky/templates/organizations/organization_crisis_room.html
-msgid "Top 10 most severe Findings"
-msgstr "முதல் 10 மிகவும் கடுமையான கண்டுபிடிப்புகள்"
-
-#: rocky/templates/organizations/organization_crisis_room.html
-msgid "Showing "
-msgstr "காண்பிக்க "
-
-#: rocky/templates/organizations/organization_crisis_room.html
-#: rocky/templates/partials/pagination.html
-msgid "of"
-msgstr "of"
-
-#: rocky/templates/organizations/organization_crisis_room.html
-msgid "findings"
-msgstr "கண்டுபிடிப்புகள்"
-
-#: rocky/templates/organizations/organization_crisis_room.html
-msgid "Findings table"
-msgstr "கண்டுபிடிப்புகள் அட்டவணை"
-
-#: rocky/templates/organizations/organization_crisis_room.html
-msgid "Finding type:"
-msgstr "வகை கண்டுபிடிப்பு:"
-
-#: rocky/templates/organizations/organization_crisis_room.html
-msgid "OOI type:"
-msgstr "OOI வகை:"
-
-#: rocky/templates/organizations/organization_crisis_room.html
-msgid "Source OOI:"
-msgstr "மூல ooi:"
-
 #: rocky/templates/organizations/organization_edit.html
 msgid "Edit organization"
 msgstr "அமைப்பைத் திருத்து"
@@ -7139,7 +7331,8 @@ msgid ""
 "                        "
 msgstr ""
 "\n"
-"%(மொத்த) அமைப்புகளைக் காட்டுகிறது"
+"                            %(total)s அமைப்புகளைக் காட்டுகிறது\n"
+"                        "
 
 #: rocky/templates/organizations/organization_list.html
 msgid "Organization overview:"
@@ -7164,24 +7357,26 @@ msgid "Rerun all bits"
 msgstr "அனைத்து பிட்களையும் மீண்டும் இயக்கவும்"
 
 #: rocky/templates/organizations/organization_member_add.html
-msgid " member account setup"
-msgstr " உறுப்பினர் கணக்கு அமைப்பு"
+msgid "Change account type"
+msgstr "கணக்கு வகையை மாற்றவும்"
 
-#: rocky/templates/organizations/organization_member_add.html
-msgid "Member details"
-msgstr "உறுப்பினர் விவரங்கள்"
+#: rocky/templates/organizations/organization_member_add_header.html
+#: rocky/views/organization_member_add.py
+msgid "Add member"
+msgstr "உறுப்பினரைச் சேர்"
 
-#: rocky/templates/organizations/organization_member_add_account_type.html
-msgid "Member account type setup"
-msgstr "உறுப்பினர் கணக்கு வகை அமைப்பு"
-
-#: rocky/templates/organizations/organization_member_add_account_type.html
-msgid "Choose an account type for this new member."
-msgstr "இந்த புதிய உறுப்பினருக்கான கணக்கு வகையைத் தேர்வுசெய்க."
-
-#: rocky/templates/organizations/organization_member_add_account_type.html
-msgid "Account type details"
-msgstr "கணக்கு வகை விவரங்கள்"
+#: rocky/templates/organizations/organization_member_add_header.html
+#, python-format
+msgid ""
+"Creating a new member of organization <strong>%(organization)s</strong>. For"
+" detailed information about the different account types, check the <a "
+"href=\"https://docs.openkat.nl/basics/users-and-organisations.html#users\" "
+"target=\"_blank\" rel=\"noopener\">documentation</a>."
+msgstr ""
+"அமைப்பின் புதிய உறுப்பினரை உருவாக்குதல் <strong>%(organization)s </strong>. "
+"வெவ்வேறு கணக்கு வகைகளைப் பற்றிய விரிவான தகவலுக்கு, <a href = "
+"\"https://docs.openkat.nl/basics/users-and-organisations.html#users\" இலக்கு"
+" = \"_ வெற்று\" rel = \"noopener\"> ஆவணங்கள் </a> ஐ சரிபார்க்கவும்."
 
 #: rocky/templates/organizations/organization_member_edit.html
 #: rocky/views/organization_member_edit.py
@@ -7194,8 +7389,8 @@ msgstr "உறுப்பினரை சேமிக்கவும்"
 
 #: rocky/templates/organizations/organization_member_list.html
 #, python-format
-msgid "An overview of members of <strong>%(organization_name)s</strong>."
-msgstr "<strong>%(organization_name)s </strong> உறுப்பினர்களின் கண்ணோட்டம்."
+msgid "An overview of members of <strong>%(organization_name)s</strong>"
+msgstr "<strong>%(organization_name)s </strong> உறுப்பினர்களின் கண்ணோட்டம்"
 
 #: rocky/templates/organizations/organization_member_list.html
 msgid "Add member(s)"
@@ -7217,7 +7412,8 @@ msgid ""
 "                    "
 msgstr ""
 "\n"
-"%(மொத்த) உறுப்பினர்களைக் காட்டுகிறது"
+"                        %(total)s உறுப்பினர்களைக் காட்டுகிறது\n"
+"                    "
 
 #: rocky/templates/organizations/organization_member_list.html
 msgid "Member overview:"
@@ -7239,30 +7435,27 @@ msgstr "ஒதுக்கப்பட்ட இசைவு நிலை"
 msgid "Super user"
 msgstr "சூப்பர் பயனர்"
 
-#: rocky/templates/organizations/organization_member_list.html
-msgid "Active"
-msgstr "செயலில்"
-
-#: rocky/templates/organizations/organization_member_list.html
-msgid "New"
-msgstr "புதிய"
+#: rocky/templates/organizations/organization_member_upload.html
+#: rocky/views/organization_member_add.py
+msgid "Add members"
+msgstr "உறுப்பினர்களைச் சேர்"
 
 #: rocky/templates/organizations/organization_member_upload.html
-msgid "Upload a csv file with members for organisation"
-msgstr "நிறுவனத்திற்கான உறுப்பினர்களுடன் காபிம கோப்பை பதிவேற்றவும்"
+#, python-format
+msgid ""
+"To upload multiple members at once, you can upload a CSV file or you can <a "
+"href=\"%(download_url)s\">download the template</a>."
+msgstr ""
+"பல உறுப்பினர்களை ஒரே நேரத்தில் பதிவேற்ற, நீங்கள் ஒரு காபிம கோப்பைப் "
+"பதிவேற்றலாம் அல்லது நீங்கள் <a href = \"%(download_url)s\"> வார்ப்புருவைப் "
+"பதிவிறக்கலாம் </a>."
 
 #: rocky/templates/organizations/organization_member_upload.html
-msgid "Download the template"
-msgstr "வார்ப்புருவைப் பதிவிறக்கவும்"
-
-#: rocky/templates/organizations/organization_member_upload.html
-msgid "or create a csv file with the following criteria"
-msgstr "அல்லது பின்வரும் அளவுகோல்களுடன் ஒரு காபிம கோப்பை உருவாக்கவும்"
-
-#: rocky/templates/organizations/organization_member_upload.html
-#: rocky/templates/upload_csv.html
-msgid "These are the criteria for CSV upload:"
-msgstr "சி.எச்.வி பதிவேற்றத்திற்கான அளவுகோல்கள் இவை:"
+msgid ""
+"To create a custom CSV file, make sure it meets the following criteria:"
+msgstr ""
+"தனிப்பயன் காபிம கோப்பை உருவாக்க, இது பின்வரும் அளவுகோல்களை நிறைவு செய்கிறது "
+"என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்:"
 
 #: rocky/templates/organizations/organization_member_upload.html
 msgid "Upload"
@@ -7482,6 +7675,18 @@ msgstr "அடுத்த பக்கம்"
 msgid "Next"
 msgstr "அடுத்தது"
 
+#: rocky/templates/partials/mute_findings_modal.html
+msgid "You are muting the selected findings."
+msgstr "நீங்கள் தேர்ந்தெடுக்கப்பட்ட கண்டுபிடிப்புகளை முடக்குகிறீர்கள்."
+
+#: rocky/templates/partials/mute_findings_modal.html
+msgid "Reason:"
+msgstr "காரணம்:"
+
+#: rocky/templates/partials/mute_findings_modal.html
+msgid "Expires by (UTC):"
+msgstr "(UTC) காலாவதியாகிறது:"
+
 #: rocky/templates/partials/notifications_block.html
 msgid "Confirmation:"
 msgstr "உறுதிப்படுத்தல்:"
@@ -7495,17 +7700,14 @@ msgid "No related object known for"
 msgstr "தொடர்புடைய எந்தப் பொருளும் அறியப்படவில்லை"
 
 #: rocky/templates/partials/ooi_detail_toolbar.html
-msgid "Mute Finding"
-msgstr "முடக்கு கண்டுபிடிப்பு"
+msgid "Generate Report"
+msgstr "அறிக்கையை உருவாக்குங்கள்"
 
 #: rocky/templates/partials/ooi_detail_toolbar.html
 #, python-format
 msgid "Edit %(display_type)s"
 msgstr "திருத்து %(display_type)s"
 
-# Suggested in Weblate: இது பொதுவான தகவல்களையும் அதனுடன் தொடர்புடைய
-# பொருள்களையும் காட்டுகிறது. இது கூடுதல் தொடர்புடைய பொருள்களைச் சேர்ப்பதற்கான
-# வாய்ப்பையும் வழங்குகிறது, அல்லது அவற்றுக்காக ச்கேன் செய்யவும்.
 #: rocky/templates/partials/ooi_head.html
 #, python-format
 msgid ""
@@ -7575,14 +7777,6 @@ msgid "Tree - table view"
 msgstr "மரம் - அட்டவணை பார்வை"
 
 #: rocky/templates/partials/organization_member_list_filters.html
-msgid "Shown status types"
-msgstr "நிலை வகைகள் காட்டப்பட்டுள்ளன"
-
-#: rocky/templates/partials/organization_member_list_filters.html
-msgid "Blocked status"
-msgstr "தடுக்கப்பட்ட நிலை"
-
-#: rocky/templates/partials/organization_member_list_filters.html
 msgid "Update List"
 msgstr "புதுப்பிப்பு பட்டியல்"
 
@@ -7605,6 +7799,10 @@ msgstr "அனைத்து அமைப்புகளும்"
 #: rocky/templates/partials/page-meta.html
 msgid "Logged in as:"
 msgstr "உள்நுழைந்தது:"
+
+#: rocky/templates/partials/pagination.html
+msgid "of"
+msgstr "of"
 
 #: rocky/templates/partials/pagination.html
 msgid "first"
@@ -7647,17 +7845,13 @@ msgid "Current clearance level"
 msgstr "தற்போதைய இசைவு நிலை"
 
 #: rocky/templates/scan_profiles/scan_profile_detail.html
+msgid "Declared clearance level explanation"
+msgstr "அறிவிக்கப்பட்ட இசைவு நிலை விளக்கம்"
+
+#: rocky/templates/scan_profiles/scan_profile_detail.html
 msgid "Declared:"
 msgstr "அறிவிக்கப்பட்டது:"
 
-# Suggested in Weblate: இதன் பொருள் இந்த பொருள் ச்கேன் மட்டத்துடன் போஃப்செசால்
-# ச்கேன் செய்யப்படும்
-#  %(scan_level)s மற்றும் கீழ். இசைவு அளவை "அறிவிக்கப்பட்ட" இலிருந்து அமைத்தல்
-#  "பரம்பரை" என்பது இந்த பொருள் அதன் நிலையை அண்டை நாடுகளிலிருந்து பெறும்
-# என்பதாகும்
-#  பொருள்கள். இதன் பொருள் இசைவு நிலை அப்படியே இருக்கக்கூடும், அதிகரிப்பு,
-#  அல்லது பிற அறிவிக்கப்பட்ட இசைவு நிலைகளைப் பொறுத்து குறைவு. இசைவு நிலைகள்
-#  இந்த இசைவு மட்டத்திலிருந்து பெறும் பொருள்களும் மீண்டும் கணக்கிடப்படும்.
 #: rocky/templates/scan_profiles/scan_profile_detail.html
 #, python-format
 msgid ""
@@ -7668,9 +7862,9 @@ msgid ""
 "or decrease depending on other declared clearance levels. Clearance levels "
 "of objects that inherit from this clearance level will also be recalculated."
 msgstr ""
-"இதன் பொருள் இந்த பொருள் போஃப்செசால் வருடு நிலை %(scan_level)s மற்றும் "
+"இதன் பொருள் இந்தப் பொருள் போஃப்செசால் வருடு நிலை %(scan_level)s மற்றும் "
 "அதற்கும் குறைவாக வருடு செய்யப்படும். இசைவு அளவை “அறிவிக்கப்பட்ட” இலிருந்து "
-"“பரம்பரை” வரை அமைப்பது என்பது இந்த பொருள் அதன் நிலையை அண்டை "
+"“பரம்பரை” வரை அமைப்பது என்பது இந்தப் பொருள் அதன் நிலையை அண்டை "
 "பொருட்களிலிருந்து பெறும் என்பதாகும். இதன் பொருள், பிற அறிவிக்கப்பட்ட இசைவு "
 "நிலைகளைப் பொறுத்து இசைவு நிலை அப்படியே இருக்கலாம், அதிகரிக்கலாம் அல்லது "
 "குறையக்கூடும். இந்த இசைவு மட்டத்திலிருந்து பெறும் பொருட்களின் இசைவு "
@@ -7681,14 +7875,13 @@ msgid "Set clearance level to inherit"
 msgstr "இசைவு அளவை மரபுரிமையாக அமைக்கவும்"
 
 #: rocky/templates/scan_profiles/scan_profile_detail.html
+msgid "Empty clearance level explanation"
+msgstr "வெற்று இசைவு நிலை விளக்கம்"
+
+#: rocky/templates/scan_profiles/scan_profile_detail.html
 msgid "Empty:"
 msgstr "காலியாக:"
 
-# Suggested in Weblate: இந்த பொருள் "L0" இன் இசைவு அளவைக் கொண்டுள்ளது. இதன்
-# பொருள் இந்த பொருள் எந்த போஃப்சீயும் ச்கேன் செய்யப்படாது
-#  போஃப்சே மீண்டும் இந்த பொருளுக்கு கைமுறையாக இயக்கப்படுகிறது. "L0" ஐ விட
-# அதிகமான இசைவு அளவைக் கொண்ட பொருள்கள் போஃப்செசால் தானாகவே ச்கேன் செய்யப்படும்
-#  தொடர்புடைய ச்கேன் நிலைகள்.
 #: rocky/templates/scan_profiles/scan_profile_detail.html
 msgid ""
 "This object has a clearance level of \"L0\". This means that this object "
@@ -7696,11 +7889,66 @@ msgid ""
 " object again. Objects with a clearance level higher than \"L0\" will be "
 "scanned automatically by Boefjes with corresponding scan levels."
 msgstr ""
-"இந்த பொருள் \"L0\" இன் இசைவு அளவைக் கொண்டுள்ளது. இந்த பொருளுக்கு மீண்டும் "
-"இந்த பொருளுக்கு கைமுறையாக இயங்கும் வரை இந்த பொருள் எந்த போஃப்சீயால் வருடு "
-"செய்யப்படாது என்பதே இதன் பொருள். \"L0\" ஐ விட அதிகமான இசைவு அளவைக் கொண்ட "
-"பொருள்கள் தொடர்புடைய வருடு அளவுகளுடன் போஃப்செசால் தானாகவே வருடு "
-"செய்யப்படும்."
+"இந்தப் பொருள் \"L0\" இன் இசைவு அளவைக் கொண்டுள்ளது. இந்தப் பொருளுக்கு "
+"மீண்டும் இந்தப் பொருளுக்குக் கைமுறையாக இயங்கும் வரை இந்தப் பொருள் எந்த "
+"போஃப்சீயால் வருடு செய்யப்படாது என்பதே இதன் பொருள். \"L0\" ஐ விட அதிகமான "
+"இசைவு அளவைக் கொண்ட பொருள்கள் தொடர்புடைய வருடு அளவுகளுடன் போஃப்செசால் தானாகவே"
+" வருடு செய்யப்படும்."
+
+#: rocky/templates/scan_profiles/scan_profile_detail.html
+msgid "Indemnification warning"
+msgstr "இழப்பீடு எச்சரிக்கை"
+
+#: rocky/templates/scan_profiles/scan_profile_detail.html
+msgid "Indemnification is not set for this organization."
+msgstr "இந்த அமைப்புக்கு இழப்பீடு அமைக்கப்படவில்லை."
+
+#: rocky/templates/scan_profiles/scan_profile_detail.html
+msgid "Go to the"
+msgstr "செல்லுங்கள்"
+
+#: rocky/templates/scan_profiles/scan_profile_detail.html
+msgid "organization settings page"
+msgstr "அமைப்பு அமைப்புகள் பக்கம்"
+
+#: rocky/templates/scan_profiles/scan_profile_detail.html
+msgid "to add one."
+msgstr "ஒன்றைச் சேர்க்க."
+
+#: rocky/templates/scan_profiles/scan_profile_detail.html
+msgid "Set clearance level warning"
+msgstr "அனுமதி நிலை எச்சரிக்கை அமை"
+
+#: rocky/templates/scan_profiles/scan_profile_detail.html
+msgid ""
+"You don't have permissions to set clearance level. Contact your "
+"administrator."
+msgstr ""
+"இசைவு அளவை அமைக்க உங்களுக்கு இசைவு இல்லை. உங்கள் நிர்வாகியைத் தொடர்பு "
+"கொள்ளுங்கள்."
+
+#: rocky/templates/scan_profiles/scan_profile_detail.html
+#, python-format
+msgid ""
+"You are not allowed to set the clearance level of this OOI. Your maximum "
+"clearance level is %(member_clearance_level)s and this OOI has level "
+"%(boefje_scan_level)s."
+msgstr ""
+"இந்த OOI இன் இசைவு அளவை அமைக்க உங்களுக்கு இசைவு இல்லை. உங்கள் அதிகபட்ச இசைவு"
+" நிலை %(member_clearance_level)s மற்றும் இந்த OOI நிலை "
+"%(boefje_scan_level)s."
+
+#: rocky/templates/scan_profiles/scan_profile_detail.html
+msgid "Go to your"
+msgstr "உங்கள் செல்லவும்"
+
+#: rocky/templates/scan_profiles/scan_profile_detail.html
+msgid "account details"
+msgstr "கணக்கு விவரங்கள்"
+
+#: rocky/templates/scan_profiles/scan_profile_detail.html
+msgid "to manage your clearance level."
+msgstr "உங்கள் இசைவு அளவை நிர்வகிக்க."
 
 #: rocky/templates/scan_profiles/scan_profile_reset.html
 msgid "Set clearance level for:"
@@ -7737,12 +7985,10 @@ msgstr "மேவு தரவைப் பதிவிறக்கவும்"
 msgid "Input object"
 msgstr "உள்ளீட்டு பொருள்"
 
-# Suggested in Weblate: போஃப்செசுக்கு பணிகள் எதுவும் இல்லை
 #: rocky/templates/tasks/boefjes.html
 msgid "There are no tasks for boefjes."
 msgstr "போஃப்செசுக்கு பணிகள் எதுவும் இல்லை."
 
-# Suggested in Weblate: போஃப்செசுக்கான பணிகளின் பட்டியல்
 #: rocky/templates/tasks/boefjes.html
 msgid "List of tasks for boefjes."
 msgstr "போஃப்செசுக்கான பணிகளின் பட்டியல்."
@@ -7762,12 +8008,10 @@ msgstr "உருவாக்கப்பட்ட தேதி"
 msgid "Modified date"
 msgstr "மாற்றியமைக்கப்பட்ட தேதி"
 
-# Suggested in Weblate: இயல்பான மருந்துகளுக்கு பணிகள் எதுவும் இல்லை
 #: rocky/templates/tasks/normalizers.html
 msgid "There are no tasks for normalizers."
-msgstr "இயல்பான மருந்துகளுக்கு பணிகள் எதுவும் இல்லை."
+msgstr "இயல்பான மருந்துகளுக்குப் பணிகள் எதுவும் இல்லை."
 
-# Suggested in Weblate: இயல்பான மருந்துகளுக்கான பணிகளின் பட்டியல்
 #: rocky/templates/tasks/normalizers.html
 msgid "List of tasks for normalizers."
 msgstr "இயல்பான மருந்துகளுக்கான பணிகளின் பட்டியல்."
@@ -7780,7 +8024,6 @@ msgstr "போஃப்சே உள்ளீடு OOI"
 msgid "Manually added"
 msgstr "கைமுறையாக சேர்க்கப்பட்டது"
 
-# Suggested in Weblate: எந்தப் பணிகளும் இல்லை
 #: rocky/templates/tasks/ooi_detail_task_list.html
 msgid "There have been no tasks."
 msgstr "பணிகள் எதுவும் இல்லை."
@@ -7840,10 +8083,9 @@ msgstr "எந்த பணிகளும் இல்லை"
 msgid "List of tasks for"
 msgstr "பணிகளின் பட்டியல்"
 
-# Suggested in Weblate: எந்த பணிகளும் இல்லை
 #: rocky/templates/tasks/reports.html
 msgid "There are no tasks for reports."
-msgstr "அறிக்கைகளுக்கு பணிகள் எதுவும் இல்லை."
+msgstr "அறிக்கைகளுக்குப் பணிகள் எதுவும் இல்லை."
 
 #: rocky/templates/tasks/reports.html
 msgid "List of tasks for reports."
@@ -8131,6 +8373,10 @@ msgstr ""
 "காபிம கோப்பைப் பதிவேற்றுவதன் மூலம் பல பொருள்களை உருவாக்குவதை "
 "தானியக்கமாக்குங்கள்."
 
+#: rocky/templates/upload_csv.html
+msgid "These are the criteria for CSV upload:"
+msgstr "சி.எச்.வி பதிவேற்றத்திற்கான அளவுகோல்கள் இவை:"
+
 #: rocky/templates/upload_raw.html
 msgid "Automate the creation of multiple objects by uploading a raw file."
 msgstr ""
@@ -8164,6 +8410,18 @@ msgstr "மூல தரவைப் பெறுவது தோல்விய
 msgid "Add Finding"
 msgstr "கண்டுபிடிப்பைச் சேர்"
 
+#: rocky/views/finding_list.py
+msgid "You do not have the permission to add items to a dashboard."
+msgstr "டாச்போர்டில் உருப்படிகளைச் சேர்க்க உங்களுக்கு இசைவு இல்லை."
+
+#: rocky/views/finding_list.py rocky/views/ooi_list.py
+msgid "Unknown action."
+msgstr "தெரியாத செயல்."
+
+#: rocky/views/finding_list.py rocky/views/ooi_list.py
+msgid "Dashboard item has been added."
+msgstr "டாச்போர்டு உருப்படி சேர்க்கப்பட்டுள்ளது."
+
 #: rocky/views/health.py
 msgid "Beautified"
 msgstr "அழகுபடுத்தப்பட்டது"
@@ -8179,10 +8437,6 @@ msgstr "தேர்ந்தெடுக்கப்பட்ட தேதி �
 #: rocky/views/mixins.py
 msgid "Can not parse date, falling back to show current date."
 msgstr "தேதியை அலச முடியாது, தற்போதைய தேதியைக் காட்ட மீண்டும் விழுகிறது."
-
-#: rocky/views/ooi_add.py
-msgid "Type select"
-msgstr "தேர்ந்தெடு தட்டச்சு செய்க"
 
 #: rocky/views/ooi_add.py
 #, python-format
@@ -8215,10 +8469,6 @@ msgstr "பொருள் கண்டுபிடிப்புகள்"
 #: rocky/views/ooi_list.py
 msgid "No OOIs selected."
 msgstr "OOIS தேர்ந்தெடுக்கப்படவில்லை."
-
-#: rocky/views/ooi_list.py
-msgid "Unknown action."
-msgstr "தெரியாத செயல்."
 
 #: rocky/views/ooi_list.py
 #, python-format
@@ -8350,11 +8600,11 @@ msgstr "நிறுவனங்களைச் சேர்க்க உங்�
 msgid "Organization %s successfully updated."
 msgstr "அமைப்பு %s வெற்றிகரமாக புதுப்பிக்கப்பட்டன."
 
-#: rocky/views/organization_member_add.py rocky/views/upload_csv.py
-msgid "Add column titles. Followed by each object on a new line."
+#: rocky/views/organization_member_add.py
+msgid "Add column titles, followed by each object on a new line."
 msgstr ""
-"நெடுவரிசை தலைப்புகளைச் சேர்க்கவும். ஒவ்வொரு பொருளையும் ஒரு புதிய வரியில் "
-"அதைத் தொடர்ந்து."
+"நெடுவரிசை தலைப்புகளைச் சேர், அதைத் தொடர்ந்து ஒவ்வொரு பொருளும் ஒரு புதிய "
+"வரியில்."
 
 #: rocky/views/organization_member_add.py
 msgid "The columns are: "
@@ -8369,16 +8619,8 @@ msgid "Account type can be one of: "
 msgstr "கணக்கு வகை ஒன்றாகும்: "
 
 #: rocky/views/organization_member_add.py
-msgid "Add Account Type"
-msgstr "கணக்கு வகையைச் சேர்க்கவும்"
-
-#: rocky/views/organization_member_add.py
 msgid "Member added successfully."
 msgstr "உறுப்பினர் வெற்றிகரமாகச் சேர்த்தார்."
-
-#: rocky/views/organization_member_add.py
-msgid "Add Member"
-msgstr "உறுப்பினரைச் சேர்க்கவும்"
 
 #: rocky/views/organization_member_add.py
 msgid "The csv file is missing required columns"
@@ -8437,10 +8679,6 @@ msgstr ""
 "வேண்டும்."
 
 #: rocky/views/organization_member_list.py
-msgid "Not blocked"
-msgstr "தடுக்கப்படவில்லை"
-
-#: rocky/views/organization_member_list.py
 #, python-format
 msgid "Blocked member %s successfully."
 msgstr "தடுக்கப்பட்ட உறுப்பினர் %s வெற்றிகரமாக."
@@ -8493,6 +8731,12 @@ msgstr ""
 #: rocky/views/tasks.py
 msgid "All Tasks"
 msgstr "அனைத்து பணிகளும்"
+
+#: rocky/views/upload_csv.py
+msgid "Add column titles. Followed by each object on a new line."
+msgstr ""
+"நெடுவரிசை தலைப்புகளைச் சேர்க்கவும். ஒவ்வொரு பொருளையும் ஒரு புதிய வரியில் "
+"அதைத் தொடர்ந்து."
 
 #: rocky/views/upload_csv.py
 msgid ""

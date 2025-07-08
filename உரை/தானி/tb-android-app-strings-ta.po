@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Thunderbird for Android / K-9 Mail)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-09 16:41+0200\n"
-"PO-Revision-Date: 2025-03-10 20:23+0530\n"
+"POT-Creation-Date: 2025-07-03 00:48+0200\n"
+"PO-Revision-Date: 2025-07-09 04:41\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/tb-android/app-strings/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.3-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #.  === App-specific strings
 #. =============================================================
@@ -28,11 +28,26 @@ msgid "Thunderbird Mobile Team"
 msgstr "தண்டர்பேர்ட் மொபைல் குழு"
 
 #, java-printf-format
+msgctxt "open_camera"
+msgid "Open Camera"
+msgstr "திறந்த கேமரா"
+
+#, java-printf-format
+msgctxt "attach_file"
+msgid "Attach File"
+msgstr "கோப்பை இணைக்கவும்"
+
+#, java-printf-format
+msgctxt "camera_permission_denied"
+msgid "Camera Permission Denied! Unable to take photo"
+msgstr "கேமரா இசைவு மறுக்கப்பட்டது! புகைப்படம் எடுக்க முடியவில்லை"
+
+#, java-printf-format
 msgctxt "source_code"
 msgid "Source code"
 msgstr "மூலக் குறியீடு"
 
-#, java-printf-format
+#, ignore-same, java-printf-format
 msgctxt "app_license"
 msgid "Apache License, Version 2.0"
 msgstr "அப்பாச்சி உரிமம், பதிப்பு 2.0"
@@ -242,7 +257,7 @@ msgstr "புதிய செய்தியாகத் திருத்த�
 #, java-printf-format
 msgctxt "move_action"
 msgid "Move"
-msgstr "அனுப்பு"
+msgstr "நகர்த்து"
 
 #, java-printf-format
 msgctxt "move_to_drafts_action"
@@ -252,7 +267,7 @@ msgstr "வரைவுகளுக்கு நகர்த்தவும்"
 #, java-printf-format
 msgctxt "refile_action"
 msgid "Refile…"
-msgstr "மீண்டும் நிரப்பு"
+msgstr "மீண்டும் நிரப்பு…"
 
 #, java-printf-format
 msgctxt "done_action"
@@ -488,7 +503,7 @@ msgstr "<Xliff வரை ஏற்றவும்: g ஐடி = \"messages_to_l
 #, java-printf-format
 msgctxt "size_format_gigabytes"
 msgid "%.1f GB"
-msgstr "%.1F சிபி"
+msgstr "%.1f சீபி"
 
 #, java-printf-format
 msgctxt "size_format_megabytes"
@@ -689,9 +704,19 @@ msgid "Enable debug logging"
 msgstr "பிழை பதிவு இயக்கு"
 
 #, java-printf-format
+msgctxt "debug_enable_sync_debug_logging_title"
+msgid "Enable sync debug logging"
+msgstr "ஒத்திசைவு பிழைத்திருத்த பதிவை இயக்கவும்"
+
+#, java-printf-format
 msgctxt "debug_enable_debug_logging_summary"
 msgid "Log extra diagnostic information"
 msgstr "மேம்பட்ட பிழை பதிவு இயக்கு"
+
+#, java-printf-format
+msgctxt "debug_enable_sync_debug_logging_summary"
+msgid "Log sync diagnostic information for 24 hours"
+msgstr "பதிவு ஒத்திசைவு கண்டறியும் தகவல்களை 24 மணி நேரம்"
 
 #, java-printf-format
 msgctxt "debug_enable_sensitive_logging_title"
@@ -707,6 +732,11 @@ msgstr "பதிவுகளில் கடவுச்சொற்கள�
 msgctxt "debug_export_logs_title"
 msgid "Export logs"
 msgstr "ஏற்றுமதி பதிவுகள்"
+
+#, java-printf-format
+msgctxt "debug_sync_export_logs_title"
+msgid "Export Sync logs"
+msgstr "ஏற்றுமதி ஒத்திசைவு பதிவுகள்"
 
 #, java-printf-format
 msgctxt "debug_export_logs_success"
@@ -804,7 +834,7 @@ msgstr "பெறுநரின் புலத்தில் முழும�
 #, java-printf-format
 msgctxt "error_contact_address_not_found"
 msgid "No email address could be found for this contact."
-msgstr "இந்த தொடர்புக்கு அஞ்சல் இல்லை"
+msgstr "இந்தத் தொடர்புக்கு அஞ்சல் இல்லை."
 
 #, java-printf-format
 msgctxt "message_compose_attachments_skipped_toast"
@@ -812,6 +842,23 @@ msgid ""
 "Some attachments cannot be forwarded because they have not been downloaded."
 msgstr "சில இணைப்புகள் பதிவிறக்கம் இல்லாததால், இணைக்க முடியாது."
 
+#. Displayed when loading the message details has failed
+#. Name of the action to add a person to contacts. Usually displayed in a menu
+#. or in a tooltip when long-pressing the associated icon.
+#. Name of the action to compose a new message to a particular address.
+#. Usually displayed in a menu or in a tooltip when long-pressing the
+#. associated icon.
+#. Name of the action to copy an email address to the clipboard. Usually
+#. displayed in a menu or in a tooltip when long-pressing the associated icon.
+#. Name of the action to copy a name and email address to the clipboard.
+#. Usually displayed in a menu or in a tooltip when long-pressing the
+#. associated icon.
+#. A user visible label for the email address copied to the clipboard
+#. A user visible label for the name and email address copied to the clipboard
+#. Might be displayed in a notification when deleting an account (in the
+#. background)
+#. For unread messages the first line of a message list item is modified by
+#. this to improve the experience for people with screen readers.
 #, java-printf-format
 msgctxt "message_compose_attachments_forward_toast"
 msgid ""
@@ -1174,7 +1221,7 @@ msgstr "பயனற்றது"
 #, java-printf-format
 msgctxt "general_settings_swipe_action_move"
 msgid "Move"
-msgstr "அனுப்பு"
+msgstr "நகர்த்து"
 
 #.  Title of the setting to specify the density of the message list
 #, java-printf-format
@@ -3279,12 +3326,13 @@ msgstr "தரவுத்தளங்கள் மேம்படுகிற�
 #, java-printf-format
 msgctxt "upgrade_databases_unspecified"
 msgid "Upgrading databases…"
-msgstr "தரவுத்தளங்கள் மேம்படுகிறது"
+msgstr "தரவுத்தளங்கள் மேம்படுகிறது…"
 
 #, java-printf-format
 msgctxt "upgrade_database_format"
 msgid "Upgrading database of account \"<xliff:g id=\"account\">%s</xliff:g>\""
-msgstr "கணக்கின் தரவுத்தளத்தை மேம்படுத்துதல்"
+msgstr ""
+"கணக்கின் தரவுத்தளத்தை மேம்படுத்துதல்: <xliff:g id=\"account\">%s</xliff:g>"
 
 #, java-printf-format
 msgctxt "global_settings_splitview_mode_label"
@@ -3948,8 +3996,8 @@ msgid ""
 "You can <a href=\"https://k9mail.app/2018/02/26/OpenPGP-Considerations-Part-"
 "III-Autocrypt.html\">click here</a> to learn more."
 msgstr ""
-"நீங்கள் <a href = \"https://k9mail.app/2018/02/26/openpgp-considerations-"
-"iii-autocrypt.html\"> மேலும் அறிய இங்கே சொடுக்கு செய்க </a>."
+"நீங்கள் <a href=\"https://k9mail.app/2018/02/26/openpgp-considerations-iii-"
+"autocrypt.html\"> மேலும் அறிய இங்கே சொடுக்கு செய்க </a>."
 
 #, java-printf-format
 msgctxt "general_settings_title"
@@ -4147,7 +4195,7 @@ msgid ""
 "notification while the app is active in the background. <xliff:g "
 "id=\"optional_extended_explanation\">%2$s</xliff:g>"
 msgstr ""
-"புச் பயன்படுத்தும் போது, ​​<xliff: g ஐடி = \"app_name\">%1$s </xliff: g> "
+"புச் பயன்படுத்தும் போது, <xliff: g ஐடி = \"app_name\">%1$s </xliff: g> "
 "அஞ்சல் சேவையகத்துடன் இணைப்பைப் பராமரிக்கிறது. பயன்பாடு பின்னணியில் செயலில் "
 "இருக்கும்போது ஆண்ட்ராய்டு க்கு தொடர்ச்சியான அறிவிப்பைக் காண்பிக்க வேண்டும். "
 "<xliff: g ஐடி = \"atanal_extended_explanation\">%2$s </xliff: g>"
@@ -4238,6 +4286,20 @@ msgstr "நட்சத்திரம் கழி"
 msgctxt "swipe_action_archive"
 msgid "Archive"
 msgstr "காப்பகம்"
+
+#, java-printf-format
+msgctxt "swipe_action_archive_folder_not_set"
+msgid "Set Up Archive Folder"
+msgstr "காப்பக கோப்புறையை அமைக்கவும்"
+
+#, java-printf-format
+msgctxt "swipe_action_change_swipe_gestures"
+msgid ""
+"Change \n"
+"Swipe Gestures"
+msgstr ""
+"மாற்றம் \n"
+"சைகைகளை ச்வைப் செய்யுங்கள்"
 
 #.  Name of the swipe action to delete a message. Try to keep it short.
 #. Name of the swipe action to delete a message. Try to keep it short.
@@ -4452,3 +4514,8 @@ msgstr ""
 "இந்த பயன்பாட்டைப் பற்றிய செயல்திறன், பயன்பாடு, வன்பொருள் மற்றும் "
 "தனிப்பயனாக்குதல் தரவைப் பகிர்ந்து கொள்கிறது மொசில்லாவுடன் தண்டர்பேர்டை "
 "சிறந்ததாக்க எங்களுக்கு உதவுகிறது"
+
+#, java-printf-format
+msgctxt "archiving_not_available_for_this_account"
+msgid "Archiving is not available for this account."
+msgstr "இந்த கணக்கிற்கு காப்பகம் கிடைக்கவில்லை."
