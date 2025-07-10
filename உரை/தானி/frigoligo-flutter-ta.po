@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Frigoligo)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-27 11:48+0200\n"
-"PO-Revision-Date: 2024-12-27 18:31+0530\n"
+"POT-Creation-Date: 2025-06-29 10:45+0200\n"
+"PO-Revision-Date: 2025-07-09 07:31\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/frigoligo/flutter/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. A piece of content fetched from the web. This is one of the main concepts
 #. of the app.
@@ -102,7 +102,7 @@ msgstr "பதிப்பு"
 #, case-insensitive, icu-message-format, placeholders:$N$
 msgctxt "humanize_days"
 msgid "{n, plural, =1{1 day} other{{n} days}}"
-msgstr "{n, பன்மை, = 1 {1 day} பிற {{n} நாட்கள்}}"
+msgstr "{n, plural, =1{1 நாள்} other{{n} நாட்கள்}}"
 
 #. Describe a duration until a moment in the future.
 #, case-insensitive, icu-message-format, placeholders:$DURATION$
@@ -113,12 +113,12 @@ msgstr "{duration} இல்"
 #, case-insensitive, icu-message-format, placeholders:$N$
 msgctxt "humanize_hours"
 msgid "{n, plural, =1{1 hour} other{{n} hours}}"
-msgstr "{n, பன்மை, = 1 {1 hour} பிற {{n} மணிநேரம்}}"
+msgstr "{n, plural, =1{1 மணி நேரம்} other{{n} மணிநேரம்}}"
 
 #, case-insensitive, icu-message-format, placeholders:$N$
 msgctxt "humanize_minutes"
 msgid "{n, plural, =1{1 minute} other{{n} minutes}}"
-msgstr "{n, பன்மை, = 1 {1 minute} பிற {{n} நிமிடங்கள்}}"
+msgstr "{n, plural, =1{1 நிமிடம்} other{{n} நிமிடங்கள்}}"
 
 #. Describe a duration since a moment in the past.
 #, case-insensitive, icu-message-format, placeholders:$DURATION$
@@ -129,13 +129,19 @@ msgstr "{duration} முன்பு"
 #, case-insensitive, icu-message-format, placeholders:$N$
 msgctxt "humanize_seconds"
 msgid "{n, plural, =1{1 second} other{{n} seconds}}"
-msgstr "{n, பன்மை, = 1 {1 second} பிற {{n} விநாடிகள்}}"
+msgstr "{n, plural, =1{1 வினாடி} other{{n} வினாடிகள்}}"
 
 #. The action to add tags to an article.
 #, icu-message-format
 msgctxt "article_addTags"
 msgid "Add tags"
 msgstr "குறிச்சொற்களைச் சேர்க்கவும்"
+
+#. The action to archive the article.
+#, icu-message-format
+msgctxt "article_archive"
+msgid "Archive this article"
+msgstr "இந்த கட்டுரையை காப்பகப்படுத்தவும்"
 
 #. The action to open the URL of the article in the web browser.
 #, icu-message-format
@@ -149,11 +155,23 @@ msgctxt "article_delete"
 msgid "Delete this article"
 msgstr "இந்த கட்டுரையை நீக்கு"
 
+#. The action to show the article details.
+#, icu-message-format
+msgctxt "article_details"
+msgid "More information"
+msgstr "மேலும் செய்தி"
+
 #. Placeholder for when the article content is not available.
 #, icu-message-format
 msgctxt "article_noContentFetched"
 msgid "No content fetched"
 msgstr "எந்த உள்ளடக்கமும் பெறப்படவில்லை"
+
+#. Placeholder for when the article is not found.
+#, icu-message-format
+msgctxt "article_notFound"
+msgid "Article not found"
+msgstr "கட்டுரை காணப்படவில்லை"
 
 #. The action to open the article in the web browser.
 #, icu-message-format
@@ -166,6 +184,42 @@ msgstr "உலாவியில் திற"
 msgctxt "article_readingTime"
 msgid "{minutes} min"
 msgstr "{minutes} மணித்துளி"
+
+#. The action to ask the server to fetch the article content again.
+#, icu-message-format
+msgctxt "article_refetchContent"
+msgid "Re-fetch content"
+msgstr "உள்ளடக்கத்தை மீண்டும் பெறவும்"
+
+#. The action to open the reading settings sheet.
+#, icu-message-format
+msgctxt "article_readingSettings"
+msgid "Text settings"
+msgstr "உரை அமைப்புகள்"
+
+#. The action to share the article.
+#, icu-message-format
+msgctxt "article_share"
+msgid "Share this article"
+msgstr "இந்த கட்டுரையைப் பகிரவும்"
+
+#. The action to star the article.
+#, icu-message-format
+msgctxt "article_star"
+msgid "Star this article"
+msgstr "இந்த கட்டுரையை விண்மீன் செய்யுங்கள்"
+
+#. The action to unarchive the article.
+#, icu-message-format
+msgctxt "article_unarchive"
+msgid "Unarchive this article"
+msgstr "இந்த கட்டுரையை அறியாதது"
+
+#. The action to unstar the article.
+#, icu-message-format
+msgctxt "article_unstar"
+msgid "Unstar this article"
+msgstr "இந்த கட்டுரையை உறுதிப்படுத்தவும்"
 
 #. The estimated reading time of the article.
 #, icu-message-format
@@ -201,7 +255,7 @@ msgstr "களங்கள்"
 #, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "filters_articleDomainsCount"
 msgid "{count, plural, =1{1 domain} other{{count} domains}}"
-msgstr "{எண்ணிக்கை, பன்மை, = 1 {1 domain} பிற {{count} களங்கள்}}"
+msgstr "{count, plural, =1 {1 டொமைன்} other{{count} களங்கள்}}"
 
 #. Filter starred articles.
 #, icu-message-format
@@ -243,7 +297,7 @@ msgstr "குறிச்சொற்கள்"
 #, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "filters_articleTagsCount"
 msgid "{count, plural, =1{1 tag} other{{count} tags}}"
-msgstr "{எண்ணிக்கை, பன்மை, = 1 {1 tag} பிற {{count} குறிச்சொற்கள்}}"
+msgstr "{count, plural, =1{1 குறிச்சொல்} other{{count} குறிச்சொற்கள்}}"
 
 #. Search bar hint in the home screen.
 #, icu-message-format
@@ -388,8 +442,8 @@ msgstr "உரை வடிவமைப்பு"
 #. The title of the reading settings screen.
 #, icu-message-format
 msgctxt "readingsettings_title"
-msgid "Reading settings"
-msgstr "அமைப்புகளைப் படித்தல்"
+msgid "Text settings"
+msgstr "உரை அமைப்புகள்"
 
 #. The title of the confirmation screen after the article is saved.
 #, icu-message-format
@@ -449,12 +503,6 @@ msgctxt "server_address"
 msgid "Server address"
 msgstr "சேவையக முகவரி"
 
-#. An error occurred while communicating with the wallabag API.
-#, icu-message-format
-msgctxt "server_apiError"
-msgid "Invalid API response"
-msgstr "தவறான பநிஇ பதில்"
-
 #. A message for non-empty check fail on a form field.
 #, case-insensitive, icu-message-format, placeholders:$LABEL$
 msgctxt "server_emptyField"
@@ -467,11 +515,24 @@ msgctxt "server_invalidUrl"
 msgid "Invalid address"
 msgstr "தவறான முகவரி"
 
+#. The application could not detect the server type.
+#, icu-message-format
+msgctxt "server_unknownServerType"
+msgid "Unknown server type"
+msgstr "தெரியாத சேவையக வகை"
+
+#. The server instance is unreachable.
 #. The wallabag instance is unreachable.
 #, icu-message-format
 msgctxt "server_unreachable"
 msgid "Server unreachable"
 msgstr "சேவையகம் அணுக முடியாதது"
+
+#. The server instance is not supported.
+#, icu-message-format
+msgctxt "server_versionNotSupported"
+msgid "Server version not supported"
+msgstr "சேவையக பதிப்பு ஆதரிக்கப்படவில்லை"
 
 #. A message displayed when the value is copied to the clipboard.
 #, icu-message-format
@@ -651,6 +712,12 @@ msgctxt "settings_title"
 msgid "Settings"
 msgstr "அமைப்புகள்"
 
+#. The action to toggle the use of the experimental article renderer.
+#, icu-message-format
+msgctxt "settings_nativeArticleRenderer"
+msgid "Native article renderer"
+msgstr "சொந்த கட்டுரை ரெண்டரர்"
+
 #. The label for the dark theme mode.
 #, icu-message-format
 msgctxt "settings_valueThemeDark"
@@ -667,4 +734,4 @@ msgstr "ஒளி"
 #, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "syncer_pendingActions"
 msgid "{count, plural, =1{1 action} other{{count} actions}}"
-msgstr "{எண்ணிக்கை, பன்மை, = 1 {1 action} பிற {{count} செயல்கள்}}"
+msgstr "{count, plural, =1{1 செயல்} other{{count} செயல்கள்}}"

@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (fluidd)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-26 13:19+0200\n"
-"PO-Revision-Date: 2024-12-26 20:29+0530\n"
+"POT-Creation-Date: 2025-06-30 06:02+0200\n"
+"PO-Revision-Date: 2025-07-09 09:36\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/fluidd/fluidd/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #, vue-format
 msgctxt "app->bedmesh->label->active"
@@ -70,7 +70,7 @@ msgid ""
 "If saving as something other than %{name}, you can choose to also remove the"
 " %{name} profile"
 msgstr ""
-"%{பெயர் than தவிர வேறு ஏதாவது சேமித்தால், %{name} சுயவிவரத்தையும் அகற்றவும் "
+"%{name} தவிர வேறு ஏதாவது சேமித்தால், %{name} சுயவிவரத்தையும் அகற்றவும் "
 "நீங்கள் தேர்வு செய்யலாம்"
 
 #, vue-format
@@ -106,14 +106,19 @@ msgid "Commits calibrated profile to printer.cfg"
 msgstr "அச்சுப்பொறிக்கு அளவீடு செய்யப்பட்ட சுயவிவரத்தை ccfg க்குச் செய்கிறது"
 
 #, vue-format
-msgctxt "app->bedmesh->tooltip->copy_image"
-msgid "Copy bed mesh image"
-msgstr "படுக்கை கண்ணி படத்தை நகலெடுக்கவும்"
+msgctxt "app->bedmesh->tooltip->download_image"
+msgid "Download bed mesh image"
+msgstr "படுக்கை கண்ணி படத்தைப் பதிவிறக்கவும்"
 
 #, vue-format
 msgctxt "app->chart->label->current"
 msgid "Actual"
 msgstr "உண்மையான"
+
+#, vue-format
+msgctxt "app->chart->label->fan_breakpoints"
+msgid "Fan Breakpoints"
+msgstr "சுவைஞர் முறிவு புள்ளிகள்"
 
 #, vue-format
 msgctxt "app->chart->label->item"
@@ -126,21 +131,44 @@ msgid "Power"
 msgstr "விசை"
 
 #, vue-format
+msgctxt "app->chart->label->rate_of_change"
+msgid "Change"
+msgstr "மாற்றம்"
+
+#, vue-format
+msgctxt "app->chart->label->target_temperature"
+msgid "Target Temperature"
+msgstr "இலக்கு வெப்பநிலை"
+
+#, vue-format
 msgctxt "app->chart->label->target"
 msgid "Target"
 msgstr "இலக்கு"
 
 #, vue-format
-msgctxt "app->chart->label->rate_of_change"
-msgid "Change"
-msgstr "மாற்றம்"
+msgctxt "app->chart->label->turn_off"
+msgid "Turn Off"
+msgstr "அணைக்கவும்"
+
+#, vue-format
+msgctxt "app->chart->title->mpc_calibrate"
+msgid "MPC Calibrate {name}"
+msgstr "MPC அளவீடு {name}"
+
+#, vue-format
+msgctxt "app->chart->title->pid_calibrate"
+msgid "PID Calibrate {name}"
+msgstr "PID அளவீடு {name}"
 
 #, vue-format
 msgctxt "app->chart->tooltip->help"
 msgid ""
 "Hold <kbd>Shift</kbd> to zoom.<br />Click an item to toggle in the graph.<br"
 " />Click a power to toggle in the graph."
-msgstr "பெரிதாக்க <kbd> சிப்ட் < /kbd> ஐ வைத்திருங்கள்."
+msgstr ""
+"பெரிதாக்க <kbd> சிப்ட் </kbd> ஐ வைத்திருங்கள்.<br />வரைபடத்தில் மாறுவதற்கு "
+"ஒரு உருப்படியைக் கிளிக் செய்க. <br /> வரைபடத்தில் மாற்றுவதற்கான சக்தியைக் "
+"கிளிக் செய்க."
 
 #, vue-format
 msgctxt "app->console->label->auto_scroll"
@@ -164,7 +192,7 @@ msgid ""
 "/>Use <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> for history"
 msgstr ""
 "கட்டளைகளுக்கு \"உதவி\" <br/> ஐ உள்ளிடவும் <kbd> தாவல் </kbd> ஐப் "
-"பயன்படுத்தவும் <br/> <kbd> & uarr;"
+"பயன்படுத்தவும் <br/> <kbd> &uarr;</kbd> மற்றும் <kbd>&darr;</kbd> வரலாறு"
 
 #, vue-format
 msgctxt "app->endpoint->error->cant_connect"
@@ -188,13 +216,13 @@ msgid ""
 "target=\"_blank\">here</a>"
 msgstr ""
 "இது உங்கள் மூன்ரேக்கர் உள்ளமைவை மாற்ற வேண்டும் என்று பொருள். பல அச்சுப்பொறி "
-"அமைப்புகளில் உள்ள ஆவணங்களைப் பார்க்கவும் <a href = \"%{url}\" இலக்கு = \"_ "
-"வெற்று\"> இங்கே </a>"
+"அமைப்புகளில் உள்ள ஆவணங்களைப் பார்க்கவும் <a href=\"%{url}\" "
+"target=\"_blank\"> இங்கே </a>"
 
 #, vue-format
 msgctxt "app->endpoint->hint->add_printer"
-msgid "E.g., http://fluiddpi.local"
-msgstr "எ.கா., http: //fluiddpi.local"
+msgid "E.g., http://fluidd.local"
+msgstr "எ.கா., http://fluidd.local"
 
 #, vue-format
 msgctxt "app->endpoint->msg->trouble"
@@ -202,8 +230,8 @@ msgid ""
 "Having trouble? <a href=\"%{url}\" target=\"_blank\">See here</a> for more "
 "information."
 msgstr ""
-"சிக்கல் உள்ளதா? <a href = \"%{url}\" இலக்கு = \"_ வெற்று\"> மேலும் தகவலுக்கு"
-" இங்கே காண்க </a>."
+"சிக்கல் உள்ளதா?<a href=\"%{url}\" target=\"_blank\">மேலும் தகவலுக்கு இங்கே "
+"காண்க </a>."
 
 #, vue-format
 msgctxt "app->endpoint->tooltip->endpoint_examples"
@@ -211,17 +239,24 @@ msgid ""
 "Enter your API URL.<br />Some examples might be;<br "
 "/><blockquote>fluidd.local, https://192.168.1.150</blockquote>"
 msgstr ""
-"உங்கள் பநிஇ முகவரி ஐ உள்ளிடவும். <br /> சில எடுத்துக்காட்டுகள் இருக்கலாம்;"
+"உங்கள் பநிஇ முகவரி ஐ உள்ளிடவும். <br /> சில எடுத்துக்காட்டுகள் "
+"இருக்கலாம்;<br /><blockquote>fluidd.local, "
+"https://192.168.1.150</blockquote>"
 
 #, vue-format
-msgctxt "app->endstop->label->open"
+msgctxt "app->endstop->states->label->open"
 msgid "OPEN"
 msgstr "திற"
 
 #, vue-format
-msgctxt "app->endstop->label->triggered"
+msgctxt "app->endstop->states->label->triggered"
 msgid "TRIGGERED"
 msgstr "தூண்டப்பட்டது"
+
+#, vue-format
+msgctxt "app->endstop->label->endstop"
+msgid "Endstop %{name}"
+msgstr "எண்ட்ச்டாப் %{name}"
 
 #, vue-format
 msgctxt "app->endstop->msg->subtitle"
@@ -240,7 +275,7 @@ msgid "Filter printed"
 msgstr "வடிகட்டி அச்சிடப்பட்டது"
 
 #, vue-format
-msgctxt "app->file_system->filters->label->hidden_files_folders"
+msgctxt "app->file_system->filters->label->hidden_files"
 msgid "Filter hidden files and folders"
 msgstr "மறைக்கப்பட்ட கோப்புகள் மற்றும் கோப்புறைகளை வடிகட்டவும்"
 
@@ -278,6 +313,11 @@ msgstr "வட்டு பயன்பாடு"
 msgctxt "app->file_system->label->diskinfo"
 msgid "Disk Information"
 msgstr "வட்டு செய்தி"
+
+#, vue-format
+msgctxt "app->file_system->label->sd_card_info"
+msgid "SD Card Information"
+msgstr "எச்டி அட்டை செய்தி"
 
 #, vue-format
 msgctxt "app->file_system->label->downloaded"
@@ -623,8 +663,8 @@ msgstr "தொகு"
 
 #, vue-format
 msgctxt "app->general->btn->exit_layout"
-msgid "Exit layout mode"
-msgstr "தளவமைப்பு பயன்முறையிலிருந்து வெளியேறவும்"
+msgid "Exit"
+msgstr "வெளியேறு"
 
 #, vue-format
 msgctxt "app->general->btn->extrude"
@@ -687,9 +727,14 @@ msgid "Pause"
 msgstr "இடைநிறுத்தம்"
 
 #, vue-format
+msgctxt "app->general->btn->power_on_printer"
+msgid "Power On Printer"
+msgstr "அச்சுப்பொறியில் ஆற்றல்"
+
+#, vue-format
 msgctxt "app->general->btn->preheat"
 msgid "Preheat"
-msgstr "Preheat"
+msgstr "முன்சூடு"
 
 #, vue-format
 msgctxt "app->general->btn->presets"
@@ -763,13 +808,13 @@ msgstr "கோப்பை அழிக்கவும்"
 
 #, vue-format
 msgctxt "app->general->btn->reset_layout"
-msgid "Reset to Default Layout"
-msgstr "இயல்புநிலை தளவமைப்புக்கு மீட்டமைக்கவும்"
+msgid "Reset"
+msgstr "மீட்டமை"
 
 #, vue-format
 msgctxt "app->general->btn->reset_default_layout"
-msgid "Reset Default Layout"
-msgstr "இயல்புநிலை தளவமைப்பை மீட்டமைக்கவும்"
+msgid "Reset Default"
+msgstr "இயல்புநிலை மீட்டமை"
 
 #, vue-format
 msgctxt "app->general->btn->restart_firmware"
@@ -848,8 +893,8 @@ msgstr "வண்ணத்தை அமைக்கவும்"
 
 #, vue-format
 msgctxt "app->general->btn->set_default_layout"
-msgid "Set as Default Layout"
-msgstr "இயல்புநிலை தளவமைப்பாக அமைக்கவும்"
+msgid "Save As Default"
+msgstr "இயல்புநிலையாக அமை"
 
 #, vue-format
 msgctxt "app->general->btn->shutdown"
@@ -870,6 +915,11 @@ msgstr "மீண்டும் இணைக்கவும்"
 msgctxt "app->general->btn->socket_refresh"
 msgid "Force refresh"
 msgstr "கட்டாய புதுப்பிப்பு"
+
+#, vue-format
+msgctxt "app->general->btn->perform_time_analysis"
+msgid "Perform Time Analysis"
+msgstr "நேர பகுப்பாய்வு செய்யுங்கள்"
 
 #, vue-format
 msgctxt "app->general->btn->thumbnail_size"
@@ -938,6 +988,13 @@ msgstr ""
 "மூன்ரேக்கர் தோல்வியுற்ற செருகுநிரல்களைக் கொண்டுள்ளது, தயவுசெய்து உங்கள் "
 "பதிவுகளைச் சரிபார்த்து, உங்கள் உள்ளமைவைப் புதுப்பித்து மூன்ரேக்கரை "
 "மறுதொடக்கம் செய்யுங்கள்."
+
+#, vue-format
+msgctxt "app->general->error->printer_powered_off"
+msgid ""
+"The printer is currently powered off.<br/><br/> To power on the printer, "
+"please click the button on the left."
+msgstr "அச்சுப்பொறி தற்போது இயக்கப்படுகிறது."
 
 #, vue-format
 msgctxt "app->general->label->accel_to_decel"
@@ -1169,6 +1226,11 @@ msgid "LDAP"
 msgstr "LDAP"
 
 #, vue-format
+msgctxt "app->general->label->length_in_kilometers"
+msgid "Length in kilometers"
+msgstr "கிலோமீட்டரில் நீளம்"
+
+#, vue-format
 msgctxt "app->general->label->longest_job"
 msgid "Longest job"
 msgstr "மிக நீண்ட வேலை"
@@ -1241,7 +1303,7 @@ msgstr "கடவுச்சொல்"
 #, vue-format
 msgctxt "app->general->label->partial_of_total"
 msgid "%{partial} of %{total}"
-msgstr "%{மொத்த {மொத்த {partial}"
+msgstr "%{total} இல் %{partial}"
 
 #, vue-format
 msgctxt "app->general->label->pause_at_layer"
@@ -1359,6 +1421,11 @@ msgid "Thumbnail Size"
 msgstr "சிறு அளவு"
 
 #, vue-format
+msgctxt "app->general->label->time_in_days"
+msgid "Time in days"
+msgstr "நாட்களில் நேரம்"
+
+#, vue-format
 msgctxt "app->general->label->total"
 msgid "Total"
 msgstr "மொத்தம்"
@@ -1467,6 +1534,11 @@ msgstr "தெரியும்"
 msgctxt "app->general->label->z_offset"
 msgid "Z Offset"
 msgstr "ஈடுசெய்யும்"
+
+#, vue-format
+msgctxt "app->general->label->z_hop_height"
+msgid "Z-Hop Height"
+msgstr "இசட்-ஆப் உயரம்"
 
 #, vue-format
 msgctxt "app->general->label->unsaved_changes"
@@ -1784,14 +1856,29 @@ msgid "Estimated time"
 msgstr "மதிப்பிடப்பட்ட நேரம்"
 
 #, vue-format
-msgctxt "app->general->table->header->filament"
-msgid "Filament"
-msgstr "தாள்"
+msgctxt "app->general->table->header->extruder_colors"
+msgid "Extruder colors"
+msgstr "எக்ச்ட்ரூடர் வண்ணங்கள்"
+
+#, vue-format
+msgctxt "app->general->table->header->filament_change_count"
+msgid "Filament changes"
+msgstr "இழை மாற்றங்கள்"
+
+#, vue-format
+msgctxt "app->general->table->header->filament_colors"
+msgid "Filament colors"
+msgstr "இழை வண்ணங்கள்"
 
 #, vue-format
 msgctxt "app->general->table->header->filament_name"
 msgid "Filament name"
 msgstr "இழை பெயர்"
+
+#, vue-format
+msgctxt "app->general->table->header->filament_temps"
+msgid "Filament temps"
+msgstr "நேர இழை"
 
 #, vue-format
 msgctxt "app->general->table->header->filament_type"
@@ -1807,6 +1894,21 @@ msgstr "பயன்படுத்தப்பட்ட இழை"
 msgctxt "app->general->table->header->filament_weight_total"
 msgid "Filament weight"
 msgstr "இழை எடை"
+
+#, vue-format
+msgctxt "app->general->table->header->filament_weights"
+msgid "Filament weights"
+msgstr "இழை எடைகள்"
+
+#, vue-format
+msgctxt "app->general->table->header->filament"
+msgid "Filament"
+msgstr "தாள்"
+
+#, vue-format
+msgctxt "app->general->table->header->file_processors"
+msgid "File processors"
+msgstr "கோப்பு செயலிகள்"
 
 #, vue-format
 msgctxt "app->general->table->header->first_layer_bed_temp"
@@ -1839,6 +1941,11 @@ msgid "Layer height"
 msgstr "அடுக்கு உயரம்"
 
 #, vue-format
+msgctxt "app->general->table->header->mmu_print"
+msgid "MMU print"
+msgstr "எம்.எம்.யூ அச்சு"
+
+#, vue-format
 msgctxt "app->general->table->header->modified"
 msgid "Modified"
 msgstr "மாற்றியமைக்கப்பட்ட"
@@ -1857,6 +1964,11 @@ msgstr "முனை விட்டம்"
 msgctxt "app->general->table->header->print_duration"
 msgid "Print duration"
 msgstr "அச்சு காலம்"
+
+#, vue-format
+msgctxt "app->general->table->header->referenced_tools"
+msgid "Referenced tools"
+msgstr "குறிப்பிடப்பட்ட கருவிகள்"
 
 #, vue-format
 msgctxt "app->general->table->header->time_added"
@@ -1897,6 +2009,11 @@ msgstr "நிலை"
 msgctxt "app->general->table->header->total_duration"
 msgid "Total duration"
 msgstr "மொத்த காலம்"
+
+#, vue-format
+msgctxt "app->general->table->header->user"
+msgid "User"
+msgstr "பயனர்"
 
 #, vue-format
 msgctxt "app->general->title->add_chart"
@@ -2094,6 +2211,11 @@ msgid "Emergency Stop"
 msgstr "அவசர நிறுத்தம்"
 
 #, vue-format
+msgctxt "app->general->tooltip->exit_layout"
+msgid "Exit layout mode"
+msgstr "தளவமைப்பு பயன்முறையிலிருந்து வெளியேறவும்"
+
+#, vue-format
 msgctxt "app->general->tooltip->managed_by_moonraker"
 msgid "Managed by your moonraker configuration"
 msgstr "உங்கள் மூன்ராகேக்கர் உள்ளமைவால் நிர்வகிக்கப்படுகிறது"
@@ -2102,6 +2224,11 @@ msgstr "உங்கள் மூன்ராகேக்கர் உள்ள�
 msgctxt "app->general->tooltip->notifications"
 msgid "Notifications"
 msgstr "அறிவிப்புகள்"
+
+#, vue-format
+msgctxt "app->general->tooltip->power_on_printer"
+msgid "Turns on the power to the printer"
+msgstr "அச்சுப்பொறிக்கு சக்தியை இயக்குகிறது"
 
 #, vue-format
 msgctxt "app->general->tooltip->reload_klipper"
@@ -2113,6 +2240,19 @@ msgctxt "app->general->tooltip->reload_restart_klipper"
 msgid "Reloads klipper configuration and restarts MCU's."
 msgstr ""
 "கிளிப்பர் உள்ளமைவை மீண்டும் ஏற்றுகிறது மற்றும் MCU ஐ மறுதொடக்கம் செய்கிறது."
+
+#, vue-format
+msgctxt "app->general->tooltip->reset_layout"
+msgid "Reset current layout to server-wide default layout"
+msgstr ""
+"சேவையக அளவிலான இயல்புநிலை தளவமைப்புக்கு தற்போதைய தளவமைப்பை மீட்டமைக்கவும்"
+
+#, vue-format
+msgctxt "app->general->tooltip->reset_default_layout"
+msgid "Reset server-wide default layout to factory defaults"
+msgstr ""
+"தொழிற்சாலை இயல்புநிலைகளுக்கு சேவையக அளவிலான இயல்புநிலை தளவமைப்பை "
+"மீட்டமைக்கவும்"
 
 #, vue-format
 msgctxt "app->general->tooltip->restart_klipper"
@@ -2128,6 +2268,11 @@ msgstr "சேகரிப்பாளரை இயக்கவும்"
 msgctxt "app->general->tooltip->rollover_logs"
 msgid "Rollover logs"
 msgstr "ரோல்ஓவர் பதிவுகள்"
+
+#, vue-format
+msgctxt "app->general->tooltip->set_default_layout"
+msgid "Set current layout as server-wide default layout"
+msgstr "தற்போதைய தளவமைப்பை சேவையக அளவிலான இயல்புநிலை தளவமைப்பாக அமைக்கவும்"
 
 #, vue-format
 msgctxt "app->general->tooltip->file_browser_help"
@@ -2174,9 +2319,29 @@ msgstr ""
 "நீங்கள் உறுதியாக இருக்கிறீர்களா? இது முழு அச்சுப்பொறி வரிசையையும் அழிக்கும்"
 
 #, vue-format
+msgctxt "app->job_queue->label->eta"
+msgid "ETA"
+msgstr "மற்றும்"
+
+#, vue-format
+msgctxt "app->job_queue->label->filament"
+msgid "Filament"
+msgstr "தாள்"
+
+#, vue-format
 msgctxt "app->job_queue->label->number_of_copies"
 msgid "Number of copies"
 msgstr "பிரதிகளின் எண்ணிக்கை"
+
+#, vue-format
+msgctxt "app->job_queue->label->print_time"
+msgid "Print time"
+msgstr "நேரம் அச்சிடுக"
+
+#, vue-format
+msgctxt "app->job_queue->label->unknown_jobs"
+msgid "Unknown jobs"
+msgstr "தெரியாத வேலைகள்"
 
 #, vue-format
 msgctxt "app->job_queue->title->multiply_job"
@@ -2301,7 +2466,7 @@ msgstr "மீட்டமை"
 #, vue-format
 msgctxt "app->setting->btn->restore"
 msgid "Restore"
-msgstr "மீட்டமை"
+msgstr "மீட்டெடு"
 
 #, vue-format
 msgctxt "app->setting->btn->select_theme"
@@ -2407,6 +2572,11 @@ msgstr "அச்சு தொடக்கத்தில் கோப்பை 
 msgctxt "app->setting->label->auto_load_mobile_on_print_start"
 msgid "Automatically load file on mobile devices"
 msgstr "மொபைல் சாதனங்களில் தானாக கோப்பை ஏற்றவும்"
+
+#, vue-format
+msgctxt "app->setting->label->auto"
+msgid "Auto"
+msgstr "தானி"
 
 #, vue-format
 msgctxt "app->setting->label->axes"
@@ -2582,6 +2752,11 @@ msgid "Extrusion Line Width"
 msgstr "வெளியேற்ற வரி அகலம்"
 
 #, vue-format
+msgctxt "app->setting->label->firmware_restart"
+msgid "Firmware Restart"
+msgstr "ஃபார்ம்வேர் மறுதொடக்கம்"
+
+#, vue-format
 msgctxt "app->setting->label->flip_horizontal"
 msgid "Horizontal Flip"
 msgstr "கிடைமட்ட திருப்பம்"
@@ -2637,6 +2812,11 @@ msgid "Use GCode Coordinates"
 msgstr "GCODE ஆயத்தொகுதிகளைப் பயன்படுத்தவும்"
 
 #, vue-format
+msgctxt "app->setting->label->host_restart"
+msgid "Host Restart"
+msgstr "புரவலன் மறுதொடக்கம்"
+
+#, vue-format
 msgctxt "app->setting->label->icon"
 msgid "Icon"
 msgstr "படவுரு"
@@ -2660,6 +2840,11 @@ msgstr "தலைகீழ் சட் கட்டுப்பாடு"
 msgctxt "app->setting->label->keyboard_shortcuts"
 msgid "Keyboard shortcuts"
 msgstr "விசைப்பலகை குறுக்குவழிகள்"
+
+#, vue-format
+msgctxt "app->setting->label->klipper_save_and_restart_action"
+msgid "Klipper Save & Restart action"
+msgstr "செயலாக்க சேமிப்பு மற்றும் மறுதொடக்கம்"
 
 #, vue-format
 msgctxt "app->setting->label->language"
@@ -2757,6 +2942,11 @@ msgid "Printer Name"
 msgstr "அச்சுப்பொறி பெயர்"
 
 #, vue-format
+msgctxt "app->setting->label->printer_power_device"
+msgid "Printer power device"
+msgstr "அச்சுப்பொறி ஆற்றல் சாதனம்"
+
+#, vue-format
 msgctxt "app->setting->label->reset"
 msgid "Reset settings"
 msgstr "அமைப்புகளை மீட்டமைக்கவும்"
@@ -2781,6 +2971,11 @@ msgctxt ""
 "app->setting->label->sections_to_ignore_pending_configuration_changes"
 msgid "Sections to ignore Pending Configuration Changes"
 msgstr "நிலுவையில் உள்ள உள்ளமைவு மாற்றங்களை புறக்கணிப்பதற்கான பிரிவுகள்"
+
+#, vue-format
+msgctxt "app->setting->label->service_restart"
+msgid "Service Restart"
+msgstr "பணி மறுதொடக்கம்"
 
 #, vue-format
 msgctxt "app->setting->label->show_animations"
@@ -2925,7 +3120,7 @@ msgstr "நேர வடிவம்"
 #, vue-format
 msgctxt "app->setting->label->text_sort_order"
 msgid "Text sort order"
-msgstr "உரை வரிசை வரிசை"
+msgstr "உரை வரிசை முறை"
 
 #, vue-format
 msgctxt ""
@@ -3319,15 +3514,15 @@ msgid ""
 "Only unassigned CAN bus nodes can be detected.<br> It is recommended to have"
 " only one unassigned device connected to the CAN bus to avoid communication "
 "issues.<br> More information can be found <a target=\"_blank\" "
-"href=\"https://moonraker.readthedocs.io/en/latest/web_api/#query-unassigned-"
-"canbus-uuids\">here.</a>"
+"href=\"https://moonraker.readthedocs.io/en/latest/external_api/machine/#query-"
+"unassigned-canbus-uuids\">here.</a>"
 msgstr ""
-"ஒதுக்கப்படாத கேன் பச் முனைகளை மட்டுமே கண்டறிய முடியும். <br> தகவல்தொடர்பு "
-"சிக்கல்களைத் தவிர்ப்பதற்காக கேன் பச் உடன் இணைக்கப்படாத ஒரே ஒரு "
-"கையொப்பமிடப்படாத சாதனம் மட்டுமே இருக்க பரிந்துரைக்கப்படுகிறது. <br> கூடுதல் "
-"தகவல்களைக் காணலாம் <ஒரு இலக்கு = \"_ வெற்று\" href = \" "
-"://moonraker.readthedocs.io/en/latest/web_api/#query-unassigned-canbus-"
-"uuids\">here.</a>"
+"ஒதுக்கப்படாத கேன் பஸ் முனைகளை மட்டுமே கண்டறிய முடியும்.<br> தகவல்தொடர்பு "
+"சிக்கல்களைத் தவிர்ப்பதற்காக ஒரு ஒதுக்கப்படாத ஒரு சாதனம் மட்டுமே CAN பஸ் உடன்"
+" இணைக்கப்பட்டிருக்க பரிந்துரைக்கப்படுகிறது. <br> கூடுதல் தகவல்களைக் "
+"காணலாம்<a target=\"_blank\" "
+"href=\"https://moonraker.readthedocs.io/en/latest/external_api/machine/#query-"
+"unassigned-canbus-uuids\">இங்கே. </a>"
 
 #, vue-format
 msgctxt "app->system_info->msg->no_devices_found"
@@ -3378,8 +3573,8 @@ msgstr "முழுமையான நிலைப்படுத்தல்"
 msgctxt "app->tool->tooltip->extruder_disabled"
 msgid "extruder disabled, below min_extrude_temp (%{min}<small>°C</small>)"
 msgstr ""
-"எக்ச்ட்ரூடர் முடக்கப்பட்டது, min_extrude_temp க்கு கீழே (%{min} <mall> ° C "
-"</small>)"
+"எக்ச்ட்ரூடர் முடக்கப்பட்டது, min_extrude_temp க்கு கீழே (%{min} <small> ° சி"
+" </small>)"
 
 #, vue-format
 msgctxt "app->tool->tooltip->home_xy"
@@ -3423,10 +3618,9 @@ msgid ""
 "for</span> %{filamentDiameter} mm diameter filament <span class=\"secondary"
 "--text\">and</span> %{nozzleDiameter} mm nozzle"
 msgstr ""
-"<ச்பான் வகுப்பு = \"இரண்டாம் நிலை-உரை\"> செயலில் எக்ச்ட்ரூடர் உள்ளமைவு "
-"</span> %{filamentDiameter} mm விட்டம் இழை <span வகுப்பு = \"இரண்டாம் "
-"நிலை-உரை\"> மற்றும் </span> %{nozzleDiameter} mm க்கு அமைக்கப்பட்டுள்ளது "
-"முனை"
+"<span class=\"secondary--text\">செயலில் எக்ச்ட்ரூடர் உள்ளமைவு </span> "
+"%{filamentDiameter} mm விட்டம் இழை <span class=\"secondary--text\">மற்றும் "
+"</span> %{nozzleDiameter} mm க்கு அமைக்கப்பட்டுள்ளது முனை"
 
 #, vue-format
 msgctxt "app->tool->label->stats_volumetric_flow"
@@ -3434,7 +3628,9 @@ msgid ""
 "Extruding at %{extrudeSpeed} mm/s<span class=\"secondary--text\">, the "
 "extruder should be able to provide an</span> estimated volumetric flow of "
 "%{estimatedVolumetricFlow} mm³/s"
-msgstr "%{extrudeSpeed} மிமீ/வி <ச்பான் கிளாச் = \"இரண்டாம் நிலை-உரை\">"
+msgstr ""
+"%{extrudeSpeed} மிமீ/வி<span class=\"secondary--text\">         </span>     "
+"%{estimatedVolumetricFlow}"
 
 #, vue-format
 msgctxt "app->tool->label->stats_extruded_length"
@@ -3443,8 +3639,8 @@ msgid ""
 "class=\"secondary--text\">, will provide an</span> estimated output length "
 "of %{estimatedExtrudedLength} mm"
 msgstr ""
-"%{extrudeLength} மிமீ இழை %{extrudeFactor} %ஓட்டம் <ச்பான் வகுப்பு = "
-"\"இரண்டாம் நிலை-உரை\">, ஒரு </ச்பான்> மதிப்பிடப்பட்ட வெளியீட்டு நீளத்தை "
+"%{extrudeLength} மிமீ இழை %{extrudeFactor} % ஓட்டம் <span class=\"secondary"
+"--text\">, ஒரு</span> மதிப்பிடப்பட்ட வெளியீட்டு நீளத்தை "
 "%{estimatedExtrudedLength} மிமீ வழங்கும்"
 
 #, vue-format
@@ -3454,9 +3650,9 @@ msgid ""
 "height<span class=\"secondary--text\">, the</span> estimated maximum print "
 "speed is %{estimatedMaxSpeed} mm/s"
 msgstr ""
-"<span வகுப்பு = \"இரண்டாம் நிலை-உரை\"> ஒரு </span> %{layerHeight} mm அடுக்கு"
-" உயரம் <span வகுப்பு = \"இரண்டாம் நிலை-உரை\">, </span> மதிப்பிடப்பட்ட "
-"அதிகபட்ச அச்சு விரைவு %{estimatedMaxSpeed} மிமீ/எச்"
+"<span class=\"secondary--text\">ஒரு </span> %{layerHeight} mm அடுக்கு உயரம் "
+"<span class=\"secondary--text\">, </span> மதிப்பிடப்பட்ட அதிகபட்ச அச்சு "
+"விரைவு %{estimatedMaxSpeed} மிமீ/எச்"
 
 #, vue-format
 msgctxt "app->version->btn->check_for_updates"
@@ -3534,8 +3730,9 @@ msgid ""
 "You are using an old version of %{name} that does not support all features "
 "of Fluidd.<br>Update %{name} to at least %{version}."
 msgstr ""
-"ஃப்ளூய்ட்டின் அனைத்து அம்சங்களையும் ஆதரிக்காத %{பெயர் of இன் பழைய பதிப்பைப் "
-"பயன்படுத்துகிறீர்கள்."
+"ஃப்ளூய்ட்டின் அனைத்து அம்சங்களையும் ஆதரிக்காத %{name} இன் பழைய பதிப்பைப் "
+"பயன்படுத்துகிறீர்கள்.<br> %{name} முதல் குறைந்தது %{version} வரை "
+"புதுப்பிக்கவும்."
 
 #, vue-format
 msgctxt "app->version->status->finished"
@@ -3821,7 +4018,7 @@ msgstr "குறியீட்டை ச்கேன் செய்யுங�
 #, vue-format
 msgctxt "app->spoolman->btn->select"
 msgid "Select | Select for {macro}"
-msgstr "தேர்ந்தெடு | {மேக்ரோ க்கு க்கு தேர்ந்தெடுக்கவும்"
+msgstr "தேர்ந்தெடு | {macro} க்கு தேர்ந்தெடு"
 
 #, vue-format
 msgctxt "app->spoolman->title->spoolman"
@@ -3831,7 +4028,7 @@ msgstr "ச்பூல்மேன்"
 #, vue-format
 msgctxt "app->spoolman->title->spool_selection"
 msgid "Spool Selection | Spool Selection for macro {macro}"
-msgstr "ச்பூல் தேர்வு | மேக்ரோ {மேக்ரோ க்கு க்கான ச்பூல் தேர்வு"
+msgstr "ச்பூல் தேர்வு | மேக்ரோ {macro} க்கான ச்பூல் தேர்வு"
 
 #, vue-format
 msgctxt "app->spoolman->title->scan_spool"
@@ -3844,9 +4041,19 @@ msgid "Active Spool"
 msgstr "செயலில் ச்பூல்"
 
 #, vue-format
+msgctxt "app->spoolman->label->bed_temp"
+msgid "Bed Temp"
+msgstr "படுக்கை தற்காலிக"
+
+#, vue-format
 msgctxt "app->spoolman->label->change_spool"
 msgid "Change Spool"
 msgstr "ச்பூலை மாற்றவும்"
+
+#, vue-format
+msgctxt "app->spoolman->label->colors"
+msgid "Colors"
+msgstr "நிறங்கள்"
 
 #, vue-format
 msgctxt "app->spoolman->label->comment"
@@ -3854,9 +4061,24 @@ msgid "Comment"
 msgstr "கருத்து"
 
 #, vue-format
+msgctxt "app->spoolman->label->density"
+msgid "Density"
+msgstr "அடர்த்தி"
+
+#, vue-format
 msgctxt "app->spoolman->label->device_camera"
 msgid "Device"
 msgstr "சாதனம்"
+
+#, vue-format
+msgctxt "app->spoolman->label->diameter"
+msgid "Diameter"
+msgstr "விட்டம்"
+
+#, vue-format
+msgctxt "app->spoolman->label->extruder_temp"
+msgid "Extruder Temp"
+msgstr "எக்ச்ட்ரூடர் தற்காலிக"
 
 #, vue-format
 msgctxt "app->spoolman->label->filament_name"
@@ -3874,9 +4096,24 @@ msgid "ID"
 msgstr "ஐடி"
 
 #, vue-format
+msgctxt "app->spoolman->label->initial_length"
+msgid "Initial Length"
+msgstr "தொடக்க நீளம்"
+
+#, vue-format
+msgctxt "app->spoolman->label->initial_weight"
+msgid "Initial Weight"
+msgstr "தொடக்க எடை"
+
+#, vue-format
 msgctxt "app->spoolman->label->last_used"
 msgid "Last Used"
 msgstr "கடைசியாக பயன்படுத்தப்பட்டது"
+
+#, vue-format
+msgctxt "app->spoolman->label->length"
+msgid "Length"
+msgstr "நீளம்"
 
 #, vue-format
 msgctxt "app->spoolman->label->location"
@@ -3894,9 +4131,39 @@ msgid "Material"
 msgstr "பொருள்"
 
 #, vue-format
+msgctxt "app->spoolman->label->price"
+msgid "Price"
+msgstr "விலை"
+
+#, vue-format
+msgctxt "app->spoolman->label->remaining_length"
+msgid "Remaining Length"
+msgstr "மீதமுள்ள நீளம்"
+
+#, vue-format
 msgctxt "app->spoolman->label->remaining_weight"
+msgid "Remaining Weight"
+msgstr "மீதமுள்ள எடை"
+
+#, vue-format
+msgctxt "app->spoolman->label->remaining"
 msgid "Remaining"
 msgstr "மீதமுள்ள"
+
+#, vue-format
+msgctxt "app->spoolman->label->used_length"
+msgid "Used Length"
+msgstr "பயன்படுத்தப்பட்ட நீளம்"
+
+#, vue-format
+msgctxt "app->spoolman->label->used_weight"
+msgid "Used Weight"
+msgstr "பயன்படுத்தப்பட்ட எடை"
+
+#, vue-format
+msgctxt "app->spoolman->label->used"
+msgid "Used"
+msgstr "பயன்படுத்தப்பட்டது"
 
 #, vue-format
 msgctxt "app->spoolman->label->vendor"
@@ -3907,11 +4174,6 @@ msgstr "விற்பனையாளர்"
 msgctxt "app->spoolman->label->weight"
 msgid "Weight"
 msgstr "எடை"
-
-#, vue-format
-msgctxt "app->spoolman->label->length"
-msgid "Length"
-msgstr "நீளம்"
 
 #, vue-format
 msgctxt "app->spoolman->msg->no_spool"
@@ -4014,6 +4276,11 @@ msgid "Automatically commit spool selection on QR code match"
 msgstr "QR குறியீடு பொருத்தத்தில் தானாகவே ச்பூல் தேர்வை செய்யுங்கள்"
 
 #, vue-format
+msgctxt "app->spoolman->setting->card_fields"
+msgid "Fields to show in the Spoolman card"
+msgstr "ச்பூல்மேன் அட்டையில் காண்பிக்க புலங்கள்"
+
+#, vue-format
 msgctxt "app->spoolman->setting->prefer_device_camera"
 msgid "Use device camera for QR code detection if available"
 msgstr "கிடைத்தால் QR குறியீடு கண்டறிதலுக்கு சாதன கேமராவைப் பயன்படுத்தவும்"
@@ -4045,6 +4312,650 @@ msgstr ""
 msgctxt "app->spoolman->setting->remaining_filament_unit"
 msgid "Show remaining filament as"
 msgstr "மீதமுள்ள இழைகளைக் காட்டு"
+
+#, vue-format
+msgctxt "app->mmu->btn->check_all_gates"
+msgid "Check All Gates"
+msgstr "அனைத்து வாயில்களையும் சரிபார்க்கவும்"
+
+#, vue-format
+msgctxt "app->mmu->btn->check_gate"
+msgid "Check Gate"
+msgstr "காசோலை வாயில்"
+
+#, vue-format
+msgctxt "app->mmu->btn->select"
+msgid "Select"
+msgstr "தேர்ந்தெடு"
+
+#, vue-format
+msgctxt "app->mmu->btn->eject"
+msgid "Eject"
+msgstr "வெளியேற்ற"
+
+#, vue-format
+msgctxt "app->mmu->btn->load"
+msgid "Load"
+msgstr "சுமை"
+
+#, vue-format
+msgctxt "app->mmu->btn->load_ext"
+msgid "Load Ext"
+msgstr "விரிவாக்கத்தை ஏற்றவும்"
+
+#, vue-format
+msgctxt "app->mmu->btn->unload"
+msgid "Unload"
+msgstr "இறக்கவும்"
+
+#, vue-format
+msgctxt "app->mmu->btn->unload_ext"
+msgid "Unload Ext"
+msgstr "Endload ext"
+
+#, vue-format
+msgctxt "app->mmu->btn->preload"
+msgid "Preload"
+msgstr "முன்பே ஏற்றவும்"
+
+#, vue-format
+msgctxt "app->mmu->btn->print_stats"
+msgid "Print Stats"
+msgstr "புள்ளிவிவரங்களை அச்சிடுக"
+
+#, vue-format
+msgctxt "app->mmu->btn->recover"
+msgid "Recover"
+msgstr "மீட்க"
+
+#, vue-format
+msgctxt "app->mmu->btn->sync_spoolman"
+msgid "Sync Spoolman"
+msgstr "ஒத்திசைவு ச்பூல்மேன்"
+
+#, vue-format
+msgctxt "app->mmu->btn->unlock"
+msgid "Unlock"
+msgstr "திறக்க"
+
+#, vue-format
+msgctxt "app->mmu->btn->cancel"
+msgid "Cancel"
+msgstr "ரத்துசெய்"
+
+#, vue-format
+msgctxt "app->mmu->btn->mmu_maintenance"
+msgid "MMU Maintenance"
+msgstr "எம்.எம்.யூ பராமரிப்பு"
+
+#, vue-format
+msgctxt "app->mmu->btn->recover_state"
+msgid "Fix MMU State"
+msgstr "MMU மாநிலத்தை சரிசெய்யவும்"
+
+#, vue-format
+msgctxt "app->mmu->btn->edit_gate_map"
+msgid "Edit Filaments"
+msgstr "இழைகளைத் திருத்து"
+
+#, vue-format
+msgctxt "app->mmu->btn->edit_ttg_map"
+msgid "Map Tools / Filaments"
+msgstr "வரைபட கருவிகள் / இழைகள்"
+
+#, vue-format
+msgctxt "app->mmu->btn->sync"
+msgid "Sync"
+msgstr "ஒத்திசைவு"
+
+#, vue-format
+msgctxt "app->mmu->btn->unsync"
+msgid "Unsync"
+msgstr "ஆதாரமற்றது"
+
+#, vue-format
+msgctxt "app->mmu->btn->off"
+msgid "Off"
+msgstr "அணை"
+
+#, vue-format
+msgctxt "app->mmu->btn->on"
+msgid "On"
+msgstr "ஆன்"
+
+#, vue-format
+msgctxt "app->mmu->btn->home"
+msgid "Home"
+msgstr "வீடு"
+
+#, vue-format
+msgctxt "app->mmu->btn->up"
+msgid "Up"
+msgstr "மேலே"
+
+#, vue-format
+msgctxt "app->mmu->btn->down"
+msgid "Down"
+msgstr "கீழே"
+
+#, vue-format
+msgctxt "app->mmu->btn->move"
+msgid "Move"
+msgstr "நகர்த்தவும்"
+
+#, vue-format
+msgctxt "app->mmu->btn->grip"
+msgid "Grip"
+msgstr "பிடியில்"
+
+#, vue-format
+msgctxt "app->mmu->btn->release"
+msgid "Release"
+msgstr "வெளியீடு"
+
+#, vue-format
+msgctxt "app->mmu->btn->reset"
+msgid "Reset"
+msgstr "மீட்டமை"
+
+#, vue-format
+msgctxt "app->mmu->title->headline"
+msgid "Mmu"
+msgstr "எம்.எம்.யு"
+
+#, vue-format
+msgctxt "app->mmu->title->mmu_maintenance"
+msgid "MMU Maintenance"
+msgstr "எம்.எம்.யூ பராமரிப்பு"
+
+#, vue-format
+msgctxt "app->mmu->title->recover_state"
+msgid "Fix MMU State (Error Recover)"
+msgstr "MMU மாநிலத்தை சரிசெய்யவும் (பிழை மீட்க)"
+
+#, vue-format
+msgctxt "app->mmu->title->edit_gate_map"
+msgid "Edit Filaments (Edit Gate Map)"
+msgstr "இழைகளைத் திருத்து (கேட் வரைபடத்தைத் திருத்து)"
+
+#, vue-format
+msgctxt "app->mmu->title->edit_ttg_map"
+msgid "Map Tools / Filaments (Edit TTG Map)"
+msgstr "வரைபட கருவிகள் / இழைகள் (TTG வரைபடத்தைத் திருத்து)"
+
+#, vue-format
+msgctxt "app->mmu->label->clog_detection"
+msgid "Clog Detection"
+msgstr "க்ளாக் கண்டறிதல்"
+
+#, vue-format
+msgctxt "app->mmu->label->tool_mapping"
+msgid "Tool Mapping"
+msgstr "கருவி மேப்பிங்"
+
+#, vue-format
+msgctxt "app->mmu->label->spoolman"
+msgid "Spoolman"
+msgstr "ச்பூல்மேன்"
+
+#, vue-format
+msgctxt "app->mmu->label->spoolman_id"
+msgid "Spoolman ID"
+msgstr "ச்பூல்மேன் அடையாளம்"
+
+#, vue-format
+msgctxt "app->mmu->label->choose_spool"
+msgid "Choose Spool"
+msgstr "ச்பூல் தேர்வு செய்யவும்"
+
+#, vue-format
+msgctxt "app->mmu->label->filament_name"
+msgid "Filament Name"
+msgstr "இழை பெயர்"
+
+#, vue-format
+msgctxt "app->mmu->label->load_speed"
+msgid "Load speed override"
+msgstr "சுமை விரைவு மேலெழுதும்"
+
+#, vue-format
+msgctxt "app->mmu->label->material"
+msgid "Material"
+msgstr "பொருள்"
+
+#, vue-format
+msgctxt "app->mmu->label->reset"
+msgid "Reset"
+msgstr "மீட்டமை"
+
+#, vue-format
+msgctxt "app->mmu->label->temperature"
+msgid "Temperature"
+msgstr "வெப்பநிலை"
+
+#, vue-format
+msgctxt "app->mmu->label->motor_sync"
+msgid "Extruder Motor Sync"
+msgstr "எக்ச்ட்ரூடர் மின்னோடி ஒத்திசைவு"
+
+#, vue-format
+msgctxt "app->mmu->label->extruder_only"
+msgid "Extruder Only"
+msgstr "எக்ச்ட்ரூடர் மட்டுமே"
+
+#, vue-format
+msgctxt "app->mmu->label->mmu_motors"
+msgid "MMU Motors"
+msgstr "எம்.எம்.யூ எஞ்சின்"
+
+#, vue-format
+msgctxt "app->mmu->label->extruder_tx"
+msgid "Tools Tx"
+msgstr "கருவிகள் tx"
+
+#, vue-format
+msgctxt "app->mmu->label->selector"
+msgid "Selector"
+msgstr "தேர்வாளர்"
+
+#, vue-format
+msgctxt "app->mmu->label->leds"
+msgid "LEDs"
+msgstr "எல்.ஈ.டிக்கள்"
+
+#, vue-format
+msgctxt "app->mmu->label->ui_visual"
+msgid "UI Visual"
+msgstr "இடைமுகம் காட்சி"
+
+#, vue-format
+msgctxt "app->mmu->label->animation"
+msgid "Animation"
+msgstr "அனிமேசன்"
+
+#, vue-format
+msgctxt "app->mmu->label->config"
+msgid "Config"
+msgstr "கட்டமைப்பு"
+
+#, vue-format
+msgctxt "app->mmu->label->enable"
+msgid "Enable"
+msgstr "இயக்கு"
+
+#, vue-format
+msgctxt "app->mmu->label->unknown"
+msgid "Unknown"
+msgstr "தெரியவில்லை"
+
+#, vue-format
+msgctxt "app->mmu->label->skip_automap"
+msgid "Skip Automap"
+msgstr "ஆட்டோமாப்பைத் தவிர்க்கவும்"
+
+#, vue-format
+msgctxt "app->mmu->label->all_tools"
+msgid "All Tools"
+msgstr "அனைத்து கருவிகளும்"
+
+#, vue-format
+msgctxt "app->mmu->label->ok"
+msgid "Ok"
+msgstr "சரி"
+
+#, vue-format
+msgctxt "app->mmu->label->save"
+msgid "Save"
+msgstr "சேமி"
+
+#, vue-format
+msgctxt "app->mmu->label->cancel"
+msgid "Cancel"
+msgstr "ரத்துசெய்"
+
+#, vue-format
+msgctxt "app->mmu->label->gate"
+msgid "Gate"
+msgstr "வாயில்"
+
+#, vue-format
+msgctxt "app->mmu->label->endless_spool"
+msgid "ES ∞"
+msgstr "எச்"
+
+#, vue-format
+msgctxt "app->mmu->label->filament_info"
+msgid "Filament Information"
+msgstr "இழை செய்தி"
+
+#, vue-format
+msgctxt "app->mmu->label->slicer_expects"
+msgid "Slicer Expects"
+msgstr "ச்லைசர் எதிர்பார்க்கிறது"
+
+#, vue-format
+msgctxt "app->mmu->label->spoolman_last_used"
+msgid "Last Used"
+msgstr "கடைசியாக பயன்படுத்தப்பட்டது"
+
+#, vue-format
+msgctxt "app->mmu->label->spoolman_never"
+msgid "Never"
+msgstr "ஒருபோதும்"
+
+#, vue-format
+msgctxt "app->mmu->label->spoolman_today"
+msgid "Today"
+msgstr "இன்று"
+
+#, vue-format
+msgctxt "app->mmu->label->spoolman_yesterday"
+msgid "Yesterday"
+msgstr "நேற்று"
+
+#, vue-format
+msgctxt "app->mmu->label->spoolman_days_ago"
+msgid "%{days} days ago"
+msgstr "%{days} நாட்களுக்கு முன்பு"
+
+#, vue-format
+msgctxt "app->mmu->tooltip->empty"
+msgid "Empty"
+msgstr "காலி"
+
+#, vue-format
+msgctxt "app->mmu->tooltip->color"
+msgid "Color"
+msgstr "நிறம்"
+
+#, vue-format
+msgctxt "app->mmu->tooltip->spoolid"
+msgid "Spool ID"
+msgstr "ச்பூல் அடையாளம்"
+
+#, vue-format
+msgctxt "app->mmu->msg->reset_gate_map_confirmation"
+msgid ""
+"This will reset the entire gate map back to the default defined in "
+"'mmu_parameters.cfg' or empty map if no defaults are available"
+msgstr ""
+"இயல்புநிலை எதுவும் கிடைக்கவில்லை என்றால் இது முழு கேட் வரைபடத்தையும் "
+"'mmu_parameters.cfg' அல்லது வெற்று வரைபடத்தில் வரையறுக்கப்பட்ட "
+"இயல்புநிலைக்கு மீட்டமைக்கும்"
+
+#, vue-format
+msgctxt "app->mmu->msg->reset_ttg_map_confirmation"
+msgid ""
+"This will reset the entire tool-to-gate mapping and endless spool groups "
+"back to the default defined in 'mmu_parameters.cfg' or default 1:1 mapping "
+"in no defaults are available"
+msgstr ""
+"இது முழு கருவி-க்கு-கேட் மேப்பிங் மற்றும் முடிவற்ற ச்பூல் குழுக்களை "
+"'mmu_parameters.cfg' அல்லது இயல்புநிலை 1: 1 மேப்பிங் கிடைக்காத "
+"இயல்புநிலைக்கு மீண்டும் இயல்புநிலைக்கு மீட்டமைக்கும்"
+
+#, vue-format
+msgctxt "app->mmu->msg->select_gate"
+msgid "Select gate/spool info you would like to edit"
+msgstr "நீங்கள் திருத்த விரும்பும் கேட்/ச்பூல் தகவலைத் தேர்ந்தெடுக்கவும்"
+
+#, vue-format
+msgctxt "app->mmu->msg->spoolman_off"
+msgid ""
+"Spoolman support is \"%{mode}\" in Happy Hare. Assigning spool id to a gate "
+"is disabled"
+msgstr ""
+"ச்பூல்மேன் உதவி என்பது ஏப்பி ஏரில் \"%{mode}\" ஆகும். ஒரு வாயிலுக்கு ச்பூல் "
+"ஐடியை ஒதுக்குவது முடக்கப்பட்டுள்ளது"
+
+#, vue-format
+msgctxt "app->mmu->msg->spoolman_other"
+msgid ""
+"Spoolman support is \"%{mode}\". You can optionally assign a spool id or "
+"edit gate attributes directly"
+msgstr ""
+"ச்பூல்மேன் உதவி \"%{mode}\". நீங்கள் விருப்பமாக ஒரு ச்பூல் அடையாளம் அல்லது "
+"திருத்து கேட் பண்புகளை நேரடியாக ஒதுக்கலாம்"
+
+#, vue-format
+msgctxt "app->mmu->msg->spoolman_pull"
+msgid ""
+"Spoolman support is in \"%{mode}\" mode. Local editing of most gate "
+"properties is disabled. Assign spool/gate mapping in spoolman DB directly or"
+" use the MMU_SPOOLMAN command"
+msgstr ""
+"ச்பூல்மேன் உதவி \"%{mode}\" பயன்முறையில் உள்ளது. பெரும்பாலான கேட் பண்புகளின்"
+" உள்ளக திருத்துதல் முடக்கப்பட்டுள்ளது. ச்பூல்மேன் டி.பியில் ச்பூல்/கேட் "
+"மேப்பிங்கை நேரடியாக ஒதுக்குங்கள் அல்லது எம்.எம்.யூ_ச்பூல்மேன் கட்டளையைப் "
+"பயன்படுத்தவும்"
+
+#, vue-format
+msgctxt "app->mmu->msg->no_matching_spool"
+msgid "No matching spool found"
+msgstr "பொருந்தக்கூடிய ச்பூல் எதுவும் கிடைக்கவில்லை"
+
+#, vue-format
+msgctxt "app->mmu->msg->are_you_sure"
+msgid "Are you sure?"
+msgstr "நீங்கள் உறுதியாக இருக்கிறீர்களா?"
+
+#, vue-format
+msgctxt "app->mmu->msg->bad_temperature"
+msgid "Temperature out of range"
+msgstr "வெப்பநிலை வரம்பிற்கு வெளியே"
+
+#, vue-format
+msgctxt "app->mmu->msg->filament_available"
+msgid "Filament available in gate"
+msgstr "வாயிலில் இழை கிடைக்கிறது"
+
+#, vue-format
+msgctxt "app->mmu->msg->filament_unknown"
+msgid "Unknown filament state (please set)"
+msgstr "அறியப்படாத இழை நிலை (தயவுசெய்து அமைக்கவும்)"
+
+#, vue-format
+msgctxt "app->mmu->msg->filament_empty"
+msgid "Filament not available"
+msgstr "இழை கிடைக்கவில்லை"
+
+#, vue-format
+msgctxt "app->mmu->msg->maintenance_intro"
+msgid "Directly manage specific MMU functions and selective configuration."
+msgstr ""
+"குறிப்பிட்ட MMU செயல்பாடுகள் மற்றும் தேர்ந்தெடுக்கப்பட்ட உள்ளமைவை நேரடியாக "
+"நிர்வகிக்கவும்."
+
+#, vue-format
+msgctxt "app->mmu->msg->recover_intro"
+msgid ""
+"This is a low level recovery for use when Happy Hare is out of sync with "
+"your MMU. It is recommended to try automatic recovery first however this "
+"will be required to correct the current tool or gate (Alternatively on "
+"Type-A MMU's you can unload and home the selector)."
+msgstr ""
+"ஏப்பி ஏர் உங்கள் எம்.எம்.யுவுடன் ஒத்திசைக்கப்படாதபோது இது பயன்படுத்த குறைந்த"
+" அளவிலான மீட்பு ஆகும். முதலில் தானியங்கி மீட்டெடுப்பை முயற்சிக்க "
+"பரிந்துரைக்கப்படுகிறது, இருப்பினும் இது தற்போதைய கருவி அல்லது வாயிலை "
+"சரிசெய்ய தேவைப்படும் (மாற்றாக வகை-ஒரு MMU இன் நீங்கள் இறக்கி, தேர்வாளரை "
+"வீட்டிற்கு அனுப்பலாம்)."
+
+#, vue-format
+msgctxt "app->mmu->msg->no_custom_controls"
+msgid "No Custom Controls"
+msgstr "தனிப்பயன் கட்டுப்பாடுகள் இல்லை"
+
+#, vue-format
+msgctxt "app->mmu->msg->filament_loaded"
+msgid ""
+"Is the filament completely loaded to the extruder or completely unloaded?"
+msgstr ""
+"இழை முற்றிலும் எக்ச்ட்ரூடருக்கு ஏற்றப்பட்டதா அல்லது முற்றிலும் "
+"இறக்கப்படுகிறதா?"
+
+#, vue-format
+msgctxt "app->mmu->msg->gate_bypass"
+msgid "Gate is set to Bypass!"
+msgstr "கேட் பைபாச் செய்ய அமைக்கப்பட்டுள்ளது!"
+
+#, vue-format
+msgctxt "app->mmu->msg->no_gate"
+msgid "A gate must be selected"
+msgstr "ஒரு வாயில் தேர்ந்தெடுக்கப்பட வேண்டும்"
+
+#, vue-format
+msgctxt "app->mmu->msg->no_position"
+msgid "Attempt to recover position"
+msgstr "நிலையை மீட்டெடுக்க முயற்சி"
+
+#, vue-format
+msgctxt "app->mmu->msg->no_tool"
+msgid "A tool must be selected"
+msgstr "ஒரு கருவி தேர்ந்தெடுக்கப்பட வேண்டும்"
+
+#, vue-format
+msgctxt "app->mmu->msg->remap"
+msgid "This will remap gate to %{tool}"
+msgstr "இது %{கருவி க்கு க்கு வாயிலை மறுபரிசீலனை செய்யும்"
+
+#, vue-format
+msgctxt "app->mmu->msg->set_gate"
+msgid "Set to the current gate"
+msgstr "தற்போதைய வாயிலுக்கு அமைக்கவும்"
+
+#, vue-format
+msgctxt "app->mmu->msg->set_tool"
+msgid "Set to the current tool"
+msgstr "தற்போதைய கருவிக்கு அமைக்கவும்"
+
+#, vue-format
+msgctxt "app->mmu->msg->tool_bypass"
+msgid "Tool is set to Bypass!"
+msgstr "கருவி பைபாசுக்கு அமைக்கப்பட்டுள்ளது!"
+
+#, vue-format
+msgctxt "app->mmu->msg->warning_prefix"
+msgid "Warning-"
+msgstr "எச்சரிக்கை-"
+
+#, vue-format
+msgctxt "app->mmu->msg->no_active_spool"
+msgid "No active spool"
+msgstr "செயலில் ச்பூல் இல்லை"
+
+#, vue-format
+msgctxt "app->mmu->msg->no_spool_id"
+msgid "No spool ID"
+msgstr "ச்பூல் அடையாளம் இல்லை"
+
+#, vue-format
+msgctxt "app->mmu->msg->recover_filament_position"
+msgid "Recover Filament Position"
+msgstr "இழை நிலையை மீட்டெடுக்கவும்"
+
+#, vue-format
+msgctxt "app->mmu->msg->multi_color"
+msgid ""
+"This looks like a Multi Material Single Extruder print using %{numTools} "
+"tools. You should probably review tool mapping"
+msgstr ""
+"இது %{numTools} கருவிகளைப் பயன்படுத்தி பல பொருள் ஒற்றை எக்ச்ட்ரூடர் அச்சு "
+"போல் தெரிகிறது. கருவி மேப்பிங்கை நீங்கள் மதிப்பாய்வு செய்ய வேண்டும்"
+
+#, vue-format
+msgctxt "app->mmu->msg->single_color"
+msgid ""
+"This looks like a single color print but you don't have the bypass selected "
+"on your MMU. You may want to check the chosen tool"
+msgstr ""
+"இது ஒற்றை வண்ண அச்சு போல் தெரிகிறது, ஆனால் உங்கள் MMU இல் "
+"தேர்ந்தெடுக்கப்பட்ட பைபாச் உங்களிடம் இல்லை. நீங்கள் தேர்ந்தெடுக்கப்பட்ட "
+"கருவியை சரிபார்க்க விரும்பலாம்"
+
+#, vue-format
+msgctxt "app->mmu->msg->map_slicer_tools"
+msgid "Map slicer tools to MMU gates for print"
+msgstr "அச்சுக்கு MMU வாயில்களுக்கு ச்லைசர் கருவிகளை வரைபடமாக்குகிறது"
+
+#, vue-format
+msgctxt "app->mmu->msg->map_tools"
+msgid "Map tools to MMU gates"
+msgstr "MMU வாயில்களுக்கு வரைபட கருவிகள்"
+
+#, vue-format
+msgctxt "app->mmu->msg->tool_not_used"
+msgid "Tool %{tool} not used in this print, choose default mapping"
+msgstr ""
+"கருவி %{கருவி this இந்த அச்சில் பயன்படுத்தப்படவில்லை, இயல்புநிலை "
+"மேப்பிங்கைத் தேர்வுசெய்க"
+
+#, vue-format
+msgctxt "app->mmu->msg->mismatch"
+msgid "Possible filament mismatch"
+msgstr "சாத்தியமான இழை பொருந்தாதது"
+
+#, vue-format
+msgctxt "app->mmu->msg->color"
+msgid "Color"
+msgstr "நிறம்"
+
+#, vue-format
+msgctxt "app->mmu->msg->material"
+msgid "Material"
+msgstr "பொருள்"
+
+#, vue-format
+msgctxt "app->mmu->msg->temperature"
+msgid "Temperature"
+msgstr "வெப்பநிலை"
+
+#, vue-format
+msgctxt "app->mmu->msg->no_gate_data"
+msgid "No gate data"
+msgstr "கேட் தரவு இல்லை"
+
+#, vue-format
+msgctxt "app->mmu->msg->no_slicer_info"
+msgid "No slicer information, choose default mapping for %{tool}"
+msgstr ""
+"ச்லைசர் செய்தி இல்லை, %{கருவி க்கு க்கு இயல்புநிலை மேப்பிங் தேர்வு செய்யவும்"
+
+#, vue-format
+msgctxt "app->mmu->msg->select_tool"
+msgid "Select Tool to map then choose gate from list"
+msgstr ""
+"வரைபடத்திற்கு கருவியைத் தேர்ந்தெடுக்கவும், பின்னர் பட்டியலிலிருந்து கேட்டைத்"
+" தேர்வுசெய்க"
+
+#, vue-format
+msgctxt "app->mmu->setting->large_filament_status"
+msgid "Large Filament Status"
+msgstr "பெரிய இழை நிலை"
+
+#, vue-format
+msgctxt "app->mmu->setting->show_clog_detection"
+msgid "Show Clog Detection"
+msgstr "க்ளாக் கண்டறிதலைக் காட்டு"
+
+#, vue-format
+msgctxt "app->mmu->setting->show_details"
+msgid "Show Filament Details"
+msgstr "இழை விவரங்களைக் காட்டு"
+
+#, vue-format
+msgctxt "app->mmu->setting->show_ttg_map"
+msgid "Show TTG Map"
+msgstr "TTG வரைபடத்தைக் காட்டு"
+
+#, vue-format
+msgctxt "app->mmu->setting->show_logos"
+msgid "Show Logos"
+msgstr "லோகோக்களைக் காட்டு"
+
+#, vue-format
+msgctxt "app->mmu->setting->show_unavailable_spool_color"
+msgid "Show Unavailable Spools"
+msgstr "கிடைக்காத ச்பூல்களைக் காட்டு"
 
 #, vue-format
 msgctxt "app->sensors->title->sensors"

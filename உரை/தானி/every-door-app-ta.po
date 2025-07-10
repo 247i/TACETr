@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Every Door)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-25 07:44+0200\n"
-"PO-Revision-Date: 2024-12-25 12:32+0530\n"
+"POT-Creation-Date: 2025-07-01 05:18+0200\n"
+"PO-Revision-Date: 2025-07-09 07:31\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/every-door/app/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. Initial message for the loading screen, virtually unseen.
 #, icu-message-format
@@ -77,8 +77,8 @@ msgid ""
 "{count,plural, =1{Downloaded {count} element.} few{Downloaded {count} "
 "elements.} other{Downloaded {count} elements.}}"
 msgstr ""
-"{எண்ணிக்கை, பன்மை, = 1 {பதிவிறக்கம் {count} உறுப்பு.} சில {பதிவிறக்கம் "
-"{count} கூறுகள்."
+"{count,plural,=1{பதிவிறக்கம் {count} உறுப்பு.} few{பதிவிறக்கம் {count} "
+"கூறுகள்.} other{பதிவிறக்கம் {count} கூறுகள்.}}"
 
 #. Prefix for a list of icons for attributes missing in amenity.
 #, icu-message-format
@@ -101,6 +101,7 @@ msgstr ""
 "தயவுசெய்து எதற்கும் நெருக்கமாக நகர்த்தவும், வரைபடத்தை இழுக்கவும் அல்லது "
 "காணாமல் போன வசதியைச் சேர்க்கவும்."
 
+#. Message displayed when there's nothing around, and a filter is on.
 #. Message displayer when there's nothing around, and a filter is on.
 #, icu-message-format
 msgctxt "tileDragOrUnfilter"
@@ -108,6 +109,13 @@ msgid "Please move around, add an amenity, or clear the filter."
 msgstr ""
 "தயவுசெய்து நகர்த்தவும், ஒரு வசதியைச் சேர்க்கவும் அல்லது வடிப்பானை "
 "அழிக்கவும்."
+
+#. Message displayed when there is nothing around, and a download button is
+#. present.
+#, icu-message-format
+msgctxt "tileDragDownload"
+msgid "Try tapping the download button."
+msgstr "பதிவிறக்க பொத்தானைத் தட்ட முயற்சிக்கவும்."
 
 #. Legend item for all other types.
 #, icu-message-format
@@ -238,6 +246,12 @@ msgctxt "chooseTypeClear"
 msgid "Clear"
 msgstr "தெளிவான"
 
+#. Warning message for an amenity=fixme object with just a name.
+#, icu-message-format
+msgctxt "warningFixmeNote"
+msgid "Will be converted to an OSM note"
+msgstr "OSM குறிப்பாக மாற்றப்படும்"
+
 #. Warning message for when an object has a non-empty fixme value.
 #, case-insensitive, icu-message-format, ignore-multiple-failures, placeholders:$VALUE$
 msgctxt "warningFixme"
@@ -275,7 +289,7 @@ msgctxt "years"
 msgid ""
 "{count,plural, =1{{count} year} few{{count} years} other{{count} years}}"
 msgstr ""
-"{எண்ணிக்கை, பன்மை, = 1 {{count} ஆண்டு} சில {{count} ஆண்டுகள்} பிற {{count} "
+"{count,plural,=1{{count} ஆண்டு} few{{count} ஆண்டுகள்} other{{count} "
 "ஆண்டுகள்}}"
 
 #. Save button title in the editor
@@ -337,7 +351,7 @@ msgstr "நகர்த்தவும்"
 #, case-insensitive, icu-message-format, placeholders:$DISTANCE$
 msgctxt "editorDuplicate"
 msgid "Possible duplicate in {distance} m"
-msgstr "{தூரத்தில் சாத்தியமான நகல்"
+msgstr "{distance} சாத்தியமான நகல்"
 
 #. Button title to mark an amenity active (non-defunct).
 #, icu-message-format
@@ -589,9 +603,8 @@ msgid ""
 "{count,plural, =1{Purged {count} element} few{Purged {count} elements} "
 "other{Purged {count} elements}}"
 msgstr ""
-"{எண்ணிக்கை, பன்மை, = 1 {சுத்திகரிக்கப்பட்ட {count} உறுப்பு} சில "
-"{சுத்திகரிக்கப்பட்ட {count} கூறுகள்} பிற {சுத்திகரிக்கப்பட்ட {count} "
-"கூறுகள்}}"
+"{count,plural,=1{சுத்திகரிக்கப்பட்ட {count} உறுப்பு} few{சுத்திகரிக்கப்பட்ட "
+"{count} கூறுகள்} other{சுத்திகரிக்கப்பட்ட {count} கூறுகள்}}"
 
 #. Settings entry for browsing changes to upload.
 #, icu-message-format
@@ -647,6 +660,12 @@ msgstr "நீட்டிக்கப்பட்ட எண் விசைப�
 msgctxt "settingsDefaultPayment"
 msgid "Default Payment Cards"
 msgstr "இயல்புநிலை கட்டண அட்டைகள்"
+
+#. Title for the settings section and the page about managing plugins.
+#, icu-message-format
+msgctxt "settingsPlugins"
+msgid "Plugins"
+msgstr "செருகுநிரல்கள்"
 
 #. Title for the settings section for system-related switches.
 #, icu-message-format
@@ -857,8 +876,8 @@ msgid ""
 "{count,plural, =1{{count} change} few{{count} changes} other{{count} "
 "changes}}"
 msgstr ""
-"{எண்ணிக்கை, பன்மை, = 1 {{count} மாற்றம்} சில {{count} மாற்றங்கள்} பிற "
-"{{count} மாற்றங்கள்}}"
+"{count,plural,=1{{count} மாற்றம்} few{{count} மாற்றங்கள்} other{{count} "
+"மாற்றங்கள்}}"
 
 #. Title for the notification about a successful upload.
 #, icu-message-format
@@ -869,8 +888,8 @@ msgstr "பதிவேற்றப்பட்டது"
 #. Message for the notification about a successful upload.
 #, case-insensitive, icu-message-format, placeholders:$CHANGES$
 msgctxt "changesUploadedMessage"
-msgid "Sent {changes} to the API."
-msgstr "பநிஇ க்கு {changes} அனுப்பப்பட்டது."
+msgid "Sent {changes} to OpenStreetMap."
+msgstr "Opentreetmap க்கு {changes} அனுப்பப்பட்டது."
 
 #. Title for the notification about a failed changes upload.
 #, icu-message-format
@@ -932,6 +951,93 @@ msgstr ""
 msgctxt "changesSwipeLeft"
 msgid "Swipe left to undo a change"
 msgstr "ஒரு மாற்றத்தை செயல்தவிர்க்க இடதுபுறம் ச்வைப் செய்யவும்"
+
+#. Button for enabling a deactivated plugin.
+#, icu-message-format
+msgctxt "pluginsEnable"
+msgid "Enable"
+msgstr "இயக்கு"
+
+#. Button for deactivating a plugin.
+#, icu-message-format
+msgctxt "pluginsDisable"
+msgid "Disable"
+msgstr "முடக்கு"
+
+#. Header for the section listing deactivated, disabled plugins.
+#, icu-message-format
+msgctxt "pluginsDisabledHeader"
+msgid "Disabled"
+msgstr "முடக்கப்பட்டது"
+
+#. Page title for a list of plugins stored on a server, to choose from.
+#, icu-message-format
+msgctxt "pluginsRepository"
+msgid "Plugin Repository"
+msgstr "சொருகி களஞ்சியம்"
+
+#. Searching text field hint on the plugin repository page.
+#, icu-message-format
+msgctxt "pluginsSearch"
+msgid "Search"
+msgstr "தேடல்"
+
+#. Button for updating an installed plugin to the latest version.
+#, icu-message-format
+msgctxt "pluginsUpdate"
+msgid "Update"
+msgstr "புதுப்பிப்பு"
+
+#. Button to install a new plugin from a server.
+#, icu-message-format
+msgctxt "pluginsInstall"
+msgid "Install"
+msgstr "நிறுவவும்"
+
+#. Title for a dialog inviting to paste an URL to a plugin file. Shown when
+#. the QR reader is disabled.
+#, icu-message-format
+msgctxt "pluginsUrl"
+msgid "Plugin URL"
+msgstr "சொருகி முகவரி"
+
+#. Button to see details about a specific plugin and manage it.
+#, icu-message-format
+msgctxt "pluginsMore"
+msgid "More..."
+msgstr "மேலும் ..."
+
+#. Page title for installing a single plugin from the web.
+#, icu-message-format
+msgctxt "pluginsInstallation"
+msgid "Plugin Installation"
+msgstr "சொருகி நிறுவல்"
+
+#. Message that appears when installing a plugin from an unverified source.
+#, case-insensitive, icu-message-format, placeholders:$PLUGIN$:$VERSION$
+msgctxt "pluginsInstallQuestion"
+msgid "Install plugin \"{plugin}\" version {version}?"
+msgstr "சொருகி \"{plugin}\" பதிப்பு {version} ஐ நிறுவவும்?"
+
+#. What is displayed instead of a version number, if the plugin version is
+#. unknown.
+#, icu-message-format
+msgctxt "pluginsUnknownVersion"
+msgid "unknown"
+msgstr "தெரியவில்லை"
+
+#. Message to display a host from which a plugin is installed.
+#, case-insensitive, icu-message-format, placeholders:$HOST$
+msgctxt "pluginsInstallSource"
+msgid "Source: {host}"
+msgstr "ஆதாரம்: {host}"
+
+#. Button title to browse the system log when a plugin installation error has
+#. occurred.
+#, icu-message-format
+msgctxt "pluginsSeeLogs"
+msgid "See logs"
+msgstr "பதிவுகள் பார்க்கவும்"
 
 #. Text on the hours button when there's no value.
 #, icu-message-format
@@ -1946,22 +2052,22 @@ msgstr "அனைத்து குறியீட்டு கேள்வி�
 #, icu-message-format
 msgctxt "faqTaggingContent"
 msgid ""
-"Why an object is missing in the editor? When these white dots are displayed in the micromapping mode? How objects are sorted?\n"
+"Why is an object missing in the editor? When are these white dots displayed in the micromapping mode? How are objects sorted?\n"
 "\n"
-"Answers to all these questions are in [good_tags.dart](https://github.com/Zverik/every_door/blob/main/lib/helpers/good_tags.dart). Here's what you can look at:\n"
+"Answers to all these questions are in [element_kind_std.dart](https://github.com/Zverik/every_door/blob/main/lib/helpers/tags/element_kind_std.dart). Here's what you can look at:\n"
 "\n"
-"* The key order for the main tag — list `kMainKeys`.\n"
-"* Which objects are downloaded — function `isGoodTags`.\n"
-"* What is considered an amenity — function `isAmenityTags`.\n"
-"* Which points are snapped to what ways — function `detectSnap`.\n"
-"* When a micromapping object is incomplete — function `needsMoreInfo`."
+"* The key order for the main tag — list `kMainKeys` in `main_key.dart`.\n"
+"* Which objects are downloaded — class `_EverythingKind`.\n"
+"* What is considered an amenity — class `_AmenityKind`.\n"
+"* Which points are snapped to what ways — class `ElementKindImpl` logic (see relevant subclasses).\n"
+"* When a micromapping object is incomplete — class `_NeedsMoreInfo`."
 msgstr ""
-"எடிட்டரில் ஒரு பொருள் ஏன் காணவில்லை? இந்த வெள்ளை புள்ளிகள் மைக்ரோமேப்பிங் பயன்முறையில் காட்டப்படும் போது? பொருள்கள் எவ்வாறு வரிசைப்படுத்தப்படுகின்றன?\n"
+"எடிட்டரில் ஒரு பொருள் ஏன் காணவில்லை? மைக்ரோமேப்பிங் பயன்முறையில் இந்த வெள்ளை புள்ளிகள் எப்போது காட்டப்படுகின்றன? பொருள்கள் எவ்வாறு வரிசைப்படுத்தப்படுகின்றன? \n"
 "\n"
-" இந்த எல்லா கேள்விகளுக்கும் பதில்கள் [good_tags.dart] (https://github.com/zverik/every_door/blob/main/lib/helpers/good_tags.dart) இல் உள்ளன. நீங்கள் பார்க்கக்கூடியது இங்கே:\n"
+"இந்த எல்லா கேள்விகளுக்கும் பதில்கள் [element_kind_std.dart] (https://github.com/zverik/every_door/blob/main/lib/helpers/tags/element_kind_std.dart) இல் உள்ளன. நீங்கள் பார்க்கக்கூடியது இங்கே: \n"
 "\n"
-" * முதன்மையான குறிச்சொல்லின் முக்கிய ஆர்டர் - பட்டியல் `kmainkeys`.\n"
-" * எந்த பொருள்கள் பதிவிறக்கம் செய்யப்படுகின்றன - செயல்பாடு `isgoodtags`.\n"
-" * ஒரு வசதி என்று கருதப்படுவது - செயல்பாடு `isamenityTags`.\n"
-" * எந்த புள்ளிகள் எந்த வழிகளில் துண்டிக்கப்படுகின்றன - `கண்டறிதல்கள்`.\n"
-" * மைக்ரோமேப்பிங் பொருள் முழுமையடையாதபோது - செயல்பாடு `தேவைகள் மோர்ன்ஃபோ`."
+"* முக்கிய குறிச்சொல்லுக்கான முக்கிய ஆர்டர் - `main_key.dart` இல்` Kmainkeys` பட்டியல். \n"
+"* எந்த பொருள்கள் பதிவிறக்கம் செய்யப்படுகின்றன - வகுப்பு `_ everythingkind`. \n"
+"* ஒரு வசதி என்று கருதப்படுவது - வகுப்பு `_amenityKind`. \n"
+". \n"
+"* மைக்ரோமேப்பிங் பொருள் முழுமையடையாதபோது - வகுப்பு `_needsmoreinfo`."

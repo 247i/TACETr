@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (GNU Mailman)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-28 12:30+0200\n"
-"PO-Revision-Date: 2024-12-29 00:14+0530\n"
+"POT-Creation-Date: 2025-06-29 07:01+0200\n"
+"PO-Revision-Date: 2025-07-09 04:48\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/gnu-mailman/postorius/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -31,11 +31,11 @@ msgstr ""
 msgid "Mail Host"
 msgstr "அஞ்சல் புரவலன்"
 
-#: forms/domain_forms.py:48 forms/domain_forms.py:69
+#: forms/domain_forms.py:48 forms/domain_forms.py:79
 msgid "Please enter a domain name"
 msgstr "தயவுசெய்து ஒரு டொமைன் பெயரை உள்ளிடவும்"
 
-#: forms/domain_forms.py:49 forms/domain_forms.py:70
+#: forms/domain_forms.py:49 forms/domain_forms.py:80
 msgid "Please enter a valid domain name."
 msgstr "செல்லுபடியாகும் டொமைன் பெயரை உள்ளிடவும்."
 
@@ -45,11 +45,11 @@ msgid ""
 "testing@example.com, enter example.com here."
 msgstr ""
 "உங்கள் அஞ்சல் பட்டியல்களுக்கான டொமைன். எடுத்துக்காட்டாக, testing@example.com"
-" போன்ற பட்டியல்களை நீங்கள் விரும்பும் போது, ​​எடுத்துக்காட்டு.காம் இங்கே "
+" போன்ற பட்டியல்களை நீங்கள் விரும்பும் போது, எடுத்துக்காட்டு.காம் இங்கே "
 "உள்ளிடவும்."
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:22
-#: templates/postorius/index.html:88
+#: templates/postorius/index.html:89
 msgid "Description"
 msgstr "விவரம்"
 
@@ -57,7 +57,7 @@ msgstr "விவரம்"
 msgid "Alias Domain"
 msgstr "மாற்றுப்பெயர் டொமைன்"
 
-#: forms/domain_forms.py:61 forms/domain_forms.py:93
+#: forms/domain_forms.py:61 forms/domain_forms.py:103
 msgid "Please enter a valid domain name or nothing."
 msgstr "செல்லுபடியாகும் டொமைன் பெயர் அல்லது எதுவும் உள்ளிடவும்."
 
@@ -68,14 +68,27 @@ msgstr ""
 "பயன்படுத்தப்படுகிறது."
 
 #: forms/domain_forms.py:67 templates/postorius/domain/index.html:24
+msgid "Base Url"
+msgstr "அடிப்படை முகவரி"
+
+#: forms/domain_forms.py:69 forms/domain_forms.py:114
+msgid "Please enter a valid URL for accessing Postorius or nothing."
+msgstr ""
+"போச்டோரியசை அணுக அல்லது ஒன்றும் செய்ய செல்லுபடியாகும் முகவரி ஐ உள்ளிடவும்."
+
+#: forms/domain_forms.py:73
+msgid "The base URL for accessing Postorius."
+msgstr "போச்டோரியசை அணுகுவதற்கான அடிப்படை URL."
+
+#: forms/domain_forms.py:77 templates/postorius/domain/index.html:25
 msgid "Web Host"
 msgstr "வலை புரவலன்"
 
-#: forms/domain_forms.py:83
+#: forms/domain_forms.py:93
 msgid "Please enter a valid domain name"
 msgstr "செல்லுபடியாகும் டொமைன் பெயரை உள்ளிடவும்"
 
-#: forms/domain_forms.py:111
+#: forms/domain_forms.py:133
 msgid "Owner's Email"
 msgstr "உரிமையாளரின் மின்னஞ்சல்"
 
@@ -182,7 +195,7 @@ msgstr ""
 msgid "Moderation"
 msgstr "மிதமான"
 
-#: forms/fields.py:191 forms/list_forms.py:1299
+#: forms/fields.py:191 forms/list_forms.py:1311
 #: templatetags/membership_helpers.py:93
 msgid "List default"
 msgstr "இயல்புநிலை பட்டியல்"
@@ -203,7 +216,7 @@ msgstr ""
 " நிராகரிக்கவும் - இது இடுகையின் ஆசிரியருக்கு ஒரு பவுன்ச் அறிவிப்பை அனுப்புவதன் மூலம் செய்தியை தானாக நிராகரிக்கிறது. பவுன்ச் அறிவிப்பின் உரையை நீங்கள் கட்டமைக்க முடியும்.\n"
 " நிராகரிக்கவும் - இது இடுகையின் ஆசிரியருக்கு எந்த அறிவிப்பும் அனுப்பாமல் செய்தியை நிராகரிக்கிறது.\n"
 " ஏற்றுக்கொள் - மேலும் சோதனைகள் இல்லாமல் எந்த இடுகைகளையும் ஏற்றுக்கொள்கிறது.\n"
-" இயல்புநிலை செயலாக்கம் - கூடுதல் காசோலைகளை இயக்கி செய்தியை ஏற்றுக்கொள்ளுங்கள்.\n"
+" இயல்புநிலை செயலாக்கம் - கூடுதல் காசோலைகளை இயக்கி செய்தியை ஏற்றுக்கொள்ளுங்கள். \n"
 
 #: forms/list_forms.py:43
 msgid "Daily"
@@ -273,7 +286,7 @@ msgstr "இந்த பட்டியலை பட்டியல் குற
 msgid "Hide this list in list index"
 msgstr "இந்த பட்டியலை பட்டியல் குறியீட்டில் மறைக்கவும்"
 
-#: forms/list_forms.py:94 forms/list_forms.py:1142
+#: forms/list_forms.py:94 forms/list_forms.py:1154
 msgid "Short Description"
 msgstr "குறுகிய விளக்கம்"
 
@@ -331,7 +344,7 @@ msgstr "சரியான மின்னஞ்சல் முகவரிய�
 msgid "Your name (optional)"
 msgstr "உங்கள் பெயர் (விரும்பினால்)"
 
-#: forms/list_forms.py:198 forms/list_forms.py:1445 views/list.py:544
+#: forms/list_forms.py:198 forms/list_forms.py:1457 views/list.py:544
 msgid "Primary Address ({})"
 msgstr "முதன்மை முகவரி ({})"
 
@@ -384,7 +397,7 @@ msgstr ""
 " மிதமான: மதிப்பீட்டாளர்கள் ஒவ்வொரு சந்ததியினருக்கும் கைமுறையாக அங்கீகரிக்க வேண்டும்.\n"
 " மிதமானதை உறுதிப்படுத்தவும்: முதல் சந்தாதாரர்கள் உறுதிப்படுத்த வேண்டும், பின்னர் ஒரு மதிப்பீட்டாளர் அங்கீகரிக்க வேண்டும்."
 
-#: forms/list_forms.py:278 forms/list_forms.py:780
+#: forms/list_forms.py:278 forms/list_forms.py:779
 #: templates/postorius/lists/held_messages.html:31
 #: templates/postorius/lists/held_messages.html:122
 #: templates/postorius/lists/pending_confirmations.html:37
@@ -402,27 +415,27 @@ msgstr "தள நிர்வாகி"
 
 #: forms/list_forms.py:284 forms/list_forms.py:316 forms/list_forms.py:327
 #: forms/list_forms.py:338 forms/list_forms.py:467 forms/list_forms.py:477
-#: forms/list_forms.py:526 forms/list_forms.py:660 forms/list_forms.py:667
-#: forms/list_forms.py:720 forms/list_forms.py:810 forms/list_forms.py:821
-#: forms/list_forms.py:841 forms/list_forms.py:861 forms/list_forms.py:926
-#: forms/list_forms.py:965 forms/list_forms.py:982 forms/list_forms.py:1060
-#: forms/list_forms.py:1071 forms/list_forms.py:1085 forms/list_forms.py:1097
-#: forms/list_forms.py:1111 forms/list_forms.py:1134 forms/list_forms.py:1196
-#: forms/list_forms.py:1205 forms/list_forms.py:1229 forms/list_forms.py:1297
-#: forms/user_forms.py:63
+#: forms/list_forms.py:526 forms/list_forms.py:659 forms/list_forms.py:666
+#: forms/list_forms.py:719 forms/list_forms.py:809 forms/list_forms.py:820
+#: forms/list_forms.py:840 forms/list_forms.py:860 forms/list_forms.py:927
+#: forms/list_forms.py:966 forms/list_forms.py:983 forms/list_forms.py:1061
+#: forms/list_forms.py:1072 forms/list_forms.py:1086 forms/list_forms.py:1098
+#: forms/list_forms.py:1112 forms/list_forms.py:1123 forms/list_forms.py:1146
+#: forms/list_forms.py:1208 forms/list_forms.py:1217 forms/list_forms.py:1241
+#: forms/list_forms.py:1309 forms/user_forms.py:63
 msgid "Yes"
 msgstr "ஆம்"
 
 #: forms/list_forms.py:284 forms/list_forms.py:316 forms/list_forms.py:327
 #: forms/list_forms.py:338 forms/list_forms.py:467 forms/list_forms.py:477
-#: forms/list_forms.py:526 forms/list_forms.py:660 forms/list_forms.py:667
-#: forms/list_forms.py:720 forms/list_forms.py:810 forms/list_forms.py:821
-#: forms/list_forms.py:841 forms/list_forms.py:861 forms/list_forms.py:926
-#: forms/list_forms.py:965 forms/list_forms.py:982 forms/list_forms.py:1060
-#: forms/list_forms.py:1071 forms/list_forms.py:1085 forms/list_forms.py:1097
-#: forms/list_forms.py:1111 forms/list_forms.py:1134 forms/list_forms.py:1196
-#: forms/list_forms.py:1205 forms/list_forms.py:1229 forms/list_forms.py:1298
-#: forms/user_forms.py:63
+#: forms/list_forms.py:526 forms/list_forms.py:659 forms/list_forms.py:666
+#: forms/list_forms.py:719 forms/list_forms.py:809 forms/list_forms.py:820
+#: forms/list_forms.py:840 forms/list_forms.py:860 forms/list_forms.py:927
+#: forms/list_forms.py:966 forms/list_forms.py:983 forms/list_forms.py:1061
+#: forms/list_forms.py:1072 forms/list_forms.py:1086 forms/list_forms.py:1098
+#: forms/list_forms.py:1112 forms/list_forms.py:1123 forms/list_forms.py:1146
+#: forms/list_forms.py:1208 forms/list_forms.py:1217 forms/list_forms.py:1241
+#: forms/list_forms.py:1310 forms/user_forms.py:63
 msgid "No"
 msgstr "இல்லை"
 
@@ -464,7 +477,7 @@ msgstr ""
 "ஒரு உறுப்பினரின் பவுன்ச் செய்தி பழையதாகக் கருதப்படும் நாட்களின் எண்ணிக்கை. "
 "இடைக்காலத்தில் புதிய பவுன்ச் எதுவும் பெறப்படவில்லை என்றால், பவுன்ச் "
 "மதிப்பெண் பூச்சியத்திற்கு மீட்டமைக்கப்படுகிறது. இந்த மதிப்பு ஒரு முழு எண்ணாக"
-" இருக்க வேண்டும்."
+" இருக்க வேண்டும். "
 
 #: forms/list_forms.py:318
 msgid "Notify owner on bounce increment"
@@ -478,7 +491,7 @@ msgid ""
 msgstr ""
 "உறுப்பினரின் பவுன்ச் மதிப்பெண் அதிகரிக்கப்படும்போது பட்டியல் உரிமையாளருக்கு "
 "அறிவிக்கப்படுகிறதா இல்லையா என்பதை இந்த விருப்பம் கட்டுப்படுத்துகிறது, ஆனால் "
-"அவற்றின் பவுன்ச் வாசலை விடக் குறைவான மதிப்புக்கு."
+"அவற்றின் பவுன்ச் வாசலை விடக் குறைவான மதிப்புக்கு. "
 
 #: forms/list_forms.py:329
 msgid "Notify owner on disable"
@@ -492,7 +505,7 @@ msgid ""
 msgstr ""
 "உறுப்பினரின் சந்தா தானாகவே முடக்கப்பட்டிருக்கும் போது பட்டியல் "
 "உரிமையாளருக்கு அறிவிக்கப்படுகிறதா இல்லையா என்பதை இந்த விருப்பம் "
-"கட்டுப்படுத்துகிறது."
+"கட்டுப்படுத்துகிறது. "
 
 #: forms/list_forms.py:340
 msgid "Notify owner on removal"
@@ -506,7 +519,7 @@ msgid ""
 msgstr ""
 "முடக்கப்பட்ட அறிவிப்புகள் தீர்ந்துவிட்ட பிறகு, ஒரு உறுப்பினர் பட்டியலில் "
 "இருந்து அகற்றப்படும்போது பட்டியல் உரிமையாளருக்கு அறிவிக்கப்படுகிறதா இல்லையா "
-"என்பதை இந்த விருப்பம் கட்டுப்படுத்துகிறது."
+"என்பதை இந்த விருப்பம் கட்டுப்படுத்துகிறது. "
 
 #: forms/list_forms.py:351
 msgid "Forward unrecognized bounces"
@@ -544,7 +557,7 @@ msgstr ""
 "ஒரு ஊனமுற்ற உறுப்பினர் அஞ்சல் பட்டியலின் பட்டியலிலிருந்து தங்கள் முகவரி "
 "அகற்றப்படுவதற்கு முன்பு பெறும் அறிவிப்புகளின் எண்ணிக்கை. அவற்றின் பவுன்ச் "
 "மதிப்பெண் வாசலை மீறிவிட்டால், பட்டியலில் இருந்து உடனடியாக ஒரு முகவரியை அகற்ற"
-" இதை 0 ஆக அமைக்கவும். இந்த மதிப்பு ஒரு முழு எண்ணாக இருக்க வேண்டும்."
+" இதை 0 ஆக அமைக்கவும். இந்த மதிப்பு ஒரு முழு எண்ணாக இருக்க வேண்டும். "
 
 #: forms/list_forms.py:387
 msgid "Public archives"
@@ -588,7 +601,7 @@ msgid ""
 "Currently, this option is only supported by Hyperkitty."
 msgstr ""
 "இந்த விருப்பம், காப்பகத்தில் மின்னஞ்சல்களை வழங்குவதற்கு மின்னஞ்சலில் மார்க்அப்பை அடிப்படையாகக் கொண்ட வடிவமைப்பைக் கொண்டு பணக்கார உரையாக மாற்ற உதவுகிறது.\n"
-" தற்போது, ​​இந்த விருப்பத்தை ஐபர்கிட்டியால் மட்டுமே ஆதரிக்கிறது."
+" தற்போது, இந்த விருப்பத்தை ஐபர்கிட்டியால் மட்டுமே ஆதரிக்கிறது."
 
 #: forms/list_forms.py:453
 msgid "Acceptable aliases"
@@ -682,7 +695,7 @@ msgid ""
 "against the list of explicitly accepted, held, rejected (bounced), and "
 "discarded addresses. If no match is found, then this action is taken."
 msgstr ""
-"உறுப்பினர் அல்லாதவர்களிடமிருந்து ஒரு இடுகை பெறப்படும்போது, ​​செய்தியின் "
+"உறுப்பினர் அல்லாதவர்களிடமிருந்து ஒரு இடுகை பெறப்படும்போது, செய்தியின் "
 "அனுப்புநர் வெளிப்படையாக ஏற்றுக்கொள்ளப்பட்ட, நடைபெற்ற, நிராகரிக்கப்பட்ட "
 "(பவுன்ச்) மற்றும் நிராகரிக்கப்பட்ட முகவரிகளின் பட்டியலுடன் பொருந்துகிறார். "
 "எந்த போட்டியும் கிடைக்கவில்லை என்றால், இந்த நடவடிக்கை எடுக்கப்படுகிறது."
@@ -700,7 +713,7 @@ msgstr ""
 "இந்த விருப்பம் இயக்கப்பட்டால், அனைத்து பட்டியல் போக்குவரத்தும் அவசரகாலமாக "
 "உள்ளது, அதாவது மிதமானதாக நடத்தப்படுகிறது. உங்கள் பட்டியல் ஒரு ஃபிளேம்வாரை "
 "அனுபவிக்கும் போது இந்த விருப்பத்தை இயக்கவும், நீங்கள் குளிரூட்டும் காலத்தை "
-"விரும்புகிறீர்கள்."
+"விரும்புகிறீர்கள். "
 
 #: forms/list_forms.py:538
 msgid "Maximum message size"
@@ -730,11 +743,23 @@ msgstr ""
 "அஞ்சல்கள் ஏற்றுக்கொள்ளப்படுவதைத் தடுக்க இதைப் பயன்படுத்தலாம். 0 இன் மதிப்பு "
 "காசோலையை முடக்குகிறது."
 
-#: forms/list_forms.py:568
+#: forms/list_forms.py:560
+msgid "Discard held posts after"
+msgstr "பின்னர் இடுகைகளை நிராகரிக்கவும்"
+
+#: forms/list_forms.py:563
+msgid ""
+"No. of days after which held messages will be automatically discarded.  Set "
+"to zero for no automatic discard."
+msgstr ""
+"வைத்திருக்கும் செய்திகள் தானாகவே நிராகரிக்கப்படும். தானியங்கி "
+"நிராகரிக்கப்படாமல் பூச்சியமாக அமைக்கவும்."
+
+#: forms/list_forms.py:567
 msgid "Accept these non-members"
 msgstr "இந்த உறுப்பினர்கள் அல்லாதவர்கள் ஏற்றுக்கொள்ளுங்கள்"
 
-#: forms/list_forms.py:571
+#: forms/list_forms.py:570
 msgid ""
 "This is a list, one per line, of regexps matching addresses or other lists "
 "on this server whose members are allowed to post to this mailing list "
@@ -755,11 +780,11 @@ msgstr ""
 "சேர்க்கவும், இயல்பான செயலாக்கத்திற்கு nonmember இன் மிதமான தன்மையை "
 "அமைக்கவும் விரும்பப்படுகிறது."
 
-#: forms/list_forms.py:586
+#: forms/list_forms.py:585
 msgid "Hold these non-members"
 msgstr "இந்த உறுப்பினர்கள் அல்லாதவர்களை வைத்திருங்கள்"
 
-#: forms/list_forms.py:589
+#: forms/list_forms.py:588
 msgid ""
 "This is a list, one per line, of regexps matching nonmember addresses, posts"
 " from which are held automatically. Entries are regexps beginning with `^' "
@@ -774,11 +799,11 @@ msgstr ""
 "முகவரியை ஒரு அல்லாத நபராகச் சேர்ப்பது மற்றும் உறுப்பினரின் மிதமான தன்மையை "
 "வைத்திருக்க விரும்பப்படுகிறது."
 
-#: forms/list_forms.py:600
+#: forms/list_forms.py:599
 msgid "Reject these non-members"
 msgstr "இந்த உறுப்பினர்கள் அல்லாதவர்களை நிராகரிக்கவும்"
 
-#: forms/list_forms.py:603
+#: forms/list_forms.py:602
 msgid ""
 "This is a list, one per line, of regexps matching nonmember addresses, posts"
 " from which are rejected with notice to the sender. Entries are regexps "
@@ -793,11 +818,11 @@ msgstr ""
 "என்றாலும், முகவரியை ஒரு அல்லாத நபராகச் சேர்ப்பது மற்றும் நிராகரிக்கப்படாத "
 "மிதமான தன்மையை அமைக்க விரும்பப்படுகிறது."
 
-#: forms/list_forms.py:615
+#: forms/list_forms.py:614
 msgid "Discard these non-members"
 msgstr "இந்த உறுப்பினர்கள் அல்லாதவர்களை நிராகரிக்கவும்"
 
-#: forms/list_forms.py:618
+#: forms/list_forms.py:617
 msgid ""
 "This is a list, one per line, of regexps matching nonmember addresses, posts"
 " from which are discarded automatically. Entries are regexps beginning with "
@@ -812,35 +837,35 @@ msgstr ""
 "முகவரியை ஒரு அல்லாத நபராகச் சேர்ப்பது மற்றும் நிராகரிக்கப்படாத மிதமான "
 "தன்மையை நிர்ணயிக்க விரும்பப்படுகிறது."
 
-#: forms/list_forms.py:642
+#: forms/list_forms.py:641
 msgid "Invalid alias regexp: {}: {}"
 msgstr "தவறான அல்லது regexp: {}: {}"
 
-#: forms/list_forms.py:649
+#: forms/list_forms.py:648
 msgid "Invalid alias email: {}"
 msgstr "தவறான மாற்றுப்பெயர் மின்னஞ்சல்: {}"
 
-#: forms/list_forms.py:663
+#: forms/list_forms.py:662
 msgid "Enable Digests"
 msgstr "செரிமானங்களை இயக்கவும்"
 
-#: forms/list_forms.py:664
+#: forms/list_forms.py:663
 msgid "Should Mailman enable digests for this MailingList?"
 msgstr "இந்த அஞ்சல் பட்டியலில் மெயில்மேன் செரிமானங்களை இயக்க வேண்டுமா?"
 
-#: forms/list_forms.py:670
+#: forms/list_forms.py:669
 msgid "Send Digest Periodically"
 msgstr "டைசெச்டை அவ்வப்போது அனுப்பவும்"
 
-#: forms/list_forms.py:671
+#: forms/list_forms.py:670
 msgid "Should Mailman send out digests periodically?"
 msgstr "மெயில்மேன் அவ்வப்போது செரிமானங்களை அனுப்ப வேண்டுமா?"
 
-#: forms/list_forms.py:677
+#: forms/list_forms.py:676
 msgid "Digest Volume Frequency"
 msgstr "தொகுதி அதிர்வெண்ணை சீரணிக்கவும்"
 
-#: forms/list_forms.py:679
+#: forms/list_forms.py:678
 msgid ""
 "At what frequency should Mailman increment the digest volume number and "
 "reset the issue number?"
@@ -848,45 +873,45 @@ msgstr ""
 "எந்த அதிர்வெண்ணில் மெயில்மேன் டைசச்ட் தொகுதி எண்ணை அதிகரிக்க வேண்டும் "
 "மற்றும் வெளியீட்டு எண்ணை மீட்டமைக்க வேண்டும்?"
 
-#: forms/list_forms.py:684
+#: forms/list_forms.py:683
 msgid "Digest size threshold"
 msgstr "அளவு வாசலை சீரணிக்கவும்"
 
-#: forms/list_forms.py:686
+#: forms/list_forms.py:685
 msgid "How big in Kb should a digest be before it gets sent out?"
 msgstr ""
 "KB இல் ஒரு டைசச்ட் வெளியே அனுப்பப்படுவதற்கு முன்பு எவ்வளவு பெரியதாக இருக்க "
 "வேண்டும்?"
 
-#: forms/list_forms.py:697
+#: forms/list_forms.py:696
 msgid "DMARC mitigation action"
 msgstr "DMARC தணிப்பு நடவடிக்கை"
 
-#: forms/list_forms.py:701
+#: forms/list_forms.py:700
 msgid "Please choose a DMARC mitigation action."
 msgstr "தயவுசெய்து ஒரு DMARC தணிப்பு நடவடிக்கையைத் தேர்வுசெய்க."
 
-#: forms/list_forms.py:704
+#: forms/list_forms.py:703
 msgid "No DMARC mitigations"
 msgstr "DMARC தணிப்புகள் இல்லை"
 
-#: forms/list_forms.py:705
+#: forms/list_forms.py:704
 msgid "Replace From: with list address"
 msgstr "மாற்றவும்: பட்டியல் முகவரியுடன்"
 
-#: forms/list_forms.py:708
+#: forms/list_forms.py:707
 msgid "Wrap the message in an outer message From: the list."
 msgstr "வெளிப்புற செய்தியில் செய்தியை மடிக்கவும்: பட்டியல்."
 
-#: forms/list_forms.py:710
+#: forms/list_forms.py:709
 msgid "Reject the message"
 msgstr "செய்தியை நிராகரிக்கவும்"
 
-#: forms/list_forms.py:711
+#: forms/list_forms.py:710
 msgid "Discard the message"
 msgstr "செய்தியை நிராகரிக்கவும்"
 
-#: forms/list_forms.py:714
+#: forms/list_forms.py:713
 msgid ""
 "The action to apply to messages From: a domain publishing a DMARC policy of "
 "reject or quarantine or to all messages if DMARC Mitigate unconditionally is"
@@ -896,11 +921,11 @@ msgstr ""
 "தனிமைப்படுத்தப்பட்ட ஒரு DMARC கொள்கையை வெளியிடுகிறது அல்லது அனைத்து "
 "செய்திகளுக்கும் DMARC நிபந்தனையின்றி தணித்தால் உண்மை."
 
-#: forms/list_forms.py:723
+#: forms/list_forms.py:722
 msgid "DMARC Mitigate unconditionally"
 msgstr "DMARC நிபந்தனையின்றி தணிக்கும்"
 
-#: forms/list_forms.py:725
+#: forms/list_forms.py:724
 msgid ""
 "If DMARC mitigation action is munge_from or wrap_message, should it apply to"
 " all messages regardless of the DMARC policy of the From: domain."
@@ -909,11 +934,11 @@ msgstr ""
 "டொமைனின் DMARC கொள்கையைப் பொருட்படுத்தாமல் அனைத்து செய்திகளுக்கும் இது "
 "பொருந்த வேண்டும்."
 
-#: forms/list_forms.py:731
+#: forms/list_forms.py:730
 msgid "DMARC Addresses"
 msgstr "DMARC முகவரிகள்"
 
-#: forms/list_forms.py:734
+#: forms/list_forms.py:733
 msgid ""
 "Email addresses and regexps matching email addresses, one per line. Regexps "
 "begin with '^' as in '^.*@example\\.com'. DMARC mitigation action will apply"
@@ -926,11 +951,11 @@ msgstr ""
 "முகவரி பொருத்தம், வழக்கு உதவிக்குறிப்பு, இந்த முகவரிகள் அல்லது வடிவங்களில் "
 "ஒன்று இருந்து: டொமைனின் DMARC கொள்கை."
 
-#: forms/list_forms.py:742
+#: forms/list_forms.py:741
 msgid "DMARC rejection notice"
 msgstr "DMARC நிராகரிப்பு அறிவிப்பு"
 
-#: forms/list_forms.py:746
+#: forms/list_forms.py:745
 msgid ""
 "Text to replace the default reason in any rejection notice to be sent when "
 "DMARC mitigation action of reject applies."
@@ -939,11 +964,11 @@ msgstr ""
 "மாற்றுவதற்கான உரை, நிராகரிப்பதற்கான DMARC தணிப்பு நடவடிக்கை பொருந்தும் போது "
 "அனுப்பப்படும்."
 
-#: forms/list_forms.py:751
+#: forms/list_forms.py:750
 msgid "DMARC wrapped message text"
 msgstr "DMARC போர்த்தப்பட்ட செய்தி உரை"
 
-#: forms/list_forms.py:755
+#: forms/list_forms.py:754
 msgid ""
 "Text to be added as a separate text/plain MIME part preceding the original "
 "message part in the wrapped message when DMARC mitigation action of wrap "
@@ -953,21 +978,21 @@ msgstr ""
 "செய்தியின் அசல் செய்தி பகுதியை முன்னதாக ஒரு தனி உரை/எளிய MIME பகுதியாக "
 "சேர்க்க வேண்டிய உரை."
 
-#: forms/list_forms.py:763 templates/postorius/lists/summary.html:146
+#: forms/list_forms.py:762 templates/postorius/lists/summary.html:146
 #: templates/postorius/lists/summary.html:155
 #: templatetags/membership_helpers.py:81 templatetags/membership_helpers.py:87
 msgid "None"
 msgstr "எதுவுமில்லை"
 
-#: forms/list_forms.py:764
+#: forms/list_forms.py:763
 msgid "Individual"
 msgstr "தனிப்பட்ட"
 
-#: forms/list_forms.py:765
+#: forms/list_forms.py:764
 msgid "Full"
 msgstr "முழு"
 
-#: forms/list_forms.py:769
+#: forms/list_forms.py:768
 msgid ""
 "\n"
 "    None: No personalization.\n"
@@ -977,27 +1002,27 @@ msgid ""
 "    Full: All of the 'individual' personalization plus recipient header           modification. "
 msgstr ""
 "\n"
-"எதுவுமில்லை: தனிப்பயனாக்கம் இல்லை.\n"
+"    எதுவுமில்லை: தனிப்பயனாக்கம் இல்லை.\n"
 "\n"
 " தனிநபர்: ஒவ்வொருவரும் செய்தியின் தனித்துவமான நகலைப் பெறுகிறார்கள், மேலும் சில மாற்று மாறிகள் உள்ளன, ஆனால் தலைப்புகள் எதுவும் மாற்றப்படவில்லை.\n"
 "\n"
-" முழு: 'தனிப்பட்ட' தனிப்பயனாக்கம் மற்றும் பெறுநரின் தலைப்பு மாற்றங்கள் அனைத்தும்."
+" முழு: 'தனிப்பட்ட' தனிப்பயனாக்கம் மற்றும் பெறுநரின் தலைப்பு மாற்றங்கள் அனைத்தும். "
 
-#: forms/list_forms.py:781 templates/postorius/lists/held_messages.html:30
+#: forms/list_forms.py:780 templates/postorius/lists/held_messages.html:30
 #: templates/postorius/lists/held_messages.html:121
 #: templates/postorius/lists/subscription_requests.html:46
 msgid "Reject"
 msgstr "நிராகரிக்கவும்"
 
-#: forms/list_forms.py:782
+#: forms/list_forms.py:781
 msgid "Forward"
 msgstr "முன்னோக்கி"
 
-#: forms/list_forms.py:783
+#: forms/list_forms.py:782
 msgid "Preserve"
 msgstr "பாதுகாக்கவும்"
 
-#: forms/list_forms.py:787
+#: forms/list_forms.py:786
 msgid ""
 "Action to take on messages which have no content\n"
 "after filtering.\n"
@@ -1013,15 +1038,15 @@ msgstr ""
 " முன்னோக்கி = பட்டியல் உரிமையாளருக்கு (கள்) செய்தியை அனுப்பவும்.\n"
 " பாதுகாக்க = QFILES/BAD இல் செய்தியைச் சேமிக்கவும்.\n"
 
-#: forms/list_forms.py:806
+#: forms/list_forms.py:805
 msgid "Personalize"
 msgstr "தனிப்பயனாக்கு"
 
-#: forms/list_forms.py:813
+#: forms/list_forms.py:812
 msgid "Anonymous list"
 msgstr "அநாமதேய பட்டியல்"
 
-#: forms/list_forms.py:815
+#: forms/list_forms.py:814
 msgid ""
 "Hide the sender of a message, replacing it with the list address (Removes "
 "From, Sender and Reply-To fields)"
@@ -1029,11 +1054,11 @@ msgstr ""
 "ஒரு செய்தியை அனுப்புநரை மறைக்கவும், அதை பட்டியல் முகவரியுடன் மாற்றவும் "
 "(அனுப்புநர் மற்றும் பதில்-புலங்கள் ஆகியவற்றிலிருந்து நீக்குகிறது)"
 
-#: forms/list_forms.py:824
+#: forms/list_forms.py:823
 msgid "Include RFC2369 headers"
 msgstr "RFC2369 தலைப்புகள் அடங்கும்"
 
-#: forms/list_forms.py:826
+#: forms/list_forms.py:825
 msgid ""
 "Yes is highly recommended. RFC 2369 defines a set of List-* headers that are"
 " normally added to every message sent to the list membership. These greatly "
@@ -1059,11 +1084,11 @@ msgstr ""
 "தலைப்புகளை முடக்கலாம், ஆனால் இது பரிந்துரைக்கப்படவில்லை (உண்மையில், இந்த "
 "தலைப்புகளை முடக்குவதற்கான உங்கள் திறன் இறுதியில் போகக்கூடும்)."
 
-#: forms/list_forms.py:844
+#: forms/list_forms.py:843
 msgid "Include the list post header"
 msgstr "பட்டியல் இடுகை தலைப்பு சேர்க்கவும்"
 
-#: forms/list_forms.py:846
+#: forms/list_forms.py:845
 msgid ""
 "This can be set to no for announce lists that do not wish to include the "
 "List-Post header because posting to the list is discouraged."
@@ -1071,11 +1096,11 @@ msgstr ""
 "பட்டியல்-போச்ட் தலைப்பை சேர்க்க விரும்பாத அறிவிப்பு பட்டியல்களுக்கு இதை "
 "அமைக்கலாம், ஏனெனில் பட்டியலில் இடுகையிடுவது ஊக்கமளிக்கிறது."
 
-#: forms/list_forms.py:852
+#: forms/list_forms.py:851
 msgid "Explicit reply-to address"
 msgstr "வெளிப்படையான பதில்-முகவரி"
 
-#: forms/list_forms.py:855
+#: forms/list_forms.py:854
 msgid ""
 "This option allows admins to set an explicit Reply-to address. It is only "
 "used if the reply-to is set to use an explicitly set header"
@@ -1084,62 +1109,61 @@ msgstr ""
 "பதில்-க்கு வெளிப்படையாக அமைக்கப்பட்ட தலைப்பைப் பயன்படுத்த அமைக்கப்பட்டால் "
 "மட்டுமே இது பயன்படுத்தப்படுகிறது"
 
-#: forms/list_forms.py:864
+#: forms/list_forms.py:863
 msgid "First strip Reply-To"
 msgstr "முதல் துண்டு பதில்"
 
-#: forms/list_forms.py:866
+#: forms/list_forms.py:865
 msgid ""
 "Should any existing Reply-To: header found in the original message be "
-"stripped? If so, this will be done regardless of whether an explict Reply-"
+"stripped? If so, this will be done regardless of whether an explicit Reply-"
 "To: header is added by Mailman or not."
 msgstr ""
 "தற்போதுள்ள ஏதேனும் பதில் இருக்க வேண்டுமா: அசல் செய்தியில் காணப்படும் தலைப்பு"
-" அகற்றப்பட வேண்டுமா? அப்படியானால், ஒரு விளக்கமளிக்கும் பதிலைப் "
-"பொருட்படுத்தாமல் இது செய்யப்படும்: தலைப்பு மெயில்மேன் சேர்க்கப்பட்டதா "
-"இல்லையா."
+" அகற்றப்பட வேண்டுமா? அப்படியானால், வெளிப்படையான பதில்-க்கு இருந்தாலும் இது "
+"செய்யப்படும்: தலைப்பு மெயில்மேனால் சேர்க்கப்பட்டதா இல்லையா."
 
-#: forms/list_forms.py:872 forms/list_forms.py:878
+#: forms/list_forms.py:871 forms/list_forms.py:877
 msgid "Reply goes to list"
 msgstr "பதில் பட்டியலுக்கு செல்கிறது"
 
-#: forms/list_forms.py:875
+#: forms/list_forms.py:874
 msgid "Please choose a reply-to action."
 msgstr "தயவுசெய்து ஒரு பதிலைத் தேர்வுசெய்க."
 
-#: forms/list_forms.py:877
+#: forms/list_forms.py:876
 msgid "No Munging"
 msgstr "முங்கிங் இல்லை"
 
-#: forms/list_forms.py:879
+#: forms/list_forms.py:878
 msgid "Explicit Reply-to header set"
 msgstr "வெளிப்படையான பதில்-தலைப்பு தொகுப்பு"
 
-#: forms/list_forms.py:880
+#: forms/list_forms.py:879
 msgid "Explicit Reply-to set; no Cc added"
 msgstr "வெளிப்படையான பதில்-அமைக்க; சிசி எதுவும் சேர்க்கப்படவில்லை"
 
-#: forms/list_forms.py:883
+#: forms/list_forms.py:882
 msgid ""
 "Where are replies to list messages directed? No Munging is strongly recommended for most mailing lists. \n"
-"This option controls what Mailman does to the Reply-To: header in messages flowing through this mailing list. When set to No Munging, no Reply-To: header is added by Mailman, although if one is present in the original message, it is not stripped. Setting this value to either Reply to List, Explicit Reply, or Reply Only causes Mailman to insert a specific Reply-To: header in all messages, overriding the header in the original message if necessary (Explicit Reply inserts the value of reply_to_address). Explicit Reply-to set; no Cc added is useful forannounce-only lists where you want to avoid someone replying to the list address. There are many reasons not to introduce or override the Reply-To: header. One is that some posters depend on their own Reply-To: settings to convey their valid return address. Another is that modifying Reply-To: makes it much more difficult to send private replies. See <a href=\"http://marc.merlins.org/netrants/reply-to-harmful.html\">`Reply-To' Munging Considered Harmful</a> for a general discussion of this issue. See <a href=\"http://marc.merlins.org/netrants/reply-to-useful.html\">`Reply-To' Munging Considered Useful</a> for a dissenting opinion. Some mailing lists have restricted posting privileges, with a parallel list devoted to discussions. Examples are `patches' or `checkin' lists, where software changes are posted by a revision control system, but discussion about the changes occurs on a developers mailing list. To support these types of mailing lists, select Explicit Reply and set the Reply-To: address option to point to the parallel list."
+"This option controls what Mailman does to the Reply-To: header in messages flowing through this mailing list. When set to No Munging, no Reply-To: header is added by Mailman, although if one is present in the original message, it may be stripped depending on First strip Reply-To. Setting this value to Reply to List or either of the Explicit Reply settings causes Mailman to insert a specific Reply-To: header in all messages, either adding to or overriding the header in the original message depending on First Strip Reply-To. Explicit Reply inserts the value of Explicit reply-to_address, Reply goes to list inserts the list posting address. Explicit Reply-to set; no Cc added is useful forannounce-only lists where you want to avoid someone replying to the list address. There are many reasons not to introduce or override the Reply-To: header. One is that some posters depend on their own Reply-To: settings to convey their valid return address. Another is that modifying Reply-To: makes it much more difficult to send private replies. See <a href=\"http://marc.merlins.org/netrants/reply-to-harmful.html\">`Reply-To' Munging Considered Harmful</a> for a general discussion of this issue. See <a href=\"http://marc.merlins.org/netrants/reply-to-useful.html\">`Reply-To' Munging Considered Useful</a> for a dissenting opinion. Some mailing lists have restricted posting privileges, with a parallel list devoted to discussions. Examples are `patches' or `checkin' lists, where software changes are posted by a revision control system, but discussion about the changes occurs on a developers mailing list. To support these types of mailing lists, select Explicit Reply and set the Reply-To: address option to point to the parallel list."
 msgstr ""
-"பட்டியல் செய்திகளுக்கான பதில்கள் எங்கே? பெரும்பாலான அஞ்சல் பட்டியல்களுக்கு எந்த முணுமுணுப்பும் கடுமையாக பரிந்துரைக்கப்படவில்லை.\n"
-" இந்த விருப்பம் பதிலுக்கு மெயில்மேன் என்ன செய்கிறார் என்பதைக் கட்டுப்படுத்துகிறது: இந்த அஞ்சல் பட்டியல் மூலம் பாயும் செய்திகளில் தலைப்பு. எந்த முணுமுணுப்புக்கும் அமைக்கும்போது, ​​பதில் இல்லை: தலைப்பு மெயில்மேன் சேர்க்கப்படுகிறது, இருப்பினும் அசல் செய்தியில் ஒருவர் இருந்தால், அது அகற்றப்படாது. இந்த மதிப்பை பட்டியலுக்கு பதிலளிக்க, வெளிப்படையான பதில் அல்லது பதில் மட்டுமே மெயில்மேன் ஒரு குறிப்பிட்ட பதிலைச் செருகுவதற்கு காரணமாகிறது: எல்லா செய்திகளிலும் தலைப்பு, தேவைப்பட்டால் அசல் செய்தியில் தலைப்பை மீறுகிறது (வெளிப்படையான பதில் Reply_TO_ADDRESS இன் மதிப்பைச் செருகுகிறது). வெளிப்படையான பதில்-அமைக்க; பட்டியல் முகவரிக்கு யாராவது பதிலளிப்பதைத் தவிர்க்க விரும்பும் எந்தவொரு சி.சி சேர்க்கும் பயனுள்ள முன்னறிவிப்பு-மட்டும் பட்டியல்கள். பதிலை அறிமுகப்படுத்தவோ அல்லது மேலெழுதவோ கூடாது என்பதற்கு பல காரணங்கள் உள்ளன: தலைப்பு. ஒன்று, சில சுவரொட்டிகள் தங்கள் சொந்த பதிலைப் பொறுத்தது: அவர்களின் சரியான வருவாய் முகவரியை தெரிவிக்க அமைப்புகள். மற்றொன்று, பதிலை மாற்றியமைப்பது: தனிப்பட்ட பதில்களை அனுப்புவது மிகவும் கடினம். <A href = \"http://marc.merlins.org/netrants/reply-to-to-harmful.html\"> `பதில்-to 'மங்கிங் தீங்கு விளைவிப்பதாகக் கருதப்படுகிறது </a> இந்த பிரச்சினையின் பொதுவான கலந்துரையாடலுக்கு. <A href = \"http://marc.merlins.org/netrants/reply-to-useful.html\"> `பதில்-க்கு 'சுறுசுறுப்பாக கருதப்படுகிறது </a> ஒரு கருத்து வேறுபாடுக்கு. சில அஞ்சல் பட்டியல்கள் விவாதங்களுக்கு அர்ப்பணிக்கப்பட்ட ஒரு இணையான பட்டியலுடன், இடுகையிடும் சலுகைகளை தடை செய்துள்ளன. எடுத்துக்காட்டுகள் `திட்டுகள் 'அல்லது` செக்கின்' பட்டியல்கள், அங்கு மென்பொருள் மாற்றங்கள் திருத்தக் கட்டுப்பாட்டு அமைப்பு மூலம் வெளியிடப்படுகின்றன, ஆனால் உருவாக்குபவர்கள் அஞ்சல் பட்டியலில் மாற்றங்கள் குறித்த விவாதம் நிகழ்கிறது. இந்த வகை அஞ்சல் பட்டியல்களை ஆதரிக்க, வெளிப்படையான பதிலைத் தேர்ந்தெடுத்து, பதிலை அமைக்கவும்: இணையான பட்டியலை சுட்டிக்காட்ட முகவரி விருப்பத்தை."
+"பட்டியல் செய்திகளுக்கான பதில்கள் எங்கே? பெரும்பாலான அஞ்சல் பட்டியல்களுக்கு எந்த முணுமுணுப்பும் கடுமையாக பரிந்துரைக்கப்படவில்லை. \n"
+"இந்த விருப்பம் பதிலுக்கு மெயில்மேன் என்ன செய்கிறார் என்பதைக் கட்டுப்படுத்துகிறது: இந்த அஞ்சல் பட்டியல் மூலம் பாயும் செய்திகளில் தலைப்பு. எந்த முணுமுணுப்பும் அமைக்கப்படும்போது, ​​பதில் இல்லை: தலைப்பு மெயில்மேன் சேர்க்கப்படுகிறது, இருப்பினும் அசல் செய்தியில் ஒருவர் இருந்தால், அது முதல் துண்டு பதிலைப் பொறுத்து அகற்றப்படலாம். பட்டியலுக்கு பதிலளிக்க இந்த மதிப்பை அமைப்பது அல்லது வெளிப்படையான பதில் அமைப்புகளில் ஒன்று மெயில்மேன் ஒரு குறிப்பிட்ட பதிலைச் செருகுவதற்கு காரணமாகிறது: எல்லா செய்திகளிலும் தலைப்பு, முதல் துண்டு பதிலைப் பொறுத்து அசல் செய்தியில் தலைப்பைச் சேர்ப்பது அல்லது மேலெழுதும். வெளிப்படையான பதில் வெளிப்படையான பதில்-to_address இன் மதிப்பைச் செருகுகிறது, பதில் பட்டியல் இடுகையிடும் முகவரியை செருகும். வெளிப்படையான பதில்-அமைக்க; பட்டியல் முகவரிக்கு யாராவது பதிலளிப்பதைத் தவிர்க்க விரும்பும் எந்தவொரு சி.சி சேர்க்கும் பயனுள்ள முன்னறிவிப்பு-மட்டும் பட்டியல்கள். பதிலை அறிமுகப்படுத்தவோ அல்லது மேலெழுதவோ கூடாது என்பதற்கு பல காரணங்கள் உள்ளன: தலைப்பு. ஒன்று, சில சுவரொட்டிகள் தங்கள் சொந்த பதிலைப் பொறுத்தது: அவர்களின் சரியான வருவாய் முகவரியை தெரிவிக்க அமைப்புகள். மற்றொன்று பதிலை மாற்றியமைப்பது: தனிப்பட்ட பதில்களை அனுப்புவது மிகவும் கடினம். <A href = \"http://marc.merlins.org/netrants/reply-to-to-harmful.html\"> `பதில்-to 'மங்கிங் தீங்கு விளைவிப்பதாகக் கருதப்படுகிறது </a> இந்த பிரச்சினையின் பொதுவான கலந்துரையாடலுக்கு. <A href = \"http://marc.merlins.org/netrants/reply-to-useful.html\"> `பதில்-க்கு 'சுறுசுறுப்பாக கருதப்படுகிறது </a> ஒரு கருத்து வேறுபாடுக்கு. சில அஞ்சல் பட்டியல்கள் விவாதங்களுக்கு அர்ப்பணிக்கப்பட்ட ஒரு இணையான பட்டியலுடன், இடுகையிடும் சலுகைகளை தடை செய்துள்ளன. எடுத்துக்காட்டுகள் `திட்டுகள் 'அல்லது` செக்கின்' பட்டியல்கள், அங்கு மென்பொருள் மாற்றங்கள் திருத்தக் கட்டுப்பாட்டு அமைப்பு மூலம் வெளியிடப்படுகின்றன, ஆனால் உருவாக்குபவர்கள் அஞ்சல் பட்டியலில் மாற்றங்கள் குறித்த விவாதம் நிகழ்கிறது. இந்த வகை அஞ்சல் பட்டியல்களை ஆதரிக்க, வெளிப்படையான பதிலைத் தேர்ந்தெடுத்து, பதிலை அமைக்கவும்: இணையான பட்டியலை சுட்டிக்காட்ட முகவரி விருப்பத்தை."
 
-#: forms/list_forms.py:917
+#: forms/list_forms.py:918
 msgid "Pipeline"
 msgstr "குழாய்"
 
-#: forms/list_forms.py:923
+#: forms/list_forms.py:924
 msgid "Type of pipeline you want to use for this mailing list"
 msgstr "இந்த அஞ்சல் பட்டியலுக்கு நீங்கள் பயன்படுத்த விரும்பும் குழாய் வகை"
 
-#: forms/list_forms.py:929
+#: forms/list_forms.py:930
 msgid "Filter content"
 msgstr "உள்ளடக்கத்தை வடிகட்டவும்"
 
-#: forms/list_forms.py:931
+#: forms/list_forms.py:932
 msgid ""
 "Should Mailman filter the content of list traffic according to the settings below?\n"
 "<b>None of the settings below have any effect if this is No.</b>"
@@ -1147,11 +1171,11 @@ msgstr ""
 "கீழே உள்ள அமைப்புகளுக்கு ஏற்ப பட்டியல் போக்குவரத்தின் உள்ளடக்கத்தை மெயில்மேன் வடிகட்ட வேண்டுமா?\n"
 " <b> இது இல்லையென்றால் கீழே உள்ள அமைப்புகள் எதுவும் எந்த விளைவையும் ஏற்படுத்தாது. </b>"
 
-#: forms/list_forms.py:937
+#: forms/list_forms.py:938
 msgid "Filter types"
 msgstr "வடிகட்டி வகைகள்"
 
-#: forms/list_forms.py:940
+#: forms/list_forms.py:941
 msgid ""
 "MIME types to filter from the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-"
@@ -1160,19 +1184,19 @@ msgstr ""
 "உள்வரும் இடுகைகளிலிருந்து வடிகட்ட மைம் வகைகள். பொதுவான வகைகளின் பட்டியலைக் "
 "காணலாம் <a href = \""
 
-#: forms/list_forms.py:946
+#: forms/list_forms.py:947
 msgid "Filter extensions"
 msgstr "நீட்டிப்புகளை வடிகட்டவும்"
 
-#: forms/list_forms.py:948
+#: forms/list_forms.py:949
 msgid "Extensions to filter from the incoming posts."
 msgstr "உள்வரும் இடுகைகளிலிருந்து வடிகட்ட நீட்டிப்புகள்."
 
-#: forms/list_forms.py:951
+#: forms/list_forms.py:952
 msgid "Pass types"
 msgstr "பாச் வகைகள்"
 
-#: forms/list_forms.py:954
+#: forms/list_forms.py:955
 msgid ""
 "MIME types to allow in the incoming posts. A list of common types can be "
 "found <a href=\"https://developer.mozilla.org/en-"
@@ -1181,34 +1205,34 @@ msgstr ""
 "உள்வரும் இடுகைகளில் அனுமதிக்க MIME வகைகள். பொதுவான வகைகளின் பட்டியலைக் "
 "காணலாம் <a href = \""
 
-#: forms/list_forms.py:960
+#: forms/list_forms.py:961
 msgid "Pass extensions"
 msgstr "நீட்டிப்புகளை கடந்து செல்லுங்கள்"
 
-#: forms/list_forms.py:962
+#: forms/list_forms.py:963
 msgid "Extensions to allow in the incoming posts."
 msgstr "உள்வரும் இடுகைகளில் அனுமதிக்க நீட்டிப்புகள்."
 
-#: forms/list_forms.py:968
+#: forms/list_forms.py:969
 msgid "Collapse alternatives"
 msgstr "மாற்று வழிகளை வீழ்த்துங்கள்"
 
-#: forms/list_forms.py:970
+#: forms/list_forms.py:971
 msgid ""
 "Should Mailman collapse multipart/alternative to its first part content?"
 msgstr ""
 "மெயில்மேன் அதன் முதல் பகுதி உள்ளடக்கத்திற்கு மல்டிபார்ட்/மாற்றீட்டை வீழ்த்த "
 "வேண்டுமா?"
 
-#: forms/list_forms.py:978
+#: forms/list_forms.py:979
 msgid "Filter Action"
 msgstr "வடிகட்டி செயல்"
 
-#: forms/list_forms.py:985
+#: forms/list_forms.py:986
 msgid "Convert html to plaintext"
 msgstr "உஉகுமொ ஐ எளிய உரையாக மாற்றவும்"
 
-#: forms/list_forms.py:987
+#: forms/list_forms.py:988
 msgid ""
 "Should Mailman convert text/html parts to plain text? This conversion "
 "happens after MIME attachments have been stripped."
@@ -1216,59 +1240,59 @@ msgstr ""
 "மெயில்மேன் உரை/HTML பகுதிகளை எளிய உரையாக மாற்ற வேண்டுமா? மைம் இணைப்புகள் "
 "அகற்றப்பட்ட பிறகு இந்த மாற்றம் நிகழ்கிறது."
 
-#: forms/list_forms.py:1000
+#: forms/list_forms.py:1001
 msgid "Respond and continue processing"
 msgstr "பதிலளித்து செயலாக்கத்தைத் தொடரவும்"
 
-#: forms/list_forms.py:1001
+#: forms/list_forms.py:1002
 msgid "Respond and discard message"
 msgstr "செய்திக்கு பதிலளிக்கவும் நிராகரிக்கவும்"
 
-#: forms/list_forms.py:1002
+#: forms/list_forms.py:1003
 msgid "No automatic response"
 msgstr "தானியங்கி பதில் இல்லை"
 
-#: forms/list_forms.py:1007
+#: forms/list_forms.py:1008
 msgid "Autorespond to list owner"
 msgstr "பட்டியல் உரிமையாளருக்கு தானே"
 
-#: forms/list_forms.py:1009
+#: forms/list_forms.py:1010
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -owner address?"
 msgstr ""
 "-உரிமையாளர் முகவரிக்கு அனுப்பப்பட்ட மின்னஞ்சல்களுக்கு மெயில்மேன் தானாக பதிலை"
 " அனுப்ப வேண்டுமா?"
 
-#: forms/list_forms.py:1014
+#: forms/list_forms.py:1015
 msgid "Autoresponse owner text"
 msgstr "AutoreSponse உரிமையாளர் உரை"
 
-#: forms/list_forms.py:1017
+#: forms/list_forms.py:1018
 msgid "Auto-response text to send to -owner emails."
 msgstr "-உரிமையாளர் மின்னஞ்சல்களுக்கு அனுப்ப தானாக மறுமொழி உரை."
 
-#: forms/list_forms.py:1022
+#: forms/list_forms.py:1023
 msgid "Autorespond postings"
 msgstr "Autorspond Potals"
 
-#: forms/list_forms.py:1024
+#: forms/list_forms.py:1025
 msgid "Should Mailman send an auto-response to mailing list posters?"
 msgstr ""
 "அஞ்சல் பட்டியல் சுவரொட்டிகளுக்கு மெயில்மேன் தானாக மறுமொழி அனுப்ப வேண்டுமா?"
 
-#: forms/list_forms.py:1028
+#: forms/list_forms.py:1029
 msgid "Autoresponse postings text"
 msgstr "ஆட்டோ மறுமொழி இடுகை உரை"
 
-#: forms/list_forms.py:1031
+#: forms/list_forms.py:1032
 msgid "Auto-response text to send to mailing list posters."
 msgstr "அஞ்சல் பட்டியல் சுவரொட்டிகளுக்கு அனுப்ப தானாக மறுமொழி உரை."
 
-#: forms/list_forms.py:1036
+#: forms/list_forms.py:1037
 msgid "Autorespond requests"
 msgstr "Autorospent கோரிக்கைகள்"
 
-#: forms/list_forms.py:1038
+#: forms/list_forms.py:1039
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -request address?"
 " If you choose yes, decide whether you want Mailman to discard the original "
@@ -1279,19 +1303,19 @@ msgstr ""
 "நிராகரிக்க மெயில்மேன் விரும்புகிறீர்களா அல்லது சாதாரண அஞ்சல் கட்டளையாக "
 "கணினியில் அனுப்ப விரும்புகிறீர்களா என்பதை முடிவு செய்யுங்கள்."
 
-#: forms/list_forms.py:1045
+#: forms/list_forms.py:1046
 msgid "Autoresponse request text"
 msgstr "AutoreSponse கோரிக்கை உரை"
 
-#: forms/list_forms.py:1048
+#: forms/list_forms.py:1049
 msgid "Auto-response text to send to -request emails."
 msgstr "மின்னஞ்சல்களுக்கு அனுப்ப தானாக மறுமொழி உரை."
 
-#: forms/list_forms.py:1051
+#: forms/list_forms.py:1052
 msgid "Autoresponse grace period"
 msgstr "ஆட்டார்ச்போன்ச் கிரேச் காலம்"
 
-#: forms/list_forms.py:1053
+#: forms/list_forms.py:1054
 msgid ""
 "Number of days between auto-responses to either the mailing list or "
 "-request/-owner address from the same poster. Set to zero (or negative) for "
@@ -1302,11 +1326,11 @@ msgstr ""
 "பூச்சியமாக (அல்லது எதிர்மறை) அமைக்கவும் (அதாவது ஒவ்வொரு செய்திக்கும் தானாக "
 "பதிலளிக்கவும்)."
 
-#: forms/list_forms.py:1063
+#: forms/list_forms.py:1064
 msgid "Notify users of held messages"
 msgstr "வைத்திருக்கும் செய்திகளின் பயனர்களுக்கு அறிவிக்கவும்"
 
-#: forms/list_forms.py:1065
+#: forms/list_forms.py:1066
 msgid ""
 "Should Mailman notify users about their messages held for approval. If you "
 "say 'No', no notifications will be sent to users about the pending approval "
@@ -1317,11 +1341,11 @@ msgstr ""
 "செய்திகளில் நிலுவையில் உள்ள ஒப்புதல் குறித்து எந்த அறிவிப்புகளும் "
 "அனுப்பப்படாது."
 
-#: forms/list_forms.py:1074 forms/list_forms.py:1304
+#: forms/list_forms.py:1075 forms/list_forms.py:1316
 msgid "Send welcome message"
 msgstr "வரவேற்பு செய்தியை அனுப்பவும்"
 
-#: forms/list_forms.py:1076
+#: forms/list_forms.py:1077
 msgid ""
 "Send welcome message to newly subscribed members? Turn this off only if you plan on subscribing people manually and don't want them to know that you did so. Setting this to No is most useful for transparently migrating lists from some other mailing list manager to Mailman.\n"
 "The text of Welcome message can be set via the Templates tab."
@@ -1329,11 +1353,11 @@ msgstr ""
 "புதிதாக சந்தா உறுப்பினர்களுக்கு வரவேற்பு செய்தியை அனுப்பவா? மக்களை கைமுறையாக சந்தா செலுத்த திட்டமிட்டால் மட்டுமே இதை அணைக்கவும், நீங்கள் அவ்வாறு செய்தீர்கள் என்பதை அவர்கள் அறிந்து கொள்ள விரும்பவில்லை. இதை இல்லை க்கு அமைப்பது வேறு சில அஞ்சல் பட்டியல் மேலாளரிடமிருந்து மெயில்மேனுக்கு வெளிப்படையாக இடம்பெயர மிகவும் பயனுள்ளதாக இருக்கும்.\n"
 " வரவேற்பு செய்தியின் உரையை வார்ப்புருக்கள் தாவல் வழியாக அமைக்கலாம்."
 
-#: forms/list_forms.py:1088
+#: forms/list_forms.py:1089
 msgid "Send goodbye message"
 msgstr "விடைபெறும் செய்தியை அனுப்பவும்"
 
-#: forms/list_forms.py:1090
+#: forms/list_forms.py:1091
 msgid ""
 "Send goodbye message to newly unsubscribed members? Turn this off only if you plan on unsubscribing people manually and don't want them to know that you did so.\n"
 "The text of Goodbye message can be set via the Templates tab."
@@ -1341,11 +1365,11 @@ msgstr ""
 "புதிதாக குழுவிலகப்படாத உறுப்பினர்களுக்கு விடைபெறும் செய்தியை அனுப்பவா? மக்களை கைமுறையாக குழுவிலக நீங்கள் திட்டமிட்டால் மட்டுமே இதை அணைக்கவும், நீங்கள் அவ்வாறு செய்தீர்கள் என்பதை அவர்கள் அறிந்து கொள்ள விரும்பவில்லை.\n"
 " குட்பை செய்தியின் உரையை வார்ப்புருக்கள் தாவல் வழியாக அமைக்கலாம்."
 
-#: forms/list_forms.py:1099
+#: forms/list_forms.py:1100
 msgid "Admin immed notify"
 msgstr "நிர்வாகி உடனடி அறிவிப்பு"
 
-#: forms/list_forms.py:1101
+#: forms/list_forms.py:1102
 msgid ""
 "Should the list moderators get immediate notice of new requests, as well as "
 "daily notices about collected ones? List moderators (and list "
@@ -1361,40 +1385,55 @@ msgstr ""
 "காரணத்திற்காக நடத்தப்படும் இடுகைகள் போன்ற ஒப்புதல் நிலுவையில் உள்ள "
 "கோரிக்கைகளின் நாள்தோறும் நினைவூட்டல்களை அனுப்புகின்றன. இந்த விருப்பத்தை "
 "அமைப்பது புதிய கோரிக்கைகளின் வருகையின் போது உடனடியாக அறிவிப்புகளை "
-"அனுப்புகிறது."
+"அனுப்புகிறது. "
 
-#: forms/list_forms.py:1113
+#: forms/list_forms.py:1114
+msgid "Admin notify held with attachment"
+msgstr "நிர்வாகி அறிவிப்புடன் நடைபெற்றது"
+
+#: forms/list_forms.py:1116
+msgid ""
+"If the above Admin immed notify setting is Yes, should the notice of a held "
+"message have the message attached.  You may want to set this to No if "
+"notices of held spammy messages are caught in the admin's spam filters."
+msgstr ""
+"மேலே உள்ள நிர்வாகி உடனடி அறிவிப்பு அமைப்பு ஆம் எனில், ஒரு வைத்திருக்கும் "
+"செய்தியின் அறிவிப்பில் செய்தி இணைக்கப்பட்டிருந்தால். நிர்வாகியின் ச்பேம் "
+"வடிப்பான்களில் வைத்திருக்கும் ச்பேமி செய்திகளின் அறிவிப்புகள் சிக்கினால் இதை"
+" நீங்கள் அமைக்க விரும்பலாம்."
+
+#: forms/list_forms.py:1125
 msgid "Notify admin of membership changes"
 msgstr "உறுப்பினர் மாற்றங்களை நிர்வாகிக்கு அறிவிக்கவும்"
 
-#: forms/list_forms.py:1115
+#: forms/list_forms.py:1127
 msgid "Should administrator get notices of subscribes and unsubscribes?"
 msgstr ""
 "நிர்வாகி சந்தாதாரர்கள் மற்றும் குழுவிலகங்களின் அறிவிப்பைப் பெற வேண்டுமா?"
 
-#: forms/list_forms.py:1122
+#: forms/list_forms.py:1134
 msgid "Not Moderated"
 msgstr "மிதமானதாக இல்லை"
 
-#: forms/list_forms.py:1123
+#: forms/list_forms.py:1135
 msgid "Moderated but allows for open posting"
 msgstr "மிதமான ஆனால் திறந்த இடுகையை அனுமதிக்கிறது"
 
-#: forms/list_forms.py:1124
+#: forms/list_forms.py:1136
 msgid "Moderated"
 msgstr "மிதமான"
 
-#: forms/list_forms.py:1136
+#: forms/list_forms.py:1148
 msgid "Show list on index page"
 msgstr "குறியீட்டு பக்கத்தில் பட்டியலைக் காட்டு"
 
-#: forms/list_forms.py:1138
+#: forms/list_forms.py:1150
 msgid "Choose whether to include this list on the list of all lists"
 msgstr ""
 "இந்த பட்டியலை அனைத்து பட்டியல்களின் பட்டியலிலும் சேர்க்க வேண்டுமா என்பதைத் "
 "தேர்வுசெய்க"
 
-#: forms/list_forms.py:1145
+#: forms/list_forms.py:1157
 msgid ""
 "This description is used when the mailing list is listed with other mailing "
 "lists, or in headers, and so forth. It should be as succinct as you can get "
@@ -1405,45 +1444,45 @@ msgstr ""
 "என்பதை அடையாளம் காணும் அதே வேளையில், நீங்கள் அதைப் பெறக்கூடிய அளவுக்கு "
 "சுருக்கமாக இருக்க வேண்டும்."
 
-#: forms/list_forms.py:1152
+#: forms/list_forms.py:1164
 msgid "Long Description"
 msgstr "நீண்ட விளக்கம்"
 
-#: forms/list_forms.py:1153
+#: forms/list_forms.py:1165
 msgid "A longer description of this mailing list."
 msgstr "இந்த அஞ்சல் பட்டியலின் நீண்ட விளக்கம்."
 
-#: forms/list_forms.py:1158
+#: forms/list_forms.py:1170
 msgid "Display name"
 msgstr "காட்சி பெயர்"
 
-#: forms/list_forms.py:1160
+#: forms/list_forms.py:1172
 msgid "Display name is the name shown in the web interface."
 msgstr "காட்சி பெயர் என்பது வலை இடைமுகத்தில் காட்டப்பட்டுள்ள பெயர்."
 
-#: forms/list_forms.py:1163
+#: forms/list_forms.py:1175
 msgid "Subject prefix"
 msgstr "பொருள் முன்னொட்டு"
 
-#: forms/list_forms.py:1168
+#: forms/list_forms.py:1180
 msgid "Preferred Language"
 msgstr "விருப்பமான மொழி"
 
-#: forms/list_forms.py:1174
+#: forms/list_forms.py:1186
 msgid "Members List Visibility"
 msgstr "உறுப்பினர்கள் பட்டியல் தெரிவுநிலை"
 
-#: forms/list_forms.py:1179
+#: forms/list_forms.py:1191
 msgid "Who is allowed to see members list for this MailingList?"
 msgstr ""
 "இந்த அஞ்சல் பட்டியலுக்கான உறுப்பினர்கள் பட்டியலைப் பார்க்க யார் "
 "அனுமதிக்கப்படுகிறார்கள்?"
 
-#: forms/list_forms.py:1198
+#: forms/list_forms.py:1210
 msgid "Gateway to mail"
 msgstr "அஞ்சலுக்கான நுழைவாயில்"
 
-#: forms/list_forms.py:1200
+#: forms/list_forms.py:1212
 msgid ""
 "Flag indicating that posts to the linked newsgroup should be gated to the "
 "list"
@@ -1451,11 +1490,11 @@ msgstr ""
 "இணைக்கப்பட்ட செய்திக்குழுவுடன் இடுகைகள் பட்டியலுக்கு வர வேண்டும் என்பதைக் "
 "குறிக்கும் கொடி"
 
-#: forms/list_forms.py:1207
+#: forms/list_forms.py:1219
 msgid "Gateway to news"
 msgstr "செய்திக்கு நுழைவாயில்"
 
-#: forms/list_forms.py:1209
+#: forms/list_forms.py:1221
 msgid ""
 "Flag indicating that posts to the list should be gated to the linked "
 "newsgroup."
@@ -1463,27 +1502,27 @@ msgstr ""
 "பட்டியலுக்கான இடுகைகள் இணைக்கப்பட்ட செய்திக்குழுவுடன் பெறப்பட வேண்டும் "
 "என்பதைக் குறிக்கும் கொடி."
 
-#: forms/list_forms.py:1214
+#: forms/list_forms.py:1226
 msgid "Linked Newsgroup"
 msgstr "இணைக்கப்பட்ட செய்திக்குழு"
 
-#: forms/list_forms.py:1216
+#: forms/list_forms.py:1228
 msgid "The name of the linked newsgroup."
 msgstr "இணைக்கப்பட்ட செய்திக்குழுவின் பெயர்."
 
-#: forms/list_forms.py:1219
+#: forms/list_forms.py:1231
 msgid "Newsgroup moderation"
 msgstr "செய்திக்குழு மிதமான"
 
-#: forms/list_forms.py:1224
+#: forms/list_forms.py:1236
 msgid "The moderation policy for the linked newsgroup, if there is one."
 msgstr "ஒன்று இருந்தால், இணைக்கப்பட்ட செய்திக்குழுவிற்கான மிதமான கொள்கை."
 
-#: forms/list_forms.py:1231
+#: forms/list_forms.py:1243
 msgid "NNTP Include subject prefix "
-msgstr "என்.என்.டி.பி பொருள் முன்னொட்டு அடங்கும்"
+msgstr "என்.என்.டி.பி பொருள் முன்னொட்டு அடங்கும் "
 
-#: forms/list_forms.py:1233
+#: forms/list_forms.py:1245
 msgid ""
 "Flag indicating whether the list's \"Subject Prefix\" should be included in "
 "posts gated to usenet."
@@ -1491,11 +1530,11 @@ msgstr ""
 "பட்டியலின் \"பொருள் முன்னொட்டு\" பயனற்ற இடுகைகளில் சேர்க்கப்பட வேண்டுமா "
 "என்பதைக் குறிக்கும் கொடி."
 
-#: forms/list_forms.py:1243
+#: forms/list_forms.py:1255
 msgid "Emails to mass subscribe"
 msgstr "வெகுசன குழுசேர மின்னஞ்சல்கள்"
 
-#: forms/list_forms.py:1245
+#: forms/list_forms.py:1257
 msgid ""
 "The following formats are accepted:\n"
 "jdoe@example.com\n"
@@ -1513,42 +1552,42 @@ msgstr ""
 " jdoe@example.com (சான் டோ)\n"
 " காட்சி பெயரை முகவரியுடன் இணைக்க கடைசி மூன்று பயன்படுத்தவும்\n"
 
-#: forms/list_forms.py:1256
+#: forms/list_forms.py:1268
 msgid "Pre confirm"
 msgstr "முன் உறுதிப்படுத்தவும்"
 
-#: forms/list_forms.py:1259
+#: forms/list_forms.py:1271
 msgid "If checked, users will not have to confirm their subscription."
 msgstr ""
 "சரிபார்க்கப்பட்டால், பயனர்கள் தங்கள் சந்தாவை உறுதிப்படுத்த வேண்டியதில்லை."
 
-#: forms/list_forms.py:1265
+#: forms/list_forms.py:1277
 msgid "Pre approved"
 msgstr "முன் அங்கீகரிக்கப்பட்டது"
 
-#: forms/list_forms.py:1268
+#: forms/list_forms.py:1280
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
 msgstr ""
 "சரிபார்க்கப்பட்டால், மதிப்பீட்டாளர்கள் சந்தா கோரிக்கையை அங்கீகரிக்க "
 "வேண்டியதில்லை."
 
-#: forms/list_forms.py:1275
+#: forms/list_forms.py:1287
 msgid "Pre Verified"
 msgstr "முன் சரிபார்க்கப்பட்டது"
 
-#: forms/list_forms.py:1278
+#: forms/list_forms.py:1290
 msgid ""
 "If checked, users will not have to verify that their email address is valid."
 msgstr ""
 "சரிபார்க்கப்பட்டால், பயனர்கள் தங்கள் மின்னஞ்சல் முகவரி செல்லுபடியாகும் "
 "என்பதை சரிபார்க்க வேண்டியதில்லை."
 
-#: forms/list_forms.py:1285
+#: forms/list_forms.py:1297
 msgid "Invitation"
 msgstr "அழைப்பு"
 
-#: forms/list_forms.py:1288
+#: forms/list_forms.py:1300
 msgid ""
 "If checked, the other checkboxes are ignored and the users will be sent an "
 "invitation to join the list and will be subscribed upon acceptance thereof."
@@ -1557,7 +1596,7 @@ msgstr ""
 "பட்டியலில் சேர அழைப்பு அனுப்பப்படும், அதை ஏற்றுக்கொண்டவுடன் சந்தா "
 "செலுத்தப்படும்."
 
-#: forms/list_forms.py:1306
+#: forms/list_forms.py:1318
 msgid ""
 "If set to \"Yes\" or \"No\", List's default setting of send_welcome_message "
 "will be ignored for these subscribers and a welcome message will be sent or "
@@ -1567,68 +1606,68 @@ msgstr ""
 " செய்தியின் இயல்புநிலை அமைப்பு புறக்கணிக்கப்படும், மேலும் வரவேற்பு செய்தி "
 "அனுப்பப்படும் அல்லது தேர்வின் அடிப்படையில் அனுப்பப்படாது."
 
-#: forms/list_forms.py:1346
+#: forms/list_forms.py:1358
 msgid "Emails to Unsubscribe"
 msgstr "குழுவிலகுவதற்கான மின்னஞ்சல்கள்"
 
-#: forms/list_forms.py:1347
+#: forms/list_forms.py:1359
 msgid "Add one email address on each line"
 msgstr "ஒவ்வொரு வரியிலும் ஒரு மின்னஞ்சல் முகவரியைச் சேர்க்கவும்"
 
-#: forms/list_forms.py:1363
+#: forms/list_forms.py:1375
 msgid "Default antispam action"
 msgstr "இயல்புநிலை ஆண்டிச்பாம் செயல்"
 
-#: forms/list_forms.py:1368
+#: forms/list_forms.py:1380
 msgid "Header"
 msgstr "தலைப்பி"
 
-#: forms/list_forms.py:1369
+#: forms/list_forms.py:1381
 msgid "Email header to filter on (case-insensitive)."
 msgstr "வடிகட்ட மின்னஞ்சல் தலைப்பு (வழக்கு-உணர்திறன்)."
 
-#: forms/list_forms.py:1371
+#: forms/list_forms.py:1383
 msgid "Please enter a header."
 msgstr "தயவுசெய்து ஒரு தலைப்பை உள்ளிடவும்."
 
-#: forms/list_forms.py:1372
+#: forms/list_forms.py:1384
 msgid "Please enter a valid header."
 msgstr "சரியான தலைப்பை உள்ளிடவும்."
 
-#: forms/list_forms.py:1376
+#: forms/list_forms.py:1388
 msgid "Pattern"
 msgstr "முறை"
 
-#: forms/list_forms.py:1378
+#: forms/list_forms.py:1390
 msgid "Regular expression matching the header's value (case-insensitive)."
 msgstr ""
 "தலைப்பின் மதிப்புடன் பொருந்தக்கூடிய வழக்கமான வெளிப்பாடு (வழக்கு-உணர்வற்றது)."
 
-#: forms/list_forms.py:1382
+#: forms/list_forms.py:1394
 msgid "Please enter a pattern."
 msgstr "தயவுசெய்து ஒரு வடிவத்தை உள்ளிடவும்."
 
-#: forms/list_forms.py:1383
+#: forms/list_forms.py:1395
 msgid "Please enter a valid pattern."
 msgstr "சரியான வடிவத்தை உள்ளிடவும்."
 
-#: forms/list_forms.py:1387 templates/postorius/domain/index.html:26
+#: forms/list_forms.py:1399 templates/postorius/domain/index.html:27
 msgid "Action"
 msgstr "செயல்"
 
-#: forms/list_forms.py:1388
+#: forms/list_forms.py:1400
 msgid "Please enter a valid action."
 msgstr "சரியான செயலை உள்ளிடவும்."
 
-#: forms/list_forms.py:1391
+#: forms/list_forms.py:1403
 msgid "Action to take when a header matches"
 msgstr "ஒரு தலைப்பு பொருந்தும்போது எடுக்க நடவடிக்கை"
 
-#: forms/list_forms.py:1426
+#: forms/list_forms.py:1438
 msgid "Select Email"
 msgstr "மின்னஞ்சலைத் தேர்ந்தெடுக்கவும்"
 
-#: forms/list_forms.py:1452
+#: forms/list_forms.py:1464
 msgid "Data"
 msgstr "தகவல்கள்"
 
@@ -1688,7 +1727,7 @@ msgid ""
 "is normally shown. If you do not want your email address to show up on this "
 "membership roster, select Yes for this option."
 msgstr ""
-"பிற உறுப்பினர்கள் பட்டியல் உறுப்பினர்களைக் காண அனுமதிக்கும்போது, ​​உங்கள் "
+"பிற உறுப்பினர்கள் பட்டியல் உறுப்பினர்களைக் காண அனுமதிக்கும்போது, உங்கள் "
 "மின்னஞ்சல் முகவரி பொதுவாக காட்டப்படும். இந்த உறுப்பினர் பட்டியலில் உங்கள் "
 "மின்னஞ்சல் முகவரி காண்பிக்கப்படுவதை நீங்கள் விரும்பவில்லை என்றால், இந்த "
 "விருப்பத்திற்கு ஆம் என்பதைத் தேர்ந்தெடுக்கவும்."
@@ -1773,7 +1812,7 @@ msgstr ""
 " $ உரிமையாளர்_மெயில்: -owner முகவரியுக்கான மின்னஞ்சல் முகவரி\n"
 " $ site_email: தளத்தின் உரிமையாளர்களை அடைய மின்னஞ்சல் முகவரி\n"
 " $ மொழி: பட்டியலின் விருப்பமான மொழிக்கான இரண்டு கடித மொழி குறியீடு எ.கா. fr, en, de\n"
-" சில வார்ப்புருக்கள் கூடுதல் மாறிகளை ஏற்றுக்கொள்கின்றன. <A href = \"https://docs.mailman3.org/projects/mailman/en/latest/src/mailman/rest/docs/templates.html#templated-texts\"> இந்த ஆவணம் </a>\n"
+" சில வார்ப்புருக்கள் கூடுதல் மாறிகளை ஏற்றுக்கொள்கின்றன. <A href = \"https://docs.mailman3.org/projects/mailman/en/latest/src/mailman/rest/docs/templates.html#templated-texts\"> இந்த ஆவணம் </a> \n"
 
 #: models.py:80
 msgid "owner"
@@ -2057,7 +2096,7 @@ msgstr "தடைகள்"
 msgid "System Information"
 msgstr "கணினி செய்தி"
 
-#: templates/postorius/base.html:102 templates/postorius/menu/list_nav.html:51
+#: templates/postorius/base.html:102 templates/postorius/menu/list_nav.html:65
 #: templates/postorius/user/all.html:8 templates/postorius/user/all.html:13
 msgid "Users"
 msgstr "பயனர்கள்"
@@ -2098,22 +2137,23 @@ msgid ""
 "      "
 msgstr ""
 "\n"
-"இது %(அளவு) பட்டியல்களை நீக்கும், அவற்றில் சில:"
+"        இது %(size)s பட்டியல்களை நீக்கும், அவற்றில் சில:\n"
+"      "
 
 #: templates/postorius/domain/confirm_delete.html:33
-#: templates/postorius/domain/index.html:59
+#: templates/postorius/domain/index.html:61
 #: templates/postorius/domain/template_index.html:35
 #: templates/postorius/lists/confirm_delete.html:5
 #: templates/postorius/lists/members.html:168
 #: templates/postorius/lists/members.html:179
 #: templates/postorius/lists/template_list.html:33
-#: templates/postorius/menu/list_nav.html:89
+#: templates/postorius/menu/list_nav.html:103
 msgid "Delete"
 msgstr "நீக்கு"
 
 #: templates/postorius/domain/confirm_delete.html:34
 #: templates/postorius/domain/template_delete.html:28
-#: templates/postorius/lists/confirm_delete.html:25
+#: templates/postorius/lists/confirm_delete.html:26
 #: templates/postorius/lists/confirm_remove_role.html:23
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
@@ -2138,28 +2178,28 @@ msgstr "புதுப்பிப்பு"
 msgid "Add Domain"
 msgstr "டொமைனைச் சேர்க்கவும்"
 
-#: templates/postorius/domain/index.html:25
-#: templates/postorius/menu/list_nav.html:57
-#: templates/postorius/menu/list_nav.html:63
+#: templates/postorius/domain/index.html:26
+#: templates/postorius/menu/list_nav.html:71
+#: templates/postorius/menu/list_nav.html:77
 msgid "Owners"
 msgstr "உரிமையாளர்கள்"
 
-#: templates/postorius/domain/index.html:38
-#: templates/postorius/domain/index.html:58
+#: templates/postorius/domain/index.html:40
+#: templates/postorius/domain/index.html:60
 #: templates/postorius/domain/template_index.html:34
 #: templates/postorius/lists/template_list.html:32
 msgid "Edit"
 msgstr "தொகு"
 
-#: templates/postorius/domain/index.html:50
+#: templates/postorius/domain/index.html:52
 msgid "remove"
 msgstr "அகற்று"
 
-#: templates/postorius/domain/index.html:54
+#: templates/postorius/domain/index.html:56
 msgid "Add"
 msgstr "கூட்டு"
 
-#: templates/postorius/domain/index.html:57
+#: templates/postorius/domain/index.html:59
 #: templates/postorius/domain/template_add.html:6
 #: templates/postorius/domain/template_delete.html:6
 #: templates/postorius/domain/template_index.html:6
@@ -2168,11 +2208,11 @@ msgstr "கூட்டு"
 #: templates/postorius/lists/template_delete.html:7
 #: templates/postorius/lists/template_list.html:7
 #: templates/postorius/lists/template_update.html:7
-#: templates/postorius/menu/list_nav.html:71 templatetags/nav_helpers.py:39
+#: templates/postorius/menu/list_nav.html:85 templatetags/nav_helpers.py:39
 msgid "Templates"
 msgstr "வார்ப்புருக்கள்"
 
-#: templates/postorius/domain/index.html:67
+#: templates/postorius/domain/index.html:69
 msgid "No domains yet."
 msgstr "இன்னும் களங்கள் இல்லை."
 
@@ -2190,7 +2230,7 @@ msgstr "டொமைனை உருவாக்கவும்"
 
 #: templates/postorius/domain/owners.html:6
 msgid "Add domain owner "
-msgstr "டொமைன் உரிமையாளரைச் சேர்க்கவும்"
+msgstr "டொமைன் உரிமையாளரைச் சேர்க்கவும் "
 
 #: templates/postorius/domain/owners.html:12
 msgid "Add a new owner to"
@@ -2224,8 +2264,9 @@ msgid ""
 "           "
 msgstr ""
 "\n"
-"\"%(name)s\" வார்ப்புருவை நீக்க விரும்புகிறீர்களா என்பது உறுதி\n"
-" டொமைன் \"%(identifier)s\"?"
+"           \"%(name)s\" வார்ப்புருவை நீக்க விரும்புகிறீர்களா என்பது உறுதி\n"
+" டொமைன் \"%(identifier)s\"?\n"
+"           "
 
 #: templates/postorius/domain/template_index.html:16
 #: templates/postorius/lists/template_list.html:15
@@ -2262,75 +2303,75 @@ msgstr "இந்த முகவரி அன்-பான்"
 msgid "No addresses are currently banned."
 msgstr "முகவரிகள் தற்போது தடை செய்யப்படவில்லை."
 
-#: templates/postorius/index.html:6
+#: templates/postorius/index.html:7
 msgid "List Index"
 msgstr "பட்டியல் அட்டவணை"
 
-#: templates/postorius/index.html:12
+#: templates/postorius/index.html:13
 msgid "Mailing Lists"
 msgstr "அஞ்சல் பட்டியல்கள்"
 
-#: templates/postorius/index.html:20
+#: templates/postorius/index.html:21
 msgid "Role: "
-msgstr "பங்கு:"
+msgstr "பங்கு: "
 
-#: templates/postorius/index.html:41
+#: templates/postorius/index.html:42
 msgid "Owner"
 msgstr "உரிமையாளர்"
 
-#: templates/postorius/index.html:46
+#: templates/postorius/index.html:47
 msgid "Moderator"
 msgstr "மதிப்பீட்டாளர்"
 
-#: templates/postorius/index.html:51
+#: templates/postorius/index.html:52
 msgid "Member"
 msgstr "உறுப்பினர்"
 
-#: templates/postorius/index.html:56
+#: templates/postorius/index.html:57
 msgid "Non-member"
 msgstr "உறுப்பினர் அல்லாதவர்"
 
-#: templates/postorius/index.html:59
+#: templates/postorius/index.html:60
 msgid "All"
 msgstr "அனைத்தும்"
 
-#: templates/postorius/index.html:72
+#: templates/postorius/index.html:73
 msgid "Create New Domain"
 msgstr "புதிய களத்தை உருவாக்கவும்"
 
-#: templates/postorius/index.html:74
+#: templates/postorius/index.html:75
 msgid "Create New List"
 msgstr "புதிய பட்டியலை உருவாக்கவும்"
 
-#: templates/postorius/index.html:86
+#: templates/postorius/index.html:87
 msgid "List name"
 msgstr "பட்டியல் பெயர்"
 
-#: templates/postorius/index.html:87
+#: templates/postorius/index.html:88
 msgid "Post address"
 msgstr "முகவரி முகவரி"
 
-#: templates/postorius/index.html:90 templates/postorius/menu/list_nav.html:54
-#: templates/postorius/menu/list_nav.html:60
-#: templates/postorius/menu/list_nav.html:67
+#: templates/postorius/index.html:91 templates/postorius/menu/list_nav.html:68
+#: templates/postorius/menu/list_nav.html:74
+#: templates/postorius/menu/list_nav.html:81
 msgid "Members"
 msgstr "உறுப்பினர்கள்"
 
-#: templates/postorius/index.html:91
+#: templates/postorius/index.html:92
 #: templates/postorius/lists/held_messages.html:11
-#: templates/postorius/menu/list_nav.html:42
+#: templates/postorius/menu/list_nav.html:53
 msgid "Held messages"
 msgstr "செய்திகள்"
 
-#: templates/postorius/index.html:92 templates/postorius/menu/list_nav.html:14
+#: templates/postorius/index.html:93 templates/postorius/menu/list_nav.html:14
 msgid "Subscription requests"
 msgstr "சந்தா கோரிக்கைகள்"
 
-#: templates/postorius/index.html:104
+#: templates/postorius/index.html:105
 msgid "unadvertised"
 msgstr "ஏற்றுக்கொள்ளப்படாதது"
 
-#: templates/postorius/index.html:140
+#: templates/postorius/index.html:141
 msgid ""
 "Only lists that you are owner, moderator or subscriber for are shown here. "
 "Click to <a href=\"?all-lists\"> see all lists</a>."
@@ -2339,13 +2380,13 @@ msgstr ""
 "மட்டுமே இங்கே காட்டப்பட்டுள்ளன. <A href = \"? அனைத்து பட்டியல்களுக்கும்” "
 "என்பதைக் சொடுக்கு செய்க> எல்லா பட்டியல்களையும் காண்க </a>."
 
-#: templates/postorius/index.html:144
+#: templates/postorius/index.html:145
 msgid "Only admins see unadvertised lists in the list index."
 msgstr ""
 "பட்டியல் குறியீட்டில் சேர்க்கப்படாத பட்டியல்களை நிர்வாகிகள் மட்டுமே "
 "காண்கின்றனர்."
 
-#: templates/postorius/index.html:150
+#: templates/postorius/index.html:151
 msgid "There are currently no mailing lists."
 msgstr "தற்போது அஞ்சல் பட்டியல்கள் எதுவும் இல்லை."
 
@@ -2361,7 +2402,11 @@ msgstr "இந்த பட்டியலை நிரந்தரமாக ந
 msgid "All settings and membership data will be lost!"
 msgstr "அனைத்து அமைப்புகளும் உறுப்பினர் தரவுகளும் இழக்கப்படும்!"
 
-#: templates/postorius/lists/confirm_delete.html:20
+#: templates/postorius/lists/confirm_delete.html:15
+msgid "Archives will NOT be deleted."
+msgstr "காப்பகங்கள் நீக்கப்படாது."
+
+#: templates/postorius/lists/confirm_delete.html:21
 #, python-format
 msgid ""
 "\n"
@@ -2369,7 +2414,8 @@ msgid ""
 "                "
 msgstr ""
 "\n"
-"நீக்கு %(பட்டியல் பெயர்) கள்"
+"                நீக்கு %(listname)sகள்\n"
+"                "
 
 #: templates/postorius/lists/confirm_remove_role.html:5
 msgid "Confirm remove role"
@@ -2387,7 +2433,7 @@ msgstr "நீங்கள் உறுதியாக இருக்கிற�
 #: templates/postorius/lists/confirm_remove_role.html:22
 #, python-format
 msgid " Remove %(role_translated)s"
-msgstr "%ஐ அகற்று (Real_translated) கள்"
+msgstr " ஐ அகற்று %(role_translated)s கள்"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -2401,7 +2447,8 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"எச்சரிக்கை! இது ஒவ்வொரு உறுப்பினரையும் %(பட்டியல் பெயர்) இருந்து அகற்றும்!"
+"        எச்சரிக்கை! இது ஒவ்வொரு உறுப்ப(னரையும் %(listname)s இருந்து அகம்!\n"
+"    "
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:21
 #: templates/postorius/lists/mass_removal.html:17
@@ -2417,7 +2464,8 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"%(ஏ.டி.டி.ஆர்) எச் முதல் %(addr)s ( %(name)s) சந்தாவை உறுதிப்படுத்தவும்:"
+"    (ஏ.டி.டி.ஆர்) எச் முதல் %(addr)s %(name)s(%(listid)s) சந்தாவை உறுதிப்படுத்தவும்:\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:16
 #, python-format
@@ -2427,7 +2475,8 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"%(addr)s ( %(name)s) இலிருந்து %(ஏ.டி.டி.ஆர்) கள் குழுவிலக்கிற்கானவை என்பதை உறுதிப்படுத்தவும்:"
+"    %(addr)s %(name)s(%(listid)s) இலிருந்து (ஏ.டி.டி.ஆர்) கள் குழுவிலக்கிற்கானவை என்பதை உறுதிப்படுத்தவும்:\n"
+"    "
 
 #: templates/postorius/lists/confirm_token.html:20
 #, python-format
@@ -2437,10 +2486,11 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"கிள்ளாக்கு %(token)s உறுதிப்படுத்தவும்:"
+"    கிள்ளாக்கு %(token)s உறுதிப்படுத்தவும்:\n"
+"    "
 
 #: templates/postorius/lists/header_matches.html:7
-#: templates/postorius/menu/list_nav.html:88
+#: templates/postorius/menu/list_nav.html:102
 msgid "Header filters"
 msgstr "தலைப்பு வடிப்பான்கள்"
 
@@ -2534,8 +2584,8 @@ msgid "Remove listed users"
 msgstr "பட்டியலிடப்பட்ட பயனர்களை அகற்று"
 
 #: templates/postorius/lists/mass_subscribe.html:7
-#: templates/postorius/menu/list_nav.html:79
-#: templates/postorius/menu/list_nav.html:83
+#: templates/postorius/menu/list_nav.html:93
+#: templates/postorius/menu/list_nav.html:97
 msgid "Mass subscribe"
 msgstr "வெகுசன குழு"
 
@@ -2629,7 +2679,7 @@ msgid "There are currently no subscription requests for this list."
 msgstr "இந்த பட்டியலுக்கு தற்போது சந்தா கோரிக்கைகள் எதுவும் இல்லை."
 
 #: templates/postorius/lists/settings.html:7
-#: templates/postorius/menu/list_nav.html:72
+#: templates/postorius/menu/list_nav.html:86
 msgid "Settings"
 msgstr "அமைப்புகள்"
 
@@ -2664,7 +2714,8 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"<a வகுப்பு = \"btn btn-primary\" href = \"%(hyperkitty_list_url)s\"> காப்பகங்கள் </a>"
+"            <a வகுப்பு = \"btn btn-primary\" href = \"%(hyperkitty_list_url)s\"> காப்பகங்கள் </a>\n"
+"          "
 
 #: templates/postorius/lists/summary.html:47
 #: templates/postorius/lists/summary.html:104
@@ -2709,9 +2760,10 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"குழுசேர நீங்கள் பொருள் 'குழுசேர்' உடன் மின்னஞ்சலை அனுப்பலாம்\n"
+"                குழுசேர நீங்கள் பொருள் 'குழுசேர்' உடன் மின்னஞ்சலை அனுப்பலாம்\n"
 " <a href = \"mailto:%(address)s? பொருள் = குழுசேர்\">%(address)s </a>\n"
-" அல்லது கீழே உள்ள படிவத்தைப் பயன்படுத்தவும்:"
+" அல்லது கீழே உள்ள படிவத்தைப் பயன்படுத்தவும்:\n"
+"            "
 
 #: templates/postorius/lists/summary.html:96
 #: templates/postorius/lists/summary.html:124
@@ -2735,9 +2787,10 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"இந்த பட்டியலிலிருந்து குழுசேர அல்லது குழுவிலக, முதலில் உள்நுழைக.\n"
+"        இந்த பட்டியலிலிருந்து குழுசேர அல்லது குழுவிலக, முதலில் உள்நுழைக.\n"
 " நீங்கள் முன்பு உள்நுழையவில்லை என்றால், நீங்கள் ஒரு கணக்கை அமைக்க வேண்டியிருக்கலாம்\n"
-" பொருத்தமான மின்னஞ்சல் முகவரியுடன்."
+" பொருத்தமான மின்னஞ்சல் முகவரியுடன்.\n"
+"        "
 
 #: templates/postorius/lists/summary.html:116
 msgid ""
@@ -2747,8 +2800,9 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"கணக்கை உருவாக்காமல் நீங்கள் குழுசேரலாம்.\n"
-" நீங்கள் அவ்வாறு செய்ய விரும்பினால், தயவுசெய்து கீழே உள்ள படிவத்தைப் பயன்படுத்தவும்."
+"          கணக்கை உருவாக்காமல் நீங்கள் குழுசேரலாம்.\n"
+" நீங்கள் அவ்வாறு செய்ய விரும்பினால், தயவுசெய்து கீழே உள்ள படிவத்தைப் பயன்படுத்தவும்.\n"
+"          "
 
 #: templates/postorius/lists/summary.html:134
 msgid "List metrics"
@@ -2779,44 +2833,45 @@ msgid ""
 "     "
 msgstr ""
 "\n"
-"\"%(name)s\" வார்ப்புருவை நீக்க விரும்புகிறீர்களா என்பது உறுதி\n"
-" \"%(identifier)s\" பட்டியலிலிருந்து?"
+"     \"%(name)s\" வார்ப்புருவை நீக்க விரும்புகிறீர்களா என்பது உறுதி\n"
+" \"%(identifier)s\" பட்டியலிலிருந்து?\n"
+"     "
 
-#: templates/postorius/menu/list_nav.html:19
-#: templates/postorius/menu/list_nav.html:30
+#: templates/postorius/menu/list_nav.html:24
+#: templates/postorius/menu/list_nav.html:41
 msgid "Pending Approval"
 msgstr "ஒப்புதல் நிலுவையில் உள்ளது"
 
-#: templates/postorius/menu/list_nav.html:22
-#: templates/postorius/menu/list_nav.html:33
+#: templates/postorius/menu/list_nav.html:30
+#: templates/postorius/menu/list_nav.html:44
 msgid "Pending Confirmation"
 msgstr "உறுதிப்படுத்தல் நிலுவையில் உள்ளது"
 
-#: templates/postorius/menu/list_nav.html:25
-#: templates/postorius/menu/list_nav.html:36
+#: templates/postorius/menu/list_nav.html:33
+#: templates/postorius/menu/list_nav.html:47
 msgid "Unsubscription Requests"
 msgstr "குழுவிலகும் கோரிக்கைகள்"
 
-#: templates/postorius/menu/list_nav.html:55
-#: templates/postorius/menu/list_nav.html:61
+#: templates/postorius/menu/list_nav.html:69
+#: templates/postorius/menu/list_nav.html:75
 msgid "Non-Members"
 msgstr "உறுப்பினர்கள் அல்லாதவர்கள்"
 
-#: templates/postorius/menu/list_nav.html:56
-#: templates/postorius/menu/list_nav.html:62
+#: templates/postorius/menu/list_nav.html:70
+#: templates/postorius/menu/list_nav.html:76
 msgid "Moderators"
 msgstr "மதிப்பீட்டாளர்கள்"
 
-#: templates/postorius/menu/list_nav.html:76
+#: templates/postorius/menu/list_nav.html:90
 msgid "Mass operations"
 msgstr "வெகுசன நடவடிக்கைகள்"
 
-#: templates/postorius/menu/list_nav.html:80
-#: templates/postorius/menu/list_nav.html:84
+#: templates/postorius/menu/list_nav.html:94
+#: templates/postorius/menu/list_nav.html:98
 msgid "Mass removal"
 msgstr "வெகுசன அகற்றுதல்"
 
-#: templates/postorius/menu/list_nav.html:87
+#: templates/postorius/menu/list_nav.html:101
 msgid "Ban List"
 msgstr "பட்டியல்"
 
@@ -3079,38 +3134,38 @@ msgid "Mailman REST API not available. Please start Mailman core."
 msgstr ""
 "மெயில்மேன் ரெச்ட் பநிஇ கிடைக்கவில்லை. தயவுசெய்து மெயில்மேன் கோர் தொடங்கவும்."
 
-#: views/domain.py:86
+#: views/domain.py:87
 msgid "New Domain registered"
 msgstr "புதிய டொமைன் பதிவு செய்யப்பட்டுள்ளது"
 
-#: views/domain.py:127
+#: views/domain.py:129
 #, python-format
 msgid "Domain %s updated"
 msgstr "டொமைன் %s புதுப்பிக்கப்பட்டன"
 
-#: views/domain.py:130 views/list.py:1030
+#: views/domain.py:132 views/list.py:1034
 msgid "Please check the errors below"
 msgstr "கீழே உள்ள பிழைகளை சரிபார்க்கவும்"
 
-#: views/domain.py:154
+#: views/domain.py:157
 #, python-format
 msgid "The domain %s has been deleted."
 msgstr "டொமைன் %s நீக்கப்பட்டுள்ளன."
 
-#: views/domain.py:160
+#: views/domain.py:163
 #, python-format
 msgid "The domain could not be deleted: %s"
 msgstr "டொமைனை நீக்க முடியவில்லை: %s"
 
-#: views/domain.py:182
+#: views/domain.py:185
 msgid "Added {} as an owner for {}"
 msgstr "{To க்கு உரிமையாளராக {} சேர்க்கப்பட்டது"
 
-#: views/domain.py:217
+#: views/domain.py:220
 msgid "{} is not an owner for {}"
 msgstr "{} {for க்கு உரிமையாளர் அல்ல"
 
-#: views/domain.py:227
+#: views/domain.py:230
 msgid "Removed {} as an owner for {}"
 msgstr "{} க்கு க்கு உரிமையாளராக {} அகற்றப்பட்டது"
 
@@ -3118,7 +3173,7 @@ msgstr "{} க்கு க்கு உரிமையாளராக {} அக
 msgid "The email {} has been banned."
 msgstr "மின்னஞ்சல்}} தடைசெய்யப்பட்டுள்ளது."
 
-#: views/generic.py:122 views/generic.py:137 views/list.py:1572
+#: views/generic.py:122 views/generic.py:137 views/list.py:1576
 #, python-format
 msgid "An error occurred: %s"
 msgstr "பிழை ஏற்பட்டது: %s"
@@ -3155,7 +3210,7 @@ msgstr "தேர்ந்தெடுக்கப்பட்ட உறுப�
 #: views/list.py:206
 #, python-brace-format
 msgid "{email} has been added with the role {role}"
-msgstr "{மின்னஞ்சல் the பாத்திரத்துடன் சேர்க்கப்பட்டுள்ளது {email}"
+msgstr "{role} the பாத்திரத்துடன் சேர்க்கப்பட்டுள்ளது {email}"
 
 #: views/list.py:255
 msgid "Member does not exist"
@@ -3249,7 +3304,7 @@ msgid ""
 " Subscription may be pending address verification, confirmation or approval "
 "as appropriate."
 msgstr ""
-"சந்தா முகவரி சரிபார்ப்பு, உறுதிப்படுத்தல் அல்லது ஒப்புதல் பொருத்தமானதாக "
+" சந்தா முகவரி சரிபார்ப்பு, உறுதிப்படுத்தல் அல்லது ஒப்புதல் பொருத்தமானதாக "
 "நிலுவையில் இருக்கலாம்."
 
 #: views/list.py:767 views/list.py:837
@@ -3265,7 +3320,7 @@ msgstr "படிவத்தை சரியாக நிரப்பவும�
 #, python-brace-format
 msgid "These addresses {address} have been unsubscribed from {list}."
 msgstr ""
-"இந்த முகவரிகள் {address} {பட்டியல் இருந்து இலிருந்து குழுவிலகப்பட்டுள்ளன."
+"இந்த முகவரிகள் {address} {list} இருந்து இலிருந்து குழுவிலகப்பட்டுள்ளன."
 
 #: views/list.py:859
 msgid "The selected messages were accepted"
@@ -3307,148 +3362,148 @@ msgstr "{} க்கான மிதமான செயல் {}"
 msgid "Failed to set moderation action for {}"
 msgstr "{For க்கு மிதமான செயலை அமைப்பதில் தோல்வி"
 
-#: views/list.py:986
+#: views/list.py:990
 msgid "Choose a Domain"
 msgstr "ஒரு டொமைனைத் தேர்வுசெய்க"
 
-#: views/list.py:1010
+#: views/list.py:1014
 msgid "List created"
 msgstr "பட்டியல் உருவாக்கப்பட்டது"
 
-#: views/list.py:1022
+#: views/list.py:1026
 msgid "Mailing List already exists."
 msgstr "அஞ்சல் பட்டியல் ஏற்கனவே உள்ளது."
 
-#: views/list.py:1202
+#: views/list.py:1206
 msgid "Subscriptions pending user confirmation"
 msgstr "சந்தாக்கள் பயனர் உறுதிப்படுத்தல் நிலுவையில் உள்ளன"
 
-#: views/list.py:1215
+#: views/list.py:1219
 msgid "Subscriptions pending approval"
 msgstr "சந்தாக்கள் ஒப்புதல் நிலுவையில் உள்ளன"
 
-#: views/list.py:1228
+#: views/list.py:1232
 msgid "Un-subscriptions pending approval"
 msgstr "ஒப்புதல் நிலுவையில் உள்ளது"
 
-#: views/list.py:1277
+#: views/list.py:1281
 msgid "The request has been accepted."
 msgstr "கோரிக்கை ஏற்றுக்கொள்ளப்பட்டுள்ளது."
 
-#: views/list.py:1278
+#: views/list.py:1282
 msgid "The request has been rejected."
 msgstr "கோரிக்கை நிராகரிக்கப்பட்டுள்ளது."
 
-#: views/list.py:1279
+#: views/list.py:1283
 msgid "The request has been discarded."
 msgstr "கோரிக்கை நிராகரிக்கப்பட்டுள்ளது."
 
-#: views/list.py:1280
+#: views/list.py:1284
 msgid "The request has been defered."
 msgstr "கோரிக்கை ஒத்திவைக்கப்பட்டுள்ளது."
 
-#: views/list.py:1300
+#: views/list.py:1304
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr "கோரிக்கை ஏற்கனவே மிதமானதாக இருந்தது: %s"
 
-#: views/list.py:1304
+#: views/list.py:1308
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr "கோரிக்கையை மிதப்படுத்த முடியவில்லை: %s"
 
-#: views/list.py:1318
+#: views/list.py:1322
 msgid "List Identity"
 msgstr "அடையாள அடையாளத்தை பட்டியலிடுங்கள்"
 
-#: views/list.py:1319
+#: views/list.py:1323
 msgid "Automatic Responses"
 msgstr "தானியங்கி பதில்கள்"
 
-#: views/list.py:1320
+#: views/list.py:1324
 msgid "Alter Messages"
 msgstr "செய்திகளை மாற்றவும்"
 
-#: views/list.py:1321
+#: views/list.py:1325
 msgid "DMARC Mitigations"
 msgstr "Dmarc தணிப்புகள்"
 
-#: views/list.py:1322
+#: views/list.py:1326
 msgid "Digest"
 msgstr "செரிமானம்"
 
-#: views/list.py:1323
+#: views/list.py:1327
 msgid "Message Acceptance"
 msgstr "செய்தி ஏற்றுக்கொள்ளல்"
 
-#: views/list.py:1324
+#: views/list.py:1328
 msgid "Archiving"
 msgstr "காப்பகப்படுத்துதல்"
 
-#: views/list.py:1325
+#: views/list.py:1329
 msgid "Member Policy"
 msgstr "உறுப்பினர் கொள்கை"
 
-#: views/list.py:1326
+#: views/list.py:1330
 msgid "Bounce Processing"
 msgstr "பவுன்ச் செயலாக்கம்"
 
-#: views/list.py:1327
+#: views/list.py:1331
 msgid "Newsgroup Gateway"
 msgstr "செய்திக்குழு நுழைவாயில்"
 
-#: views/list.py:1395
+#: views/list.py:1399
 msgid "The settings have been updated."
 msgstr "அமைப்புகள் புதுப்பிக்கப்பட்டுள்ளன."
 
-#: views/list.py:1398
+#: views/list.py:1402
 msgid "An error occurred: "
-msgstr "பிழை ஏற்பட்டது:"
+msgstr "பிழை ஏற்பட்டது: "
 
-#: views/list.py:1432
+#: views/list.py:1436
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr "பயனர் %(email)s %(role)sுழுவில் இல்லை"
 
-#: views/list.py:1439
+#: views/list.py:1443
 msgid "Removing the last owner is impossible"
 msgstr "கடைசி உரிமையாளரை நீக்குவது சாத்தியமற்றது"
 
-#: views/list.py:1457
+#: views/list.py:1461
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr "பயனரை அகற்ற முடியவில்லை: %(msg)s"
 
-#: views/list.py:1463
+#: views/list.py:1467
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "பயனர் %(address)s %(role)sுழுவிலிருந்து அகற்றப்பட்டுள்ளன."
 
-#: views/list.py:1484
+#: views/list.py:1488
 msgid "No member is subscribed to the list currently."
 msgstr "எந்தவொரு உறுப்பினரும் தற்போது பட்டியலில் குழுசேரவில்லை."
 
-#: views/list.py:1497
+#: views/list.py:1501
 msgid "All members have been unsubscribed from the list."
 msgstr "அனைத்து உறுப்பினர்களும் பட்டியலில் இருந்து குழுவிலகப்பட்டுள்ளனர்."
 
-#: views/list.py:1576
+#: views/list.py:1580
 msgid "The header matches were successfully modified."
 msgstr "தலைப்பு போட்டிகள் வெற்றிகரமாக மாற்றப்பட்டன."
 
-#: views/list.py:1583
+#: views/list.py:1587
 msgid "New header"
 msgstr "புதிய தலைப்பு"
 
-#: views/list.py:1584
+#: views/list.py:1588
 msgid "New pattern"
 msgstr "புதிய முறை"
 
-#: views/list.py:1616
+#: views/list.py:1620
 msgid "Invalid confirmation token"
 msgstr "தவறான உறுதிப்படுத்தல் கிள்ளாக்கு"
 
-#: views/list.py:1626 views/list.py:1642
+#: views/list.py:1630 views/list.py:1646
 msgid "Token expired or invalid."
 msgstr "கிள்ளாக்கு காலாவதியானது அல்லது தவறானது."
 

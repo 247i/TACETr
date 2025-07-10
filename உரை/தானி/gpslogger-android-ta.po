@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (GPSLogger)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-28 15:06+0200\n"
-"PO-Revision-Date: 2024-12-29 16:32+0530\n"
+"POT-Creation-Date: 2025-06-29 01:10+0200\n"
+"PO-Revision-Date: 2025-07-09 09:36\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/gpslogger/android/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #, java-printf-format
 msgctxt "title_drawer_uploadsettings"
@@ -1424,13 +1424,19 @@ msgstr "கோப்புறைக்கு சேமி"
 msgctxt "gpslogger_folder_summary"
 msgid "Where to save the log files to, defaults to /sdcard/GPSLogger"
 msgstr ""
-"பதிவு கோப்புகளை எங்கே சேமிப்பது, இயல்புநிலை /எச்டி அட்டை /சி.பி.எச்.எல்.சி."
+"பதிவுக் கோப்புகளை எங்கே சேமிப்பது, இயல்புநிலை /எச்டி அட்டை /சி.பி.எசு "
+"பதிப்பி"
 
 #, java-printf-format
 msgctxt "autoftp_directory"
 msgid "Folder"
 msgstr "கோப்புறை"
 
+# Please see the explanation -
+# 
+# These look like Java format variables, but they are actually placeholders
+# used within the app, no need to translate the placeholders, eg %YEAR should
+# stay as-is.
 #. These look like Java format variables, but they are actually placeholders
 #. used within the app, no need to translate the placeholders, eg %YEAR should
 #. stay as-is.
@@ -1440,8 +1446,8 @@ msgid ""
 "You can use %SER for device serial, %YEAR, %MONTH, %MONTHNAME, %DAY, "
 "%DAYNAME, %HOUR, %MIN, %PROFILE, %VER for version"
 msgstr ""
-"சாதன சீரியல், %ஆண்டு, %மாதம், %மாத பெயர், %நாள், %நாள் பெயர், %மணிநேரம், "
-"%நிமிடம், %சுயவிவரம், பதிப்பிற்கான %ver"
+"%SER சாதன சீரியல், %YEAR, %MONTH, %MONTHNAME, %DAY, %DAYNAME, %HOUR, %MIN, "
+"%PROFILE, %VER பதிப்பிற்காக"
 
 #, java-printf-format
 msgctxt "new_file_prefix_serial_title"
@@ -1530,6 +1536,20 @@ msgid ""
 msgstr ""
 "ஒரு புள்ளி சேமிக்க மின்னோட்டத்திற்கும் முந்தையவற்றுக்கும் இடையில் "
 "தேவைப்படும் குறைந்தபட்ச தூரம், இல்லையெனில் புள்ளி நிராகரிக்கப்படும்."
+
+#, java-printf-format
+msgctxt "passive_filter_time_title"
+msgid "Passive locations update interval"
+msgstr "செயலற்ற இடங்கள் இடைவெளி புதுப்பித்தல்"
+
+#, java-printf-format
+msgctxt "passive_filter_time_summary"
+msgid ""
+"Reduce redundant passive location updates by adjusting the minimum "
+"collection interval (in seconds)."
+msgstr ""
+"குறைந்தபட்ச சேகரிப்பு இடைவெளியை (நொடிகளில்) சரிசெய்வதன் மூலம் தேவையற்ற "
+"செயலற்ற இருப்பிட புதுப்பிப்புகளைக் குறைக்கவும்."
 
 #, java-printf-format
 msgctxt "points"
@@ -1766,7 +1786,7 @@ msgid ""
 "want it to remain static."
 msgstr ""
 "தனிப்பயன் கோப்பு பெயர் மதிப்புகள் மாறும்போது, தற்போதைய கோப்பு பெயர் "
-"மாற்றட்டும். எடுத்துக்காட்டாக, %மணிநேரம் பயன்படுத்தப்பட்டால், ஒவ்வொரு மணி "
+"மாற்றட்டும். எடுத்துக்காட்டாக, %HOUR பயன்படுத்தப்பட்டால், ஒவ்வொரு மணி "
 "நேரமும் ஒரு புதிய கோப்பு உருவாக்கப்படுகிறது. அதைத் தேர்வுநீக்கு, அது "
 "நிலையானதாக இருக்க விரும்பினால்."
 
@@ -1854,9 +1874,19 @@ msgid "Send on Wi-Fi only"
 msgstr "Wi-Fi இல் மட்டும் அனுப்பு"
 
 #, java-printf-format
+msgctxt "autosend_wifionly_summary"
+msgid ""
+"Wait for a WiFi connection before performing any network requests. Applies "
+"to all requests including sending and logging."
+msgstr ""
+"எந்தவொரு பிணைய கோரிக்கைகளையும் செய்வதற்கு முன் வைஃபை இணைப்புக்காக "
+"காத்திருங்கள். அனுப்புதல் மற்றும் உள்நுழைவு உள்ளிட்ட அனைத்து "
+"கோரிக்கைகளுக்கும் பொருந்தும்."
+
+#, java-printf-format
 msgctxt "logview_showlocationsonly"
 msgid "Locations only"
-msgstr "இருப்பிடம் மட்டும்"
+msgstr "இருப்பிடங்கள் மட்டும்"
 
 #, java-printf-format
 msgctxt "logview_autoscroll"
@@ -1910,8 +1940,8 @@ msgid ""
 "properly. You will now be prompted multiple times for various permissions "
 "(sorry).  Here is an explanation of each permission. ]]>"
 msgstr ""
-"<! [சி.டி.ஏ.டி.ஏ [இந்த பயன்பாட்டிற்கு சரியாக செயல்பட பல்வேறு அனுமதிகள் தேவை."
-" நீங்கள் இப்போது பல்வேறு அனுமதிகளுக்கு பல முறை தூண்டப்படுவீர்கள் "
+"<![CDATA[சி.டி.ஏ.டி.ஏ [இந்த பயன்பாட்டிற்கு சரியாக செயல்பட பல்வேறு அனுமதிகள் "
+"தேவை. நீங்கள் இப்போது பல்வேறு அனுமதிகளுக்கு பல முறை தூண்டப்படுவீர்கள் "
 "(மன்னிக்கவும்). ஒவ்வொரு அனுமதியின் விளக்கம் இங்கே. ]]>"
 
 #, java-printf-format
@@ -1920,9 +1950,8 @@ msgid ""
 "<![CDATA[<b>Device location</b> - This permission allows reading location "
 "data from cell towers and the device GPS hardware.]]>"
 msgstr ""
-"<! [சி.டி.ஏ.டி.ஏ [<b> சாதன இருப்பிடம் </b> - இந்த இசைவு செல் கோபுரங்கள் "
-"மற்றும் சாதன சி.பி.எச் வன்பொருளிலிருந்து இருப்பிட தரவைப் படிக்க "
-"அனுமதிக்கிறது.]]>"
+"<![CDATA[<b> சாதன இருப்பிடம் </b> - இந்த இசைவு செல் கோபுரங்கள் மற்றும் சாதன "
+"சி.பி.எச் வன்பொருளிலிருந்து இருப்பிட தரவைப் படிக்க அனுமதிக்கிறது.]]>"
 
 #, java-printf-format
 msgctxt "gpslogger_permissions_rationale_message_notification"
@@ -1930,8 +1959,8 @@ msgid ""
 "<![CDATA[<b>Notifications</b> - Allow showing a notification, this helps "
 "with keeping the logging service alive. ]]>"
 msgstr ""
-"<! [சி.டி.ஏ.டி.ஏ [<b> அறிவிப்புகள் </b> - அறிவிப்பைக் காட்ட அனுமதிக்கவும், "
-"இது பதிவு சேவையை உயிரோடு வைத்திருக்க உதவுகிறது. ]]>"
+"<![CDATA[<b>அறிவிப்புகள் </b> - அறிவிப்பைக் காட்ட அனுமதிக்கவும், இது பதிவு "
+"சேவையை உயிரோடு வைத்திருக்க உதவுகிறது. ]]>"
 
 #, java-printf-format
 msgctxt "gpslogger_permissions_rationale_message_storage"
@@ -1939,7 +1968,11 @@ msgid ""
 "<![CDATA[<b>Photos, media, files</b> - This permission allows writing log "
 "files and test files to storage, and reading from a list of files for "
 "uploading or sharing. This app will not access your photos or media.]]>"
-msgstr "<!] இந்த பயன்பாடு உங்கள் புகைப்படங்கள் அல்லது ஊடகத்தை அணுகாது.]]"
+msgstr ""
+"<![CDATA[<b> புகைப்படங்கள், மீடியா, கோப்புகள் </b> - இந்த இசைவு பதிவு "
+"கோப்புகள் மற்றும் சோதனை கோப்புகளை சேமிப்பிற்கு எழுத அனுமதிக்கிறது, மேலும் "
+"பதிவேற்றம் அல்லது பகிர்வுக்கான கோப்புகளின் பட்டியலிலிருந்து படிக்க "
+"அனுமதிக்கிறது. இந்த பயன்பாடு உங்கள் புகைப்படங்கள் அல்லது ஊடகத்தை அணுகாது.]]>"
 
 #, java-printf-format
 msgctxt "gpslogger_permissions_rationale_message_location_background"
@@ -1947,9 +1980,8 @@ msgid ""
 "<![CDATA[<b>Allow all the time</b> - Allow this app to receive location "
 "updates when running in the background. ]]>"
 msgstr ""
-"<! [சி.டி.ஏ.டி.ஏ [<b> எல்லா நேரத்தையும் அனுமதிக்கவும் </b> - பின்னணியில் "
-"இயங்கும் போது இருப்பிட புதுப்பிப்புகளைப் பெற இந்த பயன்பாட்டை அனுமதிக்கவும். "
-"]]>"
+"<![CDATA[<b> எல்லா நேரத்தையும் அனுமதிக்கவும் </b> - பின்னணியில் இயங்கும் "
+"போது இருப்பிட புதுப்பிப்புகளைப் பெற இந்த பயன்பாட்டை அனுமதிக்கவும். ]]>"
 
 #, java-printf-format
 msgctxt "gpslogger_permissions_rationale_message_battery_optimization"
@@ -1957,9 +1989,9 @@ msgid ""
 "<![CDATA[<b>Ignore battery optimization</b> - Allow this app to run in the "
 "background by reducing battery optimization. ]]>"
 msgstr ""
-"<! [சி.டி.ஏ.டி.ஏ [<b> பேட்டரி உகப்பாக்கத்தை புறக்கணிக்கவும் </b> - பேட்டரி "
-"உகப்பாக்கத்தைக் குறைப்பதன் மூலம் இந்த பயன்பாட்டை பின்னணியில் இயக்க "
-"அனுமதிக்கவும். ]]>"
+"<![CDATA[<b><! [சி.டி.ஏ.டி.ஏ [<b> பேட்டரி உகப்பாக்கத்தை புறக்கணிக்கவும் </b>"
+" - பேட்டரி உகப்பாக்கத்தைக் குறைப்பதன் மூலம் இந்த பயன்பாட்டை பின்னணியில் "
+"இயக்க அனுமதிக்கவும். ]]>"
 
 #, java-printf-format
 msgctxt "gpslogger_permissions_permanently_denied"
@@ -1969,7 +2001,7 @@ msgid ""
 "these permissions.  <br /><br />If you have permanently denied permissions "
 "you can reset them in the system settings. ]]>"
 msgstr ""
-"<! [சி.டி.ஏ.டி.ஏ [இந்த பயன்பாட்டிற்கு தேவைப்படும் ஒன்று அல்லது அதற்கு "
+"<![CDATA[சி.டி.ஏ.டி.ஏ [இந்த பயன்பாட்டிற்கு தேவைப்படும் ஒன்று அல்லது அதற்கு "
 "மேற்பட்ட அனுமதிகளை நீங்கள் மறுத்துள்ளீர்கள். இந்த அனுமதிகளை வழங்க நீங்கள் "
 "மீண்டும் தொடங்க வேண்டும், அல்லது கணினி அமைப்புகள் திரைக்குச் செல்ல வேண்டும்."
 " <br /> <br /> நீங்கள் நிரந்தரமாக அனுமதிகளை மறுத்திருந்தால் அவற்றை கணினி "
@@ -1981,8 +2013,8 @@ msgid ""
 "<![CDATA[To allow GPSLogger to run in the background, you will need to grant"
 " it an additional permission.  On the next screen please select: ]]>"
 msgstr ""
-"<! [சி.டி.ஏ.டி.ஏ [சி.பி.எச்.எல்.சிசரை பின்னணியில் இயக்க அனுமதிக்க, நீங்கள் "
-"அதற்கு கூடுதல் அனுமதியை வழங்க வேண்டும். அடுத்த திரையில் தயவுசெய்து "
+"<![CDATA[சி.பி.எச்.எல்.சிசரை பின்னணியில் இயக்க அனுமதிக்க, நீங்கள் அதற்கு "
+"கூடுதல் அனுமதியை வழங்க வேண்டும். அடுத்த திரையில் தயவுசெய்து "
 "தேர்ந்தெடுக்கவும்:]]>"
 
 #, java-printf-format
@@ -2221,3 +2253,18 @@ msgstr "பொத்தான் நிறம்"
 msgctxt "prompt_for_details_when_logging_starts"
 msgid "Prompt for details when logging starts"
 msgstr "உள்நுழைவு தொடங்கும் போது விவரங்களுக்கு வரியில்"
+
+#, java-printf-format
+msgctxt "only_log_if_significant_motion_title"
+msgid "Only log if there is significant motion"
+msgstr "குறிப்பிடத்தக்க இயக்கம் இருந்தால் மட்டுமே பதிவு"
+
+#, java-printf-format
+msgctxt "only_log_if_significant_motion_summary"
+msgid ""
+"Only log if significant activity is detected such as walking, biking, "
+"driving. Significant motion is determined by your OS."
+msgstr ""
+"நடைபயிற்சி, பைக்கிங், வண்டி ஓட்டுதல் போன்ற குறிப்பிடத்தக்க செயல்பாடு "
+"கண்டறியப்பட்டால் மட்டுமே பதிவு. குறிப்பிடத்தக்க இயக்கம் உங்கள் OS ஆல் "
+"தீர்மானிக்கப்படுகிறது."
