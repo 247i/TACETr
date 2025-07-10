@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (HyperPlay Client)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-01 23:46+0200\n"
-"PO-Revision-Date: 2025-01-02 19:21+0530\n"
+"POT-Creation-Date: 2025-06-29 00:22+0200\n"
+"PO-Revision-Date: 2025-07-10 21:43\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/hyperplay-client/globals/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #, i18next-interpolation
 msgctxt "16GB of RAM"
@@ -22,7 +22,7 @@ msgstr "16GB RAM"
 #, i18next-interpolation
 msgctxt "accessibility.actions_font_family_no_default"
 msgid "Actions Font Family (Default: "
-msgstr "செயல்கள் எழுத்துரு குடும்பம் (இயல்புநிலை:"
+msgstr "செயல்கள் எழுத்துரு குடும்பம் (இயல்புநிலை: "
 
 #, i18next-interpolation
 msgctxt "accessibility.all_tiles_in_color"
@@ -32,12 +32,17 @@ msgstr "அனைத்து விளையாட்டு ஓடுகளை�
 #, i18next-interpolation
 msgctxt "accessibility.content_font_family_no_default"
 msgid "Content Font Family (Default: "
-msgstr "உள்ளடக்க எழுத்துரு குடும்பம் (இயல்புநிலை:"
+msgstr "உள்ளடக்க எழுத்துரு குடும்பம் (இயல்புநிலை: "
 
 #, i18next-interpolation
-msgctxt "accessibility.fonts"
-msgid "Fonts"
-msgstr "எழுத்துருக்கள்"
+msgctxt "accessibility.refreshFonts"
+msgid "Refresh Fonts"
+msgstr "எழுத்துருக்களைப் புதுப்பிக்கவும்"
+
+#, i18next-interpolation
+msgctxt "accessibility.refreshingFonts"
+msgid "Refreshing Fonts..."
+msgstr "புத்துணர்ச்சியூட்டும் எழுத்துருக்கள் ..."
 
 #, i18next-interpolation
 msgctxt "accessibility.title"
@@ -260,7 +265,7 @@ msgstr ""
 #, i18next-interpolation
 msgctxt "box.error.generic.message"
 msgid ""
-msgstr ""
+msgstr " "
 
 #, i18next-interpolation
 msgctxt "box.error.generic.title"
@@ -324,18 +329,103 @@ msgid "Ubisoft Connect"
 msgstr "Ubisoft இணைப்பு"
 
 #, i18next-interpolation
-msgctxt "box.error.update.message"
-msgid ""
-"Something went wrong with the update! Please manually uninstall and "
-"reinstall HyperPlay."
-msgstr ""
-"புதுப்பிப்பில் ஏதோ தவறு ஏற்பட்டது! தயவுசெய்து கைமுறையாக HyperPlay ஐ "
-"அகற்றவும் மற்றும் மீண்டும் நிறுவவும்."
+msgctxt "box.error.update.addressUnreachable"
+msgid "Address unreachable. Please check your internet connection."
+msgstr "அணுக முடியாத முகவரி. உங்கள் இணைய இணைப்பை சரிபார்க்கவும்."
 
 #, i18next-interpolation
-msgctxt "box.error.update.title"
-msgid "Update Error"
-msgstr "புதுப்பிப்பு பிழை"
+msgctxt "box.error.update.certAuthorityInvalid"
+msgid ""
+"Certificate authority invalid. Please check your system time and date or "
+"open a ticket with HyperPlay support."
+msgstr ""
+"சான்றிதழ் ஆணையம் தவறானது. உங்கள் கணினி நேரம் மற்றும் தேதியை சரிபார்க்கவும் "
+"அல்லது ஐப்பர் பிளே ஆதரவுடன் டிக்கெட்டைத் திறக்கவும்."
+
+#, i18next-interpolation
+msgctxt "box.error.update.certDateInvalid"
+msgid ""
+"Certificate date invalid. Please check your system time and date or open a "
+"ticket with HyperPlay support."
+msgstr ""
+"சான்றிதழ் தேதி தவறானது. உங்கள் கணினி நேரம் மற்றும் தேதியை சரிபார்க்கவும் "
+"அல்லது ஐப்பர் பிளே ஆதரவுடன் டிக்கெட்டைத் திறக்கவும்."
+
+#, i18next-interpolation
+msgctxt "box.error.update.connectionAborted"
+msgid "Connection aborted. Please check your internet connection."
+msgstr "இணைப்பு கைவிடப்பட்டது. உங்கள் இணைய இணைப்பை சரிபார்க்கவும்."
+
+#, i18next-interpolation
+msgctxt "box.error.update.connectionClosed"
+msgid "Connection closed. Please check your internet connection."
+msgstr "இணைப்பு மூடப்பட்டது. உங்கள் இணைய இணைப்பை சரிபார்க்கவும்."
+
+#, i18next-interpolation
+msgctxt "box.error.update.connectionRefused"
+msgid "Connection refused. Please check your internet connection."
+msgstr "இணைப்பு மறுத்துவிட்டது. உங்கள் இணைய இணைப்பை சரிபார்க்கவும்."
+
+#, i18next-interpolation
+msgctxt "box.error.update.connectionReset"
+msgid "Connection reset. Please check your internet connection."
+msgstr "இணைப்பு மீட்டமைப்பு. உங்கள் இணைய இணைப்பை சரிபார்க்கவும்."
+
+#, i18next-interpolation
+msgctxt "box.error.update.connectionTimedOut"
+msgid "Connection timed out. Please check your internet connection."
+msgstr "இணைப்பு நேரம் முடிந்தது. உங்கள் இணைய இணைப்பை சரிபார்க்கவும்."
+
+#, i18next-interpolation
+msgctxt "box.error.update.emptyResponse"
+msgid "Empty response. Please check your internet connection."
+msgstr "வெற்று பதில். உங்கள் இணைய இணைப்பை சரிபார்க்கவும்."
+
+#, i18next-interpolation
+msgctxt "box.error.update.failed"
+msgid "Download Failed. Please check your internet connection."
+msgstr "பதிவிறக்கம் தோல்வியடைந்தது. உங்கள் இணைய இணைப்பை சரிபார்க்கவும்."
+
+#, i18next-interpolation
+msgctxt "box.error.update.http2ServerRefusedStream"
+msgid "HTTP2 server refused stream. Please check your internet connection."
+msgstr ""
+"HTTP2 சேவையகம் ச்ட்ரீம் மறுத்துவிட்டது. உங்கள் இணைய இணைப்பை சரிபார்க்கவும்."
+
+#, i18next-interpolation
+msgctxt "box.error.update.internetDisconnected"
+msgid "Internet disconnected. Please check your internet connection."
+msgstr "இணையம் துண்டிக்கப்பட்டது. உங்கள் இணைய இணைப்பை சரிபார்க்கவும்."
+
+#, i18next-interpolation
+msgctxt "box.error.update.nameNotResolved"
+msgid "Name not resolved. Please check your internet connection."
+msgstr "பெயர் தீர்க்கப்படவில்லை. உங்கள் இணைய இணைப்பை சரிபார்க்கவும்."
+
+#, i18next-interpolation
+msgctxt "box.error.update.networkAccessDenied"
+msgid "Network access denied. Please check your internet connection."
+msgstr "பிணையம் அணுகல் மறுக்கப்பட்டது. உங்கள் இணைய இணைப்பை சரிபார்க்கவும்."
+
+#, i18next-interpolation
+msgctxt "box.error.update.networkChanged"
+msgid "Network changed. Please check your internet connection."
+msgstr "பிணையம் மாற்றப்பட்டது. உங்கள் இணைய இணைப்பை சரிபார்க்கவும்."
+
+#, i18next-interpolation
+msgctxt "box.error.update.proxyConnectionFailed"
+msgid "Proxy connection failed. Please check your proxy settings."
+msgstr ""
+"பதிலாள் இணைப்பு தோல்வியடைந்தது. உங்கள் பதிலாள் அமைப்புகளை சரிபார்க்கவும்."
+
+#, i18next-interpolation
+msgctxt "box.error.update.sslProtocolError"
+msgid ""
+"SSL protocol error. Please check your system time and date or open a ticket "
+"with HyperPlay support."
+msgstr ""
+"SSL நெறிமுறை பிழை. உங்கள் கணினி நேரம் மற்றும் தேதியை சரிபார்க்கவும் அல்லது "
+"ஐப்பர் பிளே ஆதரவுடன் டிக்கெட்டைத் திறக்கவும்."
 
 #, i18next-interpolation
 msgctxt "box.error.winetricks.message"
@@ -597,11 +687,6 @@ msgid "Continue"
 msgstr "தொடரவும்"
 
 #, i18next-interpolation
-msgctxt "button.download"
-msgid "Download"
-msgstr "பதிவிறக்கம்"
-
-#, i18next-interpolation
 msgctxt "button.go_to_library"
 msgid "Go to Library"
 msgstr "நூலகத்திற்குச் செல்லுங்கள்"
@@ -731,13 +816,11 @@ msgctxt "dlc.noDlcFound"
 msgid "No DLCs found"
 msgstr "டிஎல்சிகள் எதுவும் இல்லை"
 
-# Suggested in Weblate: அளவு
 #, i18next-interpolation
 msgctxt "dlc.size"
 msgid "Size"
 msgstr "அளவு"
 
-# Suggested in Weblate: தலைப்பு
 #, i18next-interpolation
 msgctxt "dlc.title"
 msgid "Title"
@@ -875,6 +958,106 @@ msgctxt "game.title"
 msgid "Game Title"
 msgstr "விளையாட்டு தலைப்பு"
 
+#, i18next-interpolation
+msgctxt "gameplayWallet.action.set"
+msgid "Set as Active"
+msgstr "செயலில் அமைக்கவும்"
+
+#, i18next-interpolation
+msgctxt "gameplayWallet.active.title"
+msgid "Active Wallet"
+msgstr "செயலில் பணப்பையை"
+
+#, i18next-interpolation
+msgctxt "gameplayWallet.connected.title"
+msgid "Connected Wallet"
+msgstr "இணைக்கப்பட்ட பணப்பையை"
+
+#, i18next-interpolation
+msgctxt "gameplayWallet.detected.message"
+msgid "To track your quest eligibility, set this as your active wallet."
+msgstr ""
+"உங்கள் தேடல் தகுதியைக் கண்காணிக்க, இதை உங்கள் செயலில் உள்ள பணப்பையாக "
+"அமைக்கவும்."
+
+#, i18next-interpolation
+msgctxt "gameplayWallet.detected.title"
+msgid "Wallet Connected"
+msgstr "பணப்பையை இணைக்கப்பட்டுள்ளது"
+
+#, i18next-interpolation
+msgctxt "gameplayWallet.error.action"
+msgid "Create Discord Ticket"
+msgstr "டிச்கார்ட் டிக்கெட்டை உருவாக்கவும்"
+
+#, i18next-interpolation
+msgctxt "gameplayWallet.error.alreadyLinked.message"
+msgid ""
+"This wallet is linked to another HyperPlay account. Try a different one or "
+"sign in to to the associated account to continue."
+msgstr ""
+"இந்த பணப்பையை மற்றொரு ஐப்பர் பிளே கணக்குடன் இணைக்கப்பட்டுள்ளது. தொடர வேறு "
+"ஒன்றை முயற்சிக்கவும் அல்லது தொடர தொடர்புடைய கணக்கில் உள்நுழைக."
+
+#, i18next-interpolation
+msgctxt "gameplayWallet.error.alreadyLinked.title"
+msgid "Wallet Already Linked"
+msgstr "பணப்பையை ஏற்கனவே இணைக்கப்பட்டுள்ளது"
+
+#, i18next-interpolation
+msgctxt "gameplayWallet.error.message"
+msgid ""
+"Please try once more. If it still doesn't work, create a Discord support "
+"ticket."
+msgstr ""
+"தயவுசெய்து மீண்டும் ஒரு முறை முயற்சிக்கவும். இது இன்னும் வேலை செய்யவில்லை "
+"என்றால், ஒரு முரண்பாடு உதவி டிக்கெட்டை உருவாக்கவும்."
+
+#, i18next-interpolation
+msgctxt "gameplayWallet.error.title"
+msgid "Something went wrong"
+msgstr "ஏதோ தவறு நடந்தது"
+
+#, i18next-interpolation
+msgctxt "gameplayWallet.info.description"
+msgid ""
+"This wallet address is set to track your quest eligibility. You can switch "
+"to a different wallet address at anytime—quest eligibility is saved to each "
+"wallet address separately."
+msgstr ""
+"உங்கள் தேடல் தகுதியைக் கண்காணிக்க இந்த பணப்பை முகவரி அமைக்கப்பட்டுள்ளது. "
+"நீங்கள் எப்போது வேண்டுமானாலும் வேறு பணப்பையை முகவரிக்கு மாற்றலாம் - ஒவ்வொரு "
+"பணப்பையை முகவரிக்கு தனித்தனியாக தேடல் தகுதி சேமிக்கப்படுகிறது."
+
+#, i18next-interpolation
+msgctxt "gameplayWallet.new.message"
+msgid ""
+"To track your quest eligibility on this new wallet, set it as your active "
+"wallet."
+msgstr ""
+"இந்த புதிய பணப்பையில் உங்கள் குவெச்ட் தகுதியைக் கண்காணிக்க, அதை உங்கள் "
+"செயலில் உள்ள பணப்பையாக அமைக்கவும்."
+
+#, i18next-interpolation
+msgctxt "gameplayWallet.new.title"
+msgid "New Wallet Connected"
+msgstr "புதிய பணப்பையை இணைக்கப்பட்டுள்ளது"
+
+#, i18next-interpolation
+msgctxt "gameplayWallet.noWallet.message"
+msgid "Connect your wallet to start tracking eligibility for this Quest."
+msgstr "இந்த தேடலுக்கான தகுதியைக் கண்காணிக்க உங்கள் பணப்பையை இணைக்கவும்."
+
+#, i18next-interpolation
+msgctxt "gameplayWallet.noWallet.status"
+msgid "No wallet connected"
+msgstr "பணப்பையை இணைக்கவில்லை"
+
+#, i18next-interpolation
+msgctxt "gameplayWallet.setConnected.title"
+msgid "Connected Wallet"
+msgstr "இணைக்கப்பட்ட பணப்பையை"
+
 #, i18next-interpolation, ignore-translated
 msgctxt "gameRelease.alpha"
 msgid "Alpha"
@@ -973,7 +1156,7 @@ msgid ""
 " in our Discord channel."
 msgstr ""
 "நம்பத்தகாத மூலங்களிலிருந்து சிஎச்எச் கோப்புகளைப் பயன்படுத்த வேண்டாம். ஐயம் "
-"இருக்கும்போது, ​​எங்கள் முரண்பாடு சேனலில் மதிப்பாய்வு கேட்கவும்."
+"இருக்கும்போது, எங்கள் முரண்பாடு சேனலில் மதிப்பாய்வு கேட்கவும்."
 
 #, i18next-interpolation
 msgctxt "help.custom_themes_wiki"
@@ -1301,14 +1484,14 @@ msgid "Oops!"
 msgstr "அப்பா!"
 
 #, i18next-interpolation
-msgctxt "hyperplay.analyticsOff"
-msgid "Analytics is turned off"
-msgstr "அனலிட்டிக்ஸ் முடக்கப்பட்டுள்ளது"
+msgctxt "hyperplay.analyticsTurnOff"
+msgid "Turn off"
+msgstr "அணைக்கவும்"
 
 #, i18next-interpolation
-msgctxt "hyperplay.analyticsOn"
-msgid "Analytics is turned on"
-msgstr "அனலிட்டிக்ஸ் இயக்கப்பட்டுள்ளது"
+msgctxt "hyperplay.analyticsTurnOn"
+msgid "Turn on"
+msgstr "இயக்கவும்"
 
 # Suggested in Weblate: பயன்பாட்டு ஐடி
 #, i18next-interpolation
@@ -1331,11 +1514,6 @@ msgstr "நான் ஒப்புக்கொள்கிறேன்"
 msgctxt "hyperplay.buttons.secondaryButton"
 msgid "No, Thanks"
 msgstr "இல்லை, நன்றி"
-
-#, i18next-interpolation
-msgctxt "hyperplay.changeWallet"
-msgid "Swap wallet account"
-msgstr "வாலெட் கணக்கை மாற்றவும்"
 
 #, i18next-interpolation
 msgctxt "hyperplay.compatibilityLayer"
@@ -1515,6 +1693,26 @@ msgid "Wallet connected!"
 msgstr "வாலெட் இணைக்கப்பட்டுள்ளது!"
 
 #, i18next-interpolation
+msgctxt "hyperplay.onboarding.walletSelection.metamaskExtension"
+msgid "MetaMask Browser Extension"
+msgstr "மெட்டமாச்க் உலாவி நீட்டிப்பு"
+
+#, i18next-interpolation
+msgctxt "hyperplay.onboarding.walletSelection.metamaskExtensionSubtext"
+msgid "Approve transactions in-game."
+msgstr "விளையாட்டில் பரிவர்த்தனைகளை அங்கீகரிக்கவும்."
+
+#, i18next-interpolation
+msgctxt "hyperplay.onboarding.walletSelection.metamaskMobile"
+msgid "MetaMask Mobile"
+msgstr "மெட்டமாச்க் மொபைல்"
+
+#, i18next-interpolation
+msgctxt "hyperplay.onboarding.walletSelection.metamaskMobileSubtext"
+msgid "Transactions on mobile. Most secure."
+msgstr "மொபைலில் பரிவர்த்தனைகள். மிகவும் பாதுகாப்பானது."
+
+#, i18next-interpolation
 msgctxt "hyperplay.onboarding.walletSelection.pleaseConnect"
 msgid ""
 "Please connect your wallet, or download the Metamask mobile-app to get\n"
@@ -1522,6 +1720,11 @@ msgid ""
 msgstr ""
 "உங்கள் பணப்பையை இணைக்கவும், அல்லது தொடக்கத்திற்கு Metamask மொபைல் செயலியை "
 "பதிவிறக்கவும்:"
+
+#, i18next-interpolation
+msgctxt "hyperplay.onboarding.walletSelection.recommended"
+msgid "Recommended"
+msgstr "பரிந்துரைக்கப்படுகிறது"
 
 #, i18next-interpolation
 msgctxt "hyperplay.onboarding.walletSelection.screens.import.cantFindProfile"
@@ -1668,6 +1871,11 @@ msgid "Wallet Connections"
 msgstr "வாலெட் இணைப்புகள்"
 
 #, i18next-interpolation
+msgctxt "hyperplay.onboarding.walletSelection.walletConnectSubtext"
+msgid "Most Flexible. Choose from 400+ wallets."
+msgstr "மிகவும் நெகிழ்வான. 400+ பணப்பைகளிலிருந்து தேர்வு செய்யவும்."
+
+#, i18next-interpolation
 msgctxt "hyperplay.onboarding.welcome.text.bulletPointFive"
 msgid ""
 "Run Windows games on macOS, Linux, and SteamDeck using our\n"
@@ -1745,6 +1953,11 @@ msgid "One Time Passcode"
 msgstr "ஒரு முறை கடவுச்சொல்"
 
 #, i18next-interpolation
+msgctxt "hyperplay.swapConnectedWallet"
+msgid "Swap connected wallet"
+msgstr "இணைக்கப்பட்ட பணப்பையை மாற்றவும்"
+
+#, i18next-interpolation
 msgctxt "hyperplay.Sync"
 msgid "Sync"
 msgstr "ஒத்திசைவு"
@@ -1753,17 +1966,6 @@ msgstr "ஒத்திசைவு"
 msgctxt "hyperplay.syncing"
 msgid "Syncing..."
 msgstr "சிங்க்கிங்..."
-
-# Suggested in Weblate: Turn off
-#, i18next-interpolation
-msgctxt "hyperplay.turnAnalyticsOff"
-msgid "Turn off"
-msgstr "அணைக்கவும்"
-
-#, i18next-interpolation
-msgctxt "hyperplay.turnAnalyticsOn"
-msgid "Turn on"
-msgstr "இயக்கவும்"
 
 #, i18next-interpolation
 msgctxt "hyperplay.viewFullscreen"
@@ -1783,7 +1985,7 @@ msgstr "போர்ட்ஃபோலியோவைப் பார்வை�
 #, i18next-interpolation
 msgctxt "HyperPlay"
 msgid ""
-msgstr ""
+msgstr " "
 
 #, i18next-interpolation
 msgctxt "HyperPlay will notify you once the installation is done;"
@@ -2104,11 +2306,6 @@ msgid "Library"
 msgstr "நூலகம்"
 
 #, i18next-interpolation
-msgctxt "library.refresh"
-msgid "Refresh"
-msgstr "புதுப்பி"
-
-#, i18next-interpolation
 msgctxt "library.sortByStatus"
 msgid "Sort by Status"
 msgstr "அந்தச்தால் வரிசைப்படுத்துங்கள்"
@@ -2212,7 +2409,7 @@ msgstr "ஜிப் கோப்பை தேர்ந்தெடுக்க�
 #, i18next-interpolation
 msgctxt "mods.instructions.selectZip"
 msgid ""
-msgstr ""
+msgstr " "
 
 #, i18next-interpolation
 msgctxt "mods.instructions.step1.description"
@@ -2681,7 +2878,7 @@ msgstr "2-சார் குறியீடு (அதாவது: \"en\" அ�
 #, i18next-interpolation
 msgctxt "Please connect to the internet to access the stores"
 msgid ""
-msgstr ""
+msgstr " "
 
 #, i18next-interpolation
 msgctxt "Please Wait"
@@ -2778,6 +2975,20 @@ msgid "Create Discord Ticket"
 msgstr "Discord டிக்கெட் உருவாக்கவும்"
 
 #, i18next-interpolation
+msgctxt "quest.existingSignatureErrorMessage"
+msgid ""
+"Looks like you started your claim with a different wallet. Try switching "
+"back to that one to finish claiming your reward."
+msgstr ""
+"உங்கள் உரிமைகோரலை வேறு பணப்பையுடன் தொடங்கியது போல் தெரிகிறது. உங்கள் "
+"வெகுமதியைக் கோருவதை முடிக்க மீண்டும் அதை மாற்ற முயற்சிக்கவும்."
+
+#, i18next-interpolation
+msgctxt "quest.existingSignatureErrorTitle"
+msgid "Wrong Wallet. Switch to {{address}}"
+msgstr "தவறான பணப்பையை. {{address} பெறுநர் க்கு மாறவும்"
+
+#, i18next-interpolation
 msgctxt "quest.g7Numclaimed"
 msgid "Total Claimed G7 Credits"
 msgstr "மொத்தமாகக் கையகப்படுத்திய G7 கிரெடிட்கள்"
@@ -2786,6 +2997,22 @@ msgstr "மொத்தமாகக் கையகப்படுத்தி�
 msgctxt "quest.linkAccount"
 msgid "Link your Steam account to check eligibility."
 msgstr "உங்கள் Steam கணக்கை இணைத்து தகுதியை சரிபார்க்கவும்."
+
+#, i18next-interpolation
+msgctxt "quest.multipleClaimsDetected.message"
+msgid ""
+"You've already claimed this quest the max number of times. If this seems "
+"wrong, please open a support ticket. Please note that HyperPlay doesn't "
+"decide eligibility for this type of quest."
+msgstr ""
+"இந்த தேடலை அதிகபட்ச எண்ணிக்கையில் நீங்கள் ஏற்கனவே கோரியுள்ளீர்கள். இது "
+"தவறாகத் தெரிந்தால், தயவுசெய்து ஒரு உதவி டிக்கெட்டைத் திறக்கவும். இந்த வகை "
+"தேடலுக்கான தகுதியை ஐப்பர் பிளே தீர்மானிக்கவில்லை என்பதை நினைவில் கொள்க."
+
+#, i18next-interpolation
+msgctxt "quest.multipleClaimsDetected.title"
+msgid "Multiple claims detected"
+msgstr "பல உரிமைகோரல்கள் கண்டறியப்பட்டன"
 
 #, i18next-interpolation
 msgctxt "quest.needMoreAchievements"
@@ -2957,6 +3184,20 @@ msgid "Log in"
 msgstr "உள்ளீடு செய்யவும்"
 
 #, i18next-interpolation
+msgctxt "quest.switchChainFailed.message"
+msgid ""
+"Please switch to {{chainName}} within your wallet, or try again with "
+"MetaMask."
+msgstr ""
+"உங்கள் பணப்பையில் {{chainName} பெறுநர் க்கு மாறவும் அல்லது மெட்டமாச்குடன் "
+"மீண்டும் முயற்சிக்கவும்."
+
+#, i18next-interpolation
+msgctxt "quest.switchChainFailed.title"
+msgid "Failed to switch to {{chainName}}"
+msgstr "{{chainName} பெறுநர் க்கு மாறுவதில் தோல்வி"
+
+#, i18next-interpolation
 msgctxt "quest.sync"
 msgid "Sync"
 msgstr "ஒத்திசைவு"
@@ -2970,6 +3211,11 @@ msgstr "உங்கள் பரிசை கையகப்படுத்த.
 msgctxt "quest.toSeeDetails"
 msgid "to see details."
 msgstr "விவரங்களைப் பார்க்க."
+
+#, i18next-interpolation
+msgctxt "quest.type.leaderboard"
+msgid "Leaderboard"
+msgstr "லீடர்போர்டு"
 
 #, i18next-interpolation
 msgctxt "quest.type.playstreak"
@@ -3038,6 +3284,11 @@ msgstr ""
 msgctxt "quests.quests"
 msgid "Quests"
 msgstr "பணிகள்"
+
+#, i18next-interpolation
+msgctxt "quests.search"
+msgid "Search"
+msgstr "தேடல்"
 
 #, i18next-interpolation
 msgctxt "quests.viewAllQuests.title"
@@ -3173,11 +3424,6 @@ msgstr "முன்னொட்டில் VKD3D ஐ தானாக நிற
 msgctxt "setting.change-target-exe"
 msgid "Select an alternative EXE to run"
 msgstr "இயக்க மாற்று EXE ஐத் தேர்ந்தெடுக்கவும்"
-
-#, i18next-interpolation
-msgctxt "setting.checkForUpdatesOnStartup"
-msgid "Check for HyperPlay Updates on Startup"
-msgstr "தொடக்கத்தில் ஐப்பர் பிளே புதுப்பிப்புகளை சரிபார்க்கவும்"
 
 #, i18next-interpolation
 msgctxt "setting.crossover-version"
@@ -3405,48 +3651,35 @@ msgid "Library Top Section"
 msgstr "நூலக மேல் பிரிவு"
 
 #, i18next-interpolation
-msgctxt "setting.log.copy-to-clipboard"
-msgid "Copy log content to clipboard"
-msgstr "பதிவு உள்ளடக்கத்தை இடைநிலைப்பலகைக்கு நகலெடுக்கவும்"
+msgctxt "setting.log.alert-message"
+msgid ""
+"If you encounter any issues while using HyperPlay, please head to our "
+"#create-ticket channel on Discord to get support from the team. We'll follow"
+" up with you directly via the ticket."
+msgstr ""
+"ஐப்பர் பிளேயைப் பயன்படுத்தும் போது ஏதேனும் சிக்கல்களை நீங்கள் சந்தித்தால், "
+"தயவுசெய்து அணியின் ஆதரவைப் பெற டிச்கார்டில் எங்கள் #உருவாக்கு-டிக்கெட் "
+"சேனலுக்குச் செல்லுங்கள். டிக்கெட் வழியாக நேரடியாக உங்களுடன் பின்தொடர்வோம்."
 
 #, i18next-interpolation
-msgctxt "setting.log.instructions_title"
+msgctxt "setting.log.alert-title"
 msgid "How to report a problem?"
 msgstr "ஒரு சிக்கலைப் புகாரளிப்பது எப்படி?"
 
 #, i18next-interpolation
-msgctxt "setting.log.instructions-part-01"
-msgid ""
-"If you encounter any issues while using HyperPlay, we have two designated "
-"areas to report your issues in our Discord Server. If you're a player, "
-"please report any problems by visiting the player-support-forum. If you are "
-"a game dev, please report any problems by visiting the dev-support-forum."
-msgstr ""
-"HyperPlay ஐப் பயன்படுத்தும் போது நீங்கள் எந்தவொரு சிக்கல்களை சந்தித்தால், "
-"எங்கள் Discord சேவையகத்தில் உங்கள் சிக்கல்களைப் புகாரளிக்க இரண்டு "
-"குறிப்பிட்ட பகுதிகள் உள்ளன. நீங்கள் ஒரு வீரர் என்றால், தயவுசெய்து வீரர் "
-"ஆதரவு மன்றத்தைப் besøக்கவும். நீங்கள் ஒரு விளையாட்டு மேம்பாட்டாளர் என்றால், "
-"தயவுசெய்து மேம்பாட்டு ஆதரவு மன்றத்தைப் besøக்கவும்."
+msgctxt "setting.log.copied-to-clipboard"
+msgid "Copied!"
+msgstr "நகலெடுக்கப்பட்டது!"
 
 #, i18next-interpolation
-msgctxt "setting.log.instructions-part-02"
-msgid ""
-"To help us diagnose and fix the problem as quickly as possible, please "
-"provide as much information as possible, including a copy of your logs. Our "
-"support team will monitor both channels and do their best to respond to your"
-" issue as quickly as possible. Thank you for your patience and understanding"
-" while we work to resolve any problems you may encounter."
-msgstr ""
-"எங்கள் குழுவுக்கு சிக்கலை விரைவாக கண்டறிந்து சரிசெய்ய உதவ, உங்கள் பதிவுகளை "
-"உள்ளடக்கிய அளவுக்கு அதிகமான தகவல்களை வழங்கவும். எங்கள் ஆதரவு குழு இரு "
-"சேனல்களையும் கண்காணித்து, உங்கள் சிக்கலுக்கு விரைவாக பதிலளிக்க 최선을 다ிக்கும்."
-" நீங்கள் சந்திக்கும் எந்த சிக்கலையும் தீர்க்க எங்கள் முயற்சிக்கு உங்கள் "
-"பொறுமைக்கும் புரிதலுக்கும் நன்றி."
+msgctxt "setting.log.copy-log-clipboard"
+msgid "Copy Log to Clipboard"
+msgstr "இடைநிலைப்பலகைக்கு பதிவை நகலெடுக்கவும்"
 
 #, i18next-interpolation
-msgctxt "setting.log.join-hyperplay-discord"
-msgid "Join our Discord"
-msgstr "எங்கள் Discord இல் சேரவும்"
+msgctxt "setting.log.create-ticket-discord"
+msgid "Create a ticket"
+msgstr "ஒரு டிக்கெட்டை உருவாக்கவும்"
 
 #, i18next-interpolation
 msgctxt "setting.log.no-file"
@@ -3454,9 +3687,14 @@ msgid "No log file found"
 msgstr "பதிவு கோப்பு எதுவும் கிடைக்கவில்லை"
 
 #, i18next-interpolation
-msgctxt "setting.log.show-in-folder"
-msgid "Show log file in folder"
+msgctxt "setting.log.show-log-folder"
+msgid "Show Log File in Folder"
 msgstr "கோப்புறையில் பதிவு கோப்பைக் காட்டு"
+
+#, i18next-interpolation
+msgctxt "setting.logs.title"
+msgid "Logs"
+msgstr "பதிவுகள்"
 
 #, i18next-interpolation
 msgctxt "setting.mangohud"
@@ -3653,12 +3891,17 @@ msgid "Copied to Clipboard!"
 msgstr "இடைநிலைப்பலகைக்கு நகலெடுக்கப்பட்டது!"
 
 #, i18next-interpolation
+msgctxt "settings.copyClipboard"
+msgid "Copy Advanced Settings"
+msgstr "மேம்பட்ட அமைப்புகளை நகலெடுக்கவும்"
+
+#, i18next-interpolation
 msgctxt "settings.copyToClipboard"
 msgid "Copy All Settings to Clipboard"
 msgstr "அனைத்து செட்டிங்ஸையும் கிளிப் போர்டில் நகல் எடு"
 
 #, i18next-interpolation
-msgctxt "settings.default_hint"
+msgctxt "settings.default_alert_message"
 msgid ""
 "Changes in this section only apply as default values when installing games. "
 "If you want to change the settings of an already installed game, use the "
@@ -3668,6 +3911,16 @@ msgstr ""
 "மதிப்புகளாக மட்டுமே பொருந்தும். ஏற்கனவே நிறுவப்பட்ட விளையாட்டின் அமைப்புகளை "
 "மாற்ற விரும்பினால், விளையாட்டு பக்கத்தில் அமைப்புகள் பொத்தானைப் "
 "பயன்படுத்தவும்."
+
+#, i18next-interpolation
+msgctxt "settings.default_alert_title"
+msgid "Default Settings"
+msgstr "இயல்புநிலை அமைப்புகள்"
+
+#, i18next-interpolation
+msgctxt "settings.default_title"
+msgid "Games Settings"
+msgstr "விளையாட்டு அமைப்புகள்"
 
 #, i18next-interpolation
 msgctxt "settings.eacRuntime.gameModeRequired.message"
@@ -3877,6 +4130,11 @@ msgid "Achievements"
 msgstr "சாதனங்கள்"
 
 #, i18next-interpolation
+msgctxt "sidebar.docs"
+msgid "Docs"
+msgstr "கோப்புகள்"
+
+#, i18next-interpolation
 msgctxt "sidebar.downloadManager"
 msgid "Download Manager"
 msgstr "பதிவு மேலாளர்"
@@ -3885,6 +4143,16 @@ msgstr "பதிவு மேலாளர்"
 msgctxt "sidebar.library"
 msgid "Library"
 msgstr "நூலகம்"
+
+#, i18next-interpolation
+msgctxt "sidebar.quests"
+msgid "Quests"
+msgstr "தேடல்கள்"
+
+#, i18next-interpolation
+msgctxt "sidebar.settings"
+msgid "Settings"
+msgstr "அமைப்புகள்"
 
 #, i18next-interpolation
 msgctxt "sidebar.store"
@@ -3926,7 +4194,7 @@ msgstr "கோப்புகளை செயலாக்குகிறது, 
 #, i18next-interpolation
 msgctxt "Steam Installation"
 msgid ""
-msgstr ""
+msgstr " "
 
 #, i18next-interpolation
 msgctxt "steam-install.compatibility-layer-not-available"
@@ -3972,6 +4240,11 @@ msgstr ""
 msgctxt "store"
 msgid "Epic Store"
 msgstr "Epic விற்பனைக்கூடம்"
+
+#, i18next-interpolation
+msgctxt "System"
+msgid ""
+msgstr "மண்டலம்"
 
 #, i18next-interpolation
 msgctxt "title.allGames"
@@ -4113,7 +4386,7 @@ msgstr ""
 #, i18next-interpolation
 msgctxt "wine.manager.title"
 msgid "Compatibility Layer "
-msgstr "பொருந்தக்கூடிய அடுக்கு"
+msgstr "பொருந்தக்கூடிய அடுக்கு "
 
 #, i18next-interpolation
 msgctxt "wine.manager.unzipping"
