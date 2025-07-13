@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Interstellar)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-28 17:35+0200\n"
-"PO-Revision-Date: 2025-07-09 09:36\n"
+"POT-Creation-Date: 2025-07-13 13:16+0200\n"
+"PO-Revision-Date: 2025-07-13 16:47\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/interstellar/interstellar/ta/>\n"
 "Language: ta\n"
@@ -127,7 +127,7 @@ msgstr "அனைத்து முடிவுகளும்"
 #, icu-message-format
 msgctxt "filter_subscribed"
 msgid "Subscribed"
-msgstr "சந்தா"
+msgstr "சந்தா கட்டப்பட்டது"
 
 #, icu-message-format
 msgctxt "filter_moderated"
@@ -172,7 +172,7 @@ msgstr "படிக்க"
 #, icu-message-format
 msgctxt "sort"
 msgid "Sort by"
-msgstr "வரிசைப்படுத்தவும்"
+msgstr "மூலம் வரிசைப்படுத்து"
 
 #, icu-message-format
 msgctxt "sortComments"
@@ -267,7 +267,7 @@ msgstr "எல்லா நேரத்திலும் மேலே"
 #, icu-message-format
 msgctxt "sort_commented"
 msgid "Commented"
-msgstr "கருத்து"
+msgstr "கருத்திடப்பட்டது"
 
 #, icu-message-format
 msgctxt "sort_commented_3h"
@@ -391,8 +391,8 @@ msgstr "மைக்ரோ பிளாக்"
 
 #, icu-message-format
 msgctxt "timeline"
-msgid "Timeline"
-msgstr "காலவரிசை"
+msgid "Combined"
+msgstr "இணைக்கப்பட்டது"
 
 #, icu-message-format
 msgctxt "stars"
@@ -422,6 +422,11 @@ msgid "All Community Subs"
 msgstr "அனைத்து சமூக துணை"
 
 #, icu-message-format
+msgctxt "subscriptions_community_empty"
+msgid "This feels empty; subscribe to a community to appear here."
+msgstr "இது காலியாக உணர்கிறது; இங்கே தோன்றுவதற்கு ஒரு சமூகத்தில் இணையுங்கள்."
+
+#, icu-message-format
 msgctxt "subscriptions_user"
 msgid "User Follows"
 msgstr "பயனர் பின்வருமாறு"
@@ -432,6 +437,11 @@ msgid "All User Follows"
 msgstr "அனைத்து பயனர்களும் பின்வருமாறு"
 
 #, icu-message-format
+msgctxt "subscriptions_user_empty"
+msgid "This feels empty; subscribe to a user to appear here."
+msgstr "இது காலியாக உணர்கிறது; இங்கே தோன்றுவதற்கு ஒரு பயனருடன் இணையுங்கள்."
+
+#, icu-message-format
 msgctxt "subscriptions_domain"
 msgid "Domain Subscriptions"
 msgstr "டொமைன் சந்தாக்கள்"
@@ -440,6 +450,51 @@ msgstr "டொமைன் சந்தாக்கள்"
 msgctxt "subscriptions_domain_all"
 msgid "All Domain Subs"
 msgstr "அனைத்து டொமைன் சப்ச்"
+
+#, icu-message-format
+msgctxt "subscriptions_domain_empty"
+msgid "This feels empty; subscribe to a domain to appear here."
+msgstr "இது காலியாக உணர்கிறது; இங்கே தோன்றுவதற்கு ஒரு தளத்தில் இணையுங்கள்."
+
+#, icu-message-format
+msgctxt "feeds"
+msgid "Feeds"
+msgstr "ஊட்டங்கள்"
+
+#, icu-message-format
+msgctxt "feeds_empty"
+msgid "This feels empty; create a feed to appear here."
+msgstr "இது காலியாக உணர்கிறது; இங்கே தோன்ற ஒரு ஊட்டத்தை உருவாக்கவும்."
+
+#, icu-message-format
+msgctxt "feeds_new"
+msgid "New feed"
+msgstr "புதிய ஊட்டம்"
+
+#, case-insensitive, icu-message-format, placeholders:$FEED$
+msgctxt "feeds_edit"
+msgid "Edit feed {feed}"
+msgstr "ஊட்டத்தை திருத்து {feed}"
+
+#, icu-message-format
+msgctxt "feeds_delete"
+msgid "Delete feed"
+msgstr "ஊட்டத்தை நீக்கு"
+
+#, icu-message-format
+msgctxt "feeds_input"
+msgid "Add input"
+msgstr "உள்ளீட்டைச் சேர்க்கவும்"
+
+#, icu-message-format
+msgctxt "feeds_import"
+msgid "Import feed"
+msgstr "இறக்குமதி தீவனம்"
+
+#, icu-message-format
+msgctxt "feeds_selectInputs"
+msgid "Select inputs"
+msgstr "உள்ளீடுகளைத் தேர்ந்தெடுக்கவும்"
 
 #, icu-message-format
 msgctxt "post"
@@ -502,7 +557,7 @@ msgstr "திறந்த பெற்றோர்"
 #, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "openReplies"
 msgid "Open {count} {count, plural, =1{reply} other{replies}}"
-msgstr "திறக்க {count} {எண்ணிக்கை, பன்மை, = 1 {reply} பிற {replies}}"
+msgstr "திறக்க {count} {count, plural, =1{பதில்} other{பதில்கள்}}"
 
 #, icu-message-format
 msgctxt "search"
@@ -592,12 +647,12 @@ msgstr "நிராகரிக்கவும்"
 #, icu-message-format
 msgctxt "reportedUser"
 msgid "Reported user: "
-msgstr "அறிவிக்கப்பட்ட பயனர்:"
+msgstr "அறிவிக்கப்பட்ட பயனர்: "
 
 #, icu-message-format
 msgctxt "reportedBy"
 msgid "Reported by: "
-msgstr "வழங்கியவர்:"
+msgstr "வழங்கியவர்: "
 
 #, icu-message-format
 msgctxt "copy"
@@ -865,6 +920,16 @@ msgstr "சுருளில் படித்த குறிகள்"
 msgctxt "settings_markMicroblogsReadOnScroll"
 msgid "Mark microblogs read on scroll"
 msgstr "சுருளில் படித்த மார்க் மைக்ரோ வலைப்பதிவுகள்"
+
+#, icu-message-format
+msgctxt "settings_animationSpeed"
+msgid "Animation speed"
+msgstr "அனிமேசன் விரைவு"
+
+#, icu-message-format
+msgctxt "settings_animationDisabled"
+msgid "Disabled"
+msgstr "முடக்கப்பட்டது"
 
 #, icu-message-format
 msgctxt "settings_themeMode"
@@ -1207,6 +1272,11 @@ msgid "Microblog Sort"
 msgstr "மைக்ரோ பிளாக் வரிசைப்படுத்துதல்"
 
 #, icu-message-format
+msgctxt "settings_feedDefaults_combinedSort"
+msgid "Combined Sort"
+msgstr "ஒருங்கிணைந்த வரிசை"
+
+#, icu-message-format
 msgctxt "settings_feedDefaults_exploreSort"
 msgid "Explore Sort"
 msgstr "வரிசைப்படுத்துங்கள்"
@@ -1357,7 +1427,7 @@ msgstr ""
 "\n"
 "## சுயவிவரங்களை மாற்றியமைத்தல் \n"
 "\n"
-"ஒரு சுயவிவரத்தை மாற்ற, அதற்கு மாறி அமைப்புகளை சரிசெய்யவும். தற்போது, ​​ஒரு மேலெழுதும் அமைப்பை இயல்புநிலைக்கு மீட்டமைக்க, நீங்கள் சுயவிவரத்தை நீக்கி மீண்டும் உருவாக்க வேண்டும். \n"
+"ஒரு சுயவிவரத்தை மாற்ற, அதற்கு மாறி அமைப்புகளை சரிசெய்யவும். தற்போது, ஒரு மேலெழுதும் அமைப்பை இயல்புநிலைக்கு மீட்டமைக்க, நீங்கள் சுயவிவரத்தை நீக்கி மீண்டும் உருவாக்க வேண்டும். \n"
 "\n"
 "## அமைப்புகள் சேர்க்கப்பட்டுள்ளன \n"
 "\n"
@@ -1436,7 +1506,7 @@ msgstr "{datetime} இல் உருவாக்கப்பட்டது"
 #, case-insensitive, icu-message-format, placeholders:$DATETIME$
 msgctxt "editedAt"
 msgid "Edited at {datetime}"
-msgstr "தேதிநேரத்தில் திருத்தப்பட்டது"
+msgstr "{datetime} திருத்தப்பட்டது"
 
 #, icu-message-format
 msgctxt "expand"
@@ -1452,7 +1522,7 @@ msgstr "சரிவு"
 #, case-insensitive, icu-message-format, placeholders:$NAME$
 msgctxt "moreFrom"
 msgid "More from {name}"
-msgstr "பெயரில் இருந்து மேலும்"
+msgstr "{name}இருந்து மேலும்"
 
 #, icu-message-format
 msgctxt "report"
@@ -1504,7 +1574,7 @@ msgstr "தடை {user}"
 #, case-insensitive, icu-message-format, placeholders:$USER$:$COMMUNITY$
 msgctxt "banUser_help"
 msgid "You are about to ban {user} from {community}."
-msgstr "{சமூகத்திலிருந்து {user} தடை செய்ய உள்ளீர்கள்."
+msgstr "{community} இருந்து {user} தடை செய்ய உள்ளீர்கள்."
 
 #, icu-message-format
 msgctxt "status"
@@ -2289,7 +2359,32 @@ msgstr "{name} இல் சேர்க்கவும்"
 #, icu-message-format
 msgctxt "bookmark_removeFromX"
 msgid "Remove from {name}"
-msgstr "{பெயரில் இருந்து அகற்று"
+msgstr "{name} இருந்து அகற்று"
+
+#, icu-message-format
+msgctxt "bookmarks"
+msgid "Bookmarks"
+msgstr "புக்மார்க்குகள்"
+
+#, icu-message-format
+msgctxt "bookmarkLists"
+msgid "Bookmark Lists"
+msgstr "புக்மார்க்கு பட்டியல்கள்"
+
+#, icu-message-format
+msgctxt "bookmarkLists_create"
+msgid "Create list"
+msgstr "பட்டியலை உருவாக்கு"
+
+#, icu-message-format
+msgctxt "bookmarkLists_setDefault"
+msgid "Set as default"
+msgstr "இயல்புநிலையாக அமைக்கவும்"
+
+#, icu-message-format
+msgctxt "bookmarkLists_createHint"
+msgid "New list name"
+msgstr "புதிய பட்டியல் பெயர்"
 
 #, icu-message-format
 msgctxt "configShare"
@@ -2315,6 +2410,16 @@ msgstr "விண்மீன் வடிகட்டி பட்டியல�
 msgctxt "configShare_filterList_info"
 msgid "Contains {count} phrases"
 msgstr "{count} சொற்றொடர்களைக் கொண்டுள்ளது"
+
+#, icu-message-format
+msgctxt "configShare_feed_title"
+msgid "Interstellar feed"
+msgstr "விண்மீன் ஊட்டம்"
+
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
+msgctxt "configShare_feed_info"
+msgid "Contains {count} inputs"
+msgstr "{count} உள்ளீடுகளைக் கொண்டுள்ளது"
 
 #, case-insensitive, icu-message-format, placeholders:$DATE$:$VERSION$
 msgctxt "configShare_created"
