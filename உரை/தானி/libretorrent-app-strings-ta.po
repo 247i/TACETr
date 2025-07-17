@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (LibreTorrent)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-12 03:08+0200\n"
-"PO-Revision-Date: 2025-01-12 15:04+0530\n"
+"POT-Creation-Date: 2025-07-17 04:25+0200\n"
+"PO-Revision-Date: 2025-07-17 07:56\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/libretorrent/app-strings/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #.  Global string
 #, java-printf-format
@@ -290,6 +290,16 @@ msgid "Cannot open the .torrent file"
 msgstr "டோரண்ட் கோப்பை திறக்க முடியவில்லை"
 
 #, java-printf-format
+msgctxt "error_open_ip_filter_file"
+msgid "Cannot open the IP filter file"
+msgstr "ஐபி வடிகட்டி கோப்பைத் திறக்க முடியாது"
+
+#, java-printf-format
+msgctxt "error_select_folder"
+msgid "Cannot open the selected folder"
+msgstr "தேர்ந்தெடுக்கப்பட்ட கோப்புறையைத் திறக்க முடியாது"
+
+#, java-printf-format
 msgctxt "open_file"
 msgid "Open file"
 msgstr "கோப்பை திற"
@@ -527,6 +537,18 @@ msgctxt "downloading_torrent_notify_template"
 msgid "%1$d%% • %2$s • ↓ %3$s/s • %4$s"
 msgstr "%1$d %% • %2$s •  %3$s/s • %4 $ s"
 
+#.  percent • ETA • download speed
+#, java-printf-format
+msgctxt "single_downloading_torrent_notify_template"
+msgid "%1$d%% • %2$s • ↓ %3$s/s"
+msgstr "%1$d %% • %2$s •  %3$s/s"
+
+#.  ↓ download speed | ↑ upload speed • Online
+#, java-printf-format
+msgctxt "foreground_notify_template"
+msgid "↓ %1$s/s | ↑ %2$s/s • %3$s"
+msgstr "1 %1$s/s | 2 %2$s/s • %3$s"
+
 #.  status • upload speed • name
 #, java-printf-format
 msgctxt "seeding_torrent_notify_template"
@@ -703,11 +725,11 @@ msgstr "எச்சரிக்கை"
 #, java-printf-format
 msgctxt "manage_all_files_warning_dialog_description"
 msgid ""
-"Don't use the Google Play version of LibreTorrent if you want to save torrents in folders other than 'Downloads' and similar.\n"
+"Don't use the Google Play version of LibreTorrent if you want to save torrents in folders other than 'Downloads' and similar. \n"
 "There are other sources on the project page."
 msgstr ""
-"'பதிவிறக்கங்கள்' தவிர வேறு கோப்புறைகளில் டோரண்டுகளை சேமிக்க விரும்பினால், லிப்ரெட்டோரண்டின் கூகிள் பிளே பதிப்பைப் பயன்படுத்த வேண்டாம்.\n"
-" திட்ட பக்கத்தில் பிற ஆதாரங்கள் உள்ளன."
+"'பதிவிறக்கங்கள்' தவிர வேறு கோப்புறைகளில் டோரண்டுகளை சேமிக்க விரும்பினால், லிப்ரெட்டோரண்டின் கூகிள் பிளே பதிப்பைப் பயன்படுத்த வேண்டாம். \n"
+"திட்ட பக்கத்தில் பிற ஆதாரங்கள் உள்ளன."
 
 #.  Add torrent dialog
 #, java-printf-format
@@ -732,6 +754,11 @@ msgstr "டோரண்ட் கோப்பை படிக்க முடி
 msgctxt "error_fetch_link"
 msgid "Could not fetch data from the link"
 msgstr "இணைப்பிலிருந்து தரவைப் பெற முடியவில்லை"
+
+#, java-printf-format
+msgctxt "error_fetch_torrent_metadata"
+msgid "Could not fetch metadata"
+msgstr "மேனிலை தரவு பெற முடியவில்லை"
 
 #, java-printf-format
 msgctxt "error_invalid_link_or_path"
@@ -986,7 +1013,7 @@ msgid ""
 "%1$s • %2$s/%3$s • %4$d%% •\n"
 "Availability: %5$s"
 msgstr ""
-"%1$s • %2$s/%3$s • %4$d%% •\n"
+"%1$s • %2$s/%3$s • %4$d%% • \n"
 " கிடைக்கக்கூடியதாக்கல்: %5$s"
 
 #, java-printf-format
@@ -1080,6 +1107,7 @@ msgctxt "torrent_uploaded"
 msgid "Uploaded"
 msgstr "பதிவேற்றிய"
 
+#. - Like a rating
 #, java-printf-format
 msgctxt "torrent_share_ratio"
 msgid "Share ratio"
@@ -1507,6 +1535,11 @@ msgid "Do not download immediately"
 msgstr "உடனடியாக பதிவிறக்க வேண்டாம்"
 
 #, java-printf-format
+msgctxt "feed_download_immediately"
+msgid "Download immediately"
+msgstr "உடனடியாக பதிவிறக்கவும்"
+
+#, java-printf-format
 msgctxt "feed_item_url_not_found"
 msgid "URL not found"
 msgstr "URL கிடைக்கவில்லை"
@@ -1697,13 +1730,13 @@ msgstr "கோப்புகளை தவிர்"
 
 #, java-printf-format
 msgctxt "skip_files_hint"
-msgid "Enter filenames separated by \"|\"."
-msgstr "\"|\" ஆல் பிரிக்கப்பட்ட கோப்பு பெயர்களை உள்ளிடவும்."
+msgid "Enter filenames separated by \"|\""
+msgstr "\"|\" ஆல் பிரிக்கப்பட்ட கோப்பு பெயர்களை உள்ளிடவும்"
 
 #, java-printf-format
 msgctxt "select_folder_to_save"
-msgid "Select a folder to save."
-msgstr "சேமிக்க ஒரு கோப்புறையைத் தேர்ந்தெடுக்கவும்."
+msgid "Select a folder to save"
+msgstr "சேமிக்க ஒரு கோப்புறையைத் தேர்ந்தெடுக்கவும்"
 
 #, java-printf-format
 msgctxt "torrent_saved_to"
@@ -1971,6 +2004,11 @@ msgctxt "pref_auto_manage_title"
 msgid "Auto-manage"
 msgstr "ஆட்டோ-மேனேச்"
 
+#, java-printf-format
+msgctxt "pref_enable_auto_manage_title"
+msgid "Enable auto-manage"
+msgstr "ஆட்டோ-மேனேசை இயக்கவும்"
+
 #, ignore-end-stop, java-printf-format
 msgctxt "pref_auto_manage_summary"
 msgid ""
@@ -1996,6 +2034,20 @@ msgctxt "pref_theme_title"
 msgid "Theme"
 msgstr "தீம்"
 
+#, java-printf-format
+msgctxt "pref_theme_dynamic_colors_title"
+msgid "Dynamic colors"
+msgstr "மாறும் வண்ணங்கள்"
+
+#, java-printf-format
+msgctxt "pref_theme_dynamic_colors_summary"
+msgid ""
+"Theme colors are adjusted based on your system settings, wallpapers or "
+"selected color"
+msgstr ""
+"உங்கள் கணினி அமைப்புகள், வால்பேப்பர்கள் அல்லது தேர்ந்தெடுக்கப்பட்ட "
+"வண்ணத்தின் அடிப்படையில் கருப்பொருள் வண்ணங்கள் சரிசெய்யப்படுகின்றன"
+
 #.  pref_theme_entries
 #, java-printf-format
 msgctxt "pref_theme_entries_0"
@@ -2011,6 +2063,11 @@ msgstr "டார்க்"
 msgctxt "pref_theme_entries_2"
 msgid "Black"
 msgstr "பிளாக்"
+
+#, java-printf-format
+msgctxt "pref_theme_entries_3"
+msgid "System"
+msgstr "மண்டலம்"
 
 #, java-printf-format
 msgctxt "pref_notification_category"
@@ -2320,7 +2377,7 @@ msgid ""
 "2. Used for fetching magnet links."
 msgstr ""
 "டிராக்கர்ச் பட்டியல், பின்வரும் நிகழ்வுகளில் பயன்படுத்தப்படுகிறது:\n"
-" 1. ஒரு நீரோட்டத்தைச் சேர்க்கும்போது, ​​இயல்புநிலை பட்டியல் தானாக டொரண்ட் பட்டியலில் சேர்க்கப்படும்.\n"
+" 1. ஒரு நீரோட்டத்தைச் சேர்க்கும்போது, இயல்புநிலை பட்டியல் தானாக டொரண்ட் பட்டியலில் சேர்க்கப்படும்.\n"
 " 2. காந்த இணைப்புகளைப் பெற பயன்படுகிறது."
 
 #.  Network settings
@@ -2482,6 +2539,11 @@ msgstr "NAT பிழைகள் காட்டு"
 msgctxt "pref_anonymous_mode_title"
 msgid "Anonymous mode"
 msgstr "அநாமதேய பயன்முறை"
+
+#, java-printf-format
+msgctxt "pref_use_anonymous_mode"
+msgid "Use anonymous mode"
+msgstr "அநாமதேய பயன்முறையைப் பயன்படுத்தவும்"
 
 #, ignore-end-stop, java-printf-format
 msgctxt "pref_anonymous_mode_summary"
@@ -2651,6 +2713,11 @@ msgid "Auto-refresh channels"
 msgstr "ஆட்டோ-ரஃப்ரெச் சேனல்கள்"
 
 #, java-printf-format
+msgctxt "pref_enable_feed_auto_refresh"
+msgid "Enable auto-refresh"
+msgstr "ஆட்டோ-ரீஃப்ரெசை இயக்கவும்"
+
+#, java-printf-format
 msgctxt "pref_feed_auto_refresh_summary"
 msgid "Periodically refresh channels in the background."
 msgstr "அவ்வப்போது பின்னணியில் சேனல்களை புதுப்பிக்கவும்."
@@ -2792,6 +2859,11 @@ msgctxt "pref_streaming_enable_title"
 msgid "Streaming"
 msgstr "ச்ட்ரீமிங்"
 
+#, java-printf-format
+msgctxt "pref_enable_streaming"
+msgid "Enable streaming"
+msgstr "ச்ட்ரீமிங்கை இயக்கவும்"
+
 #, ignore-end-stop, java-printf-format
 msgctxt "pref_streaming_enable_summary"
 msgid ""
@@ -2859,3 +2931,76 @@ msgstr ""
 "தேவை. டோரண்ட் கோப்புகளை தன்னிச்சையான கோப்புறைகளில். இந்த அனுமதியின்றி, "
 "லிப்ரெட்டோரண்டிற்கு ஒரு குறிப்பிட்ட எண்ணிக்கையிலான கோப்புறைகளுக்கு மட்டுமே "
 "அணுகல் இருக்கும். இந்த அனுமதியை நீங்கள் மறுக்க விரும்புகிறீர்களா?"
+
+#, java-printf-format
+msgctxt "torrents"
+msgid "Torrents"
+msgstr "டொரண்ட்ச்"
+
+#, java-printf-format
+msgctxt "ascending_sort"
+msgid "Ascending sort"
+msgstr "ஏறுவரிசை வரிசை"
+
+#, java-printf-format
+msgctxt "descending_sort"
+msgid "Descending sort"
+msgstr "இறங்கு வரிசை"
+
+#, java-printf-format
+msgctxt "current_storage"
+msgid "Current storage"
+msgstr "தற்போதைய சேமிப்பு"
+
+#, java-printf-format
+msgctxt "select"
+msgid "Select"
+msgstr "தேர்ந்தெடு"
+
+#, java-printf-format
+msgctxt "create"
+msgid "Create"
+msgstr "உருவாக்கு"
+
+#, java-printf-format
+msgctxt "color_picker"
+msgid "Color picker"
+msgstr "வண்ண தேர்வாளர்"
+
+#, java-printf-format
+msgctxt "load_message"
+msgid "Load, please wait…"
+msgstr "ஏற்றவும், தயவுசெய்து காத்திருங்கள்…"
+
+#, java-printf-format
+msgctxt "reset_filter"
+msgid "Reset filter"
+msgstr "வடிகட்டியை மீட்டமை"
+
+#, java-printf-format
+msgctxt "feed_articles"
+msgid "Articles"
+msgstr "கட்டுரைகள்"
+
+#, java-printf-format
+msgctxt "enable_journal"
+msgid "Enable journal"
+msgstr "பத்திரிகையை இயக்கு"
+
+#, java-printf-format
+msgctxt "scroll_up"
+msgid "Scroll up"
+msgstr "மேலே உருட்டவும்"
+
+#, java-printf-format
+msgctxt "scroll_down"
+msgid "Scroll down"
+msgstr "கீழே உருட்டவும்"
+
+#.  Size • files count
+#, java-printf-format
+msgctxt "torrent_info_size_template_plural"
+msgid "%1$s • %2$d file"
+msgid_plural "%1$s • %2$d files"
+msgstr[0] "%1$s • %2$d கோப்பு"
+msgstr[1] "%1$s • %2$d கோப்புகள்"
