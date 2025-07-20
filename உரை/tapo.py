@@ -482,6 +482,27 @@ def எடுபொருள்மொழிபெயர்(அனைத்து
                     பதிவு.msgstr = இ
                     print(பதிவு.msgid, பதிவு.msgstr)
                 அகராதி_சேமி(அ, இருமம்)
+        else:
+            tr_entries = அ.translated_entries()
+            for பதிவு in tr_entries:
+                src = பதிவு.msgid
+                if src == "":
+                    src = பதிவு.msgctxt
+                if src == பதிவு.msgstr                :
+                    இ, _ = பொருள்_பெறு(src)
+                    if பதிவு.msgid_plural:
+                        பதிவு.msgstr_plural[0] = இ
+                        ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural)
+                        பதிவு.msgstr_plural[1] = ஈ
+                        # பதிவு.msgstr_plural = {0: இ, 1: ஈ}
+                        if 2 in பதிவு.msgstr_plural:
+                            பதிவு.msgstr_plural[2] = ஈ
+                            # பதிவு.msgstr_plural = {0: இ, 1: ஈ, 2: ஈ}
+                        print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
+                    else:
+                        பதிவு.msgstr = இ
+                        print(பதிவு.msgid, பதிவு.msgstr)
+                    அகராதி_சேமி(அ, இருமம்)
 
 
 def சரங்கள்மொழிபெயர்(பாதை="./வெறுமை/*.strings"):
