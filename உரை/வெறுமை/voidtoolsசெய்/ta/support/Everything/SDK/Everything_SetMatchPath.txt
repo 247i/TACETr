@@ -1,0 +1,34 @@
+=Everything_SetMatchPath=
+The '''Everything_SetMatchPath''' function enables or disables full path matching for the next call to [[support/everything/SDK/Everything_Query|Everything_Query]].
+
+==Syntax==
+<pre>
+void Everything_SetMatchPath(
+    BOOL bEnable
+);
+</pre>
+
+==Parameters==
+<dl>
+;''bEnable''
+[in] Specifies whether to enable or disable full path matching.
+If this parameter is TRUE, full path matching is enabled. 
+If the parameter is FALSE, full path matching is disabled. 
+</dl>
+
+==Remarks==
+If match full path is being enabled, the next call to [[support/everything/SDK/Everything_Query|Everything_Query]] will search the full path and file name of each file and folder.
+If match full path is being disabled, the next call to [[support/everything/SDK/Everything_Query|Everything_Query]] will search the file name only of each file and folder.
+Match path is disabled by default.
+Enabling match path will add a significant performance hit.
+
+==Example==
+<pre>
+Everything_SetMatchPath(TRUE);
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_GetMatchPath|Everything_GetMatchPath]]
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+</ul>

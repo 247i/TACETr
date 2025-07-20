@@ -1,0 +1,76 @@
+=Everything Service=
+The Everything service indexes NTFS volumes and monitors USN Journals.
+This allows the Everything client to run as a standard user.
+
+On XP or earlier the Everything service is not required.
+On Vista or later with a standard user account you will need to install the Everything service to use NTFS indexing.
+On Vista or later with the true administrator account the Everything service is not required.
+
+The Everything service is installed by default on Windows Vista or later when the installer is run with a standard user account.
+
+==Installing==
+
+<ul>
+*Check the Install Everything Service option when running the Everything installer.
+</ul>
+
+-or-
+
+<ul>
+*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
+*Click the '''General '''Tab.
+*Check '''Everything Service'''.
+*Uncheck '''Run as administrator'''.
+*Click '''OK'''.
+</ul>
+
+==How is the Everything service started?==
+Windows automatically starts the Everything service on system start-up.
+
+==Stopping or starting the service==
+The Everything service is always running and generally does not need to be stopped.
+However, you can start or stop the Everything service from Start -> Control Panel -> Administrative Tools -> Services. Right click the Everything service and select Start or Stop.
+
+==How can I manage the Everything service from the command line?==
+<pre>
+Everything.exe -install-service [-install-service-pipe-name <name>] [-install-service-security-descriptor <sd>]
+Everything.exe -uninstall-service
+Everything.exe -start-service
+Everything.exe -stop-service
+</pre>
+
+==How can I manage the Everything service from Everything?==
+<ul>
+*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
+*Click the '''General '''Tab.
+*Check or uncheck the '''Everything service''' to install or uninstall the Everything service.
+*Click '''OK'''.
+</ul>
+
+==How can I run the Everything service from the portable version of Everything?==
+To launch the Everything service as a normal administrator application, run the following:
+<pre>
+Everything.exe -svc
+</pre>
+
+To specify the pipe name, use the -svc-pipe-name <name> command line option, for example:
+<pre>
+Everything.exe -svc -svc-pipe-name "my Everything pipe name"
+</pre>
+
+Running the Everything service this way does not modify the system.
+
+The Everything service has no interface.
+Use Task Manager to terminate the service application when it is no longer needed.
+
+You can close the portable service application easily by making a batch file that runs Everything.exe -svc
+Simply close the console window to terminate the service application.
+
+==How many resources does the service use?==
+The Everything service will use about 1MB of RAM and will have none to very little CPU usage.
+
+==Security==
+Any local user can use the Everything Service to create a list of all NTFS filenames. 
+Note: The Everything Service can not be used to access files, only filenames.
+
+

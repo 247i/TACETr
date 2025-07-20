@@ -1,0 +1,65 @@
+=Everything_GetResultFullPathName=
+The '''Everything_GetResultFullPathName''' function retrieves the full path and file name of the visible result.
+
+==Syntax==
+<pre>
+DWORD Everything_GetResultFullPathName(
+    DWORD index,
+    LPTSTR lpString,
+    DWORD nMaxCount
+);
+</pre>
+
+==Parameters==
+<dl>
+;''index''
+Zero based index of the visible result.
+;''lpString'' [out]
+Pointer to the buffer that will receive the text. If the string is as long or longer than the buffer, the string is truncated and terminated with a NULL character. 
+;''nMaxCount''
+Specifies the maximum number of characters to copy to the buffer, including the NULL character. If the text exceeds this limit, it is truncated.
+</dl>
+
+==Return Value==
+If lpString is NULL, the return value is the number of '''TCHARs''' excluding the null terminator needed to store the full path and file name of the visible result.
+If lpString is not NULL, the return value is the number of '''TCHARs''' excluding the null terminator copied into lpString.
+If the function fails the return value is 0. To get extended error information, call [[support/everything/SDK/Everything_GetLastError|Everything_GetLastError]].
+
+{|
+! Error code
+! Description
+|-
+| EVERYTHING_ERROR_INVALIDCALL
+| Call [[support/everything/SDK/Everything_Query|Everything_Query]] before calling Everything_GetResultFullPathName.
+|-
+| EVERYTHING_ERROR_INVALIDINDEX
+| index must be greater than or equal to 0 and less than the visible number of results.
+|}
+
+==Remarks==
+You can only call this function for a visible result. To determine if a result is visible use the [[support/everything/SDK/Everything_GetNumFileResults|Everything_GetNumFileResults]] function.
+You can mix ANSI / Unicode versions of Everything_GetResultFullPathName and Everything_Query. 
+
+==Example==
+<pre>
+TCHAR buf[MAX_PATH];
+
+// set the search text to abc AND 123
+Everything_SetSearch("abc 123");
+
+// execute the query
+Everything_Query(TRUE);
+
+// Get the full path and file name of the first visible result.
+Everything_GetResultFullPathName(0,buf,sizeof(buf) / sizeof(TCHAR));
+</pre>
+
+==Function Information==
+Requires Everything 1.4.1 or later.
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+*[[support/everything/SDK/Everything_GetResultFileName|Everything_GetResultFileName]]
+*[[support/everything/SDK/Everything_GetResultPath|Everything_GetResultPath]]
+</ul>

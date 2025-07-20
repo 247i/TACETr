@@ -1,0 +1,62 @@
+=Troubleshooting=
+
+==Missing files==
+Corrupt files and folders are automatically excluded by "''Everything''". Please check your disk(s) for errors.
+
+To check your disk(s) for errors:
+<ul>
+* In '''My Computer''', for each volume:
+* '''Right click''' and select '''Properties'''.
+* Click the '''Tools''' tab.
+* Click '''Check now...'''.
+* Select '''Automatically fix file system errors'''.
+* Click '''Start'''.
+* If prompted to schedule the disk check the next time you restart the computer select Yes.
+</ul>
+
+==Rebuilding the database==
+To force "''Everything''" to rebuild the database:
+<ul>
+*In "'''''Everything'''''", from the the '''Tools''' menu, click '''Options'''.
+*Click the '''Indexes''' tab.
+*Click '''Force rebuild'''.
+*Click '''OK'''.
+</ul>
+
+==Recreate the USN Journal==
+To force the NTFS driver to rebuild the USN Journal:
+<ul>
+*In "'''''Everything'''''", from the the '''Tools''' menu, click '''Options'''.
+*Click the '''NTFS''' tab.
+*Select the NTFS volume .
+*Uncheck '''Enable USN Journal Logging'''.
+*Click '''Apply'''.
+*Check '''Enable USN Journal Logging'''.
+*Click '''OK'''.
+</ul>
+
+==HTTP Server does not start==
+This is most commonly caused by another service using port 80.
+
+Try to change the HTTP server port.
+
+For example: to change the HTTP server port to 8080:
+
+<ul>
+*In "Everything", from the Tools menu, click Options.
+*Under the HTTP tab, change the HTTP Server Port to 8080.
+*Click OK.
+</ul>
+
+To connect to this server:
+<ul>
+*In your web browser, enter http://localhost:8080
+*Change localhost to the server name for remote access. 
+</ul>
+
+==Debug mode.
+The debug console can be toggled with the Ctrl + ` key.
+See [[/forum/viewtopic.php?f=6&t=1713]] for more information.
+
+==Support==
+Please check the [[/forum/|forums]] or [[contact|contact voidtools]] for support.

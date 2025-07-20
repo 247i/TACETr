@@ -1,0 +1,30 @@
+=Everything_CleanUp=
+The '''Everything_CleanUp''' function resets the result list and search state, freeing any allocated memory by the library.
+
+==Syntax==
+<pre>
+void Everything_CleanUp(void);
+</pre>
+
+==Parameters==
+This function has no parameters.
+
+==Return Value==
+This function has no return value.
+
+==Remarks==
+You should call '''Everything_CleanUp''' to free any memory allocated by the Everything SDK.
+Calling [[support/everything/SDK/Everything_SetSearch|Everything_SetSearch]] frees the old search and allocates the new search string.
+Calling [[support/everything/SDK/Everything_Query|Everything_Query]] frees the old result list and allocates the new result list.
+
+==Example==
+<pre>
+Everything_CleanUp();
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_SetSearch|Everything_SetSearch]]
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+</ul>
+

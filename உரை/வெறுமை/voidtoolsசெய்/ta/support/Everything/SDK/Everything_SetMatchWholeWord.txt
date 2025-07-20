@@ -1,0 +1,31 @@
+=Everything_SetMatchWholeWord=
+The '''Everything_SetMatchWholeWord''' function enables or disables matching whole words for the next call to [[support/everything/SDK/Everything_Query|Everything_Query]].
+
+==Syntax==
+<pre>
+void Everything_SetMatchWholeWord(
+    BOOL bEnable
+);
+</pre>
+
+==Parameters==
+<dl>
+;''bEnable''
+Specifies whether the search matches whole words, or can match anywhere.
+If this parameter is TRUE, the search matches whole words only. 
+If the parameter is FALSE, the search can occur anywhere. 
+</dl>
+
+==Remarks==
+Match whole word is disabled by default.
+
+==Example==
+<pre>
+Everything_SetMatchWholeWord(TRUE);
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_GetMatchWholeWord|Everything_GetMatchWholeWord]]
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+</ul>

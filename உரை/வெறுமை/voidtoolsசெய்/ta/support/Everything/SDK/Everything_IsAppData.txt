@@ -1,0 +1,44 @@
+=Everything_IsAppData=
+The '''Everything_IsAppData''' function checks if Everything is saving settings and data to %APPDATA%\Everything or to the same location as the Everything.exe.
+
+==Syntax==
+<pre>
+BOOL Everything_IsAppData(void);
+</pre>
+
+==Parameters==
+<dl>
+No parameters.
+</dl>
+
+==Return Value==
+The function returns non-zero if settings and data are saved in %APPDATA%\Everything.
+The function returns 0 if settings and data are saved to the same location as the Everything.exe or if an error occurred. To get extended error information, call [[support/everything/SDK/Everything_GetLastError|Everything_GetLastError]]
+
+{|
+! Error code
+! Meaning
+|-
+| EVERYTHING_ERROR_SUCCESS
+| Settings and data are stored in the same location as the Everything.exe.
+|-
+| EVERYTHING_ERROR_IPC
+| Please make sure the Everything search client is running in the background.
+|}
+
+==Remarks==
+
+==Example==
+<pre>
+BOOL isAppData;
+
+isAppData = Everything_IsAppData();
+</pre>
+
+==Function Information==
+Requires Everything 1.4.1 or later.
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_IsAdmin|Everything_IsAdmin]]
+</ul>

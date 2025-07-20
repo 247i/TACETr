@@ -1,0 +1,39 @@
+=Everything_GetSearch=
+The '''Everything_GetSearch''' function retrieves the search text to use for the next call to [[support/everything/SDK/Everything_Query|Everything_Query]].
+
+==Syntax==
+<pre>
+LPCTSTR Everything_GetSearch(void);
+</pre>
+
+==Return Value==
+The return value is a pointer to the null terminated search string.
+The unicode and ansi version must match the call to Everything_SetSearch.
+The function will fail if you call Everything_GetSearchA after a call to Everything_SetSearchW
+The function will fail if you call Everything_GetSearchW after a call to Everything_SetSearchA
+If the function fails, the return value is NULL.
+To get extended error information, call [[support/everything/SDK/Everything_GetLastError|Everything_GetLastError]].
+
+{|
+! Error code
+! Meaning
+|-
+| EVERYTHING_ERROR_INVALIDCALL
+| Mismatched unicode / ansi call. 
+|}
+
+==Remarks==
+Get the internal state of the search text.
+The default string is an empty string.
+
+==Example==
+
+<pre>
+LPCTSTR lpSearchString = Everything_GetSearch();
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_SetSearch|Everything_SetSearch]]
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+</ul>

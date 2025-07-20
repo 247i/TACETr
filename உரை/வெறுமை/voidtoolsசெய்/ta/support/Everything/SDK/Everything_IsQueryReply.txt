@@ -1,0 +1,133 @@
+=Everything_IsQueryReply=
+The '''Everything_IsQueryReply''' function checks if the specified window message is a query reply.
+
+==Syntax==
+<pre>
+BOOL EVERYTHINGAPI Everything_IsQueryReply(
+    UINT message,
+    WPARAM wParam,
+    LPARAM lParam,
+    DWORD nId
+);
+</pre>
+
+==Parameters==
+<dl>
+;''message''
+Specifies the message identifier.
+;''wParam''
+Specifies additional information about the message.
+;''lParam''
+Specifies additional information about the message.
+;''nId''
+The unique identifier specified with [[support/everything/SDK/Everything_SetReplyID|Everything_SetReplyID]], or 0 for the default ID.
+This is the value used to compare with the dwData member of the COPYDATASTRUCT if the message is WM_COPYDATA.
+</dl>
+
+==Return Value==
+Returns TRUE if the message is a query reply.
+If the function fails the return value is FALSE. To get extended error information, call: [[support/everything/SDK/Everything_GetLastError|Everything_GetLastError]].
+
+==Remarks==
+This function checks if the message is a WM_COPYDATA message. If the message is a WM_COPYDATA message the function checks if the ReplyID matches the dwData member of the COPYDATASTRUCT. If they match the function makes a copy of the query results.
+You must call Everything_IsQueryReply in the windows message handler to check for an IPC query reply if you call Everything_Query with bWait set to FALSE.
+If the function returns TRUE you should return TRUE.
+If the function returns TRUE you can call the following functions to read the results:
+
+<ul>
+*[[support/everything/SDK/Everything_SortResultsByPath|Everything_SortResultsByPath]]
+*[[support/everything/SDK/Everything_Reset|Everything_Reset]]
+*[[support/everything/SDK/Everything_GetNumFileResults|Everything_GetNumFileResults]]
+*[[support/everything/SDK/Everything_GetNumFolderResults|Everything_GetNumFolderResults]]
+*[[support/everything/SDK/Everything_GetNumResults|Everything_GetNumResults]]
+*[[support/everything/SDK/Everything_GetTotFileResults|Everything_GetTotFileResults]]
+*[[support/everything/SDK/Everything_GetTotFolderResults|Everything_GetTotFolderResults]]
+*[[support/everything/SDK/Everything_GetTotResults|Everything_GetTotResults]]
+*[[support/everything/SDK/Everything_IsVolumeResult|Everything_IsVolumeResult]]
+*[[support/everything/SDK/Everything_IsFolderResult|Everything_IsFolderResult]]
+*[[support/everything/SDK/Everything_IsFileResult|Everything_IsFileResult]]
+*[[support/everything/SDK/Everything_GetResultFileName|Everything_GetResultFileName]]
+*[[support/everything/SDK/Everything_GetResultPath|Everything_GetResultPath]]
+*[[support/everything/SDK/Everything_GetResultFullPathName|Everything_GetResultFullPathName]]
+</ul>
+
+==Example==
+<pre>
+LRESULT CALLBACK WindowProc(HWND hwnd,UINT uMsg,WPARAM wParam,LPARAM lParam)
+{
+	if (Everything_IsQueryReply(uMsg,wParam,lParam,0))
+	{
+		// ...
+		// do something with the results..
+		// ...
+		
+		return TRUE;
+	}
+
+	// return the default window proc..
+	return DefWindowProc(hwnd,uMsg,wParam,lParam);
+}
+</pre>
+
+==Implementation==
+<pre>
+BOOL EVERYTHINGAPI Everything_IsQueryReply(UINT message,WPARAM wParam,LPARAM lParam,DWORD nId)
+{
+	if (message == WM_COPYDATA)
+	{
+		COPYDATASTRUCT *cds = (COPYDATASTRUCT *)lParam;
+		
+		if (cds)
+		{
+			if (cds->dwData == _Everything_ReplyID)
+			{
+				if (_Everything_IsUnicodeQuery)				
+				{
+					if (_Everything_List) HeapFree(GetProcessHeap(),0,_Everything_List);
+					
+					_Everything_List = (EVERYTHING_IPC_LISTW *)HeapAlloc(GetProcessHeap(),0,cds->cbData);
+					
+					if (_Everything_List)
+					{
+						CopyMemory(_Everything_List,cds->lpData,cds->cbData);
+					}
+					else
+					{
+						_Everything_LastError = EVERYTHING_ERROR_MEMORY;
+					}
+					
+					return TRUE;
+				}
+				else
+				{
+					if (_Everything_List) HeapFree(GetProcessHeap(),0,_Everything_List);
+					
+					_Everything_List = (EVERYTHING_IPC_LISTW *)HeapAlloc(GetProcessHeap(),0,cds->cbData);
+					
+					if (_Everything_List)
+					{
+						CopyMemory(_Everything_List,cds->lpData,cds->cbData);
+					}
+					else
+					{
+						_Everything_LastError = EVERYTHING_ERROR_MEMORY;
+					}
+					
+					return TRUE;
+				}
+			}
+		}
+	}
+	
+	return FALSE;
+}
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+*[[support/everything/SDK/Everything_SetReplyWindow|Everything_SetReplyWindow]]
+*[[support/everything/SDK/Everything_SetReplyID|Everything_SetReplyID]]
+*[[support/everything/SDK/Everything_GetReplyWindow|Everything_GetReplyWindow]]
+*[[support/everything/SDK/Everything_GetReplyID|Everything_GetReplyID]]
+</ul>

@@ -1,0 +1,43 @@
+=Everything_DeleteRunHistory=
+The '''Everything_DeleteRunHistory''' function deletes all run history.
+
+==Syntax==
+<pre>
+BOOL Everything_DeleteRunHistory(void);
+</pre>
+
+==Parameters==
+<dl>
+No parameters.
+</dl>
+
+==Return Value==
+The function returns non-zero if run history is cleared.
+The function returns 0 if an error occurred. To get extended error information, call [[support/everything/SDK/Everything_GetLastError|Everything_GetLastError]]
+
+{|
+! Error code
+! Meaning
+|-
+| EVERYTHING_ERROR_IPC
+| Please make sure the Everything search client is running in the background.
+|}
+
+==Remarks==
+Calling this function will clear all run history from memory and disk.
+
+==Example==
+<pre>
+// clear run history
+Everything_DeleteRunHistory();
+</pre>
+
+==Function Information==
+Requires Everything 1.4.1 or later.
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_GetRunCountFromFileName|Everything_GetRunCountFromFileName]]
+*[[support/everything/SDK/Everything_SetRunCountFromFileName|Everything_SetRunCountFromFileName]]
+*[[support/everything/SDK/Everything_IncRunCountFromFileName|Everything_IncRunCountFromFileName]]
+</ul>

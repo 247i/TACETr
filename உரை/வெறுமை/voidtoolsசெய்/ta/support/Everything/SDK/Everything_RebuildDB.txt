@@ -1,0 +1,42 @@
+=Everything_RebuildDB=
+The '''Everything_RebuildDB''' function requests Everything to forcefully rebuild the Everything index.
+
+==Syntax==
+<pre>
+BOOL Everything_RebuildDB(void);
+</pre>
+
+==Parameters==
+<dl>
+No parameters.
+</dl>
+
+==Return Value==
+The function returns non-zero if the request to forcefully rebuild the Everything index was successful.
+The function returns 0 if an error occurred. To get extended error information, call [[support/everything/SDK/Everything_GetLastError|Everything_GetLastError]]
+
+{|
+! Error code
+! Meaning
+|-
+| EVERYTHING_ERROR_IPC
+| Please make sure the Everything search client is running in the background.
+|}
+
+==Remarks==
+Requesting a rebuild will mark all indexes as dirty and start the rebuild process.
+Use '''Everything_IsDBLoaded''' to determine if the database has been rebuilt before performing a query.
+
+==Example==
+<pre>
+// rebuild the database.
+Everything_RebuildDB();
+</pre>
+
+==Function Information==
+Requires Everything 1.4.1 or later.
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_IsDBLoaded|Everything_IsDBLoaded]]
+</ul>

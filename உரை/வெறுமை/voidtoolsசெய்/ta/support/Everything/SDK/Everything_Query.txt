@@ -1,0 +1,110 @@
+=Everything_Query=
+The '''Everything_Query''' function executes an Everything IPC query with the current search state.
+
+==Syntax==
+<pre>
+void Everything_Query(
+    BOOL bWait
+);
+</pre>
+
+==Parameters==
+<dl>
+;''bWait''
+Should the function wait for the results or return immediately.
+Set this to FALSE to post the IPC Query and return immediately.
+Set this to TRUE to send the IPC Query and wait for the results.
+</dl>
+
+
+==Return Value==
+If the function succeeds, the return value is TRUE.
+If the function fails, the return value is FALSE.  To get extended error information, call [[support/everything/SDK/Everything_GetLastError|Everything_GetLastError]]
+
+{|
+! Error code
+! Description
+|-
+| EVERYTHING_ERROR_CREATETHREAD
+| Failed to create the search query thread. 
+|-
+| EVERYTHING_ERROR_REGISTERCLASSEX
+| Failed to register the search query window class.
+|-
+| EVERYTHING_ERROR_CREATEWINDOW
+| Failed to create the search query window.
+|-
+| EVERYTHING_ERROR_IPC
+| IPC is not available. Make sure Everything is running.
+|-
+| EVERYTHING_ERROR_MEMORY
+| Failed to allocate memory for the search query.
+|-
+| EVERYTHING_ERROR_INVALIDCALL
+| Call [[support/everything/SDK/Everything_SetReplyWindow|Everything_SetReplyWindow]] before calling Everything_Query with bWait set to FALSE.
+|}
+
+
+==Remarks==
+If bWait is FALSE you must call [[support/everything/SDK/Everything_SetReplyWindow|Everything_SetReplyWindow]] before calling Everything_Query. Use the [[support/everything/SDK/Everything_IsQueryReply|Everything_IsQueryReply]] function to check for query replies.
+Optionally call the following functions to set the search state before calling Everything_Query:
+<ul>
+*[[support/everything/SDK/Everything_SetSearch|Everything_SetSearch]]
+*[[support/everything/SDK/Everything_SetMatchPath|Everything_SetMatchPath]]
+*[[support/everything/SDK/Everything_SetMatchCase|Everything_SetMatchCase]]
+*[[support/everything/SDK/Everything_SetMatchWholeWord|Everything_SetMatchWholeWord]]
+*[[support/everything/SDK/Everything_SetRegex|Everything_SetRegex]]
+*[[support/everything/SDK/Everything_SetMax|Everything_SetMax]]
+*[[support/everything/SDK/Everything_SetOffset|Everything_SetOffset]]
+*[[support/everything/SDK/Everything_SetReplyID|Everything_SetReplyID]]
+*[[support/everything/SDK/Everything_SetRequestFlags|Everything_SetRequestFlags]]
+</ul>
+You can mix ANSI / Unicode version of Everything_SetSearch and Everything_Query.
+The ANSI / Unicode version of Everything_Query MUST match the ANSI / Unicode version of Everything_GetResultName and Everything_GetResultPath.
+The search state is not modified from a call to Everything_Query.
+The default state is as follows:
+See [[support/everything/SDK/Everything_Reset|Everything_Reset]] for the default search state.
+
+
+==Example==
+
+<pre>
+// set the search text to abc AND 123
+Everything_SetSearch("abc 123");
+
+// enable case sensitive searching.
+Everything_SetMatchCase(TRUE);
+
+// execute the query
+Everything_Query(TRUE);
+</pre>
+
+
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_SetSearch|Everything_SetSearch]]
+*[[support/everything/SDK/Everything_SetMatchPath|Everything_SetMatchPath]]
+*[[support/everything/SDK/Everything_SetMatchCase|Everything_SetMatchCase]]
+*[[support/everything/SDK/Everything_SetMatchWholeWord|Everything_SetMatchWholeWord]]
+*[[support/everything/SDK/Everything_SetRegex|Everything_SetRegex]]
+*[[support/everything/SDK/Everything_SetMax|Everything_SetMax]]
+*[[support/everything/SDK/Everything_SetOffset|Everything_SetOffset]]
+*[[support/everything/SDK/Everything_SortResultsByPath|Everything_SortResultsByPath]]
+*[[support/everything/SDK/Everything_GetLastError|Everything_GetLastError]]
+*[[support/everything/SDK/Everything_GetNumFileResults|Everything_GetNumFileResults]]
+*[[support/everything/SDK/Everything_GetNumFolderResults|Everything_GetNumFolderResults]]
+*[[support/everything/SDK/Everything_GetNumResults|Everything_GetNumResults]]
+*[[support/everything/SDK/Everything_GetTotFileResults|Everything_GetTotFileResults]]
+*[[support/everything/SDK/Everything_GetTotFolderResults|Everything_GetTotFolderResults]]
+*[[support/everything/SDK/Everything_GetTotResults|Everything_GetTotResults]]
+*[[support/everything/SDK/Everything_IsVolumeResult|Everything_IsVolumeResult]]
+*[[support/everything/SDK/Everything_IsFolderResult|Everything_IsFolderResult]]
+*[[support/everything/SDK/Everything_IsFileResult|Everything_IsFileResult]]
+*[[support/everything/SDK/Everything_GetResultFileName|Everything_GetResultFileName]]
+*[[support/everything/SDK/Everything_GetResultPath|Everything_GetResultPath]]
+*[[support/everything/SDK/Everything_GetResultFullPathName|Everything_GetResultFullPathName]]
+*[[support/everything/SDK/Everything_SetReplyWindow|Everything_SetReplyWindow]]
+*[[support/everything/SDK/Everything_SetReplyID|Everything_SetReplyID]]
+*[[support/everything/SDK/Everything_Reset|Everything_Reset]]
+</ul>

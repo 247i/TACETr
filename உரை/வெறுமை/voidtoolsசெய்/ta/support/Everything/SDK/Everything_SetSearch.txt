@@ -1,0 +1,38 @@
+=Everything_SetSearch=
+The '''Everything_SetSearch''' function sets the search string for the IPC Query.
+
+==Syntax==
+<pre>
+void Everything_SetSearch(
+    LPCTSTR lpString
+);
+</pre>
+
+==Parameters==
+<dl>
+;''lpString'' [in]
+Pointer to a null-terminated string to be used as the new search text. 
+</dl>
+
+==Return Value==
+This function has no return value.
+
+==Remarks==
+Optionally call this function prior to a call to [[support/everything/SDK/Everything_Query|Everything_Query]]
+[[support/everything/SDK/Everything_Query|Everything_Query]] executes the IPC Query using this search string.
+
+==Example==
+<pre>
+// Set the search string to abc AND 123
+Everything_SetSearch("abc 123");
+
+// Execute the IPC query.
+Everything_Query(FALSE);
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_GetSearch|Everything_GetSearch]]
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+</ul>
+

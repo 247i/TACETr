@@ -1,0 +1,40 @@
+=Everything_Exit=
+The '''Everything_Exit''' function requests Everything to exit.
+
+==Syntax==
+<pre>
+BOOL Everything_Exit(void);
+</pre>
+
+==Parameters==
+<dl>
+No parameters.
+</dl>
+
+==Return Value==
+The function returns non-zero if the exit request was successful.
+The function returns 0 if the request failed. To get extended error information, call [[support/everything/SDK/Everything_GetLastError|Everything_GetLastError]]
+
+{|
+! Error code
+! Meaning
+|-
+| EVERYTHING_ERROR_IPC
+| Please make sure the Everything search client is running in the background.
+|}
+
+==Remarks==
+Request Everything to save settings and data to disk and exit.
+
+==Example==
+<pre>
+// request Everything to exit.
+Everything_Exit();
+</pre>
+
+==Function Information==
+Requires Everything 1.4.1 or later.
+
+==See Also==
+<ul>
+</ul>

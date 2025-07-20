@@ -1,0 +1,27 @@
+=Everything_GetMatchCase=
+The '''Everything_GetMatchCase''' function returns the match case state.
+
+==Syntax==
+<pre>
+BOOL Everything_GetMatchCase(void);
+</pre>
+
+==Return Value==
+The return value is the match case state.
+The function returns TRUE if match case is enabled.
+The function returns FALSE if match case is disabled.
+
+==Remarks==
+Get the internal state of the match case switch.
+The default state is FALSE, or disabled.
+
+==Example==
+<pre>
+BOOL bEnabled = Everything_GetMatchCase();
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_SetMatchCase|Everything_SetMatchCase]]
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+</ul>

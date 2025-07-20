@@ -1,0 +1,104 @@
+=IPC C Example=
+A C example to send a search query to Everything using WM_COPYDATA and retrieve the results.
+
+==Sending a query==
+<pre>
+#define COPYDATA_QUERYCOMPLETE	0
+
+BOOL sendquery(HWND hwnd,DWORD max_results,WCHAR *search_string,BOOL regex,BOOL match_case,BOOL match_whole_word,BOOL match_path)
+{
+	EVERYTHING_IPC_QUERY *query;
+	DWORD len;
+	DWORD size;
+	HWND everything_hwnd;
+	COPYDATASTRUCT cds;
+	
+	everything_hwnd = FindWindow(EVERYTHING_IPC_WNDCLASS,0);
+	if (everything_hwnd)
+	{
+		len = (int)wcslen(search_string);
+		
+		size = sizeof(EVERYTHING_IPC_QUERY) - sizeof(WCHAR) + len*sizeof(WCHAR) + sizeof(WCHAR);
+		
+		query = (EVERYTHING_IPC_QUERY *)HeapAlloc(GetProcessHeap(),0,size);
+		if (query)
+		{
+			query->max_results = max_results;
+			query->offset = 0;
+			query->reply_copydata_message = COPYDATA_QUERYCOMPLETE;
+			query->search_flags = (regex?EVERYTHING_IPC_REGEX:0) | (match_case?EVERYTHING_IPC_MATCHCASE:0) | (match_whole_word?EVERYTHING_IPC_MATCHWHOLEWORD:0) | (match_path?EVERYTHING_IPC_MATCHPATH:0);
+			query->reply_hwnd = hwnd;
+			
+			CopyMemory(query->search_string,search_string,(len+1)*sizeof(WCHAR));
+			
+			cds.cbData = size;
+			cds.dwData = EVERYTHING_IPC_COPYDATAQUERY;
+			cds.lpData = query;
+			
+			if (SendMessage(everything_hwnd,WM_COPYDATA,(WPARAM)hwnd,(LPARAM)&cds) == TRUE)
+			{
+				HeapFree(GetProcessHeap(),0,query);
+				
+				return TRUE;
+			}
+			else
+			{
+				// Everything IPC service not running
+			}
+			
+			HeapFree(GetProcessHeap(),0,query);
+		}
+	}
+	else
+	{
+		// the everything window was not found.
+		// we can optionally RegisterWindowMessage("EVERYTHING_IPC_CREATED") and 
+		// wait for Everything to post this message to all top level windows when its up and running.
+	}
+	
+	return FALSE;
+}
+</pre>
+
+==Retrieving results==
+<pre>
+
+void DisplayPathName(TCHAR *path,TCHAR *filename)
+{
+	// ...
+	// do something with path and filename
+	// ...
+}
+
+LRESULT CALLBACK window_proc(HWND hwnd,UINT uMsg,WPARAM wParam,LPARAM lParam)
+{
+	DWORD i;
+	EVERYTHING_IPC_LIST *list
+	
+	switch(uMsg)
+	{
+		case WM_COPYDATA:
+		{
+			COPYDATASTRUCT *cds = (COPYDATASTRUCT *)lParam;
+			
+			switch(cds->dwData)
+			{
+				case COPYDATA_QUERYCOMPLETE:
+				
+				list = (EVERYTHING_IPC_LIST *)cds->lpData;
+				
+				for(i=0;i<list->numitems;i++)
+				{
+					DisplayPathName(EVERYTHING_IPC_ITEMPATH(list,&list->items[i]),EVERYTHING_IPC_ITEMFILENAME(list,&list->items[i]))
+				}
+				
+				return TRUE;
+			}
+			
+			break;
+		}
+	}
+	
+	return DefWindowProc(hwnd,msg,wParam,lParam);
+}
+</pre>

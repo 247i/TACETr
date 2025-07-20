@@ -1,0 +1,273 @@
+=Indexes=
+By default, "''Everything''" indexes all local fixed NTFS volumes.
+
+Indexes can be customized in the [[support/everything/options#indexes|Everything options]].
+
+==Database location==
+Everything stores the database in:
+<pre>
+%LOCALAPPDATA%\Everything\Everything.db
+</pre>
+If [[support/everything/options#Store settings and data in %APPDATA%\Everything|Store settings and data in %APPDATA%\Everything]] is disabled, Everything.db is stored in the same location as Everything.exe.
+
+To set the database location:
+<ul>
+*In "''Everything''", from the '''Tools''' menu, click '''Options'''.
+*Select the '''Indexes''' tab.
+*Set the '''Database location'''.
+*Click '''OK'''.
+</ul>
+
+==Size, Dates and Attributes Indexing==
+Everything indexes file size and date modified by default.
+Everything will maintain this extra file information in real-time.
+
+File information that is indexed can be searched instantly.
+
+Extra file information, such as date created and file attributes is not indexed.
+This file information is gathered when displayed in Everything.
+Searching or sorting by this file information can be quite slow for many results.
+
+To include extra file information in the Everything index:
+<ul>
+*In '''''"Everything"''''', from the '''Tools''' menu, click '''Options'''
+*Click the '''Indexes''' tab.
+*Check the desired options:
+<ul>
+*Index file size
+*Index folder size
+*Index date created
+*Index date modified
+*Index date accessed
+*Index attributes
+</ul>
+*Click '''OK'''.
+</ul>
+
+Note: Including extra file information in the index will require more memory.
+Hover over an extra file information option to see a tooltip showing the extra memory requirements.
+
+==Folder sizes==
+To show folder sizes in ''"Everything"'':
+<ul>
+*In '''''"Everything"''''', from the '''Tools''' menu, click '''Options'''
+*Click the '''Indexes''' tab.
+*Check '''Index folder size'''.
+*Click '''OK'''.
+</ul>
+
+==Fast Sorting==
+''"Everything"'' maintains a "Fast sort" index for size and date modified information.
+
+Fast sorting is persistent, that is, ''"Everything"'' will remember the sort between searches.
+
+When sorting by file information that does not have fast sorting enabled ''"Everything"'' must gather this information from disk which can be slow.
+
+To enable fast sorting:
+<ul>
+*In '''''"Everything"''''', from the '''Tools''' menu, click '''Options'''.
+*Click the '''Indexes''' tab.
+*Check the desired fast sort options:
+<ul>
+*Fast size sort
+*Fast date created sort
+*Fast date modified sort
+*Fast date accessed sort
+*Fast attribute sort
+*Fast path sort
+*Fast extension sort
+</ul>
+*Click '''OK'''.
+</ul>
+
+Note: Enabling fast sort requires more memory. The corresponding extra file information must be included in the index.
+Hover over a fast sort option to see a tooltip showing the extra memory requirements.
+
+Name, Date Run, Run Count and Date Recently Changed are always fast sort enabled.
+
+==NTFS==
+''"Everything"'' will automatically index all fixed NTFS volumes.
+
+To manually index fixed NTFS volumes:
+<ul>
+*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
+*Click the '''NTFS''' tab
+*uncheck '''Auto include new fixed volumes'''.
+*Click '''OK'''.
+</ul>
+
+To include removable NTFS volumes in the index:
+<ul>
+*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
+*Click the '''NTFS''' tab
+*Select the removable volume.
+*Check '''Include in database'''.
+*Click '''OK'''.
+</ul>
+
+==ReFS==
+''"Everything"'' will automatically index all fixed ReFS volumes.
+
+To manually index fixed ReFS volumes:
+<ul>
+*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
+*Click the '''ReFS''' tab
+*uncheck '''Auto include new fixed volumes'''.
+*Click '''OK'''.
+</ul>
+
+To include removable ReFS volumes in the index:
+<ul>
+*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
+*Click the '''ReFS''' tab
+*Select the removable volume.
+*Check '''Include in database'''.
+*Click '''OK'''.
+</ul>
+
+==Folders==
+Use folder indexing to include mapped network drives, CDRoms, DVDRoms, FAT and FAT32 volumes.
+
+See [[support/everything/Folder Indexing]] for more information.
+
+==File Lists==
+Use file lists to index CDs, DVDs, BluRays and other offline files and folders.
+
+See [[support/everything/File lists]] for more information.
+
+==Exclude==
+''"Everything"'' will index every file and folder, you can then exclude files from the index.
+
+To exclude files or folders with the hidden or system attributes from the ''"Everything"'' index:
+<ul>
+*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
+*Click the '''Exclude''' tab
+*Check '''Exclude hidden files and folders''' to exclude files and folders with the hidden attribute.
+*Check '''Exclude system files and folders''' to exclude files and folders with the system attribute.
+*Click '''OK'''.
+</ul>
+
+To exclude a folder from the ''"Everything"'' index:
+<ul>
+*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
+*Click the '''Exclude''' tab
+*Click '''Add Folder...'''
+*Select the folder to exclude.
+*Click '''OK'''.
+*Click '''OK'''.
+</ul>
+
+To include only certain types of files in the ''"Everything"'' index:
+<ul>
+*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
+*Click the '''Exclude''' tab
+*Type in the semicolon delimited list of wildcard filters for '''include only files''', for example, include only mp3 and jpg files:
+<pre>
+*.mp3;*.jpg
+</pre>
+*Click '''OK'''.
+</ul>
+
+To exclude certain types of files from the ''"Everything"'' index:
+<ul>
+*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
+*Click the '''Exclude''' tab
+*Type in the semicolon delimited list of wildcard filters for '''exclude files''', for example, exclude thumbs.db, desktop.ini and tmp files:
+<pre>
+thumbs.db;desktop.ini;*.tmp
+</pre>
+*Click '''OK'''.
+</ul>
+
+To use regex in your exclude filters, prefix the exclude filter with regex:, for example, to exclude folders starting with A-N, set the exclude filter to:
+regex:^[A-N]
+
+==Optimizing for smallest memory foot print==
+To reduce the memory requirements for ''"Everything"'':
+<ul>
+*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
+*Click the '''Indexes''' tab
+*Uncheck '''Index recent changes'''.
+*Uncheck '''Index file size'''.
+*Uncheck '''Index folder size'''.
+*Uncheck '''Index date created'''.
+*Uncheck '''Index date modified'''.
+*Uncheck '''Index date accessed'''.
+*Uncheck '''Index attributes'''.
+*Uncheck '''Fast path sort'''.
+*Uncheck '''Fast extension sort'''.
+*Click '''OK'''.
+</ul>
+
+==Recover filenames from an Everything.db==
+To recover a list of filenames from a Everything.db:
+<ul>
+*Please make sure you have a backup of your Everything.db.
+*Download [[/db2efu.zip|db2efu.zip]].
+*Open db2efu.zip and run db2efu.exe
+*Select your Everything.db file.
+*Choose a filename to store the list of filenames.
+*This [[support/Everything/File Lists|file list]] file can be opened with ''"Everything"'', notepad or Excel.
+</ul>
+
+==Force rebuild==
+To force ''"Everything"'' to rebuild its indexes:
+<ul>
+*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
+*Click the '''Indexes''' tab
+*Click '''Force Rebuild'''.
+*Click '''OK'''.
+</ul>
+
+==Keep offline NTFS volumes in the index==
+To force Everything to rebuild its indexes:
+<ul>
+*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
+*Click the '''NTFS''' tab
+*Uncheck '''Automatically remove offline volumes'''.
+*Click '''OK'''.
+</ul>
+
+To manually remove offline volumes
+<ul>
+*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
+*Click the '''NTFS''' tab
+*Select the offline NTFS volume and click '''Remove'''.
+*Click '''OK'''.
+</ul>
+
+==Fast reindexing==
+''"Everything"'' must perform a reindex when a new volume is added to the index or an existing volume is removed from the index.
+When a reindex occurs with ''"Everything"'' 1.3 and earlier, all volumes must be completely rescanned, even if they have not changed.
+''"Everything"'' 1.4 can quickly reindex by reusing the existing up-to-date indexes.
+
+==Limitations==
+While all NTFS/ReFS hard links are indexed, changes made to a hard link will only update the first hard link entry in ''"Everything"''.
+''"Everything"'' does not follow junctions with NTFS/ReFS indexing.
+
+==Pausing file system monitors==
+To pause NTFS monitors, ReFS monitors, folder monitors and file list monitors:
+<ul>
+*In "'''''Everything'''''", type in the following search and press ENTER:
+/monitor_pause
+</ul>
+
+To resume NTFS monitors, ReFS monitors, folder monitors and file list monitors:
+<ul>
+*In "'''''Everything'''''", type in the following search and press ENTER:
+/monitor_resume
+</ul>
+
+Monitors will remain paused until they are resumed.
+
+==See also==
+<ul>
+*[[support/Everything/options#Indexes|Indexing options]]
+*[[support/Everything/options#NTFS|NTFS]]
+*[[support/Everything/options#Folders|Folder indexing options]]
+*[[support/Everything/options#File Lists|File lists options]]
+*[[support/Everything/options#Exclude|Exclude options]]
+*[[support/Everything/command line options#Database|Database command line options]]
+*[[support/Everything/ini#Indexing|Indexing Everything.ini options]]
+</ul>
+

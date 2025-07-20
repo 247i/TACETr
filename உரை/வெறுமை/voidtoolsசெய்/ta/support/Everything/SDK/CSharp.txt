@@ -1,0 +1,259 @@
+=C#=
+A C# example.
+
+==form1.Designer.cs==
+<pre>
+namespace WindowsApplication1
+{
+	partial class Form1
+	{
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
+		
+		/// <summary>
+		/// Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+	
+			base.Dispose(disposing);
+		}
+
+		#region Windows Form Designer generated code
+		
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
+			this.button1 = new System.Windows.Forms.Button();
+			this.listBox1 = new System.Windows.Forms.ListBox();
+			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+			this.SuspendLayout();
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(250, 12);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(84, 20);
+			this.button1.TabIndex = 0;
+			this.button1.Text = "Search";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
+			// listBox1
+			// 
+			this.listBox1.FormattingEnabled = true;
+			this.listBox1.Location = new System.Drawing.Point(12, 38);
+			this.listBox1.Name = "listBox1";
+			this.listBox1.Size = new System.Drawing.Size(302, 199);
+			this.listBox1.TabIndex = 2;
+			// 
+			// textBox1
+			// 
+			this.textBox1.Location = new System.Drawing.Point(12, 12);
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(232, 20);
+			this.textBox1.TabIndex = 3;
+			// 
+			// vScrollBar1
+			// 
+			this.vScrollBar1.Location = new System.Drawing.Point(317, 38);
+			this.vScrollBar1.Name = "vScrollBar1";
+			this.vScrollBar1.Size = new System.Drawing.Size(17, 199);
+			this.vScrollBar1.TabIndex = 4;
+			this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vScrollBar1_Scroll);
+			// 
+			// Form1
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(344, 245);
+			this.Controls.Add(this.vScrollBar1);
+			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.listBox1);
+			this.Controls.Add(this.button1);
+			this.Name = "Form1";
+			this.Text = "Form1";
+			this.ResumeLayout(false);
+			this.PerformLayout();
+			
+		}
+		
+		#endregion
+		
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.ListBox listBox1;
+		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.VScrollBar vScrollBar1;
+	}
+}
+</pre>
+
+==form1.cs==
+<pre>
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using System.Runtime.InteropServices;
+
+namespace WindowsApplication1
+{
+	public partial class Form1 : Form
+	{
+		[DllImport("Everything32.dll", CharSet = CharSet.Unicode)]
+		public static extern int Everything_SetSearchW(string lpSearchString);
+		[DllImport("Everything32.dll")]
+		public static extern void Everything_SetMatchPath(bool bEnable);
+		[DllImport("Everything32.dll")]
+		public static extern void Everything_SetMatchCase(bool bEnable);
+		[DllImport("Everything32.dll")]
+		public static extern void Everything_SetMatchWholeWord(bool bEnable);
+		[DllImport("Everything32.dll")]
+		public static extern void Everything_SetRegex(bool bEnable);
+		[DllImport("Everything32.dll")]
+		public static extern void Everything_SetMax(int dwMax);
+		[DllImport("Everything32.dll")]
+		public static extern void Everything_SetOffset(int dwOffset);
+		[DllImport("Everything32.dll")]
+		public static extern void Everything_SetReplyWindow(IntPtr hWnd);
+		[DllImport("Everything32.dll")]
+		public static extern void Everything_SetReplyID(int nId);
+		
+		[DllImport("Everything32.dll")]
+		public static extern bool Everything_GetMatchPath();
+		[DllImport("Everything32.dll")]
+		public static extern bool Everything_GetMatchCase();
+		[DllImport("Everything32.dll")]
+		public static extern bool Everything_GetMatchWholeWord();
+		[DllImport("Everything32.dll")]
+		public static extern bool Everything_GetRegex();
+		[DllImport("Everything32.dll")]
+		public static extern UInt32 Everything_GetMax();
+		[DllImport("Everything32.dll")]
+		public static extern UInt32 Everything_GetOffset();
+		[DllImport("Everything32.dll")]
+		public static extern string Everything_GetSearch();
+		[DllImport("Everything32.dll")]
+		public static extern int Everything_GetLastError();
+		[DllImport("Everything32.dll")]
+		public static extern IntPtr Everything_GetReplyWindow();
+		[DllImport("Everything32.dll")]
+		public static extern int Everything_GetReplyID();
+		
+		[DllImport("Everything32.dll")]
+		public static extern bool Everything_QueryW(bool bWait);
+		
+		[DllImport("Everything32.dll")]
+		public static extern bool Everything_IsQueryReply(int message, IntPtr wParam, IntPtr lParam, uint nId);
+		
+		[DllImport("Everything32.dll")]
+		public static extern void Everything_SortResultsByPath();
+		
+		[DllImport("Everything32.dll")]
+		public static extern int Everything_GetNumFileResults();
+		[DllImport("Everything32.dll")]
+		public static extern int Everything_GetNumFolderResults();
+		[DllImport("Everything32.dll")]
+		public static extern int Everything_GetNumResults();
+		[DllImport("Everything32.dll")]
+		public static extern int Everything_GetTotFileResults();
+		[DllImport("Everything32.dll")]
+		public static extern int Everything_GetTotFolderResults();
+		[DllImport("Everything32.dll")]
+		public static extern int Everything_GetTotResults();
+		[DllImport("Everything32.dll")]
+		public static extern bool Everything_IsVolumeResult(int nIndex);
+		[DllImport("Everything32.dll")]
+		public static extern bool Everything_IsFolderResult(int nIndex);
+		[DllImport("Everything32.dll")]
+		public static extern bool Everything_IsFileResult(int nIndex);
+		[DllImport("Everything32.dll", CharSet = CharSet.Unicode)]
+		public static extern void Everything_GetResultFullPathNameW(int nIndex, StringBuilder lpString, int nMaxCount);
+		[DllImport("Everything32.dll")]
+		public static extern void Everything_Reset();
+		
+		const int MY_REPLY_ID = 0;
+		
+		public Form1()
+		{
+			InitializeComponent();
+		}
+		
+		protected override void WndProc(ref Message m)
+		{
+			// use the default id (0) for the nId parameter.
+			if (Everything_IsQueryReply(m.Msg, m.WParam, m.LParam, MY_REPLY_ID))
+			{
+				int i;
+				const int bufsize = 260;
+				StringBuilder buf = new StringBuilder(bufsize);
+				
+				// IPC Query reply.
+				// clear the old list of results			
+				listBox1.Items.Clear();
+				
+				// set the window title
+				Text = textBox1.Text + " - " + Everything_GetTotResults() + " Results";
+				
+				// loop through the results, adding each result to the listbox.
+				for (i = 0; i < Everything_GetNumResults(); i++)
+				{
+					// get the result's full path and file name.
+					Everything_GetResultFullPathNameW(i, buf, bufsize);
+					
+					// add it to the list box				
+					listBox1.Items.Insert(i, buf);
+				}				
+				
+				vScrollBar1.Minimum = 0;
+				vScrollBar1.Maximum = Everything_GetTotResults() - 1; 
+				vScrollBar1.SmallChange = 1;
+				vScrollBar1.LargeChange = listBox1.ClientRectangle.Height / listBox1.ItemHeight;
+			}
+			
+			base.WndProc(ref m);
+			
+		}
+		
+		private void button1_Click(object sender, EventArgs e)
+		{
+			// set the search
+			Everything_SetSearchW(textBox1.Text);
+			
+			// set the reply window (this window) [REQUIRED if not waiting for results in Everything_Query].
+			Everything_SetReplyWindow(Handle);
+			
+			// set the reply id.
+			Everything_SetReplyID(MY_REPLY_ID);
+			
+			// set up the visible result window.
+			Everything_SetMax(listBox1.ClientRectangle.Height / listBox1.ItemHeight);
+			
+			// set up the visible result window.
+			Everything_SetOffset(vScrollBar1.Value);
+			
+			// execute the query, do not wait for results [REQUIRED]
+			Everything_QueryW(false);
+		}
+		
+		private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+		{
+			button1_Click(sender,e);
+		}
+	}
+}
+</pre>

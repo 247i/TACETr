@@ -1,0 +1,42 @@
+=Everything_SetReplyWindow=
+The '''Everything_SetReplyWindow''' function sets the window that will receive the the IPC Query results.
+
+==Syntax==
+<pre>
+void Everything_SetReplyWindow(
+    HWND hWnd
+);
+</pre>
+
+==Parameters==
+<dl>
+;''hWnd''
+The handle to the window that will receive the IPC Query reply.
+</dl>
+
+==Return Value==
+This function has no return value.
+
+==Remarks==
+This function must be called before calling [[support/everything/SDK/Everything_Query|Everything_Query]] with bWait set to FALSE.
+Check for results with the specified window using [[support/everything/SDK/Everything_IsQueryReply|Everything_IsQueryReply]].
+Call [[support/everything/SDK/Everything_SetReplyID|Everything_SetReplyID]] with a unique identifier to specify multiple searches.
+
+==Example==
+
+<pre>
+// reply to this window.
+Everything_SetReplyWindow(hwnd);
+
+// execute the query
+Everything_Query(FALSE);
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+*[[support/everything/SDK/Everything_SetReplyID|Everything_SetReplyID]]
+*[[support/everything/SDK/Everything_GetReplyWindow|Everything_GetReplyWindow]]
+*[[support/everything/SDK/Everything_GetReplyID|Everything_GetReplyID]]
+*[[support/everything/SDK/Everything_IsQueryReply|Everything_IsQueryReply]]
+</ul>

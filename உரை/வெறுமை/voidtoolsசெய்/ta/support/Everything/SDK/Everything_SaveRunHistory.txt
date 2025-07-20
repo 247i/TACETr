@@ -1,0 +1,41 @@
+=Everything_SaveRunHistory=
+The '''Everything_SaveRunHistory''' function requests Everything to save the run history to disk.
+
+==Syntax==
+<pre>
+BOOL Everything_SaveRunHistory(void);
+</pre>
+
+==Parameters==
+<dl>
+No parameters.
+</dl>
+
+==Return Value==
+The function returns non-zero if the request to save the run history to disk was successful.
+The function returns 0 if an error occurred. To get extended error information, call [[support/everything/SDK/Everything_GetLastError|Everything_GetLastError]]
+
+{|
+! Error code
+! Meaning
+|-
+| EVERYTHING_ERROR_IPC
+| Please make sure the Everything search client is running in the background.
+|}
+
+==Remarks==
+The run history is only saved to disk when you close an Everything search window or exit Everything.
+Call '''Everything_RunHistory''' to write the run history to the file: Run History.csv
+
+==Example==
+<pre>
+// flush run history to disk
+Everything_SaveRunHistory();
+</pre>
+
+==Function Information==
+Requires Everything 1.4.1 or later.
+
+==See Also==
+<ul>
+</ul>

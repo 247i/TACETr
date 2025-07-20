@@ -1,0 +1,37 @@
+=Multiple Instances=
+By default there is only one instance of Everything.
+When you run Everything.exe it will check for an existing instance. If an existing instance is found the command line options are sent and processed by the existing instance. If no existing instance is found a new one is created.
+
+To run multiple instances of Everything use [[support/everything/multiple instances#named instances|Named instances]].
+
+==Named instances==
+By default Everything uses the unnamed instance. 
+Assign unique names to Everything instances to use multiple instances.
+There can only be one instance for each unique name.
+
+To assign a name to the instance:
+Use the [[support/everything/command line options#-instance|-instance]] command line option to specify the instance name when starting Everything.exe.
+
+For example:
+<pre>
+Everything.exe -instance "ETP Server"
+</pre>
+
+Named instances use unique settings and data.
+For example, the named instanced "ETP Server" will use Everything-ETP SERVER.ini as the settings file.
+
+The name of the instance is located in the Everything search window caption and in the tooltip when hovering over the tray icon with the cursor.
+
+==Service==
+By default Everything will install a service for each instance.
+
+To use the same service for all instances, use the [[support/everything/command_line_options#-service-pipe-name|-service-pipe-name]] command line option or [[support/everything/ini#service_pipe_name|service_pipe_name]] ini option to specify the same service pipe name.
+The default unnamed servive pipe name is:
+<pre>
+\\\\.\\PIPE\\Everything Service
+</pre>
+
+For example, to connect to the default service pipe with a different instance name:
+<pre>
+Everything.exe -instance "ETP Server" -service-pipe-name "\\\\.\\PIPE\\Everything Service"
+</pre>

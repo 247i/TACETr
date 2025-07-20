@@ -1,0 +1,56 @@
+=Everything_GetResultFileName=
+The '''Everything_GetResultFileName''' function retrieves the file name part only of the visible result.
+
+==Syntax==
+<pre>
+LPCTSTR Everything_GetResultFileName(
+    DWORD index
+);
+</pre>
+
+==Parameters==
+<dl>
+;''index''
+Zero based index of the visible result.
+</dl>
+
+==Return Value==
+The function returns a pointer to a null terminated string of '''TCHARs'''.
+If the function fails the return value is NULL. To get extended error information, call [[support/everything/SDK/Everything_GetLastError|Everything_GetLastError]].
+
+{|
+! Error code
+! Meaning
+|-
+| EVERYTHING_ERROR_INVALIDCALL
+| Call [[support/everything/SDK/Everything_Query|Everything_Query]] before calling Everything_GetResultFileName.
+|-
+| EVERYTHING_ERROR_INVALIDINDEX
+| index must be greater than or equal to 0 and less than the visible number of results.
+|}
+
+==Remarks==
+The ANSI / Unicode version of this function must match the ANSI / Unicode version of the call to [[support/everything/SDK/Everything_Query|Everything_Query]].
+The function is faster than Everything_GetResultFullPathName as no memory copying occurs.
+The function returns a pointer to an internal structure that is only valid until the next call to [[support/everything/SDK/Everything_Query|Everything_Query]] or [[support/everything/SDK/Everything_Reset|Everything_Reset]].
+You can only call this function for a visible result. To determine if a result is visible use the [[support/everything/SDK/Everything_GetNumFileResults|Everything_GetNumFileResults]] function.
+
+==Example==
+<pre>
+// set the search text to abc AND 123
+Everything_SetSearch("abc 123");
+
+// execute the query
+Everything_Query(TRUE);
+
+// Get the file name part of the first visible result.
+LPCTSTR cFileName = Everything_GetResultFileName(0);
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+*[[support/everything/SDK/Everything_Reset|Everything_Reset]]
+*[[support/everything/SDK/Everything_GetResultPath|Everything_GetResultPath]]
+*[[support/everything/SDK/Everything_GetResultFullPathName|Everything_GetResultFullPathName]]
+</ul>

@@ -1,0 +1,446 @@
+=Command Line Options=
+A list of all the command line options available in Everything.
+Most of these options are available within Everything, in the [[support/everything/options|Everything options]].
+
+==Syntax==
+<pre>
+Everything.exe [filename] [options]
+</pre>
+
+<dl>
+;[option]
+Optional option.
+
+;<option>
+Required option.
+</dl>
+
+
+==Installation==
+These command line options return immediately and do not show an Everything search window.
+Some command line options require administrative privileges. Running Everything with a command line option that requires administrative privileges from a standard user account will automatically relaunch Everything with the specified command line option as administrator.
+
+<dl>
+;''-app-data''
+;''-noapp-data''
+Store settings and data in %APPDATA%\Everything or in the same location as the executable.
+
+;''-choose-language''
+Show the language selection page.
+
+;''-choose-volumes''
+Do not automatically index volumes. Removes all NTFS volumes from the index.
+
+;''-enable-run-as-admin''
+;''-disable-run-as-admin''
+Enable or disable run as administrator.
+
+;''-enable-update-notification''
+;''-disable-update-notification''
+Enable or disable update notification on startup.
+
+;''-install'' <location>
+Copies Everything.exe and uninstall.exe to the new location. Creates an uninstall entry in Programs and Features if uninstall.exe is present. Executes the copied Everything.exe with the install options specified in [[support/everything/command line options#-install-options|-install-options]].
+
+;''-install-client-service''
+;''-uninstall-client-service''
+Install the "Everything" client as a service.
+
+;''-install-config'' <filename>
+Install the specified configuration file. The specified ini file is merged with any existing configuration file before any other install options are applied.
+
+;''-install-desktop-shortcut''
+;''-uninstall-desktop-shortcut''
+Create or delete the desktop shortcut.
+
+;''-install-efu-association''
+;''-uninstall-efu-association''
+Create or remove the EFU file association with Everything.
+
+;''-install-folder-context-menu''
+;''-uninstall-folder-context-menu''
+Install or uninstall folder context menus.
+
+;''-install-options'' <command line options>
+Command line options to pass to the newly installed Everything.exe. Combine with [[support/everything/command line options#-install|-install]].
+
+;''-install-quick-launch-shortcut''
+;''-uninstall-quick-launch-shortcut''
+Create or delete the Search Everything quick launch shortcut.
+
+;''-install-run-on-system-startup''
+;''-uninstall-run-on-system-startup''
+Add or remove Everything from the system startup.
+
+;''-install-service''
+;''-uninstall-service''
+Install or uninstall the "Everything" service. The service is started automatically. Combine with [[#-install-service-port|-install-service-port]] to set the service port. Combine with [[#-install-service-pipe-name|-install-service-pipe-name]] to set the service pipe name. Combine with [[#-install-service-security-descriptor|-install-service-security-descriptor]] to set the service security descriptor.
+
+;''-install-service-port'' <port>
+Install the Everything service on the specified port.
+
+;''-install-service-pipe-name'' <name>
+Install the Everything service with the specified pipe name.
+
+;''-install-service-security-descriptor'' <sd>
+Install the Everything service with the specified security descriptor.
+
+;''-install-start-menu-shortcuts''
+;''-uninstall-start-menu-shortcuts''
+Create or delete the Everything shortcuts in the Start menu.
+
+;''-install-url-protocol''
+;''-uninstall-url-protocol''
+Install or uninstall the URL Protocol.
+
+;''-language'' <langID>
+Set the language to the specified language ID in decimal. 1033 = English (US). 0 = System default. See [[support/everything/Language IDs|Language IDs]] for a list of langIDs.
+
+;''-uninstall'' [path]
+Uninstall Everything from the specified path. If no path is specified Everything is uninstalled from the executables location. This removes Everything from system startup, removes the service, folder context menu, start menu shortcuts, desktop shortcut, quick launch shortcut, URL protocol, efu file associations and deletes any files created by Everything.
+
+;''-uninstall-user''
+Uninstall Everything user files.
+
+;''-create-usn-journal'' <volume> <max-size-bytes> <allocation-delta-bytes>
+Create a USN Journal on the specifed volume with the specified maximum size and allocation delta in bytes.
+
+;''-delete-usn-journal'' <volume>
+Delete the USN Journal on the specifed volume.
+</dl>
+
+==File Lists==
+Command line options to manipulate Everything file lists EFU files.
+
+<dl>
+;[filename]
+Open the specified file list.
+
+;''-create-file-list'' <filename> <path>
+Create a file list of a path. When this command completes Everything.exe will exit, no search window is shown.
+
+;''-create-file-list-exclude-files'' <filters>
+Set a semicolon delimited wildcard filter of files to exclude with -create-file-list.
+Prefix a filter with regex: to use Regex.
+
+;''-create-file-list-exclude-folders'' <filters>
+Set a semicolon delimited wildcard filter of folders to exclude with -create-file-list.
+Prefix a filter with regex: to use Regex.
+
+;''-create-file-list-include-only-files'' <filters>
+Set a semicolon delimited wildcard filter of files to include only with -create-file-list.
+Prefix a filter with regex: to use Regex.
+
+;''-edit'' <filename>
+Open the specified file list with the file list editor.
+
+;''-f'' <filename>
+;''-filelist'' <filename>
+Open a file list.
+</dl>
+
+==ETP==
+Command line options to connect to an ETP server.
+
+<dl>
+;''-admin-server-share-links''
+;''-server-share-links''
+;''-ftp-links''
+;''-drive-links''
+Link type for ETP connections. Use with [[#-connect|-connect]].
+
+;''-connect'' <[username[:password]@]host[:port]>
+Connect to an ETP server.
+</dl>
+
+==Searching==
+Command line options to manipulate the search.
+
+<dl>
+;''-bookmark'' <name>
+Open a bookmark.
+
+;''-case''
+;''-nocase''
+Enable or disable case matching.
+
+;''-diacritics''
+;''-nodiacritics''
+Enable or disable diacritics matching.
+
+;''-filename'' <filename>
+Search for a file or folder by filename.
+
+;''-filter'' <name>
+Select a search filter.
+
+;''-l''
+;''-local''
+Load the local database.
+
+;''-matchpath''
+;''-nomatchpath''
+Enable or disable full path matching.
+
+;''-p'' <path>
+;''-path'' <path>
+Search for a path.
+
+;''-parent'' <path>
+Search for files and folders in path. Does not search subfolders.
+
+;''-parentpath'' <path>
+Search for the parent of a path.
+
+;''-regex''
+;''-noregex''
+Enable or disable Regex.
+
+;''-s'' <text>
+;''-search'' <text>
+Set the search.
+
+;''-url'' <[es:]search>
+Set the search from an ES: URL.
+
+;''-wholeword''
+;''-nowholeword''
+;''-ww''
+;''-noww''
+Enable or disable match whole word.
+
+;''-home''
+Open the home search.
+
+;''-name-part'' <filename>
+Search for the name part of a filename.
+
+;''-search-file-list'' <filename>
+Search the specified text file for a list of file names.
+Each filename must appear on a single line.
+Include a backslash to match the full path and filename.
+
+</dl>
+
+==Results==
+Command line options to manipulate the results.
+
+<dl>
+;''-sort'' <name>
+Set the sort to the specified name.
+
+;''-sort-ascending''
+Sort ascending.
+
+;''-sort-descending''
+Sort descending.
+
+;''-details''
+View results in the detail view.
+
+;''-thumbnail-size'' <size>
+Specify the size of thumbnails in pixels.
+
+;''-thumbnails''
+Show results in thumbnail view.
+
+;''-focus-bottom-result''
+Focus the bottom result.
+
+;''-focus-last-run-result''
+Focus the last run result.
+
+;''-focus-most-run-result''
+Focus the most run result.
+
+;''-focus-results''
+Focus the result list.
+
+;''-focus-top-result''
+Focus the top result.
+
+;''-select'' <filename>
+Focus and select the specified result.
+
+</dl>
+
+==General==
+General command line options.
+
+<dl>
+;''-?''
+;''-h''
+;''-help''
+Show this help.
+
+;''-admin''
+Run Everything as an administrator.
+
+;''-client-svc''
+Everything client service entry point.
+
+;''-config'' <filename>
+The filename of the ini file.
+
+;''-console''
+;''-debug''
+Show the debugging console.
+
+;''-debug-log''
+Enables debug mode and logs debugging information to disk.
+
+;''-exit''
+;''-quit''
+Exit an existing "Everything" instance.
+
+;''-instance'' <name>
+The name of the Everything [[support/everything/Multiple Instances|instance]].
+
+;''-is-run-as''
+Everything was executed with "runas" and should not attempt to runas again.
+
+;''-start-client-service''
+;''-stop-client-service''
+Start or stop the Everything client service.
+
+;''-start-service''
+;''-stop-service''
+Start or stop the Everything service.
+
+;''-startup''
+Run Everything in the background.
+
+;''-svc''
+Service entry point. Optionally combine with -svc-port.
+
+;''-svc-port'' <port>
+Run the Everything service on the specified port.
+
+;''-svc-pipe-name'' <name>
+Host the pipe server with the specified name.
+
+;''-svc-security-descriptor'' <sd>
+Host the pipe server with the security descriptor.
+
+;''-service-port'' <port>
+Connect to the Everything service on the specified port.
+
+;''-service-pipe-name'' <name>
+Connect to the Everything service using the specified pipe name.
+
+;''-verbose''
+;''-noverbose''
+Display all or basic debug messages. combine with [[#-debug|-debug]].
+
+;''-first-instance''
+Only run Everything if this is the first instance of Everything.
+If Everything is already running this call will be ignored.
+
+;''-no-first-instance''
+Only run Everything if Everything is already running.
+If Everything is not running this call will be ignored.
+
+
+</dl>
+
+==Database==
+Command line options to manipulate the Everything database.
+
+<dl>
+;''-db'' <filename>
+The filename of the database. Combine with -read-only.
+
+;''-load-delay'' <milliseconds>
+The delay in milliseconds before loading the database.
+The database is loaded if required before this delay.
+
+;''-nodb''
+Do not save to or load from the "Everything" database file.
+
+;''-read-only''
+Loads the database in read-only mode.
+
+;''-reindex''
+Force database rebuild.
+
+;''-update''
+Save the database to disk.
+</dl>
+
+==Window==
+Command line options to manipulate the search window and results.
+
+<dl>
+;''-fullscreen''
+;''-nofullscreen''
+Show the search window fullscreen or in a window.
+
+;''-maximized''
+;''-nomaximized''
+Maximize or restore the search window.
+
+;''-minimized''
+;''-nominimized''
+Minimize or restore the search window.
+
+;''-newwindow''
+;''-nonewwindow''
+Create a new search window or show an existing window.
+
+;''-ontop''
+;''-noontop''
+Enable or disable always ontop.
+
+;''-close''
+Close the current search window. 
+
+;''-toggle-window''
+Shows or hides the current search window.
+
+
+</dl>
+
+==Multi File Renaming==
+Shows the multi file renamer dialog and does not start Everything.
+
+<dl>
+;''-copyto'' [filename1] [filename2] [filename3] [...]
+Show the Everything multi file renamer for a copy to operation.
+
+;''-moveto'' [filename1] [filename2] [filename3] [...]
+Show the Everything multi file renamer for a move to operation.
+
+;''-rename'' [filename1] [filename2] [filename3] [...]
+Show the Everything multi file renamer for a rename operation.
+
+</dl>
+
+==Notes==
+Dashes (-) inside switches can be omitted, for example, instead of using -no-new-window, use: -nonewwindow
+
+Use double quotes to escape spaces and switches.
+
+Use ^ to escape \, &, |, >, < and ^.
+
+Use """ to escape a literal "
+
+==Examples==
+Search for ABC or 123:
+<pre>
+Everything.exe -s "ABC|123"
+</pre>
+
+Connect to an ETP server:
+<pre>
+Everything.exe -connect "ComputerName" -drive-links
+</pre>
+
+Create a filelist mp3 and flac files in D:\Music
+<pre>
+Everything.exe -create-file-list "music.efu" "D:\Music" -create-file-list-include-only "*.mp3;*.flac"
+</pre>
+
+==See also==
+<ul>
+*[[support/everything/multiple instances|Multiple Instances]]
+</ul>

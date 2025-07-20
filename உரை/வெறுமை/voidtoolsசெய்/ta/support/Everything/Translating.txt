@@ -1,0 +1,146 @@
+=Translating=
+Please check [[support/Everything/Supported languages]] for a list of supported translations.
+
+Download the English translation template from [[/Template.zip]]
+
+Unzip the template to an empty folder.
+
+Open the file <code>Template.txt</code> with notepad.
+
+Translate each string in the template to the new language.
+
+==Syntax==
+Each string will appear on a single line and has the following syntax:
+<pre>
+key = "value"
+</pre>
+
+For example: the string in the English translation template:
+<pre>
+LOADING_DATABASE = "Loading database..."
+</pre>
+
+For example: Translating the LOADING_DATABASE string to Italian:
+<pre>
+LOADING_DATABASE = "Caricamento della base dati..."
+</pre>
+
+==Comments==
+<code>//</code> Start a line comment (the rest of the line is ignored)
+<code>;</code> Start a line comment (the rest of the line is ignored)
+Comments are ignored by the language compiler.
+
+==Escaping charactors==
+{|
+! Escape
+! Description
+|-
+| <code>\n</code>
+| new line
+|-
+| <code>\r</code>
+| line return
+|-
+| <code>\t</code>
+| tab
+|-
+| <code>\"</code>
+| escape a double quote (")
+|-
+| <code>\\</code>
+| a single back-slash (\)
+|}
+
+==printf==
+{| style="background:#ffeeee; border:1px dashed red;"
+| %s and %d must be in the same order as they appear in the English translation template.
+|}
+
+==Menu Keys==
+place a <code>&</code> in front of the letter for the menu key.
+This only apples to strings in the English translation template that have a <code>&</code>
+
+==Saving==
+Please save the template as UTF-8
+
+==Updating==
+
+I will notify you by email when translations require updating.
+
+An up to date English translation template is always available from [[/Template.zip]]
+
+New and changed translation strings are added to the end of the template.
+
+If you have an existing translation you will need to add the updated translations from [[/Template.zip]] to the end of your translation template.
+
+Your translation is compatible with previous and future versions of Everything.
+Strings that have not yet been translated will appear in English.
+
+
+==Changes==
+Some strings may change vary between Everything versions. Usually help information is expanded upon or alt shortcut keys added.
+Please check the Changes.txt in the [[/Template.zip]] file for a list of changes that may need updating in your existing translation template.txt.
+
+==Language compiler==
+Please download the language pack compiler if you would like to test your translation with "''Everything''".
+
+An up to date language pack compiler is always available from [[/makelng.zip]]
+
+==Instructions==
+<ul>
+*Download the language pack compiler and extract to an empty folder.
+*Copy your translation template to this folder.
+*Run the compiler.
+*Exit "''Everything''".
+*Copy the generated <code>Everything.lng</code> to your "''Everything''" installation folder.
+*Restart "''Everything''".
+*Select the correct language in "''Everything''"
+</ul>
+
+
+{| style="background:#ffeeee; border:1px dashed red;"
+| Note: makelng.exe compiles *.txt .
+|}
+
+
+
+==Warnings==
+Ignore warnings for duplicated definitions.
+
+The last definition will be used for duplicates.
+
+You can optionally remove the first references of the duplicates to remove these warnings.
+
+Warnings for undefined strings should be fixed.
+Warnings for empty strings should be fixed.
+
+==Credit==
+Please add your name to the credit list for your translation.
+
+Your name will be added to the English translation template to be updated for the next release of "''Everything''".
+
+Your name will also be included on the website.
+
+You can optionally have your name linked to an email address or website.
+
+==Help & Support==
+Please contact [[mailto:david@voidtools.com|David Carpenter]] for assistance.
+
+==Everything 1.4 Changes==
+Please check the latest English translation template from [[/Template.zip]] for a list of changes to strings from Everything 1.3. These strings should be updated in your translation template.
+
+==Website==
+To translate the voidtools website, please see [[support/everything/makevoidtools|makevoidtools]].
+
+
+==Thanks==
+Thanks to those that have translated "''Everything''".
+
+Thank you for supporting "''Everything''"!
+
+
+
+==See also==
+<ul>
+*[[support/Everything/Supported languages]]
+</ul>

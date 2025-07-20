@@ -1,0 +1,49 @@
+=Everything_SetRunCountFromFileName=
+The '''Everything_SetRunCountFromFileName''' function sets the run count for a specified file in the Everything index by file name.
+
+==Syntax==
+<pre>
+BOOL Everything_SetRunCountFromFileName(
+    LPCTSTR lpFileName,
+    DWORD dwRunCount
+);
+</pre>
+
+==Parameters==
+<dl>
+;''lpFileName'' [in]
+Pointer to a null-terminated string that specifies a fully qualified file name in the Everything index. 
+;''dwRunCount'' [in]
+The new run count.
+</dl>
+
+==Return Value==
+The function returns non-zero if successful.
+The function returns 0 if an error occurred. To get extended error information, call [[support/everything/SDK/Everything_GetLastError|Everything_GetLastError]]
+
+{|
+! Error code
+! Meaning
+|-
+| EVERYTHING_ERROR_IPC
+| Please make sure the Everything search client is running in the background.
+|}
+
+==Remarks==
+Set the run count to 0 to remove any run history information for the specified file.
+The file does not have to exist. When the file is created it will have the correct run history.
+Run history information is preserved between file deletion and creation.
+Calling this function will update the date run to the current time for the specified file.
+
+==Example==
+<pre>
+// set a file to show higher in the results by setting an exaggerated run count
+Everything_SetRunCountFromFileName(TEXT("C:\\folder\\file.doc"),1000);
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_GetRunCountFromFileName|Everything_GetRunCountFromFileName]]
+*[[support/everything/SDK/Everything_IncRunCountFromFileName|Everything_IncRunCountFromFileName]]
+</ul>
+

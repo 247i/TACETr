@@ -1,0 +1,31 @@
+=Everything_SetMatchCase=
+The '''Everything_SetMatchCase''' function enables or disables full path matching for the next call to [[support/everything/SDK/Everything_Query|Everything_Query]].
+
+==Syntax==
+<pre>
+void Everything_SetMatchCase(
+    BOOL bEnable
+);
+</pre>
+
+==Parameters==
+<dl>
+;''bEnable''
+Specifies whether the search is case sensitive or insensitive.
+If this parameter is TRUE, the search is case sensitive. 
+If the parameter is FALSE, the search is case insensitive. 
+</dl>
+
+==Remarks==
+Match case is disabled by default.
+
+==Example==
+<pre>
+Everything_SetMatchCase(TRUE);
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_GetMatchCase|Everything_GetMatchCase]]
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+</ul>

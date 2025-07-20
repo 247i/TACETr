@@ -1,0 +1,60 @@
+=Run History=
+"Everything" "Run History" is a database of how many times you have run every file or folder from "Everything".
+Every time you open a file or folder its run count is incremented by one.
+Pressing Enter from the search edit will focus the file or folder result with the highest run count.
+
+==Set an items run count==
+<ul>
+*'''Right click''' the file or folder.
+*Click '''Set Run Count...'''.
+*Enter in a new run count.
+</ul>
+
+==Disable Run History==
+<ul>
+*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
+*Click the '''History '''tab.
+*Uncheck '''Enable run history'''.
+*Click '''OK'''.
+</ul>
+
+==Run History Location==
+Everything stores run history in:
+<pre>
+%APPDATA%\Everything\Run History.csv 
+</pre>
+If [[support/everything/options#Store settings and data in %APPDATA%\Everything|Store settings and data in %APPDATA%\Everything]] is disabled, Run History.csv is stored in the same location as Everything.exe.
+
+==Search for run count==
+Use runcount: to search for a specific run count or run count range.
+
+Search for a run count greater than 100:
+<pre>
+runcount:>100
+</pre>
+
+Run once or more:
+<pre>
+runcount:
+</pre>
+
+Search for a run count between 10 and 20:
+<pre>
+runcount:10-20
+</pre>
+
+Search for files you ran yesterday:
+<pre>
+daterun:yesterday
+</pre>
+
+==Sort by run count by default==
+Sorting by run count is instant and persistent.
+
+To sort by run count by default:
+<ul>
+*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
+*Click the '''Home''' tab.
+*Change '''sort '''to '''Run Count (Descending)'''.
+*Click '''OK'''.
+</ul>

@@ -1,0 +1,223 @@
+=makevoidtools=
+makevoidtools is a program to compile your own [[http://www.voidtools.com|voidtools.com]] website.
+All text can be customized for localization.
+
+==makevoidtools Guide==
+<ul>
+*Extact [[/makevoidtools.zip]] to a new folder, eg: c:\makevoidtools
+*Copy the en-us.txt file and name it with the [[http://www.lingoes.net/en/translator/langcode.htm|language code]] for your language and region.
+*This is the main translation template file for the website.
+*For example: es-us.txt
+*Copy the en-us subfolder and name it with the [[http://www.lingoes.net/en/translator/langcode.htm|language code]] for your language and region.
+*This is the main translation folder for the website.
+*For example: es-us
+*open your main translation file, eg: en-us.txt
+*Read the notes inside this translation file for help.
+*translate all strings.
+*translate all pages in the main translation folder, eg: en-us\*.txt
+</ul>
+
+==Requirements==
+Only the files directly in your main translation folder (eg: en-us) need to be translated.
+Translating the support wiki is not required. -not all pages need translating as some are quite technical.
+translating the following support wiki pages are encouraged:
+<ul>
+*01-Installing Everything.txt
+*02-Using Everything.txt
+*Searching.txt
+</ul>
+
+==Offline help==
+The Everything.chm offline help will use the same support wiki templates.
+
+==Testing==
+Run makevoidtools.exe
+makevoidtools will compile *.txt in the same location as makevoidtools.exe
+These txt files will be translation templates for each language and region.
+
+<pre>
+makevoidtools.exe <output folder> <url root>
+</pre>
+
+Example:
+<pre>
+makevoidtools.exe c:\makevoidtools\voidtools file://c:/makevoidtools/voidtools
+</pre>
+
+Open c:\makevoidtools\voidtools\index.html
+
+==Wiki Pages==
+Make sure you open and save wiki pages as UTF-8
+Wiki pages in the support folder use basic [[#Wiki syntax|wiki markup language]].
+Prefixing a wiki page template with a number are shown above all other wiki pages in sequence. For example, 01-Installing Everything.txt is the first wiki page listed and 02-Using Everything.txt is the second wiki page listed and so on.
+wiki page templates starting with a underscore (_) are hidden. For example: [[http://www.voidtools.com/support/everything/db]].
+
+==Wiki syntax==
+The voidtools wiki syntax is very similar to [[https://en.wikipedia.org/wiki/Help:Wiki_markup|Wikipedia's markup]] with some limitations:
+
+<dl>
+;''Text''
+<pre>
+A paragraph of text.
+</pre>
+
+A paragraph of text.
+
+;''Headers''
+<pre>
+=Main Header=
+</pre>
+
+=Main Header=
+
+<pre>
+==Sub Header==
+</pre>
+
+==Sub Header==
+
+;''Italic''
+<pre>
+''Italic''
+</pre>
+
+''Italic''
+
+;''Bold''
+<pre>
+'''Bold'''
+</pre>
+
+'''bold'''
+
+;''Italic and Bold''
+<pre>
+'''''Italic and Bold'''''
+</pre>
+
+'''''Italic and Bold'''''
+
+;''Links''
+Relative URLs are relative to http://www.voidtools.com/en-us
+where en-us is your language-region code.
+The |text part in [ [url|text]] can be omitted, in which case the url is used as the text and URLs paths are striped when no protocol is present.
+
+<pre>
+[[http://en.wikipedia.org/wiki/]]
+</pre>
+
+[[http://en.wikipedia.org/wiki/]]
+
+<pre>
+[[faq#what_is_everything|What is Everything?]]
+</pre>
+
+[[faq/#what_is_everything|What is Everything?]]
+
+;''Images''
+<pre>
+[[File:support/everything/Everything.Search.Window.png|alt=Everything Search Window]]
+</pre>
+
+[[File:support/everything/Everything.Search.Window.png|alt=Everything Search Window]]
+
+;''Preformatted text''
+{{PRE_EXAMPLE}}
+
+<pre>
+int i;
+for(i=0;i<10;i++)
+{
+	printf("hello %d\n",i);
+}
+</pre>
+
+;''Unordered lists''
+<pre>
+<ul>
+*item1
+*item2
+<ul>
+*subitem1
+*subitem2
+*subitem3
+</ul>
+*item3
+</ul>
+</pre>
+
+<ul>
+*item1
+*item2
+<ul>
+*subitem1
+*subitem2
+*subitem3
+</ul>
+*item3
+</ul>
+
+;''Tables''
+<pre>
+{|
+! header1
+! header2
+! header3
+|-
+| row1, data1
+| row1, data2
+| row1, data3
+|-
+| row2, abc1
+| row2, abc2
+| row2, abc3
+|}
+</pre>
+
+{|
+! header1
+! header2
+! header3
+|-
+| row1, data1
+| row1, data2
+| row1, data3
+|-
+| row2, abc1
+| row2, abc2
+| row2, abc3
+|}
+
+;''Discription lists''
+<pre>
+<dl>
+;''item1''
+text1
+;''item2''
+text2
+;''item3''
+text3
+</dl>
+</pre>
+
+<dl>
+;''item1''
+text1
+;''item2''
+text2
+;''item3''
+text3
+</dl>
+
+;''Macros''
+<pre>
+{{DOWNLOAD_EVERYTHING}}
+</pre>
+
+{{DOWNLOAD_EVERYTHING}}
+
+</dl>
+
+==Help==
+If you need any assistance, please [[contact|contact David Carpenter]].
+

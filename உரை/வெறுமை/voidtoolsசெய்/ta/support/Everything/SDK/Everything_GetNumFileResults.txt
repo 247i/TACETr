@@ -1,0 +1,50 @@
+=Everything_GetNumFileResults=
+The '''Everything_GetNumFileResults''' function returns the number of visible file results.
+
+==Syntax==
+<pre>
+DWORD Everything_GetNumFileResults(void);
+</pre>
+
+==Parameters==
+This functions has no parameters.
+
+==Return Value==
+Returns the number of visible file results.
+If the function fails the return value is 0. To get extended error information, call [[support/everything/SDK/Everything_GetLastError|Everything_GetLastError]].
+
+{|
+! Error code
+! Meaning
+|-
+| EVERYTHING_ERROR_INVALIDCALL
+| Call [[support/everything/SDK/Everything_Query|Everything_Query]] before calling Everything_GetNumFileResults.
+|}
+
+==Remarks==
+You must call [[support/everything/SDK/Everything_Query|Everything_Query]] before calling Everything_GetNumFileResults.
+Use [[support/everything/SDK/Everything_GetTotFileResults|Everything_GetTotFileResults]] to retrieve the total number of file results.
+If the result offset state is 0, and the max result is 0xFFFFFFFF, Everything_GetNumFileResults will return the total number of file results and all file results will be visible.
+Everything_GetNumFileResults is not supported when using [[support/everything/SDK/Everything_SetRequestFlags|Everything_SetRequestFlags]]
+
+==Example==
+<pre>
+// set the search text to abc AND 123
+Everything_SetSearch("abc 123");
+
+// execute the query
+Everything_Query(TRUE);
+
+// get the number of visible file results.
+DWORD dwNumFileResults = Everything_GetNumFileResults();
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+*[[support/everything/SDK/Everything_GetNumResults|Everything_GetNumResults]]
+*[[support/everything/SDK/Everything_GetNumFolderResults|Everything_GetNumFolderResults]]
+*[[support/everything/SDK/Everything_GetTotResults|Everything_GetTotResults]]
+*[[support/everything/SDK/Everything_GetTotFileResults|Everything_GetTotFileResults]]
+*[[support/everything/SDK/Everything_GetTotFolderResults|Everything_GetTotFolderResults]]
+</ul>

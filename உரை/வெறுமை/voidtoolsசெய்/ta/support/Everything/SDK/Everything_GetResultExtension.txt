@@ -1,0 +1,57 @@
+=Everything_GetResultExtension=
+The '''Everything_GetResultExtension''' function retrieves the extension part of a visible result.
+
+==Syntax==
+<pre>
+LPCTSTR Everything_GetResultExtension(
+    DWORD dwIndex
+);
+</pre>
+
+==Parameters==
+<dl>
+;''dwIndex''
+Zero based index of the visible result.
+</dl>
+
+==Return Value==
+The function returns a pointer to a null terminated string of '''TCHARs'''.
+If the function fails the return value is NULL. To get extended error information, call [[support/everything/SDK/Everything_GetLastError|Everything_GetLastError]].
+
+{|
+! Error code
+! Meaning
+|-
+| EVERYTHING_ERROR_INVALIDCALL
+| Call [[support/everything/SDK/Everything_Query|Everything_Query]] before calling Everything_GetResultExtension.
+|-
+| EVERYTHING_ERROR_INVALIDREQUEST
+| Extension was not requested or is unavailable, Call [[support/everything/SDK/Everything_SetRequestFlags|Everything_SetRequestFlags]] with EVERYTHING_REQUEST_EXTENSION before calling [[support/everything/SDK/Everything_Query|Everything_Query]].
+|-
+| EVERYTHING_ERROR_INVALIDINDEX
+| index must be greater than or equal to 0 and less than the visible number of results.
+|}
+
+==Remarks==
+The ANSI / Unicode version of this function must match the ANSI / Unicode version of the call to [[support/everything/SDK/Everything_Query|Everything_Query]].
+The function returns a pointer to an internal structure that is only valid until the next call to [[support/everything/SDK/Everything_Query|Everything_Query]], [[support/everything/SDK/Everything_Reset|Everything_Reset]] or [[support/everything/SDK/Everything_CleanUp|Everything_CleanUp]].
+You can only call this function for a visible result. To determine if a result is visible use the [[support/everything/SDK/Everything_GetNumResults|Everything_GetNumResults]] function.
+
+==Example==
+<pre>
+// set the search text to abc AND 123
+Everything_SetSearch("abc 123");
+
+// execute the query
+Everything_Query(TRUE);
+
+// Get the extension part of the first visible result.
+LPCTSTR lpExtension = Everything_GetResultExtension(0);
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+*[[support/everything/SDK/Everything_Reset|Everything_Reset]]
+*[[support/everything/SDK/Everything_SetRequestFlags|Everything_SetRequestFlags]]
+</ul>

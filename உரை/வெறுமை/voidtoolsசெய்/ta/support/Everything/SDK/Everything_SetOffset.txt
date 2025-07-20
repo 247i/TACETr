@@ -1,0 +1,32 @@
+=Everything_SetOffset=
+The '''Everything_SetOffset''' function set the first result offset to return from a call to [[support/everything/SDK/Everything_Query|Everything_Query]].
+
+==Syntax==
+<pre>
+void Everything_SetOffset(
+    DWORD dwOffset
+);
+</pre>
+
+==Parameters==
+<dl>
+;dwOffset
+Specifies the first result from the available results.
+Set this to 0 to return the first available result.
+</dl>
+
+==Remarks==
+The default offset is 0 (the first available result).
+If you are displaying the results in a window with a custom scroll bar, set the offset to the vertical scroll bar position.
+Using a search window can reduce the amount of data sent over the IPC and significantly increase search performance.
+
+==Example==
+<pre>
+Everything_SetOffset(scrollbar_vpos);
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_GetOffset|Everything_GetOffset]]
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+</ul>

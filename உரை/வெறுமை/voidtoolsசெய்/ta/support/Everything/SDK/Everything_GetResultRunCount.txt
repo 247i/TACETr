@@ -1,0 +1,63 @@
+=Everything_GetResultRunCount=
+The '''Everything_GetResultRunCount''' function retrieves the number of times a visible result has been run from Everything.
+
+==Syntax==
+<pre>
+DWORD Everything_GetResultRunCount(
+    DWORD dwIndex,
+);
+</pre>
+
+==Parameters==
+<dl>
+;''dwIndex''
+Zero based index of the visible result.
+</dl>
+
+==Return Value==
+The function returns the number of times the result has been run from Everything.
+The function returns 0 if the run count information is unavailable. To get extended error information, call [[support/everything/SDK/Everything_GetLastError|Everything_GetLastError]]
+
+{|
+! Error code
+! Meaning
+|-
+| EVERYTHING_ERROR_SUCCESS
+| The run count is 0.
+|-
+| EVERYTHING_ERROR_INVALIDCALL
+| Call [[support/everything/SDK/Everything_Query|Everything_Query]] before calling Everything_GetResultRunCount.
+|-
+| EVERYTHING_ERROR_INVALIDREQUEST
+| Run count information was not requested or is unavailable, Call [[support/everything/SDK/Everything_SetRequestFlags|Everything_SetRequestFlags]] with EVERYTHING_REQUEST_RUN_COUNT before calling [[support/everything/SDK/Everything_Query|Everything_Query]].
+|-
+| EVERYTHING_ERROR_INVALIDINDEX
+| index must be greater than or equal to 0 and less than the visible number of results.
+|}
+
+==Remarks==
+dwIndex must be a valid visible result index. To determine if a result index is visible use the [[support/everything/SDK/Everything_GetNumResults|Everything_GetNumResults]] function.
+
+==Example==
+<pre>
+DWORD runCount;
+
+// set the search text to abc AND 123
+Everything_SetSearch("abc 123");
+
+// execute the query
+Everything_Query(TRUE);
+
+// Get the run count of the first visible result.
+runCount = Everything_GetResultRunCount(0);
+</pre>
+
+==Function Information==
+Requires Everything 1.4.1 or later.
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+*[[support/everything/SDK/Everything_Reset|Everything_Reset]]
+*[[support/everything/SDK/Everything_SetRequestFlags|Everything_SetRequestFlags]]
+</ul>

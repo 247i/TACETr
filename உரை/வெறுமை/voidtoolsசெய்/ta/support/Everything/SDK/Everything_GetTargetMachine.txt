@@ -1,0 +1,72 @@
+=Everything_GetTargetMachine=
+The '''Everything_GetTargetMachine''' function retrieves the target machine of Everything.
+
+==Syntax==
+<pre>
+DWORD Everything_GetTargetMachine(void);
+</pre>
+
+==Parameters==
+<dl>
+No parameters.
+</dl>
+
+==Return Value==
+The function returns one of the following:
+{|
+! Macro
+! Meaning
+|-
+| EVERYTHING_TARGET_MACHINE_X86 (1)
+| Target machine is x86 (32 bit).
+|-
+| EVERYTHING_TARGET_MACHINE_X64 (2)
+| Target machine is x64 (64 bit).
+|-
+| EVERYTHING_TARGET_MACHINE_ARM (3)
+| Target machine is ARM.
+|}
+
+The function returns 0 if target machine information is unavailable. To get extended error information, call [[support/everything/SDK/Everything_GetLastError|Everything_GetLastError]]
+
+{|
+! Error code
+! Meaning
+|-
+| EVERYTHING_ERROR_IPC
+| Please make sure the Everything search client is running in the background.
+|}
+
+==Remarks==
+Everything uses the following version format:
+major.minor.revision.build
+The build part is incremental and unique for all Everything versions.
+
+==Example==
+<pre>
+DWORD targetMachine;
+
+// Get the attributes of the first visible result.
+targetMachine = Everything_GetTargetMachine();
+
+if (targetMachine == EVERYTHING_TARGET_MACHINE_X64)
+{
+	// do something with x64 build.
+}
+else
+if (targetMachine == EVERYTHING_TARGET_MACHINE_X86)
+{
+	// do something with x86 build.
+}
+</pre>
+
+==Function Information==
+Requires Everything 1.4.0 or later.
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_GetMajorVersion|Everything_GetMajorVersion]]
+*[[support/everything/SDK/Everything_GetMinorVersion|Everything_GetMinorVersion]]
+*[[support/everything/SDK/Everything_GetRevision|Everything_GetRevision]]
+*[[support/everything/SDK/Everything_GetBuildNumber|Everything_GetBuildNumber]]
+</ul>

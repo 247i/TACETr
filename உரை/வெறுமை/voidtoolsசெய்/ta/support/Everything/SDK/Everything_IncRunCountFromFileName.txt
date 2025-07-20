@@ -1,0 +1,49 @@
+=Everything_IncRunCountFromFileName=
+The '''Everything_IncRunCountFromFileName''' function increments the run count by one for a specified file in the Everything by file name.
+
+==Syntax==
+<pre>
+DWORD Everything_IncRunCountFromFileName(
+    LPCTSTR lpFileName
+);
+</pre>
+
+==Parameters==
+<dl>
+;''lpFileName'' [in]
+Pointer to a null-terminated string that specifies a fully qualified file name in the Everything index. 
+</dl>
+
+==Return Value==
+The function returns the new run count for the specifed file.
+The function returns 0 if an error occurred. To get extended error information, call [[support/everything/SDK/Everything_GetLastError|Everything_GetLastError]]
+
+{|
+! Error code
+! Meaning
+|-
+| EVERYTHING_ERROR_IPC
+| Please make sure the Everything search client is running in the background.
+|}
+
+==Remarks==
+The file does not have to exist. When the file is created it will have the correct run history.
+Run history information is preserved between file deletion and creation.
+Calling this function will update the date run to the current time for the specified file.
+Incrementing a file with a run count of 4294967295 (0xffffffff) will do nothing.
+
+==Example==
+<pre>
+// run a file
+system("C:\\folder\\file.doc");
+
+// increment the run count in Everything.
+Everything_IncRunCountFromFileName(TEXT("C:\\folder\\file.doc"));
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_GetRunCountFromFileName|Everything_GetRunCountFromFileName]]
+*[[support/everything/SDK/Everything_SetRunCountFromFileName|Everything_SetRunCountFromFileName]]
+</ul>
+

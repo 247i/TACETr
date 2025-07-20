@@ -1,0 +1,31 @@
+=Everything_SetMax=
+The '''Everything_SetMax''' function set the maximum number of results to return from [[support/everything/SDK/Everything_Query|Everything_Query]].
+
+==Syntax==
+<pre>
+void Everything_SetMax(
+    DWORD dwMaxResults
+);
+</pre>
+
+==Parameters==
+<dl>
+;''dwMaxResults''
+Specifies the maximum number of results to return.
+Setting this to 0xffffffff will return all results.
+</dl>
+
+==Remarks==
+The default maximum number of results is 0xffffffff (all results).
+If you are displaying the results in a window, set the maximum number of results to the number of visible items in the window.
+
+==Example==
+<pre>
+Everything_SetMax(window_height / item_height);
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_GetMax|Everything_GetMax]]
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+</ul>

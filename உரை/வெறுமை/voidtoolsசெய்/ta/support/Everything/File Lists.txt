@@ -1,0 +1,168 @@
+=File Lists=
+Everything File List (EFU) are recommended for off-line files or files that do not change, for example a CDRom, DVDRom or read only NAS.
+An EFU file is a Comma-separated Values (CSV) file containing a list of filenames, sizes, dates and attributes.
+File lists can be opened with Everything or included in your Everything index.
+File lists can be searched and sorted by size, date or attributes instantly.
+
+==How do I make an EFU file list?==
+<ul>
+*In '''Everything''', from the '''Tools '''menu, click '''File List Editor...'''.
+*In the '''File List Editor''', '''drag and drop''' files into the list to add to your file list.
+*You can also add files and folders from the Edit menu.
+*When you are finished, from the '''File '''menu, click '''Save'''.
+</ul>
+
+==How do I make an EFU file list from Everything?==
+To save the current search as an EFU file list
+<ul>
+*In '''''"Everything"''''', from the '''File '''menu, click '''Export...'''.
+*Change '''Save as Type''' to '''EFU Everything File List (*.efu)'''.
+*Type in a filename and click '''OK'''.
+</ul>
+
+==How do I make an EFU File list from the command line?==
+To create a file list from the command line:
+<pre>
+Everything.exe -create-filelist <output-filename> <path-to-scan>
+</pre>
+
+Combine with [[support/everything/command_line_options#-create-file-list-exclude-files|-create-file-list-exclude-files]] <filters> to exclude files.
+Combine with [[support/everything/command_line_options#-create-file-list-exclude-folders|-create-file-list-exclude-folders]] <filters> to exclude folders.
+Combine with [[support/everything/command_line_options#-create-file-list-include-only-files|-create-file-list-include-only-files]] <filters> to include only the specified files.
+
+Examples
+To create a file list excluding tmp files:
+<pre>
+Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-files "*.tmp"
+</pre>
+
+To create a file list excluding lnk and thumbs.db files:
+<pre>
+Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-files "*.lnk;thumbs.db"
+</pre>
+
+To exclude folders with the name 1033:
+<pre>
+Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-folders "1033"
+</pre>
+
+To exclude a specific folder
+<pre>
+Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-folders "c:\windows"
+</pre>
+
+To exclude specific folders
+<pre>
+Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-folders "c:\windows;c:\program files;c:\program files (x86)"
+</pre>
+
+To include specified files only:
+<pre>
+Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-include-only-files "*.mp3;*.flac"
+</pre>
+
+regex can be used in the exclude lists, for example, exclude files starting with A-M
+<pre>
+Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-files "regex:^^[A-M]"
+</pre>
+
+Path matching can be done by including a \ in your filter (\\ for regex).
+<pre>
+Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-files "c:\folder\a specific file.txt"
+</pre>
+
+==Does Everything access the files in the file list?==
+Everything will only access the files if you try to open a file or right click a file.
+File size, dates and attributes are read from the file list.
+
+
+==How do I change the volume for all the files in a file list?==
+<ul>
+*Open the file list in Notepad.
+*Press '''Ctrl + H''' to replace.
+*Change '''Find what''' to the old volume (eg: D:)
+*Change '''Replace '''with to the new volume (eg: E:)
+*Click '''Replace All'''.
+*'''Save '''changes to the file list.
+</ul>
+
+==Can I use relative paths in a file list?==
+Yes, filenames are relative to the file list location.
+Optionally use . and .. for locations relative to the file list location.
+You can use \ at the start of a filename to specify a file relative to the root of the file list.
+Specify a filename with a full path to override relative filenames.
+
+==Update a file list with the Task Scheduler==
+To rebuild a file list every hour with the task scheduler:
+<ul>
+*Open the '''Task Scheduler''' from Start -> Programs -> Accessories -> System Tools -> Task Scheduler.
+*Click '''Create Task...'''.
+*Set the '''Name''' to '''Everything File List'''
+
+*Click the '''Triggers''' tab.
+*Click '''New...'''.
+*Select '''One time'''.
+*Check '''Repeat task every'''.
+*Change the '''Repeat task every time''' to '''1 hour'''.
+*Change '''for a duration of''' to '''Indefinitely'''.
+*Click '''OK'''.
+
+*Click the '''Actions''' tab.
+*Click '''New...'''.
+*Select Start a program for Action.
+*Click Browse to select Everything.exe
+*Set '''Add arguments''' to:
+<pre>
+-create-filelist c:\filelist.efu c:\
+</pre>
+*Click '''OK'''.
+*Click '''OK'''.
+</ul>
+
+==Include a file list in the Everything index==
+<ul>
+*In '''''"Everything"''''', from the '''Tools''' menu, click '''Options'''.
+*Click the '''File Lists''' tab.
+*Click '''Add...''' to add a file list.
+*Select a file list.
+*Click '''Open'''.
+*Click '''OK'''.
+</ul>
+
+==Modifying file lists==
+"Everything" will automatically reload modified file lists that are included in the Everything index.
+
+To disable this feature:
+<ul>
+*In '''''"Everything"''''', from the '''Tools''' menu, click '''Options'''.
+*Click the '''File Lists''' tab.
+*Select the file list to stop monitoring.
+*Uncheck '''Monitor changes'''.
+*Click '''OK'''.
+</ul>
+
+==What is the format of an EFU file list?==
+EFU files are comma-separated values ([[http://en.wikipedia.org/wiki/Comma-separated_values|CSV]]) files.
+A header is required with at least the Filename column specified.
+File size is specified in bytes.
+Dates are FILETIMEs (100-nanosecond intervals since January 1, 1601.) in decimal or [[http://en.wikipedia.org/wiki/ISO_8601|ISO 8601]] dates.
+Attributes can be zero or more of the [[http://msdn.microsoft.com/en-us/library/windows/desktop/gg258117%28v=vs.85%29.aspx|Windows File Attributes]].
+EFU files are encoded with UTF-8.
+
+==Opening a file list with Excel==
+To open a file list with excel:
+<ul>
+*In '''Excel''', from the '''Data''' menu, from the '''Import External Data''' submenu, click '''Import data...'''.
+*Select your exported csv and click '''Open'''.
+*Change '''File origin''' to '''65001 : Unicode (UTF-8)'''.
+*Click '''Next'''.
+*Check '''Comma'''.
+*Click '''Next'''.
+*Click '''Finish'''.
+*Click '''OK''' to put the data in the existing worksheet at '''$A$1'''.
+</ul>
+
+==See also==
+<ul>
+*[[support/everything/folder indexing|Folder indexing]]
+</ul>

@@ -1,0 +1,42 @@
+=Everything_Reset=
+The '''Everything_Reset''' function resets the result list and search state to the default state, freeing any allocated memory by the library.
+
+==Syntax==
+<pre>
+void Everything_Reset(void);
+</pre>
+
+==Parameters==
+This function has no parameters.
+
+==Return Value==
+This function has no return value.
+
+==Remarks==
+Calling [[support/everything/SDK/Everything_SetSearch|Everything_SetSearch]] frees the old search and allocates the new search string.
+Calling [[support/everything/SDK/Everything_Query|Everything_Query]] frees the old result list and allocates the new result list.
+Calling [[support/everything/SDK/Everything_Reset|Everything_Reset]] frees the current search and current result list.
+The default state:
+
+<pre>
+Everything_SetSearch(\"\");
+Everything_SetMatchPath(FALSE);
+Everything_SetMatchCase(FALSE);
+Everything_SetMatchWholeWord(FALSE);
+Everything_SetRegex(FALSE);
+Everything_SetMax(0xFFFFFFFF);
+Everything_SetOffset(0);
+Everything_SetReplyWindow(0);
+Everything_SetReplyID(0);
+</pre>
+
+==Example==
+<pre>
+Everything_Reset();
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_SetSearch|Everything_SetSearch]]
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+</ul>

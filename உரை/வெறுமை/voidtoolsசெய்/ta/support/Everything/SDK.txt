@@ -1,0 +1,135 @@
+=SDK=
+The Everything SDK provides a DLL and Lib interface to Everything over [[support/everything/SDK/IPC]].
+It also provides methods for using WM_COPYDATA for [[support/everything/SDK/IPC]].
+
+==Download==
+[[/Everything-SDK.zip]]
+
+==Manipulating the search state==
+<ul>
+*[[support/Everything/SDK/Everything_SetSearch|Everything_SetSearch]]
+*[[support/Everything/SDK/Everything_SetMatchPath|Everything_SetMatchPath]]
+*[[support/Everything/SDK/Everything_SetMatchCase|Everything_SetMatchCase]]
+*[[support/Everything/SDK/Everything_SetMatchWholeWord|Everything_SetMatchWholeWord]]
+*[[support/Everything/SDK/Everything_SetRegex|Everything_SetRegex]]
+*[[support/Everything/SDK/Everything_SetMax|Everything_SetMax]]
+*[[support/Everything/SDK/Everything_SetOffset|Everything_SetOffset]]
+*[[support/Everything/SDK/Everything_SetReplyWindow|Everything_SetReplyWindow]]
+*[[support/Everything/SDK/Everything_SetReplyID|Everything_SetReplyID]]
+*[[support/Everything/SDK/Everything_SetSort|Everything_SetSort]]
+*[[support/Everything/SDK/Everything_SetRequestFlags|Everything_SetRequestFlags]]
+</ul>
+
+==Reading the search state==
+<ul>
+*[[support/Everything/SDK/Everything_GetSearch|Everything_GetSearch]]
+*[[support/Everything/SDK/Everything_GetMatchPath|Everything_GetMatchPath]]
+*[[support/Everything/SDK/Everything_GetMatchCase|Everything_GetMatchCase]]
+*[[support/Everything/SDK/Everything_GetMatchWholeWord|Everything_GetMatchWholeWord]]
+*[[support/Everything/SDK/Everything_GetRegex|Everything_GetRegex]]
+*[[support/Everything/SDK/Everything_GetMax|Everything_GetMax]]
+*[[support/Everything/SDK/Everything_GetOffset|Everything_GetOffset]]
+*[[support/Everything/SDK/Everything_GetReplyWindow|Everything_GetReplyWindow]]
+*[[support/Everything/SDK/Everything_GetReplyID|Everything_GetReplyID]]
+*[[support/Everything/SDK/Everything_GetLastError|Everything_GetLastError]]
+*[[support/Everything/SDK/Everything_GetSort|Everything_GetSort]]
+*[[support/Everything/SDK/Everything_GetRequestFlags|Everything_GetRequestFlags]]
+</ul>
+
+==Executing the query==
+<ul>
+*[[support/Everything/SDK/Everything_Query|Everything_Query]]
+</ul>
+
+==Check for query reply==
+<ul>
+*[[support/Everything/SDK/Everything_IsQueryReply|Everything_IsQueryReply]]
+</ul>
+
+==Manipulating results==
+<ul>
+*[[support/Everything/SDK/Everything_SortResultsByPath|Everything_SortResultsByPath]]
+*[[support/Everything/SDK/Everything_Reset|Everything_Reset]]
+</ul>
+
+==Reading results==
+<ul>
+*[[support/Everything/SDK/Everything_GetNumFileResults|Everything_GetNumFileResults]]
+*[[support/Everything/SDK/Everything_GetNumFolderResults|Everything_GetNumFolderResults]]
+*[[support/Everything/SDK/Everything_GetNumResults|Everything_GetNumResults]]
+*[[support/Everything/SDK/Everything_GetTotFileResults|Everything_GetTotFileResults]]
+*[[support/Everything/SDK/Everything_GetTotFolderResults|Everything_GetTotFolderResults]]
+*[[support/Everything/SDK/Everything_GetTotResults|Everything_GetTotResults]]
+*[[support/Everything/SDK/Everything_IsVolumeResult|Everything_IsVolumeResult]]
+*[[support/Everything/SDK/Everything_IsFolderResult|Everything_IsFolderResult]]
+*[[support/Everything/SDK/Everything_IsFileResult|Everything_IsFileResult]]
+*[[support/Everything/SDK/Everything_GetResultFileName|Everything_GetResultFileName]]
+*[[support/Everything/SDK/Everything_GetResultPath|Everything_GetResultPath]]
+*[[support/Everything/SDK/Everything_GetResultFullPathName|Everything_GetResultFullPathName]]
+*[[support/Everything/SDK/Everything_GetResultListSort|Everything_GetResultListSort]]
+*[[support/Everything/SDK/Everything_GetResultListRequestFlags|Everything_GetResultListRequestFlags]]
+*[[support/Everything/SDK/Everything_GetResultExtension|Everything_GetResultExtension]]
+*[[support/Everything/SDK/Everything_GetResultSize|Everything_GetResultSize]]
+*[[support/Everything/SDK/Everything_GetResultDateCreated|Everything_GetResultDateCreated]]
+*[[support/Everything/SDK/Everything_GetResultDateModified|Everything_GetResultDateModified]]
+*[[support/Everything/SDK/Everything_GetResultDateAccessed|Everything_GetResultDateAccessed]]
+*[[support/Everything/SDK/Everything_GetResultAttributes|Everything_GetResultAttributes]]
+*[[support/Everything/SDK/Everything_GetResultFileListFileName|Everything_GetResultFileListFileName]]
+*[[support/Everything/SDK/Everything_GetResultRunCount|Everything_GetResultRunCount]]
+*[[support/Everything/SDK/Everything_GetResultDateRun|Everything_GetResultDateRun]]
+*[[support/Everything/SDK/Everything_GetResultDateRecentlyChanged|Everything_GetResultDateRecentlyChanged]]
+*[[support/Everything/SDK/Everything_GetResultHighlightedFileName|Everything_GetResultHighlightedFileName]]
+*[[support/Everything/SDK/Everything_GetResultHighlightedPath|Everything_GetResultHighlightedPath]]
+*[[support/Everything/SDK/Everything_GetResultHighlightedFullPathAndFileName|Everything_GetResultHighlightedFullPathAndFileName]]
+</ul>
+
+==General==
+<ul>
+*[[support/Everything/SDK/Everything_Reset|Everything_Reset]]
+*[[support/Everything/SDK/Everything_CleanUp|Everything_CleanUp]]
+*[[support/Everything/SDK/Everything_GetMajorVersion|Everything_GetMajorVersion]]
+*[[support/Everything/SDK/Everything_GetMinorVersion|Everything_GetMinorVersion]]
+*[[support/Everything/SDK/Everything_GetRevision|Everything_GetRevision]]
+*[[support/Everything/SDK/Everything_GetBuildNumber|Everything_GetBuildNumber]]
+*[[support/Everything/SDK/Everything_Exit|Everything_Exit]]
+*[[support/Everything/SDK/Everything_IsDBLoaded|Everything_IsDBLoaded]]
+*[[support/Everything/SDK/Everything_IsAdmin|Everything_IsAdmin]]
+*[[support/Everything/SDK/Everything_IsAppData|Everything_IsAppData]]
+*[[support/Everything/SDK/Everything_RebuildDB|Everything_RebuildDB]]
+*[[support/Everything/SDK/Everything_UpdateAllFolderIndexes|Everything_UpdateAllFolderIndexes]]
+*[[support/Everything/SDK/Everything_SaveDB|Everything_SaveDB]]
+*[[support/Everything/SDK/Everything_SaveRunHistory|Everything_SaveRunHistory]]
+*[[support/Everything/SDK/Everything_DeleteRunHistory|Everything_DeleteRunHistory]]
+*[[support/Everything/SDK/Everything_GetTargetMachine|Everything_GetTargetMachine]]
+</ul>
+
+==Run History==
+<ul>
+*[[support/Everything/SDK/Everything_GetRunCountFromFileName|Everything_GetRunCountFromFileName]]
+*[[support/Everything/SDK/Everything_SetRunCountFromFileName|Everything_SetRunCountFromFileName]]
+*[[support/Everything/SDK/Everything_IncRunCountFromFileName|Everything_IncRunCountFromFileName]]
+</ul>
+
+==Examples==
+<ul>
+*[[support/Everything/SDK/C|C/C++]]
+*[[support/Everything/SDK/CSharp|C#]]
+*[[support/Everything/SDK/Clarion|Clarion]]
+</ul>
+
+
+
+==Notes==
+<ul>
+*The SDK is a basic [[support/Everything/SDK/IPC|IPC]] wrapper
+*Requires "Everything" to be running.
+*ANSI / Unicode support.
+*Thread safe.
+*Support for blocking and non-blocking mode.
+*x86 and x64 support.
+</ul>
+
+==See Also==
+<ul>
+*[[support/Everything/SDK/IPC]]
+</ul>

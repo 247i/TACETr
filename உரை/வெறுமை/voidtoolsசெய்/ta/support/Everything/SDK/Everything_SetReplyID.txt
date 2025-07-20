@@ -1,0 +1,46 @@
+=Everything_SetReplyID=
+The '''Everything_SetReplyID''' function sets the unique number to identify the next query.
+
+==Syntax==
+<pre>
+void Everything_SetReplyID(
+    DWORD nId
+);
+</pre>
+
+==Parameters==
+<dl>
+;''nID''
+The unique number to identify the next query.
+</dl>
+
+==Return Value==
+This function has no return value.
+
+==Remarks==
+The default identifier is 0.
+Set a unique identifier for the IPC Query.
+If you want to post multiple search queries with the same window handle, you must call the Everything_SetReplyID function to assign each query a unique identifier.
+The nID value is the dwData member in the COPYDATASTRUCT used in the WM_COPYDATA reply message.
+This function is not required if you call Everything_Query with bWait set to true.
+
+==Example==
+<pre>
+// reply to this window.
+Everything_SetReplyWindow(hwnd);
+
+// set a unique identifier for this query.
+Everything_SetReplyID(1);
+
+// execute the query
+Everything_Query(FALSE);
+</pre>
+
+==See Also==
+<ul>
+*[[support/everything/SDK/Everything_Query|Everything_Query]]
+*[[support/everything/SDK/Everything_SetReplyWindow|Everything_SetReplyWindow]]
+*[[support/everything/SDK/Everything_GetReplyWindow|Everything_GetReplyWindow]]
+*[[support/everything/SDK/Everything_GetReplyID|Everything_GetReplyID]]
+*[[support/everything/SDK/Everything_IsQueryReply|Everything_IsQueryReply]]
+</ul>

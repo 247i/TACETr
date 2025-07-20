@@ -1,0 +1,2433 @@
+=INI=
+The Everything.ini stores all the settings for Everything.
+<ul>
+*[[support/everything/ini#general_settings|General Settings]]
+*[[support/everything/ini#search_window_settings|Search Window Settings]]
+*[[support/everything/ini#search_settings|Search Settings]]
+*[[support/everything/ini#indexing|Indexing]]
+*[[support/everything/ini#etp|ETP]]
+*[[support/everything/ini#http|HTTP]]
+*[[support/everything/ini#keyboard|Keyboard]]
+*[[support/everything/ini#fonts_and_colors|Fonts and colors]]
+*[[support/everything/ini#hidden_settings|Hidden settings]]
+</ul>
+
+==Viewing and changing settings in Everything==
+Most of these settings can be changed from within Everything, in the [[support/everything/options|Everything Options]].
+
+To show the current value for a setting in the status bar, type in the following search and press ENTER:
+<pre>
+/<ini option>
+</pre>
+where <ini option> is one of the ini options below. Not all ini options are supported.
+
+For example, to check the current value for the ini option '''snap''', type in the following search and press ENTER:
+<pre>
+/snap
+</pre>
+
+The current value is shown in the status bar for 3 seconds.
+
+
+To change the value for a setting, type in the following search and press ENTER:
+<pre>
+/<ini option>=<value>
+</pre>
+where <ini option> is one of the ini options below and <value> is the new value. Not all ini options are supported.
+
+For example, to enable the '''snap''' ini option, type in the following search and press ENTER:
+<pre>
+/snap=1
+</pre>
+
+The new value is shown in the status bar for 3 seconds.
+
+==Editing the Everything.ini==
+The Everything.ini is located in:
+<pre>
+%APPDATA%\Everything
+</pre>
+If [[support/everything/options#Store settings and data in %APPDATA%\Everything|Store settings and data in %APPDATA%\Everything]] is disabled, the Everything.ini is stored in the same location as Everything.exe.
+
+The [[support/everything/options#Store settings and data in %APPDATA%\Everything|Store settings and data in %APPDATA%\Everything]] setting is stored in the Everything.ini in the same location as Everything.exe.
+
+To open your Everything.ini file, type in the following search and press ENTER:
+<pre>
+about:config
+</pre>
+
+'''The Everything.ini is automatically generated. Any changes made to the Everything.ini while Everything is running are lost when Everything exits.'''
+
+Please exit "''Everything''" before making changes to the Everything.ini file.
+
+To exit Everything:
+<ul>
+*Right click the Everything system tray icon and click Exit.
+</ul>
+
+The Everything.ini should be opened and saved as UTF-8.
+
+==Syntax==
+<pre>
+[section]
+key=value
+</pre>
+
+==[Everything]==
+<pre>
+[Everything]
+</pre>
+This begins the Everything section.
+Only the Everything section is used.
+
+==General Settings==
+General settings for Everything.
+
+<dl>
+;''app_data''
+The location of settings and data. If set to 1, settings and data are stored in %APPDATA%\Everything. If set to 0, settings and data are stored in the same location as the Everything.exe.
+This option is always stored in the Everything.ini in the same location as your Everything.exe.
+
+;''run_as_admin''
+Run Everything as an admin. If set to 1 and Everything was run as from a standard user account, Everything will relaunch as an admin. If set to 1 and Everything was run as an admin, Everything will continue as normal. If set to 0, Everything will not relaunch as an admin.
+This option is always stored in the Everything.ini in the same location as your Everything.exe.
+
+;''allow_multiple_windows''
+Create a new search window or show an existing search window when Everything.exe is run. If set to 1, a new search window is always created. If set to 0 and no search window exists a new one is created. If set to 0 and a search window already exists, the existing search window is shown.
+
+;''run_in_background''
+Specify wether Everything should exit after all the search windows have been closed. If set to 1, Everything will continue to run in the background after closing all the search windows. If set to 0, Everything will exit when all search windows are closed.
+
+;''show_tray_icon''
+Show the Everything icon in the notification area. If set to 1, the tray icon is shown. If set to 0, the tray icon is not shown.
+
+;''language''
+The [[support/everything/language ids|Language Identifier]] in decimal for displaying text. If set to 1033, English (US) is used. If set to 0, The user default language for displaying text is used.
+
+;''open_folder_command2''
+;''open_file_command2''
+;''open_path_command2''
+;''explore_command2''
+;''explore_path_command2''
+The command to execute when opening or exploring a folder, file or path.
+See [[support/everything/customizing#External file manager|External file manager]] for more information.
+
+;''last_export_type''
+The last export type. Can be one of the following:
+{|
+! Type
+! Description
+|-
+| 0
+| EFU File
+|-
+| 1
+| CSV File
+|-
+| 2
+| TXT File
+|}
+
+;''check_for_updates_on_startup''
+Check for updates when Everything is started. Set to 1 to enable. Set to 0 to disable.
+
+;''connect_history_hosts''
+A list of successful ETP connections.
+
+;''connect_history_ports''
+A list of ports for each connect_history_hosts.
+
+;''connect_history_usernames''
+A list of usernames for each connect_history_hosts.
+
+;''connect_history_link_types''
+A list of history link types for each connect_history_hosts. Can be one of the following values:
+{|
+! Type
+! Description
+|-
+| 0
+| C:\ links.
+|-
+| 1
+| \\server\C links.
+|-
+| 2
+| \\server\$C links.
+|-
+| 3
+| ftp://server/C links.
+|}
+
+;''search_history_enabled''
+Enable or disable search history. Set to 1 to enable. Set to 0 to disable.
+
+;''run_history_enabled''
+Enable or disable run history. Set to 1 to enable. Set to 0 to disable.
+
+;''search_history_days_to_keep''
+The number of days to keep search history.
+
+;''run_history_days_to_keep''
+The number of days to keep run history.
+
+;''search_history_keep_forever''
+Keep search history forever.
+Set to 1 to enable. Set to 0 to disable.
+
+;''run_history_keep_forever''
+Keep run history forever.
+Set to 1 to enable. Set to 0 to disable.
+
+;''search_history_always_suggest''
+Show search suggestions on each keystroke or only show suggestions when Ctrl + Space is pressed. Set to 1 to always show suggestions. Set to 0 to show suggestions when Ctrl + Space is pressed.
+
+;''search_history_sort''
+The search history organizer sort.
+Can be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| Sort by search
+|-
+| 1
+| Sort by search count
+|-
+| 2
+| Sort by search date
+|}
+
+;''search_history_sort_ascending''
+The search history organizer sort order.
+Set to 1 to sort ascending. Set to 0 to sort descending.
+
+;''search_history_x''
+;''search_history_y''
+The search history window position.
+
+;''search_history_wide''
+;''search_history_high''
+The search history window dimensions.
+
+;''search_history_column_search_wide''
+The width of the search column in pixels.
+
+;''search_history_column_search_order''
+The position of the search column.
+
+;''search_history_column_count_wide''
+The width of the search count column in pixels.
+
+;''search_history_column_count_order''
+The position of the search count column.
+
+;''search_history_column_date_wide''
+The width of the last search date column in pixels.
+
+;''search_history_column_date_order''
+The position of the last search date column.
+</dl>
+
+==Search Window Settings==
+settings that affect appearance.
+
+<dl>
+;''window_x''
+The last horizontal position of the search window's upper left corner, in screen coordinates before it was closed. New search windows are positioned based on this setting.
+
+;''window_y''
+The last vertical position of the search window's upper left corner, in screen coordinates before it was closed. New search windows are positioned based on this setting.
+
+;''window_wide''
+;''window_high''
+The last size of the Everything search window, in pixels before it was closed. New search windows are sized based on this setting.
+
+;''maximized''
+Control how new search windows are displayed. If set to 1, new search windows are shown maximized. If set to 0, new search windows are not shown maximized.
+
+;''minimized''
+Control how new search windows are displayed. If set to 1, new search windows are minimized, If set to 0, new search windows are not shown minimized. Everything does not save this value, it must be set manually.
+
+;''fullscreen''
+Show the Everything search window in a full screen window. Set to 1 to enable full screen mode. Set to 0 to window mode.
+
+;''ontop''
+Keep the Everything window on top of other windows. Set to 0 to never be on top. Set to 1 to be always on top. Set to 2 to be on top only while the search is not empty.
+
+;''alternate_row_color''
+Set to 1 to alternate the result list row color. Set to 0 to use a solid color for the result list.
+
+;''show_mouseover''
+Show the row the mouse is currently over in a different color. Set to 1 use a custom color. Set to 0 to use the default color.
+
+;''show_highlighted_search_terms''
+Show highlighted search terms. Set to 1 to enable. Set to 0 to disable.
+
+;''text_size''
+Offset in pixels of the font height for displaying results. Set to 0 to reset.
+
+;''hide_empty_search_results''
+Don't show any results when the search is an empty string. Set to 1 to enable. Set to 0 to show all results when the search is empty.
+
+;''clear_selection_on_search''
+Reset the selection when changing a search parameter. Set to 1 to enable. Set to 0 to keep the selection between searches.
+
+;''show_selected_item_in_statusbar''
+Show the full path and filename of the currently selected item in the status bar. Set to 1 to enable. Set to 0 to disable.
+
+;''translucent_selection_rectangle_alpha''
+The alpha level for the selection rectangle. Ranges from 0 - 255. 0 = transparent, 255 = opaque.
+
+;''last_options_page''
+The last Everything options page. When opening a new option window, this page will be shown.
+
+;''invert_layout''
+Toggle LTR/RTL view. Set to 1 to invert.
+
+;''allow_multiple_windows_from_tray''
+Create a new search window or show an existing search window when opening Everything from the tray icon. Set to 1 to always create a new search window. Set to 0 to show an existing window before creating a new search window.
+
+;''single_click_tray''
+Open the Everything search window with a single or double click from the tray icon. Set to 1 to open with a single click. Set to 0 to open with a double click.
+
+;''close_on_execute''
+Close the Everything search window after executing an item. Set to 1 to close after executing. Set to 0 to keep the window open after executing.
+
+;''double_click_path''
+Open the path in the path column when double clicking it. Set to 1 to allow a double click to open the path. Set to 0 to ignore the double click.
+
+;''update_display_after_scroll''
+Force the display to update immediately after it is scrolled. Set to 1 to update after scrolling. Set to 0 to invalidate and update later.
+
+;''auto_scroll_view''
+Automatically scroll the view when dragging the selection mask outside the window. Set to 1 to automatically scroll. Set to 0 to only scroll when the mouse is moved.
+
+;''double_quote_copy_as_path''
+Include double quotes around the path when copied to the clipboard. Set to 1 to include the double quotes. Set to 0 to copy without the double quotes.
+
+;''rename_select_filepart_only''
+Select only the file part only (not the extension) or the entire filename when renaming. Set to 1 to select only the file part and not select the extension. Set to 0 to select the entire filename.
+
+;''select_search_on_mouse_click''
+Select all the search text when focusing the search edit.
+
+;''focus_search_on_activate''
+Focus the search edit when the Everything window is activated.
+
+;''single_click_open''
+Open a result with a single click or double click.
+Set to 0 to use the system default setting for single click open. Set to 1 to open with a single click. Set to 2 to open with a double click.
+
+;''underline_icon_titles''
+Show result text with underlines.
+Set to 0 to use the system default setting for underline icon titles. Set to 1 to always show underlines. Set to 2 to never show underlines. Set to 3 to underline result text when hovering with the mouse cursor. 
+
+;''wrap_focus''
+Can be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| focus is clamped to the result list.
+|-
+| 1
+| focus wraps around the top and bottom of the result list.
+|-
+| 2
+| focus wraps around the top and bottom of the result list and search edit.
+|}
+
+;''load_icon_priority''
+;''load_thumbnail_priority''
+;''load_fileinfo_priority''
+The thread priority of the load action.
+Can be one of the following values:
+{|
+! Value
+! Description
+|-
+| -15
+| Idle priority.
+|-
+| -1
+| Below normal priority.
+|-
+| 0
+| Normal priority.
+|-
+| 1
+| Above normal priority.
+|-
+| 2
+| High priority.
+|}
+
+;''full_row_select''
+Allow clicking anywhere in the row to select an item and show the selection for the entire row.
+Set to 1 to enable. Set to 0 to disable.
+
+;''double_buffer''
+Use an off screen buffer when rendering the result list. Set to 1 to use the off screen buffer. Set to 0 to render directly to the screen. Use a double buffer to remove flickering when rendering. Drawing directly to the screen may improve performance on older computers.
+
+;''show_number_of_results_with_selection''
+Show the total number of results with the selection count in the status bar. Set to 1 to enable. Set to 0 to disable.
+
+;''date_descending_first''
+Show dates in descending order first.
+
+;''size_descending_first''
+Show sizes in descending order first.
+
+;''size_format''
+The size format type, can be one of the following:
+{|
+! Type
+! Description
+|-
+| 0
+| Best format depending on the size.
+|-
+| 1
+| Always show sizes in bytes.
+|-
+| 2
+| Always show sizes in KB.
+|-
+| 3
+| Always show sizes in MB.
+|}
+
+;''alpha_select''
+Draw the selection mask as a translucent rectangle or a XOR outline mask. Set to 1 to use a translucent rectangle. Set to 2 to use a XOR outline mask. Set to 0 to use the system default selection rectangle.
+
+;''show_size_in_statusbar''
+Set to 1 to show the selection or total size in status bar.
+Set to 0 to disable.
+Enabling can decrease search performance.
+
+;''tooltips''
+Show or don't show tooltips in the option window. Set to 1 to show tooltips. Set to 0 to not show tooltips.
+
+;''editor_x''
+;''editor_y''
+The last file list editor window position.
+
+;''editor_wide''
+;''editor_high''
+The last file list editor window dimensions.
+
+;''editor_maximized''
+The file list editor is maximized.
+Set to 1 to enable. Set to 0 to disable.
+
+;''rename_x''
+;''rename_y''
+The multi-file rename window position.
+
+;''rename_wide''
+;''rename_high''
+The multi-file rename window dimensions.
+
+;''rename_match_case''
+Match or ignore case in a multi-file rename operation.
+Set to 1 to match case. Set to 0 to ignore case.
+
+;''rename_regex''
+Enable regex in a multi-file rename operation.
+Set to 1 to enable. Set to 0 to disable.
+
+;''advanced_copy_to_x''
+;''advanced_copy_to_y''
+The advanced copy to window position.
+
+;''advanced_copy_to_wide''
+;''advanced_copy_to_high''
+The advanced copy to window dimensions.
+
+;''advanced_copy_to_match_case''
+Match or ignore case in a advanced copy to operation.
+Set to 1 to match case. Set to 0 to ignore case.
+
+;''advanced_copy_to_regex''
+Enable regex in a advanced copy to operation.
+Set to 1 to enable. Set to 0 to disable.
+
+;''advanced_move_to_x''
+;''advanced_move_to_y''
+The advanced move to window position.
+
+;''advanced_move_to_wide''
+;''advanced_move_to_high''
+The advanced move to window dimensions.
+
+;''advanced_move_to_match_case''
+Match or ignore case in a advanced move to operation.
+Set to 1 to match case. Set to 0 to ignore case.
+
+;''advanced_move_to_regex''
+Enable regex in a advanced move to operation.
+Set to 1 to enable. Set to 0 to disable.
+
+;''advanced_search_x''
+;''advanced_search_y''
+The advanced search window position.
+
+;''advanced_search_wide''
+;''advanced_search_high''
+The advanced search window dimensions.
+
+;''advanced_search_page_y_offset''
+The vertical scroll offset from the top of the advanced search page.
+
+;''advanced_search_focus_id''
+The ID of the advanced search item that had focus last.
+
+;''show_copy_name''
+Show or do not show the copy name context menu item. Set to 1 to show the context menu item. Set to 0 to not show the context menu item. Set to 2 to use the default show setting. Set to 3 to show when holding down the Shift key.
+
+;''show_copy_path''
+Show or do not show the copy path context menu item. Set to 1 to show the context menu item. Set to 0 to not show the context menu item. Set to 2 to use the default show setting. Set to 3 to show when holding down the Shift key.
+
+;''show_copy_full_name''
+Show or do not show the copy full name context menu item. Set to 1 to show the context menu item. Set to 0 to not show the context menu item. Set to 2 to use the default show setting. Set to 3 to show when holding down the Shift key.
+
+;''show_open_path''
+Show or do not show the open path context menu item. Set to 1 to show the context menu item. Set to 0 to not show the context menu item. Set to 2 to use the default show setting. Set to 3 to show when holding down the Shift key.
+
+;''show_explore''
+Show or do not show the Explore context menu item. Set to 1 to show the context menu item. Set to 0 to not show the context menu item. Set to 2 to use the default show setting. Set to 3 to show when holding down the Shift key.
+
+;''show_explore_path''
+Show or do not show the Explore path context menu item. Set to 1 to show the context menu item. Set to 0 to not show the context menu item. Set to 2 to use the default show setting. Set to 3 to show when holding down the Shift key.
+
+;''filters_visible''
+Show the filter bar in the toolbar.
+Set to 1 to show. Set to 0 to hide.
+
+;''filters_wide''
+Width of the filter bar in pixels.
+
+;''filters_right_align''
+Left or right alignment of the filter bar. Set to 1 to align to the right. Set to 0 to align to the left.
+
+;''filter_everything_name'';
+The name of the Everything filter.
+
+;''filter_organize_x''
+;''filter_organize_y''
+The filter organize window position.
+
+;''filter_organize_wide''
+;''filter_organize_high''
+The filter organize window dimensions.
+
+;''preview_visible''
+Show or hide the preview pane.
+Set to 1 to show. Set to 0 to hide.
+
+;''preview_x''
+The width of the preview pane in pixels.
+
+;''name_column_pos''
+;''path_column_pos''
+;''size_column_pos''
+;''extension_column_pos''
+;''type_column_pos''
+;''last_write_time_column_pos''
+;''creation_time_column_pos''
+;''date_accessed_column_pos''
+;''attribute_column_pos''
+;''file_list_filename_column_pos''
+;''date_run_column_pos''
+;''run_count_column_pos''
+;''date_recently_changed_column_pos''
+The position of the column. 0 being the left most.
+
+;''name_column_width''
+;''path_column_width''
+;''size_column_width''
+;''extension_column_width''
+;''type_column_width''
+;''last_write_time_column_width''
+;''creation_time_column_width''
+;''date_accessed_column_width''
+;''attribute_column_width''
+;''file_list_filename_column_width''
+;''date_run_column_width''
+;''run_count_column_width''
+;''date_recently_changed_column_width''
+The width of the column in pixels.
+
+;''path_column_visible''
+;''size_column_visible''
+;''extension_column_visible''
+;''type_column_visible''
+;''last_write_time_column_visible''
+;''creation_time_column_visible''
+;''date_accessed_column_visible''
+;''attribute_column_visible''
+;''file_list_filename_column_visible''
+;''date_run_column_visible''
+;''run_count_column_visible''
+;''date_recently_changed_column_visible''
+Visibility of the column. Set to 1 to show. Set to 0 to hide.
+</dl>
+
+==Search Settings==
+Settings that affect the search.
+
+<dl>
+;''match_whole_word''
+Match whole words. Set to 1 to enable. Set to 0 to match anywhere.
+
+;''match_path''
+Match full paths. Set to 1 to enable. Set to 0 to match filenames only.
+
+;''match_case''
+Match case. Set to 1 to enable. Set to 0 to ignore case.
+
+;''match_diacritics''
+Match diacritical marks. Set to 1 to enable. Set to 0 to disable.
+
+;''match_regex''
+Use regular expressions. Set to 1 to enable. Set to 0 to disable.
+
+;''home_match_case''
+The match case value for the home search. Set to 0 to use the last value. set to 1 to use a custom value.
+
+;''home_match_whole_word'' 
+The match whole word value for the home search. Set to 0 to use the last value. set to 1 to use a custom value.
+
+;''home_match_path''
+The match path value for the home search. Set to 0 to use the last value. set to 1 to use a custom value.
+
+;''home_match_diacritics''
+The match diacritics value for the home search. Set to 0 to use the last value. set to 1 to use a custom value.
+
+;''home_regex''
+The Regex value for the home search. Set to 0 to use the last value. set to 1 to use a custom value.
+
+;''home_search''
+The search type for the home search. Set to 0 to use the last value. Set to 1 to use a custom search.
+
+;''home_filter''
+The filter type for the home search. Set to 0 to use the last value. Set to 1 to use a custom filter.
+
+;''home_sort''
+The sort type for the home search. Set to 0 to use the last value. Set to 1 to use a custom sort.
+
+;''home_view''
+The result list view mode for the home search.
+Can be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| Details
+|-
+| 1
+| Thumbnails
+|}
+
+;''home_index''
+The index type for the home search. Set to 0 to use the last value. Set to 1 to use a custom index.
+
+;''fast_ascii_search''
+Use single byte ASCII lower case comparisons. Set to 0 to fix Turkish I with dot mappings.
+
+;''match_path_when_search_contains_path_separator''
+Enable full path matching when the search contains a backslash (\). Set to 1 to enable. Set to 0 to disable.
+
+;''allow_literal_operators''
+Allow use of the literal operators AND, OR and NOT. Set to 1 to allow. Set to 0 to disallow. Can cause conflicts if enabled and a filename contains the text AND, OR or NOT.
+
+;''allow_round_bracket_parenthesis''
+Allow ( and ) for grouping. Set to 1 to allow. Set to 0 to disallow. Can cause conflicts if enabled and a filename contains a ( or ).
+
+;''expand_environment_variables''
+Expand environment strings inside % quotes. Set to 1 to enable. Set to 0 to disable. Can cause conflicts if enabled and a filename contains a %.
+
+;''search_as_you_type''
+Search as you type or search when you press enter. Set to 1 to search as you type. Set to 0 to search when you press enter.
+
+;''convert_forward_slash_to_backslash''
+Convert backslashes (/) to forward slashes (\). Set to 1 to convert / to \. Set to 0 to allow /. Can cause conflicts if enabled and a filename contains a /. Note: filenames on NTFS volumes can not contain a /. It is possible to use / in file lists for URLs.
+
+;''match_whole_filename_when_using_wildcards''
+Match the whole filename or anywhere when using wildcards. Set to 1 to match the whole filename. Set to 0 to match anywhere.
+
+;''operator_precedence''
+Order of operations.
+Can be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| OR > AND
+|-
+| 1
+| AND > OR
+|}
+
+;''search''
+The last search string. Only valid if home_search is set to 1.
+
+;''bookmark_remember_case''
+;''bookmark_remember_wholeword''
+;''bookmark_remember_path''
+;''bookmark_remember_diacritic''
+;''bookmark_remember_regex''
+;''bookmark_remember_sort''
+;''bookmark_remember_view''
+;''bookmark_remember_filter''
+;''bookmark_remember_index''
+Save the search settings to the bookmark. Set to 1 to remember the setting. Set to 0 to keep the current setting. If enabled, when the bookmark is opened the search settings are restored. 
+
+;''bookmark_organize_x''
+;''bookmark_organize_y''
+The current bookmark window position.
+
+;''bookmark_organize_wide''
+;''bookmark_organize_high''
+The current bookmark window dimensions.
+
+;''filter''
+The last filter name. If home_sort is 1, this filter is restored when opening a new search window. 
+
+;''sort''
+The last sort. If home_sort is 1, this sort is restored when opening a new search window. If always_keep_sort is 0, this value will be ignored if it is a slow sort.
+
+Can be one of the following sort types:
+{|
+! Type
+! Description
+|-
+| 0
+| Name
+|-
+| 1
+| Path
+|-
+| 2
+| Extension
+|-
+| 3
+| Type
+|-
+| 4
+| Date modified
+|-
+| 5
+| Date created
+|-
+| 6
+| Date accessed
+|-
+| 7
+| Attributes
+|-
+| 8
+| Date recently changed
+|-
+| 9
+| Run count
+|-
+| 10
+| Date run
+|-
+| 11
+| File list filename
+|}
+
+;''sort_ascending''
+Sort ascending or descending. Set to 1 to sort ascending. Set to 0 to sort descending.
+
+;''index''
+The last index type. If home_index is 1, this index is restored when opening a new search window.
+
+Can be one of the follow index types:
+{|
+! Type
+! Description
+|-
+| 0
+| Local DB.
+|-
+| 1
+| File list.
+|-
+| 2
+| ETP server.
+|}
+
+;''index_file_list''
+The file list filename when the last index is a file list.
+
+;''index_etp_server''
+The ETP server when the last index is a ETP server.
+
+;''index_link_type''
+The ETP link type when the last index is a ETP server.
+
+;''view''
+The result list view mode.
+Can be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| Details
+|-
+| 1
+| Thumbnails
+|}
+
+;''thumbnail_size''
+The thumbnail size in pixels.
+
+;''status_bar_visible''
+Show or hide the status bar. Set to 1 to show the status bar. Set to 0 to hide the status bar.
+</dl>
+
+==Indexing==
+settings that affect indexing.
+
+<dl>
+;''auto_include_fixed_volumes''
+Automatically rebuild the database to include a new fixed NTFS volume has been added to the system.
+
+;''auto_include_removable_volumes''
+Automatically rebuild the database to include a new removable NTFS volume has been added to the system.
+
+;''auto_remove_offline_ntfs_volumes''
+Automatically remove offline NTFS volumes included in the index.
+If disabled, offline volumes can be removed manually.
+
+;''auto_include_fixed_refs_volumes''
+Automatically rebuild the database to include a new fixed ReFS volume has been added to the system.
+
+;''auto_include_removable_refs_volumes''
+Automatically rebuild the database to include a new removable ReFS volume has been added to the system.
+
+;''auto_remove_offline_refs_volumes''
+Automatically remove offline ReFS volumes included in the index.
+If disabled, offline volumes can be removed manually.
+
+;''exclude_list_enabled''
+Enable or disable the exclude list. Set to 1 to enable. Set to 0 to disable.
+
+;''exclude_hidden_files_and_folders''
+Exclude or include hidden files and folders. Set to 1 to exclude hidden files and folders. Set to 0 to include hidden files and folders.
+
+;''exclude_system_files_and_folders''
+Exclude or include system files and folders. Set to 1 to exclude system files and folders. Set to 0 to include system files and folders.
+
+;''include_only_files''
+semicolon delimited list of which extensions to include. eg: *.mp3;*.jpg 
+Set to an empty string to include all file types.
+
+;''exclude_files''
+semicolon delimited list of which extensions to exclude. eg: *.db
+Set to an empty string to not exclude any file types.
+
+;''db_location''
+The path where the Everything.db is located.
+
+;''db_multi_user_filename''
+Use a unique filename for the database for each computer and user. Set to 1 to enable. Set to 0 to disable. Might be useful when using the portable version on different computers.
+
+;''db_compress''
+Use Bzip 2 to compress the database. Set to 1 to enable. Set to 0 to disable. Can improve loading performance on slow hard drives at the cost of higher CPU usage when loading and saving.
+
+;''index_size''
+Include file size information in the index.
+Set to 1 to enable. Set to 0 to disable.
+
+;''fast_size_sort''
+Maintain a size sorted index for instant size sorting.
+Set to 1 to enable. Set to 0 to disable.
+
+;''index_date_created''
+Include file and folder date created information in the index.
+Set to 1 to enable. Set to 0 to disable.
+
+;''fast_date_created_sort''
+Maintain a date created sorted index for instant date created sorting.
+Set to 1 to enable. Set to 0 to disable.
+
+;''index_date_modified''
+Include file and folder date modified information in the index.
+Set to 1 to enable. Set to 0 to disable.
+
+;''fast_date_modified_sort''
+Maintain a date modified sorted index for instant date modified sorting.
+Set to 1 to enable. Set to 0 to disable.
+
+;''index_date_accessed''
+Include file and folder date accessed information in the index.
+Set to 1 to enable. Set to 0 to disable.
+
+;''fast_date_accessed_sort''
+Maintain a date accessed sorted index for instant date accessed sorting.
+Set to 1 to enable. Set to 0 to disable.
+
+;''index_attributes''
+Include file and folder attributes information in the index.
+Set to 1 to enable. Set to 0 to disable.
+
+;''fast_attributes_sort''
+Maintain an attributes sorted index for instant attributes sorting.
+Set to 1 to enable. Set to 0 to disable.
+
+;''index_folder size''
+Include folder size information in the index.
+Set to 1 to enable. Set to 0 to disable.
+
+;''fast_path_sort''
+Maintain an path sorted index for instant path sorting.
+Set to 1 to enable. Set to 0 to disable.
+
+;''fast_extension_sort''
+Maintain an extension sorted index for instant extension sorting.
+Set to 1 to enable. Set to 0 to disable.
+
+;''extended_information_cache_monitor''
+Monitor changes to file sizes, dates and attributes. Set to 1 to enable. Set to 0 to disable. 
+
+;''index_recent_changes''
+Maintain a list of changes to the database. These changes can be searched, or all results can be sorted by date recently changed.
+
+;''ntfs_volume_guids''
+The list of NTFS volumes guids to potentially include in the database.
+
+;''ntfs_volume_paths''
+The list of NTFS volumes paths to potentially include in the database.
+
+;''ntfs_volume_roots''
+The list of NTFS volumes roots to potentially include in the database. The root is a path without the root part to specify the base folder to index. 
+
+;''ntfs_volume_includes''
+List of include or exclude values for each NTFS volume in the ntfs_volume_path list. Set to 1 to include. Set to 0 to exclude.
+
+;''ntfs_volume_load_recent_changes''
+List of load recent change values for each NTFS volume in the ntfs_volume_path list. Set to 1 to load recent changes. Set to 0 to not load recent changes.
+
+;''ntfs_volume_include_onlys''
+List of load include only values for each NTFS volume in the ntfs_volume_path list. Set to an empty string to include all folders. Set to a semicolon delimited list of folders to exclude.
+
+;''ntfs_volume_monitors''
+List of monitor values for each NTFS volume in the ntfs_volume_path list. Set to 1 to monitor changes. Set to 0 to not monitor changes.
+
+;''refs_volume_guids''
+The list of ReFS volumes guids to potentially include in the database.
+
+;''refs_volume_paths''
+The list of ReFS volumes paths to potentially include in the database.
+
+;''refs_volume_roots''
+The list of ReFS volumes roots to potentially include in the database. The root is a path without the root part to specify the base folder to index. 
+
+;''refs_volume_includes''
+List of include or exclude values for each ReFS volume in the refs_volume_path list. Set to 1 to include. Set to 0 to exclude.
+
+;''refs_volume_load_recent_changes''
+List of load recent change values for each ReFS volume in the refs_volume_path list. Set to 1 to load recent changes. Set to 0 to not load recent changes.
+
+;''refs_volume_include_onlys''
+List of load include only values for each ReFS volume in the refs_volume_path list. Set to an empty string to include all folders. Set to a semicolon delimited list of folders to exclude.
+
+;''refs_volume_monitors''
+List of monitor values for each ReFS volume in the refs_volume_path list. Set to 1 to monitor changes. Set to 0 to not monitor changes.
+
+;''filelists''
+A list of file list filenames to include in the index.
+
+;''folders''
+A comma separated list of folders to include in the index.
+
+;''folder_monitor_changes''
+A comma separated list of monitor values for each folder in the folders list. Set to 1 to monitor changes. Set to 0 to not monitor changes.
+
+;''folder_buffer_size_list''
+A comma separated list of buffer sizes in bytes for each folder in the index.
+
+;''folder_rescan_if_full_list''
+A comma separated list of rescan if full option for each folder in the index.
+Set to 1 to rescan if full. Set to 0 to ignore changes if buffer is full.
+
+;''folder_update_types''
+A comma separated list of update types for each folder in the folders list. Can be one of the following values:
+{|
+! Type
+! Description
+|-
+| 0
+| Never update.
+|-
+| 1
+| Update at a specified interval.
+|-
+| 2
+| Update on the specified day.
+|}
+
+
+;''folder_update_days''
+A comma separated list of update days for each folder in the folders list. Can be one of the following values:
+{|
+! Type
+! Description
+|-
+| 0
+| Update everyday.
+|-
+| 1
+| Update every Sunday
+|-
+| 2
+| Update every Monday
+|-
+| 3
+| Update every Tuesday
+|-
+| 4
+| Update every Wednesday
+|-
+| 5
+| Update every Thursday
+|-
+| 6
+| Update every Friday
+|-
+| 7
+| Update every Saturday
+|}
+
+;''folder_update_ats''
+A comma separated list of update ats in hours for each folder in the folders list. Can be in the range from 0 - 23.
+
+;''folder_update_intervals''
+A comma separated list of update intervals in minutes or hours (depending on folder_update_interval_types) for each folder in the folders list.
+
+;''folder_update_interval_types''
+A comma separated list of update intervals types for each folder in the folders list. Can be one of the following values:
+{|
+! Type
+! Description
+|-
+| 0
+| Minutes
+|-
+| 1
+| Hours
+|}
+
+;''exclude_folders''
+A comma separated list of folders to exclude. Set to an empty string to include all folders.
+</dl>
+
+==ETP==
+settings that affect the ETP server
+
+<dl>
+;''etp_server_enabled''
+Enable or disable the ETP server. Set to 1 to enable the ETP server. Set to 0 to disable the ETP server.
+
+;''etp_server_bindings''
+The ETP server listening socket bindings. Set to an empty string to bind to all interfaces.
+
+;''etp_server_port''
+The ETP server listening socket port.
+
+;''etp_server_username''
+The ETP server username. Set to an empty string to ignore.
+
+;''etp_server_password''
+The ETP server password. Set to an empty string to ignore.
+
+;''etp_server_welcome_message''
+The ETP welcome message.
+
+The following macros can be included:
+{|
+! Macro name
+! Description
+|-
+| %%
+| A single %
+|-
+| %v
+| Current Everything version.
+|-
+| %n
+| A new line.
+|}
+Leave empty to use the default welcome message.
+
+;''etp_server_log_file_name''
+The filename of the ETP server log. Set to an empty string to use the default filename.
+
+;''etp_server_logging_enabled''
+Enable or disable ETP server logging. Set to 1 to enable. Set to 0 to disable.
+
+;''etp_server_log_max_size''
+The maximum size of the ETP server log file in bytes. If the log file exceeds this size it is truncated [[support/everything/ini#etp_server_log_delta_size|etp_server_log_delta_size]] bytes.
+
+;''etp_server_log_delta_size''
+The number of bytes removed from the start of the ETP server log when it exceeds the maximum size.
+
+;''etp_server_allow_file_download''
+Allow or disallow file downloading from the ETP server. Set to 1 to allow. Set to 0 to disallow.
+</dl>
+
+==HTTP==
+Settings that affect the HTTP server
+
+<dl>
+;''http_server_enabled''
+Enable or disable the HTTP server. Set to 1 to enable. Set to 0 to disable.
+
+;''http_server_bindings''
+The HTTP server listening socket bindings. Set to an empty string to bind to all interfaces.
+
+;''http_server_port''
+The HTTP server listening socket port.
+
+;''http_server_username''
+The HTTP server username. Set to an empty string to ignore.
+
+;''http_server_password''
+The HTTP server password. Set to an empty string to ignore.
+
+;''http_server_home''
+The HTTP server folder. 
+
+''http_server_default_page''
+The HTTP server default page.
+
+;''http_server_log_file_name''
+The HTTP server log filename. Set to an empty string to use the default log filename.
+
+''http_server_logging_enabled''
+Enable or disable HTTP server logging. Set to 1 to enable. Set to 0 to disable.
+
+;''http_server_log_max_size''
+The maximum size of the HTTP server log file in bytes. If the log file exceeds this size it is truncated http_server_log_delta_size bytes.
+
+;''http_server_log_delta_size''
+The number of bytes removed from the start of the HTTP server log when it exceeds the maximum size.
+
+;''http_server_allow_file_download''
+Allow or disallow file downloading from the HTTP server. Set to 1 to allow. Set to 0 to disallow.
+</dl>
+
+==Keyboard==
+Settings for hotkeys and keyboard shortcuts:
+
+<dl>
+;''new_window_key''
+;''show_window_key''
+;''toggle_window_key''
+The hotkey code. The LOBYTE is the Virtual key. HIBYTE is the modifier flags.
+The modifier flags can be 0 or more of the following:
+{|
+! Value
+! Description
+|-
+| 0x01
+| Control
+|-
+| 0x02
+| Alt
+|-
+| 0x04
+| Shift
+|-
+| 0x08
+| Windows key
+|}
+</dl>
+
+<dl>
+;''file_new_search_window_keys''
+;''file_open_file_list_keys''
+;''file_close_file_list_keys''
+;''file_close_keys''
+;''file_export_keys''
+;''file_copy_full_name_to_clipboard_keys''
+;''file_copy_path_to_clipboard_keys''
+;''file_set_run_count_keys''
+;''file_create_shortcut_keys''
+;''file_delete_keys''
+;''file_delete_permanently_keys''
+;''file_edit_keys''
+;''file_open_keys''
+;''file_open_selection_and_close_everything_keys''
+;''file_explore_path_keys''
+;''file_open_new_keys''
+;''file_open_path_keys''
+;''file_open_with_keys''
+;''file_open_with_default_verb_keys''
+;''file_play_keys''
+;''file_preview_keys''
+;''file_print_keys''
+;''file_print_to_keys''
+;''file_properties_keys''
+;''file_read_extended_information_keys''
+;''file_rename_keys''
+;''file_run_as_keys''
+;''file_exit_keys''
+;''file_copy_name_to_clipboard_keys''
+;''file_open_selection_and_do_not_close_everything_keys''
+;''file_open_most_run_keys''
+;''file_open_last_run_keys''
+;''file_custom_verb_1_keys''
+;''file_custom_verb_2_keys''
+;''file_custom_verb_3_keys''
+;''file_custom_verb_4_keys''
+;''file_custom_verb_5_keys''
+;''file_custom_verb_6_keys''
+;''file_custom_verb_7_keys''
+;''file_custom_verb_8_keys''
+;''file_custom_verb_9_keys''
+;''file_custom_verb_10_keys''
+;''file_custom_verb_11_keys''
+;''file_custom_verb_12_keys''
+;''indexes_folders_rescan_all_now_keys''
+;''indexes_force_rebuild_keys''
+;''edit_cut_keys''
+;''edit_copy_keys''
+;''edit_paste_keys''
+;''edit_select_all_keys''
+;''edit_invert_selection_keys''
+;''edit_copy_to_folder_keys''
+;''edit_move_to_folder_keys''
+;''edit_advanced_advanced_copy_to_folder_keys''
+;''edit_advanced_advanced_move_to_folder_keys''
+;''view_filters_keys''
+;''view_preview_keys''
+;''view_status_bar_keys''
+;''view_details_keys''
+;''view_medium_thumbnails_keys''
+;''view_large_thumbnails_keys''
+;''view_extra_large_thumbnails_keys''
+;''view_increase_thumbnail_size_keys''
+;''view_decrease_thumbnail_size_keys''
+;''view_window_size_small_keys''
+;''view_window_size_medium_keys''
+;''view_window_size_large_keys''
+;''view_window_size_auto_fit_keys''
+;''view_zoom_zoom_in_keys''
+;''view_zoom_zoom_out_keys''
+;''view_zoom_reset_keys''
+;''view_go_to_back_keys''
+;''view_go_to_forward_keys''
+;''view_go_to_home_keys''
+;''view_go_to_show_all_history_keys''
+;''view_sort_by_name_keys''
+;''view_sort_by_path_keys''
+;''view_sort_by_size_keys''
+;''view_sort_by_extension_keys''
+;''view_sort_by_type_keys''
+;''view_sort_by_date_modified_keys''
+;''view_sort_by_date_created_keys''
+;''view_sort_by_attributes_keys''
+;''view_sort_by_file_list_filename_keys''
+;''view_sort_by_run_count_keys''
+;''view_sort_by_date_run_keys''
+;''view_sort_by_date_recently_changed_keys''
+;''view_sort_by_date_accessed_keys''
+;''view_sort_by_ascending_keys''
+;''view_sort_by_descending_keys''
+;''view_refresh_keys''
+;''view_fullscreen_keys''
+;''view_toggle_ltrrtl_direction_keys''
+;''view_on_top_never_keys''
+;''view_on_top_always_keys''
+;''view_on_top_while_searching_keys''
+;''search_match_case_keys''
+;''search_match_whole_word_keys''
+;''search_match_path_keys''
+;''search_match_diacritics_keys''
+;''search_enable_regex_keys''
+;''search_advanced_search_keys''
+;''search_add_to_filters_keys''
+;''search_organize_filters_keys''
+;''bookmarks_add_to_bookmarks_keys''
+;''bookmarks_organize_bookmarks_keys''
+;''tools_options_keys''
+;''tools_console_keys''
+;''tools_file_list_editor_keys''
+;''tools_connect_to_etp_server_keys''
+;''tools_disconnect_from_etp_server_keys''
+;''help_everything_help_keys''
+;''help_search_syntax_keys''
+;''help_regex_syntax_keys''
+;''help_command_line_options_keys''
+;''help_everything_website_keys''
+;''help_check_for_updates_keys''
+;''help_about_everything_keys''
+;''help_donate_keys''
+;''search_edit_focus_search_edit_keys''
+;''search_edit_delete_previous_word_keys''
+;''search_edit_auto_complete_search_keys''
+;''search_edit_show_search_history_keys''
+;''search_edit_show_all_search_history_keys''
+;''result_list_item_up_keys''
+;''result_list_item_down_keys''
+;''result_list_page_up_keys''
+;''result_list_page_down_keys''
+;''result_list_start_of_list_keys''
+;''result_list_end_of_list_keys''
+;''result_list_item_up_extend_keys''
+;''result_list_item_down_extend_keys''
+;''result_list_page_up_extend_keys''
+;''result_list_page_down_extend_keys''
+;''result_list_start_of_list_extend_keys''
+;''result_list_end_of_list_extend_keys''
+;''result_list_focus_up_keys''
+;''result_list_focus_down_keys''
+;''result_list_focus_page_up_keys''
+;''result_list_focus_page_down_keys''
+;''result_list_focus_start_of_list_keys''
+;''result_list_focus_end_of_list_keys''
+;''result_list_focus_up_extend_keys''
+;''result_list_focus_down_extend_keys''
+;''result_list_focus_page_up_extend_keys''
+;''result_list_focus_page_down_extend_keys''
+;''result_list_focus_start_of_list_extend_keys''
+;''result_list_focus_end_of_list_extend_keys''
+;''result_list_focus_result_list_keys''
+;''result_list_focus_highest_run_count_result_keys''
+;''result_list_focus_last_run_result_keys''
+;''result_list_toggle_path_column_keys''
+;''result_list_toggle_size_column_keys''
+;''result_list_toggle_extension_column_keys''
+;''result_list_toggle_type_column_keys''
+;''result_list_toggle_date_modified_column_keys''
+;''result_list_toggle_date_created_column_keys''
+;''result_list_toggle_attributes_column_keys''
+;''result_list_toggle_file_list_filename_column_keys''
+;''result_list_toggle_run_count_column_keys''
+;''result_list_toggle_date_recently_changed_column_keys''
+;''result_list_toggle_date_accessed_column_keys''
+;''result_list_toggle_date_run_column_keys''
+;''result_list_size_all_columns_to_fit_keys''
+;''result_list_size_result_list_to_fit_keys''
+;''result_list_context_menu_keys''
+;''result_list_scroll_left_or_thumbnail_left_keys''
+;''result_list_scroll_right_or_thumbnail_right_keys''
+;''result_list_scroll_page_left_or_thumbnail_focus_left_keys''
+;''result_list_scroll_page_right_or_thumbnail_focus_right_keys''
+;''result_list_left_extend_keys''
+;''result_list_right_extend_keys''
+;''result_list_focus_left_extend_keys''
+;''result_list_focus_right_extend_keys''
+;''result_list_select_focus_keys''
+;''result_list_toggle_focus_selection_keys''
+;''result_list_copy_as_csv_keys''
+;''preview_focus_preview_keys''
+Comma delimited list of keyboard shortcuts for the command. The LOBYTE is the virtual key. The HIBYTE can be 0 or more of the follow values:
+{|
+! Flag
+! Description
+|-
+| 0x01
+| Control modifier.
+|-
+| 0x02
+| Alt modifier.
+|-
+| 0x04
+| Shift modifier.
+|-
+| 0x08
+| Windows key modifier.
+|-
+| 0x10
+| Use in search edit only.
+|-
+| 0x20
+| Use in result list only.
+|}
+</dl>
+
+==Fonts and colors==
+settings for fonts and colors.
+
+<dl>
+;''result_list_font''
+The family name of the result list font.
+
+;''result_list_font_size''
+The size of the result list font in pixels.
+
+;''search_edit_font''
+The family name of the search edit font.
+
+;''search_edit_font_size''
+The size of the search edit font in pixels.
+
+;''status_bar_font''
+The family name of the status bar font.
+
+;''status_bar_font_size''
+The size of the status bar font in pixels.
+
+;''header_font''
+The family name of the result list header font.
+
+;''header_font_size''
+The size of the result list header font in pixels.
+
+;''normal_background_color''
+;''current_sort_alternate_row_highlighted_foreground_color''
+;''current_sort_alternate_row_highlighted_background_color''
+;''current_sort_alternate_row_foreground_color''
+;''current_sort_alternate_row_background_color''
+;''alternate_row_highlighted_foreground_color''
+;''alternate_row_highlighted_background_color''
+;''alternate_row_foreground_color''
+;''alternate_row_background_color''
+;''mouseover_current_sort_highlighted_foreground_color''
+;''mouseover_current_sort_highlighted_background_color''
+;''current_sort_mouseover_foreground_color''
+;''current_sort_mouseover_background_color''
+;''mouseover_highlighted_foreground_color''
+;''mouseover_highlighted_background_color''
+;''mouseover_foreground_color''
+;''mouseover_background_color''
+;''highlighted_current_sort_foreground_color''
+;''highlighted_current_sort_background_color''
+;''current_sort_foreground_color''
+;''current_sort_background_color''
+;''highlighted_drop_target_foreground_color''
+;''highlighted_drop_target_background_color''
+;''drop_target_foreground_color''
+;''drop_target_background_color''
+;''highlighted_selected_inactive_foreground_color''
+;''highlighted_selected_inactive_background_color''
+;''selected_inactive_foreground_color''
+;''selected_inactive_background_color''
+;''highlighted_selected_foreground_color''
+;''highlighted_selected_background_color''
+;''selected_foreground_color''
+;''selected_background_color''
+;''highlighted_foreground_color''
+;''highlighted_background_color''
+;''normal_foreground_color''
+The item's color. Set to #RRGGBB, RR is the red hex value, GG is the green hex value and BB is the blue hex value. Set to an empty string to use the default color.
+
+;''current_sort_alternate_row_highlighted_bold''
+;''current_sort_alternate_row_bold''
+;''alternate_row_highlighted_bold''
+;''alternate_row_bold''
+;''mouseover_current_sort_highlighted_bold''
+;''current_sort_mouseover_bold''
+;''mouseover_highlighted_bold''
+;''mouseover_bold''
+;''highlighted_current_sort_bold''
+;''current_sort_bold''
+;''highlighted_drop_target_bold''
+;''drop_target_bold''
+;''highlighted_selected_inactive_bold''
+;''selected_inactive_bold''
+;''highlighted_selected_bold''
+;''selected_bold''
+;''highlighted_bold''
+;''normal_bold''
+The item's style, can be one of the following values:
+{|
+! Style
+! Description
+|-
+| 0
+| Normal
+|-
+| 1
+| Default style
+|-
+| 2
+| Bold
+|}
+</dl>
+
+==Hidden settings==
+These settings are not available in the Everything UI.
+These settings are only available in the Everything.ini.
+
+<dl>
+;''allow_http_server''
+Set to 1 to allow the http server.
+Set to 0 to disable the http server and remove it from the interface.
+This option is only available in the Everything.ini in the same location as your Everything.exe.
+
+;''allow_etp_server''
+Set to 1 to allow the ETP server.
+Set to 0 to disable the ETP server and remove it from the interface.
+This option is only available in the Everything.ini in the same location as your Everything.exe.
+
+;''allow_multiple_instances''
+Allow a new Everything process when one is already running. If set to 1, a new process is created every time you run Everything (Not recommended, use [[support/everything/Multiple instances|named instances]] instead). If set to 0 and an Everything process already exists, the commands line options are sent to the existing process. If set to 0 and there is no existing Everything process, a new Everything process is created.
+
+;''beta_updates''
+Include beta updates when checking for updates. If set to 1, beta updates are included. If set to 0, only stable releases are included.
+
+;''window_title_format''
+;''taskbar_notification_title_format''
+Window title or taskbar notification.
+See [[support/everything/customizing#window_caption|Change the Everything window caption]] for more information.
+
+;''instance_name''
+The instance name.
+See [[support/everything/Multiple Instances|Multiple Instances]] for more information.
+
+;''max_threads''
+Limit the number of threads Everything uses. Set to 0 to use all available threads. Set to 1 to use only one thread.
+
+;''reuse_threads''
+Reuse threads. Set to 1 to put threads to sleep when they complete. The thread is reused when a new thread is required. Set to 0 to terminate threads when they complete. Disabling can cause memory leaks.
+
+;''max_recv_size''
+The maximum packet size to receive over TCP-IP in bytes.
+
+;''search_history_always_suggest_extend_toolbar''
+Always extend the toolbar height when always suggestion search history is enabled.
+Set to 1 to extend the toolbar. Set to 0 to disable.
+
+;''search_history_visible_count_max''
+Set the maximum number of visible search history items.
+
+;''search_history_always_suggest_visible_count_max''
+Set the maximum number of visible search history items when always show search suggestions is enabled.
+
+;''search_history_show_all_max''
+Set the maximum number of search history results when showing all search history.
+
+;''search_history_suggestion_max''
+Set the maximum number of search history results when suggesting a search.
+
+;''search_history_show_all_sort''
+Set the sort order for search history when showing all search history.
+Can be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| Sort by search
+|-
+| 1
+| Sort by search count
+|-
+| 2
+| Sort by search date
+|}
+
+;''search_history_suggestion_sort''
+Set the sort order for search history when showing search suggestions.
+Can be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| Sort by search
+|-
+| 1
+| Sort by search count
+|-
+| 2
+| Sort by search date
+|}
+
+;''search_history_show_above''
+Show the search history drop down list above or below the search edit. Set to 1 to show above. Set to 0 to show below.
+
+;''debug''
+Show the debug console. Set to 1 to show the debug console when Everything starts. Set to 0 to not show the debug console when Everything starts.
+
+;''debug_log''
+Log debug messages to %TEMP%\Everything Debug Log.txt
+Set to 1 to enable debugging mode and debug logging. Set to 0 to disable.
+
+;''verbose''
+Enable verbose debugging.
+
+;''min_zoom''
+The minimum pixel offset of the zoom.
+
+;''max_zoom''
+The maximum pixel offset of the zoom.
+
+;''single_parent_context_menu''
+Use context menus for single parents only. 
+Set to 1 to enable single parents only.
+Set to 0 to disable single parents only.
+If enabled, context menu items of files in different paths will only work for items in the same location as the focused item (or first selected item).
+
+;''context_menu_type''
+The maximum context menu type to use. Can be one of the following settings:
+{|
+! Type
+! Description
+|-
+| 0
+| Use highest context menu interface type possible.
+|-
+| 1
+| Only IID_IContextMenu types.
+|-
+| 2
+| Support IID_IContextMenu or IID_IContextMenu2 types.
+|-
+| 3
+| Support IID_IContextMenu, IID_IContextMenu2 or IID_IContextMenu3 types.
+|}
+
+;''auto_size_1''
+;''auto_size_2''
+;''auto_size_3''
+The window height in pixels to use when auto sizing.
+
+;''auto_size_aspect_ratio_x''
+;''auto_size_aspect_ratio_y''
+The aspect ratio x:y to use when auto sizing.
+
+;auto_size_width_only
+Set to 1 to enable, set to 0 to disable.
+When enabled the height is unchanged when auto-sizing.
+
+;''auto_size_path_x''
+;''auto_size_path_y''
+The ratio x:y to use for auto sizing the name and path column.
+
+;''sticky_vscroll_bottom''
+When the vertical scrollbar is scrolled to the bottom, it will remain at the bottom when resizing the window or when the results change.
+
+;''draw_focus_rect''
+Disable the focus rect drawn around result list items when they have focus.
+
+;''date_format''
+The format to display dates. This is the same format GetDateFormat uses. Leave blank to use the default date format.
+See [[support/everything/customizing#date_format]] for more information.
+
+;''time_format''
+The format to display times. This is the same format GetTimeFormat uses. Leave blank to use the default time format.
+See [[support/everything/customizing#time_format]] for more information.
+
+;''listview_item_high''
+The height of a result list item in pixels. Set to 0 to use the default height.
+
+;''update_display_after_mask''
+Force the display to update immediately after changing the selection mask. Set to 1 to update immediately. Set to 0 to invalidate and update later. Setting this to 1 can improve performance when the mouse updates faster than 40hz.
+
+;''rename_move_caret_to_selection_end''
+Move the caret to the selection end or keep the selection when renaming. Set to 1 to move the caret to the end of the selection. Set to 0 to move the caret from the current position.
+
+;''search_edit_move_caret_to_selection_end''
+Move the caret to the selection end or keep the selection when focusing the search edit. Set to 1 to move the caret to the end of the selection. Set to 0 to move the caret from the current position.
+
+;''reset_vscroll_on_search''
+Scroll the results to the top when the search changes.
+
+;''header_high''
+Custom header height in pixels. Set to 0 to use the default header height.
+
+;''hide_on_close''
+Instead of closing the window, hide it temporarily. when a new search window is requested this window is made visible instead. Useful for keeping extended file information cached.
+
+;''winmm''
+Automatically plays the focused item with Windows Multimedia API mciSendString. Set to 1 to enable. Set to 0 to disable.
+
+;''menu_escape_amp''
+Escape & characters in menu items. Set to 0 to define custom keyboard shortcuts for bookmarks and filters. Custom keyboard shortcuts can be defined by prefixing a letter with the & character.
+
+;''menu_folders''
+Enable submenus by including \ in your macro and bookmark names.
+Set to 1 to enable. Set to 0 to disable.
+
+For example, to use the bookmark name "Beatles" in a submenu called "Music", call your bookmark Music\Beatles
+
+;''menu_folder_separator''
+Change the sub menu separator \ to the specified string. 
+
+;''menu_items_per_column''
+Split menus into columns and limit each column to the specified number of items. set to 0 to disable.
+
+;''new_inherit''
+Inherit search settings from an existing window.
+Set to 1 to enable. Set to 0 to disable.
+When enabled, creating a new window from an existing window will create a new window with the same settings otherwise the default settings are used. 
+
+;''rtl_listview_edit''
+Use a right to left layout edit when renaming a file that contains a right to left character. Set to 1 to use a right to left edit. Set to 0 to always use a left to right edit.
+
+;''force_path_ltr_order''
+Force the path to be shown in Left to Right order.
+Set to 1 to enable. Set to 0 to disable.
+
+;''force_path_left_align''
+Force the path to be left aligned.
+Set to 1 to enable. Set to 0 to disable.
+
+;''date_time_order''
+Change the order of date and time.
+Can be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| Date Time for LTR localizations, Time Date for RTL localizations
+|-
+| 1
+| Date Time
+|-
+| 2
+| Time Date
+|-
+| 3
+| Time Date for LTR localizations, Date Time for RTL localizations
+|}
+
+;''date_time_align''
+Change the alignment of date and time text.
+Can be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| Left aligned for LTR localizations, Right aligned for RTL localizations
+|-
+| 1
+| Left aligned
+|-
+| 2
+| Right aligned
+|-
+| 3
+| Right aligned for LTR localizations, Left aligned for RTL localizations
+|}
+
+;''size_align''
+Change the alignment of size text.
+Can be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| Left aligned for LTR localizations, Right aligned for RTL localizations
+|-
+| 1
+| Left aligned
+|-
+| 2
+| Right aligned
+|-
+| 3
+| Right aligned for LTR localizations, Left aligned for RTL localizations
+|}
+
+;''update_layout_on_input_language_change''
+Automatically change the layout to match the current input language.
+Set to 1 to enable. Set to 0 to disable.
+
+;''control_shift_action''
+Set the action when pressing the Control and Shift keys.
+Can be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| Do nothing
+|-
+| 1
+| Change input
+|-
+| 2
+| Change layout
+|-
+| 3
+| Change input and layout
+|}
+
+;''change_search_rtl_reading_action''
+Change the search edit Right to left reading order action
+Can be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| Do nothing
+|-
+| 1
+| Change input
+|-
+| 2
+| Change layout
+|-
+| 3
+| Change input and layout
+|}
+
+;''invert_layout_action''
+Change the invert layout action
+Can be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| Do nothing
+|-
+| 1
+| Change input
+|-
+| 2
+| Change layout
+|-
+| 3
+| Change input and layout
+|}
+
+;''file_list_relative_paths''
+Use relative paths with file lists.
+Set to 1 to enable. Set to 0 to disable.
+
+;''advanced_search_warnings''
+Show warning icons on advanced search fields that could perform slowly.
+
+;''display_full_path_name''
+Display the full path and filename in the name column. Set to 1 to enable. Set to 0 to disable.
+
+;''themed_toolbar''
+Use visual themes or windows classic style to render the toolbar. Set to 1 to use visual themes. Set to 0 to use Windows classic style.
+
+;''copy_path_folder_append_backslash''
+Append a backslash to copied folder names. Set to 1 to append a backslash. Set to 0 to not append a backslash.
+
+;''custom_verb01''
+;''custom_verb02''
+;''custom_verb03''
+;''custom_verb04''
+;''custom_verb05''
+;''custom_verb06''
+;''custom_verb07''
+;''custom_verb08''
+;''custom_verb09''
+;''custom_verb10''
+;''custom_verb11''
+;''custom_verb12''
+Define a custom verb for the custom verb keyboard shortcuts.
+
+;''filters_tab_stop''
+Include the filter bar when cycling through the control focus with TAB. Set to 1 to include the filter bar. Set to 0 to exclude the filter bar.
+
+;''preview_tab_stop''
+Allow TAB to focus the preview pane.
+
+;''translucent_selection_rectangle_background_color''
+The color of the translucent selection rectangle. Set to #RRGGBB, RR is the red hex value, GG is the green hex value and BB is the blue hex value. Set to an empty string to use the default color.
+
+;''translucent_selection_rectangle_border_color''
+The color of the translucent selection rectangle border. Set to #RRGGBB, RR is the red hex value, GG is the green hex value and BB is the blue hex value. Set to an empty string to use the default color.
+
+;''size_tiny''
+;''size_small''
+;''size_medium''
+;''size_large''
+;''size_huge''
+The size to use when searching for size:small, size:medium, size:large, size:huge or size:gigantic.
+
+;''always_keep_sort''
+Always keep the sort. Set to 1 to enable. Set to 0 to only keep fast sorts. Enabling this will drastically reduce performance.
+
+;''select_search_on_focus_mode''
+Select all the search text when the search edit gains focus. 
+Can be one of the following modes:
+{|
+! Mode
+! Description
+|-
+| 0
+| Do nothing.
+|-
+| 1
+| Select all text and move the caret to the end.
+|-
+| 2
+| Deselect all text and move the caret to the end.
+|}
+
+;''select_search_on_set_mode''
+Can be one of the following modes:
+{|
+! Mode
+! Description
+|-
+| 0
+| Do nothing.
+|-
+| 1
+| Select all text and move the caret to the end.
+|-
+| 2
+| Deselect all text and move the caret to the end.
+|}
+
+;''db_update_thread_priority''
+The thread priority to read the USN Journal.
+Can be one of the following values:
+{|
+! Value
+! Description
+|-
+| -15
+| Idle priority.
+|-
+| -1
+| Below normal priority.
+|-
+| 0
+| Normal priority.
+|-
+| 1
+| Above normal priority.
+|-
+| 2
+| High priority.
+|}
+
+;''refs_file_id_extd_directory_info_buffer_size''
+The read buffer size in bytes for reading ReFS folders. Set to 0 to use the default buffer size (64k).
+
+;''folder_update_thread_mode_background''
+Set the folder monitor thread to have low IO priority. 
+Set to 1 to enable. Set to 0 to disable. 
+
+;''folder_update_rescan_asap''
+Rescan folders when starting Everything if a scheduled folder rescan was missed.
+Set to 1 to rescan immediately. Set to 0 to rescan at the next scheduled time.
+
+;''monitor_thread_mode_background''
+Set the USN monitor thread to have low IO priority. 
+Set to 1 to enable. Set to 0 to disable. 
+
+;''monitor_retry_delay''
+The retry delay in milliseconds before attempting to reopen an offline volume for monitoring.
+
+;''monitor_update_delay''
+The delay in milliseconds between reading USN journal changes.
+
+;''monitor_pause''
+Pause folder indexes monitoring, file list changes monitoring and USN change journal monitors.
+Set to 1 to pause. Set to 0 to allow monitors to start. 
+Monitors can be pause and resumed with the search commands: /monitor_pause and /monitor_resume.
+
+;''usn_record_filter''
+Include list of USN reasons flags. USN Reasons that are not included in this list are ignored.
+Set to 0xffffffff to include all USN reasons.
+Can be zero or more of the follow flags in hexadecimal:
+{|
+! Flag
+! Description
+|-
+| 0x00000001
+| USN_REASON_DATA_OVERWRITE
+|-
+| 0x00000002
+| USN_REASON_DATA_EXTEND
+|-
+| 0x00000004
+| USN_REASON_DATA_TRUNCATION
+|-
+| 0x00000010
+| USN_REASON_NAMED_DATA_OVERWRITE
+|-
+| 0x00000020
+| USN_REASON_NAMED_DATA_EXTEND
+|-
+| 0x00000040
+| USN_REASON_NAMED_DATA_TRUNCATION
+|-
+| 0x00000100
+| USN_REASON_FILE_CREATE
+|-
+| 0x00000200
+| USN_REASON_FILE_DELETE
+|-
+| 0x00000400
+| USN_REASON_EA_CHANGE
+|-
+| 0x00000800
+| USN_REASON_SECURITY_CHANGE
+|-
+| 0x00001000
+| USN_REASON_RENAME_OLD_NAME
+|-
+| 0x00002000
+| USN_REASON_RENAME_NEW_NAME
+|-
+| 0x00004000
+| USN_REASON_INDEXABLE_CHANGE
+|-
+| 0x00008000
+| USN_REASON_BASIC_INFO_CHANGE
+|-
+| 0x00010000
+| USN_REASON_HARD_LINK_CHANGE
+|-
+| 0x00020000
+| USN_REASON_COMPRESSION_CHANGE
+|-
+| 0x00040000
+| USN_REASON_ENCRYPTION_CHANGE
+|-
+| 0x00080000
+| USN_REASON_OBJECT_ID_CHANGE
+|-
+| 0x00100000
+| USN_REASON_REPARSE_POINT_CHANGE
+|-
+| 0x00200000
+| USN_REASON_STREAM_CHANGE
+|-
+| 0x80000000
+| USN_REASON_CLOSE
+|}
+
+;''cancel_delay''
+The delay in milliseconds to wait before showing the cancel dialog when the Everything database is busy.
+
+
+;''http_title_format''
+The http title format.
+See [[support/everything/customizing#window_caption|Change the Everything window caption]] for more information.
+
+;''http_server_show_drive_labels''
+Show drive labels for root folders.
+Set to 1 to enable. Set to 0 to disable.
+
+;''http_server_strings''
+Customize the built in http server. 
+See [[support/everything/http#Custom strings|Custom Strings]] for more information.
+
+;''alpha''
+Set the transparency value of the Everything.
+0 = transparent. 128 = 50% transparent. 192 = 25% transparent. 255 = opaque.
+
+;''snap''
+Snap the Everything search window to the desktop edges. Set to 1 to enable snapping. Set to 0 to disable snapping.
+
+;''snaplen''
+The maximum number of pixels from a desktop edge before the Everything search window will snap to it.
+
+;''thumbnail_fill''
+Set to 1 to resize the thumbnail to fill the full thumbnail size. Set to 0 to limit the resizing to 1:1. 
+
+;''min_thumbnail_size''
+Set the minimum thumbnail size in pixels. Must be greater than 0.
+
+;''max_thumbnail_size''
+Set the maximum thumbnail size in pixels. Must be greater than 0. Anything larger than [[support/Everything/INI#thumbnail_load_size|thumbnail_load_size]] will be stretched.
+
+;''medium_thumbnail_size''
+Set the medium thumbnail size in pixels.
+
+;''large_thumbnail_size''
+Set the large thumbnail size in pixels.
+
+;''extra_large_thumbnail_size''
+Set the extra large thumbnail size in pixels.
+
+;''thumbnail_load_size''
+Set the internal thumbnail size. The largest supported thumbnail size is 1024x1024.
+Set to 0 to use the default internal size (256x256).
+
+;''show_in_taskbar''
+Set to 1 to show the Everything taskbar button.
+Set to 0 to prevent the Everything search window from showing in the taskbar.
+
+;''toggle_window_from_tray_icon''
+Set to 1 to toggle the search window from the tray icon. The taskbar must be ontop, there must not be any topmost windows.
+Set to 0 to show or create a new search window from the tray icon.
+
+;''show_focus_on_search''
+Set to 1 to brings the focus into view after each search.
+Set to 0 to allow the focus to go off screen after a search.
+
+;''statusbar_selected_item_format''
+
+The following string substitutions can be used:
+{|
+! String
+! Substitution
+|-
+| <code>$$</code>
+| A single $
+|-
+| <code>$f</code>
+| Full path and file name
+|-
+| <code>$n</code>
+| Name
+|-
+| <code>$p</code>
+| Path
+|-
+| <code>$s</code>
+| Size
+|-
+| <code>$e</code>
+| Extension
+|-
+| <code>$t</code>
+| Type
+|-
+| <code>$m</code>
+| Date modified
+|-
+| <code>$c</code>
+| Date created
+|-
+| <code>$a</code>
+| Date accessed
+|-
+| <code>$b</code>
+| Attributes
+|-
+| <code>$d</code>
+| Date recently changed
+|-
+| <code>$r</code>
+| Run count
+|-
+| <code>$u</code>
+| Date last run
+|-
+| <code>$l</code>
+| File list file name
+|}
+
+Set to an empty string to use the text from each visible column (showing path last)
+
+;''minimize_to_tray''
+When enabled, the Everything Search window will not show up in the task bar when minimized.
+The search window can be restored from the tray icon.
+Set to 1 to enable. Set to 0 to disable.
+
+;''auto_remove_moved_ntfs_volumes''
+Set to 1 to enable.
+Set to 0 to disable.
+Automatically remove old NTFS volumes that have moved to a new drive letter.
+
+;''auto_remove_moved_refs_volumes''
+Set to 1 to enable.
+Set to 0 to disable.
+Automatically remove old ReFS volumes that have moved to a new drive letter.
+
+;''find_mount_points_on_removable_volumes''
+Look for mount points on removable volumes.
+Set to 1 to enable.
+Set to 0 to disable.
+Can caused undesired access to removable volumes if enabled.
+
+;''find_subfolders_and_files_max_threads''
+Set to the number of threads to use.
+Set to 0 to use the default number of threads. The default number of threads to use is max_thread / 2 (at least one thread is used).
+
+;''statusbar_size_format''
+Set the size format for the total selected size in the status bar.
+Must be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| Auto (Bytes/KB/MB/GB depending on size).
+|-
+| 1
+| Always Bytes
+|-
+| 2
+| Always KB.
+|-
+| 3
+| Always MB.
+|}
+
+;''lvm''
+Enable or disable listview messages. Set to 1 to enable. Set to 0 to disable.
+
+;''ipc''
+Enable or disable IPC. Set to 1 to enable. Set to 0 to disable.
+
+;''rename_nav''
+Enable or disable rename navigation or inline renaming. Set to 1 to enable. Set to 0 to disable.
+
+;''tray_show_command_line''
+The command line to execute when running Everything from the tray icon.
+For example, set to -home to load the home settings when clicking on the tray icon.
+
+;''dpi''
+The Dots Per Inch (DPI) multiplier. Use to scale Everything.
+Set to 0 to disable.
+96 = 100%, 120=125%, 144=150%, 168=175%, 192=200%
+This setting is multiplied by the current system DPI.
+Please note that some widgets always use the system DPI.
+
+;''ctrl_mouse_wheel_action''
+The action to perform when using the mouse wheel with the control held down.
+Can be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| None.
+|-
+| 1
+| Change view
+|-
+| 2
+| Change zoom
+|}
+
+;''allow_open''
+Allow executing results.
+Set to 1 to allow. Set to 0 to disallow.
+
+;''allow_context_menu''
+Allow right clicking on results.
+Set to 1 to allow. Set to 0 to disallow.
+
+;''allow_delete''
+Allow deleting results.
+Set to 1 to allow. Set to 0 to disallow.
+
+;''allow_rename''
+Allow renaming results.
+Set to 1 to allow. Set to 0 to disallow.
+
+;''allow_cut''
+Allow cutting/moving results.
+Set to 1 to allow. Set to 0 to disallow.
+
+;''allow_copy''
+Allow copying results.
+Set to 1 to allow. Set to 0 to disallow.
+
+;''allow_paste''
+Allow pasting results.
+Set to 1 to allow. Set to 0 to disallow.
+
+;''allow_drag_drop''
+Allow dragging results and allow dropping on results.
+Set to 1 to allow. Set to 0 to disallow.
+
+;''auto_column_widths''
+Auto adjust column widths when resizing the search window.
+Set to 1 to enable. Set to 0 to disable.
+
+;''hotkey_explorer_path_search''
+Set the search to the current path in Windows Explorer when opening Everything from a hotkey.
+Set to 1 to enable. Set to 0 to disable.
+
+;''get_key_name_text''
+Use the keyboard driver for keyboard button names.
+Set to 1 to enable. Set to 0 to disable.
+
+;''paste_new_line_op''
+Convert new lines when pasting multi-line text into the search box.
+Can be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| AND (convert new lines to spaces)
+|-
+| 1
+| OR (convert new lines to |)
+|}
+
+;''always_update_query_on_search_parameter_change''
+Update the query when search as you type is disabled and when you change a search option or filter.
+Set to 1 to enable. Set to 0 to disable.
+
+;''preview_mag_filter''
+Set the magnify filter for images in the preview window.
+Only works for images.
+
+Must be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| Use default setting.
+|-
+| 3
+| Color on color. (Performance)
+|-
+| 4
+| Half tone (Quality)
+|}
+
+;''preview_min_filter''
+Set the mipmap filter for images in the preview window.
+Only works for images.
+
+Must be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| Use default setting.
+|-
+| 3
+| Color on color. (Performance)
+|-
+| 4
+| Half tone (Quality)
+|}
+
+;''preview_fill''
+Set to 1 to resize the preview image to fill the full preview window. Set to 0 to limit the resizing to 1:1. 
+Only works for images.
+
+;''show_preview_handlers_in_preview_pane''
+Allow system preview handlers in the preview pane. Everything has a built in preview handler for images.
+Set to 0 to use the system setting. Set to 1 to allow. Set to 2 to disallow. The system setting can be changed from Windows Explorer -> Tools -> Folder Options... -> View -> Show preview handlers in preview pane.
+
+;''preview_load_size''
+The single value used for both width and height in pixels of the image preview load buffer. Set to 0 to use the default of 1024.
+
+;''service_pipe_name''
+Name of the service pipe.
+Must be in the form of \\.\pipe\pipename
+Leave blank to use the default pipe name: \\.\pipe\Everything Service
+
+;''thumbnail_mouseover_border_color''
+Set the thumbnail mouse over border color.
+Use the following color format: #RRGGBB
+
+;''preview_background_color''
+Set the preview background color.
+Use the following color format: #RRGGBB
+
+;''etp_client_rewrite_patterns''
+;''etp_client_rewrite_substitutions''
+A comma (,) separated list of ETP link rewrites.
+For example, on the ETP server you may have a folder D:\folder1 which is shared as \\ETPserver\folder1.
+Set the pattern to: "D:\\folder1"
+set the substitution to: "\\\\ETPserver\\folder1"
+
+;''icons_only''
+Always display icons, never thumbnails.
+
+Must be one of the following values:
+{|
+! Value
+! Description
+|-
+| 0
+| Use system setting.
+|-
+| 1
+| Icons only
+|-
+| 2
+| Thumbnails
+|}
+The system setting can be changed in Windows Explorer -> Tools -> Folder Options... -> View -> Always show icons, never thumbnails.
+
+;''auto_scroll_repeat_delay''
+The delay to wait in milliseconds before auto scrolling the result list.
+
+;''auto_scroll_repeat_rate''
+The repeat rate in milliseconds to auto scroll the result list.
+
+;''open_many_files_warning_threshold''
+Show the open many files warning dialog when attempting to open more than the specified number of files.
+
+;''search_edit_drag_accept_files''
+Allow files and folders to be dropped on the search edit. When a single folder is dropped, Everything will search inside this folder. When multiple files and/or folders are dropped, a file list search is generated to find the specified files and folders.
+
+;''always_request_all_fileinfo''
+Always request file information, even when it is not displayed in the result list.
+
+;''replace_exact_trailing_star_dot_star_with_star''
+Replace *.* with *
+Only works when match_whole_filename_when_using_wildcards is enabled.
+When enabled, *.* also matches files that do not contain a .
+When disabled, *.* matches only files containing a .
+Set to 1 to enable. Set to 0 to disable.
+
+;''allow_exclamation_point_not''
+Allow ! to be used as a NOT operator.
+Set to 1 to enable. Set to 0 to disable.
+
+;''search_command_prefix''
+The search command prefix. If convert_forward_slash_to_backslash is enabled, you may wish to change this to > or some other prefix.
+
+;''auto_complete_search_command''
+Allow TAB to auto complete search commands. The search must currently start with the search command prefix.
+Set to 1 to enable. Set to 0 to disable.
+
+;''listview_tooltips''
+Show or don't show tooltips in the result list. Set to 1 to show tooltips. Set to 0 to not show tooltips.
+
+;''show_detailed_listview_tooltips''
+Show detailed tooltips in thumbnail view.
+Set to 1 to show text for all visible column types. Set to 0 to show the name only. 
+
+</dl>
+
+==Backup==
+To make a backup of all settings:
+<ul>
+*In '''''Everything''''', type in the following search and press ENTER:
+<pre>
+/config_save
+</pre>
+*Choose a filename and destination and click '''Save'''.
+</ul>
+
+==Restore==
+To restore all settings:
+<ul>
+*In '''''Everything''''', type in the following search and press ENTER:
+<pre>
+/config_load
+</pre>
+*Select a Everything.ini and click '''Open'''.
+</ul>
+
+==Restore default settings==
+To restore all the default settings in Everything:
+<ul>
+* Exit "''Everything''"
+* Delete the Everything.ini file in %APPDATA%\Everything
+* Restart Everything.
+</ul>
+
+==Custom filename==
+Use Everything.exe [[support/everything/command line options#-config|-config]] <Everything.ini> to specify the filename of the Everything ini file.
+
+==See also==
+<ul>
+*[[support/everything/options|Options]]
+</ul>

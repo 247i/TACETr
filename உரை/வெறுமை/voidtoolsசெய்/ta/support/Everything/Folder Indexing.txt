@@ -1,0 +1,126 @@
+=Folder Indexing=
+Folder indexing allows Everything to include any file system folder in the Everything index.
+
+Indexed folders can go offline and remain in the Everything index.
+
+For example, with folder indexing you can index:
+<ul>
+*Network shares or mapped network drives.
+*FAT32 and other volumes.
+*Any physical folder.
+</ul>
+
+[[File:support/everything/everything.options.folders.server.downloads.png|alt=Everything Options Folders Network Share]]
+
+==Do I need administrative privileges or the Everything service to index folders?==
+No, folder indexing does not require administrative privileges or the Everything service.
+
+==Why is indexing so slow?==
+Folder indexing uses the same approach as the Windows search.
+This can be a lot slower than NTFS indexing.
+Everything can take a couple minutes to scan a folder and all its subfolders and files.
+
+==How do I add a folder to the Everything index?==
+<ul>
+*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
+*Click the '''Folders '''tab.
+*Click '''Add...'''.
+*Select a folder to add to the Everything index.
+*Click '''OK'''.
+*Click '''OK'''.
+</ul>
+
+==How do I add a network share to the Everything index?==
+<ul>
+*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
+*Click the '''Folders '''tab.
+*Click '''Add...'''.
+*Select the network share to add to the Everything index, for example:
+<pre>
+\\server\share
+</pre>
+*Click '''OK'''.
+*Click '''OK'''.
+</ul>
+
+==How do I add a mapped network drive to the Everything index?==
+<ul>
+*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
+*Click the '''Folders '''tab.
+*Click '''Add...'''.
+*Select the mapped network drive.
+*Click '''OK'''.
+*Click '''OK'''.
+</ul>
+
+If network drives are not listed in Everything, please try running Everything as a standard user:
+<ul>
+*In '''Everything''', from the '''Tools''' menu, click '''Options'''.
+*Click the '''General''' tab on the left.
+*Check '''Everything service'''.
+*Uncheck '''Run as administrator'''.
+*Click '''OK'''.
+*Restart Everything (right click the Everything tray icon and click Exit).
+</ul>
+
+==How do I stop Everything from scanning folders on startup==
+To prevent Everything from rescanning folders on startup:
+<ul>
+*In '''Everything''', type in the following search and press '''ENTER''':
+/[[support/everything/ini#folder_update_rescan_asap|folder_update_rescan_asap]]=0
+</ul>
+
+Folder rescanning will occur at the next scheduled time.
+
+==Will Everything detect all file name changes made to this folder?==
+Almost all changes are detected. 
+Changes can be missed if too many occur in a short time.
+
+To rebuild the folder index when too many changes occur in a short time:
+<ul>
+*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
+*Click the '''Folders '''tab.
+*Select a folder.
+*Check '''Rescan on full buffer'''.
+</ul>
+
+Everything can schedule an update time or update interval to rescan the entire folder for changes that might have been missed.
+
+To customize the update time or update interval:
+<ul>
+*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
+*Click the '''Folders '''tab.
+*Select a folder.
+*Choose one of the options below:
+<ul>
+*Update each day, or weekly on a specific day, at a specific time.
+*Update periodically in the specified hours or minutes.
+*Never update.
+</ul>
+</ul>
+
+==How do I manually update a folder index?==
+To manually update all folder indexes:
+<ul>
+*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
+*Click the '''Folders '''tab.
+*Click '''Rescan All Now'''.
+*Click '''OK'''.
+</ul>
+
+To manually update a folder index:
+<ul>
+*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
+*Click the '''Folders '''tab.
+*Select the folder to update and click '''Rescan Now'''.
+*Click '''OK'''.
+</ul>
+
+==What happens if the indexed folder is offline or not available?==
+The folder index will remain unchanged.
+However, forcing a index rebuild will show the folder as empty.
+
+Everything will continue to re-scan the folder at the specified update time or update interval and only update the folder when it is online.
+
+Displaying icons and file information of offline folders can take several seconds to time-out.
+You can press F5 to refresh this cache when the folder is back online.
