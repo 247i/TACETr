@@ -1,18 +1,18 @@
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (OSM Apps Catalog)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-23 19:03+0200\n"
-"PO-Revision-Date: 2025-01-24 19:33+0530\n"
+"POT-Creation-Date: 2025-07-23 20:44+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Tamil <https://hosted.weblate.org/projects/osm-apps-catalog/osm-apps-catalog/ta/>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/osm-apps-catalog/"
+"osm-apps-catalog/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #, i18next-interpolation
 msgctxt "about"
@@ -40,9 +40,19 @@ msgid "Filters"
 msgstr "வடிப்பான்கள்"
 
 #, i18next-interpolation
-msgctxt "filter.free"
-msgid "Free"
-msgstr "இலவசம்"
+msgctxt "filter.resetFilters"
+msgid "Show all"
+msgstr "அனைத்தையும் காட்டு"
+
+#, i18next-interpolation
+msgctxt "filter.preview"
+msgid "The filter is set to:"
+msgstr "வடிகட்டி இதற்கு அமைக்கப்பட்டுள்ளது:"
+
+#, i18next-interpolation
+msgctxt "filter.preset"
+msgid "The filter is preset for you:"
+msgstr "வடிகட்டி உங்களுக்காக முன்னமைக்கப்பட்டுள்ளது:"
 
 #, i18next-interpolation
 msgctxt "filter.topic"
@@ -66,8 +76,8 @@ msgstr "பாதுகாப்பு"
 
 #, i18next-interpolation
 msgctxt "filter.category"
-msgid "Category"
-msgstr "வகை"
+msgid "Menu"
+msgstr "பட்டியல்"
 
 #, i18next-interpolation
 msgctxt "filter.category.all"
@@ -96,17 +106,22 @@ msgstr "உங்கள் வழியைக் கண்டறியவும�
 
 #, i18next-interpolation
 msgctxt "filter.category.edit"
-msgid "Contribute"
-msgstr "பங்களிப்பு"
+msgid "Improve the map"
+msgstr "வரைபடத்தை மேம்படுத்தவும்"
 
 #, i18next-interpolation
 msgctxt "category.all.description"
-msgid ""
-"{{numberOfApps}} apps that use OpenStreetMap, sorted by Community "
-"Contribution Score."
+msgid "{{numberOfApps}} apps that use <o>OpenStreetMap</o>."
 msgstr ""
-"திற {numberOfApps}} திற openstreetmap ஐப் பயன்படுத்தும் பயன்பாடுகள், சமூக "
+"திற {{numberOfApps}} திற <o>திறந்தவீதிவரைபடம்</o> ஐப் பயன்படுத்தும் பயன்பாடுகள், சமூக "
 "பங்களிப்பு மதிப்பெண்ணால் வரிசைப்படுத்தப்படுகின்றன."
+
+#, i18next-interpolation
+msgctxt "category.all.description.filtered"
+msgid ""
+"{{numberOfApps}} of {{totalNumberOfApps}} apps that use <o>OpenStreetMap</o>."
+msgstr ""
+"{{numberOfApps}} {{totalNumberOfApps}}} பயன்பாடுகள் <o> openstreetmap </o>."
 
 #, i18next-interpolation
 msgctxt "category.focus.description"
@@ -126,8 +141,8 @@ msgid ""
 "{{numberOfApps}} apps developed for mobile devices or that support offline "
 "use."
 msgstr ""
-"Mobile {numberOfApps}} மொபைல் சாதனங்களுக்காக உருவாக்கப்பட்ட பயன்பாடுகள் "
-"அல்லது இணைப்பில்லாத பயன்பாட்டை ஆதரிக்கின்றன."
+"Mobile {{numberOfApps}} மொபைல் சாதனங்களுக்காக உருவாக்கப்பட்ட பயன்பாடுகள் அல்லது "
+"இணைப்பில்லாத பயன்பாட்டை ஆதரிக்கின்றன."
 
 #, i18next-interpolation
 msgctxt "category.navigation.description"
@@ -140,9 +155,8 @@ msgid ""
 "{{numberOfApps}} apps that support adding, editing or analysing "
 "OpenStreetMap data or recording geotracks."
 msgstr ""
-"திற {numberOfApps}} opentretmap தரவைச் சேர்ப்பது, திருத்துதல் அல்லது "
-"பகுப்பாய்வு செய்தல் அல்லது சியோட்ராக்களை பதிவுசெய்தல் ஆகியவற்றை ஆதரிக்கும் "
-"பயன்பாடுகள்."
+"திற {{numberOfApps}} opentretmap தரவைச் சேர்ப்பது, திருத்துதல் அல்லது பகுப்பாய்வு "
+"செய்தல் அல்லது சியோட்ராக்களை பதிவுசெய்தல் ஆகியவற்றை ஆதரிக்கும் பயன்பாடுகள்."
 
 #, i18next-interpolation
 msgctxt "relatedApps"
@@ -161,13 +175,22 @@ msgid ""
 "programming knowledge. Perhaps someone has already created the map you are "
 "looking for, or you can create your own theme map."
 msgstr ""
-"பின்வரும் சேவைகள் மூலம் எந்த நிரலாக்க அறிவும் இல்லாமல் உங்கள் சொந்த "
-"கருப்பொருள் வரைபடங்களை உருவாக்கலாம். நீங்கள் தேடும் வரைபடத்தை யாராவது "
-"ஏற்கனவே உருவாக்கியிருக்கலாம் அல்லது உங்கள் சொந்த கருப்பொருள் வரைபடத்தை "
-"உருவாக்கலாம்."
+"பின்வரும் சேவைகள் மூலம் எந்த நிரலாக்க அறிவும் இல்லாமல் உங்கள் சொந்த கருப்பொருள் வரைபடங்களை "
+"உருவாக்கலாம். நீங்கள் தேடும் வரைபடத்தை யாராவது ஏற்கனவே உருவாக்கியிருக்கலாம் அல்லது உங்கள் "
+"சொந்த கருப்பொருள் வரைபடத்தை உருவாக்கலாம்."
 
 #, i18next-interpolation
 msgctxt "noResults"
+msgid "No results"
+msgstr "முடிவுகள் இல்லை"
+
+#, i18next-interpolation
+msgctxt "select.search.placeholder"
+msgid "Search"
+msgstr "தேடல்"
+
+#, i18next-interpolation
+msgctxt "select.search.noResults"
 msgid "No results"
 msgstr "முடிவுகள் இல்லை"
 
@@ -217,24 +240,9 @@ msgid "Accessibility"
 msgstr "அணுகல்"
 
 #, i18next-interpolation
-msgctxt "app.free"
-msgid "Free"
-msgstr "இலவசம்"
-
-#, i18next-interpolation
 msgctxt "multilingual"
 msgid "Multilingual"
 msgstr "பன்மொழி"
-
-#, i18next-interpolation
-msgctxt "libre"
-msgid "Libre"
-msgstr "லிபர்"
-
-#, i18next-interpolation
-msgctxt "proprietary"
-msgid "Proprietary"
-msgstr "தனியுரிம"
 
 #, i18next-interpolation
 msgctxt "list.documentation"
@@ -254,7 +262,12 @@ msgstr "தகவல்கள்"
 #, i18next-interpolation
 msgctxt "app.imageAlt"
 msgid "Image from {{name}}."
-msgstr "{{name} இருந்து இலிருந்து படம்."
+msgstr "{{name}} இருந்து இலிருந்து படம்."
+
+#, i18next-interpolation
+msgctxt "app.getIt"
+msgid "Get it on"
+msgstr "அதைப் பெறுங்கள்"
 
 #, i18next-interpolation
 msgctxt "app.website"
@@ -313,8 +326,13 @@ msgstr "கடைசி வெளியீடு"
 
 #, i18next-interpolation
 msgctxt "app.unmaintained"
+msgid "(<icon/> Unmaintained)"
+msgstr "(<icon/> பராமரிக்கப்படாதது)"
+
+#, i18next-interpolation
+msgctxt "app.unmaintained.wiki"
 msgid "({{icon}} Unmaintained)"
-msgstr "({{icon}} Unmaintained)"
+msgstr "({{icon}} பராமரிக்கப்படாதது)"
 
 #, i18next-interpolation
 msgctxt "app.languages"
@@ -325,6 +343,86 @@ msgstr "மொழிகள்"
 msgctxt "app.coverage"
 msgid "Coverage"
 msgstr "பாதுகாப்பு"
+
+#, i18next-interpolation
+msgctxt "app.contribute"
+msgid "Contribute"
+msgstr "பங்களிப்பு"
+
+#, i18next-interpolation
+msgctxt "app.contribute.toSoftware"
+msgid "To software"
+msgstr "மென்பொருளுக்கு"
+
+#, i18next-interpolation
+msgctxt "app.contribute.toSoftware.discuss"
+msgid "Discuss & share ideas"
+msgstr "யோசனைகளைப் பற்றி விவாதிக்கவும் பகிர்ந்து கொள்ளவும்"
+
+#, i18next-interpolation
+msgctxt "app.contribute.toSoftware.test"
+msgid "Test & provide feedback"
+msgstr "சோதனை மற்றும் கருத்துக்களை வழங்கவும்"
+
+#, i18next-interpolation
+msgctxt "app.contribute.toSoftware.translate"
+msgid "Help translate"
+msgstr "மொழிபெயர்க்க உதவுங்கள்"
+
+#, i18next-interpolation
+msgctxt "app.contribute.toSoftware.develop"
+msgid "Develop code"
+msgstr "குறியீட்டை உருவாக்குங்கள்"
+
+#, i18next-interpolation
+msgctxt "app.contribute.toSoftware.document"
+msgid "Improve the documentation"
+msgstr "ஆவணங்களை மேம்படுத்தவும்"
+
+#, i18next-interpolation
+msgctxt "app.contribute.toData"
+msgid "To OSM data"
+msgstr "OSM தரவுக்கு"
+
+#, i18next-interpolation
+msgctxt "app.contribute.toData.edit"
+msgid "Edit map data"
+msgstr "வரைபடத் தரவைத் திருத்தவும்"
+
+#, i18next-interpolation
+msgctxt "app.contribute.toData.resolve"
+msgid "Resolve map notes"
+msgstr "வரைபட குறிப்புகளை தீர்க்கவும்"
+
+#, i18next-interpolation
+msgctxt "app.contribute.toData.review"
+msgid "Review edits"
+msgstr "திருத்தங்களை மதிப்பாய்வு செய்யுங்கள்"
+
+#, i18next-interpolation
+msgctxt "app.contribute.toData.photos"
+msgid "Upload photos for mapping"
+msgstr "மேப்பிங்கிற்கான புகைப்படங்களை பதிவேற்றவும்"
+
+#, i18next-interpolation
+msgctxt "app.contribute.toData.tracks"
+msgid "Record & share tracks"
+msgstr "தடங்களை பதிவு செய்து பகிரவும்"
+
+#, i18next-interpolation
+msgctxt "app.contribute.toData.qa"
+msgid "Perform quality assurance"
+msgstr "தர உத்தரவாதத்தை செய்யுங்கள்"
+
+#, i18next-interpolation
+msgctxt "app.contribute.toCommunity"
+msgid "To Community"
+msgstr "சமூகத்திற்கு"
+
+#, i18next-interpolation
+msgctxt "app.contribute.toCommunity.welcome"
+msgid "Welcome new users"
+msgstr "புதிய பயனர்களை வரவேற்கிறோம்"
 
 #, i18next-interpolation
 msgctxt "app.community"
@@ -357,6 +455,11 @@ msgid "Mastodon"
 msgstr "மாச்டோடன்"
 
 #, i18next-interpolation
+msgctxt "app.community.lemmy"
+msgid "Lemmy"
+msgstr "லெம்மி"
+
+#, i18next-interpolation
 msgctxt "app.community.issueTracker"
 msgid "Issues"
 msgstr "சிக்கல்கள்"
@@ -368,7 +471,7 @@ msgstr "அறிவிலிமையம் விவாதங்கள்"
 
 #, i18next-interpolation
 msgctxt "app.community.telegram"
-msgid "Telegramm group"
+msgid "Telegram group"
 msgstr "தந்தி குழு"
 
 #, i18next-interpolation
@@ -383,8 +486,8 @@ msgstr "ரெடிட்"
 
 #, i18next-interpolation
 msgctxt "app.author"
-msgid "Author"
-msgstr "நூலாசிரியர்"
+msgid "Developed by"
+msgstr "உருவாக்கியது"
 
 #, i18next-interpolation
 msgctxt "app.price"
@@ -408,8 +511,12 @@ msgstr "மூலம்"
 
 #, i18next-interpolation
 msgctxt "app.source.date"
-msgid "Last change: {{date}}"
-msgstr "கடைசி மாற்றம்: {{date}}"
+msgid ""
+"Last change: {{date}}\n"
+"First crawled: {{added}}"
+msgstr ""
+"கடைசி மாற்றம்: {{date}}\n"
+"முதலில் ஊர்ந்து சென்றது: {{added}}"
 
 #, i18next-interpolation
 msgctxt "app.source.description"
@@ -429,11 +536,10 @@ msgstr "தெரியவில்லை"
 #, i18next-interpolation
 msgctxt "share.wiki"
 msgid ""
-"Copied {{group}} table to the clipboard formatted for "
-"wiki.openstreetmap.org."
+"Copied {{group}} table to the clipboard formatted for wiki.openstreetmap.org."
 msgstr ""
-"Wiki.openstreetmap.org க்காக வடிவமைக்கப்பட்ட இடைநிலைப்பலகைக்கு {{group}} "
-"அட்டவணை நகலெடுக்கப்பட்டது."
+"Wiki.openstreetmap.org க்காக வடிவமைக்கப்பட்ட இடைநிலைப்பலகைக்கு {{group}} அட்டவணை "
+"நகலெடுக்கப்பட்டது."
 
 #, i18next-interpolation
 msgctxt "wiki.generatedBy"
@@ -450,8 +556,7 @@ msgctxt "wiki.generatedByOsmAppsCatalog"
 msgid ""
 "This table was generated by the [{{link}} OSM Apps Catalog] at {{date}}."
 msgstr ""
-"இந்த அட்டவணை {{link}} இல் [{{date}} osm பயன்பாடுகளின் பட்டியல்] ஆல் "
-"உருவாக்கப்பட்டது."
+"இந்த அட்டவணை {{link}} இல் [{{date}} osm பயன்பாடுகளின் பட்டியல்] ஆல் உருவாக்கப்பட்டது."
 
 #, i18next-interpolation
 msgctxt "score.results"
@@ -484,8 +589,7 @@ msgctxt "score.criteria.supportsContributions"
 msgid ""
 "the app supports contributions (editing, analyzing, etc.) to OpenStreetMap"
 msgstr ""
-"OpenStreetMap க்கு பங்களிப்புகளை (எடிட்டிங், பகுப்பாய்வு போன்றவை) பயன்பாடு "
-"ஆதரிக்கிறது"
+"OpenStreetMap க்கு பங்களிப்புகளை (எடிட்டிங், பகுப்பாய்வு போன்றவை) பயன்பாடு ஆதரிக்கிறது"
 
 #, i18next-interpolation
 msgctxt "score.criteria.addingAndEditingPossible"
@@ -569,13 +673,12 @@ msgid ""
 "accessibility is supported (e.g. screen reader compatibility or route "
 "calculation for wheelchair users)"
 msgstr ""
-"அணுகல் ஆதரிக்கப்படுகிறது (எ.கா. திரை ரீடர் பொருந்தக்கூடிய தன்மை அல்லது சக்கர"
-" நாற்காலி பயனர்களுக்கான பாதை கணக்கீடு)"
+"அணுகல் ஆதரிக்கப்படுகிறது (எ.கா. திரை ரீடர் பொருந்தக்கூடிய தன்மை அல்லது சக்கர நாற்காலி "
+"பயனர்களுக்கான பாதை கணக்கீடு)"
 
 #, i18next-interpolation
 msgctxt "score.criteria.communityChannelExists"
-msgid ""
-"a communication channel for the community exists (e.g. forum, Mastodon)"
+msgid "a communication channel for the community exists (e.g. forum, Mastodon)"
 msgstr "சமூகத்திற்கான தகவல்தொடர்பு சேனல் உள்ளது (எ.கா. மன்றம், மாச்டோடன்)"
 
 #, i18next-interpolation
@@ -595,5 +698,5 @@ msgid ""
 "the app is documented on multiple platforms (e.g. OSM-Wiki, taginfo, "
 "Wikidata)"
 msgstr ""
-"பயன்பாடு பல தளங்களில் ஆவணப்படுத்தப்பட்டுள்ளது (எ.கா. ஓஎச்எம்-விக்கி, "
-"டாகின்ஃபோ, விக்கிடேட்டா)"
+"பயன்பாடு பல தளங்களில் ஆவணப்படுத்தப்பட்டுள்ளது (எ.கா. ஓஎச்எம்-விக்கி, டாகின்ஃபோ, "
+"விக்கிடேட்டா)"

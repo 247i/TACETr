@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Grist)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-29 01:01+0200\n"
-"PO-Revision-Date: 2025-07-09 09:36\n"
+"POT-Creation-Date: 2025-07-23 19:32+0200\n"
+"PO-Revision-Date: 2025-07-24 00:08\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/grist/client/ta/>\n"
 "Language: ta\n"
@@ -27,7 +27,7 @@ msgstr "புதிய உறுப்பினரை அழைக்கவு�
 #, i18next-interpolation
 msgctxt "ACUserManager.We'll email an invite to {{email}}"
 msgid "We'll email an invite to {{email}}"
-msgstr "{{email} க்கு க்கு அழைப்பை மின்னஞ்சல் செய்வோம்"
+msgstr "{{email}} க்கு அழைப்பை மின்னஞ்சல் செய்வோம்"
 
 #, i18next-interpolation
 msgctxt "AccessRules.Add Column Rule"
@@ -143,17 +143,17 @@ msgstr "அனுமதிகள்"
 #, i18next-interpolation
 msgctxt "AccessRules.Remove column {{- colId }} from {{- tableId }} rules"
 msgid "Remove column {{- colId }} from {{- tableId }} rules"
-msgstr "{{- அட்டவணை}} விதிகளிலிருந்து {{- கோலிட்}} நெடுவரிசையை அகற்று"
+msgstr "{{- tableId }} விதிகளிலிருந்து {{- colId }} நெடுவரிசையை அகற்று"
 
 #, i18next-interpolation
 msgctxt "AccessRules.Remove {{- tableId }} rules"
 msgid "Remove {{- tableId }} rules"
-msgstr "{{- அட்டவணை}} விதிகளை அகற்று"
+msgstr "{{- tableId }} விதிகளை அகற்று"
 
 #, i18next-interpolation
 msgctxt "AccessRules.Remove {{- name }} user attribute"
 msgid "Remove {{- name }} user attribute"
-msgstr "{{- பெயர்}} பயனர் பண்புக்கூறு அகற்று"
+msgstr "{{- name }} பயனர் பண்புக்கூறு அகற்று"
 
 #, i18next-interpolation
 msgctxt "AccessRules.Reset"
@@ -1127,14 +1127,14 @@ msgctxt ""
 "CustomSectionConfig.{{wrongTypeCount}} non-{{columnType}} columns are not "
 "shown_one"
 msgid "{{wrongTypeCount}} non-{{columnType}} column is not shown"
-msgstr "{{{wrongTypeCount}} non-{{columnType}} நெடுவரிசை காட்டப்படவில்லை"
+msgstr "{{wrongTypeCount}} non-{{columnType}} நெடுவரிசை காட்டப்படவில்லை"
 
 #, i18next-interpolation
 msgctxt ""
 "CustomSectionConfig.{{wrongTypeCount}} non-{{columnType}} columns are not "
 "shown_other"
 msgid "{{wrongTypeCount}} non-{{columnType}} columns are not shown"
-msgstr "{{{wrongTypeCount}} non-{{columnType}} நெடுவரிசைகள் காட்டப்படவில்லை"
+msgstr "{{wrongTypeCount}} non-{{columnType}} நெடுவரிசைகள் காட்டப்படவில்லை"
 
 #, i18next-interpolation
 msgctxt "CustomSectionConfig.Clear selection"
@@ -1340,7 +1340,7 @@ msgstr "{{name}} ஐ நீக்கு"
 #, i18next-interpolation
 msgctxt "DocMenu.Deleted {{at}}"
 msgid "Deleted {{at}}"
-msgstr "}} இல் {{நீக்கப்பட்டது"
+msgstr "{{at}} நீக்கப்பட்டது"
 
 #, i18next-interpolation
 msgctxt "DocMenu.Discover More Templates"
@@ -1371,7 +1371,7 @@ msgstr ""
 #, i18next-interpolation
 msgctxt "DocMenu.Edited {{at}}"
 msgid "Edited {{at}}"
-msgstr "}} At இல் திருத்தப்பட்டது"
+msgstr "{{at}} திருத்தப்பட்டது"
 
 #. This string currently needs to have a "&" because it is referenced that way
 #. in a batch of tests.
@@ -1598,6 +1598,17 @@ msgstr "இந்த ஆவணத்திற்கான திருத்த 
 
 #, i18next-interpolation
 msgctxt ""
+"DocPageModel.Please reload the document and if the error persist, contact "
+"the document owners to attempt a document recovery. [{{error}}]"
+msgid ""
+"Please reload the document and if the error persist, contact the document "
+"owners to attempt a document recovery. [{{error}}]"
+msgstr ""
+"தயவுசெய்து ஆவணத்தை மீண்டும் ஏற்றவும், பிழை தொடர்ந்தால், ஆவண உரிமையாளர்களைத் "
+"தொடர்பு கொள்ளவும் ஆவண மீட்டெடுப்பு. [{{error}}]"
+
+#, i18next-interpolation
+msgctxt ""
 "DocTour.Cannot construct a document tour from the data in this document. "
 "Ensure there is a table named GristDocTour with columns Title, Body, "
 "Placement, and Location."
@@ -1747,8 +1758,8 @@ msgctxt ""
 msgid ""
 "Document ID to use whenever the REST API calls for {{docId}}. See {{apiURL}}"
 msgstr ""
-"REST பநிஇ {{apiURL} க்கு க்கு அழைக்கும் போதெல்லாம் பயன்படுத்த ஆவண ஐடி. "
-"{{docId}} ஐப் பார்க்கவும்"
+"REST பநிஇ {{apiURL}} க்கு அழைக்கும் போதெல்லாம் பயன்படுத்த ஆவண ஐடி. {{docId}}"
+" ஐப் பார்க்கவும்"
 
 #, i18next-interpolation
 msgctxt "DocumentSettings.Find slow formulas"
@@ -1950,8 +1961,8 @@ msgid ""
 "Document automatically opens in {{fiddleModeDocUrl}}. Anyone may edit, which"
 " will create a new unsaved copy."
 msgstr ""
-"ஆவணம் தானாகவே {{fiddleModeDocUrl} in இல் திறக்கிறது. யாரும் திருத்தலாம், இது"
-" புதிய சேமிக்கப்படாத நகலை உருவாக்கும்."
+"ஆவணம் தானாகவே {{fiddleModeDocUrl}} இல் திறக்கிறது. யாரும் திருத்தலாம், இது "
+"புதிய சேமிக்கப்படாத நகலை உருவாக்கும்."
 
 #, i18next-interpolation
 msgctxt "DocumentSettings.fiddle mode"
@@ -2585,7 +2596,7 @@ msgstr "மீட்டமை {{count}} முழு நெடுவரிசை
 #, i18next-interpolation
 msgctxt "GridViewMenus.Show column {{- label}}"
 msgid "Show column {{- label}}"
-msgstr "நெடுவரிசையைக் காட்டு {{- லேபிள்}}"
+msgstr "நெடுவரிசையைக் காட்டு {{- label}}"
 
 #, i18next-interpolation
 msgctxt "GridViewMenus.Sort"
@@ -2710,7 +2721,7 @@ msgstr "நகல்களைக் கண்டறியவும் ..."
 #, i18next-interpolation
 msgctxt "GridViewMenus.Duplicate in {{- label}}"
 msgid "Duplicate in {{- label}}"
-msgstr "{{- லேபிள்}} இல் நகல்"
+msgstr "{{- label}} இல் நகல்"
 
 #, i18next-interpolation
 msgctxt "GridViewMenus.No reference columns."
@@ -2848,6 +2859,19 @@ msgid "go to webhook settings"
 msgstr "வெப்ஊக் அமைப்புகளுக்குச் செல்லவும்"
 
 #, i18next-interpolation
+msgctxt ""
+"GristDoc.New changes are temporarily suspended. Webhooks queue overflowed. "
+"Please check webhooks settings, remove invalid webhooks, and clean the "
+"queue."
+msgid ""
+"New changes are temporarily suspended. Webhooks queue overflowed. Please "
+"check webhooks settings, remove invalid webhooks, and clean the queue."
+msgstr ""
+"புதிய மாற்றங்கள் தற்காலிகமாக இடைநிறுத்தப்படுகின்றன. வெப்ஊக்ச் வரிசை நிரம்பி "
+"வழிகிறது. தயவுசெய்து வெப்ஊக்ச் அமைப்புகளைச் சரிபார்த்து, தவறான வெப்ஊக்குகளை "
+"அகற்றி, வரிசையை தூய்மை செய்யுங்கள்."
+
+#, i18next-interpolation
 msgctxt "HomeIntro.Any documents created in this site will appear here."
 msgid "Any documents created in this site will appear here."
 msgstr "இந்த தளத்தில் உருவாக்கப்பட்ட எந்த ஆவணங்களும் இங்கே தோன்றும்."
@@ -2943,7 +2967,7 @@ msgstr "கிரிச்டுக்கு வருக, {{name}}!"
 #, i18next-interpolation
 msgctxt "HomeIntro.Welcome to {{orgName}}"
 msgid "Welcome to {{orgName}}"
-msgstr "{{orgName} க்கு க்கு வருக"
+msgstr "{{orgName}} க்கு வருக"
 
 #, i18next-interpolation
 msgctxt ""
@@ -2967,12 +2991,12 @@ msgstr "Your உங்கள் வேலையைச் சேமிக்க {
 #, i18next-interpolation
 msgctxt "HomeIntro.Welcome to Grist, {{- name}}!"
 msgid "Welcome to Grist, {{- name}}!"
-msgstr "கிரிச்டுக்கு வருக, {{- பெயர்}}!"
+msgstr "கிரிச்டுக்கு வருக, {{- name}}!"
 
 #, i18next-interpolation
 msgctxt "HomeIntro.Welcome to {{- orgName}}"
 msgid "Welcome to {{- orgName}}"
-msgstr "{{- orgname} க்கு க்கு வருக"
+msgstr "{{- orgName}} க்கு வருக"
 
 #, i18next-interpolation
 msgctxt "HomeIntro.Sign in"
@@ -3316,7 +3340,7 @@ msgstr "ஆவணத்தைப் பதிவிறக்கவும்"
 #, i18next-interpolation
 msgctxt "MakeCopyMenu.Download document and history"
 msgid "Download document and history"
-msgstr "முழு ஆவணத்தையும் வரலாற்றையும் பதிவிறக்கவும்"
+msgstr "ஆவணத்தையும் வரலாற்றையும் பதிவிறக்கவும்"
 
 #, i18next-interpolation
 msgctxt ""
@@ -3375,6 +3399,20 @@ msgstr "மேலும் அறிக"
 msgctxt "MakeCopyMenu.download attachments"
 msgid "download attachments"
 msgstr "இணைப்புகளைப் பதிவிறக்கவும்"
+
+#, i18next-interpolation
+msgctxt ""
+"MakeCopyMenu.Attachments are external and not included in this download. If "
+"uploading the document to a separate Grist installation, you will also need "
+"to {{downloadLink}} separately. "
+msgid ""
+"Attachments are external and not included in this download. If uploading the"
+" document to a separate Grist installation, you will also need to "
+"{{downloadLink}} separately. "
+msgstr ""
+"இணைப்புகள் வெளிப்புறங்கள் மற்றும் இந்த பதிவிறக்கத்தில் சேர்க்கப்படவில்லை. "
+"ஆவணத்தை ஒரு தனி கிரிச்ட் நிறுவலில் பதிவேற்றினால், நீங்கள் தனித்தனியாக "
+"{{downloadLink}} வேண்டும்."
 
 #, i18next-interpolation
 msgctxt "NotifyUI.Ask for help"
@@ -3464,7 +3502,7 @@ msgstr "பக்கத்தில் சேர்க்கவும்"
 #, i18next-interpolation
 msgctxt "PageWidgetPicker.Building {{- label}} widget"
 msgid "Building {{- label}} widget"
-msgstr "கட்டிடம் {{- லேபிள்}} விட்செட்"
+msgstr "கட்டிடம் {{- label}} விட்செட்"
 
 #, i18next-interpolation
 msgctxt "PageWidgetPicker.Group by"
@@ -3500,6 +3538,20 @@ msgstr "பின்வரும் அட்டவணை இனி தெரி
 msgctxt "Pages.The following tables will no longer be visible_other"
 msgid "The following tables will no longer be visible"
 msgstr "பின்வரும் அட்டவணைகள் இனி தெரியாது"
+
+#, i18next-interpolation
+msgctxt ""
+"Pages.Keep data and delete page. Table will remain available in "
+"{{rawDataLink}}"
+msgid ""
+"Keep data and delete page. Table will remain available in {{rawDataLink}}"
+msgstr ""
+"தரவை வைத்து பக்கத்தை நீக்கவும். அட்டவணை {{rawDataLink}} இல் கிடைக்கும்"
+
+#, i18next-interpolation
+msgctxt "Pages.raw data page"
+msgid "raw data page"
+msgstr "மூல தரவு பக்கம்"
 
 #, i18next-interpolation
 msgctxt "PermissionsWidget.Allow All"
@@ -3539,7 +3591,7 @@ msgstr "புதிய புலத்தை உருவாக்கவும�
 #, i18next-interpolation
 msgctxt "RecordLayoutEditor.Show field {{- label}}"
 msgid "Show field {{- label}}"
-msgstr "புலத்தைக் காட்டு {{- லேபிள்}}"
+msgstr "புலத்தைக் காட்டு {{- label}}"
 
 #, i18next-interpolation
 msgctxt "RecordLayoutEditor.Save Layout"
@@ -3884,7 +3936,7 @@ msgstr "மின்னோட்டத்திற்குத் திரு�
 #, i18next-interpolation
 msgctxt "ShareMenu.Compare to {{termToUse}}"
 msgid "Compare to {{termToUse}}"
-msgstr "{{termToUse} with உடன் ஒப்பிடுக"
+msgstr "{{termToUse}} உடன் ஒப்பிடுக"
 
 #, i18next-interpolation
 msgctxt "ShareMenu.Current Version"
@@ -3934,7 +3986,7 @@ msgstr "{{termToUse}} ஐ மாற்றவும்…"
 #, i18next-interpolation
 msgctxt "ShareMenu.Return to {{termToUse}}"
 msgid "Return to {{termToUse}}"
-msgstr "{{termToUse} பெறுநர் க்கு திரும்பவும்"
+msgstr "{{termToUse}}க்கு திரும்பவும்"
 
 #, i18next-interpolation
 msgctxt "ShareMenu.Save Copy"
@@ -4450,6 +4502,11 @@ msgid "Create a form"
 msgstr "ஒரு படிவத்தை உருவாக்கவும்"
 
 #, i18next-interpolation
+msgctxt "ViewLayoutMenu.Duplicate widget"
+msgid "Duplicate widget"
+msgstr "நகல் விட்செட்"
+
+#, i18next-interpolation
 msgctxt "ViewSectionMenu.(customized)"
 msgid "(customized)"
 msgstr "(தனிப்பயனாக்கப்பட்டது)"
@@ -4752,7 +4809,7 @@ msgid ""
 "Could not find the requested page.{{separator}}Please check the URL and try "
 "again."
 msgstr ""
-"கோரப்பட்ட பக்கத்தைக் கண்டுபிடிக்க முடியவில்லை. {{separator} the தயவுசெய்து "
+"கோரப்பட்ட பக்கத்தைக் கண்டுபிடிக்க முடியவில்லை. {{separator}} தயவுசெய்து "
 "முகவரி ஐ சரிபார்த்து மீண்டும் முயற்சிக்கவும்."
 
 #, i18next-interpolation
@@ -4778,7 +4835,7 @@ msgid ""
 "You are signed in as {{email}}. You can sign in with a different account, or"
 " ask an administrator for access."
 msgstr ""
-"நீங்கள் {{email} அச் ஆக உள்நுழைந்துள்ளீர்கள். நீங்கள் வேறு கணக்கில் "
+"நீங்கள் {{email}} ஆக உள்நுழைந்துள்ளீர்கள். நீங்கள் வேறு கணக்கில் "
 "உள்நுழையலாம் அல்லது அணுகலை நிர்வாகியிடம் கேட்கலாம்."
 
 #, i18next-interpolation
@@ -5378,17 +5435,17 @@ msgstr "கலப்பு வகைகள்"
 #, i18next-interpolation
 msgctxt "FieldBuilder.Revert field settings for {{colId}} to common"
 msgid "Revert field settings for {{colId}} to common"
-msgstr "{{colId} க்கு க்கான புல அமைப்புகளை பொதுவானதாக மாற்றவும்"
+msgstr "{{colId}} க்கான புல அமைப்புகளைப் பொதுவானதாக மாற்றவும்"
 
 #, i18next-interpolation
 msgctxt "FieldBuilder.Save field settings for {{colId}} as common"
 msgid "Save field settings for {{colId}} as common"
-msgstr "{{colId} க்கு க்கான புல அமைப்புகளை பொதுவானதாக சேமிக்கவும்"
+msgstr "{{colId}} க்கான புல அமைப்புகளைப் பொதுவானதாகச் சேமி"
 
 #, i18next-interpolation
 msgctxt "FieldBuilder.Use separate field settings for {{colId}}"
 msgid "Use separate field settings for {{colId}}"
-msgstr "{{colId} க்கு க்கு தனி புல அமைப்புகளைப் பயன்படுத்தவும்"
+msgstr "{{colId}} க்கு தனி புல அமைப்புகளைப் பயன்படுத்தவும்"
 
 #, i18next-interpolation
 msgctxt "FieldBuilder.Changing column type"
@@ -5426,7 +5483,7 @@ msgstr "எல்லா {{numErrors}} கலங்களிலும் பி�
 #, i18next-interpolation
 msgctxt "FormulaEditor.Errors in {{numErrors}} of {{numCells}} cells"
 msgid "Errors in {{numErrors}} of {{numCells}} cells"
-msgstr "{{numErrors}} கலங்களின் {{numCells} in இல் உள்ள பிழைகள்"
+msgstr "{{numErrors}} கலங்களின் {{numCells}} இல் உள்ள பிழைகள்"
 
 #, i18next-interpolation
 msgctxt "FormulaEditor.editingFormula is required"
@@ -5530,7 +5587,7 @@ msgctxt ""
 msgid ""
 "Browse our {{templateLibrary}} to discover what's possible and get inspired."
 msgstr ""
-"சாத்தியமானதைக் கண்டுபிடித்து ஊக்கம் பெற எங்கள் {{templateLibrary} the below "
+"சாத்தியமானதைக் கண்டுபிடித்து ஊக்கம் பெற எங்கள் {{templateLibrary}} below "
 "உலாவவும்."
 
 #, i18next-interpolation
@@ -5551,7 +5608,7 @@ msgstr "நெடுவரிசைகளைத் தனிப்பயனா�
 #, i18next-interpolation
 msgctxt "WelcomeTour.Double-click or hit {{enter}} on a cell to edit it. "
 msgid "Double-click or hit {{enter}} on a cell to edit it. "
-msgstr "அதைத் திருத்த ஒரு கலத்தில் {{உள்ளிடவும் {{உள்ளிடவும். "
+msgstr "அதைத் திருத்த ஒரு கலத்தில் {{enter}}உள்ளிடவும். "
 
 #, i18next-interpolation
 msgctxt "WelcomeTour.Editing Data"
@@ -5637,7 +5694,7 @@ msgstr ""
 #, i18next-interpolation
 msgctxt "WelcomeTour.Use {{helpCenter}} for documentation or questions."
 msgid "Use {{helpCenter}} for documentation or questions."
-msgstr "ஆவணங்கள் அல்லது கேள்விகளுக்கு {{helpCenter} bet ஐப் பயன்படுத்தவும்."
+msgstr "ஆவணங்கள் அல்லது கேள்விகளுக்கு {{helpCenter}} ஐப் பயன்படுத்தவும்."
 
 #, i18next-interpolation
 msgctxt "WelcomeTour.Welcome to Grist!"
@@ -5724,8 +5781,8 @@ msgid ""
 "Clicking {{EyeHideIcon}} in each cell hides the field from this view without"
 " deleting it."
 msgstr ""
-"ஒவ்வொரு கலத்திலும் {{{EyeHideIcon}} ஐக் சொடுக்கு செய்வது இந்த பார்வையில் "
-"இருந்து நீக்காமல் புலத்தை மறைக்கிறது."
+"ஒவ்வொரு கலத்திலும் {{EyeHideIcon}} ஐக் சொடுக்கு செய்வது இந்தப் "
+"பார்வையிலிருந்து நீக்காமல் புலத்தை மறைக்கிறது."
 
 #, i18next-interpolation
 msgctxt "GristTooltips.Editing Card Layout"
@@ -6207,6 +6264,79 @@ msgid "The new Grist Assistant is here!"
 msgstr "புதிய கிரிச்ட் உதவியாளர் இங்கே இருக்கிறார்!"
 
 #, i18next-interpolation
+msgctxt ""
+"GristTooltips.Formulas support many Excel functions and full Python syntax."
+msgid "Formulas support many Excel functions and full Python syntax."
+msgstr ""
+"சூத்திரங்கள் பல எக்செல் செயல்பாடுகள் மற்றும் முழு பைதான் தொடரியல் ஆகியவற்றை "
+"ஆதரிக்கின்றன."
+
+#, i18next-interpolation
+msgctxt ""
+"GristTooltips.Creates a new Reference List column in the target table, with "
+"both this and the target columns editable and synchronized."
+msgid ""
+"Creates a new Reference List column in the target table, with both this and "
+"the target columns editable and synchronized."
+msgstr ""
+"இலக்கு அட்டவணையில் புதிய குறிப்பு பட்டியல் நெடுவரிசையை உருவாக்குகிறது, இது "
+"மற்றும் இலக்கு நெடுவரிசைகள் திருத்தக்கூடிய மற்றும் ஒத்திசைக்கப்பட்டவை."
+
+#, i18next-interpolation
+msgctxt ""
+"GristTooltips.Internal storage means all attachments are stored in the "
+"document SQLite file, while external storage indicates all attachments are "
+"stored in the same external storage."
+msgid ""
+"Internal storage means all attachments are stored in the document SQLite "
+"file, while external storage indicates all attachments are stored in the "
+"same external storage."
+msgstr ""
+"உள் சேமிப்பிடம் என்றால் அனைத்து இணைப்புகளும் ஆவண SQLITE கோப்பில் "
+"சேமிக்கப்படுகின்றன, அதே நேரத்தில் வெளிப்புற சேமிப்பு அனைத்து இணைப்புகளும் "
+"ஒரே வெளிப்புற சேமிப்பகத்தில் சேமிக்கப்படுவதைக் குறிக்கிறது."
+
+#, i18next-interpolation
+msgctxt ""
+"GristTooltips.This allows you to add attachments that are missing from "
+"external storage, e.g. in an imported document. Only .tar attachment "
+"archives downloaded from Grist can be uploaded here."
+msgid ""
+"This allows you to add attachments that are missing from external storage, "
+"e.g. in an imported document. Only .tar attachment archives downloaded from "
+"Grist can be uploaded here."
+msgstr ""
+"வெளிப்புற சேமிப்பகத்திலிருந்து காணாமல் போன இணைப்புகளைச் சேர்க்க இது உங்களை "
+"அனுமதிக்கிறது, எ.கா. இறக்குமதி செய்யப்பட்ட ஆவணத்தில். ."
+
+#, i18next-interpolation
+msgctxt ""
+"GristTooltips.Understand, modify and work with your data and formulas with "
+"the help of Grist's new AI Assistant!"
+msgid ""
+"Understand, modify and work with your data and formulas with the help of "
+"Grist's new AI Assistant!"
+msgstr ""
+"கிரிச்டின் புதிய AI உதவியாளரின் உதவியுடன் உங்கள் தரவு மற்றும் "
+"சூத்திரங்களுடன் புரிந்து கொள்ளுங்கள், மாற்றியமைத்து வேலை செய்யுங்கள்!"
+
+#, i18next-interpolation
+msgctxt ""
+"GristTooltips.This form is created by a Grist user, and is not endorsed by "
+"Grist Labs. Do not submit passwords through this form, and be careful with "
+"links in it. Report malicious forms to [{{mail}}](mailto:{{mail}})."
+msgid ""
+"This form is created by a Grist user, and is not endorsed by Grist Labs. Do "
+"not submit passwords through this form, and be careful with links in it. "
+"Report malicious forms to [{{mail}}](mailto:{{mail}})."
+msgstr ""
+"இந்த படிவம் ஒரு கிரிச்ட் பயனரால் உருவாக்கப்பட்டது, மேலும் இது கிரிச்ட் "
+"ஆய்வகங்களால் அங்கீகரிக்கப்படவில்லை. இந்த படிவத்தின் மூலம் கடவுச்சொற்களைச் "
+"சமர்ப்பிக்க வேண்டாம், அதில் உள்ள இணைப்புகளுடன் கவனமாக இருங்கள். "
+"தீங்கிழைக்கும் படிவங்களை [{{mail}}] (மெயில்டோ: {{mail}}) க்கு "
+"புகாரளிக்கவும்."
+
+#, i18next-interpolation
 msgctxt "DescriptionConfig.DESCRIPTION"
 msgid "DESCRIPTION"
 msgstr "விவரம்"
@@ -6220,6 +6350,26 @@ msgstr "படைப்பாளர் குழு மூடு"
 msgctxt "PagePanels.Open Creator Panel"
 msgid "Open Creator Panel"
 msgstr "திறந்த கிரியேட்டர் பேனல்"
+
+#, i18next-interpolation
+msgctxt "PagePanels.Creator panel (right panel)"
+msgid "Creator panel (right panel)"
+msgstr "கிரியேட்டர் பேனல் (வலது குழு)"
+
+#, i18next-interpolation
+msgctxt "PagePanels.Document header"
+msgid "Document header"
+msgstr "ஆவண தலைப்பு"
+
+#, i18next-interpolation
+msgctxt "PagePanels.Main content"
+msgid "Main content"
+msgstr "முக்கிய உள்ளடக்கம்"
+
+#, i18next-interpolation
+msgctxt "PagePanels.Main navigation and document settings (left panel)"
+msgid "Main navigation and document settings (left panel)"
+msgstr "முதன்மையான வழிசெலுத்தல் மற்றும் ஆவண அமைப்புகள் (இடது குழு)"
 
 #, i18next-interpolation
 msgctxt "ColumnTitle.Add description"
@@ -6275,6 +6425,18 @@ msgstr "கிடைத்தது"
 msgctxt "Clipboard.Unavailable Command"
 msgid "Unavailable Command"
 msgstr "கிடைக்காத கட்டளை"
+
+#, i18next-interpolation
+msgctxt ""
+"Clipboard.The {{action}} menu command is not available in this browser. You "
+"can still {{action}} by using the keyboard shortcut {{shortcut}}."
+msgid ""
+"The {{action}} menu command is not available in this browser. You can still "
+"{{action}} by using the keyboard shortcut {{shortcut}}."
+msgstr ""
+"{{action}} பட்டியல் கட்டளை இந்த உலாவியில் கிடைக்கவில்லை. விசைப்பலகை "
+"குறுக்குவழி {{action} bed ஐப் பயன்படுத்துவதன் மூலம் நீங்கள் இன்னும் "
+"{{shortcut} the}."
 
 #, i18next-interpolation
 msgctxt "FieldContextMenu.Clear field"
@@ -6483,7 +6645,7 @@ msgid ""
 "for more help."
 msgstr ""
 "எங்கள் {{helpFunction}}} மற்றும் {{formulaCheat}} ஐப் பார்க்கவும், அல்லது "
-"கூடுதல் உதவிக்கு எங்கள் {{சமூகத்தைப் பார்வையிடவும்."
+"கூடுதல் உதவிக்கு எங்கள் {{community}}ஐப் பார்வையிடவும்."
 
 #, i18next-interpolation
 msgctxt "FormulaAssistant.Tips"
@@ -6605,6 +6767,42 @@ msgstr "சார்பு குழு திட்டத்திற்கு 
 msgctxt "FormulaAssistant.upgrade your plan"
 msgid "upgrade your plan"
 msgstr "உங்கள் திட்டத்தை மேம்படுத்தவும்"
+
+#, i18next-interpolation
+msgctxt ""
+"FormulaAssistant.For more help with formulas, check out our {{functionList}}"
+" and {{formulaCheatSheet}}, or visit our {{community}} for more help."
+msgid ""
+"For more help with formulas, check out our {{functionList}} and "
+"{{formulaCheatSheet}}, or visit our {{community}} for more help."
+msgstr ""
+"ஃபார்முலாக்களுடன் கூடுதல் உதவிக்கு, எங்கள் {{functionList}}} மற்றும் "
+"{{formulaCheatSheet}} அல்லது கூடுதல் உதவிக்கு எங்கள் {{சமூகத்தைப் "
+"பார்வையிடவும்."
+
+#, i18next-interpolation
+msgctxt ""
+"FormulaAssistant.When you talk to me, your questions and your document "
+"structure (visible in {{codeView}}) are sent to OpenAI. {{learnMore}}."
+msgid ""
+"When you talk to me, your questions and your document structure (visible in "
+"{{codeView}}) are sent to OpenAI. {{learnMore}}."
+msgstr ""
+"நீங்கள் என்னுடன் பேசும்போது, உங்கள் கேள்விகள் மற்றும் உங்கள் ஆவண அமைப்பு "
+"({{codeView}} இல் தெரியும்) OpenAI க்கு அனுப்பப்படும். {{learnMore}}."
+
+#, i18next-interpolation
+msgctxt ""
+"FormulaAssistant.Talk to me like a person. No need to specify tables and "
+"column names. For example, you can ask \"Please calculate the total invoice "
+"amount.\""
+msgid ""
+"Talk to me like a person. No need to specify tables and column names. For "
+"example, you can ask \"Please calculate the total invoice amount.\""
+msgstr ""
+"ஒரு நபரைப் போல என்னுடன் பேசுங்கள். அட்டவணைகள் மற்றும் நெடுவரிசை பெயர்களைக் "
+"குறிப்பிட தேவையில்லை. எடுத்துக்காட்டாக, \"மொத்த விலைப்பட்டியல் தொகையை "
+"கணக்கிடுங்கள்\" என்று நீங்கள் கேட்கலாம்."
 
 #, i18next-interpolation
 msgctxt "GridView.Click to insert"
@@ -6738,8 +6936,8 @@ msgid ""
 "get it back without assistance              from someone else with "
 "sufficient access to the {{name}}."
 msgstr ""
-"உங்கள் சொந்த அணுகலை நீங்கள் அகற்றியவுடன், {{name} க்கு க்கு போதுமான அணுகல் "
-"கொண்ட வேறொருவரின் உதவி இல்லாமல் அதை திரும்பப் பெற முடியாது."
+"உங்கள் சொந்த அணுகலை நீங்கள் அகற்றியவுடன், {{name}} க்கு போதுமான அணுகல் கொண்ட"
+" வேறொருவரின் உதவி இல்லாமல் அதைத் திரும்பப் பெற முடியாது."
 
 #, i18next-interpolation
 msgctxt "UserManager.Open Access Rules"
@@ -6769,8 +6967,8 @@ msgid ""
 "Public access inherited from {{parent}}. To remove, set 'Inherit access' "
 "option to 'None'."
 msgstr ""
-"பொது அணுகல் {{parent} இருந்து இலிருந்து பெறப்படுகிறது. அகற்ற, 'எதுவுமில்லை' "
-"என்ற 'அணுகல்' விருப்பத்தை அமைக்கவும்."
+"பொது அணுகல் {{parent}} இலிருந்து பெறப்படுகிறது. அகற்ற, 'எதுவுமில்லை' என்ற "
+"'அணுகல்' விருப்பத்தை அமைக்கவும்."
 
 #, i18next-interpolation
 msgctxt "UserManager.Public access: "
@@ -6846,7 +7044,7 @@ msgstr "{{collaborator}} வரம்பு மீறியது"
 #, i18next-interpolation
 msgctxt "UserManager.{{limitAt}} of {{limitTop}} {{collaborator}}s"
 msgid "{{limitAt}} of {{limitTop}} {{collaborator}}s"
-msgstr "{{limitAt}} {{{limitTop}} s இன் {{collaborator}}"
+msgstr "{{limitAt}} இன் {{limitTop}} {{collaborator}}கள்"
 
 #, i18next-interpolation
 msgctxt ""
@@ -6869,8 +7067,8 @@ msgid ""
 "without assistance from someone else with sufficient access to the "
 "{{resourceType}}."
 msgstr ""
-"உங்கள் சொந்த அணுகலை நீங்கள் அகற்றியவுடன், {{resourceType} க்கு க்கு போதுமான "
-"அணுகல் கொண்ட வேறொருவரின் உதவி இல்லாமல் அதை திரும்பப் பெற முடியாது."
+"உங்கள் சொந்த அணுகலை நீங்கள் அகற்றியவுடன், {{resourceType}} க்கு போதுமான "
+"அணுகல் கொண்ட வேறொருவரின் உதவி இல்லாமல் அதைத் திரும்பப் பெற முடியாது."
 
 #, i18next-interpolation
 msgctxt ""
@@ -6882,9 +7080,9 @@ msgid ""
 "resources inside. If removed here, this user will lose access to resources "
 "inside."
 msgstr ""
-"பயனருக்கு {{resource} க்கு க்கான அணுகல் உள்ளது, இதன் விளைவாக உள்ளே உள்ள "
-"வளங்களுக்கான கைமுறையாக அமைக்கப்பட்டுள்ளது. இங்கே அகற்றப்பட்டால், இந்த பயனர் "
-"உள்ளே வளங்களுக்கான அணுகலை இழக்கும்."
+"பயனருக்கு {{resource}} க்கான அணுகல் உள்ளது, இதன் விளைவாக உள்ளே உள்ள "
+"வளங்களுக்கான கைமுறையாக அமைக்கப்பட்டுள்ளது. இங்கே அகற்றப்பட்டால், இந்தப் "
+"பயனர் உள்ளே வளங்களுக்கான அணுகலை இழக்கும்."
 
 #, i18next-interpolation
 msgctxt ""
@@ -6894,20 +7092,20 @@ msgid ""
 "User inherits permissions from {{parent}}. To remove, set 'Inherit access' "
 "option to 'None'."
 msgstr ""
-"{{parent} இருந்து இலிருந்து பயனர் அனுமதிகளைப் பெறுகிறார். அகற்ற, "
-"'எதுவுமில்லை' என்ற 'அணுகல்' விருப்பத்தை அமைக்கவும்."
+"{{parent}} இலிருந்து பயனர் அனுமதிகளைப் பெறுகிறார். அகற்ற, 'எதுவுமில்லை' என்ற"
+" 'அணுகல்' விருப்பத்தை அமைக்கவும்."
 
 #, i18next-interpolation
 msgctxt ""
 "UserManager.You are about to remove your own access to this {{resourceType}}"
 msgid "You are about to remove your own access to this {{resourceType}}"
 msgstr ""
-"இந்த {{resourceType} க்கு க்கான உங்கள் சொந்த அணுகலை நீங்கள் அகற்ற உள்ளீர்கள்"
+"இந்த {{resourceType}} க்கான உங்கள் சொந்த அணுகலை நீங்கள் அகற்ற உள்ளீர்கள்"
 
 #, i18next-interpolation
 msgctxt "UserManager.Inherit access: "
 msgid "Inherit access: "
-msgstr "அணுகலைப் பெறுதல்:"
+msgstr "அணுகலைப் பெறுதல்: "
 
 #, i18next-interpolation
 msgctxt "UserManager.Access overview"
@@ -6973,7 +7171,7 @@ msgid ""
 "from the {{link}} in the user menu."
 msgstr ""
 "நன்றி! உங்கள் நம்பிக்கையும் ஆதரவும் பெரிதும் பாராட்டப்படுகிறது. பயனர் "
-"பட்டியலில் {{link} இருந்து இலிருந்து எந்த நேரத்தையும் தேர்வு செய்யவும்."
+"பட்டியலில் {{link}} இலிருந்து எந்த நேரத்தையும் தேர்வு செய்யவும்."
 
 #, i18next-interpolation
 msgctxt "SupportGristNudge.Admin Panel"
@@ -7060,7 +7258,7 @@ msgid ""
 "We only collect usage statistics, as detailed in our {{link}}, never "
 "document contents."
 msgstr ""
-"எங்கள் {{link} at இல் விவரிக்கப்பட்டுள்ளபடி, பயன்பாட்டு புள்ளிவிவரங்களை "
+"எங்கள் {{link}} இல் விவரிக்கப்பட்டுள்ளபடி, பயன்பாட்டு புள்ளிவிவரங்களை "
 "மட்டுமே நாங்கள் சேகரிக்கிறோம், உள்ளடக்கங்களை ஒருபோதும் ஆவணப்படுத்த வேண்டாம்."
 
 #, i18next-interpolation
@@ -7087,6 +7285,59 @@ msgid "Sponsor"
 msgstr "ஒப்புரவாளர்"
 
 #, i18next-interpolation
+msgctxt ""
+"SupportGristPage.Grist software is developed by Grist Labs, which offers "
+"free and paid hosted plans. We also make Grist code available under a "
+"standard free and open OSS license (Apache 2.0) on {{link}}."
+msgid ""
+"Grist software is developed by Grist Labs, which offers free and paid hosted"
+" plans. We also make Grist code available under a standard free and open OSS"
+" license (Apache 2.0) on {{link}}."
+msgstr ""
+"கிரிச்ட் மென்பொருளை கிரிச்ட் லேப்சால் உருவாக்கப்பட்டது, இது இலவச மற்றும் "
+"கட்டண புரவலன் திட்டங்களை வழங்குகிறது. {{link} on இல் நிலையான இலவச மற்றும் "
+"திறந்த OSS உரிமத்தின் (அப்பாச்சி 2.0) கீழ் கிரிச்ட் குறியீட்டை நாங்கள் "
+"கிடைக்கச் செய்கிறோம்."
+
+#, i18next-interpolation
+msgctxt ""
+"SupportGristPage.Support Grist by opting in to telemetry, which helps us "
+"understand how the product is used, so that we can prioritize future "
+"improvements."
+msgid ""
+"Support Grist by opting in to telemetry, which helps us understand how the "
+"product is used, so that we can prioritize future improvements."
+msgstr ""
+"டெலிமெட்ரியைத் தேர்ந்தெடுப்பதன் மூலம் உதவி திருட்டு, இது தயாரிப்பு எவ்வாறு "
+"பயன்படுத்தப்படுகிறது என்பதைப் புரிந்துகொள்ள உதவுகிறது, இதன் மூலம் எதிர்கால "
+"மேம்பாடுகளுக்கு முன்னுரிமை அளிக்க முடியும்."
+
+#, i18next-interpolation
+msgctxt ""
+"SupportGristPage.We are a small and determined team. Your support matters a "
+"lot to us. It also shows to others that there is a determined community "
+"behind this product."
+msgid ""
+"We are a small and determined team. Your support matters a lot to us. It "
+"also shows to others that there is a determined community behind this "
+"product."
+msgstr ""
+"நாங்கள் ஒரு சிறிய மற்றும் உறுதியான குழு. உங்கள் உதவி எங்களுக்கு நிறைய "
+"முக்கியமானது. இந்த தயாரிப்புக்கு பின்னால் ஒரு உறுதியான சமூகம் உள்ளது "
+"என்பதையும் இது மற்றவர்களுக்கு காட்டுகிறது."
+
+#, i18next-interpolation
+msgctxt ""
+"SupportGristPage.You can support Grist open-source development by sponsoring"
+" us on our {{link}}."
+msgid ""
+"You can support Grist open-source development by sponsoring us on our "
+"{{link}}."
+msgstr ""
+"எங்கள் {{link} at இல் எங்களுக்கு நிதியுதவி செய்வதன் மூலம் கிரிச்ட் "
+"திறந்த-மூல வளர்ச்சியை நீங்கள் ஆதரிக்கலாம்."
+
+#, i18next-interpolation
 msgctxt "buildViewSectionDom.No data"
 msgid "No data"
 msgstr "தரவு இல்லை"
@@ -7094,7 +7345,7 @@ msgstr "தரவு இல்லை"
 #, i18next-interpolation
 msgctxt "buildViewSectionDom.No row selected in {{title}}"
 msgid "No row selected in {{title}}"
-msgstr "{{title} in இல் தேர்ந்தெடுக்கப்பட்ட வரிசை இல்லை"
+msgstr "{{title}} இல் தேர்ந்தெடுக்கப்பட்ட வரிசை இல்லை"
 
 #, i18next-interpolation
 msgctxt "buildViewSectionDom.Not all data is shown"
@@ -7179,7 +7430,7 @@ msgstr ""
 #, i18next-interpolation
 msgctxt "WelcomeCoachingCall.Schedule Call"
 msgid "Schedule Call"
-msgstr "அழைப்பு அழைப்பு"
+msgstr "அழைப்பு திட்டமிடு"
 
 #, i18next-interpolation
 msgctxt ""
@@ -7187,7 +7438,7 @@ msgctxt ""
 "team."
 msgid "Schedule your {{freeCoachingCall}} with a member of our team."
 msgstr ""
-"எங்கள் அணியின் உறுப்பினருடன் உங்கள் {{freeCoachingCall} the திட்டமிடவும்."
+"எங்கள் அணியின் உறுப்பினருடன் உங்கள் {{freeCoachingCall}} திட்டமிடவும்."
 
 #, i18next-interpolation
 msgctxt "FormView.Publish"
@@ -7293,6 +7544,55 @@ msgstr "# ** படிவ தலைப்பு **"
 msgctxt "FormView.Your form description goes here."
 msgid "Your form description goes here."
 msgstr "உங்கள் படிவ விளக்கம் இங்கே செல்கிறது."
+
+#, i18next-interpolation
+msgctxt ""
+"FormView.Publishing your form will generate a share link. Anyone with the "
+"link can see the empty form and submit a response."
+msgid ""
+"Publishing your form will generate a share link. Anyone with the link can "
+"see the empty form and submit a response."
+msgstr ""
+"உங்கள் படிவத்தை வெளியிடுவது ஒரு பங்கு இணைப்பை உருவாக்கும். இணைப்பு உள்ள "
+"எவரும் வெற்று வடிவத்தைக் காணலாம் மற்றும் பதிலைச் சமர்ப்பிக்கலாம்."
+
+#, i18next-interpolation
+msgctxt ""
+"FormView.Unpublishing the form will disable the share link so that users "
+"accessing your form via that link will see an error."
+msgid ""
+"Unpublishing the form will disable the share link so that users accessing "
+"your form via that link will see an error."
+msgstr ""
+"படிவத்தை வெளியிடுவது பங்கு இணைப்பை முடக்கும், இதனால் அந்த இணைப்பு வழியாக "
+"உங்கள் படிவத்தை அணுகும் பயனர்கள் பிழையைக் காண்பார்கள்."
+
+#, i18next-interpolation
+msgctxt ""
+"FormView.Users are limited to submitting entries (records in your table) and"
+" reading pre-set values in designated fields, such as reference and choice "
+"columns."
+msgid ""
+"Users are limited to submitting entries (records in your table) and reading "
+"pre-set values in designated fields, such as reference and choice columns."
+msgstr ""
+"பயனர்கள் உள்ளீடுகளை சமர்ப்பிப்பதற்கும் (உங்கள் அட்டவணையில் பதிவுகள்) மற்றும்"
+" குறிப்பு மற்றும் தேர்வு நெடுவரிசைகள் போன்ற நியமிக்கப்பட்ட துறைகளில் முன் "
+"அமைக்கப்பட்ட மதிப்புகளைப் படிப்பதற்கும் மட்டுப்படுத்தப்பட்டவர்கள்."
+
+#, i18next-interpolation
+msgctxt ""
+"FormView.Your form is published. Every change is live and visible to users "
+"with access to the form. If you want to make changes in draft, unpublish the"
+" form."
+msgid ""
+"Your form is published. Every change is live and visible to users with "
+"access to the form. If you want to make changes in draft, unpublish the "
+"form."
+msgstr ""
+"உங்கள் படிவம் வெளியிடப்பட்டது. ஒவ்வொரு மாற்றமும் நேரடி மற்றும் படிவத்தை "
+"அணுகக்கூடிய பயனர்களுக்கு தெரியும். வரைவில் மாற்றங்களைச் செய்ய விரும்பினால், "
+"படிவத்தை வெளியிடுங்கள்."
 
 #, i18next-interpolation
 msgctxt "Editor.Delete"
@@ -7944,8 +8244,8 @@ msgid ""
 "Or, as a fallback, you can set: {{bootKey}} in the environment and visit: "
 "{{url}}"
 msgstr ""
-"அல்லது, ஒரு குறைவடையும் என, நீங்கள் அமைக்கலாம்: {{url} the சூழலில் மற்றும் "
-"பார்வையிடவும்: {{bootKey}}"
+"அல்லது, ஒரு குறைவடையும் என, நீங்கள் அமைக்கலாம்: {{bootKey}} சூழலில் மற்றும் "
+"பார்வையிடவும்: {{url}}"
 
 #, i18next-interpolation
 msgctxt "AdminPanel.Results"
@@ -8056,7 +8356,7 @@ msgstr "அணை"
 msgctxt ""
 "AdminPanel.{{firstDestinationName}} + {{- remainingDestinationsCount}} more"
 msgid "{{firstDestinationName}} + {{- remainingDestinationsCount}} more"
-msgstr "{{firstDestinationName}} + {{{- retingdestinationsCount}} more"
+msgstr "{{firstDestinationName}} + {{- remainingDestinationsCount}} மேலும்"
 
 #, i18next-interpolation
 msgctxt "AdminPanel.On"
@@ -8067,6 +8367,41 @@ msgstr "ஆன்"
 msgctxt "AdminPanel.Grist Instance"
 msgid "Grist Instance"
 msgstr "கிரிச்ட் நிகழ்வு"
+
+#, i18next-interpolation
+msgctxt "AdminPanel.Auto-check weekly"
+msgid "Auto-check weekly"
+msgstr "தானாக சரிபார்ப்பு வாராந்திர"
+
+#, i18next-interpolation
+msgctxt "AdminPanel.No record of last version check"
+msgid "No record of last version check"
+msgstr "கடைசி பதிப்பு காசோலையின் பதிவு இல்லை"
+
+#, i18next-interpolation
+msgctxt ""
+"AdminPanel.You can set up streaming of audit events from Grist to an "
+"external security information and event management (SIEM) system if you "
+"enable Grist Enterprise. {{contactUsLink}} to learn more."
+msgid ""
+"You can set up streaming of audit events from Grist to an external security "
+"information and event management (SIEM) system if you enable Grist "
+"Enterprise. {{contactUsLink}} to learn more."
+msgstr ""
+"நீங்கள் கிரிச்ட் எண்டர்பிரைசை இயக்கினால், கிரிச்டிலிருந்து வெளிப்புற "
+"பாதுகாப்பு செய்தி மற்றும் நிகழ்வு மேலாண்மை (SIEM) அமைப்புக்கு தணிக்கை "
+"நிகழ்வுகளின் ச்ட்ரீமிங்கை அமைக்கலாம். {{contactUsLink} the மேலும் அறிய."
+
+#, i18next-interpolation
+msgctxt ""
+"AdminPanel.Automatic checks are disabled. Set the environment variable "
+"GRIST_ALLOW_AUTOMATIC_VERSION_CHECKING to \"true\" to enable them."
+msgid ""
+"Automatic checks are disabled. Set the environment variable "
+"GRIST_ALLOW_AUTOMATIC_VERSION_CHECKING to \"true\" to enable them."
+msgstr ""
+"தானியங்கி சோதனைகள் முடக்கப்பட்டுள்ளன. சுற்றுச்சூழல் மாறி "
+"grist_allow_automatic_version_chechking ஐ \"உண்மை\" என்று அமைக்கவும்."
 
 #, i18next-interpolation
 msgctxt "Columns.Remove Column"
@@ -8414,6 +8749,17 @@ msgstr "உங்கள் பங்கு"
 
 #, i18next-interpolation
 msgctxt ""
+"OnboardingPage.Grist may look like a spreadsheet, but it doesn't always act "
+"like one. Discover what makes Grist different."
+msgid ""
+"Grist may look like a spreadsheet, but it doesn't always act like one. "
+"Discover what makes Grist different."
+msgstr ""
+"கிரிச்ட் ஒரு விரிதாள் போல தோன்றலாம், ஆனால் அது எப்போதும் ஒன்றைப் போல "
+"செயல்படாது. கிரிச்ட்டை வேறுபடுத்துவதைக் கண்டறியவும்."
+
+#, i18next-interpolation
+msgctxt ""
 "ToggleEnterpriseWidget.An activation key is used to run Grist Enterprise after a trial period\n"
 "of 30 days has expired. Get an activation key by [signing up for Grist\n"
 "Enterprise]({{signupLink}}). You do not need an activation key to run\n"
@@ -8560,8 +8906,8 @@ msgid ""
 "To continue using Grist Enterprise, you need to\n"
 "                  [contact us]({{signupLink}}) to get your activation key."
 msgstr ""
-"கிரிச்ட் நிறுவனத்தைப் பயன்படுத்த, நீங்கள் வேண்டும் \n"
-"."
+"கிரிச்ட் நிறுவனத்தைப் பயன்படுத்த, நீங்கள் தொடர்புகொள்ள வேண்டும் \n"
+"                  உங்கள் செயல்படுத்தும் விசையைப் பெற [தொடர்பு]({{signupLink}})."
 
 #, i18next-interpolation
 msgctxt "ToggleEnterpriseWidget.You are currently trialing Grist Enterprise."
@@ -8603,7 +8949,7 @@ msgid ""
 "[sign up for Grist Enterprise]({{signupLink}}) and paste your activation key below."
 msgstr ""
 "உங்கள் சோதனை காலம் ** {{expireAt}} ** இல் காலாவதியானது. கிரிச்ட் நிறுவனத்தைப் பயன்படுத்த, நீங்கள் வேண்டும் \n"
-"."
+"[கிரிஸ்ட் நிறுவனத்திற்கு பதிவுபெறுக]({{signupLink}}) மற்றும் உங்கள் செயல்படுத்தும் விசையைக் கீழே ஒட்டு."
 
 #, i18next-interpolation
 msgctxt "ViewLayout.Delete"
@@ -8847,7 +9193,7 @@ msgstr "நீக்கு"
 #, i18next-interpolation
 msgctxt "ReverseReferenceConfig.Delete column {{column}} in table {{table}}?"
 msgid "Delete column {{column}} in table {{table}}?"
-msgstr "அட்டவணையில் {{column}}}}}}} இல் நெடுவரிசையை நீக்கவா?"
+msgstr "{{table}} அட்டவணையில் {{column}} இல் நெடுவரிசையை நீக்கவா?"
 
 #, i18next-interpolation
 msgctxt ""
@@ -8876,6 +9222,19 @@ msgstr "இரு வழி குறிப்பை நீக்கவா?"
 msgctxt "ReverseReferenceConfig.Target table"
 msgid "Target table"
 msgstr "இலக்கு அட்டவணை"
+
+#, i18next-interpolation
+msgctxt ""
+"ReverseReferenceConfig.This will delete the reference column {{refCol}} in "
+"table {{refTable}}. The reference column {{myName}} will remain in the "
+"current table {{myTable}}."
+msgid ""
+"This will delete the reference column {{refCol}} in table {{refTable}}. The "
+"reference column {{myName}} will remain in the current table {{myTable}}."
+msgstr ""
+"இது அட்டவணையில் {{refCol}}}}}}}}}}}}}}}}}}}}}}}}}}}}} ஐ நீக்கிவிடும். "
+"குறிப்பு நெடுவரிசை {{refTable}} தற்போதைய அட்டவணையில் {{myName}} இல் "
+"இருக்கும்."
 
 #, i18next-interpolation
 msgctxt "SupportGristButton.Admin Panel"
@@ -8917,6 +9276,33 @@ msgid ""
 msgstr ""
 "நன்றி! உங்கள் நம்பிக்கையும் ஆதரவும் பெரிதும் பாராட்டப்படுகிறது. பயனர் "
 "பட்டியலில் {{link} இருந்து இலிருந்து எந்த நேரத்தையும் தேர்வு செய்யவும்."
+
+#, i18next-interpolation
+msgctxt ""
+"SupportGristButton.Opt in to telemetry to help us understand how the product"
+" is used, so that we can prioritize future improvements."
+msgid ""
+"Opt in to telemetry to help us understand how the product is used, so that "
+"we can prioritize future improvements."
+msgstr ""
+"தயாரிப்பு எவ்வாறு பயன்படுத்தப்படுகிறது என்பதைப் புரிந்துகொள்ள எங்களுக்கு உதவ"
+" டெலிமெட்ரியைத் தேர்வுசெய்க, இதன் மூலம் எதிர்கால மேம்பாடுகளுக்கு முன்னுரிமை "
+"அளிக்க முடியும்."
+
+#, i18next-interpolation
+msgctxt ""
+"SupportGristButton.We only collect usage statistics, as detailed in our "
+"{{helpCenterLink}}, never document contents. Opt out any time from the "
+"{{supportGristLink}} in the user menu."
+msgid ""
+"We only collect usage statistics, as detailed in our {{helpCenterLink}}, "
+"never document contents. Opt out any time from the {{supportGristLink}} in "
+"the user menu."
+msgstr ""
+"எங்கள் {{helpCenterLink}} இல் விவரிக்கப்பட்டுள்ளபடி, பயன்பாட்டு "
+"புள்ளிவிவரங்களை மட்டுமே நாங்கள் சேகரிக்கிறோம், உள்ளடக்கங்களை ஒருபோதும் "
+"ஆவணப்படுத்த வேண்டாம். பயனர் பட்டியலில் {{supportGristLink} இருந்து இலிருந்து"
+" எந்த நேரத்தையும் தேர்வு செய்யவும்."
 
 #, i18next-interpolation
 msgctxt "buildReassignModal.Cancel"
@@ -9073,6 +9459,20 @@ msgid "URL"
 msgstr "முகவரி"
 
 #, i18next-interpolation
+msgctxt ""
+"AuditLogStreamingConfig.Set up streaming of audit events from Grist to an "
+"external security information and event management (SIEM) system like "
+"Splunk. {{learnMoreLink}}."
+msgid ""
+"Set up streaming of audit events from Grist to an external security "
+"information and event management (SIEM) system like Splunk. "
+"{{learnMoreLink}}."
+msgstr ""
+"கிரிச்ட்டில் இருந்து வெளிப்புற பாதுகாப்பு செய்தி மற்றும் நிகழ்வு மேலாண்மை "
+"(SIEM) அமைப்புக்கு தணிக்கை நிகழ்வுகளின் ச்ட்ரீமிங் ச்ப்ளங்க் போன்றவற்றை "
+"அமைக்கவும். {{learnMoreLink}}."
+
+#, i18next-interpolation
 msgctxt "AuditLogsPage.Audit Logs"
 msgid "Audit Logs"
 msgstr "தணிக்கை பதிவுகள்"
@@ -9106,6 +9506,34 @@ msgstr "தள உரிமையாளர்கள் மட்டுமே த
 msgctxt "AuditLogsPage.upgrade your plan"
 msgid "upgrade your plan"
 msgstr "உங்கள் திட்டத்தை மேம்படுத்தவும்"
+
+#, i18next-interpolation
+msgctxt ""
+"AuditLogsPage.You can set up streaming of audit events from Grist to an "
+"external SIEM (security information and event management) system if you "
+"enable Grist Enterprise. {{contactUsLink}} to learn more."
+msgid ""
+"You can set up streaming of audit events from Grist to an external SIEM "
+"(security information and event management) system if you enable Grist "
+"Enterprise. {{contactUsLink}} to learn more."
+msgstr ""
+"நீங்கள் கிரிச்ட் எண்டர்பிரைசை இயக்கினால், கிரிச்டிலிருந்து வெளிப்புற SIEM "
+"(பாதுகாப்பு செய்தி மற்றும் நிகழ்வு மேலாண்மை) அமைப்புக்கு தணிக்கை "
+"நிகழ்வுகளின் ச்ட்ரீமிங்கை அமைக்கலாம். {{contactUsLink} the மேலும் அறிய."
+
+#, i18next-interpolation
+msgctxt ""
+"AuditLogsPage.You can set up streaming of audit events from Grist to an "
+"external SIEM (security information and event management) system if you "
+"{{upgradePlanButton}}."
+msgid ""
+"You can set up streaming of audit events from Grist to an external SIEM "
+"(security information and event management) system if you "
+"{{upgradePlanButton}}."
+msgstr ""
+"நீங்கள் {{upgradePlanButton}} என்றால், கிரிச்டிலிருந்து வெளிப்புற SIEM "
+"(பாதுகாப்பு செய்தி மற்றும் நிகழ்வு மேலாண்மை) அமைப்புக்கு தணிக்கை "
+"நிகழ்வுகளின் ச்ட்ரீமிங் அமைக்கலாம்."
 
 #, i18next-interpolation
 msgctxt "DocList.Access details"
@@ -9479,6 +9907,19 @@ msgid "upgrade your plan"
 msgstr "உங்கள் திட்டத்தை மேம்படுத்தவும்"
 
 #, i18next-interpolation
+msgctxt ""
+"Assistant.The conversation has become too long and I can no longer respond "
+"effectively. Please {{startANewChatButton}} to continue receiving "
+"assistance."
+msgid ""
+"The conversation has become too long and I can no longer respond "
+"effectively. Please {{startANewChatButton}} to continue receiving "
+"assistance."
+msgstr ""
+"உரையாடல் மிக நீளமாகிவிட்டது, இனி என்னால் திறம்பட பதிலளிக்க முடியாது. "
+"தொடர்ந்து உதவியைப் பெறுவதற்கு {{startANewChatButton}}."
+
+#, i18next-interpolation
 msgctxt "apiconsole.Are you sure you want to delete the following?"
 msgid "Are you sure you want to delete the following?"
 msgstr "பின்வருவனவற்றை நீக்க விரும்புகிறீர்களா?"
@@ -9521,3 +9962,151 @@ msgstr ""
 msgctxt "MentionTextBox.no access"
 msgid "no access"
 msgstr "அணுகல் இல்லை"
+
+#, i18next-interpolation
+msgctxt ""
+"VersionUpdateBanner.There is a critical Grist update available.\n"
+"Consider upgrading to version {{version}} as soon as possible."
+msgid ""
+"There is a critical Grist update available.\n"
+"Consider upgrading to version {{version}} as soon as possible."
+msgstr ""
+"ஒரு முக்கியமான கிரிச்ட் புதுப்பிப்பு உள்ளது. \n"
+"பதிப்பு {{version} that க்கு மேம்படுத்துவதைக் கவனியுங்கள்."
+
+#, i18next-interpolation
+msgctxt ""
+"VersionUpdateBanner.Your Grist version is outdated.\n"
+"Consider upgrading to version {{version}} as soon as possible."
+msgid ""
+"Your Grist version is outdated.\n"
+"Consider upgrading to version {{version}} as soon as possible."
+msgstr ""
+"உங்கள் கிரிச்ட் பதிப்பு காலாவதியானது. \n"
+"பதிப்பு {{version} that க்கு மேம்படுத்துவதைக் கவனியுங்கள்."
+
+#, i18next-interpolation
+msgctxt ""
+"ExternalAttachmentBanner.Recommendation: {{storageRecommendation}}\n"
+"When storing large attachments, or many of them, we recommend\n"
+"keeping them in external storage. This document is currently\n"
+"using internal storage for attachments, which keeps it\n"
+"self-contained but may limit performance."
+msgid ""
+"Recommendation: {{storageRecommendation}}\n"
+"When storing large attachments, or many of them, we recommend\n"
+"keeping them in external storage. This document is currently\n"
+"using internal storage for attachments, which keeps it\n"
+"self-contained but may limit performance."
+msgstr ""
+"பரிந்துரை: {{storageRecommendation}}} \n"
+"பெரிய இணைப்புகளை அல்லது அவற்றில் பலவற்றை சேமிக்கும்போது, நாங்கள் பரிந்துரைக்கிறோம் \n"
+"அவற்றை வெளிப்புற சேமிப்பகத்தில் வைத்திருத்தல். இந்த ஆவணம் தற்போது உள்ளது \n"
+"இணைப்புகளுக்கு உள் சேமிப்பிடத்தைப் பயன்படுத்துதல், அது வைத்திருக்கிறது \n"
+"தன்னிறைவான ஆனால் செயல்திறனைக் கட்டுப்படுத்தலாம்."
+
+#, i18next-interpolation
+msgctxt "ExternalAttachmentBanner.Set the document to use external storage."
+msgid "Set the document to use external storage."
+msgstr "வெளிப்புற சேமிப்பிடத்தைப் பயன்படுத்த ஆவணத்தை அமைக்கவும்."
+
+#, i18next-interpolation
+msgctxt ""
+"ToggleEnterpriseModel.Please wait for the previous operation to complete."
+msgid "Please wait for the previous operation to complete."
+msgstr "முந்தைய செயல்பாடு முடிவடையும் வரை காத்திருங்கள்."
+
+#, i18next-interpolation
+msgctxt ""
+"ToggleEnterpriseModel.Timed out on waiting for the Grist backend to restart"
+msgid "Timed out on waiting for the Grist backend to restart"
+msgstr ""
+"கிரிச்ட் பின்தளத்தில் மறுதொடக்கம் செய்ய காத்திருக்கும் நேரம் முடிந்தது"
+
+#, i18next-interpolation
+msgctxt "Experiments.Disable feature"
+msgid "Disable feature"
+msgstr "அம்சத்தை முடக்கு"
+
+#, i18next-interpolation
+msgctxt "Experiments.Don't worry, you can disable it later if needed."
+msgid "Don't worry, you can disable it later if needed."
+msgstr "கவலைப்பட வேண்டாம், தேவைப்பட்டால் அதை முடக்கலாம்."
+
+#, i18next-interpolation
+msgctxt "Experiments.Enable feature"
+msgid "Enable feature"
+msgstr "அம்சத்தை இயக்கவும்"
+
+#, i18next-interpolation
+msgctxt "Experiments.Experimental feature"
+msgid "Experimental feature"
+msgstr "சோதனை நற்பொருத்தம்"
+
+#, i18next-interpolation
+msgctxt "Experiments.New record button"
+msgid "New record button"
+msgstr "புதிய பதிவு பொத்தான்"
+
+#, i18next-interpolation
+msgctxt "Experiments.Reload the page"
+msgid "Reload the page"
+msgstr "பக்கத்தை மீண்டும் ஏற்றவும்"
+
+#, i18next-interpolation
+msgctxt ""
+"Experiments.Visit this URL at any time to stop using this feature: {{url}}"
+msgid "Visit this URL at any time to stop using this feature: {{url}}"
+msgstr ""
+"இந்த அம்சத்தைப் பயன்படுத்துவதை நிறுத்த எந்த நேரத்திலும் இந்த முகவரி ஐப் "
+"பார்வையிடவும்: {{url}}"
+
+#, i18next-interpolation
+msgctxt ""
+"Experiments.You are about to disable this experimental feature: "
+"{{experiment}}"
+msgid "You are about to disable this experimental feature: {{experiment}}"
+msgstr "இந்த சோதனை அம்சத்தை நீங்கள் முடக்க உள்ளீர்கள்: {{experiment}}"
+
+#, i18next-interpolation
+msgctxt ""
+"Experiments.You are about to enable this experimental feature: "
+"{{experiment}}"
+msgid "You are about to enable this experimental feature: {{experiment}}"
+msgstr "இந்த சோதனை அம்சத்தை நீங்கள் இயக்க உள்ளீர்கள்: {{experiment}}"
+
+#, i18next-interpolation
+msgctxt "Experiments.{{experiment}} disabled."
+msgid "{{experiment}} disabled."
+msgstr "{{experiment}} முடக்கப்பட்டது."
+
+#, i18next-interpolation
+msgctxt "Experiments.{{experiment}} enabled."
+msgid "{{experiment}} enabled."
+msgstr "{{experiment}} இயக்கப்பட்டது."
+
+#, i18next-interpolation
+msgctxt "NewRecordButton.New card"
+msgid "New card"
+msgstr "புதிய அட்டை"
+
+#, i18next-interpolation
+msgctxt "NewRecordButton.New record"
+msgid "New record"
+msgstr "புதிய பதிவு"
+
+#, i18next-interpolation
+msgctxt "RegionFocusSwitcher.Trying to access the creator panel? Use {{key}}."
+msgid "Trying to access the creator panel? Use {{key}}."
+msgstr ""
+"கிரியேட்டர் பேனலை அணுக முயற்சிக்கிறீர்களா? {{key}} ஐப் பயன்படுத்தவும்."
+
+#, i18next-interpolation
+msgctxt "duplicateWidget.Duplicate widget"
+msgid "Duplicate widget"
+msgstr "நகல் விட்செட்"
+
+#, i18next-interpolation
+msgctxt "duplicateWidget.Duplicate widgets"
+msgid "Duplicate widgets"
+msgstr "நகல் விட்செட்டுகள்"
