@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Flathub)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-01 04:55+0200\n"
-"PO-Revision-Date: 2025-07-10 22:00\n"
+"POT-Creation-Date: 2025-07-31 21:58+0200\n"
+"PO-Revision-Date: 2025-08-02 10:32\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/flathub/frontend/ta/>\n"
 "Language: ta\n"
@@ -153,6 +153,11 @@ msgstr "சின்னங்கள்"
 msgctxt "statistics"
 msgid "Statistics"
 msgstr "புள்ளிவிவரங்கள்"
+
+#, i18next-interpolation
+msgctxt "country-statistics"
+msgid "Country Statistics"
+msgstr "நாட்டின் புள்ளிவிவரங்கள்"
 
 #, i18next-interpolation
 msgctxt "source-code"
@@ -373,6 +378,11 @@ msgid "Since"
 msgstr "இருந்து"
 
 #, i18next-interpolation
+msgctxt "since-x"
+msgid "Since {{date}}"
+msgstr "{{date}}"
+
+#, i18next-interpolation
 msgctxt "downloads-per-country"
 msgid "Downloads per Country"
 msgstr "ஒவ்வொரு நாட்டிற்கும் பதிவிறக்கங்கள்"
@@ -546,13 +556,13 @@ msgstr "{{developer}} வழங்கும் செயலிகள்"
 
 #, i18next-interpolation
 msgctxt "apps-by-tag"
-msgid "Apps by tag '{{tag}}'"
-msgstr "குறிச்சொல் மூலம் பயன்பாடுகள் '{{tag}}'"
+msgid "Apps by tag “{{tag}}”"
+msgstr "குறிச்சொல் மூலம் “{{tag}}”"
 
 #, i18next-interpolation
 msgctxt "search-for-query"
-msgid "Search for '{{query}}'"
-msgstr "'{{query}}' ஐத் தேடுங்கள்"
+msgid "Search for “{{query}}”"
+msgstr "“{{query}}” ஐத் தேடுங்கள்"
 
 #, i18next-interpolation
 msgctxt "moderation-pending-reviews"
@@ -614,13 +624,13 @@ msgstr "காலாவதியானது"
 msgctxt "moderation-approved-by"
 msgid "Approved by {{handledBy}} on {{handledAt}} ({{handledAtRel}})"
 msgstr ""
-"{{handledAtRel}} ({{handledAt}}) இல் {{handledBy}} ஆல் அங்கீகரிக்கப்பட்டது"
+"{{handledAt}} ({{handledAtRel}}) இல் {{handledBy}} ஆல் அங்கீகரிக்கப்பட்டது"
 
 #, i18next-interpolation
 msgctxt "moderation-rejected-by"
 msgid "Rejected by {{handledBy}} on {{handledAt}} ({{handledAtRel}})"
 msgstr ""
-"{{handledAtRel}} ({{handledAt}}) இல் {{handledBy}} ஆல் நிராகரிக்கப்பட்டது"
+"{{handledAt}} ({{handledAtRel}}) இல் {{handledBy}} ஆல் நிராகரிக்கப்பட்டது"
 
 #, i18next-interpolation
 msgctxt "moderation-build-id"
@@ -718,8 +728,8 @@ msgstr "நான் எனது கணக்கை நீக்க விர�
 
 #, i18next-interpolation
 msgctxt "entry-confirmation-prompt"
-msgid "Enter \"{{text}}\" to continue."
-msgstr "தொடர \"{{text}}\" ஐ உள்ளிடவும்."
+msgid "Enter “{{text}}” to continue."
+msgstr "தொடர “{{text}}” உள்ளிடவும்."
 
 #, i18next-interpolation
 msgctxt "login-with-provider"
@@ -851,11 +861,11 @@ msgstr ""
 msgctxt "millions-users"
 msgid ""
 "<0>Reach millions of users</0> — Flathub comes out of the box on multiple "
-"Linux distros, is <2>easily installable</2> on the rest, and has over a "
+"Linux distros, is <3>easily installable</3> on the rest, and has over a "
 "million active users"
 msgstr ""
 "<0> மில்லியன் கணக்கான பயனர்களை அடையுங்கள் </0> - பல லினக்ச் டிச்ட்ரோக்களில் "
-"ஃப்ளாதப் பெட்டியிலிருந்து வெளியே வருகிறது, <2> எளிதில் நிறுவக்கூடியது </2> "
+"ஃப்ளாதப் பெட்டியிலிருந்து வெளியே வருகிறது, <3> எளிதில் நிறுவக்கூடியது </3> "
 "மீதமுள்ளவற்றில், மற்றும் ஒரு மில்லியனுக்கும் அதிகமான செயலில் உள்ள பயனர்களைக்"
 " கொண்டுள்ளது"
 
@@ -1716,7 +1726,7 @@ msgid ""
 " with admin rights to the <3>{{login_name}}</3> organization on "
 "<5>{{login_provider}}</5>."
 msgstr ""
-"<3>{{login_provider}}</3> நிறுவனத்திற்கு <5>{{login_name}}</5> இல் நிர்வாகி "
+"<3>{{login_name}}</3> நிறுவனத்திற்கு <5>{{login_provider}}</5> இல் நிர்வாகி "
 "உரிமைகள் உள்ள கணக்கில் உள்நுழைந்து <1>{{id}}</1> செயலி அடையாளத்தை "
 "பயன்படுத்துவதற்கான உங்கள் உரிமையைச் சரிபார்க்கவும்."
 
@@ -2121,8 +2131,8 @@ msgstr "டோக்கனை திரும்பப் பெறவும்"
 
 #, i18next-interpolation
 msgctxt "revoke-token-description"
-msgid "Are you sure you want to revoke the token '{{name}}'?"
-msgstr "'{{name}}' டோக்கனை நிச்சயமாக திரும்பப் பெற விரும்புகிறீர்களா?"
+msgid "Are you sure you want to revoke the token “{{name}}”?"
+msgstr "அரே you sure you want பெறுநர் revoke the கிள்ளாக்கு “{{name}}”?"
 
 #, i18next-interpolation
 msgctxt "repo"
@@ -3373,8 +3383,8 @@ msgid ""
 msgstr ""
 "முறிவு ச்லைடரைப் பகிரவும். APP, SDK மற்றும் FLATHUB க்கு இடையிலான "
 "விநியோகத்தை சரிசெய்ய அம்பு விசைகளைப் பயன்படுத்தவும். தற்போதைய விநியோகம்: "
-"பயன்பாடு: {{appPercentage}}, SDK: {{sdkPercentage}}, பிளாதப்: {{totalCost}. "
-"மொத்த செலவு: {{flathubPercentage}}."
+"பயன்பாடு: {{appPercentage}}, SDK: {{sdkPercentage}}, பிளாதப்: "
+"{{flathubPercentage}}. மொத்த செலவு: {{totalCost}}."
 
 #, i18next-interpolation
 msgctxt "quality-guideline.problems"
@@ -3635,6 +3645,16 @@ msgid "Show branding preview"
 msgstr "பிராண்டிங் மாதிரிக்காட்சியைக் காட்டு"
 
 #, i18next-interpolation
+msgctxt "quality-guideline.light"
+msgid "Light"
+msgstr "ஒளி"
+
+#, i18next-interpolation
+msgctxt "quality-guideline.dark"
+msgid "Dark"
+msgstr "இருண்ட"
+
+#, i18next-interpolation
 msgctxt "lightbox.close"
 msgid "Close"
 msgstr "மூடு"
@@ -3668,3 +3688,22 @@ msgstr "திரைக்காட்சி முழுத்திரை க�
 msgctxt "lightbox.screenshot"
 msgid "Screenshot"
 msgstr "திரைக்காட்சி"
+
+#, i18next-interpolation
+msgctxt "download.install-x"
+msgid "Install “{{x}}”"
+msgstr "“{{x}}” நிறுவவும்"
+
+#, i18next-interpolation
+msgctxt "download.fallback-instructions"
+msgid ""
+"<0>Opening “{{name}}” in your software manager...</0><1>If nothing happens, "
+"maybe your system does not support <i>flatpak+https</i> urls.</1><2>In that "
+"case you can:</2><3><0>Download the <2>.flatpakref file</2></0><1>Then run "
+"it from your file manager</1></3><4><0>Instructions to install "
+"Flatpak</0></4>"
+msgstr ""
+"<0> உங்கள் மென்பொருள் மேலாளரில் “{{name}}” திறப்பு ... </0> <1> எதுவும் "
+"நடக்கவில்லை என்றால், உங்கள் கணினி ஆதரிக்கவில்லை <i> பிளாட்பாக்+https </i> "
+"urls. மேலாளர் </1> </3> <4> <0> பிளாட்பேக்கை நிறுவுவதற்கான வழிமுறைகள் </0> "
+"</4>"
