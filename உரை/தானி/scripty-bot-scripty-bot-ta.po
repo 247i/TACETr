@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Scripty)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-02 14:52+0200\n"
-"PO-Revision-Date: 2025-06-14 06:58\n"
+"POT-Creation-Date: 2025-08-02 14:59+0200\n"
+"PO-Revision-Date: 2025-08-02 21:47\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/scripty-bot/scripty-bot/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.3-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. join command
 #. This and all attributes show up exclusively in the slash command picker
@@ -31,16 +31,16 @@ msgid ""
 ".create_thread = create_thread\n"
 ".create_thread-description = Create a new thread for this transcription? Defaults to false."
 msgstr ""
-"சேர\n"
-" . விவரம் = குரல் அரட்டையில் சேரவும். இந்த கட்டளையை நீங்கள் இயக்கும் சேனலில் டிரான்ச்கிரிப்டுகள் உள்நுழைந்திருக்கும்.\n"
-" .voice_channel = woice_channel\n"
-" .voice_channel- விளக்கப்படம் = பிணைக்க குரல் அரட்டை.\n"
-" .record_transcriptions = Record_Transcriptions\n"
-" . Record_transcriptions- விவரம் = அனைத்து டிரான்ச்கிரிப்டுகளையும் பதிவு செய்யவா? ச்கிரிப்டி சேனலை விட்டு வெளியேறும்போது பயனர்கள் டிமெட் செய்யப்படுவார்கள். இயல்புநிலைகள் பொய்.\n"
-" .target_channel = target_channel\n"
-" .target_channel- விளக்கப்படம் = தற்போதைய சேனலுக்கு பதிலாக டிரான்ச்கிரிப்ட்களை இங்கே அனுப்பவும். புதிய இடுகையை உருவாக்க ஒரு மன்றத்தை குறிவைக்கவும்.\n"
-" .create_thread = create_thread\n"
-" .create_thread-description = இந்த டிரான்ச்கிரிப்சனுக்கான புதிய நூலை உருவாக்கவா? இயல்புநிலைகள் பொய்."
+"சேர \n"
+". விவரம் = குரல் அரட்டையில் சேரவும். இந்த கட்டளையை நீங்கள் இயக்கும் சேனலில் டிரான்ச்கிரிப்டுகள் உள்நுழைந்திருக்கும். \n"
+".voice_channel = woice_channel \n"
+".voice_channel- விளக்கப்படம் = பிணைக்க குரல் அரட்டை. \n"
+".record_transcriptions = Record_Transcriptions \n"
+". Record_transcriptions- விவரம் = அனைத்து டிரான்ச்கிரிப்டுகளையும் பதிவு செய்யவா? ச்கிரிப்டி சேனலை விட்டு வெளியேறும்போது பயனர்கள் டிமெட் செய்யப்படுவார்கள். இயல்புநிலைகள் பொய். \n"
+".target_channel = target_channel \n"
+".target_channel- விளக்கப்படம் = தற்போதைய சேனலுக்கு பதிலாக டிரான்ச்கிரிப்ட்களை இங்கே அனுப்பவும். புதிய இடுகையை உருவாக்க ஒரு மன்றத்தை குறிவைக்கவும். \n"
+".create_thread = create_thread \n"
+".create_thread-description = இந்த டிரான்ச்கிரிப்சனுக்கான புதிய நூலை உருவாக்கவா? இயல்புநிலைகள் பொய்."
 
 #. join command
 #. This message is shown when the user is not in a voice channel, nor was a
@@ -178,6 +178,14 @@ msgid "An automatic transcript was started { $timestamp }."
 msgstr "ஒரு தானியங்கி டிரான்ச்கிரிப்ட் {$ நேர முத்திரை} தொடங்கப்பட்டது."
 
 #. join command
+#. This is the initial message sent to the target channel when joining a voice
+#. channel
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "join-sending-to-target"
+msgid "A transcript session was started { $timestamp }."
+msgstr "ஒரு டிரான்ச்கிரிப்ட் அமர்வு {$ நேர முத்திரை} தொடங்கப்பட்டது."
+
+#. join command
 #. Message shown when a user tries to use an ephemeral thread but cannot do so
 #. as a thread was not selected
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -209,8 +217,7 @@ msgstr ""
 
 #. join command
 #. This message is shown when the user has told the bot to send transcripts to
-#. a non-text-based channel (ie category). `target_channel` should be
-#. translated, as slash command arguments are localized.
+#. a non-text-based channel (ie category).
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
 msgctxt "join-target-not-text-based"
 msgid ""
@@ -222,6 +229,18 @@ msgstr ""
 "அடிப்படையிலான சேனல் அல்ல. தயவுசெய்து உரை அடிப்படையிலான சேனலைப் "
 "பயன்படுத்தவும் அல்லது `Target_channel` வாதத்தில் வேறு சேனலைத் "
 "தேர்ந்தெடுக்கவும்."
+
+#. join command
+#. This message is shown when the user has told Scripty to join a channel that
+#. isn't a voice channel.
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "join-voice-channel-not-voice"
+msgid ""
+"The channel you told me to join ({ $targetMention }) isn't a voice channel. "
+"Try again with a voice channel."
+msgstr ""
+"சேர நீங்கள் என்னிடம் சொன்ன சேனல் ({$ இலக்கு}) குரல் சேனல் அல்ல. குரல் "
+"சேனலுடன் மீண்டும் முயற்சிக்கவும்."
 
 #. join command
 #. This message is shown when the user requests the bot create a new thread in
@@ -236,6 +255,32 @@ msgstr ""
 "முரண்பாடு {$ இலக்கு} இல் நூல்களை ஆதரிக்காது. தயவுசெய்து வேறு சேனலைப் "
 "பயன்படுத்தவும், அல்லது ஒரு நூலை உருவாக்க வேண்டாம்."
 
+#. join command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "join-ephemeral-with-thread-target-warn"
+msgid ""
+"You're trying to use { $targetThreadMention } as an ephemeral thread. This "
+"will delete it after Scripty leaves! Are you sure you want to do this?"
+msgstr ""
+"நீங்கள் {$ TargetThreadmention a ஒரு இடைக்கால நூலாக பயன்படுத்த "
+"முயற்சிக்கிறீர்கள். ச்கிரிப்டி இலைகளுக்குப் பிறகு இது நீக்கப்படும்! இதை "
+"நீங்கள் செய்ய விரும்புகிறீர்களா?"
+
+#. join command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "join-ephemeral-with-thread-target-timed-out"
+msgid "Timed out. Rerun if you still want to try again."
+msgstr ""
+"நேரம் முடிந்தது. நீங்கள் இன்னும் மீண்டும் முயற்சிக்க விரும்பினால் மீண்டும் "
+"இயக்கவும்."
+
+#. join command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "join-ephemeral-with-thread-target-cancelled"
+msgid "You selected not to proceed, cancelling."
+msgstr ""
+"தொடர வேண்டாம் என்று நீங்கள் தேர்ந்தெடுத்தீர்கள், ரத்து செய்ய வேண்டும்."
+
 #. Leave command
 #. This and all attributes show up exclusively in the slash command picker
 #. when `leave` is selected.
@@ -245,8 +290,8 @@ msgid ""
 "leave\n"
 ".description = Leave any current voice call."
 msgstr ""
-"விடுப்பு\n"
-" . விவரம் = தற்போதைய குரல் அழைப்பை விட்டு விடுங்கள்."
+"விடுப்பு \n"
+". விவரம் = தற்போதைய குரல் அழைப்பை விட்டு விடுங்கள்."
 
 #. Leave command
 #. This is shown when the bot successfully leaves a voice call
@@ -266,10 +311,10 @@ msgid ""
 ".command = command\n"
 ".command-description = Specific command to show help about"
 msgstr ""
-"உதவி\n"
-" . விவரம் = இந்த உதவி மெனுவைக் காட்டு\n"
-" .command = கட்டளை\n"
-" .Command- விவரம் = உதவியைக் காட்ட குறிப்பிட்ட கட்டளை"
+"உதவி \n"
+". விவரம் = இந்த உதவி மெனுவைக் காட்டு \n"
+".command = கட்டளை \n"
+".Command- விவரம் = உதவியைக் காட்ட குறிப்பிட்ட கட்டளை"
 
 #. transcribe_message command
 #. This and all attributes show up exclusively in the slash command picker
@@ -280,8 +325,177 @@ msgid ""
 "transcribe_message\n"
 ".description = Transcribe a message. Reply to a message to transcribe it."
 msgstr ""
-"டிரான்ச்கிரிப்_மெச்ச்\n"
-" . விவரம் = ஒரு செய்தியை படியெடுக்கவும். ஒரு செய்தியை படியெடுக்க பதிலளிக்கவும்."
+"செய்தியை படியெடுத்தல் \n"
+". விவரம் = ஒரு செய்தியை படியெடுக்கவும். ஒரு செய்தியை படியெடுக்க பதிலளிக்கவும்."
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-initial-reply"
+msgid "Loading..."
+msgstr "ஏற்றுகிறது ..."
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-not-slash-command"
+msgid ""
+"Due to Discord limitations, this command is not available as a slash "
+"command. Use the prefix or context menu versions."
+msgstr ""
+"முரண்பாடு வரம்புகள் காரணமாக, இந்த கட்டளை ச்லாச் கட்டளையாக கிடைக்காது. "
+"முன்னொட்டு அல்லது சூழல் பட்டியல் பதிப்புகளைப் பயன்படுத்தவும்."
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-needs-reply"
+msgid "You must reply to the message you want to transcribe."
+msgstr "நீங்கள் படியெடுக்க விரும்பும் செய்திக்கு பதிலளிக்க வேண்டும்."
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-timed-out-after-reply"
+msgid ""
+"A fatal internal error occured. This should never happen, and is a bug. "
+"(timed out waiting for final result after stream disappeared, ID { $msgId })"
+msgstr ""
+"ஒரு அபாயகரமான உள் பிழை ஏற்பட்டது. இது ஒருபோதும் நடக்கக்கூடாது, அது ஒரு பிழை."
+" (ச்ட்ரீம் மறைந்த பிறகு இறுதி முடிவுக்காக காத்திருக்கும் நேரம், அடையாளம் {$ "
+"msgid})"
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-downloading-file"
+msgid "Downloading file `{ $filename }`... (size { $fileSize } bytes)"
+msgstr "கோப்பு `{$ FILENAME}` ..."
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-probing-file"
+msgid "Probing file `{ $filename }`..."
+msgstr "ஆய்வு கோப்பு `{$ கோப்பு பெயர்}` ..."
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-transcoding-file"
+msgid "Transcoding file `{ $filename }`... ({ $fileLength } seconds long)"
+msgstr ""
+"டிரான்ச்கோடிங் கோப்பு `{$ கோப்பு பெயர்}` ... ({$ கோப்பு நீளம்} விநாடிகள் "
+"நீளமானது)"
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-transcribing-file"
+msgid "Transcribing file `{ $filename }`... ({ $fileLength } seconds long)"
+msgstr "கோப்பு `{$ கோப்பு பெயர்}` ... ({$ கோப்பு நீளம்} விநாடிகள் நீளமானது)"
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-no-results"
+msgid ""
+"No transcripts returned. Either the linked message has no attachments, or no"
+" attachments are supported (video only with Premium 1 or above)"
+msgstr ""
+"எந்த டிரான்ச்கிரிப்டுகளும் திரும்பவில்லை. இணைக்கப்பட்ட செய்திக்கு எந்த "
+"இணைப்புகளும் இல்லை, அல்லது இணைப்புகள் எதுவும் ஆதரிக்கப்படவில்லை (வீடியோ "
+"காப்பீடு 1 அல்லது அதற்கு மேல் மட்டுமே)"
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-inline-header"
+msgid "Transcript:"
+msgstr "படியெடுத்தல்:"
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-time-taken-single-file"
+msgid "Took { $timeTaken } seconds to transcribe { $fileLength } second file."
+msgstr ""
+"{$ FileLength} இரண்டாவது கோப்பை படியெடுக்க {$ timetaken} வினாடிகள் எடுத்தன."
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-time-taken-named-file"
+msgid ""
+"File `{ $filename }` took { $timeTaken } seconds to transcribe ({ "
+"$fileLength } seconds long)"
+msgstr ""
+"கோப்பு `{$ FILENAME}` படியெடுக்க {$ டைம்டேகன்} வினாடிகள் எடுத்தது ({$ கோப்பு"
+" நீளம்} விநாடிகள் நீளமானது)"
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-unusually-long"
+msgid ""
+"This shouldn't take so long. If you're willing to share the content with us,"
+" please let us know in our support server."
+msgstr ""
+"இது இவ்வளவு நேரம் எடுக்கக்கூடாது. உள்ளடக்கத்தை எங்களுடன் பகிர்ந்து கொள்ள "
+"நீங்கள் விரும்பினால், தயவுசெய்து எங்கள் உதவி சேவையகத்தில் எங்களுக்குத் "
+"தெரியப்படுத்துங்கள்."
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-no-transcript"
+msgid ""
+"No transcript returned for file `{ $filename }` in { $took } ({ $fileLength "
+"} second file)"
+msgstr ""
+"{$ இல் {$ ({$ கோப்பு நீளம்} இரண்டாவது கோப்பு) கோப்புக்கு எந்த "
+"டிரான்ச்கிரிப்டும் திரும்பவில்லை"
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-too-long"
+msgid ""
+"With your current Premium status, you can transcribe files at most { "
+"$maxFileLength } seconds long. `{ $filename }` is { $fileLength } seconds "
+"long, and has been ignored."
+msgstr ""
+"உங்கள் தற்போதைய காப்பீடு நிலை மூலம், நீங்கள் கோப்புகளை அதிகபட்சம் {$ "
+"அதிகபட்சம் வரை நீளம்} விநாடிகள் நீளமாக படியெடுக்கலாம். `{$ FileName}` என்பது"
+" {$ கோப்பு நீளம்} விநாடிகள் நீளமானது, மேலும் புறக்கணிக்கப்பட்டுள்ளது."
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-video-needs-premium"
+msgid ""
+"Videos are more computationally expensive to transcode, and require Premium."
+" { $filename } has been detected as a video, and has been ignored."
+msgstr ""
+"வீடியோக்கள் டிரான்ச்கோடிற்கு மிகவும் கணக்கீட்டு ரீதியாக விலை உயர்ந்தவை, "
+"மேலும் காப்பீடு தேவைப்படுகிறது. {$ கோப்பு பெயர் a ஒரு வீடியோவாக "
+"கண்டறியப்பட்டுள்ளது, மேலும் புறக்கணிக்கப்பட்டுள்ளது."
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-result-error"
+msgid ""
+"An error was encountered while processing `{ $filename }`: `{ $error }`. "
+"Please report this in our support server."
+msgstr ""
+"`{$ கோப்பு பெயர்}`: `{$ பிழை}` செயலாக்கும்போது பிழை ஏற்பட்டது. இதை எங்கள் "
+"உதவி சேவையகத்தில் புகாரளிக்கவும்."
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-malformed-input"
+msgid ""
+"Malformed input was detected while processing `{ $filename }`. Fix it and "
+"try again. `{ $error }`"
+msgstr ""
+"`{$ கோப்பு பெயர்}` செயலாக்கும்போது தவறான உள்ளீடு கண்டறியப்பட்டது. அதை "
+"சரிசெய்து மீண்டும் முயற்சிக்கவும். `{$ பிழை}`"
+
+#. transcribe_message command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "transcribe-message-discord-error"
+msgid ""
+"Discord broke while processing `{ $filename }`! There's likely nothing we "
+"can do about this, read the error and check permissions if necessary. `{ "
+"$error }`"
+msgstr ""
+"`{$ கோப்பு பெயர்}` செயலாக்கும்போது முரண்பாடு உடைந்தது! இதைப் பற்றி நாம் "
+"எதுவும் செய்ய முடியாது, பிழையைப் படித்து, தேவைப்பட்டால் அனுமதிகளை "
+"சரிபார்க்கவும். `{$ பிழை}`"
 
 #. premium command
 #. This and all attributes show up exclusively in the slash command picker
@@ -292,8 +506,8 @@ msgid ""
 "premium\n"
 ".description = Premium commands"
 msgstr ""
-"காப்பீடு\n"
-" . விவரம் = காப்பீடு கட்டளைகள்"
+"காப்பீடு \n"
+". விவரம் = காப்பீடு கட்டளைகள்"
 
 #. premium command
 #. This and all attributes show up exclusively in the slash command picker
@@ -304,8 +518,8 @@ msgid ""
 "claim\n"
 ".description = Claim your premium within the server where this command is executed."
 msgstr ""
-"உரிமைகோரல்\n"
-" . விவரம் = இந்த கட்டளை செயல்படுத்தப்படும் சேவையகத்திற்குள் உங்கள் பிரீமியத்தை கோரவும்."
+"உரிமைகோரல் \n"
+". விவரம் = இந்த கட்டளை செயல்படுத்தப்படும் சேவையகத்திற்குள் உங்கள் பிரீமியத்தை கோரவும்."
 
 #. premium command
 #. This and all attributes show up exclusively in the slash command picker
@@ -316,8 +530,8 @@ msgid ""
 "remove\n"
 ".description = Remove your premium from the server where this command is executed."
 msgstr ""
-"அகற்று\n"
-" . விவரம் = இந்த கட்டளை செயல்படுத்தப்படும் சேவையகத்திலிருந்து உங்கள் பிரீமியத்தை அகற்று."
+"அகற்று \n"
+". விவரம் = இந்த கட்டளை செயல்படுத்தப்படும் சேவையகத்திலிருந்து உங்கள் பிரீமியத்தை அகற்று."
 
 #. premium command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -326,8 +540,8 @@ msgid ""
 "info\n"
 ".description = Get information on this server's Scripty Premium status."
 msgstr ""
-"செய்தி\n"
-" . விவரம் = இந்த சேவையகத்தின் ச்கிரிப்டி காப்பீடு நிலை குறித்த தகவல்களைப் பெறுங்கள்."
+"செய்தி \n"
+". விவரம் = இந்த சேவையகத்தின் ச்கிரிப்டி காப்பீடு நிலை குறித்த தகவல்களைப் பெறுங்கள்."
 
 #. premium command
 #. This is shown to the user when they are not subscribed to premium.
@@ -475,10 +689,10 @@ msgid ""
 ".verbose = verbose\n"
 ".verbose-description = Defaults to false"
 msgstr ""
-"வாய்மொழி\n"
-" . விவரம் = டிரான்ச்கிரிப்சன்களின் போது ச்கிரிப்டி வாய்மொழியா என்பதை மாற்றவும்.\n"
-" .வர்போச் = வெர்போச்\n"
-" .வர்போச்-விளக்கப்படம் = பொய்யான இயல்புநிலை"
+"வாய்மொழி \n"
+". விவரம் = டிரான்ச்கிரிப்சனின் போது ச்கிரிப்ட் வாய்மொழியா என்பதை மாற்றவும். \n"
+".வர்போச் = வெர்போச் \n"
+".வர்போச்-விளக்கப்படம் = பொய்யான இயல்புநிலை"
 
 #. config - verbose command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -501,10 +715,10 @@ msgid ""
 ".transcribe_voice_messages = transcribe_voice_messages\n"
 ".transcribe_voice_messages-description = Defaults to true"
 msgstr ""
-"transcribe_voice_messages\n"
-" . விவரம் = ச்கிரிப்டி குரல் செய்திகளை படியெடுக்கிறதா என்பதை நிலைநிறுத்துங்கள்.\n"
-" .transcribe_voice_messages = transcribe_voice_messages\n"
-" .transcribe_voice_messages-pescription = இயல்புநிலை உண்மை"
+"transcribe_voice_messages \n"
+". விவரம் = ச்கிரிப்டி குரல் செய்திகளை படியெடுக்கிறதா என்பதை நிலைநிறுத்துங்கள். \n"
+".transcribe_voice_messages = transcribe_voice_messages \n"
+".transcribe_voice_messages-pescription = இயல்புநிலை உண்மை"
 
 #. config - transcribe voice messages command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -527,10 +741,10 @@ msgid ""
 ".transcribe_audio = transcribe_audio\n"
 ".transcribe_audio-description = Defaults to false"
 msgstr ""
-"டிரான்ச்கிரைப்_அடியோ\n"
-" . விவரம் = ச்கிரிப்டி தன்னிச்சையான ஆடியோ கோப்புகளை படியெடுக்க வேண்டுமா என்று மாற்றவும். காப்பீடு தேவை.\n"
-" .transcribe_audio = transcribe_audio\n"
-" .transcribe_audio- விளக்கப்படம் = இயல்புநிலைக்கு பொய்யானது"
+"டிரான்ச்கிரைப்_அடியோ \n"
+". விவரம் = ச்கிரிப்டி தன்னிச்சையான ஆடியோ கோப்புகளை படியெடுக்க வேண்டுமா என்று மாற்றவும். காப்பீடு தேவை. \n"
+".transcribe_audio = transcribe_audio \n"
+".transcribe_audio- விளக்கப்படம் = இயல்புநிலைக்கு பொய்யானது"
 
 #. config - transcribe audio command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -544,18 +758,6 @@ msgctxt "config-transcribe-audio-disabled"
 msgid "Scripty will no longer transcribe audio files."
 msgstr "ச்கிரிப்டி இனி ஆடியோ கோப்புகளை படியெடுக்காது."
 
-#. config - transcribe audio command
-#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
-msgctxt "config-transcribe-audio-requires-premium"
-msgid ""
-"Transcribing audio files is a Premium feature, as it is computationally expensive to transcode audio files.\n"
-"If you would like to upgrade to Premium, head to https://dash.scripty.org/premium. You can also request a free trial of Premium by DMing the bot.\n"
-"If this feature was enabled before, it is now disabled."
-msgstr ""
-"ஆடியோ கோப்புகளை டிரான்ச்கோட் செய்வதற்கு கணக்கீட்டு ரீதியாக விலை உயர்ந்தது என்பதால் ஆடியோ கோப்புகளை படியெடுப்பது காப்பீடு அம்சமாகும்.\n"
-" நீங்கள் பிரீமியத்திற்கு மேம்படுத்த விரும்பினால், https://dash.scripty.org/premium க்குச் செல்லுங்கள். போட் டிமிங் செய்வதன் மூலம் பிரீமியத்தின் இலவச சோதனையையும் நீங்கள் கோரலாம்.\n"
-" இந்த நற்பொருத்தம் இதற்கு முன்பு இயக்கப்பட்டிருந்தால், அது இப்போது முடக்கப்பட்டுள்ளது."
-
 #. config - transcribe video command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
 msgctxt "config_transcribe_video"
@@ -565,10 +767,10 @@ msgid ""
 ".transcribe_video = transcribe_video\n"
 ".transcribe_video-description = Defaults to false"
 msgstr ""
-"டிரான்ச்கிரிப்_விடோ\n"
-" . விவரம் = ச்கிரிப்டி தன்னிச்சையான வீடியோ கோப்புகளை படியெடுக்கிறதா என்பதை நிலைநிறுத்துங்கள். T2 காப்பீடு தேவை.\n"
-" .transcribe_video = transcribe_video\n"
-" .transcribe_video- விளக்கப்படம் = பொய்யான இயல்புநிலை"
+"டிரான்ச்கிரிப்_விடோ \n"
+". விவரம் = ச்கிரிப்டி தன்னிச்சையான வீடியோ கோப்புகளை படியெடுக்கிறதா என்பதை நிலைநிறுத்துங்கள். T2 காப்பீடு தேவை. \n"
+".transcribe_video = transcribe_video \n"
+".transcribe_video- விளக்கப்படம் = பொய்யான இயல்புநிலை"
 
 #. config - transcribe video command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -586,13 +788,13 @@ msgstr "ச்கிரிப்டி இனி வீடியோ கோப்
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
 msgctxt "config-transcribe-video-requires-premium"
 msgid ""
-"Transcribing video files is a Premium Tier 2 feature, as it is very computationally expensive to transcode video files.\n"
-"If you would like to upgrade to Premium Tier 2, head to https://dash.scripty.org/premium.\n"
+"Transcribing video files is a Premium feature, as it is very computationally expensive to transcode video files.\n"
+"If you would like to upgrade to Premium, head to https://dash.scripty.org/premium.\n"
 "If this feature was enabled before, it is now disabled."
 msgstr ""
-"வீடியோ கோப்புகளை படியெடுப்பது காப்பீடு அடுக்கு 2 அம்சமாகும், ஏனெனில் இது வீடியோ கோப்புகளை டிரான்ச்கோட் செய்வது மிகவும் கணக்கீட்டு ரீதியாக விலை உயர்ந்தது.\n"
-" நீங்கள் காப்பீடு அடுக்கு 2 க்கு மேம்படுத்த விரும்பினால், https://dash.scripty.org/premium க்குச் செல்லுங்கள்.\n"
-" இந்த நற்பொருத்தம் இதற்கு முன்பு இயக்கப்பட்டிருந்தால், அது இப்போது முடக்கப்பட்டுள்ளது."
+"வீடியோ கோப்புகளை டிரான்ச்கோட் செய்வது மிகவும் கணக்கீட்டு ரீதியாக விலை உயர்ந்தது என்பதால் வீடியோ கோப்புகளை படியெடுப்பது ஒரு காப்பீடு அம்சமாகும். \n"
+"நீங்கள் பிரீமியத்திற்கு மேம்படுத்த விரும்பினால், https://dash.scripty.org/premium க்குச் செல்லுங்கள். \n"
+"இந்த நற்பொருத்தம் இதற்கு முன்பு இயக்கப்பட்டிருந்தால், அது இப்போது முடக்கப்பட்டுள்ளது."
 
 #. config - auto detect language command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -603,10 +805,10 @@ msgid ""
 ".auto_detect_lang = auto_detect_lang\n"
 ".auto_detect_lang-description = Defaults to false"
 msgstr ""
-"Auto_detect_lang\n"
-" . விவரம் = பேசப்படும் மொழியை தானாகவே கண்டறிய முயற்சிக்கிறீர்களா? மிகவும் துல்லியமற்ற vs ஒரு மொழியை அமைத்தல்.\n"
-" .auto_detect_lang = auto_detect_lang\n"
-" .auto_detect_lang-description = false க்கு இயல்புநிலை"
+"Auto_detect_lang \n"
+". விவரம் = பேசப்படும் மொழியை தானாகவே கண்டறிய முயற்சிக்கிறீர்களா? மிகவும் துல்லியமற்ற vs ஒரு மொழியை அமைத்தல். \n"
+".auto_detect_lang = auto_detect_lang \n"
+".auto_detect_lang-description = false க்கு இயல்புநிலை"
 
 #. config - auto detect language command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -639,12 +841,16 @@ msgid ""
 "auto_join\n"
 ".description = Should Scripty automatically join a voice channel when someone joins it?\n"
 ".auto_join = auto_join\n"
-".auto_join-description = Defaults to false"
+".auto_join-description = Defaults to false\n"
+".modify_channel = modify_channel\n"
+".modify_channel-description = Optionally set a channel this setting should apply to. If not set, the server setting is modified."
 msgstr ""
-"ஆட்டோ_சோயின்\n"
-" . விவரம் = யாராவது சேரும்போது ச்கிரிப்டி தானாகவே குரல் சேனலில் சேர வேண்டுமா?\n"
-" .auto_join = auto_join\n"
-" .auto_join- விளக்கப்படம் = பொய்யான இயல்புநிலை"
+"ஆட்டோ_சோயின் \n"
+". விவரம் = யாராவது சேரும்போது ச்கிரிப்டி தானாகவே குரல் சேனலில் சேர வேண்டுமா? \n"
+".auto_join = auto_join \n"
+".auto_join- விளக்கப்படம் = பொய்யான இயல்புநிலை \n"
+".modify_channel = modify_channel \n"
+".modify_channel-description = விருப்பமாக ஒரு சேனலை அமைக்கவும் இந்த அமைப்பு பொருந்த வேண்டும். அமைக்காவிட்டால், சேவையக அமைப்பு மாற்றியமைக்கப்படுகிறது."
 
 #. config - auto detect language command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -661,6 +867,36 @@ msgstr "ஒரு பயன்பாடு செய்யும்போது 
 
 #. config - auto detect language command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-auto-join-enabled-channel"
+msgid ""
+"Scripty will now automatically join { $modifyChannelMention } when a user "
+"does."
+msgstr ""
+"ஒரு பயனர் செய்யும் போது ச்கிரிப்டி இப்போது தானாகவே {$ modifyChannelmention "
+"women இல் சேரும்."
+
+#. config - auto detect language command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-auto-join-disabled-channel"
+msgid ""
+"Scripty will no longer automatically join { $modifyChannelMention } when a "
+"user does."
+msgstr ""
+"ஒரு பயனர் செய்யும் போது ச்கிரிப்டி இனி தானாகவே {$ modifyChannelmention your "
+"இல் சேராது."
+
+#. config - auto detect language command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-auto-join-modify-channel-must-be-vc"
+msgid ""
+"{ $modifyChannelMention } isn't a voice channel. Try again with a voice "
+"channel."
+msgstr ""
+"{$ modifyChannelmention a ஒரு குரல் சேனல் அல்ல. குரல் சேனலுடன் மீண்டும் "
+"முயற்சிக்கவும்."
+
+#. config - auto detect language command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
 msgctxt "config-auto-join-needs-target-channel"
 msgid ""
 "Enabling auto-join requires a default target channel be set. Do that with `{"
@@ -668,6 +904,36 @@ msgid ""
 msgstr ""
 "ஆட்டோ-சேர உதவுவதற்கு இயல்புநிலை இலக்கு சேனல் அமைக்கப்பட வேண்டும். `{$ "
 "Contextprefix} கட்டமைப்பு இயல்புநிலை இலக்கு_சானல்` உடன் அதைச் செய்யுங்கள்."
+
+#. config - auto detect language command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "cmds_config_auto_join_temp_disable"
+msgid ""
+"temp_disable\n"
+".description = Temporarily disable auto-join in this server for the specified number of seconds.\n"
+".disable_for = disable_for\n"
+".disable_for-description = Number of seconds to disable auto-join for - leave empty to enable again"
+msgstr ""
+"temp_disable \n"
+". விவரம் = குறிப்பிட்ட எண்ணிக்கையிலான விநாடிகளுக்கு இந்த சேவையகத்தில் தற்காலிகமாக தானாக சேரவும். \n"
+".Sisable_for = disable_for \n"
+".Sisable_for- விவரம் = தானாக இணைப்பை முடக்குவதற்கான விநாடிகளின் எண்ணிக்கை-மீண்டும் இயக்க காலியாக விடவும்"
+
+#. config - auto detect language command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-auto-join-temp-disable"
+msgid ""
+"{ $timeLeft ->\n"
+"    [0] Auto-join has been re-enabled in this server.\n"
+"    [1] Auto-join has been disabled in this server for 1 second.\n"
+"   *[other] Auto-join has been disabled in this server for { $timeLeft } seconds.\n"
+"}"
+msgstr ""
+"{$ timeleft -> \n"
+"[0] இந்த சேவையகத்தில் ஆட்டோ-சீன் மீண்டும் இயக்கப்பட்டுள்ளது. \n"
+"[1] இந்த சேவையகத்தில் 1 நொடிக்கு ஆட்டோ-சீன் முடக்கப்பட்டுள்ளது. \n"
+". \n"
+"}"
 
 #. config - transcribe only role command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -678,10 +944,10 @@ msgid ""
 ".transcribe_only_role = transcribe_only_role\n"
 ".transcribe_only_role-description = Role to limit to: set empty to disable."
 msgstr ""
-"transcribe_only_role\n"
-" . விவரம் = குரல் அரட்டையில் இந்த பாத்திரத்துடன் கூடிய பயனர்களுக்கு மட்டுமே ச்கிரிப்ட்டியின் படியெடுத்தல்களைக் கட்டுப்படுத்துங்கள்.\n"
-" .transcribe_only_role = transcribe_only_role\n"
-" .transcribe_only_role- விவரம் = வரம்புக்குட்பட்ட பங்கு: முடக்க காலியாக அமைக்கவும்."
+"transcribe_only_role \n"
+". விவரம் = குரல் அரட்டையில் இந்த பாத்திரத்துடன் கூடிய பயனர்களுக்கு மட்டுமே ச்கிரிப்ட்டியின் படியெடுத்தல்களைக் கட்டுப்படுத்துங்கள். \n"
+".transcribe_only_role = transcribe_only_role \n"
+".transcribe_only_role- விவரம் = வரம்புக்குட்பட்ட பங்கு: முடக்க காலியாக அமைக்கவும்."
 
 #. config - transcribe only role command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -708,10 +974,10 @@ msgid ""
 ".translate = translate\n"
 ".translate-description = Defaults to false"
 msgstr ""
-"மொழிபெயர்க்கவும்\n"
-" . விவரம் = தானாக டிரான்ச்கிரிப்சன்களை ஆங்கிலத்திற்கு மொழிபெயர்க்கவா?\n"
-" . மொழிபெயர்த்திடு = மொழிபெயர்க்கவும்\n"
-" .பிரான்ச்லேட்-விவரம் = இயல்புநிலைகள் தவறானவை"
+"மொழிபெயர்க்கவும் \n"
+". விவரம் = தானாக டிரான்ச்கிரிப்சன்களை ஆங்கிலத்திற்கு மொழிபெயர்க்கவா? \n"
+". மொழிபெயர்த்திடு = மொழிபெயர்க்கவும் \n"
+".பிரான்ச்லேட்-விவரம் = இயல்புநிலைகள் தவறானவை"
 
 #. config - translate command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -749,10 +1015,10 @@ msgid ""
 ".enable_kiai = enable_kiai\n"
 ".enable_kiai-description = Defaults to false"
 msgstr ""
-"SEABLE_KIAI\n"
-" . விவரம் = ச்கிரிப்டியின் KIAI ஒருங்கிணைப்பை இயக்கு. கியாய் பற்றிய தகவல்களைப் பெற எந்த வாதங்களும் இல்லாமல் இந்த கட்டளையை இயக்கவும்.\n"
-" .enable_kiai = enable_kiai\n"
-" .enable_kiai- விளக்கப்படம் = பொய்யான இயல்புநிலை"
+"SEABLE_KIAI \n"
+". விவரம் = ச்கிரிப்டியின் KIAI ஒருங்கிணைப்பை இயக்கு. கியாய் பற்றிய தகவல்களைப் பெற எந்த வாதங்களும் இல்லாமல் இந்த கட்டளையை இயக்கவும். \n"
+".enable_kiai = enable_kiai \n"
+".enable_kiai- விளக்கப்படம் = பொய்யான இயல்புநிலை"
 
 #. config - enable_kiai command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -781,7 +1047,7 @@ msgid ""
 "If you use this integration, be sure to disable Kiai's voice XP module as they will conflict."
 msgstr ""
 "KIAI பற்றிய கூடுதல் தகவலை [kiai.app] (https://www.kiai.app/?utm_source=scripty_info) இல் காணலாம்.\n"
-" {\"\"}\n"
+" { \"\" }\n"
 " இந்த ஒருங்கிணைப்பைப் பயன்படுத்தினால், கியாயின் குரல் எக்ச்பி தொகுதியை முடக்குவதை உறுதிப்படுத்திக் கொள்ளுங்கள்."
 
 #. config - enable_kiai command
@@ -809,10 +1075,10 @@ msgid ""
 ".language = language\n"
 ".language-description = The language you want to set your guild language to."
 msgstr ""
-"முன்னொட்டு\n"
-" . விவரம் = இந்த சேவையகத்தின் மொழியை கிடைக்கக்கூடிய மொழிகளில் ஒன்றிற்கு அமைக்கவும்.\n"
-" . மொழி = மொழி\n"
-" . மொழி-விவரம் = உங்கள் கில்ட் மொழியை அமைக்க விரும்பும் மொழி."
+"முன்னொட்டு \n"
+". விவரம் = இந்த சேவையகத்தின் மொழியை கிடைக்கக்கூடிய மொழிகளில் ஒன்றிற்கு அமைக்கவும். \n"
+". மொழி = மொழி \n"
+". மொழி-விவரம் = உங்கள் கில்ட் மொழியை அமைக்க விரும்பும் மொழி."
 
 #. config - enable_kiai command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -852,10 +1118,10 @@ msgid ""
 ".ephemeral = ephemeral\n"
 ".ephemeral-description = Default value for ephemeral on the join command"
 msgstr ""
-"இடைக்கால\n"
-" . விவரம் = ச்கிரிப்டி, இயல்பாக, கடைசி பயனர் வெளியேறும்போது மறைந்துவிடும் இடைக்கால டிரான்ச்கிரிப்ட்களை உருவாக்க வேண்டுமா?\n"
-" .பெமரல் = எஃபெமரல்\n"
-" .பெமரல்-விளக்கப்படம் = சேர கட்டளையில் இடைக்காலத்திற்கான இயல்புநிலை மதிப்பு"
+"இடைக்கால \n"
+". விவரம் = ச்கிரிப்டி, இயல்பாக, கடைசி பயனர் வெளியேறும்போது மறைந்துவிடும் இடைக்கால டிரான்ச்கிரிப்ட்களை உருவாக்க வேண்டுமா? \n"
+".பெமரல் = எஃபெமரல் \n"
+".பெமரல்-விளக்கப்படம் = சேர கட்டளையில் இடைக்காலத்திற்கான இயல்புநிலை மதிப்பு"
 
 #. config - default settings - ephemeral command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -904,10 +1170,10 @@ msgid ""
 ".new_thread = new_thread\n"
 ".new_thread-description = Default value for new_thread on the join command"
 msgstr ""
-"new_thread\n"
-" . விவரம் = ச்கிரிப்டி, இயல்பாக, அனைத்து டிரான்ச்கிரிப்சன்களுக்கும் புதிய நூலை உருவாக்க வேண்டுமா?\n"
-" .new_thread = new_thread\n"
-" .new_thread-description = சேர் கட்டளையில் புதிய_thread க்கான இயல்புநிலை மதிப்பு"
+"new_thread \n"
+". விவரம் = ச்கிரிப்டி, இயல்பாக, அனைத்து டிரான்ச்கிரிப்சன்களுக்கும் புதிய நூலை உருவாக்க வேண்டுமா? \n"
+".new_thread = new_thread \n"
+".new_thread-description = சேர் கட்டளையில் புதிய_thread க்கான இயல்புநிலை மதிப்பு"
 
 #. config - default settings - new_thread command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -928,6 +1194,12 @@ msgid ""
 msgstr ""
 "குரல் சேனல்களில் நூல்கள் இருக்க முடியாது. வேறு இயல்புநிலை இலக்கு சேனலைத் "
 "தேர்ந்தெடுங்கள் அல்லது புதிய_திரெடியை இயக்க வேண்டாம்."
+
+#. config - default settings - new_thread command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-default-forum-need-new-thread"
+msgid "new_thread must be enabled if you're targeting a forum by default."
+msgstr "இயல்பாக ஒரு மன்றத்தை குறிவைத்தால் புதிய_திரெட் இயக்கப்பட வேண்டும்."
 
 #. config - default settings - new_thread command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -954,10 +1226,10 @@ msgid ""
 ".record_transcriptions = record_transcriptions\n"
 ".record_transcriptions-description = Default value for record_transcriptions on the join command"
 msgstr ""
-"Record_Transcriptions\n"
-" . விவரம் = ச்கிரிப்டி, இயல்பாக, அனைத்து டிரான்ச்கிரிப்சன்களையும் உரை கோப்பில் பதிவு செய்ய வேண்டுமா?\n"
-" .record_transcriptions = Record_Transcriptions\n"
-" .record_transcriptions-description = சேர கட்டளையில் Record_transprictions க்கான இயல்புநிலை மதிப்பு"
+"Record_Transcriptions \n"
+". விவரம் = ச்கிரிப்டி, இயல்பாக, அனைத்து டிரான்ச்கிரிப்சன்களையும் உரை கோப்பில் பதிவு செய்ய வேண்டுமா? \n"
+".record_transcriptions = Record_Transcriptions \n"
+".record_transcriptions-description = சேர கட்டளையில் Record_transprictions க்கான இயல்புநிலை மதிப்பு"
 
 #. config - default settings - record_transcriptions command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -982,12 +1254,37 @@ msgid ""
 "target_channel\n"
 ".description = Set the default target channel where Scripty will output transcripts if none are specified.\n"
 ".target_channel = target_channel\n"
-".target_channel-description = Default value for target_channel on the join command"
+".target_channel-description = Default value for target_channel on the join command\n"
+".modify_channel = modify_channel\n"
+".modify_channel-description = If this is set, this target channel will only apply when Scripty joins this voice channel."
 msgstr ""
-"இலக்கு_சானல்\n"
-" . விவரக்குறிப்பு = இயல்புநிலை இலக்கு சேனலை அமைக்கவும், அங்கு ச்கிரிப்டி எதுவும் குறிப்பிடப்படவில்லை என்றால் டிரான்ச்கிரிப்ட்களை வெளியிடும்.\n"
-" .target_channel = target_channel\n"
-" .target_channel- விளக்கப்படம் = சேர் கட்டளையில் இலக்கு_சானலுக்கான இயல்புநிலை மதிப்பு"
+"இலக்கு_சானல் \n"
+". விவரக்குறிப்பு = இயல்புநிலை இலக்கு சேனலை அமைக்கவும், அங்கு ச்கிரிப்டி எதுவும் குறிப்பிடப்படவில்லை என்றால் டிரான்ச்கிரிப்ட்களை வெளியிடும். \n"
+".target_channel = target_channel \n"
+".target_channel- விளக்கப்படம் = சேர் கட்டளையில் இலக்கு_சானலுக்கான இயல்புநிலை மதிப்பு \n"
+".modify_channel = modify_channel \n"
+".modify_channel- விளக்கப்படம் = இது அமைக்கப்பட்டால், ச்கிரிப்டி இந்த குரல் சேனலில் சேரும்போது மட்டுமே இந்த இலக்கு சேனல் பொருந்தும்."
+
+#. config - default settings - target_channel command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-default-target-channel-enabled-per-channel"
+msgid ""
+"Scripty will now, by default, send all transcripts to { "
+"$targetChannelMention } when joining { $modifyChannelMention }."
+msgstr ""
+"ச்கிரிப்டி, இயல்பாகவே, {$ modychannelmention will இல் சேரும்போது அனைத்து "
+"டிரான்ச்கிரிப்டுகளையும் {$ targetsannelmention பெறுநர் க்கு அனுப்பும்."
+
+#. config - default settings - target_channel command
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "config-default-target-channel-disabled-per-channel"
+msgid ""
+"Scripty will now, by default, send all transcripts to the server default "
+"target channel when joining { $modifyChannelMention }."
+msgstr ""
+"ச்கிரிப்டி இப்போது, இயல்புநிலையாக, {$ modifyChannelmention on இல் சேரும்போது"
+" அனைத்து டிரான்ச்கிரிப்டுகளையும் சேவையக இயல்புநிலை இலக்கு சேனலுக்கு "
+"அனுப்பும்."
 
 #. config - default settings - target_channel command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -996,7 +1293,7 @@ msgid ""
 "Scripty will now, by default, send all transcripts to { "
 "$targetChannelMention }."
 msgstr ""
-"ச்கிரிப்டி இப்போது, ​​இயல்பாக, அனைத்து டிரான்ச்கிரிப்டுகளையும் {$ "
+"ச்கிரிப்டி இப்போது, இயல்பாக, அனைத்து டிரான்ச்கிரிப்டுகளையும் {$ "
 "targetChannelmention க்கு க்கு அனுப்பும்."
 
 #. config - default settings - target_channel command
@@ -1006,7 +1303,7 @@ msgid ""
 "Scripty will now, by default, send all transcripts to the channel where "
 "`/join` is executed."
 msgstr ""
-"ச்கிரிப்டி இப்போது, ​​இயல்பாக, அனைத்து டிரான்ச்கிரிப்டுகளையும் `/சேர "
+"ச்கிரிப்டி இப்போது, இயல்பாக, அனைத்து டிரான்ச்கிரிப்டுகளையும் `/சேர "
 "'செயல்படுத்தப்படும் சேனலுக்கு அனுப்பும்."
 
 #. config - default settings - target_channel command
@@ -1037,8 +1334,8 @@ msgid ""
 "debug\n"
 ".description = Output debugging information about Scripty internal state."
 msgstr ""
-"பிழைத்திருத்தம்\n"
-" . விவரம் = வெளியீட்டு பிழைத்திருத்த செய்தி ச்கிரிப்டி உள் நிலை."
+"பிழைத்திருத்தம் \n"
+". விவரம் = வெளியீட்டு பிழைத்திருத்த செய்தி ச்கிரிப்டி உள் நிலை."
 
 #. debug command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -1086,9 +1383,9 @@ msgid ""
 "Context menu commands:\n"
 "{ \"\" }"
 msgstr ""
-"{\"\"}\n"
+"{ \"\" }\n"
 " சூழல் பட்டியல் கட்டளைகள்:\n"
-" {\"\"}"
+" { \"\" }"
 
 #. Context menu command translation strings
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -1098,9 +1395,9 @@ msgid ""
 "{ $commandName } (on user)\n"
 "{ \"\" }"
 msgstr ""
-"{\"\"}\n"
-" {$ கட்டளை பெயர்} (பயனருக்கு)\n"
-" {\"\"}"
+"{\"\"} \n"
+"{$ கட்டளை பெயர்} (பயனருக்கு) \n"
+"{\"\"}"
 
 #. Context menu command translation strings
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -1110,9 +1407,9 @@ msgid ""
 "{ $commandName } (on message)\n"
 "{ \"\" }"
 msgstr ""
-"{\"\"}\n"
-" {$ கட்டளை பெயர்} (செய்தியில்)\n"
-" {\"\"}"
+"{\"\"} \n"
+"{$ கட்டளை பெயர்} (செய்தியில்) \n"
+"{\"\"}"
 
 #. Context menu command translation strings
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -1122,9 +1419,9 @@ msgid ""
 "{ $commandName } (on unknown)\n"
 "{ \"\" }"
 msgstr ""
-"{\"\"}\n"
-" {$ கட்டளை பெயர்} (அறியப்படாதது)\n"
-" {\"\"}"
+"{\"\"} \n"
+"{$ கட்டளை பெயர்} (அறியப்படாதது) \n"
+"{\"\"}"
 
 #. Context menu command translation strings
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -1133,8 +1430,8 @@ msgid ""
 "For more information on a specific command, type `{ $contextPrefix }help <name>`\n"
 "```"
 msgstr ""
-"ஒரு குறிப்பிட்ட கட்டளையைப் பற்றிய கூடுதல் தகவலுக்கு, `{$ contextprefix} உதவி <aname>` என தட்டச்சு செய்க\n"
-" `` `"
+"ஒரு குறிப்பிட்ட கட்டளையைப் பற்றிய கூடுதல் தகவலுக்கு, `{$ contextprefix} உதவி <aname>` என தட்டச்சு செய்க \n"
+"`` `"
 
 #. Language configuration strings
 #. This and all attributes show up exclusively in the slash command picker
@@ -1147,10 +1444,10 @@ msgid ""
 ".language = language\n"
 ".language-description = The language you want to set your user language to."
 msgstr ""
-"பயனர்\n"
-" . விவரம் = உங்கள் பயனர் மொழியை கிடைக்கக்கூடிய மொழிகளில் ஒன்றிற்கு அமைக்கவும்.\n"
-" . மொழி = மொழி\n"
-" . மொழி-விளக்கமானது = உங்கள் பயனர் மொழியை அமைக்க விரும்பும் மொழி."
+"பயனர் \n"
+". விவரம் = உங்கள் பயனர் மொழியை கிடைக்கக்கூடிய மொழிகளில் ஒன்றிற்கு அமைக்கவும். \n"
+". மொழி = மொழி \n"
+". மொழி-விளக்கமானது = உங்கள் பயனர் மொழியை அமைக்க விரும்பும் மொழி."
 
 #. Language configuration strings
 #. This and all attributes show up exclusively in the slash command picker
@@ -1163,10 +1460,10 @@ msgid ""
 ".language = language\n"
 ".language-description = The language you want to set your guild language to."
 msgstr ""
-"கில்ட்\n"
-" . விவரம் = இந்த சேவையகத்தின் மொழியை கிடைக்கக்கூடிய மொழிகளில் ஒன்றிற்கு அமைக்கவும்.\n"
-" . மொழி = மொழி\n"
-" . மொழி-விவரம் = உங்கள் கில்ட் மொழியை அமைக்க விரும்பும் மொழி."
+"கில்ட் \n"
+". விவரம் = இந்த சேவையகத்தின் மொழியை கிடைக்கக்கூடிய மொழிகளில் ஒன்றிற்கு அமைக்கவும். \n"
+". மொழி = மொழி \n"
+". மொழி-விவரம் = உங்கள் கில்ட் மொழியை அமைக்க விரும்பும் மொழி."
 
 #. Language configuration strings
 #. This message is shown as the embed title when the user sets their language
@@ -1310,6 +1607,22 @@ msgstr ""
 "தயவுசெய்து இந்த கட்டளையின் துணைக் கட்டளைகளை மட்டுமே பயன்படுத்தவும். மேலும் "
 "தகவலுக்கு {$ contexprefix} உதவி {$ கட்டளை பெயர்}} ஐப் பார்க்கவும்."
 
+#. Command invocation contexts
+#. This message is shown as the embed title when the user tries to invoke a
+#. guild-only command in DMs
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "guild-only-command-invoked-title"
+msgid "This command can only be used in a server!"
+msgstr "இந்த கட்டளையை ஒரு சேவையகத்தில் மட்டுமே பயன்படுத்த முடியும்!"
+
+#. Command invocation contexts
+#. This message is shown as the embed contents when the user tries to invoke a
+#. guild-only command in DMs
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "guild-only-command-invoked-description"
+msgid "Try using this command in a server."
+msgstr "இந்த கட்டளையை ஒரு சேவையகத்தில் பயன்படுத்த முயற்சிக்கவும்."
+
 #. ping command
 #. This and all attributes show up exclusively in the slash command picker
 #. when `ping` is selected.
@@ -1319,8 +1632,8 @@ msgid ""
 "ping\n"
 ".description = Get the bot latency."
 msgstr ""
-"பிங்\n"
-" . விவரம் = போட் தாமதத்தைப் பெறுங்கள்."
+"பிங் \n"
+". விவரம் = போட் தாமதத்தைப் பெறுங்கள்."
 
 #. ping command
 #. This message is shown when the user requests latency information.
@@ -1336,12 +1649,12 @@ msgid ""
 "Note: if any latency is equal to 0ms, it means that specific latency could not be calculated right now.\n"
 "Try again later."
 msgstr ""
-"வெப்சாக்கெட் தாமதம்: {$ wslatencyms} ms ({$ wslatencyns} ns)\n"
-" Http தாமதம்: {$ httplatencyms} ms ({$ httplatencyns} ns)\n"
-" தரவுத்தள தாமதம்: {$ pglatencyms} ms ({$ pglatencyns} ns)\n"
+"வெப்சாக்கெட் தாமதம்: {$ wslatencyms} ms ({$ wslatencyns} ns) \n"
+"Http தாமதம்: {$ httplatencyms} ms ({$ httplatencyns} ns) \n"
+"தரவுத்தள தாமதம்: {$ pglatencyms} ms ({$ pglatencyns} ns) \n"
 "\n"
-" குறிப்பு: ஏதேனும் நேரந்தவறுகை 0ms க்கு சமமாக இருந்தால், குறிப்பிட்ட தாமதத்தை இப்போது கணக்கிட முடியாது என்று அர்த்தம்.\n"
-" பின்னர் மீண்டும் முயற்சிக்கவும்."
+"குறிப்பு: ஏதேனும் நேரந்தவறுகை 0ms க்கு சமமாக இருந்தால், குறிப்பிட்ட தாமதத்தை இப்போது கணக்கிட முடியாது என்று பொருள். \n"
+"பின்னர் மீண்டும் முயற்சிக்கவும்."
 
 #. data_storage command
 #. This and all attributes show up exclusively in the slash command picker
@@ -1352,8 +1665,8 @@ msgid ""
 "data_storage\n"
 ".description = Configure storage settings for your data"
 msgstr ""
-"data_storage\n"
-" . விவரம் = உங்கள் தரவுகளுக்கான சேமிப்பக அமைப்புகளை உள்ளமைக்கவும்"
+"data_storage \n"
+". விவரம் = உங்கள் தரவுகளுக்கான சேமிப்பக அமைப்புகளை உள்ளமைக்கவும்"
 
 #. data_storage command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -1380,20 +1693,20 @@ msgid ""
 "\n"
 "You can toggle your choices using the below buttons."
 msgstr ""
-"{\"**\"} குறிப்பு **: பின்வரும் அனைத்தும் ** முற்றிலும் விருப்பமான **, மற்றும் ** ஐத் தவிர்ப்பது **, எந்த வகையிலும், ச்கிரிப்டியுடனான உங்கள் அனுபவத்தை பாதிக்காது.\n"
-" இங்கே, இங்கே செல்கிறது.\n"
+"{\"**\"} குறிப்பு **: பின்வரும் அனைத்தும் ** முற்றிலும் விருப்பமான **, மற்றும் ** ஐத் தவிர்ப்பது **, எந்த வகையிலும், ச்கிரிப்டியுடனான உங்கள் அனுபவத்தை பாதிக்காது. \n"
+"இங்கே, இங்கே செல்கிறது. \n"
 "\n"
-" சரியான பேச்சு-க்கு-உரை மாதிரியைப் பயிற்றுவிக்க ச்கிரிப்ட்டுக்கு நிறைய ஆடியோ மற்றும் உரை தரவு தேவைப்படுகிறது. எங்களுக்கு உதவ எல்லோரும் நன்கொடை அளிக்கவோ அல்லது காப்பீடு வாங்கவோ முடியாது, எனவே ஒரு மாதிரியைப் பயிற்றுவிப்பதற்காக ஆடியோ மற்றும் செய்திகள் போன்ற உங்கள் தரவை சேமிக்க அனுமதிப்பதன் மூலம் நீங்கள் உதவ ஒரு பெரிய வழி.\n"
-" இந்தத் தரவு மிகவும் தனிப்பட்டதாக இருக்கக்கூடும் என்பதை நாங்கள் புரிந்துகொள்கிறோம், எனவே இது முற்றிலும் தேர்வு மற்றும் உங்கள் அனுபவத்தை எந்த வகையிலும் பாதிக்காது.\n"
+"சரியான பேச்சு-க்கு-உரை மாதிரியைப் பயிற்றுவிக்க ச்கிரிப்ட்டுக்கு நிறைய ஆடியோ மற்றும் உரை தரவு தேவைப்படுகிறது. எங்களுக்கு உதவ எல்லோரும் நன்கொடை அளிக்கவோ அல்லது காப்பீடு வாங்கவோ முடியாது, எனவே ஒரு மாதிரியைப் பயிற்றுவிப்பதற்காக ஆடியோ மற்றும் செய்திகள் போன்ற உங்கள் தரவை சேமிக்க அனுமதிப்பதன் மூலம் நீங்கள் உதவ ஒரு பெரிய வழி. \n"
+"இந்தத் தரவு மிகவும் தனிப்பட்டதாக இருக்கக்கூடும் என்பதை நாங்கள் புரிந்துகொள்கிறோம், எனவே இது முற்றிலும் தேர்வு மற்றும் உங்கள் அனுபவத்தை எந்த வகையிலும் பாதிக்காது. \n"
 "\n"
-" இங்கே நாம் என்ன செய்ய வேண்டும்:\n"
-" {\"*\" Say சேமிக்கப்பட்ட செய்திகளுடன், அவற்றை உங்கள் மொழியை இலக்காகக் கொண்ட ஒரு மதிப்பெண் பெற்றவருக்கு நாங்கள் உணவளிப்போம். இந்த ச்கோரர் ஒரு குறிப்பிட்ட ஒலிகளுக்கு பெரும்பாலும் சொற்களைத் தேர்ந்தெடுக்க வழிமுறையை அனுமதிப்பார். மிகவும் உதவியாக இருந்தாலும், இது ஆடியோவைப் போல முக்கியமல்ல. இந்த செய்தி தரவு AES 256-பிட் குறியாக்கத்துடன் குறியாக்கம் செய்யப்பட்டுள்ளது என்பதை நினைவில் கொள்க.\n"
-" {\"*\" Say சேமிக்கப்பட்ட ஆடியோவுடன், பேச்சு-க்கு-உரை மாதிரியின் துல்லியத்தை அதிகரிக்க அதை ஒரு மாதிரியாக மாற்றுவோம். உங்களிடம் மோசமான மைக்ரோஃபோன் மற்றும் நிறைய பின்னணி இரைச்சல் இருந்தாலும் இது மிகவும் உதவியாக இருக்கும்: உண்மையில், அதிக ஒலி, சிறந்தது, நீங்கள் சொல்வதை ஒரு மனிதன் இன்னும் உருவாக்க முடியும்.\n"
+"இங்கே நாம் என்ன செய்ய வேண்டும்: \n"
+"{\"*\" Say சேமிக்கப்பட்ட செய்திகளுடன், அவற்றை உங்கள் மொழியை இலக்காகக் கொண்ட ஒரு மதிப்பெண் பெற்றவருக்கு நாங்கள் உணவளிப்போம். இந்த ச்கோரர் ஒரு குறிப்பிட்ட ஒலிகளுக்கு பெரும்பாலும் சொற்களைத் தேர்ந்தெடுக்க வழிமுறையை அனுமதிப்பார். மிகவும் உதவியாக இருந்தாலும், இது ஆடியோவைப் போல முக்கியமல்ல. இந்த செய்தி தரவு AES 256-பிட் குறியாக்கத்துடன் குறியாக்கம் செய்யப்பட்டுள்ளது என்பதை நினைவில் கொள்க. \n"
+"{\"*\" Say சேமிக்கப்பட்ட ஆடியோவுடன், பேச்சு-க்கு-உரை மாதிரியின் துல்லியத்தை அதிகரிக்க அதை ஒரு மாதிரியாக மாற்றுவோம். உங்களிடம் மோசமான மைக்ரோஃபோன் மற்றும் நிறைய பின்னணி இரைச்சல் இருந்தாலும் இது மிகவும் உதவியாக இருக்கும்: உண்மையில், அதிக ஒலி, சிறந்தது, நீங்கள் சொல்வதை ஒரு மாந்தன் இன்னும் உருவாக்க முடியும். \n"
 "\n"
-" நீங்கள் தேர்வுசெய்தால், பின்னர் விலக வேண்டும் என்று நீங்கள் முடிவு செய்தால், உங்கள் தரவு இன்னும் சேமிக்கப்பட்டுள்ளது, ஆனால் `{$ contextprefix} delete_all_data` ஐ இயக்குவதன் மூலம் உங்கள் குரல் தரவை நீக்குமாறு கோரலாம். இருப்பினும், உங்கள் செய்தி தரவை நீக்குவது சாத்தியமில்லை. ஏனென்றால், பயனர் எந்த செய்தியை அனுப்பியதன் இணைப்பை நாங்கள் சேமிக்கவில்லை.\n"
-" உங்கள் தரவு இறுக்கமாக பூட்டப்பட்ட சேவையகங்களில் சேமிக்கப்படுகிறது. வெற்றிகரமாக அணுகுவதற்கான அணுகலைப் பெற முயற்சிக்கும் எவருக்கும் இது மிகவும் கடினமாக இருக்கும்.\n"
+"நீங்கள் தேர்வுசெய்தால், பின்னர் விலக வேண்டும் என்று நீங்கள் முடிவு செய்தால், உங்கள் தரவு இன்னும் சேமிக்கப்பட்டுள்ளது, ஆனால் `{$ contextprefix} delete_all_data` ஐ இயக்குவதன் மூலம் உங்கள் குரல் தரவை நீக்குமாறு கோரலாம். இருப்பினும், உங்கள் செய்தி தரவை நீக்குவது சாத்தியமில்லை. ஏனென்றால், பயனர் எந்த செய்தியை அனுப்பியதன் இணைப்பை நாங்கள் சேமிக்கவில்லை. \n"
+"உங்கள் தரவு இறுக்கமாக பூட்டப்பட்ட சேவையகங்களில் சேமிக்கப்படுகிறது. வெற்றிகரமாக அணுகுவதற்கான அணுகலைப் பெற முயற்சிக்கும் எவருக்கும் இது மிகவும் கடினமாக இருக்கும். \n"
 "\n"
-" கீழே உள்ள பொத்தான்களைப் பயன்படுத்தி உங்கள் தேர்வுகளை மாற்றலாம்."
+"கீழே உள்ள பொத்தான்களைப் பயன்படுத்தி உங்கள் தேர்வுகளை மாற்றலாம்."
 
 #. data_storage command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -1456,8 +1769,8 @@ msgid ""
 "automod\n"
 ".description = Manage Scripty's automod"
 msgstr ""
-"தானியங்கி\n"
-" . விவரம் = ச்கிரிப்டியின் ஆட்டோமோடை நிர்வகிக்கவும்"
+"தானியங்கி \n"
+". விவரம் = ச்கிரிப்டியின் ஆட்டோமோடை நிர்வகிக்கவும்"
 
 #. automod setup command
 #. This and all attributes show up exclusively in the slash command picker
@@ -1474,14 +1787,14 @@ msgid ""
 ".auto_join = auto_join\n"
 ".auto_join-description = Should the bot automatically join voice if a user joins? Defaults to true."
 msgstr ""
-"அமைவு\n"
-" . விவரம் = ச்கிரிப்டியின் ஆட்டோமோட்டுடன் தொடங்கவும்.\n"
-" .target_channel = target_channel\n"
-" .target_channel-description = ஆட்டோமாட் பதிவுகளை அனுப்ப சேனல்.\n"
-" .log_recording = log_recording\n"
-" .log_recording- விளக்கப்படம் = புண்படுத்தும் பேச்சின் பதிவு இலக்கு சேனலுக்கு அனுப்பப்பட வேண்டுமா? இயல்புநிலைகள் பொய்.\n"
-" .auto_join = auto_join\n"
-" .auto_join- விளக்கப்படம் = ஒரு பயனர் இணைந்தால் போட் தானாகவே குரலில் சேர வேண்டுமா? இயல்புநிலை உண்மை."
+"அமைவு \n"
+". விவரம் = ச்கிரிப்டியின் ஆட்டோமோட்டுடன் தொடங்கவும். \n"
+".target_channel = target_channel \n"
+".target_channel-description = ஆட்டோமாட் பதிவுகளை அனுப்ப சேனல். \n"
+".log_recording = log_recording \n"
+".log_recording- விளக்கப்படம் = புண்படுத்தும் பேச்சின் பதிவு இலக்கு சேனலுக்கு அனுப்பப்பட வேண்டுமா? இயல்புநிலைகள் பொய். \n"
+".auto_join = auto_join \n"
+".auto_join- விளக்கப்படம் = ஒரு பயனர் இணைந்தால் போட் தானாகவே குரலில் சேர வேண்டுமா? இயல்புநிலை உண்மை."
 
 #. automod setup command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -1547,19 +1860,19 @@ msgid ""
 ".action-choice-DeleteLogAndKick = Delete, log, and remove user from voice\n"
 ".action-choice-DeleteLogAndSilence = Delete, log, and mute user"
 msgstr ""
-"add_rule\n"
-" . விவரம் = ஆட்டோமோட் விதியைச் சேர்க்கவும்.\n"
-" .rule_type = rule_type\n"
-" .rule_type- விளக்கப்படம் = சேர்க்க வேண்டிய விதி வகை. மேலும் தகவலுக்கு `/ஆட்டோமோட் ரூல்_எல்ப்` ஐப் பார்க்கவும்.\n"
-" .rule_type-choice- ஒழுங்குமுறை = வழக்கமான\n"
-" .content = உள்ளடக்கம்\n"
-" .Content- விவரம் = சேர்க்க விதி உள்ளடக்கம்.\n"
-" .ACTION = செயல்\n"
-" .அக்சன்-விளக்கப்படம் = விதி தூண்டப்படும்போது எடுக்க வேண்டிய நடவடிக்கை.\n"
-" .அகைப்பு-தேர்வு-silentdelete = அமைதியான நீக்கு\n"
-" .அக்சன்-தேர்வு-நீக்குதல்-நீக்குதல் = நீக்கு மற்றும் பதிவு\n"
-" .அக்சர்-சாய்ச்-டிச்டெலோகாண்ட்கிக் = குரலில் இருந்து பயனரை நீக்கு, பதிவுசெய்க மற்றும் அகற்றவும்\n"
-" .அக்சர்-சாய்ச்-நீக்குதல்எலோகாண்ட்சிலென்ச் = நீக்குதல், பதிவு மற்றும் முடக்கு பயனர்"
+"add_rule \n"
+". விவரம் = ஆட்டோமோட் விதியைச் சேர்க்கவும். \n"
+".rule_type = rule_type \n"
+".rule_type- விளக்கப்படம் = சேர்க்க வேண்டிய விதி வகை. மேலும் தகவலுக்கு `/ஆட்டோமோட் ரூல்_எல்ப்` ஐப் பார்க்கவும். \n"
+".rule_type-choice- ஒழுங்குமுறை = வழக்கமான \n"
+".content = உள்ளடக்கம் \n"
+".Content- விவரம் = சேர்க்க விதி உள்ளடக்கம். \n"
+".ACTION = செயல் \n"
+".அக்சன்-விளக்கப்படம் = விதி தூண்டப்படும்போது எடுக்க வேண்டிய நடவடிக்கை. \n"
+".அகைப்பு-தேர்வு-silentdelete = அமைதியான நீக்கு \n"
+".அக்சன்-தேர்வு-நீக்குதல்-நீக்குதல் = நீக்கு மற்றும் பதிவு \n"
+".அக்சர்-சாய்ச்-டிச்டெலோகாண்ட்கிக் = குரலில் இருந்து பயனரை நீக்கு, பதிவுசெய்க மற்றும் அகற்றவும் \n"
+".அக்சர்-சாய்ச்-நீக்குதல்எலோகாண்ட்சிலென்ச் = நீக்குதல், பதிவு மற்றும் முடக்கு பயனர்"
 
 #. automod add rule command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -1662,10 +1975,10 @@ msgid ""
 ".rule_id = rule_id\n"
 ".rule_id-description = The rule ID to remove."
 msgstr ""
-"remove_rule\n"
-" . விவரக்குறிப்பு = ஒரு ஆட்டோமோட் விதியை அகற்று.\n"
-" .rule_id = rule_id\n"
-" .rule_id-description = அகற்ற விதி ஐடி."
+"remove_rule \n"
+". விவரக்குறிப்பு = ஒரு ஆட்டோமோட் விதியை அகற்று. \n"
+".rule_id = rule_id \n"
+".rule_id-description = அகற்ற விதி அடையாளம்."
 
 #. automod remove rule command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -1690,8 +2003,8 @@ msgstr "விதியை அகற்றுவதில் தோல்வி!
 msgctxt "automod-remove-rule-embed-failure-description-invalid-id"
 msgid "Invalid rule ID. See `{ $contextPrefix }automod list` for more info."
 msgstr ""
-"தவறான விதி ஐடி. மேலும் தகவலுக்கு `{$ contextprefix} ஆட்டோமோட் பட்டியல்` ஐப் "
-"பார்க்கவும்."
+"தவறான விதி அடையாளம். மேலும் தகவலுக்கு `{$ contextprefix} ஆட்டோமோட் பட்டியல்`"
+" ஐப் பார்க்கவும்."
 
 #. automod remove rule command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -1712,10 +2025,10 @@ msgid ""
 ".filter_by = filter_by\n"
 ".filter_by-description = Filter rules by their content. Leave empty to show all rules."
 msgstr ""
-"list_rules\n"
-" . விவரம் = அனைத்து ஆட்டோமோட் விதிகளையும் பட்டியலிடுங்கள்.\n"
-" .filter_by = filter_by\n"
-" .filter_by-description = அவற்றின் உள்ளடக்கத்தால் வடிகட்டி விதிகள். எல்லா விதிகளையும் காட்ட காலியாக விடவும்."
+"list_rules \n"
+". விவரம் = அனைத்து ஆட்டோமோட் விதிகளையும் பட்டியலிடுங்கள். \n"
+".filter_by = filter_by \n"
+".filter_by-description = அவற்றின் உள்ளடக்கத்தால் வடிகட்டி விதிகள். எல்லா விதிகளையும் காட்ட காலியாக விடவும்."
 
 #. automod list rules command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -1743,9 +2056,9 @@ msgid ""
 "Content: { $ruleContent }\n"
 "Action: { $ruleAction }"
 msgstr ""
-"வகை: {$ ruletype}\n"
-" உள்ளடக்கம்: {$ ruleContent}\n"
-" செயல்: {$ ruleaction}"
+"வகை: {$ ruletype} \n"
+"உள்ளடக்கம்: {$ ruleContent} \n"
+"செயல்: {$ ruleaction}"
 
 #. automod list rules command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -1768,10 +2081,10 @@ msgid ""
 ".enabled = enabled\n"
 ".enabled-description = Enable vote reminders?"
 msgstr ""
-"வாக்கு_ரெமிண்டர்\n"
-" . விவரம் = கால காலநீடிப்பு முடிந்தபின் ச்கிரிப்டி போட் வாக்களிக்க உங்களுக்கு நினைவூட்டுமா என்பதை மாற்றவும்.\n"
-" . இயக்கப்பட்டது = இயக்கப்பட்டது\n"
-" இயக்கப்பட்ட-விவரம் = வாக்கு நினைவூட்டல்களை இயக்கவா?"
+"வாக்கு_ரெமிண்டர் \n"
+". விவரம் = கால காலநீடிப்பு முடிந்தபின் ச்கிரிப்டி போட் வாக்களிக்க உங்களுக்கு நினைவூட்டுமா என்பதை மாற்றவும். \n"
+". இயக்கப்பட்டது = இயக்கப்பட்டது \n"
+"இயக்கப்பட்ட-விவரம் = வாக்கு நினைவூட்டல்களை இயக்கவா?"
 
 #. vote reminder command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -1953,10 +2266,10 @@ msgid ""
 "```\n"
 "This has been automatically reported. Please do not attempt to repeatedly use this command."
 msgstr ""
-"`` `\n"
-" {$ errorfmt}\n"
-" `` `\n"
-" இது தானாகவே தெரிவிக்கப்பட்டுள்ளது. தயவுசெய்து இந்த கட்டளையை மறுநிகழ்வு பயன்படுத்த முயற்சிக்காதீர்கள்."
+"`` ` \n"
+"{$ errorfmt} \n"
+"`` ` \n"
+"இது தானாகவே தெரிவிக்கப்பட்டுள்ளது. தயவுசெய்து இந்த கட்டளையை மறுநிகழ்வு பயன்படுத்த முயற்சிக்காதீர்கள்."
 
 #. general errors
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -1986,11 +2299,11 @@ msgid ""
 "The only fix for this is to wait for Discord to propagate slash commands, which can take up to one hour.\n"
 "If you do not want to wait this hour, you should use the prefix commands: run this command with `~{ $qualifiedName } { $args }`."
 msgstr ""
-"{$ விளக்கம்}\n"
+"{$ விளக்கம்} \n"
 "\n"
-" {\"**\"} குறிப்பு **: இது ஒரு கருத்து வேறுபாடு.\n"
-" ச்லாச் கட்டளைகளைப் பரப்புவதற்கு முரண்பாடு காத்திருப்பதே இதற்கான ஒரே பிழைத்திருத்தம், இது ஒரு மணி நேரம் வரை ஆகலாம்.\n"
-" இந்த மணிநேரத்தை நீங்கள் காத்திருக்க விரும்பவில்லை என்றால், நீங்கள் முன்னொட்டு கட்டளைகளைப் பயன்படுத்த வேண்டும்: இந்த கட்டளையை `~ {$ தகுதி பெயர்} {$ args}` உடன் இயக்கவும்."
+"{\"**\"} குறிப்பு **: இது ஒரு கருத்து வேறுபாடு. \n"
+"ச்லாச் கட்டளைகளைப் பரப்புவதற்கு முரண்பாடு காத்திருப்பதே இதற்கான ஒரே பிழைத்திருத்தம், இது ஒரு மணி நேரம் வரை ஆகலாம். \n"
+"இந்த மணிநேரத்தை நீங்கள் காத்திருக்க விரும்பவில்லை என்றால், நீங்கள் முன்னொட்டு கட்டளைகளைப் பயன்படுத்த வேண்டும்: இந்த கட்டளையை `~ {$ தகுதி பெயர்} {$ args}` உடன் இயக்கவும்."
 
 #. general errors
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -2082,11 +2395,11 @@ msgid ""
 "If possible, please contact the core devs in the support server: { $supportServerInvite }.\n"
 "Thanks!"
 msgstr ""
-"உள் பிழை: STT வழிமுறை இயங்கும் பிழையுடன் தோல்வியடைந்தது: {$ பிழை}\n"
-" SSRC: {$ SSRC}\n"
-" இது உள்நுழைந்துள்ளது, விரைவில் சரி செய்யப்படும்.\n"
-" முடிந்தால், தயவுசெய்து உதவி சேவையகத்தில் கோர் டெவ்சைத் தொடர்பு கொள்ளவும்: {$ supportserverInvite}.\n"
-" நன்றி!"
+"உள் பிழை: STT வழிமுறை இயங்கும் பிழையுடன் தோல்வியடைந்தது: {$ பிழை} \n"
+"SSRC: {$ SSRC} \n"
+"இது உள்நுழைந்துள்ளது, விரைவில் சரி செய்யப்படும். \n"
+"முடிந்தால், தயவுசெய்து உதவி சேவையகத்தில் கோர் டெவ்சைத் தொடர்பு கொள்ளவும்: {$ supportserverInvite}. \n"
+"நன்றி!"
 
 #. Data deletion command
 #. This and all attributes show up exclusively in the slash command picker
@@ -2097,8 +2410,8 @@ msgid ""
 "delete_all_data\n"
 ".description = Delete all your data."
 msgstr ""
-"delete_all_data\n"
-" . விவரம் = உங்கள் எல்லா தரவையும் நீக்கு."
+"delete_all_data \n"
+". விவரம் = உங்கள் எல்லா தரவையும் நீக்கு."
 
 #. Data deletion command
 #, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
@@ -2123,7 +2436,7 @@ msgid ""
 msgstr ""
 "இது உங்கள் எல்லா தரவையும் நீக்கிவிடும். இந்த நடவடிக்கை நிரந்தரமானது, மீளமுடியாதது, செயல்தவிர்க்க முடியாது.\n"
 "\n"
-" \"உங்கள் தரவு அனைத்தும்\" என்று நாங்கள் கூறும்போது, ​​அதையெல்லாம் * என்று அர்த்தப்படுத்துகிறோம். இது உங்கள் குரல் தரவு மற்றும் தரவுத்தளத்தில் உங்கள் பயனரை உள்ளடக்கியது.\n"
+" \"உங்கள் தரவு அனைத்தும்\" என்று நாங்கள் கூறும்போது, அதையெல்லாம் * என்று அர்த்தப்படுத்துகிறோம். இது உங்கள் குரல் தரவு மற்றும் தரவுத்தளத்தில் உங்கள் பயனரை உள்ளடக்கியது.\n"
 " எவ்வாறாயினும், நீங்கள் அதைத் தேர்ந்தெடுத்தால் உங்களிடமிருந்து நாங்கள் சேமித்து வைத்திருக்கும் எந்த செய்திகளையும் * சேர்க்கவில்லை. அந்த செய்திகளை எங்களால் நீக்க முடியாது, ஏனென்றால் பயனர் என்ன செய்தியை அனுப்பினார் என்பது எங்களுக்குத் தெரியாது.\n"
 "\n"
 " இந்த செயலுக்குப் பிறகு போட் பயன்படுத்த தடை விதிக்க விரும்பினால், அந்த வகையில் நீங்கள் தற்செயலாக உங்களை நீங்கள் படிக்கவில்லை, கீழே உள்ள பொருத்தமான பொத்தானைக் சொடுக்கு செய்யலாம்.\n"
@@ -2163,3 +2476,17 @@ msgstr ""
 "ச்கிரிப்டி பிரீமியத்தின் 3 நாள் சோதனைகளை நாங்கள் வழங்கினோம், நீங்கள் அதை "
 "முயற்சித்து, அது உங்களுக்கு சரியானதா என்று பார்க்க விரும்பினால். இலவச "
 "சோதனையுடன் தொடங்க போட் ஒரு டி.எம்."
+
+#. generic strings
+#. Generic string for yes
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "generic-yes"
+msgid "Yes"
+msgstr "ஆம்"
+
+#. generic strings
+#. Generic string for no
+#, fluent-parts, fluent-references, fluent-source-inner-html, fluent-source-syntax, fluent-target-inner-html, fluent-target-syntax, fluent-type:Message, ignore-fluent-target-inner-html, ignore-xml-invalid, ignore-xml-tags
+msgctxt "generic-no"
+msgid "No"
+msgstr "இல்லை"
