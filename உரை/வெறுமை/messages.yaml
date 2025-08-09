@@ -1,0 +1,543 @@
+---
+# Holds messages to show the user.
+# The key is indicative, in that those starting with 'error', 'warning', or 'info'
+# are likely to be used in the MessageBox and have images associated with them.
+# Those starting with 'message' are used in other forms, possibly as stand alone messages.
+# 'title' items are used on the title bar of forms, table headings, or as label text.
+# messages with the word 'Once' just before the number are only to be shown to the user once.
+messages:
+   # CommitEditor
+   title1006: The push failed due to differences between the local and remote repositories.<br><br>Please tick the 'Overwrite' box to force the push.
+   question1007: The commit was successful, but couldn't be pushed due to differences between the local and remote repositories.<br><br>Would you like to overwrite the remote repository?
+   error1008: There was an error when saving your working files to the stash.
+   error1009: There was an error when pushing from the local to the remote repository.
+   error1010: There was an error when creating the commit.
+   message1017: 1 file will be committed
+   message1018: $0 files will be committed
+   message1019: All shown files will be stashed
+   error1020: No repository is loaded
+   error1021: Please type in a message
+   error1022: Please tick some files
+   error1023: There are no pending files
+   title1024: Commit, Stash, or Analyse
+   title1025: Resolution Commit
+   title1026: Append a Recent Message
+   title1027: Amend the previous commit
+   title1028: Make me the author
+   title1029: Compare to the latest commit
+   message1032: 'Amending files: un-committing $0, committing $1'
+   error1033: There was an error when amending the commit.
+   title1034: Commit
+   title1035: Stash
+   title1036: Recent messages
+   title1037: Use Conventional Commits
+   title1038: Click to visit the Conventional Commits website
+   title1039: Both the type & subject (maximum 72 characters) are compulsory
+   title1040: Conventional Commit scope (optional)
+   title1041: Conventional Commit subject
+   title1042: Breaking change reason
+   title1043: What did you change?
+   title1044: Breaking change
+   title1045: Supplying a reason for the breaking change is compulsory.
+   title1046: Push after commit
+   title1047: Leave index unchanged
+   title1048: Message Subject and Body
+   error1049: Please select a remote repository to push to
+   # BranchesView
+   error1102: There was an error when retrieving the commits for the branch <b>$0</b>.
+   error1103: There was an error when creating the branch <b>$0</b>.
+   error1104: There was an error when deleting the branch <b>$0</b>.
+   error1105: There was an error when switching to the branch <b>$0</b>.
+   error1107: Switching to the new branch <b>$0</b> would overwrite some changed working files. Please commit or stash these changes to these files first.
+   question1108: Some commits on the branch <b>$0</b> will be permanently lost if you delete it. Would you like to continue?
+   infoOnce1109: Fetching happens automatically. You can refresh (F5 or Ctrl+R) to fetch right now. Or change the frequency in the options.
+   infoOnce1114: A branch will be created, after the latest commit on this branch.<br><br>To create a branch which starts after an earlier commit, right click on the commit and select 'Create a branch' from the context menu.
+   tour1117: Clicking any commit summary will show its message and files.<br><br>Right click on any commit to cherry pick, rewind and more.
+   title1118: Uses artificial intelligence to analyse the code changes, and code review them.
+   title1119: Message
+   tour1120: Search to find commits in this local branch, or all branches.<br><br>Use wildcards:<br><br>?&nbsp;&nbsp;&nbsp;matches 1 character<br>*&nbsp;&nbsp;&nbsp;matches 0 or more characters
+   title1121: Switch
+   title1122: Push...
+   title1123: Pull...
+   title1124: Create...
+   title1125: Merge...
+   title1126: Delete...
+   title1127: Cherry Pick...
+   title1128: Rewind...
+   title1130: Squash...
+   title1131: Analyse...
+   # PendingView
+   error1201: There was an error when getting the pending files.
+   tour1202: See all your local files, and commit, analyse with AI, or stash them.<br><br>Show or hide unaltered, uncommitted, or buried files. Buried files are those that you only commit sometimes.
+   tour1203: Added, modified, and deleted files are shown here. To commit them, just tick them first.<br><br>Right click on files to compare them, undo changes, bury them and more.
+   tour1204: Either analyse your changes with AI, or just type a message and then commit or stash files.<br><br>You never need to 'stage' files.<br><br>You can optionally push to a remote repository when you commit.
+   # StashView
+   error1303: There was an error when deleting this stash item.
+   error1304: There was an error when applying this stash item.
+   error1305: There was an error when applying and then deleting this stash item.
+   error1306: There was an error when getting a list of stashes from the repository.
+   error1307: There was an error when getting the files in this stash item.
+   error1308: There was an error when getting the information for the stash item <b>$0</b>.
+   title1309: Compare with before stashing
+   title1310: Compare with your working files
+   tour1311: Select a stash to view it, apply it to your Pending files, or delete it.
+   tour1312: Compare your stashed files against either the previous commit, or your working files.
+   title1313: Apply & Delete
+   title1314: Reinstate the index
+   title1315: Apply
+   # Store
+   error1401: There was an error when getting the files in this stash item.
+   # ContextMenu
+   error1501: There was an error when comparing the selected file <b>$0</b> to its previous commit.
+   error1502: There was an error when comparing the latest commit to the penultimate commit of the file <b>$0</b>.
+   error1504: There was an error when opening the file <b>$0</b>.
+   error1505: There was an error when exploring the file <b>$0</b>.
+   error1506: There was an error when copying some files to <b>$0</b>.
+   error1507: There was an error when overwriting the files with files from the Git commit.
+   error1508: There was an error when exporting the files to <b>$0</b>.
+   error1509: There was an error when comparing the selected file <b>$0</b> to an empty file.
+   error1510: There was an error when creating a patch of the selected files.
+   error1511: There was an error when saving a patch file of the selected files.
+   error1513: No repository has been selected to load. Please add one via the options.
+   error1514: There was an error when comparing the two files <b>$0</b> and <b>$1</b>.
+   error1515: There was an error when comparing the selected file <b>$0</b> to the commit.
+   error1516: There was an error when viewing the conflicted file <b>$0</b>.
+   # PendingViewMenu
+   error1601: There was an error when staging the files<br><br>$0.
+   error1602: There was an error when undoing changes to the files<br><br>$0.
+   error1603: There was an error when deleting files.
+   error1604: There was an error when moving the files to the folder <b>$0</b>.
+   error1605: There was an error when burying the files.
+   error1606: There was an error when exhuming the files.
+   message1607: There is a merge in progress.<br />Please finish it manually to continue.
+   message1608: There is a cherry pick in progress.<br />Please finish it manually to continue.
+   message1609: There is a rebase in progress.<br />Please finish it manually to continue.
+   message1610: There is a revert in progress.<br />Please finish it manually to continue.
+   error1611: There was an error when un-staging the files<br><br>$0.
+   title1612: Undo changes
+   title1613: Delete file(s)
+   title1614: Bury file(s)
+   title1615: Exhume file(s)
+   title1616: View and edit conflicts
+   # StashViewMenu
+   error1701: There was an error when comparing the stash's file to the working file <b>$0</b>.
+   error1702: There was an error when comparing the stash's file <b>$0</b> to its latest commit.
+   error1703: There was an error when comparing the stash's file <b>$0</b> to an empty file.
+   error1704: There was an error when comparing the stash's file <b>$0</b> to the old index's file.
+   title1705: Compare stash file to working file
+   title1706: Compare stash file to latest commit
+   # RepositorySearch
+   title1807: All branches
+   title1808: Messages
+   title1809: File names
+   title1810: File contents
+   title1811: Authors
+   title1812: Committers
+   title1813: Search
+   title1814: clim?te solut*
+   # HistoryViewMenu
+   error1901: There was an error when comparing the historic file to the working file <b>$0</b>.
+   error1902: There was an error when comparing the historic file <b>$0</b> to its latest commit.
+   error1903: There was an error when comparing the historic file <b>$0</b> to its previous commit.
+   error1904: There was an error when comparing the historic file <b>$0</b> to an empty file.
+   infoOnce1905: Historic file comparisons may need to find other commits to do those comparisons.<br><br>They are not limited to using commits in the search results, if any.
+   # Branches Modal Views
+   title2001: Create Branch
+   message2001: 'A new branch called <b>$0</b> will be created. The new branch will start after these preceding commits:'
+   message2002: This branch can't be created, it already exists.
+   message2003: Please type the new branch's name.
+   title2004: Cherry Pick Commits
+   message2004: The $0 selected $1 will be cherry picked (copied) onto the current branch <b>$2</b> these commits will be cherry picked in date order. To change the current branch, switch to it in the main screen first.
+   message2005: Please type or select the branch to put the $0 $1 onto.
+   message2006: This branch can't be used since it doesn't exist.
+   error2007: There was an error when cherry picking the commit(s) onto the current branch <b>$1</b>
+   message2008: This branch is remote! Are you sure you want to cherry pick onto it?
+   title2009: Merge Branch
+   message2009: 'The branch <b>$0</b>, which has these latest commits:'
+   message2010: Select an existing branch as the source.
+   message2011: Highlighted branches will produce changes to your working files.
+   error2013: There was an error when merging the source branch <b>$0</b> into the target current branch <b>$1</b>
+   title2014: Merge Commit
+   message2014: 'This commit (and its ancestors):'
+   error2015: There was an error when merging the commit <b>$0</b> into the current branch <b>$1</b>
+   message2016: Only branches which would produce changes after merging are listed above
+   info2017: There was nothing to commit after merging <b>$0</b> and <b>$1</b>
+   error2018: ''
+   message2019: There will be conflicts for some of files listed below, when the merge happens.
+   message2020: The source branch is also the target current branch. Please select a different source branch.
+   message2021: There is a merge already in progress. Please resolve it manually before continuing.
+   title2022: Push Branch
+   message2022: The local branch <b>$0</b> will be pushed to the remote branch
+   message2023: Please type the name of remote branch you wish to push to.
+   error2024: There was an error when pushing the local branch <b>$0</b> to the remote branch <b>$1</b>
+   message2025: A new remote branch will be created.
+   title2026: Pull Branch
+   message2026: Please choose how to pull commits into the current branch <b>$0</b> from
+   error2027: There was an error when pulling changes into the current branch <b>$0</b>.
+   message2028: There is a cherry pick already in progress. Please resolve it manually before continuing.
+   message2030: Force overwrite the remote branch
+   message2031: Please specify an upstream repository for this branch.
+   title2032: Rewind
+   title2033: Keep the working files' changes
+   title2035: Rewind Type
+   title2036: Delete commits
+   title2037: Undo commits
+   message2038: "All commits, from the most recent to the <span style='font-weight: bold;'>earliest</span> selected, will be deleted from the branch <b>$0</b>as shown below. "
+   message2039: "All your current working files' changes and the deleted commits' changes will be visible in the Pending tab."
+   message2040: After the undo, commit all the undone files (but not currently altered working files)
+   message2041: "<span class='red-colour'>All the deleted commits' changes, and your current working files' changes, will be lost!</span>"
+   title2042: Commits to Undo
+   title2043: Commits to Delete
+   warning2044: There are no previous commits to rewind to. Instead, please delete the branch<br><br><b>$0</b><br><br>if you wish to delete this commit entirely.
+   warning2045: There were conflicts as a result, which you will need to resolve.
+   error2046: There was an error when rewinding.
+   error2047: "There was an error when adding (staging) files to the index, to then allow the stash containing your working files to be applied. Please add them, then apply & delete the latest 'GitBreezeTemp' stash."
+   error2048: "There was an error when applying the stash containing your old working files. Please apply & delete the latest 'GitBreezeTemp' stash. The message returned by Git was<br><br>$0"
+   error2049: There was an error when committing the results of the revert. Please check the pending files, and commit the changes if you wish.
+   message2050: All commits will be kept, but the alterations made by the selected commits below will be reversed.
+   message2051: These reversions will be visible in the Pending tab. <span class='red-colour'>You will lose all your pending files' changes!</span>
+   message2052: These reversions and your current working files changes will be merged and the result will be visible in the Pending tab.
+   message2053: "These reversions will be committed. Your current working files' changes will be lost."
+   message2054: "These reversions will be committed. Then your current working files' changes will be restored."
+   message2055: <br><br>The undo may cause merge conflicts that will need to be resolved later.
+   warning2056: 'There were some conflicts when applying the stash containing your old working files. Please resolve these.'
+   warning2057: The action could not be completed, since the commit '$0' was not recognised.
+   warning2058: Removing the first commit is not possible. Please delete the branch.
+   warning2059: There is currently another merge, rebase, revert, or cherry pick in progress. Or there are existing conflicted files that must be resolved first.
+   warning2060: Can't continue. One or more working files would have been overwritten. Please revert or remove them.
+   message2061: 'Will be merged into the current branch <b>$0</b>, which has these latest commits:'
+   warning2062: A generic failure occurred.<br><br><b>$0<b>
+   warning2063: "Can't continue. One or more working files would have been overwritten. Please revert or remove them. The files were:<br><br><b>$0<b>"
+   message2064: Append the source commit's hash to the new commit's message
+   title2065: Keep both the commits' and working files' changes
+   warning2066: There will be conflicts, which you will need to resolve.
+   title2067: Delete Branch
+   message2068: 'The branch <b>$0</b> will be deleted, along with these commits and their ancestors:'
+   warning2069: Fast forwarding failed. Please either merge or rebase.
+   title2070: Fast forward
+   title2071: Merge
+   title2072: Rebase
+   error2073: You must have supply a message for the squashed commit
+   message2074: 'The message saved in the resulting commit will be:'
+   message2075: 'These commits will be squashed:'
+   message2076: What changes did you undo and why?
+   title2077: Squash Commits
+   error2078: There was an error when squashing the commit(s)
+   message2079: You can't change the commit message because the new squashed commit won't be the last in this branch.
+   message2080: The remote repository name is not recognised.
+   warning2081: The repository could not be found. This may be due to an incorrect URL. The error was:<br><br><b>$0<b>
+   warning2082: The user name could not be read. This may be due to an incorrect URL. The error was:<br><br><b>$0<b>
+   title2083: "<br>Warning: The new branch will not include all commits in '$0'"
+   # BranchesModalMenu
+   error2101: There was an error when comparing the merge of the file <b>$0</b> to its own working file.
+   error2102: There was an error when comparing the merge of the file <b>$0</b> to its latest commit.
+   # FileViewer
+   error2201: 'FileViewer: The store module for <b>$0</b> is incorrectly named; it must be called the same, but is <b>$1</b>.'
+   # OptionsView
+   title2302: Repositories
+   title2307: Name, Repository Location
+   error2308: Please enter a unique local repository location, either existing or desired, then press 'Load' or 'Create'.
+   title2309: The interval in minutes between fetching updates from the remote repository.
+   error2310: There was an error when creating a new repository at <b>$0</b>.
+   title2311: System
+   title2312: User
+   title2313: After you press 'Find', this folder and any sub-folders will be searched for repositories.
+   title2314: Edit or Load an Imported Repository
+   title2315: Remove
+   title2316: There was an error when searching for new repositories within <b>$0</b>.
+   title2317: '* Missing *'
+   title2319: Find
+   title2320: Create bare
+   title2324: Select a Directory
+   title2325: Please select, type, or paste a folder path.
+   title2326: There is a repository already here, so a new one can't be created.
+   title2329: The theme to apply to GitBreeze
+   title2330: See all the 'one time' messages again
+   tour2331: There's little to see in the application without loading a repository.<br><br>All of your imported local repositories will be shown here.<br><br>You can import them below, by finding, creating or cloning them.
+   tour2332: Search across local folders and subfolders on your computer to find your repositories.<br><br>After that, they will be listed above, and you can open them.
+   tour2333: Create a new repository in a folder of your choice, and then open it to start working.
+   tour2334: Clone a remote repository into a folder of your choice.<br><br>Just select an existing remote repository, or enter a new URL.
+   title2337: GitBreeze will clone the repository from this location.
+   title2338: Please type or paste a URL to clone a repository from.
+   title2339: After you press 'Create', GitBreeze will create a repository at this location.
+   error2340: There was an error when cloning to a new repository at <b>$0</b>.
+   error2341: The remote repository<br><b>$0</b><br>doesn't exist.
+   title2343: The target directory must be empty to clone into it.
+   error2344: Please supply a user name, in the format<br><br>https://[user@]host.xxx[:port]/yyy/zzz.git/<br><br>or<br><br>ssh://[user@]host.xxx[:port]/yyy/zzz.git/
+   error2345: The password was not accepted. Please check it and try again.
+   title2347: The language to use within GitBreeze
+   title2348: https://[user@]host.xxx[:port]/yyy/zzz.git/     or     ssh://[user@]host.xxx[:port]/yyy/zzz.git/
+   error2349: You must not enter a password here. This would be stored <b>without encryption</b> in the Git config.<br><br>Please use the Git credentials manager directly to store this information securely.
+   title2350: After you press 'Clone', GitBreeze will create a repository at this location.
+   title2351: Compare differences between two files using
+   title2352: Compare differences between three files (merge) using
+   title2353: Using an external tool isn't possible since Git is not configured for this comparison type.
+   title2355: There are no remote repositories listed, please create a link to one locally first, using the 'Manage Remotes' button.
+   title2356: Manage Remotes...
+   error2357: Please supply a local path to use.
+   error2358: The host could not be resolved. Probably either the path or your access rights are incorrect.
+   error2359: The key verification failed. Has the fingerprint been accepted?
+   title2360: After the trial period, the number of saved repositories is reduced to one, unless a licence is purchased.
+   title2361: Local folder
+   title2362: OpenAI API Key
+   title2363: External
+   title2364: Proxy URL
+   # App
+   error2401: There was a fundamental error connecting to the Git repository at <b>$0</b>.
+   warning2402: No current branch is set. If this isn't expected, the HEAD file may be corrupt.
+   question2403: An update has been downloaded.<br /><br />Would you like to restart GitBreeze to install that update?
+   title2404: GitBreeze - End User Licence Agreement
+   title2405: Agree
+   title2406: Disagree
+   question2407: No installation of Git could be found!<br /><br />GitBreeze works with your local Git installation, so that you maintain control at all times.<br /><br />Would you like to download Git now?
+   info2408: No installation of Git could be found!<br /><br />GitBreeze works with your local Git installation, so that you maintain control at all times.<br /><br />Please download and install it now.
+   title2409: Source
+   title2410: Target
+   title2411: Commit
+   title2412: 'Commits of <b>$0</b>:'
+   title2413: Branch
+   title2414: Branches
+   title2415: Selected
+   title2416: Remove
+   title2417: Select
+   title2418: Create
+   title2419: Add
+   error2420: There was an error when retrieving commits from the Git repository.
+   title2421: Delete
+   title2422: Undo
+   title2423: Options
+   title2426: Stashes
+   title2427: Pending
+   title2428: Conflicts
+   title2429: OK
+   title2430: Cancel
+   title2431: 'Yes'
+   title2432: 'No'
+   info2433: An update has been downloaded. Please restart GitBreeze to install it.
+   title2434: GitBreeze One Time Message
+   title2435: Clear
+   title2436: 'True'
+   title2437: 'False'
+   title2438: Open
+   title2439: Add / Edit
+   title2440: Read only
+   title2441: Editable
+   title2442: Light
+   title2443: Dark
+   title2444: Chocolate
+   title2445: Reset
+   info2446: We need a name and an email address in order to provide you with support. Please enter them so that we can help you.
+   title2448: Close
+   title2449: Append
+   title2450: Previous
+   title2451: Next
+   title2452: Finish
+   tour2454: Quick Help
+   question2455: Get back to coding even faster by sparing just 30 seconds to tell us <b>one thing to add or improve next</b> in GitBreeze.
+   title2456: Clone
+   title2457: Stash
+   title2458: All
+   title2459: The GitBreeze logo
+   title2460: GitBreeze cannot read the repository directory:<br><br>$0
+   title2461: en-GB, English (British), fr-FR, French (France), de-DE, German (Germany), es-ES, Spanish (Spain)
+   info2462: An update for GitBreeze has been detected.<br><br>Please visit https://gitbreeze.dev to install it.
+   error2464: The configuration file could not be created. This may be due to a directory permissions problem.<br><br><b>No options or repositories will be saved from this session.</b><br><br>GitBreeze is attempting to save the configuration file to:<br><br>$0
+   error2465: Your version of Git couldn't be determined, please ensure it is version 2.2 at least.
+   error2466: Your version of Git is too old. Please upgrade to version 2.2 at least.
+   info2467: '*** Trial Period ***'
+   info2468: No Repository Loaded
+   title2469: Update
+   info2470: '*** Licence Expired ***'
+   title2471: Remote repositories
+   title2472: No remote repositories
+   warning2473: There are no branches because there are no commits.<br><br>Please add or change some of the files in the repository's folder. Then create a new commit via the Pending tab.
+   title2474: No current branch
+   title2475: AI Analysis
+   title2476: Compare Branches
+   # SignUpModal
+   title2501: Communication Details
+   title2502: In order to provide you with the best possible service, including enhanced support and a newsletter, please supply your first name and email.
+   title2503: Your privacy matters to us. Unsubscribe from our emails at any time. We will not rent or sell your information. We hate spam!
+   # AdvertModal
+   title2701: Let's Win!
+   title2702: No thanks
+   title2704: Competitions
+   title2705: I agree with the Terms & Conditions
+   title2706: '<span class="url-dotted">Terms &amp; Conditions</span>'
+   title2707: Terms & conditions
+   title2708: Please enter your first name, email address, and accept the terms & conditions
+   title2709: Get $0 bonus points now! Just enter your first name, email address, and accept the terms & conditions.
+   title2710: Finding any competitions...
+   title2711: No competitions found
+   title2712: There was an error connecting to the competition server.<br>This has been logged. Please try later.
+   # LicenceKeyModal
+   title2801: Licencing
+   title2802: Licence email
+   warning2803: Please enter your email
+   title2804: Licence status
+   warning2805: Please enter your key
+   warning2806: The licence key is not valid
+   warning2807: The email is not valid
+   title2808: Save
+   title2809: Activate
+   title2810: Deactivate
+   title2811: Deactivate All...
+   title2812: In order to view your account, subscriptions, and billing details please click here.
+   title2813: Locally, not activated. Globally, $0 of $1 activations are in use.
+   title2814: Locally, activated$2. Globally, $0 of $1 activations are in use.
+   title2815: Refresh
+   question2816: Do you want to remove all activations for this licence?<br><br>This will affect every activation globally.
+   title2817: Licence name
+   warning2818: New customer? Please enter your first name
+   title2819: Key or Code
+   warning2820: New customer? Please enter your last name
+   title2821: Unlock
+   # Comparisons
+   info2901: There are no file content differences to show.
+   error2903: Git has some comparison software incorrectly configured. Please rectify this.
+   error2904: There was a fatal error when running a comparison through Git.
+   infoOnce2905: If there are no differences between the files, no comparison will be shown.
+   info2906: The conflicted file has been deleted.
+   info2907: <b>No comparison software has been found in the Git configuration. Please configure Git to use a 'difftool' and 'mergetool'.<br><br>The default diff viewer for this operating system has been used, the results are:<b><br><br><br>$0
+   info2908: There is no latest commit to compare this file to.
+   error2909: There is no 'diff' tool configured in Git.
+   error2910: There is no 'merge' tool configured in Git.
+   # FileViewerSorter
+   title3101: Tick Files
+   title3102: Select Files
+   title3103: Show Files
+   title3104: Layout
+   title3105: Buried
+   title3106: Not in Git
+   title3107: Unaltered
+   title3108: Ignored
+   title3109: Added
+   title3110: Modified
+   title3111: Deleted
+   title3112: Renamed
+   title3113: File Names, Folders, Extensions, File Statuses, Lines Added, Lines Deleted
+   # ConflictResolution
+   title3201: Resolve $0 Conflict(s)
+   title3203: Skip...
+   title3204: Abort...
+   question3205: Are you sure you wish to skip this conflicted commit? The files will remain as they are.
+   question3206: Starting to abort. All conflicted files will be reverted to their previous state. Or would you like to keep the files as they are?
+   title3207: Source Commit from the $0
+   # BranchesViewMenu
+   error3301: There was an error when creating a patch of the selected commits.
+   error3302: There was an error when saving a patch file of the selected commits.
+   title3303: Rewind these commit(s)...
+   title3304: Create a branch at this commit...
+   title3305: Cherry pick the commit(s) into the current branch...
+   title3306: Merge the commit && ancestors into the current branch...
+   title3307: Copy the commit(s) details
+   title3308: Copy the commit SHA(s)
+   title3309: Create patch file(s)...
+   title3310: Squash these commits...
+   title3311: Analyse this commit...
+   # CommitComparisonList
+   title3401: identical commit
+   title3402: identical commits
+   title3403: Compare
+   title3404: Compare to branch
+   title3405: Missing
+   title3406: Differences
+   # CommitSummaryList
+   title3501: Copy the full Commit SHA to the clipboard
+   # BuyNowModal
+   title3601: Buy GitBreeze Now
+   title3602: Buy Now
+   title3603: You have reached your free AI analysis limit of $0 tokens.<br /><br /><br />Buying GitBreeze (AI plan) now and supplying your own key from $1 will mean you can analyse more commits effortlessly.<br /><br /><br />It also means that as a small independent software developer, we can provide you with the best support and continue to develop GitBreeze.
+   title3605: You must buy a GitBreeze (AI plan) licence to use your own $0 API key with our AI Code Analyser. You have also reached your free AI analysis limit of $1 tokens.<br /><br /><br />Buying GitBreeze (AI plan) now will <b>enable your own key</b>, so you can analyse more commits effortlessly.<br /><br /><br />It also means that as a small independent software developer, we can provide you with the best support and continue to develop GitBreeze.
+   # MainMenu
+   title3801: File
+   title3802: Repositories
+   title3805: Edit
+   title3806: View
+   title3807: Feedback
+   title3809: GitBreeze Home Page
+   title3810: Communication Details
+   title3811: Licencing
+   title3815: Preferences...
+   title3816: Options
+   title3817: Knowledge Base
+   title3818: Road Map && Customer Ideas
+   title3819: My Account
+   title3820: Close
+   title3821: Cut
+   title3822: Copy
+   title3823: Paste
+   title3824: Select All
+   title3825: Delete
+   title3826: Reload
+   title3827: Actual Size
+   title3828: Zoom In
+   title3829: Zoom Out
+   title3830: Toggle Full Screen
+   title3831: Minimise
+   title3832: Help
+   title3833: About GitBreeze
+   title3834: Services
+   title3835: Hide GitBreeze
+   title3836: Hide Others
+   title3837: Show All
+   title3838: Quit GitBreeze
+   # ContextMenuFile
+   title3901: Copy the file name(s)
+   title3902: Copy the relative file path(s)
+   title3903: Copy the full file path(s)
+   title3904: Copy all file(s) information
+   title3905: Compare working file to latest commit
+   title3906: Compare working file to previous commit
+   title3907: 'Compare commits: latest to previous'
+   title3908: Compare working file to...
+   title3909: Compare now
+   title3910: View file in comparer
+   title3911: Open the working file(s)
+   title3912: Explore the working file(s) folder
+   title3913: Copy the working file(s) to...
+   title3914: Create patch of the working file(s)...
+   title3915: Overwrite working with $0 file(s)
+   title3916: Export the $0 file(s) to...
+   # HistoryMenuFile
+   title4001: Compare historic file to previous commit
+   title4002: Compare historic file to working file
+   title4003: Compare historic file to latest commit
+   # FileComparisonModal
+   title4101: File Comparison Viewer
+   title4102: Viewing style
+   title4103: Side by side
+   title4104: Over / under
+   title4105: lines
+   title4106: Show changes only
+   title4107: Ignore white space changes
+   title4108: These files are identical
+   # CommitSummary
+   title4202: Commit Message & Files
+   title4203: Message & Files
+   title4204: Message
+   # RemoteRepoModal
+   title4301: Manage Remote Repositories
+   title4302: Local name for remote
+   title4303: Fetch remote URL
+   title4304: Push remote URL
+   title4305: The remote URL format is not recognised.
+   error4306: There was an error when saving your remote repository changes. Please try again.
+   # CodeAnalyser
+   error4401: There was an error when analysing the commit.$0
+   error4402: There was no patch content for the supplied commit.
+   title4403: The GitBreeze licence must be bought and activated in order to use your own API key.
+   question4404: 'This will send the patch file of the commit to $0 for analysis. A summary of how they use this data is:<br/><br/>$1<br/><br/>You can find out more at: $2<br/><br/>Would you like to accept these terms and continue?'
+   info4405: In order to deal with the size limitations of the AI analyser, the patch file will be split into $0 parts.
+   title4406: Stop
+   error4408: There was no result from the AI analysis for the commit $0
+   error4409: There was no result from the AI analysis for the working files.
+   # CopyButton
+   title4501: Click to copy to the clipboard
+   # BranchesTreeview
+   title4701: உள்ளக
+   title4702: தொலை
+   # BranchCompareView
+   title4801: கிளைகளை மாற்று
+   # Star
+   title4901: பிடித்தது
