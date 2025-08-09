@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Klipper)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-06 22:32+0200\n"
-"PO-Revision-Date: 2025-01-07 08:44+0530\n"
+"POT-Creation-Date: 2025-08-09 10:13+0200\n"
+"PO-Revision-Date: 2025-08-09 13:44\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/klipper/canbus_troubleshooting/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: docs/CANBUS_Troubleshooting.md:block 1 (header)
 #, md-text
@@ -111,54 +111,6 @@ msgstr ""
 "மணிநேரங்களுக்கும் அல்லது அடிக்கடி அதிகரிக்கிறது), இது கடுமையான பிரச்சினையின்"
 " அறிகுறியாகும்."
 
-#: docs/CANBUS_Troubleshooting.md:block 10 (paragraph)
-#, md-text
-msgid ""
-"Incrementing `bytes_invalid` on a CAN bus connection is a symptom of "
-"reordered messages on the CAN bus. There are two known causes of reordered "
-"messages:"
-msgstr ""
-"கேன் பச் இணைப்பில் `bytes_invalid` ஐ அதிகரிப்பது கேன் பச்சில் "
-"மறுவரிசைப்படுத்தப்பட்ட செய்திகளின் அறிகுறியாகும். மறுவரிசைப்படுத்தப்பட்ட "
-"செய்திகளுக்கு இரண்டு அறியப்பட்ட காரணங்கள் உள்ளன:"
-
-#: docs/CANBUS_Troubleshooting.md:block 11 (ordered list)
-#, md-text
-msgid ""
-"Old versions of the popular candlight_firmware for USB CAN adapters had a "
-"bug that could cause reordered messages. If using a USB CAN adapter running "
-"this firmware then make sure to update to the latest firmware if "
-"incrementing `bytes_invalid` is observed."
-msgstr ""
-"யூ.எச்.பி க்கான பிரபலமான மெழுகுவர்த்தி_பார்ம்வேரின் பழைய பதிப்புகள் "
-"அடாப்டர்களில் மறுவரிசைப்படுத்தப்பட்ட செய்திகளை ஏற்படுத்தக்கூடிய ஒரு பிழை "
-"இருந்தது. ஒரு யூ.எச்.பி பயன்படுத்தினால் இந்த ஃபார்ம்வேரை இயக்கும் அடாப்டர் "
-"முடியும் என்றால், `bytes_invalid` ஐ அதிகரிப்பதாக இருந்தால் அண்மைக் கால "
-"ஃபார்ம்வேரைப் புதுப்பிக்க உறுதிசெய்க."
-
-#: docs/CANBUS_Troubleshooting.md:block 11 (ordered list)
-#, md-text
-msgid ""
-"Some Linux kernel builds for embedded devices have been known to reorder CAN"
-" bus messages. It may be necessary to use an alternative Linux kernel or to "
-"use alternative hardware that supports mainstream Linux kernels that do not "
-"exhibit this problem."
-msgstr ""
-"உட்பொதிக்கப்பட்ட சாதனங்களுக்கான சில லினக்ச் கர்னல் கட்டமைப்புகள் பச் "
-"செய்திகளை மறுவரிசைப்படுத்துகின்றன. மாற்று லினக்ச் கர்னலைப் பயன்படுத்துவது "
-"அல்லது இந்த சிக்கலை வெளிப்படுத்தாத முதன்மையான லினக்ச் கர்னல்களை ஆதரிக்கும் "
-"மாற்று வன்பொருளைப் பயன்படுத்துவது அவசியமாக இருக்கலாம்."
-
-#: docs/CANBUS_Troubleshooting.md:block 12 (paragraph)
-#, md-text
-msgid ""
-"Reordered messages is a severe problem that must be fixed. It will result in"
-" unstable behavior and can lead to confusing errors at any part of a print."
-msgstr ""
-"மறுவரிசைப்படுத்தப்பட்ட செய்திகள் ஒரு கடுமையான சிக்கல், அது சரி செய்யப்பட "
-"வேண்டும். இது நிலையற்ற நடத்தைக்கு வழிவகுக்கும் மற்றும் அச்சின் எந்தப் "
-"பகுதியிலும் குழப்பமான பிழைகள் வழிவகுக்கும்."
-
 #: docs/CANBUS_Troubleshooting.md:block 13 (header)
 #, md-text
 msgid "Obtaining candump logs"
@@ -187,11 +139,6 @@ msgstr ""
 "மென்பொருளை வழங்குகிறது. இது பொதுவாக இயங்குவதன் மூலம் ஒரு கணினியில் "
 "நிறுவப்படுகிறது:"
 
-#: docs/CANBUS_Troubleshooting.md:block 16 (code)
-#, md-text
-msgid "sudo apt-get update && sudo apt-get install can-utils\n"
-msgstr "sudo apt-get புதுப்பிப்பு && sudo apt-get install கேன்-பயன்பாடுகள்\n"
-
 #: docs/CANBUS_Troubleshooting.md:block 17 (paragraph)
 #, md-text
 msgid ""
@@ -200,11 +147,6 @@ msgid ""
 msgstr ""
 "நிறுவப்பட்டதும், பின்வரும் கட்டளையுடன் ஒரு இடைமுகத்தில் அனைத்து பச் "
 "செய்திகளையும் கைப்பற்றலாம்:"
-
-#: docs/CANBUS_Troubleshooting.md:block 18 (code)
-#, md-text
-msgid "candump -tz -Ddex can0,#FFFFFFFF > mycanlog\n"
-msgstr "candump -tz -ddex can0,#ffffffff> myCanlog\n"
 
 #: docs/CANBUS_Troubleshooting.md:block 19 (paragraph)
 #, md-text
@@ -239,11 +181,6 @@ msgstr ""
 " அலசுவதற்கு ஒருவர் `parsecandump.py` கருவியைப் பயன்படுத்தலாம். இந்த "
 "கருவியைப் பயன்படுத்துவது ஒரு மேம்பட்ட தலைப்பு, இது கிளிப்பர் [MCU கட்டளைகள்]"
 " (MCU_COMMANDS.MD) பற்றிய அறிவு தேவைப்படுகிறது. உதாரணமாக:"
-
-#: docs/CANBUS_Troubleshooting.md:block 22 (code)
-#, md-text
-msgid "./scripts/parsecandump.py mycanlog 108 ./out/klipper.dict\n"
-msgstr "./scripts/parsecandump.py mycanlog 108 ./out/klipper.dict\n"
 
 #: docs/CANBUS_Troubleshooting.md:block 23 (paragraph)
 #, md-text
@@ -397,11 +334,6 @@ msgstr ""
 "நிரப்பியிருந்தால், லினக்ச் அந்த பாக்கெட்டை கைவிடுகிறது, மேலும் "
 "பின்வருவனவற்றைப் போன்ற செய்திகள் கிளிப்பர் பதிவில் தோன்றும்:"
 
-#: docs/CANBUS_Troubleshooting.md:block 16 (code)
-#, md-text
-msgid "Got error -1 in can write: (105)No buffer space available\n"
-msgstr "பிழை -1 இல் எழுத முடியும்: (105) இடையக இடம் கிடைக்கவில்லை\n"
-
 #: docs/CANBUS_Troubleshooting.md:block 17 (paragraph)
 #, md-text
 msgid ""
@@ -483,3 +415,145 @@ msgstr ""
 "பரிந்துரைக்கப்பட்ட மதிப்புக்கு மேலே. இருப்பினும், மேலே உள்ளபடி, அதிகப்படியான"
 " சுற்று-பயண நேர தாமதத்தைத் தவிர்க்க புதிய மதிப்பைத் தேர்ந்தெடுக்கும்போது "
 "கவனமாக இருக்க வேண்டும்."
+
+#: docs/CANBUS_Troubleshooting.md:block 10 (paragraph)
+#, md-text
+msgid ""
+"Incrementing `bytes_invalid` on a CAN bus connection is a symptom of "
+"reordered messages on the CAN bus. If seen, make sure to:"
+msgstr ""
+"கேன் பச் இணைப்பில் `bytes_invalid` ஐ அதிகரிப்பது கேன் பச்சில் "
+"மறுவரிசைப்படுத்தப்பட்ட செய்திகளின் அறிகுறியாகும். பார்த்தால், இதை "
+"உறுதிப்படுத்திக் கொள்ளுங்கள்:"
+
+#: docs/CANBUS_Troubleshooting.md:block 11 (unordered list)
+#, md-text
+msgid "Use a Linux kernel version 6.6.0 or later."
+msgstr "லினக்ச் கர்னல் பதிப்பு 6.6.0 அல்லது அதற்குப் பிறகு பயன்படுத்தவும்."
+
+#: docs/CANBUS_Troubleshooting.md:block 11 (unordered list)
+#, md-text
+msgid ""
+"If using a USB-to-CANBUS adapter running candlelight firmware, use v2.0 or "
+"later of candleLight_fw."
+msgstr ""
+"மெழுகுவர்த்தியை இயங்கும் யூ.எச்.பி-டு-கேன்பச் அடாப்டரைப் பயன்படுத்தினால், "
+"V2.0 அல்லது பின்னர் மெழுகுவர்த்தி_பிடபிள்யூவைப் பயன்படுத்தவும்."
+
+#: docs/CANBUS_Troubleshooting.md:block 11 (unordered list)
+#, md-text
+msgid ""
+"If using Klipper's USB-to-CANBUS bridge mode, make sure the bridge node is "
+"flashed with Klipper v0.12.0 or later."
+msgstr ""
+"கிளிப்பரின் யூ.எச்.பி-டு-கன்பச் பிரிட்ச் பயன்முறையைப் பயன்படுத்தினால், "
+"கிளிப்பர் V0.12.0 அல்லது அதற்குப் பிறகு பாலம் முனை ஒளிரும் என்பதை "
+"உறுதிப்படுத்திக் கொள்ளுங்கள்."
+
+#: docs/CANBUS_Troubleshooting.md:block 12 (paragraph)
+#, md-text
+msgid ""
+"Reordered messages is a severe problem that must be fixed. It will result in"
+" unstable behavior and can lead to confusing errors at any part of a print. "
+"An incrementing `bytes_invalid` is not caused by wiring or similar hardware "
+"issues and can only be fixed by identifying and updating the faulty "
+"software."
+msgstr ""
+"மறுவரிசைப்படுத்தப்பட்ட செய்திகள் ஒரு கடுமையான சிக்கல், அது சரி செய்யப்பட "
+"வேண்டும். இது நிலையற்ற நடத்தைக்கு வழிவகுக்கும் மற்றும் அச்சின் எந்தப் "
+"பகுதியிலும் குழப்பமான பிழைகள் வழிவகுக்கும். `Bytes_invalid` அதிகரிக்கும் "
+"வயரிங் அல்லது ஒத்த வன்பொருள் சிக்கல்களால் ஏற்படாது, மேலும் தவறான மென்பொருளை "
+"அடையாளம் கண்டு புதுப்பிப்பதன் மூலம் மட்டுமே நிர்ணயிக்க முடியும்."
+
+#: docs/CANBUS_Troubleshooting.md:block 13 (paragraph)
+#, md-text
+msgid ""
+"Older versions of the Linux kernel had a bug in the gs_usb canbus driver "
+"code that could cause reordered canbus packets. The issue is thought to be "
+"fixed in [Linux commit "
+"24bc41b4](https://github.com/torvalds/linux/commit/24bc41b4558347672a3db61009c339b1f5692169)"
+" which was released in v6.6.0. In some cases, older Linux versions may not "
+"show the problem (due to how hardware interrupts are configured), however if"
+" problems are seen the recommended solution is to upgrade to a newer kernel."
+msgstr ""
+"லினக்ச் கர்னலின் பழைய பதிப்புகள் GS_USB கான்பச் டிரைவர் குறியீட்டில் ஒரு "
+"பிழையைக் கொண்டிருந்தன, அவை மறுவரிசைப்படுத்தப்பட்ட கான்பச் பாக்கெட்டுகளை "
+"ஏற்படுத்தக்கூடும். [லினக்ச் கமிட் 24 பி.சி 41 பி 4] "
+"(https://github.com/torvalds/linux/commit/24BC41B455834767672A3DB61009B1F5692169)"
+" இல் இந்த சிக்கல் சரி செய்யப்படும் என்று கருதப்படுகிறது. சில "
+"சந்தர்ப்பங்களில், பழைய லினக்ச் பதிப்புகள் சிக்கலைக் காட்டாது (வன்பொருள் "
+"குறுக்கீடுகள் எவ்வாறு கட்டமைக்கப்படுகின்றன என்பதன் காரணமாக), இருப்பினும் "
+"சிக்கல்கள் காணப்பட்டால், பரிந்துரைக்கப்பட்ட தீர்வு புதிய கர்னலுக்கு "
+"மேம்படுத்துவதாகும்."
+
+#: docs/CANBUS_Troubleshooting.md:block 14 (paragraph)
+#, md-text
+msgid ""
+"Older versions of candlelight firmware could reorder canbus packets, and the"
+" issue is thought to be fixed in [candlelight_fw commit "
+"8b3a7b45](https://github.com/candle-"
+"usb/candleLight_fw/commit/8b3a7b4565a3c9521b762b154c94c72c5acb2bcf)."
+msgstr ""
+"மெழுகுவர்த்தி துல்லியமான ஃபார்ம்வேரின் பழைய பதிப்புகள் கான்பச் பாக்கெட்டுகளை"
+" மறுவரிசைப்படுத்தலாம், மேலும் சிக்கல் [மெழுகுவர்த்தி_எஃப் டூம்வ் கமிட் இல் "
+"சரி செய்யப்படும் என்று கருதப்படுகிறது 8B3A7B45] (https://github.com/candle-"
+"usb/candlelight_fw/commit/8b3a7b4565a3c9521b762b154c9c72c5acb2bcf)."
+
+#: docs/CANBUS_Troubleshooting.md:block 15 (paragraph)
+#, md-text
+msgid ""
+"Older versions of Klipper's USB-to-CANBUS bridge code could incorrectly drop"
+" canbus messages. This is not as severe as reordering messages, but it "
+"should still be fixed. It is thought to be fixed with [Klipper PR "
+"#6175](https://github.com/Klipper3d/klipper/pull/6175)."
+msgstr ""
+"கிளிப்பரின் யூ.எச்.பி-டு-கேன்பச் பிரிட்ச் குறியீட்டின் பழைய பதிப்புகள் "
+"கான்பச் செய்திகளை தவறாக கைவிடக்கூடும். இது செய்திகளை மறுவரிசைப்படுத்துவது "
+"போல கடுமையானதல்ல, ஆனால் அது இன்னும் சரி செய்யப்பட வேண்டும். இது [கிளிப்பர் "
+"பி.ஆர் #6175] (https://github.com/klipper3d/klipper/pull/6175) உடன் சரி "
+"செய்யப்படும் என்று கருதப்படுகிறது."
+
+#: docs/CANBUS_Troubleshooting.md:block 25 (header)
+#, md-text
+msgid "Use `canbus_query.py` only to identify nodes never previously seen"
+msgstr ""
+"முன்னர் பார்த்திராத முனைகளை அடையாளம் காண மட்டுமே `canbus_query.py` ஐப் "
+"பயன்படுத்தவும்"
+
+#: docs/CANBUS_Troubleshooting.md:block 26 (paragraph)
+#, md-text
+msgid ""
+"It is only valid to use the [`canbus_query.py` tool](CANBUS.md#finding-the-"
+"canbus_uuid-for-new-micro-controllers) to identify micro-controllers that "
+"have never been previously identified. Once all nodes on a bus are "
+"identified, record the resulting uuids in the printer.cfg, and avoid running"
+" the tool unnecessarily."
+msgstr ""
+"முன்னர் அடையாளம் காணப்படாத மைக்ரோ-கன்ட்ரோலர்களை அடையாளம் காண "
+"[`canbus_query.py` கருவி] "
+"(Canbus.md#கண்டுபிடிப்பு-தி-கன்பச்_யூயிட்-புதிய-மைக்ரோ-கன்ட்ரோலர்கள்) "
+"பயன்படுத்துவது மட்டுமே செல்லுபடியாகும். பச்சில் உள்ள அனைத்து முனைகளும் "
+"அடையாளம் காணப்பட்டதும், இதன் விளைவாக வரும் UUID களை அச்சுப்பொறியில் "
+"பதிவுசெய்து, தேவையில்லாமல் கருவியை இயக்குவதைத் தவிர்க்கவும்."
+
+#: docs/CANBUS_Troubleshooting.md:block 27 (paragraph)
+#, md-text
+msgid ""
+"The tool is implemented using a low-level mechanism that can cause nodes to "
+"internally observe bus errors. These internal errors may result in "
+"communication interruptions and may result is some nodes disconnecting from "
+"the bus."
+msgstr ""
+"குறைந்த அளவிலான பொறிமுறையைப் பயன்படுத்தி கருவி செயல்படுத்தப்படுகிறது, இது "
+"பச் பிழைகளை உள்நாட்டில் கவனிக்க முனைகள் ஏற்படலாம். இந்த உள் பிழைகள் "
+"தகவல்தொடர்பு குறுக்கீடுகளை ஏற்படுத்தக்கூடும், மேலும் பச்சிலிருந்து "
+"துண்டிக்கப்படும் சில முனைகள் இருக்கலாம்."
+
+#: docs/CANBUS_Troubleshooting.md:block 28 (paragraph)
+#, md-text
+msgid ""
+"It is not valid to use the tool to \"ping\" if a node is connected. Do not "
+"run the tool during an active print."
+msgstr ""
+"ஒரு முனை இணைக்கப்பட்டிருந்தால் கருவியை \"பிங்\" செய்ய பயன்படுத்துவது "
+"செல்லுபடியாகாது. செயலில் உள்ள அச்சின் போது கருவியை இயக்க வேண்டாம்."
