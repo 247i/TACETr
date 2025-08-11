@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Klipper)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-06 22:28+0200\n"
-"PO-Revision-Date: 2025-01-07 08:26+0530\n"
+"POT-Creation-Date: 2025-08-09 17:05+0200\n"
+"PO-Revision-Date: 2025-08-09 21:05\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/klipper/benchmarks/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #, md-text
 msgid "This document describes Klipper benchmarks."
@@ -480,113 +480,13 @@ msgstr "870 கே"
 msgid "Host Benchmarks"
 msgstr "புரவலன் வரையறைகள்"
 
-#, ignore-same, md-text
-msgid ""
-"SET start_clock {clock+freq}\n"
-"SET ticks 1000\n"
-"\n"
-"reset_step_clock oid=0 clock={start_clock}\n"
-"set_next_step_dir oid=0 dir=0\n"
-"queue_step oid=0 interval={ticks} count=60000 add=0\n"
-"set_next_step_dir oid=0 dir=1\n"
-"queue_step oid=0 interval=3000 count=1 add=0\n"
-"\n"
-"reset_step_clock oid=1 clock={start_clock}\n"
-"set_next_step_dir oid=1 dir=0\n"
-"queue_step oid=1 interval={ticks} count=60000 add=0\n"
-"set_next_step_dir oid=1 dir=1\n"
-"queue_step oid=1 interval=3000 count=1 add=0\n"
-"\n"
-"reset_step_clock oid=2 clock={start_clock}\n"
-"set_next_step_dir oid=2 dir=0\n"
-"queue_step oid=2 interval={ticks} count=60000 add=0\n"
-"set_next_step_dir oid=2 dir=1\n"
-"queue_step oid=2 interval=3000 count=1 add=0\n"
-msgstr ""
-"START_CLOCK {CLACK+FREQ}\n"
-" உண்ணி 1000 ஐ அமைக்கவும்\n"
-"\n"
-" Reset_step_clock oid = 0 கடிகாரம் = {start_clock}\n"
-" set_next_step_dir oid = 0 அடைவு = 0\n"
-" queue_step oid = 0 இடைவெளி = {ticks} எண்ணிக்கை = 60000 சேர் = 0\n"
-" set_next_step_dir oid = 0 அடைவு = 1\n"
-" queue_step oid = 0 இடைவெளி = 3000 எண்ணிக்கை = 1 கூட்டு = 0\n"
-"\n"
-" Reset_step_clock oid = 1 கடிகாரம் = {start_clock}\n"
-" set_next_step_dir oid = 1 அடைவு = 0\n"
-" queue_step oid = 1 இடைவெளி = {ticks} எண்ணிக்கை = 60000 சேர் = 0\n"
-" set_next_step_dir oid = 1 அடைவு = 1\n"
-" queue_step oid = 1 இடைவெளி = 3000 எண்ணிக்கை = 1 கூட்டு = 0\n"
-"\n"
-" Reset_step_clock oid = 2 கடிகாரம் = {start_clock}\n"
-" set_next_step_dir oid = 2 அடைவு = 0\n"
-" queue_step oid = 2 இடைவெளி = {ticks} எண்ணிக்கை = 60000 சேர் = 0\n"
-" set_next_step_dir oid = 2 அடைவு = 1\n"
-" queue_step oid = 2 இடைவெளி = 3000 எண்ணிக்கை = 1 கூட்டு = 0\n"
-
-#, ignore-same, md-text
-msgid "clear_shutdown\n"
-msgstr "clear_shutdown\n"
-
-#, ignore-same, md-text
-msgid "ECHO Test result is: {\"%.0fK\" % (3. * freq / ticks / 1000.)}\n"
-msgstr "எதிரொலி சோதனை முடிவு: {\" % .0fk\" % (3. * Freq / decks / 1000.)}\n"
-
-#, ignore-same, md-text
-msgid ""
-"DELAY {clock + 2*freq} get_uptime\n"
-"FLOOD 100000 0.0 debug_nop\n"
-"get_uptime\n"
-msgstr ""
-"நேரந்தவறுகை {கடிகாரம் + 2*ஃப்ரீக்} get_uptime\n"
-" வெள்ளம் 100000 0.0 பிழைத்திருத்தம்_நாப்\n"
-" get_uptime\n"
-
-#, ignore-same, md-text
-msgid ""
-"time ~/klippy-env/bin/python ./klippy/klippy.py config/example-cartesian.cfg"
-" -i something_complex.gcode -o /dev/null -d out/klipper.dict\n"
-msgstr "நேரம் ~/klippy -env/bin/python.\n"
-
-#, md-text
-msgid "RP2040 step rate benchmark"
-msgstr "RP2040 படி வீத அளவுகோல்"
-
-#, md-text
-msgid "The following configuration sequence is used on the RP2040:"
-msgstr "பின்வரும் உள்ளமைவு வரிசை RP2040 இல் பயன்படுத்தப்படுகிறது:"
-
-#, md-text
-msgid "rp2040"
-msgstr "RP2040"
-
 #, md-text
 msgid "66"
 msgstr "66"
 
-#, md-text
-msgid "5"
-msgstr "5"
-
-#, md-text
-msgid "22"
-msgstr "22"
-
 #, ignore-same, md-text
 msgid "rp2040 (USB)"
 msgstr "RP2040 (யூ.எச்.பி)"
-
-#, md-text
-msgid "873K"
-msgstr "நீங்கள்"
-
-#, md-text
-msgid "c5667193"
-msgstr "மீட்டமை 193"
-
-#, ignore-same, md-text
-msgid "arm-none-eabi-gcc (Fedora 10.2.0-4.fc34) 10.2.0"
-msgstr "ARM-NONE-EABI-GCC (ஃபெடோரா 10.2.0-4.FC34) 10.2.0"
 
 #: docs/Benchmarks.md:block 1 (header)
 #, md-text
@@ -663,21 +563,6 @@ msgstr ""
 "பயன்படுத்தவும் படி துடிப்பு. பிற மைக்ரோ-கன்ட்ரோலர்களுக்கு 100ns உடன் "
 "தொடர்புடைய `Step_pulse_duration` ஐப் பயன்படுத்தவும்."
 
-#: docs/Benchmarks.md:block 20 (code)
-#, ignore-same, md-text
-msgid ""
-"allocate_oids count=3\n"
-"config_stepper oid=0 step_pin=PA5 dir_pin=PA4 invert_step=0 step_pulse_ticks=32\n"
-"config_stepper oid=1 step_pin=PA3 dir_pin=PA2 invert_step=0 step_pulse_ticks=32\n"
-"config_stepper oid=2 step_pin=PC7 dir_pin=PC6 invert_step=0 step_pulse_ticks=32\n"
-"finalize_config crc=0\n"
-msgstr ""
-"ஒதுக்கீடு_யிட்ச் எண்ணிக்கை = 3\n"
-" config_stepper oid = 0 step_pin = pa5 dir_pin = pa4 invert_step = 0 step_pules_ticks = 32\n"
-" config_stepper oid = 1 step_pin = pa3 dir_pin = pa2 invert_step = 0 step_pules_ticks = 32\n"
-" config_stepper oid = 2 step_pin = pc7 dir_pin = pc6 invert_step = 0 step_pules_ticks = 32\n"
-" இறுதி_கான்ஃபிக் சி.ஆர்.சி = 0\n"
-
 #: docs/Benchmarks.md:block 21 (paragraph)
 #, md-text
 msgid ""
@@ -703,21 +588,6 @@ msgstr "102"
 msgid "486"
 msgstr "486"
 
-#: docs/Benchmarks.md:block 25 (code)
-#, ignore-same, md-text
-msgid ""
-"allocate_oids count=3\n"
-"config_stepper oid=0 step_pin=PB27 dir_pin=PA21 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=1 step_pin=PB26 dir_pin=PC30 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=2 step_pin=PA21 dir_pin=PC30 invert_step=-1 step_pulse_ticks=0\n"
-"finalize_config crc=0\n"
-msgstr ""
-"ஒதுக்கீடு_யிட்ச் எண்ணிக்கை = 3\n"
-" config_stepper oid = 0 step_pin = pb27 dir_pin = pa21 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 1 step_pin = pb26 dir_pin = pc30 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 2 step_pin = pa21 dir_pin = pc30 invert_step = -1 step_pules_ticks = 0\n"
-" இறுதி_கான்ஃபிக் சி.ஆர்.சி = 0\n"
-
 #: docs/Benchmarks.md:block 26 (paragraph)
 #, md-text
 msgid ""
@@ -732,40 +602,10 @@ msgstr ""
 msgid "257"
 msgstr "257"
 
-#: docs/Benchmarks.md:block 30 (code)
-#, ignore-same, md-text
-msgid ""
-"allocate_oids count=3\n"
-"config_stepper oid=0 step_pin=PC26 dir_pin=PC18 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=1 step_pin=PC26 dir_pin=PA8 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=2 step_pin=PC26 dir_pin=PB4 invert_step=-1 step_pulse_ticks=0\n"
-"finalize_config crc=0\n"
-msgstr ""
-"ஒதுக்கீடு_யிட்ச் எண்ணிக்கை = 3\n"
-" config_stepper oid = 0 step_pin = pc26 dir_pin = pc18 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 1 step_pin = pc26 dir_pin = pa8 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 2 step_pin = pc26 dir_pin = pb4 invert_step = -1 step_pules_ticks = 0\n"
-" இறுதி_கான்ஃபிக் சி.ஆர்.சி = 0\n"
-
 #: docs/Benchmarks.md:block 32 (table)
 #, md-text
 msgid "260"
 msgstr "260"
-
-#: docs/Benchmarks.md:block 35 (code)
-#, ignore-same, md-text
-msgid ""
-"allocate_oids count=3\n"
-"config_stepper oid=0 step_pin=PD6 dir_pin=PD11 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=1 step_pin=PD7 dir_pin=PD12 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=2 step_pin=PD8 dir_pin=PD13 invert_step=-1 step_pulse_ticks=0\n"
-"finalize_config crc=0\n"
-msgstr ""
-"ஒதுக்கீடு_யிட்ச் எண்ணிக்கை = 3\n"
-" config_stepper oid = 0 step_pin = pd6 dir_pin = pd11 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 1 step_pin = pd7 dir_pin = pd12 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 2 step_pin = pd8 dir_pin = pd13 invert_step = -1 step_pules_ticks = 0\n"
-" இறுதி_கான்ஃபிக் சி.ஆர்.சி = 0\n"
 
 #: docs/Benchmarks.md:block 36 (paragraph)
 #, md-text
@@ -787,21 +627,6 @@ msgstr "48"
 msgid "215"
 msgstr "215"
 
-#: docs/Benchmarks.md:block 40 (code)
-#, ignore-same, md-text
-msgid ""
-"allocate_oids count=3\n"
-"config_stepper oid=0 step_pin=gpio0_23 dir_pin=gpio1_12 invert_step=0 step_pulse_ticks=20\n"
-"config_stepper oid=1 step_pin=gpio1_15 dir_pin=gpio0_26 invert_step=0 step_pulse_ticks=20\n"
-"config_stepper oid=2 step_pin=gpio0_22 dir_pin=gpio2_1 invert_step=0 step_pulse_ticks=20\n"
-"finalize_config crc=0\n"
-msgstr ""
-"ஒதுக்கீடு_யிட்ச் எண்ணிக்கை = 3\n"
-" config_stepper oid = 0 step_pin = gpio0_23 dir_pin = gpio1_12 invert_step = 0 step_pulse_ticks = 20\n"
-" config_stepper oid = 1 step_pin = gpio1_15 dir_pin = gpio0_26 invert_step = 0 step_pulse_ticks = 20\n"
-" config_stepper oid = 2 step_pin = gpio0_22 dir_pin = gpio2_1 invert_step = 0 step_pules_ticks = 20\n"
-" இறுதி_கான்ஃபிக் சி.ஆர்.சி = 0\n"
-
 #: docs/Benchmarks.md:block 41 (paragraph)
 #, md-text
 msgid ""
@@ -821,21 +646,6 @@ msgstr "231"
 msgid "847"
 msgstr "847"
 
-#: docs/Benchmarks.md:block 45 (code)
-#, ignore-same, md-text
-msgid ""
-"allocate_oids count=3\n"
-"config_stepper oid=0 step_pin=PA1 dir_pin=PA2 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=1 step_pin=PA3 dir_pin=PA2 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=2 step_pin=PB8 dir_pin=PA2 invert_step=-1 step_pulse_ticks=0\n"
-"finalize_config crc=0\n"
-msgstr ""
-"ஒதுக்கீடு_யிட்ச் எண்ணிக்கை = 3\n"
-" config_stepper oid = 0 step_pin = pa1 dir_pin = pa2 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 1 step_pin = pa3 dir_pin = pa2 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 2 step_pin = pb8 dir_pin = pa2 invert_step = -1 step_pules_ticks = 0\n"
-" இறுதி_கான்ஃபிக் சி.ஆர்.சி = 0\n"
-
 #: docs/Benchmarks.md:block 47 (table)
 #, md-text
 msgid "59"
@@ -846,21 +656,6 @@ msgstr "59"
 msgid "249"
 msgstr "249"
 
-#: docs/Benchmarks.md:block 50 (code)
-#, ignore-same, md-text
-msgid ""
-"allocate_oids count=3\n"
-"config_stepper oid=0 step_pin=PC13 dir_pin=PB5 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=1 step_pin=PB3 dir_pin=PB6 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=2 step_pin=PA4 dir_pin=PB7 invert_step=-1 step_pulse_ticks=0\n"
-"finalize_config crc=0\n"
-msgstr ""
-"ஒதுக்கீடு_யிட்ச் எண்ணிக்கை = 3\n"
-" config_stepper oid = 0 step_pin = pc13 dir_pin = pb5 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 1 step_pin = pb3 dir_pin = pb6 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 2 step_pin = pa4 dir_pin = pb7 invert_step = -1 step_pules_ticks = 0\n"
-" இறுதி_கான்ஃபிக் சி.ஆர்.சி = 0\n"
-
 #: docs/Benchmarks.md:block 52 (table)
 #, md-text
 msgid "61"
@@ -870,21 +665,6 @@ msgstr "61"
 #, md-text
 msgid "264"
 msgstr "264"
-
-#: docs/Benchmarks.md:block 55 (code)
-#, ignore-same, md-text
-msgid ""
-"allocate_oids count=3\n"
-"config_stepper oid=0 step_pin=PA5 dir_pin=PB5 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=1 step_pin=PB2 dir_pin=PB6 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=2 step_pin=PB3 dir_pin=PB7 invert_step=-1 step_pulse_ticks=0\n"
-"finalize_config crc=0\n"
-msgstr ""
-"ஒதுக்கீடு_யிட்ச் எண்ணிக்கை = 3\n"
-" config_stepper oid = 0 step_pin = pa5 dir_pin = pb5 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 1 step_pin = pb2 dir_pin = pb6 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 2 step_pin = pb3 dir_pin = pb7 invert_step = -1 step_pules_ticks = 0\n"
-" இறுதி_கான்ஃபிக் சி.ஆர்.சி = 0\n"
 
 #: docs/Benchmarks.md:block 56 (paragraph)
 #, md-text
@@ -908,21 +688,6 @@ msgstr "46"
 msgid "205"
 msgstr "205"
 
-#: docs/Benchmarks.md:block 61 (code)
-#, ignore-same, md-text
-msgid ""
-"allocate_oids count=3\n"
-"config_stepper oid=0 step_pin=P1.20 dir_pin=P1.18 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=1 step_pin=P1.21 dir_pin=P1.18 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=2 step_pin=P1.23 dir_pin=P1.18 invert_step=-1 step_pulse_ticks=0\n"
-"finalize_config crc=0\n"
-msgstr ""
-"ஒதுக்கீடு_யிட்ச் எண்ணிக்கை = 3\n"
-" config_stepper oid = 0 step_pin = p1.20 dir_pin = p1.18 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 1 step_pin = p1.21 dir_pin = p1.18 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 2 step_pin = p1.23 dir_pin = p1.18 invert_step = -1 step_pules_ticks = 0\n"
-" இறுதி_கான்ஃபிக் சி.ஆர்.சி = 0\n"
-
 #: docs/Benchmarks.md:block 62 (paragraph)
 #, md-text
 msgid ""
@@ -940,21 +705,6 @@ msgstr ""
 msgid "222"
 msgstr "222"
 
-#: docs/Benchmarks.md:block 67 (code)
-#, ignore-same, md-text
-msgid ""
-"allocate_oids count=3\n"
-"config_stepper oid=0 step_pin=PA27 dir_pin=PA20 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=1 step_pin=PB3 dir_pin=PA21 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=2 step_pin=PA17 dir_pin=PA21 invert_step=-1 step_pulse_ticks=0\n"
-"finalize_config crc=0\n"
-msgstr ""
-"ஒதுக்கீடு_யிட்ச் எண்ணிக்கை = 3\n"
-" config_stepper oid = 0 step_pin = pa27 dir_pin = pa20 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 1 step_pin = pb3 dir_pin = pa21 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 2 step_pin = pa17 dir_pin = pa21 invert_step = -1 step_pules_ticks = 0\n"
-" இறுதி_கான்ஃபிக் சி.ஆர்.சி = 0\n"
-
 #: docs/Benchmarks.md:block 68 (paragraph)
 #, md-text
 msgid ""
@@ -969,21 +719,6 @@ msgstr ""
 #, md-text
 msgid "306"
 msgstr "306"
-
-#: docs/Benchmarks.md:block 72 (code)
-#, ignore-same, md-text
-msgid ""
-"allocate_oids count=3\n"
-"config_stepper oid=0 step_pin=PA22 dir_pin=PA20 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=1 step_pin=PA22 dir_pin=PA21 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=2 step_pin=PA22 dir_pin=PA19 invert_step=-1 step_pulse_ticks=0\n"
-"finalize_config crc=0\n"
-msgstr ""
-"ஒதுக்கீடு_யிட்ச் எண்ணிக்கை = 3\n"
-" config_stepper oid = 0 step_pin = pa22 dir_pin = pa20 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 1 step_pin = pa22 dir_pin = pa21 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 2 step_pin = pa22 dir_pin = pa19 invert_step = -1 step_pules_ticks = 0\n"
-" இறுதி_கான்ஃபிக் சி.ஆர்.சி = 0\n"
 
 #: docs/Benchmarks.md:block 73 (paragraph)
 #, md-text
@@ -1009,46 +744,6 @@ msgstr "191"
 #, md-text
 msgid "181"
 msgstr "181"
-
-#: docs/Benchmarks.md:block 77 (code)
-#, ignore-same, md-text
-msgid ""
-"allocate_oids count=3\n"
-"config_stepper oid=0 step_pin=gpio25 dir_pin=gpio3 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=1 step_pin=gpio26 dir_pin=gpio4 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=2 step_pin=gpio27 dir_pin=gpio5 invert_step=-1 step_pulse_ticks=0\n"
-"finalize_config crc=0\n"
-msgstr ""
-"ஒதுக்கீடு_யிட்ச் எண்ணிக்கை = 3\n"
-" config_stepper oid = 0 step_pin = gpio25 dir_pin = gpio3 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 1 step_pin = gpio26 dir_pin = gpio4 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 2 step_pin = gpio27 dir_pin = gpio5 invert_step = -1 step_pules_ticks = 0\n"
-" இறுதி_கான்ஃபிக் சி.ஆர்.சி = 0\n"
-
-#: docs/Benchmarks.md:block 78 (paragraph)
-#, md-text
-msgid ""
-"The test was last run on commit `59314d99` with gcc version `arm-none-eabi-"
-"gcc (Fedora 10.2.0-4.fc34) 10.2.0` on a Raspberry Pi Pico board."
-msgstr ""
-"ராச்பெர்ரி பை பைக்கோ போர்டில் சி.சி.சி பதிப்பு `ஆர்ம்-நோன்-ஈபி-சி.சி.சி "
-"(ஃபெடோரா 10.2.0-4.FC34) 10.2.0` உடன்` 59314D99` இல் சோதனை கடைசியாக "
-"இயக்கப்பட்டது."
-
-#: docs/Benchmarks.md:block 82 (code)
-#, ignore-same, md-text
-msgid ""
-"allocate_oids count=3\n"
-"config_stepper oid=0 step_pin=gpio2 dir_pin=gpio3 invert_step=0 step_pulse_ticks=5\n"
-"config_stepper oid=1 step_pin=gpio4 dir_pin=gpio5 invert_step=0 step_pulse_ticks=5\n"
-"config_stepper oid=2 step_pin=gpio6 dir_pin=gpio17 invert_step=0 step_pulse_ticks=5\n"
-"finalize_config crc=0\n"
-msgstr ""
-"ஒதுக்கீடு_யிட்ச் எண்ணிக்கை = 3\n"
-" config_stepper oid = 0 step_pin = gpio2 dir_pin = gpio3 invert_step = 0 step_pules_ticks = 5\n"
-" config_stepper oid = 1 step_pin = gpio4 dir_pin = gpio5 invert_step = 0 step_pules_ticks = 5\n"
-" config_stepper oid = 2 step_pin = gpio6 dir_pin = gpio17 invert_step = 0 step_pules_ticks = 5\n"
-" இறுதி_கான்ஃபிக் சி.ஆர்.சி = 0\n"
 
 #: docs/Benchmarks.md:block 83 (paragraph)
 #, md-text
@@ -1093,21 +788,6 @@ msgstr "STM32G0B1 படி வீத அளவுகோல்"
 msgid "The following configuration sequence is used on the STM32G0B1:"
 msgstr "பின்வரும் உள்ளமைவு வரிசை STM32G0B1 இல் பயன்படுத்தப்படுகிறது:"
 
-#: docs/Benchmarks.md:block 61 (code)
-#, ignore-same, md-text
-msgid ""
-"allocate_oids count=3\n"
-"config_stepper oid=0 step_pin=PB13 dir_pin=PB12 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=1 step_pin=PB10 dir_pin=PB2 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=2 step_pin=PB0 dir_pin=PC5 invert_step=-1 step_pulse_ticks=0\n"
-"finalize_config crc=0\n"
-msgstr ""
-"ஒதுக்கீடு_யிட்ச் எண்ணிக்கை = 3\n"
-" config_stepper oid = 0 step_pin = pb13 dir_pin = pb12 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 1 step_pin = pb10 dir_pin = pb2 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 2 step_pin = pb0 dir_pin = pc5 invert_step = -1 step_pules_ticks = 0\n"
-" இறுதி_கான்ஃபிக் சி.ஆர்.சி = 0\n"
-
 #: docs/Benchmarks.md:block 62 (paragraph)
 #, md-text
 msgid ""
@@ -1137,52 +817,6 @@ msgstr "STM32G0B1"
 msgid "STM32H7 step rate benchmark"
 msgstr "STM32H7 படி வீத அளவுகோல்"
 
-#: docs/Benchmarks.md:block 60 (paragraph)
-#, md-text
-msgid "The following configuration sequence is used on a STM32H743VIT6:"
-msgstr "பின்வரும் உள்ளமைவு வரிசை STM32H743VIT6 இல் பயன்படுத்தப்படுகிறது:"
-
-#: docs/Benchmarks.md:block 61 (code)
-#, ignore-same, md-text
-msgid ""
-"allocate_oids count=3\n"
-"config_stepper oid=0 step_pin=PD4 dir_pin=PD3 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=1 step_pin=PA15 dir_pin=PA8 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=2 step_pin=PE2 dir_pin=PE3 invert_step=-1 step_pulse_ticks=0\n"
-"finalize_config crc=0\n"
-msgstr ""
-"ஒதுக்கீடு_யிட்ச் எண்ணிக்கை = 3\n"
-" config_stepper oid = 0 step_pin = pd4 dir_pin = pd3 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 1 step_pin = pa15 dir_pin = pa8 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 2 step_pin = pe2 dir_pin = pe3 invert_step = -1 step_pules_ticks = 0\n"
-" இறுதி_கான்ஃபிக் சி.ஆர்.சி = 0\n"
-
-#: docs/Benchmarks.md:block 62 (paragraph)
-#, md-text
-msgid ""
-"The test was last run on commit `00191b5c` with gcc version `arm-none-eabi-"
-"gcc (15:8-2019-q3-1+b1) 8.3.1 20190703 (release) [gcc-8-branch revision "
-"273027]`."
-msgstr ""
-"இந்த சோதனை கடைசியாக சி.சி.சி பதிப்பு `ஆர்ம்-நோன்-ஈபி-சி.சி.சி (15: "
-"8-2019-Q3-1+பி 1) 8.3.1 20190703 (வெளியீடு) [சி.சி.சி -8-பிராஞ்ச் திருத்தம் "
-"273027] `."
-
-#: docs/Benchmarks.md:block 63 (table)
-#, ignore-same, md-text
-msgid "stm32h7"
-msgstr "நான் கேட்பேன்"
-
-#: docs/Benchmarks.md:block 63 (table)
-#, md-text
-msgid "44"
-msgstr "44"
-
-#: docs/Benchmarks.md:block 63 (table)
-#, md-text
-msgid "198"
-msgstr "198"
-
 #: docs/Benchmarks.md:block 85 (header)
 #, md-text
 msgid "AR100 step rate benchmark"
@@ -1195,31 +829,6 @@ msgid ""
 msgstr ""
 "பின்வரும் உள்ளமைவு வரிசை AR100 சிபியு இல் பயன்படுத்தப்படுகிறது (ALLWINNER "
 "A64):"
-
-#: docs/Benchmarks.md:block 87 (code)
-#, ignore-same, md-text
-msgid ""
-"allocate_oids count=3\n"
-"config_stepper oid=0 step_pin=PL10 dir_pin=PE14 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=1 step_pin=PL11 dir_pin=PE15 invert_step=-1 step_pulse_ticks=0\n"
-"config_stepper oid=2 step_pin=PL12 dir_pin=PE16 invert_step=-1 step_pulse_ticks=0\n"
-"finalize_config crc=0\n"
-"\n"
-msgstr ""
-"ஒதுக்கீடு_யிட்ச் எண்ணிக்கை = 3\n"
-" config_stepper oid = 0 step_pin = pl10 dir_pin = pe14 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 1 step_pin = pl11 dir_pin = pe15 invert_step = -1 step_pules_ticks = 0\n"
-" config_stepper oid = 2 step_pin = pl12 dir_pin = pe16 invert_step = -1 step_pules_ticks = 0\n"
-" இறுதி_கான்ஃபிக் சி.ஆர்.சி = 0\n"
-
-#: docs/Benchmarks.md:block 88 (paragraph)
-#, md-text
-msgid ""
-"The test was last run on commit `08d037c6` with gcc version `or1k-linux-"
-"musl-gcc (GCC) 9.2.0` on an Allwinner A64-H micro-controller."
-msgstr ""
-"ஆலைனர் A64-H மைக்ரோ-கான்ட்ரோலரில் GCC பதிப்பு `OR1K-LINUX-MUSL-GCC (GCC) "
-"9.2.0` உடன்` 08D037C6` இல் சோதனை கடைசியாக இயக்கப்பட்டது."
 
 #: docs/Benchmarks.md:block 89 (table)
 #, md-text
@@ -1255,3 +864,149 @@ msgstr "08D037C6"
 #, ignore-same, md-text
 msgid "or1k-linux-musl-gcc 9.3.0"
 msgstr "OR1K-LINUX-MUSL-GCC 9.3.0"
+
+#: docs/Benchmarks.md:block 85 (header)
+#, md-text
+msgid "SAME70 step rate benchmark"
+msgstr "சமமான 70 படி வீத அளவுகோல்"
+
+#: docs/Benchmarks.md:block 86 (paragraph)
+#, md-text
+msgid "The following configuration sequence is used on the SAME70:"
+msgstr "பின்வரும் உள்ளமைவு வரிசை சமமான 70 இல் பயன்படுத்தப்படுகிறது:"
+
+#: docs/Benchmarks.md:block 88 (paragraph)
+#, md-text
+msgid ""
+"The test was last run on commit `34e9ea55` with gcc version `arm-none-eabi-"
+"gcc (NixOS 10.3-2021.10) 10.3.1` on a SAME70Q20B micro-controller."
+msgstr ""
+"இந்த சோதனை கடைசியாக GCC பதிப்பு `ARM-NONE-EABI-GCC (NIXOS 10.3-2021.10) "
+"10.3.1` உடன் ஒரே 70Q20B மைக்ரோ-கான்ட்ரோலரில் கமிட்` 34E9EA55` இல் "
+"இயக்கப்பட்டது."
+
+#: docs/Benchmarks.md:block 89 (table)
+#, md-text
+msgid "same70"
+msgstr "சமி 0"
+
+#: docs/Benchmarks.md:block 89 (table)
+#, md-text
+msgid "45"
+msgstr "45"
+
+#: docs/Benchmarks.md:block 89 (table)
+#, md-text
+msgid "190"
+msgstr "190"
+
+#: docs/Benchmarks.md:block 93 (paragraph)
+#, md-text
+msgid ""
+"The test was last run on commit `b7978d37` with gcc version `or1k-linux-"
+"musl-gcc (GCC) 9.2.0` on an Allwinner A64-H micro-controller."
+msgstr ""
+"ஆலைனர் A64-H மைக்ரோ-கான்ட்ரோலரில் GCC பதிப்பு `OR1K-LINUX-MUSL-GCC (GCC) "
+"9.2.0` உடன்` B7978D37` உடன் சோதனை கடைசியாக இயக்கப்பட்டது."
+
+#: docs/Benchmarks.md:block 95 (header)
+#, md-text
+msgid "RPxxxx step rate benchmark"
+msgstr "RPXXXX படி வீத அளவுகோல்"
+
+#: docs/Benchmarks.md:block 96 (paragraph)
+#, md-text
+msgid "The following configuration sequence is used on the RP2040 and RP2350:"
+msgstr ""
+"பின்வரும் உள்ளமைவு வரிசை RP2040 மற்றும் RP2350 இல் பயன்படுத்தப்படுகிறது:"
+
+#: docs/Benchmarks.md:block 99 (table)
+#, md-text
+msgid "rp2040 (*)"
+msgstr "RP2040 (*)"
+
+#: docs/Benchmarks.md:block 100 (table)
+#, md-text
+msgid "rp2350"
+msgstr "ரபா 0"
+
+#: docs/Benchmarks.md:block 100 (table)
+#, md-text
+msgid "36"
+msgstr "36"
+
+#: docs/Benchmarks.md:block 100 (table)
+#, md-text
+msgid "169"
+msgstr "169"
+
+#: docs/Benchmarks.md:block 112 (table)
+#, md-text
+msgid "885K"
+msgstr "885 கே"
+
+#: docs/Benchmarks.md:block 112 (table)
+#, md-text
+msgid "f6718291"
+msgstr "ஃபட்டா 18291"
+
+#: docs/Benchmarks.md:block 112 (table)
+#, md-text
+msgid "arm-none-eabi-gcc (Fedora 14.1.0-1.fc40) 14.1.0"
+msgstr "ARM-NONE-EABI-GCC (ஃபெடோரா 14.1.0-1.FC40) 14.1.0"
+
+#: docs/Benchmarks.md:block 112 (table)
+#, md-text
+msgid "rp2350 (USB)"
+msgstr "RP2350 (யூ.எச்.பி)"
+
+#: docs/Benchmarks.md:block 60 (paragraph)
+#, md-text
+msgid "The following configuration sequence is used on STM32H723:"
+msgstr "பின்வரும் உள்ளமைவு வரிசை STM32H723 இல் பயன்படுத்தப்படுகிறது:"
+
+#: docs/Benchmarks.md:block 62 (paragraph)
+#, md-text
+msgid ""
+"The test was last run on commit `554ae78d` with gcc version `arm-none-eabi-"
+"gcc (Fedora 14.1.0-1.fc40) 14.1.0`."
+msgstr ""
+"இந்த சோதனை கடைசியாக GCC பதிப்பு `ARM-NONE-EABI-GCC (ஃபெடோரா 14.1.0-1.FC40) "
+"14.1.0` உடன்` 554AE78D` இல் இயக்கப்பட்டது."
+
+#: docs/Benchmarks.md:block 63 (table)
+#, md-text
+msgid "stm32h723"
+msgstr "நான் கேட்பேன்"
+
+#: docs/Benchmarks.md:block 98 (paragraph)
+#, md-text
+msgid ""
+"The test was last run on commit `14c105b8` with gcc version `arm-none-eabi-"
+"gcc (Fedora 14.1.0-1.fc40) 14.1.0` on Raspberry Pi Pico and Pico 2 boards."
+msgstr ""
+"இந்த சோதனை கடைசியாக `14C105B8` இல் சி.சி.சி பதிப்பு` ARM-NONE-EABI-GCC "
+"(ஃபெடோரா 14.1.0-1.FC40) 14.1.0` உடன் ராச்பெர்ரி பை பைக்கோ மற்றும் பைக்கோ 2 "
+"பலகைகளுடன் இயக்கப்பட்டது."
+
+#: docs/Benchmarks.md:block 99 (table)
+#, md-text
+msgid "3"
+msgstr "௩"
+
+#: docs/Benchmarks.md:block 99 (table)
+#, md-text
+msgid "14"
+msgstr "14"
+
+#: docs/Benchmarks.md:block 101 (paragraph)
+#, md-text
+msgid ""
+"(*) Note that the reported rp2040 ticks are relative to a 12Mhz scheduling "
+"timer and do not correspond to its 200Mhz internal ARM processing rate. It "
+"is expected that 5 scheduling ticks corresponds to ~42 ARM core cycles and "
+"14 scheduling ticks corresponds to ~225 ARM core cycles."
+msgstr ""
+". 5 திட்டமிடல் உண்ணிகள் ~ 42 கை கோர் சுழற்சிகளுக்கு ஒத்திருக்கும் என்று "
+"எதிர்பார்க்கப்படுகிறது, மேலும் 14 திட்டமிடல் உண்ணி 3 225 கை கோர் "
+"சுழற்சிகளுக்கு ஒத்திருக்கிறது."
