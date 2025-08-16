@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (fluidd)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-30 06:02+0200\n"
-"PO-Revision-Date: 2025-07-09 09:36\n"
+"POT-Creation-Date: 2025-08-15 13:34+0200\n"
+"PO-Revision-Date: 2025-08-15 17:06\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/fluidd/fluidd/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.13\n"
 
 #, vue-format
 msgctxt "app->bedmesh->label->active"
@@ -994,7 +994,9 @@ msgctxt "app->general->error->printer_powered_off"
 msgid ""
 "The printer is currently powered off.<br/><br/> To power on the printer, "
 "please click the button on the left."
-msgstr "அச்சுப்பொறி தற்போது இயக்கப்படுகிறது."
+msgstr ""
+"அச்சுப்பொறி தற்போது இயக்கப்படுகிறது.<br/><br/>அச்சுப்பொறியில் சக்திக்கு, "
+"இடது புறத்தில் உள்ள பொத்தானைக் கிளிக் செய்க."
 
 #, vue-format
 msgctxt "app->general->label->accel_to_decel"
@@ -3103,6 +3105,16 @@ msgid "Unit"
 msgstr "அலகு"
 
 #, vue-format
+msgctxt "app->setting->label->warn_on_cpu_throttled"
+msgid "Warn if CPU throttling is detected"
+msgstr "சிபியு தூண்டுதல் கண்டறியப்பட்டால் எச்சரிக்கவும்"
+
+#, vue-format
+msgctxt "app->setting->label->warn_on_stepper_driver_overheating"
+msgid "Warn if stepper driver is over-heating"
+msgstr "ச்டெப்பர் டிரைவர் அதிக வெப்பமடைகிறாரா என்று எச்சரிக்கவும்"
+
+#, vue-format
 msgctxt "app->setting->label->z_adjust_values"
 msgid "Z Adjust values"
 msgstr "சட் மதிப்புகளை சரிசெய்யவும்"
@@ -3239,6 +3251,11 @@ msgid "Tool"
 msgstr "கருவி"
 
 #, vue-format
+msgctxt "app->setting->title->warnings"
+msgid "Warnings"
+msgstr "எச்சரிக்கைகள்"
+
+#, vue-format
 msgctxt "app->setting->tooltip->average_calculation"
 msgid "If more than one option is select, an average will be calculated"
 msgstr ""
@@ -3299,6 +3316,16 @@ msgstr ""
 "அந்தந்த பிராண்டுகள். <br> கருப்பொருள்கள் தொடர்பான ஏதேனும் சிக்கல்கள் அல்லது "
 "விசாரணைகள் திரவக் குழுவுக்கு அனுப்பப்பட வேண்டும். பிராண்டுகள் "
 "குறிக்கப்படுகின்றன."
+
+#, vue-format
+msgctxt "app->setting->tooltip->warn_on_cpu_throttled"
+msgid "CPU throttling can cause prints to fail"
+msgstr "சிபியு தூண்டுதல் அச்சிட்டு தோல்வியடையும்"
+
+#, vue-format
+msgctxt "app->setting->tooltip->warn_on_stepper_driver_overheating"
+msgid "Trinamic drivers only"
+msgstr "டிரினாமிக் இயக்கிகள் மட்டுமே"
 
 #, vue-format
 msgctxt "app->socket->msg->connecting"
@@ -3713,6 +3740,11 @@ msgstr "OS தொகுப்புகள்"
 msgctxt "app->version->label->package_list"
 msgid "Package List"
 msgstr "தொகுப்பு பட்டியல்"
+
+#, vue-format
+msgctxt "app->version->label->packages"
+msgid "{count} package | {count} packages"
+msgstr "{count} தொகுப்பு | {count} தொகுப்புகள்"
 
 #, vue-format
 msgctxt "app->version->label->up_to_date"
@@ -4816,7 +4848,7 @@ msgstr "ஒரு கருவி தேர்ந்தெடுக்கப்�
 #, vue-format
 msgctxt "app->mmu->msg->remap"
 msgid "This will remap gate to %{tool}"
-msgstr "இது %{கருவி க்கு க்கு வாயிலை மறுபரிசீலனை செய்யும்"
+msgstr "இது %{tool} க்கு வாயிலை மறுபரிசீலனை செய்யும்"
 
 #, vue-format
 msgctxt "app->mmu->msg->set_gate"
@@ -4886,8 +4918,8 @@ msgstr "MMU வாயில்களுக்கு வரைபட கருவ
 msgctxt "app->mmu->msg->tool_not_used"
 msgid "Tool %{tool} not used in this print, choose default mapping"
 msgstr ""
-"கருவி %{கருவி this இந்த அச்சில் பயன்படுத்தப்படவில்லை, இயல்புநிலை "
-"மேப்பிங்கைத் தேர்வுசெய்க"
+"கருவி %{tool} இந்த அச்சில் பயன்படுத்தப்படவில்லை, இயல்புநிலை மேப்பிங்கைத் "
+"தேர்வுசெய்க"
 
 #, vue-format
 msgctxt "app->mmu->msg->mismatch"
@@ -4918,7 +4950,7 @@ msgstr "கேட் தரவு இல்லை"
 msgctxt "app->mmu->msg->no_slicer_info"
 msgid "No slicer information, choose default mapping for %{tool}"
 msgstr ""
-"ச்லைசர் செய்தி இல்லை, %{கருவி க்கு க்கு இயல்புநிலை மேப்பிங் தேர்வு செய்யவும்"
+"ச்லைசர் செய்தி இல்லை, %{tool} க்கு இயல்புநிலை மேப்பிங் தேர்வு செய்யவும்"
 
 #, vue-format
 msgctxt "app->mmu->msg->select_tool"
