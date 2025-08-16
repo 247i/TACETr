@@ -488,7 +488,9 @@ def எடுபொருள்மொழிபெயர்(அனைத்து
                 src = பதிவு.msgid
                 if src == "":
                     src = பதிவு.msgctxt
-                if src == பதிவு.msgstr                :
+                if src == பதிவு.msgstr:
+                    if src == ", ":
+                        pass
                     இ, _ = பொருள்_பெறு(src)
                     if பதிவு.msgid_plural:
                         பதிவு.msgstr_plural[0] = இ
