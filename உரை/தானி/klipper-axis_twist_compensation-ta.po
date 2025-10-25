@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Klipper)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-06 22:32+0200\n"
-"PO-Revision-Date: 2025-01-07 08:26+0530\n"
+"POT-Creation-Date: 2025-09-08 04:55+0200\n"
+"PO-Revision-Date: 2025-09-08 08:45\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/klipper/axis_twist_compensation/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #: docs/Axis_Twist_Compensation.md:block 1 (header)
 #, md-text
@@ -84,63 +84,6 @@ msgstr ""
 "(config_reference.md#ஆய்வு) அளவுத்திருத்தத்தை பெரிதும் பாதிக்கும்போது சரியாக"
 " அமைக்கப்படுவதை உறுதிசெய்க."
 
-#: docs/Axis_Twist_Compensation.md:block 8 (ordered list)
-#, md-text
-msgid ""
-"After setting up the [axis_twist_compensation] module, perform "
-"`AXIS_TWIST_COMPENSATION_CALIBRATE`"
-msgstr ""
-"[AXIS_TWIST_COMPENSATION] தொகுதியை அமைத்த பிறகு, "
-"`AXIS_TWIST_COMPENSATION_CALIBRATE` ஐச் செய்யுங்கள்"
-
-#: docs/Axis_Twist_Compensation.md:block 9 (unordered list)
-#, md-text
-msgid ""
-"The calibration wizard will prompt you to measure the probe Z offset at a "
-"few points along the bed"
-msgstr ""
-"அளவுத்திருத்த வழிகாட்டி படுக்கையுடன் ஒரு சில புள்ளிகளில் ஆய்வு சட் "
-"ஆஃப்செட்டை அளவிட உங்களைத் தூண்டும்"
-
-#: docs/Axis_Twist_Compensation.md:block 9 (unordered list)
-#, md-text
-msgid ""
-"The calibration defaults to 3 points but you can use the option "
-"`SAMPLE_COUNT=` to use a different number."
-msgstr ""
-"அளவுத்திருத்தம் 3 புள்ளிகளுக்கு இயல்புநிலையாகிறது, ஆனால் நீங்கள் வேறு "
-"எண்ணைப் பயன்படுத்த `மாதிரி_சவுண்ட் =` விருப்பத்தைப் பயன்படுத்தலாம்."
-
-#: docs/Axis_Twist_Compensation.md:block 10 (ordered list)
-#, md-text
-msgid "[Adjust your Z offset](Probe_Calibrate.md#calibrating-probe-z-offset)"
-msgstr ""
-"[Adjust your சட் offset](Probe_Calibrate.md#calibrating-probe-z-offset)"
-
-#: docs/Axis_Twist_Compensation.md:block 10 (ordered list)
-#, md-text
-msgid ""
-"Perform automatic/probe-based bed tramming operations, such as [Screws Tilt "
-"Adjust](G-Codes.md#screws_tilt_adjust), [Z Tilt "
-"Adjust](G-Codes.md#z_tilt_adjust) etc"
-msgstr "[திருகுகள் சாய் சரிசெய்தல்] (சி-கோட்ச்."
-
-#: docs/Axis_Twist_Compensation.md:block 10 (ordered list)
-#, md-text
-msgid "Home all axis, then perform a [Bed Mesh](Bed_Mesh.md) if required"
-msgstr ""
-"முகப்பு அனைத்து அச்சுகளும், பின்னர் தேவைப்பட்டால் [படுக்கை கண்ணி] "
-"(BED_MESH.MD) செய்யுங்கள்"
-
-#: docs/Axis_Twist_Compensation.md:block 10 (ordered list)
-#, md-text
-msgid ""
-"Perform a test print, followed by any [fine-"
-"tuning](Axis_Twist_Compensation.md#fine-tuning) as desired"
-msgstr ""
-"ஒரு சோதனை அச்சுப்பொறியைச் செய்யுங்கள், அதைத் தொடர்ந்து [நன்றாக-ட்யூனிங்] "
-"(அச்சு_ட்விச்ட்_காம்பென்சேசன். எம்.டி#ஃபைன்-ட்யூனிங்) விரும்பியபடி"
-
 #: docs/Axis_Twist_Compensation.md:block 11 (quote)
 #, md-text
 msgid ""
@@ -172,3 +115,119 @@ msgid ""
 msgstr ""
 "[AXIS_TWIST_COMPENSATION] க்கான கட்டளைகளை [G- குறியீடுகள்] "
 "(g-codes.md#axin_twist_compensation) இல் காணலாம்)"
+
+#: docs/Axis_Twist_Compensation.md:block 8 (header)
+#, md-text
+msgid "Basic Usage: X-Axis Calibration"
+msgstr "அடிப்படை பயன்பாடு: எக்ச்-அச்சு அளவுத்திருத்தம்"
+
+#: docs/Axis_Twist_Compensation.md:block 9 (ordered list)
+#, md-text
+msgid "After setting up the `[axis_twist_compensation]` module, run:"
+msgstr "`[AXIS_TWIST_COMPENSATION]` தொகுதியை அமைத்த பிறகு, இயக்கவும்:"
+
+#: docs/Axis_Twist_Compensation.md:block 11 (paragraph)
+#, md-text
+msgid ""
+"This command will calibrate the X-axis by default. - The calibration wizard "
+"will prompt you to measure the probe Z offset at several points along the "
+"bed. - By default, the calibration uses 3 points, but you can specify a "
+"different number with the option: `SAMPLE_COUNT=<value>`"
+msgstr ""
+"இந்த கட்டளை இயல்புநிலையாக எக்ச்-அச்சை அளவீடு செய்யும். - அளவுத்திருத்த "
+"வழிகாட்டி படுக்கையுடன் பல புள்ளிகளில் ஆய்வு சட் ஆஃப்செட்டை அளவிட உங்களைத் "
+"தூண்டும். - இயல்பாக, அளவுத்திருத்தம் 3 புள்ளிகளைப் பயன்படுத்துகிறது, ஆனால் "
+"விருப்பத்துடன் வேறு எண்ணைக் குறிப்பிடலாம்: `மாதிரி_சவுண்ட் = <மதிப்பு>`"
+
+#: docs/Axis_Twist_Compensation.md:block 12 (ordered list)
+#, md-text
+msgid ""
+"**Adjust Your Z Offset:** After completing the calibration, be sure to "
+"[adjust your Z offset] (Probe_Calibrate.md#calibrating-probe-z-offset)."
+msgstr ""
+"**Adjust Your சட் Offset:** After completing the calibration, be sure "
+"பெறுநர் [adjust your சட் offset] (Probe_Calibrate.md#calibrating-probe-z-"
+"offset)."
+
+#: docs/Axis_Twist_Compensation.md:block 12 (ordered list)
+#, md-text
+msgid ""
+"**Perform Bed Leveling Operations:** Use probe-based operations as needed, "
+"such as:"
+msgstr ""
+"** படுக்கை நிலை செயல்பாடுகளைச் செய்யுங்கள்: ** தேவைக்கேற்ப ஆய்வு "
+"அடிப்படையிலான செயல்பாடுகளைப் பயன்படுத்துங்கள்:"
+
+#: docs/Axis_Twist_Compensation.md:block 12 (ordered list)
+#, md-text
+msgid "[Screws Tilt Adjust](G-Codes.md#screws_tilt_adjust)"
+msgstr "[Screws Tilt Adjust](G-Codes.md#screws_tilt_adjust)"
+
+#: docs/Axis_Twist_Compensation.md:block 12 (ordered list)
+#, md-text
+msgid "[Z Tilt Adjust](G-Codes.md#z_tilt_adjust)"
+msgstr "[Z Tilt Adjust](G-Codes.md#z_tilt_adjust)"
+
+#: docs/Axis_Twist_Compensation.md:block 12 (ordered list)
+#, md-text
+msgid "**Finalize the Setup:**"
+msgstr "** அமைப்பை இறுதி செய்யுங்கள்: **"
+
+#: docs/Axis_Twist_Compensation.md:block 12 (ordered list)
+#, md-text
+msgid "Home all axes, and perform a [Bed Mesh](Bed_Mesh.md) if necessary."
+msgstr ""
+"அனைத்து அச்சுகளையும் வீட்டிலேயே, தேவைப்பட்டால் [படுக்கை கண்ணி] (BED_MESH.MD)"
+" செய்யுங்கள்."
+
+#: docs/Axis_Twist_Compensation.md:block 12 (ordered list)
+#, md-text
+msgid ""
+"Run a test print, followed by any [fine-"
+"tuning](Axis_Twist_Compensation.md#fine-tuning) if needed."
+msgstr ""
+"ஒரு சோதனை அச்சிடலை இயக்கவும், அதைத் தொடர்ந்து தேவைப்பட்டால் ஏதேனும் "
+"[நன்றாக-ட்யூனிங்] (அச்சு_ட்விச்ட்_காம்பென்சேசன்."
+
+#: docs/Axis_Twist_Compensation.md:block 13 (header)
+#, md-text
+msgid "For Y-Axis Calibration"
+msgstr "Y- அச்சு அளவுத்திருத்தத்திற்கு"
+
+#: docs/Axis_Twist_Compensation.md:block 14 (paragraph)
+#, md-text
+msgid ""
+"The calibration process for the Y-axis is similar to the X-axis. To "
+"calibrate the Y-axis, use:"
+msgstr ""
+"Y- அச்சுக்கான அளவுத்திருத்த செயல்முறை எக்ச்-அச்சுக்கு ஒத்ததாகும். Y- அச்சை "
+"அளவீடு செய்ய, பயன்படுத்தவும்:"
+
+#: docs/Axis_Twist_Compensation.md:block 16 (paragraph)
+#, md-text
+msgid ""
+"This will guide you through the same measuring process as for the X-axis."
+msgstr ""
+"இது எக்ச்-அச்சுக்கு அதே அளவீட்டு செயல்முறையின் மூலம் உங்களுக்கு வழிகாட்டும்."
+
+#: docs/Axis_Twist_Compensation.md:block 17 (header)
+#, md-text
+msgid "Automatic Calibration for Both Axes"
+msgstr "இரண்டு அச்சுகளுக்கும் தானியங்கி அளவுத்திருத்தம்"
+
+#: docs/Axis_Twist_Compensation.md:block 18 (paragraph)
+#, md-text
+msgid ""
+"To perform automatic calibration for both the X and Y axes without manual "
+"intervention, use:"
+msgstr ""
+"கையேடு தலையீடு இல்லாமல் ஃச் மற்றும் ஒய் அச்சுகள் இரண்டிற்கும் தானியங்கி "
+"அளவுத்திருத்தத்தை செய்ய, பயன்படுத்தவும்:"
+
+#: docs/Axis_Twist_Compensation.md:block 20 (paragraph)
+#, md-text
+msgid ""
+"In this mode, the calibration process will run for both axes automatically."
+msgstr ""
+"இந்த பயன்முறையில், அளவுத்திருத்த செயல்முறை இரண்டு அச்சுகளுக்கும் தானாக "
+"இயங்கும்."

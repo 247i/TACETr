@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Klipper)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-06 22:33+0200\n"
-"PO-Revision-Date: 2025-06-14 06:58\n"
+"POT-Creation-Date: 2025-09-08 04:54+0200\n"
+"PO-Revision-Date: 2025-09-08 10:33\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/klipper/g-codes/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #, md-text
 msgid ""
@@ -409,7 +409,7 @@ msgstr ""
 "`Manual_probe [வேகம் = <வேகம்>]`: கொடுக்கப்பட்ட இடத்தில் முனை உயரத்தை அளவிட "
 "பயனுள்ள ஒரு உதவி ச்கிரிப்டை இயக்கவும். விரைவு குறிப்பிடப்பட்டால், இது "
 "டெச்ட்ச் கட்டளைகளின் வேகத்தை அமைக்கிறது (இயல்புநிலை 5 மிமீ/வி). ஒரு கையேடு "
-"ஆய்வின் போது, ​​பின்வரும் கூடுதல் கட்டளைகள் கிடைக்கின்றன:"
+"ஆய்வின் போது, பின்வரும் கூடுதல் கட்டளைகள் கிடைக்கின்றன:"
 
 #, md-text
 msgid ""
@@ -687,7 +687,7 @@ msgstr ""
 "`Endstop_phase_calibrate [stepper = <config_name>]`: ச்டெப்பர் அளவுரு "
 "எதுவும் வழங்கப்படவில்லை என்றால், இந்த கட்டளை கடந்த கால செயல்பாடுகளின் போது "
 "எண்ட்ச்டாப் ச்டெப்பர் கட்டங்களில் புள்ளிவிவரங்களைப் புகாரளிக்கும். ஒரு "
-"ச்டெபர் அளவுரு வழங்கப்படும்போது, ​​கொடுக்கப்பட்ட எண்ட்ச்டாப் கட்ட அமைப்பை "
+"ச்டெபர் அளவுரு வழங்கப்படும்போது, கொடுக்கப்பட்ட எண்ட்ச்டாப் கட்ட அமைப்பை "
 "கட்டமைப்பு கோப்பில் எழுத ஏற்பாடு செய்கிறது (Save_config கட்டளையுடன் "
 "இணைந்து)."
 
@@ -717,27 +717,6 @@ msgstr ""
 "நிலையில் வைக்கும்; இயக்கவியலை மீட்டமைக்க G28 ஐ பின்னர் வழங்கவும். இந்த "
 "கட்டளை குறைந்த அளவிலான கண்டறிதல் மற்றும் பிழைத்திருத்தத்திற்காக "
 "வடிவமைக்கப்பட்டுள்ளது."
-
-#, md-text
-msgid ""
-"`SET_KINEMATIC_POSITION [X=<value>] [Y=<value>] [Z=<value>]`: Force the low-"
-"level kinematic code to believe the toolhead is at the given cartesian "
-"position. This is a diagnostic and debugging command; use SET_GCODE_OFFSET "
-"and/or G92 for regular axis transformations. If an axis is not specified "
-"then it will default to the position that the head was last commanded to. "
-"Setting an incorrect or invalid position may lead to internal software "
-"errors. This command may invalidate future boundary checks; issue a G28 "
-"afterwards to reset the kinematics."
-msgstr ""
-"`Set_kinematic_position [x = <மதிப்பு>] [y = <மதிப்பு>] [z = <மதிப்பு>]`: "
-"கருவியின்எட் கொடுக்கப்பட்ட கார்ட்டீசியன் நிலையில் இருப்பதாக நம்புவதற்கு "
-"குறைந்த அளவிலான இயக்கக் குறியீட்டை கட்டாயப்படுத்தவும். இது ஒரு கண்டறியும் "
-"மற்றும் பிழைத்திருத்த கட்டளை; வழக்கமான அச்சு மாற்றங்களுக்கு SET_GCODE_OFFSET"
-" மற்றும்/அல்லது G92 ஐப் பயன்படுத்தவும். ஒரு அச்சு குறிப்பிடப்படாவிட்டால், "
-"அது கடைசியாக கட்டளையிடப்பட்ட நிலைக்கு இயல்புநிலையாக இருக்கும். தவறான அல்லது "
-"தவறான நிலையை அமைப்பது உள் மென்பொருள் பிழைகளுக்கு வழிவகுக்கும். இந்த கட்டளை "
-"எதிர்கால எல்லை சோதனைகளை செல்லாது; இயக்கவியலை மீட்டமைக்க G28 ஐ பின்னர் "
-"வழங்கவும்."
 
 #, md-text
 msgid "`SDCARD_LOOP_END`: End a looped section in the SD print."
@@ -937,18 +916,6 @@ msgstr ""
 
 #, md-text
 msgid ""
-"`SAVE_VARIABLE VARIABLE=<name> VALUE=<value>`: Saves the variable to disk so"
-" that it can be used across restarts. All stored variables are loaded into "
-"the `printer.save_variables.variables` dict at startup and can be used in "
-"gcode macros. The provided VALUE is parsed as a Python literal."
-msgstr ""
-"`Save_variable variact = <aname> மதிப்பு = <மதிப்பு>`: மாறி வட்டில் "
-"சேமிக்கிறது, இதனால் மறுதொடக்கங்கள் முழுவதும் பயன்படுத்தப்படலாம். "
-"சேமிக்கப்பட்ட அனைத்து மாறிகள் தொடக்கத்தில் `அச்சுப்பொறி.சேவ்_வார்பிள்கள். "
-"வழங்கப்பட்ட மதிப்பு ஒரு பைதான் மொழியாக பாகுபடுத்தப்படுகிறது."
-
-#, md-text
-msgid ""
 "`SET_INPUT_SHAPER [SHAPER_FREQ_X=<shaper_freq_x>] "
 "[SHAPER_FREQ_Y=<shaper_freq_y>] [DAMPING_RATIO_X=<damping_ratio_x>] "
 "[DAMPING_RATIO_Y=<damping_ratio_y>] [SHAPER_TYPE=<shaper>] "
@@ -1113,7 +1080,7 @@ msgstr ""
 " கோரப்பட்ட எண்ணிக்கையில் முடுக்கமானி அளவீடுகளைத் தொடங்குகிறது. சிப் "
 "குறிப்பிடப்படவில்லை என்றால், அது \"ADXL345\" க்கு இயல்புநிலையாகும். கட்டளை "
 "ஒரு தொடக்க-நிறுத்த பயன்முறையில் செயல்படுகிறது: முதல் முறையாக "
-"செயல்படுத்தப்படும் போது, ​​அது அளவீடுகளைத் தொடங்குகிறது, அடுத்த சாவுஒறுப்பு "
+"செயல்படுத்தப்படும் போது, அது அளவீடுகளைத் தொடங்குகிறது, அடுத்த சாவுஒறுப்பு "
 "அவற்றைத் தடுக்கிறது. அளவீடுகளின் முடிவுகள் `/tmp/adxl345- <cip>-<sip> .csv` "
 "என்ற கோப்பில் எழுதப்பட்டுள்ளன, அங்கு` <iph> `என்பது முடுக்கமானி சிப்பின் "
 "பெயர் (` adxl345 my_chip_name] `இலிருந்து` my_chip_name` ) மற்றும் `<பெயர்>`"
@@ -1176,7 +1143,7 @@ msgid "Additional Commands"
 msgstr "கூடுதல் கட்டளைகள்"
 
 #: docs/G-Codes.md:block 12 (header)
-#, md-text
+#, md-text, read-only
 msgid "[adxl345]"
 msgstr "[ADICS 45]"
 
@@ -1192,7 +1159,7 @@ msgstr ""
 #: docs/G-Codes.md:block 14 (header)
 #, md-text, read-only
 msgid "ACCELEROMETER_MEASURE"
-msgstr "முடுக்கமானி அளவீட்டு"
+msgstr "முடுக்கமானி நடவடிக்கைகள்"
 
 #: docs/G-Codes.md:block 16 (header)
 #, md-text
@@ -1200,7 +1167,7 @@ msgid "ACCELEROMETER_QUERY"
 msgstr "முடுக்கமானி_ குவேரி"
 
 #: docs/G-Codes.md:block 18 (header)
-#, md-text, terminology
+#, md-text, read-only, terminology
 msgid "ACCELEROMETER_DEBUG_READ"
 msgstr "முடுக்கமானி_டெபக்_ரெட்"
 
@@ -1251,27 +1218,27 @@ msgstr ""
 "ஐயும் பார்க்கவும்)."
 
 #: docs/G-Codes.md:block 24 (header)
-#, md-text
+#, md-text, read-only
 msgid "BED_MESH_CALIBRATE"
 msgstr "Bed_mesh_calibrate"
 
 #: docs/G-Codes.md:block 26 (header)
-#, md-text
+#, md-text, read-only
 msgid "BED_MESH_OUTPUT"
 msgstr "Bed_mesh_output"
 
 #: docs/G-Codes.md:block 28 (header)
-#, md-text
+#, md-text, read-only
 msgid "BED_MESH_MAP"
 msgstr "Bed_mesh_map"
 
 #: docs/G-Codes.md:block 30 (header)
-#, md-text
+#, md-text, read-only
 msgid "BED_MESH_CLEAR"
 msgstr "Bed_mesh_clear"
 
 #: docs/G-Codes.md:block 32 (header)
-#, md-text
+#, md-text, read-only
 msgid "BED_MESH_PROFILE"
 msgstr "Bed_mesh_profile"
 
@@ -1297,12 +1264,12 @@ msgstr ""
 "நினைவில் கொள்க."
 
 #: docs/G-Codes.md:block 34 (header)
-#, md-text
+#, md-text, read-only
 msgid "BED_MESH_OFFSET"
 msgstr "Bed_mesh_offset"
 
 #: docs/G-Codes.md:block 36 (header)
-#, md-text
+#, md-text, read-only
 msgid "[bed_screws]"
 msgstr "[BED_SCREWS]"
 
@@ -1318,12 +1285,12 @@ msgstr ""
 "வழிகாட்டி] (கையேடு_லெவல்."
 
 #: docs/G-Codes.md:block 38 (header)
-#, md-text
+#, md-text, read-only
 msgid "BED_SCREWS_ADJUST"
 msgstr "Bed_screws_adjust"
 
 #: docs/G-Codes.md:block 40 (header)
-#, md-text
+#, md-text, read-only
 msgid "[bed_tilt]"
 msgstr "[BED_TILT]"
 
@@ -1337,12 +1304,12 @@ msgstr ""
 "பின்வரும் கட்டளைகள் கிடைக்கும்."
 
 #: docs/G-Codes.md:block 42 (header)
-#, md-text
+#, md-text, read-only
 msgid "BED_TILT_CALIBRATE"
 msgstr "Bed_tilt_calibrate"
 
 #: docs/G-Codes.md:block 44 (header)
-#, md-text
+#, md-text, read-only
 msgid "[bltouch]"
 msgstr "[bltouch]"
 
@@ -1358,7 +1325,7 @@ msgstr ""
 "(bltouch.md) ஐயும் பார்க்கவும்)."
 
 #: docs/G-Codes.md:block 46 (header)
-#, md-text
+#, md-text, read-only
 msgid "BLTOUCH_DEBUG"
 msgstr "Bltouch_debug"
 
@@ -1378,12 +1345,12 @@ msgstr ""
 "`output_mode_store` கட்டளைகளையும் ஆதரிக்கலாம்."
 
 #: docs/G-Codes.md:block 48 (header)
-#, md-text
+#, md-text, read-only
 msgid "BLTOUCH_STORE"
 msgstr "Bltouch_store"
 
 #: docs/G-Codes.md:block 50 (header)
-#, md-text
+#, md-text, read-only
 msgid "[configfile]"
 msgstr "[கட்டமைப்பு]"
 
@@ -1393,12 +1360,12 @@ msgid "The configfile module is automatically loaded."
 msgstr "கட்டமைப்பு தொகுதி தானாக ஏற்றப்படும்."
 
 #: docs/G-Codes.md:block 52 (header)
-#, md-text
+#, md-text, read-only
 msgid "SAVE_CONFIG"
 msgstr "Save_config"
 
 #: docs/G-Codes.md:block 54 (header)
-#, md-text
+#, md-text, read-only
 msgid "[delayed_gcode]"
 msgstr "[தாமதமாக_சோட்]"
 
@@ -1414,12 +1381,12 @@ msgstr ""
 "(Command_templates.md#தாமதமான-GCODES) ஐப் பார்க்கவும்)."
 
 #: docs/G-Codes.md:block 56 (header)
-#, md-text
+#, md-text, read-only
 msgid "UPDATE_DELAYED_GCODE"
 msgstr "Update_delayed_gcode"
 
 #: docs/G-Codes.md:block 58 (header)
-#, md-text
+#, md-text, read-only
 msgid "[delta_calibrate]"
 msgstr "[டெல்டா_கலிப்ரேட்]"
 
@@ -1436,17 +1403,17 @@ msgstr ""
 "(டெல்டா_கலிபிரேட். எம்.டி) ஐயும் பார்க்கவும்)."
 
 #: docs/G-Codes.md:block 60 (header)
-#, md-text
+#, md-text, read-only
 msgid "DELTA_CALIBRATE"
 msgstr "Delta_calibrate"
 
 #: docs/G-Codes.md:block 62 (header)
-#, md-text
+#, md-text, read-only
 msgid "DELTA_ANALYZE"
 msgstr "Delta_analyze"
 
 #: docs/G-Codes.md:block 64 (header)
-#, md-text
+#, md-text, read-only
 msgid "[display]"
 msgstr "[காட்சி]"
 
@@ -1460,12 +1427,12 @@ msgstr ""
 "பின்வரும் கட்டளை கிடைக்கும்."
 
 #: docs/G-Codes.md:block 66 (header)
-#, md-text
+#, md-text, read-only
 msgid "SET_DISPLAY_GROUP"
 msgstr "Set_display_group"
 
 #: docs/G-Codes.md:block 68 (header)
-#, md-text
+#, md-text, read-only
 msgid "[display_status]"
 msgstr "[டிச்ப்ளே_ச்டேட்டச்]"
 
@@ -1495,7 +1462,7 @@ msgstr ""
 "இயக்கப்பட்டால் பின்வரும் கட்டளை கிடைக்கும்."
 
 #: docs/G-Codes.md:block 73 (header)
-#, md-text
+#, md-text, read-only
 msgid "SET_DUAL_CARRIAGE"
 msgstr "Set_dual_carriage"
 
@@ -1516,12 +1483,12 @@ msgstr ""
 "(endstop_phase.md) ஐப் பார்க்கவும்)."
 
 #: docs/G-Codes.md:block 77 (header)
-#, md-text
+#, md-text, read-only
 msgid "ENDSTOP_PHASE_CALIBRATE"
 msgstr "Endstop_phase_calibrate"
 
 #: docs/G-Codes.md:block 79 (header)
-#, md-text
+#, md-text, read-only
 msgid "[extruder]"
 msgstr "[எக்ச்ட்ரூடர்]"
 
@@ -2884,7 +2851,7 @@ msgid ""
 msgstr ""
 "`Set_smart_effector [உணர்திறன் = <sensitivity>] [முடி = <ched>] [மீட்பு_ "
 "நேரம் = <time>]`: அறிவுள்ள செயல்திறன் அளவுருக்களை அமைக்கவும். `உணர்திறன்` "
-"குறிப்பிடப்படும்போது, ​​அந்தந்த மதிப்பு ச்மார்ட்ஃபெக்டர் EEPROM க்கு "
+"குறிப்பிடப்படும்போது, அந்தந்த மதிப்பு ச்மார்ட்ஃபெக்டர் EEPROM க்கு "
 "எழுதப்படுகிறது (வழங்கப்பட வேண்டும்` control_pin` தேவை). ஏற்றுக்கொள்ளக்கூடிய "
 "`<உணர்திறன்>` மதிப்புகள் 0..255, இயல்புநிலை 50 ஆகும். குறைந்த மதிப்புகளுக்கு"
 " தூண்டுவதற்கு குறைந்த முனை தொடர்பு ஆற்றல் தேவைப்படுகிறது (ஆனால் ஆய்வு "
@@ -2961,7 +2928,7 @@ msgid ""
 "When the `NAME` parameter is given, the named object will be excluded from "
 "printing."
 msgstr ""
-"`பெயர்` அளவுரு வழங்கப்படும்போது, ​​பெயரிடப்பட்ட பொருள் அச்சிடுவதிலிருந்து "
+"`பெயர்` அளவுரு வழங்கப்படும்போது, பெயரிடப்பட்ட பொருள் அச்சிடுவதிலிருந்து "
 "விலக்கப்படும்."
 
 #: docs/G-Codes.md:block 92 (paragraph)
@@ -2970,7 +2937,7 @@ msgid ""
 "When the `CURRENT` parameter is given, the current object will be excluded "
 "from printing."
 msgstr ""
-"`தற்போதைய` அளவுரு வழங்கப்படும்போது, ​​தற்போதைய பொருள் அச்சிடுவதிலிருந்து "
+"`தற்போதைய` அளவுரு வழங்கப்படும்போது, தற்போதைய பொருள் அச்சிடுவதிலிருந்து "
 "விலக்கப்படும்."
 
 #: docs/G-Codes.md:block 93 (paragraph)
@@ -2980,7 +2947,7 @@ msgid ""
 "cleared. Additionally including `NAME` will only reset the named object. "
 "This **can** cause print failures, if layers were already skipped."
 msgstr ""
-"`மீட்டமை` அளவுரு வழங்கப்படும்போது, ​​விலக்கப்பட்ட பொருட்களின் பட்டியல் "
+"`மீட்டமை` அளவுரு வழங்கப்படும்போது, விலக்கப்பட்ட பொருட்களின் பட்டியல் "
 "அழிக்கப்படும். கூடுதலாக `பெயர்` உட்பட பெயரிடப்பட்ட பொருளை மட்டுமே "
 "மீட்டமைக்கும். அடுக்குகள் ஏற்கனவே தவிர்க்கப்பட்டால், இது ** அச்சு தோல்விகளை "
 "ஏற்படுத்தும்."
@@ -3009,7 +2976,7 @@ msgid ""
 msgstr ""
 "அளவுருக்கள் எதுவும் வழங்கப்படாமல், இது கிளிப்பருக்கு அறியப்பட்ட "
 "வரையறுக்கப்பட்ட பொருள்களை பட்டியலிடும். `Json` அளவுரு வழங்கப்படாவிட்டால், "
-"அது சாதொபொகு வடிவத்தில் பொருள் விவரங்களைத் தரும் போது, ​​சரங்களின் பட்டியலை "
+"அது சாதொபொகு வடிவத்தில் பொருள் விவரங்களைத் தரும் போது, சரங்களின் பட்டியலை "
 "வழங்குகிறது."
 
 #: docs/G-Codes.md:block 97 (paragraph)
@@ -3018,7 +2985,7 @@ msgid ""
 "When the `NAME` parameter is included, this defines an object to be "
 "excluded."
 msgstr ""
-"`பெயர்` அளவுரு சேர்க்கப்படும்போது, ​​இது விலக்கப்பட வேண்டிய ஒரு பொருளை "
+"`பெயர்` அளவுரு சேர்க்கப்படும்போது, இது விலக்கப்பட வேண்டிய ஒரு பொருளை "
 "வரையறுக்கிறது."
 
 #: docs/G-Codes.md:block 98 (unordered list)
@@ -3049,7 +3016,7 @@ msgid ""
 "When the `RESET` parameter is provided, all defined objects will be cleared,"
 " and the `[exclude_object]` module will be reset."
 msgstr ""
-"`மீட்டமை` அளவுரு வழங்கப்படும்போது, ​​வரையறுக்கப்பட்ட அனைத்து பொருட்களும் "
+"`மீட்டமை` அளவுரு வழங்கப்படும்போது, வரையறுக்கப்பட்ட அனைத்து பொருட்களும் "
 "அழிக்கப்படும், மேலும்` [விலக்கு_ஆப்செக்ட்] `தொகுதி மீட்டமைக்கப்படும்."
 
 #: docs/G-Codes.md:block 100 (header)
@@ -3162,61 +3129,6 @@ msgstr ""
 "[அச்சுப்பொறி கட்டமைப்பில்] `enable_force_move` ஐ அமைக்க வேண்டும் "
 "(config_reference.md#force_move)."
 
-#: docs/G-Codes.md:block 281 (paragraph)
-#, md-text
-msgid ""
-"`TEST_RESONANCES AXIS=<axis> OUTPUT=<resonances,raw_data> [NAME=<name>] "
-"[FREQ_START=<min_freq>] [FREQ_END=<max_freq>] [HZ_PER_SEC=<hz_per_sec>] "
-"[CHIPS=<adxl345_chip_name>] [POINT=x,y,z] [INPUT_SHAPING=[<0:1>]]`: Runs the"
-" resonance test in all configured probe points for the requested \"axis\" "
-"and measures the acceleration using the accelerometer chips configured for "
-"the respective axis. \"axis\" can either be X or Y, or specify an arbitrary "
-"direction as `AXIS=dx,dy`, where dx and dy are floating point numbers "
-"defining a direction vector (e.g. `AXIS=X`, `AXIS=Y`, or `AXIS=1,-1` to "
-"define a diagonal direction). Note that `AXIS=dx,dy` and `AXIS=-dx,-dy` is "
-"equivalent. `adxl345_chip_name` can be one or more configured adxl345 "
-"chip,delimited with comma, for example `CHIPS=\"adxl345, adxl345 rpi\"`. "
-"Note that `adxl345` can be omitted from named adxl345 chips. If POINT is "
-"specified it will override the point(s) configured in `[resonance_tester]`. "
-"If `INPUT_SHAPING=0` or not set(default), disables input shaping for the "
-"resonance testing, because it is not valid to run the resonance testing with"
-" the input shaper enabled. `OUTPUT` parameter is a comma-separated list of "
-"which outputs will be written. If `raw_data` is requested, then the raw "
-"accelerometer data is written into a file or a series of files "
-"`/tmp/raw_data_<axis>_[<chip_name>_][<point>_]<name>.csv` with (`<point>_` "
-"part of the name generated only if more than 1 probe point is configured or "
-"POINT is specified). If `resonances` is specified, the frequency response is"
-" calculated (across all probe points) and written into "
-"`/tmp/resonances_<axis>_<name>.csv` file. If unset, OUTPUT defaults to "
-"`resonances`, and NAME defaults to the current time in \"YYYYMMDD_HHMMSS\" "
-"format."
-msgstr ""
-"`Test_resonances அச்சு = <six> வெளியீடு = <அதிர்வுகள், RAW_DATA> [பெயர் = "
-"<பெயர்>] [FREQ_START = <MIN_FREQ>] புள்ளி = ஃச், ஒய், z] [input_shapeing = "
-"[<0: 1>>]] `: கோரப்பட்ட\" அச்சு \"க்கான அனைத்து கட்டமைக்கப்பட்ட ஆய்வு "
-"புள்ளிகளிலும் அதிர்வு சோதனையை இயக்குகிறது மற்றும் அந்தந்த அச்சுக்கு "
-"கட்டமைக்கப்பட்ட முடுக்கமானி சில்லுகளைப் பயன்படுத்தி முடுக்கம் அளவிடுகிறது. "
-"\"அச்சு\" ஃச் அல்லது ஒய் ஆக இருக்கலாம், அல்லது தன்னிச்சையான திசையை `அச்சு = "
-"dx, dy` எனக் குறிப்பிடலாம், அங்கு dx மற்றும் dy ஆகியவை திசை திசையன் "
-"வரையறுக்கும் புள்ளி எண்களை மிதக்கின்றன (எ.கா.` அச்சு = x`, `அச்சு = y`, "
-"அல்லது மூலைவிட்ட திசையை வரையறுக்க `அச்சு = 1, -1`). `அச்சு = dx, dy` "
-"மற்றும்` அச்சு = -dx, -dy` சமம் என்பதை நினைவில் கொள்க. `ADXL345_CHIP_NAME` "
-"கமாவுடன் பிரிக்கப்பட்ட ஒன்று அல்லது அதற்கு மேற்பட்ட கட்டமைக்கப்பட்ட ADXL345 "
-"CHIP ஆக இருக்கலாம், எடுத்துக்காட்டாக` CHIPS = \"ADXL345, ADXL345 RPI\" `. "
-"`ADXL345` என்று பெயரிடப்பட்ட ADXL345 சில்லுகளிலிருந்து தவிர்க்கலாம் என்பதை "
-"நினைவில் கொள்க. புள்ளி குறிப்பிடப்பட்டால், அது `[அதிர்வு_டெச்டர்]` இல் "
-"கட்டமைக்கப்பட்ட புள்ளி (களை) மேலெழுதும். `உள்ளீடு_சேப்பிங் = 0` அல்லது "
-"அமைக்கப்படாவிட்டால் (இயல்புநிலை), அதிர்வு சோதனைக்கு உள்ளீட்டு வடிவமைப்பை "
-"முடக்குகிறது, ஏனெனில் இயக்கப்பட்ட உள்ளீட்டு வடிவத்துடன் அதிர்வு சோதனையை "
-"இயக்குவது செல்லுபடியாகாது. `வெளியீடு` அளவுரு என்பது கமாவால் பிரிக்கப்பட்ட "
-"பட்டியலாகும், இதன் வெளியீடுகள் எழுதப்படும். `RAW_DATA` கோரப்பட்டால், மூல "
-"முடுக்கமானி தரவு ஒரு கோப்பு அல்லது தொடர்ச்சியான கோப்புகளில் எழுதப்பட்டுள்ளது"
-" . `அதிர்வுகள்` குறிப்பிடப்பட்டால், அதிர்வெண் பதில் கணக்கிடப்படுகிறது (எல்லா"
-" ஆய்வு புள்ளிகளிலும்) மற்றும்`/tmp/அதிர்வு_ <inx> _ <aname> .csv` கோப்பில் "
-"எழுதப்பட்டுள்ளது. அமைக்கப்படாவிட்டால், வெளியீடு இயல்புநிலையாக "
-"`அதிர்வுகளுக்கு`, மற்றும் பெயர் இயல்புநிலை தற்போதைய நேரத்திற்கு\" "
-"yyyymmdd_hhmmss \"வடிவத்தில் உள்ளது."
-
 #: docs/G-Codes.md:block 79 (paragraph)
 #, md-text
 msgid "Also provided is the following extended G-Code command:"
@@ -3276,7 +3188,7 @@ msgstr ""
 "`Set_digipot digipot = config_name wiper = <value>`: இந்த கட்டளை "
 "டிசிபோட்டின் தற்போதைய மதிப்பை மாற்றும். இந்த மதிப்பு பொதுவாக 0.0 முதல் 1.0 "
 "வரை இருக்க வேண்டும், கட்டமைப்பில் ஒரு 'அளவுகோல்' வரையறுக்கப்படாவிட்டால். "
-"'அளவுகோல்' வரையறுக்கப்படும்போது, ​​இந்த மதிப்பு 0.0 மற்றும் 'அளவுகோல்' வரை "
+"'அளவுகோல்' வரையறுக்கப்படும்போது, இந்த மதிப்பு 0.0 மற்றும் 'அளவுகோல்' வரை "
 "இருக்க வேண்டும்."
 
 #: docs/G-Codes.md:block 261 (header)
@@ -3472,7 +3384,7 @@ msgstr ""
 "`Set_tmc_current stepper = <ame> மின்னோட்ட்ம், ஓட்டம் = <mps> holdcurrent = "
 "<mps>`: இது டிஎம்சி டிரைவரின் ஓட்டத்தை சரிசெய்து வைத்திருக்கும். TMC2660 "
 "இயக்கிகளுக்கு `ஓல்ட்கரண்ட்` பொருந்தாது. `குளோபல்ச்கேலர்` புலம் (டி.எம்.சி "
-"5160 மற்றும் டி.எம்.சி 2240) கொண்ட ஓட்டுநரில் பயன்படுத்தும்போது, ​​ச்டெல்த் "
+"5160 மற்றும் டி.எம்.சி 2240) கொண்ட ஓட்டுநரில் பயன்படுத்தும்போது, ச்டெல்த் "
 "சேப் 2 பயன்படுத்தப்பட்டால், ச்டெப்பரை> 130 எம்.எச்."
 
 #: docs/G-Codes.md:block 354 (paragraph)
@@ -3500,47 +3412,6 @@ msgstr ""
 " ஒரு வேகத்தையும் குறிப்பிடலாம். இந்த விரைவு 20 பிட் TSTEP அடிப்படையிலான "
 "மதிப்பு பிரதிநிதித்துவமாக மாற்றப்படுகிறது. வேகங்களைக் குறிக்கும் "
 "புலங்களுக்கு மட்டுமே திசைவேக வாதத்தைப் பயன்படுத்துங்கள்."
-
-#: docs/G-Codes.md:block 379 (paragraph)
-#, md-text
-msgid ""
-"`Z_TILT_ADJUST [HORIZONTAL_MOVE_Z=<value>] [<probe_parameter>=<value>]`: "
-"This command will probe the points specified in the config and then make "
-"independent adjustments to each Z stepper to compensate for tilt. See the "
-"PROBE command for details on the optional probe parameters. The optional "
-"`HORIZONTAL_MOVE_Z` value overrides the `horizontal_move_z` option specified"
-" in the config file."
-msgstr ""
-"`Z_tilt_adjust [கிடைமட்ட_மோவ்_இச் = <மதிப்பு>] [<probe_parameter> = "
-"<மதிப்பு>]`: இந்த கட்டளை கட்டமைப்பில் குறிப்பிடப்பட்டுள்ள புள்ளிகளை "
-"ஆராய்ந்து பின்னர் ஒவ்வொரு சட் ச்டெப்பரிலும் சுயாதீனமான மாற்றங்களைச் "
-"செய்யும். விருப்ப ஆய்வு அளவுருக்கள் குறித்த விவரங்களுக்கு ஆய்வு கட்டளையைப் "
-"பார்க்கவும். விருப்பமான `கிடைமட்ட_மோவ்_செச்` மதிப்பு கட்டமைப்பு கோப்பில் "
-"குறிப்பிடப்பட்டுள்ள` கிடைமட்ட_மோவ்_செச்` விருப்பத்தை மீறுகிறது."
-
-#: docs/G-Codes.md:block 84 (paragraph)
-#, md-text
-msgid ""
-"`SET_DUAL_CARRIAGE CARRIAGE=[0|1] [MODE=[PRIMARY|COPY|MIRROR]]`: This "
-"command will change the mode of the specified carriage. If no `MODE` is "
-"provided it defaults to `PRIMARY`. Setting the mode to `PRIMARY` deactivates"
-" the other carriage and makes the specified carriage execute subsequent "
-"G-Code commands as-is. `COPY` and `MIRROR` modes are supported only for "
-"`CARRIAGE=1`. When set to either of these modes, carriage 1 will then track "
-"the subsequent moves of the carriage 0 and either copy relative movements of"
-" it (in `COPY` mode) or execute them in the opposite (mirror) direction (in "
-"`MIRROR` mode)."
-msgstr ""
-"`Set_dual_carriage வண்டி = [0 | 1] [பயன்முறை = [முதன்மை | நகல் | கண்ணாடி]]`:"
-" இந்த கட்டளை குறிப்பிட்ட வண்டியின் பயன்முறையை மாற்றும். `பயன்முறை` "
-"வழங்கப்படாவிட்டால், அது` முதன்மை` இயல்புநிலையாகும். பயன்முறையை `முதன்மை` "
-"அமைப்பது மற்ற வண்டியை செயலிழக்கச் செய்கிறது மற்றும் குறிப்பிட்ட வண்டியை "
-"அடுத்தடுத்த சி-குறியீட்டு கட்டளைகளை இயக்குகிறது. `நகல்` மற்றும்` மிரர்` "
-"முறைகள் `வண்டி = 1` க்கு மட்டுமே ஆதரிக்கப்படுகின்றன. இந்த முறைகளில் ஏதேனும் "
-"அமைக்கப்படும்போது, ​​வண்டி 1 பின்னர் வண்டி 0 இன் அடுத்தடுத்த நகர்வுகளைக் "
-"கண்காணிக்கும் மற்றும் அதன் தொடர்புடைய இயக்கங்களை (`நகல்` பயன்முறையில்) "
-"நகலெடுக்கும் அல்லது அவற்றை எதிர் (கண்ணாடி) திசையில் (` மிரர்` பயன்முறையில் "
-"இயக்கும் )."
 
 #: docs/G-Codes.md:block 85 (header)
 #, md-text
@@ -3591,43 +3462,8 @@ msgstr ""
 "மீட்டெடுக்கின்றன என்பதை நினைவில் கொள்க, இது இரட்டை கேரிசின் நகல் மற்றும் "
 "கண்ணாடி பயன்முறையை சரியாக மீட்டெடுக்க அவசியமாக இருக்கலாம்."
 
-#: docs/G-Codes.md:block 298 (paragraph)
-#, md-text
-msgid ""
-"`SHAPER_CALIBRATE [AXIS=<axis>] [NAME=<name>] [FREQ_START=<min_freq>] "
-"[FREQ_END=<max_freq>] [HZ_PER_SEC=<hz_per_sec>] [CHIPS=<adxl345_chip_name>] "
-"[MAX_SMOOTHING=<max_smoothing>]`: Similarly to `TEST_RESONANCES`, runs the "
-"resonance test as configured, and tries to find the optimal parameters for "
-"the input shaper for the requested axis (or both X and Y axes if `AXIS` "
-"parameter is unset). If `MAX_SMOOTHING` is unset, its value is taken from "
-"`[resonance_tester]` section, with the default being unset. See the [Max "
-"smoothing](Measuring_Resonances.md#max-smoothing) of the measuring "
-"resonances guide for more information on the use of this feature. The "
-"results of the tuning are printed to the console, and the frequency "
-"responses and the different input shapers values are written to a CSV "
-"file(s) `/tmp/calibration_data_<axis>_<name>.csv`. Unless specified, NAME "
-"defaults to the current time in \"YYYYMMDD_HHMMSS\" format. Note that the "
-"suggested input shaper parameters can be persisted in the config by issuing "
-"`SAVE_CONFIG` command, and if `[input_shaper]` was already enabled "
-"previously, these parameters take effect immediately."
-msgstr ""
-"`Shaper_calibrate [அச்சு = <six>] [பெயர் = <பெயர்>] [freq_start = "
-"<min_freq>] [freq_end = <ax_freq>] [hz_per_sec = <hz_per_sec>] [chips = "
-"<adxl345_chip_namemolothen = max_namem>] ; `Max_smoothing` அமைக்கப்படவில்லை "
-"என்றால், அதன் மதிப்பு` [அதிர்வு_டெச்டர்] `பிரிவில் இருந்து எடுக்கப்படுகிறது,"
-" இயல்புநிலை அமைக்கப்படாதது. இந்த அம்சத்தைப் பயன்படுத்துவது குறித்த கூடுதல் "
-"தகவலுக்கு அளவீட்டு அதிர்வு வழிகாட்டியின் [அதிகபட்ச மென்மையான] "
-"(அளவீட்டு_ரெசோனன்ச். ட்யூனிங்கின் முடிவுகள் கன்சோலுக்கு அச்சிடப்படுகின்றன, "
-"மேலும் அதிர்வெண் பதில்கள் மற்றும் வெவ்வேறு உள்ளீட்டு சேப்பர்ச் மதிப்புகள் "
-"ஒரு காபிம கோப்பு (கள்) `/TMP/அளவுத்திருத்த_டேட்டா_ <inx> _ <amen> .csv` க்கு"
-" எழுதப்பட்டுள்ளன. குறிப்பிடப்படாவிட்டால், பெயர் \"YYYYMMDD_HHMMS\" "
-"வடிவத்தில் தற்போதைய நேரத்திற்கு இயல்புநிலை. பரிந்துரைக்கப்பட்ட உள்ளீட்டு "
-"சேப்பர் அளவுருக்கள் `Save_config` கட்டளையை வழங்குவதன் மூலம் கட்டமைப்பில் "
-"தொடரலாம், மேலும்` [INPUT_SHAPER] `முன்பு ஏற்கனவே இயக்கப்பட்டிருந்தால், இந்த "
-"அளவுருக்கள் உடனடியாக நடைமுறைக்கு வரும்."
-
 #: docs/G-Codes.md:block 376 (header)
-#, md-text
+#, md-text, read-only
 msgid "[axis_twist_compensation]"
 msgstr "[AXIS_TWIST_COMPENSATION]"
 
@@ -3645,55 +3481,6 @@ msgstr ""
 #, md-text
 msgid "AXIS_TWIST_COMPENSATION_CALIBRATE"
 msgstr "AXIS_TWIST_COMPENSATION_CALIBRATE"
-
-#: docs/G-Codes.md:block 379 (paragraph)
-#, md-text
-msgid ""
-"`AXIS_TWIST_COMPENSATION_CALIBRATE [SAMPLE_COUNT=<value>]`: Initiates the X "
-"twist calibration wizard. `SAMPLE_COUNT` specifies the number of points "
-"along the X axis to calibrate at and defaults to 3."
-msgstr ""
-"`Axis_twist_compensation_calibrate [salem_count = <value>]`: ஃச் ட்விச்ட் "
-"அளவுத்திருத்த வழிகாட்டி தொடங்குகிறது. `மாதிரி_கவுண்ட்` ஃச் அச்சில் உள்ள "
-"புள்ளிகளின் எண்ணிக்கையை அளவீடு செய்ய மற்றும் இயல்புநிலையாக 3 க்கு "
-"குறிப்பிடுகிறது."
-
-#: docs/G-Codes.md:block 37 (paragraph)
-#, md-text
-msgid ""
-"`BED_MESH_CALIBRATE [PROFILE=<name>] [METHOD=manual] "
-"[HORIZONTAL_MOVE_Z=<value>] [<probe_parameter>=<value>] "
-"[<mesh_parameter>=<value>] [ADAPTIVE=1] [ADAPTIVE_MARGIN=<value>]`: This "
-"command probes the bed using generated points specified by the parameters in"
-" the config. After probing, a mesh is generated and z-movement is adjusted "
-"according to the mesh. The mesh will be saved into a profile specified by "
-"the `PROFILE` parameter, or `default` if unspecified. See the PROBE command "
-"for details on the optional probe parameters. If METHOD=manual is specified "
-"then the manual probing tool is activated - see the MANUAL_PROBE command "
-"above for details on the additional commands available while this tool is "
-"active. The optional `HORIZONTAL_MOVE_Z` value overrides the "
-"`horizontal_move_z` option specified in the config file. If ADAPTIVE=1 is "
-"specified then the objects defined by the Gcode file being printed will be "
-"used to define the probed area. The optional `ADAPTIVE_MARGIN` value "
-"overrides the `adaptive_margin` option specified in the config file."
-msgstr ""
-"`Bed_mesh_calibrate [சுயவிவரம் = <பெயர்>] [முறை = கையேடு] "
-"[கிடைமட்ட_மோவ்_செச் = <மதிப்பு>] [<probe_parameter> = <மதிப்பு>] "
-"[<mesh_parameter> = <மதிப்பு>] [தகவமைப்பு = 1] [தகவமைப்பு_மார்சின் = "
-"<மதிப்பு> ] `: இந்த கட்டளை கட்டமைப்பில் உள்ள அளவுருக்களால் குறிப்பிடப்பட்ட "
-"உருவாக்கப்பட்ட புள்ளிகளைப் பயன்படுத்தி படுக்கையை ஆராய்கிறது. ஆராய்ந்த பிறகு,"
-" ஒரு கண்ணி உருவாக்கப்பட்டு, கண்ணி படி z- இயக்கம் சரிசெய்யப்படுகிறது. "
-"குறிப்பிடப்படாவிட்டால் `சுயவிவரம்` அளவுருவால் குறிப்பிடப்பட்ட சுயவிவரத்தில் "
-"கண்ணி சேமிக்கப்படும். விருப்ப ஆய்வு அளவுருக்கள் குறித்த விவரங்களுக்கு ஆய்வு "
-"கட்டளையைப் பார்க்கவும். முறை = கையேடு குறிப்பிடப்பட்டால், கையேடு ஆய்வு கருவி"
-" செயல்படுத்தப்படுகிறது - இந்த கருவி செயலில் இருக்கும்போது கிடைக்கும் கூடுதல்"
-" கட்டளைகள் குறித்த விவரங்களுக்கு மேலே உள்ள கையேடு_பிரோப் கட்டளையைப் "
-"பார்க்கவும். விருப்பமான `கிடைமட்ட_மோவ்_செச்` மதிப்பு கட்டமைப்பு கோப்பில் "
-"குறிப்பிடப்பட்டுள்ள` கிடைமட்ட_மோவ்_செச்` விருப்பத்தை மீறுகிறது. தகவமைப்பு = "
-"1 குறிப்பிடப்பட்டால், அச்சிடப்பட்ட GCODE கோப்பால் வரையறுக்கப்பட்ட பொருள்கள் "
-"ஆய்வு செய்யப்பட்ட பகுதியை வரையறுக்க பயன்படுத்தப்படும். விருப்ப "
-"`அடாப்டிவ்_மார்சின்` மதிப்பு கட்டமைப்பு கோப்பில் குறிப்பிடப்பட்டுள்ள` "
-"அடாப்டிவ்_மார்சின்` விருப்பத்தை மீறுகிறது."
 
 #: docs/G-Codes.md:block 47 (paragraph)
 #, md-text
@@ -3937,3 +3724,460 @@ msgstr ""
 "`வெப்பநிலை_பிரோப்_இனபிள் இயக்கு = [0 | 1]`: வெப்பநிலை சறுக்கல் இழப்பீட்டை "
 "ஆன் அல்லது ஆஃப் அமைக்கிறது. இயக்கு 0 என அமைக்கப்பட்டால், சறுக்கல் இழப்பீடு "
 "முடக்கப்படும், 1 ஆக அமைக்கப்பட்டால் அது இயக்கப்பட்டிருந்தால்."
+
+#: docs/G-Codes.md:block 26 (header)
+#, md-text
+msgid "ANGLE_CHIP_CALIBRATE"
+msgstr "Angin_chip_calibrate"
+
+#: docs/G-Codes.md:block 27 (paragraph)
+#, md-text
+msgid ""
+"`ANGLE_CHIP_CALIBRATE CHIP=<chip_name>`: Perform internal sensor "
+"calibration, if implemented (MT6826S/MT6835)."
+msgstr ""
+"`Anglan_chip_calibrate chip = <iph_name>`: செயல்படுத்தப்பட்டால் "
+"(MT6826S/MT6835) உள் சென்சார் அளவுத்திருத்தத்தை செய்யுங்கள்."
+
+#: docs/G-Codes.md:block 28 (unordered list)
+#, md-text
+msgid ""
+"**MT68XX**: The motor should be disconnected from any printer carriage "
+"before performing calibration. After calibration, the sensor should be reset"
+" by disconnecting the power."
+msgstr ""
+"** MT68XX **: அளவுத்திருத்தத்தை செய்வதற்கு முன் எந்த அச்சுப்பொறி "
+"வண்டியிலிருந்தும் மின்னோடி துண்டிக்கப்பட வேண்டும். அளவுத்திருத்தத்திற்குப் "
+"பிறகு, சக்தியைத் துண்டிப்பதன் மூலம் சென்சார் மீட்டமைக்கப்பட வேண்டும்."
+
+#: docs/G-Codes.md:block 37 (paragraph)
+#, md-text
+msgid ""
+"Calibrates axis twist compensation by specifying the target axis or enabling"
+" automatic calibration."
+msgstr ""
+"இலக்கு அச்சைக் குறிப்பிடுவதன் மூலம் அல்லது தானியங்கி அளவுத்திருத்தத்தை "
+"செயல்படுத்துவதன் மூலம் அச்சு திருப்ப இழப்பீட்டை அளவீடு செய்கிறது."
+
+#: docs/G-Codes.md:block 38 (unordered list)
+#, md-text
+msgid ""
+"**AXIS:** Define the axis (`X` or `Y`) for which the twist compensation will"
+" be calibrated. If not specified, the axis defaults to `'X'`."
+msgstr ""
+"** அச்சு: ** திருப்பம் இழப்பீடு அளவீடு செய்யப்படும் அச்சை (`x` அல்லது` y`) "
+"வரையறுக்கவும். குறிப்பிடப்படாவிட்டால், அச்சு `'x'` க்கு இயல்புநிலையாகிறது."
+
+#: docs/G-Codes.md:block 133 (paragraph)
+#, md-text
+msgid ""
+"`SET_FAN_SPEED PIN=config_name TEMPLATE=<template_name> "
+"[<param_x>=<literal>]`: If `TEMPLATE` is specified then it assigns a "
+"[display_template](Config_Reference.md#display_template) to the given fan. "
+"For example, if one defined a `[display_template my_fan_template]` config "
+"section then one could assign `TEMPLATE=my_fan_template` here. The "
+"display_template should produce a string containing a floating point number "
+"with the desired value. The template will be continuously evaluated and the "
+"fan will be automatically set to the resulting speed. One may set "
+"display_template parameters to use during template evaluation (parameters "
+"will be parsed as Python literals). If TEMPLATE is an empty string then this"
+" command will clear any previous template assigned to the pin (one can then "
+"use `SET_FAN_SPEED` commands to manage the values directly)."
+msgstr ""
+"`Set_fan_speed முள் = config_name வார்ப்புரு = <emmatual_name> [<carm_x> = "
+"<iteral>]`: `வார்ப்புரு` குறிப்பிடப்பட்டால், அது கொடுக்கப்பட்ட விசிறிக்கு "
+"[config_reference.md#display_template) ஒதுக்குகிறது. எடுத்துக்காட்டாக, "
+"ஒருவர் `[display_template my_fan_template]` கட்டமைப்பு பிரிவை வரையறுத்தால், "
+"ஒருவர் `வார்ப்புரு = my_fan_template` ஐ இங்கே ஒதுக்கலாம். "
+"டிச்ப்ளே_டெம்ப்ளேட் விரும்பிய மதிப்புடன் மிதக்கும் புள்ளி எண்ணைக் கொண்ட ஒரு "
+"சரத்தை உருவாக்க வேண்டும். வார்ப்புரு தொடர்ந்து மதிப்பீடு செய்யப்படும், "
+"மேலும் விசிறி தானாகவே அதன் விளைவாக வரும் வேகத்திற்கு அமைக்கப்படும். "
+"வார்ப்புரு மதிப்பீட்டின் போது பயன்படுத்த வேண்டிய காட்சி_டெம்ப்ளேட் "
+"அளவுருக்களை ஒருவர் அமைக்கலாம் (அளவுருக்கள் பைதான் லிட்டரர்களாக "
+"பாகுபடுத்தப்படும்). வார்ப்புரு ஒரு வெற்று சரம் என்றால், இந்த கட்டளை முள் "
+"ஒதுக்கப்பட்ட முந்தைய வார்ப்புருவை அழிக்கும் (ஒன்று மதிப்புகளை நேரடியாக "
+"நிர்வகிக்க `set_fan_speed` கட்டளைகளைப் பயன்படுத்தலாம்)."
+
+#: docs/G-Codes.md:block 242 (paragraph)
+#, md-text
+msgid ""
+"`SET_PIN PIN=config_name TEMPLATE=<template_name> [<param_x>=<literal>]`: If"
+" `TEMPLATE` is specified then it assigns a "
+"[display_template](Config_Reference.md#display_template) to the given pin. "
+"For example, if one defined a `[display_template my_pin_template]` config "
+"section then one could assign `TEMPLATE=my_pin_template` here. The "
+"display_template should produce a string containing a floating point number "
+"with the desired value. The template will be continuously evaluated and the "
+"pin will be automatically set to the resulting value. One may set "
+"display_template parameters to use during template evaluation (parameters "
+"will be parsed as Python literals). If TEMPLATE is an empty string then this"
+" command will clear any previous template assigned to the pin (one can then "
+"use `SET_PIN` commands to manage the values directly)."
+msgstr ""
+"`Set_pin முள் = config_name வார்ப்புரு = <emplatue_name> [<carm_x> = "
+"<iteral>]`: `வார்ப்புரு` குறிப்பிடப்பட்டால், அது கொடுக்கப்பட்ட முள். "
+"எடுத்துக்காட்டாக, ஒருவர் `[display_template my_pin_template]` கட்டமைப்பு "
+"பிரிவை வரையறுத்தால், ஒருவர் `வார்ப்புரு = my_pin_template` ஐ இங்கே "
+"ஒதுக்கலாம். டிச்ப்ளே_டெம்ப்ளேட் விரும்பிய மதிப்புடன் மிதக்கும் புள்ளி "
+"எண்ணைக் கொண்ட ஒரு சரத்தை உருவாக்க வேண்டும். வார்ப்புரு தொடர்ந்து மதிப்பீடு "
+"செய்யப்படும் மற்றும் முள் தானாகவே அதன் விளைவாக வரும் மதிப்புக்கு "
+"அமைக்கப்படும். வார்ப்புரு மதிப்பீட்டின் போது பயன்படுத்த வேண்டிய "
+"காட்சி_டெம்ப்ளேட் அளவுருக்களை ஒருவர் அமைக்கலாம் (அளவுருக்கள் பைதான் "
+"லிட்டரர்களாக பாகுபடுத்தப்படும்). வார்ப்புரு ஒரு வெற்று சரம் என்றால், இந்த "
+"கட்டளை முள் ஒதுக்கப்பட்ட முந்தைய வார்ப்புருவை அழிக்கும் (ஒன்று மதிப்புகளை "
+"நேரடியாக நிர்வகிக்க `set_pin` கட்டளைகளைப் பயன்படுத்தலாம்)."
+
+#: docs/G-Codes.md:block 298 (header)
+#, md-text
+msgid "[quad_gantry_level]"
+msgstr "[குவாட்_கான்ட்ரி_லெவல்]"
+
+#: docs/G-Codes.md:block 299 (paragraph)
+#, md-text
+msgid ""
+"The following commands are available when the [quad_gantry_level config "
+"section](Config_Reference.md#quad_gantry_level) is enabled."
+msgstr ""
+"[Qual_gantry_level கட்டமைப்பு பிரிவு] "
+"(config_reference.md#qual_gantry_level) இயக்கப்பட்டிருக்கும் போது பின்வரும் "
+"கட்டளைகள் கிடைக்கும்."
+
+#: docs/G-Codes.md:block 300 (header)
+#, md-text
+msgid "QUAD_GANTRY_LEVEL"
+msgstr "குவாட்_கான்ட்ரி_லெவல்"
+
+#: docs/G-Codes.md:block 301 (paragraph)
+#, md-text
+msgid ""
+"`QUAD_GANTRY_LEVEL [RETRIES=<value>] [RETRY_TOLERANCE=<value>] "
+"[HORIZONTAL_MOVE_Z=<value>] [<probe_parameter>=<value>]`: This command will "
+"probe the points specified in the config and then make independent "
+"adjustments to each Z stepper to compensate for tilt. See the PROBE command "
+"for details on the optional probe parameters. The optional `RETRIES`, "
+"`RETRY_TOLERANCE`, and `HORIZONTAL_MOVE_Z` values override those options "
+"specified in the config file."
+msgstr ""
+"`Qual_gantry_level [retires = <மதிப்பு>] [retry_tolerance = <value>] "
+"[கிடைமட்ட_மோவ்_செச் = <மதிப்பு>] [<probe_parameter> = <மதிப்பு>]`: இந்த "
+"கட்டளை கட்டமைப்பில் குறிப்பிடப்பட்டுள்ள புள்ளிகளை ஆய்வு செய்து, பின்னர் "
+"ஒவ்வொரு சட் ச்டெப்பருக்கும் சுயாதீனமான மாற்றங்களைச் செய்யும். விருப்ப ஆய்வு "
+"அளவுருக்கள் குறித்த விவரங்களுக்கு ஆய்வு கட்டளையைப் பார்க்கவும். விருப்பமான "
+"`முயற்சிகள்`,` RETRY_TOLERANCE`, மற்றும் `கிடைமட்ட_மோவ்_இச்` மதிப்புகள் "
+"கட்டமைப்பு கோப்பில் குறிப்பிடப்பட்டுள்ள அந்த விருப்பங்களை மேலெழுதும்."
+
+#: docs/G-Codes.md:block 316 (paragraph)
+#, md-text
+msgid ""
+"`TEST_RESONANCES AXIS=<axis> [OUTPUT=<resonances,raw_data>] [NAME=<name>] "
+"[FREQ_START=<min_freq>] [FREQ_END=<max_freq>] [ACCEL_PER_HZ=<accel_per_hz>] "
+"[HZ_PER_SEC=<hz_per_sec>] [CHIPS=<chip_name>] [POINT=x,y,z] "
+"[INPUT_SHAPING=<0:1>]`: Runs the resonance test in all configured probe "
+"points for the requested \"axis\" and measures the acceleration using the "
+"accelerometer chips configured for the respective axis. \"axis\" can either "
+"be X or Y, or specify an arbitrary direction as `AXIS=dx,dy`, where dx and "
+"dy are floating point numbers defining a direction vector (e.g. `AXIS=X`, "
+"`AXIS=Y`, or `AXIS=1,-1` to define a diagonal direction). Note that "
+"`AXIS=dx,dy` and `AXIS=-dx,-dy` is equivalent. `chip_name` can be one or "
+"more configured accel chips, delimited with comma, for example "
+"`CHIPS=\"adxl345, adxl345 rpi\"`. If POINT is specified it will override the"
+" point(s) configured in `[resonance_tester]`. If `INPUT_SHAPING=0` or not "
+"set(default), disables input shaping for the resonance testing, because it "
+"is not valid to run the resonance testing with the input shaper enabled. "
+"`OUTPUT` parameter is a comma-separated list of which outputs will be "
+"written. If `raw_data` is requested, then the raw accelerometer data is "
+"written into a file or a series of files "
+"`/tmp/raw_data_<axis>_[<chip_name>_][<point>_]<name>.csv` with (`<point>_` "
+"part of the name generated only if more than 1 probe point is configured or "
+"POINT is specified). If `resonances` is specified, the frequency response is"
+" calculated (across all probe points) and written into "
+"`/tmp/resonances_<axis>_<name>.csv` file. If unset, OUTPUT defaults to "
+"`resonances`, and NAME defaults to the current time in \"YYYYMMDD_HHMMSS\" "
+"format."
+msgstr ""
+"`Test_resonances அச்சு = <six> [வெளியீடு = <அதிர்வுகள், RAW_DATA>] [பெயர் = "
+"<பெயர்>] [Freq_start = <min_freq>] . \"அச்சு\" ஃச் அல்லது ஒய் ஆக இருக்கலாம்,"
+" அல்லது ஒரு தன்னிச்சையான திசையை `அச்சு = dx, dy` எனக் குறிப்பிடலாம், அங்கு "
+"dx மற்றும் dy ஆகியவை ஒரு திசை திசையனை வரையறுக்கும் புள்ளி எண்களை மிதக்கின்றன"
+" (எ.கா. `அச்சு = dx, dy` மற்றும்` அச்சு = -dx, -dy` சமம் என்பதை நினைவில் "
+"கொள்க. `CHIP_NAME` ஒன்று அல்லது அதற்கு மேற்பட்ட கட்டமைக்கப்பட்ட முடி "
+"சில்லுகளாக இருக்கலாம், இது கமாவுடன் பிரிக்கப்பட்டுள்ளது, எடுத்துக்காட்டாக` "
+"சிப்ச் = \"ADXL345, ADXL345 RPI\" `. புள்ளி குறிப்பிடப்பட்டால், அது "
+"`[அதிர்வு_டெச்டர்]` இல் கட்டமைக்கப்பட்ட புள்ளி (களை) மேலெழுதும். "
+"`உள்ளீடு_சேப்பிங் = 0` அல்லது அமைக்கப்படாவிட்டால் (இயல்புநிலை), அதிர்வு "
+"சோதனைக்கு உள்ளீட்டு வடிவமைப்பை முடக்குகிறது, ஏனெனில் இயக்கப்பட்ட உள்ளீட்டு "
+"வடிவத்துடன் அதிர்வு சோதனையை இயக்குவது செல்லுபடியாகாது. `வெளியீடு` அளவுரு "
+"என்பது கமாவால் பிரிக்கப்பட்ட பட்டியலாகும், இதன் வெளியீடுகள் எழுதப்படும். "
+"`RAW_DATA` கோரப்பட்டால், மூல முடுக்கமானி தரவு ஒரு கோப்பில் அல்லது "
+"தொடர்ச்சியான கோப்புகளில் எழுதப்பட்டுள்ளது`/tmp/raw_data_ <inx> _ "
+"[<chic_name> _] [<point> _] <amane> .csv` உடன் (`<புள்ளி> _ _ _ _ _ _ _ _ _ "
+"_ _ _ _ _ _ _ ' `அதிர்வுகள்` குறிப்பிடப்பட்டால், அதிர்வெண் பதில் "
+"கணக்கிடப்படுகிறது (எல்லா ஆய்வு புள்ளிகளிலும்) மற்றும்`/tmp/அதிர்வு_ <inx> _ "
+"<aname> .csv` கோப்பில் எழுதப்பட்டுள்ளது. அமைக்கப்படாவிட்டால், வெளியீடு "
+"இயல்புநிலையாக `அதிர்வுகளுக்கு`, மற்றும் பெயர் இயல்புநிலை தற்போதைய "
+"நேரத்திற்கு\" yyyymmdd_hhmmss \"வடிவத்தில் உள்ளது."
+
+#: docs/G-Codes.md:block 318 (paragraph)
+#, md-text
+msgid ""
+"`SHAPER_CALIBRATE [AXIS=<axis>] [NAME=<name>] [FREQ_START=<min_freq>] "
+"[FREQ_END=<max_freq>] [ACCEL_PER_HZ=<accel_per_hz>][HZ_PER_SEC=<hz_per_sec>]"
+" [CHIPS=<chip_name>] [MAX_SMOOTHING=<max_smoothing>] [INPUT_SHAPING=<0:1>]`:"
+" Similarly to `TEST_RESONANCES`, runs the resonance test as configured, and "
+"tries to find the optimal parameters for the input shaper for the requested "
+"axis (or both X and Y axes if `AXIS` parameter is unset). If `MAX_SMOOTHING`"
+" is unset, its value is taken from `[resonance_tester]` section, with the "
+"default being unset. See the [Max smoothing](Measuring_Resonances.md#max-"
+"smoothing) of the measuring resonances guide for more information on the use"
+" of this feature. The results of the tuning are printed to the console, and "
+"the frequency responses and the different input shapers values are written "
+"to a CSV file(s) `/tmp/calibration_data_<axis>_<name>.csv`. Unless "
+"specified, NAME defaults to the current time in \"YYYYMMDD_HHMMSS\" format. "
+"Note that the suggested input shaper parameters can be persisted in the "
+"config by issuing `SAVE_CONFIG` command, and if `[input_shaper]` was already"
+" enabled previously, these parameters take effect immediately."
+msgstr ""
+"`Shaper_calibrate [அச்சு = <six>] [பெயர் = <பெயர்>] [freq_start = "
+"<min_freq>] [freq_end = <ax_freq>] . `Max_smoothing` அமைக்கப்படவில்லை "
+"என்றால், அதன் மதிப்பு` [அதிர்வு_டெச்டர்] `பிரிவில் இருந்து எடுக்கப்படுகிறது,"
+" இயல்புநிலை அமைக்கப்படாதது. இந்த அம்சத்தைப் பயன்படுத்துவது குறித்த கூடுதல் "
+"தகவலுக்கு அளவீட்டு அதிர்வு வழிகாட்டியின் [அதிகபட்ச மென்மையான] "
+"(அளவீட்டு_ரெசோனன்ச். ட்யூனிங்கின் முடிவுகள் கன்சோலுக்கு அச்சிடப்படுகின்றன, "
+"மேலும் அதிர்வெண் பதில்கள் மற்றும் வெவ்வேறு உள்ளீட்டு சேப்பர்ச் மதிப்புகள் "
+"ஒரு காபிம கோப்பு (கள்) `/TMP/அளவுத்திருத்த_டேட்டா_ <inx> _ <amen> .csv` க்கு"
+" எழுதப்பட்டுள்ளன. குறிப்பிடப்படாவிட்டால், பெயர் \"YYYYMMDD_HHMMS\" "
+"வடிவத்தில் தற்போதைய நேரத்திற்கு இயல்புநிலை. பரிந்துரைக்கப்பட்ட உள்ளீட்டு "
+"சேப்பர் அளவுருக்கள் `Save_config` கட்டளையை வழங்குவதன் மூலம் கட்டமைப்பில் "
+"தொடரலாம், மேலும்` [INPUT_SHAPER] `முன்பு ஏற்கனவே இயக்கப்பட்டிருந்தால், இந்த "
+"அளவுருக்கள் உடனடியாக நடைமுறைக்கு வரும்."
+
+#: docs/G-Codes.md:block 403 (paragraph)
+#, md-text
+msgid ""
+"`Z_TILT_ADJUST [RETRIES=<value>] [RETRY_TOLERANCE=<value>] "
+"[HORIZONTAL_MOVE_Z=<value>] [<probe_parameter>=<value>]`: This command will "
+"probe the points specified in the config and then make independent "
+"adjustments to each Z stepper to compensate for tilt. See the PROBE command "
+"for details on the optional probe parameters. The optional `RETRIES`, "
+"`RETRY_TOLERANCE`, and `HORIZONTAL_MOVE_Z` values override those options "
+"specified in the config file."
+msgstr ""
+". விருப்ப ஆய்வு அளவுருக்கள் குறித்த விவரங்களுக்கு ஆய்வு கட்டளையைப் "
+"பார்க்கவும். விருப்பமான `முயற்சிகள்`,` RETRY_TOLERANCE`, மற்றும் "
+"`கிடைமட்ட_மோவ்_இச்` மதிப்புகள் கட்டமைப்பு கோப்பில் குறிப்பிடப்பட்டுள்ள அந்த "
+"விருப்பங்களை மேலெழுதும்."
+
+#: docs/G-Codes.md:block 36 (paragraph)
+#, md-text
+msgid ""
+"`AXIS_TWIST_COMPENSATION_CALIBRATE [AXIS=<X|Y>] [SAMPLE_COUNT=<value>]`"
+msgstr ""
+"`Axis_twist_compensation_calibrate [அச்சு = <x | y>] [மாதிரி_சவுண்ட் = "
+"<மதிப்பு>]`"
+
+#: docs/G-Codes.md:block 155 (paragraph)
+#, md-text
+msgid ""
+"`SET_KINEMATIC_POSITION [X=<value>] [Y=<value>] [Z=<value>] "
+"[SET_HOMED=<[X][Y][Z]>] [CLEAR_HOMED=<[X][Y][Z]>]`: Force the low-level "
+"kinematic code to believe the toolhead is at the given cartesian position "
+"and set/clear homed status. This is a diagnostic and debugging command; use "
+"SET_GCODE_OFFSET and/or G92 for regular axis transformations. Setting an "
+"incorrect or invalid position may lead to internal software errors."
+msgstr ""
+"`Set_kinematic_position [x = <மதிப்பு>] [y = <மதிப்பு>] [z = <மதிப்பு>] "
+"[set_homed = <[x] [y] [z]>] இது ஒரு கண்டறியும் மற்றும் பிழைத்திருத்த கட்டளை;"
+" வழக்கமான அச்சு மாற்றங்களுக்கு SET_GCODE_OFFSET மற்றும்/அல்லது G92 ஐப் "
+"பயன்படுத்தவும். தவறான அல்லது தவறான நிலையை அமைப்பது உள் மென்பொருள் "
+"பிழைகளுக்கு வழிவகுக்கும்."
+
+#: docs/G-Codes.md:block 156 (paragraph)
+#, md-text
+msgid ""
+"The `X`, `Y`, and `Z` parameters are used to alter the low-level kinematic "
+"position tracking. If any of these parameters are not set then the position "
+"is not changed - for example `SET_KINEMATIC_POSITION Z=10` would set all "
+"axes as homed, set the internal Z position to 10, and leave the X and Y "
+"positions unchanged. Changing the internal position tracking is not "
+"dependent on the internal homing state - one may alter the position for both"
+" homed and not homed axes, and similarly one may set or clear the homing "
+"state of an axis without altering its internal position."
+msgstr ""
+"குறைந்த அளவிலான இயக்கவியல் நிலை கண்காணிப்பை மாற்ற `x`,` y`, மற்றும் `Z` "
+"அளவுருக்கள் பயன்படுத்தப்படுகின்றன. இந்த அளவுருக்கள் ஏதேனும் "
+"அமைக்கப்படாவிட்டால், நிலை மாற்றப்படவில்லை - எடுத்துக்காட்டாக "
+"`set_kinematic_position சட் = 10` அனைத்து அச்சுகளையும் வீட்டிலேயே அமைக்கும்,"
+" உள் சட் நிலையை 10 ஆக அமைத்து, ஃச் மற்றும் ஒய் நிலைகளை மாறாமல் விட்டுவிடும்."
+" உள் நிலை கண்காணிப்பை மாற்றுவது உள் ஓமிங் நிலையைப் பொறுத்தது அல்ல - ஒருவர் "
+"வீட்டிலேயே மற்றும் வீட்டு அச்சுகள் இரண்டிற்கும் நிலையை மாற்றக்கூடும், "
+"அதேபோல் ஒரு அச்சின் உள்நாட்டு நிலையை அதன் உள் நிலையை மாற்றாமல் அமைக்கலாம் "
+"அல்லது அழிக்கலாம்."
+
+#: docs/G-Codes.md:block 157 (paragraph)
+#, md-text
+msgid ""
+"The `SET_HOMED` parameter defaults to `XYZ` which instructs the kinematics "
+"to consider all axes as homed. A bare `SET_KINEMATIC_POSITION` command will "
+"result in all axes being considered homed (and not change its current "
+"position). If it is not desired to change the state of homed axes then "
+"assign `SET_HOMED` to an empty string - for example: `SET_KINEMATIC_POSITION"
+" SET_HOMED= X=10`. It is also possible to request an individual axis be "
+"considered homed (eg, `SET_HOMED=X`), but note that non-cartesian style "
+"kinematics (such as delta kinematics) may not support setting an individual "
+"axis as homed."
+msgstr ""
+"`Set_homed` அளவுரு` xyz` க்கு இயல்புநிலையாகிறது, இது அனைத்து அச்சுகளையும் "
+"வீட்டிலேயே கருதுமாறு இயக்கவியலுக்கு அறிவுறுத்துகிறது. ஒரு வெற்று "
+"`set_kinematic_position` கட்டளை அனைத்து அச்சுகளும் வீட்டிலேயே கருதப்படும் "
+"(மற்றும் அதன் தற்போதைய நிலையை மாற்றாது). வீட்டு அச்சுகளின் நிலையை மாற்ற "
+"விரும்பவில்லை என்றால், `Set_homed` ஐ வெற்று சரத்திற்கு ஒதுக்கவும் - "
+"எடுத்துக்காட்டாக:` set_kinematic_position set_homed = ஃச் = 10`. ஒரு "
+"தனிப்பட்ட அச்சை வீட்டிலேயே கருதலாம் (எ.கா., `set_homed = x`), ஆனால் "
+"கார்டீசியன் அல்லாத பாணி இயக்கவியல் (டெல்டா இயக்கவியல் போன்றவை) ஒரு தனிப்பட்ட"
+" அச்சை வீட்டிலேயே அமைப்பதை ஆதரிக்காது என்பதை நினைவில் கொள்க."
+
+#: docs/G-Codes.md:block 158 (paragraph)
+#, md-text
+msgid ""
+"The `CLEAR_HOMED` parameter instructs the kinematics to consider the given "
+"axes as not homed. For example, `CLEAR_HOMED=XYZ` would request all axes to "
+"be considered not homed (and thus require homing prior to movement on those "
+"axes). The default is `SET_HOMED=XYZ` even if `CLEAR_HOMED` is present, so "
+"the command `SET_KINEMATIC_POSITION CLEAR_HOMED=Z` will set X and Y as homed"
+" and clear the homing state for Z. Use `SET_KINEMATIC_POSITION SET_HOMED= "
+"CLEAR_HOMED=Z` if the goal is to clear only the Z homing state. If an axis "
+"is specified in neither `SET_HOMED` nor `CLEAR_HOMED` then its homing state "
+"is not changed and if it is specified in both then `CLEAR_HOMED` has "
+"precedence. It is possible to request clearing of an individual axis, but on"
+" non-cartesian style kinematics (such as delta kinematics) doing so may "
+"result in clearing the homing state of additional axes. Note the `CLEAR` "
+"parameter is currently an alias for the `CLEAR_HOMED` parameter, but this "
+"alias will be removed in the future."
+msgstr ""
+"`Clear_homed` அளவுரு கொடுக்கப்பட்ட அச்சுகளை வீட்டிலேயே கருதவில்லை என்று "
+"இயக்கவியலுக்கு அறிவுறுத்துகிறது. எடுத்துக்காட்டாக, `clear_homed = xyz` "
+"அனைத்து அச்சுகளையும் வீட்டுவசதி செய்யக்கூடாது என்று கருத வேண்டும் (இதனால் "
+"அந்த அச்சுகளில் இயக்கத்திற்கு முன் ஓமிங் தேவைப்படுகிறது). இயல்புநிலை "
+"`set_homed = xyz`` clear_homed` இருந்தாலும் கூட, எனவே "
+"`set_kinematic_position selor_homed = z` கட்டளை ஃச் மற்றும் ஒய் ஐ ஓமிங் "
+"நிலையை சட் க்கு நிர்ணயிக்கும். ஒரு அச்சு `set_homed` அல்லது` clear_homed` "
+"இல் குறிப்பிடப்பட்டால், அதன் ஓமிங் நிலை மாற்றப்படாது, அது இரண்டிலும் "
+"குறிப்பிடப்பட்டால் `clear_homed` முன்னுரிமை உள்ளது. ஒரு தனிப்பட்ட அச்சைத் "
+"துடைக்கக் கோர முடியும், ஆனால் கார்டீசியன் அல்லாத பாணி இயக்கவியலில் (டெல்டா "
+"இயக்கவியல் போன்றவை) அவ்வாறு செய்வது கூடுதல் அச்சுகளின் நிலையை "
+"அழிக்கக்கூடும். `தெளிவான` அளவுரு தற்போது` clear_homed` அளவுருவுக்கான "
+"மாற்றுப்பெயராக உள்ளது, ஆனால் இந்த மாற்றுப்பெயர் எதிர்காலத்தில் அகற்றப்படும்."
+
+#: docs/G-Codes.md:block 224 (header)
+#, md-text
+msgid "[load_cell]"
+msgstr "[load_cell]"
+
+#: docs/G-Codes.md:block 225 (paragraph)
+#, md-text
+msgid ""
+"The following commands are enabled if a [load_cell config "
+"section](Config_Reference.md#load_cell) has been enabled."
+msgstr ""
+"[Load_cell கட்டமைப்பு பிரிவு] (config_reference.md#load_cell) "
+"இயக்கப்பட்டிருந்தால் பின்வரும் கட்டளைகள் இயக்கப்படும்."
+
+#: docs/G-Codes.md:block 226 (header)
+#, md-text
+msgid "LOAD_CELL_DIAGNOSTIC"
+msgstr "Load_cell_diagnostic"
+
+#: docs/G-Codes.md:block 227 (paragraph)
+#, md-text
+msgid ""
+"`LOAD_CELL_DIAGNOSTIC [LOAD_CELL=<config_name>]`: This command collects 10 "
+"seconds of load cell data and reports statistics that can help you verify "
+"proper operation of the load cell. This command can be run on both "
+"calibrated and uncalibrated load cells."
+msgstr ""
+"`Load_cell_diagnostic [load_cell = <config_name>]`: இந்த கட்டளை 10 வினாடிகள்"
+" சுமை செல் தரவைச் சேகரிக்கிறது மற்றும் சுமை கலத்தின் சரியான செயல்பாட்டை "
+"சரிபார்க்க உதவும் புள்ளிவிவரங்களைப் புகாரளிக்கிறது. இந்த கட்டளையை அளவீடு "
+"செய்யப்பட்ட மற்றும் அளவிடப்படாத சுமை செல்கள் இரண்டிலும் இயக்க முடியும்."
+
+#: docs/G-Codes.md:block 228 (header)
+#, md-text
+msgid "LOAD_CELL_CALIBRATE"
+msgstr "Load_cell_calibrate"
+
+#: docs/G-Codes.md:block 229 (paragraph)
+#, md-text
+msgid ""
+"`LOAD_CELL_CALIBRATE [LOAD_CELL=<config_name>]`: Start the guided "
+"calibration utility. Calibration is a 3 step process:"
+msgstr ""
+"`Load_cell_calibrate [load_cell = <config_name>]`: வழிகாட்டப்பட்ட "
+"அளவுத்திருத்த பயன்பாட்டைத் தொடங்கவும். அளவுத்திருத்தம் என்பது 3 படி "
+"செயல்முறை:"
+
+#: docs/G-Codes.md:block 230 (ordered list)
+#, md-text
+msgid ""
+"First you remove all load from the load cell and run the `TARE` command"
+msgstr ""
+"முதலில் நீங்கள் சுமை கலத்திலிருந்து அனைத்து சுமைகளையும் அகற்றி `tare` "
+"கட்டளையை இயக்கவும்"
+
+#: docs/G-Codes.md:block 230 (ordered list)
+#, md-text
+msgid ""
+"Next you apply a known load to the load cell and run the `CALIBRATE "
+"GRAMS=nnn` command"
+msgstr ""
+"அடுத்து நீங்கள் சுமை கலத்திற்கு அறியப்பட்ட சுமையைப் பயன்படுத்துங்கள் மற்றும்"
+" `அளவீடு கிராம் = என்.என்.என்` கட்டளையை இயக்கவும்"
+
+#: docs/G-Codes.md:block 230 (ordered list)
+#, md-text
+msgid "Finally use the `ACCEPT` command to save the results"
+msgstr "இறுதியாக முடிவுகளைச் சேமிக்க `ஏற்றுக்கொள் 'கட்டளையைப் பயன்படுத்தவும்"
+
+#: docs/G-Codes.md:block 231 (paragraph)
+#, md-text
+msgid "You can cancel the calibration process at any time with `ABORT`."
+msgstr ""
+"நீங்கள் எந்த நேரத்திலும் அளவுத்திருத்த செயல்முறையை `` abort` உடன் ரத்து "
+"செய்யலாம்."
+
+#: docs/G-Codes.md:block 232 (header)
+#, md-text
+msgid "LOAD_CELL_TARE"
+msgstr "Load_cell_tare"
+
+#: docs/G-Codes.md:block 234 (header)
+#, md-text
+msgid "LOAD_CELL_READ load_cell=\"name\""
+msgstr "Load_cell_read load_cell = \"பெயர்\""
+
+#: docs/G-Codes.md:block 235 (paragraph)
+#, md-text
+msgid ""
+"`LOAD_CELL_READ [LOAD_CELL=<config_name>]`: This command takes a reading "
+"from the load cell. The response is the percentage of the sensors range that"
+" was read and the raw value in counts. If the load cell is calibrated a "
+"force in grams is also reported."
+msgstr ""
+"`Load_cell_read [load_cell = <config_name>]`: இந்த கட்டளை சுமை "
+"கலத்திலிருந்து வாசிப்பை எடுக்கும். பதில் வாசிக்கப்பட்ட சென்சார்கள் வரம்பின் "
+"விழுக்காடு மற்றும் மூல மதிப்பு எண்ணிக்கையில் உள்ளது. சுமை செல் அளவீடு "
+"செய்யப்பட்டால் கிராம் ஒரு சக்தியும் தெரிவிக்கப்படுகிறது."
+
+#: docs/G-Codes.md:block 343 (paragraph)
+#, md-text
+msgid ""
+"`SAVE_VARIABLE VARIABLE=<name> VALUE=<value>`: Saves the variable to disk so"
+" that it can be used across restarts. The VARIABLE must be lowercase. All "
+"stored variables are loaded into the `printer.save_variables.variables` dict"
+" at startup and can be used in gcode macros. The provided VALUE is parsed as"
+" a Python literal."
+msgstr ""
+"`Save_variable variact = <aname> மதிப்பு = <மதிப்பு>`: மாறி வட்டில் "
+"சேமிக்கிறது, இதனால் மறுதொடக்கங்கள் முழுவதும் பயன்படுத்தப்படலாம். மாறி "
+"சிறியதாக இருக்க வேண்டும். சேமிக்கப்பட்ட அனைத்து மாறிகள் தொடக்கத்தில் "
+"`அச்சுப்பொறி.சேவ்_வார்பிள்கள். வழங்கப்பட்ட மதிப்பு பைதான் நேரடி என "
+"பாகுபடுத்தப்படுகிறது."

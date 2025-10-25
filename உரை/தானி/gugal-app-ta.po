@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Gugal)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-29 17:13+0200\n"
-"PO-Revision-Date: 2024-12-29 23:57+0530\n"
+"POT-Creation-Date: 2025-09-21 05:51+0200\n"
+"PO-Revision-Date: 2025-09-21 09:27\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/gugal/app/ta/>\n"
 "Language: ta\n"
@@ -12,12 +12,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #, java-printf-format, placeholders:%s
 msgctxt "app_name"
 msgid "Gugal"
-msgstr "கூகிள்"
+msgstr "குகல்"
 
 #. %s - name of search engine
 #, java-printf-format, placeholders:%s
@@ -45,6 +45,30 @@ msgstr "முடிவுகள் இல்லை"
 msgctxt "rp_error"
 msgid "An error has occurred"
 msgstr "பிழை ஏற்பட்டது"
+
+#, java-printf-format, placeholders:%s
+msgctxt "rp_error_unk"
+msgid "Unknown error"
+msgstr "தெரியாத பிழை"
+
+#.  %s - extra information (e.g. error code, text...)
+#, java-printf-format, placeholders:%s
+msgctxt "rp_error_unk_extras"
+msgid "Unknown error (%s)"
+msgstr "அறியப்படாத பிழை (%s)"
+
+#, java-printf-format, placeholders:%s
+msgctxt "rp_error_invalid_creds"
+msgid "Please set up search again."
+msgstr "மீண்டும் தேடலை அமைக்கவும்."
+
+#. search error that is shown when the user is searching too often (i.e.
+#. they're being rate limited)
+#, java-printf-format, placeholders:%s
+msgctxt "rp_error_rate_limited"
+msgid "You're searching too often. Please wait before searching again."
+msgstr ""
+"நீங்கள் அடிக்கடி தேடுகிறீர்கள். மீண்டும் தேடுவதற்கு முன் காத்திருங்கள்."
 
 #. Title of a dialog with a list of web browsers, shown when a link or search
 #. result is tapped.
@@ -121,21 +145,16 @@ msgstr ""
 #, java-printf-format, placeholders:%s
 msgctxt "serp_gcse_setup_3"
 msgid ""
-"I recommend tapping the API Console link and restricting the API key to "
-"Custom Search API."
+"It's best to tap the API Console link and restrict the API key to Custom "
+"Search API."
 msgstr ""
 "பநிஇ கன்சோல் இணைப்பைத் தட்டவும், தனிப்பயன் தேடல் ஏபிஐக்கு பநிஇ விசையை "
-"கட்டுப்படுத்தவும் பரிந்துரைக்கிறேன்."
+"கட்டுப்படுத்தவும் சிறந்தது."
 
 #, java-printf-format, placeholders:%s
 msgctxt "serp_gcse_cx"
 msgid "CSE ID"
 msgstr "சிஎச்இ நேரம்"
-
-#, java-printf-format, placeholders:%s
-msgctxt "serp_gcse_apiKey"
-msgid "API key"
-msgstr "பநிஇ விசை"
 
 #.  SearX SERP provider strings
 #, java-printf-format, placeholders:%s
@@ -179,6 +198,12 @@ msgctxt "serp_searx_connTest_fail"
 msgid "Unsupported instance"
 msgstr "ஆதரிக்கப்படாத நிகழ்வு"
 
+#.  shown as a status message, %d - HTTP error code
+#, java-printf-format, placeholders:%s
+msgctxt "serp_searx_connTest_http"
+msgid "Unsupported instance (error %d)"
+msgstr "ஆதரிக்கப்படாத நிகழ்வு (பிழை %d)"
+
 #.  setup
 #, java-printf-format, placeholders:%s
 msgctxt "setup_p1_title"
@@ -201,9 +226,37 @@ msgid "Select search engine"
 msgstr "தேடுபொறியைத் தேர்ந்தெடுக்கவும்"
 
 #, java-printf-format, placeholders:%s
+msgctxt "setup_p2_badrestore"
+msgid ""
+"The search engine used in this backup is not available in this version of "
+"Gugal. Please select another."
+msgstr ""
+"இந்த காப்புப்பிரதியில் பயன்படுத்தப்படும் தேடுபொறி குகலின் இந்த பதிப்பில் "
+"கிடைக்கவில்லை. மற்றொன்றைத் தேர்ந்தெடுக்கவும்."
+
+#, java-printf-format, placeholders:%s
 msgctxt "setup_p3_title"
 msgid "Set up search"
 msgstr "தேடலை அமைக்கவும்"
+
+#, java-printf-format, placeholders:%s
+msgctxt "setup_p3_auth_title"
+msgid "Sign in"
+msgstr "விடுபதிகை"
+
+#, java-printf-format, placeholders:%s
+msgctxt "setup_p3_auth_description"
+msgid ""
+"More credentials are required to continue. Please enter them and press the "
+"button to try again."
+msgstr ""
+"தொடர கூடுதல் சான்றுகள் தேவை. தயவுசெய்து அவற்றை உள்ளிட்டு மீண்டும் முயற்சிக்க"
+" பொத்தானை அழுத்தவும்."
+
+#, java-printf-format, placeholders:%s
+msgctxt "setup_p3_auth_btn"
+msgid "Try again"
+msgstr "மீண்டும் முயற்சிக்கவும்"
 
 #, ignore-multiple-failures, java-printf-format, placeholders:%s
 msgctxt "setup_p4_title"
@@ -313,6 +366,11 @@ msgstr "ஊட்டத்தைச் சேர்க்கவும்"
 msgctxt "setup_feeds_bs_exists"
 msgid "Feed was already added"
 msgstr "ஊட்டம் ஏற்கனவே சேர்க்கப்பட்டது"
+
+#, java-printf-format, placeholders:%s
+msgctxt "setup_extra_news_title"
+msgid "Enable News?"
+msgstr "செய்தியை இயக்கவா?"
 
 #.  changelog
 #, java-printf-format, placeholders:%s
@@ -491,6 +549,16 @@ msgid "Settings for the News feature."
 msgstr "செய்தி அம்சத்திற்கான அமைப்புகள்."
 
 #, java-printf-format, placeholders:%s
+msgctxt "setting_backup_title"
+msgid "Backup and restore"
+msgstr "காப்புப்பிரதி மற்றும் மீட்டமை"
+
+#, java-printf-format, placeholders:%s
+msgctxt "setting_backup_desc"
+msgid "Protect Gugal's data by making a backup."
+msgstr "காப்புப்பிரதி எழுதிய பாதுகாக்கவும்."
+
+#, java-printf-format, placeholders:%s
 msgctxt "setting_newsFeeds_title"
 msgid "Set up News"
 msgstr "செய்திகளை அமைக்கவும்"
@@ -516,6 +584,16 @@ msgstr ""
 "குகலை வேறொரு மொழியில் மொழிபெயர்க்க விரும்புகிறீர்களா அல்லது மொழிபெயர்ப்பு "
 "சிக்கலை சரிசெய்ய விரும்புகிறீர்களா? வெப்லேட்டில் எங்கள் மொழிபெயர்ப்பு "
 "பக்கத்தைத் திறக்க இங்கே தட்டவும்."
+
+#, java-printf-format, placeholders:%s
+msgctxt "setting_bottom_search_title"
+msgid "Bottom search field"
+msgstr "கீழே தேடல் புலம்"
+
+#, java-printf-format, placeholders:%s
+msgctxt "setting_bottom_search_desc"
+msgid "Move the search field to the bottom."
+msgstr "தேடல் புலத்தை கீழே நகர்த்தவும்."
 
 #.  changelog
 #, java-printf-format, placeholders:%s
@@ -600,6 +678,18 @@ msgstr ""
 "இது கூகிளின் முன்னோட்ட பதிப்பு. கூகிளின் அறிவிலிஆய்வு களஞ்சியத்தில் "
 "சிக்கல்களைச் செய்வதன் மூலம் பிழைகள் புகாரளிக்கலாம் (\"பீட்டா\" லேபிளைச் "
 "சேர்ப்பதை உறுதிசெய்க)."
+
+#. shown if this build is a [test version](https://gugal.gitlab.io/test-
+#. versions.html)
+#, java-printf-format, placeholders:%s
+msgctxt "tip_testing"
+msgid ""
+"This is a test version of Gugal. Test versions are created to test specific "
+"changes. Please report bugs on the discussion page for those changes."
+msgstr ""
+"இது குகலின் சோதனை பதிப்பாகும். குறிப்பிட்ட மாற்றங்களைச் சோதிக்க சோதனை "
+"பதிப்புகள் உருவாக்கப்படுகின்றன. அந்த மாற்றங்களுக்கு விவாதப் பக்கத்தில் "
+"பிழைகள் புகாரளிக்கவும்."
 
 #.  buttons
 #, java-printf-format, placeholders:%s
@@ -778,3 +868,153 @@ msgstr "இங்கே தேதி"
 msgctxt "action_do_past_search"
 msgid "Search"
 msgstr "தேடல்"
+
+#.  credentials
+#. credential type - this is the same string as `serp_gcse_apikey` in 0.8.4
+#. and below
+#, java-printf-format, placeholders:%s
+msgctxt "credential_apikey"
+msgid "API key"
+msgstr "பநிஇ விசை"
+
+#, java-printf-format, placeholders:%s
+msgctxt "credential_username"
+msgid "Username"
+msgstr "பயனர்பெயர்"
+
+#, java-printf-format, placeholders:%s
+msgctxt "credential_password"
+msgid "Password"
+msgstr "கடவுச்சொல்"
+
+#, java-printf-format, placeholders:%s
+msgctxt "credential_instance_url"
+msgid "Instance URL"
+msgstr "நிகழ்வு முகவரி"
+
+#.  backup
+#, java-printf-format, placeholders:%s
+msgctxt "backup_create_title"
+msgid "Back up data"
+msgstr "தரவை காப்புப் பிரதி எடுக்கவும்"
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_create_desc"
+msgid "Save a copy of the settings."
+msgstr "அமைப்புகளின் நகலைச் சேமிக்கவும்."
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_create_success"
+msgid "Backup created."
+msgstr "காப்புப்பிரதி உருவாக்கப்பட்டது."
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_create_btn_title"
+msgid "Create backup"
+msgstr "காப்புப்பிரதியை உருவாக்கவும்"
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_create_enc_title"
+msgid "Lock backup"
+msgstr "காப்புப்பிரதி பூட்டு"
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_create_enc_desc"
+msgid "Protect the backup with a password for extra security."
+msgstr ""
+"கூடுதல் பாதுகாப்புக்காக கடவுச்சொல் மூலம் காப்புப்பிரதியைப் பாதுகாக்கவும்."
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_create_enc_desc_limit"
+msgid "Protect the backup with a passcode and save search credentials."
+msgstr ""
+"கடவுக்குறியீடு மூலம் காப்புப்பிரதியைப் பாதுகாக்கவும் மற்றும் தேடல் "
+"சான்றுகளைச் சேமிக்கவும்."
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_create_enc_prompt"
+msgid "Set password"
+msgstr "கடவுச்சொல்லை அமைக்கவும்"
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_create_enc_prompt2"
+msgid "Set a passcode to create this backup."
+msgstr "இந்த காப்புப்பிரதியை உருவாக்க கடவுக்குறியீட்டை அமைக்கவும்."
+
+#. shown as error text in the backup create dialog
+#, java-printf-format, placeholders:%s
+msgctxt "backup_create_enc_simple"
+msgid "Password too simple"
+msgstr "கடவுச்சொல் மிகவும் எளிமையானது"
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_create_error_storage"
+msgid "Not enough storage to create this backup."
+msgstr "இந்த காப்புப்பிரதியை உருவாக்க போதுமான சேமிப்பு இல்லை."
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_restore_title"
+msgid "Restore data"
+msgstr "தரவை மீட்டமைக்கவும்"
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_restore_desc"
+msgid "Restore Gugal's settings from a backup."
+msgstr "குகலின் அமைப்புகளை காப்புப்பிரதியிலிருந்து மீட்டமைக்கவும்."
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_restore_success"
+msgid "Backup restored"
+msgstr "காப்புப்பிரதி மீட்டெடுக்கப்பட்டது"
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_restore_success_restart"
+msgid "Gugal must be restarted to apply the backup."
+msgstr "காப்புப்பிரதியைப் பயன்படுத்த குகல் மறுதொடக்கம் செய்யப்பட வேண்டும்."
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_restore_enc_title"
+msgid "Unlock backup"
+msgstr "காப்புப்பிரதியைத் திறக்கவும்"
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_restore_enc_desc"
+msgid "This backup is locked. Please unlock it to restore it."
+msgstr ""
+"இந்த காப்புப்பிரதி பூட்டப்பட்டுள்ளது. அதை மீட்டெடுக்க அதைத் திறக்கவும்."
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_restore_enc_wrong"
+msgid "Incorrect password"
+msgstr "தவறான கடவுச்சொல்"
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_error_title"
+msgid "Error"
+msgstr "பிழை"
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_restore_error_corrupt"
+msgid "This backup is damaged and can't be restored."
+msgstr "இந்த காப்புப்பிரதி சேதமடைந்துள்ளது மற்றும் மீட்டெடுக்க முடியாது."
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_restore_error_general"
+msgid "This backup can't be restored due to an unknown error."
+msgstr "அறியப்படாத பிழை காரணமாக இந்த காப்புப்பிரதியை மீட்டெடுக்க முடியாது."
+
+#, java-printf-format, placeholders:%s
+msgctxt "backup_restore_error_storage"
+msgid "Not enough storage to restore this backup."
+msgstr "இந்த காப்புப்பிரதியை மீட்டெடுக்க போதுமான சேமிப்பு இல்லை."
+
+#. do not translate - name of search engine
+#, ignore-same, java-printf-format, placeholders:%s
+msgctxt "serp_stract_title"
+msgid "Stract"
+msgstr "கீறல்"
+
+#, java-printf-format, placeholders:%s
+msgctxt "serp_stract_desc"
+msgid "Independent and open search engine."
+msgstr "சுயாதீனமான மற்றும் திறந்த தேடுபொறி."

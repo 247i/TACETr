@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Klipper)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-09 17:39+0200\n"
-"PO-Revision-Date: 2025-08-09 22:11\n"
+"POT-Creation-Date: 2025-09-08 04:55+0200\n"
+"PO-Revision-Date: 2025-09-08 10:32\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/klipper/measuring_resonances/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #, md-text
 msgid "Measuring Resonances"
@@ -62,7 +62,7 @@ msgstr "3.3 வி டிசி ஆற்றல்"
 
 #, md-text
 msgid "GND"
-msgstr "நிலம்"
+msgstr "Gnd"
 
 #, md-text
 msgid "06"
@@ -102,7 +102,7 @@ msgstr "எச்.டி.ஏ."
 
 #, md-text
 msgid "19"
-msgstr "௧௯"
+msgstr "19"
 
 #, md-text
 msgid "GPIO10 (SPI0_MOSI)"
@@ -191,9 +191,9 @@ msgid ""
 "Make sure the Linux SPI driver is enabled by running `sudo raspi-config` and"
 " enabling SPI under the \"Interfacing options\" menu."
 msgstr ""
-"`sudo raspi-config` ஐ இயக்கி \"இடைமுக விருப்பங்கள்\" மெனுவின் கீழ் SPI ஐ "
-"இயக்குவதன் மூலம் Linux SPI இயக்கி இயக்கப்பட்டுள்ளதா என்பதை "
-"உறுதிப்படுத்தவும்."
+"`சுடோ ராச்பி-கான்ஃபிக்` ஐ இயக்குவதன் மூலமும்,\" இடைமுக விருப்பங்கள் "
+"\"மெனுவின் கீழ் SPI ஐ இயக்குவதன் மூலமும் லினக்ச் எச்பிஐ இயக்கி "
+"இயக்கப்பட்டிருப்பதை உறுதிசெய்க."
 
 #, md-text
 msgid ""
@@ -487,7 +487,7 @@ msgstr ""
 
 #, md-text
 msgid "Selecting max_accel"
-msgstr "max_accel ஐத் தேர்ந்தெடுக்கிறது"
+msgstr "Max_accel ஐத் தேர்ந்தெடுக்கும்"
 
 #, md-text
 msgid ""
@@ -959,6 +959,11 @@ msgstr "45"
 msgid "I2C Accelerometers"
 msgstr "I2C முடுக்கமானிகள்"
 
+#: docs/Measuring_Resonances.md:block 21 (header)
+#, md-text
+msgid "MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500"
+msgstr "MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500"
+
 #: docs/Measuring_Resonances.md:block 23 (paragraph)
 #, md-text
 msgid "Recommended connection scheme for I2C on the Raspberry Pi:"
@@ -1092,7 +1097,7 @@ msgstr "36"
 #: docs/Measuring_Resonances.md:block 22 (table)
 #, md-text
 msgid "2"
-msgstr "௨"
+msgstr "2"
 
 #: docs/Measuring_Resonances.md:block 22 (table)
 #, md-text
@@ -1102,7 +1107,7 @@ msgstr "Gp1 (spi0_csn)"
 #: docs/Measuring_Resonances.md:block 22 (table)
 #, md-text
 msgid "1"
-msgstr "௧"
+msgstr "1"
 
 #: docs/Measuring_Resonances.md:block 22 (table)
 #, md-text
@@ -1112,7 +1117,7 @@ msgstr "Gp0 (spi0_rx)"
 #: docs/Measuring_Resonances.md:block 22 (table)
 #, md-text
 msgid "5"
-msgstr "௫"
+msgstr "5"
 
 #: docs/Measuring_Resonances.md:block 22 (table)
 #, md-text
@@ -1122,7 +1127,7 @@ msgstr "Gp3 (spi0_tx)"
 #: docs/Measuring_Resonances.md:block 22 (table)
 #, md-text
 msgid "4"
-msgstr "௪"
+msgstr "4"
 
 #: docs/Measuring_Resonances.md:block 22 (table)
 #, md-text
@@ -1718,6 +1723,17 @@ msgstr ""
 "கொள்ளுங்கள் (SDO ஐ GND க்கு இழுப்பதன் மூலம் I2C க்கு ஒரு சிறிய "
 "எண்ணிக்கையிலான பலகைகள் கடுமையாக கட்டமைக்கப்பட்டதாகத் தெரிகிறது)."
 
+#: docs/Measuring_Resonances.md:block 5 (paragraph)
+#, md-text
+msgid ""
+"For MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500s and LIS2DW/LIS3DH there "
+"are also a variety of board designs and clones with different I2C pull-up "
+"resistors which will need supplementing."
+msgstr ""
+"MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500S மற்றும் LIS2DW/LIS3DH க்கு "
+"வெவ்வேறு I2C புல்-அப் மின்தடையங்களுடன் பலவிதமான பலகை வடிவமைப்புகள் மற்றும் "
+"குளோன்களும் உள்ளன."
+
 #: docs/Measuring_Resonances.md:block 7 (table)
 #, md-text
 msgid "SAMD"
@@ -1734,8 +1750,9 @@ msgid ""
 "SAMC21G18, SAMD21G18, SAMD21E18, SAMD21J18, SAMD21E15, SAMD51G19, SAMD51J19,"
 " SAMD51N19, SAMD51P20, SAME51J19, SAME51N19, SAME54P20"
 msgstr ""
-"SAMC21G18, SAMD21G18, SAMD21E18, SAMD21J18, SAMD21E15, SAMD51G19, SAMD51J19,"
-" SAMD51N19, SAMD51P20, SIME51J19, Soe51N19, Some54P20"
+"SAMD21G18, SAMD21G18, SAMD21E18A, SAMD21J18, SAMD21E15, SAMD51G19, "
+"SAMD51J19, SAMD51N19, SAMD51P20, SIME51J19, SOME51N19, SOME51N19, SOME51N19,"
+" SOME51N19"
 
 #: docs/Measuring_Resonances.md:block 61 (paragraph)
 #, md-text
@@ -1811,28 +1828,3 @@ msgstr ""
 "சரிசெய்யப்படுகின்றன). அது எதுவும் உதவவில்லை என்றால், ஒரு பயனர் இயல்புநிலையாக"
 " பரிந்துரைக்கப்பட்டதைத் தவிர தயாரிக்கப்பட்ட பட்டியலிலிருந்து மற்ற சேப்பர்களை"
 " முயற்சி செய்யலாம்."
-
-#: docs/Measuring_Resonances.md:block 5 (paragraph)
-#, md-text
-msgid ""
-"For MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500/ICM20948s and LIS2DW/LIS3DH"
-" there are also a variety of board designs and clones with different I2C "
-"pull-up resistors which will need supplementing."
-msgstr ""
-"MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500/ICM20948S மற்றும் LIS2DW/LIS3DH"
-" க்கு பலவிதமான பலகை வடிவமைப்புகள் மற்றும் வெவ்வேறு I2C புல்-அப் "
-"மின்தடையங்களுடன் கூடிய குளோன்களும் உள்ளன."
-
-#: docs/Measuring_Resonances.md:block 37 (header)
-#, md-text
-msgid "MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500/ICM20948"
-msgstr "MPU-9250/MPU-9255/MPU-6515/MPU-6050/MPU-6500/ICM20948"
-
-#: docs/Measuring_Resonances.md:block 90 (paragraph)
-#, md-text
-msgid ""
-"If you are using the ICM20948, replace instances of \"mpu9250\" with "
-"\"icm20948\"."
-msgstr ""
-"நீங்கள் ICM20948 ஐப் பயன்படுத்துகிறீர்கள் என்றால், \"MPU9250\" இன் "
-"நிகழ்வுகளை \"ICM20948\" உடன் மாற்றவும்."

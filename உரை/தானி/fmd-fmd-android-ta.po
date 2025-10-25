@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (FMD)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-31 21:48+0200\n"
-"PO-Revision-Date: 2025-08-03 09:06\n"
+"POT-Creation-Date: 2025-09-21 13:24+0200\n"
+"PO-Revision-Date: 2025-09-21 17:40\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/fmd/fmd-android/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #, java-printf-format
 msgctxt "app_name"
@@ -224,6 +224,16 @@ msgid "Warning: The PIN is not included in the app backup."
 msgstr "எச்சரிக்கை: பயன்பாட்டு காப்புப்பிரதியில் முள் சேர்க்கப்படவில்லை."
 
 #, java-printf-format
+msgctxt "Settings_Set_Pin"
+msgid "Set PIN"
+msgstr "முள் அமைக்கவும்"
+
+#, java-printf-format
+msgctxt "Settings_Change_Pin"
+msgid "Change PIN"
+msgstr "முள் மாற்றவும்"
+
+#, java-printf-format
 msgctxt "Settings_Enter_Pin"
 msgid "Enter PIN"
 msgstr "முள் உள்ளிடவும்"
@@ -376,9 +386,9 @@ msgid "Push URL: %s"
 msgstr "புச் URL: %s"
 
 #, java-printf-format
-msgctxt "Settings_FMDServer_Push_Open_UP"
-msgid "Open UnifiedPush website"
-msgstr "யுனிஃபைட் புச் வலைத்தளத்தைத் திறக்கவும்"
+msgctxt "Settings_FMDServer_Push_Open_Help"
+msgid "More information about push"
+msgstr "புச் பற்றிய கூடுதல் தகவல்கள்"
 
 #, java-printf-format
 msgctxt "Settings_FMDServer_Push_Register"
@@ -544,6 +554,22 @@ msgstr ""
 "%1$s இல் உள்ள FMD சேவையகத்தை இனி அடைய முடியாது. கடைசி வெற்றிகரமான இணைப்பு "
 "%2$s இல் இருந்தது."
 
+#, java-printf-format
+msgctxt "server_connectivity_check_not_enabled_title"
+msgid "Enable the server connectivity check"
+msgstr "சேவையக இணைப்பு காசோலையை இயக்கவும்"
+
+#, java-printf-format
+msgctxt "server_connectivity_check_not_enabled_text"
+msgid ""
+"FMD can regularly check whether FMD Server is still reachable. For privacy "
+"reasons this is off by default. But for availability reasons we recommend "
+"enabling it."
+msgstr ""
+"எஃப்எம்டி சேவையகம் இன்னும் அடைய முடியுமா என்பதை எஃப்எம்டி தவறாமல் சரிபார்க்க"
+" முடியும். தனியுரிமை காரணங்களுக்காக இது இயல்பாகவே முடக்கப்பட்டுள்ளது. ஆனால் "
+"கிடைக்கும் காரணங்களுக்காக அதை இயக்க பரிந்துரைக்கிறோம்."
+
 #.  FMD Server registration/login
 #, java-printf-format
 msgctxt "server_version"
@@ -620,18 +646,28 @@ msgstr "எஃப்எம்டி அடையாளம்"
 msgctxt "server_fmd_id_hint"
 msgid ""
 "The FMD ID identifies your account on the FMD Server. Leave this empty to "
-"let the server generate an ID. Note that the FMD ID is stored in plaintext "
-"on the server, i.e., the server administrator can see it."
+"let the server generate an ID. The server administrator can see the FMD ID."
 msgstr ""
 "எஃப்எம்டி அடையாளம் எஃப்எம்டி சேவையகத்தில் உங்கள் கணக்கை அடையாளம் "
-"காட்டுகிறது. சேவையகம் ஒரு ஐடியை உருவாக்க அனுமதிக்க இதை காலியாக விடவும். FMD "
-"அடையாளம் சேவையகத்தில் எளிய உரையில் சேமிக்கப்பட்டுள்ளது என்பதை நினைவில் "
-"கொள்க, அதாவது, சேவையக நிர்வாகி அதைப் பார்க்க முடியும்."
+"காட்டுகிறது. சேவையகம் ஒரு ஐடியை உருவாக்க அனுமதிக்க இதை காலியாக விடவும். "
+"சேவையக நிர்வாகி FMD ஐடியைக் காணலாம்."
 
 #, java-printf-format
 msgctxt "password"
 msgid "Password"
 msgstr "கடவுச்சொல்"
+
+#, java-printf-format
+msgctxt "server_password_hint"
+msgid ""
+"Choose a password that cannot be guessed, but that you can recover when you "
+"lose your device. The password grants access to remotely running commands on"
+" your device. The server administrator cannot access or reset your password."
+msgstr ""
+"யூகிக்க முடியாத கடவுச்சொல்லைத் தேர்வுசெய்க, ஆனால் உங்கள் சாதனத்தை "
+"இழக்கும்போது மீட்க முடியும். கடவுச்சொல் உங்கள் சாதனத்தில் தொலைதூரத்தில் "
+"இயங்கும் கட்டளைகளுக்கான அணுகலை வழங்குகிறது. சேவையக நிர்வாகி உங்கள் "
+"கடவுச்சொல்லை அணுகவோ அல்லது மீட்டமைக்கவோ முடியாது."
 
 #, java-printf-format
 msgctxt "Settings_FMDServer_Error_id_or_pw_empty"
@@ -1133,6 +1169,17 @@ msgstr ""
 " %2$s"
 
 #, java-printf-format
+msgctxt "cmd_locate_response_beacondb_failed"
+msgid ""
+"Error gaining location from BeaconDB. This can happen if the cell tower is not in the database.\n"
+"\n"
+"%s"
+msgstr ""
+"BEACONDB இலிருந்து இருப்பிடத்தைப் பெறுவதில் பிழை. செல் கோபுரம் தரவுத்தளத்தில் இல்லாவிட்டால் இது நிகழலாம். \n"
+"\n"
+"%s"
+
+#, java-printf-format
 msgctxt "cmd_locate_response_gps_fail"
 msgid "Getting a fresh GPS location failed. Maybe due to a timeout."
 msgstr ""
@@ -1187,6 +1234,15 @@ msgstr "சாதனம் இப்போது ஒலிக்க வேண்
 msgctxt "cmd_ringermode_description_short"
 msgid "Change the ringer mode"
 msgstr "ரிங்கர் பயன்முறையை மாற்றவும்"
+
+#, java-printf-format
+msgctxt "cmd_ringermode_description_long"
+msgid ""
+"Note that \"silent\" also enables Do Not Disturb mode. This is expected "
+"behaviour and is defined by Android."
+msgstr ""
+"\"அமைதியானது\" பயன்முறையை தொந்தரவு செய்யாது என்பதை நினைவில் கொள்க. இது "
+"எதிர்பார்க்கப்படும் நடத்தை மற்றும் ஆண்ட்ராய்டு ஆல் வரையறுக்கப்படுகிறது."
 
 #, java-printf-format
 msgctxt "cmd_ringermode_response_empty"
@@ -1636,6 +1692,11 @@ msgstr ""
 msgctxt "setup_warnings_title"
 msgid "Setup warnings"
 msgstr "அமைவு எச்சரிக்கைகள்"
+
+#, java-printf-format
+msgctxt "setup_recommendations_title"
+msgid "Recommendations"
+msgstr "பரிந்துரைகள்"
 
 #, java-printf-format
 msgctxt "missing_permissions_title"

@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Rhino Linux)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-28 10:47+0200\n"
-"PO-Revision-Date: 2025-02-11 22:43+0530\n"
+"POT-Creation-Date: 2025-09-07 12:25+0200\n"
+"PO-Revision-Date: 2025-09-07 15:56\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rhino-linux/rhino-pkg/ta/>\n"
 "Language: ta\n"
@@ -12,65 +12,85 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
-#: rhino-pkg:186
-msgid ""
-"Are you sure you want to update all packages? "
-"(${BGreen}y${NC}/${BRed}N${NC}) "
-msgstr ""
-"எல்லா தொகுப்புகளையும் புதுப்பிக்க விரும்புகிறீர்களா? ($ {BGreen} ஒய் $ "
-"{NC}/$ {BRed} n $ {NC})"
+#: rhino-pkg:144 rhino-pkg:236 rhino-pkg:328
+#, python-brace-format
+msgid "No packages found matching '{rest}'!"
+msgstr "'{rest}' பொருந்தக்கூடிய தொகுப்புகள் எதுவும் காணப்படவில்லை!"
 
-#: rhino-pkg:218
-msgid "Searching Pacstall…"
-msgstr "பேக்ச்டால் தேடுகிறது…"
-
-#: rhino-pkg:222
-msgid "Searching apt…"
-msgstr "பொருத்தமாகத் தேடுகிறது…"
-
-#: rhino-pkg:226
-msgid "Searching flatpak…"
-msgstr "பிளாட்பேக்கைத் தேடுகிறது…"
-
-#: rhino-pkg:231
-msgid "Searching snap…"
-msgstr "ச்னாப் தேடுகிறது…"
-
-#: rhino-pkg:237
-msgid "No packages found matching '$*'!"
-msgstr "'$*' பொருந்தக்கூடிய தொகுப்புகள் எதுவும் காணப்படவில்லை!"
-
-#: rhino-pkg:241
-msgid "Found packages matching '${BPurple}$*${NC}':"
-msgstr "'$ {BPurple} $*$ {NC}' உடன் பொருந்தக்கூடிய தொகுப்புகள் கிடைத்தன:"
-
-#: rhino-pkg:286
-msgid "Select which package to install"
+#: rhino-pkg:254
+#, python-brace-format
+msgid "Select which packages to install"
 msgstr "எந்த தொகுப்பை நிறுவ வேண்டும் என்பதைத் தேர்ந்தெடுக்கவும்"
 
-#: rhino-pkg:292
+#: rhino-pkg:256
+#, python-brace-format
+msgid "Selecting '{pkg}' from package manager '{provider}'"
+msgstr "'{pkg}' தொகுப்பு மேலாளரிடமிருந்து '{provider}'"
+
+#: rhino-pkg:264 rhino-pkg:345
+#, python-brace-format
+msgid "Are you sure? ({y}/{n}) "
+msgstr "நீங்கள் உறுதியாக இருக்கிறீர்களா? ({y}/{n}) "
+
+#: rhino-pkg:293
+#, python-brace-format
+msgid "Failed to install '{pkg}'."
+msgstr "'{pkg}' ஐ நிறுவுவதில் தோல்வி."
+
+#: rhino-pkg:336
+#, python-brace-format
 msgid "Select which package to remove"
 msgstr "எந்த தொகுப்பை அகற்ற வேண்டும் என்பதைத் தேர்ந்தெடுக்கவும்"
 
-#: rhino-pkg:298
-msgid "'${entered_input[*]}' is not a valid number"
-msgstr "'$ {ented_input [*]}' என்பது சரியான எண் அல்ல"
+#: rhino-pkg:338
+#, python-brace-format
+msgid "Removing '{part}' from '{provider}'"
+msgstr "'{part}' இலிருந்து '{provider}' நீக்குகிறது"
 
-#: rhino-pkg:303
+#: rhino-pkg:377
+#, python-brace-format
 msgid ""
-"Selecting '${BPurple}${pkgs[i]}${NC}' from package manager "
-"'${BPurple}${pkgrepo[i]}${NC}'"
+"Attempting to repair dependencies and remove unused packages. Continue? "
+"({y}/{n}) "
 msgstr ""
-"'$ {BPurple} $ {pkgs [i]} $ {NC}' தொகுப்பு மேலாளரிடமிருந்து '$ {BPurple} $ "
-"{pkgrepo [i]} $ {NC}'"
+"சார்புகளை சரிசெய்யவும் பயன்படுத்தப்படாத தொகுப்புகளை அகற்றவும் "
+"முயற்சிக்கிறது. தொடரவா? ({y}/{n})"
 
-#: rhino-pkg:306
-msgid "Are you sure? (${BGreen}y${NC}/${BRed}N${NC}) "
-msgstr ""
-"நீங்கள் உறுதியாக இருக்கிறீர்களா? ($ {BGreen} ஒய் $ {NC}/$ {BRed} n $ {NC})"
+#: rhino-pkg:428
+#, python-brace-format
+msgid "Are you sure you want to update all packages? ({y}/{n}) "
+msgstr "எல்லா தொகுப்புகளையும் புதுப்பிக்க விரும்புகிறீர்களா? ({y}/{n}) "
 
-#: rhino-pkg:341
-msgid "Invalid repository name!"
-msgstr "தவறான களஞ்சிய பெயர்!"
+#: cmd.nu:38 cmd.nu:48
+#, python-brace-format
+msgid "No valid inputs given!"
+msgstr "சரியான உள்ளீடுகள் எதுவும் கொடுக்கப்படவில்லை!"
+
+#: search.nu:12 search.nu:47
+#, python-brace-format
+msgid "Searching APT…"
+msgstr "பொருத்தமாகத் தேடுகிறது…"
+
+#: search.nu:15 search.nu:50
+#, python-brace-format
+msgid "Searching Pacstall…"
+msgstr "பேக்ச்டால் தேடுகிறது…"
+
+# Suggested in Weblate: பிளாட்பேக்கைத் தேடுகிறது…
+#: search.nu:18 search.nu:53
+#, python-brace-format
+msgid "Searching Flatpak…"
+msgstr "பிளாட்பேக்கைத் தேடுகிறது…"
+
+# Suggested in Weblate: ச்னாப் தேடுகிறது…
+#: search.nu:21 search.nu:56
+#, python-brace-format
+msgid "Searching Snap…"
+msgstr "ச்னாப் தேடுகிறது…"
+
+#: apt.nu:51
+#, python-brace-format
+msgid "`aptitude` not installed."
+msgstr "`அப்டிட்யூட்` நிறுவப்படவில்லை."

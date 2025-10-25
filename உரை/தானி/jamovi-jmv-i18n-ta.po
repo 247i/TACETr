@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (jamovi)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-03 10:38+0200\n"
-"PO-Revision-Date: 2025-06-14 06:58\n"
+"POT-Creation-Date: 2025-09-15 06:29+0200\n"
+"PO-Revision-Date: 2025-09-20 14:11\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/jamovi/jmv-i18n/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #: R/errors.R
 msgid "'{col}' contains infinite values"
@@ -44,7 +44,7 @@ msgstr ""
 msgid "'{rotation}' rotation was used"
 msgstr "'{rotation}' சுழற்சி பயன்படுத்தப்பட்டது"
 
-#: R/linreg.b.R
+#: R/descriptives.b.R R/linreg.b.R
 #, ignore-multiple-failures
 msgid "'{var}' contains negative values. Negative weights are not permitted."
 msgstr ""
@@ -188,198 +188,6 @@ msgstr "நெடுவரிசைக்குள் %"
 msgid "% within row"
 msgstr "வரிசையில் %"
 
-#: ancova/options/ss.description.R anova/options/ss.description.R
-#, ignore-multiple-failures
-msgid "`'1'`, `'2'` or `'3'` (default), the sum of squares to use"
-msgstr ""
-"`'1'',`' 2'` அல்லது `'3'` (இயல்புநிலை), பயன்படுத்த வேண்டிய சதுரங்களின் தொகை"
-
-#: anovaRM/options/ss.description.R
-msgid "`'2'` or `'3'` (default), the sum of squares to use"
-msgstr "`'2'` அல்லது`' 3'` (இயல்புநிலை), பயன்படுத்த வேண்டிய சதுரங்களின் தொகை"
-
-#: contTables/options/hypothesis.description.R
-#: ttestIS/options/hypothesis.description.R
-msgid ""
-"`'different'` (default), `'oneGreater'` or `'twoGreater'`, the alternative "
-"hypothesis; group 1 different to group 2, group 1 greater than group 2, and "
-"group 2 greater than group 1 respectively"
-msgstr ""
-"`'வேறுபட்டது (இயல்புநிலை),`' ஒன் கிரீட்டர்'` அல்லது `'டூக்ரீட்டர்', மாற்று "
-"கருதுகோள்; குழு 1 குழு 2 க்கு வேறுபட்டது, குழு 1 ஐ விட குழு 1, மற்றும் குழு "
-"2 முறையே குழு 1 ஐ விட அதிகமாகும்"
-
-#: ttestPS/options/hypothesis.description.R
-msgid ""
-"`'different'` (default), `'oneGreater'` or `'twoGreater'`, the alternative "
-"hypothesis; measure 1 different to measure 2, measure 1 greater than measure"
-" 2, and measure 2 greater than measure 1 respectively"
-msgstr ""
-"`'வேறுபட்டது (இயல்புநிலை),`' ஒன் கிரீட்டர்'` அல்லது `'டூக்ரீட்டர்', மாற்று "
-"கருதுகோள்; 2 ஐ அளவிட 1 வேறுபட்டது, அளவீட்டு 2 ஐ விட 1 ஐ அளவிடவும், முறையே 1 "
-"ஐ விட 2 ஐ அளவிடவும்"
-
-#: ttestOneS/options/hypothesis.description.R
-msgid ""
-"`'dt'` (default), `'gt'` or `'lt'`, the alternative hypothesis; different to"
-" `testValue`, greater than `testValue`, and less than `testValue` "
-"respectively"
-msgstr ""
-"`'dt'` (இயல்புநிலை),`' gt'` அல்லது `'lt'`, மாற்று கருதுகோள்; `டெச்ட்வால்யூ` "
-"க்கு வேறுபட்டது,` டெச்ட்வாலூ` ஐ விடவும், முறையே `டெச்ட்வாலூ` ஐ விடவும் "
-"குறைவாக உள்ளது"
-
-#: cfa/options/constrain.description.R
-msgid ""
-"`'facVar'` or `'facInd'`, how to contrain the model; `'facVar'` fixes the "
-"factor variances to one, `'facInd'` fixes each factor to the scale of its "
-"first indicator."
-msgstr ""
-"`'காரணி' அல்லது` 'எதிர்கொள்வது, மாதிரியை எவ்வாறு கட்டுப்படுத்துவது; காரணி "
-"மாறுபாடுகளை ஒன்றுக்கு சரிசெய்கிறது, `'FACIND' ஒவ்வொரு காரணியையும் அதன் முதல்"
-" குறிகாட்டியின் அளவிற்கு சரிசெய்கிறது."
-
-#: cfa/options/miss.description.R
-msgid ""
-"`'listwise'` or `'fiml'`, how to handle missing values; `'listwise'` "
-"excludes a row from all analyses if one of its entries is missing, `'fiml'` "
-"uses a full information maximum likelihood method to estimate the model."
-msgstr ""
-"காணாமல் போன மதிப்புகளை எவ்வாறு கையாள்வது; `'லிச்ட்வைச்'` அதன் உள்ளீடுகளில் "
-"ஒன்று காணவில்லை என்றால் அனைத்து பகுப்பாய்வுகளிலிருந்தும் ஒரு வரிசையை "
-"விலக்குகிறது, மாதிரியை மதிப்பிடுவதற்கு `'ஃபிம்ல் ஒரு முழு செய்தி அதிகபட்ச "
-"சாத்தியக்கூறு முறையைப் பயன்படுத்துகிறது."
-
-#: anovaRMNP/options/plotType.description.R
-msgid "`'means'` (default) or `'medians'`, the error bars to use in the plot"
-msgstr ""
-"`'என்றால்' (இயல்புநிலை) அல்லது` 'மீடியர்கள்'`, சதித்திட்டத்தில் பயன்படுத்த "
-"வேண்டிய பிழைகள்"
-
-#: efa/options/extraction.description.R
-msgid ""
-"`'minres'` (default), `'ml'`, or `'pa'` use respectively 'minimum residual',"
-" 'maximum likelihood', or 'prinicipal axis' as the factor extraction method"
-msgstr ""
-"`'MINRES'` (இயல்புநிலை),`' ml'`, அல்லது `'pa'` முறையே' குறைந்தபட்ச எச்சம் "
-"',' அதிகபட்ச சாத்தியக்கூறு 'அல்லது' அச்சுப்பொறி அச்சு 'ஆகியவற்றைப் "
-"பயன்படுத்துங்கள் காரணி பிரித்தெடுக்கும் முறையாக"
-
-#: ancova/options/emmPlotError.description.R
-#: anova/options/emmPlotError.description.R
-#: anovaRM/options/emmPlotError.description.R
-msgid ""
-"`'none'`, `'ci'` (default), or `'se'`. Use no error bars, use confidence "
-"intervals, or use standard errors on the marginal mean plots, respectively"
-msgstr ""
-"`'எதுவுமில்லை',` 'சிஐ'` (இயல்புநிலை), அல்லது `' se'`. பிழை பார்கள் இல்லை, "
-"நம்பிக்கை இடைவெளிகளைப் பயன்படுத்தவும் அல்லது முறையே விளிம்பு சராசரி "
-"அடுக்குகளில் நிலையான பிழைகளைப் பயன்படுத்தவும்"
-
-#: anovaOneW/options/phMethod.description.R
-msgid ""
-"`'none'`, `'gamesHowell'` or `'tukey'`, which post-hoc tests to provide; "
-"`'none'` shows no post-hoc tests, `'gamesHowell'` shows Games-Howell post-"
-"hoc tests where no equivalence of variances is assumed, and `'tukey'` shows "
-"Tukey post-hoc tests where equivalence of variances is assumed"
-msgstr ""
-"`'எதுவுமில்லை',` 'கேம்சோவெல்' அல்லது `'டுகே'`, இது வழங்க வேண்டிய பிந்தைய "
-"சோதனைகள்; `'எதுவுமில்லை, பிந்தைய தற்காலிக சோதனைகள் இல்லை,`' கேம்சோவெல் "
-"'விளையாட்டுகளைக் காட்டுகிறது-மாறுபாடுகளின் சமநிலை கருதப்படாத, மற்றும் "
-"மாறுபாடுகளின் சமநிலை இருக்கும் இடத்தில் டுகே பிந்தைய தற்காலிக சோதனைகளை `' "
-"டுகே 'காட்டுகிறது கருதப்பட்டது"
-
-#: pca/options/rotation.description.R
-msgid ""
-"`'none'`, `'varimax'` (default), `'quartimax'`, `'promax'`, `'oblimin'`, or "
-"`'simplimax'`, the rotation to use in estimation"
-msgstr ""
-"`'எதுவுமில்லை',` '' '' varimax'` (இயல்புநிலை), `'Quartimax'`,`' promax'`, "
-"`'oblimin'`, அல்லது`' simplimax'`, மதிப்பீட்டில் பயன்படுத்த வேண்டிய சுழற்சி"
-
-#: efa/options/rotation.description.R
-msgid ""
-"`'none'`, `'varimax'`, `'quartimax'`, `'promax'`, `'oblimin'` (default), or "
-"`'simplimax'`, the rotation to use in estimation"
-msgstr ""
-"`'எதுவுமில்லை',` '' 'varimax'`, `' Quartimax'`,` 'promax'`, `' '' "
-"(இயல்புநிலை), அல்லது` 'simplimax'`, மதிப்பீட்டில் பயன்படுத்த வேண்டிய சுழற்சி"
-
-#: propTest2/options/hypothesis.description.R
-#, ignore-multiple-failures
-msgid ""
-"`'notequal'` (default), `'greater'` or `'less'`, the alternative hypothesis"
-msgstr ""
-"`'notequal'` (இயல்புநிலை),`' பெரியது 'அல்லது `' குறைவாக, மாற்று கருதுகோள்"
-
-#: efa/options/nFactorMethod.description.R
-#: pca/options/nFactorMethod.description.R
-msgid ""
-"`'parallel'` (default), `'eigen'` or `'fixed'`, the way to determine the "
-"number of factors"
-msgstr ""
-"`'இணையான'` (இயல்புநிலை),`' 'ஈசென்' அல்லது `'சரி செய்யப்பட்டது, காரணிகளின் "
-"எண்ணிக்கையை தீர்மானிப்பதற்கான வழி"
-
-#: ttestPS/options/miss.description.R
-#, ignore-multiple-failures
-msgid ""
-"`'perAnalysis'` or `'listwise'`, how to handle missing values; "
-"`'perAnalysis'` excludes missing values for individual dependent variables, "
-"`'listwise'` excludes a row from all analyses if one of its entries is "
-"missing"
-msgstr ""
-"`'peranalysis'` அல்லது `'listwise'`, காணாமல் போன மதிப்புகளை எவ்வாறு "
-"கையாள்வது; `'peranalysis'` தனிப்பட்ட சார்பு மாறிகளுக்கான காணாமல் போன "
-"மதிப்புகளைத் தவிர்த்து, அதன் உள்ளீடுகளில் ஒன்று காணவில்லை எனில்`' listywise "
-"'`அனைத்து பகுப்பாய்வுகளிலிருந்தும் ஒரு வரிசையை விலக்குகிறது"
-
-#: anovaOneW/options/miss.description.R ttestIS/options/miss.description.R
-#: ttestOneS/options/miss.description.R
-#, ignore-multiple-failures
-msgid ""
-"`'perAnalysis'` or `'listwise'`, how to handle missing values; "
-"`'perAnalysis'` excludes missing values for individual dependent variables, "
-"`'listwise'` excludes a row from all analyses if one of its entries is "
-"missing."
-msgstr ""
-"`'peranalysis'` அல்லது `'listwise'`, காணாமல் போன மதிப்புகளை எவ்வாறு "
-"கையாள்வது; `'peranalysis'` தனிப்பட்ட சார்பு மாறிகளுக்கான காணாமல் போன "
-"மதிப்புகளை விலக்குகிறது, அதன் உள்ளீடுகளில் ஒன்று காணவில்லை எனில்`' listywise"
-" '`அனைத்து பகுப்பாய்வுகளிலிருந்தும் ஒரு வரிசையை விலக்குகிறது."
-
-#: linReg/options/intercept.description.R
-#, ignore-multiple-failures
-msgid ""
-"`'refLevel'` (default) or `'grandMean'`, coding of the intercept. Either "
-"creates contrast so that the intercept represents the reference level or the"
-" grand mean"
-msgstr ""
-"`'reflevel'` (இயல்புநிலை) அல்லது`' பாட்டி'`, இடைமறிப்பின் குறியீட்டு முறை. "
-"ஒன்று மாறுபாட்டை உருவாக்குகிறது, இதனால் இடைமறிப்பு குறிப்பு நிலை அல்லது "
-"பெரிய சராசரியைக் குறிக்கிறது"
-
-#: descriptives/options/desc.description.R
-#, ignore-multiple-failures
-msgid ""
-"`'rows'` or `'columns'` (default), display the variables across the rows or "
-"across the columns (default)"
-msgstr ""
-"`'வரிசைகள்' அல்லது` 'நெடுவரிசைகள்' (இயல்புநிலை), வரிசைகள் முழுவதும் அல்லது "
-"நெடுவரிசைகள் முழுவதும் மாறிகளைக் காண்பி (இயல்புநிலை)"
-
-#: efa/options/factorScoreMethod.description.R
-#, ignore-end-stop, ignore-multiple-failures
-msgid ""
-"`'Thurstone'` (default), `'Bartlett'`, `'tenBerge'`, `'Anderson'`, or "
-"`'Harman'` use respectively 'Thurstone', 'Bartlett', 'ten Berge', 'Anderson "
-"& Rubin', or 'Harman' method for estimating factor scores"
-msgstr ""
-"`'தர்ச்டோன்'` (இயல்புநிலை),`' பார்ட்லெட்'`, `'டென்பெர்ச்',` 'ஆண்டர்சன்', "
-"அல்லது `'அர்மன்' முறையே 'தர்ச்டோன்', 'பார்ட்லெட்', 'டென் பெர்க்', 'ஆண்டர்சன்"
-" பயன்படுத்தவும் & ரூபின் ', அல்லது காரணி மதிப்பெண்களை மதிப்பிடுவதற்கான' "
-"அர்மன் 'முறை"
-
 #: ancova/results/main.title
 msgid "`ANCOVA - ${dep}`"
 msgstr "`அன்கோவா - $ {dep}`"
@@ -387,14 +195,6 @@ msgstr "`அன்கோவா - $ {dep}`"
 #: anova/results/main.title
 msgid "`ANOVA - ${dep}`"
 msgstr "`ANOVA - $ {dep}`"
-
-#: contTables/options/compare.description.R
-msgid ""
-"`columns` or `rows` (default), compare columns/rows in difference of "
-"proportions or relative risks (2x2 tables)"
-msgstr ""
-"`நெடுவரிசைகள் அல்லது` வரிசைகள்` (இயல்புநிலை), நெடுவரிசைகள்/வரிசைகளை "
-"விகிதாச்சாரத்தின் வேறுபாடு அல்லது தொடர்புடைய அபாயங்கள் (2x2 அட்டவணைகள்)"
 
 #: linReg/results/models.template/coef.title
 msgid "`Model Coefficients - ${ dep }`"
@@ -410,1155 +210,6 @@ msgstr "`மாதிரி குணகங்கள் - $ {dep}`"
 #, ignore-multiple-failures
 msgid "`Proportions - ${var}`"
 msgstr "`விகிதாச்சாரங்கள் - $ {var}`"
-
-#: descriptives/options/boxLabelOutliers.description.R
-msgid ""
-"`TRUE` (default) or `FALSE`, add labels with the row number to the outliers "
-"in the box plot"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` தவறு`, பெட்டி சதித்திட்டத்தில் உள்ள "
-"வெளிநாட்டினருக்கு வரிசை எண்ணுடன் லேபிள்களைச் சேர்க்கவும்"
-
-#: ttestIS/options/students.description.R
-#: ttestOneS/options/students.description.R
-#: ttestPS/options/students.description.R
-msgid "`TRUE` (default) or `FALSE`, perform Student's t-tests"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` தவறு`, மாணவர்களின் டி-சோதனைகளைச் செய்யுங்கள்"
-
-#: anovaOneW/options/welchs.description.R
-msgid ""
-"`TRUE` (default) or `FALSE`, perform Welch's one-way ANOVA which does not "
-"assume equal variances"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` தவறு`, வெல்ச்சின் ஒரு வழி ANOVA ஐச் "
-"செய்யுங்கள், இது சம மாறுபாடுகளை எடுத்துக் கொள்ளாது"
-
-#: cfa/options/estTest.description.R
-msgid ""
-"`TRUE` (default) or `FALSE`, provide 'Z' and 'p' values for the model "
-"estimates"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` தவறு`, மாதிரி மதிப்பீடுகளுக்கு 'சட்' மற்றும் "
-"'p' மதிப்புகளை வழங்கவும்"
-
-#: cfa/options/modelTest.description.R
-msgid ""
-"`TRUE` (default) or `FALSE`, provide a chi-square test for exact fit that "
-"compares the model with the perfect fitting model"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` பொய்`, சரியான பொருத்தத்திற்காக ஒரு சி-சதுர "
-"சோதனையை வழங்கவும், இது மாதிரியை சரியான பொருத்துதல் மாதிரியுடன் ஒப்பிடுகிறது"
-
-#: linReg/options/ciEmm.description.R logLinear/options/ciEmm.description.R
-#: logRegBin/options/ciEmm.description.R
-#: logRegMulti/options/ciEmm.description.R
-msgid ""
-"`TRUE` (default) or `FALSE`, provide a confidence interval for the estimated"
-" marginal means"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` பொய்`, மதிப்பிடப்பட்ட விளிம்பு வழிமுறைகளுக்கு "
-"நம்பிக்கை இடைவெளியை வழங்கவும்"
-
-#: logLinear/options/aic.description.R logRegBin/options/aic.description.R
-#: logRegMulti/options/aic.description.R logRegOrd/options/aic.description.R
-msgid ""
-"`TRUE` (default) or `FALSE`, provide Aikaike's Information Criterion (AIC) "
-"for the models"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` பொய்`, மாதிரிகளுக்கு ஐகாய்கின் செய்தி அளவுகோலை "
-"(AIC) வழங்கவும்"
-
-#: reliability/options/alphaScale.description.R
-msgid "`TRUE` (default) or `FALSE`, provide Cronbach's α"
-msgstr "`உண்மை` (இயல்புநிலை) அல்லது` தவறு`, க்ரோன்பேக்கின் α ஐ வழங்கவும்"
-
-#: ancova/options/emmPlots.description.R anova/options/emmPlots.description.R
-#: anovaRM/options/emmPlots.description.R
-#: linReg/options/emmPlots.description.R
-#: logLinear/options/emmPlots.description.R
-#: logRegBin/options/emmPlots.description.R
-#: logRegMulti/options/emmPlots.description.R
-msgid "`TRUE` (default) or `FALSE`, provide estimated marginal means plots"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` பொய்`, மதிப்பிடப்பட்ட விளிம்பு வழிமுறைகளை "
-"வழங்கவும்"
-
-#: cfa/options/factCovEst.description.R
-msgid ""
-"`TRUE` (default) or `FALSE`, provide estimates for the factor (co)variances"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` தவறு`, காரணி (CO) மாறுபாடுகளுக்கான மதிப்பீடுகளை"
-" வழங்கவும்"
-
-#: cfa/options/resCovEst.description.R
-msgid ""
-"`TRUE` (default) or `FALSE`, provide estimates for the residual "
-"(co)variances"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` தவறு`, மீதமுள்ள (CO) மாறுபாடுகளுக்கான "
-"மதிப்பீடுகளை வழங்கவும்"
-
-#: anovaOneW/options/phMeanDif.description.R
-msgid ""
-"`TRUE` (default) or `FALSE`, provide mean differences for post-hoc tests"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` பொய்`, பிந்தைய தற்காலிக சோதனைகளுக்கு சராசரி "
-"வேறுபாடுகளை வழங்கவும்"
-
-#: corrMatrix/options/pearson.description.R
-#: corrPart/options/pearson.description.R
-msgid "`TRUE` (default) or `FALSE`, provide Pearson's R"
-msgstr "`உண்மை` (இயல்புநிலை) அல்லது` தவறு`, பியர்சனின் ஆர் வழங்கவும்"
-
-#: corrMatrix/options/sig.description.R corrPart/options/sig.description.R
-msgid "`TRUE` (default) or `FALSE`, provide significance levels"
-msgstr "`உண்மை` (இயல்புநிலை) அல்லது` பொய்`, முக்கியத்துவ நிலைகளை வழங்கவும்"
-
-#: anovaOneW/options/phSig.description.R
-msgid ""
-"`TRUE` (default) or `FALSE`, provide significance levels for post-hoc tests"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` தவறு`, பிந்தைய தற்காலிக சோதனைகளுக்கு "
-"முக்கியத்துவம் வாய்ந்த நிலைகளை வழங்கவும்"
-
-#: logLinear/options/dev.description.R logRegBin/options/dev.description.R
-#: logRegMulti/options/dev.description.R logRegOrd/options/dev.description.R
-msgid ""
-"`TRUE` (default) or `FALSE`, provide the deviance (or -2LogLikelihood) for "
-"the models"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` பொய்`, மாதிரிகளுக்கு விலகலை (அல்லது "
-"-2loglikelihod) வழங்குங்கள்"
-
-#: descriptives/options/mean.description.R
-msgid "`TRUE` (default) or `FALSE`, provide the mean"
-msgstr "`உண்மை` (இயல்புநிலை) அல்லது` பொய்`, சராசரியை வழங்கவும்"
-
-#: descriptives/options/median.description.R
-msgid "`TRUE` (default) or `FALSE`, provide the median"
-msgstr "`உண்மை` (இயல்புநிலை) அல்லது` பொய்`, சராசரி வழங்கவும்"
-
-#: linReg/options/modelTest.description.R
-msgid ""
-"`TRUE` (default) or `FALSE`, provide the model comparison between the models"
-" and the NULL model"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` பொய்`, மாதிரிகள் மற்றும் சுழிய மாதிரிக்கு "
-"இடையிலான மாதிரி ஒப்பீட்டை வழங்கவும்"
-
-#: descriptives/options/missing.description.R
-msgid "`TRUE` (default) or `FALSE`, provide the number of missing values"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` பொய்`, காணாமல் போன மதிப்புகளின் எண்ணிக்கையை "
-"வழங்கவும்"
-
-#: descriptives/options/n.description.R
-msgid "`TRUE` (default) or `FALSE`, provide the sample size"
-msgstr "`உண்மை` (இயல்புநிலை) அல்லது` தவறு`, மாதிரி அளவை வழங்கவும்"
-
-#: descriptives/options/sd.description.R
-msgid "`TRUE` (default) or `FALSE`, provide the standard deviation"
-msgstr "`உண்மை` (இயல்புநிலை) அல்லது` பொய்`, நிலையான விலகலை வழங்கவும்"
-
-#: linReg/options/r2.description.R
-msgid ""
-"`TRUE` (default) or `FALSE`, provide the statistical measure `R-squared` for"
-" the models"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` தவறு`, மாதிரிகளுக்கு `ஆர்-ச்கொயர்` புள்ளிவிவர "
-"நடவடிக்கையை வழங்கவும்"
-
-#: linReg/options/r.description.R
-msgid ""
-"`TRUE` (default) or `FALSE`, provide the statistical measure `R` for the "
-"models"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` பொய்`, மாதிரிகளுக்கு புள்ளிவிவர நடவடிக்கையை `r`"
-" வழங்கவும்"
-
-#: contTables/options/chiSq.description.R
-#: contTablesPaired/options/chiSq.description.R
-msgid "`TRUE` (default) or `FALSE`, provide χ²"
-msgstr "`உண்மை` (இயல்புநிலை) அல்லது` தவறு`, வழங்கவும்"
-
-#: ancova/options/emmWeights.description.R
-#: anova/options/emmWeights.description.R
-#: anovaRM/options/emmWeights.description.R
-#: linReg/options/emmWeights.description.R
-#: logLinear/options/emmWeights.description.R
-#: logRegBin/options/emmWeights.description.R
-#: logRegMulti/options/emmWeights.description.R
-msgid ""
-"`TRUE` (default) or `FALSE`, weigh each cell equally or weigh them according"
-" to the cell frequency"
-msgstr ""
-"`உண்மை` (இயல்புநிலை) அல்லது` பொய்`, ஒவ்வொரு கலத்தையும் சமமாக எடைபோடுங்கள் "
-"அல்லது செல் அதிர்வெண்ணின் படி அவற்றை எடைபோடுங்கள்"
-
-#: descriptives/options/barCounts.description.R
-msgid "`TRUE` or `FALSE` (default), add counts to the  bar plots"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), பார் அடுக்குகளில் எண்ணிக்கையைச் "
-"சேர்க்கவும்"
-
-#: descriptives/options/boxMean.description.R
-msgid "`TRUE` or `FALSE` (default), add mean to box plot"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), பெட்டி சதித்திட்டத்திற்கு சராசரியைச் "
-"சேர்க்கவும்"
-
-#: corrMatrix/options/flag.description.R corrPart/options/flag.description.R
-msgid "`TRUE` or `FALSE` (default), flag significant correlations"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), குறிப்பிடத்தக்க தொடர்புகளை கொடியிடுங்கள்"
-
-#: anovaOneW/options/phFlag.description.R
-msgid "`TRUE` or `FALSE` (default), flag significant post-hoc comparisons"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), குறிப்பிடத்தக்க பிந்தைய தற்காலிக "
-"ஒப்பீடுகளை கொடியிடுங்கள்"
-
-#: linReg/options/norm.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), perform a Shapiro-Wilk test on the residuals"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), எஞ்சியவற்றில் சாபிரோ-வில்க் சோதனையைச் "
-"செய்யுங்கள்"
-
-#: anovaOneW/options/fishers.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), perform Fisher's one-way ANOVA which assumes "
-"equal variances"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), ஃபிசரின் ஒரு வழி ANOVA ஐச் செய்யுங்கள், "
-"இது சம மாறுபாடுகளைக் கருதுகிறது"
-
-#: ancova/options/homo.description.R anova/options/homo.description.R
-msgid "`TRUE` or `FALSE` (default), perform homogeneity tests"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), ஒரேவிதமான சோதனைகளைச் செய்யுங்கள்"
-
-#: anovaOneW/options/eqv.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), perform Levene's test for homogeneity of "
-"variances"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாறுபாடுகளின் ஒருமைப்பாட்டிற்கான லெவனின்"
-" சோதனையைச் செய்யுங்கள்"
-
-#: ttestIS/options/eqv.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), perform Levene's tests for homogeneity of "
-"variances"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாறுபாடுகளின் ஒருமைப்பாட்டிற்கு லெவனின் "
-"சோதனைகளைச் செய்யுங்கள்"
-
-#: ttestIS/options/mann.description.R
-msgid "`TRUE` or `FALSE` (default), perform Mann-Whitney U tests"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மான்-விட்னி யு சோதனைகளைச் செய்யுங்கள்"
-
-#: anovaNP/options/pairs.description.R anovaRMNP/options/pairs.description.R
-msgid "`TRUE` or `FALSE` (default), perform pairwise comparisons"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), சோடிவரிசை ஒப்பீடுகளைச் செய்யுங்கள்"
-
-#: ttestPS/options/norm.description.R
-#, ignore-reused
-msgid "`TRUE` or `FALSE` (default), perform Shapiro-wilk normality tests"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), சாபிரோ-வில்க் இயல்பான சோதனைகளைச் "
-"செய்யுங்கள்"
-
-#: anovaOneW/options/norm.description.R
-msgid "`TRUE` or `FALSE` (default), perform Shapiro-Wilk test of normality"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), இயல்பான சாபிரோ-வில்க் சோதனையைச் "
-"செய்யுங்கள்"
-
-#: ancova/options/norm.description.R anova/options/norm.description.R
-#: ttestIS/options/norm.description.R
-#, ignore-reused
-msgid "`TRUE` or `FALSE` (default), perform Shapiro-Wilk tests of normality"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), இயல்பான சாபிரோ-வில்க் சோதனைகளைச் "
-"செய்யுங்கள்"
-
-#: ttestOneS/options/norm.description.R
-#, ignore-reused
-msgid "`TRUE` or `FALSE` (default), perform Shapiro-wilk tests of normality"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), இயல்பான சாபிரோ-வில்க் சோதனைகளைச் "
-"செய்யுங்கள்"
-
-#: anovaRM/options/spherTests.description.R
-msgid "`TRUE` or `FALSE` (default), perform sphericity tests"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), கோள சோதனைகளைச் செய்யுங்கள்"
-
-#: ttestIS/options/welchs.description.R
-msgid "`TRUE` or `FALSE` (default), perform Welch's t-tests"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), வெல்ச்சின் டி-சோதனைகளைச் செய்யுங்கள்"
-
-#: ttestOneS/options/wilcoxon.description.R
-#: ttestPS/options/wilcoxon.description.R
-msgid "`TRUE` or `FALSE` (default), perform Wilcoxon signed rank tests"
-msgstr ""
-"`உண்மை` அல்லது` தவறு` (இயல்புநிலை), வில்காக்சன் கையொப்பமிடப்பட்ட தரவரிசை "
-"சோதனைகளைச் செய்யுங்கள்"
-
-#: ancova/options/emmPlotData.description.R
-#: anova/options/emmPlotData.description.R
-#: anovaRM/options/emmPlotData.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), plot the data on top of the marginal means"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), விளிம்பு வழிமுறைகளின் மேல் தரவைத் "
-"திட்டமிடுங்கள்"
-
-#: logLinear/options/ci.description.R logRegBin/options/ci.description.R
-#: logRegMulti/options/ci.description.R logRegOrd/options/ci.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide a confidence interval for the model "
-"coefficient estimates"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாதிரி குணக மதிப்பீடுகளுக்கு நம்பிக்கை "
-"இடைவெளியை வழங்கவும்"
-
-#: logRegBin/options/ciOR.description.R logRegMulti/options/ciOR.description.R
-#: logRegOrd/options/ciOR.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide a confidence interval for the model "
-"coefficient odds ratio estimates"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாதிரி குணக முரண்பாடுகள் விகித "
-"மதிப்பீடுகளுக்கு நம்பிக்கை இடைவெளியை வழங்கவும்"
-
-#: logLinear/options/ciRR.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide a confidence interval for the model "
-"coefficient rate ratio estimates"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாதிரி குணக விகித விகித மதிப்பீடுகளுக்கு"
-" நம்பிக்கை இடைவெளியை வழங்கவும்"
-
-#: linReg/options/ciStdEst.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide a confidence interval for the model "
-"coefficient standardized estimates"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாதிரி குணகம் தரப்படுத்தப்பட்ட "
-"மதிப்பீடுகளுக்கு நம்பிக்கை இடைவெளியை வழங்கவும்"
-
-#: linReg/options/ci.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide a confidence interval for the model "
-"coefficients"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாதிரி குணகங்களுக்கு நம்பிக்கை இடைவெளியை"
-" வழங்கவும்"
-
-#: cfa/options/ci.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide a confidence interval for the model "
-"estimates"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாதிரி மதிப்பீடுகளுக்கு நம்பிக்கை "
-"இடைவெளியை வழங்கவும்"
-
-#: corrMatrix/options/plots.description.R
-#, ignore-reused
-msgid "`TRUE` or `FALSE` (default), provide a correlation matrix plot"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), ஒரு தொடர்பு மேட்ரிக்ச் சதித்திட்டத்தை "
-"வழங்கவும்"
-
-#: reliability/options/corPlot.description.R
-#, ignore-reused
-msgid "`TRUE` or `FALSE` (default), provide a correlation plot"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), ஒரு தொடர்பு சதித்திட்டத்தை வழங்கவும்"
-
-#: logRegBin/options/cutOffPlot.description.R
-msgid "`TRUE` or `FALSE` (default), provide a cut-off plot"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), கட்-ஆஃப் சதித்திட்டத்தை வழங்கவும்"
-
-#: anovaRMNP/options/plots.description.R
-msgid "`TRUE` or `FALSE` (default), provide a descriptive plot"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), ஒரு விளக்க சதித்திட்டத்தை வழங்கவும்"
-
-#: cfa/options/pathDiagram.description.R
-msgid "`TRUE` or `FALSE` (default), provide a path diagram of the model"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாதிரியின் பாதை வரைபடத்தை வழங்கவும்"
-
-#: logRegBin/options/class.description.R
-#, ignore-end-stop, ignore-multiple-failures
-msgid ""
-"`TRUE` or `FALSE` (default), provide a predicted classification table (or "
-"confusion matrix)"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), கணிக்கப்பட்ட வகைப்பாடு அட்டவணையை (அல்லது"
-" குழப்ப மேட்ரிக்ச்) வழங்கவும்"
-
-#: mancova/options/qqPlot.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide a Q-Q plot of multivariate normality"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), பன்முக இயல்புநிலையின் Q-Q சதித்திட்டத்தை"
-" வழங்கவும்"
-
-#: ancova/options/qq.description.R anova/options/qq.description.R
-#: anovaOneW/options/qq.description.R anovaRM/options/qq.description.R
-#: linReg/options/qqPlot.description.R ttestOneS/options/qq.description.R
-#: ttestPS/options/qq.description.R
-msgid "`TRUE` or `FALSE` (default), provide a Q-Q plot of residuals"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), எஞ்சியவர்களின் Q-Q சதித்திட்டத்தை "
-"வழங்கவும்"
-
-#: logRegBin/options/rocPlot.description.R
-msgid "`TRUE` or `FALSE` (default), provide a ROC curve plot"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), ஒரு ROC வளைவு சதித்திட்டத்தை வழங்கவும்"
-
-#: linReg/options/stdEst.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide a standardized estimate for the model "
-"coefficients"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாதிரி குணகங்களுக்கு தரப்படுத்தப்பட்ட "
-"மதிப்பீட்டை வழங்கவும்"
-
-#: cfa/options/stdEst.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide a standardized estimate for the model "
-"estimates"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாதிரி மதிப்பீடுகளுக்கு தரப்படுத்தப்பட்ட"
-" மதிப்பீட்டை வழங்கவும்"
-
-#: contTables/options/zProp.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide a z test for differences between two "
-"proportions"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), இரண்டு விகிதாச்சாரங்களுக்கு இடையிலான "
-"வேறுபாடுகளுக்கு ஒரு சட் சோதனையை வழங்கவும்"
-
-#: linReg/options/aic.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide Aikaike's Information Criterion (AIC) "
-"for the models"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாதிரிகளுக்கு ஐகீக்கின் செய்தி அளவுகோலை "
-"(AIC) வழங்குங்கள்"
-
-#: contTablesPaired/options/exact.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide an exact log odds ratio (requires "
-"exact2x2 to be installed)"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), சரியான பதிவு முரண்பாடுகள் விகிதத்தை "
-"வழங்கவும் (துல்லியமான 2x2 நிறுவப்பட வேண்டும்)"
-
-#: descriptives/options/bar.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide bar plots (nominal, ordinal variables "
-"only)"
-msgstr ""
-"`உண்மை` அல்லது` தவறு` (இயல்புநிலை), பார் அடுக்குகளை வழங்கவும் (பெயரளவு, "
-"சாதாரண மாறிகள் மட்டும்)"
-
-#: propTest2/options/bf.description.R ttestIS/options/bf.description.R
-#: ttestOneS/options/bf.description.R ttestPS/options/bf.description.R
-msgid "`TRUE` or `FALSE` (default), provide Bayes factors"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), பேயச் காரணிகளை வழங்குதல்"
-
-#: propTest2/options/ciBayes.description.R
-#, ignore-multiple-failures
-msgid "`TRUE` or `FALSE` (default), provide Bayesian credible intervals"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), பேய்சியன் நம்பகமான இடைவெளிகளை வழங்கவும்"
-
-#: linReg/options/bic.description.R logLinear/options/bic.description.R
-#: logRegBin/options/bic.description.R logRegMulti/options/bic.description.R
-#: logRegOrd/options/bic.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide Bayesian Information Criterion (BIC) "
-"for the models"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாதிரிகளுக்கு பேய்சியன் செய்தி அளவுகோலை "
-"(BIC) வழங்கவும்"
-
-#: descriptives/options/box.description.R
-#, ignore-multiple-failures
-msgid ""
-"`TRUE` or `FALSE` (default), provide box plots (continuous variables only)"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), பெட்டி அடுக்குகளை வழங்கவும் "
-"(தொடர்ச்சியான மாறிகள் மட்டும்)"
-
-#: logRegBin/options/boxTidwell.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide Box-Tidwell test for linearity of the "
-"logit"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), உள்நுழைவின் நேர்கோட்டுக்கு "
-"பாக்ச்-டிட்வெல் சோதனையை வழங்கவும்"
-
-#: mancova/options/boxM.description.R
-msgid "`TRUE` or `FALSE` (default), provide Box's M test"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), பெட்டியின் எம் சோதனையை வழங்கவும்"
-
-#: ttestOneS/options/effectSize.description.R
-msgid "`TRUE` or `FALSE` (default), provide Cohen's d effect sizes"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), கோஅனின் டி விளைவு அளவுகளை வழங்கவும்"
-
-#: contTables/options/pcCol.description.R
-#: contTablesPaired/options/pcCol.description.R
-msgid "`TRUE` or `FALSE` (default), provide column percentages"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), நெடுவரிசை சதவீதங்களை வழங்கவும்"
-
-#: corrMatrix/options/ci.description.R propTest2/options/ci.description.R
-#: ttestIS/options/ci.description.R ttestPS/options/ci.description.R
-msgid "`TRUE` or `FALSE` (default), provide confidence intervals"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), நம்பிக்கை இடைவெளிகளை வழங்கவும்"
-
-#: contTables/options/ci.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide confidence intervals for the "
-"comparative measures"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), ஒப்பீட்டு நடவடிக்கைகளுக்கு நம்பிக்கை "
-"இடைவெளிகளை வழங்கவும்"
-
-#: ttestIS/options/ciES.description.R ttestOneS/options/ciES.description.R
-#: ttestPS/options/ciES.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide confidence intervals for the effect-"
-"sizes"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), விளைவு அளவுகளுக்கு நம்பிக்கை இடைவெளிகளை "
-"வழங்கவும்"
-
-#: descriptives/options/ci.description.R
-msgid "`TRUE` or `FALSE` (default), provide confidence intervals for the mean"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), சராசரிக்கு நம்பிக்கை இடைவெளிகளை "
-"வழங்கவும்"
-
-#: ttestOneS/options/ci.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide confidence intervals for the mean "
-"difference"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), சராசரி வேறுபாட்டிற்கான நம்பிக்கை "
-"இடைவெளிகளை வழங்கவும்"
-
-#: ancova/options/postHocEsCi.description.R
-#: anova/options/postHocEsCi.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide confidence intervals for the post-hoc "
-"effect sizes"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), பிந்தைய தற்காலிக விளைவு அளவுகளுக்கு "
-"நம்பிக்கை இடைவெளிகளை வழங்கவும்"
-
-#: corrMatrix/options/plotDens.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide densities in the correlation matrix "
-"plot"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), தொடர்பு மேட்ரிக்ச் சதித்திட்டத்தில் "
-"அடர்த்தியை வழங்கவும்"
-
-#: descriptives/options/dens.description.R
-#, ignore-multiple-failures
-msgid ""
-"`TRUE` or `FALSE` (default), provide density plots (continuous variables "
-"only)"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), அடர்த்தி அடுக்குகளை வழங்கவும் "
-"(தொடர்ச்சியான மாறிகள் மட்டும்)"
-
-#: anovaOneW/options/descPlot.description.R
-#: ttestIS/options/plots.description.R ttestOneS/options/plots.description.R
-#: ttestPS/options/plots.description.R
-msgid "`TRUE` or `FALSE` (default), provide descriptive plots"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), விளக்கமான இடங்களை வழங்கவும்"
-
-#: anovaOneW/options/desc.description.R anovaRMNP/options/desc.description.R
-#: ttestIS/options/desc.description.R ttestOneS/options/desc.description.R
-#: ttestPS/options/desc.description.R
-msgid "`TRUE` or `FALSE` (default), provide descriptive statistics"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), விளக்க புள்ளிவிவரங்களை வழங்கவும்"
-
-#: descriptives/options/dot.description.R
-#, ignore-multiple-failures
-msgid ""
-"`TRUE` or `FALSE` (default), provide dot plots (continuous variables only)"
-msgstr ""
-"`உண்மை` அல்லது` தவறு` (இயல்புநிலை), புள்ளி அடுக்குகளை வழங்கவும் "
-"(தொடர்ச்சியான மாறிகள் மட்டும்)"
-
-#: ttestIS/options/effectSize.description.R
-#: ttestPS/options/effectSize.description.R
-#, ignore-reused
-msgid "`TRUE` or `FALSE` (default), provide effect sizes"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), விளைவு அளவுகளை வழங்கவும்"
-
-#: anovaNP/options/es.description.R
-#, ignore-reused
-msgid "`TRUE` or `FALSE` (default), provide effect-sizes"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), விளைவு அளவுகளை வழங்கவும்"
-
-#: ancova/options/emmTables.description.R
-#: anova/options/emmTables.description.R
-#: anovaRM/options/emmTables.description.R
-#: linReg/options/emmTables.description.R
-#: logLinear/options/emmTables.description.R
-#: logRegBin/options/emmTables.description.R
-#: logRegMulti/options/emmTables.description.R
-msgid "`TRUE` or `FALSE` (default), provide estimated marginal means tables"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மதிப்பிடப்பட்ட விளிம்பு வழிமுறைகளை "
-"அட்டவணைகளை வழங்கவும்"
-
-#: cfa/options/factInterceptEst.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide estimates for the factor intercepts"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), காரணி இடைமறிப்புகளுக்கான மதிப்பீடுகளை "
-"வழங்கவும்"
-
-#: cfa/options/resInterceptEst.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide estimates for the residual intercepts"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மீதமுள்ள இடைமறிப்புகளுக்கான மதிப்பீடுகளை"
-" வழங்கவும்"
-
-#: contTables/options/fisher.description.R
-msgid "`TRUE` or `FALSE` (default), provide Fisher's exact test"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), ஃபிசரின் சரியான சோதனையை வழங்கவும்"
-
-#: descriptives/options/freq.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide frequency tables (nominal, ordinal "
-"variables only)"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), அதிர்வெண் அட்டவணைகளை வழங்கவும் (பெயரளவு,"
-" சாதாரண மாறிகள் மட்டும்)"
-
-#: contTables/options/gamma.description.R
-msgid "`TRUE` or `FALSE` (default), provide gamma"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), காமா வழங்கவும்"
-
-#: descriptives/options/hist.description.R
-#, ignore-multiple-failures
-msgid ""
-"`TRUE` or `FALSE` (default), provide histograms (continuous variables only)"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), இச்டோகிராம்களை வழங்கவும் (தொடர்ச்சியான "
-"மாறிகள் மட்டும்)"
-
-#: reliability/options/meanItems.description.R
-msgid "`TRUE` or `FALSE` (default), provide item means"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), உருப்படி வழிமுறைகளை வழங்குதல்"
-
-#: reliability/options/sdItems.description.R
-msgid "`TRUE` or `FALSE` (default), provide item standard deviations"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), உருப்படி நிலையான விலகல்களை வழங்கவும்"
-
-#: reliability/options/itemRestCor.description.R
-msgid "`TRUE` or `FALSE` (default), provide item-rest correlations"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), உருப்படி-மறுசீரமைப்பு தொடர்புகளை "
-"வழங்கவும்"
-
-#: contTables/options/taub.description.R
-#: corrMatrix/options/kendall.description.R
-#: corrPart/options/kendall.description.R
-msgid "`TRUE` or `FALSE` (default), provide Kendall's tau-b"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), கெண்டலின் ட au-பி வழங்கவும்"
-
-#: contTables/options/mh.description.R
-msgid "`TRUE` or `FALSE` (default), provide Mantel-Haenszel test for trend"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), போக்குக்கு மாண்டல்-எய்ன்ச்சல் சோதனையை "
-"வழங்கவும்"
-
-#: reliability/options/omegaScale.description.R
-msgid "`TRUE` or `FALSE` (default), provide McDonald's ω"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மெக்டொனால்டின் வழங்கவும்"
-
-#: ttestOneS/options/meanDiff.description.R
-msgid "`TRUE` or `FALSE` (default), provide means and standard deviations"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), வழிமுறைகளையும் நிலையான விலகல்களையும் "
-"வழங்குதல்"
-
-#: ttestIS/options/meanDiff.description.R
-#: ttestPS/options/meanDiff.description.R
-msgid "`TRUE` or `FALSE` (default), provide means and standard errors"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), வழிமுறைகளையும் நிலையான பிழைகளையும் "
-"வழங்குதல்"
-
-#: cfa/options/mi.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide modification indices for the parameters"
-" not included in the model"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாதிரியில் சேர்க்கப்படாத "
-"அளவுருக்களுக்கான மாற்றும் குறியீடுகளை வழங்கவும்"
-
-#: descriptives/options/extreme.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide N most extreme (highest and lowest) "
-"values"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), n மிகவும் தீவிரமான (மிக உயர்ந்த மற்றும் "
-"மிகக் குறைந்த) மதிப்புகளை வழங்கவும்"
-
-#: descriptives/options/pc.description.R
-msgid "`TRUE` or `FALSE` (default), provide percentiles"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), சதவீதங்களை வழங்கவும்"
-
-#: contTables/options/phiCra.description.R
-msgid "`TRUE` or `FALSE` (default), provide Phi and Cramer's V"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), ஃபை மற்றும் க்ராமரின் வி"
-
-#: propTest2/options/postPlots.description.R
-msgid "`TRUE` or `FALSE` (default), provide posterior plots"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), பின்புற அடுக்குகளை வழங்கவும்"
-
-#: descriptives/options/qq.description.R
-#, ignore-multiple-failures
-msgid ""
-"`TRUE` or `FALSE` (default), provide Q-Q plots (continuous variables only)"
-msgstr ""
-"`உண்மை` அல்லது` தவறு` (இயல்புநிலை), Q-Q அடுக்குகளை வழங்கவும் (தொடர்ச்சியான "
-"மாறிகள் மட்டும்)"
-
-#: ttestIS/options/qq.description.R
-msgid "`TRUE` or `FALSE` (default), provide Q-Q plots of residuals"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), எஞ்சியவர்களின் Q-Q அடுக்குகளை வழங்கவும்"
-
-#: descriptives/options/pcEqGr.description.R
-msgid "`TRUE` or `FALSE` (default), provide quantiles"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), அளவுகளை வழங்கவும்"
-
-#: linReg/options/resPlots.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide residual plots where the dependent "
-"variable and each covariate is plotted against the standardized residuals."
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), சார்பு மாறி மற்றும் ஒவ்வொரு "
-"கோவாரியட்டும் தரப்படுத்தப்பட்ட எச்சங்களுக்கு எதிராக திட்டமிடப்பட்ட இடங்களில்"
-" எஞ்சிய இடங்களை வழங்குகின்றன."
-
-#: linReg/options/durbin.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide results of the Durbin- Watson test for "
-"autocorrelation"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), டர்பின்- வாட்சன் சோதனையின் முடிவுகளை "
-"வழங்கவும்"
-
-#: linReg/options/rmse.description.R
-msgid "`TRUE` or `FALSE` (default), provide RMSE for the models"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாதிரிகளுக்கு RMSE ஐ வழங்கவும்"
-
-#: contTables/options/pcRow.description.R
-#: contTablesPaired/options/pcRow.description.R
-msgid "`TRUE` or `FALSE` (default), provide row percentages"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), வரிசை சதவீதங்களை வழங்கவும்"
-
-#: descriptives/options/sw.description.R
-msgid "`TRUE` or `FALSE` (default), provide Shapiro-Wilk p-value"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), சாபிரோ-வில்க் பி-மதிப்பை வழங்கவும்"
-
-#: mancova/options/shapiro.description.R
-msgid "`TRUE` or `FALSE` (default), provide Shapiro-Wilk test"
-msgstr "`உண்மை` அல்லது` தவறு` (இயல்புநிலை), சாபிரோ-வில்க் சோதனையை வழங்கவும்"
-
-#: corrMatrix/options/spearman.description.R
-#: corrPart/options/spearman.description.R
-msgid "`TRUE` or `FALSE` (default), provide Spearman's rho"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), ச்பியர்மேனின் ரோவை வழங்கவும்"
-
-#: corrMatrix/options/plotStats.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide statistics in the correlation matrix "
-"plot"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), தொடர்பு மேட்ரிக்ச் சதித்திட்டத்தில் "
-"புள்ளிவிவரங்களை வழங்கவும்"
-
-#: linReg/options/cooks.description.R logRegBin/options/cooks.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide summary statistics for the Cook's "
-"distance"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), சமையல்காரரின் தூரத்திற்கான சுருக்கமான "
-"புள்ளிவிவரங்களை வழங்கவும்"
-
-#: anovaOneW/options/phTest.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide test results (t-value and degrees of "
-"freedom) for post-hoc tests"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), பிந்தைய தற்காலிக சோதனைகளுக்கு சோதனை "
-"முடிவுகளை (டி-மதிப்பு மற்றும் சுதந்திரத்தின் அளவுகள்) வழங்கவும்"
-
-#: contTables/options/contCoef.description.R
-msgid "`TRUE` or `FALSE` (default), provide the contingency coefficient"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), தற்செயல் குணகத்தை வழங்கவும்"
-
-#: contTables/options/diffProp.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide the differences in proportions (only "
-"available for 2x2 tables)"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), விகிதாச்சாரத்தில் உள்ள வேறுபாடுகளை "
-"வழங்கவும் (2x2 அட்டவணைகளுக்கு மட்டுமே கிடைக்கும்)"
-
-#: contTables/options/exp.description.R
-msgid "`TRUE` or `FALSE` (default), provide the expected counts"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), எதிர்பார்க்கப்படும் எண்ணிக்கையை "
-"வழங்கவும்"
-
-#: logRegBin/options/OR.description.R logRegMulti/options/OR.description.R
-#: logRegOrd/options/OR.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide the exponential of the log-odds ratio "
-"estimate, or the odds ratio estimate"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), பதிவு-ODDS விகித மதிப்பீட்டின் "
-"அதிவேகத்தை வழங்கவும், அல்லது முரண்பாடுகள் விகித மதிப்பீட்டை வழங்கவும்"
-
-#: logLinear/options/RR.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide the exponential of the log-rate ratio "
-"estimate, or the rate ratio estimate"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), பதிவு-விகித விகித மதிப்பீட்டின் "
-"அதிவேகத்தை வழங்கவும், அல்லது விகித விகித மதிப்பீட்டை வழங்கவும்"
-
-#: descriptives/options/iqr.description.R
-msgid "`TRUE` or `FALSE` (default), provide the interquartile range"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), இடைநிலை வரம்பை வழங்கவும்"
-
-#: descriptives/options/kurt.description.R
-msgid "`TRUE` or `FALSE` (default), provide the kurtosis"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), கர்டோசிசை வழங்கவும்"
-
-#: contTables/options/likeRat.description.R
-msgid "`TRUE` or `FALSE` (default), provide the likelihood ratio"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), நிகழ்தகவு விகிதத்தை வழங்கவும்"
-
-#: contTables/options/logOdds.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide the log odds ratio (only available for "
-"2x2 tables)"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), பதிவு முரண்பாடுகள் விகிதத்தை வழங்கவும் "
-"(2x2 அட்டவணைகளுக்கு மட்டுமே கிடைக்கும்)"
-
-#: descriptives/options/max.description.R
-msgid "`TRUE` or `FALSE` (default), provide the maximum"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), அதிகபட்சத்தை வழங்கவும்"
-
-#: reliability/options/meanScale.description.R
-msgid "`TRUE` or `FALSE` (default), provide the mean"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), சராசரியை வழங்கவும்"
-
-#: descriptives/options/min.description.R
-msgid "`TRUE` or `FALSE` (default), provide the minimum"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), குறைந்தபட்சத்தை வழங்கவும்"
-
-#: descriptives/options/mode.description.R
-msgid "`TRUE` or `FALSE` (default), provide the mode"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), பயன்முறையை வழங்கவும்"
-
-#: logLinear/options/modelTest.description.R
-#: logRegBin/options/modelTest.description.R
-#: logRegMulti/options/modelTest.description.R
-#: logRegOrd/options/modelTest.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide the model comparison between the models"
-" and the NULL model"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாதிரிகள் மற்றும் சுழிய மாதிரிக்கு "
-"இடையிலான மாதிரி ஒப்பீட்டை வழங்கவும்"
-
-#: corrMatrix/options/n.description.R corrPart/options/n.description.R
-msgid "`TRUE` or `FALSE` (default), provide the number of cases"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), வழக்குகளின் எண்ணிக்கையை வழங்கவும்"
-
-#: contTables/options/obs.description.R
-msgid "`TRUE` or `FALSE` (default), provide the observed counts"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), கவனிக்கப்பட்ட எண்ணிக்கையை வழங்கவும்"
-
-#: contTables/options/odds.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide the odds ratio (only available for 2x2 "
-"tables)"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), முரண்பாடான விகிதத்தை வழங்கவும் (2x2 "
-"அட்டவணைகளுக்கு மட்டுமே கிடைக்கும்)"
-
-#: linReg/options/anova.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide the omnibus ANOVA test for the "
-"predictors"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), முன்கணிப்பாளர்களுக்கான சர்வபுல அனோவா "
-"சோதனையை வழங்கவும்"
-
-#: logLinear/options/omni.description.R logRegBin/options/omni.description.R
-#: logRegMulti/options/omni.description.R logRegOrd/options/omni.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide the omnibus likelihood ratio tests for "
-"the predictors"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), முன்கணிப்பாளர்களுக்கான சர்வபுலங்கள் "
-"நிகழ்தகவு விகித சோதனைகளை வழங்கவும்"
-
-#: logRegBin/options/acc.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide the predicted accuracy of outcomes "
-"grouped by the cut-off value"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), கட்-ஆஃப் மதிப்பால் தொகுக்கப்பட்ட "
-"விளைவுகளின் கணிக்கப்பட்ட துல்லியத்தை வழங்கவும்"
-
-#: logRegBin/options/sens.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide the predicted sensitivity of outcomes "
-"grouped by the cut-off value"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), கட்-ஆஃப் மதிப்பால் தொகுக்கப்பட்ட "
-"விளைவுகளின் கணிக்கப்பட்ட உணர்திறனை வழங்கவும்"
-
-#: logRegBin/options/spec.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide the predicted specificity of outcomes "
-"grouped by the cut-off value"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), கட்-ஆஃப் மதிப்பால் தொகுக்கப்பட்ட "
-"விளைவுகளின் கணிக்கப்பட்ட விவரக்குறிப்பை வழங்கவும்"
-
-#: descriptives/options/range.description.R
-msgid "`TRUE` or `FALSE` (default), provide the range"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), வரம்பை வழங்கவும்"
-
-#: logRegBin/options/auc.description.R
-#, ignore-end-stop, ignore-multiple-failures
-msgid "`TRUE` or `FALSE` (default), provide the rea under the ROC curve (AUC)"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), ROC வளைவின் (AUC) இன் கீழ் REA ஐ "
-"வழங்கவும்"
-
-#: contTables/options/relRisk.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide the relative risk (only available for "
-"2x2 tables)"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), தொடர்புடைய ஆபத்தை வழங்கவும் (2x2 "
-"அட்டவணைகளுக்கு மட்டுமே கிடைக்கும்)"
-
-#: cfa/options/corRes.description.R
-#, ignore-end-stop, ignore-multiple-failures
-msgid ""
-"`TRUE` or `FALSE` (default), provide the residuals for the observed "
-"correlation matrix (i.e., the difference between the expected correlation "
-"matrix and the observed correlation matrix)"
-msgstr ""
-"`உண்மை` அல்லது` தவறு` (இயல்புநிலை), கவனிக்கப்பட்ட தொடர்பு மேட்ரிக்சிற்கான "
-"எச்சங்களை வழங்கவும் (அதாவது, எதிர்பார்க்கப்படும் தொடர்பு மேட்ரிக்ச் மற்றும் "
-"கவனிக்கப்பட்ட தொடர்பு மேட்ரிக்ச் ஆகியவற்றுக்கு இடையிலான வேறுபாடு)"
-
-#: descriptives/options/skew.description.R
-msgid "`TRUE` or `FALSE` (default), provide the skewness"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), வளைவை வழங்கவும்"
-
-#: reliability/options/sdScale.description.R
-msgid "`TRUE` or `FALSE` (default), provide the standard deviation"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), நிலையான விலகலை வழங்கவும்"
-
-#: descriptives/options/se.description.R
-msgid "`TRUE` or `FALSE` (default), provide the standard error"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), நிலையான பிழையை வழங்கவும்"
-
-#: linReg/options/r2Adj.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide the statistical measure `adjusted "
-"R-squared` for the models"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாதிரிகளுக்கு `சரிசெய்யப்பட்ட "
-"ஆர்-ச்கொயர்` புள்ளிவிவர நடவடிக்கையை வழங்கவும்"
-
-#: descriptives/options/sum.description.R
-msgid "`TRUE` or `FALSE` (default), provide the sum"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), தொகையை வழங்கவும்"
-
-#: logRegOrd/options/thres.description.R
-#, ignore-multiple-failures
-msgid ""
-"`TRUE` or `FALSE` (default), provide the thresholds that are used as cut-off"
-" scores for the levels of the dependent variable"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), சார்பு மாறியின் நிலைகளுக்கு கட்-ஆஃப் "
-"மதிப்பெண்களாகப் பயன்படுத்தப்படும் வாசல்களை வழங்கவும்"
-
-#: descriptives/options/variance.description.R
-msgid "`TRUE` or `FALSE` (default), provide the variance"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாறுபாட்டை வழங்கவும்"
-
-#: contTables/options/pcTot.description.R
-msgid "`TRUE` or `FALSE` (default), provide total percentages"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மொத்த சதவீதங்களை வழங்கவும்"
-
-#: linReg/options/collin.description.R logRegBin/options/collin.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide VIF and tolerence collinearity "
-"statistics"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), விஐஎஃப் மற்றும் சகிப்புத்தன்மையை "
-"வழங்குதல் கோலைனரிட்டி புள்ளிவிவரங்கள்"
-
-#: descriptives/options/violin.description.R
-#, ignore-multiple-failures
-msgid ""
-"`TRUE` or `FALSE` (default), provide violin plots (continuous variables "
-"only)"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), வயலின் அடுக்குகளை வழங்கவும் "
-"(தொடர்ச்சியான மாறிகள் மட்டும்)"
-
-#: reliability/options/alphaItems.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide what the Cronbach's α would be if the "
-"item was dropped"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), உருப்படி கைவிடப்பட்டால் க்ரோன்பேக்கின் α"
-" என்னவாக இருக்கும் என்பதை வழங்கவும்"
-
-#: reliability/options/omegaItems.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), provide what the McDonald's ω would be if the "
-"item was dropped"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), உருப்படி கைவிடப்பட்டால் மெக்டொனால்டின் "
-"சீ என்னவாக இருக்கும் என்பதை வழங்கவும்"
-
-#: contTables/options/chiSqCorr.description.R
-#: contTablesPaired/options/chiSqCorr.description.R
-msgid "`TRUE` or `FALSE` (default), provide χ² with continuity correction"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), தொடர்ச்சியான திருத்தம் மூலம் χ² "
-"வழங்கவும்"
-
-#: anovaRM/options/groupSumm.description.R
-msgid "`TRUE` or `FALSE` (default), report a summary of the different groups"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), வெவ்வேறு குழுக்களின் சுருக்கத்தைப் "
-"புகாரளிக்கவும்"
-
-#: logRegBin/options/cutOff.description.R
-msgid "`TRUE` or `FALSE` (default), set a cut-off used for the predictions"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), கணிப்புகளுக்கு பயன்படுத்தப்படும் "
-"கட்-ஆஃப்"
-
-#: contTables/options/barplot.description.R
-msgid "`TRUE` or `FALSE` (default), show barplots"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), பார்ப்லாட்களைக் காட்டு"
-
-#: efa/options/bartlett.description.R pca/options/bartlett.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), show Bartlett's test of sphericity results"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), பார்ட்லெட்டின் கோள முடிவுகளின் சோதனையைக்"
-" காட்டு"
-
-#: efa/options/eigen.description.R pca/options/eigen.description.R
-msgid "`TRUE` or `FALSE` (default), show eigenvalue table"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), ஈசென்வெல்யூ அட்டவணையைக் காட்டு"
-
-#: efa/options/factorSummary.description.R
-#: pca/options/factorSummary.description.R
-msgid "`TRUE` or `FALSE` (default), show factor summary"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), காரணி சுருக்கத்தைக் காட்டு"
-
-#: efa/options/factorCor.description.R pca/options/factorCor.description.R
-msgid "`TRUE` or `FALSE` (default), show inter-factor correlations"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), இடை-காரணி தொடர்புகளைக் காட்டுங்கள்"
-
-#: efa/options/kmo.description.R pca/options/kmo.description.R
-msgid ""
-"`TRUE` or `FALSE` (default), show Kaiser-Meyer-Olkin (KMO) measure of "
-"sampling adequacy (MSA) results"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), கைசர்-மேயர்-ஓல்கின் (KMO) மாதிரி போதுமான"
-" அளவு (MSA) முடிவுகளைக் காட்டு"
-
-#: efa/options/modelFit.description.R
-msgid "`TRUE` or `FALSE` (default), show model fit measures and test"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாதிரி பொருத்தம் நடவடிக்கைகளைக் காட்டி "
-"சோதனை"
-
-#: efa/options/screePlot.description.R pca/options/screePlot.description.R
-msgid "`TRUE` or `FALSE` (default), show scree plot"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), ச்க்ரீ சதித்திட்டத்தைக் காட்டு"
-
-#: efa/options/sortLoadings.description.R
-#: pca/options/sortLoadings.description.R
-msgid "`TRUE` or `FALSE` (default), sort the factor loadings by size"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), காரணி ஏற்றங்களை அளவு மூலம் "
-"வரிசைப்படுத்தவும்"
-
-#: anovaRM/options/leveneTest.description.R
-#, ignore-end-stop, ignore-multiple-failures
-msgid ""
-"`TRUE` or `FALSE` (default), test for homogeneity of variances (i.e., "
-"Levene's test)"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாறுபாடுகளின் ஒருமைப்பாட்டிற்கான சோதனை "
-"(அதாவது, லெவனின் சோதனை)"
-
-#: propTest2/options/areCounts.description.R
-#, ignore-multiple-failures
-msgid "`TRUE` or `FALSE` (default), the variables are counts"
-msgstr "`உண்மை` அல்லது` பொய்` (இயல்புநிலை), மாறிகள் எண்ணப்படுகின்றன"
-
-#: propTestN/options/expected.description.R
-#, ignore-end-question
-msgid ""
-"`TRUE` or `FALSE` (default), whether expected counts should be displayed"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை), எதிர்பார்க்கப்படும் எண்ணிக்கைகள் "
-"காட்டப்பட வேண்டுமா"
-
-#: ancova/options/modelTest.description.R
-#: anova/options/modelTest.description.R
-msgid "`TRUE` or `FALSE` (default); perform an overall model test"
-msgstr ""
-"`உண்மை` அல்லது` பொய்` (இயல்புநிலை); ஒட்டுமொத்த மாதிரி சோதனையைச் செய்யுங்கள்"
 
 #: ttestIS/results/ttest.columns.title ttestOneS/results/ttest.columns.title
 #: ttestPS/results/ttest.columns.title
@@ -1581,8 +232,9 @@ msgid "> Test value"
 msgstr "> சோதனை மதிப்பு"
 
 #: R/linreg.b.R R/logregbin.b.R R/logregmulti.b.R
+#, ignore-end-stop
 msgid "⁻ mean - 1SD, <sup>μ</sup> mean, ⁺ mean + 1SD"
-msgstr "⁻ சராசரி - 1 எச்.டி, <up> μ </sup> சராசரி, ⁺ சராசரி + 1 எச்.டி."
+msgstr "⁻ சராசரி - 1 எச்.டி, <sup> μ </sup> சராசரி, ⁺ சராசரி + 1 எச்.டி."
 
 #: pca/results/loadings.columns.title
 #: pca/results/factorStats/factorCor.columns.title
@@ -1606,12 +258,6 @@ msgstr "25,50,75"
 msgid "a (semi)partial correlation matrix table"
 msgstr "ஒரு (அரை) பகுதி தொடர்பு மேட்ரிக்ச் அட்டவணை"
 
-#: descriptives/options/pcValues.description.R
-msgid "a comma-sepated list (default: 25,50,75) specifying the percentiles"
-msgstr ""
-"கமாவால் பிரிக்கப்பட்ட பட்டியல் (இயல்புநிலை: 25,50,75) சதவீதங்களைக் "
-"குறிப்பிடுகிறது"
-
 #: corrMatrix/results/plot.description
 msgid "a correlation matrix plot"
 msgstr "ஒரு தொடர்பு மேட்ரிக்ச் சூழ்ச்சி"
@@ -1623,152 +269,6 @@ msgstr "ஒரு தொடர்பு மேட்ரிக்ச் அட்
 #: anovaRMNP/results/plot.description
 msgid "a descriptives plot"
 msgstr "ஒரு விளக்க சூழ்ச்சி"
-
-#: ancova/options/emMeans.description.R anova/options/emMeans.description.R
-msgid ""
-"a formula containing the terms to estimate marginal means for (see the "
-"examples)"
-msgstr ""
-"விளிம்பு வழிமுறைகளை மதிப்பிடுவதற்கான விதிமுறைகளைக் கொண்ட ஒரு தேற்றம் "
-"(எடுத்துக்காட்டுகளைப் பார்க்கவும்)"
-
-#: linReg/options/emMeans.description.R
-#, ignore-multiple-failures
-msgid ""
-"a formula containing the terms to estimate marginal means for, supports up "
-"to three variables per term"
-msgstr ""
-"விளிம்பு வழிமுறைகளை மதிப்பிடுவதற்கான விதிமுறைகளைக் கொண்ட ஒரு தேற்றம், ஒரு "
-"காலத்திற்கு மூன்று மாறிகள் வரை ஆதரிக்கிறது"
-
-#: ancova/options/postHoc.description.R anova/options/postHoc.description.R
-msgid ""
-"a formula containing the terms to perform post-hoc tests on (see the "
-"examples)"
-msgstr ""
-"பிந்தைய தற்காலிக சோதனைகளைச் செய்வதற்கான விதிமுறைகளைக் கொண்ட ஒரு தேற்றம் "
-"(எடுத்துக்காட்டுகளைப் பார்க்கவும்)"
-
-#: ancova/options/modelTerms.description.R
-#: anova/options/modelTerms.description.R
-msgid ""
-"a formula describing the terms to go into the model (not necessary when "
-"providing a formula, see examples)"
-msgstr ""
-"மாதிரியில் செல்ல விதிமுறைகளை விவரிக்கும் ஒரு தேற்றம் (ஒரு சூத்திரத்தை "
-"வழங்கும்போது தேவையில்லை, எடுத்துக்காட்டுகளைப் பார்க்கவும்)"
-
-#: cfa/options/factors.description.R
-msgid ""
-"a list containing named lists that define the `label` of the factor and the "
-"`vars` that belong to that factor"
-msgstr ""
-"காரணி `லேபிள்` மற்றும் அந்த காரணியைச் சேர்ந்த` வார்ச்` ஆகியவற்றை "
-"வரையறுக்கும் பெயரிடப்பட்ட பட்டியல்களைக் கொண்ட பட்டியல்"
-
-#: linReg/options/blocks.description.R logLinear/options/blocks.description.R
-#: logRegBin/options/blocks.description.R
-#: logRegMulti/options/blocks.description.R
-#: logRegOrd/options/blocks.description.R
-msgid ""
-"a list containing vectors of strings that name the predictors that are added"
-" to the model. The elements are added to the model according to their order "
-"in the list"
-msgstr ""
-"மாதிரியில் சேர்க்கப்படும் முன்னறிவிப்பாளர்களுக்கு பெயரிடும் சரங்களின் "
-"திசையன்கள் கொண்ட பட்டியல். கூறுகள் பட்டியலில் உள்ள ஆர்டருக்கு ஏற்ப "
-"மாதிரியில் சேர்க்கப்படுகின்றன"
-
-#: anovaRM/options/bsTerms.description.R
-msgid ""
-"a list of character vectors describing the between subjects terms to go into"
-" the model"
-msgstr ""
-"மாதிரிக்குச் செல்ல பாடங்களுக்கு இடையிலான சொற்களை விவரிக்கும் எழுத்து "
-"திசையன்களின் பட்டியல்"
-
-#: anovaRM/options/postHoc.description.R
-msgid ""
-"a list of character vectors describing the post-hoc tests that need to be "
-"computed"
-msgstr ""
-"கணக்கிடப்பட வேண்டிய பிந்தைய தற்காலிக சோதனைகளை விவரிக்கும் எழுத்து "
-"திசையன்களின் பட்டியல்"
-
-#: anovaRM/options/rmTerms.description.R
-msgid ""
-"a list of character vectors describing the repeated measures terms to go "
-"into the model"
-msgstr ""
-"மாதிரிக்குச் செல்ல மறுநிகழ்வு நடவடிக்கைகளின் விதிமுறைகளை விவரிக்கும் எழுத்து"
-" திசையன்களின் பட்டியல்"
-
-#: linReg/options/refLevels.description.R
-#: logLinear/options/refLevels.description.R
-#: logRegBin/options/refLevels.description.R
-#: logRegMulti/options/refLevels.description.R
-#: logRegOrd/options/refLevels.description.R
-msgid ""
-"a list of lists specifying reference levels of the dependent variable and "
-"all the factors"
-msgstr ""
-"சார்பு மாறியின் குறிப்பு நிலைகள் மற்றும் அனைத்து காரணிகளையும் குறிப்பிடும் "
-"பட்டியல்களின் பட்டியல்"
-
-#: ancova/options/contrasts.description.R
-#: anova/options/contrasts.description.R
-msgid ""
-"a list of lists specifying the factor and type of contrast to use, one of "
-"`'deviation'`, `'simple'`, `'difference'`, `'helmert'`, `'repeated'` or "
-"`'polynomial'`"
-msgstr ""
-"பயன்படுத்துவதற்கான காரணி மற்றும் வகையைக் குறிப்பிடும் பட்டியல்களின் "
-"பட்டியல், `'விலகல்',` 'எளிமையானது', `'வித்தியாசம்',` 'எல்மர்ட்'`, `' '' "
-"அல்லது` '' பல்லுறுப்புக்கோவை ' `"
-
-#: ttestPS/options/pairs.description.R
-msgid "a list of lists specifying the pairs of measurement in `data`"
-msgstr "`தரவு` இல் அளவீட்டு சோடிகளைக் குறிப்பிடும் பட்டியல்களின் பட்டியல்"
-
-#: cfa/options/resCov.description.R
-msgid ""
-"a list of lists specifying the residual covariances that need to be "
-"estimated"
-msgstr ""
-"மதிப்பிடப்பட வேண்டிய மீதமுள்ள கோவாரியன்களைக் குறிப்பிடும் பட்டியல்களின் "
-"பட்டியல்"
-
-#: anovaRM/options/emMeans.description.R
-#: logLinear/options/emMeans.description.R
-#: logRegBin/options/emMeans.description.R
-#: logRegMulti/options/emMeans.description.R
-msgid ""
-"a list of lists specifying the variables for which the estimated marginal "
-"means need to be calculate. Supports up to three variables per term."
-msgstr ""
-"மதிப்பிடப்பட்ட விளிம்பு வழிமுறைகளை கணக்கிட வேண்டிய மாறிகளைக் குறிப்பிடும் "
-"பட்டியல்களின் பட்டியல். ஒரு காலத்திற்கு மூன்று மாறிகள் வரை ஆதரிக்கிறது."
-
-#. Levels means the levels of a factor.
-#: anovaRM/options/rmCells.description.R
-msgid ""
-"a list of lists, where each list decribes a repeated measure (as a string) "
-"from `data` defined as `measure` and the particular combination of levels "
-"from `rm` that it belongs to (as a vector of strings) defined as `cell`"
-msgstr ""
-"பட்டியல்களின் பட்டியல், ஒவ்வொரு பட்டியலும் `தரவு` இலிருந்து மறுநிகழ்வு அளவை "
-"(ஒரு சரமாக) குறைத்து,` அளவீடு` என வரையறுக்கப்படுகிறது மற்றும் `rm` இலிருந்து"
-" குறிப்பிட்ட நிலைகளின் கலவையாகும் (சரங்களின் திசையனாக) வரையறுக்கப்பட்டுள்ளது"
-" செல்`"
-
-#: anovaRM/options/rm.description.R
-msgid ""
-"a list of lists, where each list describes the `label` (as a string) and the"
-" `levels` (as vector of strings) of a particular repeated measures factor"
-msgstr ""
-"பட்டியல்களின் பட்டியல், ஒவ்வொரு பட்டியலும் ஒரு குறிப்பிட்ட மறுநிகழ்வு "
-"நடவடிக்கைகளின் காரணியின் `லேபிள்` (ஒரு சரமாக) மற்றும்` நிலைகள்` (சரங்களின் "
-"திசையனாக) விவரிக்கிறது"
 
 #: ttestIS/results/assum/eqv.notes.p
 msgid ""
@@ -1784,197 +284,9 @@ msgstr "குறைந்த பி-மதிப்பு இயல்பான
 msgid "A nice correlation data set"
 msgstr "ஒரு நல்ல தொடர்பு தரவு தொகுப்பு"
 
-#: cfa/options/hlCorRes.description.R
-msgid ""
-"a number (default: 0.1), highlight values in the `'corRes'` table above this"
-" value"
-msgstr ""
-"ஒரு எண் (இயல்புநிலை: 0.1), இந்த மதிப்புக்கு மேலே உள்ள `'கோர்ச்` அட்டவணையில் "
-"மதிப்புகளை முன்னிலைப்படுத்தவும்"
-
-#: efa/options/hideLoadings.description.R
-msgid "a number (default: 0.3), hide factor loadings below this value"
-msgstr ""
-"ஒரு எண் (இயல்புநிலை: 0.3), இந்த மதிப்புக்கு கீழே காரணி ஏற்றங்களை மறைக்கவும்"
-
-#: pca/options/hideLoadings.description.R
-msgid "a number (default: 0.3), hide loadings below this value"
-msgstr "ஒரு எண் (இயல்புநிலை: 0.3), இந்த மதிப்புக்கு கீழே ஏற்றங்களை மறைக்கவும்"
-
-#: propTest2/options/testValue.description.R
-msgid "a number (default: 0.5), the value for the null hypothesis"
-msgstr "ஒரு எண் (இயல்புநிலை: 0.5), சுழிய கருதுகோளுக்கான மதிப்பு"
-
-#: efa/options/minEigen.description.R
-msgid ""
-"a number (default: 0), the minimal eigenvalue for a factor to be included in"
-" the model"
-msgstr ""
-"ஒரு எண் (இயல்புநிலை: 0), மாதிரியில் சேர்க்கப்பட வேண்டிய குறைந்தபட்ச "
-"ஈசென்வெல்யூ"
-
-#: propTest2/options/priorA.description.R
-msgid "a number (default: 1), the beta prior 'a' parameter"
-msgstr "ஒரு எண் (இயல்புநிலை: 1), பீட்டா முன் 'ஒரு' அளவுரு"
-
-#: propTest2/options/priorB.description.R
-msgid "a number (default: 1), the beta prior 'b' parameter"
-msgstr "ஒரு எண் (இயல்புநிலை: 1), பீட்டா முன் 'பி' அளவுரு"
-
-#: pca/options/minEigen.description.R
-msgid ""
-"a number (default: 1), the minimal eigenvalue for a component to be included"
-" in the model"
-msgstr ""
-"ஒரு எண் (இயல்புநிலை: 1), மாதிரியில் சேர்க்கப்பட வேண்டிய குறைந்தபட்ச "
-"ஈசென்வெல்யூ"
-
-#: cfa/options/hlMI.description.R
-msgid ""
-"a number (default: 3), highlight values in the `'modIndices'` tables above "
-"this value"
-msgstr ""
-"ஒரு எண் (இயல்புநிலை: 3), இந்த மதிப்புக்கு மேலே உள்ள `'மோடிண்டீசச்' "
-"அட்டவணையில் மதிப்புகளை முன்னிலைப்படுத்தவும்"
-
-#: ttestIS/options/bfPrior.description.R
-msgid ""
-"a number between 0.01 and 2 (default 0.707), the prior width to use in "
-"calculating Bayes factors"
-msgstr ""
-"0.01 மற்றும் 2 (இயல்புநிலை 0.707) க்கு இடையில் ஒரு எண், பேயச் காரணிகளைக் "
-"கணக்கிடுவதில் பயன்படுத்த முந்தைய அகலம்"
-
-#: ttestPS/options/bfPrior.description.R
-msgid ""
-"a number between 0.5 and 2 (default 0.707), the prior width to use in "
-"calculating Bayes factors"
-msgstr ""
-"0.5 முதல் 2 (இயல்புநிலை 0.707) க்கு இடையில் ஒரு எண், பேயச் காரணிகளைக் "
-"கணக்கிடுவதில் பயன்படுத்த வேண்டிய முந்தைய அகலம்"
-
-#: ttestOneS/options/bfPrior.description.R
-#, ignore-reused
-msgid ""
-"a number between 0.5 and 2.0 (default 0.707), the prior width to use in "
-"calculating Bayes factors"
-msgstr ""
-"0.5 முதல் 2.0 (இயல்புநிலை 0.707) க்கு இடையில் ஒரு எண், பேயச் காரணிகளைக் "
-"கணக்கிடுவதில் பயன்படுத்த வேண்டிய முந்தைய அகலம்"
-
-#: linReg/options/ciWidth.description.R
-#: linReg/options/ciWidthStdEst.description.R
-#: logLinear/options/ciWidth.description.R
-#: logLinear/options/ciWidthRR.description.R
-#: logRegBin/options/ciWidth.description.R
-#: logRegBin/options/ciWidthOR.description.R
-#: logRegMulti/options/ciWidth.description.R
-#: logRegMulti/options/ciWidthOR.description.R
-#: logRegOrd/options/ciWidth.description.R
-#: logRegOrd/options/ciWidthOR.description.R
-msgid ""
-"a number between 50 and 99.9 (default: 95) specifying the confidence "
-"interval width"
-msgstr ""
-"50 முதல் 99.9 க்கு இடையில் ஒரு எண் (இயல்புநிலை: 95) நம்பிக்கை இடைவெளி "
-"அகலத்தைக் குறிப்பிடுகிறது"
-
-#: ancova/options/ciWidthEmm.description.R
-#: anova/options/ciWidthEmm.description.R
-#: anovaRM/options/ciWidthEmm.description.R
-#: linReg/options/ciWidthEmm.description.R
-#: logLinear/options/ciWidthEmm.description.R
-#: logRegBin/options/ciWidthEmm.description.R
-#: logRegMulti/options/ciWidthEmm.description.R
-msgid ""
-"a number between 50 and 99.9 (default: 95) specifying the confidence "
-"interval width for the estimated marginal means"
-msgstr ""
-"50 முதல் 99.9 வரை (இயல்புநிலை: 95) மதிப்பிடப்பட்ட விளிம்பு வழிமுறைகளுக்கான "
-"நம்பிக்கை இடைவெளி அகலத்தைக் குறிப்பிடுகிறது"
-
-#: cfa/options/ciWidth.description.R
-msgid ""
-"a number between 50 and 99.9 (default: 95) specifying the confidence "
-"interval width that is used as `'ci'`"
-msgstr ""
-"50 முதல் 99.9 க்கு இடையில் ஒரு எண் (இயல்புநிலை: 95) நம்பிக்கை இடைவெளி "
-"அகலத்தைக் குறிப்பிடுகிறது, இது `'ci'` ஆகப் பயன்படுத்தப்படுகிறது"
-
-#: propTest2/options/ciWidth.description.R
-msgid ""
-"a number between 50 and 99.9 (default: 95), the confidence interval width"
-msgstr "50 முதல் 99.9 வரை (இயல்புநிலை: 95), நம்பிக்கை இடைவெளி அகலம்"
-
-#: propTest2/options/ciBayesWidth.description.R
-msgid ""
-"a number between 50 and 99.9 (default: 95), the credible interval width"
-msgstr "50 முதல் 99.9 வரை (இயல்புநிலை: 95), நம்பகமான இடைவெளி அகலம்"
-
-#: descriptives/options/ciWidth.description.R
-#: ttestIS/options/ciWidth.description.R
-#: ttestOneS/options/ciWidth.description.R
-#: ttestPS/options/ciWidth.description.R
-msgid ""
-"a number between 50 and 99.9 (default: 95), the width of confidence "
-"intervals"
-msgstr ""
-"50 முதல் 99.9 க்கு இடையில் ஒரு எண் (இயல்புநிலை: 95), நம்பிக்கை இடைவெளிகளின் "
-"அகலம்"
-
-#: ttestIS/options/ciWidthES.description.R
-#: ttestOneS/options/ciWidthES.description.R
-#: ttestPS/options/ciWidthES.description.R
-msgid ""
-"a number between 50 and 99.9 (default: 95), the width of confidence "
-"intervals for the effect sizes"
-msgstr ""
-"50 முதல் 99.9 வரை (இயல்புநிலை: 95), விளைவு அளவுகளுக்கான நம்பிக்கை "
-"இடைவெளிகளின் அகலம்"
-
-#: ancova/options/postHocEsCiWidth.description.R
-#: anova/options/postHocEsCiWidth.description.R
-msgid ""
-"a number between 50 and 99.9 (default: 95), the width of confidence "
-"intervals for the post-hoc effect sizes"
-msgstr ""
-"50 முதல் 99.9 வரை (இயல்புநிலை: 95), பிந்தைய தற்காலிக விளைவு அளவுகளுக்கான "
-"நம்பிக்கை இடைவெளிகளின் அகலம்"
-
-#: corrMatrix/options/ciWidth.description.R
-#, ignore-reused
-msgid ""
-"a number between 50 and 99.9 (default: 95), the width of confidence "
-"intervals to provide"
-msgstr ""
-"50 முதல் 99.9 வரை (இயல்புநிலை: 95), வழங்குவதற்கான நம்பிக்கை இடைவெளிகளின் "
-"அகலம்"
-
-#: contTables/options/ciWidth.description.R
-#, ignore-reused
-msgid ""
-"a number between 50 and 99.9 (default: 95), width of the confidence "
-"intervals to provide"
-msgstr ""
-"50 முதல் 99.9 வரை (இயல்புநிலை: 95), வழங்குவதற்கான நம்பிக்கை இடைவெளிகளின் "
-"அகலம்"
-
-#: ttestOneS/options/testValue.description.R
-msgid "a number specifying the value of the null hypothesis"
-msgstr "சுழிய கருதுகோளின் மதிப்பைக் குறிப்பிடும் எண்"
-
 #: propTest2/ui[2][0][0]/priorA.label
 msgid "a parameter"
 msgstr "ஒரு அளவுரு"
-
-#: ancova/options/postHocES.description.R
-#: anova/options/postHocES.description.R
-msgid ""
-"a possible value of `'d'`; provide cohen's d measure of effect size for the "
-"post-hoc tests"
-msgstr ""
-"`'டி'`; பிந்தைய தற்காலிக சோதனைகளுக்கு கோஅனின் டி அளவீட்டு விளைவு அளவை "
-"வழங்குதல்"
 
 #: anovaOneW/results/postHoc.template.description
 msgid "a post-hoc table"
@@ -1992,49 +304,6 @@ msgstr "ஒரு Q-Q சூழ்ச்சி"
 #: package/datasets/Bugs (Ryan Wilde %26 Crist 2013).description
 msgid "A repeated measures ANOVA data set"
 msgstr "ANOVA தரவு தொகுப்பை மறுநிகழ்வு அளவிடும்"
-
-#: anovaRM/options/depLabel.description.R
-msgid ""
-"a string (default: 'Dependent') describing the label used for the dependent "
-"variable throughout the analysis"
-msgstr ""
-"பகுப்பாய்வு முழுவதும் சார்பு மாறிக்கு பயன்படுத்தப்படும் லேபிளை விவரிக்கும் "
-"ஒரு சரம் (இயல்புநிலை: 'சார்பு')"
-
-#: logLinear/options/counts.description.R
-msgid ""
-"a string naming a variable in `data` containing counts, or NULL if each row "
-"represents a single observation"
-msgstr ""
-"ஒவ்வொரு வரிசையும் ஒற்றை அவதானிப்பைக் குறிக்கும் என்றால் `தரவு`, அல்லது "
-"பூச்யத்தில் ஒரு மாறியை பெயரிடும் ஒரு சரம்"
-
-#: logRegBin/options/dep.description.R logRegMulti/options/dep.description.R
-#: logRegOrd/options/dep.description.R
-msgid ""
-"a string naming the dependent variable from `data`, variable must be a "
-"factor"
-msgstr ""
-"`தரவு` இலிருந்து சார்பு மாறியை பெயரிடும் ஒரு சரம், மாறி ஒரு காரணியாக இருக்க "
-"வேண்டும்"
-
-#: mancova/options/deps.description.R
-msgid ""
-"a string naming the dependent variable from `data`, variable must be numeric"
-msgstr ""
-"`தரவு` இலிருந்து சார்பு மாறியை பெயரிடும் ஒரு சரம், மாறி எண் இருக்க வேண்டும்"
-
-#: anovaNP/options/deps.description.R
-msgid "a string naming the dependent variable in `data`"
-msgstr "`தரவு` இல் சார்பு மாறியை பெயரிடும் ஒரு சரம்"
-
-#: anovaOneW/options/deps.description.R
-msgid "a string naming the dependent variables in `data`"
-msgstr "`தரவு` இல் சார்பு மாறிகள் பெயரிடும் ஒரு சரம்"
-
-#: anovaNP/options/group.description.R anovaOneW/options/group.description.R
-msgid "a string naming the grouping or independent variable in `data`"
-msgstr "`தரவு` இல் குழு அல்லது சுயாதீன மாறிக்கு பெயரிடும் ஒரு சரம்"
 
 #: anovaRM/results/groupSummary.description
 msgid "a summary of the groups"
@@ -2188,6 +457,10 @@ msgstr "மாதிரி குணகங்களின் அட்டவண�
 msgid "a table of normality tests"
 msgstr "இயல்பான சோதனைகளின் அட்டவணை"
 
+#: contTables/results/postHoc.description
+msgid "a table of post-hoc residuals"
+msgstr "பிந்தைய தற்காலிக எச்சங்களின் அட்டவணை"
+
 #: logRegBin/results/models.template/pred/class.description
 msgid "a table of predicted classifications"
 msgstr "கணிக்கப்பட்ட வகைப்பாடுகளின் அட்டவணை"
@@ -2252,73 +525,6 @@ msgstr "சோதனை முடிவுகளின் அட்டவணை"
 #: contTables/results/chiSq.description
 msgid "a table of χ² test results"
 msgstr "χ² சோதனை முடிவுகளின் அட்டவணை"
-
-#: reliability/options/revItems.description.R
-msgid ""
-"a vector containing strings naming the varibales that are reverse scaled"
-msgstr "தலைகீழ் மதிப்பெண் பெறும் மாறிகள் பெயரிடும் சரம் கொண்ட ஒரு திசையன்"
-
-#: propTestN/options/ratio.description.R
-msgid "a vector of numbers: the expected proportions"
-msgstr "எண்களின் திசையன்: எதிர்பார்க்கப்படும் விகிதாச்சாரம்"
-
-#: anovaRM/options/bs.description.R
-msgid "a vector of strings naming the between subjects factors from `data`"
-msgstr "`தரவு` இலிருந்து பாட காரணிகளுக்கு இடையில் பெயரிடும் சரங்களின் திசையன்"
-
-#: corrPart/options/controls.description.R
-#, ignore-multiple-failures
-msgid "a vector of strings naming the control variables in `data`"
-msgstr "`தரவு` இல் கட்டுப்பாட்டு மாறிகள் பெயரிடும் சரங்களின் திசையன்"
-
-#: logRegBin/options/covs.description.R logRegMulti/options/covs.description.R
-#: logRegOrd/options/covs.description.R mancova/options/covs.description.R
-#, ignore-multiple-failures
-msgid "a vector of strings naming the covariates from `data`"
-msgstr "`தரவு` இலிருந்து கோவாரியட்டுகளை பெயரிடும் சரங்களின் திசையன்"
-
-#: anovaRM/options/cov.description.R
-#, ignore-multiple-failures
-msgid ""
-"a vector of strings naming the covariates from `data`. Variables must be "
-"numeric"
-msgstr ""
-"`தரவு` இலிருந்து கோவாரியட்டுகளை பெயரிடும் சரங்களின் திசையன். மாறிகள் எண் "
-"இருக்க வேண்டும்"
-
-#: logLinear/options/factors.description.R
-#: mancova/options/factors.description.R
-msgid "a vector of strings naming the factors from `data`"
-msgstr "`தரவு` இலிருந்து காரணிகளை பெயரிடும் சரங்களின் திசையன்"
-
-#: logRegBin/options/factors.description.R
-#: logRegMulti/options/factors.description.R
-#: logRegOrd/options/factors.description.R
-msgid "a vector of strings naming the fixed factors from `data`"
-msgstr "`தரவு` இலிருந்து நிலையான காரணிகளை பெயரிடும் சரங்களின் திசையன்"
-
-#: anovaRMNP/options/measures.description.R
-#, ignore-multiple-failures
-msgid "a vector of strings naming the repeated measures variables"
-msgstr "மறுநிகழ்வு நடவடிக்கைகள் மாறிகள் பெயரிடும் சரங்களின் திசையன்"
-
-#: descriptives/options/vars.description.R efa/options/vars.description.R
-#: pca/options/vars.description.R propTest2/options/vars.description.R
-#: reliability/options/vars.description.R ttestOneS/options/vars.description.R
-#, ignore-multiple-failures
-msgid "a vector of strings naming the variables of interest in `data`"
-msgstr "`தரவு` இல் ஆர்வத்தின் மாறிகள் பெயரிடும் சரங்களின் திசையன்"
-
-#: corrMatrix/options/vars.description.R corrPart/options/vars.description.R
-#, ignore-multiple-failures
-msgid "a vector of strings naming the variables to correlate in `data`"
-msgstr "`தரவு` உடன் தொடர்புபடுத்த மாறிகள் பெயரிடும் சரங்களின் திசையன்"
-
-#: descriptives/options/splitBy.description.R
-#, ignore-multiple-failures
-msgid "a vector of strings naming the variables used to split `vars`"
-msgstr ""
-"`vars` ஐப் பிரிக்கப் பயன்படுத்தப்படும் மாறிகள் பெயரிடும் சரங்களின் திசையன்"
 
 #: logRegBin/options/acc.title
 #: logRegBin/results/models.template/pred/measures.columns.title
@@ -2415,6 +621,7 @@ msgid "an array of model specific results"
 msgstr "மாதிரி குறிப்பிட்ட முடிவுகளின் வரிசை"
 
 #: anovaNP/results/comparisons.description
+#: anovaNP/results/comparisonsDunn.description
 msgid "an array of pairwise comparison tables"
 msgstr "சோடிவரிசை ஒப்பீட்டு அட்டவணைகளின் வரிசை"
 
@@ -2452,25 +659,6 @@ msgstr "மாதிரி பாதை வரைபடத்தைக் கொ
 msgid "an image of the descriptive plots"
 msgstr "விளக்க அடுக்குகளின் படம்"
 
-#: pca/options/nFactors.description.R
-msgid "an integer (default: 1), the number of components in the model"
-msgstr "ஒரு முழு எண் (இயல்புநிலை: 1), மாதிரியில் உள்ள கூறுகளின் எண்ணிக்கை"
-
-#: efa/options/nFactors.description.R
-msgid "an integer (default: 1), the number of factors in the model"
-msgstr "ஒரு முழு எண் (இயல்புநிலை: 1), மாதிரியில் உள்ள காரணிகளின் எண்ணிக்கை"
-
-#: descriptives/options/pcNEqGr.description.R
-msgid "an integer (default: 4) specifying the number of equal groups"
-msgstr ""
-"ஒரு முழு எண் (இயல்புநிலை: 4) சம குழுக்களின் எண்ணிக்கையைக் குறிப்பிடுகிறது"
-
-#: descriptives/options/extremeN.description.R
-msgid "an integer (default: 5) specifying the number of extreme values"
-msgstr ""
-"ஒரு முழு எண் (இயல்புநிலை: 5) தீவிர மதிப்புகளின் எண்ணிக்கையைக் "
-"குறிப்பிடுகிறது"
-
 #: package/datasets/Tooth Growth.description
 msgid "An uninspiring ANOVA data set"
 msgstr "ஆர்வமற்ற ANOVA தரவு தொகுப்பு"
@@ -2493,6 +681,7 @@ msgstr "ஆண்டர்சன் & ரூபின்"
 msgid "Anderson's Iris Data"
 msgstr "ஆண்டர்சனின் ஐரிச் தரவு"
 
+# Suggested in Weblate: அனோவா
 #: R/anova.b.R package/analyses/anovaOneW.menuGroup
 #: package/analyses/anova.title package/analyses/anova.menuGroup
 #: package/analyses/anova.menuTitle package/analyses/anovaRM.menuGroup
@@ -2580,7 +769,8 @@ msgstr "பார் சூழ்ச்சி"
 msgid "Bar Plots"
 msgstr "பார் அடுக்கு"
 
-#: contTables/options/bartype.title contTables/ui[1][2][0][0][1].label
+#: contTables/options/bartype.title contTables/ui[1][3][0][0][1].label
+#, ignore-inconsistent, ignore-multiple-failures, ignore-reused
 msgid "Bar Type"
 msgstr "பார் வகை"
 
@@ -2713,8 +903,9 @@ msgstr "தொகுதிகள்"
 msgid "Bonferroni"
 msgstr "போன்பெரோரோனி"
 
+# Suggested in Weblate: பெட்டி சூழ்ச்சி
 #: descriptives/options/box.title
-#, ignore-reused
+#, ignore-inconsistent, ignore-multiple-failures, ignore-reused
 msgid "Box plot"
 msgstr "பெட்டி சூழ்ச்சி"
 
@@ -2932,7 +1123,7 @@ msgstr "நம்பிக்கை இடைவெளி"
 #: ttestOneS/ui[1][1][0]/effectSize[0]/ciES.label
 #: ttestPS/ui[1][1][0]/meanDiff[0]/ci.label
 #: ttestPS/ui[1][1][0]/effectSize[0]/ciES.label
-#, ignore-multiple-failures, ignore-reused
+#, ignore-inconsistent, ignore-multiple-failures, ignore-reused
 msgid "Confidence interval"
 msgstr "நம்பிக்கை இடைவெளி"
 
@@ -3040,10 +1231,12 @@ msgstr "குக்கின் தூரம்"
 
 #: ancova/options/postHocCorr.title ancova/ui[5][1][0].label
 #: anova/options/postHocCorr.title anova/ui[5][1][0].label
+#, ignore-multiple-failures, ignore-reused
 msgid "Correction"
 msgstr "திருத்தம்"
 
 #: anovaRM/options/postHocCorr.title anovaRM/ui[4][1][0].label
+#, ignore-multiple-failures
 msgid "Corrections"
 msgstr "திருத்தங்கள்"
 
@@ -3157,6 +1350,7 @@ msgstr "தொடர்பு வகை"
 msgid "Count"
 msgstr "எண்ணுங்கள்"
 
+# Suggested in Weblate: எண்ணிக்கைகள்
 #. as noun (as in number count)
 #: R/conttables.b.R R/descriptives.b.R R/loglinear.b.R
 #: contTables/options/yaxis/ycounts.title contTables/ui[1][1][0][0][0].label
@@ -3165,6 +1359,7 @@ msgstr "எண்ணுங்கள்"
 msgid "Counts"
 msgstr "எண்ணிக்கைகள்"
 
+# Suggested in Weblate: எண்ணிக்கைகள் (விரும்பினால்)
 #: contTables/options/counts.title contTablesPaired/options/counts.title
 #: logLinear/options/counts.title logLinear/ui[0][1].label
 #: propTestN/options/counts.title
@@ -3262,251 +1457,11 @@ msgstr "கட்-ஆஃப் சூழ்ச்சி"
 msgid "Cut-off value"
 msgstr "கட்-ஆஃப் மதிப்பு"
 
-#: contTablesPaired/options.description.R.usage
-#, ignore-duplicate, ignore-multiple-failures, ignore-newline-count, ignore-same
-msgid ""
-"dat <- data.frame(\n"
-"    `1st survey` = c('Approve', 'Approve', 'Disapprove', 'Disapprove'),\n"
-"    `2nd survey` = c('Approve', 'Disapprove', 'Approve', 'Disapprove'),\n"
-"    `Counts` = c(794, 150, 86, 570),\n"
-"    check.names=FALSE)\n"
-"\n"
-"contTablesPaired(formula = Counts ~ `1st survey`:`2nd survey`, data = dat)\n"
-"\n"
-"#\n"
-"#  PAIRED SAMPLES CONTINGENCY TABLES\n"
-"#\n"
-"#  Contingency Tables\n"
-"#  ────────────────────────────────────────────────\n"
-"#    1st survey    Approve    Disapprove    Total\n"
-"#  ────────────────────────────────────────────────\n"
-"#    Approve           794           150      944\n"
-"#    Disapprove         86           570      656\n"
-"#    Total             880           720     1600\n"
-"#  ────────────────────────────────────────────────\n"
-"#\n"
-"#\n"
-"#  McNemar Test\n"
-"#  ─────────────────────────────────────────────────────\n"
-"#                                Value    df    p\n"
-"#  ─────────────────────────────────────────────────────\n"
-"#    χ²                           17.4     1    < .001\n"
-"#    χ² continuity correction     16.8     1    < .001\n"
-"#  ─────────────────────────────────────────────────────\n"
-"#\n"
-"\n"
-"\n"
-"# Alternatively, omit the left of the formula (`Counts`) from the\n"
-"# formula if each row represents a single observation:\n"
-"\n"
-"contTablesPaired(formula = ~ `1st survey`:`2nd survey`, data = dat)"
-msgstr ""
-"dat <- data.frame (\n"
-" `1 வது கணக்கெடுப்பு` = சி ('ஒப்புதல்', 'ஒப்புதல்', 'மறுத்து', 'மறுத்து'),\n"
-" `2 வது கணக்கெடுப்பு` = சி ('ஒப்புதல்', 'மறுக்க', 'ஒப்புதல்', 'மறுத்து'),\n"
-" `எண்ணிக்கைகள்` = சி (794, 150, 86, 570),\n"
-" check.names = பொய்)\n"
-"\n"
-" conttablespaired (formula = counts ~ `1 வது கணக்கெடுப்பு`:` 2 வது கணக்கெடுப்பு`, தரவு = dat)\n"
-"\n"
-" #\n"
-" # இணை மாதிரிகள் தற்செயல் அட்டவணைகள்\n"
-" #\n"
-" # தற்செயல் அட்டவணைகள்\n"
-" # ─\n"
-" # 1 வது கணக்கெடுப்பு ஒப்புதல் மொத்தத்தை மறுப்பது\n"
-" # ─\n"
-" # ஒப்புதல் 794 150 944\n"
-" # மறுக்க 86 570 656\n"
-" # மொத்தம் 880 720 1600\n"
-" # ─\n"
-" #\n"
-" #\n"
-" # மெக்நெமர் சோதனை\n"
-" # ─ ─\n"
-" # மதிப்பு df p\n"
-" # ─ ─\n"
-" # χ² 17.4 1 <.001\n"
-" # χ² தொடர்ச்சியான திருத்தம் 16.8 1 <.001\n"
-" # ─ ─\n"
-" #\n"
-"\n"
-"\n"
-" # மாற்றாக, சூத்திரத்தின் இடதுபுறத்தை (`எண்ணிக்கைகள்`) தவிர்க்கவும்\n"
-" # ஃபார்முலா ஒவ்வொரு வரிசையும் ஒற்றை அவதானிப்பைக் குறிக்கிறது என்றால்:\n"
-"\n"
-" conttablespaired (formula = ~ `1 வது கணக்கெடுப்பு`:` 2 வது கணக்கெடுப்பு`, தரவு = dat)"
-
-#: propTest2/options.description.R.usage
-#, ignore-multiple-failures, ignore-same
-msgid ""
-"dat <- data.frame(x=c(8, 15))\n"
-"\n"
-"propTest2(dat, vars = x, areCounts = TRUE)\n"
-"\n"
-"#\n"
-"#  PROPORTION TEST (2 OUTCOMES)\n"
-"#\n"
-"#  Binomial Test\n"
-"#  ───────────────────────────────────────────────────────\n"
-"#         Level    Count    Total    Proportion    p\n"
-"#  ───────────────────────────────────────────────────────\n"
-"#    x    1            8       23         0.348    0.210\n"
-"#         2           15       23         0.652    0.210\n"
-"#  ───────────────────────────────────────────────────────\n"
-"#    Note. Hₐ is proportion ≠ 0.5\n"
-"#"
-msgstr ""
-"dat <- data.frame (x = c (8, 15))\n"
-"\n"
-" proptest2 (dat, vars = ஃச், arecounts = உண்மை)\n"
-"\n"
-" #\n"
-" # விகிதாச்சாரம் சோதனை (2 முடிவுகள்)\n"
-" #\n"
-" # பைனோமியல் சோதனை\n"
-" # ─ ─\n"
-" # நிலை எண்ணிக்கை மொத்த விகிதம் ப\n"
-" # ─ ─\n"
-" # ஃச் 1 8 23 0.348 0.210\n"
-" # 2 15 23 0.652 0.210\n"
-" # ─ ─\n"
-" # குறிப்பு. Hₐ என்பது விகிதம் ≠ 0.5\n"
-" #"
-
+# Suggested in Weblate: தகவல்கள்
 #: R/pca.b.R descriptives/options/dot.title
-#, ignore-multiple-failures
+#, ignore-inconsistent, ignore-multiple-failures
 msgid "Data"
 msgstr "தகவல்கள்"
-
-#: cfa/options.description.R.usage
-#, ignore-multiple-failures, ignore-same
-msgid ""
-"data <- lavaan::HolzingerSwineford1939\n"
-"\n"
-"jmv::cfa(\n"
-"    data = data,\n"
-"    factors = list(\n"
-"        list(label=\"Visual\", vars=c(\"x1\", \"x2\", \"x3\")),\n"
-"        list(label=\"Textual\", vars=c(\"x4\", \"x5\", \"x6\")),\n"
-"        list(label=\"Speed\", vars=c(\"x7\", \"x8\", \"x9\"))),\n"
-"    resCov = NULL)\n"
-"\n"
-"#\n"
-"#  CONFIRMATORY FACTOR ANALYSIS\n"
-"#\n"
-"#  Factor Loadings\n"
-"#  ─────────────────────────────────────────────────────────────────\n"
-"#    Factor     Indicator    Estimate    SE        Z        p\n"
-"#  ─────────────────────────────────────────────────────────────────\n"
-"#    Visual     x1              0.900    0.0832    10.81    < .001\n"
-"#               x2              0.498    0.0808     6.16    < .001\n"
-"#               x3              0.656    0.0776     8.46    < .001\n"
-"#    Textual    x4              0.990    0.0567    17.46    < .001\n"
-"#               x5              1.102    0.0626    17.60    < .001\n"
-"#               x6              0.917    0.0538    17.05    < .001\n"
-"#    Speed      x7              0.619    0.0743     8.34    < .001\n"
-"#               x8              0.731    0.0755     9.68    < .001\n"
-"#               x9              0.670    0.0775     8.64    < .001\n"
-"#  ─────────────────────────────────────────────────────────────────\n"
-"#\n"
-"#\n"
-"#  FACTOR ESTIMATES\n"
-"#\n"
-"#  Factor Covariances\n"
-"#  ──────────────────────────────────────────────────────────────\n"
-"#                          Estimate    SE        Z       p\n"
-"#  ──────────────────────────────────────────────────────────────\n"
-"#    Visual     Visual      1.000 ᵃ\n"
-"#               Textual     0.459      0.0635    7.22    < .001\n"
-"#               Speed       0.471      0.0862    5.46    < .001\n"
-"#    Textual    Textual     1.000 ᵃ\n"
-"#               Speed       0.283      0.0715    3.96    < .001\n"
-"#    Speed      Speed       1.000 ᵃ\n"
-"#  ──────────────────────────────────────────────────────────────\n"
-"#    ᵃ fixed parameter\n"
-"#\n"
-"#\n"
-"#  MODEL FIT\n"
-"#\n"
-"#  Test for Exact Fit\n"
-"#  ────────────────────────\n"
-"#    χ²      df    p\n"
-"#  ────────────────────────\n"
-"#    85.3    24    < .001\n"
-"#  ────────────────────────\n"
-"#\n"
-"#\n"
-"#  Fit Measures\n"
-"#  ───────────────────────────────────────────────\n"
-"#    CFI      TLI      RMSEA     Lower     Upper\n"
-"#  ───────────────────────────────────────────────\n"
-"#    0.931    0.896    0.0921    0.0714    0.114\n"
-"#  ───────────────────────────────────────────────\n"
-"#"
-msgstr ""
-"தரவு <- லாவான் :: ஓலிங்கர்ச்வைன்ஃபோர்ட் 1939\n"
-"\n"
-" JMV :: CFA (\n"
-" தரவு = தரவு,\n"
-" காரணிகள் = பட்டியல் (\n"
-" பட்டியல் (லேபிள் = \"காட்சி\", vars = c (\"x1\", \"x2\", \"x3\")),\n"
-" பட்டியல் (லேபிள் = \"உரை\", vars = c (\"x4\", \"x5\", \"x6\")),\n"
-" பட்டியல் (லேபிள் = \"வேகம்\", vars = c (\"x7\", \"x8\", \"x9\"))),\n"
-" rescov = null)\n"
-"\n"
-" #\n"
-" # உறுதிப்படுத்தும் காரணி பகுப்பாய்வு\n"
-" #\n"
-" # காரணி ஏற்றுதல்\n"
-" # ─ ─\n"
-" # காரணி காட்டி மதிப்பீடு SE சட் P\n"
-" # ─ ─\n"
-" # விசுவல் ஃச் 1 0.900 0.0832 10.81 <.001\n"
-" # x2 0.498 0.0808 6.16 <.001\n"
-" # x3 0.656 0.0776 8.46 <.001\n"
-" # உரை x4 0.990 0.0567 17.46 <.001\n"
-" # x5 1.102 0.0626 17.60 <.001\n"
-" # x6 0.917 0.0538 17.05 <.001\n"
-" # விரைவு x7 0.619 0.0743 8.34 <.001\n"
-" # x8 0.731 0.0755 9.68 <.001\n"
-" # x9 0.670 0.0775 8.64 <.001\n"
-" # ─ ─\n"
-" #\n"
-" #\n"
-" # காரணி மதிப்பீடுகள்\n"
-" #\n"
-" # காரணி கோவாரியன்ச்\n"
-" # ─ ─\n"
-" # மதிப்பீட்டு SE சட் p\n"
-" # ─ ─\n"
-" # காட்சி காட்சி 1.000\n"
-" # உரை 0.459 0.0635 7.22 <.001\n"
-" # விரைவு 0.471 0.0862 5.46 <.001\n"
-" # உரை உரை 1.000\n"
-" # விரைவு 0.283 0.0715 3.96 <.001\n"
-" # வேக விரைவு 1.000\n"
-" # ─ ─\n"
-" # ᵃ நிலையான அளவுரு\n"
-" #\n"
-" #\n"
-" # மாதிரி பொருத்தம்\n"
-" #\n"
-" # சரியான பொருத்தத்திற்கான சோதனை\n"
-" # ─\n"
-" # χ² df ப\n"
-" # ─\n"
-" # 85.3 24 <.001\n"
-" # ─\n"
-" #\n"
-" #\n"
-" # பொருத்தமான நடவடிக்கைகள்\n"
-" # ─\n"
-" # CFI TLI RMSEA குறைந்த மேல்\n"
-" # ─\n"
-" # 0.931 0.896 0.0921 0.0714 0.114\n"
-" # ─\n"
-" #"
 
 #: package/analyses/pca.menuSubgroup package/analyses/efa.menuSubgroup
 #: package/analyses/cfa.menuSubgroup
@@ -3523,1264 +1478,12 @@ msgstr "தரவு தொகுப்பு தற்போது கவனி
 msgid "Data Summary"
 msgstr "தரவு சுருக்கம்"
 
-#: logRegBin/options.description.R.usage
-#, ignore-multiple-failures, ignore-newline-count, ignore-same
-msgid ""
-"data('birthwt', package='MASS')\n"
-"\n"
-"dat <- data.frame(\n"
-"            low = factor(birthwt$low),\n"
-"            age = birthwt$age,\n"
-"            bwt = birthwt$bwt)\n"
-"\n"
-"logRegBin(data = dat, dep = low,\n"
-"          covs = vars(age, bwt),\n"
-"          blocks = list(list(\"age\", \"bwt\")),\n"
-"          refLevels = list(list(var=\"low\", ref=\"0\")))\n"
-"\n"
-"#\n"
-"#  BINOMIAL LOGISTIC REGRESSION\n"
-"#\n"
-"#  Model Fit Measures\n"
-"#  ───────────────────────────────────────\n"
-"#    Model    Deviance    AIC     R²-McF\n"
-"#  ───────────────────────────────────────\n"
-"#        1     4.97e-7    6.00     1.000\n"
-"#  ───────────────────────────────────────\n"
-"#\n"
-"#\n"
-"#  MODEL SPECIFIC RESULTS\n"
-"#\n"
-"#  MODEL 1\n"
-"#\n"
-"#  Model Coefficients\n"
-"#  ────────────────────────────────────────────────────────────\n"
-"#    Predictor    Estimate      SE          Z           p\n"
-"#  ────────────────────────────────────────────────────────────\n"
-"#    Intercept    2974.73225    218237.2      0.0136    0.989\n"
-"#    age            -0.00653       482.7    -1.35e-5    1.000\n"
-"#    bwt            -1.18532        87.0     -0.0136    0.989\n"
-"#  ────────────────────────────────────────────────────────────\n"
-"#    Note. Estimates represent the log odds of \"low = 1\"\n"
-"#    vs. \"low = 0\"\n"
-"#\n"
-"#"
-msgstr ""
-"தரவு ('பிறப்பு', தொகுப்பு = 'நிறை')\n"
-"\n"
-" dat <- data.frame (\n"
-" குறைந்த = காரணி (பிறப்பு $ குறைவாக),\n"
-" அகவை = பிறப்பு $ வயது,\n"
-" BWT = PoreseWt $ BWT)\n"
-"\n"
-" logregbin (தரவு = dat, dep = low,\n"
-" covs = vars (வயது, bwt),\n"
-" தொகுதிகள் = பட்டியல் (பட்டியல் (\"வயது\", \"BWT\")),\n"
-" reflevels = பட்டியல் (பட்டியல் (var = \"low\", ref = \"0\")))\n"
-"\n"
-" #\n"
-" # பைனோமியல் லாசிச்டிக் பின்னடைவு\n"
-" #\n"
-" # மாதிரி பொருத்தம் நடவடிக்கைகள்\n"
-" # ─\n"
-" # மாதிரி விலகல் AIC R²-MCF\n"
-" # ─\n"
-" # 1 4.97E-7 6.00 1.000\n"
-" # ─\n"
-" #\n"
-" #\n"
-" # மாதிரி குறிப்பிட்ட முடிவுகள்\n"
-" #\n"
-" # மாதிரி 1\n"
-" #\n"
-" # மாதிரி குணகங்கள்\n"
-" # ─ ─\n"
-" # முன்கணிப்பு மதிப்பீடு Se சட் p\n"
-" # ─ ─\n"
-" # இடைமறிப்பு 2974.73225 218237.2 0.0136 0.989\n"
-" # அகவை -0.00653 482.7 -1.35E -5 1.000\n"
-" # BWT -1.18532 87.0 -0.0136 0.989\n"
-" # ─ ─\n"
-" # குறிப்பு. மதிப்பீடுகள் \"குறைந்த = 1\" இன் பதிவு முரண்பாடுகளைக் குறிக்கின்றன\n"
-" # எதிராக \"குறைந்த = 0\"\n"
-" #\n"
-" #"
-
-#: logRegMulti/options.description.R.usage
-#, ignore-multiple-failures, ignore-newline-count, ignore-punctuation-spacing, ignore-same
-msgid ""
-"data('birthwt', package='MASS')\n"
-"\n"
-"dat <- data.frame(\n"
-"            race = factor(birthwt$race),\n"
-"            age = birthwt$age,\n"
-"            low = factor(birthwt$low))\n"
-"\n"
-"logRegMulti(data = dat, dep = race,\n"
-"            covs = age, factors = low,\n"
-"            blocks = list(list(\"age\", \"low\")),\n"
-"            refLevels = list(\n"
-"                list(var=\"race\", ref=\"1\"),\n"
-"                list(var=\"low\", ref=\"0\")))\n"
-"\n"
-"#\n"
-"#  MULTINOMIAL LOGISTIC REGRESSION\n"
-"#\n"
-"#  Model Fit Measures\n"
-"#  ──────────────────────────────────────\n"
-"#    Model    Deviance    AIC    R²-McF\n"
-"#  ──────────────────────────────────────\n"
-"#        1         360    372    0.0333\n"
-"#  ──────────────────────────────────────\n"
-"#\n"
-"#\n"
-"#  MODEL SPECIFIC RESULTS\n"
-"#\n"
-"#  MODEL 1\n"
-"#\n"
-"#  Model Coefficients\n"
-"#  ───────────────────────────────────────────────────────────────\n"
-"#    race     Predictor    Estimate    SE        Z         p\n"
-"#  ───────────────────────────────────────────────────────────────\n"
-"#    2 - 1    Intercept      0.8155    1.1186     0.729    0.466\n"
-"#             age           -0.1038    0.0487    -2.131    0.033\n"
-"#             low:\n"
-"#             1 – 0          0.7527    0.4700     1.601    0.109\n"
-"#    3 - 1    Intercept      1.0123    0.7798     1.298    0.194\n"
-"#             age           -0.0663    0.0324    -2.047    0.041\n"
-"#             low:\n"
-"#             1 – 0          0.5677    0.3522     1.612    0.107\n"
-"#  ───────────────────────────────────────────────────────────────\n"
-"#\n"
-"#"
-msgstr ""
-"தரவு ('பிறப்பு', தொகுப்பு = 'நிறை')\n"
-"\n"
-" dat <- data.frame (\n"
-" ரேச் = காரணி (பிறப்பு Wate ரேச்),\n"
-" அகவை = பிறப்பு $ வயது,\n"
-" குறைந்த = காரணி (பிறப்பு சொல் குறைந்த))\n"
-"\n"
-" logregmulti (data = dat, dep = race,\n"
-" covs = அகவை, காரணிகள் = குறைந்த,\n"
-" தொகுதிகள் = பட்டியல் (பட்டியல் (\"வயது\", \"குறைந்த\")),\n"
-" reflevels = பட்டியல் (\n"
-" பட்டியல் (var = \"இனம்\", ref = \"1\"),\n"
-" பட்டியல் (var = \"low\", ref = \"0\")))\n"
-"\n"
-" #\n"
-" # பன்முக லாசிச்டிக் பின்னடைவு\n"
-" #\n"
-" # மாதிரி பொருத்தம் நடவடிக்கைகள்\n"
-" # ─\n"
-" # மாதிரி விலகல் AIC R²-MCF\n"
-" # ─\n"
-" # 1 360 372 0.0333\n"
-" # ─\n"
-" #\n"
-" #\n"
-" # மாதிரி குறிப்பிட்ட முடிவுகள்\n"
-" #\n"
-" # மாதிரி 1\n"
-" #\n"
-" # மாதிரி குணகங்கள்\n"
-" # ─ ─\n"
-" # ரேச் முன்கணிப்பு மதிப்பீடு SE சட் P.\n"
-" # ─ ─\n"
-" # 2 - 1 இடைமறிப்பு 0.8155 1.1186 0.729 0.466\n"
-" # அகவை -0.1038 0.0487 -2.131 0.033\n"
-" # குறைந்த:\n"
-" # 1 - 0 0.7527 0.4700 1.601 0.109\n"
-" # 3 - 1 இடைமறிப்பு 1.0123 0.7798 1.298 0.194\n"
-" # அகவை -0.0663 0.0324 -2.047 0.041\n"
-" # குறைந்த:\n"
-" # 1 - 0 0.5677 0.3522 1.612 0.107\n"
-" # ─ ─\n"
-" #\n"
-" #"
-
-#: anovaRM/options.description.R.usage
-#, ignore-multiple-failures, ignore-same
-msgid ""
-"data('bugs', package = 'jmv')\n"
-"\n"
-"anovaRM(\n"
-"    data = bugs,\n"
-"    rm = list(\n"
-"        list(\n"
-"            label = 'Frightening',\n"
-"            levels = c('Low', 'High'))),\n"
-"    rmCells = list(\n"
-"        list(\n"
-"            measure = 'LDLF',\n"
-"            cell = 'Low'),\n"
-"        list(\n"
-"            measure = 'LDHF',\n"
-"            cell = 'High')),\n"
-"    rmTerms = list(\n"
-"        'Frightening'))\n"
-"\n"
-"#\n"
-"#  REPEATED MEASURES ANOVA\n"
-"#\n"
-"#  Within Subjects Effects\n"
-"#  ───────────────────────────────────────────────────────────────────────\n"
-"#                  Sum of Squares    df    Mean Square    F       p\n"
-"#  ───────────────────────────────────────────────────────────────────────\n"
-"#    Frightening              126     1         126.11    44.2    < .001\n"
-"#    Residual                 257    90           2.85\n"
-"#  ───────────────────────────────────────────────────────────────────────\n"
-"#    Note. Type 3 Sums of Squares\n"
-"#\n"
-"#\n"
-"#\n"
-"#  Between Subjects Effects\n"
-"#  ─────────────────────────────────────────────────────────────────\n"
-"#                Sum of Squares    df    Mean Square    F    p\n"
-"#  ─────────────────────────────────────────────────────────────────\n"
-"#    Residual               954    90           10.6\n"
-"#  ─────────────────────────────────────────────────────────────────\n"
-"#    Note. Type 3 Sums of Squares\n"
-"#"
-msgstr ""
-"தரவு ('பிழைகள்', தொகுப்பு = 'JMV')\n"
-"\n"
-" அனோவார்ம் (\n"
-" தரவு = பிழைகள்,\n"
-" rm = பட்டியல் (\n"
-" பட்டியல் (\n"
-" சிட்டை = 'பயமுறுத்தும்',\n"
-" நிலைகள் = சி ('குறைந்த', 'உயர்'))),\n"
-" rmcells = பட்டியல் (\n"
-" பட்டியல் (\n"
-" அளவீடு = 'LDLF',\n"
-" செல் = 'குறைந்த'),\n"
-" பட்டியல் (\n"
-" அளவீடு = 'LDHF',\n"
-" செல் = 'உயர்')),\n"
-" rmterms = பட்டியல் (\n"
-" 'பயமுறுத்தும்'))\n"
-"\n"
-" #\n"
-" # மறுநிகழ்வு நடவடிக்கைகள் ANOVA\n"
-" #\n"
-" # பாடங்களின் விளைவுகளுக்குள்\n"
-" # ─ ─\n"
-" # சதுரங்களின் தொகை df சராசரி நாற்கை f p\n"
-" # ─ ─\n"
-" # பயமுறுத்தும் 126 1 126.11 44.2 <.001\n"
-" # மீதமுள்ள 257 90 2.85\n"
-" # ─ ─\n"
-" # குறிப்பு. சதுரங்களின் 3 தொகை\n"
-" #\n"
-" #\n"
-" #\n"
-" # பாடங்களின் விளைவுகளுக்கு இடையில்\n"
-" # ─ ─\n"
-" # சதுரங்களின் தொகை df சராசரி நாற்கை f p\n"
-" # ─ ─\n"
-" # மீதமுள்ள 954 90 10.6\n"
-" # ─ ─\n"
-" # குறிப்பு. சதுரங்களின் 3 தொகை\n"
-" #"
-
-#: anovaRMNP/options.description.R.usage
-#, ignore-multiple-failures, ignore-same
-msgid ""
-"data('bugs', package = 'jmv')\n"
-"\n"
-"anovaRMNP(bugs, measures = vars(LDLF, LDHF, HDLF, HDHF))\n"
-"\n"
-"#\n"
-"#  REPEATED MEASURES ANOVA (NON-PARAMETRIC)\n"
-"#\n"
-"#  Friedman\n"
-"#  ────────────────────────\n"
-"#    χ²      df    p\n"
-"#  ────────────────────────\n"
-"#    55.8     3    < .001\n"
-"#  ────────────────────────\n"
-"#"
-msgstr ""
-"தரவு ('பிழைகள்', தொகுப்பு = 'JMV')\n"
-"\n"
-" anovarmnp (பிழைகள், நடவடிக்கைகள் = VARS (LDLF, LDHF, HDLF, HDHF)))\n"
-"\n"
-" #\n"
-" # மறுநிகழ்வு நடவடிக்கைகள் ANOVA (அளவுரு அல்லாத)\n"
-" #\n"
-" # ப்ரீட்மேன்\n"
-" # ─\n"
-" # χ² df ப\n"
-" # ─\n"
-" # 55.8 3 <.001\n"
-" # ─\n"
-" #"
-
-#: ttestPS/options.description.R.usage
-#, ignore-duplicate, ignore-multiple-failures, ignore-same
-msgid ""
-"data('bugs', package = 'jmv')\n"
-"\n"
-"ttestPS(bugs, pairs = list(\n"
-"        list(i1 = 'LDLF', i2 = 'LDHF')))\n"
-"\n"
-"#\n"
-"#  PAIRED SAMPLES T-TEST\n"
-"#\n"
-"#  Paired Samples T-Test\n"
-"#  ──────────────────────────────────────────────────────────────\n"
-"#                                   statistic    df      p\n"
-"#  ──────────────────────────────────────────────────────────────\n"
-"#    LDLF    LDHF    Student's t        -6.65    90.0    < .001\n"
-"#  ──────────────────────────────────────────────────────────────\n"
-"#"
-msgstr ""
-"தரவு ('பிழைகள்', தொகுப்பு = 'JMV')\n"
-"\n"
-" TTESTPS (பிழைகள், சோடிகள் = பட்டியல் (\n"
-" பட்டியல் (i1 = 'ldlf', i2 = 'ldhf')))\n"
-"\n"
-" #\n"
-" # இணை மாதிரிகள் டி-சோதனை\n"
-" #\n"
-" # இணை மாதிரிகள் டி-சோதனை\n"
-" # ─ ─\n"
-" # புள்ளிவிவர டி.எஃப் ப\n"
-" # ─ ─\n"
-" # LDLF LDHF மாணவர்களின் T -6.65 90.0 <.001\n"
-" # ─ ─\n"
-" #"
-
-#: contTables/options.description.R.usage
-#, ignore-duplicate, ignore-multiple-failures, ignore-newline-count, ignore-punctuation-spacing, ignore-same
-msgid ""
-"data('HairEyeColor')\n"
-"dat <- as.data.frame(HairEyeColor)\n"
-"\n"
-"contTables(formula = Freq ~ Hair:Eye, dat)\n"
-"\n"
-"#\n"
-"#  CONTINGENCY TABLES\n"
-"#\n"
-"#  Contingency Tables\n"
-"#  ─────────────────────────────────────────────────────\n"
-"#    Hair     Brown    Blue    Hazel    Green    Total\n"
-"#  ─────────────────────────────────────────────────────\n"
-"#    Black       68      20       15        5      108\n"
-"#    Brown      119      84       54       29      286\n"
-"#    Red         26      17       14       14       71\n"
-"#    Blond        7      94       10       16      127\n"
-"#    Total      220     215       93       64      592\n"
-"#  ─────────────────────────────────────────────────────\n"
-"#\n"
-"#\n"
-"#  χ² Tests\n"
-"#  ───────────────────────────────\n"
-"#          Value    df    p\n"
-"#  ───────────────────────────────\n"
-"#    χ²      138     9    < .001\n"
-"#    N       592\n"
-"#  ───────────────────────────────\n"
-"#\n"
-"\n"
-"# Alternatively, omit the left of the formula (`Freq`) if each row\n"
-"# represents a single observation:\n"
-"\n"
-"contTables(formula = ~ Hair:Eye, dat)"
-msgstr ""
-"தரவு ('haireyecolor')\n"
-" dat <- as.data.frame (haireyecolor)\n"
-"\n"
-" contedables (formula = freq ~ முடி: கண், dat)\n"
-"\n"
-" #\n"
-" # தற்செயல் அட்டவணைகள்\n"
-" #\n"
-" # தற்செயல் அட்டவணைகள்\n"
-" # ─ ─\n"
-" # முடி பழுப்பு நீல ஏசல் பச்சை மொத்தம்\n"
-" # ─ ─\n"
-" # கருப்பு 68 20 15 5 108\n"
-" # பிரவுன் 119 84 54 29 286\n"
-" # சிவப்பு 26 17 14 14 71\n"
-" # மஞ்சள் நிற 7 94 10 16 127\n"
-" # மொத்தம் 220 215 93 64 592\n"
-" # ─ ─\n"
-" #\n"
-" #\n"
-" # χ² சோதனைகள்\n"
-" # ─\n"
-" # மதிப்பு df p\n"
-" # ─\n"
-" # χ² 138 9 <.001\n"
-" # N 592\n"
-" # ─\n"
-" #\n"
-"\n"
-" # மாற்றாக, ஒவ்வொரு வரிசையிலும் இருந்தால் சூத்திரத்தின் இடதுபுறத்தை (`Freq`) தவிர்க்கவும்\n"
-" # ஒற்றை கவனிப்பைக் குறிக்கிறது:\n"
-"\n"
-" CONTETABLES (Furmula = ~ முடி: கண், DAT)"
-
-#: propTestN/options.description.R.usage
-#, ignore-duplicate, ignore-multiple-failures, ignore-same
-msgid ""
-"data('HairEyeColor')\n"
-"dat <- as.data.frame(HairEyeColor)\n"
-"\n"
-"propTestN(formula = Freq ~ Eye, data = dat, ratio = c(1,1,1,1))\n"
-"\n"
-"#\n"
-"#  PROPORTION TEST (N OUTCOMES)\n"
-"#\n"
-"#  Proportions\n"
-"#  ────────────────────────────────\n"
-"#    Level    Count    Proportion\n"
-"#  ────────────────────────────────\n"
-"#    Brown      220         0.372\n"
-"#    Blue       215         0.363\n"
-"#    Hazel       93         0.157\n"
-"#    Green       64         0.108\n"
-"#  ────────────────────────────────\n"
-"#\n"
-"#\n"
-"#  χ² Goodness of Fit\n"
-"#  ───────────────────────\n"
-"#    χ²     df    p\n"
-"#  ───────────────────────\n"
-"#    133     3    < .001\n"
-"#  ───────────────────────\n"
-"#"
-msgstr ""
-"தரவு ('haireyecolor')\n"
-" dat <- as.data.frame (haireyecolor)\n"
-"\n"
-" proptestn (formula = freq ~ eye, தகவல்கள் = dat, விகிதம் = c (1,1,1,1))\n"
-"\n"
-" #\n"
-" # விகிதாச்சாரம் சோதனை (n விளைவுகள்)\n"
-" #\n"
-" # விகிதாச்சாரம்\n"
-" # ─\n"
-" # நிலை எண்ணிக்கை விகிதம்\n"
-" # ─\n"
-" # பிரவுன் 220 0.372\n"
-" # நீலம் 215 0.363\n"
-" # ஏசல் 93 0.157\n"
-" # பச்சை 64 0.108\n"
-" # ─\n"
-" #\n"
-" #\n"
-" # χ² பொருத்தத்தின் நன்மை\n"
-" # ─\n"
-" # χ² df ப\n"
-" # ─\n"
-" # 133 3 <.001\n"
-" # ─\n"
-" #"
-
-#: efa/options.description.R.usage
-#, ignore-multiple-failures, ignore-same
-msgid ""
-"data('iris')\n"
-"\n"
-"efa(iris, vars = vars(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width))\n"
-"\n"
-"#\n"
-"#  EXPLORATORY FACTOR ANALYSIS\n"
-"#\n"
-"#  Factor Loadings\n"
-"#  ────────────────────────────────────────────────\n"
-"#                    1        2        Uniqueness\n"
-"#  ────────────────────────────────────────────────\n"
-"#    Sepal.Length    0.993                0.10181\n"
-"#    Sepal.Width              0.725       0.42199\n"
-"#    Petal.Length    0.933                0.00483\n"
-"#    Petal.Width     0.897                0.07088\n"
-"#  ────────────────────────────────────────────────\n"
-"#    Note. 'oblimin' rotation was used\n"
-"#"
-msgstr ""
-"தரவு ('ஐரிச்')\n"
-"\n"
-" EFA (IRIS, VARS = VARS (sepal.length, sepal.width, petal.length, petal.width)))\n"
-"\n"
-" #\n"
-" # ஆய்வு காரணி பகுப்பாய்வு\n"
-" #\n"
-" # காரணி ஏற்றுதல்\n"
-" # ─\n"
-" # 1 2 தனித்துவம்\n"
-" # ─\n"
-" # Sepal.length 0.993 0.10181\n"
-" # Sepal.width 0.725 0.42199\n"
-" # Petal.length 0.933 0.00483\n"
-" # Petal.width 0.897 0.07088\n"
-" # ─\n"
-" # குறிப்பு. 'ஒப்லிமின்' சுழற்சி பயன்படுத்தப்பட்டது\n"
-" #"
-
-#: mancova/options.description.R.usage
-#, ignore-multiple-failures, ignore-same
-msgid ""
-"data('iris')\n"
-"\n"
-"mancova(data = iris,\n"
-"    deps = vars(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width),\n"
-"    factors = Species)\n"
-"\n"
-"#\n"
-"#  MANCOVA\n"
-"#\n"
-"#  Multivariate Tests\n"
-"#  ───────────────────────────────────────────────────────────────────────────\n"
-"#                                     value     F       df1    df2    p\n"
-"#  ───────────────────────────────────────────────────────────────────────────\n"
-"#    Species    Pillai's Trace          1.19    53.5      8    290    < .001\n"
-"#               Wilks' Lambda         0.0234     199      8    288    < .001\n"
-"#               Hotelling's Trace       32.5     581      8    286    < .001\n"
-"#               Roy's Largest Root      32.2    1167      4    145    < .001\n"
-"#  ───────────────────────────────────────────────────────────────────────────\n"
-"#\n"
-"#\n"
-"#  Univariate Tests\n"
-"#  ───────────────────────────────────────────────────────────────────────────────────────────────\n"
-"#                 Dependent Variable    Sum of Squares    df     Mean Square    F         p\n"
-"#  ───────────────────────────────────────────────────────────────────────────────────────────────\n"
-"#    Species      Sepal.Length                   63.21      2        31.6061     119.3    < .001\n"
-"#                 Sepal.Width                    11.34      2         5.6725      49.2    < .001\n"
-"#                 Petal.Length                  437.10      2       218.5514    1180.2    < .001\n"
-"#                 Petal.Width                    80.41      2        40.2067     960.0    < .001\n"
-"#    Residuals    Sepal.Length                   38.96    147         0.2650\n"
-"#                 Sepal.Width                    16.96    147         0.1154\n"
-"#                 Petal.Length                   27.22    147         0.1852\n"
-"#                 Petal.Width                     6.16    147         0.0419\n"
-"#  ───────────────────────────────────────────────────────────────────────────────────────────────\n"
-"#"
-msgstr ""
-"தரவு ('ஐரிச்')\n"
-"\n"
-" MANCOVA (தரவு = கருவிழி,\n"
-" deps = vars (sepal.length, sepal.width, petal.length, petal.width),\n"
-" காரணிகள் = இனங்கள்)\n"
-"\n"
-" #\n"
-" # மான்கோவா\n"
-" #\n"
-" # பன்முக சோதனைகள்\n"
-" # ─ ─\n"
-" # மதிப்பு F DF1 DF2 ப\n"
-" # ─ ─\n"
-" # இனங்கள் பிள்ளையின் சுவடு 1.19 53.5 8 290 <.001\n"
-" # வில்க்ச் லாம்ப்டா 0.0234 199 8 288 <.001\n"
-" # ஓட்டல்ச் ட்ரேச் 32.5 581 8 286 <.001\n"
-" # ராயின் மிகப்பெரிய ரூட் 32.2 1167 4 145 <.001\n"
-" # ─ ─\n"
-" #\n"
-" #\n"
-" # ஒற்றுமையற்ற சோதனைகள்\n"
-" # ─ •\n"
-" # சதுரங்களின் சார்பு மாறி தொகை df சராசரி நாற்கை f p\n"
-" # ─ •\n"
-" # இனங்கள் sepal.length 63.21 2 31.6061 119.3 <.001\n"
-" # Sepal.width 11.34 2 5.6725 49.2 <.001\n"
-" # Petal.length 437.10 2 218.5514 1180.2 <.001\n"
-" # Petal.width 80.41 2 40.2067 960.0 <.001\n"
-" # எச்சங்கள் செபால். நீளம் 38.96 147 0.2650\n"
-" # Sepal.width 16.96 147 0.1154\n"
-" # Petal.length 27.22 147 0.1852\n"
-" # Petal.width 6.16 147 0.0419\n"
-" # ─ •\n"
-" #"
-
-#: pca/options.description.R.usage
-#, ignore-multiple-failures, ignore-same
-msgid ""
-"data('iris')\n"
-"\n"
-"pca(iris, vars = vars(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width))\n"
-"\n"
-"#\n"
-"#  PRINCIPAL COMPONENT ANALYSIS\n"
-"#\n"
-"#  Component Loadings\n"
-"#  ────────────────────────────────────────\n"
-"#                    1         Uniqueness\n"
-"#  ────────────────────────────────────────\n"
-"#    Sepal.Length     0.890        0.2076\n"
-"#    Sepal.Width     -0.460        0.7883\n"
-"#    Petal.Length     0.992        0.0168\n"
-"#    Petal.Width      0.965        0.0688\n"
-"#  ────────────────────────────────────────\n"
-"#    Note. 'varimax' rotation was used\n"
-"#"
-msgstr ""
-"தரவு ('ஐரிச்')\n"
-"\n"
-" பி.சி.ஏ (ஐரிச், வார்ச் = வார்ச் (செபால். நீளம், செபால்.விட், பெட்டல்.நீளம், பெட்டல்.விட்))\n"
-"\n"
-" #\n"
-" # முதன்மை கூறு பகுப்பாய்வு\n"
-" #\n"
-" # கூறு ஏற்றுதல்\n"
-" # ─\n"
-" # 1 தனித்துவம்\n"
-" # ─\n"
-" # Sepal.length 0.890 0.2076\n"
-" # Sepal.width -0.460 0.7883\n"
-" # Petal.length 0.992 0.0168\n"
-" # Petal.width 0.965 0.0688\n"
-" # ─\n"
-" # குறிப்பு. 'வரிமேக்ச்' சுழற்சி பயன்படுத்தப்பட்டது\n"
-" #"
-
-#: reliability/options.description.R.usage
-#, ignore-multiple-failures, ignore-same
-msgid ""
-"data('iris')\n"
-"\n"
-"reliability(iris, vars = c('Sepal.Length', 'Sepal.Width', 'Petal.Length', 'Petal.Width'),\n"
-"            omegaScale = TRUE)\n"
-"\n"
-"#\n"
-"#  RELIABILITY ANALYSIS\n"
-"#\n"
-"#  Scale Reliability Statistics\n"
-"#  ─────────────────────────────────────────\n"
-"#             Cronbach's α    McDonald's ω\n"
-"#  ─────────────────────────────────────────\n"
-"#    scale           0.708           0.848\n"
-"#  ─────────────────────────────────────────\n"
-"#"
-msgstr ""
-"தரவு ('ஐரிச்')\n"
-"\n"
-" நம்பகத்தன்மை (ஐரிச், vars = c ('sepal.length', 'sepal.width', 'petal.length', 'petal.width'),\n"
-" omegascale = உண்மை)\n"
-"\n"
-" #\n"
-" # நம்பகத்தன்மை பகுப்பாய்வு\n"
-" #\n"
-" # அளவிலான நம்பகத்தன்மை புள்ளிவிவரங்கள்\n"
-" # ─\n"
-" # க்ரோன்பேக்கின் α மெக்டொனால்டு\n"
-" # ─\n"
-" # அளவு 0.708 0.848\n"
-" # ─\n"
-" #"
-
-#: corrMatrix/options.description.R.usage
-#, ignore-duplicate, ignore-multiple-failures, ignore-same
-msgid ""
-"data('mtcars')\n"
-"\n"
-"corrMatrix(mtcars, vars = vars(mpg, cyl, disp, hp))\n"
-"\n"
-"#\n"
-"#  CORRELATION MATRIX\n"
-"#\n"
-"#  Correlation Matrix\n"
-"#  ──────────────────────────────────────────────────────────────\n"
-"#                           mpg      cyl       disp      hp\n"
-"#  ──────────────────────────────────────────────────────────────\n"
-"#    mpg     Pearson's r        —    -0.852    -0.848    -0.776\n"
-"#            p-value            —    < .001    < .001    < .001\n"
-"#\n"
-"#    cyl     Pearson's r                  —     0.902     0.832\n"
-"#            p-value                      —    < .001    < .001\n"
-"#\n"
-"#    disp    Pearson's r                            —     0.791\n"
-"#            p-value                                —    < .001\n"
-"#\n"
-"#    hp      Pearson's r                                      —\n"
-"#            p-value                                          —\n"
-"#  ──────────────────────────────────────────────────────────────\n"
-"#"
-msgstr ""
-"தரவு ('MTCARS')\n"
-"\n"
-" கோர்மாட்ரிக்ச் (MTCARS, VARS = VARS (MPG, CYL, DISP, HP))\n"
-"\n"
-" #\n"
-" # தொடர்பு அணி\n"
-" #\n"
-" # தொடர்பு அணி\n"
-" # ─ ─\n"
-" # எம்பிசி சிலி டிச்ப் எச்பி\n"
-" # ─ ─\n"
-" # எம்பிசி பியர்சனின் ஆர் --0.852 -0.848 -0.776\n"
-" # பி-மதிப்பு-<.001 <.001 <.001\n"
-" #\n"
-" # சிலி பியர்சனின் ஆர் - 0.902 0.832\n"
-" # பி-மதிப்பு-<.001 <.001\n"
-" #\n"
-" # பியர்சனின் ஆர் - 0.791\n"
-" # பி-மதிப்பு-<.001\n"
-" #\n"
-" # எச்பி பியர்சனின் ஆர் -\n"
-" # பி-மதிப்பு-\n"
-" # ─ ─\n"
-" #"
-
-#: corrPart/options.description.R.usage
-#, ignore-duplicate, ignore-multiple-failures, ignore-same
-msgid ""
-"data('mtcars')\n"
-"\n"
-"corrPart(mtcars, vars = vars(mpg, cyl, disp), controls = vars(hp))\n"
-"\n"
-"#\n"
-"#  PARTIAL CORRELATION\n"
-"#\n"
-"#  Partial Correlation\n"
-"#  ────────────────────────────────────────────────────\n"
-"#                           mpg       cyl       disp\n"
-"#  ────────────────────────────────────────────────────\n"
-"#    mpg     Pearson's r         —\n"
-"#            p-value             —\n"
-"#\n"
-"#    cyl     Pearson's r    -0.590         —\n"
-"#            p-value        < .001         —\n"
-"#\n"
-"#    disp    Pearson's r    -0.606     0.719        —\n"
-"#            p-value        < .001    < .001        —\n"
-"#  ────────────────────────────────────────────────────\n"
-"#    Note. controlling for 'hp'\n"
-"#"
-msgstr ""
-"தரவு ('MTCARS')\n"
-"\n"
-" corpart (mtcars, vars = vars (mpg, cyl, disp), கட்டுப்பாடுகள் = vars (hp))\n"
-"\n"
-" #\n"
-" # பகுதி தொடர்பு\n"
-" #\n"
-" # பகுதி தொடர்பு\n"
-" # ─ . F.\n"
-" # எம்பிசி சிலி டிச்ப்\n"
-" # ─ . F.\n"
-" # எம்பிசி பியர்சனின் ஆர் -\n"
-" # பி-மதிப்பு-\n"
-" #\n"
-" # சிலி பியர்சனின் ஆர் -0.590 -\n"
-" # பி-மதிப்பு <.001-\n"
-" #\n"
-" # டிச்ப் பியர்சனின் ஆர் -0.606 0.719 -\n"
-" # பி-மதிப்பு <.001 <.001-\n"
-" # ─ . F.\n"
-" # குறிப்பு. 'எச்பி' க்கு கட்டுப்படுத்துதல்\n"
-" #"
-
-#: logLinear/options.description.R.usage
-#, ignore-multiple-failures, ignore-newline-count, ignore-punctuation-spacing, ignore-same
-msgid ""
-"data('mtcars')\n"
-"\n"
-"tab <- table('gear'=mtcars$gear, 'cyl'=mtcars$cyl)\n"
-"dat <- as.data.frame(tab)\n"
-"\n"
-"logLinear(data = dat, factors = vars(gear, cyl),  counts = Freq,\n"
-"          blocks = list(list(\"gear\", \"cyl\", c(\"gear\", \"cyl\"))),\n"
-"          refLevels = list(\n"
-"              list(var=\"gear\", ref=\"3\"),\n"
-"              list(var=\"cyl\", ref=\"4\")))\n"
-"\n"
-"#\n"
-"#  LOG-LINEAR REGRESSION\n"
-"#\n"
-"#  Model Fit Measures\n"
-"#  ───────────────────────────────────────\n"
-"#    Model    Deviance    AIC     R²-McF\n"
-"#  ───────────────────────────────────────\n"
-"#        1    4.12e-10    41.4     1.000\n"
-"#  ───────────────────────────────────────\n"
-"#\n"
-"#\n"
-"#  MODEL SPECIFIC RESULTS\n"
-"#\n"
-"#  MODEL 1\n"
-"#\n"
-"#  Model Coefficients\n"
-"#  ──────────────────────────────────────────────────────────────────\n"
-"#    Predictor          Estimate     SE          Z            p\n"
-"#  ──────────────────────────────────────────────────────────────────\n"
-"#    Intercept          -4.71e-16        1.00    -4.71e-16    1.000\n"
-"#    gear:\n"
-"#    4 – 3                  2.079        1.06        1.961    0.050\n"
-"#    5 – 3                  0.693        1.22        0.566    0.571\n"
-"#    cyl:\n"
-"#    6 – 4                  0.693        1.22        0.566    0.571\n"
-"#    8 – 4                  2.485        1.04        2.387    0.017\n"
-"#    gear:cyl:\n"
-"#    (4 – 3):(6 – 4)       -1.386        1.37       -1.012    0.311\n"
-"#    (5 – 3):(6 – 4)       -1.386        1.73       -0.800    0.423\n"
-"#    (4 – 3):(8 – 4)      -26.867    42247.17    -6.36e -4    0.999\n"
-"#    (5 – 3):(8 – 4)       -2.485        1.44       -1.722    0.085\n"
-"#  ──────────────────────────────────────────────────────────────────\n"
-"#\n"
-"#"
-msgstr ""
-"தரவு ('MTCARS')\n"
-"\n"
-" தாவல் <- அட்டவணை ('கியர்' = MTCARS $ கியர், 'Cyl' = MTCARS $ Cyl)\n"
-" dat <- as.data.frame (தாவல்)\n"
-"\n"
-" loglinear (தரவு = dat, காரணிகள் = vars (கியர், சிலி), எண்ணிக்கைகள் = ஃப்ரீக்,\n"
-" தொகுதிகள் = பட்டியல் (பட்டியல் (\"கியர்\", \"சிலி\", சி (\"கியர்\", \"சிலி\"))),\n"
-" reflevels = பட்டியல் (\n"
-" பட்டியல் (var = \"gear\", ref = \"3\"),\n"
-" பட்டியல் (var = \"cyl\", ref = \"4\")))\n"
-"\n"
-" #\n"
-" # பதிவு-நேரியல் பின்னடைவு\n"
-" #\n"
-" # மாதிரி பொருத்தம் நடவடிக்கைகள்\n"
-" # ─\n"
-" # மாதிரி விலகல் AIC R²-MCF\n"
-" # ─\n"
-" # 1 4.12E-10 41.4 1.000\n"
-" # ─\n"
-" #\n"
-" #\n"
-" # மாதிரி குறிப்பிட்ட முடிவுகள்\n"
-" #\n"
-" # மாதிரி 1\n"
-" #\n"
-" # மாதிரி குணகங்கள்\n"
-" # ─ ─\n"
-" # முன்கணிப்பு மதிப்பீடு Se சட் p\n"
-" # ─ ─\n"
-" # இடைமறிப்பு -4.71E -16 1.00 -4.71E -16 1.000\n"
-" # கியர்:\n"
-" # 4 - 3 2.079 1.06 1.961 0.050\n"
-" # 5 - 3 0.693 1.22 0.566 0.571\n"
-" # சிலி:\n"
-" # 6 - 4 0.693 1.22 0.566 0.571\n"
-" # 8 - 4 2.485 1.04 2.387 0.017\n"
-" # கியர்: சிலி:\n"
-" # (4 -3) :( 6 -4) -1.386 1.37 -1.012 0.311\n"
-" # (5 ​​-3) :( 6 -4) -1.386 1.73 -0.800 0.423\n"
-" # (4 -3) :( 8 -4) -26.867 42247.17 -6.36e -4 0.999\n"
-" # (5 ​​-3) :( 8 -4) -2.485 1.44 -1.722 0.085\n"
-" # ─ ─\n"
-" #\n"
-" #"
-
-#: descriptives/options.description.R.usage
-#, ignore-duplicate, ignore-multiple-failures, ignore-same
-msgid ""
-"data('mtcars')\n"
-"dat <- mtcars\n"
-"\n"
-"# frequency tables can be provided for factors\n"
-"dat$gear <- as.factor(dat$gear)\n"
-"\n"
-"descriptives(dat, vars = vars(mpg, cyl, disp, gear), freq = TRUE)\n"
-"\n"
-"#\n"
-"#  DESCRIPTIVES\n"
-"#\n"
-"#  Descriptives\n"
-"#  ───────────────────────────────────────────\n"
-"#               mpg     cyl     disp    gear\n"
-"#  ───────────────────────────────────────────\n"
-"#    N            32      32      32      32\n"
-"#    Missing       0       0       0       0\n"
-"#    Mean       20.1    6.19     231    3.69\n"
-"#    Median     19.2    6.00     196    4.00\n"
-"#    Minimum    10.4    4.00    71.1       3\n"
-"#    Maximum    33.9    8.00     472       5\n"
-"#  ───────────────────────────────────────────\n"
-"#\n"
-"#\n"
-"#  FREQUENCIES\n"
-"#\n"
-"#  Frequencies of gear\n"
-"#  ────────────────────\n"
-"#    Levels    Counts\n"
-"#  ────────────────────\n"
-"#    3             15\n"
-"#    4             12\n"
-"#    5              5\n"
-"#  ────────────────────\n"
-"#\n"
-"\n"
-"# spliting by a variable\n"
-"descriptives(formula = disp + mpg ~ cyl, dat,\n"
-"    median=F, min=F, max=F, n=F, missing=F)\n"
-"\n"
-"# providing histograms\n"
-"descriptives(formula = mpg ~ cyl, dat, hist=T,\n"
-"    median=F, min=F, max=F, n=F, missing=F)\n"
-"\n"
-"# splitting by multiple variables\n"
-"descriptives(formula = mpg ~ cyl:gear, dat,\n"
-"    median=F, min=F, max=F, missing=F)"
-msgstr ""
-"தரவு ('MTCARS')\n"
-" dat <- MTCARS\n"
-"\n"
-" # காரணிகளுக்கு அதிர்வெண் அட்டவணைகள் வழங்கப்படலாம்\n"
-" dat $ பற்சக்கரம் <- as.factor (dat $ gear)\n"
-"\n"
-" விளக்கங்கள் (dat, vars = vars (mpg, cyl, disp, gear), freq = true)\n"
-"\n"
-" #\n"
-" # விளக்கங்கள்\n"
-" #\n"
-" # விளக்கங்கள்\n"
-" # ─\n"
-" # எம்பிசி சிலி டிச்ப் கியர்\n"
-" # ─\n"
-" # N 32 32 32 32\n"
-" # காணவில்லை 0 0 0 0\n"
-" # சராசரி 20.1 6.19 231 3.69\n"
-" # சராசரி 19.2 6.00 196 4.00\n"
-" # குறைந்தபட்சம் 10.4 4.00 71.1 3\n"
-" # அதிகபட்சம் 33.9 8.00 472 5\n"
-" # ─\n"
-" #\n"
-" #\n"
-" # அதிர்வெண்கள்\n"
-" #\n"
-" # கியரின் அதிர்வெண்கள்\n"
-" # ─\n"
-" # நிலைகள் எண்ணப்படுகின்றன\n"
-" # ─\n"
-" # 3 15\n"
-" # 4 12\n"
-" # 5 5\n"
-" # ─\n"
-" #\n"
-"\n"
-" # ஒரு மாறி மூலம் பிரித்தல்\n"
-" விளக்கங்கள் (ஃபார்முலா = disp + mpg ~ cyl, dat,\n"
-" சராசரி = f, min = f, max = f, n = f, காணவில்லை = f)\n"
-"\n"
-" # இச்டோகிராம்களை வழங்குதல்\n"
-" விளக்கங்கள் (ஃபார்முலா = எம்பிசி ~ சிலி, டாட், இச்ட் = டி,\n"
-" சராசரி = f, min = f, max = f, n = f, காணவில்லை = f)\n"
-"\n"
-" # பல மாறிகள் மூலம் பிரித்தல்\n"
-" விளக்கங்கள் (ஃபார்முலா = எம்பிசி ~ சிலி: கியர், டேட்,\n"
-" இடைநடு = f, min = f, max = f, காணவில்லை = f)"
-
-#: linReg/options.description.R.usage
-#, ignore-multiple-failures, ignore-same
-msgid ""
-"data('Prestige', package='carData')\n"
-"\n"
-"linReg(data = Prestige, dep = income,\n"
-"       covs = vars(education, prestige, women),\n"
-"       blocks = list(list('education', 'prestige', 'women')))\n"
-"\n"
-"#\n"
-"#  LINEAR REGRESSION\n"
-"#\n"
-"#  Model Fit Measures\n"
-"#  ───────────────────────────\n"
-"#    Model    R        R²\n"
-"#  ───────────────────────────\n"
-"#        1    0.802    0.643\n"
-"#  ───────────────────────────\n"
-"#\n"
-"#\n"
-"#  MODEL SPECIFIC RESULTS\n"
-"#\n"
-"#  MODEL 1\n"
-"#\n"
-"#\n"
-"#  Model Coefficients\n"
-"#  ────────────────────────────────────────────────────────\n"
-"#    Predictor    Estimate    SE         t         p\n"
-"#  ────────────────────────────────────────────────────────\n"
-"#    Intercept      -253.8    1086.16    -0.234     0.816\n"
-"#    women           -50.9       8.56    -5.948    < .001\n"
-"#    prestige        141.4      29.91     4.729    < .001\n"
-"#    education       177.2     187.63     0.944     0.347\n"
-"#  ────────────────────────────────────────────────────────\n"
-"#"
-msgstr ""
-"தரவு ('க ti ரவம்', தொகுப்பு = 'கார்டேட்டா')\n"
-"\n"
-" linreg (தரவு = க ti ரவம், dep = வருமானம்,\n"
-" covs = vars (கல்வி, க ti ரவம், பெண்கள்),\n"
-" தொகுதிகள் = பட்டியல் (பட்டியல் ('கல்வி', 'க ti ரவம்', 'பெண்கள்'))))\n"
-"\n"
-" #\n"
-" # நேரியல் பின்னடைவு\n"
-" #\n"
-" # மாதிரி பொருத்தம் நடவடிக்கைகள்\n"
-" # ─\n"
-" # மாதிரி r r²\n"
-" # ─\n"
-" # 1 0.802 0.643\n"
-" # ─\n"
-" #\n"
-" #\n"
-" # மாதிரி குறிப்பிட்ட முடிவுகள்\n"
-" #\n"
-" # மாதிரி 1\n"
-" #\n"
-" #\n"
-" # மாதிரி குணகங்கள்\n"
-" # ─ ─\n"
-" # முன்கணிப்பு மதிப்பீடு se t p\n"
-" # ─ ─\n"
-" # இடைமறிப்பு -253.8 1086.16 -0.234 0.816\n"
-" # பெண்கள் -50.9 8.56 -5.948 <.001\n"
-" # பிரெச்டீச் 141.4 29.91 4.729 <.001\n"
-" # கல்வி 177.2 187.63 0.944 0.347\n"
-" # ─ ─\n"
-" #"
-
-#: ancova/options.description.R.usage
-#, ignore-multiple-failures, ignore-same
-msgid ""
-"data('ToothGrowth')\n"
-"\n"
-"ancova(formula = len ~ supp + dose, data = ToothGrowth)\n"
-"\n"
-"#\n"
-"#  ANCOVA\n"
-"#\n"
-"#  ANCOVA\n"
-"#  ───────────────────────────────────────────────────────────────────────\n"
-"#                 Sum of Squares    df    Mean Square    F        p\n"
-"#  ───────────────────────────────────────────────────────────────────────\n"
-"#    supp                    205     1          205.4     11.4     0.001\n"
-"#    dose                   2224     1         2224.3    124.0    < .001\n"
-"#    Residuals              1023    57           17.9\n"
-"#  ───────────────────────────────────────────────────────────────────────\n"
-"#\n"
-"\n"
-"ancova(\n"
-"    formula = len ~ supp + dose,\n"
-"    data = ToothGrowth,\n"
-"    postHoc = ~ supp,\n"
-"    emMeans = ~ supp)"
-msgstr ""
-"தரவு ('பல் வளர்ச்சி')\n"
-"\n"
-" ANCOVA (ஃபார்முலா = லென் ~ சப் + டோச், தரவு = பல் வளர்ச்சி)\n"
-"\n"
-" #\n"
-" # அன்கோவா\n"
-" #\n"
-" # அன்கோவா\n"
-" # ─ ─\n"
-" # சதுரங்களின் தொகை df சராசரி நாற்கை f p\n"
-" # ─ ─\n"
-" # சப் 205 1 205.4 11.4 0.001\n"
-" # டோச் 2224 1 2224.3 124.0 <.001\n"
-" # எச்சங்கள் 1023 57 17.9\n"
-" # ─ ─\n"
-" #\n"
-"\n"
-" அன்கோவா (\n"
-" ஃபார்முலா = லென் ~ சப் + டோச்,\n"
-" தரவு = பல் வளர்ச்சி,\n"
-" போச்தோக் = ~ சப்,\n"
-" emmeans = ~ supp)"
-
-#: anova/options.description.R.usage
-#, ignore-multiple-failures, ignore-newline-count, ignore-same
-msgid ""
-"data('ToothGrowth')\n"
-"\n"
-"ANOVA(formula = len ~ dose * supp, data = ToothGrowth)\n"
-"\n"
-"#\n"
-"#  ANOVA\n"
-"#\n"
-"#  ANOVA\n"
-"#  ───────────────────────────────────────────────────────────────────────\n"
-"#                 Sum of Squares    df    Mean Square    F        p\n"
-"#  ───────────────────────────────────────────────────────────────────────\n"
-"#    dose                   2426     2         1213.2    92.00    < .001\n"
-"#    supp                    205     1          205.4    15.57    < .001\n"
-"#    dose:supp               108     2           54.2     4.11     0.022\n"
-"#    Residuals               712    54           13.2\n"
-"#  ───────────────────────────────────────────────────────────────────────\n"
-"#\n"
-"\n"
-"ANOVA(\n"
-"    formula = len ~ dose * supp,\n"
-"    data = ToothGrowth,\n"
-"    emMeans = ~ supp + dose:supp, # est. marginal means for supp and dose:supp\n"
-"    emmPlots = TRUE,              # produce plots of those marginal means\n"
-"    emmTables = TRUE)             # produce tables of those marginal means"
-msgstr ""
-"தரவு ('பல் வளர்ச்சி')\n"
-"\n"
-" ANOVA (ஃபார்முலா = லென் ~ டோச் * சப், தரவு = பல் வளர்ச்சி)\n"
-"\n"
-" #\n"
-" # ANOVA\n"
-" #\n"
-" # ANOVA\n"
-" # ─ ─\n"
-" # சதுரங்களின் தொகை df சராசரி நாற்கை f p\n"
-" # ─ ─\n"
-" # டோச் 2426 2 1213.2 92.00 <.001\n"
-" # சப் 205 1 205.4 15.57 <.001\n"
-" # டோச்: சப் 108 2 54.2 4.11 0.022\n"
-" # எச்சங்கள் 712 54 13.2\n"
-" # ─ ─\n"
-" #\n"
-"\n"
-" அனோவா (\n"
-" ஃபார்முலா = லென் ~ டோச் * சப்,\n"
-" தரவு = பல் வளர்ச்சி,\n"
-" emmeans = ~ supp + dose: supp, # est. சப் மற்றும் டோசிற்கான விளிம்பு வழிமுறைகள்: சப்: சப்\n"
-" emmplots = உண்மை, # அந்த விளிம்பு வழிமுறைகளின் அடுக்குகளை உருவாக்குங்கள்\n"
-" emmtables = true) # அந்த விளிம்பு வழிமுறைகளின் அட்டவணையை உருவாக்குங்கள்"
-
-#: anovaNP/options.description.R.usage
-#, ignore-multiple-failures, ignore-same
-msgid ""
-"data('ToothGrowth')\n"
-"\n"
-"anovaNP(formula = len ~ dose, data=ToothGrowth)\n"
-"\n"
-"#\n"
-"#  ONE-WAY ANOVA (NON-PARAMETRIC)\n"
-"#\n"
-"#  Kruskal-Wallis\n"
-"#  ───────────────────────────────\n"
-"#           χ²      df    p\n"
-"#  ───────────────────────────────\n"
-"#    len    40.7     2    < .001\n"
-"#  ───────────────────────────────\n"
-"#"
-msgstr ""
-"தரவு ('பல் வளர்ச்சி')\n"
-"\n"
-" anovanp (formula = len ~ டோச், தரவு = பல் வளர்ச்சி)\n"
-"\n"
-" #\n"
-" # ஒரு வழி ANOVA (அளவுரு அல்லாத)\n"
-" #\n"
-" # க்ருச்கல்-வாலிச்\n"
-" # ─\n"
-" # χ² df ப\n"
-" # ─\n"
-" # லென் 40.7 2 <.001\n"
-" # ─\n"
-" #"
-
-#: ttestIS/options.description.R.usage
-#, ignore-duplicate, ignore-multiple-failures, ignore-newline-count, ignore-same
-msgid ""
-"data('ToothGrowth')\n"
-"\n"
-"ttestIS(formula = len ~ supp, data = ToothGrowth)\n"
-"\n"
-"#\n"
-"#  INDEPENDENT SAMPLES T-TEST\n"
-"#\n"
-"#  Independent Samples T-Test\n"
-"#  ────────────────────────────────────────────────────\n"
-"#                          statistic    df      p\n"
-"#  ────────────────────────────────────────────────────\n"
-"#    len    Student's t         1.92    58.0    0.060\n"
-"#  ────────────────────────────────────────────────────\n"
-"#"
-msgstr ""
-"தரவு ('பல் வளர்ச்சி')\n"
-"\n"
-" ttestis (formula = len ~ supp, தரவு = பல் வளர்ச்சி)\n"
-"\n"
-" #\n"
-" # சுயாதீன மாதிரிகள் டி-சோதனை\n"
-" #\n"
-" # சுயாதீன மாதிரிகள் டி-சோதனை\n"
-" # ─ . F.\n"
-" # புள்ளிவிவர டி.எஃப் ப\n"
-" # ─ . F.\n"
-" # லென் மாணவரின் டி 1.92 58.0 0.060\n"
-" # ─ . F.\n"
-" #"
-
-#: ttestOneS/options.description.R.usage
-#, ignore-duplicate, ignore-multiple-failures, ignore-newline-count, ignore-same
-msgid ""
-"data('ToothGrowth')\n"
-"\n"
-"ttestOneS(ToothGrowth, vars = vars(len, dose))\n"
-"\n"
-"#\n"
-"#  ONE SAMPLE T-TEST\n"
-"#\n"
-"#  One Sample T-Test\n"
-"#  ──────────────────────────────────────────────────────\n"
-"#                           statistic    df      p\n"
-"#  ──────────────────────────────────────────────────────\n"
-"#    len     Student's t         19.1    59.0    < .001\n"
-"#    dose    Student's t         14.4    59.0    < .001\n"
-"#  ──────────────────────────────────────────────────────\n"
-"#"
-msgstr ""
-"தரவு ('பல் வளர்ச்சி')\n"
-"\n"
-" ttestones (பல் வளர்ச்சி, vars = vars (len, dose))\n"
-"\n"
-" #\n"
-" # ஒரு மாதிரி டி-சோதனை\n"
-" #\n"
-" # ஒரு மாதிரி டி-சோதனை\n"
-" # ─ ─\n"
-" # புள்ளிவிவர டி.எஃப் ப\n"
-" # ─ ─\n"
-" # லென் மாணவர்களின் டி 19.1 59.0 <.001\n"
-" # டோச் மாணவரின் டி 14.4 59.0 <.001\n"
-" # ─ ─\n"
-" #"
-
-#: anovaOneW/options.description.R.usage
-#, ignore-duplicate, ignore-multiple-failures, ignore-same
-msgid ""
-"data('ToothGrowth')\n"
-"dat <- ToothGrowth\n"
-"dat$dose <- factor(dat$dose)\n"
-"\n"
-"anovaOneW(formula = len ~ dose, data = dat)\n"
-"\n"
-"#\n"
-"#  ONE-WAY ANOVA\n"
-"#\n"
-"#  One-Way ANOVA (Welch's)\n"
-"#  ────────────────────────────────────────\n"
-"#           F       df1    df2     p\n"
-"#  ────────────────────────────────────────\n"
-"#    len    68.4      2    37.7    < .001\n"
-"#  ────────────────────────────────────────\n"
-"#"
-msgstr ""
-"தரவு ('பல் வளர்ச்சி')\n"
-" dat <- பல் வளர்ச்சி\n"
-" dat $ டோச் <- காரணி (dat $ டோச்)\n"
-"\n"
-" anovaonew (formula = len ~ dose, தகவல்கள் = dat)\n"
-"\n"
-" #\n"
-" # ஒரு வழி ANOVA\n"
-" #\n"
-" # ஒரு வழி ANOVA (வெல்ச்ச்)\n"
-" # ─\n"
-" # F DF1 DF2 ப\n"
-" # ─\n"
-" # லென் 68.4 2 37.7 <.001\n"
-" # ─\n"
-" #"
-
 #: corrMatrix/options/plotDens.title
 msgid "Densities for variables"
 msgstr "மாறிகள் அடர்த்தி"
 
 #: R/proptest2.b.R descriptives/options/dens.title
-#, ignore-reused
+#, ignore-inconsistent, ignore-reused
 msgid "Density"
 msgstr "அடர்த்தி"
 
@@ -4907,6 +1610,19 @@ msgstr "விளக்க அட்டவணை"
 msgid "Deviance"
 msgstr "விலகல்"
 
+#: R/conttables.b.R
+msgid "Deviance residuals"
+msgstr "விலகல் எச்சங்கள்"
+
+#: contTables/options/resA.title
+msgid "Deviance residuals (Poisson GLM)"
+msgstr "விலகல் எச்சங்கள் (பாய்சன் சி.எல்.எம்)"
+
+#: R/conttables.b.R
+msgid "Deviance residuals are adjusted residuals from a Poisson GLM."
+msgstr ""
+"ஒரு பாய்சன் சி.எல்.எம் -ல் இருந்து எஞ்சியிருக்கும் எச்சங்கள் எஞ்சியவை."
+
 #: ancova/options/contrasts.template/type/deviation.title
 #: anova/options/contrasts.template/type/deviation.title
 #: anovaRM/options/contrasts.template/type/deviation.title
@@ -4973,12 +1689,17 @@ msgid "Difference in proportions"
 msgstr "விகிதாச்சாரத்தில் வேறுபாடு"
 
 #: descriptives/ui[2][2][0].label
+#, ignore-multiple-failures
 msgid "Dispersion"
 msgstr "சிதறல்"
 
 #: descriptives/ui[2][3][0].label
 msgid "Distribution"
 msgstr "பரவல்"
+
+#: R/descriptives.b.R
+msgid "Does not support weighted data yet."
+msgstr "எடையுள்ள தரவை இன்னும் ஆதரிக்கவில்லை."
 
 #: anovaOneW/options/welchs.title
 msgid "Don't assume equal (Welch's)"
@@ -5008,6 +1729,10 @@ msgstr "இங்கே மாறிகள் இழுக்கவும்"
 msgid "DSCF pairwise comparisons"
 msgstr "டி.எச்.சி.எஃப் சோடிவரிசை ஒப்பீடுகள்"
 
+#: anovaNP/options/pairsDunn.title anovaNP/results/comparisonsDunn.title
+msgid "Dunn's pairwise comparisons"
+msgstr "டன்னின் சோடிவரிசை ஒப்பீடுகள்"
+
 #: linReg/results/models.template/assump/durbin.title
 msgid "Durbin–Watson Test for Autocorrelation"
 msgstr "டர்பின் -தன்னியக்க தொடர்புக்கான வாட்ச் டெச்ட்"
@@ -5022,7 +1747,7 @@ msgstr "DWASS-STEEL-CHRITCHLOW-FLIGNER சோடிவரிசை ஒப்ப�
 
 #: ancova/options/effectSize.title ancova/ui[1][1].label
 #: ancova/ui[5][1][1].label anova/options/effectSize.title
-#: anova/ui[1][1].label anova/ui[5][1][1].label
+#: anova/ui[1][1].label anova/ui[5][1][1].label anovaNP/ui[1][0].label
 #: anovaRM/options/effectSize.title anovaRM/ui[1][0][0].label
 #: ttestIS/options/effectSize.title ttestIS/results/ttest.columns.title
 #: ttestOneS/results/ttest.columns.title ttestPS/options/effectSize.title
@@ -5032,9 +1757,8 @@ msgid "Effect Size"
 msgstr "விளைவு அளவு"
 
 #: ancova/options/postHocES.title anova/options/postHocES.title
-#: anovaNP/options/es.title ttestIS/ui[1][1][0]/effectSize.label
-#: ttestOneS/options/effectSize.title ttestOneS/ui[1][1][0]/effectSize.label
-#: ttestPS/ui[1][1][0]/effectSize.label
+#: ttestIS/ui[1][1][0]/effectSize.label ttestOneS/options/effectSize.title
+#: ttestOneS/ui[1][1][0]/effectSize.label ttestPS/ui[1][1][0]/effectSize.label
 #, ignore-reused
 msgid "Effect size"
 msgstr "விளைவு அளவு"
@@ -5172,6 +1896,7 @@ msgstr "எதிர்பார்க்கப்படும் எண்ண�
 msgid "Expected Proportions"
 msgstr "எதிர்பார்க்கப்படும் விகிதாச்சாரம்"
 
+# Suggested in Weblate: ஆய்வு
 #. refers to the menu entry and has therefore to be short
 #: package/analyses/descriptives.menuGroup descriptives/options.menuGroup
 #, ignore-inconsistent, ignore-same
@@ -5221,6 +1946,7 @@ msgstr "எஃப் சோதனை"
 msgid "F-statistic could not be calculated"
 msgstr "எஃப்-புள்ளிவிவரத்தை கணக்கிட முடியவில்லை"
 
+# Suggested in Weblate: காரணி
 #: R/efa.b.R package/analyses/reliability.menuGroup
 #: package/analyses/pca.menuGroup package/analyses/efa.menuGroup
 #: package/analyses/cfa.menuGroup cfa/options.menuGroup
@@ -5399,6 +2125,7 @@ msgstr "சின்னங்களுடன் குறிப்பிடத�
 msgid "flag significant post-hoc comparisons."
 msgstr "குறிப்பிடத்தக்க பிந்தைய பிந்தைய ஒப்பீடுகளை கொடியிடுங்கள்."
 
+# Suggested in Weblate: அலைவெண்கள்
 #: package/analyses/propTest2.menuGroup package/analyses/propTestN.menuGroup
 #: package/analyses/contTables.menuGroup
 #: package/analyses/contTablesPaired.menuGroup
@@ -5466,6 +2193,7 @@ msgstr "கிரீன்அவுச் செல்கிறது"
 msgid "Greenhouse-Geisser ε"
 msgstr "கிரீன்அவுச்-குக்கர்"
 
+# Suggested in Weblate: குழு
 #: ttestIS/results/desc.columns.title
 #, ignore-inconsistent, ignore-multiple-failures
 msgid "Group"
@@ -5514,8 +2242,10 @@ msgstr "குழு சுருக்கம்"
 msgid "Group summary"
 msgstr "குழு சுருக்கம்"
 
+# Suggested in Weblate: தொகுத்தல் மாறி
 #: anovaNP/options/group.title anovaOneW/options/group.title
 #: anovaOneW/ui[0][1].label ttestIS/options/group.title
+#, ignore-inconsistent, ignore-multiple-failures
 msgid "Grouping Variable"
 msgstr "தொகுத்தல் மாறி"
 
@@ -5541,6 +2271,7 @@ msgid "Hₐ is negative correlation"
 msgstr "Hₐ எதிர்மறை தொடர்பு"
 
 #: R/corrmatrix.b.R R/corrpart.b.R
+#, ignore-inconsistent
 msgid "Hₐ is positive correlation"
 msgstr "Hₐ நேர்மறையான தொடர்பு"
 
@@ -5574,6 +2305,8 @@ msgid "Hide loadings below"
 msgstr "கீழே ஏற்றங்களை மறைக்கவும்"
 
 #: cfa/options/hlCorRes.title cfa/options/hlMI.title
+#: contTables/options/hlresP.title contTables/options/hlresS.title
+#: contTables/options/hlresA.title
 msgid "Highlight values above"
 msgstr "மேலே உள்ள மதிப்புகளை முன்னிலைப்படுத்தவும்"
 
@@ -5629,10 +2362,6 @@ msgstr "கருதுகோள்"
 #: reliability/results/items.columns.superTitle
 msgid "If item dropped"
 msgstr "உருப்படி கைவிடப்பட்டால்"
-
-#: anovaRM/options/contrasts.description.R
-msgid "in development"
-msgstr "வளர்ச்சியில்"
 
 #: anovaRM/options/groupSumm.description.ui
 msgid "include a summary of the groups"
@@ -5699,6 +2428,24 @@ msgstr "இடைவேளை"
 #: R/descriptives.b.R descriptives/options/iqr.title
 msgid "IQR"
 msgstr "Iqr"
+
+#: R/utilsanova.R
+#, ignore-long-untranslated
+msgid ""
+"It appears that your model has a \\\"singularity\\\" problem. This usually "
+"means that the model is having trouble distinguishing between certain "
+"effects because some variables are too closely related or there isn't enough"
+" data to estimate all the effects reliably. To resolve this, consider "
+"simplifying the model by removing some of the effects or checking if your "
+"data might have redundant or highly correlated variables."
+msgstr ""
+"உங்கள் மாதிரியில் \\ \"ஒருமைப்பாடு \\\" சிக்கல் இருப்பதாகத் தெரிகிறது. இது "
+"வழக்கமாக மாதிரியானது சில விளைவுகளுக்கு இடையில் வேறுபடுவதில் சிக்கல் உள்ளது, "
+"ஏனெனில் சில மாறிகள் மிகவும் நெருக்கமாக தொடர்புடையவை அல்லது அனைத்து "
+"விளைவுகளையும் நம்பத்தகுந்த முறையில் மதிப்பிடுவதற்கு போதுமான தரவு இல்லை. "
+"இதைத் தீர்க்க, சில விளைவுகளை அகற்றுவதன் மூலம் மாதிரியை எளிதாக்குவதைக் "
+"கவனியுங்கள் அல்லது உங்கள் தரவுகளில் தேவையற்ற அல்லது மிகவும் தொடர்புடைய "
+"மாறிகள் இருக்கக்கூடும்."
 
 #: R/anovarm.b.R
 msgid "Item '{item}' consists of one level only"
@@ -5919,6 +2666,42 @@ msgstr "கீழ்"
 msgid "lower bound"
 msgstr "கீழ் எல்லை"
 
+#: R/linreg.b.R
+#, ignore-same
+msgid "Mahalanobis ChiSq"
+msgstr "மஅலானோபிச் சிச்க்"
+
+#: linReg/options/mahal.title linReg/options/mahalOV.title
+msgid "Mahalanobis distance"
+msgstr "மஅலானோபிச் தூரம்"
+
+#: linReg/results/models.template/dataSummary/mahal.title
+#: linReg/results/mahalOV.title
+#, ignore-reused
+msgid "Mahalanobis Distance"
+msgstr "மஅலானோபிச் தூரம்"
+
+#: R/linreg.b.R
+msgid "Mahalanobis distance (Chi sq.)"
+msgstr "மஅலானோபிச் தூரம் (சி சுக்.)"
+
+#: R/linreg.b.R
+msgid "Mahalanobis distance (p)"
+msgstr "மஅலானோபிச் தூரம் (பி)"
+
+#: R/linreg.b.R
+msgid ""
+"Mahalanobis distance can only be calculated for models with two or more "
+"covariates"
+msgstr ""
+"மஅலானோபிச் தூரத்தை இரண்டு அல்லது அதற்கு மேற்பட்ட கோவாரியட்டுகள் கொண்ட "
+"மாதிரிகளுக்கு மட்டுமே கணக்கிட முடியும்"
+
+#: R/linreg.b.R
+#, ignore-same
+msgid "Mahalanobis p"
+msgstr "இடம்"
+
 #: package/analyses/mancova.title package/analyses/mancova.menuTitle
 #: mancova/options.title mancova/ui.title mancova/results.title
 msgid "MANCOVA"
@@ -5970,6 +2753,7 @@ msgid "Mauchly's W"
 msgstr "ம uch ச்லியின் டபிள்யூ"
 
 #: linReg/results/models.template/dataSummary/cooks.columns.title
+#: linReg/results/models.template/dataSummary/mahal.columns.title
 #: logRegBin/results/models.template/dataSummary/cooks.columns.title
 msgid "Max"
 msgstr "அதிகபட்சம்"
@@ -6022,13 +2806,14 @@ msgstr "மெக்நெமர் சோதனை"
 #: anovaOneW/results/desc.columns.title anovaRMNP/results/desc.columns.title
 #: descriptives/options/boxMean.title descriptives/options/mean.title
 #: linReg/results/models.template/dataSummary/cooks.columns.title
+#: linReg/results/models.template/dataSummary/mahal.columns.title
 #: logRegBin/results/models.template/dataSummary/cooks.columns.title
 #: reliability/options/meanScale.title reliability/options/meanItems.title
 #: reliability/results/scale.columns.title
 #: reliability/results/items.columns.title ttestIS/results/desc.columns.title
 #: ttestOneS/results/descriptives.columns.title
 #: ttestPS/results/desc.columns.title
-#, ignore-reused
+#, ignore-inconsistent, ignore-reused
 msgid "Mean"
 msgstr "இடை, சராசரி"
 
@@ -6102,6 +2887,7 @@ msgstr "நடவடிக்கைகள்"
 #: R/descriptives.b.R R/ttestis.b.R R/ttestps.b.R
 #: anovaRMNP/results/desc.columns.title descriptives/options/median.title
 #: linReg/results/models.template/dataSummary/cooks.columns.title
+#: linReg/results/models.template/dataSummary/mahal.columns.title
 #: logRegBin/results/models.template/dataSummary/cooks.columns.title
 #: ttestIS/results/desc.columns.title
 #: ttestOneS/results/descriptives.columns.title
@@ -6118,6 +2904,7 @@ msgid "Method"
 msgstr "முறை"
 
 #: linReg/results/models.template/dataSummary/cooks.columns.title
+#: linReg/results/models.template/dataSummary/mahal.columns.title
 #: logRegBin/results/models.template/dataSummary/cooks.columns.title
 msgid "Min"
 msgstr "மணித்துளி"
@@ -6142,11 +2929,13 @@ msgstr "குறைந்தபட்ச மதிப்பு"
 msgid "Missing"
 msgstr "இல்லை"
 
+# Suggested in Weblate: மதிப்புகள் இல்லை
 #: anovaOneW/ui[1][0][1].label
 #, ignore-multiple-failures, ignore-reused
 msgid "Missing Values"
 msgstr "மதிப்புகள் இல்லை"
 
+# Suggested in Weblate: மதிப்புகள் இல்லை
 #: ttestIS/options/miss.title ttestIS/ui[1][0][2].label
 #: ttestOneS/options/miss.title ttestOneS/ui[1][0][2].label
 #: ttestPS/options/miss.title ttestPS/ui[1][0][2].label
@@ -6206,6 +2995,10 @@ msgstr "மாதிரி ஒப்பீடுகள்"
 msgid "Model Fit"
 msgstr "மாதிரி பொருத்தம்"
 
+#: R/utilsanova.R
+msgid "Model fit issue detected!"
+msgstr "மாதிரி பொருத்தம் வெளியீடு கண்டறியப்பட்டது!"
+
 #: linReg/results/modelFit.title logLinear/results/modelFit.title
 #: logRegBin/results/modelFit.title logRegMulti/results/modelFit.title
 #: logRegOrd/results/modelFit.title pca/results/modelFit/fit.title
@@ -6242,6 +3035,10 @@ msgstr "மாதிரி வாசல்கள்"
 #, ignore-reused
 msgid "Model thresholds"
 msgstr "மாதிரி வாசல்கள்"
+
+#: R/linreg.b.R R/logregbin.b.R R/logregmulti.b.R R/logregord.b.R
+msgid "Models estimated using sample size of N={n}"
+msgstr "N = {n of இன் மாதிரி அளவைப் பயன்படுத்தி மதிப்பிடப்பட்ட மாதிரிகள்"
 
 #: cfa/results/modelPerformance/modIndices.title
 #, ignore-reused
@@ -6342,6 +3139,7 @@ msgstr ""
 "எந்த காரணிகளும் வரையறுக்கப்படவில்லை. மாதிரிகள் காரணிகளைக் கொண்டிருக்கும்போது"
 " மட்டுமே பெட்டியின் எம் சோதனை பொருத்தமானது."
 
+# Suggested in Weblate: பெயரளவு
 #: contTables/ui[1][0][1][0][0].label contTables/results/nom.title
 #, ignore-multiple-failures, ignore-same
 msgid "Nominal"
@@ -6353,6 +3151,7 @@ msgstr "பெயரளவு"
 msgid "Non-Parametric"
 msgstr "அளவுரு அல்லாத"
 
+# Suggested in Weblate: எதுவுமில்லை
 #: ancova/options/contrasts.template/type/none.title
 #: ancova/options/emmPlotError/none.title
 #: anova/options/contrasts.template/type/none.title
@@ -6400,6 +3199,10 @@ msgstr "இயல்பான சோதனை (சாபிரோ-வில்�
 msgid "Not all coefficients could be estimated (likely due to singular fit)"
 msgstr ""
 "எல்லா குணகங்களையும் மதிப்பிட முடியாது (ஒற்றை பொருத்தம் காரணமாக இருக்கலாம்)"
+
+#: R/descriptives.b.R
+msgid "Not all statistics support weighted data yet."
+msgstr "எல்லா புள்ளிவிவரங்களும் இன்னும் எடையுள்ள தரவை ஆதரிக்கவில்லை."
 
 #: R/mancova.b.R
 msgid "Not available due to too large number of cases (> 5000)."
@@ -6512,25 +3315,6 @@ msgstr "ஒவ்வொரு சோதனை"
 msgid "Omnibus Tests"
 msgstr "அனைத்து சோதனைகளும்"
 
-#: corrMatrix/options/hypothesis.description.R
-#: corrPart/options/hypothesis.description.R
-msgid ""
-"one of `'corr'` (default), `'pos'`, `'neg'` specifying the alernative "
-"hypothesis; correlated, correlated positively, correlated negatively "
-"respectively."
-msgstr ""
-"`'கோர்' (இயல்புநிலை),` 'போச்', `' எதிர்மறையானது மாற்று கருதுகோளைக் "
-"குறிப்பிடுகிறது; தொடர்புபடுத்தப்பட்ட, நேர்மறையாக தொடர்புடைய, முறையே "
-"எதிர்மறையாக தொடர்புடையது."
-
-#: corrPart/options/type.description.R
-msgid ""
-"one of `'part'` (default) or `'semi'` specifying the type of partial "
-"correlation to calculate; partial or semipartial correlation."
-msgstr ""
-"`'பகுதி' (இயல்புநிலை) அல்லது`' அரை 'கணக்கிடுவதற்கான பகுதி தொடர்புகளின் "
-"வகையைக் குறிப்பிடுவது; பகுதி அல்லது அரைகுறை தொடர்பு."
-
 #: R/ttestis.b.R
 msgid "One or both groups do not contain enough observations"
 msgstr "ஒன்று அல்லது இரு குழுக்களும் போதுமான அவதானிப்புகள் இல்லை"
@@ -6558,83 +3342,6 @@ msgid ""
 msgstr ""
 "மாதிரியில் ஒன்று அல்லது அதற்கு மேற்பட்ட குணகங்கள் '{modelNo}' சரியான "
 "கூட்டுறவு காரணமாக மதிப்பிட முடியாது."
-
-#: cfa/options/fitMeasures.description.R
-#, ignore-multiple-failures
-msgid ""
-"one or more of `'cfi'`, `'tli'`, `'srmr'`, `'rmsea'`, `'aic'`, or `'bic'`; "
-"use CFI, TLI, SRMR, RMSEA + 90% confidence interval, adjusted AIC, and BIC "
-"model fit measures, respectively"
-msgstr ""
-"ஒன்று அல்லது அதற்கு மேற்பட்ட `'cfi'`,`' tli'`, `'srmr'`,`' rmsea ', `' "
-"aic'`, அல்லது` 'bic'`; முறையே CFI, TLI, SRMR, RMSEA + 90% நம்பிக்கை இடைவெளி,"
-" சரிசெய்யப்பட்ட AIC மற்றும் BIC மாதிரி பொருத்தம் நடவடிக்கைகளைப் "
-"பயன்படுத்தவும்"
-
-#: ancova/options/effectSize.description.R
-#: anova/options/effectSize.description.R
-#: anovaRM/options/effectSize.description.R
-#, ignore-duplicate, ignore-multiple-failures
-msgid ""
-"one or more of `'eta'`, `'partEta'`, or `'omega'`; use η², partial η², and "
-"ω² effect sizes, respectively"
-msgstr ""
-"ஒன்று அல்லது அதற்கு மேற்பட்ட `'eta'`,`' parteta'`, அல்லது `'omega'`; முறையே "
-"η², பகுதி η² மற்றும் ω² விளைவு அளவுகளைப் பயன்படுத்தவும்"
-
-#: anovaRM/options/spherCorr.description.R
-msgid ""
-"one or more of `'none'` (default), `'GG'`, or ``HF``; use no p-value "
-"correction, the Greenhouse-Geisser p-value correction, and the Huynh-Feldt "
-"p-value correction for shericity, respectively"
-msgstr ""
-"ஒன்று அல்லது அதற்கு மேற்பட்ட `'எதுவுமில்லை' (இயல்புநிலை),` 'gg'`, அல்லது `` "
-"hf``; பி-மதிப்பு திருத்தம், கிரீன்அவுச்-கீசர் பி-மதிப்பு திருத்தம் மற்றும் "
-"செரிசிட்டிக்கு முறையே உய்ன்-ஃபெல்ட் பி-மதிப்பு திருத்தம் ஆகியவற்றைப் "
-"பயன்படுத்த வேண்டாம்"
-
-#: anovaRM/options/postHocCorr.description.R
-msgid ""
-"one or more of `'none'`, `'tukey'` (default), `'scheffe'`, `'bonf'`, or "
-"`'holm'`; use no, Tukey, Scheffe, Bonferroni and Holm posthoc corrections, "
-"respectively"
-msgstr ""
-"ஒன்று அல்லது அதற்கு மேற்பட்ட `'எதுவுமில்லை',` 'டுகே'` (இயல்புநிலை), `' "
-"செஃப்'`,` 'பாண்ட்'`, அல்லது `' ஓல்ம் '; முறையே NO, TUKEY, SCHEFFE, "
-"Bonferroni மற்றும் HOLM POST HOC திருத்தம் பயன்படுத்தவும்"
-
-#: ancova/options/postHocCorr.description.R
-#: anova/options/postHocCorr.description.R
-#, ignore-end-stop, ignore-multiple-failures
-msgid ""
-"one or more of `'none'`, `'tukey'`, `'scheffe'`, `'bonf'`, or `'holm'`; "
-"provide no, Tukey, Scheffe, Bonferroni, and Holm Post Hoc corrections "
-"respectively"
-msgstr ""
-"ஒன்று அல்லது அதற்கு மேற்பட்ட `'எதுவுமில்லை',` 'டுகே'`, `' செஃப்'`,` "
-"'போன்ஃப்'`, அல்லது `' ஓல்ம் '; முறையே டுகே, செஃப், போன்பெரோரோனி மற்றும் "
-"ஓல்ம் போச்ட் ஓக் திருத்தங்களை வழங்க வேண்டாம்"
-
-#: mancova/options/multivar.description.R
-msgid ""
-"one or more of `'pillai'`, `'wilks'`, `'hotel'`, or `'roy'`; use Pillai's "
-"Trace, Wilks' Lambda, Hotelling's Trace, and Roy's Largest Root multivariate"
-" statistics, respectively"
-msgstr ""
-"ஒன்று அல்லது அதற்கு மேற்பட்ட `'பிள்ளை'`,`' வில்க்ச்'`, `'ஓட்டல்', அல்லது` "
-"'ராய்'`; பிள்ளையின் சுவடு, வில்க்சின் லாம்ப்டா, ஓட்டல் ட்ரேச் மற்றும் ராயின்"
-" மிகப்பெரிய ரூட் பன்முக புள்ளிவிவரங்களைப் பயன்படுத்தவும்"
-
-#: logLinear/options/pseudoR2.description.R
-#: logRegBin/options/pseudoR2.description.R
-#: logRegMulti/options/pseudoR2.description.R
-#: logRegOrd/options/pseudoR2.description.R
-msgid ""
-"one or more of `'r2mf'`, `'r2cs'`, or `'r2n'`; use McFadden's, Cox & Snell, "
-"and Nagelkerke pseudo-R², respectively"
-msgstr ""
-"ஒன்று அல்லது அதற்கு மேற்பட்ட `'r2mf'`,`' r2cs'`, அல்லது `'r2n'`; முறையே "
-"மெக்பேடன், காக்ச் & ச்னெல் மற்றும் நாகெல்கெர்கே போலி-ஆர்-ஐப் பயன்படுத்தவும்"
 
 #: package/analyses/propTest2.menuSubgroup
 #: package/analyses/propTestN.menuSubgroup propTest2/options.menuSubgroup
@@ -6672,6 +3379,7 @@ msgstr "ஒரு வழி ANOVA (வெல்ச்ச்)"
 msgid "Options"
 msgstr "விருப்பங்கள்"
 
+# Suggested in Weblate: சாதாரண
 #: contTables/ui[1][0][1][1][0].label
 #, ignore-multiple-failures, ignore-same
 msgid "Ordinal"
@@ -6691,6 +3399,7 @@ msgstr "சாதாரண விளைவுகள்"
 msgid "Outliers"
 msgstr "வெளிநாட்டவர்கள்"
 
+# Suggested in Weblate: வெளியீடு
 #: ancova/ui[6][1][0][0].label anova/ui[6][1][0][0].label
 #: anovaRM/ui[5][1][0][0].label linReg/ui[6][1][1][0].label
 #: logLinear/ui[5][1][1][0].label logRegBin/ui[6][1][1][0].label
@@ -6778,12 +3487,26 @@ msgstr "ஒட்டுமொத்த மாதிரி சோதனை"
 msgid "p"
 msgstr "ப"
 
+#: linReg/ui[3][0][1][0]/mahal/mahalp.label
+msgid "p <"
+msgstr "ப <"
+
 #: anovaOneW/results/postHoc.template.columns.content
 #: corrMatrix/results/matrix.columns.content
 #: corrPart/results/matrix.columns.content
 #, ignore-multiple-failures, ignore-same
 msgid "p-value"
 msgstr "பி-மதிப்பு"
+
+#: anovaNP/results/comparisonsDunn.template.columns.title
+#, ignore-same
+msgid "p<sub>(Bonferroni)</sub>"
+msgstr "பி <சப்> (போன்பெரோரோனி) </துணை>"
+
+#: anovaNP/results/comparisonsDunn.template.columns.title
+#, ignore-long-untranslated, ignore-multiple-failures
+msgid "p<sub>(unadj)</sub>"
+msgstr "பி <சப்> (unadj) </sub>"
 
 #: R/ancova.b.R
 #, ignore-multiple-failures, ignore-same
@@ -6826,6 +3549,7 @@ msgid "Paired Variables"
 msgstr "இணை மாறிகள்"
 
 #: anovaNP/results/comparisons.template.title
+#: anovaNP/results/comparisonsDunn.template.title
 msgid "Pairwise comparisons - $key"
 msgstr "இணை ஒப்பீடுகள் - $ விசை"
 
@@ -6910,6 +3634,10 @@ msgstr "பகுதி ம"
 msgid "partial η²"
 msgstr "பகுதி ம"
 
+#: linReg/results/models.template/dataSummary/mahal.columns.title
+msgid "Participants (rows) below p-threshold"
+msgstr "பி-வாசலுக்குக் கீழே பங்கேற்பாளர்கள் (வரிசைகள்)"
+
 #: cfa/results/pathDiagram.title
 #, ignore-reused
 msgid "Path Diagram"
@@ -6930,6 +3658,10 @@ msgstr "பியர்சன்"
 msgid "Pearson correlation cannot be calculated for non-numeric values"
 msgstr "பியர்சன் தொடர்பை எண் அல்லாத மதிப்புகளுக்கு கணக்கிட முடியாது"
 
+#: R/conttables.b.R contTables/options/resP.title
+msgid "Pearson residuals"
+msgstr "பியர்சன் எச்சங்கள்"
+
 #: corrMatrix/results/matrix.columns.content
 #: corrPart/results/matrix.columns.content
 #, ignore-same
@@ -6940,8 +3672,10 @@ msgstr "பியர்சனின் ஆர்"
 msgid "Pearson{}Correlation"
 msgstr "பியர்சன் {} தொடர்பு"
 
+# Suggested in Weblate: சதவீதங்கள்
 #: contTables/options/yaxis/ypc.title contTables/ui[1][1][0][1][0].label
 #: contTablesPaired/ui[2][0].label
+#, ignore-inconsistent, ignore-multiple-failures
 msgid "Percentages"
 msgstr "சதவீதங்கள்"
 
@@ -7069,12 +3803,15 @@ msgstr ""
 msgid "plot the data along with the marginal means."
 msgstr "விளிம்பு வழிமுறைகளுடன் தரவைத் திட்டமிடுங்கள்."
 
+# Suggested in Weblate: சூழ்ச்சி வகை
 #: anovaRMNP/options/plotType.title
+#, ignore-inconsistent, ignore-multiple-failures
 msgid "Plot Type"
 msgstr "சூழ்ச்சி வகை"
 
+# Suggested in Weblate: அடுக்கு
 #: anovaOneW/results/plots.title cfa/ui[5][1][0].label
-#: contTables/ui[1][2].label contTables/ui[1][2][0][0][0].label
+#: contTables/ui[1][3].label contTables/ui[1][3][0][0][0].label
 #: contTables/results/barplot.title descriptives/ui[3].label
 #: descriptives/results/plots.title propTest2/ui[2][0][1].label
 #: ttestIS/results/plots.title ttestOneS/results/plots.title
@@ -7082,6 +3819,10 @@ msgstr "சூழ்ச்சி வகை"
 #, ignore-inconsistent, ignore-multiple-failures, ignore-reused
 msgid "Plots"
 msgstr "அடுக்கு"
+
+#: R/descriptives.b.R
+msgid "Plots are not yet supported for weighted descriptives."
+msgstr "எடையுள்ள விளக்கங்களுக்கு அடுக்குகள் இன்னும் ஆதரிக்கப்படவில்லை."
 
 #: ancova/options/contrasts.template/type/polynomial.title
 #: anova/options/contrasts.template/type/polynomial.title
@@ -7094,11 +3835,21 @@ msgstr "அடுக்குக்கோவை"
 msgid "Post Hoc Comparisons - {term}"
 msgstr "பிந்தைய தற்காலிக ஒப்பீடுகள் - {term}"
 
+#: R/conttables.b.R
+#, ignore-reused
+msgid "Post Hoc Test"
+msgstr "பிந்தைய தற்காலிக சோதனை"
+
+#: R/conttables.b.R
+msgid "Post Hoc Test ({title})"
+msgstr "பிந்தைய தற்காலிக சோதனை ({title})"
+
 #: ancova/options/postHoc.title ancova/ui[5].label
 #: ancova/results/postHoc.title anova/options/postHoc.title anova/ui[5].label
-#: anova/results/postHoc.title anovaOneW/results/postHoc.title
-#: anovaRM/options/postHoc.title anovaRM/ui[4].label
-#: anovaRM/results/postHoc.title
+#: anova/results/postHoc.title anovaNP/ui[1][1].label
+#: anovaOneW/results/postHoc.title anovaRM/options/postHoc.title
+#: anovaRM/ui[4].label anovaRM/results/postHoc.title contTables/ui[1][2].label
+#: contTables/ui[1][2][0][0][0].label contTables/results/postHoc.title
 #, ignore-reused
 msgid "Post Hoc Tests"
 msgstr "பிந்தைய தற்காலிக சோதனைகள்"
@@ -7589,7 +4340,9 @@ msgstr "R² <sub> t </sub>"
 
 #: R/descriptives.b.R descriptives/options/range.title
 #: linReg/results/models.template/dataSummary/cooks.columns.superTitle
+#: linReg/results/models.template/dataSummary/mahal.columns.superTitle
 #: logRegBin/results/models.template/dataSummary/cooks.columns.superTitle
+#, ignore-inconsistent, ignore-multiple-failures
 msgid "Range"
 msgstr "வீச்சு"
 
@@ -7635,6 +4388,7 @@ msgstr "குறிப்பு நிலை (போலி குறியீ�
 msgid "Reference Levels"
 msgstr "குறிப்பு நிலைகள்"
 
+# Suggested in Weblate: பின்னடைவு
 #: package/analyses/corrMatrix.menuGroup package/analyses/corrPart.menuGroup
 #: package/analyses/linReg.menuGroup package/analyses/logRegBin.menuGroup
 #: package/analyses/logRegMulti.menuGroup package/analyses/logRegOrd.menuGroup
@@ -7771,6 +4525,7 @@ msgstr "எச்சங்கள் கவனிக்கப்பட்ட த�
 msgid "Residuals Plots"
 msgstr "மீதமுள்ள அடுக்கு"
 
+# Suggested in Weblate: முடிவுகள்
 #: package/analyses/empty.title package/analyses/empty.menuTitle
 #: cfa/ui[3][0][0].label empty/options.title empty/ui.title
 #: empty/results.title
@@ -7785,10 +4540,6 @@ msgstr "தலைகீழ் அளவிடப்பட்ட உருப்�
 #: reliability/ui[2]/revItemsSupplier[0].label
 msgid "Reverse Scaled Items"
 msgstr "தலைகீழ் அளவிடப்பட்ட உருப்படிகள்"
-
-#: jamovi/js/anovarm.events.js:8
-msgid "RM Factor {0}"
-msgstr "Rm காரணி {0}"
 
 #: anovaRM/options/rm.default[0].label
 msgid "RM Factor 1"
@@ -7842,6 +4593,7 @@ msgstr "வரிசை எண்"
 msgid "Row variable '{var}' contains fewer than 2 levels"
 msgstr "வரிசை மாறி '{var}' 2 நிலைகளுக்கு குறைவாகவே உள்ளது"
 
+# Suggested in Weblate: வரிசைகள்
 #: contTables/options/rows.title contTables/options/xaxis/xrows.title
 #: contTablesPaired/options/rows.title
 #, ignore-inconsistent, ignore-reused
@@ -7852,11 +4604,6 @@ msgstr "வரிசைகள்"
 #, ignore-reused
 msgid "rows"
 msgstr "வரிசைகள்"
-
-#: contTables/options/xaxis.description.R
-msgid "rows (default), or columns in bar plot X axis"
-msgstr ""
-"வரிசைகள் (இயல்புநிலை), அல்லது பார் சூழ்ச்சி ஃச் அச்சில் உள்ள நெடுவரிசைகள்"
 
 #: R/conttables.b.R
 msgid "Rows compared"
@@ -7870,6 +4617,7 @@ msgstr "ராயின் மிகப்பெரிய வேர்"
 msgid "Sample Size"
 msgstr "மாதிரி அளவு"
 
+# Suggested in Weblate: சேமி
 #: ancova/ui[7].label anova/ui[7].label efa/ui[2].label linReg/ui[7].label
 #: logRegBin/ui[8].label pca/ui[2].label reliability/ui[3].label
 #, ignore-inconsistent, ignore-multiple-failures, ignore-reused
@@ -7941,6 +4689,7 @@ msgstr "ச்க்ரீ சூழ்ச்சி"
 
 #: R/descriptives.b.R anovaOneW/results/desc.columns.title
 #: linReg/results/models.template/dataSummary/cooks.columns.title
+#: linReg/results/models.template/dataSummary/mahal.columns.title
 #: logRegBin/results/models.template/dataSummary/cooks.columns.title
 #: reliability/results/scale.columns.title
 #: reliability/results/items.columns.title ttestIS/results/desc.columns.title
@@ -7995,83 +4744,6 @@ msgstr "உணர்திறன்"
 #, ignore-multiple-failures
 msgid "septic"
 msgstr "செப்டிக்"
-
-#: logRegOrd/options.description.R.usage
-#, ignore-multiple-failures, ignore-same
-msgid ""
-"set.seed(1337)\n"
-"\n"
-"y <- factor(sample(1:3, 100, replace = TRUE))\n"
-"x1 <- rnorm(100)\n"
-"x2 <- rnorm(100)\n"
-"\n"
-"df <- data.frame(y=y, x1=x1, x2=x2)\n"
-"\n"
-"logRegOrd(data = df, dep = y,\n"
-"          covs = vars(x1, x2),\n"
-"          blocks = list(list(\"x1\", \"x2\")))\n"
-"\n"
-"#\n"
-"#  ORDINAL LOGISTIC REGRESSION\n"
-"#\n"
-"#  Model Fit Measures\n"
-"#  ───────────────────────────────────────\n"
-"#    Model    Deviance    AIC    R²-McF\n"
-"#  ───────────────────────────────────────\n"
-"#        1         218    226    5.68e-4\n"
-"#  ───────────────────────────────────────\n"
-"#\n"
-"#\n"
-"#  MODEL SPECIFIC RESULTS\n"
-"#\n"
-"#  MODEL 1\n"
-"#\n"
-"#  Model Coefficients\n"
-"#  ────────────────────────────────────────────────────\n"
-"#    Predictor    Estimate    SE       Z        p\n"
-"#  ────────────────────────────────────────────────────\n"
-"#    x1             0.0579    0.193    0.300    0.764\n"
-"#    x2             0.0330    0.172    0.192    0.848\n"
-"#  ────────────────────────────────────────────────────\n"
-"#\n"
-"#"
-msgstr ""
-"set.seed (1337)\n"
-"\n"
-" ஒய் <- காரணி (மாதிரி (1: 3, 100, மாற்றுதல் = உண்மை))\n"
-" x1 <- rnorm (100)\n"
-" x2 <- rnorm (100)\n"
-"\n"
-" df <- data.frame (y = ஒய், x1 = x1, x2 = x2)\n"
-"\n"
-" logerdord (தரவு = df, dep = y,\n"
-" covs = vars (x1, x2),\n"
-" தொகுதிகள் = பட்டியல் (பட்டியல் (\"x1\", \"x2\")))\n"
-"\n"
-" #\n"
-" # ஆர்டினல் லாசிச்டிக் பின்னடைவு\n"
-" #\n"
-" # மாதிரி பொருத்தம் நடவடிக்கைகள்\n"
-" # ─\n"
-" # மாதிரி விலகல் AIC R²-MCF\n"
-" # ─\n"
-" # 1 218 226 5.68E-4\n"
-" # ─\n"
-" #\n"
-" #\n"
-" # மாதிரி குறிப்பிட்ட முடிவுகள்\n"
-" #\n"
-" # மாதிரி 1\n"
-" #\n"
-" # மாதிரி குணகங்கள்\n"
-" # ─ . F.\n"
-" # முன்கணிப்பு மதிப்பீடு Se சட் p\n"
-" # ─ . F.\n"
-" # x1 0.0579 0.193 0.300 0.764\n"
-" # x2 0.0330 0.172 0.192 0.848\n"
-" # ─ . F.\n"
-" #\n"
-" #"
 
 #: R/ancova.b.R
 msgid "sextic"
@@ -8142,6 +4814,10 @@ msgstr ""
 "மற்ற முன்கணிப்பு மாறிகளின் நேரியல் கலவையாகும்."
 
 #: R/anovarm.b.R
+msgid "Singularity error. Sphericity corrections are not available"
+msgstr "ஒருமைப்பாடு பிழை. கோள திருத்தங்கள் கிடைக்கவில்லை"
+
+#: R/anovarm.b.R
 msgid "Singularity error. Sphericity tests are not available"
 msgstr "ஒருமைப்பாடு பிழை. கோள சோதனைகள் கிடைக்கவில்லை"
 
@@ -8155,12 +4831,13 @@ msgstr "ஏற்றங்களை அளவு மூலம் வரிசை
 
 #: corrMatrix/options/spearman.title corrMatrix/ui[1][0]/spearman.label
 #: corrPart/options/spearman.title corrPart/ui[1][0]/spearman.label
-#, ignore-same
+#, ignore-multiple-failures, ignore-same
 msgid "Spearman"
 msgstr "ச்பியர்மேன்"
 
 #: corrMatrix/results/matrix.columns.content
 #: corrPart/results/matrix.columns.content
+#, ignore-multiple-failures
 msgid "Spearman's rho"
 msgstr "ச்பியர்மேனின் ரோ"
 
@@ -8191,6 +4868,7 @@ msgid "Sphericity tests"
 msgstr "கோள சோதனைகள்"
 
 #: descriptives/options/splitBy.title descriptives/ui[0][1].label
+#, ignore-reused
 msgid "Split by"
 msgstr "பிரிந்தது"
 
@@ -8206,10 +4884,6 @@ msgstr "எச்.ஆர்.எம்.ஆர்"
 #: pca/results/factorStats/factorSummary.columns.title
 msgid "SS Loadings"
 msgstr "எச்எச் ஏற்றுதல்"
-
-#: contTables/options/bartype.description.R
-msgid "stack or side by side (default), barplot type"
-msgstr "அடுக்கு அல்லது பக்கமாக (இயல்புநிலை), பார்ப்லாட் வகை"
 
 #: contTables/options/bartype/stack.title
 #: descriptives/options/dotType/stack.title
@@ -8236,6 +4910,7 @@ msgstr "திட்டவிலக்கல், நியம விலகல்
 msgid "Standard Error"
 msgstr "நிலையான பிழை"
 
+# Suggested in Weblate: நிலையான பிழை
 #: ancova/options/emmPlotError/se.title anovaRM/options/emmPlotError/se.title
 #: descriptives/options/se.title
 #, ignore-inconsistent, ignore-multiple-failures, ignore-reused
@@ -8254,8 +4929,18 @@ msgstr "தரப்படுத்தப்பட்ட மதிப்பீ�
 
 #: R/ancova.b.R R/anovaonew.b.R R/anovarm.b.R R/descriptives.b.R R/linreg.b.R
 #: R/ttestis.b.R R/ttestones.b.R R/ttestps.b.R
+#, ignore-reused
 msgid "Standardized Residuals"
 msgstr "தரப்படுத்தப்பட்ட எச்சங்கள்"
+
+#: R/conttables.b.R
+#, ignore-reused
+msgid "Standardized residuals"
+msgstr "தரப்படுத்தப்பட்ட எச்சங்கள்"
+
+#: contTables/options/resS.title
+msgid "Standardized residuals (adjusted Pearson)"
+msgstr "தரப்படுத்தப்பட்ட எச்சங்கள் (சரிசெய்யப்பட்ட பியர்சன்)"
 
 #: ancova/results/assump/norm.columns.title
 #: anovaRMNP/results/comp.columns.title
@@ -8349,6 +5034,7 @@ msgstr "சுருக்கம்"
 msgid "t"
 msgstr "டி"
 
+# Suggested in Weblate: டி-சோதனைகள்
 #: package/analyses/ttestIS.menuGroup package/analyses/ttestPS.menuGroup
 #: package/analyses/ttestOneS.menuGroup ttestIS/options.menuGroup
 #: ttestOneS/options.menuGroup ttestPS/options.menuGroup
@@ -8366,8 +5052,8 @@ msgid "ten Berge"
 msgstr "பத்து பெர்க்"
 
 #: jamovi/js/ancova.events.js:51 jamovi/js/ancova.events.js:7
-#: jamovi/js/anova.js:45 jamovi/js/anova.js:9 jamovi/js/anovarm.events.js:16
-#: jamovi/js/anovarm.events.js:77 jamovi/js/linreg.events.js:10
+#: jamovi/js/anova.js:45 jamovi/js/anova.js:9 jamovi/js/anovarm.js:15
+#: jamovi/js/anovarm.js:98 jamovi/js/linreg.events.js:10
 #: jamovi/js/linreg.events.js:47 jamovi/js/loglinear.events.js:10
 #: jamovi/js/loglinear.events.js:52 jamovi/js/logregbin.events.js:10
 #: jamovi/js/logregbin.events.js:61
@@ -8428,13 +5114,6 @@ msgstr "R இலிருந்து 'கருவிழி' தரவு அ�
 #: R/descriptives.b.R
 msgid "The 'split by' variable '{var}' contains no data."
 msgstr "'பிளவுபட்டது' மாறி '{var}' எந்த தரவையும் கொண்டிருக்கவில்லை."
-
-#: linReg/options/weights.description.R
-#, ignore-end-stop, ignore-multiple-failures
-msgid "the (optional) weights from `data` to be used in the fitting process"
-msgstr ""
-"பொருத்துதல் செயல்பாட்டில் பயன்படுத்தப்பட வேண்டிய `தரவு` இலிருந்து (விருப்ப) "
-"எடைகள்"
 
 #: ttestOneS/options/hypothesis.description.ui
 msgid ""
@@ -8633,40 +5312,14 @@ msgstr "பயன்படுத்த முரண்பாடுகள்."
 msgid "the control variables of interest."
 msgstr "ஆர்வத்தின் கட்டுப்பாட்டு மாறிகள்."
 
-#: propTestN/options/counts.description.R
-msgid "the counts in `data`"
-msgstr "`தரவு` இல் உள்ள எண்ணிக்கைகள்"
-
 #: anovaRM/options/cov.description.ui
 #, ignore-end-stop, ignore-multiple-failures
 msgid "the covariates (specifying these makes this an ANCOVA)"
 msgstr "கோவாரியட்டுகள் (இவற்றைக் குறிப்பிடுவது இதை ஒரு அன்கோவாவாக ஆக்குகிறது)"
 
-#: linReg/options/covs.description.R
-msgid "the covariates from `data`"
-msgstr "`தரவு` இலிருந்து கோவாரியட்டுகள்"
-
 #: R/logregbin.b.R
 msgid "The cut-off value is set to {}"
 msgstr "கட்-ஆஃப் மதிப்பு {} என அமைக்கப்பட்டுள்ளது"
-
-#: ancova/options/data.description.R anova/options/data.description.R
-#: anovaNP/options/data.description.R anovaOneW/options/data.description.R
-#: anovaRM/options/data.description.R anovaRMNP/options/data.description.R
-#: cfa/options/data.description.R contTables/options/data.description.R
-#: contTablesPaired/options/data.description.R
-#: corrMatrix/options/data.description.R corrPart/options/data.description.R
-#: descriptives/options/data.description.R efa/options/data.description.R
-#: linReg/options/data.description.R logLinear/options/data.description.R
-#: logRegBin/options/data.description.R logRegMulti/options/data.description.R
-#: logRegOrd/options/data.description.R mancova/options/data.description.R
-#: pca/options/data.description.R propTest2/options/data.description.R
-#: propTestN/options/data.description.R reliability/options/data.description.R
-#: ttestIS/options/data.description.R ttestOneS/options/data.description.R
-#: ttestPS/options/data.description.R
-#, ignore-inconsistent
-msgid "the data as a data frame"
-msgstr "தரவு சட்டமாக தரவு"
 
 #: R/ancova.b.R R/mancova.b.R
 msgid "The dataset contains 0 rows (after removing rows with missing values)"
@@ -8704,19 +5357,6 @@ msgstr ""
 "சார்பு மாறி \"{dep}\" இரண்டு நிலைகளை மட்டுமே கொண்டுள்ளது, ஒரு பைனோமியல் "
 "லாசிச்டிக் பின்னடைவைச் செய்வதைக் கவனியுங்கள்."
 
-#: linReg/options/dep.description.R
-msgid "the dependent variable from `data`, variable must be numeric"
-msgstr "`தரவு` இலிருந்து சார்பு மாறி, மாறி எண்ணாக இருக்க வேண்டும்"
-
-#: ancova/options/dep.description.R anova/options/dep.description.R
-#, ignore-end-stop, ignore-multiple-failures
-msgid ""
-"the dependent variable from `data`, variable must be numeric (not necessary "
-"when providing a formula, see examples)"
-msgstr ""
-"`தரவு`, மாறி எண் (ஒரு சூத்திரத்தை வழங்கும்போது தேவையில்லை, "
-"எடுத்துக்காட்டுகளைப் பார்க்கவும்)"
-
 #: ancova/options/dep.description.ui
 msgid "the dependent variable. For ANCOVA, these will be continuous."
 msgstr "சார்பு மாறி. அன்கோவாவைப் பொறுத்தவரை, இவை தொடர்ச்சியாக இருக்கும்."
@@ -8733,14 +5373,6 @@ msgstr ""
 "சார்பு மாறிகள்-குறிப்பிடப்பட்ட ஒவ்வொரு சார்பு மாறிக்கும் ஒரு தனி டி-சோதனை "
 "செய்யப்படுகிறது."
 
-#: ttestIS/options/vars.description.R
-msgid ""
-"the dependent variables (not necessary when using a formula, see the "
-"examples)"
-msgstr ""
-"சார்பு மாறிகள் (ஒரு சூத்திரத்தைப் பயன்படுத்தும் போது தேவையில்லை, "
-"எடுத்துக்காட்டுகளைப் பார்க்கவும்)"
-
 #: anovaOneW/options/deps.description.ui
 msgid "the dependent variables. For ANOVA, these will be continuous."
 msgstr "சார்பு மாறிகள். ANOVA ஐப் பொறுத்தவரை, இவை தொடர்ச்சியாக இருக்கும்."
@@ -8750,23 +5382,6 @@ msgstr "சார்பு மாறிகள். ANOVA ஐப் பொறு�
 #: anovaRM/options/emmPlotError.description.ui
 msgid "the error bars to plot on the marginal means."
 msgstr "விளிம்பு வழிகளில் சூழ்ச்சி செய்ய பிழை."
-
-#: ancova/options/covs.description.R
-msgid ""
-"the explanatory covariates (not necessary when providing a formula, see "
-"examples)"
-msgstr ""
-"விளக்கமளிக்கும் கோவாரியட்டுகள் (ஒரு சூத்திரத்தை வழங்கும்போது தேவையில்லை, "
-"எடுத்துக்காட்டுகளைப் பார்க்கவும்)"
-
-#: ancova/options/factors.description.R anova/options/factors.description.R
-#, ignore-multiple-failures
-msgid ""
-"the explanatory factors in `data` (not necessary when providing a formula, "
-"see examples)"
-msgstr ""
-"`தரவு 'இல் உள்ள விளக்க காரணிகள் (ஒரு சூத்திரத்தை வழங்கும்போது தேவையில்லை, "
-"எடுத்துக்காட்டுகளைப் பார்க்கவும்)"
 
 #: anovaOneW/options/group.description.ui
 msgid ""
@@ -8781,11 +5396,8 @@ msgid ""
 msgstr ""
 "விளக்கமளிக்கும் அல்லது சுயாதீன மாறிகள். ANOVA க்கு இவை வகைப்படுத்தப்படும்."
 
-#: linReg/options/factors.description.R
-msgid "the fixed factors from `data`"
-msgstr "`தரவு` இலிருந்து நிலையான காரணிகள்"
-
 #: package/analyses/anovaRMNP.description anovaRMNP/options.description.main
+#, ignore-multiple-failures
 msgid ""
 "The Friedman test is used to explore the relationship between a continuous "
 "dependent variable and a categorical explanatory variable, where the "
@@ -8803,15 +5415,6 @@ msgstr ""
 "ஒருமைப்பாடு ஆகியவற்றின் அனுமானங்கள் தேவையில்லை. இருப்பினும், இது ஒரு "
 "நேரத்தில் ஒரு விளக்க மாறியை மட்டுமே சோதிக்க முடியும் என்ற வரம்பைக் "
 "கொண்டுள்ளது."
-
-#. Levels means the levels of a nominal or ordinal variable.
-#: ttestIS/options/group.description.R
-msgid ""
-"the grouping variable with two levels (not necessary when using a formula, "
-"see the examples)"
-msgstr ""
-"இரண்டு நிலைகளைக் கொண்ட குழும மாறி (ஒரு சூத்திரத்தைப் பயன்படுத்தும் போது "
-"தேவையில்லை, எடுத்துக்காட்டுகளைப் பார்க்கவும்)"
 
 #: package/analyses/anovaNP.description anovaNP/options.description.main
 msgid ""
@@ -8962,16 +5565,6 @@ msgstr "மறுநிகழ்வு நடவடிக்கைகள் வ�
 #: R/anovarm.b.R
 msgid ""
 "The repeated measures has only two levels. The assumption of sphericity is "
-"always met when the repeated measures has only two levels"
-msgstr ""
-"மறுநிகழ்வு நடவடிக்கைகள் இரண்டு நிலைகள் மட்டுமே உள்ளன. மறுநிகழ்வு "
-"நடவடிக்கைகளுக்கு இரண்டு நிலைகள் மட்டுமே இருக்கும்போது கோளத்தின் அனுமானம் "
-"எப்போதும் நிறைவு செய்யப்படுகிறது"
-
-#. Levels means the levels of a nominal or ordinal variable.
-#: R/anovarm.b.R
-msgid ""
-"The repeated measures has only two levels. The assumption of sphericity is "
 "always met when the repeated measures has only two levels."
 msgstr ""
 "மறுநிகழ்வு நடவடிக்கைகள் இரண்டு நிலைகள் மட்டுமே உள்ளன. மறுநிகழ்வு "
@@ -8985,6 +5578,17 @@ msgstr "மறுநிகழ்வு அளவீட்டு அளவீட�
 #: anovaRM/options/rmTerms.description.ui
 msgid "the repeated measures terms of the model."
 msgstr "மாதிரியின் தொடர்ச்சியான நடவடிக்கைகள் விதிமுறைகள்."
+
+#: R/utilsreg.R
+msgid ""
+"The specified reference level was not found for the following variable(s): "
+"{vars}. Defaulting to the first available level. To use a custom reference "
+"level, ensure the defined reference level is available in the data."
+msgstr ""
+"பின்வரும் மாறி (கள்) க்கு குறிப்பிட்ட குறிப்பு நிலை காணப்படவில்லை: {vars}. "
+"கிடைக்கக்கூடிய முதல் நிலைக்கு இயல்புநிலை. தனிப்பயன் குறிப்பு மட்டத்தைப் "
+"பயன்படுத்த, வரையறுக்கப்பட்ட குறிப்பு நிலை தரவுகளில் கிடைக்கிறது என்பதை "
+"உறுதிப்படுத்தவும்."
 
 #: package/analyses/ttestIS.description
 #, ignore-newline-count
@@ -9151,45 +5755,10 @@ msgstr ""
 "மாறி {var} எண் என கருத முடியாது. இந்த மாறிக்கு எண் தரவு உருவாக்கப்படாது "
 "என்று எதிர்பார்க்கும் அடுக்கு."
 
-#: propTestN/options/var.description.R
-msgid ""
-"the variable of interest in `data` (not necessary when using a formula, see "
-"the examples)"
-msgstr ""
-"`தரவு` இல் ஆர்வத்தின் மாறுபாடு (ஒரு சூத்திரத்தைப் பயன்படுத்தும் போது "
-"தேவையில்லை, எடுத்துக்காட்டுகளைப் பார்க்கவும்)"
-
 #. Levels means the levels of a nominal or ordinal variable.
 #: ttestIS/options/group.description.ui
 msgid "the variable specifying the groups; must have 2 levels."
 msgstr "குழுக்களைக் குறிப்பிடும் மாறி; 2 நிலைகளைக் கொண்டிருக்க வேண்டும்."
-
-#: contTables/options/cols.description.R
-#: contTablesPaired/options/cols.description.R
-msgid ""
-"the variable to use as the columns in the contingency table (not necessary "
-"when providing a formula, see the examples)"
-msgstr ""
-"தற்செயல் அட்டவணையில் உள்ள நெடுவரிசைகளாக பயன்படுத்தக்கூடிய மாறி (ஒரு "
-"சூத்திரத்தை வழங்கும்போது தேவையில்லை, எடுத்துக்காட்டுகளைப் பார்க்கவும்)"
-
-#: contTables/options/counts.description.R
-#: contTablesPaired/options/counts.description.R
-msgid ""
-"the variable to use as the counts in the contingency table (not necessary "
-"when providing a formula, see the examples)"
-msgstr ""
-"தற்செயல் அட்டவணையில் எண்ணிக்கையாகப் பயன்படுத்த வேண்டிய மாறி (ஒரு சூத்திரத்தை"
-" வழங்கும்போது தேவையில்லை, எடுத்துக்காட்டுகளைப் பார்க்கவும்)"
-
-#: contTables/options/rows.description.R
-#: contTablesPaired/options/rows.description.R
-msgid ""
-"the variable to use as the rows in the contingency table (not necessary when"
-" providing a formula, see the examples)"
-msgstr ""
-"தற்செயல் அட்டவணையில் வரிசைகளாகப் பயன்படுத்தக்கூடிய மாறி (ஒரு சூத்திரத்தை "
-"வழங்கும்போது தேவையில்லை, எடுத்துக்காட்டுகளைப் பார்க்கவும்)"
 
 #: R/descriptives.b.R
 #, ignore-multiple-failures
@@ -9211,14 +5780,6 @@ msgstr ""
 #: corrMatrix/options/vars.description.ui corrPart/options/vars.description.ui
 msgid "the variables of interest."
 msgstr "ஆர்வத்தின் மாறிகள்."
-
-#: contTables/options/layers.description.R
-msgid ""
-"the variables to use to split the contingency table (not necessary when "
-"providing a formula, see the examples)"
-msgstr ""
-"தற்செயல் அட்டவணையைப் பிரிக்க பயன்படுத்த வேண்டிய மாறிகள் (ஒரு சூத்திரத்தை "
-"வழங்கும்போது தேவையில்லை, எடுத்துக்காட்டுகளைப் பார்க்கவும்)"
 
 #: ancova/options/ciWidthEmm.description.ui
 #: anova/options/ciWidthEmm.description.ui
@@ -9258,6 +5819,10 @@ msgstr ""
 #: R/ttestis.b.R R/ttestones.b.R R/ttestps.b.R
 msgid "Theoretical Quantiles"
 msgstr "தத்துவார்த்த அளவுகள்"
+
+#: R/linreg.b.R
+msgid "There were no Mahalanobis distances with a threshold below p < {p}."
+msgstr "P <{p than க்குக் கீழே ஒரு வாசலுடன் மஆலனோபிச் தூரங்கள் இல்லை."
 
 #: package.description
 msgid ""
@@ -9343,15 +5908,6 @@ msgstr "பல் வளர்ச்சி"
 msgid "Total"
 msgstr "மொத்தம்"
 
-#: contTables/options/yaxisPc.description.R
-msgid ""
-"total_pc (default), column_pc, or row_pc. Use respectively percentages `of "
-"total`, `within columns`, or `within rows` for the bar plot y-axis."
-msgstr ""
-"மொத்தம்_பிசி (இயல்புநிலை), நெடுவரிசை_பிசி, அல்லது ROW_PC. முறையே `மொத்தம்`,`"
-" நெடுவரிசைகளுக்குள் `அல்லது` வரிசைகளுக்குள்` பட்டி சூழ்ச்சி y- அச்சுக்கு "
-"சதவீதங்களைப் பயன்படுத்துங்கள்."
-
 #: ancova/options/postHocCorr/tukey.title
 #: anova/options/postHocCorr/tukey.title
 #: anovaRM/options/postHocCorr/tukey.title
@@ -9404,6 +5960,10 @@ msgstr "தனித்துவம்"
 msgid "Univariate Tests"
 msgstr "ஒற்றுமையற்ற சோதனைகள்"
 
+#: R/conttables.b.R contTables/options/resU.title
+msgid "Unstandardized residuals"
+msgstr "நிலையற்ற எச்சங்கள்"
+
 #: R/ancova.b.R R/descriptives.b.R R/linreg.b.R R/loglinear.b.R
 #: R/logregbin.b.R R/logregmulti.b.R cfa/results/factorLoadings.columns.title
 #: cfa/results/factorEst/factorCov.columns.title
@@ -9453,7 +6013,7 @@ msgstr "மதிப்புகள் எண்ணிக்கைகள்"
 #: logRegBin/ui[2]/refLevels.columns.label
 #: logRegMulti/ui[2]/refLevels.columns.label
 #: logRegOrd/ui[2]/refLevels.columns.label propTestN/options/var.title
-#, ignore-multiple-failures, ignore-reused
+#, ignore-inconsistent, ignore-multiple-failures, ignore-reused
 msgid "Variable"
 msgstr "மாறக்கூடிய"
 
@@ -9473,11 +6033,12 @@ msgstr "மாறி போதுமான அவதானிப்புகள�
 msgid "Variable is not numeric"
 msgstr "மாறி எண் அல்ல"
 
+# Suggested in Weblate: மாறிகள்
 #: corrMatrix/options/vars.title corrPart/options/vars.title
 #: corrPart/ui/variablesupplier[0].label descriptives/options/vars.title
 #: descriptives/ui[0][0].label efa/options/vars.title pca/options/vars.title
 #: propTest2/options/vars.title
-#, ignore-multiple-failures
+#, ignore-inconsistent, ignore-multiple-failures, ignore-reused
 msgid "Variables"
 msgstr "மாறிகள்"
 
@@ -9529,8 +6090,9 @@ msgstr "வரிமேக்ச்"
 msgid "VIF"
 msgstr "Vif"
 
+# Suggested in Weblate: வயலின்
 #: descriptives/options/violin.title
-#, ignore-multiple-failures, ignore-same
+#, ignore-inconsistent, ignore-multiple-failures, ignore-same
 msgid "Violin"
 msgstr "வயலின்"
 
@@ -9561,6 +6123,7 @@ msgstr "எடை மாறி"
 msgid "Weighted by '{varName}'"
 msgstr "'{varName}' ஆல் எடைபோடுகிறது"
 
+# Suggested in Weblate: எடைகள்
 #: package/analyses/weights.title package/analyses/weights.menuTitle
 #: weights/options.title weights/ui.title weights/results.title
 msgid "Weights"
@@ -9617,7 +6180,8 @@ msgstr "வரிசைகளுக்குள்"
 msgid "Within Subjects Effects"
 msgstr "பாட விளைவுகளுக்குள்"
 
-#: contTables/ui[1][2][0][1][1].label
+# Suggested in Weblate: எக்ச்-அச்சு
+#: contTables/ui[1][3][0][1][1].label
 #, ignore-inconsistent, ignore-reused
 msgid "X-Axis"
 msgstr "எக்ச்-அச்சு"
@@ -9627,7 +6191,8 @@ msgstr "எக்ச்-அச்சு"
 msgid "X-axis"
 msgstr "எக்ச்-அச்சு"
 
-#: contTables/ui[1][2][0][1][0].label
+# Suggested in Weblate: Y- அச்சு
+#: contTables/ui[1][3][0][1][0].label
 #, ignore-inconsistent, ignore-reused
 msgid "Y-Axis"
 msgstr "Y- அச்சு"
@@ -9636,14 +6201,6 @@ msgstr "Y- அச்சு"
 #, ignore-reused
 msgid "Y-axis"
 msgstr "Y- அச்சு"
-
-#: contTables/options/yaxis.description.R
-msgid ""
-"ycounts (default) or ypc. Use respectively `counts` or `percentages` for the"
-" bar plot y-axis"
-msgstr ""
-"ycounts (இயல்புநிலை) அல்லது YPC. Y- அச்சுக்கு முறையே `எண்ணிக்கைகள் அல்லது` "
-"சதவீதங்கள்` பயன்படுத்தவும்"
 
 #: cfa/results/factorLoadings.columns.title
 #: cfa/results/factorEst/factorCov.columns.title
@@ -9677,7 +6234,7 @@ msgstr "சட் சோதனை 2x2 அட்டவணைகளுக்கு
 msgid "ΔR²"
 msgstr "Δr²"
 
-#: anovaNP/results/table.columns.title
+#: anovaNP/options/es.title anovaNP/results/table.columns.title
 msgid "ε²"
 msgstr "E²"
 

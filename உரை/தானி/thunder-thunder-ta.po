@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Thunder)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-05 16:05+0200\n"
-"PO-Revision-Date: 2025-08-05 19:41\n"
+"POT-Creation-Date: 2025-10-22 16:20+0200\n"
+"PO-Revision-Date: 2025-10-22 22:12\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/thunder/thunder/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #. About settings category.
 #, icu-message-format
@@ -41,13 +41,13 @@ msgstr ""
 "நேரத்தில் பயன்படுத்த அனுமதிக்கிறது."
 
 #. Describes the user account
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "account"
 msgid "{count, plural, zero {Account} one {Account} other {Accounts} } "
-msgstr "{count, plural, zero {Account} one {கணக்கு} other {கணக்குகள்} } "
+msgstr "{count, plural, zero {Account} one {Account} other {Accounts} } "
 
 #. User descriptor for accounts created on today's date
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$ADDITIONALINFO$
 msgctxt "accountBirthday"
 msgid "Account Birthday {additionalInfo}"
 msgstr "கணக்கு பிறந்த நாள் {additionalInfo}"
@@ -64,7 +64,7 @@ msgid "Account Settings"
 msgstr "கணக்கு அமைப்புகள்"
 
 #. Message shown to user when account settings are exported successfully
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$SAVEDFILEPATH$
 msgctxt "accountSettingsExportedSuccessfully"
 msgid "Lemmy account settings exported successfully to {savedFilePath}!"
 msgstr ""
@@ -78,13 +78,13 @@ msgid "Lemmy account settings imported successfully!"
 msgstr "லெம்மி கணக்கு அமைப்புகள் வெற்றிகரமாக இறக்குமதி செய்யப்படுகின்றன!"
 
 #. Error message for when we couldn't resolve comment to reply to
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$INSTANCE$
 msgctxt "accountSwitchParentCommentNotFound"
 msgid "The selected comment was not found on '{instance}'"
 msgstr "தேர்ந்தெடுக்கப்பட்ட கருத்து '{instance}' இல் காணப்படவில்லை"
 
 #. Error message for when we couldn't resolve post to reply to
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$INSTANCE$
 msgctxt "accountSwitchPostNotFound"
 msgid "The selected post was not found on '{instance}'"
 msgstr "தேர்ந்தெடுக்கப்பட்ட இடுகை '{instance}' இல் காணப்படவில்லை"
@@ -191,6 +191,12 @@ msgctxt "addedModToCommunity"
 msgid "Added Mod to Community"
 msgstr "சமூகத்திற்கு மோட் சேர்க்கப்பட்டது"
 
+#. Short decription for moderator action to add a user as community moderator
+#, case-insensitive, icu-message-format, placeholders:$USERNAME$
+msgctxt "addedUserAsCommunityModerator"
+msgid "Added {username} as community moderator"
+msgstr "சமூக மதிப்பீட்டாளராக {username} சேர்க்கப்பட்டார்"
+
 #. Role name for admin
 #, icu-message-format
 msgctxt "admin"
@@ -204,7 +210,7 @@ msgid "Advanced"
 msgstr "மேம்பட்ட"
 
 #. Represents a duration in the past
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$TIME$
 msgctxt "ago"
 msgid "{time} ago"
 msgstr "{time} முன்பு"
@@ -247,7 +253,8 @@ msgctxt "always"
 msgid "Always"
 msgstr "எப்போதும்"
 
-#, icu-message-format
+#. Represents a number of items
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "andXMore"
 msgid "and {count} more"
 msgstr "மேலும் {count} மேலும்"
@@ -297,26 +304,26 @@ msgid "Apply"
 msgstr "இடு"
 
 #. A status indicator for whether notifications are allowed by OS permissions
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$YESORNO$
 msgctxt "areNotificationsAllowedBySystem"
 msgid "Notifications are allowed by system: {yesOrNo}"
 msgstr "அறிவிப்புகள் கணினி மூலம் அனுமதிக்கப்படுகின்றன: {yesOrNo}"
 
 #. Describes the average number of comments created in the past month
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$X$
 msgctxt "averageComments"
 msgid "{x} comments/month"
 msgstr "{x} கருத்துகள்/மாதம்"
 
 #. Describes the average number of contributions (both posts and comments) in
 #. the past month
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$X$
 msgctxt "averageContributions"
 msgid "{x} contributions/month"
 msgstr "{x} பங்களிப்புகள்/மாதம்"
 
 #. Describes the average number of posts created in the past month
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$X$
 msgctxt "averagePosts"
 msgid "{x} posts/month"
 msgstr "{x} இடுகைகள்/மாதம்"
@@ -341,6 +348,12 @@ msgstr "மீண்டும் மேலே"
 msgctxt "backgroundCheckWarning"
 msgid "Note that notification checks will consume additional battery"
 msgstr "அறிவிப்பு காசோலைகள் கூடுதல் பேட்டரியை நுகரும் என்பதை நினைவில் கொள்க"
+
+#. Short decription for moderator action to ban a user
+#, icu-message-format
+msgctxt "ban"
+msgid "Ban"
+msgstr "தடை வெற்றி"
 
 #. Moderator action to ban a user from a community
 #, icu-message-format
@@ -468,7 +481,8 @@ msgctxt "browserMode"
 msgid "Link handling"
 msgstr "இணைப்பு கையாளுதல்"
 
-#, icu-message-format
+#. Message shown to user when browsing anonymously
+#, case-insensitive, icu-message-format, placeholders:$INSTANCE$
 msgctxt "browsingAnonymously"
 msgid "You are currently browsing {instance} anonymously."
 msgstr "நீங்கள் தற்போது {instance} அநாமதேயமாக உலாவுகிறீர்கள்."
@@ -553,7 +567,7 @@ msgid "Change Sort"
 msgstr "வரிசைப்படுத்துங்கள்"
 
 #. Label for action to clear cache in the dialog
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$CACHESIZE$
 msgctxt "clearCache"
 msgid "Clear Cache ({cacheSize})"
 msgstr "தெளிவான தற்காலிக சேமிப்பு ({cacheSize})"
@@ -711,6 +725,12 @@ msgctxt "comment"
 msgid "Comment"
 msgstr "கருத்து"
 
+#. Title for the comment actions bottom sheet
+#, icu-message-format
+msgctxt "commentActions"
+msgid "Comment Actions"
+msgstr "கருத்து நடவடிக்கைகள்"
+
 #. Subcategory in Setting -> General
 #, icu-message-format
 msgctxt "commentBehaviourSettings"
@@ -795,7 +815,7 @@ msgid "Community Actions"
 msgstr "சமூக நடவடிக்கைகள்"
 
 #. Entry in list for a community to perform further actions
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$COMMUNITY$
 msgctxt "communityEntry"
 msgid "Community '{community}'"
 msgstr "சமூகம் '{community}'"
@@ -920,7 +940,7 @@ msgid "Are you sure you want to unsubscribe?"
 msgstr "நீங்கள் நிச்சயமாக குழுவிலக விரும்புகிறீர்களா?"
 
 #. Tell the user which UnifiedPush app we're connected to
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$APP$
 msgctxt "connectedToUnifiedPushDistributorApp"
 msgid "Conected to {app}"
 msgstr "{app} உடன் இணைக்கப்பட்டுள்ளது"
@@ -998,55 +1018,55 @@ msgstr ""
 "அகற்றப்பட்டிருக்கலாம்."
 
 #. Number of comments
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "countComments"
 msgid "{count} Comments"
 msgstr "{count} கருத்துகள்"
 
 #. Number of local subscribers
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "countLocalSubscribers"
 msgid "{count} Local Subscribers"
 msgstr "{count} உள்ளக சந்தாதாரர்கள்"
 
 #. Number of posts
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "countPosts"
 msgid "{count} Posts"
 msgstr "{count} இடுகைகள்"
 
 #. Number of subscribers
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "countSubscribers"
 msgid "{count} Subscribers"
 msgstr "{count} சந்தாதாரர்கள்"
 
 #. Describes a certain number of users
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "countUsers"
 msgid "{count} users"
 msgstr "{count} பயனர்கள்"
 
 #. Number of users active in the last day
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "countUsersActiveDay"
 msgid "{count} users/day"
 msgstr "{count} பயனர்கள்/நாள்"
 
 #. Number of users active in the last half year
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "countUsersActiveHalfYear"
 msgid "{count} users/6 mo"
 msgstr "{count} பயனர்கள்/6 மோ"
 
 #. Number of users active in the last month
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "countUsersActiveMonth"
 msgid "{count} users/mo"
 msgstr "{count} பயனர்கள்/மோ"
 
 #. Number of users active in the last week
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "countUsersActiveWeek"
 msgid "{count} users/wk"
 msgstr "{count} பயனர்கள்/WK"
@@ -1072,7 +1092,7 @@ msgid "Create Post"
 msgstr "இடுகையை உருவாக்கவும்"
 
 #. The date that something was created
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$DATE$
 msgctxt "created"
 msgid "Created {date}"
 msgstr "உருவாக்கப்பட்டது {date}"
@@ -1090,9 +1110,9 @@ msgid "Creator"
 msgstr "உருவாக்கியவர்"
 
 #. Initial heading for text-based cross-post
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$POSTURL$
 msgctxt "crossPostedFrom"
-msgid "cross-posted from:  {postUrl}"
+msgid "cross-posted from: {postUrl}"
 msgstr "குறுக்கு இடுகையிடப்பட்டது: {postUrl}"
 
 #, icu-message-format
@@ -1106,7 +1126,7 @@ msgid "Currently set as long press"
 msgstr "தற்போது நீண்ட பத்திரிகையாக அமைக்கப்பட்டுள்ளது"
 
 #. A status indicator for the current notifications mode
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$MODE$
 msgctxt "currentNotificationsMode"
 msgid "Current notifications mode: {mode}"
 msgstr "தற்போதைய அறிவிப்புகள் பயன்முறை: {mode}"
@@ -1147,7 +1167,7 @@ msgstr ""
 "நீங்கள் தொடர விரும்புகிறீர்களா?"
 
 #. Message shown to the user when the db was successfully exported
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$SAVEDFILEPATH$
 msgctxt "databaseExportedSuccessfully"
 msgid "The database was successfully exported to '{savedFilePath}'"
 msgstr "தரவுத்தளம் வெற்றிகரமாக '{savedFilePath}' க்கு ஏற்றுமதி செய்யப்பட்டது"
@@ -1346,6 +1366,18 @@ msgctxt "deletedByModerator"
 msgid "deleted by moderator"
 msgstr "மதிப்பீட்டாளரால் நீக்கப்பட்டது"
 
+#. Message shown when a comment is deleted
+#, icu-message-format
+msgctxt "deletedComment"
+msgid "Deleted comment"
+msgstr "நீக்கப்பட்ட கருத்து"
+
+#. Message shown when a post is deleted
+#, icu-message-format
+msgctxt "deletedPost"
+msgid "Deleted post"
+msgstr "நீக்கப்பட்ட இடுகை"
+
 #, icu-message-format
 msgctxt "deselectUndeterminedWarning"
 msgid "If you deselect Undetermined, you will not see most content."
@@ -1354,7 +1386,7 @@ msgstr ""
 "உள்ளடக்கங்களைக் காண மாட்டீர்கள்."
 
 #. The reason for the moderation action
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$REASON$
 msgctxt "detailedReason"
 msgid "Reason: {reason}"
 msgstr "காரணம்: {reason}"
@@ -1548,12 +1580,13 @@ msgid "End Search"
 msgstr "இறுதி தேடல்"
 
 #. Error message for deleting an image
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$ERROR$
 msgctxt "errorDeletingImage"
 msgid "There was an error deleting the image: {error}"
 msgstr "படத்தை நீக்குவதில் பிழை இருந்தது: {error}"
 
-#, icu-message-format
+#. Error message for downloading media
+#, case-insensitive, icu-message-format, placeholders:$ERRORMESSAGE$
 msgctxt "errorDownloadingMedia"
 msgid "Could not download the media file to share: {errorMessage}"
 msgstr ""
@@ -1747,21 +1780,24 @@ msgctxt "extraLarge"
 msgid "Extra Large"
 msgstr "கூடுதல் பெரிய"
 
-#, icu-message-format
+#. Error message for when we fail to block a user
+#, case-insensitive, icu-message-format, placeholders:$ERRORMESSAGE$
 msgctxt "failedToBlock"
 msgid "Failed to block: {errorMessage}"
 msgstr "தடுப்பதில் தோல்வி: {errorMessage}"
 
 #. Error message for when we fail to communicate with Thunder notification
 #. server
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$SERVERADDRESS$
 msgctxt "failedToCommunicateWithThunderNotificationServer"
 msgid ""
-"Failed to communicate with Thunder notification server at '{serverAddress}'"
+"Failed to communicate with Thunder notification server at {serverAddress}."
 msgstr ""
-"'{serverAddress}' இல் தண்டர் அறிவிப்பு சேவையகத்துடன் தொடர்புகொள்வதில் தோல்வி"
+"{serverAddress} இல் Thunder அறிவிப்பு சேவையகத்துடன் தொடர்பு கொள்ள "
+"முடியவில்லை."
 
-#, icu-message-format
+#. Error message for when we fail to load blocks
+#, case-insensitive, icu-message-format, placeholders:$ERRORMESSAGE$
 msgctxt "failedToLoadBlocks"
 msgid "Could not load blocks: {errorMessage}"
 msgstr "தொகுதிகளை ஏற்ற முடியவில்லை: {errorMessage}"
@@ -1778,7 +1814,8 @@ msgctxt "failedToPerformAction"
 msgid "Failed to perform action"
 msgstr "செயலைச் செய்யத் தவறிவிட்டது"
 
-#, icu-message-format
+#. Error message for when we fail to unblock a user
+#, case-insensitive, icu-message-format, placeholders:$ERRORMESSAGE$
 msgctxt "failedToUnblock"
 msgid "Could not unblock: {errorMessage}"
 msgstr "தடைசெய்ய முடியவில்லை: {errorMessage}"
@@ -1836,7 +1873,7 @@ msgid "Could not determine account"
 msgstr "கணக்கை தீர்மானிக்க முடியவில்லை"
 
 #. Filtering by a community or creator in search.
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$ENTITY$
 msgctxt "filteringBy"
 msgid "Filtering by {entity}"
 msgstr "{entity} மூலம் வடிகட்டுதல்"
@@ -1907,6 +1944,12 @@ msgid "Swipe anywhere to go back when left-to-right gestures are disabled"
 msgstr ""
 "இடமிருந்து வலமாக சைகைகள் முடக்கப்பட்டிருக்கும் போது திரும்பிச் செல்ல எங்கும்"
 " ச்வைப் செய்யவும்"
+
+#. Action for entering fullscreen
+#, icu-message-format
+msgctxt "fullscreen"
+msgid "Fullscreen"
+msgstr "முழு திரை"
 
 #. Setting for fullscreen swipe gestures
 #, icu-message-format
@@ -2126,7 +2169,9 @@ msgctxt "importSettings"
 msgid "Import Settings"
 msgstr "அமைப்புகளை இறக்குமதி செய்யுங்கள்"
 
-#, icu-message-format
+#. Indicates that a comment/post is in reply to a certain post in a certain
+#. community
+#, case-insensitive, icu-message-format, placeholders:$POST$:$COMMUNITY$
 msgctxt "inReplyTo"
 msgid "In reply to {post} in {community}"
 msgstr "{community}இல் {post}இதற்குப் பதிலளிக்கும் விதமாக"
@@ -2180,10 +2225,10 @@ msgid "Information"
 msgstr "தகவல்"
 
 #. Heading for an instance
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "instance"
 msgid "{count, plural, zero {Instance} one {Instance} other {Instances} } "
-msgstr "{count, plural, zero {நிகழ்வு} one {நிகழ்வு} other {நிகழ்வுகள்} } "
+msgstr "{count, plural, zero {Instance} one {Instance} other {Instances} } "
 
 #. Heading for instance actions page
 #, icu-message-format
@@ -2192,12 +2237,13 @@ msgid "Instance Actions"
 msgstr "நிகழ்வு செயல்கள்"
 
 #. Entry in list for a instance to perform further actions
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$USERNAME$
 msgctxt "instanceEntry"
 msgid "Instance '{username}'"
 msgstr "சான்று '{username}'"
 
-#, icu-message-format
+#. Error message for when an instance has already been added
+#, case-insensitive, icu-message-format, placeholders:$INSTANCE$
 msgctxt "instanceHasAlreadyBenAdded"
 msgid "{instance} has already been added."
 msgstr "{instance} ஏற்கனவே சேர்க்கப்பட்டுள்ளது."
@@ -2236,7 +2282,7 @@ msgid "Invalid URL format"
 msgstr "தவறான முகவரி வடிவம்"
 
 #. Describes the time when a user joined the site (or was created)
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$X$
 msgctxt "joined"
 msgid "Joined {x}"
 msgstr "{x} இல் சேர்ந்தார்"
@@ -2306,10 +2352,11 @@ msgctxt "light"
 msgid "Light"
 msgstr "ஒளி"
 
-#, icu-message-format
+#. Describes a link
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "link"
 msgid "{count, plural, zero {Link} one {Link} other {Links} } "
-msgstr "{count, plural, zero {இணைப்பு} one {இணைப்பு} other {இணைப்புகள்} } "
+msgstr "{count, plural, zero {Link} one {Link} other {Links} } "
 
 #, icu-message-format
 msgctxt "linkActions"
@@ -2358,12 +2405,14 @@ msgctxt "linksBehaviourSettings"
 msgid "Links"
 msgstr "இணைப்புகள்"
 
-#, icu-message-format
+#. Load more replies
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "loadMorePlural"
 msgid "Load {count} more replies…"
 msgstr "{count} மேலும் பதில்களை ஏற்றவும்…"
 
-#, icu-message-format
+#. Load more replies
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "loadMoreSingular"
 msgid "Load {count} more reply…"
 msgstr "ஏற்றவும் {count} மேலும் பதில்…"
@@ -2431,7 +2480,7 @@ msgid "Login attempt canceled."
 msgstr "உள்நுழைவு முயற்சி ரத்து செய்யப்பட்டது."
 
 #. Message shown to user when their login attempt failed
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$ERRORMESSAGE$
 msgctxt "loginFailed"
 msgid "Could not log in. Please try again. (Error: {errorMessage})"
 msgstr ""
@@ -2528,11 +2577,11 @@ msgctxt "medium"
 msgid "Medium"
 msgstr "சராசரி"
 
-#, icu-message-format
+#. Describes a mention
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "mention"
 msgid "{count, plural, zero {Mention} one {Mention} other {Mentions} }"
-msgstr ""
-"{count, plural, zero {குறிப்பிடு} one {குறிப்பிடு} other {குறிப்பிடுகள்} }"
+msgstr "{count, plural, zero {Mention} one {Mention} other {Mentions} }"
 
 #. Menu button description
 #, icu-message-format
@@ -2540,10 +2589,11 @@ msgctxt "menu"
 msgid "Menu"
 msgstr "பட்டியல்"
 
-#, icu-message-format
+#. Describes a message
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "message"
 msgid "{count, plural, zero {Message} one {Message} other {Messages} }"
-msgstr "{count, plural, zero {செய்தி} one {செய்தி} other {செய்திகள்} }"
+msgstr "{count, plural, zero {Message} one {Message} other {Messages} }"
 
 #. Setting for metadata font scale
 #, icu-message-format
@@ -2631,12 +2681,10 @@ msgid "Moderates"
 msgstr "மிதவாதிகள்"
 
 #. Role name for moderator
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "moderator"
 msgid "{count, plural, zero {Moderator} one {Moderator} other {Moderators}}"
-msgstr ""
-"{count, plural, zero {மதிப்பீட்டாளர்} one {மதிப்பீட்டாளர்} other "
-"{மதிப்பீட்டாளர்கள்}}"
+msgstr "{count, plural, zero {Moderator} one {Moderator} other {Moderators}}"
 
 #. Actions for moderators to perform on posts
 #, icu-message-format
@@ -2920,7 +2968,7 @@ msgid "Normal"
 msgstr "சாதாரண"
 
 #. Message for when an instance is not a valid Lemmy/PieFed instance
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$INSTANCE$
 msgctxt "notValidLemmyInstance"
 msgid "{instance} does not appear to be a valid instance"
 msgstr "{instance} செல்லுபடியாகும் உதாரணமாகத் தெரியவில்லை"
@@ -2936,13 +2984,14 @@ msgid "Nothing to share"
 msgstr "பகிர எதுவும் இல்லை"
 
 #. Message formatting for notifications count.
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "notifications"
 msgid ""
 "{count, plural, zero {Notification} one {Notifications} other "
 "{Notifications}}"
 msgstr ""
-"{count, plural, zero {அறிவிப்பு} one {அறிவிப்பு} other {அறிவிப்புகள்}}"
+"{count, plural, zero {Notification} one {Notifications} other "
+"{Notifications}}"
 
 #. Subcategory in Setting -> General
 #, icu-message-format
@@ -3097,7 +3146,7 @@ msgid "Pending"
 msgstr "நிலுவையில் உள்ளது"
 
 #. Describes the user who performed an action (e.g., moderator)
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$USER$
 msgctxt "performedBy"
 msgid "Performed by: {user}"
 msgstr "செய்தவர்: {user}"
@@ -3137,6 +3186,12 @@ msgstr "சமூகத்திற்கு முள்"
 msgctxt "pinned"
 msgid "Pinned"
 msgstr "குத்திவைக்கப்பட்டது"
+
+#. Message shown when a post is pinned to a community
+#, icu-message-format
+msgctxt "pinnedPostToCommunity"
+msgid "Pinned post to community"
+msgstr "சமூகத்தில் பின் செய்யப்பட்ட இடுகை"
 
 #. Placeholder text for any previews. This comes from https://www.lipsum.com/
 #, icu-message-format
@@ -3318,7 +3373,8 @@ msgctxt "preview"
 msgid "Preview"
 msgstr "முன்னோட்டம்"
 
-#, icu-message-format
+#. Message shown to user when a profile is applied successfully
+#, case-insensitive, icu-message-format, placeholders:$PROFILE$
 msgctxt "profileAppliedSuccessfully"
 msgid "{profile} applied successfully!"
 msgstr "{profile} வெற்றிகரமாக பயன்படுத்தப்படுகிறது!"
@@ -3517,7 +3573,7 @@ msgid "Remove instance"
 msgstr "உதாரணத்தை அகற்று"
 
 #. Description of removing a keyword filter
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$KEYWORD$
 msgctxt "removeKeyword"
 msgid "Remove \"{keyword}\"?"
 msgstr "\"{keyword}\" ஐ அகற்றவா?"
@@ -3533,6 +3589,12 @@ msgstr "முக்கிய சொல்லை அகற்று"
 msgctxt "removePost"
 msgid "Remove Post"
 msgstr "இடுகையை அகற்று"
+
+#. Description for removing user data when banning user
+#, icu-message-format
+msgctxt "removeUserData"
+msgid "Remove user data"
+msgstr "பயனர் தரவை அகற்று"
 
 #. Status to indicate that an item has been removed
 #, icu-message-format
@@ -3575,16 +3637,24 @@ msgctxt "removedPost"
 msgid "Removed Post"
 msgstr "அகற்றப்பட்ட இடுகை"
 
+#. Short decription for moderator action to remove a user as community
+#. moderator
+#, case-insensitive, icu-message-format, placeholders:$USERNAME$
+msgctxt "removedUserAsCommunityModerator"
+msgid "Removed {username} as community moderator"
+msgstr "சமூக மதிப்பீட்டாளராக {username} அகற்றப்பட்டார்"
+
 #. Tooltip text for the list editor button
 #, icu-message-format
 msgctxt "reorder"
 msgid "Reorder"
 msgstr "மறுவரிசை"
 
-#, icu-message-format
+#. Message formatting for reply count.
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "reply"
 msgid "{count, plural, zero {Reply} one {Reply} other {Replies} }"
-msgstr "{count, plural, zero {மறுமொழி} one {மறுமொழி} other {மறுமொழிகள்} }"
+msgstr "{count, plural, zero {Reply} one {Reply} other {Replies} }"
 
 #. Name of reply color setting
 #, icu-message-format
@@ -3602,15 +3672,17 @@ msgctxt "replyToPost"
 msgid "Reply to Post"
 msgstr "இடுகைக்கு பதில்"
 
-#, icu-message-format
+#. Describes the author of the post that is being replied to
+#, case-insensitive, icu-message-format, placeholders:$AUTHOR$
 msgctxt "replyingTo"
 msgid "Replying to {author}"
 msgstr "{author} க்கு பதிலளித்தல்"
 
-#, icu-message-format
+#. Message formatting for report count.
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "report"
 msgid "{count, plural, zero {Report} one {Report} other {Reports} } "
-msgstr "{count, plural, zero {அறிக்கை} one {அறிக்கை} other {அறிக்கைகள்} } "
+msgstr "{count, plural, zero {Report} one {Report} other {Reports} } "
 
 #, icu-message-format
 msgctxt "reportComment"
@@ -3622,6 +3694,18 @@ msgstr "கருத்து தெரிவிக்கவும்"
 msgctxt "reportPost"
 msgid "Report Post"
 msgstr "அறிக்கை இடுகை"
+
+#. Message shown when a comment is reported
+#, icu-message-format
+msgctxt "reportedComment"
+msgid "Reported comment"
+msgstr "கருத்து தெரிவிக்கப்பட்டது"
+
+#. Message shown when a post is reported
+#, icu-message-format
+msgctxt "reportedPost"
+msgid "Reported post"
+msgstr "அறிக்கையிடப்பட்ட இடுகை"
 
 #. Name of reporter that reported a post/comment
 #, icu-message-format
@@ -3684,8 +3768,8 @@ msgstr "இடுகையை மீட்டெடுங்கள்"
 #. Short decription for moderator action to restore a comment
 #, icu-message-format
 msgctxt "restoredComment"
-msgid "Restored Comment"
-msgstr "மீட்டெடுக்கப்பட்ட கருத்து"
+msgid "Restored comment"
+msgstr "கருத்து மீட்டெடுக்கப்பட்டது"
 
 #, icu-message-format
 msgctxt "restoredCommentFromDraft"
@@ -3793,23 +3877,26 @@ msgctxt "searchComments"
 msgid "Search Comments"
 msgstr "கருத்துகளைத் தேடுங்கள்"
 
-#, icu-message-format
+#. Placeholder text for searching for comments
+#, case-insensitive, icu-message-format, placeholders:$INSTANCE$
 msgctxt "searchCommentsFederatedWith"
 msgid "Search for comments federated with {instance}"
 msgstr "{instance} உடன் கூட்டாக்கப்பட்ட கருத்துகளைத் தேடு"
 
-#, icu-message-format
+#. Placeholder text for searching for communities
+#, case-insensitive, icu-message-format, placeholders:$INSTANCE$
 msgctxt "searchCommunitiesFederatedWith"
 msgid "Search for communities federated with {instance}"
 msgstr "{instance} உடன் கூட்டாக்கப்பட்ட சமூகங்களைத் தேடு"
 
-#, icu-message-format
+#. Placeholder text for searching for an instance
+#, case-insensitive, icu-message-format, placeholders:$INSTANCE$
 msgctxt "searchInstance"
 msgid "Search {instance}"
 msgstr "தேடல் {instance}"
 
 #. Placeholder text for searching for instances
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$INSTANCE$
 msgctxt "searchInstancesFederatedWith"
 msgid "Search for instances federated with {instance}"
 msgstr "{instance} உடன் கூட்டமைப்பு செய்யப்பட்ட நிகழ்வுகளைத் தேடு"
@@ -3819,7 +3906,8 @@ msgctxt "searchPostSearchType"
 msgid "Select Post Search Type"
 msgstr "இடுகை தேடல் வகையைத் தேர்ந்தெடுக்கவும்"
 
-#, icu-message-format
+#. Placeholder text for searching for posts
+#, case-insensitive, icu-message-format, placeholders:$INSTANCE$
 msgctxt "searchPostsFederatedWith"
 msgid "Search for posts federated with {instance}"
 msgstr "{instance} உடன் கூட்டாக்கப்பட்ட இடுகைகளைத் தேடு"
@@ -3829,7 +3917,8 @@ msgctxt "searchTerm"
 msgid "Search term"
 msgstr "தேடல் கால"
 
-#, icu-message-format
+#. Placeholder text for searching for users
+#, case-insensitive, icu-message-format, placeholders:$INSTANCE$
 msgctxt "searchUsersFederatedWith"
 msgid "Search for users federated with {instance}"
 msgstr "{instance} உடன் கூட்டாக்கப்பட்ட பயனர்களைத் தேடு"
@@ -3914,7 +4003,8 @@ msgctxt "sentRequestForTestNotification"
 msgid "Sent request for test notification."
 msgstr "சோதனை அறிவிப்புக்கான கோரிக்கை அனுப்பப்பட்டது."
 
-#, icu-message-format
+#. Error message for when we fail to fetch more comments
+#, case-insensitive, icu-message-format, placeholders:$MESSAGE$
 msgctxt "serverErrorComments"
 msgid "A server error was encountered when fetching more comments: {message}"
 msgstr "மேலும் கருத்துகளைப் பெறும்போது சேவையக பிழை ஏற்பட்டது: {message}"
@@ -3942,7 +4032,8 @@ msgctxt "settingOverrideLabel"
 msgid "These settings override Thunder's default settings."
 msgstr "இந்த அமைப்புகள் தண்டரின் இயல்புநிலை அமைப்புகளை மீறுகின்றன."
 
-#, icu-message-format
+#. Error message for when a setting type is not supported
+#, case-insensitive, icu-message-format, placeholders:$SETTINGTYPE$
 msgctxt "settingTypeNotSupported"
 msgid "Settings of type {settingType} are not yet supported."
 msgstr "வகை {settingType} இன் அமைப்புகள் இன்னும் ஆதரிக்கப்படவில்லை."
@@ -3953,7 +4044,7 @@ msgid "Settings"
 msgstr "அமைப்புகள்"
 
 #. Message shown to the user when the settings were exported successfully
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$SAVEDFILEPATH$
 msgctxt "settingsExportedSuccessfully"
 msgid "Settings were successfully saved to '{savedFilePath}'"
 msgstr "அமைப்புகள் வெற்றிகரமாக '{savedFilePath}'"
@@ -4532,7 +4623,7 @@ msgid "Subscriptions"
 msgstr "சந்தாக்கள்"
 
 #. Notification for successfully banning a user
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$USERNAME$
 msgctxt "successfullyBannedUser"
 msgid "Banned {username}"
 msgstr "தடைசெய்யப்பட்டது {username}"
@@ -4542,19 +4633,20 @@ msgctxt "successfullyBlocked"
 msgid "Blocked."
 msgstr "தடுக்கப்பட்டது."
 
-#, icu-message-format
+#. Notification for successfully blocking a community
+#, case-insensitive, icu-message-format, placeholders:$COMMUNITYNAME$
 msgctxt "successfullyBlockedCommunity"
 msgid "Blocked {communityName}"
 msgstr "தடுக்கப்பட்ட {communityName}"
 
 #. Notification for successfully blocking a user
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$USERNAME$
 msgctxt "successfullyBlockedUser"
 msgid "Blocked {username}"
 msgstr "தடுக்கப்பட்டது {username}"
 
 #. Notification for successfully unbanning a user
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$USERNAME$
 msgctxt "successfullyUnbannedUser"
 msgid "Unbanned {username}"
 msgstr "தடைசெய்யப்படாத {username}"
@@ -4564,13 +4656,14 @@ msgctxt "successfullyUnblocked"
 msgid "Unblocked."
 msgstr "தடைசெய்யப்பட்டது."
 
-#, icu-message-format
+#. Notification for successfully unblocking a community
+#, case-insensitive, icu-message-format, placeholders:$COMMUNITYNAME$
 msgctxt "successfullyUnblockedCommunity"
 msgid "Unblocked {communityName}"
 msgstr "தடைசெய்யப்படாத {communityName}"
 
 #. Notification for successfully unblocking a user
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$USERNAME$
 msgctxt "successfullyUnblockedUser"
 msgid "Unblocked {username}"
 msgstr "தடைசெய்யப்பட்ட {username}"
@@ -4589,7 +4682,7 @@ msgid "Suggested title"
 msgstr "பரிந்துரைக்கப்பட்ட தலைப்பு"
 
 #. Message shown to the user when Thunder automatically switches accounts
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$USERNAME$
 msgctxt "switchedAccount"
 msgid "Switched to {username}"
 msgstr "{username} க்கு மாறியது"
@@ -4721,14 +4814,14 @@ msgid "Thumbnail URL"
 msgstr "சிறு முகவரி"
 
 #. Heading for changelog when Thunder has been updated
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$VERSION$
 msgctxt "thunderHasBeenUpdated"
 msgid "Thunder updated to {version}!"
 msgstr "{version} க்கு இடி புதுப்பிக்கப்பட்டது!"
 
 #. Text for the user to know what the currently selected notification server
 #. is
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$SERVER$
 msgctxt "thunderNotificationServer"
 msgid "Thunder Notification Server: {server}"
 msgstr "தண்டர் அறிவிப்பு சேவையகம்: {server}"
@@ -4832,13 +4925,13 @@ msgid "Top Year"
 msgstr "முதல் ஆண்டு"
 
 #. The total comments created by a user
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$X$
 msgctxt "totalComments"
 msgid "{x} Comments"
 msgstr "{x} கருத்துகள்"
 
 #. The total posts created by a user
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$X$
 msgctxt "totalPosts"
 msgid "{x} Posts"
 msgstr "{x} இடுகைகள்"
@@ -4879,7 +4972,7 @@ msgstr "சமூகத்தைக் கண்டுபிடிக்க ம�
 
 #. Error message for when we are unable to find a community, including the
 #. name
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$COMMUNITYNAME$
 msgctxt "unableToFindCommunityName"
 msgid "Unable to find community '{communityName}'"
 msgstr "சமூகத்தைக் கண்டுபிடிக்க முடியவில்லை '{communityName}'"
@@ -4914,7 +5007,8 @@ msgctxt "unableToFindUser"
 msgid "Unable to find user"
 msgstr "பயனரைக் கண்டுபிடிக்க முடியவில்லை"
 
-#, icu-message-format
+#. Error message when we are unable to find a user
+#, case-insensitive, icu-message-format, placeholders:$USERNAME$
 msgctxt "unableToFindUserName"
 msgid "Unable to find user '{username}'"
 msgstr "பயனரை '{username}' கண்டுபிடிக்க முடியவில்லை"
@@ -4926,12 +5020,13 @@ msgid "Unable to load image"
 msgstr "படத்தை ஏற்ற முடியவில்லை"
 
 #. Placeholder for when we are unable to load an image from a URL
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$DOMAIN$
 msgctxt "unableToLoadImageFrom"
 msgid "Unable to load image from {domain}"
 msgstr "{domain}"
 
-#, icu-message-format
+#. Error message when we are unable to load an instance
+#, case-insensitive, icu-message-format, placeholders:$INSTANCE$
 msgctxt "unableToLoadInstance"
 msgid "Unable to load {instance}"
 msgstr "{instance}"
@@ -4942,7 +5037,8 @@ msgctxt "unableToLoadPost"
 msgid "Unable to load post"
 msgstr "இடுகையை ஏற்ற முடியவில்லை"
 
-#, icu-message-format
+#. Error message when we are unable to load posts from an instance
+#, case-insensitive, icu-message-format, placeholders:$INSTANCE$
 msgctxt "unableToLoadPostsFrominstance"
 msgid "Unable to load posts from {instance}"
 msgstr "{instance} இருந்து இலிருந்து இடுகைகளை ஏற்ற முடியவில்லை"
@@ -4953,7 +5049,7 @@ msgid "Unable to load more replies."
 msgstr "மேலும் பதில்களை ஏற்ற முடியவில்லை."
 
 #. Error message for when we can't navigate to a Lemmy instance
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$INSTANCEHOST$
 msgctxt "unableToNavigateToInstance"
 msgid ""
 "Unable to navigate to {instanceHost}. It may not be a valid Lemmy instance."
@@ -4968,7 +5064,7 @@ msgid "Unable to resolve report"
 msgstr "அறிக்கையைத் தீர்க்க முடியவில்லை"
 
 #. Error message for when we are unable to retrieve the changelog.
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$VERSION$
 msgctxt "unableToRetrieveChangelog"
 msgid "Unable to retrieve changelog for version {version}."
 msgstr "பதிப்பு {version} க்கான மாற்றபதிப்பு மீட்டெடுக்க முடியவில்லை."
@@ -4986,10 +5082,10 @@ msgid "Unbanned User"
 msgstr "தடைசெய்யப்படாத பயனர்"
 
 #. Short decription for moderator action to unban a user from a community
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$USERNAME$
 msgctxt "unbannedUserFromCommunity"
-msgid "Unbanned User from Community"
-msgstr "சமூகத்திலிருந்து தடைசெய்யப்படாத பயனர்"
+msgid "Unbanned {username} from Community"
+msgstr "சமூகத்திலிருந்து {username} தடைநீக்கப்பட்டது"
 
 #. Action for unblocking an item
 #, icu-message-format
@@ -5065,7 +5161,7 @@ msgstr "இரக்கமற்றது"
 
 #. A status indicator telling the current state of the UnifiedPush distributor
 #. app
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$APP$:$COUNT$
 msgctxt "unifiedPushDistributorApp"
 msgid "UnifiedPush Distributor app: {app} ({count} available)"
 msgstr "UNIFIDEPUSH விநியோகச்தர் பயன்பாடு: {app} ({count} கிடைக்கிறது)"
@@ -5077,7 +5173,7 @@ msgid "UnifiedPush Notifications"
 msgstr "ஒருங்கிணைந்த புச் அறிவிப்புகள்"
 
 #. Debug text that tells the user what UnifiedPush server is being used
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$SERVER$
 msgctxt "unifiedPushServer"
 msgid "UnifiedPush Server: {server}"
 msgstr "UNIFIDEPUSH சேவையகம்: {server}"
@@ -5112,6 +5208,12 @@ msgctxt "unpinPostFromCommunity"
 msgid "Unpin Post from Community"
 msgstr "சமூகத்திலிருந்து இடுக்கையை அவிழ்த்து விடுங்கள்"
 
+#. Message shown when a post is unpinned from a community
+#, icu-message-format
+msgctxt "unpinnedPostFromCommunity"
+msgid "Unpinned post from community"
+msgstr "சமூகத்திலிருந்து பின் நீக்கப்பட்ட இடுகை"
+
 #. Describes an instance that is currently unreachable
 #, icu-message-format
 msgctxt "unreachable"
@@ -5145,7 +5247,8 @@ msgctxt "unsubscribed"
 msgid "Unsubscribed"
 msgstr "குழுவிலகப்பட்டது"
 
-#, icu-message-format
+#. Message shown to the user when a new update is released
+#, case-insensitive, icu-message-format, placeholders:$VERSION$
 msgctxt "updateReleased"
 msgid "Update released: {version}"
 msgstr "புதுப்பிப்பு வெளியிடப்பட்டது: {version}"
@@ -5156,7 +5259,7 @@ msgid "Upload image"
 msgstr "படத்தைப் பதிவேற்றவும்"
 
 #. Metadata for image uploads
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$DATE$
 msgctxt "uploadedDate"
 msgid "Uploaded: {date}"
 msgstr "பதிவேற்றப்பட்டது: {date}"
@@ -5253,7 +5356,8 @@ msgstr ""
 "உள்நுழையும்போது, டிராயர் ஐகானுக்கு பதிலாக பயனரின் சுயவிவரப் படத்தைக் "
 "காட்டுகிறது"
 
-#, icu-message-format
+#. Message shown to the user when the suggested title is found
+#, case-insensitive, icu-message-format, placeholders:$TITLE$
 msgctxt "useSuggestedTitle"
 msgid "Use suggested title: {title}"
 msgstr "பரிந்துரைக்கப்பட்ட தலைப்பைப் பயன்படுத்தவும்: {title}"
@@ -5283,7 +5387,7 @@ msgid "User Actions"
 msgstr "பயனர் செயல்கள்"
 
 #. Entry in list for a user to perform further actions
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$USERNAME$
 msgctxt "userEntry"
 msgid "User '{username}'"
 msgstr "பயனர் '{username}'"
@@ -5371,7 +5475,7 @@ msgid "Users"
 msgstr "பயனர்கள்"
 
 #. String for describing the current version
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$VERSION$
 msgctxt "versionNumber"
 msgid "Version {version}"
 msgstr "பதிப்பு {version}"
@@ -5382,6 +5486,7 @@ msgctxt "video"
 msgid "Video"
 msgstr "ஒளிதோற்றம்"
 
+#. Option to always start the video players in landscape
 #, icu-message-format
 msgctxt "videoAutoFullscreen"
 msgid "Auto Fullscreen"
@@ -5484,7 +5589,7 @@ msgid "Viewing all"
 msgstr "அனைத்தையும் பார்க்கிறது"
 
 #. Visibility heading for community
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$VISIBILITY$
 msgctxt "visibility"
 msgid "Visibility: {visibility}"
 msgstr "தெரிவுநிலை: {visibility}"
@@ -5522,24 +5627,26 @@ msgctxt "warning"
 msgid "Warning"
 msgstr "எச்சரிக்கை"
 
-#, icu-message-format
+#. The total downvotes of post or comment
+#, case-insensitive, icu-message-format, placeholders:$X$
 msgctxt "xDownvotes"
 msgid "{x} downvotes"
 msgstr "{x} கீழ்நோக்கி"
 
 #. The total score of post or comment
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$X$
 msgctxt "xScore"
 msgid "{x} score"
 msgstr "{x} மதிப்பெண்"
 
-#, icu-message-format
+#. The total upvotes of post or comment
+#, case-insensitive, icu-message-format, placeholders:$X$
 msgctxt "xUpvotes"
 msgid "{x} upvotes"
 msgstr "{x} மேல்வாக்குகள்"
 
 #. An account descriptor representing how old an account is
-#, icu-message-format
+#, case-insensitive, icu-message-format, placeholders:$COUNT$:$X$
 msgctxt "xYearsOld"
 msgid ""
 "{count, plural, zero {{x} year old} one {{x} year old} other {{x} years "

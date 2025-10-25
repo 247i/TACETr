@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Klipper)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-06 22:28+0200\n"
-"PO-Revision-Date: 2025-01-08 07:47+0530\n"
+"POT-Creation-Date: 2025-09-08 05:01+0200\n"
+"PO-Revision-Date: 2025-09-08 09:59\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/klipper/protocol/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #, md-text
 msgid ""
@@ -110,7 +110,7 @@ msgstr ""
 "கட்டளையை \"செயல்படுத்த\" அனுமதிக்கிறது, இது கட்டளை_அப்டேட்_டிசிட்டல்_அவுட் "
 "() சி செயல்பாட்டை மைக்ரோ-கன்ட்ரோலரில் செயல்படுத்தும். கட்டளை இரண்டு முழு எண்"
 " அளவுருக்களை எடுக்கும் என்பதையும் மேலே குறிப்பிடுகிறது. "
-"கட்டளை_பிடேட்_டிசிட்டல்_வுட் () சி குறியீடு செயல்படுத்தப்படும்போது, ​​இந்த "
+"கட்டளை_பிடேட்_டிசிட்டல்_வுட் () சி குறியீடு செயல்படுத்தப்படும்போது, இந்த "
 "இரண்டு முழு எண்களைக் கொண்ட ஒரு வரிசையை அது அனுப்பும் - முதலாவது 'OID' உடன் "
 "தொடர்புடையது மற்றும் இரண்டாவது 'மதிப்பு' உடன் தொடர்புடையது."
 
@@ -398,7 +398,7 @@ msgstr ""
 "பின்பற்றப்படுகிறார்கள், மற்றும் \"ID_GET_CONFIG\" மற்றும் \"ID_GET_CLOCK\" "
 "ஆகியவை சுழிய அளவுருக்களைக் கொண்டுள்ளன என்பதை அறிவார்கள். புரவலன் மற்றும் "
 "மைக்ரோ-கன்ட்ரோலர் கட்டளை விளக்கங்களை (எ.கா. தரவை செயலாக்கும்போது, "
-"​​கொடுக்கப்பட்ட கட்டளை ஐடியைத் தொடர்ந்து ஒரு குறிப்பிட்ட எண்ணிக்கையிலான VLQ "
+"கொடுக்கப்பட்ட கட்டளை ஐடியைத் தொடர்ந்து ஒரு குறிப்பிட்ட எண்ணிக்கையிலான VLQ "
 "குறியிடப்பட்ட அளவுருக்களை எதிர்பார்க்கலாம்."
 
 #, md-text
@@ -714,88 +714,6 @@ msgstr ""
 "தொகுதிகளில் உள்ள வரிசை எண் புலம் எப்போதும் ஓச்டிலிருந்து பெறப்பட்ட செய்தித் "
 "தொகுதிகளின் கடைசியாக பெறப்பட்ட வரிசை எண்ணிக்கையை விட அதிகமாகும். மறுமொழி "
 "செய்தி தொகுதிகளின் காட்சிகளைக் கண்காணிக்க இது பயன்படுத்தப்படவில்லை."
-
-#, ignore-same, md-text
-msgid ""
-"set_digital_out pin=PA3 value=1\n"
-"set_digital_out pin=PA7 value=1\n"
-"schedule_digital_out oid=8 clock=4000000 value=0\n"
-"queue_step oid=7 interval=7458 count=10 add=331\n"
-"queue_step oid=7 interval=11717 count=4 add=1281\n"
-msgstr ""
-"set_digital_out முள் = pa3 மதிப்பு = 1\n"
-" set_digital_out முள் = pa7 மதிப்பு = 1\n"
-" அட்டவணை_டிகிட்டல்_அவுட் OID = 8 கடிகாரம் = 4000000 மதிப்பு = 0\n"
-" queue_step oid = 7 இடைவெளி = 7458 எண்ணிக்கை = 10 சேர் = 331\n"
-" queue_step oid = 7 இடைவெளி = 11717 எண்ணிக்கை = 4 சேர் = 1281\n"
-
-#, ignore-same, md-text
-msgid ""
-"DECL_COMMAND(command_update_digital_out, \"update_digital_out oid=%c "
-"value=%c\");\n"
-msgstr ""
-"Dect_command (command_update_digital_out, \"Update_digital_out oid =%c "
-"மதிப்பு =%c\");\n"
-
-#, ignore-same, md-text
-msgid ""
-"sendf(\"status clock=%u status=%c\", sched_read_time(), "
-"sched_is_shutdown());\n"
-msgstr ""
-"அனுப்பு (\"நிலை கடிகாரம் =%என்பது நிலை =%c\", sall_read_time (), "
-"sall_is_shutdown ());\n"
-
-#, ignore-same, md-text
-msgid "output(\"The value of %u is %s with size %u.\", x, buf, buf_len);\n"
-msgstr "வெளியீடு (\" %u இன் மதிப்பு %s அளவு %u உடன் %s.\", ஃச், buf, buf_len);\n"
-
-#, ignore-same, md-text
-msgid ""
-"DECL_ENUMERATION(\"spi_bus\", \"spi\", 0);\n"
-"\n"
-"DECL_ENUMERATION_RANGE(\"pin\", \"PC0\", 16, 8);\n"
-msgstr ""
-"Decal_enumeration (\"SPI_BUS\", \"SPI\", 0);\n"
-"\n"
-" Dect_enumary_range (\"முள்\", \"PC0\", 16, 8);\n"
-
-#, md-text
-msgid "DECL_CONSTANT(\"SERIAL_BAUD\", 250000);\n"
-msgstr "Dect_constant (\"சீரியல்_பாட்\", 250000);\n"
-
-#, ignore-same, md-text
-msgid "DECL_CONSTANT_STR(\"MCU\", \"pru\");\n"
-msgstr "Dec_constant_str (\"MCU\", \"prru\");\n"
-
-#, ignore-same, md-text
-msgid ""
-"<1 byte length><1 byte sequence><n-byte content><2 byte crc><1 byte sync>\n"
-msgstr ""
-"<1 பைட் நீளம்> <1 பைட் வரிசை> <n-பைட் உள்ளடக்கம்> <2 பைட் சி.ஆர்.சி> <1 பைட்"
-" ஒத்திசைவு>\n"
-
-#, ignore-same, md-text
-msgid ""
-"update_digital_out oid=6 value=1\n"
-"update_digital_out oid=5 value=0\n"
-"get_config\n"
-"get_clock\n"
-msgstr ""
-"Update_digital_out oid = 6 மதிப்பு = 1\n"
-" Update_digital_out oid = 5 மதிப்பு = 0\n"
-" get_config\n"
-" get_clock\n"
-
-#, md-text
-msgid ""
-"<id_update_digital_out><6><1><id_update_digital_out><5><0><id_get_config><id_get_clock>\n"
-msgstr ""
-"<id_update_digital_out> <6> <1> <id_update_digital_out> <5> <0> "
-"<disget_config> <id_get_clock>\n"
-
-#, md-text
-msgid "<VLQ encoded length><n-byte contents>\n"
-msgstr "<VLQ குறியிடப்பட்ட நீளம்> <n-பைட் உள்ளடக்கங்கள்>\n"
 
 #: docs/Protocol.md:block 1 (header)
 #, md-text

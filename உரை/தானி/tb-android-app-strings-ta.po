@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Thunderbird for Android / K-9 Mail)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-03 00:48+0200\n"
-"PO-Revision-Date: 2025-07-09 04:41\n"
+"POT-Creation-Date: 2025-10-22 16:18+0200\n"
+"PO-Revision-Date: 2025-10-22 21:15\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/tb-android/app-strings/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #.  === App-specific strings
 #. =============================================================
@@ -127,8 +127,8 @@ msgid ""
 "The account \"<xliff:g id=\"account\">%1$s</xliff:g>\" will be removed from "
 "<xliff:g id=\"app_name\">%2$s</xliff:g>."
 msgstr ""
-"\"<Xliff: g ஐடி =\" கணக்கு \">%1$s </xliff: g>\" கணக்கு <xliff: g ஐடி = "
-"\"app_name\">%2$s </xliff: g> இலிருந்து அகற்றப்படும்."
+"\"<xliff:g id=\"account\">%1$s</xliff:g>\" கணக்கு <xliff:g "
+"id=\"app_name\">%2$s</xliff:g> இலிருந்து அகற்றப்படும்."
 
 #.  === General strings
 #. ==================================================================
@@ -520,12 +520,13 @@ msgctxt "size_format_bytes"
 msgid "%d B"
 msgstr "%d b"
 
+# Please don't translate the placeholders XML, just the string itself.
 #, java-printf-format
 msgctxt "notification_new_messages_title"
 msgid "<xliff:g id=\"new_message_count\">%d</xliff:g> new message"
 msgid_plural "<xliff:g id=\"new_message_count\">%d</xliff:g> new messages"
-msgstr[0] "<xliff: g ஐடி = \"new_message_count\">%d </xliff: g> புதிய செய்தி"
-msgstr[1] "<xliff: g ஐடி = \"new_message_count\">%d </xliff: g> புதிய செய்திகள்"
+msgstr[0] "<xliff:g id=\"new_message_count\">%d</xliff:g> புதிய செய்தி"
+msgstr[1] "<xliff:g id=\"new_message_count\">%d</xliff:g> புதிய செய்திகள்"
 
 #, java-printf-format
 msgctxt "notification_additional_messages"
@@ -533,8 +534,8 @@ msgid ""
 "+ <xliff:g id=\"additional_messages\">%1$d</xliff:g> more on <xliff:g "
 "id=\"account\">%2$s</xliff:g>"
 msgstr ""
-"+ <xliff: g ஐடி = \"கூடுதல்_மெச்பேச்கள்\">%1$d </xliff: g> <xliff: g ஐடி = "
-"\"கணக்கு\">%2$s </xliff: g> இல் மேலும்"
+"+ <xliff:g id=\"additional_messages\">%1$d</xliff:g> <xliff:g "
+"id=\"account\">%2$s</xliff:g> இல் மேலும்"
 
 #, java-printf-format
 msgctxt "notification_action_reply"
@@ -753,6 +754,11 @@ msgid "Export failed."
 msgstr "ஏற்றுமதி தோல்வியடைந்தது."
 
 #, java-printf-format
+msgctxt "debug_open_secret_debug_screen"
+msgid "Open Secret debug screen"
+msgstr "இரகசிய பிழைத்திருத்தத் திரையைத் திறக்கவும்"
+
+#, java-printf-format
 msgctxt "message_list_load_more_messages_action"
 msgid "Load more messages"
 msgstr "மேலும் செய்திகளை ஏற்றவும்"
@@ -818,8 +824,8 @@ msgid ""
 "On <xliff:g id=\"sent_date\">%1$s</xliff:g>, <xliff:g "
 "id=\"sender\">%2$s</xliff:g> wrote:"
 msgstr ""
-"<Xliff: g ஐடி = \"sent_date\">%1$s </xliff: g>, <xliff: g ஐடி = "
-"\"sender\">%2$s </xliff: g> எழுதப்பட்டது:"
+"<xliff:g id=\"sent_date\">%1$s</xliff:g>, <xliff:g "
+"id=\"sender\">%2$s</xliff:g> எழுதப்பட்டது:"
 
 #, java-printf-format
 msgctxt "message_compose_error_no_recipients"
@@ -915,7 +921,7 @@ msgstr "இணைப்பைச் சேமிக்க முடியவி�
 #, java-printf-format
 msgctxt "message_view_recipients_format"
 msgid "to <xliff:g id=\"recipients\">%s</xliff:g>"
-msgstr "பெறுநர் <xliff: g ஐடி = \"பெறுநர்கள்\">%s </xliff: g>"
+msgstr "பெறுநர் <xliff:g id=\"recipients\">%s</xliff:g>"
 
 #.  Displayed in the message view screen in front of the number of additional
 #. recipients (the ones that are not displayed).
@@ -3069,7 +3075,7 @@ msgstr "மற்றவை"
 #, java-printf-format
 msgctxt "settings_list_action_support"
 msgid "Support <xliff:g id=\"app_name\">%s</xliff:g>"
-msgstr "உதவி <xliff: g ஐடி = \"app_name\">%s </xliff: g>"
+msgstr "உதவி <xliff:g id=\"app_name\">%s</xliff:g>"
 
 #, java-printf-format
 msgctxt "settings_export_title"
@@ -4195,10 +4201,10 @@ msgid ""
 "notification while the app is active in the background. <xliff:g "
 "id=\"optional_extended_explanation\">%2$s</xliff:g>"
 msgstr ""
-"புச் பயன்படுத்தும் போது, <xliff: g ஐடி = \"app_name\">%1$s </xliff: g> "
-"அஞ்சல் சேவையகத்துடன் இணைப்பைப் பராமரிக்கிறது. பயன்பாடு பின்னணியில் செயலில் "
+"புச் பயன்படுத்தும் போது, <xliff:g id=\"app_name\">%1$s</xliff:g> அஞ்சல் "
+"சேவையகத்துடன் இணைப்பைப் பராமரிக்கிறது. பயன்பாடு பின்னணியில் செயலில் "
 "இருக்கும்போது ஆண்ட்ராய்டு க்கு தொடர்ச்சியான அறிவிப்பைக் காண்பிக்க வேண்டும். "
-"<xliff: g ஐடி = \"atanal_extended_explanation\">%2$s </xliff: g>"
+"<xliff:g id=\"optional_extended_explanation\">%2$s</xliff:g>"
 
 #, java-printf-format
 msgctxt "push_info_configure_notification_text"
@@ -4519,3 +4525,70 @@ msgstr ""
 msgctxt "archiving_not_available_for_this_account"
 msgid "Archiving is not available for this account."
 msgstr "இந்த கணக்கிற்கு காப்பகம் கிடைக்கவில்லை."
+
+#.  Debug/testing menu items
+#, java-printf-format
+msgctxt "debug_invalidate_access_token"
+msgid "Test: Invalidate access token"
+msgstr "சோதனை: அணுகல் கிள்ளாக்கை செல்லாததாக்கு"
+
+#, java-printf-format
+msgctxt "debug_invalidate_access_token_done"
+msgid "Access token invalidated. Next request will refresh."
+msgstr "அணுகல் கிள்ளாக்கு செல்லாதது. அடுத்த கோரிக்கை புதுப்பிக்கப்படும்."
+
+#, java-printf-format
+msgctxt "debug_invalidate_access_token_unavailable"
+msgid "No OAuth token available for this account."
+msgstr "இந்தக் கணக்கிற்கு OAuth கிள்ளாக்கு எதுவும் இல்லை."
+
+#, java-printf-format
+msgctxt "debug_invalidate_access_token_local"
+msgid "Test: Invalidate access token (local)"
+msgstr "சோதனை: செல்லாத அணுகல் கிள்ளாக்கை (உள்ளூர்)"
+
+#, java-printf-format
+msgctxt "debug_invalidate_access_token_local_done"
+msgid "Local invalidation requested. Next request will fetch a new token."
+msgstr ""
+"உள்ளக செல்லாததாக்குதல் கோரப்பட்டது. அடுத்த கோரிக்கை புதிய கிள்ளாக்கைப் "
+"பெறும்."
+
+#, java-printf-format
+msgctxt "debug_invalidate_access_token_server"
+msgid "Test: Invalidate access token (server)"
+msgstr "சோதனை: செல்லாத அணுகல் கிள்ளாக்கை (சேவையகம்)"
+
+#, java-printf-format
+msgctxt "debug_invalidate_access_token_server_done"
+msgid "Stored access token corrupted. Next request will fail then refresh."
+msgstr ""
+"சேமிக்கப்பட்ட அணுகல் கிள்ளாக்கு சிதைந்துள்ளது. அடுத்த கோரிக்கை தோல்வியடைந்து"
+" புதுப்பிக்கப்படும்."
+
+#, java-printf-format
+msgctxt "debug_force_auth_failure"
+msgid "Test: Force auth failure now"
+msgstr "சோதனை: இப்போது கட்டாய அங்கீகார தோல்வி"
+
+#, java-printf-format
+msgctxt "debug_force_auth_failure_done"
+msgid "OAuth state cleared. Next request will fail."
+msgstr "OAuth மாநிலம் அழிக்கப்பட்டது. அடுத்த கோரிக்கை தோல்வியடையும்."
+
+#, java-printf-format
+msgctxt "debug_force_auth_failure_unavailable"
+msgid "No OAuth configuration available for this account."
+msgstr "இந்தக் கணக்கிற்கு OAuth உள்ளமைவு எதுவும் இல்லை."
+
+#, java-printf-format
+msgctxt "debug_invalidate_access_token_cannot_modify"
+msgid "Could not modify stored access token. Try local invalidation."
+msgstr ""
+"சேமிக்கப்பட்ட அணுகல் கிள்ளாக்கை மாற்ற முடியவில்லை. உள்ளக செல்லாததை "
+"முயற்சிக்கவும்."
+
+#, java-printf-format
+msgctxt "debug_invalidate_access_token_already_modified"
+msgid "Stored access token already modified."
+msgstr "சேமிக்கப்பட்ட அணுகல் கிள்ளாக்கு ஏற்கனவே மாற்றியமைக்கப்பட்டுள்ளது."

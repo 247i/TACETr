@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Launch Chat)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-11 02:14+0200\n"
-"PO-Revision-Date: 2025-01-11 07:05+0530\n"
+"POT-Creation-Date: 2025-09-13 07:24+0200\n"
+"PO-Revision-Date: 2025-09-13 23:44\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/launch-chat/main/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #, java-printf-format
 msgctxt "app_name"
@@ -99,11 +99,6 @@ msgid "Paste from clipboard"
 msgstr "கிளிப்போர்டிலிருந்து ஒட்டவும்"
 
 #, java-printf-format
-msgctxt "button_paste_from_clipboard"
-msgid "Clipboard"
-msgstr "இடைநிலைப் பலகை"
-
-#, java-printf-format
 msgctxt "label_contacts_shortcut"
 msgid "Contacts"
 msgstr "தொடர்புகள்"
@@ -139,6 +134,7 @@ msgid "Neither Telegram nor a browser app is installed"
 msgstr "தந்தி அல்லது உலாவி பயன்பாடு நிறுவப்படவில்லை"
 
 #.  Preference ID's
+#.  Caution when editing: This maps to Settings.KEY_ACTIVITY_HISTORY
 #, java-printf-format
 msgctxt "pref_activity_history_key"
 msgid "pref_activity_history"
@@ -159,10 +155,103 @@ msgctxt "pref_activity_history_off_description"
 msgid "Launch Chat will not record activity history"
 msgstr "வெளியீட்டு அரட்டை செயல்பாட்டு வரலாற்றை பதிவு செய்யாது"
 
+#.  Caution when editing: This maps to
+#. Settings.KEY_MISSING_COUNTRY_CODE_ACTION
 #, java-printf-format
-msgctxt "pref_last_region"
-msgid "pref_last_region"
-msgstr "pref_last_region"
+msgctxt "pref_missing_country_code_action_key"
+msgid "missing_country_code_action"
+msgstr "காணவில்லை_கோன்ட்ரி_கோட்_சான்"
+
+#, java-printf-format
+msgctxt "pref_missing_country_code_action_title"
+msgid "Action when country code is missing"
+msgstr "நாட்டின் குறியீடு காணாமல் போகும்போது நடவடிக்கை"
+
+#, java-printf-format
+msgctxt "pref_missing_country_code_action_entry_default_name"
+msgid "Use the default country code"
+msgstr "இயல்புநிலை நாட்டின் குறியீட்டைப் பயன்படுத்தவும்"
+
+#.  Caution when editing: This maps to
+#. Settings.VALUE_MISSING_COUNTRY_CODE_ACTION_ENTRY_DEFAULT
+#, java-printf-format
+msgctxt "pref_missing_country_code_action_entry_default_value"
+msgid "default_country_code"
+msgstr "Default_country_code"
+
+#, java-printf-format
+msgctxt "pref_missing_country_code_action_entry_recent_name"
+msgid "Use the most recent country code"
+msgstr "மிக அண்மைக் கால நாட்டு குறியீட்டைப் பயன்படுத்தவும்"
+
+#.  Caution when editing: This maps to
+#. Settings.VALUE_MISSING_COUNTRY_CODE_ACTION_ENTRY_DEFAULT
+#, java-printf-format
+msgctxt "pref_missing_country_code_action_entry_recent_value"
+msgid "recent_country_code"
+msgstr "சமீபத்திய_கூன்ட்ரி_கோட்"
+
+#, java-printf-format
+msgctxt ""
+"pref_missing_country_code_action_description_default_country_code_available"
+msgid "Use the default country code +%1$d"
+msgstr "இயல்புநிலை நாட்டு குறியீடு +%1$d ஐப் பயன்படுத்தவும்"
+
+#, java-printf-format
+msgctxt ""
+"pref_missing_country_code_action_description_default_country_code_missing"
+msgid "⚠️ Default country code selected, but country code not set"
+msgstr ""
+"Stature இயல்புநிலை நாட்டின் குறியீடு தேர்ந்தெடுக்கப்பட்டது, ஆனால் நாட்டின் "
+"குறியீடு அமைக்கப்படவில்லை"
+
+#, java-printf-format
+msgctxt ""
+"pref_missing_country_code_action_description_recent_country_code_available"
+msgid "Use the recent country code +%1$d"
+msgstr "அண்மைக் கால நாட்டு குறியீடு +%1$d ஐப் பயன்படுத்தவும்"
+
+#, java-printf-format
+msgctxt ""
+"pref_missing_country_code_action_description_recent_country_code_missing"
+msgid ""
+"⚠️ Recent country code selected, but no recent country code available. Try "
+"launching a chat with a phone number with country code"
+msgstr ""
+"Codey அண்மைக் கால நாட்டின் குறியீடு தேர்ந்தெடுக்கப்பட்டது, ஆனால் அண்மைக் கால"
+" நாட்டுக் குறியீடு எதுவும் கிடைக்கவில்லை. நாட்டு குறியீட்டைக் கொண்ட தொலைபேசி"
+" எண்ணுடன் அரட்டையைத் தொடங்க முயற்சிக்கவும்"
+
+#.  Caution when editing: This maps to Settings.KEY_DEFAULT_COUNTRY_CODE
+#, java-printf-format
+msgctxt "pref_default_country_code_key"
+msgid "default_country_code"
+msgstr "Default_country_code"
+
+#, java-printf-format
+msgctxt "pref_default_country_code_title"
+msgid "Default country code"
+msgstr "இயல்புநிலை நாட்டு குறியீடு"
+
+#, java-printf-format
+msgctxt "pref_default_country_code_description_missing"
+msgid ""
+"The country code to use when the phone number does not start with a country "
+"code"
+msgstr ""
+"நாட்டு குறியீட்டில் தொலைபேசி எண் தொடங்காதபோது பயன்படுத்த வேண்டிய நாட்டு "
+"குறியீடு"
+
+#, java-printf-format
+msgctxt "pref_default_country_code_description_set"
+msgid "Use the country code +%1$d"
+msgstr "நாட்டின் குறியீடு +%1$d ஐப் பயன்படுத்தவும்"
+
+#, java-printf-format
+msgctxt "pref_default_country_code_invalid_format"
+msgid "Please enter a country code in the format +123, with no spaces"
+msgstr ""
+"எந்த இடங்களும் இல்லாமல் +123 வடிவத்தில் ஒரு நாட்டின் குறியீட்டை உள்ளிடவும்"
 
 #, java-printf-format
 msgctxt "activity_source_tel"
@@ -212,7 +301,8 @@ msgstr "வரலாறு"
 #, java-printf-format
 msgctxt "action_label"
 msgid "<![CDATA[Opened <strong>%1$s</strong> with <strong>%2$s</strong>]]>"
-msgstr "<!"
+msgstr ""
+"<![CDATA[<strong>%2$s</strong> உடன் <strong>%1$s</strong> ஐத் திறந்தார்]]>"
 
 #, java-printf-format
 msgctxt "no_action_label"
@@ -221,8 +311,8 @@ msgstr "செயல்கள் இல்லை"
 
 #, java-printf-format
 msgctxt "action_more"
-msgid "...and %1$d more"
-msgstr "... மற்றும் %1$d மேலும்"
+msgid "…and %1$d more"
+msgstr "… மற்றும் %1$d மேலும்"
 
 #, java-printf-format
 msgctxt "action_type_whatsapp"
@@ -263,3 +353,53 @@ msgstr "உள்ளீட்டை மாற்றவும்"
 msgctxt "replace_input_neutral_button"
 msgid "Dismiss"
 msgstr "தள்ளுபடி"
+
+#, java-printf-format
+msgctxt "select_contacts_not_ready_dialog_title"
+msgid "Not implemented yet!"
+msgstr "இன்னும் செயல்படுத்தப்படவில்லை!"
+
+#, java-printf-format
+msgctxt "select_contacts_not_ready_dialog_message"
+msgid ""
+"This feature is not available yet. However, Launch Chat can open contacts if you open your Contacts app and share a contact with Launch Chat. \n"
+"\n"
+"See demo video at https://github.com/vinaygopinath/launch-chat/pull/18"
+msgstr ""
+"இந்த நற்பொருத்தம் இன்னும் கிடைக்கவில்லை. இருப்பினும், உங்கள் தொடர்புகள் பயன்பாட்டைத் திறந்து வெளியீட்டு அரட்டையுடன் தொடர்பைப் பகிர்ந்து கொண்டால், துவக்க அரட்டை தொடர்புகளைத் திறக்கலாம். \n"
+"\n"
+"டெமோ வீடியோவைப் பார்க்கவும் https://github.com/vinaygopinath/launch-chat/pull/18"
+
+#, java-printf-format
+msgctxt "select_contacts_not_ready_dialog_neutral_button"
+msgid "Got it"
+msgstr "கிடைத்தது"
+
+#, java-printf-format
+msgctxt "delete_confirmation_title"
+msgid "Delete history confirmation"
+msgstr "வரலாற்று உறுதிப்படுத்தலை நீக்கு"
+
+#, java-printf-format
+msgctxt "delete_confirmation_text"
+msgid ""
+"Are you sure you want to delete the selected activity history entries? This "
+"action is irreversible."
+msgstr ""
+"தேர்ந்தெடுக்கப்பட்ட செயல்பாட்டு வரலாற்று உள்ளீடுகளை நீக்க விரும்புகிறீர்களா?"
+" இந்த நடவடிக்கை மாற்ற முடியாதது."
+
+#, java-printf-format
+msgctxt "delete_confirmation_positive_button"
+msgid "Delete"
+msgstr "நீக்கு"
+
+#, java-printf-format
+msgctxt "delete_confirmation_negative_button"
+msgid "Cancel"
+msgstr "ரத்துசெய்"
+
+#, java-printf-format
+msgctxt "button_delete"
+msgid "Delete"
+msgstr "நீக்கு"
