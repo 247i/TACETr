@@ -1,15 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2007-2023, the Sphinx developers
+# Copyright (C) 2007-2025, the Sphinx developers
 # This file is distributed under the same license as the Sphinx package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2024
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 7.3.0\n"
+"Project-Id-Version: Sphinx 8.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-18 00:39+0000\n"
-"PO-Revision-Date: 2024-11-30 21:38+0530\n"
+"POT-Creation-Date: 2025-11-15 06:34+0000\n"
+"PO-Revision-Date: 2025-11-16 08:55\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2024\n"
 "Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +21,164 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/usage/referencing.rst:109
+#: ../../sphinx/doc/usage/referencing.rst:5
+msgid "Cross-references"
+msgstr "குறுக்கு குறிப்புகள்"
+
+#: ../../sphinx/doc/usage/referencing.rst:7
+msgid ""
+"One of Sphinx's most useful features is creating automatic cross-references "
+"through semantic cross-referencing roles. A cross reference to an object "
+"description, such as ``:func:`spam```, will create a link to the place where"
+" ``spam()`` is documented, appropriate to each output format (HTML, PDF, "
+"ePUB, etc.)."
+msgstr ""
+"ச்பிங்க்சின் மிகவும் பயனுள்ள அம்சங்களில் ஒன்று, சொற்பொருள் குறுக்கு-குறிப்பு"
+" பாத்திரங்கள் மூலம் தானியங்கி குறுக்கு-குறிப்புகளை உருவாக்குகிறது. "
+"``:func:`spam``` போன்ற ஒரு பொருளின் விளக்கத்திற்கான குறுக்குக் குறிப்பு, "
+"ஒவ்வொரு வெளியீட்டு வடிவத்திற்கும் (HTML, PDF, ePUB, முதலியன) பொருத்தமான "
+"`ச்பேம்()`` ஆவணப்படுத்தப்பட்ட இடத்திற்கான இணைப்பை உருவாக்கும்."
+
+#: ../../sphinx/doc/usage/referencing.rst:16
+msgid "Syntax"
+msgstr "தொடரியல்"
+
+#: ../../sphinx/doc/usage/referencing.rst:18
+msgid ""
+"Sphinx supports various cross-referencing roles to create links to other "
+"elements in the documentation. In general, writing ``:role:`target``` "
+"creates a link to the object called *target* of the type indicated by "
+"*role*. The link's text depends the role but is often the same as or similar"
+" to *target*."
+msgstr ""
+"ஆவணப்படுத்தலில் உள்ள மற்ற உறுப்புகளுக்கு இணைப்புகளை உருவாக்க சூரரிமாச்சிலை "
+"பல்வேறு குறுக்கு-குறிப்பு பாத்திரங்களை ஆதரிக்கிறது. பொதுவாக, "
+"``:role:`target``` எழுதுவது, *role* ஆல் குறிப்பிடப்பட்ட வகையின் *இலக்கு* "
+"எனப்படும் பொருளுக்கான இணைப்பை உருவாக்குகிறது. இணைப்பின் உரையானது பங்கைச் "
+"சார்ந்தது ஆனால் பெரும்பாலும் *இலக்கு* போலவே இருக்கும்."
+
+#: ../../sphinx/doc/usage/referencing.rst:26
+msgid "The behavior can be modified in the following ways:"
+msgstr "நடத்தை பின்வரும் வழிகளில் மாற்றியமைக்கப்படலாம்:"
+
+#: ../../sphinx/doc/usage/referencing.rst:28
+msgid ""
+"**Custom link text:** You can specify the link text explicitly using the "
+"same notation as in reStructuredText :ref:`external links <rst-external-"
+"links>`: ``:role:`custom text <target>``` will refer to *target* and display"
+" *custom text* as the text of the link."
+msgstr ""
+"**தனிப்பயன் இணைப்பு உரை:** reStructuredText :ref:`external links <rst-"
+"external-links>`: ``:role:` தனிப்பயன் உரை <target>``` என்பதில் உள்ள அதே "
+"குறிப்பைப் பயன்படுத்தி நீங்கள் இணைப்பு உரையை வெளிப்படையாகக் குறிப்பிடலாம் "
+"மற்றும் *இலக்கு* என்பதைக் குறிக்கும்."
+
+#: ../../sphinx/doc/usage/referencing.rst:34
+msgid ""
+"**Suppressed link:** Prefixing with an exclamation mark (``!``) prevents the"
+" creation of a link but otherwise keeps the visual output of the role."
+msgstr ""
+"**அடக்கப்பட்ட இணைப்பு:** ஆச்சரியக்குறியுடன் (``!``) முன்னொட்டு இணைப்பது "
+"இணைப்பை உருவாக்குவதைத் தடுக்கிறது ஆனால் இல்லையெனில் பாத்திரத்தின் காட்சி "
+"வெளியீட்டை வைத்திருக்கும்."
+
+#: ../../sphinx/doc/usage/referencing.rst:38
+msgid ""
+"For example, writing ``:py:func:`!target``` displays :py:func:`!target`, "
+"with no link generated."
+msgstr ""
+"எடுத்துக்காட்டாக, ``:py:func:`!target``` எழுதுவது :py:func:`!target`, எந்த "
+"இணைப்பும் உருவாக்கப்படவில்லை."
+
+#: ../../sphinx/doc/usage/referencing.rst:41
+msgid ""
+"This is helpful for cases in which the link target does not exist; e.g. "
+"changelog entries that describe removed functionality, or third-party "
+"libraries that don't support :doc:`intersphinx "
+"</usage/extensions/intersphinx>`. Suppressing the link prevents warnings in "
+":confval:`nitpicky` mode."
+msgstr ""
+"இணைப்பு இலக்கு இல்லாத சந்தர்ப்பங்களில் இது உதவியாக இருக்கும்; எ.கா. "
+"நீக்கப்பட்ட செயல்பாட்டை விவரிக்கும் சேஞ்ச்லாக் உள்ளீடுகள் அல்லது ஆதரிக்காத "
+"மூன்றாம் தரப்பு நூலகங்கள் :doc:`intersphinx "
+"</usage/extensions/intersphinx>`. இணைப்பை அடக்குவது :confval:`nitpicky` "
+"பயன்முறையில் எச்சரிக்கைகளைத் தடுக்கிறது."
+
+#: ../../sphinx/doc/usage/referencing.rst:47
+msgid ""
+"**Modified domain reference:** When :ref:`referencing domain objects <ref-"
+"objects>`, a tilde ``~`` prefix shortens the link text to the last component"
+" of the target. For example, ``:py:meth:`~queue.Queue.get``` will refer to "
+"``queue.Queue.get`` but only display ``get`` as the link text."
+msgstr ""
+"**மாற்றியமைக்கப்பட்ட டொமைன் குறிப்பு:** :ref:` டொமைன் பொருள்களை <ref-"
+"objects>` குறிப்பிடும் போது, ​​ஒரு டில்டே ``~`` முன்னொட்டு இலக்கின் கடைசி "
+"கூறுக்கு இணைப்பு உரையைக் குறைக்கிறது. எடுத்துக்காட்டாக, "
+"``:py:meth:`~queue.Queue.get``` என்பது ``queue.Queue.get`` ஐக் குறிக்கும், "
+"ஆனால் இணைப்பு உரையாக ``get`` என்பதை மட்டுமே காண்பிக்கும்."
+
+#: ../../sphinx/doc/usage/referencing.rst:53
+msgid ""
+"In HTML output, the link's ``title`` attribute (that is e.g. shown as a "
+"tool-tip on mouse-hover) will always be the full target name."
+msgstr ""
+"html வெளியீட்டில், இணைப்பின் `` தலைப்பு`` பண்புக்கூறு (அது எ.கா. "
+"மவுச்-ஓவரில் ஒரு கருவி-முனையாக காட்டப்பட்டுள்ளது) எப்போதும் முழு இலக்கு "
+"பெயராக இருக்கும்."
+
+#: ../../sphinx/doc/usage/referencing.rst:61
+msgid "Cross-referencing objects"
+msgstr "குறுக்கு-குறிப்பு பொருள்கள்"
+
+#: ../../sphinx/doc/usage/referencing.rst:63
+msgid "These roles are described with their respective domains:"
+msgstr "இந்த பாத்திரங்கள் அந்தந்த களங்களுடன் விவரிக்கப்பட்டுள்ளன:"
+
+#: ../../sphinx/doc/usage/referencing.rst:65
+msgid ":ref:`C <c-xref-roles>`"
+msgstr ":ref:`C <c-xref-roles>`"
+
+#: ../../sphinx/doc/usage/referencing.rst:66
+msgid ":ref:`C++ <cpp-xref-roles>`"
+msgstr ":ref:`C++ <cpp-xref-roles>`"
+
+#: ../../sphinx/doc/usage/referencing.rst:67
+msgid ":ref:`JavaScript <js-xref-roles>`"
+msgstr ":ref:`JavaScript <js-xref-roles>`"
+
+#: ../../sphinx/doc/usage/referencing.rst:68
+msgid ":ref:`reStructuredText <rst-xref-roles>`"
+msgstr ":ref:`reStructuredText <rst-xref-roles>`"
+
+#: ../../sphinx/doc/usage/referencing.rst:69
+msgid ":ref:`Python <python-xref-roles>`"
+msgstr ":ref:`பைதான் <python-xref-roles>`"
+
+#: ../../sphinx/doc/usage/referencing.rst:75
+msgid "Cross-referencing arbitrary locations"
+msgstr "குறுக்கு-குறிப்பு தன்னிச்சையான இடங்களை"
+
+#: ../../sphinx/doc/usage/referencing.rst:79
+msgid ""
+"To support cross-referencing to arbitrary locations in any document, the "
+"standard reStructuredText labels are used. For this to work label names must"
+" be unique throughout the entire documentation. There are two ways in which "
+"you can refer to labels:"
+msgstr ""
+"எந்தவொரு ஆவணத்திலும் தன்னிச்சையான இடங்களுக்கு குறுக்கு-குறிப்பை ஆதரிக்க, "
+"நிலையான மறுகட்டமைக்கப்பட்ட உரை லேபிள்கள் பயன்படுத்தப்படுகின்றன. இது வேலை "
+"செய்ய சிட்டை பெயர்கள் முழு ஆவணத்திலும் தனித்துவமாக இருக்க வேண்டும். "
+"லேபிள்களைக் குறிப்பிட இரண்டு வழிகள் உள்ளன:"
+
+#: ../../sphinx/doc/usage/referencing.rst:85
+msgid ""
+"If you place a label directly before a section title, you can reference to "
+"it with ``:ref:`label-name```.  For example::"
+msgstr ""
+"நீங்கள் ஒரு பிரிவு தலைப்புக்கு முன் ஒரு லேபிளை நேரடியாக வைத்தால், அதை ``: "
+"ref: `லேபிள்-பெயர்`` உடன் குறிப்பிடலாம். உதாரணத்திற்கு::"
+
+#: ../../sphinx/doc/usage/referencing.rst:97
 msgid ""
 "The ``:ref:`` role would then generate a link to the section, with the link "
 "title being \"Section to cross-reference\".  This works just as well when "
@@ -27,20 +188,12 @@ msgstr ""
 "தலைப்பு \"குறுக்கு-குறிப்புக்கான பிரிவு\". பிரிவு மற்றும் குறிப்பு வெவ்வேறு "
 "மூல கோப்புகளில் இருக்கும்போது இது நன்றாக வேலை செய்கிறது."
 
-#: ../../sphinx/doc/usage/referencing.rst:113
+#: ../../sphinx/doc/usage/referencing.rst:101
 msgid "Automatic labels also work with figures. For example::"
 msgstr ""
 "தானியங்கி லேபிள்களும் புள்ளிவிவரங்களுடன் வேலை செய்கின்றன. உதாரணத்திற்கு::"
 
-#: ../../sphinx/doc/usage/referencing.rst:12
-msgid ""
-"There are some additional facilities, however, that make cross-referencing "
-"roles more versatile:"
-msgstr ""
-"இருப்பினும், சில கூடுதல் வசதிகள் உள்ளன, அவை குறுக்கு-குறிப்பு பாத்திரங்களை "
-"மிகவும் பல்துறை ஆக்குகின்றன:"
-
-#: ../../sphinx/doc/usage/referencing.rst:121
+#: ../../sphinx/doc/usage/referencing.rst:109
 msgid ""
 "In this case, a  reference ``:ref:`my-figure``` would insert a reference to "
 "the figure with link text \"Figure caption\"."
@@ -48,7 +201,7 @@ msgstr ""
 "இந்த வழக்கில், ஒரு குறிப்பு ``: குறிப்பு: `எனது உருவம்``` இணைப்பு உரை\" படம்"
 " தலைப்பு \"உடன் உருவத்திற்கு ஒரு குறிப்பைச் செருகும்."
 
-#: ../../sphinx/doc/usage/referencing.rst:124
+#: ../../sphinx/doc/usage/referencing.rst:112
 msgid ""
 "The same works for tables that are given an explicit caption using the "
 ":dudir:`table` directive."
@@ -56,7 +209,7 @@ msgstr ""
 ": டுடிர்: `அட்டவணை` டைரெக்டிவ் ஆகியவற்றைப் பயன்படுத்தி வெளிப்படையான தலைப்பு "
 "வழங்கப்படும் அட்டவணைகளுக்கும் அதே படைப்புகள்."
 
-#: ../../sphinx/doc/usage/referencing.rst:127
+#: ../../sphinx/doc/usage/referencing.rst:115
 msgid ""
 "Labels that aren't placed before a section title can still be referenced, "
 "but you must give the link an explicit title, using this syntax: "
@@ -66,7 +219,7 @@ msgstr ""
 "ஆனால் இந்த தொடரியல் பயன்படுத்தி இணைப்புக்கு வெளிப்படையான தலைப்பைக் கொடுக்க "
 "வேண்டும்: ``: குறிப்பு: `இணைப்பு தலைப்பு <apalle-name>` `."
 
-#: ../../sphinx/doc/usage/referencing.rst:133
+#: ../../sphinx/doc/usage/referencing.rst:121
 msgid ""
 "Reference labels must start with an underscore. When referencing a label, "
 "the underscore must be omitted (see examples above)."
@@ -75,7 +228,7 @@ msgstr ""
 "குறிப்பிடும்போது, அடிக்கோடிட்டுக் காட்டப்பட வேண்டும் (மேலே உள்ள "
 "எடுத்துக்காட்டுகளைப் பார்க்கவும்)."
 
-#: ../../sphinx/doc/usage/referencing.rst:136
+#: ../../sphinx/doc/usage/referencing.rst:124
 msgid ""
 "Using :rst:role:`ref` is advised over standard reStructuredText links to "
 "sections (like ```Section title`_``) because it works across files, when "
@@ -88,39 +241,31 @@ msgstr ""
 "மாற்றப்படும்போது, தவறாக இருந்தால் எச்சரிக்கைகளை எழுப்பும், மேலும் வேலை "
 "செய்யும் குறுக்கு குறிப்புகளை ஆதரிக்கும் அனைத்து பில்டர்களும்."
 
-#: ../../sphinx/doc/usage/referencing.rst:143
+#: ../../sphinx/doc/usage/referencing.rst:131
 msgid "Cross-referencing documents"
 msgstr "குறுக்கு-குறிப்பு ஆவணங்கள்"
 
-#: ../../sphinx/doc/usage/referencing.rst:147
+#: ../../sphinx/doc/usage/referencing.rst:135
 msgid "There is also a way to directly link to documents:"
 msgstr "ஆவணங்களுடன் நேரடியாக இணைக்க ஒரு வழியும் உள்ளது:"
 
-#: ../../sphinx/doc/usage/referencing.rst:15
+#: ../../sphinx/doc/usage/referencing.rst:139
 msgid ""
-"You may supply an explicit title and reference target, like in reST direct "
-"hyperlinks: ``:role:`title <target>``` will refer to *target*, but the link "
-"text will be *title*."
+"Link to the specified document; the document name can be a relative or "
+"absolute path and is always case-sensitive, even on Windows.  For example, "
+"if the reference ``:doc:`parrot``` occurs in the document "
+"``sketches/index``, then the link refers to ``sketches/parrot``.  If the "
+"reference is ``:doc:`/people``` or ``:doc:`../people```, the link refers to "
+"``people``."
 msgstr ""
-"மீதமுள்ள நேரடி ஐப்பர்லிங்க்களைப் போலவே நீங்கள் வெளிப்படையான தலைப்பு மற்றும் "
-"குறிப்பு இலக்கை வழங்கலாம்: ``: பங்கு: `தலைப்பு <இலக்கு>` `` *இலக்கு *ஐக் "
-"குறிக்கும், ஆனால் இணைப்பு உரை *தலைப்பு *ஆக இருக்கும்."
+"குறிப்பிட்ட ஆவணத்திற்கான இணைப்பு; ஆவணத்தின் பெயர் ஒரு உறவினர் அல்லது "
+"முழுமையான பாதையாக இருக்கலாம் மற்றும் சாளரங்களில் கூட எப்போதும் "
+"கேச்-சென்சிட்டிவ் ஆகும். எடுத்துக்காட்டாக, ``:doc:`parrot``` என்ற குறிப்பு "
+"``sketches/index`` ஆவணத்தில் இருந்தால், இணைப்பு ``sketches/parrot`` என்பதைக்"
+" குறிக்கிறது. குறிப்பு ``:doc:`/people``` அல்லது ``:doc:`../people``` எனில்,"
+" இணைப்பு ``மக்கள்`` என்பதைக் குறிக்கிறது."
 
-#: ../../sphinx/doc/usage/referencing.rst:151
-msgid ""
-"Link to the specified document; the document name can be specified in "
-"absolute or relative fashion.  For example, if the reference "
-"``:doc:`parrot``` occurs in the document ``sketches/index``, then the link "
-"refers to ``sketches/parrot``.  If the reference is ``:doc:`/people``` or "
-"``:doc:`../people```, the link refers to ``people``."
-msgstr ""
-"குறிப்பிட்ட ஆவணத்திற்கான இணைப்பு; ஆவண பெயரை முழுமையான அல்லது உறவினர் "
-"பாணியில் குறிப்பிடலாம். எடுத்துக்காட்டாக, ``: டாக்: `கிளி:` "
-"`ஓவியங்கள்/குறியீட்டு`` என்ற குறிப்பு ஏற்பட்டால், இணைப்பு` `ஓவியங்கள்/கிளி``"
-" என்பதைக் குறிக்கிறது. குறிப்பு ``: டாக்: `/மக்கள்``` அல்லது` `: டாக்:` ../ "
-"மக்கள்``` என்றால், இணைப்பு `` மக்கள்` என்பதைக் குறிக்கிறது."
-
-#: ../../sphinx/doc/usage/referencing.rst:157
+#: ../../sphinx/doc/usage/referencing.rst:145
 msgid ""
 "If no explicit link text is given (like usual: ``:doc:`Monty Python members "
 "</people>```), the link caption will be the title of the given document."
@@ -129,20 +274,21 @@ msgstr ""
 "``: டாக்: `மான்டி பைதான் உறுப்பினர்கள் </மக்கள்>` ``), இணைப்பு தலைப்பு "
 "கொடுக்கப்பட்ட ஆவணத்தின் தலைப்பாக இருக்கும்."
 
-#: ../../sphinx/doc/usage/referencing.rst:162
+#: ../../sphinx/doc/usage/referencing.rst:150
 msgid "Referencing downloadable files"
 msgstr "தரவிறக்கம் செய்யக்கூடிய கோப்புகளைக் குறிப்பிடுகிறது"
 
-#: ../../sphinx/doc/usage/referencing.rst:168
+#: ../../sphinx/doc/usage/referencing.rst:156
 msgid ""
-"This role lets you link to files within your source tree that are not reST "
-"documents that can be viewed, but files that can be downloaded."
+"This role lets you link to files within your source tree that are not "
+"reStructuredText documents that can be viewed, but files that can be "
+"downloaded."
 msgstr ""
-"இந்த பங்கு உங்கள் மூல மரத்தில் உள்ள கோப்புகளுடன் இணைக்க உங்களை "
-"அனுமதிக்கிறது, அவை பார்க்கக்கூடிய ஓய்வு ஆவணங்கள் அல்ல, ஆனால் பதிவிறக்கம் "
-"செய்யக்கூடிய கோப்புகள்."
+"இந்த பாத்திரம் உங்கள் மூல மரத்தில் உள்ள கோப்புகளை இணைக்க உங்களை "
+"அனுமதிக்கிறது, அவை மறுகட்டமைக்கப்பட்ட உரை ஆவணங்களை பார்க்க முடியாது, ஆனால் "
+"பதிவிறக்கம் செய்யக்கூடிய கோப்புகள்."
 
-#: ../../sphinx/doc/usage/referencing.rst:171
+#: ../../sphinx/doc/usage/referencing.rst:160
 msgid ""
 "When you use this role, the referenced file is automatically marked for "
 "inclusion in the output when building (obviously, for HTML output only). All"
@@ -155,11 +301,11 @@ msgstr ""
 "டவுன்லோட்/<தனித்துவமான ஆச்>/` `வெளியீட்டு கோப்பகத்தின் துணை அடைவு; நகல் "
 "கோப்பு பெயர்கள் கையாளப்படுகின்றன."
 
-#: ../../sphinx/doc/usage/referencing.rst:176
+#: ../../sphinx/doc/usage/referencing.rst:165
 msgid "An example::"
 msgstr "ஒரு எடுத்துக்காட்டு ::"
 
-#: ../../sphinx/doc/usage/referencing.rst:180
+#: ../../sphinx/doc/usage/referencing.rst:169
 msgid ""
 "The given filename is usually relative to the directory the current source "
 "file is contained in, but if it absolute (starting with ``/``), it is taken "
@@ -169,7 +315,7 @@ msgstr ""
 "கோப்பகத்துடன் தொடர்புடையது, ஆனால் அது முழுமையானதாக இருந்தால் (``/`` உடன் "
 "தொடங்கி), இது சிறந்த மூல கோப்பகத்துடன் தொடர்புடையதாக எடுக்கப்படுகிறது."
 
-#: ../../sphinx/doc/usage/referencing.rst:184
+#: ../../sphinx/doc/usage/referencing.rst:173
 msgid ""
 "The ``example.py`` file will be copied to the output directory, and a "
 "suitable link generated to it."
@@ -177,7 +323,7 @@ msgstr ""
 "`` example.py`` கோப்பு வெளியீட்டு கோப்பகத்திற்கு நகலெடுக்கப்படும், மேலும் "
 "அதற்கு பொருத்தமான இணைப்பு உருவாக்கப்படும்."
 
-#: ../../sphinx/doc/usage/referencing.rst:187
+#: ../../sphinx/doc/usage/referencing.rst:176
 msgid ""
 "Not to show unavailable download links, you should wrap whole paragraphs "
 "that have this role::"
@@ -185,39 +331,32 @@ msgstr ""
 "கிடைக்காத பதிவிறக்க இணைப்புகளைக் காட்ட வேண்டாம், இந்த பாத்திரத்தைக் கொண்ட "
 "முழு பத்திகளையும் நீங்கள் போர்த்த வேண்டும் ::"
 
-#: ../../sphinx/doc/usage/referencing.rst:19
-msgid ""
-"If you prefix the content with ``!``, no reference/hyperlink will be "
-"created."
-msgstr ""
-"உள்ளடக்கத்தை ``! `` உடன் முன்னொட்டினால், குறிப்பு/ஐப்பர்லிங்க் "
-"உருவாக்கப்படாது."
-
-#: ../../sphinx/doc/usage/referencing.rst:195
+#: ../../sphinx/doc/usage/referencing.rst:184
 msgid "Cross-referencing figures by figure number"
 msgstr "படம் எண்ணால் குறுக்கு-குறிப்பு புள்ளிவிவரங்கள்"
 
-#: ../../sphinx/doc/usage/referencing.rst:199
+#: ../../sphinx/doc/usage/referencing.rst:188
 msgid ""
-"`numref` role can also refer sections. And `numref` allows `{name}` for the "
-"link text."
+":rst:role:`numref` role can also refer sections. And :rst:role:`numref` "
+"allows ``{name}`` for the link text."
 msgstr ""
-"`numref` பங்கு பிரிவுகளையும் குறிக்கலாம். மற்றும் இணைப்பு உரைக்கு `numref` "
-"அனுமதிக்கிறது."
+":rst:role:`numref` பாத்திரம் பிரிவுகளையும் குறிப்பிடலாம். மேலும் "
+":rst:role:`numref` இணைப்பு உரைக்கு ``{name}`` அனுமதிக்கிறது."
 
-#: ../../sphinx/doc/usage/referencing.rst:205
+#: ../../sphinx/doc/usage/referencing.rst:194
 msgid ""
 "Link to the specified figures, tables, code-blocks and sections; the "
-"standard reST labels are used.  When you use this role, it will insert a "
-"reference to the figure with link text by its figure number like \"Fig. "
-"1.1\"."
+"standard reStructuredText labels are used. When you use this role, it will "
+"insert a reference to the figure with link text by its figure number like "
+"\"Fig. 1.1\"."
 msgstr ""
-"குறிப்பிட்ட புள்ளிவிவரங்கள், அட்டவணைகள், குறியீடு-தொகுதிகள் மற்றும் "
-"பிரிவுகளுக்கான இணைப்பு; நிலையான ஓய்வு லேபிள்கள் பயன்படுத்தப்படுகின்றன. இந்த "
-"பாத்திரத்தை நீங்கள் பயன்படுத்தும்போது, \"படம் 1.1\" போன்ற எண்ணிக்கை மூலம் "
-"இணைப்பு உரையுடன் படத்திற்கு ஒரு குறிப்பைச் செருகும்."
+"குறிப்பிடப்பட்ட புள்ளிவிவரங்கள், அட்டவணைகள், குறியீடு-தொகுதிகள் மற்றும் "
+"பிரிவுகளுக்கான இணைப்பு; நிலையான மறுகட்டமைக்கப்பட்ட உரை லேபிள்கள் "
+"பயன்படுத்தப்படுகின்றன. நீங்கள் இந்தப் பாத்திரத்தைப் பயன்படுத்தும்போது, ​​அது"
+" \"படம் 1.1\" போன்ற உருவ எண்ணின் மூலம் இணைப்பு உரையுடன் கூடிய உருவத்தின் "
+"குறிப்பைச் செருகும்."
 
-#: ../../sphinx/doc/usage/referencing.rst:209
+#: ../../sphinx/doc/usage/referencing.rst:199
 msgid ""
 "If an explicit link text is given (as usual: ``:numref:`Image of Sphinx "
 "(Fig. %s) <my-figure>```), the link caption will serve as title of the "
@@ -232,20 +371,7 @@ msgstr ""
 "உரை எதுவும் கொடுக்கப்படவில்லை என்றால்,: confval: `numfig_format` அமைப்பு "
 "வீழ்ச்சி-பின் இயல்புநிலையாக பயன்படுத்தப்படுகிறது."
 
-#: ../../sphinx/doc/usage/referencing.rst:21
-msgid ""
-"If you prefix the content with ``~``, the link text will only be the last "
-"component of the target.  For example, ``:py:meth:`~Queue.Queue.get``` will "
-"refer to ``Queue.Queue.get`` but only display ``get`` as the link text.  "
-"This does not work with all cross-reference roles, but is domain specific."
-msgstr ""
-"உள்ளடக்கத்தை `` ~ `` உடன் முன்னொட்டினால், இணைப்பு உரை இலக்கின் கடைசி அங்கமாக"
-" மட்டுமே இருக்கும். எடுத்துக்காட்டாக, ``: py: meth: `~ queue.queue.get```` "
-"`queue.queue.get`` ஐக் குறிக்கும், ஆனால் இணைப்பு உரையாக` `பெறவும்` மட்டுமே "
-"காண்பிக்கும். இது அனைத்து குறுக்கு குறிப்பு பாத்திரங்களுடனும் செயல்படாது, "
-"ஆனால் டொமைன் குறிப்பிட்டது."
-
-#: ../../sphinx/doc/usage/referencing.rst:216
+#: ../../sphinx/doc/usage/referencing.rst:206
 msgid ""
 "If :confval:`numfig` is ``False``, figures are not numbered, so this role "
 "inserts not a reference but the label or the link text."
@@ -253,11 +379,11 @@ msgstr ""
 "if: confval: `numfig` என்பது` `தவறு``, புள்ளிவிவரங்கள் எண்ணப்படவில்லை, எனவே "
 "இந்த பங்கு ஒரு குறிப்பு அல்ல, சிட்டை அல்லது இணைப்பு உரையைச் செருகும்."
 
-#: ../../sphinx/doc/usage/referencing.rst:220
+#: ../../sphinx/doc/usage/referencing.rst:210
 msgid "Cross-referencing other items of interest"
 msgstr "ஆர்வமுள்ள பிற பொருட்களை குறுக்கு-குறிப்பு"
 
-#: ../../sphinx/doc/usage/referencing.rst:222
+#: ../../sphinx/doc/usage/referencing.rst:212
 msgid ""
 "The following roles do possibly create a cross-reference, but do not refer "
 "to objects:"
@@ -265,7 +391,16 @@ msgstr ""
 "பின்வரும் பாத்திரங்கள் குறுக்கு-குறிப்பை உருவாக்கக்கூடும், ஆனால் பொருள்களைக்"
 " குறிக்கவில்லை:"
 
-#: ../../sphinx/doc/usage/referencing.rst:227
+#: ../../sphinx/doc/usage/referencing.rst:217
+msgid ""
+"A configuration value or setting. Index entries are generated. Also "
+"generates a link to the matching :rst:dir:`confval` directive, if it exists."
+msgstr ""
+"ஒரு கட்டமைப்பு மதிப்பு அல்லது அமைப்பு. குறியீட்டு உள்ளீடுகள் "
+"உருவாக்கப்படுகின்றன. பொருத்தம் :rst:dir:`confval` கட்டளை இருந்தால், அதற்கான "
+"இணைப்பையும் உருவாக்குகிறது."
+
+#: ../../sphinx/doc/usage/referencing.rst:224
 msgid ""
 "An environment variable.  Index entries are generated.  Also generates a "
 "link to the matching :rst:dir:`envvar` directive, if it exists."
@@ -274,7 +409,7 @@ msgstr ""
 "பொருத்தத்திற்கு ஒரு இணைப்பையும் உருவாக்குகிறது: rst: dir: `envvar` கட்டளை, "
 "அது இருந்தால்."
 
-#: ../../sphinx/doc/usage/referencing.rst:232
+#: ../../sphinx/doc/usage/referencing.rst:229
 msgid ""
 "The name of a grammar token (used to create links between "
 ":rst:dir:`productionlist` directives)."
@@ -282,7 +417,7 @@ msgstr ""
 "ஒரு இலக்கண டோக்கனின் பெயர் (இடையே இணைப்புகளை உருவாக்கப் பயன்படுகிறது: rst: "
 "dir: `borctumentlist` வழிமுறைகள்)."
 
-#: ../../sphinx/doc/usage/referencing.rst:237
+#: ../../sphinx/doc/usage/referencing.rst:234
 msgid ""
 "The name of a keyword in Python.  This creates a link to a reference label "
 "with that name, if it exists."
@@ -290,7 +425,7 @@ msgstr ""
 "பைத்தானில் ஒரு முக்கிய சொல்லின் பெயர். இது அந்த பெயருடன் ஒரு குறிப்பு "
 "லேபிளின் இணைப்பை உருவாக்குகிறது, அது இருந்தால்."
 
-#: ../../sphinx/doc/usage/referencing.rst:242
+#: ../../sphinx/doc/usage/referencing.rst:239
 msgid ""
 "A command-line option to an executable program.  This generates a link to a "
 ":rst:dir:`option` directive, if it exists."
@@ -298,7 +433,7 @@ msgstr ""
 "இயங்கக்கூடிய நிரலுக்கான கட்டளை-வரி விருப்பம். இது a: rst: dir: `விருப்பம்` "
 "உத்தரவுக்கு ஒரு இணைப்பை உருவாக்குகிறது, அது இருந்தால்."
 
-#: ../../sphinx/doc/usage/referencing.rst:246
+#: ../../sphinx/doc/usage/referencing.rst:243
 msgid ""
 "The following role creates a cross-reference to a term in a :ref:`glossary "
 "<glossary-directive>`:"
@@ -306,7 +441,7 @@ msgstr ""
 "பின்வரும் பங்கு a இல் உள்ள ஒரு சொல்லுக்கு குறுக்கு குறிப்பை உருவாக்குகிறது: "
 "ref: `சொற்களஞ்சியம் <சொற்களஞ்சியம்-திசைதிருப்பல்>`:"
 
-#: ../../sphinx/doc/usage/referencing.rst:251
+#: ../../sphinx/doc/usage/referencing.rst:248
 msgid ""
 "Reference to a term in a glossary.  A glossary is created using the "
 "``glossary`` directive containing a definition list with terms and "
@@ -320,7 +455,7 @@ msgstr ""
 "போன்ற அதே கோப்பில் இருக்க வேண்டியதில்லை, எடுத்துக்காட்டாக பைதான் டாக்ச் `` "
 "சொற்களஞ்சியம்.ஆர்டி`` கோப்பில் ஒரு உலகளாவிய சொற்களஞ்சியத்தைக் கொண்டுள்ளது."
 
-#: ../../sphinx/doc/usage/referencing.rst:257
+#: ../../sphinx/doc/usage/referencing.rst:254
 msgid ""
 "If you use a term that's not explained in a glossary, you'll get a warning "
 "during build."
@@ -328,20 +463,19 @@ msgstr ""
 "சொற்களஞ்சியத்தில் விளக்கப்படாத ஒரு சொல்லை நீங்கள் பயன்படுத்தினால், "
 "கட்டமைப்பின் போது உங்களுக்கு எச்சரிக்கை கிடைக்கும்."
 
-#: ../../sphinx/doc/usage/referencing.rst:26
+#: ../../sphinx/doc/usage/referencing.rst:257
 msgid ""
-"In HTML output, the link's ``title`` attribute (that is e.g. shown as a "
-"tool-tip on mouse-hover) will always be the full target name."
+"This role also supports :ref:`custom link text <xref-modifiers>` from the "
+"general cross-reference syntax."
 msgstr ""
-"html வெளியீட்டில், இணைப்பின் `` தலைப்பு`` பண்புக்கூறு (அது எ.கா. "
-"மவுச்-ஓவரில் ஒரு கருவி-முனையாக காட்டப்பட்டுள்ளது) எப்போதும் முழு இலக்கு "
-"பெயராக இருக்கும்."
+"இந்த பாத்திரம் பொது குறுக்கு-குறிப்பு தொடரியல் இருந்து :ref:`தனிப்பயன் "
+"இணைப்பு உரை <xref-modifiers>` ஆதரிக்கிறது."
 
-#: ../../sphinx/doc/usage/referencing.rst:33
+#: ../../sphinx/doc/usage/referencing.rst:264
 msgid "Cross-referencing anything"
 msgstr "எதையும் குறுக்கு குறிப்பு"
 
-#: ../../sphinx/doc/usage/referencing.rst:39
+#: ../../sphinx/doc/usage/referencing.rst:270
 msgid ""
 "This convenience role tries to do its best to find a valid target for its "
 "reference text."
@@ -349,7 +483,7 @@ msgstr ""
 "இந்த வசதியான பங்கு அதன் குறிப்பு உரைக்கு சரியான இலக்கைக் கண்டுபிடிக்க "
 "தன்னால் முடிந்த அனைத்தையும் செய்ய முயற்சிக்கிறது."
 
-#: ../../sphinx/doc/usage/referencing.rst:42
+#: ../../sphinx/doc/usage/referencing.rst:273
 msgid ""
 "First, it tries standard cross-reference targets that would be referenced by"
 " :rst:role:`doc`, :rst:role:`ref` or :rst:role:`option`."
@@ -358,7 +492,7 @@ msgstr ""
 "முயற்சிக்கிறது: rst: rest: `doc`,: rst: rst:` ref` or: rst: rest: "
 "`விருப்பம்`."
 
-#: ../../sphinx/doc/usage/referencing.rst:45
+#: ../../sphinx/doc/usage/referencing.rst:276
 msgid ""
 "Custom objects added to the standard domain by extensions (see "
 ":meth:`.Sphinx.add_object_type`) are also searched."
@@ -366,7 +500,7 @@ msgstr ""
 "நீட்டிப்புகளால் நிலையான களத்தில் சேர்க்கப்பட்ட தனிப்பயன் பொருள்கள் (பார்க்க:"
 " மெத்: `.sphinx.add_object_type`) தேடப்படுகின்றன."
 
-#: ../../sphinx/doc/usage/referencing.rst:48
+#: ../../sphinx/doc/usage/referencing.rst:279
 msgid ""
 "Then, it looks for objects (targets) in all loaded domains.  It is up to the"
 " domains how specific a match must be.  For example, in the Python domain a "
@@ -378,11 +512,7 @@ msgstr ""
 "களங்களுக்கானது. எடுத்துக்காட்டாக, பைதான் களத்தில் ``: ஏதேனும்: `பில்டர்`` "
 "இன் குறிப்பு` `sphinx.builders.builder`` வகுப்போடு பொருந்தும்."
 
-#: ../../sphinx/doc/usage/referencing.rst:5
-msgid "Cross-referencing syntax"
-msgstr "குறுக்கு-குறிப்பு தொடரியல்"
-
-#: ../../sphinx/doc/usage/referencing.rst:53
+#: ../../sphinx/doc/usage/referencing.rst:284
 msgid ""
 "If none or multiple targets are found, a warning will be emitted.  In the "
 "case of multiple targets, you can change \"any\" to a specific role."
@@ -391,7 +521,7 @@ msgstr ""
 "வெளிப்படும். பல இலக்குகளின் விசயத்தில், நீங்கள் \"எந்த\" ஐ ஒரு குறிப்பிட்ட "
 "பாத்திரத்திற்கு மாற்றலாம்."
 
-#: ../../sphinx/doc/usage/referencing.rst:56
+#: ../../sphinx/doc/usage/referencing.rst:287
 msgid ""
 "This role is a good candidate for setting :confval:`default_role`.  If you "
 "do, you can write cross-references without a lot of markup overhead.  For "
@@ -401,7 +531,7 @@ msgstr ""
 "செய்தால், நிறைய மார்க்அப் மேல்நிலை இல்லாமல் குறுக்கு குறிப்புகளை எழுதலாம். "
 "எடுத்துக்காட்டாக, இந்த பைதான் செயல்பாட்டு ஆவணத்தில் ::"
 
-#: ../../sphinx/doc/usage/referencing.rst:65
+#: ../../sphinx/doc/usage/referencing.rst:296
 msgid ""
 "there could be references to a glossary term (usually ``:term:`handler```), "
 "a Python module (usually ``:py:mod:`signal``` or ``:mod:`signal```) and a "
@@ -412,7 +542,7 @@ msgstr ""
 "``: மோட்: `சிக்னல்```` ) மற்றும் ஒரு பிரிவு (வழக்கமாக ``: ref: "
 "`பற்றி-கையொப்பங்கள்```)."
 
-#: ../../sphinx/doc/usage/referencing.rst:69
+#: ../../sphinx/doc/usage/referencing.rst:300
 msgid ""
 "The :rst:role:`any` role also works together with the "
 ":mod:`~sphinx.ext.intersphinx` extension: when no local cross-reference is "
@@ -422,68 +552,3 @@ msgstr ""
 "மோட்:` ~ sphinx.ext.intersphinx` நீட்டிப்பு: உள்ளக குறுக்கு குறிப்பு எதுவும்"
 " காணப்படாதபோது, இன்டர்ச்பின்க்ச் சரக்குகளின் அனைத்து பொருள் வகைகளும் "
 "தேடப்படுகின்றன."
-
-#: ../../sphinx/doc/usage/referencing.rst:7
-msgid ""
-"Cross-references are generated by many semantic interpreted text roles. "
-"Basically, you only need to write ``:role:`target```, and a link will be "
-"created to the item named *target* of the type indicated by *role*.  The "
-"link's text will be the same as *target*."
-msgstr ""
-"குறுக்கு-குறிப்புகள் பல சொற்பொருள் விளக்கப்பட்ட உரை பாத்திரங்களால் "
-"உருவாக்கப்படுகின்றன. அடிப்படையில், நீங்கள் ``: பங்கு: `இலக்கு``` ஐ மட்டுமே "
-"எழுத வேண்டும், மேலும் *பாத்திரத்தால் சுட்டிக்காட்டப்பட்ட வகையின் *இலக்கு "
-"*என்ற உருப்படிக்கு ஒரு இணைப்பு உருவாக்கப்படும். இணைப்பின் உரை *இலக்கு *போலவே"
-" இருக்கும்."
-
-#: ../../sphinx/doc/usage/referencing.rst:74
-msgid "Cross-referencing objects"
-msgstr "குறுக்கு-குறிப்பு பொருள்கள்"
-
-#: ../../sphinx/doc/usage/referencing.rst:76
-msgid "These roles are described with their respective domains:"
-msgstr "இந்த பாத்திரங்கள் அந்தந்த களங்களுடன் விவரிக்கப்பட்டுள்ளன:"
-
-#: ../../sphinx/doc/usage/referencing.rst:78
-msgid ":ref:`Python <python-roles>`"
-msgstr ": குறிப்பு: `பைதான் <பைதான்-ரோல்ச்>`"
-
-#: ../../sphinx/doc/usage/referencing.rst:79
-msgid ":ref:`C <c-roles>`"
-msgstr ": குறிப்பு: `சி <சி-ரோல்ச்>`"
-
-#: ../../sphinx/doc/usage/referencing.rst:80
-msgid ":ref:`C++ <cpp-roles>`"
-msgstr ": ref: `c ++ <cpp-roles>`"
-
-#: ../../sphinx/doc/usage/referencing.rst:81
-msgid ":ref:`JavaScript <js-roles>`"
-msgstr ": குறிப்பு: `சாவாச்கிரிப்ட் <js-roles>`"
-
-#: ../../sphinx/doc/usage/referencing.rst:82
-msgid ":ref:`ReST <rst-roles>`"
-msgstr ": ref: `ஓய்வு <rst-roles>`"
-
-#: ../../sphinx/doc/usage/referencing.rst:88
-msgid "Cross-referencing arbitrary locations"
-msgstr "குறுக்கு-குறிப்பு தன்னிச்சையான இடங்களை"
-
-#: ../../sphinx/doc/usage/referencing.rst:92
-msgid ""
-"To support cross-referencing to arbitrary locations in any document, the "
-"standard reST labels are used.  For this to work label names must be unique "
-"throughout the entire documentation.  There are two ways in which you can "
-"refer to labels:"
-msgstr ""
-"எந்தவொரு ஆவணத்திலும் தன்னிச்சையான இடங்களுக்கு குறுக்கு-குறிப்பை ஆதரிக்க, "
-"நிலையான ஓய்வு லேபிள்கள் பயன்படுத்தப்படுகின்றன. இது வேலை செய்ய சிட்டை "
-"பெயர்கள் முழு ஆவணங்களிலும் தனித்துவமாக இருக்க வேண்டும். நீங்கள் லேபிள்களைக் "
-"குறிப்பிட இரண்டு வழிகள் உள்ளன:"
-
-#: ../../sphinx/doc/usage/referencing.rst:97
-msgid ""
-"If you place a label directly before a section title, you can reference to "
-"it with ``:ref:`label-name```.  For example::"
-msgstr ""
-"நீங்கள் ஒரு பிரிவு தலைப்புக்கு முன் ஒரு லேபிளை நேரடியாக வைத்தால், அதை ``: "
-"ref: `லேபிள்-பெயர்`` உடன் குறிப்பிடலாம். உதாரணத்திற்கு::"

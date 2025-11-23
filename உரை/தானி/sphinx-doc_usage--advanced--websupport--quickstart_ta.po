@@ -1,21 +1,139 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2007-2023, the Sphinx developers
+# Copyright (C) 2007-2025, the Sphinx developers
 # This file is distributed under the same license as the Sphinx package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2023
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 7.3.0\n"
+"Project-Id-Version: Sphinx 8.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-15 00:35+0000\n"
-"PO-Revision-Date: 2018-11-20 17:15+0000\n"
+"POT-Creation-Date: 2025-02-24 00:54+0000\n"
+"PO-Revision-Date: 2025-11-16 08:55\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2023\n"
 "Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:4
+msgid "Web Support Quick Start"
+msgstr "வலை ஆதரவு விரைவான தொடக்க"
+
+#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:7
+msgid "Building documentation data"
+msgstr "ஆவணங்களை உருவாக்குதல் தரவு"
+
+#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:9
+msgid ""
+"To make use of the web support package in your application you'll need to "
+"build the data it uses.  This data includes pickle files representing "
+"documents, search indices, and node data that is used to track where "
+"comments and other things are in a document.  To do this you will need to "
+"create an instance of the :class:`~.WebSupport` class and call its "
+":meth:`~.WebSupport.build` method::"
+msgstr ""
+"உங்கள் பயன்பாட்டில் வலை ஆதரவு தொகுப்பைப் பயன்படுத்த நீங்கள் பயன்படுத்தும் "
+"தரவை உருவாக்க வேண்டும். இந்தத் தரவில் ஆவணங்கள், தேடல் குறியீடுகள் மற்றும் "
+"முனை தரவு ஆகியவற்றைக் குறிக்கும் ஊறுகாய் கோப்புகள் அடங்கும், அவை ஆவணத்தில் "
+"கருத்துகள் மற்றும் பிற விஷயங்கள் எங்கு உள்ளன என்பதைக் கண்காணிக்கப் "
+"பயன்படுகின்றன. இதைச் செய்ய நீங்கள் ஒரு உதாரணத்தை உருவாக்க வேண்டும்: வகுப்பு:"
+" `~ .websupport` வகுப்பை அழைக்கவும்: மெத்:` ~ .websupport.build` முறை ::"
+
+#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:23
+msgid ""
+"This will read reStructuredText sources from ``srcdir`` and place the "
+"necessary data in ``builddir``.  The ``builddir`` will contain two "
+"subdirectories: one named \"data\" that contains all the data needed to "
+"display documents, search through documents, and add comments to documents."
+"  The other directory will be called \"static\" and contains static files "
+"that should be served from \"/static\"."
+msgstr ""
+"இது ``srcdir`` இலிருந்து மறுகட்டமைக்கப்பட்ட உரை மூலங்களைப் படித்து தேவையான "
+"தரவை ``பில்டிர்`` இல் வைக்கும். ``பில்டிர்`` இரண்டு துணை அடைவுகளைக் "
+"கொண்டிருக்கும்: ஆவணங்களைக் காட்ட, ஆவணங்கள் மூலம் தேட மற்றும் ஆவணங்களில் "
+"கருத்துகளைச் சேர்ப்பதற்குத் தேவையான அனைத்துத் தரவையும் கொண்ட \"தரவு\" என்று "
+"பெயரிடப்பட்ட ஒன்று. மற்ற கோப்பகம் \"நிலையான\" என்று அழைக்கப்படும் மற்றும் "
+"\"/static\" இலிருந்து வழங்கப்பட வேண்டிய நிலையான கோப்புகளைக் கொண்டுள்ளது."
+
+#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:31
+msgid ""
+"If you wish to serve static files from a path other than \"/static\", you "
+"can do so by providing the *staticdir* keyword argument when creating the "
+":class:`~.WebSupport` object."
+msgstr ""
+"\"/நிலையானது\" தவிர வேறு பாதையில் இருந்து நிலையான கோப்புகளை வழங்க "
+"விரும்பினால்,: `~ .websupport` பொருளை உருவாக்கும் போது * ஸ்டாடிக்டிர் * "
+"முக்கிய வாதத்தை வழங்குவதன் மூலம் நீங்கள் அவ்வாறு செய்யலாம்."
+
+#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:37
+msgid "Integrating Sphinx documents into your web-app"
+msgstr "உங்கள் இணைய பயன்பாட்டில் சூரரிமாச்சிலை ஆவணங்களை ஒருங்கிணைத்தல்"
+
+#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:39
+msgid ""
+"Now that the data is built, it's time to do something useful with it.  Start"
+" off by creating a :class:`~.WebSupport` object for your application::"
+msgstr ""
+"இப்போது தரவு கட்டமைக்கப்பட்டுள்ளதால், அதனுடன் பயனுள்ள ஒன்றைச் செய்ய வேண்டிய "
+"நேரம் இது. ஒரு: வகுப்பு: `~ .websupport` உங்கள் பயன்பாட்டிற்கான பொருள் ::"
+
+#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:47
+msgid ""
+"You'll only need one of these for each set of documentation you will be "
+"working with.  You can then call its :meth:`~.WebSupport.get_document` "
+"method to access individual documents::"
+msgstr ""
+"நீங்கள் பணிபுரியும் ஒவ்வொரு ஆவணங்களுக்கும் இவற்றில் ஒன்று மட்டுமே "
+"தேவைப்படும். நீங்கள் அதை அழைக்கலாம்: மெத்: `~ .websupport.get_document` "
+"தனிப்பட்ட ஆவணங்களை அணுகுவதற்கான முறை ::"
+
+#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:53
+msgid "This will return a dictionary containing the following items:"
+msgstr "இது பின்வரும் உருப்படிகளைக் கொண்ட அகராதியை வழங்கும்:"
+
+#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:55
+msgid "**body**: The main body of the document as HTML"
+msgstr "** உடல் **: ஆவணத்தின் முக்கிய உடல் HTML ஆக"
+
+#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:56
+msgid "**sidebar**: The sidebar of the document as HTML"
+msgstr "** பக்கப்பட்டி **: ஆவணத்தின் பக்கப்பட்டி HTML"
+
+#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:57
+msgid "**relbar**: A div containing links to related documents"
+msgstr "** Relbar **: தொடர்புடைய ஆவணங்களுக்கான இணைப்புகளைக் கொண்ட ஒரு DIV"
+
+#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:58
+msgid "**title**: The title of the document"
+msgstr "** தலைப்பு **: ஆவணத்தின் தலைப்பு"
+
+#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:59
+msgid "**css**: Links to CSS files used by Sphinx"
+msgstr "** CSS **: SPHINX ஆல் பயன்படுத்தப்படும் CSS கோப்புகளுக்கான இணைப்புகள்"
+
+#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:60
+msgid "**script**: JavaScript containing comment options"
+msgstr "** ஸ்கிரிப்ட் **: கருத்து விருப்பங்களைக் கொண்ட ஜாவாஸ்கிரிப்ட்"
+
+#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:62
+msgid ""
+"This dict can then be used as context for templates.  The goal is to be easy"
+" to integrate with your existing templating system.  An example using "
+"`Jinja2 <https://jinja.palletsprojects.com/>`_ is:"
+msgstr ""
+"இந்த கட்டளை பின்னர் வார்ப்புருக்கள் சூழலாக பயன்படுத்தப்படலாம். உங்கள் "
+"இருக்கும் வார்ப்புரு அமைப்புடன் ஒருங்கிணைப்பது எளிதாக இருக்க வேண்டும். "
+"`Jinga2 <https://jinja.palletsprojects.com/> _ _ என்பது ஒரு எடுத்துக்காட்டு:"
+
+#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:99
+msgid "Authentication"
+msgstr "அங்கீகார"
 
 #: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:101
 msgid ""
@@ -31,9 +149,9 @@ msgstr ""
 " அங்கீகாரத்தின் விவரங்கள் உங்கள் பயன்பாட்டிற்கு விடப்பட்டுள்ளன. ஒரு பயனர் "
 "அங்கீகரிக்கப்பட்டவுடன், பயனரின் விவரங்களை சிலருக்கு அனுப்பலாம்: வகுப்பு: `~ "
 ".websupport` முறைகள் * பயனர்பெயர் * மற்றும் * மதிப்பீட்டாளர் * முக்கிய "
-"வாதங்களைப் பயன்படுத்துகின்றன. வலை உதவி தொகுப்பு பயனர்பெயரை கருத்துகள் "
+"வாதங்களைப் பயன்படுத்துகின்றன. வலை ஆதரவு தொகுப்பு பயனர்பெயரை கருத்துகள் "
 "மற்றும் வாக்குகளுடன் சேமிக்கும். ஒரே எச்சரிக்கை என்னவென்றால், பயனர்களின் "
-"பயனர்பெயரை மாற்ற நீங்கள் அனுமதித்தால், நீங்கள் வலை உதவி தொகுப்பின் தரவைப் "
+"பயனர்பெயரை மாற்ற நீங்கள் அனுமதித்தால், நீங்கள் வலை ஆதரவு தொகுப்பின் தரவைப் "
 "புதுப்பிக்க வேண்டும் ::"
 
 #: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:111
@@ -51,7 +169,7 @@ msgstr ""
 msgid ""
 "An example `Flask <https://flask.palletsprojects.com/>`_ function that "
 "checks whether a user is logged in and then retrieves a document is::"
-msgstr "ஒரு சான்று"
+msgstr "ஒரு உதாரணம்"
 
 #: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:130
 msgid ""
@@ -62,45 +180,45 @@ msgid ""
 "support package will then add this data to the ``COMMENT_OPTIONS`` that are "
 "used in the template."
 msgstr ""
-"கவனிக்க வேண்டிய முதல் சேதி என்னவென்றால், * டாக்நேம் * என்பது கோரிக்கை பாதை "
-"மட்டுமே. இது சரியான ஆவணத்தை அணுகுவதை ஒரு பார்வையில் இருந்து எளிதாக்குகிறது. "
-"பயனர் அங்கீகரிக்கப்பட்டால், பயனர்பெயர் மற்றும் மிதமான நிலை டாக்நேமுடன் "
-"அனுப்பப்படும்: மெத்: `~ .websupport.get_document`. வலை உதவி தொகுப்பு பின்னர்"
-" வார்ப்புருவில் பயன்படுத்தப்படும் `` கருத்து_ஓபிசன்கள்` இல் இந்தத் தரவைச் "
-"சேர்க்கும்."
+"கவனிக்க வேண்டிய முதல் விஷயம் என்னவென்றால், * டாக்நேம் * என்பது கோரிக்கை பாதை"
+" மட்டுமே. இது சரியான ஆவணத்தை அணுகுவதை ஒரு பார்வையில் இருந்து எளிதாக்குகிறது."
+" பயனர் அங்கீகரிக்கப்பட்டால், பயனர்பெயர் மற்றும் மிதமான நிலை டாக்நேமுடன் "
+"அனுப்பப்படும்: மெத்: `~ .websupport.get_document`. வலை ஆதரவு தொகுப்பு "
+"பின்னர் வார்ப்புருவில் பயன்படுத்தப்படும் `` கருத்து_ஓபிஷன்கள்` இல் இந்தத் "
+"தரவைச் சேர்க்கும்."
 
 #: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:138
 msgid ""
 "This only works if your documentation is served from your document root. If "
 "it is served from another directory, you will need to prefix the url route "
-"with that directory, and give the `docroot` keyword argument when creating "
+"with that directory, and give the *docroot* keyword argument when creating "
 "the web support object::"
 msgstr ""
 "உங்கள் ஆவணங்கள் உங்கள் ஆவண மூலத்திலிருந்து வழங்கப்பட்டால் மட்டுமே இது "
-"செயல்படும். இது வேறொரு கோப்பகத்திலிருந்து வழங்கப்பட்டால், நீங்கள் அந்த "
-"கோப்பகத்துடன் முகவரி வழியை முன்னொட்ட வேண்டும், மேலும் வலை உதவி பொருளை "
-"உருவாக்கும் போது `டாக்ரூட்` முக்கிய வாதத்தை வழங்க வேண்டும் ::"
+"செயல்படும். இது வேறொரு கோப்பகத்திலிருந்து வழங்கப்பட்டால், அந்த கோப்பகத்துடன்"
+" முகவரி வழியை முன்னொட்டு செய்ய வேண்டும், மேலும் இணைய உதவி பொருளை உருவாக்கும்"
+" போது *docroot* முக்கிய வாதத்தை கொடுக்க வேண்டும்::"
 
 #: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:149
-msgid "Performing Searches"
-msgstr "தேடல்களைச் செய்கிறது"
+msgid "Performing searches"
+msgstr "தேடல்களை மேற்கொள்வது"
 
 #: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:151
 msgid ""
 "To use the search form built-in to the Sphinx sidebar, create a function to "
 "handle requests to the URL 'search' relative to the documentation root.  The"
-" user's search query will be in the GET parameters, with the key `q`.  Then "
-"use the :meth:`~sphinxcontrib.websupport.WebSupport.get_search_results` "
-"method to retrieve search results. In `Flask "
+" user's search query will be in the GET parameters, with the key ``q``.  "
+"Then use the :meth:`~sphinxcontrib.websupport.WebSupport.get_search_results`"
+" method to retrieve search results. In `Flask "
 "<https://flask.palletsprojects.com/>`_ that would be like this::"
 msgstr ""
-"சூரரிமாச்சிலை பக்கப்பட்டிக்கு உள்ளமைக்கப்பட்ட தேடல் படிவத்தைப் பயன்படுத்த, "
-"ஆவணப்படுத்தல் மூலத்துடன் தொடர்புடைய முகவரி 'தேடல்' கோரிக்கைகளை கையாள ஒரு "
-"செயல்பாட்டை உருவாக்கவும். பயனரின் தேடல் வினவல் `q` விசையுடன் get "
-"அளவுருக்களில் இருக்கும். தேடல் முடிவுகளை மீட்டெடுக்க `~ "
-"sphinxcontrib.websupport.websupport.websupport.get_search_results இன் "
-"முறையைப் பயன்படுத்தவும். `பிளாச்க் <https://flask.palletsprojects.com/>` _ "
-"இது இப்படி இருக்கும் ::"
+"சூரரிமாச்சிலை பக்கப்பட்டியில் உள்ளமைக்கப்பட்ட தேடல் படிவத்தைப் பயன்படுத்த, "
+"ஆவண மூலத்துடன் தொடர்புடைய முகவரி 'தேடல்'க்கான கோரிக்கைகளைக் கையாள ஒரு "
+"செயல்பாட்டை உருவாக்கவும். பயனரின் தேடல் வினவல் ``q`` விசையுடன் GET "
+"அளவுருக்களில் இருக்கும். தேடல் முடிவுகளைப் பெற "
+":meth:`~sphinxcontrib.websupport.WebSupport.get_search_results` முறையைப் "
+"பயன்படுத்தவும். `ஃப்ளாச்கில் <https://flask.palletsprojects.com/>`_ இது "
+"இப்படி இருக்கும்::"
 
 #: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:164
 msgid ""
@@ -115,8 +233,8 @@ msgstr ""
 "வழங்குகிறது: மெத்:` ~ .websupport.get_document` செய்கிறது."
 
 #: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:171
-msgid "Comments & Proposals"
-msgstr "கருத்துகள் மற்றும் திட்டங்கள்"
+msgid "Comments & proposals"
+msgstr "கருத்துகள் மற்றும் முன்மொழிவுகள்"
 
 #: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:173
 msgid ""
@@ -125,11 +243,11 @@ msgid ""
 "is used to add a new comment, and will call the web support method "
 ":meth:`~.WebSupport.add_comment`::"
 msgstr ""
-"இப்போது இது முடிந்துவிட்டதால், ச்கிரிப்ட்டிலிருந்து அசாக்ச் அழைப்புகளைக் "
+"இப்போது இது முடிந்துவிட்டதால், ஸ்கிரிப்ட்டிலிருந்து அஜாக்ஸ் அழைப்புகளைக் "
 "கையாளும் செயல்பாடுகளை வரையறுக்க வேண்டிய நேரம் இது. உங்களுக்கு மூன்று "
 "செயல்பாடுகள் தேவைப்படும். முதல் செயல்பாடு புதிய கருத்தைச் சேர்க்கப் "
-"பயன்படுகிறது, மேலும் வலை உதவி முறையை அழைக்கும்: `~ .websupport.add_comment` "
-"::"
+"பயன்படுகிறது, மேலும் வலை ஆதரவு முறையை அழைக்கும்: `~ .websupport.add_comment`"
+" ::"
 
 #: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:190
 msgid ""
@@ -158,8 +276,8 @@ msgstr ""
 "::"
 
 #: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:221
-msgid "Comment Moderation"
-msgstr "கருத்து மிதமானது"
+msgid "Comment moderation"
+msgstr "கருத்து மிதப்படுத்துதல்"
 
 #: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:223
 msgid ""
@@ -171,23 +289,6 @@ msgstr ""
 ".websupport.add_comment` தானாகவே காட்டப்படும். நீங்கள் ஒருவித மிதமான அளவைக் "
 "கொண்டிருக்க விரும்பினால், நீங்கள் `` காட்டப்பட்ட`` முக்கிய வாதத்தை "
 "அனுப்பலாம் ::"
-
-#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:23
-msgid ""
-"This will read reStructuredText sources from ``srcdir`` and place the "
-"necessary data in ``builddir``.  The ``builddir`` will contain two sub-"
-"directories: one named \"data\" that contains all the data needed to display"
-" documents, search through documents, and add comments to documents.  The "
-"other directory will be called \"static\" and contains static files that "
-"should be served from \"/static\"."
-msgstr ""
-"இது `` srcdir`` இலிருந்து மறுசீரமைப்பு ஆதாரங்களை படித்து தேவையான தரவை `` "
-"பில்டிரேர்`` இல் வைக்கும். `` பில்ட் டிர்`` இல் இரண்டு துணை இயக்குநர்கள் "
-"இருக்கும்: ஆவணங்களைக் காண்பிப்பதற்கும், ஆவணங்கள் மூலம் தேடுவதற்கும், "
-"ஆவணங்களில் கருத்துகளைச் சேர்ப்பதற்கும் தேவையான அனைத்து தரவையும் கொண்ட "
-"\"தரவு\" என்று பெயரிடப்பட்டது. மற்ற அடைவு \"நிலையானது\" என்று அழைக்கப்படும் "
-"மற்றும் \"/நிலையான\" இலிருந்து வழங்கப்பட வேண்டிய நிலையான கோப்புகளைக் "
-"கொண்டுள்ளது."
 
 #: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:232
 msgid ""
@@ -211,7 +312,8 @@ msgid ""
 msgstr ""
 "ஒரு புதிய கருத்து சேர்க்கப்பட்டாலும் காண்பிக்கப்படாதபோது தனிப்பயன் செயலைச் "
 "செய்ய (ஒரு மதிப்பீட்டாளருக்கு மின்னஞ்சல் அனுப்புவது போன்றவை), நீங்கள் "
-"அழைக்கப்படலாம்: வகுப்பு: `~ .websupport` உங்கள் உதவி பொருளை நிறுவும் போது ::"
+"அழைக்கப்படலாம்: வகுப்பு: `~ .websupport` உங்கள் ஆதரவு பொருளை நிறுவும் போது "
+"::"
 
 #: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:254
 msgid ""
@@ -220,102 +322,3 @@ msgid ""
 msgstr ""
 "மிதமான கால்பேக் ஒரு வாதத்தை எடுக்க வேண்டும், இது திரும்பிய அதே கருத்துத் "
 "கட்டளையாக இருக்கும்: மெத்: `.websupport.add_comment`."
-
-#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:31
-msgid ""
-"If you wish to serve static files from a path other than \"/static\", you "
-"can do so by providing the *staticdir* keyword argument when creating the "
-":class:`~.WebSupport` object."
-msgstr ""
-"\"/நிலையானது\" தவிர வேறு பாதையில் இருந்து நிலையான கோப்புகளை வழங்க "
-"விரும்பினால்,: `~ .websupport` பொருளை உருவாக்கும் போது * ச்டாடிக்டிர் * "
-"முக்கிய வாதத்தை வழங்குவதன் மூலம் நீங்கள் அவ்வாறு செய்யலாம்."
-
-#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:37
-msgid "Integrating Sphinx Documents Into Your Webapp"
-msgstr "உங்கள் வெப்ஆப்பில் சூரரிமாச்சிலை ஆவணங்களை ஒருங்கிணைத்தல்"
-
-#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:39
-msgid ""
-"Now that the data is built, it's time to do something useful with it.  Start"
-" off by creating a :class:`~.WebSupport` object for your application::"
-msgstr ""
-"இப்போது தரவு கட்டமைக்கப்பட்டுள்ளதால், அதனுடன் பயனுள்ள ஒன்றைச் செய்ய வேண்டிய "
-"நேரம் இது. ஒரு: வகுப்பு: `~ .websupport` உங்கள் பயன்பாட்டிற்கான பொருள் ::"
-
-#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:4
-msgid "Web Support Quick Start"
-msgstr "வலை உதவி விரைவான தொடக்க"
-
-#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:47
-msgid ""
-"You'll only need one of these for each set of documentation you will be "
-"working with.  You can then call its :meth:`~.WebSupport.get_document` "
-"method to access individual documents::"
-msgstr ""
-"நீங்கள் பணிபுரியும் ஒவ்வொரு ஆவணங்களுக்கும் இவற்றில் ஒன்று மட்டுமே "
-"தேவைப்படும். நீங்கள் அதை அழைக்கலாம்: மெத்: `~ .websupport.get_document` "
-"தனிப்பட்ட ஆவணங்களை அணுகுவதற்கான முறை ::"
-
-#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:53
-msgid "This will return a dictionary containing the following items:"
-msgstr "இது பின்வரும் உருப்படிகளைக் கொண்ட அகராதியை வழங்கும்:"
-
-#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:55
-msgid "**body**: The main body of the document as HTML"
-msgstr "** உடல் **: ஆவணத்தின் முக்கிய உடல் html ஆக"
-
-#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:56
-msgid "**sidebar**: The sidebar of the document as HTML"
-msgstr "** பக்கப்பட்டி **: ஆவணத்தின் பக்கப்பட்டி html"
-
-#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:57
-msgid "**relbar**: A div containing links to related documents"
-msgstr "** relbar **: தொடர்புடைய ஆவணங்களுக்கான இணைப்புகளைக் கொண்ட ஒரு div"
-
-#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:58
-msgid "**title**: The title of the document"
-msgstr "** தலைப்பு **: ஆவணத்தின் தலைப்பு"
-
-#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:59
-msgid "**css**: Links to CSS files used by Sphinx"
-msgstr ""
-"** css **: சூரரிமாச்சிலை ஆல் பயன்படுத்தப்படும் css கோப்புகளுக்கான இணைப்புகள்"
-
-#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:60
-msgid "**script**: JavaScript containing comment options"
-msgstr "** ச்கிரிப்ட் **: கருத்து விருப்பங்களைக் கொண்ட சாவாச்கிரிப்ட்"
-
-#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:62
-msgid ""
-"This dict can then be used as context for templates.  The goal is to be easy"
-" to integrate with your existing templating system.  An example using "
-"`Jinja2 <https://jinja.palletsprojects.com/>`_ is:"
-msgstr ""
-"இந்த கட்டளை பின்னர் வார்ப்புருக்கள் சூழலாக பயன்படுத்தப்படலாம். உங்கள் "
-"இருக்கும் வார்ப்புரு அமைப்புடன் ஒருங்கிணைப்பது எளிதாக இருக்க வேண்டும். "
-"`jinga2 <https://jinja.palletsprojects.com/> _ _ என்பது ஒரு எடுத்துக்காட்டு:"
-
-#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:7
-msgid "Building Documentation Data"
-msgstr "ஆவணப்படுத்தல் தரவை உருவாக்குதல்"
-
-#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:9
-msgid ""
-"To make use of the web support package in your application you'll need to "
-"build the data it uses.  This data includes pickle files representing "
-"documents, search indices, and node data that is used to track where "
-"comments and other things are in a document.  To do this you will need to "
-"create an instance of the :class:`~.WebSupport` class and call its "
-":meth:`~.WebSupport.build` method::"
-msgstr ""
-"உங்கள் பயன்பாட்டில் வலை உதவி தொகுப்பைப் பயன்படுத்த நீங்கள் பயன்படுத்தும் "
-"தரவை உருவாக்க வேண்டும். இந்தத் தரவில் ஆவணங்கள், தேடல் குறியீடுகள் மற்றும் "
-"முனை தரவு ஆகியவற்றைக் குறிக்கும் ஊறுகாய் கோப்புகள் அடங்கும், அவை ஆவணத்தில் "
-"கருத்துகள் மற்றும் பிற விசயங்கள் எங்கு உள்ளன என்பதைக் கண்காணிக்கப் "
-"பயன்படுகின்றன. இதைச் செய்ய நீங்கள் ஒரு உதாரணத்தை உருவாக்க வேண்டும்: வகுப்பு:"
-" `~ .websupport` வகுப்பை அழைக்கவும்: மெத்:` ~ .websupport.build` முறை ::"
-
-#: ../../sphinx/doc/usage/advanced/websupport/quickstart.rst:99
-msgid "Authentication"
-msgstr "அங்கீகார"

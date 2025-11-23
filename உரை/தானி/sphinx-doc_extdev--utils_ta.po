@@ -1,15 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2007-2023, the Sphinx developers
+# Copyright (C) 2007-2025, the Sphinx developers
 # This file is distributed under the same license as the Sphinx package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2025
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 7.3.0\n"
+"Project-Id-Version: Sphinx 8.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-15 00:35+0000\n"
-"PO-Revision-Date: 2018-04-08 15:19+0000\n"
+"POT-Creation-Date: 2025-11-15 06:34+0000\n"
+"PO-Revision-Date: 2025-11-22 18:09\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2025\n"
 "Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
@@ -17,87 +21,81 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/events.pydocstring
-#: of sphinx.events.EventManager:1
-msgid "Event manager for Sphinx."
-msgstr "ச்பிங்க்சிற்கான நிகழ்வு மேலாளர்."
+#: ../../sphinx/doc/extdev/utils.rst:2
+msgid "Utilities"
+msgstr "பயன்பாடுகள்"
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/events.pydocstring
-#: of sphinx.events.EventManager.add:1
-msgid "Register a custom Sphinx event."
-msgstr "தனிப்பயன் சூரரிமாச்சிலை நிகழ்வைப் பதிவுசெய்க."
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/events.pydocstring
-#: of sphinx.events.EventManager.connect:1
-msgid "Connect a handler to specific event."
-msgstr "குறிப்பிட்ட நிகழ்வுக்கு ஒரு கையாளுபவரை இணைக்கவும்."
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/events.pydocstring
-#: of sphinx.events.EventManager.disconnect:1
-msgid "Disconnect a handler."
-msgstr "ஒரு கையாளுபவரைத் துண்டிக்கவும்."
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/events.pydocstring
-#: of sphinx.events.EventManager.emit:1
-msgid "Emit a Sphinx event."
-msgstr "ஒரு சூரரிமாச்சிலை நிகழ்வை வெளியிடுங்கள்."
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/events.pydocstring
-#: of sphinx.events.EventManager.emit_firstresult:1
-msgid "Emit a Sphinx event and returns first result."
+#: ../../sphinx/doc/extdev/utils.rst:4
+msgid "Sphinx provides utility classes and functions to develop extensions."
 msgstr ""
-"ஒரு சூரரிமாச்சிலை நிகழ்வை வெளியிடுங்கள் மற்றும் முதல் முடிவை அளிக்கிறது."
+"நீட்டிப்புகளை உருவாக்க SPHINX பயன்பாட்டு வகுப்புகள் மற்றும் செயல்பாடுகளை "
+"வழங்குகிறது."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/events.pydocstring
-#: of sphinx.events.EventManager.emit_firstresult:3
+#: ../../sphinx/doc/extdev/utils.rst:8
+msgid "Base classes for components"
+msgstr "கூறுகளுக்கான அடிப்படை வகுப்புகள்"
+
+#: ../../sphinx/doc/extdev/utils.rst:10
 msgid ""
-"This returns the result of the first handler that doesn't return ``None``."
+"These base classes are useful to allow your extensions to obtain Sphinx "
+"components (e.g. :class:`.Config`, :class:`.BuildEnvironment` and so on) "
+"easily."
 msgstr ""
-"இது `` எதுவுமில்லை`` திரும்பப் பெறாத முதல் கையாளுபவரின் முடிவைத் தருகிறது."
+"உங்கள் நீட்டிப்புகளை ஸ்பிங்க்ஸ் கூறுகளைப் பெற அனுமதிக்க இந்த அடிப்படை "
+"வகுப்புகள் பயனுள்ளதாக இருக்கும் (எ.கா.: வகுப்பு: `.கான்பிக்`,: வகுப்பு:` "
+".பிலென்டென்டுமென்ட்` மற்றும் பல)."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/__init__.pydocstring
-#: of sphinx.transforms.SphinxTransform.config:1
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/util/docutils.pydocstring
-#: of sphinx.util.docutils.SphinxDirective.config:1
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/util/docutils.pydocstring
-#: of sphinx.util.docutils.SphinxRole.config:1
-msgid "Reference to the :class:`.Config` object."
-msgstr "குறிப்பு: வகுப்பு: `.கான்ஃபிக்` பொருள்."
+#: ../../sphinx/doc/extdev/utils.rst:13
+msgid ""
+"The subclasses of them might not work with bare docutils because they are "
+"strongly coupled with Sphinx."
+msgstr ""
+"அவற்றின் துணைப்பிரிவுகள் வெற்று ஆவணங்களுடன் வேலை செய்யாது, ஏனெனில் அவை "
+"ஸ்பிங்க்ஸுடன் வலுவாக இணைக்கப்பட்டுள்ளன."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/__init__.pydocstring
-#: of sphinx.transforms.SphinxTransform.env:1
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/util/docutils.pydocstring
-#: of sphinx.util.docutils.SphinxDirective.env:1
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/util/docutils.pydocstring
-#: of sphinx.util.docutils.SphinxRole.env:1
-msgid "Reference to the :class:`.BuildEnvironment` object."
-msgstr "குறிப்பு: வகுப்பு: `.பிலென்டென்டர்மென்ட்` பொருள்."
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/__init__.pydocstring
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/__init__.pydocstring
 #: of sphinx.transforms.SphinxTransform:1
 msgid "A base class of Transforms."
 msgstr "உருமாற்றங்களின் அடிப்படை வகுப்பு."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/__init__.pydocstring
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/__init__.pydocstring
 #: of sphinx.transforms.SphinxTransform:3
 msgid ""
 "Compared with ``docutils.transforms.Transform``, this class improves "
 "accessibility to Sphinx APIs."
 msgstr ""
-"`` docutils.transforms.transform`` உடன் ஒப்பிடும்போது, இந்த வகுப்பு "
-"சூரரிமாச்சிலை பநிஇ களுக்கான அணுகலை மேம்படுத்துகிறது."
+"`` Docutils.transforms.transform`` உடன் ஒப்பிடும்போது, இந்த வகுப்பு SPHINX "
+"API களுக்கான அணுகலை மேம்படுத்துகிறது."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/__init__.pydocstring
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/__init__.pydocstring
 #: of sphinx.transforms.SphinxTransform.app:1
 msgid "Reference to the :class:`.Sphinx` object."
 msgstr "குறிப்பு: வகுப்பு: `.sphinx` பொருள்."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/post_transforms/__init__.pydocstring
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/__init__.pydocstring
+#: of sphinx.transforms.SphinxTransform.config:1
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxDirective.config:1
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxRole.config:1
+msgid "Reference to the :class:`.Config` object."
+msgstr "குறிப்பு: வகுப்பு: `.கான்ஃபிக்` பொருள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/__init__.pydocstring
+#: of sphinx.transforms.SphinxTransform.env:1
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxDirective.env:1
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxRole.env:1
+msgid "Reference to the :class:`.BuildEnvironment` object."
+msgstr "குறிப்பு: வகுப்பு: `.பிலென்டென்டர்மென்ட்` பொருள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/__init__.pydocstring
 #: of sphinx.transforms.post_transforms.SphinxPostTransform:1
 msgid "A base class of post-transforms."
 msgstr "பிந்தைய மாற்றங்களின் அடிப்படை வகுப்பு."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/post_transforms/__init__.pydocstring
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/__init__.pydocstring
 #: of sphinx.transforms.post_transforms.SphinxPostTransform:3
 msgid ""
 "Post transforms are invoked to modify the document to restructure it for "
@@ -110,128 +108,218 @@ msgstr ""
 "மாற்றுகின்றன, ஒவ்வொரு வெளியீட்டு வடிவங்களுக்கும் சிறப்பு மாற்றங்களைச் "
 "செய்கின்றன. இந்த இடுகை மாற்றங்களை செயல்படுத்த இந்த வகுப்பு உதவுகிறது."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/post_transforms/__init__.pydocstring
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/__init__.pydocstring
 #: of sphinx.transforms.post_transforms.SphinxPostTransform.apply:1
 msgid "Override to apply the transform to the document tree."
 msgstr "ஆவண மரத்திற்கு மாற்றத்தைப் பயன்படுத்த மேலெழுதவும்."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/post_transforms/__init__.pydocstring
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/__init__.pydocstring
 #: of sphinx.transforms.post_transforms.SphinxPostTransform.is_supported:1
 msgid "Check this transform working for current builder."
 msgstr "தற்போதைய பில்டருக்கு இந்த உருமாற்றத்தை சரிபார்க்கவும்."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/post_transforms/__init__.pydocstring
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/__init__.pydocstring
 #: of sphinx.transforms.post_transforms.SphinxPostTransform.run:1
 msgid "Main method of post transforms."
 msgstr "இடுகை மாற்றங்களின் முக்கிய முறை."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/post_transforms/__init__.pydocstring
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/__init__.pydocstring
 #: of sphinx.transforms.post_transforms.SphinxPostTransform.run:3
 msgid "Subclasses should override this method instead of ``apply()``."
 msgstr ""
 "`` விண்ணப்பிக்கவும் () `` என்பதற்குப் பதிலாக துணைப்பிரிவுகள் இந்த முறையை "
 "மேலெழுத வேண்டும்."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/post_transforms/images.pydocstring
-#: of sphinx.transforms.post_transforms.images.ImageConverter:1
-msgid "A base class for image converters."
-msgstr "பட மாற்றிகளுக்கான அடிப்படை வகுப்பு."
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxDirective:1
+msgid "A base class for Sphinx directives."
+msgstr "ஸ்பின்க்ஸ் வழிமுறைகளுக்கான அடிப்படை வகுப்பு."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/post_transforms/images.pydocstring
-#: of sphinx.transforms.post_transforms.images.ImageConverter:14
-msgid "There are three steps to make your custom image converter:"
-msgstr "உங்கள் தனிப்பயன் பட மாற்றியை உருவாக்க மூன்று படிகள் உள்ளன:"
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxDirective:3
+msgid "This class provides helper methods for Sphinx directives."
+msgstr "இந்த வகுப்பு SPHINX வழிமுறைகளுக்கு உதவி முறைகளை வழங்குகிறது."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/post_transforms/images.pydocstring
-#: of sphinx.transforms.post_transforms.images.ImageConverter:16
-msgid "Make a subclass of ``ImageConverter`` class"
-msgstr "`` imageconverter`` வகுப்பின் துணைப்பிரிவை உருவாக்கவும்"
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/post_transforms/images.pydocstring
-#: of sphinx.transforms.post_transforms.images.ImageConverter:17
-msgid "Override ``conversion_rules``, ``is_available()`` and ``convert()``"
-msgstr ""
-"`` converty_rules``, `` `is_available ()` `` மற்றும் `` மாற்றவும் () ``"
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/post_transforms/images.pydocstring
-#: of sphinx.transforms.post_transforms.images.ImageConverter:18
-msgid ""
-"Register your image converter to Sphinx using "
-":py:meth:`.Sphinx.add_post_transform`"
-msgstr ""
-"உங்கள் பட மாற்றியை சூரரிமாச்சிலை க்கு பதிவுசெய்க: py: meth: "
-"`.sphinx.add_post_transform`"
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/post_transforms/images.pydocstring
-#: of sphinx.transforms.post_transforms.images.ImageConverter:3
-msgid ""
-"An image converter is kind of Docutils transform module.  It is used to "
-"convert image files which are not supported by a builder to the appropriate "
-"format for that builder."
-msgstr ""
-"ஒரு பட மாற்றி என்பது ஒரு வகையான ஆவணங்கள் உருமாறும் தொகுதி. ஒரு பில்டரால் "
-"ஆதரிக்கப்படாத படக் கோப்புகளை அந்த பில்டருக்கு பொருத்தமான வடிவத்திற்கு மாற்ற "
-"இது பயன்படுகிறது."
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/post_transforms/images.pydocstring
-#: of sphinx.transforms.post_transforms.images.ImageConverter:7
-msgid ""
-"For example, :py:class:`LaTeX builder <.LaTeXBuilder>` supports PDF, PNG and"
-" JPEG as image formats.  However it does not support SVG images. For such "
-"case, using image converters allows to embed these unsupported images into "
-"the document.  One of the image converters; :ref:`sphinx.ext.imgconverter "
-"<sphinx.ext.imgconverter>` can convert a SVG image to PNG format using "
-"Imagemagick internally."
-msgstr ""
-"எடுத்துக்காட்டாக,: py: வகுப்பு: `லேடெக்ச் பில்டர் <.லேட்எக்ச் பில்டர்>` "
-"பி.டி.எஃப், பி.என்.சி மற்றும் சே.பி.சி. இருப்பினும் இது எச்.வி.சி படங்களை "
-"ஆதரிக்காது. அத்தகைய சந்தர்ப்பத்தில், பட மாற்றிகளைப் பயன்படுத்துவது இந்த "
-"ஆதரிக்கப்படாத படங்களை ஆவணத்தில் உட்பொதிக்க அனுமதிக்கிறது. பட மாற்றிகளில் "
-"ஒன்று; ."
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/post_transforms/images.pydocstring
-#: of sphinx.transforms.post_transforms.images.ImageConverter.convert:1
-msgid "Convert an image file to the expected format."
-msgstr "ஒரு படக் கோப்பை எதிர்பார்த்த வடிவத்திற்கு மாற்றவும்."
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/post_transforms/images.pydocstring
-#: of sphinx.transforms.post_transforms.images.ImageConverter.convert:3
-msgid ""
-"*_from* is a path of the source image file, and *_to* is a path of the "
-"destination file."
-msgstr ""
-"* _from* என்பது மூல படக் கோப்பின் பாதை, மற்றும்* _to* என்பது இலக்கு கோப்பின்"
-" பாதை."
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/transforms/post_transforms/images.pydocstring
-#: of sphinx.transforms.post_transforms.images.ImageConverter.is_available:1
-msgid "Return the image converter is available or not."
-msgstr "திரும்ப பட மாற்றி கிடைக்குமா இல்லையா."
-
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/util/docutils.pydocstring
-#: of sphinx.util.docutils.SphinxDirective:5
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/util/docutils.pydocstring
-#: of sphinx.util.docutils.SphinxRole:5
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxDirective:7
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxRole:7
 msgid ""
 "The subclasses of this class might not work with docutils. This class is "
 "strongly coupled with Sphinx."
 msgstr ""
 "இந்த வகுப்பின் துணைப்பிரிவுகள் ஆவணங்களுடன் வேலை செய்யாது. இந்த வகுப்பு "
-"ச்பிங்க்சுடன் வலுவாக இணைக்கப்பட்டுள்ளது."
+"ஸ்பிங்க்ஸுடன் வலுவாக இணைக்கப்பட்டுள்ளது."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/util/docutils.pydocstring
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
 #: of sphinx.util.docutils.SphinxDirective.get_location:1
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/util/docutils.pydocstring
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
 #: of sphinx.util.docutils.SphinxRole.get_location:1
 msgid "Get current location info for logging."
 msgstr "உள்நுழைவதற்கு தற்போதைய இருப்பிட தகவலைப் பெறுங்கள்."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/util/docutils.pydocstring
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxDirective.get_source_info:1
+msgid "Get source and line number."
+msgstr "மூல மற்றும் வரி எண்ணைப் பெறுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxDirective.parse_content_to_nodes:1
+msgid "Parse the directive's content into nodes."
+msgstr "கட்டளையின் உள்ளடக்கத்தை முனைகளாக அலசவும்."
+
+#: ../../sphinx/doc/extdev/utils.rst:0
+msgid "Parameters"
+msgstr "அளவுருக்கள்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxDirective.parse_content_to_nodes:3
+msgid ""
+"Are titles (sections) allowed in the directive's content? Note that this "
+"option bypasses Docutils' usual checks on doctree structure, and misuse of "
+"this option can lead to an incoherent doctree. In Docutils, section nodes "
+"should only be children of ``Structural`` nodes, which includes "
+"``document``, ``section``, and ``sidebar`` nodes."
+msgstr ""
+"கட்டளையின் உள்ளடக்கத்தில் தலைப்புகள் (பிரிவுகள்) அனுமதிக்கப்படுமா? இந்த "
+"விருப்பம் டாக்ட்ரீ கட்டமைப்பில் Docutils இன் வழக்கமான சோதனைகளைத் "
+"தவிர்க்கிறது என்பதை நினைவில் கொள்ளவும், மேலும் இந்த விருப்பத்தை தவறாகப் "
+"பயன்படுத்துவது ஒரு பொருத்தமற்ற கோட்பாட்டிற்கு வழிவகுக்கும். ஆவணங்களில், "
+"பிரிவு முனைகள் ``ஆவணம்``, ``பிரிவு`` மற்றும் ``சைட்பார்`` முனைகளை உள்ளடக்கிய"
+" `` கட்டமைப்பு`` முனைகளின் குழந்தைகளாக மட்டுமே இருக்க வேண்டும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxDirective.parse_inline:1
+msgid "Parse *text* as inline elements."
+msgstr "இன்லைன் கூறுகளாக *உரை* பாகுபடுத்தவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxDirective.parse_inline:3
+msgid ""
+"The text to parse, which should be a single line or paragraph. This cannot "
+"contain any structural elements (headings, transitions, directives, etc)."
+msgstr ""
+"அலச வேண்டிய உரை, இது ஒரு வரி அல்லது பத்தியாக இருக்க வேண்டும். இதில் எந்த "
+"கட்டமைப்பு கூறுகளும் இருக்கக்கூடாது (தலைப்புகள், மாற்றங்கள், உத்தரவுகள் "
+"போன்றவை)."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxDirective.parse_inline:7
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxRole.lineno:1
+msgid "The line number where the interpreted text begins."
+msgstr "விளக்கப்பட்ட உரை தொடங்கும் வரி எண்."
+
+#: ../../sphinx/doc/extdev/utils.rst:0
+msgid "Returns"
+msgstr "வருமானம்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxDirective.parse_inline:9
+msgid ""
+"A list of nodes (text and inline elements) and a list of system_messages."
+msgstr ""
+"முனைகளின் பட்டியல் (உரை மற்றும் இன்லைன் கூறுகள்) மற்றும் system_messages "
+"பட்டியல்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxDirective.parse_text_to_nodes:1
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/parsing.pydocstring
+#: of sphinx.util.parsing.nested_parse_to_nodes:1
+msgid "Parse *text* into nodes."
+msgstr "*உரை* முனைகளாக அலசவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxDirective.parse_text_to_nodes:3
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/parsing.pydocstring
+#: of sphinx.util.parsing.nested_parse_to_nodes:5
+msgid "Text, in string form. ``StringList`` is also accepted."
+msgstr "உரை, இருந்து சரத்தில். ``ச்ட்ரிங் லிச்ட்`` கூட ஏற்றுக்கொள்ளப்பட்டது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxDirective.parse_text_to_nodes:5
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/parsing.pydocstring
+#: of sphinx.util.parsing.nested_parse_to_nodes:11
+msgid ""
+"Are titles (sections) allowed in *text*? Note that this option bypasses "
+"Docutils' usual checks on doctree structure, and misuse of this option can "
+"lead to an incoherent doctree. In Docutils, section nodes should only be "
+"children of ``Structural`` nodes, which includes ``document``, ``section``, "
+"and ``sidebar`` nodes."
+msgstr ""
+"*உரையில்* தலைப்புகள் (பிரிவுகள்) அனுமதிக்கப்படுமா? இந்த விருப்பம் டாக்ட்ரீ "
+"கட்டமைப்பில் Docutils இன் வழக்கமான சோதனைகளைத் தவிர்க்கிறது என்பதை நினைவில் "
+"கொள்ளவும், மேலும் இந்த விருப்பத்தை தவறாகப் பயன்படுத்துவது ஒரு பொருத்தமற்ற "
+"கோட்பாட்டிற்கு வழிவகுக்கும். ஆவணங்களில், பிரிவு முனைகள் ``ஆவணம்``, "
+"``பிரிவு`` மற்றும் ``சைட்பார்`` முனைகளை உள்ளடக்கிய `` கட்டமைப்பு`` முனைகளின்"
+" குழந்தைகளாக மட்டுமே இருக்க வேண்டும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxDirective.parse_text_to_nodes:12
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/parsing.pydocstring
+#: of sphinx.util.parsing.nested_parse_to_nodes:9
+msgid "The offset of the content."
+msgstr "உள்ளடக்கத்தின் ஆஃப்செட்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxDirective.set_source_info:1
+msgid "Set source and line number to the node."
+msgstr "மூலத்தையும் வரி எண்ணையும் முனைக்கு அமைக்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxRole:1
+msgid "A base class for Sphinx roles."
+msgstr "ஸ்பின்க்ஸ் பாத்திரங்களுக்கான அடிப்படை வகுப்பு."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxRole:3
+msgid "This class provides helper methods for Sphinx roles."
+msgstr "இந்த வகுப்பு ஸ்பிங்க்ஸ் பாத்திரங்களுக்கு உதவி முறைகளை வழங்குகிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxRole.content:1
+msgid ""
+"A list of strings, the directive content for customisation (from the "
+"\"role\" directive)."
+msgstr ""
+"சரங்களின் பட்டியல், தனிப்பயனாக்கலுக்கான உத்தரவு உள்ளடக்கம் (\"பங்கு\" "
+"உத்தரவிலிருந்து)."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxRole.inliner:1
+msgid "The ``docutils.parsers.rst.states.Inliner`` object."
+msgstr "`` Docutils.parsers.rst.states.inliner`` பொருள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxRole.name:1
+msgid "The role name actually used in the document."
+msgstr "ஆவணத்தில் உண்மையில் பயன்படுத்தப்படும் பங்கு பெயர்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxRole.options:1
+msgid ""
+"A dictionary of directive options for customisation (from the \"role\" "
+"directive)."
+msgstr ""
+"தனிப்பயனாக்கலுக்கான உத்தரவு விருப்பங்களின் அகராதி (\"பங்கு\" "
+"உத்தரவிலிருந்து)."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxRole.rawtext:1
+msgid "A string containing the entire interpreted text input."
+msgstr "முழு விளக்கப்பட்ட உரை உள்ளீட்டைக் கொண்ட ஒரு சரம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.SphinxRole.text:1
+msgid "The interpreted text content."
+msgstr "விளக்கப்பட்ட உரை உள்ளடக்கம்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
 #: of sphinx.util.docutils.ReferenceRole:1
 msgid "A base class for reference roles."
 msgstr "குறிப்பு பாத்திரங்களுக்கான அடிப்படை வகுப்பு."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/util/docutils.pydocstring
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
 #: of sphinx.util.docutils.ReferenceRole:3
 msgid ""
 "The reference roles can accept ``link title <target>`` style as a text for "
@@ -242,74 +330,106 @@ msgstr ""
 " உரையாக ஏற்றுக்கொள்ளலாம். பாகுபடுத்தப்பட்ட முடிவு; இணைப்பு தலைப்பு மற்றும் "
 "இலக்கு `` self.title`` மற்றும் `` self.target`` க்கு சேமிக்கப்படும்."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/util/docutils.pydocstring
-#: of sphinx.util.docutils.SphinxDirective:1
-msgid "A base class for Sphinx directives."
-msgstr "ச்பின்க்ச் வழிமுறைகளுக்கான அடிப்படை வகுப்பு."
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.ReferenceRole.disabled:1
+msgid "A boolean indicates the reference is disabled."
+msgstr "ஒரு பூலியன் குறிப்பு முடக்கப்பட்டிருப்பதைக் குறிக்கிறது."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/util/docutils.pydocstring
-#: of sphinx.util.docutils.SphinxDirective:3
-msgid "This class provides helper methods for Sphinx directives."
-msgstr "இந்த வகுப்பு சூரரிமாச்சிலை வழிமுறைகளுக்கு உதவி முறைகளை வழங்குகிறது."
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.ReferenceRole.has_explicit_title:1
+msgid "A boolean indicates the role has explicit title or not."
+msgstr ""
+"ஒரு பூலியன் இந்த பாத்திரத்திற்கு வெளிப்படையான தலைப்பு இருக்கிறதா இல்லையா "
+"என்பதைக் குறிக்கிறது."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/util/docutils.pydocstring
-#: of sphinx.util.docutils.SphinxDirective.get_source_info:1
-msgid "Get source and line number."
-msgstr "மூல மற்றும் வரி எண்ணைப் பெறுங்கள்."
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.ReferenceRole.target:1
+msgid "The link target for the interpreted text."
+msgstr "விளக்கப்பட்ட உரைக்கான இணைப்பு இலக்கு."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/util/docutils.pydocstring
-#: of sphinx.util.docutils.SphinxDirective.set_source_info:1
-msgid "Set source and line number to the node."
-msgstr "மூலத்தையும் வரி எண்ணையும் முனைக்கு அமைக்கவும்."
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/docutils.pydocstring
+#: of sphinx.util.docutils.ReferenceRole.title:1
+msgid "The link title for the interpreted text."
+msgstr "விளக்கப்பட்ட உரைக்கான இணைப்பு தலைப்பு."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/util/docutils.pydocstring
-#: of sphinx.util.docutils.SphinxRole:1
-msgid "A base class for Sphinx roles."
-msgstr "ச்பின்க்ச் பாத்திரங்களுக்கான அடிப்படை வகுப்பு."
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/images.pydocstring
+#: of sphinx.transforms.post_transforms.images.ImageConverter:1
+msgid "A base class for image converters."
+msgstr "பட மாற்றிகளுக்கான அடிப்படை வகுப்பு."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/sphinx/util/docutils.pydocstring
-#: of sphinx.util.docutils.SphinxRole:3
-msgid "This class provides helper methods for Sphinx roles."
-msgstr "இந்த வகுப்பு சூரரிமாச்சிலை பாத்திரங்களுக்கு உதவி முறைகளை வழங்குகிறது."
-
-#: ../../sphinx/doc/extdev/utils.rst:12
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/images.pydocstring
+#: of sphinx.transforms.post_transforms.images.ImageConverter:3
 msgid ""
-"The subclasses of them might not work with bare docutils because they are "
-"strongly coupled with Sphinx."
+"An image converter is kind of Docutils transform module.  It is used to "
+"convert image files which are not supported by a builder to the appropriate "
+"format for that builder."
 msgstr ""
-"அவற்றின் துணைப்பிரிவுகள் வெற்று ஆவணங்களுடன் வேலை செய்யாது, ஏனெனில் அவை "
-"ச்பிங்க்சுடன் வலுவாக இணைக்கப்பட்டுள்ளன."
+"ஒரு பட மாற்றி என்பது ஒரு வகையான ஆவணங்கள் உருமாறும் தொகுதி. ஒரு பில்டரால் "
+"ஆதரிக்கப்படாத படக் கோப்புகளை அந்த பில்டருக்கு பொருத்தமான வடிவத்திற்கு மாற்ற "
+"இது பயன்படுகிறது."
 
-#: ../../sphinx/doc/extdev/utils.rst:2
-msgid "Utilities"
-msgstr "பயன்பாடுகள்"
-
-#: ../../sphinx/doc/extdev/utils.rst:34
-msgid "Utility components"
-msgstr "பயன்பாட்டு கூறுகள்"
-
-#: ../../sphinx/doc/extdev/utils.rst:4
-msgid "Sphinx provides utility classes and functions to develop extensions."
-msgstr ""
-"நீட்டிப்புகளை உருவாக்க சூரரிமாச்சிலை பயன்பாட்டு வகுப்புகள் மற்றும் "
-"செயல்பாடுகளை வழங்குகிறது."
-
-#: ../../sphinx/doc/extdev/utils.rst:7
-msgid "Base classes for components"
-msgstr "கூறுகளுக்கான அடிப்படை வகுப்புகள்"
-
-#: ../../sphinx/doc/extdev/utils.rst:9
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/images.pydocstring
+#: of sphinx.transforms.post_transforms.images.ImageConverter:7
 msgid ""
-"These base classes are useful to allow your extensions to obtain Sphinx "
-"components (e.g. :class:`.Config`, :class:`.BuildEnvironment` and so on) "
-"easily."
+"For example, :py:class:`LaTeX builder <.LaTeXBuilder>` supports PDF, PNG and"
+" JPEG as image formats.  However it does not support SVG images. For such "
+"case, using image converters allows to embed these unsupported images into "
+"the document.  One of the image converters; :ref:`sphinx.ext.imgconverter "
+"<sphinx.ext.imgconverter>` can convert a SVG image to PNG format using "
+"Imagemagick internally."
 msgstr ""
-"உங்கள் நீட்டிப்புகளை சூரரிமாச்சிலை கூறுகளைப் பெற அனுமதிக்க இந்த அடிப்படை "
-"வகுப்புகள் பயனுள்ளதாக இருக்கும் (எ.கா.: வகுப்பு: `.கான்பிக்`,: வகுப்பு:` "
-".பிலென்டென்டுமென்ட்` மற்றும் பல)."
+"எடுத்துக்காட்டாக,: PY: வகுப்பு: `லேடெக்ஸ் பில்டர் <.லேட்எக்ஸ் பில்டர்>` "
+"பி.டி.எஃப், பி.என்.ஜி மற்றும் ஜே.பி.ஜி. இருப்பினும் இது எஸ்.வி.ஜி படங்களை "
+"ஆதரிக்காது. அத்தகைய சந்தர்ப்பத்தில், பட மாற்றிகளைப் பயன்படுத்துவது இந்த "
+"ஆதரிக்கப்படாத படங்களை ஆவணத்தில் உட்பொதிக்க அனுமதிக்கிறது. பட மாற்றிகளில் "
+"ஒன்று; ."
 
-#: ../docstring of
-#: sphinx.transforms.post_transforms.images.ImageConverter.available:1
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/images.pydocstring
+#: of sphinx.transforms.post_transforms.images.ImageConverter:14
+msgid "There are three steps to make your custom image converter:"
+msgstr "உங்கள் தனிப்பயன் பட மாற்றியை உருவாக்க மூன்று படிகள் உள்ளன:"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/images.pydocstring
+#: of sphinx.transforms.post_transforms.images.ImageConverter:16
+msgid "Make a subclass of ``ImageConverter`` class"
+msgstr "`` ImageConverter`` வகுப்பின் துணைப்பிரிவை உருவாக்கவும்"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/images.pydocstring
+#: of sphinx.transforms.post_transforms.images.ImageConverter:17
+msgid "Override ``conversion_rules``, ``is_available()`` and ``convert()``"
+msgstr ""
+"`` Converty_Rules``, `` `is_available ()` `` மற்றும் `` மாற்றவும் () ``"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/images.pydocstring
+#: of sphinx.transforms.post_transforms.images.ImageConverter:18
+msgid ""
+"Register your image converter to Sphinx using "
+":py:meth:`.Sphinx.add_post_transform`"
+msgstr ""
+"உங்கள் பட மாற்றியை SPHINX க்கு பதிவுசெய்க: py: meth: "
+"`.sphinx.add_post_transform`"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/images.pydocstring
+#: of sphinx.transforms.post_transforms.images.ImageConverter.convert:1
+msgid "Convert an image file to the expected format."
+msgstr "ஒரு படக் கோப்பை எதிர்பார்த்த வடிவத்திற்கு மாற்றவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/images.pydocstring
+#: of sphinx.transforms.post_transforms.images.ImageConverter.convert:3
+msgid ""
+"*_from* is a path of the source image file, and *_to* is a path of the "
+"destination file."
+msgstr ""
+"* _from* என்பது மூல படக் கோப்பின் பாதை, மற்றும்* _to* என்பது இலக்கு கோப்பின்"
+" பாதை."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/images.pydocstring
+#: of sphinx.transforms.post_transforms.images.ImageConverter.is_available:1
+msgid "Return the image converter is available or not."
+msgstr "திரும்ப பட மாற்றி கிடைக்குமா இல்லையா."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/images.pydocstring
+#: of sphinx.transforms.post_transforms.images.ImageConverter.available:1
 msgid ""
 "The converter is available or not.  Will be filled at the first call of the "
 "build.  The result is shared in the same process."
@@ -317,83 +437,150 @@ msgstr ""
 "மாற்றி கிடைக்கிறது அல்லது இல்லை. கட்டமைப்பின் முதல் அழைப்பில் நிரப்பப்படும்."
 " இதன் விளைவாக அதே செயல்பாட்டில் பகிரப்படுகிறது."
 
-#: ../docstring of
-#: sphinx.transforms.post_transforms.images.ImageConverter.available:4
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/images.pydocstring
+#: of sphinx.transforms.post_transforms.images.ImageConverter.available:4
+msgid "Todo"
+msgstr "செய்யவேண்டிய"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/images.pydocstring
+#: of sphinx.transforms.post_transforms.images.ImageConverter.available:4
 msgid ""
 "This should be refactored not to store the state without class variable."
 msgstr ""
 "வகுப்பு மாறி இல்லாமல் மாநிலத்தை சேமிக்கக்கூடாது என்று இது மறுசீரமைக்கப்பட "
 "வேண்டும்."
 
-#: ../docstring of
-#: sphinx.transforms.post_transforms.images.ImageConverter.available:4
-msgid "Todo"
-msgstr "செய்யவேண்டிய"
-
-#: ../docstring of
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/images.pydocstring
+#: of
 #: sphinx.transforms.post_transforms.images.ImageConverter.conversion_rules:1
 msgid ""
 "A conversion rules the image converter supports. It is represented as a list"
 " of pair of source image format (mimetype) and destination one::"
 msgstr ""
-"ஒரு மாற்று பட மாற்றி ஆதரிக்கும் விதிகள். இது மூல பட வடிவமைப்பு (mimetype) "
-"மற்றும் இலக்கு ஒன்று: இணை பட்டியலில் குறிப்பிடப்படுகிறது ::"
+"ஒரு மாற்று பட மாற்றி ஆதரிக்கும் விதிகள். இது மூல பட வடிவமைப்பு (MIMETYPE) "
+"மற்றும் இலக்கு ஒன்று: ஜோடி பட்டியலில் குறிப்பிடப்படுகிறது ::"
 
-#: ../docstring of
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/transforms/post_transforms/images.pydocstring
+#: of
 #: sphinx.transforms.post_transforms.images.ImageConverter.default_priority:1
 msgid "Numerical priority of this transform, 0 through 999 (override)."
 msgstr "இந்த மாற்றத்தின் எண் முன்னுரிமை, 0 முதல் 999 வரை (மேலெழுத)."
 
-#: ../docstring of sphinx.util.docutils.ReferenceRole.disabled:1
-msgid "A boolean indicates the reference is disabled."
-msgstr "ஒரு பூலியன் குறிப்பு முடக்கப்பட்டிருப்பதைக் குறிக்கிறது."
+#: ../../sphinx/doc/extdev/utils.rst:36
+msgid "Utility components"
+msgstr "பயன்பாட்டு கூறுகள்"
 
-#: ../docstring of sphinx.util.docutils.ReferenceRole.has_explicit_title:1
-msgid "A boolean indicates the role has explicit title or not."
-msgstr ""
-"ஒரு பூலியன் இந்த பாத்திரத்திற்கு வெளிப்படையான தலைப்பு இருக்கிறதா இல்லையா "
-"என்பதைக் குறிக்கிறது."
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/events.pydocstring
+#: of sphinx.events.EventManager:1
+msgid "Event manager for Sphinx."
+msgstr "ஸ்பிங்க்ஸிற்கான நிகழ்வு மேலாளர்."
 
-#: ../docstring of sphinx.util.docutils.ReferenceRole.target:1
-msgid "The link target for the interpreted text."
-msgstr "விளக்கப்பட்ட உரைக்கான இணைப்பு இலக்கு."
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/events.pydocstring
+#: of sphinx.events.EventManager.add:1
+msgid "Register a custom Sphinx event."
+msgstr "தனிப்பயன் ஸ்பிங்க்ஸ் நிகழ்வைப் பதிவுசெய்க."
 
-#: ../docstring of sphinx.util.docutils.ReferenceRole.title:1
-msgid "The link title for the interpreted text."
-msgstr "விளக்கப்பட்ட உரைக்கான இணைப்பு தலைப்பு."
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/events.pydocstring
+#: of sphinx.events.EventManager.connect:1
+msgid "Connect a handler to specific event."
+msgstr "குறிப்பிட்ட நிகழ்வுக்கு ஒரு கையாளுபவரை இணைக்கவும்."
 
-#: ../docstring of sphinx.util.docutils.SphinxRole.content:1
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/events.pydocstring
+#: of sphinx.events.EventManager.disconnect:1
+msgid "Disconnect a handler."
+msgstr "ஒரு கையாளுபவரைத் துண்டிக்கவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/events.pydocstring
+#: of sphinx.events.EventManager.emit:1
+msgid "Emit a Sphinx event."
+msgstr "ஒரு ஸ்பிங்க்ஸ் நிகழ்வை வெளியிடுங்கள்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/events.pydocstring
+#: of sphinx.events.EventManager.emit_firstresult:1
+msgid "Emit a Sphinx event and returns first result."
+msgstr "ஒரு ஸ்பிங்க்ஸ் நிகழ்வை வெளியிடுங்கள் மற்றும் முதல் முடிவை அளிக்கிறது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/events.pydocstring
+#: of sphinx.events.EventManager.emit_firstresult:3
 msgid ""
-"A list of strings, the directive content for customisation (from the "
-"\"role\" directive)."
+"This returns the result of the first handler that doesn't return ``None``."
 msgstr ""
-"சரங்களின் பட்டியல், தனிப்பயனாக்கலுக்கான கட்டளை உள்ளடக்கம் (\"பங்கு\" "
-"உத்தரவிலிருந்து)."
+"இது `` எதுவுமில்லை`` திரும்பப் பெறாத முதல் கையாளுபவரின் முடிவைத் தருகிறது."
 
-#: ../docstring of sphinx.util.docutils.SphinxRole.inliner:1
-msgid "The ``docutils.parsers.rst.states.Inliner`` object."
-msgstr "`` docutils.parsers.rst.states.inliner`` பொருள்."
+#: ../../sphinx/doc/extdev/utils.rst:43
+msgid "Utility functions"
+msgstr "பயன்பாட்டு செயல்பாடுகள்"
 
-#: ../docstring of sphinx.util.docutils.SphinxRole.lineno:1
-msgid "The line number where the interpreted text begins."
-msgstr "விளக்கப்பட்ட உரை தொடங்கும் வரி எண்."
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/parsing.pydocstring
+#: of sphinx.util.parsing.nested_parse_to_nodes:3
+msgid "The state machine state. Must be a subclass of ``RSTState``."
+msgstr "அரசு இயந்திர நிலை. ``RSTSstate`` இன் துணைப்பிரிவாக இருக்க வேண்டும்."
 
-#: ../docstring of sphinx.util.docutils.SphinxRole.name:1
-msgid "The role name actually used in the document."
-msgstr "ஆவணத்தில் உண்மையில் பயன்படுத்தப்படும் பங்கு பெயர்."
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/parsing.pydocstring
+#: of sphinx.util.parsing.nested_parse_to_nodes:7
+msgid "The text's source, used when creating a new ``StringList``."
+msgstr ""
+"புதிய ``ச்ட்ரிங்லிச்ட்`` ஐ உருவாக்கும் போது பயன்படுத்தப்படும் உரையின் "
+"சான்று."
 
-#: ../docstring of sphinx.util.docutils.SphinxRole.options:1
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/parsing.pydocstring
+#: of sphinx.util.parsing.nested_parse_to_nodes:18
 msgid ""
-"A dictionary of directive options for customisation (from the \"role\" "
-"directive)."
+"If this is False (the default), then *content* is parsed as if it were an "
+"independent document, meaning that title decorations (e.g. underlines) do "
+"not need to match the surrounding document. This is useful when the parsed "
+"content comes from a completely different context, such as docstrings. If "
+"this is True, then title underlines must match those in the surrounding "
+"document, otherwise the behaviour is undefined."
 msgstr ""
-"தனிப்பயனாக்கலுக்கான கட்டளை விருப்பங்களின் அகராதி (\"பங்கு\" "
-"உத்தரவிலிருந்து)."
+"இது தவறு (இயல்புநிலை) எனில், *உள்ளடக்கம்* ஒரு சுயாதீன ஆவணம் போல் "
+"பாகுபடுத்தப்படும், அதாவது தலைப்பு அலங்காரங்கள் (எ.கா. அடிக்கோடுகள்) "
+"சுற்றியுள்ள ஆவணத்துடன் பொருந்த வேண்டிய அவசியமில்லை. பாகுபடுத்தப்பட்ட "
+"உள்ளடக்கம் docstrings போன்ற முற்றிலும் வேறுபட்ட சூழலில் இருந்து வரும்போது "
+"இது பயனுள்ளதாக இருக்கும். இது உண்மை எனில், தலைப்பு அடிக்கோடுகள் சுற்றியுள்ள "
+"ஆவணத்துடன் பொருந்த வேண்டும், இல்லையெனில் நடத்தை வரையறுக்கப்படவில்லை."
 
-#: ../docstring of sphinx.util.docutils.SphinxRole.rawtext:1
-msgid "A string containing the entire interpreted text input."
-msgstr "முழு விளக்கப்பட்ட உரை உள்ளீட்டைக் கொண்ட ஒரு சரம்."
+#: ../../sphinx/doc/extdev/utils.rst:49
+msgid "Utility types"
+msgstr "பயன்பாட்டு வகைகள்"
 
-#: ../docstring of sphinx.util.docutils.SphinxRole.text:1
-msgid "The interpreted text content."
-msgstr "விளக்கப்பட்ட உரை உள்ளடக்கம்."
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/typing.pydocstring
+#: of sphinx.util.typing.ExtensionMetadata:1
+msgid "The metadata returned by an extension's ``setup()`` function."
+msgstr ""
+"நீட்டிப்பின் ``அமைவு()`` செயல்பாட்டின் மூலம் மேனிலை தரவு வழங்கப்பட்டது."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/typing.pydocstring
+#: of sphinx.util.typing.ExtensionMetadata:3
+msgid "See :ref:`ext-metadata`."
+msgstr "பார்க்க :ref:`ext-metadata`."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/typing.pydocstring
+#: of sphinx.util.typing.ExtensionMetadata.env_version:1
+msgid ""
+"An integer that identifies the version of env data added by the extension."
+msgstr ""
+"நீட்டிப்பால் சேர்க்கப்பட்ட env தரவின் பதிப்பை அடையாளம் காணும் முழு எண்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/typing.pydocstring
+#: of sphinx.util.typing.ExtensionMetadata.parallel_read_safe:1
+msgid ""
+"Indicate whether parallel reading of source files is supported by the "
+"extension."
+msgstr ""
+"மூலக் கோப்புகளின் இணையான வாசிப்பு நீட்டிப்பு மூலம் ஆதரிக்கப்படுகிறதா "
+"என்பதைக் குறிப்பிடவும்."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/typing.pydocstring
+#: of sphinx.util.typing.ExtensionMetadata.parallel_write_safe:1
+msgid ""
+"Indicate whether parallel writing of output files is supported by the "
+"extension (default: ``True``)."
+msgstr ""
+"வெளியீட்டு கோப்புகளின் இணையான எழுத்து நீட்டிப்பு மூலம் ஆதரிக்கப்படுகிறதா "
+"என்பதைக் குறிப்பிடவும் (இயல்புநிலை: ``உண்மை``)."
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/util/typing.pydocstring
+#: of sphinx.util.typing.ExtensionMetadata.version:1
+msgid "The extension version (default: ``'unknown version'``)."
+msgstr "நீட்டிப்பு பதிப்பு (இயல்புநிலை: ``'தெரியாத பதிப்பு''`)."

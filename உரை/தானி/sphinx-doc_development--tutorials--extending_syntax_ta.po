@@ -1,0 +1,327 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2025, the Sphinx developers
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2024
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 8.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-15 06:34+0000\n"
+"PO-Revision-Date: 2025-11-16 07:14\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2024\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:4
+msgid "Extending syntax with roles and directives"
+msgstr "பாத்திரங்கள் மற்றும் உத்தரவுகளுடன் தொடரியல் விரிவாக்கம்"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:7
+msgid "Overview"
+msgstr "கண்ணோட்டம்"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:9
+msgid ""
+"The syntax of both reStructuredText and MyST can be extended by creating new"
+" **directives** - for block-level elements - and **roles** - for inline "
+"elements."
+msgstr ""
+"மறுகட்டமைக்கப்பட்ட உரை மற்றும் MyST ஆகிய இரண்டின் தொடரியல் புதிய ** "
+"வழிகாட்டுதல்களை** - தொகுதி-நிலை உறுப்புகளுக்கு - மற்றும் ** பாத்திரங்கள்** -"
+" இன்லைன் உறுப்புகளுக்கு உருவாக்குவதன் மூலம் நீட்டிக்கப்படலாம்."
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:13
+msgid "In this tutorial we shall extend Sphinx to add:"
+msgstr "இந்த டுடோரியலில் நாம் சேர்க்க சூரரிமாச்சிலை ஐ நீட்டிப்போம்:"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:15
+msgid "A ``hello`` role, that will simply output the text ``Hello {text}!``."
+msgstr "``அலோ`` பாத்திரம், அது ``அலோ {text}!`` என்ற உரையை வெறுமனே வெளியிடும்."
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:16
+msgid ""
+"A ``hello`` directive, that will simply output the text ``Hello {text}!``, "
+"as a paragraph."
+msgstr "``அலோ`` கட்டளை, அது பத்தியாக ``அலோ {text}!`` என்ற உரையை வெளியிடும்."
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:19
+msgid ""
+"For this extension, you will need some basic understanding of Python, and we"
+" shall also introduce aspects of the docutils_ API."
+msgstr ""
+"இந்த நீட்டிப்புக்கு, பைத்தானைப் பற்றிய சில அடிப்படை புரிதல் உங்களுக்குத் "
+"தேவைப்படும், மேலும் நாங்கள் docutils_ பநிஇ இன் அம்சங்களையும் "
+"அறிமுகப்படுத்துவோம்."
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:23
+msgid "Setting up the project"
+msgstr "திட்டத்தை அமைத்தல்"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:25
+msgid ""
+"You can either use an existing Sphinx project or create a new one using "
+":program:`sphinx-quickstart`."
+msgstr ""
+"நீங்கள் ஏற்கனவே உள்ள சூரரிமாச்சிலை திட்டத்தைப் பயன்படுத்தலாம் அல்லது "
+":program:`sphinx-quickstart` ஐப் பயன்படுத்தி புதிய ஒன்றை உருவாக்கலாம்."
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:28
+msgid ""
+"With this we will add the extension to the project, within the "
+":file:`source` folder:"
+msgstr ""
+"இதனுடன், திட்டத்திற்கான நீட்டிப்பை :file:`source` கோப்புறைக்குள் சேர்ப்போம்:"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:31
+msgid "Create an :file:`_ext` folder in :file:`source`"
+msgstr "ஒரு: கோப்பை உருவாக்கவும்: `_ext` கோப்புறை: கோப்பு:` மூல`"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:32
+msgid ""
+"Create a new Python file in the :file:`_ext` folder called "
+":file:`helloworld.py`"
+msgstr ""
+"புதிய பைதான் கோப்பை உருவாக்கவும்: கோப்பு: `_ext` கோப்புறை: கோப்பு:` "
+"helloworld.py`"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:35
+msgid "Here is an example of the folder structure you might obtain:"
+msgstr "நீங்கள் பெறக்கூடிய கோப்புறை கட்டமைப்பின் எடுத்துக்காட்டு இங்கே:"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:47
+msgid "Writing the extension"
+msgstr "நீட்டிப்பு எழுதுதல்"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:49
+msgid "Open :file:`helloworld.py` and paste the following code in it:"
+msgstr ""
+"திறந்த: கோப்பு: `helloworld.py` மற்றும் பின்வரும் குறியீட்டை அதில் ஒட்டவும்:"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:55
+msgid "Some essential things are happening in this example:"
+msgstr "இந்த எடுத்துக்காட்டில் சில முக்கியமான விசயங்கள் நடக்கின்றன:"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:58
+msgid "The role class"
+msgstr "பங்கு வகுப்பு"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:60
+msgid "Our new role is declared in the ``HelloRole`` class."
+msgstr "எங்கள் புதிய பங்கு ``அலோரோல்`` வகுப்பில் அறிவிக்கப்பட்டது."
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:67
+msgid ""
+"This class extends the :class:`.SphinxRole` class. The class contains a "
+"``run`` method, which is a requirement for every role. It contains the main "
+"logic of the role and it returns a tuple containing:"
+msgstr ""
+"இந்த வகுப்பு :class:`.SphinxRole` வகுப்பை நீட்டிக்கிறது. வகுப்பில் ``ரன்`` "
+"முறை உள்ளது, இது ஒவ்வொரு பாத்திரத்திற்கும் தேவை. இது பாத்திரத்தின் முக்கிய "
+"தர்க்கத்தைக் கொண்டுள்ளது மற்றும் இது பின்வருவனவற்றைக் கொண்டுள்ளது:"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:73
+msgid "a list of inline-level docutils nodes to be processed by Sphinx."
+msgstr ""
+"ச்பிங்க்சால் செயலாக்கப்பட வேண்டிய இன்லைன்-லெவல் டாகுட்டில்ச் முனைகளின் "
+"பட்டியல்."
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:74
+msgid "an (optional) list of system message nodes"
+msgstr "கணினி செய்தி முனைகளின் (விரும்பினால்) பட்டியல்"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:77
+msgid "The directive class"
+msgstr "உத்தரவு வகுப்பு"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:79
+msgid "Our new directive is declared in the ``HelloDirective`` class."
+msgstr "எங்கள் புதிய கட்டளை ``HelloDirective`` வகுப்பில் அறிவிக்கப்பட்டது."
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:86
+msgid ""
+"This class extends the :class:`.SphinxDirective` class. The class contains a"
+" ``run`` method, which is a requirement for every directive. It contains the"
+" main logic of the directive and it returns a list of block-level docutils "
+"nodes to be processed by Sphinx. It also contains a ``required_arguments`` "
+"attribute, which tells Sphinx how many arguments are required for the "
+"directive."
+msgstr ""
+"இந்த வகுப்பு :class:`.SphinxDirective` வகுப்பை நீட்டிக்கிறது. வகுப்பில் "
+"``ரன்`` முறை உள்ளது, இது ஒவ்வொரு கட்டளைக்கும் தேவை. இது கட்டளையின் முக்கிய "
+"தர்க்கத்தைக் கொண்டுள்ளது மற்றும் இது ச்பிங்க்சால் செயலாக்கப்பட வேண்டிய "
+"தொகுதி-நிலை டாகுட்டில்ச் முனைகளின் பட்டியலை வழங்குகிறது. இது "
+"``தேவையான_வாதங்கள்`` பண்புக்கூறையும் கொண்டுள்ளது, இது கட்டளைக்கு எத்தனை "
+"வாதங்கள் தேவை என்பதை ச்பிங்க்சுக்குக் கூறுகிறது."
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:95
+msgid "What are docutils nodes?"
+msgstr "docutils முனைகள் என்றால் என்ன?"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:97
+msgid ""
+"When Sphinx parses a document, it creates an \"Abstract Syntax Tree\" (AST) "
+"of nodes that represent the content of the document in a structured way, "
+"that is generally independent of any one input (rST, MyST, etc) or output "
+"(HTML, LaTeX, etc) format. It is a tree because each node can have children "
+"nodes, and so on:"
+msgstr ""
+"சூரரிமாச்சிலை ஒரு ஆவணத்தை பாகுபடுத்தும் போது, ​​அது ஒரு கட்டமைக்கப்பட்ட "
+"முறையில் ஆவணத்தின் உள்ளடக்கத்தை பிரதிநிதித்துவப்படுத்தும் முனைகளின் "
+"\"சுருக்க தொடரியல் மரம்\" (AST) உருவாக்குகிறது, இது பொதுவாக எந்த ஒரு உள்ளீடு"
+" (rST, MyST, etc) அல்லது வெளியீடு (HTML, LaTeX, முதலியன) வடிவமைப்பிலிருந்து "
+"சுயாதீனமாக இருக்கும். இது ஒரு மரம், ஏனெனில் ஒவ்வொரு முனையிலும் குழந்தைகள் "
+"முனைகள் இருக்கலாம், மேலும் பல:"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:111
+msgid ""
+"The docutils_ package provides many `built-in nodes <docutils nodes_>`_, to "
+"represent different types of content such as text, paragraphs, references, "
+"tables, etc."
+msgstr ""
+"உரை, பத்திகள், குறிப்புகள், அட்டவணைகள் போன்ற பல்வேறு வகையான உள்ளடக்கங்களைக் "
+"குறிக்க, docutils_ தொகுப்பு பல `உள்ளமைக்கப்பட்ட முனைகளை <docutils nodes_>`_ "
+"வழங்குகிறது."
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:115
+msgid ""
+"Each node type generally only accepts a specific set of direct child nodes, "
+"for example the ``document`` node should only contain \"block-level\" nodes,"
+" such as ``paragraph``, ``section``, ``table``, etc, whilst the "
+"``paragraph`` node should only contain \"inline-level\" nodes, such as "
+"``text``, ``emphasis``, ``strong``, etc."
+msgstr ""
+"ஒவ்வொரு முனை வகையும் பொதுவாக ஒரு குறிப்பிட்ட நேரடி சைல்டு நோட்களை மட்டுமே "
+"ஏற்றுக்கொள்கிறது, எடுத்துக்காட்டாக ``ஆவணம்`` முனையில் ``பத்தி```, "
+"``பிரிவு``, ``டேபிள்``, போன்ற \"பிளாக்-லெவல்\" முனைகள் மட்டுமே இருக்க "
+"வேண்டும், அதேசமயம் ``பத்தி`` முனையில் `இன்லைன்-லெவல்\" முனைகள் மட்டுமே "
+"இருக்க வேண்டும், ``இன்லைன்-லெவல்\" நோட்கள், ``,` வலுவான,`` போன்ற முதலியன"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:123
+msgid ""
+"The docutils documentation on `creating directives <docutils directives_>`_,"
+" and `creating roles <docutils roles_>`_."
+msgstr ""
+"`உருவாக்கும் வழிமுறைகள் <docutils directives_>`_, மற்றும் `பதவிகளை "
+"உருவாக்குதல் <docutils roles_>`_ பற்றிய docutils ஆவணங்கள்."
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:128
+msgid "The ``setup`` function"
+msgstr "`` அமைவு`` செயல்பாடு"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:130
+msgid ""
+"This function is a requirement. We use it to plug our new directive into "
+"Sphinx."
+msgstr ""
+"இந்த செயல்பாடு ஒரு தேவை. எங்கள் புதிய உத்தரவை ஸ்பிங்க்ஸில் செருக இதைப் "
+"பயன்படுத்துகிறோம்."
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:137
+msgid ""
+"The simplest thing you can do is to call the :meth:`.Sphinx.add_role` and "
+":meth:`.Sphinx.add_directive` methods, which is what we've done here. For "
+"this particular call, the first argument is the name of the role/directive "
+"itself as used in a reStructuredText file. In this case, we would use "
+"``hello``. For example:"
+msgstr ""
+"நீங்கள் செய்யக்கூடிய எளிய சேதி :meth:`.Sphinx.add_role` மற்றும் "
+":meth:`.Sphinx.add_directive` முறைகளை அழைப்பது, அதைத்தான் நாங்கள் இங்கு "
+"செய்துள்ளோம். இந்த குறிப்பிட்ட அழைப்பிற்கு, மறுகட்டமைக்கப்பட்ட உரை கோப்பில் "
+"பயன்படுத்தப்படும் பாத்திரம்/வழிமுறையின் பெயரே முதல் வாதமாகும். இந்த "
+"வழக்கில், நாம் ``அலோ`` பயன்படுத்துவோம். உதாரணமாக:"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:152
+msgid ""
+"We also return the :ref:`extension metadata <ext-metadata>` that indicates "
+"the version of our extension, along with the fact that it is safe to use the"
+" extension for both parallel reading and writing."
+msgstr ""
+"நாங்கள் திருப்பித் தருகிறோம்: ref: `நீட்டிப்பு மெட்டாடேட்டா <ext-metadata>` "
+"இது எங்கள் நீட்டிப்பின் பதிப்பைக் குறிக்கிறது, அதோடு இணையான வாசிப்பு மற்றும்"
+" எழுதுதல் ஆகிய இரண்டிற்கும் நீட்டிப்பைப் பயன்படுத்துவது பாதுகாப்பானது."
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:157
+msgid "Using the extension"
+msgstr "நீட்டிப்பைப் பயன்படுத்துதல்"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:159
+msgid ""
+"The extension has to be declared in your :file:`conf.py` file to make Sphinx"
+" aware of it. There are two steps necessary here:"
+msgstr ""
+"உங்கள்: கோப்பு: `conf.py` கோப்பில் நீட்டிப்பு அறிவிக்கப்பட வேண்டும். இங்கே "
+"இரண்டு படிகள் தேவை:"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:162
+msgid ""
+"Add the :file:`_ext` directory to the `Python path`_ using "
+"``sys.path.append``. This should be placed at the top of the file."
+msgstr ""
+"`` Sys.path.append`` ஐப் பயன்படுத்தி `பைதான் பாதை`_ க்கு` _ext` கோப்பகத்தைச்"
+" சேர்க்கவும். இது கோப்பின் மேற்புறத்தில் வைக்கப்பட வேண்டும்."
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:165
+msgid ""
+"Update or create the :confval:`extensions` list and add the extension file "
+"name to the list"
+msgstr ""
+"புதுப்பிக்கவும் அல்லது உருவாக்கவும்: confval: `நீட்டிப்புகள்` பட்டியல் "
+"மற்றும் நீட்டிப்பு கோப்பு பெயரை பட்டியலில் சேர்க்கவும்"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:168
+msgid "For example:"
+msgstr "உதாரணத்திற்கு:"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:181
+msgid ""
+"Because we haven't installed our extension as a `Python package`_, we need "
+"to modify the `Python path`_ so Sphinx can find our extension. This is why "
+"we need the call to ``sys.path.append``."
+msgstr ""
+"நாங்கள் எங்கள் நீட்டிப்பை `பைதான் தொகுப்பாக`_ நிறுவாததால், `பைதான் பாதை`_ஐ "
+"மாற்ற வேண்டும், அதனால் சூரரிமாச்சிலை எங்கள் நீட்டிப்பைக் கண்டறிய முடியும். "
+"இதனால்தான் ``sys.path.append`` என்ற அழைப்பு நமக்குத் தேவைப்படுகிறது."
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:185
+msgid "You can now use the extension in a file. For example:"
+msgstr ""
+"நீங்கள் இப்போது ஒரு கோப்பில் நீட்டிப்பைப் பயன்படுத்தலாம். உதாரணத்திற்கு:"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:195
+msgid "The sample above would generate:"
+msgstr "மேலே உள்ள மாதிரி உருவாக்கும்:"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:207
+msgid "Further reading"
+msgstr "மேலும் படிக்க"
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:209
+msgid ""
+"This is the very basic principle of an extension that creates a new role and"
+" directive."
+msgstr ""
+"இது ஒரு புதிய பாத்திரத்தையும் கட்டளையையும் உருவாக்கும் நீட்டிப்பின் "
+"அடிப்படைக் கொள்கையாகும்."
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:212
+msgid "For a more advanced example, refer to :ref:`tutorial-extend-build`."
+msgstr ""
+"இன்னும் மேம்பட்ட உதாரணத்திற்கு, :ref:`tutorial-extend-build` ஐப் "
+"பார்க்கவும்."
+
+#: ../../sphinx/doc/development/tutorials/extending_syntax.rst:214
+msgid ""
+"If you wish to share your extension across multiple projects or with others,"
+" check out the :ref:`third-party-extensions` section."
+msgstr ""
+"உங்கள் நீட்டிப்பை பல திட்டங்களில் அல்லது பிறருடன் பகிர விரும்பினால், "
+":ref:`third-party-extensions` பகுதியைப் பார்க்கவும்."

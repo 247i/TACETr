@@ -1,15 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2007-2023, the Sphinx developers
+# Copyright (C) 2007-2025, the Sphinx developers
 # This file is distributed under the same license as the Sphinx package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2025
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 7.3.0\n"
+"Project-Id-Version: Sphinx 8.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-15 00:35+0000\n"
-"PO-Revision-Date: 2018-06-26 15:59+0000\n"
+"POT-Creation-Date: 2025-11-15 06:34+0000\n"
+"PO-Revision-Date: 2025-11-16 08:55\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2025\n"
 "Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +21,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/usage/extensions/linkcode.rst:10
+#: ../../sphinx/doc/usage/extensions/linkcode.rst:2
+msgid ":mod:`sphinx.ext.linkcode` -- Add external links to source code"
+msgstr ""
+": மோட்: `sphinx.ext.linkcode` - மூலக் குறியீட்டில் வெளிப்புற இணைப்புகளைச் "
+"சேர்க்கவும்"
+
+#: ../../sphinx/doc/usage/extensions/linkcode.rst:13
 msgid ""
 "This extension looks at your object descriptions (``.. class::``, ``.. "
 "function::`` etc.) and adds external links to code hosted somewhere on the "
@@ -25,74 +35,98 @@ msgid ""
 "assumes the source code can be found somewhere on the Internet."
 msgstr ""
 "இந்த நீட்டிப்பு உங்கள் பொருள் விளக்கங்களைப் பார்க்கிறது (`` .. வகுப்பு :: "
-"``, `` .. செயல்பாடு :: `` போன்றவை) மற்றும் வலையில் எங்காவது புரவலன் "
+"``, `` .. செயல்பாடு :: `` போன்றவை) மற்றும் வலையில் எங்காவது ஹோஸ்ட் "
 "செய்யப்பட்ட குறியீட்டிற்கு வெளிப்புற இணைப்புகளைச் சேர்க்கிறது. நோக்கம் `` "
 "sphinx.ext.viewcode`` நீட்டிப்புக்கு ஒத்ததாகும், ஆனால் மூலக் குறியீட்டை "
 "இணையத்தில் எங்காவது காணலாம் என்று கருதுகிறது."
 
-#: ../../sphinx/doc/usage/extensions/linkcode.rst:16
+#: ../../sphinx/doc/usage/extensions/linkcode.rst:19
 msgid ""
 "In your configuration, you need to specify a :confval:`linkcode_resolve` "
 "function that returns an URL based on the object."
 msgstr ""
 "உங்கள் உள்ளமைவில், நீங்கள் ஒரு: confval: `linkcode_resolve` செயல்பாட்டைக் "
-"குறிப்பிட வேண்டும், இது பொருளின் அடிப்படையில் முகவரி ஐ வழங்குகிறது."
+"குறிப்பிட வேண்டும், இது பொருளின் அடிப்படையில் URL ஐ வழங்குகிறது."
 
-#: ../../sphinx/doc/usage/extensions/linkcode.rst:2
-msgid ":mod:`sphinx.ext.linkcode` -- Add external links to source code"
-msgstr ""
-": மோட்: `sphinx.ext.linkcode` - மூலக் குறியீட்டில் வெளிப்புற இணைப்புகளைச் "
-"சேர்க்கவும்"
-
-#: ../../sphinx/doc/usage/extensions/linkcode.rst:21
+#: ../../sphinx/doc/usage/extensions/linkcode.rst:24
 msgid "Configuration"
 msgstr "உள்ளமைவு"
 
-#: ../../sphinx/doc/usage/extensions/linkcode.rst:25
+#: ../../sphinx/doc/usage/extensions/linkcode.rst:0
+msgid "Type"
+msgstr "வகை"
+
+#: ../../sphinx/doc/usage/extensions/linkcode.rst:0
+msgid "Default"
+msgstr "இயல்புநிலை"
+
+#: ../../sphinx/doc/usage/extensions/linkcode.rst:30
 msgid ""
 "This is a function ``linkcode_resolve(domain, info)``, which should return "
 "the URL to source code corresponding to the object in given domain with "
 "given information."
 msgstr ""
-"இது ஒரு செயல்பாடு `` இணைப்பு குறியீடு_ரெசோல்வ் (டொமைன், தகவல்) ``, இது "
+"இது ஒரு செயல்பாடு `` இணைப்பு குறியீடு_ரெஸோல்வ் (டொமைன், தகவல்) ``, இது "
 "கொடுக்கப்பட்ட தகவலுடன் கொடுக்கப்பட்ட டொமைனில் உள்ள பொருளுடன் தொடர்புடைய "
-"மூலக் குறியீட்டிற்கு முகவரி ஐ திருப்பித் தர வேண்டும்."
+"மூலக் குறியீட்டிற்கு URL ஐ திருப்பித் தர வேண்டும்."
 
-#: ../../sphinx/doc/usage/extensions/linkcode.rst:29
+#: ../../sphinx/doc/usage/extensions/linkcode.rst:34
 msgid "The function should return ``None`` if no link is to be added."
 msgstr ""
 "எந்தவொரு இணைப்பும் சேர்க்கப்படாவிட்டால் செயல்பாடு `` எதுவுமில்லை`` திரும்ப "
 "வேண்டும்."
 
-#: ../../sphinx/doc/usage/extensions/linkcode.rst:31
+#: ../../sphinx/doc/usage/extensions/linkcode.rst:36
 msgid ""
 "The argument ``domain`` specifies the language domain the object is in. "
 "``info`` is a dictionary with the following keys guaranteed to be present "
 "(dependent on the domain):"
 msgstr "`` டொமைன்`` என்பது பொருள் இருக்கும் மொழி களத்தைக் குறிப்பிடுகிறது."
 
-#: ../../sphinx/doc/usage/extensions/linkcode.rst:35
+#: ../../sphinx/doc/usage/extensions/linkcode.rst:40
 msgid ""
 "``py``: ``module`` (name of the module), ``fullname`` (name of the object)"
 msgstr ""
 "`` py``: `` தொகுதி`` (தொகுதியின் பெயர்), `` ஃபுல் பெயர்`` (பொருளின் பெயர்)"
 
-#: ../../sphinx/doc/usage/extensions/linkcode.rst:36
+#: ../../sphinx/doc/usage/extensions/linkcode.rst:41
 msgid "``c``: ``names`` (list of names for the object)"
 msgstr "`` c``: `` பெயர்கள்`` (பொருளின் பெயர்களின் பட்டியல்)"
 
-#: ../../sphinx/doc/usage/extensions/linkcode.rst:37
+#: ../../sphinx/doc/usage/extensions/linkcode.rst:42
 msgid "``cpp``: ``names`` (list of names for the object)"
 msgstr "`` சிபிபி``: `` பெயர்கள்`` (பொருளின் பெயர்களின் பட்டியல்)"
 
-#: ../../sphinx/doc/usage/extensions/linkcode.rst:38
+#: ../../sphinx/doc/usage/extensions/linkcode.rst:43
 msgid ""
 "``javascript``: ``object`` (name of the object), ``fullname`` (name of the "
 "item)"
 msgstr ""
-"`` சாவாச்கிரிப்ட்``: `` பொருள்`` (பொருளின் பெயர்), `` முழு பெயர்`` "
+"`` ஜாவாஸ்கிரிப்ட்``: `` பொருள்`` (பொருளின் பெயர்), `` முழு பெயர்`` "
 "(உருப்படியின் பெயர்)"
 
-#: ../../sphinx/doc/usage/extensions/linkcode.rst:41
+#: ../../sphinx/doc/usage/extensions/linkcode.rst:46
 msgid "Example:"
 msgstr "உதாரணமாக:"
+
+#: ../../sphinx/doc/usage/extensions/linkcode.rst:60
+msgid "Third-party domains"
+msgstr "மூன்றாம் தரப்பு களங்கள்"
+
+#: ../../sphinx/doc/usage/extensions/linkcode.rst:62
+msgid ""
+"Support for other domains can be added by extensions with "
+":py:func:`.add_linkcode_domain()`. For example, a Sphinx extension that "
+"provides a ``php`` domain could use the following code to support "
+":mod:`~sphinx.ext.linkcode`:"
+msgstr ""
+"மற்ற டொமைன்களுக்கான ஆதரவை :py:func:`.add_linkcode_domain()` உடன் "
+"நீட்டிப்புகள் மூலம் சேர்க்கலாம். எடுத்துக்காட்டாக, ``php`` டொமைனை வழங்கும் "
+"சூரரிமாச்சிலை நீட்டிப்பு :mod:`~sphinx.ext.linkcode` ஐ ஆதரிக்க பின்வரும் "
+"குறியீட்டைப் பயன்படுத்தலாம்:"
+
+#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/ext/linkcode.pydocstring
+#: of sphinx.ext.linkcode.add_linkcode_domain:1
+msgid "Register a new list of keys to use for a domain."
+msgstr ""
+"டொமைனுக்குப் பயன்படுத்துவதற்கான புதிய விசைகளின் பட்டியலைப் பதிவுசெய்யவும்."

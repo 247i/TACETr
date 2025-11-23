@@ -1,15 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2007-2023, the Sphinx developers
+# Copyright (C) 2007-2025, the Sphinx developers
 # This file is distributed under the same license as the Sphinx package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2025
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 7.3.0\n"
+"Project-Id-Version: Sphinx 8.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-22 00:35+0000\n"
-"PO-Revision-Date: 2018-06-26 15:58+0000\n"
+"POT-Creation-Date: 2025-02-24 00:54+0000\n"
+"PO-Revision-Date: 2025-11-17 06:59\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2025\n"
 "Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
@@ -17,23 +21,88 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/usage/extensions/coverage.rst:11
-msgid ""
-"To use this builder, activate the coverage extension in your configuration "
-"file and give ``-M coverage`` on the command line."
+#: ../../sphinx/doc/usage/extensions/coverage.rst:2
+msgid ":mod:`sphinx.ext.coverage` -- Collect doc coverage stats"
 msgstr ""
-"இந்த பில்டரைப் பயன்படுத்த, உங்கள் உள்ளமைவு கோப்பில் கவரேச் நீட்டிப்பை "
-"செயல்படுத்தி, கட்டளை வரியில் `` -m கவரேச்` ஆகியவற்றைக் கொடுங்கள்."
+": மோட்: `sphinx.ext.coverage` - டாக் கவரேஜ் புள்ளிவிவரங்களை சேகரிக்கவும்"
 
-#: ../../sphinx/doc/usage/extensions/coverage.rst:14
+#: ../../sphinx/doc/usage/extensions/coverage.rst:10
+msgid ""
+"This extension features one additional builder, the "
+":class:`CoverageBuilder`."
+msgstr ""
+"இந்த நீட்டிப்பு ஒரு கூடுதல் பில்டரைக் கொண்டுள்ளது, தி: வகுப்பு: "
+"`CoreageBuilder`."
+
+#: ../../sphinx/doc/usage/extensions/coverage.rst:12
 msgid "Todo"
-msgstr "செய்யவேண்டிய"
+msgstr "டோடோ"
 
-#: ../../sphinx/doc/usage/extensions/coverage.rst:14
+#: ../../sphinx/doc/usage/extensions/coverage.rst:12
 msgid "Write this section."
 msgstr "இந்த பகுதியை எழுதுங்கள்."
 
 #: ../../sphinx/doc/usage/extensions/coverage.rst:16
+msgid ""
+"The :doc:`sphinx-apidoc </man/sphinx-apidoc>` command can be used to "
+"automatically generate API documentation for all code in a project, avoiding"
+" the need to manually author these documents and keep them up-to-date."
+msgstr ""
+":doc:`sphinx-apidoc </man/sphinx-apidoc>` கட்டளையானது ஒரு திட்டத்தில் உள்ள "
+"அனைத்து குறியீடுகளுக்கும் பநிஇ ஆவணங்களை தானாக உருவாக்க பயன்படுகிறது, இந்த "
+"ஆவணங்களை கைமுறையாக எழுதி அவற்றை புதுப்பித்த நிலையில் வைத்திருக்கும் தேவையை "
+"தவிர்க்கிறது."
+
+#: ../../sphinx/doc/usage/extensions/coverage.rst:22
+msgid ""
+":mod:`~sphinx.ext.coverage` **imports** the modules to be documented. If any"
+" modules have side effects on import, these will be executed by the coverage"
+" builder when ``sphinx-build`` is run."
+msgstr ""
+":mod:`~sphinx.ext.coverage` **இறக்குமதி** ஆவணப்படுத்தப்பட வேண்டிய தொகுதிகள்."
+" இறக்குமதியில் ஏதேனும் மாட்யூல்கள் பக்கவிளைவுகளைக் கொண்டிருந்தால், "
+"``ச்பிங்க்ச்-பில்ட்`` இயங்கும் போது, ​​கவரேச் பில்டரால் இவை "
+"செயல்படுத்தப்படும்."
+
+#: ../../sphinx/doc/usage/extensions/coverage.rst:26
+msgid ""
+"If you document scripts (as opposed to library modules), make sure their "
+"main routine is protected by a ``if __name__ == '__main__'`` condition."
+msgstr ""
+"நீங்கள் ஸ்கிரிப்ட்களை ஆவணப்படுத்தினால் (நூலக தொகுதிகளுக்கு மாறாக), அவற்றின் "
+"முக்கிய வழக்கம் `` என்றால் __name__ == '__main __' `` நிபந்தனையால் "
+"பாதுகாக்கப்படுவதை உறுதிசெய்க."
+
+#: ../../sphinx/doc/usage/extensions/coverage.rst:32
+msgid ""
+"For Sphinx (actually, the Python interpreter that executes Sphinx) to find "
+"your module, it must be importable. That means that the module or the "
+"package must be in one of the directories on :data:`sys.path` -- adapt your "
+":data:`sys.path` in the configuration file accordingly."
+msgstr ""
+"ச்பிங்க்சுக்கு (உண்மையில், ச்பிங்க்சை இயக்கும் பைதான் மொழிபெயர்ப்பாளர்) "
+"உங்கள் தொகுதியைக் கண்டறிய, அது இறக்குமதி செய்யக்கூடியதாக இருக்க வேண்டும். "
+"அதாவது தொகுதி அல்லது தொகுப்பு :data:`sys.path` இல் உள்ள கோப்பகங்களில் "
+"ஒன்றில் இருக்க வேண்டும் -- உங்கள் :data:`sys.path` உள்ளமைவு கோப்பில் "
+"அதற்கேற்ப மாற்றியமைக்கவும்."
+
+#: ../../sphinx/doc/usage/extensions/coverage.rst:38
+msgid ""
+"To use this builder, activate the coverage extension in your configuration "
+"file and run ``sphinx-build -M coverage`` on the command line."
+msgstr ""
+"இந்த பில்டரைப் பயன்படுத்த, உங்கள் உள்ளமைவு கோப்பில் கவரேச் நீட்டிப்பைச் "
+"செயல்படுத்தி, கட்டளை வரியில் ``sphinx-build -M coverage`` ஐ இயக்கவும்."
+
+#: ../../sphinx/doc/usage/extensions/coverage.rst:43
+msgid "Builder"
+msgstr "கட்டுபவர்"
+
+#: ../../sphinx/doc/usage/extensions/coverage.rst:49
+msgid "Configuration"
+msgstr "உள்ளமைவு"
+
+#: ../../sphinx/doc/usage/extensions/coverage.rst:51
 msgid ""
 "Several configuration values can be used to specify what the builder should "
 "check:"
@@ -41,70 +110,74 @@ msgstr ""
 "பில்டர் என்ன சரிபார்க்க வேண்டும் என்பதைக் குறிப்பிட பல உள்ளமைவு மதிப்புகள் "
 "பயன்படுத்தப்படலாம்:"
 
-#: ../../sphinx/doc/usage/extensions/coverage.rst:2
-msgid ":mod:`sphinx.ext.coverage` -- Collect doc coverage stats"
-msgstr ""
-": மோட்: `sphinx.ext.coverage` - டாக் கவரேச் புள்ளிவிவரங்களை சேகரிக்கவும்"
+#: ../../sphinx/doc/usage/extensions/coverage.rst:0
+msgid "Type"
+msgstr "வகை"
 
-#: ../../sphinx/doc/usage/extensions/coverage.rst:27
+#: ../../sphinx/doc/usage/extensions/coverage.rst:0
+msgid "Default"
+msgstr "இயல்புநிலை"
+
+#: ../../sphinx/doc/usage/extensions/coverage.rst:58
+msgid ""
+"List of Python packages or modules to test coverage for. When this is "
+"provided, Sphinx will introspect each package or module provided in this "
+"list as well as all sub-packages and sub-modules found in each. When this is"
+" not provided, Sphinx will only provide coverage for Python packages and "
+"modules that it is aware of: that is, any modules documented using the "
+":rst:dir:`py:module` directive provided in the :doc:`Python domain "
+"</usage/domains/python>` or the :rst:dir:`automodule` directive provided by "
+"the :mod:`~sphinx.ext.autodoc` extension."
+msgstr ""
+"கவரேசை சோதிக்க பைதான் தொகுப்புகள் அல்லது தொகுதிகள் பட்டியல். இது "
+"வழங்கப்படும் போது, ​​இந்த பட்டியலில் வழங்கப்பட்ட ஒவ்வொரு தொகுப்பு அல்லது "
+"தொகுதியையும் அத்துடன் ஒவ்வொன்றிலும் காணப்படும் அனைத்து துணை தொகுப்புகள் "
+"மற்றும் துணை தொகுதிகளையும் சூரரிமாச்சிலை சுயபரிசோதனை செய்யும். இது "
+"வழங்கப்படாதபோது, சூரரிமாச்சிலை தனக்குத் தெரிந்த பைதான் தொகுப்புகள் மற்றும் "
+"தொகுதிக்கூறுகளுக்கு மட்டுமே கவரேசை வழங்கும்: அதாவது :doc:`Python டொமைனில் "
+"வழங்கப்பட்டுள்ள :rst:dir:`py:module` கட்டளையைப் பயன்படுத்தி "
+"ஆவணப்படுத்தப்பட்ட எந்த தொகுதிக்கூறுகளும் </usage/domains/python>` அல்லது "
+"வழங்கிய:`rsttomodule: :mod:`~sphinx.ext.autodoc` நீட்டிப்பு."
+
+#: ../../sphinx/doc/usage/extensions/coverage.rst:78
 msgid "List of `Python regular expressions`_."
 msgstr "`பைதான் வழக்கமான வெளிப்பாடுகள்`_ பட்டியல்."
 
-#: ../../sphinx/doc/usage/extensions/coverage.rst:29
+#: ../../sphinx/doc/usage/extensions/coverage.rst:80
 msgid ""
 "If any of these regular expressions matches any part of the full import path"
 " of a Python object, that Python object is excluded from the documentation "
 "coverage report."
 msgstr ""
 "இந்த வழக்கமான வெளிப்பாடுகள் ஏதேனும் பைதான் பொருளின் முழு இறக்குமதி பாதையின் "
-"எந்தப் பகுதியையும் பொருத்தினால், அந்த பைதான் பொருள் ஆவணப்படுத்தல் கவரேச் "
+"எந்தப் பகுதியையும் பொருத்தினால், அந்த பைதான் பொருள் ஆவணப்படுத்தல் கவரேஜ் "
 "அறிக்கையிலிருந்து விலக்கப்படுகிறது."
 
-#: ../../sphinx/doc/usage/extensions/coverage.rst:45
+#: ../../sphinx/doc/usage/extensions/coverage.rst:104
 msgid "Set to ``False`` to not write headlines."
 msgstr "தலைப்புச் செய்திகளை எழுதக்கூடாது என்பதற்கு `` தவறு`` என அமைக்கவும்."
 
-#: ../../sphinx/doc/usage/extensions/coverage.rst:51
-msgid ""
-"Skip objects that are not documented in the source with a docstring. "
-"``False`` by default."
-msgstr ""
-"ஆவணசரம் மூலம் மூலத்தில் ஆவணப்படுத்தப்படாத பொருள்களைத் தவிர்க்கவும். இயல்பாக "
-"`` தவறு``."
+#: ../../sphinx/doc/usage/extensions/coverage.rst:112
+msgid "Skip objects that are not documented in the source with a docstring."
+msgstr "ஆவணசரம் மூலம் மூலத்தில் ஆவணப்படுத்தப்படாத பொருட்களைத் தவிர்க்கவும்."
 
-#: ../../sphinx/doc/usage/extensions/coverage.rst:58
-msgid ""
-"Print objects that are missing to standard output also. ``False`` by "
-"default."
-msgstr ""
-"நிலையான வெளியீட்டிற்கும் காணாமல் போன பொருள்களையும் அச்சிடுங்கள். இயல்பாக `` "
-"தவறு``."
+#: ../../sphinx/doc/usage/extensions/coverage.rst:120
+msgid "Print objects that are missing to standard output also."
+msgstr "நிலையான வெளியீட்டில் விடுபட்ட பொருட்களை அச்சிடவும்."
 
-#: ../../sphinx/doc/usage/extensions/coverage.rst:65
+#: ../../sphinx/doc/usage/extensions/coverage.rst:128
 msgid ""
-"Print a tabluar report of the coverage statistics to the coverage report. "
-"``True`` by default."
+"Print a tabular report of the coverage statistics to the coverage report."
 msgstr ""
-"கவரேச் புள்ளிவிவரங்களின் அட்டவணை அறிக்கையை கவரேச் அறிக்கையில் அச்சிடுக. "
-"இயல்பாக `` உண்மை``."
+"கவரேச் அறிக்கைக்கு கவரேச் புள்ளிவிவரங்களின் அட்டவணை அறிக்கையை அச்சிடவும்."
 
-#: ../../sphinx/doc/usage/extensions/coverage.rst:68
-#: ../../sphinx/doc/usage/extensions/coverage.rst:87
+#: ../../sphinx/doc/usage/extensions/coverage.rst:130
+#: ../../sphinx/doc/usage/extensions/coverage.rst:150
 msgid "Example output:"
 msgstr "எடுத்துக்காட்டு வெளியீடு:"
 
-#: ../../sphinx/doc/usage/extensions/coverage.rst:7
-msgid ""
-"This extension features one additional builder, the "
-":class:`CoverageBuilder`."
+#: ../../sphinx/doc/usage/extensions/coverage.rst:148
+msgid "Print a tabular report of the coverage statistics to standard output."
 msgstr ""
-"இந்த நீட்டிப்பு ஒரு கூடுதல் பில்டரைக் கொண்டுள்ளது, தி: வகுப்பு: "
-"`coreagebuilder`."
-
-#: ../../sphinx/doc/usage/extensions/coverage.rst:84
-msgid ""
-"Print a tabluar report of the coverage statistics to standard output. "
-"``False`` by default."
-msgstr ""
-"கவரேச் புள்ளிவிவரங்களின் தப்லார் அறிக்கையை நிலையான வெளியீட்டிற்கு அச்சிடுக. "
-"இயல்பாக `` தவறு``."
+"கவரேச் புள்ளிவிவரங்களின் அட்டவணை அறிக்கையை நிலையான வெளியீட்டிற்கு "
+"அச்சிடவும்."

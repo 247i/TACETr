@@ -1,0 +1,313 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2025, the Sphinx developers
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2024
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 8.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-15 12:46+0000\n"
+"PO-Revision-Date: 2025-11-16 21:10\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2024\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/changes/0.2.rst:3
+msgid "Sphinx 0.2"
+msgstr "சூரரிமாச்சிலை 0.2"
+
+#: ../../sphinx/doc/changes/0.2.rst:7
+msgid "Release 0.2 (Apr 27, 2008)"
+msgstr "வெளியீடு 0.2 (ஏப்ரல் 27, 2008)"
+
+#: ../../sphinx/doc/changes/0.2.rst:10
+msgid "Incompatible changes"
+msgstr "பொருந்தாத மாற்றங்கள்"
+
+#: ../../sphinx/doc/changes/0.2.rst:12
+msgid ""
+"Jinja, the template engine used for the default HTML templates, is now no "
+"longer shipped with Sphinx.  If it is not installed automatically for you "
+"(it is now listed as a dependency in ``setup.py``), install it manually from"
+" PyPI.  This will also be needed if you're using Sphinx from a SVN checkout;"
+" in that case please also remove the ``sphinx/jinja`` directory that may be "
+"left over from old revisions."
+msgstr ""
+"இயல்புநிலை HTML வார்ப்புருக்களுக்குப் பயன்படுத்தப்படும் வார்ப்புரு "
+"இயந்திரமான ஜின்ஜா இப்போது ஸ்பிங்க்ஸுடன் அனுப்பப்படவில்லை. இது உங்களுக்காக "
+"தானாக நிறுவப்படவில்லை என்றால் (இது இப்போது `` setup.py``` இல் சார்புநிலையாக "
+"பட்டியலிடப்பட்டுள்ளது), அதை பைபியிலிருந்து கைமுறையாக நிறுவவும். நீங்கள் ஒரு "
+"எஸ்.வி.என் புதுப்பித்தலில் இருந்து ஸ்பிங்க்ஸைப் பயன்படுத்துகிறீர்கள் என்றால்"
+" இதுவும் தேவைப்படும்; அவ்வாறான நிலையில், பழைய திருத்தங்களிலிருந்து மீதமுள்ள "
+"`` ஸ்பின்க்ஸ்/ஜின்ஜா`` கோப்பகத்தையும் அகற்றவும்."
+
+#: ../../sphinx/doc/changes/0.2.rst:19
+msgid ""
+"The clumsy handling of the ``index.html`` template was removed.  The config "
+"value ``html_index`` is gone, and ``html_additional_pages`` should be used "
+"instead.  If you need it, the old ``index.html`` template is still there, "
+"called ``defindex.html``, and you can port your html_index template, using "
+"Jinja inheritance, by changing your template::"
+msgstr ""
+"`` Index.html`` வார்ப்புருவின் விகாரமான கையாளுதல் அகற்றப்பட்டது. உள்ளமைவு "
+"மதிப்பு `` html_index``` அதற்கு பதிலாக `` html_additional_pages`` ஐப் "
+"பயன்படுத்த வேண்டும். உங்களுக்கு இது தேவைப்பட்டால், பழைய `` index.html`` "
+"வார்ப்புரு இன்னும் உள்ளது, இது `` defindex.html`` என்று அழைக்கப்படுகிறது, "
+"மேலும் உங்கள் வார்ப்புருவை மாற்றுவதன் மூலம் ஜின்ஜா பரம்பரை பயன்படுத்தி "
+"உங்கள் HTML_INDEX வார்ப்புருவை எதிர்த்துப் போராடலாம் ::"
+
+#: ../../sphinx/doc/changes/0.2.rst:30
+msgid ""
+"and putting ``'index': name of your template`` in ``html_additional_pages``."
+msgstr ""
+"மற்றும் `` 'குறியீட்டு': உங்கள் வார்ப்புருவின் பெயர்` `` "
+"html_additional_pages`` இல் வைக்கவும்."
+
+#: ../../sphinx/doc/changes/0.2.rst:32
+msgid ""
+"In the layout template, redundant ``block``\\s were removed; you should use "
+"Jinja's standard ``{{ super() }}`` mechanism instead, as explained in the "
+"(newly written) templating docs."
+msgstr ""
+"தளவமைப்பு வார்ப்புருவில், தேவையற்ற `` தொகுதி`` \\ கள் அகற்றப்பட்டன; (புதிதாக"
+" எழுதப்பட்ட) வார்ப்புரு ஆவணங்களில் விளக்கப்பட்டுள்ளபடி, அதற்கு பதிலாக "
+"ஜின்ஜாவின் தரநிலை `{{சூப்பர் ()}}` `பொறிமுறையைப் பயன்படுத்த வேண்டும்."
+
+#: ../../sphinx/doc/changes/0.2.rst:37
+msgid "New features added"
+msgstr "புதிய அம்சங்கள் சேர்க்கப்பட்டன"
+
+#: ../../sphinx/doc/changes/0.2.rst:39
+msgid "Extension API (Application object):"
+msgstr "நீட்டிப்பு API (பயன்பாட்டு பொருள்):"
+
+#: ../../sphinx/doc/changes/0.2.rst:41
+msgid ""
+"Support a new method, ``add_crossref_type``.  It works like "
+"``add_description_unit`` but the directive will only create a target and no "
+"output."
+msgstr ""
+"ஒரு புதிய முறையை ஆதரிக்கவும், `` add_crossref_type``. இது `` "
+"add_description_unit`` போல செயல்படுகிறது, ஆனால் உத்தரவு ஒரு இலக்கை மட்டுமே "
+"உருவாக்கும் மற்றும் வெளியீடு இல்லை."
+
+#: ../../sphinx/doc/changes/0.2.rst:44
+msgid ""
+"Support a new method, ``add_transform``.  It takes a standard Docutils "
+"``Transform`` subclass which is then applied by Sphinx's reader on parsing "
+"reST document trees."
+msgstr ""
+"ஒரு புதிய முறையை ஆதரிக்கவும், `` add_transform``. இது ஒரு நிலையான ஆவணங்களை "
+"எடுக்கும் `` டிரான்ஸ்ஃபார்ம்` துணைப்பிரிவை எடுத்துக்கொள்கிறது, பின்னர் "
+"ஸ்பின்க்ஸின் வாசகரால் REST ஆவண மரங்களை பாகுபடுத்துகிறது."
+
+#: ../../sphinx/doc/changes/0.2.rst:47
+msgid ""
+"Add support for other template engines than Jinja, by adding an abstraction "
+"called a \"template bridge\".  This class handles rendering of templates and"
+" can be changed using the new configuration value \"template_bridge\"."
+msgstr ""
+"\"வார்ப்புரு பாலம்\" என்று அழைக்கப்படும் ஒரு சுருக்கத்தை சேர்ப்பதன் மூலம், "
+"ஜின்ஜாவைத் தவிர மற்ற வார்ப்புரு இயந்திரங்களுக்கு ஆதரவைச் சேர்க்கவும். இந்த "
+"வகுப்பு வார்ப்புருக்களின் ரெண்டரிங் கையாளுகிறது மற்றும் புதிய உள்ளமைவு "
+"மதிப்பை \"வார்ப்புரு_பிரிட்ஜ்\" ஐப் பயன்படுத்தி மாற்றலாம்."
+
+#: ../../sphinx/doc/changes/0.2.rst:51
+msgid ""
+"The config file itself can be an extension (if it provides a ``setup()`` "
+"function)."
+msgstr ""
+"கட்டமைப்பு கோப்பு தானே நீட்டிப்பாக இருக்கலாம் (அது `` அமைவு () `` "
+"செயல்பாட்டை வழங்கினால்)."
+
+#: ../../sphinx/doc/changes/0.2.rst:54
+msgid "Markup:"
+msgstr "மார்க்அப்:"
+
+#: ../../sphinx/doc/changes/0.2.rst:56
+msgid ""
+"New directive, ``currentmodule``.  It can be used to indicate the module "
+"name of the following documented things without creating index entries."
+msgstr ""
+"புதிய உத்தரவு, `` நடப்பு மோடூல்``. குறியீட்டு உள்ளீடுகளை உருவாக்காமல் "
+"பின்வரும் ஆவணப்படுத்தப்பட்ட விஷயங்களின் தொகுதி பெயரைக் குறிக்க இதைப் "
+"பயன்படுத்தலாம்."
+
+#: ../../sphinx/doc/changes/0.2.rst:58
+msgid "Allow giving a different title to documents in the toctree."
+msgstr "டோக்ட்ரீயில் ஆவணங்களுக்கு வேறு தலைப்பைக் கொடுக்க அனுமதிக்கவும்."
+
+#: ../../sphinx/doc/changes/0.2.rst:59
+msgid "Allow giving multiple options in a ``cmdoption`` directive."
+msgstr "`` Cmdoption`` உத்தரவில் பல விருப்பங்களை வழங்க அனுமதிக்கவும்."
+
+#: ../../sphinx/doc/changes/0.2.rst:60
+msgid "Fix display of class members without explicit class name given."
+msgstr ""
+"வெளிப்படையான வகுப்பு பெயர் இல்லாமல் வகுப்பு உறுப்பினர்களின் காட்சியை "
+"சரிசெய்யவும்."
+
+#: ../../sphinx/doc/changes/0.2.rst:62
+msgid "Templates (HTML output):"
+msgstr "வார்ப்புருக்கள் (HTML வெளியீடு):"
+
+#: ../../sphinx/doc/changes/0.2.rst:64
+msgid "``index.html`` renamed to ``defindex.html``, see above."
+msgstr "`` index.html`` `` defindex.html`` என மறுபெயரிடப்பட்டது, மேலே காண்க."
+
+#: ../../sphinx/doc/changes/0.2.rst:65
+msgid ""
+"There's a new config value, ``html_title``, that controls the overall "
+"\"title\" of the set of Sphinx docs.  It is used instead everywhere instead "
+"of \"Projectname vX.Y documentation\" now."
+msgstr ""
+"ஒரு புதிய கட்டமைப்பு மதிப்பு உள்ளது, `` html_title``, இது ஸ்பின்க்ஸ் "
+"டாக்ஸின் தொகுப்பின் ஒட்டுமொத்த \"தலைப்பைக்\" கட்டுப்படுத்துகிறது. இது "
+"இப்போது \"ProjectName VX.Y ஆவணங்கள்\" என்பதற்கு பதிலாக எல்லா இடங்களிலும் "
+"பயன்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/changes/0.2.rst:68
+msgid ""
+"All references to \"documentation\" in the templates have been removed, so "
+"that it is now easier to use Sphinx for non-documentation documents with the"
+" default templates."
+msgstr ""
+"வார்ப்புருக்களில் உள்ள \"ஆவணங்கள்\" பற்றிய அனைத்து குறிப்புகளும் "
+"அகற்றப்பட்டுள்ளன, இதனால் இயல்புநிலை வார்ப்புருக்கள் மூலம் ஆவணமற்ற "
+"ஆவணங்களுக்கு SPHINX ஐப் பயன்படுத்துவது இப்போது எளிதானது."
+
+#: ../../sphinx/doc/changes/0.2.rst:71
+msgid ""
+"Templates now have an XHTML doctype, to be consistent with Docutils' HTML "
+"output."
+msgstr ""
+"வார்ப்புருக்கள் இப்போது ஒரு XHTML டாக் டைப் உள்ளன, இது டொயட்டில்ஸின் HTML "
+"வெளியீட்டோடு ஒத்துப்போகிறது."
+
+#: ../../sphinx/doc/changes/0.2.rst:73
+msgid ""
+"You can now create an OpenSearch description file with the "
+"``html_use_opensearch`` config value."
+msgstr ""
+"`` Html_use_opensearch`` கட்டமைப்பு மதிப்புடன் இப்போது ஒரு OpenSearch "
+"விளக்கக் கோப்பை உருவாக்கலாம்."
+
+#: ../../sphinx/doc/changes/0.2.rst:75
+msgid ""
+"You can now quickly include a logo in the sidebar, using the ``html_logo`` "
+"config value."
+msgstr ""
+"`` Html_logo`` கட்டமைப்பு மதிப்பைப் பயன்படுத்தி, பக்கப்பட்டியில் ஒரு லோகோவை "
+"இப்போது விரைவாக சேர்க்கலாம்."
+
+#: ../../sphinx/doc/changes/0.2.rst:77
+msgid ""
+"There are new blocks in the sidebar, so that you can easily insert content "
+"into the sidebar."
+msgstr ""
+"பக்கப்பட்டியில் புதிய தொகுதிகள் உள்ளன, இதனால் நீங்கள் பக்கப்பட்டியில் "
+"உள்ளடக்கத்தை எளிதாக செருகலாம்."
+
+#: ../../sphinx/doc/changes/0.2.rst:80
+msgid "LaTeX output:"
+msgstr "லேடெக்ஸ் வெளியீடு:"
+
+#: ../../sphinx/doc/changes/0.2.rst:82
+msgid "The ``sphinx.sty`` package was cleaned of unused stuff."
+msgstr ""
+"`` Sphinx.sty`` தொகுப்பு பயன்படுத்தப்படாத பொருட்களை சுத்தம் செய்யப்பட்டது."
+
+#: ../../sphinx/doc/changes/0.2.rst:83
+msgid ""
+"You can include a logo in the title page with the ``latex_logo`` config "
+"value."
+msgstr ""
+"தலைப்பு பக்கத்தில் `` Latex_logo`` கட்டமைப்பு மதிப்புடன் ஒரு லோகோவை நீங்கள் "
+"சேர்க்கலாம்."
+
+#: ../../sphinx/doc/changes/0.2.rst:85
+msgid ""
+"You can define the link colors and a border and background color for "
+"verbatim environments."
+msgstr ""
+"சொற்களஞ்சிய சூழல்களுக்கான இணைப்பு வண்ணங்கள் மற்றும் எல்லை மற்றும் பின்னணி "
+"வண்ணத்தை நீங்கள் வரையறுக்கலாம்."
+
+#: ../../sphinx/doc/changes/0.2.rst:88
+msgid ""
+"Thanks to Jacob Kaplan-Moss, Talin, Jeroen Ruigrok van der Werven and "
+"Sebastian Wiesner for suggestions."
+msgstr ""
+"பரிந்துரைகளுக்காக ஜேக்கப் கப்லான்-மோஸ், தாலின், ஜெரோன் ரூக்ரோக் வான் டெர் "
+"வெர்வன் மற்றும் செபாஸ்டியன் வைஸ்னர் ஆகியோருக்கு நன்றி."
+
+#: ../../sphinx/doc/changes/0.2.rst:92
+msgid "Bugs fixed"
+msgstr "பிழைகள் சரி செய்யப்பட்டன"
+
+#: ../../sphinx/doc/changes/0.2.rst:94
+msgid ""
+"sphinx.ext.autodoc: Don't check ``__module__`` for explicitly given members."
+"  Remove \"self\" in class constructor argument list."
+msgstr ""
+"Sphinx.ext.autodoc: வெளிப்படையாக வழங்கப்பட்ட உறுப்பினர்களுக்கு `__module__``"
+" ஐ சரிபார்க்க வேண்டாம். வகுப்பு கட்டமைப்பாளர் வாத பட்டியலில் \"சுய\" ஐ "
+"அகற்று."
+
+#: ../../sphinx/doc/changes/0.2.rst:97
+msgid "sphinx.htmlwriter: Don't use os.path for joining image HREFs."
+msgstr "Sphinx.htmlwriter: பட HREFS இல் சேர OS.PATH ஐப் பயன்படுத்த வேண்டாம்."
+
+#: ../../sphinx/doc/changes/0.2.rst:99
+msgid "sphinx.htmlwriter: Don't use SmartyPants for HTML attribute values."
+msgstr ""
+"Sphinx.htmlwriter: HTML பண்புக்கூறு மதிப்புகளுக்கு ஸ்மார்டிபாண்ட்களைப் "
+"பயன்படுத்த வேண்டாம்."
+
+#: ../../sphinx/doc/changes/0.2.rst:101
+msgid ""
+"sphinx.latexwriter: Implement option lists.  Also, some other changes were "
+"made to ``sphinx.sty`` in order to enhance compatibility and remove old "
+"unused stuff.  Thanks to Gael Varoquaux for that!"
+msgstr ""
+"Sphinx.LatexWriter: விருப்ப பட்டியல்களை செயல்படுத்தவும். மேலும், "
+"பொருந்தக்கூடிய தன்மையை மேம்படுத்துவதற்கும், பயன்படுத்தப்படாத பழைய பொருட்களை "
+"அகற்றுவதற்கும் `` sphinx.sty`` க்கு வேறு சில மாற்றங்கள் செய்யப்பட்டன. "
+"அதற்காக கெயில் வரோகுவாக்ஸுக்கு நன்றி!"
+
+#: ../../sphinx/doc/changes/0.2.rst:105
+msgid "sphinx.roles: Fix referencing glossary terms with explicit targets."
+msgstr ""
+"Sphinx.roles: வெளிப்படையான இலக்குகளுடன் சொற்களஞ்சிய விதிமுறைகளைக் "
+"குறிப்பிடுவதை சரிசெய்யவும்."
+
+#: ../../sphinx/doc/changes/0.2.rst:107
+msgid "sphinx.environment: Don't swallow TOC entries when resolving subtrees."
+msgstr ""
+"Sphinx.encenment: சப்டிரீஸை தீர்க்கும்போது TOC உள்ளீடுகளை விழுங்க வேண்டாம்."
+
+#: ../../sphinx/doc/changes/0.2.rst:109
+msgid "sphinx.quickstart: Create a sensible default latex_documents setting."
+msgstr ""
+"Sphinx.QuickStart: விவேகமான இயல்புநிலை லேடெக்ஸ்_டோகேமென்ட்ஸ் அமைப்பை "
+"உருவாக்கவும்."
+
+#: ../../sphinx/doc/changes/0.2.rst:111
+msgid ""
+"sphinx.builder, sphinx.environment: Gracefully handle some user error cases."
+msgstr ""
+"sphinx.builder, sphinx.encenment: சில பயனர் பிழை நிகழ்வுகளை அழகாக கையாளவும்."
+
+#: ../../sphinx/doc/changes/0.2.rst:114
+msgid "sphinx.util: Follow symbolic links when searching for documents."
+msgstr ""
+"Sphinx.util: ஆவணங்களைத் தேடும்போது குறியீட்டு இணைப்புகளைப் பின்பற்றவும்."

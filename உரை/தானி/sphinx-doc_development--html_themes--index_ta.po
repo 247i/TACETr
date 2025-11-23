@@ -1,0 +1,816 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2025, the Sphinx developers
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2024
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 8.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-15 06:34+0000\n"
+"PO-Revision-Date: 2025-11-16 13:13\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2024\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:4
+msgid "HTML theme development"
+msgstr "HTML தீம் மேம்பாடு"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:10
+msgid ""
+"This document provides information about creating your own theme. If you "
+"simply wish to use a pre-existing HTML themes, refer to "
+":doc:`/usage/theming`."
+msgstr ""
+"இந்த ஆவணம் உங்கள் சொந்த கருப்பொருளை உருவாக்குவது பற்றிய தகவல்களை "
+"வழங்குகிறது. முன்பே இருக்கும் HTML கருப்பொருள்களைப் பயன்படுத்த நீங்கள் "
+"விரும்பினால், பார்க்க: DOC: `/பயன்பாடு/தீமிங்`."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:14
+msgid ""
+"Sphinx supports changing the appearance of its HTML output via *themes*.  A "
+"theme is a collection of HTML templates, stylesheet(s) and other static "
+"files. Additionally, it has a configuration file which specifies from which "
+"theme to inherit, which highlighting style to use, and what options exist "
+"for customizing the theme's look and feel."
+msgstr ""
+"ஸ்பின்க்ஸ் அதன் HTML வெளியீட்டின் தோற்றத்தை *கருப்பொருள்கள் *வழியாக "
+"மாற்றுவதை ஆதரிக்கிறது. ஒரு தீம் என்பது HTML வார்ப்புருக்கள், ஸ்டைல்ஷீட் "
+"(கள்) மற்றும் பிற நிலையான கோப்புகளின் தொகுப்பாகும். கூடுதலாக, இது ஒரு "
+"உள்ளமைவு கோப்பைக் கொண்டுள்ளது, இது எந்த கருப்பொருளிலிருந்து மரபுரிமையாக "
+"இருக்க வேண்டும் என்பதைக் குறிப்பிடுகிறது, இது பயன்படுத்த பாணியை "
+"முன்னிலைப்படுத்துகிறது, மேலும் கருப்பொருளின் தோற்றம் மற்றும் உணர்வைத் "
+"தனிப்பயனாக்க என்ன விருப்பங்கள் உள்ளன."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:20
+msgid ""
+"Themes are meant to be project-unaware, so they can be used for different "
+"projects without change."
+msgstr ""
+"கருப்பொருள்கள் திட்ட-அனாவேர் என்று பொருள், எனவே அவை மாற்றமின்றி வெவ்வேறு "
+"திட்டங்களுக்கு பயன்படுத்தப்படலாம்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:25
+msgid ""
+"See :ref:`dev-extensions` for more information that may be helpful in "
+"developing themes."
+msgstr ""
+"காண்க: குறிப்பு: கருப்பொருள்களை வளர்ப்பதற்கு உதவக்கூடிய கூடுதல் தகவலுக்கு "
+"`தேவ்-விரிவாக்கங்கள்`."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:30
+msgid "Creating themes"
+msgstr "கருப்பொருள்களை உருவாக்குதல்"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:32
+msgid ""
+"Themes take the form of either a directory or a zipfile (whose name is the "
+"theme name), containing the following:"
+msgstr ""
+"கருப்பொருள்கள் ஒரு அடைவு அல்லது ஜிப்ஃபைல் (அதன் பெயர் தீம் பெயர்) வடிவத்தை "
+"எடுத்துக்கொள்கின்றன, இதில் பின்வருவன உள்ளன:"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:35
+msgid ""
+"Either a :file:`theme.toml` file (preferred) or a :file:`theme.conf` file."
+msgstr ""
+"ஒரு :file:`theme.toml` கோப்பு (விருப்பம்) அல்லது :file:`theme.conf` கோப்பு."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:36
+msgid "HTML templates, if needed."
+msgstr "தேவைப்பட்டால், HTML வார்ப்புருக்கள்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:37
+msgid ""
+"A ``static/`` directory containing any static files that will be copied to "
+"the output static directory on build.  These can be images, styles, script "
+"files."
+msgstr ""
+"ஒரு `` நிலையான/`` ஏதேனும் நிலையான கோப்புகளைக் கொண்ட கோப்பகம், இது வெளியீட்டு"
+" நிலையான கோப்பகத்திற்கு நகலெடுக்கப்படும். இவை படங்கள், பாணிகள், ஸ்கிரிப்ட் "
+"கோப்புகளாக இருக்கலாம்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:41
+msgid "Theme configuration (``theme.toml``)"
+msgstr "கருப்பொருள் உள்ளமைவு (``theme.toml``)"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:43
+msgid ""
+"The :file:`theme.toml` file is a TOML_ document, containing two tables: "
+"``[theme]`` and ``[options]``."
+msgstr ""
+":file:`theme.toml` கோப்பு TOML_ ஆவணமாகும், இதில் இரண்டு அட்டவணைகள் உள்ளன: "
+"``[theme]`` மற்றும் ``[options]``."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:46
+msgid "The ``[theme]`` table defines the theme's settings:"
+msgstr "``[தீம்]`` அட்டவணை தீமின் அமைப்புகளை வரையறுக்கிறது:"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:48
+msgid ""
+"**inherit** (string): The name of the base theme from which to inherit "
+"settings, options, templates, and static files. All static files from theme "
+"'ancestors' will be used. The theme will use all options defined in "
+"inherited themes. Finally, inherited themes will be used to locate missing "
+"templates (for example, if ``\"basic\"`` is used as the base theme, most "
+"templates will already be defined)."
+msgstr ""
+"** inherit** (சரம்): அமைப்புகள், விருப்பங்கள், டெம்ப்ளேட்கள் மற்றும் நிலையான"
+" கோப்புகளைப் பெறுவதற்கான அடிப்படை தீமின் பெயர். கருப்பொருள் 'மூதாதையர்கள்' "
+"இருந்து அனைத்து நிலையான கோப்புகள் பயன்படுத்தப்படும். கருப்பொருள் மரபுவழி "
+"தீம்களில் வரையறுக்கப்பட்ட அனைத்து விருப்பங்களையும் பயன்படுத்தும். இறுதியாக, "
+"மறைந்திருக்கும் வார்ப்புருக்களைக் கண்டறிய மரபுரிமை தீம்கள் பயன்படுத்தப்படும்"
+" (உதாரணமாக, ``\"அடிப்படை\"`` அடிப்படை கருப்பொருளாகப் பயன்படுத்தப்பட்டால், "
+"பெரும்பாலான வார்ப்புருக்கள் ஏற்கனவே வரையறுக்கப்பட்டிருக்கும்)."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:56
+msgid ""
+"If set to ``\"none\"``, the theme will not inherit from any other theme. "
+"Inheritance is recursive, forming a chain of inherited themes (e.g. "
+"``default`` -> ``classic`` -> ``basic`` -> ``none``)."
+msgstr ""
+"``\"இல்லை\"`` என அமைக்கப்பட்டால், கருப்பொருள் வேறு எந்த தீமிலிருந்தும் "
+"பெறாது. பரம்பரை என்பது சுழல்நிலையானது, இது பரம்பரை கருப்பொருள்களின் "
+"சங்கிலியை உருவாக்குகிறது (எ.கா. ``இயல்புநிலை`` -> ``கிளாசிக்`` -> "
+"``அடிப்படை`` -> ```இல்லை``)."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:60
+msgid ""
+"**stylesheets** (list of strings): A list of CSS filenames which will be "
+"included in generated HTML header. Setting the   :confval:`html_style` "
+"config value will override this setting."
+msgstr ""
+"** ச்டைல்சீட்கள்** (சரங்களின் பட்டியல்): உருவாக்கப்பட்ட உஉகுமொ தலைப்பில் "
+"சேர்க்கப்படும் சிஎச்எச் கோப்புப் பெயர்களின் பட்டியல். :confval:`html_style` "
+"கட்டமைப்பு மதிப்பை அமைப்பது இந்த அமைப்பை மீறும்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:64
+msgid ""
+"Other mechanisms for including multiple stylesheets include ``@import`` in "
+"CSS or using a custom HTML template with appropriate ``<link "
+"rel=\"stylesheet\">`` tags."
+msgstr ""
+"சிஎச்எச் இல் ``@இறக்குமதி`` அல்லது பொருத்தமான ``<link rel=\"stylesheet\">`` "
+"குறிச்சொற்களைக் கொண்ட தனிப்பயன் உஉகுமொ டெம்ப்ளேட்டைப் பயன்படுத்துவது, பல "
+"நடைத்தாள்களைச் சேர்ப்பதற்கான பிற வழிமுறைகள்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:67
+msgid ""
+"**sidebars** (list of strings): A list of sidebar templates. This can be "
+"overridden by the user via the :confval:`html_sidebars` config value."
+msgstr ""
+"** பக்கப்பட்டிகள்** (சரங்களின் பட்டியல்): பக்கப்பட்டி வார்ப்புருக்களின் "
+"பட்டியல். இதை பயனர் :confval:`html_sidebars` கட்டமைப்பு மதிப்பு வழியாக "
+"மேலெழுதலாம்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:70
+msgid ""
+"**pygments_style** (table): A TOML table defining the names of Pygments "
+"styles to use for highlighting syntax. The table has two recognised keys: "
+"``default`` and ``dark``. The style defined in the ``dark`` key will be used"
+" when the CSS media query ``(prefers-color-scheme: dark)`` evaluates to "
+"true."
+msgstr ""
+"**pygments_style** (அட்டவணை): தொடரியல் சிறப்பம்சமாக பயன்படுத்துவதற்கு "
+"பயன்படுத்தப்படும் நிறமி பாணிகளின் பெயர்களை வரையறுக்கும் TOML அட்டவணை. "
+"அட்டவணையில் அங்கீகரிக்கப்பட்ட இரண்டு விசைகள் உள்ளன: ``இயல்புநிலை`` மற்றும் "
+"``இருண்ட``. சிஎச்எச் மீடியா வினவல் ``(prefers-color-scheme: dark)`` சரி என "
+"மதிப்பிடும்போது ``dark`` விசையில் வரையறுக்கப்பட்ட நடை பயன்படுத்தப்படும்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:76
+msgid ""
+"``[theme.pygments_style.default]`` can be overridden by the user via the "
+":confval:`pygments_style` config value."
+msgstr ""
+"``[theme.pygments_style.default]`` ஐ பயனரால் :confval:`pygments_style` "
+"கட்டமைப்பு மதிப்பு மூலம் மேலெழுதலாம்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:79
+msgid ""
+"The ``[options]`` table defines the options for the theme. It is structured "
+"such that each key-value pair corresponds to a variable name and the "
+"corresponding default value. These options can be overridden by the user in "
+":confval:`html_theme_options` and are accessible from all templates as "
+"``theme_<name>``."
+msgstr ""
+"``[விருப்பங்கள்]`` அட்டவணை கருப்பொருள் விருப்பங்களை வரையறுக்கிறது. ஒவ்வொரு "
+"விசை-மதிப்பு சோடியும் ஒரு மாறி பெயர் மற்றும் தொடர்புடைய இயல்புநிலை "
+"மதிப்புக்கு ஒத்திருக்கும் வகையில் இது கட்டமைக்கப்பட்டுள்ளது. இந்த "
+"விருப்பங்களை பயனரால் :confval:`html_theme_options` இல் மேலெழுதலாம் மற்றும் "
+"அனைத்து டெம்ப்ளேட்களிலிருந்து ``theme_<name>`` என அணுகலாம்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:85
+msgid "``theme.toml`` support."
+msgstr "``theme.toml`` உதவி."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:90
+msgid "Exemplar :file:`theme.toml` file:"
+msgstr "சான்று :file:`theme.toml` கோப்பு:"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:112
+msgid "Theme configuration (``theme.conf``)"
+msgstr "கருப்பொருள் உள்ளமைவு (``theme.conf``)"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:114
+msgid ""
+"The :file:`theme.conf` file is in INI format [1]_ (readable by the standard "
+"Python :mod:`configparser` module) and has the following structure:"
+msgstr ""
+"தி: கோப்பு: `தீம்.கான்ஃப்` கோப்பு ஐ.என்.ஐ வடிவத்தில் உள்ளது [1] _ (நிலையான "
+"பைதான்: மோட்:` கட்டமைப்பு பார்வையாளர்` தொகுதி) மற்றும் பின்வரும் "
+"கட்டமைப்பைக் கொண்டுள்ளது:"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:128
+msgid ""
+"The **inherit** setting gives the name of a \"base theme\", or ``none``.  "
+"The base theme will be used to locate missing templates (most themes will "
+"not have to supply most templates if they use ``basic`` as the base theme), "
+"its options will be inherited, and all of its static files will be used as "
+"well. If you want to also inherit the stylesheet, include it via CSS' "
+"``@import`` in your own."
+msgstr ""
+"** பரம்பரை ** அமைப்பு ஒரு \"அடிப்படை தீம்\" என்ற பெயரைக் கொடுக்கிறது, அல்லது"
+" `` எதுவுமில்லை``. காணாமல் போன வார்ப்புருக்களைக் கண்டுபிடிக்க அடிப்படை தீம் "
+"பயன்படுத்தப்படும் (பெரும்பாலான கருப்பொருள்கள் அடிப்படை கருப்பொருளாக `` "
+"அடிப்படை`` ஐப் பயன்படுத்தினால் பெரும்பாலான வார்ப்புருக்கள் வழங்க "
+"வேண்டியதில்லை), அதன் விருப்பங்கள் மரபுரிமையாக இருக்கும், மேலும் அதன் நிலையான"
+" கோப்புகள் அனைத்தும் பயன்படுத்தப்படும் நன்றாக. நீங்கள் ஸ்டைல்ஷீட்டைப் பெற "
+"விரும்பினால், அதை உங்கள் சொந்தமாக CSS '`@இறக்குமதி` வழியாகச் சேர்க்கவும்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:135
+msgid ""
+"The **stylesheet** setting gives a list of CSS filenames separated commas "
+"which will be referenced in the HTML header.  You can also use CSS' "
+"``@import`` technique to include one from the other, or use a custom HTML "
+"template that adds ``<link rel=\"stylesheet\">`` tags as necessary.  Setting"
+" the :confval:`html_style` config value will override this setting."
+msgstr ""
+"** ஸ்டைல்ஷீட் ** அமைப்பு CSS கோப்பு பெயர்களின் பிரிக்கப்பட்ட காற்புள்ளிகளின்"
+" பட்டியலை வழங்குகிறது, இது HTML தலைப்பில் குறிப்பிடப்படும். "
+"மற்றொன்றிலிருந்து ஒன்றைச் சேர்க்க நீங்கள் CSS '``@இறக்குமதி` நுட்பத்தையும் "
+"பயன்படுத்தலாம் அல்லது தனிப்பயன் HTML வார்ப்புருவைப் பயன்படுத்தலாம், இது `` "
+"<இணைப்பு rel = \"ஸ்டைல்ஷீட்\"> `` தேவையான குறிச்சொற்களைச் சேர்க்கும். "
+"அமைத்தல்: confval: `html_style` கட்டமைப்பு மதிப்பு இந்த அமைப்பை மீறும்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:141
+msgid ""
+"The **pygments_style** setting gives the name of a Pygments style to use for"
+" highlighting.  This can be overridden by the user in the "
+":confval:`pygments_style` config value."
+msgstr ""
+"** pygments_style ** அமைப்பு சிறப்பம்சமாகப் பயன்படுத்த பிக்மென்ட் பாணியின் "
+"பெயரைக் கொடுக்கிறது. இதை பயனரால் மீறலாம்: confval: `pygments_style` config "
+"value."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:145
+msgid ""
+"The **pygments_dark_style** setting gives the name of a Pygments style to "
+"use for highlighting when the CSS media query ``(prefers-color-scheme: "
+"dark)`` evaluates to true. It is injected into the page using "
+":meth:`~sphinx.application.Sphinx.add_css_file`."
+msgstr ""
+"**pygments_dark_style** அமைப்பானது, சிஎச்எச் மீடியா வினவல் ``(prefers-color-"
+"scheme: dark)`` சரி என மதிப்பிடும்போது, ​​ஐலைட் செய்ய, Pygments நடையின் "
+"பெயரை வழங்குகிறது. இது :meth:`~sphinx.application.Sphinx.add_css_file` ஐப் "
+"பயன்படுத்தி பக்கத்தில் செலுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:150
+msgid ""
+"The **sidebars** setting gives the comma separated list of sidebar templates"
+" for constructing sidebars.  This can be overridden by the user in the "
+":confval:`html_sidebars` config value."
+msgstr ""
+"** பக்கப்பட்டிகள் ** அமைப்பு கமாவைப் பிரிக்கப்பட்ட பக்கப்பட்டி "
+"வார்ப்புருக்கள் பக்கப்பட்டிகளை நிர்மாணிப்பதற்கான பட்டியலைக் கொடுக்கிறது. இதை"
+" பயனரால் மீறலாம்: confval: `html_sidebars` config value."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:154
+msgid ""
+"The **options** section contains pairs of variable names and default values."
+" These options can be overridden by the user in "
+":confval:`html_theme_options` and are accessible from all templates as "
+"``theme_<name>``."
+msgstr ""
+"** விருப்பங்கள் ** பிரிவில் ஜோடிகள் மாறி பெயர்கள் மற்றும் இயல்புநிலை "
+"மதிப்புகள் உள்ளன. இந்த விருப்பங்களை பயனரால் மீறலாம்: confval: "
+"`html_theme_options` மற்றும் அனைத்து வார்ப்புருக்களிலிருந்தும்` `தீம்_ "
+"<பெயர்>` `என அணுகலாம்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:158
+msgid "sidebar settings"
+msgstr "பக்கப்பட்டி அமைப்புகள்"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:163
+msgid "The stylesheet setting accepts multiple CSS filenames"
+msgstr "ஸ்டைல்ஷீட் அமைப்பு பல CSS கோப்பு பெயர்களை ஏற்றுக்கொள்கிறது"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:166
+msgid "Convert ``theme.conf`` to ``theme.toml``"
+msgstr "``theme.conf`` ஐ ``theme.toml`` ஆக மாற்றவும்"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:168
+msgid ""
+"INI-style theme configuration files (``theme.conf``) can be converted to "
+"TOML via a helper programme distributed with Sphinx. This is intended for "
+"one-time use, and may be removed without notice in a future version of "
+"Sphinx."
+msgstr ""
+"INI-பாணி கருப்பொருள் உள்ளமைவு கோப்புகளை (`Theme.conf``) ச்பிங்க்சுடன் "
+"விநியோகிக்கப்பட்ட உதவி நிரல் மூலம் TOML ஆக மாற்றலாம். இது ஒரு முறை "
+"பயன்பாட்டிற்காக வடிவமைக்கப்பட்டுள்ளது, மேலும் சூரரிமாச்சிலை இன் எதிர்கால "
+"பதிப்பில் அறிவிப்பு இல்லாமல் அகற்றப்படலாம்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:177
+msgid ""
+"The required argument is a path to a directory containing a ``theme.conf`` "
+"file. The programme will write a ``theme.toml`` file in the same directory, "
+"and will not modify the original ``theme.conf`` file."
+msgstr ""
+"தேவையான உரையாடல் என்பது ``theme.conf`` கோப்பைக் கொண்ட கோப்பகத்திற்கான "
+"பாதையாகும். நிரல் அதே கோப்பகத்தில் ``theme.toml`` கோப்பை எழுதும், மேலும் "
+"அசல் ``theme.conf`` கோப்பை மாற்றாது."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:186
+msgid "Distribute your theme as a Python package"
+msgstr "உங்கள் கருப்பொருளை பைதான் தொகுப்பாக விநியோகிக்கவும்"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:188
+msgid ""
+"As a way to distribute your theme, you can use a Python package.  This makes"
+" it easier for users to set up your theme."
+msgstr ""
+"உங்கள் கருப்பொருளை விநியோகிப்பதற்கான ஒரு வழியாக, நீங்கள் பைதான் தொகுப்பைப் "
+"பயன்படுத்தலாம். பயனர்கள் உங்கள் கருப்பொருளை அமைப்பதை இது எளிதாக்குகிறது."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:191
+msgid ""
+"To distribute your theme as a Python package, please define an entry point "
+"called ``sphinx.html_themes`` in your ``pyproject.toml`` file, and write a "
+"``setup()`` function to register your theme using the "
+":meth:`~sphinx.application.Sphinx.add_html_theme` API:"
+msgstr ""
+"உங்கள் கருப்பொருளை பைதான் தொகுப்பாக விநியோகிக்க, தயவுசெய்து உங்கள் `` "
+"pyproject.toml`` கோப்பில் `` sphinx.html_themes`` என்ற நுழைவு புள்ளியை "
+"வரையறுக்கவும், மேலும் `` அமைவு () `` செயல்பாட்டை எழுதவும் ."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:211
+msgid ""
+"If your theme package contains two or more themes, please call "
+"``add_html_theme()`` twice or more."
+msgstr ""
+"உங்கள் தீம் தொகுப்பில் இரண்டு அல்லது அதற்கு மேற்பட்ட கருப்பொருள்கள் "
+"இருந்தால், தயவுசெய்து `` add_html_theme () `` இரண்டு அல்லது அதற்கு "
+"மேற்பட்டவற்றை அழைக்கவும்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:214
+msgid "'sphinx_themes' entry_points feature."
+msgstr "'sphinx_themes' enter_points அம்சம்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:217
+msgid "``sphinx_themes`` entry_points has been deprecated."
+msgstr "`` sphinx_themes`` entry_points நீக்கப்பட்டது."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:220
+msgid "``sphinx.html_themes`` entry_points feature."
+msgstr "`` sphinx.html_themes`` entry_points அம்சம்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:225
+msgid "Styling with CSS"
+msgstr "சிஎச்எச் உடன் ச்டைலிங்"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:227
+msgid ""
+"The :confval:`!stylesheets` setting can be used to add custom CSS files to a"
+" theme."
+msgstr ""
+"தனிப்பயன் சிஎச்எச் கோப்புகளை தீமில் சேர்க்க :confval:`!stylesheets' "
+"அமைப்பைப் பயன்படுத்தலாம்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:231
+msgid ""
+"The structure of the HTML elements and their classes are currently not a "
+"well-defined public API. Please infer them from inspecting the built HTML "
+"pages. While we cannot guarantee full stability, they tend to be fairly "
+"stable."
+msgstr ""
+"உஉகுமொ உறுப்புகளின் அமைப்பு மற்றும் அவற்றின் வகுப்புகள் தற்போது நன்கு "
+"வரையறுக்கப்பட்ட பொது பநிஇ அல்ல. கட்டப்பட்ட உஉகுமொ பக்கங்களை ஆய்வு "
+"செய்வதிலிருந்து அவற்றை ஊகிக்கவும். முழு ச்திரத்தன்மைக்கு பொறுப்பு அளிக்க "
+"முடியாது என்றாலும், அவை மிகவும் நிலையானதாக இருக்கும்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:237
+msgid "Styling search result entries by category"
+msgstr "வகை வாரியாக தேடல் முடிவு உள்ளீடுகளை வடிவமைக்கிறது"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:243
+msgid ""
+"The CSS classes named below are generated by Sphinx's standalone search "
+"code.  If you are using a third-party search provider, such as ReadTheDocs_,"
+" to provide search results, then the theming options available may vary."
+msgstr ""
+"கீழே பெயரிடப்பட்ட சிஎச்எச் வகுப்புகள் சூரரிமாச்சிலை இன் தனித்த தேடல் "
+"குறியீட்டால் உருவாக்கப்பட்டவை. தேடல் முடிவுகளை வழங்க ReadTheDocs_ போன்ற "
+"மூன்றாம் தரப்பு தேடல் வழங்குநரைப் பயன்படுத்துகிறீர்கள் என்றால், கிடைக்கும் "
+"தீமிங் விருப்பங்கள் மாறுபடலாம்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:250
+msgid ""
+"The search result items have classes indicating the context in which the "
+"search term was found. You can use the CSS selectors:"
+msgstr ""
+"தேடல் முடிவு உருப்படிகளில் தேடல் சொல் கண்டுபிடிக்கப்பட்ட சூழலைக் குறிக்கும் "
+"வகுப்புகள் உள்ளன. நீங்கள் சிஎச்எச் தேர்விகளைப் பயன்படுத்தலாம்:"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:253
+msgid ""
+"``ul.search li.kind-index``: For results in an index, such as the glossary"
+msgstr ""
+"``ul.search li.kind-index``: சொற்களஞ்சியம் போன்ற குறியீட்டின் முடிவுகளுக்கு"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:255
+msgid ""
+"``ul.search li.kind-object``: For results in source code, like Python "
+"function definitions"
+msgstr ""
+"``ul.search li.kind-object``: பைதான் செயல்பாடு வரையறைகள் போன்ற மூலக் "
+"குறியீட்டின் முடிவுகளுக்கு"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:257
+msgid "``ul.search li.kind-title``: For results found in section headings"
+msgstr ""
+"``ul.search li.kind-title``: பிரிவுத் தலைப்புகளில் காணப்படும் முடிவுகளுக்கு"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:259
+msgid ""
+"``ul.search li.kind-text``: For results found anywhere else in the "
+"documentation text"
+msgstr ""
+"``ul.search li.kind-text``: ஆவண உரையில் வேறு எங்கும் காணப்படும் "
+"முடிவுகளுக்கு"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:262
+msgid ""
+"As a base for inheritance by other themes, the ``basic`` theme is "
+"intentionally minimal and does not define CSS rules using these. Derived "
+"themes are encouraged to use these selectors as they see fit. For example, "
+"the following stylesheet adds contextual icons to the search result list:"
+msgstr ""
+"பிற கருப்பொருள்கள் மூலம் மரபுரிமைக்கான அடிப்படையாக, ``அடிப்படை`` கருப்பொருள்"
+" வேண்டுமென்றே குறைவாக உள்ளது மற்றும் இவற்றைப் பயன்படுத்தி சிஎச்எச் விதிகளை "
+"வரையறுக்காது. பெறப்பட்ட தீம்கள் இந்த தேர்வாளர்களை அவர்கள் பொருத்தமாகப் "
+"பயன்படுத்த ஊக்குவிக்கப்படுகின்றன. எடுத்துக்காட்டாக, பின்வரும் ச்டைல்சீட் "
+"தேடல் முடிவு பட்டியலில் சூழல்சார் சின்னங்களைச் சேர்க்கிறது:"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:292
+msgid "Templating"
+msgstr "வார்ப்புரு"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:299
+msgid ""
+"The :doc:`guide to templating <templating>` is helpful if you want to write "
+"your own templates.  What is important to keep in mind is the order in which"
+" Sphinx searches for templates:"
+msgstr ""
+"தி: டாக்: `உங்கள் சொந்த வார்ப்புருக்கள் எழுத விரும்பினால்` "
+"வார்ப்புருவாக்கத்திற்கான வழிகாட்டி உதவியாக இருக்கும். நினைவில் கொள்ள "
+"வேண்டியது என்னவென்றால், ஸ்பிங்க்ஸ் வார்ப்புருக்களைத் தேடும் ஒழுங்கு:"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:303
+msgid "First, in the user's ``templates_path`` directories."
+msgstr "முதலாவதாக, பயனரின் `` வார்ப்புருக்கள்_பாத்` கோப்புகளில்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:304
+msgid "Then, in the selected theme."
+msgstr "பின்னர், தேர்ந்தெடுக்கப்பட்ட கருப்பொருளில்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:305
+msgid "Then, in its base theme, its base's base theme, etc."
+msgstr "பின்னர், அதன் அடிப்படை கருப்பொருளில், அதன் அடிப்படை தீம் போன்றவை."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:307
+msgid ""
+"When extending a template in the base theme with the same name, use the "
+"theme name as an explicit directory: ``{% extends \"basic/layout.html\" "
+"%}``.  From a user ``templates_path`` template, you can still use the "
+"\"exclamation mark\" syntax as :ref:`described in the templating document "
+"<templating-primer>`."
+msgstr ""
+"அதே பெயரில் அடிப்படை தீமில் டெம்ப்ளேட்டை நீட்டிக்கும்போது, ​​தீம் பெயரை "
+"வெளிப்படையான கோப்பகமாகப் பயன்படுத்தவும்: ``{% ஆனது \"basic/layout.html\" "
+"%}`` நீட்டிக்கிறது. ஒரு பயனர் ``templates_path`` டெம்ப்ளேட்டிலிருந்து, "
+"டெம்ப்ளேட்டிங் ஆவணம் <templating-primer>` இல் விவரிக்கப்பட்டுள்ள "
+":ref:`ஆச்சரியக்குறியின் தொடரியலை நீங்கள் இன்னும் பயன்படுத்தலாம்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:316
+msgid "Static templates"
+msgstr "நிலையான வார்ப்புருக்கள்"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:318
+msgid ""
+"Since theme options are meant for the user to configure a theme more easily,"
+" without having to write a custom stylesheet, it is necessary to be able to "
+"template static files as well as HTML files.  Therefore, Sphinx supports so-"
+"called \"static templates\", like this:"
+msgstr ""
+"தீம் விருப்பங்கள் பயனருக்கு ஒரு கருப்பொருளை மிக எளிதாக உள்ளமைக்க வேண்டும் "
+"என்பதால், தனிப்பயன் ஸ்டைல்ஷீட்டை எழுதாமல், நிலையான கோப்புகளையும் HTML "
+"கோப்புகளையும் வார்ப்புரு செய்ய முடியும். எனவே, இது போன்ற \"நிலையான "
+"வார்ப்புருக்கள்\" என்று அழைக்கப்படுவதை ஸ்பிங்க்ஸ் ஆதரிக்கிறது:"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:323
+msgid ""
+"If the name of a file in the ``static/`` directory of a theme (or in the "
+"user's static path) ends with ``.jinja`` or ``_t``, it will be processed by "
+"the template engine.  The suffix will be removed from the final file name."
+msgstr ""
+"தீமின் ``நிலை/`` கோப்பகத்தில் (அல்லது பயனரின் நிலையான பாதையில்) கோப்பின் "
+"பெயர் ``.jinja`` அல்லது ``_t`` என முடிவடைந்தால், அது டெம்ப்ளேட் "
+"இயந்திரத்தால் செயலாக்கப்படும். இறுதி கோப்பு பெயரிலிருந்து பின்னொட்டு "
+"நீக்கப்படும்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:327
+msgid ""
+"For example, a theme with a ``static/theme_styles.css.jinja`` file could use"
+" templating to put options into the stylesheet. When a documentation project"
+" is built with that theme, the output directory will contain a "
+"``_static/theme_styles.css`` file where all template tags have been "
+"processed."
+msgstr ""
+"எடுத்துக்காட்டாக, ``static/theme_styles.css.jinja`` கோப்பைக் கொண்ட "
+"கருப்பொருள், ச்டைல்சீட்டில் விருப்பங்களை வைக்க டெம்ப்ளேட்டிங்கைப் "
+"பயன்படுத்தலாம். அந்த கருப்பொருளுடன் ஒரு ஆவணப்படுத்தல் திட்டம் "
+"உருவாக்கப்படும் போது, ​​வெளியீட்டு கோப்பகத்தில் அனைத்து டெம்ப்ளேட் "
+"குறிச்சொற்களும் செயலாக்கப்பட்ட ``_static/theme_styles.css`` கோப்பு "
+"இருக்கும்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:335
+msgid ""
+"The preferred suffix for static templates is now ``.jinja``, in line with "
+"the Jinja project's `recommended file extension`_."
+msgstr ""
+"சின்சா திட்டத்தின் `பரிந்துரைக்கப்பட்ட கோப்பு நீட்டிப்பு`_க்கு ஏற்ப நிலையான "
+"டெம்ப்ளேட்டுகளுக்கு விருப்பமான பின்னொட்டு இப்போது ``.சின்சா`` ஆகும்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:338
+msgid ""
+"The ``_t`` file suffix for static templates is now considered 'legacy', and "
+"support may eventually be removed."
+msgstr ""
+"நிலையான வார்ப்புருக்களுக்கான ``_t`` கோப்பு பின்னொட்டு இப்போது 'மரபு' எனக் "
+"கருதப்படுகிறது, மேலும் உதவி இறுதியில் அகற்றப்படலாம்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:341
+msgid ""
+"If a static template with either a ``_t`` suffix or a ``.jinja`` suffix is "
+"detected, it will be processed by the template engine, with the suffix "
+"removed from the final file name."
+msgstr ""
+"``_t`` பின்னொட்டு அல்லது ``.சின்சா`` பின்னொட்டு கொண்ட நிலையான டெம்ப்ளேட் "
+"கண்டறியப்பட்டால், இறுதி கோப்பு பெயரிலிருந்து பின்னொட்டு அகற்றப்பட்டு "
+"டெம்ப்ளேட் இயந்திரத்தால் அது செயலாக்கப்படும்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:349
+msgid "Use custom page metadata in HTML templates"
+msgstr "HTML வார்ப்புருக்களில் தனிப்பயன் பக்க மெட்டாடேட்டாவைப் பயன்படுத்தவும்"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:351
+msgid ""
+"Any key / value pairs in :doc:`field lists </usage/restructuredtext/field-"
+"lists>` that are placed *before* the page's title will be available to the "
+"Jinja template when building the page within the :data:`meta` attribute. For"
+" example, if a page had the following text before its first title:"
+msgstr ""
+"எந்த விசை/மதிப்பு ஜோடிகளும்: டிஓசி: `புலம் பட்டியல்கள் "
+"</பயன்பாடு/மறுசீரமைப்பு டெக்ஸ்ட்/புலம்-பட்டியல்களை>` அவை வைக்கப்படுகின்றன * "
+"முன் * பக்கத்தின் தலைப்பு ஜின்ஜா வார்ப்புருவில் பக்கத்தை உருவாக்கும் போது "
+"ஜின்ஜா வார்ப்புருவில் கிடைக்கும்: தரவு: `மெட்டா `பண்புக்கூறு. "
+"எடுத்துக்காட்டாக, ஒரு பக்கத்தில் அதன் முதல் தலைப்புக்கு முன் பின்வரும் உரை "
+"இருந்தால்:"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:363
+msgid "Then it could be accessed within a Jinja template like so:"
+msgstr "அப்படி ஒரு ஜின்ஜா வார்ப்புருவுக்குள் அணுகலாம்:"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:371
+msgid ""
+"Note the check that ``meta`` is a dictionary (\"mapping\" in Jinja "
+"terminology) to ensure that using it in this way is valid."
+msgstr ""
+"இந்த வழியில் பயன்படுத்துவது செல்லுபடியாகும் என்பதை உறுதிப்படுத்த `` மெட்டா``"
+" ஒரு அகராதி (ஜின்ஜா சொற்களில் \"மேப்பிங்\") என்பதை கவனியுங்கள்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:376
+msgid "Defining custom template functions"
+msgstr "தனிப்பயன் வார்ப்புரு செயல்பாடுகளை வரையறுத்தல்"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:378
+msgid ""
+"Sometimes it is useful to define your own function in Python that you wish "
+"to then use in a template. For example, if you'd like to insert a template "
+"value with logic that depends on the user's configuration in the project, or"
+" if you'd like to include non-trivial checks and provide friendly error "
+"messages for incorrect configuration in the template."
+msgstr ""
+"சில நேரங்களில் நீங்கள் ஒரு வார்ப்புருவில் பயன்படுத்த விரும்பும் பைத்தானில் "
+"உங்கள் சொந்த செயல்பாட்டை வரையறுப்பது பயனுள்ளதாக இருக்கும். எடுத்துக்காட்டாக,"
+" திட்டத்தில் பயனரின் உள்ளமைவைப் பொறுத்து தர்க்கத்துடன் ஒரு வார்ப்புரு "
+"மதிப்பை நீங்கள் செருக விரும்பினால், அல்லது நீங்கள் அற்பமற்ற காசோலைகளைச் "
+"சேர்க்க விரும்பினால், வார்ப்புருவில் தவறான உள்ளமைவுக்கு நட்பு பிழை செய்திகளை"
+" வழங்க விரும்பினால்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:384
+msgid ""
+"To define your own template function, you'll need to define two functions "
+"inside your module:"
+msgstr ""
+"உங்கள் சொந்த வார்ப்புரு செயல்பாட்டை வரையறுக்க, உங்கள் தொகுதிக்குள் இரண்டு "
+"செயல்பாடுகளை வரையறுக்க வேண்டும்:"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:387
+msgid ""
+"A **page context event handler** (or **registration**) function. This is "
+"connected to the :class:`.Sphinx` application via an event callback."
+msgstr ""
+"ஒரு ** பக்க சூழல் நிகழ்வு கையாளுபவர் ** (அல்லது ** பதிவு **) செயல்பாடு. இது:"
+" வகுப்பு: `.sphinx` ஒரு நிகழ்வு அழைப்பு வழியாக இணைக்கப்பட்டுள்ளது."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:389
+msgid "A **template function** that you will use in your Jinja template."
+msgstr ""
+"உங்கள் ஜின்ஜா வார்ப்புருவில் நீங்கள் பயன்படுத்தும் ** வார்ப்புரு செயல்பாடு "
+"**."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:391
+msgid ""
+"First, define the registration function, which accepts the arguments for "
+":event:`html-page-context`."
+msgstr ""
+"முதலில், பதிவு செயல்பாட்டை வரையறுக்கவும், இது வாதங்களை ஏற்றுக்கொள்கிறது: "
+"நிகழ்வு: `html-page-context`."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:394
+msgid ""
+"Within the registration function, define the template function that you'd "
+"like to use within Jinja. The template function should return a string or "
+"Python objects (lists, dictionaries) with strings inside that Jinja uses in "
+"the templating process"
+msgstr ""
+"பதிவு செயல்பாட்டிற்குள், ஜின்ஜாவுக்குள் நீங்கள் பயன்படுத்த விரும்பும் "
+"வார்ப்புரு செயல்பாட்டை வரையறுக்கவும். வார்ப்புரு செயல்பாடு வார்ப்புரு "
+"செயல்பாட்டில் ஜின்ஜா பயன்படுத்தும் சரங்களுடன் ஒரு சரம் அல்லது பைதான் "
+"பொருள்களை (பட்டியல்கள், அகராதிகள்) திருப்பித் தர வேண்டும்"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:400
+msgid ""
+"The template function will have access to all of the variables that are "
+"passed to the registration function."
+msgstr ""
+"வார்ப்புரு செயல்பாடு பதிவு செயல்பாட்டிற்கு அனுப்பப்படும் அனைத்து "
+"மாறிகளுக்கும் அணுகலைக் கொண்டிருக்கும்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:403
+msgid ""
+"At the end of the registration function, add the template function to the "
+"Sphinx application's context with ``context['template_func'] = "
+"template_func``."
+msgstr ""
+"பதிவு செயல்பாட்டின் முடிவில், `` சூழல் ['டெம்ப்ளேட்_ஃபங்க்'] = "
+"டெம்ப்ளேட்_ஃபுங்க்`` உடன் SPHINX பயன்பாட்டின் சூழலில் வார்ப்புரு "
+"செயல்பாட்டைச் சேர்க்கவும்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:406
+msgid ""
+"Finally, in your extension's ``setup()`` function, add your registration "
+"function as a callback for :event:`html-page-context`."
+msgstr ""
+"இறுதியாக, உங்கள் நீட்டிப்பின் `` அமைவு () `` செயல்பாட்டில், உங்கள் பதிவு "
+"செயல்பாட்டை ஒரு அழைப்பாகச் சேர்க்கவும்: நிகழ்வு: `html-page-context`."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:423
+msgid "Now, you will have access to this function in jinja like so:"
+msgstr ""
+"இப்போது, ஜின்ஜாவில் இந்த செயல்பாட்டிற்கான அணுகல் உங்களுக்கு இருக்கும்:"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:433
+msgid "Add your own static files to the build assets"
+msgstr "உருவாக்க சொத்துக்களில் உங்கள் சொந்த நிலையான கோப்புகளைச் சேர்க்கவும்"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:435
+msgid ""
+"By default, Sphinx copies static files on the ``static/`` directory of the "
+"template directory.  However, if your package needs to place static files "
+"outside of the ``static/`` directory for some reasons, you need to copy them"
+" to the ``_static/`` directory of HTML outputs manually at the build via an "
+"event hook.  Here is an example of code to accomplish this:"
+msgstr ""
+"இயல்பாக, வார்ப்புரு கோப்பகத்தின் `` நிலையான/`` கோப்பகத்தில் நிலையான "
+"கோப்புகளை ஸ்பின்க்ஸ் நகலெடுக்கிறது. இருப்பினும், உங்கள் தொகுப்பு சில "
+"காரணங்களுக்காக `` நிலையான/`` கோப்பகத்திற்கு வெளியே நிலையான கோப்புகளை வைக்க "
+"வேண்டும் என்றால், அவற்றை `` _static/`` `HTML இன் அடைவு ஒரு நிகழ்வு கொக்கி "
+"வழியாக கட்டமைப்பில் கைமுறையாக வெளியிடும். இதை நிறைவேற்ற குறியீட்டின் "
+"எடுத்துக்காட்டு இங்கே:"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:455
+msgid "Inject JavaScript based on user configuration"
+msgstr "பயனர் உள்ளமைவின் அடிப்படையில் ஜாவாஸ்கிரிப்டை செலுத்தவும்"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:457
+msgid ""
+"If your extension makes use of JavaScript, it can be useful to allow users "
+"to control its behavior using their Sphinx configuration. However, this can "
+"be difficult to do if your JavaScript comes in the form of a static library "
+"(which will not be built with Jinja)."
+msgstr ""
+"உங்கள் நீட்டிப்பு ஜாவாஸ்கிரிப்டைப் பயன்படுத்தினால், பயனர்கள் தங்கள் "
+"ஸ்பின்க்ஸ் உள்ளமைவைப் பயன்படுத்தி அதன் நடத்தையை கட்டுப்படுத்த அனுமதிப்பது "
+"பயனுள்ளதாக இருக்கும். இருப்பினும், உங்கள் ஜாவாஸ்கிரிப்ட் ஒரு நிலையான "
+"நூலகத்தின் வடிவத்தில் வந்தால் இதைச் செய்வது கடினம் (இது ஜின்ஜாவுடன் "
+"கட்டப்படாது)."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:462
+msgid ""
+"There are two ways to inject variables into the JavaScript space based on "
+"user configuration."
+msgstr ""
+"பயனர் உள்ளமைவின் அடிப்படையில் ஜாவாஸ்கிரிப்ட் இடத்தில் மாறிகள் செலுத்த இரண்டு"
+" வழிகள் உள்ளன."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:465
+msgid ""
+"First, you may append ``_t`` to the end of any static files included with "
+"your extension. This will cause Sphinx to process these files with the "
+"templating engine, allowing you to embed variables and control behavior."
+msgstr ""
+"முதலில், உங்கள் நீட்டிப்புடன் சேர்க்கப்பட்டுள்ள எந்த நிலையான கோப்புகளின் "
+"முடிவில் `` _t`` ஐச் சேர்க்கலாம். இது ஸ்பிங்க்ஸ் இந்த கோப்புகளை வார்ப்புரு "
+"இயந்திரத்துடன் செயலாக்க வழிவகுக்கும், இது மாறிகள் உட்பொதிக்கவும், நடத்தை "
+"கட்டுப்படுத்தவும் உங்களை அனுமதிக்கிறது."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:469
+msgid "For example, the following JavaScript structure:"
+msgstr "எடுத்துக்காட்டாக, பின்வரும் ஜாவாஸ்கிரிப்ட் அமைப்பு:"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:478
+msgid ""
+"Will result in the following static file placed in your HTML's build output:"
+msgstr ""
+"உங்கள் HTML இன் உருவாக்க வெளியீட்டில் பின்வரும் நிலையான கோப்பை ஏற்படுத்தும்:"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:487
+msgid "See :ref:`theming-static-templates` for more information."
+msgstr "காண்க: குறிப்பு: மேலும் தகவலுக்கு `தீமிங்-ஸ்டாடிக்-டெம்ப்ளேட்டுகள்`."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:489
+msgid ""
+"Second, you may use the :meth:`.Sphinx.add_js_file` method without pointing "
+"it to a file. Normally, this method is used to insert a new JavaScript file "
+"into your site. However, if you do *not* pass a file path, but instead pass "
+"a string to the \"body\" argument, then this text will be inserted as "
+"JavaScript into your site's head. This allows you to insert variables into "
+"your project's JavaScript from Python."
+msgstr ""
+"இரண்டாவதாக, நீங்கள்: `.sphinx.add_js_file` முறையை ஒரு கோப்பில் "
+"சுட்டிக்காட்டாமல் பயன்படுத்தலாம். பொதுவாக, உங்கள் தளத்தில் புதிய "
+"ஜாவாஸ்கிரிப்ட் கோப்பை செருக இந்த முறை பயன்படுத்தப்படுகிறது. இருப்பினும், "
+"நீங்கள் ஒரு கோப்பு பாதையை கடந்து செல்லவில்லை என்றால், அதற்கு பதிலாக \"உடல்\""
+" வாதத்திற்கு ஒரு சரத்தை அனுப்பினால், இந்த உரை உங்கள் தளத்தின் தலையில் "
+"ஜாவாஸ்கிரிப்டாக செருகப்படும். பைத்தானில் இருந்து உங்கள் திட்டத்தின் "
+"ஜாவாஸ்கிரிப்டில் மாறிகள் செருக இது உங்களை அனுமதிக்கிறது."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:496
+msgid ""
+"For example, the following code will read in a user-configured value and "
+"then insert this value as a JavaScript variable, which your extension's "
+"JavaScript code may use:"
+msgstr ""
+"எடுத்துக்காட்டாக, பின்வரும் குறியீடு பயனர் கட்டமைக்கப்பட்ட மதிப்பில் "
+"படிக்கும், பின்னர் இந்த மதிப்பை ஜாவாஸ்கிரிப்ட் மாறியாக செருகும், இது உங்கள் "
+"நீட்டிப்பின் ஜாவாஸ்கிரிப்ட் குறியீடு பயன்படுத்தலாம்:"
+
+#: ../../sphinx/doc/development/html_themes/index.rst:515
+msgid ""
+"As a result, in your theme you can use code that depends on the presence of "
+"this variable. Users can control the variable's value by defining it in "
+"their :file:`conf.py` file."
+msgstr ""
+"இதன் விளைவாக, உங்கள் கருப்பொருளில் இந்த மாறியின் இருப்பைப் பொறுத்தது "
+"குறியீட்டைப் பயன்படுத்தலாம். பயனர்கள் மாறியின் மதிப்பை அவற்றின்: கோப்பு: "
+"`conf.py` கோப்பில் வரையறுப்பதன் மூலம் கட்டுப்படுத்தலாம்."
+
+#: ../../sphinx/doc/development/html_themes/index.rst:520
+msgid ""
+"It is not an executable Python file, as opposed to :file:`conf.py`, because "
+"that would pose an unnecessary security risk if themes are shared."
+msgstr ""
+"இது இயங்கக்கூடிய பைதான் கோப்பு அல்ல, இதற்கு மாறாக: கோப்பு: `conf.py`, "
+"ஏனென்றால் கருப்பொருள்கள் பகிரப்பட்டால் அது தேவையற்ற பாதுகாப்பு அபாயத்தை "
+"ஏற்படுத்தும்."

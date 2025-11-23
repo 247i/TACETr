@@ -1,0 +1,628 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2025, the Sphinx developers
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2024
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 8.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-15 06:34+0000\n"
+"PO-Revision-Date: 2025-11-16 08:55\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2024\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:4
+msgid "Event callbacks API"
+msgstr "நிகழ்வு அழைப்புகள் பநிஇ"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:6
+msgid ""
+"Connecting callback functions to events is a simple way to extend Sphinx, by"
+" hooking into the build process at various points."
+msgstr ""
+"நிகழ்வுகளுடன் கால்பேக் செயல்பாடுகளை இணைப்பது ச்பிங்க்சை நீட்டிப்பதற்கான ஒரு "
+"எளிய வழியாகும், பல்வேறு புள்ளிகளில் உருவாக்க செயல்முறையை இணைப்பதன் மூலம்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:9
+msgid ""
+"Use :meth:`.Sphinx.connect` in an extension's ``setup`` function, or a "
+"``setup`` function in your projects :file:`conf.py`, to connect functions to"
+" the events:"
+msgstr ""
+"நிகழ்வுகளுடன் செயல்பாடுகளை இணைக்க, நீட்டிப்பின் ``அமைவு`` செயல்பாட்டில் "
+":meth:`.Sphinx.connect` அல்லது உங்கள் திட்டப்பணிகளில் ``setup`` செயல்பாடு "
+":file:`conf.py` ஐப் பயன்படுத்தவும்:"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:23
+msgid ""
+"Extensions can add their own events by using :meth:`.Sphinx.add_event`, and "
+"calling them them with :meth:`.Sphinx.emit` or "
+":meth:`.Sphinx.emit_firstresult`."
+msgstr ""
+"நீட்டிப்புகள் :meth:`.Sphinx.add_event` ஐப் பயன்படுத்தி, அவற்றை "
+":meth:`.Sphinx.emit` அல்லது :meth:`.Sphinx.emit_firstresult` என அழைப்பதன் "
+"மூலம் அவற்றின் சொந்த நிகழ்வுகளைச் சேர்க்கலாம்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:28
+msgid "Core events overview"
+msgstr "முக்கிய நிகழ்வுகளின் கண்ணோட்டம்"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:30
+msgid "Below is an overview of the core event that happens during a build."
+msgstr ""
+"ஒரு கட்டத்தின் போது நடக்கும் முக்கிய நிகழ்வின் கண்ணோட்டம் கீழே உள்ளது."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:79
+msgid ""
+"Here is also a flow diagram of the events, within the context of the Sphinx "
+"build process:"
+msgstr ""
+"சூரரிமாச்சிலை உருவாக்க செயல்முறையின் சூழலில் நிகழ்வுகளின் ஓட்ட வரைபடமும் "
+"இங்கே உள்ளது:"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:82
+msgid "Sphinx core events flow"
+msgstr "சூரரிமாச்சிலை முக்கிய நிகழ்வுகள் ஓட்டம்"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:86
+msgid "Core event details"
+msgstr "முக்கிய நிகழ்வு விவரங்கள்"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:88
+msgid "Here is a more detailed list of these events."
+msgstr "இந்த நிகழ்வுகளின் விரிவான பட்டியல் இங்கே."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:0
+msgid "Parameters"
+msgstr "அளவுருக்கள்"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:92
+#: ../../sphinx/doc/extdev/event_callbacks.rst:101
+#: ../../sphinx/doc/extdev/event_callbacks.rst:108
+#: ../../sphinx/doc/extdev/event_callbacks.rst:125
+#: ../../sphinx/doc/extdev/event_callbacks.rst:142
+#: ../../sphinx/doc/extdev/event_callbacks.rst:160
+#: ../../sphinx/doc/extdev/event_callbacks.rst:179
+#: ../../sphinx/doc/extdev/event_callbacks.rst:201
+#: ../../sphinx/doc/extdev/event_callbacks.rst:214
+#: ../../sphinx/doc/extdev/event_callbacks.rst:223
+#: ../../sphinx/doc/extdev/event_callbacks.rst:247
+#: ../../sphinx/doc/extdev/event_callbacks.rst:264
+#: ../../sphinx/doc/extdev/event_callbacks.rst:277
+#: ../../sphinx/doc/extdev/event_callbacks.rst:297
+#: ../../sphinx/doc/extdev/event_callbacks.rst:315
+#: ../../sphinx/doc/extdev/event_callbacks.rst:325
+#: ../../sphinx/doc/extdev/event_callbacks.rst:335
+#: ../../sphinx/doc/extdev/event_callbacks.rst:345
+#: ../../sphinx/doc/extdev/event_callbacks.rst:364
+#: ../../sphinx/doc/extdev/event_callbacks.rst:377
+#: ../../sphinx/doc/extdev/event_callbacks.rst:416
+msgid ":class:`.Sphinx`"
+msgstr ":class:`.Sphinx`"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:93
+msgid ":class:`.Config`"
+msgstr ":class:`.Config`"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:95
+msgid "Emitted when the config object has been initialized."
+msgstr "கட்டமைப்பு பொருள் துவக்கப்படும்போது உமிழப்படும்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:103
+msgid ""
+"Emitted when the builder object has been created (available as "
+"``app.builder``)."
+msgstr ""
+"பில்டர் ஆப்செக்ட் உருவாக்கப்பட்டவுடன் உமிழப்படும் (`app.builder`` ஆகக் "
+"கிடைக்கும்)."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:109
+#: ../../sphinx/doc/extdev/event_callbacks.rst:126
+#: ../../sphinx/doc/extdev/event_callbacks.rst:143
+#: ../../sphinx/doc/extdev/event_callbacks.rst:224
+#: ../../sphinx/doc/extdev/event_callbacks.rst:278
+#: ../../sphinx/doc/extdev/event_callbacks.rst:280
+#: ../../sphinx/doc/extdev/event_callbacks.rst:298
+#: ../../sphinx/doc/extdev/event_callbacks.rst:316
+#: ../../sphinx/doc/extdev/event_callbacks.rst:326
+msgid ":class:`.BuildEnvironment`"
+msgstr ":class:`.Cuild Environment`"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:110
+#: ../../sphinx/doc/extdev/event_callbacks.rst:111
+#: ../../sphinx/doc/extdev/event_callbacks.rst:112
+msgid "``Set[str]``"
+msgstr "``செட்[str]``"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:0
+msgid "returns"
+msgstr "திரும்புகிறது"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:113
+msgid "``Sequence[str]`` of additional docnames to re-read"
+msgstr "மீண்டும் படிக்க வேண்டிய கூடுதல் ஆவணப்பெயர்களின் `வரிசை[str]``"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:115
+msgid ""
+"Emitted when the environment determines which source files have changed and "
+"should be re-read. *added*, *changed* and *removed* are sets of docnames "
+"that the environment has determined. You can return a list of docnames to "
+"re-read in addition to these."
+msgstr ""
+"எந்த மூலக் கோப்புகள் மாறியுள்ளன மற்றும் மீண்டும் படிக்கப்பட வேண்டும் என்பதை "
+"சூழல் தீர்மானிக்கும் போது உமிழப்படும். *சேர்க்கப்பட்டது*, *மாற்றப்பட்டது* "
+"மற்றும் *அகற்றப்பட்டது* ஆகியவை சுற்றுச்சூழலால் தீர்மானிக்கப்பட்ட "
+"ஆவணப்பெயர்களின் தொகுப்பு ஆகும். இவற்றைத் தவிர மீண்டும் படிக்க வேண்டிய ஆவணப் "
+"பெயர்களின் பட்டியலை நீங்கள் திருப்பி அனுப்பலாம்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:127
+#: ../../sphinx/doc/extdev/event_callbacks.rst:161
+#: ../../sphinx/doc/extdev/event_callbacks.rst:202
+#: ../../sphinx/doc/extdev/event_callbacks.rst:203
+#: ../../sphinx/doc/extdev/event_callbacks.rst:266
+#: ../../sphinx/doc/extdev/event_callbacks.rst:378
+#: ../../sphinx/doc/extdev/event_callbacks.rst:379
+msgid "``str``"
+msgstr "``str``"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:129
+msgid ""
+"Emitted when all traces of a source file should be cleaned from the "
+"environment, that is, if the source file is removed or before it is freshly "
+"read. This is for extensions that keep their own caches in attributes of the"
+" environment."
+msgstr ""
+"ஒரு மூலக் கோப்பின் அனைத்து தடயங்களும் சுற்றுச்சூழலில் இருந்து தூய்மை "
+"செய்யப்படும்போது, ​​அதாவது மூலக் கோப்பு அகற்றப்பட்டால் அல்லது புதிதாகப் "
+"படிக்கப்படுவதற்கு முன்பு வெளியிடப்படும். சுற்றுச்சூழலின் பண்புகளில் தங்கள் "
+"சொந்த தற்காலிக சேமிப்புகளை வைத்திருக்கும் நீட்டிப்புகளுக்கானது இது."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:134
+msgid ""
+"For example, there is a cache of all modules on the environment. When a "
+"source file has been changed, the cache's entries for the file are cleared, "
+"since the module declarations could have been removed from the file."
+msgstr ""
+"எடுத்துக்காட்டாக, சுற்றுச்சூழலில் உள்ள அனைத்து தொகுதிகளின் தற்காலிக சேமிப்பு"
+" உள்ளது. மூலக் கோப்பு மாற்றப்பட்டால், கோப்பிற்கான கேச் உள்ளீடுகள் "
+"அழிக்கப்படும், ஏனெனில் கோப்பிலிருந்து தொகுதி அறிவிப்புகள் "
+"அகற்றப்பட்டிருக்கலாம்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:144
+#: ../../sphinx/doc/extdev/event_callbacks.rst:279
+msgid "``list[str]``"
+msgstr "``list[str]``"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:146
+msgid ""
+"Emitted after the environment has determined the list of all added and "
+"changed files and just before it reads them. It allows extension authors to "
+"reorder the list of docnames (*inplace*) before processing, or add more "
+"docnames that Sphinx did not consider changed (but never add any docnames "
+"that are not in :attr:`.found_docs`)."
+msgstr ""
+"சேர்க்கப்பட்ட மற்றும் மாற்றப்பட்ட கோப்புகளின் பட்டியலையும், அவற்றைப் "
+"படிப்பதற்கு சற்று முன்பும் சூழல் தீர்மானித்த பிறகு உமிழப்படும். "
+"செயலாக்கத்திற்கு முன் ஆவணப்பெயர்களின் பட்டியலை (*இன்ப்ளேச்*) "
+"மறுவரிசைப்படுத்த இது நீட்டிப்பு ஆசிரியர்களை அனுமதிக்கிறது அல்லது "
+"சூரரிமாச்சிலை மாற்றியதாகக் கருதாத டாக் பெயர்களைச் சேர்க்கலாம் (ஆனால் "
+":attr:`.found_docs` இல் இல்லாத எந்த ஆவணங்களையும் சேர்க்க வேண்டாம்)."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:153
+msgid ""
+"You can also remove document names; do this with caution since it will make "
+"Sphinx treat changed files as unchanged."
+msgstr ""
+"ஆவண பெயர்களையும் அகற்றலாம்; இதை எச்சரிக்கையுடன் செய்யுங்கள், ஏனெனில் இது "
+"ஸ்பின்க்ஸ் சிகிச்சை மாற்றப்பட்ட கோப்புகளை மாற்றாமல் இருக்கும்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:162
+#: ../../sphinx/doc/extdev/event_callbacks.rst:186
+msgid ""
+"``list[str]`` with a single element, representing the content of the "
+"included file."
+msgstr ""
+"``list[str]`` ஒற்றை உறுப்புடன், சேர்க்கப்பட்ட கோப்பின் உள்ளடக்கத்தைக் "
+"குறிக்கும்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:166
+msgid "Emitted when a source file has been read."
+msgstr "ஒரு மூலக் கோப்பைப் படிக்கும்போது உமிழப்படும்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:168
+msgid ""
+"You can process the ``content`` and replace this item to implement source-"
+"level transformations."
+msgstr ""
+"நீங்கள் ``உள்ளடக்கம்`` ஐச் செயல்படுத்தலாம் மற்றும் மூல-நிலை மாற்றங்களைச் "
+"செயல்படுத்த இந்த உருப்படியை மாற்றலாம்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:171
+msgid ""
+"For example, if you want to use ``$`` signs to delimit inline math, like in "
+"LaTeX, you can use a regular expression to replace ``$...$`` by "
+"``:math:`...```."
+msgstr ""
+"எடுத்துக்காட்டாக, லேடெக்ஸைப் போலவே இன்லைன் கணிதத்தையும் வரையறுக்க `` $ `` "
+"அறிகுறிகளைப் பயன்படுத்த விரும்பினால், `` $ ... `` ஆல் ``: கணிதம்: `... `` `."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:180
+msgid ""
+":class:`~pathlib.Path` representing the included file relative to the "
+":term:`source directory`."
+msgstr ""
+":class:`~pathlib.Path` என்பது :term:`source directory` உடன் தொடர்புடைய "
+"சேர்க்கப்பட்ட கோப்பைக் குறிக்கிறது."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:183
+msgid ""
+"``str`` of the document name that contains the :dudir:`include` directive."
+msgstr ":dudir:`include` கட்டளையைக் கொண்ட ஆவணப் பெயரின் ``str``."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:190
+msgid "Emitted when a file has been read with the :dudir:`include` directive."
+msgstr ":dudir:`include` கட்டளையுடன் ஒரு கோப்பைப் படிக்கும்போது உமிழப்படும்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:192
+msgid ""
+"You can process the ``content`` and replace this item to transform the "
+"included content, as with the :event:`source-read` event."
+msgstr ""
+"நீங்கள் ``உள்ளடக்கம்`` ஐச் செயல்படுத்தலாம் மற்றும் சேர்க்கப்பட்ட "
+"உள்ளடக்கத்தை மாற்றுவதற்கு இந்த உருப்படியை மாற்றலாம், :event:`source-read` "
+"நிகழ்வைப் போல."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:197
+msgid "The :dudir:`include` directive and the :event:`source-read` event."
+msgstr "தி: டுடிர்: `அகரெட்டி மற்றும் தி: நிகழ்வு:` மூல-வாசிப்பு` நிகழ்வு."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:204
+msgid ":class:`.desc_content`"
+msgstr ":class:`.desc_content`"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:206
+msgid ""
+"Emitted when an object description directive has run.  The *domain* and "
+"*objtype* arguments are strings indicating object description of the object."
+" And *contentnode* is a content for the object.  It can be modified in-"
+"place."
+msgstr ""
+"ஒரு பொருள் விளக்க உத்தரவு இயங்கும் போது உமிழப்படும். * டொமைன் * மற்றும் * "
+"ஆப்ஜ்டைப் * வாதங்கள் பொருளின் பொருள் விளக்கத்தைக் குறிக்கும் சரங்கள். "
+"மற்றும் * ContentNode * என்பது பொருளின் உள்ளடக்கம். அதை இடத்தில் மாற்றலாம்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:215
+#: ../../sphinx/doc/extdev/event_callbacks.rst:265
+msgid ":class:`docutils.nodes.document`"
+msgstr ":class:`docutils.nodes.document`"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:217
+msgid ""
+"Emitted when a doctree has been parsed and read by the environment, and is "
+"about to be pickled. The ``doctree`` can be modified in-place."
+msgstr ""
+"ஒரு கோட்பாட்டை சுற்றுச்சூழலால் பாகுபடுத்தி படிக்கும்போது, ​​ஊறுகாயாக "
+"இருக்கும் போது உமிழப்படும். ``டாக்ட்ரீ`` இடத்திலேயே மாற்றியமைக்கப்படலாம்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:225
+msgid ""
+"The :class:`.pending_xref` node to be resolved. Its ``reftype``, "
+"``reftarget``, ``modname`` and ``classname`` attributes determine the type "
+"and target of the reference."
+msgstr ""
+"தீர்க்கப்பட வேண்டிய :class:`.pending_xref` முனை. அதன் ``reftype``, "
+"``reftarget``, ``modname`` மற்றும் ``classname`` பண்புக்கூறுகள் குறிப்பின் "
+"வகை மற்றும் இலக்கைத் தீர்மானிக்கின்றன."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:228
+msgid ""
+"The node that carries the text and formatting inside the future reference "
+"and should be a child of the returned reference node."
+msgstr ""
+"எதிர்கால குறிப்புக்குள் உரை மற்றும் வடிவமைப்பைக் கொண்டு செல்லும் முனை "
+"மற்றும் திரும்பிய குறிப்பு முனையின் குழந்தையாக இருக்க வேண்டும்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:230
+msgid ""
+"A new node to be inserted in the document tree in place of the node, or "
+"``None`` to let other handlers try."
+msgstr ""
+"முனைக்கு பதிலாக ஆவண மரத்தில் ஒரு புதிய முனை செருகப்பட வேண்டும் அல்லது பிற "
+"கையாளுபவர்களை முயற்சி செய்ய ``ஒன்றுமில்லை``."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:233
+msgid ""
+"Emitted when a cross-reference to an object cannot be resolved. If the event"
+" handler can resolve the reference, it should return a new docutils node to "
+"be inserted in the document tree in place of the node *node*.  Usually this "
+"node is a :class:`~nodes.reference` node containing *contnode* as a child. "
+"If the handler can not resolve the cross-reference, it can either return "
+"``None`` to let other handlers try, or raise :class:`~sphinx.errors.NoUri` "
+"to prevent other handlers in trying and suppress a warning about this cross-"
+"reference being unresolved."
+msgstr ""
+"ஒரு பொருளுக்கு குறுக்கு-குறிப்பை தீர்க்க முடியாது. நிகழ்வு கையாளுபவர் "
+"குறிப்பைத் தீர்க்க முடிந்தால், அது *முனை *க்கு பதிலாக ஆவண மரத்தில் செருக ஒரு"
+" புதிய ஆவண முனையை திருப்பித் தர வேண்டும். வழக்கமாக இந்த முனை ஒரு: வகுப்பு: "
+"`~ முனைகள். கையாளுபவர் குறுக்கு-குறிப்பைத் தீர்க்க முடியாவிட்டால், மற்ற "
+"கையாளுபவர்களை முயற்சி செய்ய அனுமதிக்க `` எதுவுமில்லை` `திரும்பலாம், அல்லது "
+"உயர்த்தலாம்: வகுப்பு:` ~ sphinx.errors.nouri` மற்ற கையாளுபவர்களைத் தடுக்க "
+"ஒரு எச்சரிக்கையை முயற்சித்து அடக்கவும் இந்த குறுக்கு குறிப்பு "
+"தீர்க்கப்படவில்லை."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:248
+msgid "The :class:`.Domain` of the missing reference."
+msgstr "விடுபட்ட குறிப்பின் :class:`.Domain`."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:249
+msgid "The :class:`.pending_xref` node that could not be resolved."
+msgstr "தீர்க்க முடியாத :class:`.pending_xref` முனை."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:250
+msgid "``True`` if a warning was emitted, else ``None``"
+msgstr "``உண்மை`` முன்னறிவிப்பு விடுக்கப்பட்டிருந்தால், ``ஒன்றுமில்லை``"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:252
+msgid ""
+"Emitted when a cross-reference to an object cannot be resolved even after "
+":event:`missing-reference`. If the event handler can emit warnings for the "
+"missing reference, it should return ``True``. The configuration variables "
+":confval:`nitpick_ignore` and :confval:`nitpick_ignore_regex` prevent the "
+"event from being emitted for the corresponding nodes."
+msgstr ""
+":event:`missing-reference` என்பதற்குப் பிறகும் கூட ஒரு பொருளின் குறுக்குக் "
+"குறிப்பைத் தீர்க்க முடியாதபோது உமிழப்படும். நிகழ்வு நடத்துபவர் விடுபட்ட "
+"குறிப்புக்கான எச்சரிக்கைகளை வெளியிட முடியுமானால், அது ``உண்மை`` என்பதை வழங்க"
+" வேண்டும். உள்ளமைவு மாறிகள் :confval:`nitpick_ignore` மற்றும் "
+":confval:`nitpick_ignore_regex` ஆகியவை தொடர்புடைய முனைகளுக்கு நிகழ்வை "
+"வெளியிடுவதைத் தடுக்கின்றன."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:268
+msgid ""
+"Emitted when a doctree has been \"resolved\" by the environment, that is, "
+"all references have been resolved and TOCs have been inserted.  The "
+"*doctree* can be modified in place."
+msgstr ""
+"சுற்றுச்சூழலால் ஒரு கோட்பாட்டாளர் \"தீர்க்கப்படும்போது\" உமிழப்படும், "
+"அதாவது, அனைத்து குறிப்புகளும் தீர்க்கப்பட்டு TOC கள் செருகப்பட்டுள்ளன. * "
+"கோட்பாடு * இடத்தில் மாற்றப்படலாம்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:272
+msgid ""
+"Here is the place to replace custom nodes that don't have visitor methods in"
+" the writers, so that they don't cause errors when the writers encounter "
+"them."
+msgstr ""
+"எழுத்தாளர்களில் பார்வையாளர் முறைகள் இல்லாத தனிப்பயன் முனைகளை மாற்றுவதற்கான "
+"இடம் இங்கே, இதனால் எழுத்தாளர்கள் அவர்களை எதிர்கொள்ளும்போது அவை பிழைகளை "
+"ஏற்படுத்தாது."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:282
+msgid ""
+"This event is only emitted when parallel reading of documents is enabled.  "
+"It is emitted once for every subprocess that has read some documents."
+msgstr ""
+"ஆவணங்களின் இணையாக வாசிப்பு இயக்கப்பட்டால் மட்டுமே இந்த நிகழ்வு வெளிப்படும். "
+"சில ஆவணங்களைப் படித்த ஒவ்வொரு துணை செயலாக்கத்திற்கும் இது ஒரு முறை "
+"வெளியேற்றப்படுகிறது."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:285
+msgid ""
+"You must handle this event in an extension that stores data in the "
+"environment in a custom location.  Otherwise the environment in the main "
+"process will not be aware of the information stored in the subprocess."
+msgstr ""
+"தனிப்பயன் இடத்தில் சூழலில் தரவை சேமிக்கும் நீட்டிப்பில் இந்த நிகழ்வை நீங்கள்"
+" கையாள வேண்டும். இல்லையெனில், முக்கிய செயல்பாட்டில் உள்ள சூழல் துணை "
+"செயலாக்கத்தில் சேமிக்கப்பட்டுள்ள தகவல்களைப் பற்றி அறிந்திருக்காது."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:289
+msgid ""
+"*other* is the environment object from the subprocess, *env* is the "
+"environment from the main process.  *docnames* is a set of document names "
+"that have been read in the subprocess."
+msgstr ""
+"* மற்றவை* என்பது துணை செயலாக்கத்திலிருந்து வரும் சுற்றுச்சூழல் பொருள்,* env*"
+" என்பது முக்கிய செயல்முறையிலிருந்து வரும் சூழல். * டாக்நேம்ஸ்* என்பது துணை "
+"செயலாக்கத்தில் படிக்கப்பட்ட ஆவண பெயர்களின் தொகுப்பாகும்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:299
+#: ../../sphinx/doc/extdev/event_callbacks.rst:317
+msgid "iterable of ``str``"
+msgstr "``str`` ஐ மீண்டும் செய்யக்கூடியது"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:301
+msgid ""
+"Emitted after reading all documents, when the environment and all doctrees "
+"are now up-to-date."
+msgstr ""
+"எல்லா ஆவணங்களையும் படித்த பிறகு, சுற்றுச்சூழல் மற்றும் அனைத்து கோட்பாடுகளும்"
+" இப்போது புதுப்பித்த நிலையில் இருக்கும்போது."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:304
+msgid ""
+"You can return an iterable of docnames from the handler.  These documents "
+"will then be considered updated, and will be (re-)written during the writing"
+" phase."
+msgstr ""
+"நீங்கள் கையாளுபவரிடமிருந்து டாக் பெயர்களை மீண்டும் செய்ய முடியும். இந்த "
+"ஆவணங்கள் பின்னர் புதுப்பிக்கப்பட்டதாகக் கருதப்படும், மேலும் எழுதும் "
+"கட்டத்தின் போது எழுதப்படும் (மறு)."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:310
+msgid "The handlers' return value is now used."
+msgstr "கையாளுபவர்களின் வருவாய் மதிப்பு இப்போது பயன்படுத்தப்படுகிறது."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:319
+msgid ""
+"Emitted when the environment determines which source files have changed and "
+"should be re-read. You can return an iterable of docnames to re-read."
+msgstr ""
+"எந்த மூலக் கோப்புகள் மாறியுள்ளன மற்றும் மீண்டும் படிக்கப்பட வேண்டும் என்பதை "
+"சூழல் தீர்மானிக்கும் போது உமிழப்படும். நீங்கள் மீண்டும் படிக்கும் ஆவணப் "
+"பெயர்களை திரும்பப் பெறலாம்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:328
+msgid ""
+"Emitted when Consistency checks phase.  You can check consistency of "
+"metadata for whole of documents."
+msgstr ""
+"நிலைத்தன்மை காசோலைகள் கட்டம் போது உமிழப்படும். முழு ஆவணங்களுக்கும் "
+"மெட்டாடேட்டாவின் நிலைத்தன்மையை நீங்கள் சரிபார்க்கலாம்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:336
+msgid ":class:`.Builder`"
+msgstr ":class:`.பில்டர்`"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:338
+msgid "Emitted before the builder starts to resolve and write documents."
+msgstr "பில்டர் ஆவணங்களைத் தீர்த்து எழுதத் தொடங்கும் முன் வெளியிடப்பட்டது."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:346
+msgid "``Exception`` or ``None``"
+msgstr "``விதிவிலக்கு`` அல்லது ``ஒன்றுமில்லை``"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:348
+msgid ""
+"Emitted when a build has finished, before Sphinx exits, usually used for "
+"cleanup.  This event is emitted even when the build process raised an "
+"exception, given as the *exception* argument.  The exception is reraised in "
+"the application after the event handlers have run.  If the build process "
+"raised no exception, *exception* will be ``None``.  This allows to customize"
+" cleanup actions depending on the exception status."
+msgstr ""
+"ஒரு கட்டடம் முடிந்ததும் உமிழப்படும், ஸ்பிங்க்ஸ் வெளியேறுவதற்கு முன்பு, "
+"பொதுவாக தூய்மைப்படுத்த பயன்படுத்தப்படுகிறது. இந்த நிகழ்வு உருவாக்கும் "
+"செயல்முறை ஒரு விதிவிலக்கை உயர்த்தினாலும் கூட, * விதிவிலக்கு * வாதமாக "
+"வழங்கப்படுகிறது. நிகழ்வு கையாளுபவர்கள் ஓடிய பிறகு விதிவிலக்கு பயன்பாட்டில் "
+"மறுபரிசீலனை செய்யப்படுகிறது. உருவாக்க செயல்முறை விதிவிலக்கல்ல என்றால், * "
+"விதிவிலக்கு * `` எதுவுமில்லை`` இருக்கும். விதிவிலக்கு நிலையைப் பொறுத்து "
+"தூய்மைப்படுத்தும் செயல்களைத் தனிப்பயனாக்க இது அனுமதிக்கிறது."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:358
+msgid "Builder specific events"
+msgstr "குறிப்பிட்ட நிகழ்வுகளை உருவாக்குதல்"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:360
+msgid "These events are emitted by specific builders."
+msgstr "இந்த நிகழ்வுகள் குறிப்பிட்ட பில்டர்களால் வெளியிடப்படுகின்றன."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:365
+msgid ""
+"iterable of ``(pagename, context, templatename)`` where *pagename* and "
+"*templatename* are strings and *context* is a ``dict[str, Any]``."
+msgstr ""
+"``(பக்கப்பெயர், சூழல், டெம்ப்ளேட் பெயர்)`` இதில் *பக்கப்பெயர்* மற்றும் "
+"*டெம்ப்ளேட் பெயர்* சரங்கள் மற்றும் *சூழல்* என்பது ``டிக்ட்[str, Any]`` "
+"ஆகும்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:369
+msgid "Emitted when the HTML builder is starting to write non-document pages."
+msgstr ""
+"உஉகுமொ பில்டர் ஆவணம் அல்லாத பக்கங்களை எழுதத் தொடங்கும் போது உமிழப்படும்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:371
+msgid "You can add pages to write by returning an iterable from this event."
+msgstr ""
+"இந்த நிகழ்விலிருந்து திரும்ப திரும்பப் பெறுவதன் மூலம் எழுதுவதற்குப் "
+"பக்கங்களைச் சேர்க்கலாம்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:380
+msgid "``dict[str, Any]``"
+msgstr "``டிக்ட்[str, Any]``"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:381
+msgid ":class:`docutils.nodes.document` or ``None``"
+msgstr ":class:`docutils.nodes.document` அல்லது ``None``"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:382
+#: ../../sphinx/doc/extdev/event_callbacks.rst:418
+msgid "``str`` or ``None``"
+msgstr "``str`` அல்லது ``ஒன்றுமில்லை``"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:384
+msgid ""
+"Emitted when the HTML builder has created a context dictionary to render a "
+"template with -- this can be used to add custom elements to the context."
+msgstr ""
+"ஒரு வார்ப்புருவை வழங்க HTML பில்டர் ஒரு சூழல் அகராதியை உருவாக்கியபோது "
+"உமிழப்படும் - இது சூழலில் தனிப்பயன் கூறுகளைச் சேர்க்க இது "
+"பயன்படுத்தப்படலாம்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:387
+msgid ""
+"The *pagename* argument is the canonical name of the page being rendered, "
+"that is, without ``.html`` suffix and using slashes as path separators. The "
+"*templatename* is the name of the template to render, this will be "
+"``'page.html'`` for all pages from reStructuredText documents."
+msgstr ""
+"*பக்கப்பெயர்* உரையாடல் என்பது வழங்குதல் செய்யப்படும் பக்கத்தின் நியமனப் "
+"பெயராகும், அதாவது ``.html`` பின்னொட்டு இல்லாமல் மற்றும் பாதை பிரிப்பான்களாக "
+"ச்லாச்களைப் பயன்படுத்துகிறது. *டெம்ப்ளேட் பெயர்* என்பது வழங்குவதற்கான "
+"டெம்ப்ளேட்டின் பெயர், இது மறுகட்டமைக்கப்பட்ட உரை ஆவணங்களிலிருந்து எல்லா "
+"பக்கங்களுக்கும் ``'page.html'`` ஆக இருக்கும்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:392
+msgid ""
+"The *context* argument is a dictionary of values that are given to the "
+"template engine to render the page and can be modified to include custom "
+"values."
+msgstr ""
+"*சூழல்* வாதமானது, பக்கத்தை வழங்க டெம்ப்ளேட் எஞ்சினுக்கு வழங்கப்படும் "
+"மதிப்புகளின் அகராதியாகும், மேலும் தனிப்பயன் மதிப்புகளைச் சேர்க்க "
+"மாற்றியமைக்கலாம்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:396
+msgid ""
+"The *doctree* argument will be a doctree when the page is created from a "
+"reStructuredText documents; it will be ``None`` when the page is created "
+"from an HTML template alone."
+msgstr ""
+"மறுசீரமைக்கப்பட்ட உரை ஆவணங்களிலிருந்து பக்கத்தை உருவாக்கும்போது *டாக்ட்ரீ* "
+"உரையாடல் ஒரு கோட்பாடாக இருக்கும்; ஒரு உஉகுமொ டெம்ப்ளேட்டிலிருந்து மட்டும் "
+"பக்கத்தை உருவாக்கும்போது அது ``ஒன்றுமில்லை`` ஆக இருக்கும்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:400
+msgid ""
+"You can return a string from the handler, it will then replace "
+"``'page.html'`` as the HTML template for this page."
+msgstr ""
+"நீங்கள் கையாளுபவரிடமிருந்து ஒரு சரத்தை திருப்பித் தரலாம், பின்னர் அது `` "
+"'பக்கம்.ஹெச்.டி.எம்.எல்'`` `இந்த பக்கத்திற்கான HTML வார்ப்புருவாக "
+"மாற்றப்படும்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:405
+msgid ""
+"You can install JS/CSS files for the specific page via "
+":meth:`.Sphinx.add_js_file` and :meth:`.Sphinx.add_css_file` (since v3.5.0)."
+msgstr ""
+"குறிப்பிட்ட பக்கத்திற்கான JS/CSS கோப்புகளை :meth:`.Sphinx.add_js_file` "
+"மற்றும் :meth:`.Sphinx.add_css_file` (v3.5.0 முதல்) வழியாக நிறுவலாம்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:411
+msgid "The return value can now specify a template name."
+msgstr "வருவாய் மதிப்பு இப்போது ஒரு வார்ப்புரு பெயரைக் குறிப்பிடலாம்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:417
+msgid "``str`` of the collected URI"
+msgstr "சேகரிக்கப்பட்ட யூரி இன் ``str``"
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:420
+msgid "Emitted when the linkcheck builder collects hyperlinks from document."
+msgstr ""
+"இணைப்புச் சரிபார்ப்பு பில்டர் ஆவணத்திலிருந்து ஐப்பர்லிங்க்களைச் சேகரிக்கும் "
+"போது உமிழப்படும்."
+
+#: ../../sphinx/doc/extdev/event_callbacks.rst:422
+msgid "The event handlers can modify the URI by returning a string."
+msgstr "நிகழ்வைக் கையாளுபவர்கள் ஒரு சரத்தை வழங்குவதன் மூலம் யூரி ஐ மாற்றலாம்."

@@ -1,15 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2007-2023, the Sphinx developers
+# Copyright (C) 2007-2025, the Sphinx developers
 # This file is distributed under the same license as the Sphinx package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2025
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 7.3.0\n"
+"Project-Id-Version: Sphinx 8.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-15 00:35+0000\n"
-"PO-Revision-Date: 2025-06-14 06:57\n"
+"POT-Creation-Date: 2025-02-24 00:54+0000\n"
+"PO-Revision-Date: 2025-11-22 21:59\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2025\n"
 "Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +21,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/usage/extensions/extlinks.rst:10
+#: ../../sphinx/doc/usage/extensions/extlinks.rst:2
+msgid ":mod:`sphinx.ext.extlinks` -- Markup to shorten external links"
+msgstr ""
+": மோட்: `sphinx.ext.extlinks` - வெளிப்புற இணைப்புகளை குறைக்க மார்க்அப்"
+
+#: ../../sphinx/doc/usage/extensions/extlinks.rst:13
 msgid ""
 "This extension is meant to help with the common pattern of having many "
 "external links that point to URLs on one and the same site, e.g. links to "
@@ -33,7 +42,7 @@ msgstr ""
 "செய்கிறது, இதன்மூலம் ஒரு இணைப்பை உருவாக்கும் போது மட்டுமே நீங்கள் துணைப் "
 "பெயரை வழங்க வேண்டும்."
 
-#: ../../sphinx/doc/usage/extensions/extlinks.rst:16
+#: ../../sphinx/doc/usage/extensions/extlinks.rst:19
 msgid ""
 "Let's assume that you want to include many links to issues at the Sphinx "
 "tracker, at :samp:`https://github.com/sphinx-doc/sphinx/issues/{num}`.  "
@@ -46,16 +55,19 @@ msgstr ""
 "தட்டச்சு செய்வது கடினமானது, எனவே நீங்கள் பயன்படுத்தலாம்: மோட்: `~ "
 "sphinx.ext.extlinks` உங்களை மீண்டும் செய்வதைத் தவிர்க்க."
 
-#: ../../sphinx/doc/usage/extensions/extlinks.rst:2
-msgid ":mod:`sphinx.ext.extlinks` -- Markup to shorten external links"
-msgstr ""
-": மோட்: `sphinx.ext.extlinks` - வெளிப்புற இணைப்புகளை குறைக்க மார்க்அப்"
-
-#: ../../sphinx/doc/usage/extensions/extlinks.rst:21
+#: ../../sphinx/doc/usage/extensions/extlinks.rst:24
 msgid "The extension adds a config value:"
 msgstr "நீட்டிப்பு ஒரு கட்டமைப்பு மதிப்பைச் சேர்க்கிறது:"
 
-#: ../../sphinx/doc/usage/extensions/extlinks.rst:25
+#: ../../sphinx/doc/usage/extensions/extlinks.rst:0
+msgid "Type"
+msgstr "வகை"
+
+#: ../../sphinx/doc/usage/extensions/extlinks.rst:0
+msgid "Default"
+msgstr "இயல்புநிலை"
+
+#: ../../sphinx/doc/usage/extensions/extlinks.rst:30
 msgid ""
 "This config value must be a dictionary of external sites, mapping unique "
 "short alias names to a *base URL* and a *caption*.  For example, to create "
@@ -67,7 +79,7 @@ msgstr ""
 "குறிப்பிட்டுள்ள சிக்கல்களுக்கு ஒரு மாற்றுப்பெயரை உருவாக்க, நீங்கள் "
 "சேர்ப்பீர்கள் ::"
 
-#: ../../sphinx/doc/usage/extensions/extlinks.rst:32
+#: ../../sphinx/doc/usage/extensions/extlinks.rst:37
 msgid ""
 "Now, you can use the alias name as a new role, e.g. ``:issue:`123```.  This "
 "then inserts a link to https://github.com/sphinx-doc/sphinx/issues/123. As "
@@ -80,19 +92,19 @@ msgstr ""
 "கொடுக்கப்பட்ட இலக்கு ``%s`` இடத்தில் * அடிப்படை முகவரி * இல் "
 "மாற்றப்படுகிறது."
 
-#: ../../sphinx/doc/usage/extensions/extlinks.rst:37
+#: ../../sphinx/doc/usage/extensions/extlinks.rst:42
 msgid ""
 "The link caption depends on the second item in the tuple, the *caption*:"
 msgstr ""
 "இணைப்பு தலைப்பு டூப்பிள், *தலைப்பு *இல் உள்ள இரண்டாவது உருப்படியைப் "
 "பொறுத்தது:"
 
-#: ../../sphinx/doc/usage/extensions/extlinks.rst:39
+#: ../../sphinx/doc/usage/extensions/extlinks.rst:44
 msgid "If *caption* is ``None``, the link caption is the full URL."
 msgstr ""
 "* தலைப்பு * `` எதுவுமில்லை`` என்றால், இணைப்பு தலைப்பு முழு முகவரி ஆகும்."
 
-#: ../../sphinx/doc/usage/extensions/extlinks.rst:40
+#: ../../sphinx/doc/usage/extensions/extlinks.rst:45
 msgid ""
 "If *caption* is a string, then it must contain ``%s`` exactly once.  In this"
 " case the link caption is *caption* with the partial URL substituted for "
@@ -103,13 +115,13 @@ msgstr ""
 "பகுதி முகவரி உடன் - மேலே உள்ள எடுத்துக்காட்டில், இணைப்பு தலைப்பு `` வெளியீடு"
 " 123`` ஆக இருக்கும்."
 
-#: ../../sphinx/doc/usage/extensions/extlinks.rst:45
+#: ../../sphinx/doc/usage/extensions/extlinks.rst:50
 msgid ""
 "To produce a literal ``%`` in either *base URL* or *caption*, use ``%%``::"
 msgstr ""
 "*அடிப்படை முகவரி *அல்லது *தலைப்பில் *ஒரு நேரடி ``%`` ஐ உருவாக்க, `` %% `` ::"
 
-#: ../../sphinx/doc/usage/extensions/extlinks.rst:50
+#: ../../sphinx/doc/usage/extensions/extlinks.rst:55
 msgid ""
 "You can also use the usual \"explicit title\" syntax supported by other "
 "roles that generate links, i.e. ``:issue:`this issue <123>```.  In this "
@@ -119,11 +131,11 @@ msgstr ""
 "\"வெளிப்படையான தலைப்பு\" தொடரியல், அதாவது ``: வெளியீடு: `இந்த சிக்கல் <123>`"
 " `` ஆகியவற்றைப் பயன்படுத்தலாம். இந்த வழக்கில், * தலைப்பு * பொருந்தாது."
 
-#: ../../sphinx/doc/usage/extensions/extlinks.rst:56
+#: ../../sphinx/doc/usage/extensions/extlinks.rst:61
 msgid "Support to substitute by '%s' in the caption."
 msgstr "தலைப்பில் '%s' ஆல் மாற்றுவதற்கான உதவி."
 
-#: ../../sphinx/doc/usage/extensions/extlinks.rst:60
+#: ../../sphinx/doc/usage/extensions/extlinks.rst:65
 msgid ""
 "Since links are generated from the role in the reading stage, they appear as"
 " ordinary links to e.g. the ``linkcheck`` builder."
@@ -131,12 +143,11 @@ msgstr ""
 "வாசிப்பு கட்டத்தில் பங்கிலிருந்து இணைப்புகள் உருவாக்கப்படுவதால், அவை எ.கா. "
 "`` லிங்க் செக்`` பில்டர்."
 
-#: ../../sphinx/doc/usage/extensions/extlinks.rst:65
+#: ../../sphinx/doc/usage/extensions/extlinks.rst:72
 msgid ""
 "If enabled, extlinks emits a warning if a hardcoded link is replaceable by "
-"an extlink, and suggests a replacement via warning.  It defaults to "
-"``False``."
+"an extlink, and suggests a replacement via warning."
 msgstr ""
-"இயக்கப்பட்டால், ஆர்ட்கோட் செய்யப்பட்ட இணைப்பு ஒரு எக்ச்ட்லிங்க் மூலம் "
-"மாற்றப்பட்டால், எச்சரிக்கை வழியாக மாற்றுவதை பரிந்துரைக்கிறது. இது "
-"இயல்புநிலையாக `` false``."
+"இயக்கப்பட்டால், ஆர்ட்கோட் செய்யப்பட்ட இணைப்பை எக்ச்ட்லிங்கால் மாற்றினால், "
+"எக்ச்ட்லிங்க்ச் எச்சரிக்கையை வெளியிடுகிறது, மேலும் முன்னறிவிப்பு மூலம் "
+"மாற்றியமைக்க பரிந்துரைக்கிறது."

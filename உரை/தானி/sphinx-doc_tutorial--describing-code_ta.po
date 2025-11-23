@@ -1,15 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2007-2023, the Sphinx developers
+# Copyright (C) 2007-2025, the Sphinx developers
 # This file is distributed under the same license as the Sphinx package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2023
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 7.3.0\n"
+"Project-Id-Version: Sphinx 8.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-03 00:36+0000\n"
-"PO-Revision-Date: 2022-03-06 06:35+0000\n"
+"POT-Creation-Date: 2025-02-24 00:54+0000\n"
+"PO-Revision-Date: 2025-11-17 09:34\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2023\n"
 "Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
@@ -17,10 +21,57 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../sphinx/doc/tutorial/describing-code.rst:101
-msgid "Then, add this exception to the original description of the function:"
+#: ../../sphinx/doc/tutorial/describing-code.rst:2
+msgid "Describing code in Sphinx"
+msgstr "ஸ்பிங்க்ஸில் குறியீட்டை விவரிக்கிறது"
+
+#: ../../sphinx/doc/tutorial/describing-code.rst:4
+msgid ""
+"In the :doc:`previous sections of the tutorial </tutorial/index>` you can "
+"read how to write narrative or prose documentation in Sphinx. In this "
+"section you will describe code objects instead."
 msgstr ""
-"பின்னர், செயல்பாட்டின் அசல் விளக்கத்திற்கு இந்த விதிவிலக்கைச் சேர்க்கவும்:"
+"இல்: டாக்: `டுடோரியலின் முந்தைய பிரிவுகள் </டுடோரியல்/குறியீட்டு>` "
+"ஸ்பிங்க்ஸில் கதை அல்லது உரைநடை ஆவணங்களை எவ்வாறு எழுதுவது என்பதை நீங்கள் "
+"படிக்கலாம். இந்த பிரிவில் நீங்கள் அதற்கு பதிலாக குறியீடு பொருள்களை "
+"விவரிப்பீர்கள்."
+
+#: ../../sphinx/doc/tutorial/describing-code.rst:8
+msgid ""
+"Sphinx supports documenting code objects in several languages, namely "
+"Python, C, C++, JavaScript, and reStructuredText. Each of them can be "
+"documented using a series of directives and roles grouped by :doc:`domain "
+"</usage/domains/index>`. For the remainder of the tutorial you will use the "
+"Python domain, but all the concepts seen in this section apply for the other"
+" domains as well."
+msgstr ""
+"பைதான், சி, சி ++, ஜாவாஸ்கிரிப்ட் மற்றும் மறுசீரமைப்பு டெக்ஸ்ட் போன்ற பல "
+"மொழிகளில் குறியீடு பொருள்களை ஆவணப்படுத்த SPHINX ஆதரிக்கிறது. அவை "
+"ஒவ்வொன்றையும் தொடர்ச்சியான வழிமுறைகள் மற்றும் பாத்திரங்களைப் பயன்படுத்தி "
+"ஆவணப்படுத்தலாம்: டாக்: `டொமைன் </பயன்பாடு/களங்கள்/குறியீட்டு>`. டுடோரியலின் "
+"எஞ்சிய பகுதிக்கு நீங்கள் பைதான் டொமைனைப் பயன்படுத்துவீர்கள், ஆனால் இந்த "
+"பிரிவில் காணப்படும் அனைத்து கருத்துக்களும் மற்ற களங்களுக்கும் பொருந்தும்."
+
+#: ../../sphinx/doc/tutorial/describing-code.rst:18
+msgid "Python"
+msgstr "பைதான்"
+
+#: ../../sphinx/doc/tutorial/describing-code.rst:21
+msgid "Documenting Python objects"
+msgstr "பைதான் பொருள்களை ஆவணப்படுத்துதல்"
+
+#: ../../sphinx/doc/tutorial/describing-code.rst:23
+msgid ""
+"Sphinx offers several roles and directives to document Python objects, all "
+"grouped together in :doc:`the Python domain </usage/domains/python>`. For "
+"example, you can use the :rst:dir:`py:function` directive to document a "
+"Python function, as follows:"
+msgstr ""
+"பைதான் பொருள்களை ஆவணப்படுத்த ஸ்பின்க்ஸ் பல பாத்திரங்களையும் வழிமுறைகளையும் "
+"வழங்குகிறது, இவை அனைத்தும் ஒன்றாக தொகுக்கப்பட்டுள்ளன: டாக்: `பைதான் டொமைன் "
+"</பயன்பாடு/களங்கள்/பைதான்>`. எடுத்துக்காட்டாக, நீங்கள்: rst: dir: `py: "
+"செயல்பாடு` ஒரு பைதான் செயல்பாட்டை ஆவணப்படுத்த உத்தரவு பின்வருமாறு: "
+"பின்வருமாறு:"
 
 #: ../../sphinx/doc/tutorial/describing-code.rst:28
 #: ../../sphinx/doc/tutorial/describing-code.rst:81
@@ -28,26 +79,112 @@ msgstr ""
 #: ../../sphinx/doc/tutorial/describing-code.rst:103
 #: ../../sphinx/doc/tutorial/describing-code.rst:173
 msgid "docs/source/usage.rst"
-msgstr "டாக்ச்/மூல/பயன்பாடு"
+msgstr "டாக்ஸ்/மூல/பயன்பாடு"
+
+#: ../../sphinx/doc/tutorial/describing-code.rst:46
+msgid "Which will render like this:"
+msgstr "இது இதுபோன்றதாக இருக்கும்:"
+
+#: ../../sphinx/doc/tutorial/describing-code.rst:48
+msgid "HTML result of documenting a Python function in Sphinx"
+msgstr "ஸ்பிங்க்ஸில் பைதான் செயல்பாட்டை ஆவணப்படுத்துவதன் HTML முடிவு"
+
+#: ../../sphinx/doc/tutorial/describing-code.rst:53
+msgid "The rendered result of documenting a Python function in Sphinx"
+msgstr ""
+"ஸ்பிங்க்ஸில் பைதான் செயல்பாட்டை ஆவணப்படுத்துவதன் மூலம் வழங்கப்பட்ட முடிவு"
+
+#: ../../sphinx/doc/tutorial/describing-code.rst:55
+msgid "Notice several things:"
+msgstr "பல விஷயங்களைக் கவனியுங்கள்:"
+
+#: ../../sphinx/doc/tutorial/describing-code.rst:57
+msgid ""
+"Sphinx parsed the argument of the ``.. py:function`` directive and "
+"highlighted the module, the function name, and the parameters appropriately."
+msgstr ""
+"ஸ்பின்க்ஸ் `` .. py: செயல்பாடு`` உத்தரவின் வாதத்தை பாகுபடுத்தி, தொகுதி, "
+"செயல்பாட்டு பெயர் மற்றும் அளவுருக்களை சரியான முறையில் முன்னிலைப்படுத்தியது."
+
+#: ../../sphinx/doc/tutorial/describing-code.rst:59
+msgid ""
+"The directive content includes a one-line description of the function, as "
+"well as an :ref:`info field list <info-field-lists>` containing the function"
+" parameter, its expected type, the return value, and the return type."
+msgstr ""
+"வழிநடத்தும் உள்ளடக்கத்தில் செயல்பாட்டின் ஒரு வரி விளக்கமும், அத்துடன் ஒரு: "
+"குறிப்பு: `தகவல் புலம் பட்டியல் <தகவல்-புல-பட்டியல்கள்>` செயல்பாட்டு அளவுரு,"
+" அதன் எதிர்பார்க்கப்படும் வகை, வருவாய் மதிப்பு மற்றும் வருவாய் வகை "
+"ஆகியவற்றைக் கொண்டுள்ளது."
+
+#: ../../sphinx/doc/tutorial/describing-code.rst:65
+msgid ""
+"The ``py:`` prefix specifies the :term:`domain`. You may configure the "
+"default domain so you can omit the prefix, either globally using the "
+":confval:`primary_domain` configuration, or use the :rst:dir:`default-"
+"domain` directive to change it from the point it is called until the end of "
+"the file. For example, if you set it to ``py`` (the default), you can write "
+"``.. function::`` directly."
+msgstr ""
+"`` Py: `` முன்னொட்டு குறிப்பிடுகிறது: கால: `டொமைன்`. நீங்கள் இயல்புநிலை "
+"களத்தை உள்ளமைக்கலாம், எனவே உலகளவில்: confval: `primal_domain` உள்ளமைவு "
+"ஆகியவற்றைப் பயன்படுத்தலாம், அல்லது: rst: dir:` இயல்புநிலை-டொமைன்` உத்தரவை "
+"அதைப் பயன்படுத்தவும் கோப்பின் முடிவு. எடுத்துக்காட்டாக, நீங்கள் அதை `` py`` "
+"(இயல்புநிலை) என அமைத்தால், நீங்கள் `` .. செயல்பாடு :: `` நேரடியாக எழுதலாம்."
+
+#: ../../sphinx/doc/tutorial/describing-code.rst:74
+msgid "Cross-referencing Python objects"
+msgstr "பைதான் பொருள்களை குறுக்கு-குறிப்பு"
+
+#: ../../sphinx/doc/tutorial/describing-code.rst:76
+msgid ""
+"By default, most of these directives generate entities that can be cross-"
+"referenced from any part of the documentation by using :ref:`a corresponding"
+" role <python-xref-roles>`. For the case of functions, you can use "
+":rst:role:`py:func` for that, as follows:"
+msgstr ""
+"இயல்பாக, இந்த உத்தரவுகளில் பெரும்பாலானவை :ref:`a தொடர்புடைய பாத்திரம் "
+"<python-xref-roles>` ஐப் பயன்படுத்தி ஆவணத்தின் எந்தப் பகுதியிலிருந்தும் "
+"குறுக்கு-குறிப்பிடக்கூடிய நிறுவனங்களை உருவாக்குகின்றன. செயல்பாடுகளின் "
+"விசயத்தில், நீங்கள் பின்வருமாறு:rst:role:`py:func` ஐப் பயன்படுத்தலாம்:"
+
+#: ../../sphinx/doc/tutorial/describing-code.rst:88
+msgid ""
+"When generating code documentation, Sphinx will generate a cross-reference "
+"automatically just by using the name of the object, without you having to "
+"explicitly use a role for that. For example, you can describe the custom "
+"exception raised by the function using the :rst:dir:`py:exception` "
+"directive:"
+msgstr ""
+"குறியீடு ஆவணங்களை உருவாக்கும் போது, நீங்கள் ஒரு பாத்திரத்தை வெளிப்படையாகப் "
+"பயன்படுத்தாமல், பொருளின் பெயரைப் பயன்படுத்துவதன் மூலம் SPHINX தானாக ஒரு "
+"குறுக்கு-குறிப்பை உருவாக்கும். எடுத்துக்காட்டாக, செயல்பாட்டால் எழுப்பப்பட்ட "
+"தனிப்பயன் விதிவிலக்கை நீங்கள் விவரிக்கலாம்: rst: dir: `py: விதிவிலக்கு` "
+"உத்தரவு:"
+
+#: ../../sphinx/doc/tutorial/describing-code.rst:101
+msgid "Then, add this exception to the original description of the function:"
+msgstr ""
+"பின்னர், செயல்பாட்டின் அசல் விளக்கத்திற்கு இந்த விதிவிலக்கைச் சேர்க்கவும்:"
 
 #: ../../sphinx/doc/tutorial/describing-code.rst:117
 msgid "And finally, this is how the result would look:"
 msgstr "இறுதியாக, இதன் விளைவாக இப்படித்தான் இருக்கும்:"
 
-#: ../../sphinx/doc/tutorial/describing-code.rst:125
+#: ../../sphinx/doc/tutorial/describing-code.rst:119
 msgid ""
 "HTML result of documenting a Python function in Sphinx\n"
 "with cross-references"
 msgstr ""
-"ச்பிங்க்சில் பைதான் செயல்பாட்டை ஆவணப்படுத்துவதன் html முடிவு \n"
+"ஸ்பிங்க்ஸில் பைதான் செயல்பாட்டை ஆவணப்படுத்துவதன் HTML முடிவு \n"
 " குறுக்கு குறிப்புகளுடன்"
 
 #: ../../sphinx/doc/tutorial/describing-code.rst:125
 msgid ""
 "HTML result of documenting a Python function in Sphinx with cross-references"
 msgstr ""
-"குறுக்கு குறிப்புகளுடன் ச்பிங்க்சில் பைதான் செயல்பாட்டை ஆவணப்படுத்துவதன் "
-"விளைவாக html முடிவு"
+"குறுக்கு குறிப்புகளுடன் ஸ்பிங்க்ஸில் பைதான் செயல்பாட்டை ஆவணப்படுத்துவதன் "
+"விளைவாக HTML முடிவு"
 
 #: ../../sphinx/doc/tutorial/describing-code.rst:127
 msgid "Beautiful, isn't it?"
@@ -67,8 +204,8 @@ msgid ""
 msgstr ""
 "பைதான் நூலகத்திலிருந்து நீங்கள் இப்போது குறியீட்டை விவரிப்பதால், ஆவணங்கள் "
 "மற்றும் குறியீடு இரண்டையும் முடிந்தவரை ஒத்திசைக்கப்படுவது பயனுள்ளதாக "
-"இருக்கும். சூரரிமாச்சிலை இல் அதைச் செய்வதற்கான வழிகளில் ஒன்று, ஆவணங்கள் "
-"கட்டமைக்கப்படும்போது செயல்படுத்தப்படும் *doctests *எனப்படும் ஆவணங்களில் "
+"இருக்கும். SPHINX இல் அதைச் செய்வதற்கான வழிகளில் ஒன்று, ஆவணங்கள் "
+"கட்டமைக்கப்படும்போது செயல்படுத்தப்படும் *Doctests *எனப்படும் ஆவணங்களில் "
 "குறியீடு துணுக்குகளைச் சேர்ப்பது."
 
 #: ../../sphinx/doc/tutorial/describing-code.rst:138
@@ -77,14 +214,14 @@ msgid ""
 "Sphinx will need to be able to import the code. To achieve that, write this "
 "at the beginning of ``conf.py``:"
 msgstr ""
-"இந்த டுடோரியலில் உள்ளடக்கப்பட்ட ஆவணங்கள் மற்றும் பிற சூரரிமாச்சிலை அம்சங்களை"
-" நிரூபிக்க, சூரரிமாச்சிலை குறியீட்டை இறக்குமதி செய்ய முடியும். அதை அடைய, `` "
+"இந்த டுடோரியலில் உள்ளடக்கப்பட்ட ஆவணங்கள் மற்றும் பிற ஸ்பிங்க்ஸ் அம்சங்களை "
+"நிரூபிக்க, ஸ்பிங்க்ஸ் குறியீட்டை இறக்குமதி செய்ய முடியும். அதை அடைய, `` "
 "conf.py`` இன் தொடக்கத்தில் இதை எழுதுங்கள்:"
 
 #: ../../sphinx/doc/tutorial/describing-code.rst:142
 #: ../../sphinx/doc/tutorial/describing-code.rst:162
 msgid "docs/source/conf.py"
-msgstr "டாக்ச்/மூல/conf.py"
+msgstr "டாக்ஸ்/மூல/conf.py"
 
 #: ../../sphinx/doc/tutorial/describing-code.rst:154
 msgid ""
@@ -92,7 +229,7 @@ msgid ""
 "``pyproject.toml`` file and make the code installable, so it behaves like "
 "any other Python library. However, the ``sys.path`` approach is simpler."
 msgstr ""
-"மாற்றுவதற்கான மாற்று: py: தரவு: `sys.bath` மாறி என்பது` `pyproject.toml`` "
+"மாற்றுவதற்கான மாற்று: PY: தரவு: `sys.bath` மாறி என்பது` `pyproject.toml`` "
 "கோப்பை உருவாக்கி குறியீட்டை நிறுவக்கூடியதாக மாற்றுவதாகும், எனவே இது வேறு "
 "எந்த பைதான் நூலகத்தையும் போலவே செயல்படுகிறது. இருப்பினும், `` sys.bath`` "
 "அணுகுமுறை எளிமையானது."
@@ -102,16 +239,12 @@ msgid ""
 "Then, before adding doctests to your documentation, enable the :doc:`doctest"
 " </usage/extensions/doctest>` extension in ``conf.py``:"
 msgstr ""
-"பின்னர், உங்கள் ஆவணங்களில் ஆவணங்களைச் சேர்ப்பதற்கு முன்,: doc: `doctest "
-"</useage/extensions/doctest>` `conf.py`` இல் நீட்டிப்பு:"
+"பின்னர், உங்கள் ஆவணங்களில் ஆவணங்களைச் சேர்ப்பதற்கு முன்,: Doc: `Doctest "
+"</Useage/extensions/Doctest>` `conf.py`` இல் நீட்டிப்பு:"
 
 #: ../../sphinx/doc/tutorial/describing-code.rst:171
 msgid "Next, write a doctest block as follows:"
 msgstr "அடுத்து, பின்வருமாறு ஒரு ஆவணத் தொகுதியை எழுதுங்கள்:"
-
-#: ../../sphinx/doc/tutorial/describing-code.rst:18
-msgid "Python"
-msgstr "பைதான்"
 
 #: ../../sphinx/doc/tutorial/describing-code.rst:180
 msgid ""
@@ -123,7 +256,7 @@ msgstr ""
 "`` >>> ``, நிலையான பைதான் மொழிபெயர்ப்பாளர் வரியில், அத்துடன் ஒவ்வொரு "
 "அறிவுறுத்தலின் எதிர்பார்க்கப்படும் வெளியீடும் முன்னால் இயக்க வேண்டிய பைதான் "
 "வழிமுறைகளை ஆவணங்கள் உள்ளடக்குகின்றன. இந்த வழியில், உண்மையான வெளியீடு "
-"எதிர்பார்த்த ஒன்றோடு பொருந்துமா என்பதை ச்பின்க்ச் சரிபார்க்கலாம்."
+"எதிர்பார்த்த ஒன்றோடு பொருந்துமா என்பதை ஸ்பின்க்ஸ் சரிபார்க்கலாம்."
 
 #: ../../sphinx/doc/tutorial/describing-code.rst:185
 msgid ""
@@ -138,7 +271,7 @@ msgstr ""
 #: ../../sphinx/doc/tutorial/describing-code.rst:189
 #: ../../sphinx/doc/tutorial/describing-code.rst:224
 msgid "lumache.py"
-msgstr ""
+msgstr "lumache.py"
 
 #: ../../sphinx/doc/tutorial/describing-code.rst:195
 msgid ""
@@ -146,43 +279,22 @@ msgid ""
 "documentation. Initially this will display an error, since the actual code "
 "does not behave as specified:"
 msgstr ""
-"உங்கள் ஆவணங்களின் ஆவணங்களை செயல்படுத்த இப்போது `` டாக்ச்டெச்டை உருவாக்கலாம்."
+"உங்கள் ஆவணங்களின் ஆவணங்களை செயல்படுத்த இப்போது `` டாக்ஸ்டெஸ்டை உருவாக்கலாம்."
 " ஆரம்பத்தில் இது ஒரு பிழையைக் காண்பிக்கும், ஏனெனில் உண்மையான குறியீடு "
 "குறிப்பிட்டபடி செயல்படாது:"
-
-#: ../../sphinx/doc/tutorial/describing-code.rst:2
-msgid "Describing code in Sphinx"
-msgstr "ச்பிங்க்சில் குறியீட்டை விவரிக்கிறது"
-
-#: ../../sphinx/doc/tutorial/describing-code.rst:21
-msgid "Documenting Python objects"
-msgstr "பைதான் பொருள்களை ஆவணப்படுத்துதல்"
 
 #: ../../sphinx/doc/tutorial/describing-code.rst:221
 msgid ""
 "As you can see, doctest reports the expected and the actual results, for "
 "easy examination. It is now time to fix the function:"
 msgstr ""
-"நீங்கள் பார்க்க முடியும் என, டாக்ச்டெச்ட் எதிர்பார்த்த மற்றும் உண்மையான "
+"நீங்கள் பார்க்க முடியும் என, டாக்ஸ்டெஸ்ட் எதிர்பார்த்த மற்றும் உண்மையான "
 "முடிவுகளை எளிதாக பரிசோதிக்க தெரிவிக்கிறது. செயல்பாட்டை சரிசெய்ய இப்போது "
 "நேரம் வந்துவிட்டது:"
 
-#: ../../sphinx/doc/tutorial/describing-code.rst:23
-msgid ""
-"Sphinx offers several roles and directives to document Python objects, all "
-"grouped together in :doc:`the Python domain </usage/domains/python>`. For "
-"example, you can use the :rst:dir:`py:function` directive to document a "
-"Python function, as follows:"
-msgstr ""
-"பைதான் பொருள்களை ஆவணப்படுத்த ச்பின்க்ச் பல பாத்திரங்களையும் வழிமுறைகளையும் "
-"வழங்குகிறது, இவை அனைத்தும் ஒன்றாக தொகுக்கப்பட்டுள்ளன: டாக்: `பைதான் டொமைன் "
-"</பயன்பாடு/களங்கள்/பைதான்>`. எடுத்துக்காட்டாக, நீங்கள்: rst: dir: `py: "
-"செயல்பாடு` ஒரு பைதான் செயல்பாட்டை ஆவணப்படுத்த கட்டளை பின்வருமாறு: "
-"பின்வருமாறு:"
-
 #: ../../sphinx/doc/tutorial/describing-code.rst:231
-msgid "And finally, ``make test`` reports success!"
-msgstr "இறுதியாக, `` சோதனை `` வெற்றியைப் புகாரளிக்கவும்!"
+msgid "And finally, ``make doctest`` reports success!"
+msgstr "இறுதியாக, ``மேக் டாக்டெச்ட்`` வெற்றியைப் பதிவு செய்கிறது!"
 
 #: ../../sphinx/doc/tutorial/describing-code.rst:233
 msgid ""
@@ -210,22 +322,22 @@ msgid ""
 "domains for more languages, such as"
 msgstr ""
 "பிற நிரலாக்க மொழிகளில் எழுதப்பட்ட பொருள்களை ஆவணப்படுத்துவதற்கும் "
-"குறுக்கு-குறிப்பு வழங்குவதையும் சூரரிமாச்சிலை ஆதரிக்கிறது. சி, சி ++, "
-"சாவாச்கிரிப்ட் மற்றும் மறுசீரமைப்பு டெக்ச்ட் நான்கு கூடுதல் உள்ளமைக்கப்பட்ட "
+"குறுக்கு-குறிப்பு வழங்குவதையும் SPHINX ஆதரிக்கிறது. சி, சி ++, "
+"ஜாவாஸ்கிரிப்ட் மற்றும் மறுசீரமைப்பு டெக்ஸ்ட் நான்கு கூடுதல் உள்ளமைக்கப்பட்ட "
 "களங்கள் உள்ளன. மூன்றாம் தரப்பு நீட்டிப்புகள் போன்ற பல மொழிகளுக்கான களங்களை "
 "வரையறுக்கலாம்"
 
 #: ../../sphinx/doc/tutorial/describing-code.rst:248
 msgid "`Fortran <https://sphinx-fortran.readthedocs.io>`_,"
-msgstr "`fortran <https://sphinx-fortran.readthedocs.io>` _,"
+msgstr "`Fortran <https://sphinx-fortran.readthedocs.io>` _,"
 
 #: ../../sphinx/doc/tutorial/describing-code.rst:249
-msgid "`Julia <http://bastikr.github.io/sphinx-julia>`_, or"
-msgstr "`சூலியா <http://bastikr.github.io/sphinx- சூலியா>` _, அல்லது"
+msgid "`Julia <https://bastikr.github.io/sphinx-julia>`_, or"
+msgstr "`சூலியா <https://bastikr.github.io/sphinx-julia>`_, அல்லது"
 
 #: ../../sphinx/doc/tutorial/describing-code.rst:250
 msgid "`PHP <https://github.com/markstory/sphinxcontrib-phpdomain>`_."
-msgstr "`php <https://github.com/markstory/sphinxcontrib-phpdomain>` _."
+msgstr "`Php <https://github.com/markstory/sphinxcontrib-phpdomain>` _."
 
 #: ../../sphinx/doc/tutorial/describing-code.rst:252
 msgid ""
@@ -260,113 +372,5 @@ msgid ""
 "Which would produce a hyperlink to the previous definition: "
 ":cpp:type:`CustomList`."
 msgstr ""
-"இது முந்தைய வரையறைக்கு ஒரு ஐப்பர்லிங்கை உருவாக்கும் :: சிபிபி: வகை: "
+"இது முந்தைய வரையறைக்கு ஒரு ஹைப்பர்லிங்கை உருவாக்கும் :: சிபிபி: வகை: "
 "`தனிப்பயன் பட்டியல்`."
-
-#: ../../sphinx/doc/tutorial/describing-code.rst:4
-msgid ""
-"In the :doc:`previous sections of the tutorial </tutorial/index>` you can "
-"read how to write narrative or prose documentation in Sphinx. In this "
-"section you will describe code objects instead."
-msgstr ""
-"இல்: டாக்: `டுடோரியலின் முந்தைய பிரிவுகள் </டுடோரியல்/குறியீட்டு>` "
-"ச்பிங்க்சில் கதை அல்லது உரைநடை ஆவணங்களை எவ்வாறு எழுதுவது என்பதை நீங்கள் "
-"படிக்கலாம். இந்த பிரிவில் நீங்கள் அதற்கு பதிலாக குறியீடு பொருள்களை "
-"விவரிப்பீர்கள்."
-
-#: ../../sphinx/doc/tutorial/describing-code.rst:46
-msgid "Which will render like this:"
-msgstr "இது இதுபோன்றதாக இருக்கும்:"
-
-#: ../../sphinx/doc/tutorial/describing-code.rst:53
-msgid "HTML result of documenting a Python function in Sphinx"
-msgstr "ச்பிங்க்சில் பைதான் செயல்பாட்டை ஆவணப்படுத்துவதன் html முடிவு"
-
-#: ../../sphinx/doc/tutorial/describing-code.rst:53
-msgid "The rendered result of documenting a Python function in Sphinx"
-msgstr ""
-"ச்பிங்க்சில் பைதான் செயல்பாட்டை ஆவணப்படுத்துவதன் மூலம் வழங்கப்பட்ட முடிவு"
-
-#: ../../sphinx/doc/tutorial/describing-code.rst:55
-msgid "Notice several things:"
-msgstr "பல விசயங்களைக் கவனியுங்கள்:"
-
-#: ../../sphinx/doc/tutorial/describing-code.rst:57
-msgid ""
-"Sphinx parsed the argument of the ``.. py:function`` directive and "
-"highlighted the module, the function name, and the parameters appropriately."
-msgstr ""
-"ச்பின்க்ச் `` .. py: செயல்பாடு`` உத்தரவின் வாதத்தை பாகுபடுத்தி, தொகுதி, "
-"செயல்பாட்டு பெயர் மற்றும் அளவுருக்களை சரியான முறையில் முன்னிலைப்படுத்தியது."
-
-#: ../../sphinx/doc/tutorial/describing-code.rst:59
-msgid ""
-"The directive content includes a one-line description of the function, as "
-"well as an :ref:`info field list <info-field-lists>` containing the function"
-" parameter, its expected type, the return value, and the return type."
-msgstr ""
-"வழிநடத்தும் உள்ளடக்கத்தில் செயல்பாட்டின் ஒரு வரி விளக்கமும், அத்துடன் ஒரு: "
-"குறிப்பு: `தகவல் புலம் பட்டியல் <தகவல்-புல-பட்டியல்கள்>` செயல்பாட்டு அளவுரு,"
-" அதன் எதிர்பார்க்கப்படும் வகை, வருவாய் மதிப்பு மற்றும் வருவாய் வகை "
-"ஆகியவற்றைக் கொண்டுள்ளது."
-
-#: ../../sphinx/doc/tutorial/describing-code.rst:65
-msgid ""
-"The ``py:`` prefix specifies the :term:`domain`. You may configure the "
-"default domain so you can omit the prefix, either globally using the "
-":confval:`primary_domain` configuration, or use the :rst:dir:`default-"
-"domain` directive to change it from the point it is called until the end of "
-"the file. For example, if you set it to ``py`` (the default), you can write "
-"``.. function::`` directly."
-msgstr ""
-"`` py: `` முன்னொட்டு குறிப்பிடுகிறது: கால: `டொமைன்`. நீங்கள் இயல்புநிலை "
-"களத்தை உள்ளமைக்கலாம், எனவே உலகளவில்: confval: `primal_domain` உள்ளமைவு "
-"ஆகியவற்றைப் பயன்படுத்தலாம், அல்லது: rst: dir:` இயல்புநிலை-டொமைன்` உத்தரவை "
-"அதைப் பயன்படுத்தவும் கோப்பின் முடிவு. எடுத்துக்காட்டாக, நீங்கள் அதை `` py`` "
-"(இயல்புநிலை) என அமைத்தால், நீங்கள் `` .. செயல்பாடு :: `` நேரடியாக எழுதலாம்."
-
-#: ../../sphinx/doc/tutorial/describing-code.rst:74
-msgid "Cross-referencing Python objects"
-msgstr "பைதான் பொருள்களை குறுக்கு-குறிப்பு"
-
-#: ../../sphinx/doc/tutorial/describing-code.rst:76
-msgid ""
-"By default, most of these directives generate entities that can be cross-"
-"referenced from any part of the documentation by using :ref:`a corresponding"
-" role <python-roles>`. For the case of functions, you can use "
-":rst:role:`py:func` for that, as follows:"
-msgstr ""
-"இயல்பாக, இந்த வழிமுறைகளில் பெரும்பாலானவை ஆவணங்களின் எந்தப் பகுதியிலிருந்தும்"
-" குறுக்கு-குறிப்பிடக்கூடிய நிறுவனங்களை உருவாக்குகின்றன: குறிப்பு: "
-"`தொடர்புடைய பங்கு <பைதான்-ரோல்ச்>`. செயல்பாடுகளின் விசயத்தில், நீங்கள் "
-"பயன்படுத்தலாம்: rst: பங்கு: `py: func` அதற்காக பின்வருமாறு:"
-
-#: ../../sphinx/doc/tutorial/describing-code.rst:8
-msgid ""
-"Sphinx supports documenting code objects in several languages, namely "
-"Python, C, C++, JavaScript, and reStructuredText. Each of them can be "
-"documented using a series of directives and roles grouped by :doc:`domain "
-"</usage/domains/index>`. For the remainder of the tutorial you will use the "
-"Python domain, but all the concepts seen in this section apply for the other"
-" domains as well."
-msgstr ""
-"பைதான், சி, சி ++, சாவாச்கிரிப்ட் மற்றும் மறுசீரமைப்பு டெக்ச்ட் போன்ற பல "
-"மொழிகளில் குறியீடு பொருள்களை ஆவணப்படுத்த சூரரிமாச்சிலை ஆதரிக்கிறது. அவை "
-"ஒவ்வொன்றையும் தொடர்ச்சியான வழிமுறைகள் மற்றும் பாத்திரங்களைப் பயன்படுத்தி "
-"ஆவணப்படுத்தலாம்: டாக்: `டொமைன் </பயன்பாடு/களங்கள்/குறியீட்டு>`. டுடோரியலின் "
-"எஞ்சிய பகுதிக்கு நீங்கள் பைதான் டொமைனைப் பயன்படுத்துவீர்கள், ஆனால் இந்த "
-"பிரிவில் காணப்படும் அனைத்து கருத்துக்களும் மற்ற களங்களுக்கும் பொருந்தும்."
-
-#: ../../sphinx/doc/tutorial/describing-code.rst:88
-msgid ""
-"When generating code documentation, Sphinx will generate a cross-reference "
-"automatically just by using the name of the object, without you having to "
-"explicitly use a role for that. For example, you can describe the custom "
-"exception raised by the function using the :rst:dir:`py:exception` "
-"directive:"
-msgstr ""
-"குறியீடு ஆவணங்களை உருவாக்கும் போது, நீங்கள் ஒரு பாத்திரத்தை வெளிப்படையாகப் "
-"பயன்படுத்தாமல், பொருளின் பெயரைப் பயன்படுத்துவதன் மூலம் சூரரிமாச்சிலை தானாக "
-"ஒரு குறுக்கு-குறிப்பை உருவாக்கும். எடுத்துக்காட்டாக, செயல்பாட்டால் "
-"எழுப்பப்பட்ட தனிப்பயன் விதிவிலக்கை நீங்கள் விவரிக்கலாம்: rst: dir: `py: "
-"விதிவிலக்கு` உத்தரவு:"

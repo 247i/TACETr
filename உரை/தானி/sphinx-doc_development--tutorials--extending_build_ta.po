@@ -1,0 +1,622 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2025, the Sphinx developers
+# This file is distributed under the same license as the Sphinx package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2024
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx 8.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-15 06:34+0000\n"
+"PO-Revision-Date: 2025-11-16 06:48\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2024\n"
+"Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:4
+msgid "Extending the build process"
+msgstr "உருவாக்க செயல்முறையை நீட்டித்தல்"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:6
+msgid ""
+"The objective of this tutorial is to create a more comprehensive extension "
+"than that created in :ref:`tutorial-extending-syntax`. Whereas that guide "
+"just covered writing a custom :term:`role` and :term:`directive`, this guide"
+" covers a more complex extension to the Sphinx build process; adding "
+"multiple directives, along with custom nodes, additional config values and "
+"custom event handlers."
+msgstr ""
+"இந்த டுடோரியலின் நோக்கம் :ref:`tutorial-extending-syntax` இல் "
+"உருவாக்கப்பட்டதை விட விரிவான நீட்டிப்பை உருவாக்குவதே ஆகும். அந்த வழிகாட்டி "
+"தனிப்பயன் :term:`role` மற்றும் :term:`directive` ஆகியவற்றை எழுதுவதை "
+"உள்ளடக்கியது. தனிப்பயன் முனைகள், கூடுதல் கட்டமைப்பு மதிப்புகள் மற்றும் "
+"தனிப்பயன் நிகழ்வு கையாளுபவர்களுடன் பல வழிமுறைகளைச் சேர்த்தல்."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:14
+msgid ""
+"To this end, we will cover a ``todo`` extension that adds capabilities to "
+"include todo entries in the documentation, and to collect these in a central"
+" place. This is similar to the :mod:`sphinx.ext.todo` extension distributed "
+"with Sphinx."
+msgstr ""
+"இந்த நோக்கத்திற்காக, ஆவணத்தில் செய்யவேண்டிய உள்ளீடுகளைச் சேர்ப்பதற்கும், "
+"இவற்றை மைய இடத்தில் சேகரிப்பதற்கும் திறன்களைச் சேர்க்கும் ``டோடோ`` "
+"நீட்டிப்பை நாங்கள் உள்ளடக்குவோம். இது சூரரிமாச்சிலை உடன் விநியோகிக்கப்படும் "
+":mod:`sphinx.ext.todo` நீட்டிப்பைப் போன்றது."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:20
+msgid "Overview"
+msgstr "கண்ணோட்டம்"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:23
+msgid ""
+"To understand the design of this extension, refer to :ref:`important-"
+"objects` and :ref:`build-phases`."
+msgstr ""
+"இந்த நீட்டிப்பின் வடிவமைப்பைப் புரிந்து கொள்ள, பார்க்க: ref: "
+"`முக்கியமான-பொருள்கள்` மற்றும்: குறிப்பு:` பில்ட்-கட்டங்கள்`."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:26
+msgid "We want the extension to add the following to Sphinx:"
+msgstr ""
+"நீட்டிப்பு பின்வருவனவற்றைச் சேர்க்க வேண்டும் என்று நாங்கள் விரும்புகிறோம்:"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:28
+msgid ""
+"A ``todo`` directive, containing some content that is marked with \"TODO\" "
+"and only shown in the output if a new config value is set. Todo entries "
+"should not be in the output by default."
+msgstr ""
+"ஒரு `` டோடோ`` உத்தரவு, \"டோடோ\" உடன் குறிக்கப்பட்ட சில உள்ளடக்கங்களைக் "
+"கொண்டுள்ளது, மேலும் புதிய கட்டமைப்பு மதிப்பு அமைக்கப்பட்டால் மட்டுமே "
+"வெளியீட்டில் காட்டப்பட்டுள்ளது. டோடோ உள்ளீடுகள் இயல்பாக வெளியீட்டில் "
+"இருக்கக்கூடாது."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:32
+msgid ""
+"A ``todolist`` directive that creates a list of all todo entries throughout "
+"the documentation."
+msgstr ""
+"ஆவணங்கள் முழுவதும் அனைத்து டோடோ உள்ளீடுகளின் பட்டியலையும் உருவாக்கும் `` "
+"டோடோலிஸ்ட்`` உத்தரவு."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:35
+msgid "For that, we will need to add the following elements to Sphinx:"
+msgstr "அதற்காக, பின்வரும் கூறுகளை SPHINX இல் சேர்க்க வேண்டும்:"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:37
+msgid "New directives, called ``todo`` and ``todolist``."
+msgstr ""
+"புதிய வழிமுறைகள், `` டோடோ`` மற்றும் `` டோடோலிஸ்ட்`` என்று அழைக்கப்படுகின்றன."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:39
+msgid ""
+"New document tree nodes to represent these directives, conventionally also "
+"called ``todo`` and ``todolist``.  We wouldn't need new nodes if the new "
+"directives only produced some content representable by existing nodes."
+msgstr ""
+"இந்த வழிமுறைகளை பிரதிநிதித்துவப்படுத்த புதிய ஆவண மர முனைகள், வழக்கமாக `` "
+"டோடோ`` மற்றும் `` டோடோலிஸ்ட்`` என்றும் அழைக்கப்படுகின்றன. புதிய வழிமுறைகள் "
+"ஏற்கனவே இருக்கும் முனைகளால் பிரதிநிதித்துவப்படுத்தக்கூடிய சில உள்ளடக்கங்களை "
+"மட்டுமே உருவாக்கினால் எங்களுக்கு புதிய முனைகள் தேவையில்லை."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:43
+msgid ""
+"A new config value ``todo_include_todos`` (config value names should start "
+"with the extension name, in order to stay unique) that controls whether todo"
+" entries make it into the output."
+msgstr ""
+"ஒரு புதிய கட்டமைப்பு மதிப்பு `` TODO_INCLUDE_TODOS``` (கட்டமைப்பு மதிப்பு "
+"பெயர்கள் நீட்டிப்பு பெயருடன் தொடங்க வேண்டும், தனித்துவமாக இருக்க வேண்டும்) "
+"இது டோடோ உள்ளீடுகள் வெளியீட்டில் அதைச் செய்கிறதா என்பதைக் "
+"கட்டுப்படுத்துகிறது."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:47
+msgid ""
+"New event handlers: one for the :event:`doctree-resolved` event, to replace "
+"the todo and todolist nodes, one for :event:`env-merge-info` to merge "
+"intermediate results from parallel builds, and one for :event:`env-purge-"
+"doc` (the reason for that will be covered later)."
+msgstr ""
+"புதிய நிகழ்வு கையாளுபவர்கள்: ஒன்று: நிகழ்வுக்கு: `கோட்பாட்டு-தீர்க்கப்பட்ட` "
+"நிகழ்வு, டோடோ மற்றும் டோடோலிஸ்ட் முனைகளை மாற்றுவதற்கு, ஒன்று: நிகழ்வு:` "
+"என்வி-மெர்ஜ்-இன்ஃபோ` இணையான கட்டமைப்பிலிருந்து இடைநிலை முடிவுகளை ஒன்றிணைக்க,"
+" மற்றும் ஒன்று: நிகழ்வு : `என்வி-புர்ஜ்-டாக்` (அதற்கான காரணம் பின்னர் "
+"மூடப்படும்)."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:54
+msgid "Prerequisites"
+msgstr "முன்நிபந்தனைகள்"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:56
+msgid ""
+"As with :ref:`tutorial-extending-syntax`, we will not be distributing this "
+"plugin via PyPI so once again we need a Sphinx project to call this from. "
+"You can use an existing project or create a new one using :program:`sphinx-"
+"quickstart`."
+msgstr ""
+":ref:`tutorial-extending-syntax` போலவே, PyPI வழியாக இந்த செருகுநிரலை நாங்கள்"
+" விநியோகிக்க மாட்டோம், எனவே இதை அழைக்க மீண்டும் ஒரு சூரரிமாச்சிலை திட்டம் "
+"தேவை. நீங்கள் ஏற்கனவே உள்ள திட்டத்தைப் பயன்படுத்தலாம் அல்லது "
+":program:`sphinx-quickstart` ஐப் பயன்படுத்தி புதிய ஒன்றை உருவாக்கலாம்."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:61
+msgid ""
+"We assume you are using separate source (:file:`source`) and build "
+"(:file:`build`) folders. Your extension file could be in any folder of your "
+"project. In our case, let's do the following:"
+msgstr ""
+"நீங்கள் தனி மூலத்தை (: கோப்பு: `மூல`) பயன்படுத்துகிறீர்கள் என்று நாங்கள் "
+"கருதுகிறோம் (: கோப்பு:` பில்ட்`) கோப்புறைகள். உங்கள் நீட்டிப்பு கோப்பு "
+"உங்கள் திட்டத்தின் எந்த கோப்புறையிலும் இருக்கலாம். எங்கள் விஷயத்தில், "
+"பின்வருவனவற்றைச் செய்வோம்:"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:65
+msgid "Create an :file:`_ext` folder in :file:`source`"
+msgstr "ஒரு: கோப்பை உருவாக்கவும்: `_ext` கோப்புறை: கோப்பு:` மூல`"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:66
+msgid ""
+"Create a new Python file in the :file:`_ext` folder called :file:`todo.py`"
+msgstr ""
+"புதிய பைதான் கோப்பை உருவாக்கவும்: கோப்பு: `_ext` கோப்புறை: கோப்பு:` todo.py`"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:68
+msgid "Here is an example of the folder structure you might obtain:"
+msgstr "நீங்கள் பெறக்கூடிய கோப்புறை கட்டமைப்பின் எடுத்துக்காட்டு இங்கே:"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:84
+msgid "Writing the extension"
+msgstr "நீட்டிப்பு எழுதுதல்"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:86
+msgid ""
+"Open :file:`todo.py` and paste the following code in it, all of which we "
+"will explain in detail shortly:"
+msgstr ""
+"திறந்த: கோப்பு: `todo.py` மற்றும் பின்வரும் குறியீட்டை ஒட்டவும், இவை "
+"அனைத்தும் விரைவில் விரிவாக விளக்குவோம்:"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:93
+msgid ""
+"This is far more extensive extension than the one detailed in "
+":ref:`tutorial-extending-syntax`, however, we will will look at each piece "
+"step-by-step to explain what's happening."
+msgstr ""
+":ref:`tutorial-extending-syntax` இல் விவரிக்கப்பட்டுள்ளதை விட இது மிகவும் "
+"விரிவான நீட்டிப்பாகும், இருப்பினும், என்ன நடக்கிறது என்பதை விளக்க ஒவ்வொரு "
+"பகுதியையும் படிப்படியாகப் பார்ப்போம்."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:99
+msgid "The node classes"
+msgstr "முனை வகுப்புகள்"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:100
+msgid "Let's start with the node classes:"
+msgstr "முனை வகுப்புகளுடன் ஆரம்பிக்கலாம்:"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:107
+msgid ""
+"Node classes usually don't have to do anything except inherit from the "
+"standard docutils classes defined in :mod:`docutils.nodes`.  ``todo`` "
+"inherits from ``Admonition`` because it should be handled like a note or "
+"warning, ``todolist`` is just a \"general\" node."
+msgstr ""
+"முனை வகுப்புகள் பொதுவாக வரையறுக்கப்பட்ட நிலையான ஆவண வகுப்புகளிலிருந்து "
+"மரபுரிமையைத் தவிர வேறு எதுவும் செய்ய வேண்டியதில்லை: மோட்: `docutils.nodes`. "
+"`` டோடோ`` `` அறிவுரை`` `` `அறிவுரைகள்` ஏனெனில் இது ஒரு குறிப்பு அல்லது "
+"எச்சரிக்கையைப் போல கையாளப்பட வேண்டும்,` `டோடோலிஸ்ட்`` ஒரு\" பொது \"முனை "
+"மட்டுமே."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:114
+msgid ""
+"Many extensions will not have to create their own node classes and work fine"
+" with the nodes already provided by `docutils "
+"<https://docutils.sourceforge.io/docs/ref/doctree.html>`__ and :ref:`Sphinx "
+"<nodes>`."
+msgstr ""
+"பல நீட்டிப்புகள் தங்களது சொந்த முனை வகுப்புகளை உருவாக்கி, ஏற்கனவே "
+"`டாக்யூடில்ஸ் <https://docutils.sourceforge.io/docs/ref/doctree.html>` __ "
+"மற்றும் Ref: `Sphinx < முனைகள்> `."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:121
+msgid ""
+"It is important to know that while you can extend Sphinx without leaving "
+"your ``conf.py``, if you declare an inherited node right there, you'll hit "
+"an unobvious :py:class:`~pickle.PickleError`. So if something goes wrong, "
+"please make sure that you put inherited nodes into a separate Python module."
+msgstr ""
+"உங்கள் `` conf.py`` ஐ விட்டு வெளியேறாமல் நீங்கள் ஸ்பிங்க்ஸை நீட்டிக்க "
+"முடியும் என்றாலும், நீங்கள் ஒரு பரம்பரை முனையை அங்கேயே அறிவித்தால், நீங்கள் "
+"ஒரு சந்தேகத்திற்கு இடமின்றி அடிபட்டால்: PY: வகுப்பு: `~ pickle.pickleerror`."
+" எனவே ஏதேனும் தவறு நடந்தால், தயவுசெய்து நீங்கள் மரபுரிமை முனைகளை ஒரு தனி "
+"பைதான் தொகுதிக்குள் வைக்கிறீர்கள் என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:127
+msgid "For more details, see:"
+msgstr "மேலும் விவரங்களுக்கு, காண்க:"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:129
+msgid "https://github.com/sphinx-doc/sphinx/issues/6751"
+msgstr "https://github.com/sphinx-doc/sphinx/issues/6751"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:130
+msgid "https://github.com/sphinx-doc/sphinx/issues/1493"
+msgstr "https://github.com/sphinx-doc/sphinx/issues/1493"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:131
+msgid "https://github.com/sphinx-doc/sphinx/issues/1424"
+msgstr "https://github.com/sphinx-doc/sphinx/issues/1424"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:134
+msgid "The directive classes"
+msgstr "உத்தரவு வகுப்புகள்"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:135
+msgid ""
+"A directive class is a class deriving usually from "
+":class:`docutils.parsers.rst.Directive`. The directive interface is also "
+"covered in detail in the `docutils documentation`_; the important thing is "
+"that the class should have attributes that configure the allowed markup, and"
+" a ``run`` method that returns a list of nodes."
+msgstr ""
+"ஒரு உத்தரவு வகுப்பு என்பது வழக்கமாக இருந்து பெறப்பட்ட ஒரு வர்க்கமாகும்: "
+"வகுப்பு: `docutils.parsers.rst.directive`. உத்தரவு இடைமுகம் `டாக்யூடில்ஸ் "
+"ஆவணங்கள்`_ இல் விரிவாக விவரிக்கப்பட்டுள்ளது; முக்கியமான விஷயம் என்னவென்றால்,"
+" வகுப்பில் அனுமதிக்கப்பட்ட மார்க்அப்பை உள்ளமைக்கும் பண்புகளும், முனைகளின் "
+"பட்டியலைத் தரும் `` ரன்`` முறையும் இருக்க வேண்டும்."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:141
+msgid "Looking first at the ``TodolistDirective`` directive:"
+msgstr "முதலில் `` டோடோலிஸ்ட்டிரெக்டிவ்`` உத்தரவு:"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:148
+msgid ""
+"It's very simple, creating and returning an instance of our ``todolist`` "
+"node class.  The ``TodolistDirective`` directive itself has neither content "
+"nor arguments that need to be handled. That brings us to the "
+"``TodoDirective`` directive:"
+msgstr ""
+"இது மிகவும் எளிமையானது, எங்கள் `` டோடோலிஸ்ட்`` முனை வகுப்பின் ஒரு நிகழ்வை "
+"உருவாக்கி திருப்பித் தருகிறது. `` டோடோலிஸ்டிரெக்டிவ்`` உத்தரவில் உள்ளடக்கமோ "
+"வாதங்களோ கையாள வேண்டியதில்லை. அது நம்மை `` டோடோடிரெக்டிவ்`` உத்தரவுக்கு "
+"கொண்டு வருகிறது:"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:158
+msgid ""
+"Several important things are covered here. First, as you can see, we're now "
+"subclassing the :class:`~sphinx.util.docutils.SphinxDirective` helper class "
+"instead of the usual :class:`~docutils.parsers.rst.Directive` class. This "
+"gives us access to the :ref:`build environment instance <important-objects>`"
+" using the ``self.env`` property. Without this, we'd have to use the rather "
+"convoluted ``self.state.document.settings.env``. Then, to act as a link "
+"target (from ``TodolistDirective``), the ``TodoDirective`` directive needs "
+"to return a target node in addition to the ``todo`` node.  The target ID (in"
+" HTML, this will be the anchor name) is generated by using "
+"``env.new_serialno`` which returns a new unique integer on each call and "
+"therefore leads to unique target names. The target node is instantiated "
+"without any text (the first two arguments)."
+msgstr ""
+"பல முக்கியமான விஷயங்கள் இங்கே உள்ளன. முதலாவதாக, நீங்கள் பார்க்க முடியும் என,"
+" நாங்கள் இப்போது துணைப்பிரிவு செய்கிறோம்: வகுப்பு: `~ "
+"sphinx.util.docutils.sphinxdirective` வழங்குநருக்கு பதிலாக உதவி வகுப்பு: "
+"வகுப்பு:` ~ docutils.parsers.rst.directive` வகுப்பு. இது எங்களுக்கு அணுகலை "
+"வழங்குகிறது: ref: `சுற்றுச்சூழல் உதாரணத்தை உருவாக்குதல் "
+"<முக்கியமான-பொருள்களை உருவாக்குதல்>` `self.env`` சொத்தைப் பயன்படுத்துதல். "
+"இது இல்லாமல், நாம் `` self.state.document.settings.env`` ஐப் பயன்படுத்த "
+"வேண்டும். பின்னர், ஒரு இணைப்பு இலக்காக (`` டோடோலிஸ்டிரெக்டிவ்`` இலிருந்து) "
+"செயல்பட, `` டோடோயெக்டிவ்`` உத்தரவு `` டோடோ`` முனைக்கு கூடுதலாக ஒரு இலக்கு "
+"முனையை திருப்பித் தர வேண்டும். இலக்கு ஐடி (HTML இல், இது நங்கூரப் பெயராக "
+"இருக்கும்) `` env.new_serialno`` ஐப் பயன்படுத்துவதன் மூலம் "
+"உருவாக்கப்படுகிறது, இது ஒவ்வொரு அழைப்பிலும் ஒரு புதிய தனித்துவமான முழு "
+"எண்ணைத் தருகிறது, எனவே தனித்துவமான இலக்கு பெயர்களுக்கு வழிவகுக்கிறது. இலக்கு"
+" முனை எந்த உரையும் இல்லாமல் உடனடிப்படுத்தப்படுகிறது (முதல் இரண்டு வாதங்கள்)."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:170
+msgid ""
+"On creating admonition node, the content body of the directive are parsed "
+"using ``self.parse_content_to_nodes()``. Following this, the ``todo`` node "
+"is added to the environment. This is needed to be able to create a list of "
+"all todo entries throughout the documentation, in the place where the author"
+" puts a ``todolist`` directive. For this case, the environment attribute "
+"``todo_all_todos`` is used (again, the name should be unique, so it is "
+"prefixed by the extension name). It does not exist when a new environment is"
+" created, so the directive must check and create it if necessary. Various "
+"information about the todo entry's location are stored along with a copy of "
+"the node."
+msgstr ""
+"அறிவுறுத்தல் முனையை உருவாக்கும் போது, ​​கட்டளையின் உள்ளடக்கம் "
+"``self.parse_content_to_nodes()`` ஐப் பயன்படுத்தி பாகுபடுத்தப்படும். இதைத் "
+"தொடர்ந்து, ``todo`` முனை சுற்றுச்சூழலில் சேர்க்கப்படுகிறது. ஆசிரியர் "
+"``todolist`` கட்டளையை வைக்கும் இடத்தில், ஆவணங்கள் முழுவதும் அனைத்து "
+"செய்யவேண்டிய உள்ளீடுகளின் பட்டியலை உருவாக்க இது தேவை. இந்த வழக்கில், சூழல் "
+"பண்புக்கூறு ``todo_all_todos`` பயன்படுத்தப்பட்டது (மீண்டும், பெயர் "
+"தனித்துவமாக இருக்க வேண்டும், எனவே இது நீட்டிப்பு பெயரால் முன்னொட்டப்பட்டது)."
+" ஒரு புதிய சூழல் உருவாக்கப்படும் போது அது இல்லை, எனவே கட்டளை சரிபார்த்து "
+"தேவைப்பட்டால் அதை உருவாக்க வேண்டும். செய்யவேண்டிய நுழைவு இடம் பற்றிய பல்வேறு"
+" தகவல்கள் முனையின் நகலுடன் சேமிக்கப்படும்."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:182
+msgid ""
+"In the last line, the nodes that should be put into the doctree are "
+"returned: the target node and the admonition node."
+msgstr ""
+"கடைசி வரியில், கோட்பாட்டிற்குள் வைக்கப்பட வேண்டிய முனைகள் திருப்பித் "
+"தரப்படுகின்றன: இலக்கு முனை மற்றும் அறிவுரைக் முனை."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:185
+msgid "The node structure that the directive returns looks like this::"
+msgstr "உத்தரவு திரும்பும் முனை அமைப்பு இப்படி தெரிகிறது ::"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:202
+msgid "The event handlers"
+msgstr "நிகழ்வு கையாளுபவர்கள்"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:203
+msgid ""
+"Event handlers are one of Sphinx's most powerful features, providing a way "
+"to do hook into any part of the documentation process. There are many events"
+" provided by Sphinx itself, as detailed in :ref:`the API guide <events>`, "
+"and we're going to use a subset of them here."
+msgstr ""
+"நிகழ்வு கையாளுபவர்கள் SPHINX இன் மிக சக்திவாய்ந்த அம்சங்களில் ஒன்றாகும், இது"
+" ஆவணமாக்கல் செயல்முறையின் எந்தப் பகுதியிலும் கொக்கி செய்ய ஒரு வழியை "
+"வழங்குகிறது. ஸ்பின்க்ஸால் பல நிகழ்வுகள் வழங்கப்பட்டுள்ளன, "
+"விவரிக்கப்பட்டுள்ளபடி: குறிப்பு: `ஏபிஐ வழிகாட்டி <நிகழ்வுகள்>`, மேலும் "
+"அவற்றின் துணைக்குழுவை இங்கே பயன்படுத்தப் போகிறோம்."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:208
+msgid ""
+"Let's look at the event handlers used in the above example.  First, the one "
+"for the :event:`env-purge-doc` event:"
+msgstr ""
+"மேலே உள்ள எடுத்துக்காட்டில் பயன்படுத்தப்படும் நிகழ்வு கையாளுபவர்களைப் "
+"பார்ப்போம். முதலில், ஒன்று: நிகழ்வு: `env-purge-doc` நிகழ்வு:"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:216
+msgid ""
+"Since we store information from source files in the environment, which is "
+"persistent, it may become out of date when the source file changes.  "
+"Therefore, before each source file is read, the environment's records of it "
+"are cleared, and the :event:`env-purge-doc` event gives extensions a chance "
+"to do the same. Here we clear out all todos whose docname matches the given "
+"one from the ``todo_all_todos`` list.  If there are todos left in the "
+"document, they will be added again during parsing."
+msgstr ""
+"சுற்றுச்சூழலில் உள்ள மூல கோப்புகளிலிருந்து தகவல்களை நாங்கள் சேமித்து "
+"வைப்பதால், இது தொடர்ந்து உள்ளது, இது மூல கோப்பு மாறும்போது அது காலாவதியானது."
+" ஆகையால், ஒவ்வொரு மூலக் கோப்பையும் வாசிப்பதற்கு முன்பு, அதன் சுற்றுச்சூழலின்"
+" பதிவுகள் அழிக்கப்படுகின்றன, மேலும்: நிகழ்வு: `என்வி-புர்ஜ்-டாக்` நிகழ்வு "
+"நீட்டிப்புகளை இதைச் செய்ய வாய்ப்பளிக்கிறது. `` Todo_all_todos`` "
+"பட்டியலிலிருந்து கொடுக்கப்பட்ட ஒன்றோடு பொருந்தக்கூடிய அனைத்து டோடோஸையும் "
+"இங்கே அழிக்கிறோம். ஆவணத்தில் டோடோஸ் எஞ்சியிருந்தால், அவை பாகுபடுத்தலின் போது"
+" மீண்டும் சேர்க்கப்படும்."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:224
+msgid ""
+"The next handler, for the :event:`env-merge-info` event, is used during "
+"parallel builds. As during parallel builds all threads have their own "
+"``env``, there's multiple ``todo_all_todos`` lists that need to be merged:"
+msgstr ""
+"அடுத்த கையாளுபவர்,: நிகழ்வு: `env-merge-info` நிகழ்வு, இணையான கட்டடங்களின் "
+"போது பயன்படுத்தப்படுகிறது. இணையான கட்டமைப்பின் போது அனைத்து நூல்களும் "
+"அவற்றின் சொந்த `` என்வி`` கொண்டிருப்பதைப் போல, ஒன்றிணைக்கப்பட வேண்டிய பல `` "
+"டோடோ_ஆல்_டோடோஸ்` பட்டியல்கள் உள்ளன:"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:235
+msgid "The other handler belongs to the :event:`doctree-resolved` event:"
+msgstr "மற்ற ஹேண்ட்லர்: நிகழ்வு: `கோட்பாட்டு-தீர்க்கப்பட்ட` நிகழ்வு:"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:242
+msgid ""
+"The :event:`doctree-resolved` event is emitted for each document that is "
+"about to be written at the end of :ref:`phase 3 (resolving) <build-phases>` "
+"and allows custom resolving to be done on that document. The handler we have"
+" written for this event is a bit more involved. If the "
+"``todo_include_todos`` config value (which we'll describe shortly) is false,"
+" all ``todo`` and ``todolist`` nodes are removed from the documents. If not,"
+" ``todo`` nodes just stay where and how they are.  ``todolist`` nodes are "
+"replaced by a list of todo entries, complete with backlinks to the location "
+"where they come from.  The list items are composed of the nodes from the "
+"``todo`` entry and docutils nodes created on the fly: a paragraph for each "
+"entry, containing text that gives the location, and a link (reference node "
+"containing an italic node) with the backreference. The reference URI is "
+"built by :meth:`sphinx.builders.Builder.get_relative_uri` which creates a "
+"suitable URI depending on the used builder, and appending the todo node's "
+"(the target's) ID as the anchor name."
+msgstr ""
+":ref:`phase 3 (resolving) <build-phases>` இன் இறுதியில் எழுதப்படும் ஒவ்வொரு "
+"ஆவணத்திற்கும் :event:`doctree-resolved` நிகழ்வு வெளியிடப்படுகிறது, மேலும் "
+"அந்த ஆவணத்தில் தனிப்பயன் தீர்வைச் செய்ய அனுமதிக்கிறது. இந்த நிகழ்விற்காக "
+"நாங்கள் எழுதிய கையாளுபவர் சற்று ஈடுபாடு கொண்டவர். ``todo_include_todos`` "
+"கட்டமைப்பு மதிப்பு (விரைவில் விவரிப்போம்) தவறாக இருந்தால், அனைத்து ``todo`` "
+"மற்றும் ``todolist`` முனைகளும் ஆவணங்களில் இருந்து அகற்றப்படும். இல்லையெனில்,"
+" ``todo`` கணுக்கள் எங்கு, எப்படி இருக்கின்றன. ``todolist`` முனைகள் "
+"செய்யவேண்டிய உள்ளீடுகளின் பட்டியலால் மாற்றப்படுகின்றன, அவை எங்கிருந்து "
+"வந்ததோ அந்த இடத்திற்கான பின்னிணைப்புகளுடன் முழுமையானது. பட்டியலிடப்பட்ட "
+"உருப்படிகள், பறக்கும்போது உருவாக்கப்பட்ட ``todo`` நுழைவு மற்றும் docutils "
+"முனைகளில் இருந்து முனைகளால் ஆனது: ஒவ்வொரு பதிவிற்கும் ஒரு பத்தி, "
+"இருப்பிடத்தை வழங்கும் உரை மற்றும் பின்குறிப்புடன் ஒரு இணைப்பு (சாய்வு முனை "
+"கொண்ட குறிப்பு முனை) ஆகியவை அடங்கும். குறிப்பு யூரி ஆனது "
+":meth:`sphinx.builders.Builder.get_relative_uri` ஆல் கட்டப்பட்டது, இது "
+"பயன்படுத்தப்பட்ட பில்டரைப் பொறுத்து பொருத்தமான யூரி ஐ உருவாக்குகிறது மற்றும்"
+" செய்யவேண்டிய நோடின் (இலக்குகளின்) ஐடியை ஆங்கர் பெயராக இணைக்கிறது."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:259
+msgid "The ``setup`` function"
+msgstr "`` அமைவு`` செயல்பாடு"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:262
+msgid ""
+"As noted :ref:`previously <tutorial-extending-syntax>`, the ``setup`` "
+"function is a requirement and is used to plug directives into Sphinx. "
+"However, we also use it to hook up the other parts of our extension. Let's "
+"look at our ``setup`` function:"
+msgstr ""
+"குறிப்பிட்டுள்ளபடி :ref:`previously <tutorial-extending-syntax>`, ``setup`` "
+"செயல்பாடு ஒரு தேவை மற்றும் ச்பிங்க்சில் வழிகாட்டுதல்களை இணைக்கப் "
+"பயன்படுகிறது. இருப்பினும், எங்கள் நீட்டிப்பின் மற்ற பகுதிகளை இணைக்கவும் "
+"இதைப் பயன்படுத்துகிறோம். எங்கள் ``அமைவு`` செயல்பாட்டைப் பார்ப்போம்:"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:272
+msgid ""
+"The calls in this function refer to the classes and functions we added "
+"earlier. What the individual calls do is the following:"
+msgstr ""
+"இந்த செயல்பாட்டில் உள்ள அழைப்புகள் நாங்கள் முன்பு சேர்த்த வகுப்புகள் மற்றும்"
+" செயல்பாடுகளைக் குறிக்கின்றன. தனிப்பட்ட அழைப்புகள் என்ன செய்கின்றன என்பது "
+"பின்வருமாறு:"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:275
+msgid ""
+":meth:`~Sphinx.add_config_value` lets Sphinx know that it should recognize "
+"the new *config value* ``todo_include_todos``, whose default value is "
+"``False`` (which also tells Sphinx that it is a boolean value)."
+msgstr ""
+":meth:`~Sphinx.add_config_value` புதிய *கட்டமைப்பு மதிப்பை* "
+"``todo_include_todos`` ஐ அடையாளம் காண வேண்டும் என்பதை சூரரிமாச்சிலை அறிய "
+"உதவுகிறது, அதன் இயல்புநிலை மதிப்பு ``False`` (இது ஒரு பூலியன் மதிப்பு என்று "
+"சூரரிமாச்சிலை க்கு கூறுகிறது)."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:279
+msgid ""
+"If the third argument was ``'html'``, HTML documents would be fully rebuilt "
+"if the config value changed its value.  This is needed for config values "
+"that influence reading (build :ref:`phase 1 (reading) <build-phases>`)."
+msgstr ""
+"மூன்றாவது உரையாடல் ``'html'` ஆக இருந்தால், கட்டமைப்பு மதிப்பு அதன் மதிப்பை "
+"மாற்றினால் உஉகுமொ ஆவணங்கள் முழுமையாக மீண்டும் உருவாக்கப்படும். வாசிப்பைப் "
+"பாதிக்கும் கட்டமைப்பு மதிப்புகளுக்கு இது தேவை (build :ref:`phase 1 (reading)"
+" <build-phases>`)."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:283
+msgid ""
+":meth:`~Sphinx.add_node` adds a new *node class* to the build system.  It "
+"also can specify visitor functions for each supported output format.  These "
+"visitor functions are needed when the new nodes stay until :ref:`phase 4 "
+"(writing) <build-phases>`. Since the ``todolist`` node is always replaced in"
+" :ref:`phase 3 (resolving) <build-phases>`, it doesn't need any."
+msgstr ""
+". ஒவ்வொரு ஆதரவு வெளியீட்டு வடிவமைப்பிற்கும் பார்வையாளர் செயல்பாடுகளையும் இது"
+" குறிப்பிடலாம். புதிய முனைகள் இருக்கும் வரை இந்த பார்வையாளர் செயல்பாடுகள் "
+"தேவைப்படுகின்றன: குறிப்பு: `கட்டம் 4 (எழுதுதல்) <உருவாக்க-கட்டங்கள்>`. `` "
+"டோடோலிஸ்ட்`` முனை எப்போதும் மாற்றப்படுவதால்: குறிப்பு: `கட்டம் 3 "
+"(தீர்க்கும்) <உருவாக்க-கட்டங்கள்>`, அதற்கு எதுவும் தேவையில்லை."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:289
+msgid ""
+":meth:`~Sphinx.add_directive` adds a new *directive*, given by name and "
+"class."
+msgstr "."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:291
+msgid ""
+"Finally, :meth:`~Sphinx.connect` adds an *event handler* to the event whose "
+"name is given by the first argument.  The event handler function is called "
+"with several arguments which are documented with the event."
+msgstr ""
+"இறுதியாக,: மெத்: `~ sphinx.connect` முதல் வாதத்தால் வழங்கப்படும் நிகழ்வுக்கு"
+" * நிகழ்வு கையாளுபவர் * சேர்க்கிறது. நிகழ்வு கையாளுபவர் செயல்பாடு நிகழ்வுடன்"
+" ஆவணப்படுத்தப்பட்ட பல வாதங்களுடன் அழைக்கப்படுகிறது."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:295
+msgid "With this, our extension is complete."
+msgstr "இதன் மூலம், எங்கள் நீட்டிப்பு முடிந்தது."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:299
+msgid "Using the extension"
+msgstr "நீட்டிப்பைப் பயன்படுத்துதல்"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:301
+msgid ""
+"As before, we need to enable the extension by declaring it in our "
+":file:`conf.py` file. There are two steps necessary here:"
+msgstr ""
+"முன்பு போல, நீட்டிப்பை எங்கள்: கோப்பு: `conf.py` கோப்பில் அறிவிப்பதன் மூலம் "
+"அதை இயக்க வேண்டும். இங்கே இரண்டு படிகள் தேவை:"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:304
+msgid ""
+"Add the :file:`_ext` directory to the `Python path`_ using "
+"``sys.path.append``. This should be placed at the top of the file."
+msgstr ""
+"`` Sys.path.append`` ஐப் பயன்படுத்தி `பைதான் பாதை`_ க்கு` _ext` கோப்பகத்தைச்"
+" சேர்க்கவும். இது கோப்பின் மேற்புறத்தில் வைக்கப்பட வேண்டும்."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:307
+msgid ""
+"Update or create the :confval:`extensions` list and add the extension file "
+"name to the list"
+msgstr ""
+"புதுப்பிக்கவும் அல்லது உருவாக்கவும்: confval: `நீட்டிப்புகள்` பட்டியல் "
+"மற்றும் நீட்டிப்பு கோப்பு பெயரை பட்டியலில் சேர்க்கவும்"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:310
+msgid ""
+"In addition, we may wish to set the ``todo_include_todos`` config value. As "
+"noted above, this defaults to ``False`` but we can set it explicitly."
+msgstr ""
+"கூடுதலாக, `` todo_include_todos`` கட்டமைப்பு மதிப்பை அமைக்க விரும்பலாம். "
+"மேலே குறிப்பிட்டுள்ளபடி, இது `` தவறு`` இயல்புநிலையாகும், ஆனால் நாங்கள் அதை "
+"வெளிப்படையாக அமைக்கலாம்."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:313
+msgid "For example:"
+msgstr "உதாரணத்திற்கு:"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:326
+msgid "You can now use the extension throughout your project. For example:"
+msgstr ""
+"இப்போது உங்கள் திட்டம் முழுவதும் நீட்டிப்பைப் பயன்படுத்தலாம். உதாரணத்திற்கு:"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:328
+msgid "index.rst"
+msgstr "Index.rst"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:342
+msgid "somefile.rst"
+msgstr "somefile.rst"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:352
+msgid "someotherfile.rst"
+msgstr "சிலவற்றில்"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:362
+msgid ""
+"Because we have configured ``todo_include_todos`` to ``False``, we won't "
+"actually see anything rendered for the ``todo`` and ``todolist`` directives."
+" However, if we toggle this to true, we will see the output described "
+"previously."
+msgstr ""
+"நாங்கள் `` TODO_INCLUDE_TODOS`` ஐ `` தவறு` ஆகியவற்றை உள்ளமைத்துள்ளதால், `` "
+"டோடோ` மற்றும் `` டோடோலிஸ்ட்`` உத்தரவுகளுக்காக வழங்கப்பட்ட எதையும் நாங்கள் "
+"உண்மையில் பார்க்க மாட்டோம். இருப்பினும், இதை உண்மைக்கு மாற்றினால், முன்னர் "
+"விவரிக்கப்பட்ட வெளியீட்டைக் காண்போம்."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:369
+msgid "Further reading"
+msgstr "மேலும் படிக்க"
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:371
+msgid ""
+"For more information, refer to the `docutils`_ documentation and "
+":doc:`/extdev/index`."
+msgstr ""
+"மேலும் தகவலுக்கு, `டாக்யூடில்ஸ்`_ ஆவணங்கள் மற்றும்: டாக்:`/extdev/index` ஐப்"
+" பார்க்கவும்."
+
+#: ../../sphinx/doc/development/tutorials/extending_build.rst:374
+msgid ""
+"If you wish to share your extension across multiple projects or with others,"
+" check out the :ref:`third-party-extensions` section."
+msgstr ""
+"உங்கள் நீட்டிப்பை பல திட்டங்களில் அல்லது பிறருடன் பகிர விரும்பினால், "
+":ref:`third-party-extensions` பகுதியைப் பார்க்கவும்."
