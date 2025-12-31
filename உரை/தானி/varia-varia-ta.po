@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Varia)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-22 08:01+0200\n"
-"PO-Revision-Date: 2025-03-22 22:45\n"
+"POT-Creation-Date: 2025-12-31 03:47+0200\n"
+"PO-Revision-Date: 2025-12-31 08:46\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/varia/varia/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #. Translators: Do NOT translate or localize the application name.
 #: data/io.github.giantpinkrobots.varia.desktop.in:4
@@ -128,11 +128,11 @@ msgstr "0 பி/வி"
 
 #: src/variamain.py:300
 msgid " MB/s"
-msgstr "Mb/s"
+msgstr " Mb/s"
 
 #: src/variamain.py:302
 msgid " KB/s"
-msgstr "Kb/s"
+msgstr " Kb/s"
 
 #: src/variamain.py:304
 msgid " B/s"
@@ -233,8 +233,14 @@ msgstr "உலாவி நீட்டிப்பு"
 msgid "Shutdown on Completion"
 msgstr "முடிந்ததும் பணிநிறுத்தம்"
 
+msgid "Sleep on Completion"
+msgstr "முடிந்தவுடன் தூங்குங்கள்"
+
 msgid "Varia is about to shut down your computer."
 msgstr "வரியா உங்கள் கணினியை மூட உள்ளது."
+
+msgid "Varia is about to put your computer to sleep."
+msgstr "வேரியா உங்கள் கணினியை தூங்க வைக்கப் போகிறார்."
 
 msgid "Press Cancel to cancel and disable."
 msgstr "ரத்துசெய் மற்றும் முடக்க ரத்துசெய்."
@@ -339,6 +345,10 @@ msgstr "தொலைநிலை நேர முத்திரை"
 #, terminology
 msgid "Torrent"
 msgstr "டொரண்ட்"
+
+#. Download type: Regular
+msgid "Regular"
+msgstr "வழக்கமான"
 
 #. Updater
 msgid "Checking for updates..."
@@ -477,18 +487,6 @@ msgstr "மெனுவைக் காட்டு"
 msgid "OK"
 msgstr "சரி"
 
-#. Snap version permission warning
-msgid ""
-"You are using Varia as a Snap package. To be able to use the shutdown on "
-"completion option you must first give Varia the related permission. To do "
-"this, open a terminal window and execute this command and then restart "
-"Varia:"
-msgstr ""
-"நீங்கள் வரியாவை ச்னாப் தொகுப்பாகப் பயன்படுத்துகிறீர்கள். நிறைவு "
-"விருப்பத்தில் பணிநிறுத்தத்தைப் பயன்படுத்த நீங்கள் முதலில் வெரியாவுக்கு "
-"தொடர்புடைய அனுமதியை வழங்க வேண்டும். இதைச் செய்ய, ஒரு முனைய சாளரத்தைத் "
-"திறந்து இந்த கட்டளையை இயக்கவும், பின்னர் மாறுபாட்டை மறுதொடக்கம் செய்யவும்:"
-
 msgid "Enable Torrenting"
 msgstr "டொரெண்டிங் இயக்கவும்"
 
@@ -504,6 +502,185 @@ msgstr ""
 
 msgid "Torrenting is disabled."
 msgstr "டோரண்டிங் முடக்கப்பட்டுள்ளது."
+
+msgid "Unknown filesize"
+msgstr "தெரியாத கோப்பு அளவு"
+
+msgid "Show"
+msgstr "காட்டு"
+
+msgid "Quit"
+msgstr "வெளியேறு"
+
+msgid "Background Mode on Close"
+msgstr "மூடுகையில் பின்னணி முறை"
+
+msgid "Upon closing, Varia will close to tray insted of exiting."
+msgstr "மூடப்பட்டவுடன், வரியா வெளியேறும் தட்டுக்கு மூடப்படும்."
+
+#. Tray icon always visible option
+msgid "Tray Icon Always Visible"
+msgstr "தட்டு ஐகான் எப்போதும் தெரியும்"
+
+msgid ""
+"The tray icon will be visible even when Varia is not in background mode."
+msgstr "மாறுபாடு பின்னணி பயன்முறையில் இல்லாதபோதும் தட்டு ஐகான் தெரியும்."
+
+#. Open on startup option
+msgid "Open on Startup"
+msgstr "தொடக்கத்தில் திற"
+
+msgid "Varia will open automatically when the system starts."
+msgstr "கணினி தொடங்கும் போது வரியா தானாகவே திறக்கப்படும்."
+
+#. Start on background mode subtitle
+msgid "Varia will start directly in background mode upon opening."
+msgstr "திறந்தவுடன் வரியா நேரடியாக பின்னணி பயன்முறையில் தொடங்கும்."
+
+#. Remote mode additional explanation
+msgid "Use Varia as a GUI for a remote aria2c instance."
+msgstr "தொலைதூர ARIA2C உதாரணத்திற்கு QUI ஆக வரியாவைப் பயன்படுத்தவும்."
+
+msgid "Configure"
+msgstr "உள்ளமை"
+
+msgid "Download Segments"
+msgstr "பிரிவுகளைப் பதிவிறக்கவும்"
+
+msgid "Pause"
+msgstr "இடைநிறுத்தம்"
+
+msgid "Resume"
+msgstr "ரெச்யூம்"
+
+msgid "Stop"
+msgstr "நிறுத்து"
+
+msgid "Open File"
+msgstr "கோப்பை திற"
+
+msgid "Retry"
+msgstr "மீண்டும் முயற்சிக்கவும்"
+
+msgid "Require Encryption"
+msgstr "குறியாக்கம் தேவை"
+
+msgid "Get Country Info of Peers"
+msgstr "சகாக்களின் நாட்டுத் தகவலைப் பெறுங்கள்"
+
+msgid ""
+"This will use an external service to get the IP geolocation of your torrent "
+"peers in order to show country flags in the details window."
+msgstr ""
+"விவரங்கள் சாளரத்தில் நாட்டின் கொடிகளைக் காண்பிப்பதற்காக உங்கள் டொரண்ட் "
+"சகாக்களின் ஐபி புவிஇருப்பிடத்தைப் பெற இது வெளிப்புறச் சேவையைப் "
+"பயன்படுத்தும்."
+
+msgid "Download Details"
+msgstr "பதிவிறக்க விவரங்கள்"
+
+msgid "Type"
+msgstr "வகை"
+
+msgid "Status"
+msgstr "நிலை"
+
+msgid "File Name"
+msgstr "கோப்பு பெயர்"
+
+msgid "Downloading"
+msgstr "பதிவிறக்குகிறது"
+
+msgid "Paused"
+msgstr "இடைநிறுத்தப்பட்டது"
+
+msgid "Scheduled"
+msgstr "திட்டமிடப்பட்டது"
+
+msgid "Extracting"
+msgstr "பிரித்தெடுத்தல்"
+
+msgid "Percentage Downloaded"
+msgstr "விழுக்காடு பதிவிறக்கப்பட்டது"
+
+msgid "Remaining"
+msgstr "மீதமுள்ளவை"
+
+msgid "Download Speed"
+msgstr "பதிவிறக்க விரைவு"
+
+msgid "Seeding Speed"
+msgstr "விதைப்பு விரைவு"
+
+msgid "Amount Downloaded"
+msgstr "பதிவிறக்கம் செய்யப்பட்ட தொகை"
+
+msgid "Amount Uploaded"
+msgstr "பதிவேற்றப்பட்ட தொகை"
+
+msgid "Ratio"
+msgstr "விகிதம்"
+
+msgid "Torrent Peers"
+msgstr "டோரண்ட் பியர்ச்"
+
+#. Snap packaging permissions dialog part 1/2
+msgid ""
+"You are using Varia as a Snap package. There are some functions that you "
+"can't use without manually giving Varia some extra permissions. These are:"
+msgstr ""
+"நீங்கள் Varia ஐ Snap தொகுப்பாகப் பயன்படுத்துகிறீர்கள். Varia க்கு கைமுறையாக "
+"சில கூடுதல் அனுமதிகளை வழங்காமல் நீங்கள் பயன்படுத்த முடியாத சில செயல்பாடுகள் "
+"உள்ளன. இவை:"
+
+#. Snap packaging permissions dialog part 2/2
+msgid ""
+"To enable these functions you must run these commands in a terminal to give "
+"the required permissions and then restart Varia:"
+msgstr ""
+"இந்த செயல்பாடுகளை இயக்க, தேவையான அனுமதிகளை வழங்க, இந்த கட்டளைகளை டெர்மினலில்"
+" இயக்க வேண்டும், பின்னர் Varia ஐ மறுதொடக்கம் செய்ய வேண்டும்:"
+
+#. Tooltip for when focused on filter options in the sidebar. Do not translate
+#. {filter option}, it will be replaced by the filter type. ("All", "In
+#. Progress", etc)
+msgid "Filter downloads by {filter option}"
+msgstr "{filter option} மூலம் பதிவிறக்கங்களை வடிகட்டவும்"
+
+msgid "Download item"
+msgstr "பொருளைப் பதிவிறக்கவும்"
+
+msgid "Timespan {number}"
+msgstr "கால இடைவெளி {number}"
+
+#. Tooltip for when focused on timespan day of the week dropdown
+msgid "Day of the week for timespan {number}"
+msgstr "நேர இடைவெளிக்கான வாரத்தின் நாள் {number}"
+
+msgid "Remove timespan {number}"
+msgstr "நேர இடைவெளியை அகற்று {number}"
+
+#. Tooltip for when focused on timespan start hour
+msgid "Start hour for timespan {number}"
+msgstr "நேர இடைவெளிக்கான தொடக்க மணிநேரம் {number}"
+
+#. Tooltip for when focused on timespan start minute
+msgid "Start minute for timespan {number}"
+msgstr "நேர இடைவெளிக்கான தொடக்க மணித்துளி {number}"
+
+#. Tooltip for when focused on timespan end hour
+msgid "End hour for timespan {number}"
+msgstr "நேர இடைவெளிக்கான இறுதி மணிநேரம் {number}"
+
+#. Tooltip for when focused on timespan end minute
+msgid "End minute for timespan {number}"
+msgstr "நேர இடைவெளிக்கான இறுதி மணித்துளி {number}"
+
+msgid "Automatically Extract Archives"
+msgstr "காப்பகங்களை தானாக பிரித்தெடுக்கவும்"
+
+msgid "Delete Archives After Extraction"
+msgstr "பிரித்தெடுத்த பிறகு காப்பகங்களை நீக்கு"
 
 #: src/gtk/help-overlay.ui:11
 msgctxt "shortcut window"
