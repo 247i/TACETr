@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (ubuntu-desktop-translations)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-05 17:20+0200\n"
-"PO-Revision-Date: 2025-09-04 23:12\n"
+"POT-Creation-Date: 2025-12-31 12:49+0200\n"
+"PO-Revision-Date: 2026-01-13 21:35\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/ubuntu-desktop-translations/desktop-security-center/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #, icu-message-format
 msgctxt "appTitle"
@@ -55,6 +55,11 @@ msgid "Execute"
 msgstr "இயக்கு"
 
 #, icu-message-format
+msgctxt "snapPermissionAccessLabel"
+msgid "Access"
+msgstr "அணுகல்"
+
+#, icu-message-format
 msgctxt "snapPermissionsEnableTitle"
 msgid "Require apps to ask for system permissions"
 msgstr "கணினி இசைவுகளைக் கேட்கப் பயன்பாடுகள் தேவை"
@@ -70,13 +75,13 @@ msgstr ""
 
 #, icu-message-format
 msgctxt "snapPermissionsEnablingLabel"
-msgid "Enabling, it might take a few seconds..."
-msgstr "செயல்படுத்த, இது சில நொடிகள் ஆகலாம் ..."
+msgid "Enabling, this may take a few seconds..."
+msgstr "இயக்குகிறது, இதற்கு சில வினாடிகள் ஆகலாம்..."
 
 #, icu-message-format
 msgctxt "snapPermissionsDisablingLabel"
-msgid "Disabling, it might take a few seconds..."
-msgstr "முடக்குதல், இதற்குச் சில நொடிகள் ஆகலாம் ..."
+msgid "Disabling, this may take a few seconds..."
+msgstr "முடக்குகிறது, இதற்கு சில வினாடிகள் ஆகலாம்..."
 
 #, icu-message-format
 msgctxt "snapPermissionsExperimentalLabel"
@@ -96,7 +101,7 @@ msgstr "பயன்பாட்டு இசைவுகள்"
 #, case-insensitive, icu-message-format, placeholders:$N$
 msgctxt "snapRulesCount"
 msgid "{n, plural, =0{no rules} =1{1 rule} other{{n} rules}}"
-msgstr "{n, plural, =0{no rules} =1{1 rule} other {{n} விதிகள்}}"
+msgstr "{n, plural, =0{விதிகள் இல்லை} =1{1 விதி} other {{n} விதிகள்}}"
 
 #, case-insensitive, icu-message-format, placeholders:$INTERFACE$:$SNAP$
 msgctxt "snapRulesPageDescription"
@@ -109,9 +114,19 @@ msgid "No rules yet"
 msgstr "இன்னும் விதிகள் இல்லை"
 
 #, icu-message-format
+msgctxt "cameraRulesPageEmptyTileLabel"
+msgid "No apps requested access yet"
+msgstr "இதுவரை எந்த ஆப்சும் அணுகலைக் கோரவில்லை"
+
+#, icu-message-format
 msgctxt "snapRulesRemoveAll"
 msgid "Remove all rules"
 msgstr "எல்லா விதிகளையும் அகற்று"
+
+#, icu-message-format
+msgctxt "snapRulesResetAllPermissions"
+msgid "Reset all permissions"
+msgstr "அனைத்து அனுமதிகளையும் மீட்டமைக்கவும்"
 
 #, icu-message-format
 msgctxt "homeInterfacePageTitle"
@@ -122,6 +137,16 @@ msgstr "வீட்டு கோப்புறை"
 msgctxt "homeInterfacePageDescription"
 msgid "Manage permissions to access files in your Home folder."
 msgstr "உங்கள் வீட்டு கோப்புறையில் கோப்புகளை அணுக இசைவுகளை நிர்வகி."
+
+#, icu-message-format
+msgctxt "cameraInterfacePageTitle"
+msgid "Camera"
+msgstr "கேமரா"
+
+#, icu-message-format
+msgctxt "cameraInterfacePageDescription"
+msgid "Allow apps to access your cameras."
+msgstr "உங்கள் கேமராக்களை அணுக ஆப்சை அனுமதிக்கவும்."
 
 #, icu-message-format
 msgctxt "interfacePageTitle"
@@ -156,7 +181,8 @@ msgstr "சிக்கல்களைப் புகாரளி"
 #, case-insensitive, icu-message-format, placeholders:$N$
 msgctxt "interfaceSnapCount"
 msgid "{n, plural, =0{no apps} =1{1 app} other {{n} apps}}"
-msgstr "{n, plural, =0 {no apps} =1 {1 app} other {{n} பயன்பாடுகள்}}"
+msgstr ""
+"{n, plural, =0 {பயன்பாடுகள் இல்லை} =1 {1 பயன்பாடு} other {{n} பயன்பாடுகள்}}"
 
 #, icu-message-format
 msgctxt "diskEncryptionPageTitle"
@@ -171,27 +197,25 @@ msgstr "மீட்பு விசை"
 #, icu-message-format
 msgctxt "diskEncryptionPageStoreYourKey"
 msgid ""
-"The recovery key lets you regain access to your data if your disk fails to "
+"The recovery key lets you regain access to your data if the disk fails to "
 "unlock during startup. Save it somewhere safe."
 msgstr ""
-"தொடக்கத்தின் போது உங்கள் வட்டு திறக்கத் தவறினால், உங்கள் தரவுகளுக்கான அணுகலை"
-" மீண்டும் பெற மீட்பு விசை உங்களை அனுமதிக்கிறது. எங்காவது பாதுகாப்பாக "
-"சேமிக்கவும்."
+"தொடக்கத்தின் போது வட்டு திறக்கத் தவறினால், மீட்பு விசை உங்கள் தரவை மீண்டும் "
+"அணுக உதவுகிறது. பாதுகாப்பான இடத்தில் சேமிக்கவும்."
 
 #, case-insensitive, icu-message-format, placeholders:$LEARNMORELINK$
 msgctxt "diskEncryptionPageStoreYourKeyWithLink"
 msgid ""
-"The recovery key lets you regain access to your data if your disk fails to "
+"The recovery key lets you regain access to your data if the disk fails to "
 "unlock during startup. Save it somewhere safe. {learnMoreLink}"
 msgstr ""
-"தொடக்கத்தின் போது உங்கள் வட்டு திறக்கத் தவறினால், உங்கள் தரவுகளுக்கான அணுகலை"
-" மீண்டும் பெற மீட்பு விசை உங்களை அனுமதிக்கிறது. எங்காவது பாதுகாப்பாக "
-"சேமிக்கவும். {learnMoreLink}"
+"தொடக்கத்தின் போது வட்டு திறக்கத் தவறினால், மீட்பு விசை உங்கள் தரவை மீண்டும் "
+"அணுக உதவுகிறது. பாதுகாப்பான இடத்தில் சேமிக்கவும். {learnMoreLink}"
 
 #, icu-message-format
 msgctxt "diskEncryptionPageLearnMore"
-msgid "Learn more about recovery keys"
-msgstr "மீட்பு விசைகள் பற்றி மேலும் அறிக"
+msgid "Learn more about hardware-backed encryption"
+msgstr "வன்பொருள் உதவி குறியாக்கத்தைப் பற்றி மேலும் அறிக"
 
 #, icu-message-format
 msgctxt "diskEncryptionPageCheckKey"
@@ -379,8 +403,118 @@ msgstr "இதை சரிசெய்ய, இந்த கட்டளைய�
 #, icu-message-format
 msgctxt "diskEncryptionPageErrorUnconnectedSnapInterfaceCommand"
 msgid "snap connect desktop-security-center:snap-fde-control"
+msgstr "snap இணை desktop-security-center:snap-fde-control"
+
+#, icu-message-format
+msgctxt "diskEncryptionPageAddPinButton"
+msgid "Add PIN..."
+msgstr "பின்னைச் சேர்..."
+
+#, icu-message-format
+msgctxt "diskEncryptionPageAddPassphraseButton"
+msgid "Add passphrase..."
+msgstr "கடவுச்சொற்றொடரைச் சேர்..."
+
+#, icu-message-format
+msgctxt "diskEncryptionPageAddPassphraseDialogHeading"
+msgid "Add passphrase"
+msgstr "கடவுச்சொற்றொடரைச் சேர்க்கவும்"
+
+#, icu-message-format
+msgctxt "diskEncryptionPageAddPinDialogHeading"
+msgid "Add PIN"
+msgstr "பின்னைச் சேர்க்கவும்"
+
+#, icu-message-format
+msgctxt "diskEncryptionPageAddPinDialogBodyMain"
+msgid ""
+"You will need to enter your PIN every time your computer starts. This PIN is"
+" different from your user password."
 msgstr ""
-"ச்னாப் இணைக்க டெச்க்டாப்-பாதுகாப்பு-மையம்: ச்னாப்-எஃப்.டி.இ-கட்டுப்பாடு"
+"உங்கள் கணினி தொடங்கும் ஒவ்வொரு முறையும் உங்கள் பின்னை உள்ளிட வேண்டும். இந்த "
+"பின் உங்கள் பயனர் கடவுச்சொல்லிலிருந்து வேறுபட்டது."
+
+#, icu-message-format
+msgctxt "diskEncryptionPageAddPinDialogBodyRecovery"
+msgid ""
+"If you forget your PIN, you can regain access to the disk by using the "
+"recovery key."
+msgstr ""
+"உங்கள் பின்னை மறந்துவிட்டால், மீட்டெடுப்பு விசையைப் பயன்படுத்தி வட்டுக்கான "
+"அணுகலை மீண்டும் பெறலாம்."
+
+#, icu-message-format
+msgctxt "diskEncryptionPageAddPassphraseDialogBodyMain"
+msgid ""
+"You will need to enter your passphrase every time your computer starts. This"
+" passphrase is different from your user password."
+msgstr ""
+"உங்கள் கணினி தொடங்கும் ஒவ்வொரு முறையும் உங்கள் கடவுச்சொற்றொடரை உள்ளிட "
+"வேண்டும். இந்த கடவுச்சொற்றொடரை உங்கள் பயனர் கடவுச்சொல்லில் இருந்து "
+"வேறுபட்டது."
+
+#, icu-message-format
+msgctxt "diskEncryptionPageAddPassphraseDialogBodyRecovery"
+msgid ""
+"If you forget your passphrase, you can regain access to the disk by using "
+"the recovery key."
+msgstr ""
+"உங்கள் கடவுச்சொற்றொடரை மறந்துவிட்டால், மீட்டெடுப்பு விசையைப் பயன்படுத்தி "
+"வட்டுக்கான அணுகலை மீண்டும் பெறலாம்."
+
+#, icu-message-format
+msgctxt "diskEncryptionPageAdditionalSecurityHeader"
+msgid "Additional security"
+msgstr "கூடுதல் பாதுகாப்பு"
+
+#, icu-message-format
+msgctxt "diskEncryptionPageAdditionalSecurityBody"
+msgid ""
+"You can set a passphrase or a PIN for additional security. You will need to "
+"enter it every time your computer starts."
+msgstr ""
+"கூடுதல் பாதுகாப்பிற்காக நீங்கள் கடவுச்சொற்றொடரை அல்லது பின்னை அமைக்கலாம். "
+"உங்கள் கணினி தொடங்கும் ஒவ்வொரு முறையும் நீங்கள் அதை உள்ளிட வேண்டும்."
+
+#, icu-message-format
+msgctxt "diskEncryptionPageAdditionalSecurityLearnMore"
+msgid "Learn more"
+msgstr "மேலும் அறிக"
+
+#, icu-message-format
+msgctxt "diskEncryptionPageAddPinDialogSaveButton"
+msgid "Add"
+msgstr "கூட்டு"
+
+#, icu-message-format
+msgctxt "diskEncryptionPageRemovePinButton"
+msgid "Remove PIN..."
+msgstr "பின்னை அகற்று..."
+
+#, icu-message-format
+msgctxt "diskEncryptionPageRemovePassphraseButton"
+msgid "Remove passphrase..."
+msgstr "கடவுச்சொற்றொடரை அகற்று..."
+
+#, icu-message-format
+msgctxt "diskEncryptionPageAddingPin"
+msgid "Adding PIN, this may take a few seconds..."
+msgstr "பின்னைச் சேர்க்கிறது, இதற்குச் சில வினாடிகள் ஆகலாம்..."
+
+#, icu-message-format
+msgctxt "diskEncryptionPageAddingPassphrase"
+msgid "Adding passphrase, this may take a few seconds..."
+msgstr "கடவுச்சொற்றொடரைச் சேர்க்கிறது, இதற்கு சில வினாடிகள் ஆகலாம்..."
+
+#, icu-message-format
+msgctxt "diskEncryptionPageRemovingPin"
+msgid "Removing PIN, this may take a few seconds..."
+msgstr "பின்னை அகற்றுகிறது, இதற்கு சில வினாடிகள் ஆகலாம்..."
+
+#, icu-message-format
+msgctxt "diskEncryptionPageRemovingPassphrase"
+msgid "Removing passphrase, this may take a few seconds..."
+msgstr "கடவுச்சொற்றொடரை அகற்றுகிறது, இதற்கு சில வினாடிகள் ஆகலாம்..."
 
 #, icu-message-format
 msgctxt "recoveryKeyExceptionFileSystemTitle"
@@ -465,12 +599,10 @@ msgstr "கடவுச்சொற்றொடரை மாற்றவும�
 
 #, icu-message-format
 msgctxt "recoveryKeyPassphraseBody"
-msgid ""
-"You need to enter your passpharse during startup to unlock the disk. You can"
-" change the passphrase but not disable it."
+msgid "You need to enter your passphrase every time your computer starts."
 msgstr ""
-"வட்டைத் திறக்க தொடக்கத்தின் போது உங்கள் கடவுச்சொற்றாக்கப்பட வேண்டும். "
-"நீங்கள் கடவுச்சொல் மாற்றலாம், ஆனால் அதை முடக்கக்கூடாது."
+"உங்கள் கணினி தொடங்கும் ஒவ்வொரு முறையும் உங்கள் கடவுச்சொற்றொடரை உள்ளிட "
+"வேண்டும்."
 
 #, icu-message-format
 msgctxt "recoveryKeyPassphraseButton"
@@ -529,12 +661,9 @@ msgstr "குறியாக்க பாச்ஃபிரச்"
 
 #, icu-message-format
 msgctxt "recoveryKeyPinBody"
-msgid ""
-"You need to enter your PIN during startup to unlock the disk. You can change"
-" the PIN but not disable it."
+msgid "You need to enter your PIN every time your computer starts."
 msgstr ""
-"வட்டைத் திறக்க தொடக்கத்தின் போது உங்கள் முள் உள்ளிட வேண்டும். நீங்கள் முள் "
-"மாற்றலாம், ஆனால் அதை முடக்கக்கூடாது."
+"உங்கள் கணினி தொடங்கும் ஒவ்வொரு முறையும் உங்கள் பின்னை உள்ளிட வேண்டும்."
 
 #, icu-message-format
 msgctxt "recoveryKeyPinButton"
@@ -621,7 +750,7 @@ msgstr ""
 #, icu-message-format
 msgctxt "recoveryKeyPassphraseEntropyOptimal"
 msgid "Strong passphrase"
-msgstr "வலுவான கடவுச்சொல்"
+msgstr "வலுவான கடவுச்சொற்றொடர்"
 
 #, icu-message-format
 msgctxt "recoveryKeyPinEntropyBelowMin"
