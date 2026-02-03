@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2007-2025, the Sphinx developers
+# Copyright (C) 2007-2026, the Sphinx developers
 # This file is distributed under the same license as the Sphinx package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -9,10 +9,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 8.3.0\n"
+"Project-Id-Version: Sphinx 9.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-15 06:34+0000\n"
-"PO-Revision-Date: 2025-11-16 08:57\n"
+"POT-Creation-Date: 2026-02-01 06:58+0000\n"
+"PO-Revision-Date: 2026-02-02 03:52\n"
 "Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2025\n"
 "Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
 "Language: ta\n"
@@ -1058,17 +1058,53 @@ msgstr "இயல்புநிலை"
 
 #: ../../sphinx/doc/usage/extensions/autodoc.rst:1010
 msgid ""
+"If true, autodoc will use the legacy class-based implementation. This is the"
+" behaviour prior to Sphinx 9.0. It is based on the ``Documenter`` class "
+"hierarchy."
+msgstr ""
+"சரி எனில், autodoc மரபு வகுப்பு அடிப்படையிலான செயலாக்கத்தைப் பயன்படுத்தும். "
+"இது சூரரிமாச்சிலை 9.0க்கு முந்தைய நடத்தை. இது ``ஆவணம்`` வகுப்பு படிநிலையை "
+"அடிப்படையாகக் கொண்டது."
+
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1014
+msgid ""
+"This setting is provided for backwards compatibility if your documentation "
+"or an extension you use uses or monkeypatches the legacy class-based API in "
+"Python code. If this is the case, set ``autodoc_use_legacy_class_based = "
+"True`` in your :file:`conf.py`. Please also add a comment to `the tracking "
+"issue on GitHub <https://github.com/sphinx-doc/sphinx/issues/14089>`__ so "
+"that the maintainers are aware of your use case, for possible future "
+"improvements."
+msgstr ""
+"உங்கள் ஆவணங்கள் அல்லது நீங்கள் பயன்படுத்தும் நீட்டிப்பு, பைதான் குறியீட்டில்"
+" உள்ள மரபு வகுப்பு அடிப்படையிலான பநிஇ ஐப் பயன்படுத்தினால் அல்லது குரங்கு "
+"ஒட்டு செய்தால், பின்னோக்கி இணக்கத்தன்மைக்காக இந்த அமைப்பு வழங்கப்படுகிறது. "
+"இப்படி இருந்தால், உங்கள் :file:`conf.py` இல் "
+"``autodoc_use_legacy_class_based = True`` என்பதை அமைக்கவும். GitHub "
+"<https://github.com/sphinx-doc/sphinx/issues/14089>`__ இல் `கண்காணிப்புச் "
+"சிக்கலுக்கு ஒரு கருத்தைச் சேர்க்கவும். இதனால், எதிர்காலத்தில் சாத்தியமான "
+"மேம்பாடுகளுக்கு, உங்கள் உபயோகத்தை பராமரிப்பவர்கள் அறிந்திருப்பார்கள்."
+
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1023
+msgid ""
+"The legacy class-based implementation does not support PEP 695 type aliases."
+msgstr ""
+"மரபு வகுப்பு அடிப்படையிலான செயல்படுத்தல் PEP 695 வகை மாற்றுப்பெயர்களை "
+"ஆதரிக்காது."
+
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1030
+msgid ""
 "This value selects what content will be inserted into the main body of an "
 ":rst:dir:`autoclass` directive.  The possible values are:"
 msgstr ""
 "இந்த மதிப்பு an: rst: dir: `autoclass` உத்தரவின் முக்கிய உடலில் எந்த "
 "உள்ளடக்கம் செருகப்படும் என்பதைத் தேர்ந்தெடுக்கிறது. சாத்தியமான மதிப்புகள்:"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1013
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1033
 msgid "``'class'``"
 msgstr "``வகுப்பு''`"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1014
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1034
 msgid ""
 "Only the class' docstring is inserted.  You can still document ``__init__`` "
 "as a separate method using :rst:dir:`automethod` or the ``members`` option "
@@ -1078,11 +1114,11 @@ msgstr ""
 "ஒரு தனி முறையாக :rst:dir:`automethod` அல்லது ``members`` விருப்பத்தை "
 ":rst:dir:`autoclass` ஐப் பயன்படுத்தி ஆவணப்படுத்தலாம்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1017
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1037
 msgid "``'both'``"
 msgstr "```இரண்டும்''`"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1018
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1038
 msgid ""
 "Both the class' and the ``__init__`` method's docstring are concatenated and"
 " inserted."
@@ -1090,15 +1126,15 @@ msgstr ""
 "வகை 'மற்றும் `__init__`` முறையின் ஆவணப்படம் இரண்டுமே ஒன்றிணைக்கப்பட்டு "
 "செருகப்படுகின்றன."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1020
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1040
 msgid "``'init'``"
 msgstr "``'init''`"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1021
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1041
 msgid "Only the ``__init__`` method's docstring is inserted."
 msgstr "`__init__`` முறையின் ஆவணப்படம் மட்டுமே செருகப்படுகிறது."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1025
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1045
 msgid ""
 "If the class has no ``__init__`` method or if the ``__init__`` method's "
 "docstring is empty, but the class has a ``__new__`` method's docstring, it "
@@ -1108,7 +1144,7 @@ msgstr ""
 "ஆவணப்படம் காலியாக இருந்தால், ஆனால் வகுப்பில் `__new__`` முறையின் ஆவணப்படம் "
 "இருந்தால், அதற்கு பதிலாக இது பயன்படுத்தப்படுகிறது."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1035
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1055
 msgid ""
 "This value selects how the signature will be displayed for the class defined"
 " by :rst:dir:`autoclass` directive.  The possible values are:"
@@ -1117,23 +1153,23 @@ msgstr ""
 "என்பதைத் தேர்ந்தெடுக்கிறது: rst: dir: `autoclass` கட்டளை. சாத்தியமான "
 "மதிப்புகள்:"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1038
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1058
 msgid "``'mixed'``"
 msgstr "```கலப்பு''``"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1039
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1059
 msgid "Display the signature with the class name."
 msgstr "கையொப்பத்தை வகுப்பு பெயருடன் காண்பி."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1040
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1060
 msgid "``'separated'``"
 msgstr "```பிரிக்கப்பட்ட''``"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1041
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1061
 msgid "Display the signature as a method."
 msgstr "கையொப்பத்தை ஒரு முறையாகக் காண்பி."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1049
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1069
 msgid ""
 "Define the order in which :rst:dir:`automodule` and :rst:dir:`autoclass` "
 "members are listed. Supported values are:"
@@ -1141,31 +1177,31 @@ msgstr ""
 ":rst:for:`automobile` மற்றும் :rst:sir:`all class` உறுப்பினர்கள் "
 "பட்டியலிடப்பட்டுள்ள வரிசையை வரையறுக்கவும். ஆதரிக்கப்படும் மதிப்புகள்:"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1052
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1072
 msgid "``'alphabetical'``: Use alphabetical order."
 msgstr "``'அகர வரிசை'``: அகர வரிசையைப் பயன்படுத்தவும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1055
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1075
 msgid "``'groupwise'``: order by member type. The order is:"
 msgstr "```குழுவரிசை''``: உறுப்பினர் வகையின்படி ஆர்டர். உத்தரவு:"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1057
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1077
 msgid "for modules, exceptions, classes, functions, data"
 msgstr "தொகுதிகள், விதிவிலக்குகள், வகுப்புகள், செயல்பாடுகள், தரவு"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1058
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1078
 msgid "for classes: class methods, static methods, methods,"
 msgstr "வகுப்புகளுக்கு: வகுப்பு முறைகள், நிலையான முறைகள், முறைகள்,"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1059
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1079
 msgid "and properties/attributes"
 msgstr "மற்றும் பண்புகள்/பண்புகள்"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1061
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1081
 msgid "Members are ordered alphabetically within groups."
 msgstr "உறுப்பினர்கள் குழுக்களாக அகரவரிசைப்படி வரிசைப்படுத்தப்பட்டுள்ளனர்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1063
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1083
 msgid ""
 "``'bysource'``: Use the order in which the members appear in the source "
 "code. This requires that the module must be a Python module with the source "
@@ -1175,11 +1211,11 @@ msgstr ""
 "பயன்படுத்தவும். இதற்குத் தொகுதியானது பைதான் தொகுதியாக இருக்க வேண்டும், அதில்"
 " கிடைக்கும் மூலக் குறியீட்டைக் கொண்டிருக்க வேண்டும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1069
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1089
 msgid "Support for ``'bysource'``."
 msgstr "`` 'bysource'`` என்பதற்கான உதவி."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1076
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1096
 msgid ""
 "The default options for autodoc directives.  They are applied to all autodoc"
 " directives automatically.  It must be a dictionary which maps option names "
@@ -1189,97 +1225,97 @@ msgstr ""
 "ஆட்டோடாக் உத்தரவுகளுக்கும் பயன்படுத்தப்படும். இது மதிப்புகளுக்கு விருப்பப் "
 "பெயர்களை வரைபடமாக்கும் அகராதியாக இருக்க வேண்டும். உதாரணமாக:"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1090
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1110
 msgid ""
 "Setting ``None`` or ``True`` to the value is equivalent to giving only the "
 "option name to the directives."
 msgstr ""
 "`` எதுவுமில்லை`` அல்லது `` உண்மை`` ஐ மதிப்புக்கு அமைப்பதற்கு சமமானதாகும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1093
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1113
 msgid "The supported options are:"
 msgstr "ஆதரிக்கப்படும் விருப்பங்கள்:"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1095
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1115
 msgid "``'members'``: See :rst:dir:`automodule:members`."
 msgstr "``'உறுப்பினர்கள்'``: பார்க்க :rst:dir:`automodule:members`."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1096
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1116
 msgid "``'undoc-members'`` See :rst:dir:`automodule:undoc-members`."
 msgstr "``'undoc-members'`` பார்க்க :rst:dir:`automodule:undoc-members`."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1097
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1117
 msgid "``'private-members'``: See :rst:dir:`automodule:private-members`."
 msgstr ""
 "``'தனியார்-உறுப்பினர்கள்'``: பார்க்க :rst:dir:`automodule:private-members`."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1098
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1118
 msgid "``'special-members'``: See :rst:dir:`automodule:special-members`."
 msgstr "``'special-members'``: பார்க்க :rst:dir:`automodule:special-members`."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1099
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1119
 msgid "``'inherited-members'``: See :rst:dir:`autoclass:inherited-members`."
 msgstr ""
 "``'பரம்பரை-உறுப்பினர்கள்'``: பார்க்க :rst:dir:`autoclass:inherited-members`."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1100
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1120
 msgid "``'imported-members'``: See :rst:dir:`automodule:imported-members`."
 msgstr ""
 "``'இறக்குமதி-உறுப்பினர்கள்''': பார்க்க :rst:dir:`automodule:imported-"
 "members`."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1101
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1121
 msgid "``'exclude-members'``: See :rst:dir:`automodule:exclude-members`."
 msgstr ""
 "``'விலக்கு-உறுப்பினர்கள்'``: பார்க்க :rst:dir:`automodule:exclude-members`."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1102
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1122
 msgid "``'ignore-module-all'``: See :rst:dir:`automodule:ignore-module-all`."
 msgstr ""
 "``'ignore-module-all'``: பார்க்க :rst:dir:`automodule:ignore-module-all`."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1103
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1123
 msgid "``'member-order'``: See :rst:dir:`automodule:member-order`."
 msgstr "``'உறுப்பினர்-வரிசை'``: பார்க்க :rst:dir:`automodule:member-order`."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1104
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1124
 msgid "``'show-inheritance'``: See :rst:dir:`autoclass:show-inheritance`."
 msgstr ""
 "``'சோ-இன்எரிட்டன்ச்'''': பார்க்க :rst:dir:`autoclass:show-inheritance`."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1105
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1125
 msgid "``'class-doc-from'``: See :rst:dir:`autoclass:class-doc-from`."
 msgstr "``'class-doc-from''``: பார்க்க :rst:dir:`autoclass:class-doc-from`."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1106
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1126
 msgid "``'no-value'``: See :rst:dir:`autodata:no-value`."
 msgstr "``'no-value'``: பார்க்க :rst:dir:`autodata:no-value`."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1107
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1127
 msgid "``'no-index'``: See :rst:dir:`automodule:no-index`."
 msgstr "``'no-index'``: பார்க்க :rst:dir:`automodule:no-index`."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1108
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1128
 msgid "``'no-index-entry'``: See :rst:dir:`automodule:no-index-entry`."
 msgstr "``'no-index-entry''``: பார்க்க :rst:dir:`automodule:no-index-entry`."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1112
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1132
 msgid "Accepts ``True`` as a value."
 msgstr "`` உண்மை`` ஒரு மதிப்பாக ஏற்றுக்கொள்கிறது."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1115
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1135
 msgid "Added ``'imported-members'``."
 msgstr "சேர்க்கப்பட்டது `'' இறக்குமதி செய்யப்பட்ட-உறுப்பினர்கள்'```."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1118
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1138
 msgid "Added ``'class-doc-from'``."
 msgstr "`` 'வகுப்பு-டாக்-from'``."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1121
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1141
 msgid "Added ``'no-value'``."
 msgstr "`` 'இல்லை-மதிப்பு'``."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1128
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1148
 msgid ""
 "Functions imported from C modules cannot be introspected, and therefore the "
 "signature for such functions cannot be automatically determined.  However, "
@@ -1291,7 +1327,7 @@ msgstr ""
 "இருப்பினும், கையொப்பத்தை செயல்பாட்டின் ஆவணத்தின் முதல் வரியில் வைப்பது "
 "பெரும்பாலும் பயன்படுத்தப்படும் மாநாடு ஆகும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1133
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1153
 msgid ""
 "If this boolean value is set to ``True`` (which is the default), autodoc "
 "will look at the first line of the docstring for functions and methods, and "
@@ -1303,7 +1339,7 @@ msgstr ""
 "பார்க்கும், மேலும் அது கையொப்பம் போல் தோன்றினால், வரியை கையொப்பமாகப் "
 "பயன்படுத்தவும், அகற்றவும் இது ஆவணசரம் உள்ளடக்கத்திலிருந்து."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1138
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1158
 msgid ""
 "autodoc will continue to look for multiple signature lines, stopping at the "
 "first line that does not look like a signature. This is useful for declaring"
@@ -1313,17 +1349,17 @@ msgstr ""
 "நிறுத்தப்படும். அதிக சுமை கொண்ட செயல்பாட்டு கையொப்பங்களை அறிவிக்க இது "
 "பயனுள்ளதாக இருக்கும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1145
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1165
 msgid "Support overloaded signatures"
 msgstr "அதிக சுமை கொண்ட கையொப்பங்களை ஆதரிக்கவும்"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1149
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1169
 msgid "Overloaded signatures do not need to be separated by a backslash"
 msgstr ""
 "அதிக சுமை கொண்ட கையொப்பங்கள் பின்சாய்வுக்குறிப்பால் பிரிக்கப்பட வேண்டிய "
 "அவசியமில்லை"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1155
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1175
 msgid ""
 "This value contains a list of modules to be mocked up. This is useful when "
 "some external dependencies are not met at build time and break the building "
@@ -1335,11 +1371,11 @@ msgstr ""
 "பயனுள்ளதாக இருக்கும். நீங்கள் சார்புகளின் ரூட் தொகுப்பை மட்டுமே "
 "குறிப்பிடலாம் மற்றும் துணை தொகுதிகளைத் தவிர்க்கலாம்:"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1164
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1184
 msgid "Will mock all imports under the ``django`` package."
 msgstr "`` சாங்கோ`` தொகுப்பின் கீழ் அனைத்து இறக்குமதியையும் கேலி செய்யும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1168
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1188
 msgid ""
 "This config value only requires to declare the top-level modules that should"
 " be mocked."
@@ -1347,7 +1383,7 @@ msgstr ""
 "இந்த கட்டமைப்பு மதிப்புக்கு மட்டுமே கேலி செய்யப்பட வேண்டிய உயர்மட்ட "
 "தொகுதிகள் அறிவிக்க வேண்டும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1176
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1196
 msgid ""
 "This value controls how to represent typehints.  The setting takes the "
 "following values:"
@@ -1355,11 +1391,11 @@ msgstr ""
 "இந்த மதிப்பு டைப்இன்ட்களை எவ்வாறு பிரதிநிதித்துவப்படுத்துவது என்பதைக் "
 "கட்டுப்படுத்துகிறது. அமைப்பு பின்வரும் மதிப்புகளை எடுக்கும்:"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1179
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1199
 msgid "``'signature'`` -- Show typehints in the signature"
 msgstr "```கையொப்பம்''` -- கையொப்பத்தில் வகை குறிப்புகளைக் காட்டு"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1180
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1200
 msgid ""
 "``'description'`` -- Show typehints as content of the function or method The"
 " typehints of overloaded functions or methods will still be represented in "
@@ -1369,11 +1405,11 @@ msgstr ""
 "காட்டு அதிக சுமை கொண்ட செயல்பாடுகள் அல்லது முறைகளின் தட்டச்சுப்பொறிகள் "
 "கையொப்பத்தில் குறிப்பிடப்படும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1183
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1203
 msgid "``'none'`` -- Do not show typehints"
 msgstr "`` 'எதுவுமில்லை'` - டைப்இன்ட்களைக் காட்ட வேண்டாம்"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1184
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1204
 msgid ""
 "``'both'`` -- Show typehints in the signature and as content of the function"
 " or method"
@@ -1381,7 +1417,7 @@ msgstr ""
 "`` 'இரண்டும் `` - கையொப்பத்தில் மற்றும் செயல்பாடு அல்லது முறையின் "
 "உள்ளடக்கமாக தட்டச்சுப்பொறிகளைக் காட்டு"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1187
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1207
 msgid ""
 "Overloaded functions or methods will not have typehints included in the "
 "description because it is impossible to accurately represent all possible "
@@ -1391,15 +1427,15 @@ msgstr ""
 "சேர்க்கப்படாது, ஏனெனில் சாத்தியமான அனைத்து ஓவர்லோடுகளையும் அளவுருக்களின் "
 "பட்டியலாக துல்லியமாக பிரதிநிதித்துவப்படுத்துவது சாத்தியமில்லை."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1194
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1214
 msgid "New option ``'description'`` is added."
 msgstr "புதிய விருப்பம் `` 'விளக்கம்'`` சேர்க்கப்பட்டுள்ளது."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1198
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1218
 msgid "New option ``'both'`` is added."
 msgstr "புதிய விருப்பம் `` 'இரண்டும் சேர்க்கப்பட்டுள்ளது."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1204
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1224
 msgid ""
 "This value controls whether the types of undocumented parameters and return "
 "values are documented when :confval:`autodoc_typehints` is set to "
@@ -1410,7 +1446,7 @@ msgstr ""
 "ஆவணப்படுத்தப்பட வேண்டுமா என்பதைக் கட்டுப்படுத்துகிறது. ஆதரிக்கப்படும் "
 "மதிப்புகள்:"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1209
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1229
 msgid ""
 "``'all'``: Types are documented for all parameters and return values, "
 "whether they are documented or not."
@@ -1418,7 +1454,7 @@ msgstr ""
 "```அனைத்து''``: அனைத்து அளவுருக்கள் மற்றும் திரும்ப மதிப்புகள் "
 "ஆவணப்படுத்தப்பட்டாலும் இல்லாவிட்டாலும் வகைகள் ஆவணப்படுத்தப்படும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1212
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1232
 msgid ""
 "``'documented'``: Types will only be documented for a parameter or a return "
 "value that is already documented by the docstring."
@@ -1426,7 +1462,7 @@ msgstr ""
 "```ஆவணப்படுத்தப்பட்ட''``: ஆவணசரம் மூலம் ஏற்கனவே ஆவணப்படுத்தப்பட்ட அளவுரு "
 "அல்லது வருவாய் மதிப்புக்காக மட்டுமே வகைகள் ஆவணப்படுத்தப்படும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1215
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1235
 msgid ""
 "``'documented_params'``: Parameter types will only be annotated if the "
 "parameter is documented in the docstring. The return type is always "
@@ -1437,12 +1473,12 @@ msgstr ""
 "திரும்பும் வகை எப்பொழுதும் சிறுகுறிப்பு செய்யப்படுகிறது (இது ``ஒன்றுமில்லை``"
 " என்பதைத் தவிர)."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1224
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1244
 msgid "New option ``'documented_params'`` is added."
 msgstr ""
 "புதிய விருப்பம் `` 'ஆவணப்படுத்தப்பட்ட_பாராம்ச்'`` சேர்க்கப்பட்டுள்ளது."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1230
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1250
 msgid ""
 "A dictionary for users defined `type aliases`__ that maps a type name to the"
 " full-qualified object name.  It is used to keep type aliases not evaluated "
@@ -1452,7 +1488,7 @@ msgstr ""
 "பெயருக்கு ஒரு வகை பெயரை வரைபடமாக்குகிறது. ஆவணத்தில் மதிப்பிடப்படாத வகை "
 "மாற்றுப்பெயர்களை வைத்திருக்க இது பயன்படுகிறது."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1234
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1254
 msgid ""
 "The type aliases are only available if your program enables :pep:`Postponed "
 "Evaluation of Annotations (PEP 563) <563>` feature via ``from __future__ "
@@ -1462,12 +1498,12 @@ msgstr ""
 "`சிறுகுறிப்புகளின் ஒத்திவைக்கப்பட்ட மதிப்பீட்டை (pep 563) <563>` __ "
 "__future__ இலிருந்து இறக்குமதி சிறுகுறிப்புகளிலிருந்து `வழியாக நற்பொருத்தம்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1238
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1258
 msgid "For example, there is code using a type alias:"
 msgstr ""
 "எடுத்துக்காட்டாக, ஒரு வகை மாற்றுப் பெயரைப் பயன்படுத்தி குறியீடு உள்ளது:"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1249
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1269
 msgid ""
 "If ``autodoc_type_aliases`` is not set, autodoc will generate internal mark-"
 "up from this code as following:"
@@ -1475,7 +1511,7 @@ msgstr ""
 "``autodoc_type_aliases`` அமைக்கப்படவில்லை எனில், autodoc இந்தக் "
 "குறியீட்டிலிருந்து பின்வருமாறு உள் மார்க்-அப்பை உருவாக்கும்:"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1258
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1278
 msgid ""
 "If you set ``autodoc_type_aliases`` as ``{'AliasType': "
 "'your.module.AliasType'}``, it generates the following document internally:"
@@ -1484,7 +1520,7 @@ msgstr ""
 "'your.module.AliasType'}`` என அமைத்தால், அது பின்வரும் ஆவணத்தை உள்நாட்டில் "
 "உருவாக்குகிறது:"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1275
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1295
 msgid ""
 "This value controls the format of typehints.  The setting takes the "
 "following values:"
@@ -1492,14 +1528,14 @@ msgstr ""
 "இந்த மதிப்பு டைப்இன்ட்களின் வடிவமைப்பைக் கட்டுப்படுத்துகிறது. அமைப்பு "
 "பின்வரும் மதிப்புகளை எடுக்கும்:"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1278
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1298
 msgid ""
 "``'fully-qualified'`` -- Show the module name and its name of typehints"
 msgstr ""
 "`` 'முழுமையாக தகுதி வாய்ந்த'``-தொகுதி பெயரையும் அதன் டைப்இன்ட்களின் "
 "பெயரையும் காட்டுங்கள்"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1279
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1299
 msgid ""
 "``'short'`` -- Suppress the leading module names of the typehints (e.g. "
 "``io.StringIO`` -> ``StringIO``)"
@@ -1507,11 +1543,11 @@ msgstr ""
 "``'குறுகிய'`` -- தட்டச்சு குறிப்புகளின் முன்னணி தொகுதி பெயர்களை அடக்கவும் "
 "(எ.கா. ``io.StringIO`` -> ``StringIO``)"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1286
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1306
 msgid "The default setting was changed to ``'short'``"
 msgstr "இயல்புநிலை அமைப்பு `` 'சார்ட்'`` ஆக மாற்றப்பட்டது"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1292
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1312
 msgid ""
 "If True, the default argument values of functions will be not evaluated on "
 "generating document.  It preserves them as is in the source code."
@@ -1520,7 +1556,7 @@ msgstr ""
 "உருவாக்குவதில் மதிப்பீடு செய்யப்படாது. மூலக் குறியீட்டில் உள்ளதைப் போலவே இது"
 " அவற்றைப் பாதுகாக்கிறது."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1297
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1317
 msgid ""
 "Added as an experimental feature.  This will be integrated into autodoc core"
 " in the future."
@@ -1528,7 +1564,7 @@ msgstr ""
 "ஒரு சோதனை அம்சமாக சேர்க்கப்பட்டது. இது எதிர்காலத்தில் ஆட்டோடோக் கோரில் "
 "ஒருங்கிணைக்கப்படும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1304
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1324
 msgid ""
 "Attempt to read ``# type: ...`` comments from source code to supplement "
 "missing type annotations, if True."
@@ -1536,7 +1572,7 @@ msgstr ""
 "``# வகை: ...`` கருத்துரைகளைப் படிக்க முயற்சிக்கவும், அது சரி எனில், விடுபட்ட"
 " வகை சிறுகுறிப்புகளுக்கு துணைபுரிய மூலக் குறியீட்டிலிருந்து."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1307
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1327
 msgid ""
 "This can be disabled if your source code does not use type comments, for "
 "example if it exclusively uses type annotations or does not use type hints "
@@ -1546,7 +1582,7 @@ msgstr ""
 "எடுத்துக்காட்டாக, வகை சிறுகுறிப்புகளை மட்டும் பயன்படுத்தினால் அல்லது எந்த "
 "வகை குறிப்புகளையும் பயன்படுத்தவில்லை என்றால் இது முடக்கப்படும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1313
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1333
 msgid ""
 "Added the option to disable the use of type comments in via the new "
 ":confval:`!autodoc_use_type_comments` option, which defaults to :code-"
@@ -1558,7 +1594,7 @@ msgstr ""
 "பின்னோக்கி இணக்கத்தன்மைக்காக :code-py:`True` க்கு இயல்புநிலையாக இருக்கும். "
 "சூரரிமாச்சிலை 10 இல் இயல்புநிலை :code-py:`False` என மாறும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1324
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1344
 msgid ""
 "This value controls the behavior of :option:`sphinx-build --fail-on-warning`"
 " during importing modules. If ``False`` is given, autodoc forcedly "
@@ -1569,7 +1605,7 @@ msgstr ""
 "இறக்குமதி செய்யப்பட்ட தொகுதி எச்சரிக்கைகளை வெளிப்படுத்தினால், autodoc பிழையை"
 " வலுக்கட்டாயமாக அடக்குகிறது."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1329
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1349
 msgid ""
 "This option now has no effect as :option:`!--fail-on-warning` no longer "
 "exits early."
@@ -1577,7 +1613,7 @@ msgstr ""
 "இந்த விருப்பம் இப்போது :option:`!--fail-on-warning` என எந்த விளைவையும் "
 "ஏற்படுத்தாது."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1337
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1357
 msgid ""
 "This value controls the docstrings inheritance. If set to True the docstring"
 " for classes or methods, if not explicitly set, is inherited from parents."
@@ -1586,7 +1622,7 @@ msgstr ""
 "முறைகளுக்கான டாக்ச்ட்ரிங்கை உண்மையாக அமைத்தால், வெளிப்படையாக "
 "அமைக்கப்படாவிட்டால், பெற்றோரிடமிருந்து பெறப்படுகிறது."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1348
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1368
 msgid ""
 ":mod:`autodoc` supports suppressing warning messages via "
 ":confval:`suppress_warnings`. It defines the following additional warnings "
@@ -1596,23 +1632,23 @@ msgstr ""
 ":mod:`autodoc` ஆதரிக்கிறது. இது பின்வரும் கூடுதல் முன்னறிவிப்பு வகைகளை "
 "வரையறுக்கிறது:"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1352
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1372
 msgid "autodoc"
 msgstr "ஆட்டோடாக்"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1353
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1373
 msgid "autodoc.import_object"
 msgstr "autodoc.import_object"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1357
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1377
 msgid "Docstring preprocessing"
 msgstr "ஆவணசரம் முன் செயலாக்கம்"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1359
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1379
 msgid "autodoc provides the following additional events:"
 msgstr "ஆட்டோடாக் பின்வரும் கூடுதல் நிகழ்வுகளை வழங்குகிறது:"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1365
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1385
 msgid ""
 "Emitted when autodoc has read and processed a docstring.  *lines* is a list "
 "of strings -- the lines of the processed docstring -- that the event handler"
@@ -1626,59 +1662,59 @@ msgstr ""
 msgid "Parameters"
 msgstr "அளவுருக்கள்"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1369
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1388
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1400
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1429
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1461
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1389
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1407
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1419
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1447
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1479
 msgid "the Sphinx application object"
 msgstr "சூரரிமாச்சிலை பயன்பாட்டு பொருள்"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1370
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1401
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1462
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1390
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1420
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1480
 msgid ""
 "the type of the object which the docstring belongs to (one of ``'module'``, "
-"``'class'``, ``'exception'``, ``'function'``, ``'method'``, ``'attribute'``)"
+"``'class'``, ``'exception'``, ``'function'``, ``'decorator'``, ``'method'``,"
+" ``'property'``, ``'attribute'``, ``'data'``, or ``'type'``)"
 msgstr ""
 "ஆவணசரம் சேர்ந்த பொருளின் வகை (```தொகுதி''`, ``'வகுப்பு''``, "
-"``'விதிவிலக்கு''``, ```செயல்பாடு''``, ```முறை''``, ``` பண்புக்கூறு''` "
-"ஆகியவற்றில் ஒன்று"
+"``'விதிவிலக்கு''``, ```செயல்பாடு''``, ``'அலங்கரிப்பான்''``, ```முறை''``, "
+"``'சொத்து''`, ``'பண்பு'', ````````,"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1373
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1404
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1430
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1465
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1393
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1423
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1448
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1483
 msgid "the fully qualified name of the object"
 msgstr "பொருளின் முழு தகுதி வாய்ந்த பெயர்"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1374
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1389
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1405
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1431
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1466
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1394
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1408
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1424
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1449
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1484
 msgid "the object itself"
 msgstr "பொருள் தானே"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1375
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1406
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1469
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1395
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1425
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1487
 msgid ""
-"the options given to the directive: an object with attributes "
-"``inherited_members``, ``undoc_members``, ``show_inheritance`` and ``no-"
-"index`` that are true if the flag option of same name was given to the auto "
-"directive"
+"the options given to the directive: an object with attributes corresponding "
+"to the options used in the auto directive, e.g. ``inherited_members``, "
+"``undoc_members``, or ``show_inheritance``."
 msgstr ""
-"உத்தரவுக்கு வழங்கப்பட்ட விருப்பங்கள்: `` மரபுவழி_மெம்பர்ச்``, `` "
-"undoc_members``, `` show_inheritance`` மற்றும் `` no-index`` என்ற பண்புகளைக்"
-" கொண்ட ஒரு பொருள் அதே பெயரின் கொடி விருப்பம் வழங்கப்பட்டால் உண்மை வாகன "
-"கட்டளை"
+"கட்டளைக்கு கொடுக்கப்பட்ட விருப்பங்கள்: தன்னியக்க கட்டளையில் "
+"பயன்படுத்தப்படும் விருப்பங்களுடன் தொடர்புடைய பண்புகளைக் கொண்ட ஒரு பொருள், "
+"எ.கா. ``பரம்பரை_உறுப்பினர்கள்``, ``உறுப்பினர்களை நீக்குதல்`` அல்லது "
+"``பரம்பரை_காட்சி``."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1379
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1398
 msgid "the lines of the docstring, see above"
 msgstr "டாக்ச்ட்ரிங்கின் கோடுகள், மேலே காண்க"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1385
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1404
 msgid ""
 "Emitted before autodoc formats a signature for an object. The event handler "
 "can modify an object to change its signature."
@@ -1686,12 +1722,12 @@ msgstr ""
 "ஆட்டோடாக் முன் உமிழ்க்கும் ஒரு பொருளின் கையொப்பத்தை வடிவமைக்கிறது. நிகழ்வு "
 "கையாளுபவர் அதன் கையொப்பத்தை மாற்ற ஒரு பொருளை மாற்ற முடியும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1390
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1409
 msgid "a boolean indicates an object is bound method or not"
 msgstr ""
 "ஒரு பூலியன் ஒரு பொருள் பிணைக்கப்பட்ட முறை அல்லது இல்லை என்பதைக் குறிக்கிறது"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1396
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1415
 msgid ""
 "Emitted when autodoc has formatted a signature for an object. The event "
 "handler can return a new tuple ``(signature, return_annotation)`` to change "
@@ -1701,7 +1737,7 @@ msgstr ""
 "கையாளுபவர் ஒரு புதிய டூப்பிள் `` (கையொப்பம், திரும்ப_ஆனோடேசன்) `` "
 "வெளியீட்டில் சூரரிமாச்சிலை வைப்பதை மாற்ற முடியும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1410
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1428
 msgid ""
 "function signature, as a string of the form ``'(parameter_1, "
 "parameter_2)'``, or ``None`` if introspection didn't succeed and signature "
@@ -1711,7 +1747,7 @@ msgstr ""
 "படிவத்தின் சரமாக, சுயபரிசோதனை வெற்றிபெறவில்லை மற்றும் உத்தரவில் கையொப்பம் "
 "குறிப்பிடப்படவில்லை."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1413
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1431
 msgid ""
 "function return annotation as a string of the form ``'annotation'``, or "
 "``''`` if there is no return annotation."
@@ -1719,7 +1755,7 @@ msgstr ""
 "ஃபங்சன் ரிட்டர்ன் சிறுகுறிப்பு என்பது ``'சிறுகுறிப்பு'`` வடிவத்தின் சரமாக, "
 "அல்லது ரிட்டர்ன் சிறுகுறிப்பு இல்லை என்றால் ``''``."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1416
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1434
 msgid ""
 "The :mod:`sphinx.ext.autodoc` module provides factory functions for commonly"
 " needed docstring processing in event :event:`autodoc-process-docstring`:"
@@ -1728,8 +1764,8 @@ msgstr ""
 "செயலாக்கத்திற்கான தொழிற்சாலை செயல்பாடுகளை வழங்குகிறது: நிகழ்வு:` "
 "ஆட்டோடோக்-செயல்முறை-டோக்ச்ட்ரிங்`:"
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/ext/autodoc/_event_listeners.pydocstring
-#: of sphinx.ext.autodoc._event_listeners.cut_lines:1
+#: ../../sphinx/sphinx/ext/autodoc/_event_listeners.pydocstring of
+#: sphinx.ext.autodoc._event_listeners.cut_lines:1
 msgid ""
 "Return a listener that removes the first *pre* and last *post* lines of "
 "every docstring.  If *what* is a sequence of strings, only docstrings of a "
@@ -1739,23 +1775,23 @@ msgstr ""
 "கேட்பவரைத் திருப்பி விடுங்கள். * என்ன * என்பது சரங்களின் வரிசை என்றால், * "
 "என்ன * செயலாக்கப்படும்."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/ext/autodoc/_event_listeners.pydocstring
-#: of sphinx.ext.autodoc._event_listeners.cut_lines:5
+#: ../../sphinx/sphinx/ext/autodoc/_event_listeners.pydocstring of
+#: sphinx.ext.autodoc._event_listeners.cut_lines:5
 msgid "Use like this (e.g. in the ``setup()`` function of :file:`conf.py`)::"
 msgstr ""
 "இதைப் பயன்படுத்தவும் (எ.கா. `` அமைவு () `` செயல்பாட்டில்: கோப்பு: `conf.py`)"
 " ::"
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/ext/autodoc/_event_listeners.pydocstring
-#: of sphinx.ext.autodoc._event_listeners.cut_lines:11
+#: ../../sphinx/sphinx/ext/autodoc/_event_listeners.pydocstring of
+#: sphinx.ext.autodoc._event_listeners.cut_lines:11
 msgid ""
 "This can (and should) be used in place of :confval:`automodule_skip_lines`."
 msgstr ""
 "இதற்கு பதிலாக இது பயன்படுத்தப்படலாம் (மற்றும் வேண்டும்): confval: "
 "`autolodule_skip_lines`."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/ext/autodoc/_event_listeners.pydocstring
-#: of sphinx.ext.autodoc._event_listeners.between:1
+#: ../../sphinx/sphinx/ext/autodoc/_event_listeners.pydocstring of
+#: sphinx.ext.autodoc._event_listeners.between:1
 msgid ""
 "Return a listener that either keeps, or if *exclude* is True excludes, lines"
 " between lines that match the *marker* regular expression.  If no line "
@@ -1768,34 +1804,35 @@ msgstr ""
 "இருக்கும், எனவே * தீவிரம் * உண்மையாக இல்லாவிட்டால் எந்த மாற்றமும் "
 "செய்யப்படாது."
 
-#: ../../../../../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/site-packages/sphinx/ext/autodoc/_event_listeners.pydocstring
-#: of sphinx.ext.autodoc._event_listeners.between:6
+#: ../../sphinx/sphinx/ext/autodoc/_event_listeners.pydocstring of
+#: sphinx.ext.autodoc._event_listeners.between:6
 msgid ""
 "If *what* is a sequence of strings, only docstrings of a type in *what* will"
 " be processed."
 msgstr "* என்ன * என்பது சரங்களின் வரிசை என்றால், * என்ன * செயலாக்கப்படும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1424
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1442
 msgid ""
 "Emitted when autodoc has read and processed a class to determine the base-"
 "classes.  *bases* is a list of classes that the event handler can modify "
 "**in place** to change what Sphinx puts into the output.  It's emitted only "
-"if ``show-inheritance`` option given."
+"if the ``show-inheritance`` option is given."
 msgstr ""
-"ஆட்டோடோக் அடிப்படை வகுப்புகளைத் தீர்மானிக்க ஒரு வகுப்பைப் படித்து "
-"செயலாக்கும்போது உமிழப்படும். *தளங்கள்*என்பது நிகழ்வு கையாளுபவர் ** இடத்தில் "
-"மாற்றக்கூடிய வகுப்புகளின் பட்டியல் ** கொடுக்கப்பட்ட `` சோ-ஃபார்எரிட்டன்ச்`` "
-"விருப்பம் இருந்தால் மட்டுமே அது உமிழப்படும்."
+"அடிப்படை வகுப்புகளைத் தீர்மானிக்க, ஆட்டோடாக் ஒரு வகுப்பைப் படித்து "
+"செயலாக்கும்போது உமிழப்படும். *அடிப்படைகள்* என்பது சூரரிமாச்சிலை வெளியீட்டில்"
+" என்ன வைக்கிறது என்பதை மாற்ற, நிகழ்வு கையாளுபவர் **இடத்தில்** மாற்றக்கூடிய "
+"வகுப்புகளின் பட்டியல். ``சோ-பரம்பரை`` விருப்பம் கொடுக்கப்பட்டால் மட்டுமே அது"
+" வெளியிடப்படும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1432
-msgid "the options given to the class directive"
-msgstr "வகுப்பு உத்தரவுக்கு வழங்கப்பட்ட விருப்பங்கள்"
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1450
+msgid "unused placeholder"
+msgstr "பயன்படுத்தப்படாத ஒதுக்கிட"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1433
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1451
 msgid "the list of base classes signature. see above."
 msgstr "அடிப்படை வகுப்புகள் கையொப்பத்தின் பட்டியல். மேலே பார்க்க."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1438
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1456
 msgid ""
 "``bases`` can contain a string as a base class name. It will be processed as"
 " reStructuredText."
@@ -1803,11 +1840,11 @@ msgstr ""
 "``bases`` ஒரு அடிப்படை வர்க்கப் பெயராக ஒரு சரத்தைக் கொண்டிருக்கலாம். இது "
 "மறுகட்டமைக்கப்பட்ட உரையாக செயலாக்கப்படும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1443
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1461
 msgid "Skipping members"
 msgstr "உறுப்பினர்களைத் தவிர்ப்பது"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1445
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1463
 msgid ""
 "autodoc allows the user to define a custom method for determining whether a "
 "member should be included in the documentation by using the following event:"
@@ -1816,7 +1853,7 @@ msgstr ""
 "சேர்க்கப்பட வேண்டுமா என்பதை தீர்மானிக்க தனிப்பயன் முறையை வரையறுக்க ஆட்டோடாக்"
 " பயனரை அனுமதிக்கிறது:"
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1452
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1470
 msgid ""
 "Emitted when autodoc has to decide whether a member should be included in "
 "the documentation.  The member is excluded if a handler returns ``True``.  "
@@ -1826,7 +1863,7 @@ msgstr ""
 "வேண்டும். ஒரு கையாளுபவர் `` உண்மை`` திரும்பினால் உறுப்பினர் விலக்கப்படுவார்."
 " ஏண்ட்லர் `` தவறு`` திரும்பினால் அது சேர்க்கப்பட்டுள்ளது."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1456
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1474
 msgid ""
 "If more than one enabled extension handles the ``autodoc-skip-member`` "
 "event, autodoc will use the first non-``None`` value returned by a handler. "
@@ -1839,7 +1876,7 @@ msgstr ""
 "பிற இயக்கப்பட்ட நீட்டிப்புகளின் தவிர்க்கும் நடத்தைக்குத் திரும்புவதற்கு "
 "கையாளுபவர்கள் `` எதுவுமில்லை` `திரும்ப வேண்டும்."
 
-#: ../../sphinx/doc/usage/extensions/autodoc.rst:1467
+#: ../../sphinx/doc/usage/extensions/autodoc.rst:1485
 msgid ""
 "a boolean indicating if autodoc will skip this member if the user handler "
 "does not override the decision"

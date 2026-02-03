@@ -1,15 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2007-2023, the Sphinx developers
+# Copyright (C) 2007-2026, the Sphinx developers
 # This file is distributed under the same license as the Sphinx package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2025
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 7.3.0\n"
+"Project-Id-Version: Sphinx 9.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-15 00:35+0000\n"
-"PO-Revision-Date: 2019-12-21 20:24+0000\n"
+"POT-Creation-Date: 2026-01-30 02:35+0000\n"
+"PO-Revision-Date: 2026-01-30 09:07\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2025\n"
 "Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
@@ -20,15 +24,91 @@ msgstr ""
 #: ../../sphinx/doc/usage/extensions/duration.rst:2
 msgid ":mod:`sphinx.ext.duration` -- Measure durations of Sphinx processing"
 msgstr ""
-": மோட்: `sphinx.ext.duration` - சூரரிமாச்சிலை செயலாக்கத்தின் கால அளவுகளை "
-"அளவிட"
+": மோட்: `sphinx.ext.duration` - ஸ்பிங்க்ஸ் செயலாக்கத்தின் கால அளவுகளை அளவிட"
 
 #: ../../sphinx/doc/usage/extensions/duration.rst:9
 msgid ""
-"This extension measures durations of Sphinx processing and show its result "
-"at end of the build.  It is useful for inspecting what document is slowly "
-"built."
+"This extension measures durations of Sphinx processing when reading "
+"documents and is useful for inspecting what document is slowly built. "
+"Durations are printed to console at the end of the build and saved to a JSON"
+" file in the output directory by default."
 msgstr ""
-"இந்த நீட்டிப்பு சூரரிமாச்சிலை செயலாக்கத்தின் கால அளவை அளவிடுகிறது மற்றும் "
-"அதன் முடிவை உருவாக்கத்தின் முடிவில் காட்டுகிறது. எந்த ஆவணம் மெதுவாக "
-"கட்டப்பட்டுள்ளது என்பதை ஆய்வு செய்ய இது பயனுள்ளதாக இருக்கும்."
+"இந்த நீட்டிப்பு ஆவணங்களைப் படிக்கும் போது சூரரிமாச்சிலை செயலாக்கத்தின் கால "
+"அளவை அளவிடுகிறது மற்றும் எந்த ஆவணம் மெதுவாக கட்டப்பட்டுள்ளது என்பதை ஆய்வு "
+"செய்ய பயனுள்ளதாக இருக்கும். உருவாக்கத்தின் முடிவில் கன்சோலுக்கு காலங்கள் "
+"அச்சிடப்பட்டு, இயல்புநிலையாக வெளியீட்டு கோப்பகத்தில் உள்ள சாதொபொகு கோப்பில் "
+"சேமிக்கப்படும்."
+
+#: ../../sphinx/doc/usage/extensions/duration.rst:14
+msgid ""
+"Enable this extension by adding ``'sphinx.ext.duration'`` to the "
+":confval:`extensions` list in your :file:`conf.py`:"
+msgstr ""
+"உங்கள் :file:`conf.py` இல் உள்ள :confval:`extensions` பட்டியலில் "
+"``'sphinx.ext.duration'`` சேர்ப்பதன் மூலம் இந்த நீட்டிப்பை இயக்கவும்:"
+
+#: ../../sphinx/doc/usage/extensions/duration.rst:26
+msgid "Configuration"
+msgstr "உள்ளமைவு"
+
+#: ../../sphinx/doc/usage/extensions/duration.rst:0
+msgid "Type"
+msgstr "வகை"
+
+#: ../../sphinx/doc/usage/extensions/duration.rst:0
+msgid "Default"
+msgstr "இயல்புநிலை"
+
+#: ../../sphinx/doc/usage/extensions/duration.rst:32
+msgid "Show the total reading duration in the build summary, e.g.:"
+msgstr "மொத்த வாசிப்பு காலத்தை உருவாக்க சுருக்கத்தில் காட்டு, எ.கா:"
+
+#: ../../sphinx/doc/usage/extensions/duration.rst:45
+msgid ""
+"Show the slowest durations in the build summary. The durations are sorted in"
+" order from slowest to fastest. This prints up to "
+":confval:`duration_n_slowest` durations, e.g.:"
+msgstr ""
+"உருவாக்க சுருக்கத்தில் மெதுவான காலங்களைக் காட்டு. காலங்கள் மெதுவாக இருந்து "
+"வேகமாக வரை வரிசைப்படுத்தப்படுகின்றன. இது :confval:`duration_n_slowest` கால "
+"அளவுகள் வரை அச்சிடுகிறது, எ.கா.:"
+
+#: ../../sphinx/doc/usage/extensions/duration.rst:64
+msgid ""
+"Maximum number of slowest durations to show in the build summary when "
+":confval:`duration_print_slowest` is enabled. By default, only the ``5`` "
+"slowest durations are shown. Set this to ``0`` to show all durations."
+msgstr ""
+":confval:`duration_print_slowest` இயக்கப்பட்டிருக்கும் போது, ​​உருவாக்க "
+"சுருக்கத்தில் காட்டப்பட வேண்டிய மெதுவான கால அளவுகளின் அதிகபட்ச எண்ணிக்கை. "
+"இயல்பாக, ``5`` மெதுவான காலங்கள் மட்டுமே காட்டப்படும். எல்லா கால அளவுகளையும் "
+"காட்ட இதை ``0`` ஆக அமைக்கவும்."
+
+#: ../../sphinx/doc/usage/extensions/duration.rst:75
+msgid ""
+"Write all reading durations to a JSON file in the output directory The file "
+"contents are a map of the document names to reading durations, where "
+"document names are strings and durations are floats in seconds. Set this "
+"value to an empty string or ``None`` to disable writing the file, or set it "
+"to a relative path to customize it."
+msgstr ""
+"வெளியீட்டு கோப்பகத்தில் உள்ள சாதொபொகு கோப்பில் அனைத்து வாசிப்பு கால "
+"அளவுகளையும் எழுதுங்கள். கோப்பு உள்ளடக்கங்கள் என்பது ஆவணப் பெயர்களின் "
+"வரைபடமாகும், அவை ஆவணப் பெயர்கள் சரங்களாகவும், கால அளவுகள் நொடிகளில் "
+"மிதவையாகவும் இருக்கும். கோப்பை எழுதுவதை முடக்க இந்த மதிப்பை வெற்று சரம் "
+"அல்லது ``ஒன்றுமில்லை`` என அமைக்கவும் அல்லது தனிப்பயனாக்க தொடர்புடைய பாதையில்"
+" அமைக்கவும்."
+
+#: ../../sphinx/doc/usage/extensions/duration.rst:81
+msgid "This may be useful for testing and setting a limit on reading times."
+msgstr ""
+"இது சோதனை செய்வதற்கும் படிக்கும் நேரத்தின் வரம்பை அமைப்பதற்கும் பயனுள்ளதாக "
+"இருக்கும்."
+
+#: ../../sphinx/doc/usage/extensions/duration.rst:89
+msgid ""
+"Set a duration limit (in seconds) for reading a document. If any duration "
+"exceeds this value, a warning is emitted."
+msgstr ""
+"ஆவணத்தைப் படிக்க கால வரம்பை (வினாடிகளில்) அமைக்கவும். ஏதேனும் கால அளவு இந்த "
+"மதிப்பை மீறினால், முன்னறிவிப்பு வெளியிடப்படும்."

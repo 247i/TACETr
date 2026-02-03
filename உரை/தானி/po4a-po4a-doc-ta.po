@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (po4a)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-22 15:34+0200\n"
-"PO-Revision-Date: 2026-01-19 06:52\n"
+"POT-Creation-Date: 2026-02-01 12:53+0200\n"
+"PO-Revision-Date: 2026-02-02 03:59\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/po4a/po4a-doc/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
+"X-Generator: Weblate 5.16-dev\n"
 
 #. type: Attribute 'xml:lang' of: <refentry>
 #: share/doc/po4a-display-man.xml:1 share/doc/po4a-display-pod.xml:1
@@ -75,11 +75,11 @@ msgid ""
 "choice='plain'><replaceable>PO4A_OPT</replaceable></arg></arg>"
 msgstr ""
 "<command>po4a-display-man</command> <arg choice='plain'><option>-p</option> "
-"</arg> <arg choice='plain'><replaceable>PO_FILE</replaceable></arg> <arg "
-"choice='opt'><arg choice='plain'><option>-m</g><arg> "
-"Choice='plain'>replaceable>MASTER_FILE</replaceable></arg></arg> <arg "
+"</arg> <arg choice='plain'><replaceable>எபொ_கோப்பு</replaceable></arg> <arg "
+"choice='opt'><arg choice='plain'><option>-m</option> </arg><arg "
+"choice='plain'><replaceable>தலை_கோப்பு</replaceable></arg></arg> <arg "
 "choice='opt'><arg choice='plain'><option>-o</option> </arg><arg "
-"choice='plain'>replaceable>PO4A_OPT</replaceable></arg></arg>"
+"choice='plain'><replaceable>எபொ4அ_விருப்ப</replaceable></arg></arg>"
 
 #. type: =head1
 #: share/doc/po4a-display-man.xml:11 share/doc/po4a-display-pod.xml:11 po4a:5
@@ -200,8 +200,8 @@ msgstr ""
 
 #. type: =head1
 #: share/doc/po4a-display-man.xml:21 share/doc/po4a-display-pod.xml:20
-#: po4a:189 po4a-gettextize:75 po4a-normalize:36 po4a-translate:47
-#: po4a-updatepo:54 msguntypot:29 doc/po4a.7.pod:196
+#: po4a:208 po4a-gettextize:75 po4a-normalize:36 po4a-translate:47
+#: po4a-updatepo:54 msguntypot:29 doc/po4a.7.pod:197
 #: lib/Locale/Po4a/Chooser.pm:7 lib/Locale/Po4a/Dia.pm:12
 #: lib/Locale/Po4a/Docbook.pm:15 lib/Locale/Po4a/Gemtext.pm:8
 #: lib/Locale/Po4a/Guide.pm:10 lib/Locale/Po4a/Halibut.pm:14
@@ -1209,20 +1209,79 @@ msgstr ""
 "ஆவணங்களுக்கும் அடிப்படை கோப்பகத்தை அமைக்கவும் (மேலே உள்ள B <-SRCDIR> ஐப் "
 "பார்க்கவும்)."
 
-#. type: =head2
+#. type: =item
 #: po4a:84
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid "B<--context-module> I<MODULE_NAME>"
+msgstr "B<--context-module> I<MODULE_NAME>"
+
+#. type: textblock
+#: po4a:85
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"Specifies the Perl module name used for context generation (such as gettext "
+"msgctxt). This option can be set individually for each master document."
+msgstr ""
+"சூழல் உருவாக்கத்திற்குப் பயன்படுத்தப்படும் பெர்ல் தொகுதிப் பெயரைக் "
+"குறிப்பிடுகிறது (கெட்டெக்ச்ட் msgctxt போன்றவை). இந்த விருப்பத்தை ஒவ்வொரு "
+"முதன்மை ஆவணத்திற்கும் தனித்தனியாக அமைக்கலாம்."
+
+#. type: textblock
+#: po4a:86
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"The module name must be discoverable by the po4a Perl program (you may need "
+"to adjust the C<PERL5LIB> environment variable, for example) and must "
+"contain a subroutine named exactly C<get_msgctxt>. This subroutine takes a "
+"single hash reference as an argument and should return either C<undef> "
+"(indicating no context) or a context string value."
+msgstr ""
+"தொகுதியின் பெயர் po4a பெர்ல் நிரலால் கண்டறியக்கூடியதாக இருக்க வேண்டும் "
+"(உதாரணமாக, C<PERL5LIB> சூழல் மாறியை நீங்கள் சரிசெய்ய வேண்டியிருக்கலாம்) "
+"மேலும் சரியாக C<get_msgctxt> என்ற சப்ரூட்டினைக் கொண்டிருக்க வேண்டும். இந்த "
+"சப்ரூட்டீன் ஒரு ஆச் குறிப்பை ஒரு வாதமாக எடுத்துக்கொள்கிறது மற்றும் C<undef> "
+"(சூழல் இல்லை என்பதைக் குறிக்கிறது) அல்லது சூழல் சர மதிப்பை வழங்க வேண்டும்."
+
+#. type: textblock
+#: po4a:87
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"The hash reference argument contains several fields: C<msgid>, C<reference>,"
+" C<type>, C<previous>, and C<others>. The C<msgid>, C<reference>, and "
+"C<type> fields contain string values for the message. The C<previous> field "
+"is a hash reference to the previous message. The C<others> field may be "
+"provided by individual format modules. To supply these additional fields, "
+"the format module implementation must override the C<translate> subroutine "
+"in the C<TransTractor> module and pass the C<context_arguments> option."
+msgstr ""
+"ஆச் குறிப்பு வாதத்தில் பல புலங்கள் உள்ளன: C<msgid>, C<reference>, C<type>, "
+"C<previous> மற்றும் C<others>. C<msgid>, C<reference> மற்றும் C<type> "
+"புலங்களில் செய்திக்கான சர மதிப்புகள் உள்ளன. C<முந்தைய> புலம் முந்தைய "
+"செய்திக்கான ஆச் குறிப்பு. C<others> புலம் தனிப்பட்ட வடிவமைப்பு தொகுதிகள் "
+"மூலம் வழங்கப்படலாம். இந்த கூடுதல் புலங்களை வழங்க, வடிவமைப்பு தொகுதி "
+"செயல்படுத்தல் C<TransTractor> தொகுதியில் உள்ள C<translate> துணை நிரலை மீற "
+"வேண்டும் மற்றும் C<context_arguments> விருப்பத்தை அனுப்ப வேண்டும்."
+
+#. type: textblock
+#: po4a:88
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid "For details, refer to its usage section below."
+msgstr "விவரங்களுக்கு, அதன் பயன்பாட்டுப் பகுதியை கீழே பார்க்கவும்."
+
+#. type: =head2
+#: po4a:89
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Options modifying the POT header"
 msgstr "பானை தலைப்பை மாற்றியமைக்கும் விருப்பங்கள்"
 
 #. type: =item
-#: po4a:85 lib/Locale/Po4a/Po.pm:10
+#: po4a:90 lib/Locale/Po4a/Po.pm:10
 #, ignore-same, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<--porefs> I<type>"
 msgstr "B <-porefs> i <type>"
 
 #. type: textblock
-#: po4a:86 po4a-updatepo:39 lib/Locale/Po4a/Po.pm:11
+#: po4a:91 po4a-updatepo:39 lib/Locale/Po4a/Po.pm:11
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Specify the reference format. Argument I<type> can be one of B<never> to not"
@@ -1237,14 +1296,14 @@ msgstr ""
 "(இயல்புநிலை: முழு)."
 
 #. type: =item
-#: po4a:87 po4a-updatepo:41 lib/Locale/Po4a/Po.pm:12
+#: po4a:92 po4a-updatepo:41 lib/Locale/Po4a/Po.pm:12
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<--wrap-po> B<no>|B<newlines>|I<number> (default: 76)"
 msgstr ""
 "பி <-மடக்கு-போ> பி <இல்லை> | பி <புதிய லைன்ச்> | நான் <எண்> (இயல்புநிலை: 76)"
 
 #. type: textblock
-#: po4a:88 po4a-updatepo:42 lib/Locale/Po4a/Po.pm:13
+#: po4a:93 po4a-updatepo:42 lib/Locale/Po4a/Po.pm:13
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Specify how the po file should be wrapped. This gives the choice between "
@@ -1258,7 +1317,7 @@ msgstr ""
 "படிக்க கடினமாக உள்ளது."
 
 #. type: textblock
-#: po4a:89 lib/Locale/Po4a/Po.pm:14
+#: po4a:94 lib/Locale/Po4a/Po.pm:14
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Historically, the gettext suite has reformatted the po files at the 77th "
@@ -1280,7 +1339,7 @@ msgstr ""
 "மூடப்பட்டிருக்கும்."
 
 #. type: textblock
-#: po4a:90 po4a-updatepo:44
+#: po4a:95 po4a-updatepo:44
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Based on the value of this option, appropriate flags (B<--no-wrap> or "
@@ -1296,7 +1355,7 @@ msgstr ""
 "I<newlines> போன்றது)."
 
 #. type: textblock
-#: po4a:91 po4a-updatepo:45 lib/Locale/Po4a/Po.pm:15
+#: po4a:96 po4a-updatepo:45 lib/Locale/Po4a/Po.pm:15
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Note that this option has no impact on how the msgid and msgstr are wrapped,"
@@ -1307,13 +1366,13 @@ msgstr ""
 "உள்ளடக்கத்தில் புதியவை எவ்வாறு சேர்க்கப்படுகின்றன என்பதில்."
 
 #. type: =item
-#: po4a:92
+#: po4a:97
 #, ignore-same, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<--master-language>"
 msgstr "பி <-மாச்டர் மொழி>"
 
 #. type: textblock
-#: po4a:93
+#: po4a:98
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Language of the source files containing the documents to translate. Note "
@@ -1323,13 +1382,13 @@ msgstr ""
 "ஆவணங்களும் ஒரே மொழியைப் பயன்படுத்த வேண்டும் என்பதை நினைவில் கொள்க."
 
 #. type: =item
-#: po4a:94 po4a-gettextize:38 po4a-updatepo:46 lib/Locale/Po4a/Po.pm:16
+#: po4a:99 po4a-gettextize:38 po4a-updatepo:46 lib/Locale/Po4a/Po.pm:16
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<--msgid-bugs-address> I<email@address>"
 msgstr "B <-msgid-bugs-address> i <மின்னஞ்சல்@முகவரி>"
 
 #. type: textblock
-#: po4a:95 po4a-gettextize:39 po4a-updatepo:47 lib/Locale/Po4a/Po.pm:17
+#: po4a:100 po4a-gettextize:39 po4a-updatepo:47 lib/Locale/Po4a/Po.pm:17
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Set the report address for msgid bugs. By default, the created POT files "
@@ -1340,13 +1399,13 @@ msgstr ""
 "இல்லை."
 
 #. type: =item
-#: po4a:96 po4a-gettextize:40 po4a-updatepo:48 lib/Locale/Po4a/Po.pm:18
+#: po4a:101 po4a-gettextize:40 po4a-updatepo:48 lib/Locale/Po4a/Po.pm:18
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<--copyright-holder> I<string>"
 msgstr "பி <-பதிப்புரிமை-ஓல்டர்> நான் <string>"
 
 #. type: textblock
-#: po4a:97 po4a-gettextize:41 po4a-updatepo:49 lib/Locale/Po4a/Po.pm:19
+#: po4a:102 po4a-gettextize:41 po4a-updatepo:49 lib/Locale/Po4a/Po.pm:19
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Set the copyright holder in the POT header. The default value is \"Free "
@@ -1356,61 +1415,61 @@ msgstr ""
 "\"இலவச மென்பொருள் அறக்கட்டளை, இன்க்.\""
 
 #. type: =item
-#: po4a:98 po4a-gettextize:42 po4a-updatepo:50 lib/Locale/Po4a/Po.pm:20
+#: po4a:103 po4a-gettextize:42 po4a-updatepo:50 lib/Locale/Po4a/Po.pm:20
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<--package-name> I<string>"
 msgstr "பி <-தொகுப்பு-பெயர்> நான் <string>"
 
 #. type: textblock
-#: po4a:99 po4a-gettextize:43 po4a-updatepo:51 lib/Locale/Po4a/Po.pm:21
+#: po4a:104 po4a-gettextize:43 po4a-updatepo:51 lib/Locale/Po4a/Po.pm:21
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Set the package name for the POT header. The default is \"PACKAGE\"."
 msgstr "பானை தலைப்புக்கு தொகுப்பு பெயரை அமைக்கவும். இயல்புநிலை \"தொகுப்பு\"."
 
 #. type: =item
-#: po4a:100 po4a-gettextize:44 po4a-updatepo:52 lib/Locale/Po4a/Po.pm:22
+#: po4a:105 po4a-gettextize:44 po4a-updatepo:52 lib/Locale/Po4a/Po.pm:22
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<--package-version> I<string>"
 msgstr "பி <-தொகுப்பு-பதிப்பு> நான் <string>"
 
 #. type: textblock
-#: po4a:101 po4a-gettextize:45 po4a-updatepo:53 lib/Locale/Po4a/Po.pm:23
+#: po4a:106 po4a-gettextize:45 po4a-updatepo:53 lib/Locale/Po4a/Po.pm:23
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Set the package version for the POT header. The default is \"VERSION\"."
 msgstr "பானை தலைப்புக்கு தொகுப்பு பதிப்பை அமைக்கவும். இயல்புநிலை \"பதிப்பு\"."
 
 #. type: =head2
-#: po4a:102
+#: po4a:107
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Options to modify the PO files"
 msgstr "PO கோப்புகளை மாற்றுவதற்கான விருப்பங்கள்"
 
 #. type: =item
-#: po4a:103 po4a-updatepo:26
+#: po4a:108 po4a-updatepo:26
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<--msgmerge-opt> I<options>"
 msgstr "B <-msgmerge-opt> i <ptions>"
 
 #. type: textblock
-#: po4a:104 po4a-updatepo:27
+#: po4a:109 po4a-updatepo:27
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Extra options for L<msgmerge(1)>."
 msgstr "L<msgmerge(1)>க்கான கூடுதல் விருப்பங்கள்."
 
 #. type: textblock
-#: po4a:105
+#: po4a:110
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Note: B<$lang> will be extended to the current language."
 msgstr "குறிப்பு: பி <$ lang> தற்போதைய மொழிக்கு நீட்டிக்கப்படும்."
 
 #. type: =item
-#: po4a:106 po4a-updatepo:22
+#: po4a:111 po4a-updatepo:22
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<--no-previous>"
 msgstr "பி <-இல்லை-ப்ரீவ்ச்>"
 
 #. type: textblock
-#: po4a:107
+#: po4a:112
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "This option removes B<--previous> from the options passed to L<msgmerge(1)>."
@@ -1421,13 +1480,13 @@ msgstr ""
 "ஆதரிக்க இது தேவை."
 
 #. type: =item
-#: po4a:108 po4a-updatepo:24
+#: po4a:113 po4a-updatepo:24
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<--previous>"
 msgstr "பி <-முந்தைய>"
 
 #. type: textblock
-#: po4a:109 po4a-updatepo:25
+#: po4a:114 po4a-updatepo:25
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "This option adds B<--previous> to the options passed to L<msgmerge(1)>.  It "
@@ -1438,13 +1497,13 @@ msgstr ""
 "தேவைப்படுகிறது, மேலும் முன்னிருப்பாகச் செயல்படுத்தப்படும்."
 
 #. type: =head1
-#: po4a:110
+#: po4a:115
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "CONFIGURATION FILE"
 msgstr "உள்ளமைவு கோப்பு"
 
 #. type: textblock
-#: po4a:111
+#: po4a:116
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "po4a expects a configuration file as argument. This file must contain the "
@@ -1454,7 +1513,7 @@ msgstr ""
 "கூறுகள் இருக்க வேண்டும்:"
 
 #. type: =item
-#: po4a:112
+#: po4a:117
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "The path to the PO files and the list of languages existing in the project;"
@@ -1462,7 +1521,7 @@ msgstr ""
 "PO கோப்புகளுக்கான பாதை மற்றும் திட்டத்தில் இருக்கும் மொழிகளின் பட்டியல்;"
 
 #. type: =item
-#: po4a:113
+#: po4a:118
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Optionally, some global options and so-called configuration aliases that are"
@@ -1472,7 +1531,7 @@ msgstr ""
 "உள்ளமைக்க வார்ப்புருக்களாகப் பயன்படுத்தப்படும் உள்ளமைவு மாற்றுப்பெயர்கள்;"
 
 #. type: =item
-#: po4a:114
+#: po4a:119
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "The list of each master file to translate, along with specific parameters."
@@ -1480,7 +1539,7 @@ msgstr ""
 "குறிப்பிட்ட அளவுருக்களுடன் மொழிபெயர்க்க ஒவ்வொரு முதன்மை கோப்பின் பட்டியல்."
 
 #. type: textblock
-#: po4a:115
+#: po4a:120
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "All lines contain a command between square braces, followed by its "
@@ -1493,7 +1552,7 @@ msgstr ""
 "நீங்கள் வரியின் முடிவில் இருந்து தப்பிக்கலாம்."
 
 #. type: textblock
-#: po4a:116
+#: po4a:121
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Some full examples are presented on this page, while other examples can be "
@@ -1504,13 +1563,13 @@ msgstr ""
 "காணலாம்."
 
 #. type: =head2
-#: po4a:117
+#: po4a:122
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Finding the PO and POT files"
 msgstr "PO மற்றும் POT கோப்புகளைக் கண்டறிதல்"
 
 #. type: textblock
-#: po4a:118
+#: po4a:123
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "The simplest solution is to explicitly give the path to POT and PO files, as"
@@ -1520,13 +1579,13 @@ msgstr ""
 " எளிமையான தீர்வு:"
 
 #. type: verbatim
-#: po4a:119
+#: po4a:124
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid " [po4a_paths] man/po/project.pot de:man/po/de.po fr:man/po/fr.po"
 msgstr "[po4a_paths] man/po/project.pot de:man/po/de.po fr:man/po/fr.po"
 
 #. type: textblock
-#: po4a:120
+#: po4a:125
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "This specifies the path to the POT file first, and then the paths to the "
@@ -1536,7 +1595,7 @@ msgstr ""
 " கோப்புகளுக்கான பாதைகளையும் குறிப்பிடுகிறது."
 
 #. type: textblock
-#: po4a:121
+#: po4a:126
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "The same information can be written as follows to reduce the risk of "
@@ -1545,7 +1604,7 @@ msgstr ""
 "நகல்/ஒட்டுதல் பிழைகள் அபாயத்தைக் குறைக்க இதே தகவல்களை பின்வருமாறு எழுதலாம்:"
 
 #. type: verbatim
-#: po4a:122
+#: po4a:127
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 " [po4a_langs] fr de\n"
@@ -1555,7 +1614,7 @@ msgstr ""
 "."
 
 #. type: textblock
-#: po4a:123
+#: po4a:128
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "The C<$lang> component is automatically expanded using the provided "
@@ -1567,7 +1626,7 @@ msgstr ""
 "பிழையின் அபாயத்தைக் குறைக்கிறது."
 
 #. type: textblock
-#: po4a:124
+#: po4a:129
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "You can further compact the same information by only providing the path to "
@@ -1577,13 +1636,13 @@ msgstr ""
 " வழங்குவதன் மூலம் அதே தகவலை நீங்கள் மேலும் சுருக்கலாம்."
 
 #. type: verbatim
-#: po4a:125
+#: po4a:130
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid " [po_directory] man/po/"
 msgstr " [Po_directory] மனிதன்/போ/"
 
 #. type: textblock
-#: po4a:126
+#: po4a:131
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "The provided directory must contain a set of PO files, each named F<XX.po> "
@@ -1600,7 +1659,7 @@ msgstr ""
 "பயன்படுத்த வேண்டிய பெயரை யூகிக்க முடியாது)."
 
 #. type: textblock
-#: po4a:127
+#: po4a:132
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Note that you must choose only one between C<po_directory> and "
@@ -1619,13 +1678,13 @@ msgstr ""
 "மேலும் அறிவுறுத்தப்படுகிறது."
 
 #. type: =head3
-#: po4a:128
+#: po4a:133
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Centralized or split PO files?"
 msgstr "மையப்படுத்தப்பட்ட அல்லது பி.ஓ."
 
 #. type: textblock
-#: po4a:129
+#: po4a:134
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "By default, po4a produces one single PO file per target language, containing"
@@ -1644,7 +1703,7 @@ msgstr ""
 "உள்ளடக்கத்தை பல கோப்புகளில் பிரிக்க விரும்புகின்றன."
 
 #. type: textblock
-#: po4a:130
+#: po4a:135
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "To have one PO file per master file, you simply have to use the string "
@@ -1656,14 +1715,14 @@ msgstr ""
 "சரத்தை பயன்படுத்த வேண்டும்."
 
 #. type: verbatim
-#: po4a:131
+#: po4a:136
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid " [po4a_paths] doc/$master/$master.pot $lang:doc/$master/$lang.po"
 msgstr ""
 " [po4a_paths] Doc/$ master/$ master.pot $ lang: doc/$ master/$ lang.po"
 
 #. type: textblock
-#: po4a:132
+#: po4a:137
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "With this line, po4a will produce separate POT and PO files for each "
@@ -1683,7 +1742,7 @@ msgstr ""
 "<பாட் => அளவுருவுடன், பின்வருமாறு பயன்படுத்த பானை கோப்பைக் குறிப்பிடலாம்."
 
 #. type: textblock
-#: po4a:133
+#: po4a:138
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "This feature can also be used to group several translated files into the "
@@ -1699,7 +1758,7 @@ msgstr ""
 " கொண்டுள்ளது F <bar/gui.xml> மற்றும் f <bar/cli.xml>)."
 
 #. type: verbatim
-#: po4a:134
+#: po4a:139
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 " [po4a_langs] de fr ja\n"
@@ -1715,7 +1774,7 @@ msgstr ""
 ". $ lang.xml pot = மதுக்கூடம்"
 
 #. type: textblock
-#: po4a:135
+#: po4a:140
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "In split mode, B<po4a> builds a temporary compendium during the PO update, "
@@ -1734,13 +1793,13 @@ msgstr ""
 "ஒவ்வொரு PO கோப்புகளிலும் மொழிபெயர்ப்பு தானாகவே பயன்படுத்தப்படுகிறது."
 
 #. type: =head2
-#: po4a:136
+#: po4a:141
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Specifying the documents to translate"
 msgstr "மொழிபெயர்க்க ஆவணங்களைக் குறிப்பிடுகிறது"
 
 #. type: textblock
-#: po4a:137
+#: po4a:142
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "You must also list the documents that should be translated. For each master "
@@ -1757,7 +1816,7 @@ msgstr ""
 "எடுத்துக்காட்டு:"
 
 #. type: verbatim
-#: po4a:138
+#: po4a:143
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 " [type: sgml] \"doc/my stuff.sgml\"  \"fr:doc/fr/mon truc.sgml\"  de:doc/de/mein\\ kram.sgml\n"
@@ -1771,7 +1830,7 @@ msgstr ""
 "DE: DOC/DE/Script.xml"
 
 #. type: textblock
-#: po4a:139
+#: po4a:144
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "But again, these complex lines are difficult to read and modify, e.g. when "
@@ -1783,7 +1842,7 @@ msgstr ""
 "மறுசீரமைப்பது மிகவும் எளிதானது:"
 
 #. type: verbatim
-#: po4a:140
+#: po4a:145
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 " [type: sgml]    doc/my_stuff.sgml $lang:doc/$lang/my_stuff.sgml\n"
@@ -1795,13 +1854,13 @@ msgstr ""
 "[Type: Docbook] Doc/Script.xml $ lang: Doc/$ lang/script.xml"
 
 #. type: =head2
-#: po4a:141
+#: po4a:146
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Specifying options"
 msgstr "விருப்பங்களைக் குறிப்பிடுகிறது"
 
 #. type: textblock
-#: po4a:142
+#: po4a:147
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "There is two types of options: I<po4a options> are default values to the "
@@ -1824,7 +1883,7 @@ msgstr ""
 "எக்ச்எம்எல் பாகுபடுத்தி பி <sostrip> க்கு நீங்கள் கடந்து செல்லலாம்."
 
 #. type: textblock
-#: po4a:143
+#: po4a:148
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "You can pass these options for a specific master file, or even for a "
@@ -1841,17 +1900,17 @@ msgstr ""
 "மொழிபெயர்ப்புக்கு 0% ஆக குறைக்கப்படும் (அது எப்போதும் வைக்கப்படுகிறது)."
 
 #. type: verbatim
-#: po4a:144
+#: po4a:149
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 " [type:xml] toto.xml $lang:toto.$lang.xml opt:\"-o nostrip\" opt_fr:\"--keep"
 " 0\""
 msgstr ""
-"[type:xml] toto.xml $lang:toto.$lang.xml தேர்வு:\"-o nostrip\" opt_fr:\"--0 "
-"வை"
+" [type:xml] toto.xml $lang:toto.$lang.xml தேர்வு:\"-o nostrip\" opt_fr:\"--0"
+" வை"
 
 #. type: textblock
-#: po4a:145
+#: po4a:150
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "In any case, these configuration chunks must be located at the end of the "
@@ -1867,7 +1926,7 @@ msgstr ""
 "சரங்களாக இணைக்கப்படுகின்றன. பின்வரும் எடுத்துக்காட்டுகள் அனைத்தும் சமமானவை:"
 
 #. type: verbatim
-#: po4a:146
+#: po4a:151
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "  [type:xml] toto.xml $lang:toto.$lang.xml opt:\"--keep 20\" opt:\"-o nostrip\" opt_fr:\"--keep 0\"\n"
@@ -1879,7 +1938,7 @@ msgstr ""
 "[type:xml] toto.xml $lang:toto.$lang.xml opt:--keep opt:20 opt:-o opt:nostrip opt_fr:--keep opt_fr:0"
 
 #. type: textblock
-#: po4a:147
+#: po4a:152
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Note that language specific options are not used when building the POT file."
@@ -1896,13 +1955,13 @@ msgstr ""
 "மொழிபெயர்ப்பை உருவாக்கும் போது பயன்படுத்தப்படுகின்றன, சி <-கீப்> விருப்பமாக."
 
 #. type: =head3
-#: po4a:148
+#: po4a:153
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Configuration aliases"
 msgstr "உள்ளமைவு மாற்றுப்பெயர்கள்"
 
 #. type: textblock
-#: po4a:149
+#: po4a:154
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "To pass the same options to several files, the best is to define a type "
@@ -1916,7 +1975,7 @@ msgstr ""
 "இது சி <மேன்> வகையின் நீட்டிப்பாகும்."
 
 #. type: verbatim
-#: po4a:150
+#: po4a:155
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "  [po4a_alias:test] man opt_it:\"--keep 0\"\n"
@@ -1926,7 +1985,7 @@ msgstr ""
 "[type: test] man/page.1 $lang:man/$lang/page.1"
 
 #. type: textblock
-#: po4a:151
+#: po4a:156
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "You can also extend an existing type reusing the same name for the alias as "
@@ -1936,7 +1995,7 @@ msgstr ""
 " நீட்டிக்கலாம். இது ஒரு தவறான சுழல்நிலை வரையறை என விளக்கப்படவில்லை."
 
 #. type: verbatim
-#: po4a:152
+#: po4a:157
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "  [po4a_alias:man] man opt_it:\"--keep 0\"\n"
@@ -1946,13 +2005,13 @@ msgstr ""
 "[type: man] man/page.1 $lang:man/$lang/page.1"
 
 #. type: =head3
-#: po4a:153
+#: po4a:158
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Global default options"
 msgstr "உலகளாவிய இயல்புநிலை விருப்பங்கள்"
 
 #. type: textblock
-#: po4a:154
+#: po4a:159
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "You can also use C<[options]> lines to define options that must be used for "
@@ -1962,13 +2021,13 @@ msgstr ""
 "விருப்பங்களை வரையறுக்க சி <[விருப்பங்கள்]> வரிகளையும் பயன்படுத்தலாம்."
 
 #. type: verbatim
-#: po4a:155
+#: po4a:160
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "  [options] --keep 20 --option nostrip"
 msgstr "  [விருப்பங்கள்] -கீப் 20 --option நாசி"
 
 #. type: textblock
-#: po4a:156
+#: po4a:161
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "As with the command line options, you can abbreviate the parameters passed "
@@ -1978,19 +2037,19 @@ msgstr ""
 "நீங்கள் சுருக்கமாகக் கூறலாம்:"
 
 #. type: verbatim
-#: po4a:157
+#: po4a:162
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "  [options] -k 20 -o nostrip"
 msgstr "  [விருப்பங்கள்] -K 20 -o நாசி"
 
 #. type: =head3
-#: po4a:158
+#: po4a:163
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Option priorities"
 msgstr "விருப்பம் முன்னுரிமைகள்"
 
 #. type: textblock
-#: po4a:159
+#: po4a:164
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "The options of every sources are concatenated, ensuring that the default "
@@ -2002,7 +2061,7 @@ msgstr ""
 "உறுதி செய்கிறது. ஆர்டர் பின்வருமாறு:"
 
 #. type: =item
-#: po4a:160
+#: po4a:165
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "C<[options]> lines provide default values that can be overridden by any "
@@ -2012,7 +2071,7 @@ msgstr ""
 " மூலத்தாலும் மீறப்படலாம்."
 
 #. type: =item
-#: po4a:161
+#: po4a:166
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Type aliases are then used. Language specific settings override the ones "
@@ -2022,7 +2081,7 @@ msgstr ""
 "அமைப்புகள் அனைத்து மொழிகளுக்கும் பொருந்தக்கூடியவற்றை மேலெழுதும்."
 
 #. type: =item
-#: po4a:162
+#: po4a:167
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Settings that are specific to a given master file override both the default "
@@ -2034,7 +2093,7 @@ msgstr ""
 "மொழி குறிப்பிட்ட அமைப்புகள் உலகளாவியவற்றை மேலெழுதும்."
 
 #. type: =item
-#: po4a:163
+#: po4a:168
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Finally, parameters provided on the B<po4a> command line override any "
@@ -2044,13 +2103,13 @@ msgstr ""
 "கோப்பிலிருந்து எந்த அமைப்புகளையும் மேலெழுதும்."
 
 #. type: =head3
-#: po4a:164
+#: po4a:169
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Example"
 msgstr "எடுத்துக்காட்டு"
 
 #. type: textblock
-#: po4a:165
+#: po4a:170
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Here is an example showing how to quote the spaces and quotes:"
 msgstr ""
@@ -2058,7 +2117,7 @@ msgstr ""
 "ஒரு எடுத்துக்காட்டு இங்கே:"
 
 #. type: verbatim
-#: po4a:166
+#: po4a:171
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 " [po_directory] man/po/\n"
@@ -2078,13 +2137,212 @@ msgstr ""
 "OPT: \"-k 75\" opt_it: \"-l utf-8\" opt_fr:-VERBOSE"
 
 #. type: =head2
-#: po4a:167
+#: po4a:172
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid "Context"
+msgstr "சூழல்"
+
+#. type: textblock
+#: po4a:173
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"po4a supports context features such as C<msgctxt> in the GNU gettext PO file"
+" format. See L<GNU gettext utilities - "
+"Contexts|https://www.gnu.org/software/gettext/manual/html_node/Contexts.html>"
+" for the motivation behind this feature. In short, it allows multiple "
+"messages with the same C<msgid> (master language message) to coexist in a "
+"single PO file. Here's a simple example. Consider this Markdown document, "
+"F<context.md>:"
+msgstr ""
+"GNU உரைபெறு PO கோப்பு வடிவத்தில் C<msgctxt> போன்ற சூழல் அம்சங்களை po4a "
+"ஆதரிக்கிறது. L<GNU உரைபெறு utilities - "
+"Contexts|https://www.gnu.org/software/gettext/manual/html_node/Contexts.html>"
+" ஐப் பார்க்கவும். சுருக்கமாக, ஒரே சி<msgid> (முதன்மை மொழி செய்தி) கொண்ட பல "
+"செய்திகளை ஒரு PO கோப்பில் இணைவதற்கு இது அனுமதிக்கிறது. இதோ ஒரு எளிய சான்று. "
+"இந்த மார்க் பேரூர் ஆவணத்தைக் கவனியுங்கள், F<context.md>:"
+
+#. type: verbatim
+#: po4a:174
+#, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"  # Foo\n"
+"\n"
+"  Foo"
+msgstr ""
+"# ஃபூ \n"
+"\n"
+"ஃபூ"
+
+#. type: textblock
+#: po4a:175
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"In this case, both the title and paragraph share the same C<msgid> \"Foo\". "
+"If we want to translate the title \"Foo\" as \"BAR\" and the paragraph "
+"\"Foo\" as \"Bar\", we encounter a problem: the PO file only supports one "
+"message for this msgid, forcing us to choose a single translation. This is "
+"where the context feature becomes useful. By tagging each message with a "
+"distinct context—for example, \"title\" or \"paragraph\"—we can treat them "
+"as separate messages, allowing each to have its own translation in the "
+"generated output."
+msgstr ""
+"இந்த வழக்கில், தலைப்பு மற்றும் பத்தி இரண்டும் ஒரே C<msgid> \"Foo\" ஐப் "
+"பகிர்ந்து கொள்கின்றன. \"Foo\" என்ற தலைப்பை \"BAR\" என்றும், \"Foo\" என்ற "
+"பத்தியை \"Bar\" என்றும் மொழிபெயர்க்க விரும்பினால், நாங்கள் ஒரு சிக்கலை "
+"எதிர்கொள்கிறோம்: PO கோப்பு மட்டும் ஒரு செய்தியை ஆதரிக்கிறது msgid, forcing "
+"us பெறுநர் choose a ஒற்றை translation. இங்குதான் சூழல் நற்பொருத்தம் "
+"பயனுள்ளதாக இருக்கும். ஒவ்வொரு செய்தியையும் தனித்தனி சூழலுடன் குறியிடுவதன் "
+"மூலம்-உதாரணமாக, \"தலைப்பு\" அல்லது \"பத்தி\"-நாம் அவற்றை தனித்தனி "
+"செய்திகளாகக் கருதலாம், உருவாக்கப்படும் வெளியீட்டில் ஒவ்வொன்றும் அதன் சொந்த "
+"மொழிபெயர்ப்பை அனுமதிக்கும்."
+
+#. type: textblock
+#: po4a:176
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"This may sound appealing, but it can be complicated to use due to its "
+"maximum flexibility. The C<context-module> option takes a Perl module name, "
+"which must contain a C<get_msgctxt> subroutine. A minimal example looks like"
+" this:"
+msgstr ""
+"இது கவர்ச்சிகரமானதாகத் தோன்றலாம், ஆனால் அதன் அதிகபட்ச நெகிழ்வுத்தன்மை "
+"காரணமாகப் பயன்படுத்துவதில் சிக்கலாக இருக்கலாம். C<context-module> விருப்பம் "
+"பெர்ல் தொகுதியின் பெயரை எடுக்கும், அதில் C<get_msgctxt> சப்ரூட்டீன் இருக்க "
+"வேண்டும். ஒரு குறைந்தபட்ச சான்று இதுபோல் தெரிகிறது:"
+
+#. type: verbatim
+#: po4a:177
+#, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"  package ContextExample;\n"
+"\n"
+"  use strict;\n"
+"  use warnings;\n"
+"\n"
+"  sub get_msgctxt {\n"
+"      my $args = shift;\n"
+"      $args->{msgid} eq 'Foo' or return;\n"
+"      if ( $args->{type} eq 'Title #' ) {\n"
+"          return 'title';\n"
+"      } else {\n"
+"          return 'paragraph';\n"
+"      }\n"
+"  }\n"
+"\n"
+"  1;"
+msgstr ""
+"தொகுப்பு சூழல் உதாரணம்; \n"
+"\n"
+"கண்டிப்பாக பயன்படுத்தவும்; \n"
+"எச்சரிக்கைகளைப் பயன்படுத்துங்கள்; \n"
+"\n"
+"துணை get_msgctxt { \n"
+"என் $args = shift; \n"
+"$args->{msgid} eq 'Foo' அல்லது return; \n"
+"என்றால் ($args->{type} eq 'Title #' ) { \n"
+"திரும்ப 'தலைப்பு'; \n"
+"} வேறு { \n"
+"திரும்ப 'பத்தி'; \n"
+"} \n"
+"} \n"
+"\n"
+"1;"
+
+#. type: textblock
+#: po4a:178
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"Save this Perl module to C</path/to/lib/ContextExample.pm>. The "
+"configuration file C</path/to/po4a.conf> should contain the following:"
+msgstr ""
+"இந்த பெர்ல் தொகுதியை C</path/to/lib/ContextExample.pm> இல் சேமிக்கவும். "
+"C</path/to/po4a.conf> உள்ளமைவு கோப்பு பின்வருவனவற்றைக் கொண்டிருக்க வேண்டும்:"
+
+#. type: verbatim
+#: po4a:179
+#, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"  [po4a_paths] master.pot trans:translation.po\n"
+"  [type:Text] context.md trans:translation.md \\\n"
+"              opt:\"--option markdown \\\n"
+"                   --context-module=ContextExample\""
+msgstr ""
+"[po4a_paths] master.pot trans:translation.po \n"
+"[வகை:உரை] சூழல்.md trans:translation.md \\ \n"
+"தேர்வு:\"--விருப்பம் குறியிடுதல் \\ \n"
+"--context-module=ContextExample\""
+
+#. type: textblock
+#: po4a:180
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"Then run C<PERL5LIB=/path/to/lib:$PERL5LIB po4a /path/to/po4a.conf>. Note "
+"that you must set the Perl library path environment variable so that po4a "
+"can locate the provided module."
+msgstr ""
+"பின்னர் C<PERL5LIB=/path/to/lib:$PERL5LIB po4a /path/to/po4a.conf> ஐ "
+"இயக்கவும். நீங்கள் பெர்ல் லைப்ரரி பாதை சூழல் மாறியை அமைக்க வேண்டும், இதனால் "
+"po4a வழங்கிய தொகுதியை கண்டறிய முடியும்."
+
+#. type: textblock
+#: po4a:181
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid "There are some important caveats when using this feature:"
+msgstr ""
+"இந்த அம்சத்தைப் பயன்படுத்தும் போது சில முக்கியமான எச்சரிக்கைகள் உள்ளன:"
+
+#. type: =item
+#: po4a:182
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid "Choose context string values wisely"
+msgstr "சூழல் சரம் மதிப்புகளை புத்திசாலித்தனமாக தேர்வு செய்யவும்"
+
+#. type: textblock
+#: po4a:183
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"Embedding the C<reference> value as-is is strongly discouraged because file "
+"paths tend to change, which would cause all messages with that context to "
+"change as well. Use concise, clear, and consistent context values that "
+"reflect your intention."
+msgstr ""
+"C<reference> மதிப்பை அப்படியே உட்பொதிப்பது கடுமையாக ஊக்கமளிக்கவில்லை, "
+"ஏனெனில் கோப்பு பாதைகள் மாற முனைகின்றன, இது அந்த சூழலுடன் கூடிய அனைத்து "
+"செய்திகளையும் மாற்றும். உங்கள் நோக்கத்தைப் பிரதிபலிக்கும் சுருக்கமான, "
+"தெளிவான மற்றும் நிலையான சூழல் மதிப்புகளைப் பயன்படுத்தவும்."
+
+#. type: =item
+#: po4a:184
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid "Unicode strings are normalized before being passed to your module"
+msgstr ""
+"யூனிகோட் சரங்கள் உங்கள் தொகுதிக்கு அனுப்பப்படுவதற்கு முன் இயல்பாக்கப்படும்"
+
+#. type: textblock
+#: po4a:185
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"You may need to investigate the exact Perl string literal using debug print "
+"statements in your context module. For example, if the C<msgid> contains "
+"C<’> (a right single quotation mark), the value passed to the C<get_msgctxt>"
+" subroutine will contain C<\\x{2019}> instead. In this case, you would write"
+" a conditional such as C<$args->{msgid} eq \"\\x{2019}scuse me?\".>"
+msgstr ""
+"உங்கள் சூழல் தொகுதியில் உள்ள பிழைத்திருத்த அச்சு அறிக்கைகளைப் பயன்படுத்தி "
+"சரியான பெர்ல் சரத்தை நீங்கள் ஆராய வேண்டியிருக்கலாம். எடுத்துக்காட்டாக, "
+"C<msgid> C<'> (வலது ஒற்றை மேற்கோள் குறி) இருந்தால், C<get_msgctxt> "
+"சப்ரூட்டினுக்கு அனுப்பப்பட்ட மதிப்பில் C<\\x{2019}> இருக்கும். இந்த "
+"வழக்கில், நீங்கள் C<$args->{msgid} eq \"\\x{2019}scuse me?\" போன்ற ஒரு "
+"நிபந்தனையை எழுதுவீர்கள்.>"
+
+#. type: =head2
+#: po4a:186
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Addendum: Adding extra content in the translation"
 msgstr "கூடுதல்: மொழிபெயர்ப்பில் கூடுதல் உள்ளடக்கத்தைச் சேர்ப்பது"
 
 #. type: textblock
-#: po4a:168
+#: po4a:187
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "If you want to add an extra section to the translation, for example to give "
@@ -2098,7 +2356,7 @@ msgstr ""
 "தொடரியல் பற்றிய கூடுதல் விவரங்களுக்கு L <PO4A (7)> பக்கத்தைப் பார்க்கவும்."
 
 #. type: verbatim
-#: po4a:169
+#: po4a:188
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 " [type: pod] script fr:doc/fr/script.1 \\\n"
@@ -2107,13 +2365,13 @@ msgstr ""
 " [type: pod] script fr:dr/fr/script.1 \\ கூட்டு fr:doc/l10n/script.for.add"
 
 #. type: textblock
-#: po4a:170
+#: po4a:189
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "You can also use language templates as follow:"
 msgstr "நீங்கள் பின்வருமாறு மொழி வார்ப்புருக்களையும் பயன்படுத்தலாம்:"
 
 #. type: verbatim
-#: po4a:171
+#: po4a:190
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 " [type: pod] script $lang:doc/$lang/script.1 \\\n"
@@ -2123,20 +2381,20 @@ msgstr ""
 "add_ $ lang: doc/l10n/ச்கிரிப்ட். $ lang.add"
 
 #. type: textblock
-#: po4a:172
+#: po4a:191
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "If an addendum fails to apply, the translation is discarded."
 msgstr ""
 "ஒரு கூடுதல் விண்ணப்பிக்கத் தவறினால், மொழிபெயர்ப்பு நிராகரிக்கப்படுகிறது."
 
 #. type: =head3
-#: po4a:173
+#: po4a:192
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Modifiers for the addendum declaration"
 msgstr "கூடுதல் அறிவிப்புக்கான மாற்றியமைப்பாளர்கள்"
 
 #. type: textblock
-#: po4a:174
+#: po4a:193
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Addendum modifiers can simplify the configuration file in the case where not"
@@ -2150,13 +2408,13 @@ msgstr ""
 "கோப்பு பெயருக்கு முன் அமைந்துள்ள ஒற்றை கரி."
 
 #. type: =item
-#: po4a:175
+#: po4a:194
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<?>"
 msgstr "பி <?>"
 
 #. type: textblock
-#: po4a:176
+#: po4a:195
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Include I<addendum_path> if this file does exist, otherwise do nothing."
@@ -2165,13 +2423,13 @@ msgstr ""
 "எதுவும் செய்யாதீர்கள்."
 
 #. type: =item
-#: po4a:177
+#: po4a:196
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<@>"
 msgstr "பி <@>"
 
 #. type: textblock
-#: po4a:178
+#: po4a:197
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "I<addendum_path> is not a regular addendum but a file containing a list of "
@@ -2182,13 +2440,13 @@ msgstr ""
 "முன்னதாக இருக்கலாம்."
 
 #. type: =item
-#: po4a:179
+#: po4a:198
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<!>"
 msgstr "பி <!>"
 
 #. type: textblock
-#: po4a:180
+#: po4a:199
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "I<addendum_path> is discarded, it is not loaded and will not be loaded by "
@@ -2198,7 +2456,7 @@ msgstr ""
 "கூடுதல் சேர்க்கை விவரக்குறிப்பால் ஏற்றப்படாது."
 
 #. type: textblock
-#: po4a:181
+#: po4a:200
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "The following includes an addendum in any language, but if only it exists. "
@@ -2208,39 +2466,39 @@ msgstr ""
 "மட்டுமே. கூடுதல் இல்லை என்றால் எந்த பிழையும் தெரிவிக்கப்படவில்லை."
 
 #. type: verbatim
-#: po4a:182
+#: po4a:201
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 " [type: pod] script $lang:doc/$lang/script.1  "
 "add_$lang:?doc/l10n/script.$lang.add"
 msgstr ""
-"[வகை: பாட்] ச்கிரிப்ட் $lang:doc/$lang/script.1 "
+" [வகை: பாட்] ச்கிரிப்ட் $lang:doc/$lang/script.1 "
 "add_$lang:?doc/l10n/script.$lang.add"
 
 #. type: textblock
-#: po4a:183
+#: po4a:202
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "The following includes a list of addendum for every language:"
 msgstr "பின்வருவனவற்றில் ஒவ்வொரு மொழிக்கும் கூடுதல் பட்டியல் அடங்கும்:"
 
 #. type: verbatim
-#: po4a:184
+#: po4a:203
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 " [type: pod] script $lang:doc/$lang/script.1  "
 "add_$lang:@doc/l10n/script.$lang.add"
 msgstr ""
-"[வகை: பாட்] ச்கிரிப்ட் $lang:doc/$lang/script.1 "
+" [வகை: பாட்] ச்கிரிப்ட் $lang:doc/$lang/script.1 "
 "add_$lang:@doc/l10n/script.$lang.add"
 
 #. type: =head2
-#: po4a:185
+#: po4a:204
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Filtering the translated strings"
 msgstr "மொழிபெயர்க்கப்பட்ட சரங்களை வடிகட்டுதல்"
 
 #. type: textblock
-#: po4a:186
+#: po4a:205
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Sometimes, you want to hide some strings from the translation process. To "
@@ -2255,7 +2513,7 @@ msgstr ""
 "எடுத்துக்காட்டு:"
 
 #. type: verbatim
-#: po4a:187
+#: po4a:206
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "  [type:docbook] book.xml          \\\n"
@@ -2267,7 +2525,7 @@ msgstr ""
 "$ லாங்: நூல். $ lang.xml"
 
 #. type: textblock
-#: po4a:188
+#: po4a:207
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "With this setting, the strings to translate will be extracted from the "
@@ -2292,14 +2550,14 @@ msgstr ""
 "உங்களுக்கு சி <-கீப்> விருப்பம் தேவைப்படலாம்."
 
 #. type: textblock
-#: po4a:190
+#: po4a:209
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "L<po4a-gettextize(1)>, L<po4a(7)>."
 msgstr "L <po4a-getTextize (1)>, l <po4a (7)>."
 
 #. type: =head1
-#: po4a:191 po4a-gettextize:77 po4a-normalize:38 po4a-translate:49
-#: po4a-updatepo:56 msguntypot:32 doc/po4a.7.pod:202
+#: po4a:210 po4a-gettextize:77 po4a-normalize:38 po4a-translate:49
+#: po4a-updatepo:56 msguntypot:32 doc/po4a.7.pod:203
 #: lib/Locale/Po4a/AsciiDoc.pm:57 lib/Locale/Po4a/BibTeX.pm:11
 #: lib/Locale/Po4a/Chooser.pm:12 lib/Locale/Po4a/Common.pm:28
 #: lib/Locale/Po4a/Dia.pm:14 lib/Locale/Po4a/Docbook.pm:17
@@ -2307,7 +2565,7 @@ msgstr "L <po4a-getTextize (1)>, l <po4a (7)>."
 #: lib/Locale/Po4a/Halibut.pm:16 lib/Locale/Po4a/Ini.pm:10
 #: lib/Locale/Po4a/KernelHelp.pm:9 lib/Locale/Po4a/LaTeX.pm:10
 #: lib/Locale/Po4a/Man.pm:105 lib/Locale/Po4a/Org.pm:19
-#: lib/Locale/Po4a/Po.pm:90 lib/Locale/Po4a/Pod.pm:23
+#: lib/Locale/Po4a/Po.pm:100 lib/Locale/Po4a/Pod.pm:23
 #: lib/Locale/Po4a/RubyDoc.pm:16 lib/Locale/Po4a/Sgml.pm:49
 #: lib/Locale/Po4a/SimplePod.pm:25 lib/Locale/Po4a/TeX.pm:120
 #: lib/Locale/Po4a/Texinfo.pm:16 lib/Locale/Po4a/Text.pm:45
@@ -2319,7 +2577,7 @@ msgid "AUTHORS"
 msgstr "ஆசிரியர்கள்"
 
 #. type: verbatim
-#: po4a:192 po4a-gettextize:78 po4a-normalize:39 po4a-translate:50
+#: po4a:211 po4a-gettextize:78 po4a-normalize:39 po4a-translate:50
 #: po4a-updatepo:57 lib/Locale/Po4a/Man.pm:106
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
@@ -2332,7 +2590,7 @@ msgstr ""
 "மார்ட்டின் குயின்சன் (Mquinson#debian.org)"
 
 #. type: =head1
-#: po4a:193 po4a-gettextize:79 po4a-normalize:40 po4a-translate:51
+#: po4a:212 po4a-gettextize:79 po4a-normalize:40 po4a-translate:51
 #: po4a-updatepo:58 msguntypot:34 lib/Locale/Po4a/AsciiDoc.pm:59
 #: lib/Locale/Po4a/BibTeX.pm:13 lib/Locale/Po4a/Chooser.pm:14
 #: lib/Locale/Po4a/Common.pm:30 lib/Locale/Po4a/Dia.pm:16
@@ -2352,14 +2610,14 @@ msgid "COPYRIGHT AND LICENSE"
 msgstr "பதிப்புரிமை மற்றும் உரிமம்"
 
 #. type: textblock
-#: po4a:194 po4a-gettextize:80 po4a-normalize:41 po4a-translate:52
+#: po4a:213 po4a-gettextize:80 po4a-normalize:41 po4a-translate:52
 #: po4a-updatepo:59
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Copyright 2002-2023 by SPI, inc."
 msgstr "பதிப்புரிமை 2002-2023 ச்பை, இன்க்."
 
 #. type: textblock
-#: po4a:195 po4a-gettextize:81 po4a-normalize:42 po4a-translate:53
+#: po4a:214 po4a-gettextize:81 po4a-normalize:42 po4a-translate:53
 #: po4a-updatepo:60 msguntypot:36 lib/Locale/Po4a/AsciiDoc.pm:61
 #: lib/Locale/Po4a/BibTeX.pm:15 lib/Locale/Po4a/Chooser.pm:16
 #: lib/Locale/Po4a/Common.pm:32 lib/Locale/Po4a/Dia.pm:18
@@ -5663,6 +5921,19 @@ msgstr ""
 #: doc/po4a.7.pod:163
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
+"L<YunoHost|https://yunohost.org/> (markdown): a system that installs itself "
+"on a server and allows you to install and maintain - with very little "
+"technical knowledge - digital services (apps) that you control."
+msgstr ""
+"L<YunoHost|https://yunohost.org/> (மார்க் டவுன்): ஒரு சர்வரில் தன்னை நிறுவி,"
+" நீங்கள் கட்டுப்படுத்தும் டிசிட்டல் சேவைகள் (பயன்பாடுகள்) - மிகக் குறைந்த "
+"தொழில்நுட்ப அறிவுடன் - நிறுவவும் பராமரிக்கவும் உங்களை அனுமதிக்கும் ஒரு "
+"அமைப்பு."
+
+#. type: =item
+#: doc/po4a.7.pod:164
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
 "Other item to sort out: L<https://gitlab.com/fdroid/fdroid-website/> "
 "L<https://github.com/fsfe/reuse-docs/pull/61>"
 msgstr ""
@@ -5670,19 +5941,19 @@ msgstr ""
 "website/> l <https://github.com/fsfe/reuse-docs/pull/61>"
 
 #. type: =head1
-#: doc/po4a.7.pod:164
+#: doc/po4a.7.pod:165
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "FAQ"
 msgstr "கேள்விகள்"
 
 #. type: =head2
-#: doc/po4a.7.pod:165
+#: doc/po4a.7.pod:166
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "How do you pronounce po4a?"
 msgstr "PO4A ஐ எவ்வாறு உச்சரிப்பது?"
 
 #. type: textblock
-#: doc/po4a.7.pod:166
+#: doc/po4a.7.pod:167
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "I personally vocalize it as L<pouah|https://en.wiktionary.org/wiki/pouah>, "
@@ -5691,13 +5962,13 @@ msgid ""
 msgstr "நான் அதை தனிப்பட்ட முறையில் l <pouah |"
 
 #. type: =head2
-#: doc/po4a.7.pod:167
+#: doc/po4a.7.pod:168
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Why are the individual scripts deprecated?"
 msgstr "தனிப்பட்ட ச்கிரிப்ட்கள் ஏன் நீக்கப்படுகின்றன?"
 
 #. type: textblock
-#: doc/po4a.7.pod:168
+#: doc/po4a.7.pod:169
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Indeed, B<po4a-updatepo> and B<po4a-translate> are deprecated in favor of "
@@ -5722,7 +5993,7 @@ msgstr ""
 "B<po4a> மற்றும் மற்றொன்று B<po4a-updatepo>."
 
 #. type: textblock
-#: doc/po4a.7.pod:169
+#: doc/po4a.7.pod:170
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "In the long run, I would like to drop the individual scripts and only "
@@ -5743,7 +6014,7 @@ msgstr ""
 "சிக்கல் இருக்கலாம்."
 
 #. type: textblock
-#: doc/po4a.7.pod:170
+#: doc/po4a.7.pod:171
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "We may also remove the deprecation of these scripts at some point, if a "
@@ -5755,7 +6026,7 @@ msgstr ""
 "(அல்லது சிறந்தது: ஒரு இணைப்பு), உங்கள் உதவி வரவேற்கத்தக்கது."
 
 #. type: =head2
-#: doc/po4a.7.pod:171
+#: doc/po4a.7.pod:172
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "What about the other translation tools for documentation using gettext?"
@@ -5764,7 +6035,7 @@ msgstr ""
 "என்ன?"
 
 #. type: textblock
-#: doc/po4a.7.pod:172
+#: doc/po4a.7.pod:173
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "There are a few of them. Here is a possibly incomplete list, and more tools "
@@ -5774,13 +6045,13 @@ msgstr ""
 " அடிவானத்தில் வருகின்றன."
 
 #. type: =item
-#: doc/po4a.7.pod:173
+#: doc/po4a.7.pod:174
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<poxml>"
 msgstr "B <otoxml>"
 
 #. type: textblock
-#: doc/po4a.7.pod:174
+#: doc/po4a.7.pod:175
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "This is the tool developed by KDE people to handle DocBook XML. AFAIK, it "
@@ -5792,7 +6063,7 @@ msgstr ""
 "மொழிபெயர்ப்புக்குப் பிறகு அவற்றை மீண்டும் செலுத்தவும் இது முதல் நிரலாகும்."
 
 #. type: textblock
-#: doc/po4a.7.pod:175
+#: doc/po4a.7.pod:176
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "It can only handle XML, and only a particular DTD. I'm quite unhappy with "
@@ -5805,13 +6076,13 @@ msgstr ""
 "கடினமாகிறது."
 
 #. type: =item
-#: doc/po4a.7.pod:176
+#: doc/po4a.7.pod:177
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<po-debiandoc>"
 msgstr "B <po-debiandoc>"
 
 #. type: textblock
-#: doc/po4a.7.pod:177
+#: doc/po4a.7.pod:178
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "This program done by Denis Barbier is a sort of precursor of the po4a SGML "
@@ -5823,13 +6094,13 @@ msgstr ""
 "போல், இது டெபியாண்டாக் டி.டி.டி.யை மட்டுமே கையாளுகிறது, இது ஒரு டி.டி.டி."
 
 #. type: =item
-#: doc/po4a.7.pod:178
+#: doc/po4a.7.pod:179
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<xml2po.py>"
 msgstr "B <xml2po.py>"
 
 #. type: textblock
-#: doc/po4a.7.pod:179
+#: doc/po4a.7.pod:180
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Used by the GIMP Documentation Team since 2004, works quite well even if, as"
@@ -5841,13 +6112,13 @@ msgstr ""
 "கட்டமைக்கப்பட்ட மேக்ஃபைல்கள் தேவைப்பட்டாலும் நன்றாக வேலை செய்கின்றன."
 
 #. type: =item
-#: doc/po4a.7.pod:180
+#: doc/po4a.7.pod:181
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<Sphinx>"
 msgstr "பி <ச்பின்க்ச்>"
 
 #. type: textblock
-#: doc/po4a.7.pod:181
+#: doc/po4a.7.pod:182
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "The Sphinx Documentation Project also uses gettext extensively to manage its"
@@ -5862,7 +6133,7 @@ msgstr ""
 "கருவியாகும்."
 
 #. type: textblock
-#: doc/po4a.7.pod:182
+#: doc/po4a.7.pod:183
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "The main advantages of po4a over them are the ease of extra content addition"
@@ -5872,13 +6143,13 @@ msgstr ""
 "மோசமானது) மற்றும் GetTextization ஐ அடைவதற்கான திறன்."
 
 #. type: =head2
-#: doc/po4a.7.pod:183
+#: doc/po4a.7.pod:184
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "SUMMARY of the advantages of the gettext based approach"
 msgstr "உரைபெறு அடிப்படையிலான அணுகுமுறையின் நன்மைகளின் சுருக்கம்"
 
 #. type: =item
-#: doc/po4a.7.pod:184
+#: doc/po4a.7.pod:185
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "The translations are not stored along with the original, which makes it "
@@ -5888,7 +6159,7 @@ msgstr ""
 "காலாவதியானதா என்பதைக் கண்டறிய முடியும்."
 
 #. type: =item
-#: doc/po4a.7.pod:185
+#: doc/po4a.7.pod:186
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "The translations are stored in separate files from each other, which "
@@ -5901,7 +6172,7 @@ msgstr ""
 "மட்டத்தில்."
 
 #. type: =item
-#: doc/po4a.7.pod:186
+#: doc/po4a.7.pod:187
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "It is based internally on B<gettext> (but B<po4a> offers a very simple "
@@ -5916,7 +6187,7 @@ msgstr ""
 "கருவிகள் அதிகமாகவோ அல்லது குறைவாகவோ பிழை இல்லாதவை என்று நாம் நினைக்கலாம்."
 
 #. type: =item
-#: doc/po4a.7.pod:187
+#: doc/po4a.7.pod:188
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Nothing changed for the end-user (beside the fact translations will "
@@ -5928,7 +6199,7 @@ msgstr ""
 "உள்ளது."
 
 #. type: =item
-#: doc/po4a.7.pod:188
+#: doc/po4a.7.pod:189
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "No need for translators to learn a new file syntax and their favorite PO "
@@ -5940,7 +6211,7 @@ msgstr ""
 " கற்றுக்கொள்ள வேண்டிய அவசியமில்லை."
 
 #. type: =item
-#: doc/po4a.7.pod:189
+#: doc/po4a.7.pod:190
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "gettext offers a simple way to get statistics about what is done, what "
@@ -5953,17 +6224,17 @@ msgstr ""
 "உதாரணங்களை அந்த முகவரிகளில் காணலாம்:"
 
 #. type: verbatim
-#: doc/po4a.7.pod:190
+#: doc/po4a.7.pod:191
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 " - https://docs.kde.org/stable5/en/kdesdk/lokalize/project-view.html\n"
 " - http://www.debian.org/intl/l10n/"
 msgstr ""
-"- https://docs.kde.org/stable5/en/kdesdk/lokalize/project-view.html \n"
+" - https://docs.kde.org/stable5/en/kdesdk/lokalize/project-view.html \n"
 "- http://www.debian.org/intl/l10n/"
 
 #. type: textblock
-#: doc/po4a.7.pod:191
+#: doc/po4a.7.pod:192
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "But everything isn't green, and this approach also has some disadvantages we"
@@ -5973,13 +6244,13 @@ msgstr ""
 "தீமைகள் உள்ளன."
 
 #. type: =item
-#: doc/po4a.7.pod:192
+#: doc/po4a.7.pod:193
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Addenda are somewhat strange at the first glance."
 msgstr "முதல் பார்வையில் கூடுதல் விசித்திரமானவை."
 
 #. type: =item
-#: doc/po4a.7.pod:193
+#: doc/po4a.7.pod:194
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "You can't adapt the translated text to your preferences, like splitting a "
@@ -5992,7 +6263,7 @@ msgstr ""
 "புகாரளிக்கப்பட வேண்டும்."
 
 #. type: =item
-#: doc/po4a.7.pod:194
+#: doc/po4a.7.pod:195
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Even with an easy interface, it remains a new tool people have to learn."
@@ -6001,7 +6272,7 @@ msgstr ""
 " உள்ளது."
 
 #. type: textblock
-#: doc/po4a.7.pod:195
+#: doc/po4a.7.pod:196
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "One of my dreams would be to integrate somehow po4a to Gtranslator or "
@@ -6017,7 +6288,7 @@ msgstr ""
 "தொழில்முறை மொழிபெயர்ப்பாளர்கள் இதைப் பயன்படுத்தலாம்."
 
 #. type: =item
-#: doc/po4a.7.pod:197
+#: doc/po4a.7.pod:198
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "The documentation of the all-in-one tool that you should use: L<po4a(1)>."
@@ -6025,7 +6296,7 @@ msgstr ""
 "நீங்கள் பயன்படுத்த வேண்டிய ஆல் இன் ஒன் கருவியின் ஆவணங்கள்: எல் <PO4A (1)>."
 
 #. type: =item
-#: doc/po4a.7.pod:198
+#: doc/po4a.7.pod:199
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "The documentation of the individual po4a scripts: L<po4a-gettextize(1)>, "
@@ -6035,7 +6306,7 @@ msgstr ""
 "<po4a-Updatepo (1)>, l <po4a-translate (1)>, l <po4a- noralmalize (1)>."
 
 #. type: =item
-#: doc/po4a.7.pod:199
+#: doc/po4a.7.pod:200
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "The additional helping scripts: L<msguntypot(1)>, L<po4a-display-man(1)>, "
@@ -6045,7 +6316,7 @@ msgstr ""
 "<po4a-display-pod (1)>."
 
 #. type: =item
-#: doc/po4a.7.pod:200
+#: doc/po4a.7.pod:201
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "The parser of each format, in particular to see the options they accept: "
@@ -6062,14 +6333,22 @@ msgid ""
 "L<Locale::Po4a::TeX(3pm)>, L<Locale::Po4a::VimHelp>, "
 "L<Locale::Po4a::Wml(3pm)>, L<Locale::Po4a::Xml(3pm)>."
 msgstr ""
-"La<Local::: The Local::Po4a::Fow (pm)>, The Local::Po4a::Ini(3pm)>, The "
-"Local::Po4a::RubbyDoc(pm)>, The Local::Po4a::Texing(pm:3pm)>, The "
-"Local:TPo:TPo4> Local::Po4a::BibTeX(3pm)>, The Local::Po4a::Docbook(pm)>, "
-"The Local::Po4a::Org(pm)>, The Local::Po4a::Pod(pm)>, The Local::Po4a:3Spm) "
-"Local::Po4a::TeX(3pm)>, The Local::Po4a::VimHelp>, The Local::"
+"ஒவ்வொரு வடிவமைப்பின் பாகுபடுத்தி, குறிப்பாக அவர்கள் ஏற்கும் விருப்பங்களைப் "
+"பார்க்க: L<Locale::Po4a::AsciiDoc(3pm)>, L<Locale::Po4a::Dia(3pm)>, "
+"L<Locale::Po4a::Gemtext(3pm)>, L<Locale::Po4a::Guide(3pm)>, "
+"L<Locale::Po4a::Ini(3pm)>, L<Locale::Po4a::KernelHelp(3pm)>, "
+"L<Locale::Po4a::Man(3pm)>, L<Locale::Po4a::RubyDoc(3pm)>, "
+"L<Locale::Po4a::Texinfo(3pm)>, L<Locale::Po4a::Text(3pm)>, "
+"L<Locale::Po4a::Xhtml(3pm)>, L<Locale::Po4a::Yaml(3pm)>, "
+"L<Locale::Po4a::BibTeX(3pm)>, L<Locale::Po4a::Docbook(3pm)>, "
+"L<Locale::Po4a::Halibut(3pm)>, L<Locale::Po4a::LaTeX(3pm)>, "
+"L<Locale::Po4a::Org(3pm)>, L<Locale::Po4a::Pod(3pm)>, "
+"L<Locale::Po4a::SimplePod(3pm)>, L<Locale::Po4a::Sgml(3pm)>, "
+"L<Locale::Po4a::TeX(3pm)>, L<Locale::Po4a::VimHelp>, "
+"L<Locale::Po4a::Wml(3pm)>, L<Locale::Po4a::Xml(3pm)>."
 
 #. type: =item
-#: doc/po4a.7.pod:201
+#: doc/po4a.7.pod:202
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "The implementation of the core infrastructure: "
@@ -6084,7 +6363,7 @@ msgstr ""
 "மரத்தில் f <பங்களிப்பு.எம்டி> கோப்பையும் சரிபார்க்கவும்."
 
 #. type: verbatim
-#: doc/po4a.7.pod:203
+#: doc/po4a.7.pod:204
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 " Denis Barbier <barbier,linuxfr.org>\n"
@@ -6551,10 +6830,10 @@ msgid ""
 "preserved in the po files and the corresponding entries are marked as no-"
 "wrap."
 msgstr ""
-"பாணி ​​பெயருடன் ஒரு சதவீத அடையாளம் (B<%>) சேர்க்கப்பட்டால், நடை "
-"வினைச்சொல்லாக செயலாக்கப்படும். அத்தகைய பாணியின் பத்தி அல்லது தொகுதியில் உள்ள"
-" கோடுகள் போ கோப்புகளில் பாதுகாக்கப்பட்டு, அதனுடன் தொடர்புடைய உள்ளீடுகள் "
-"நோ-ராப் எனக் குறிக்கப்படும்."
+"பாணி பெயருடன் ஒரு சதவீத அடையாளம் (B<%>) சேர்க்கப்பட்டால், நடை வினைச்சொல்லாக "
+"செயலாக்கப்படும். அத்தகைய பாணியின் பத்தி அல்லது தொகுதியில் உள்ள கோடுகள் போ "
+"கோப்புகளில் பாதுகாக்கப்பட்டு, அதனுடன் தொடர்புடைய உள்ளீடுகள் நோ-ராப் எனக் "
+"குறிக்கப்படும்."
 
 #. type: =item
 #: lib/Locale/Po4a/AsciiDoc.pm:53
@@ -6761,7 +7040,7 @@ msgstr ""
 
 #. type: verbatim
 #: lib/Locale/Po4a/Chooser.pm:13 lib/Locale/Po4a/KernelHelp.pm:10
-#: lib/Locale/Po4a/Po.pm:91 lib/Locale/Po4a/Pod.pm:24
+#: lib/Locale/Po4a/Po.pm:101 lib/Locale/Po4a/Pod.pm:24
 #: lib/Locale/Po4a/Sgml.pm:53
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
@@ -8850,7 +9129,7 @@ msgstr ""
 "உள்ளீடுகள் இங்கே:"
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:41 lib/Locale/Po4a/Po.pm:70
+#: lib/Locale/Po4a/Po.pm:41 lib/Locale/Po4a/Po.pm:72
 #: lib/Locale/Po4a/TransTractor.pm:119 lib/Locale/Po4a/Xml.pm:14
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<wrap>"
@@ -8869,7 +9148,7 @@ msgstr ""
 "முன்பு சரத்தை நியமிக்கிறது, மேலும் முடிவை மூடுகிறது."
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:43 lib/Locale/Po4a/Po.pm:73
+#: lib/Locale/Po4a/Po.pm:43 lib/Locale/Po4a/Po.pm:75
 #: lib/Locale/Po4a/TransTractor.pm:121
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<wrapcol>"
@@ -8884,11 +9163,37 @@ msgstr "நாம் போர்த்த வேண்டிய நெடுவ
 #. type: =item
 #: lib/Locale/Po4a/Po.pm:45
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid "B<msgctxt>"
+msgstr "பி<msgctxt>"
+
+#. type: textblock
+#: lib/Locale/Po4a/Po.pm:46
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"the context string value to be used as the L<msgctxt "
+"field|https://www.gnu.org/software/gettext/manual/html_node/Contexts.html> "
+"in gettext PO files.  It is empty by default, meaning no context is assigned"
+" to the message.  When a context is provided, it first searches for messages"
+" matching that context; if none are found, it falls back to searching for "
+"messages with an empty context.  This fallback behavior ensures backward "
+"compatibility."
+msgstr ""
+"கெட்டெக்ச்ட் PO கோப்புகளில் L<msgctxt "
+"புலம்|https://www.gnu.org/software/gettext/manual/html_node/Contexts.html> "
+"எனப் பயன்படுத்தப்படும் சூழல் சர மதிப்பு. இது முன்னிருப்பாக காலியாக உள்ளது, "
+"அதாவது செய்திக்கு எந்த சூழலும் ஒதுக்கப்படவில்லை. ஒரு சூழல் வழங்கப்பட்டால், "
+"அது முதலில் அந்தச் சூழலுடன் பொருந்தக்கூடிய செய்திகளைத் தேடுகிறது; எதுவும் "
+"கிடைக்கவில்லை என்றால், அது வெற்று சூழலுடன் செய்திகளைத் தேடும். இந்த "
+"பின்னடைவு நடத்தை பின்தங்கிய இணக்கத்தன்மையை உறுதி செய்கிறது."
+
+#. type: =item
+#: lib/Locale/Po4a/Po.pm:47
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "stats_get()"
 msgstr "புள்ளிவிவரங்கள்_செட் ()"
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:46
+#: lib/Locale/Po4a/Po.pm:48
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Returns statistics about the hit ratio of gettext since the last time that "
@@ -8904,7 +9209,7 @@ msgstr ""
 "MSGFMT கோப்பின் நிலையைப் புகாரளிக்கிறது. பயன்பாட்டின் எடுத்துக்காட்டு:"
 
 #. type: verbatim
-#: lib/Locale/Po4a/Po.pm:47
+#: lib/Locale/Po4a/Po.pm:49
 #, no-wrap, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "    [some use of the PO file to translate stuff]\n"
@@ -8916,31 +9221,31 @@ msgstr ""
 "க்கான மொழிபெயர்ப்புகளைக் கண்டறிந்தோம். \\ n\";"
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:48
+#: lib/Locale/Po4a/Po.pm:50
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "stats_clear()"
 msgstr "புள்ளிவிவரங்கள்_ கிளையர் ()"
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:49
+#: lib/Locale/Po4a/Po.pm:51
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Clears the statistics about gettext hits."
 msgstr "உரைபெறு வெற்றிகளைப் பற்றிய புள்ளிவிவரங்களை அழிக்கிறது."
 
 #. type: =head1
-#: lib/Locale/Po4a/Po.pm:50
+#: lib/Locale/Po4a/Po.pm:52
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Functions to build a message catalog"
 msgstr "செய்தி பட்டியலை உருவாக்குவதற்கான செயல்பாடுகள்"
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:51
+#: lib/Locale/Po4a/Po.pm:53
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "push(%)"
 msgstr "தள்ளு (%)"
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:52
+#: lib/Locale/Po4a/Po.pm:54
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Push a new entry at the end of the current catalog. The arguments should "
@@ -8950,37 +9255,37 @@ msgstr ""
 "அட்டவணையை உருவாக்க வேண்டும். செல்லுபடியாகும் விசைகள்:"
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:53
+#: lib/Locale/Po4a/Po.pm:55
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<msgid>"
 msgstr "B <msgid>"
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:54
+#: lib/Locale/Po4a/Po.pm:56
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "the string in original language."
 msgstr "அசல் மொழியில் சரம்."
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:55
+#: lib/Locale/Po4a/Po.pm:57
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<msgstr>"
 msgstr "B <msgstr>"
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:56
+#: lib/Locale/Po4a/Po.pm:58
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "the translation."
 msgstr "மொழிபெயர்ப்பு."
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:57
+#: lib/Locale/Po4a/Po.pm:59
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<reference>"
 msgstr "பி <குறிப்பு>"
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:58
+#: lib/Locale/Po4a/Po.pm:60
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "an indication of where this string was found. Example: file.c:46 (meaning in"
@@ -8992,13 +9297,13 @@ msgstr ""
 "இடத்தால் பிரிக்கப்பட்ட பட்டியலாக இருக்கலாம்."
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:59 lib/Locale/Po4a/TransTractor.pm:124
+#: lib/Locale/Po4a/Po.pm:61 lib/Locale/Po4a/TransTractor.pm:124
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<comment>"
 msgstr "பி <கருத்து>"
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:60
+#: lib/Locale/Po4a/Po.pm:62
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "a comment added here manually (by the translators). The format here is free."
@@ -9007,13 +9312,13 @@ msgstr ""
 "வடிவம் இலவசம்."
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:61
+#: lib/Locale/Po4a/Po.pm:63
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<automatic>"
 msgstr "பி <தானியங்கி>"
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:62
+#: lib/Locale/Po4a/Po.pm:64
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "a comment which was automatically added by the string extraction program. "
@@ -9024,13 +9329,13 @@ msgstr ""
 "தகவலுக்கு பி <xgetText> நிரலின் B <-add-comments> விருப்பத்தைப் பார்க்கவும்."
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:63
+#: lib/Locale/Po4a/Po.pm:65
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<flags>"
 msgstr "பி <கொடிகள்>"
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:64
+#: lib/Locale/Po4a/Po.pm:66
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "space-separated list of all defined flags for this entry."
 msgstr ""
@@ -9038,7 +9343,7 @@ msgstr ""
 "பட்டியல்."
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:65
+#: lib/Locale/Po4a/Po.pm:67
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Valid flags are: B<c-text>, B<python-text>, B<lisp-text>, B<elisp-text>, "
@@ -9051,19 +9356,19 @@ msgstr ""
 " b <ycp-text>, b <tcl-text>, b <rap>, b <no-rap> மற்றும் b <fuzzy>."
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:66
+#: lib/Locale/Po4a/Po.pm:68
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "See the gettext documentation for their meaning."
 msgstr "அவற்றின் பொருளுக்கு உரைபெறு ஆவணங்களைப் பார்க்கவும்."
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:67
+#: lib/Locale/Po4a/Po.pm:69
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "B<type>"
 msgstr "பி <வகை>"
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:68
+#: lib/Locale/Po4a/Po.pm:70
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "this is mostly an internal argument: it is used while gettextizing "
@@ -9085,7 +9390,7 @@ msgstr ""
 " மற்றும் செயல்முறை பிழையைப் புகாரளிக்கிறது."
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:69
+#: lib/Locale/Po4a/Po.pm:71
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "This information is written as automatic comment in the PO file since this "
@@ -9095,7 +9400,7 @@ msgstr ""
 "மொழிபெயர்ப்பாளர்களுக்கு மொழிபெயர்க்க சரங்கள் பற்றிய சில சூழல்களை அளிக்கிறது."
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:71
+#: lib/Locale/Po4a/Po.pm:73
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "boolean indicating whether whitespaces can be mangled in cosmetic "
@@ -9106,7 +9411,7 @@ msgstr ""
 "செய்யப்படுகிறது."
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:72
+#: lib/Locale/Po4a/Po.pm:74
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "This information is written to the PO file using the B<wrap> or B<no-wrap> "
@@ -9116,39 +9421,39 @@ msgstr ""
 "எழுதப்பட்டுள்ளது."
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:74
+#: lib/Locale/Po4a/Po.pm:76
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "ignored; the key is kept for backward computability."
 msgstr ""
 "புறக்கணிக்கப்பட்டது; பின்தங்கிய கணக்கீட்டிற்கு முக்கியமானது வைக்கப்படுகிறது."
 
 #. type: =head1
-#: lib/Locale/Po4a/Po.pm:75
+#: lib/Locale/Po4a/Po.pm:77
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Miscellaneous functions"
 msgstr "இதர செயல்பாடுகள்"
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:76
+#: lib/Locale/Po4a/Po.pm:78
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "count_entries()"
 msgstr "count_entries ()"
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:77
+#: lib/Locale/Po4a/Po.pm:79
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Returns the number of entries in the catalog (without the header)."
 msgstr ""
 "பட்டியலில் உள்ள உள்ளீடுகளின் எண்ணிக்கையை வழங்குகிறது (தலைப்பு இல்லாமல்)."
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:78
+#: lib/Locale/Po4a/Po.pm:80
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "count_entries_doc()"
 msgstr "count_entries_doc ()"
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:79
+#: lib/Locale/Po4a/Po.pm:81
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Returns the number of entries in document. If a string appears multiple "
@@ -9158,37 +9463,37 @@ msgstr ""
 "தோன்றினால், அது பல முறை கணக்கிடப்படும்."
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:80
+#: lib/Locale/Po4a/Po.pm:82
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "msgid($)"
 msgstr "msgid ($)"
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:81
+#: lib/Locale/Po4a/Po.pm:83
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Returns the msgid of the given number."
 msgstr "கொடுக்கப்பட்ட எண்ணின் MSGID ஐ வழங்குகிறது."
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:82
+#: lib/Locale/Po4a/Po.pm:84
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "msgid_doc($)"
 msgstr "msgid_doc ($)"
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:83
+#: lib/Locale/Po4a/Po.pm:85
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "Returns the msgid with the given position in the document."
 msgstr "ஆவணத்தில் கொடுக்கப்பட்ட நிலையுடன் MSGID ஐ வழங்குகிறது."
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:84
+#: lib/Locale/Po4a/Po.pm:86
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "type_doc($)"
 msgstr "type_doc ($)"
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:85
+#: lib/Locale/Po4a/Po.pm:87
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Returns the type of the msgid with the given position in the document. This "
@@ -9203,13 +9508,13 @@ msgstr ""
 "மேலெழுதப்படலாம்."
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:86
+#: lib/Locale/Po4a/Po.pm:88
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "get_charset()"
 msgstr "get_charset ()"
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:87
+#: lib/Locale/Po4a/Po.pm:89
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "Returns the character set specified in the PO header. If it hasn't been set,"
@@ -9219,13 +9524,13 @@ msgstr ""
 "அமைக்கப்படவில்லை என்றால், அது \"யுடிஎஃப் -8\" திரும்பும்."
 
 #. type: =item
-#: lib/Locale/Po4a/Po.pm:88
+#: lib/Locale/Po4a/Po.pm:90
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid "gettext_wrap_opts($)"
 msgstr "gettext_wrap_opts($)"
 
 #. type: textblock
-#: lib/Locale/Po4a/Po.pm:89
+#: lib/Locale/Po4a/Po.pm:91
 #, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
 msgid ""
 "A small utility function that returns a string with appropriate C<--no-"
@@ -9235,6 +9540,84 @@ msgstr ""
 "கொடுக்கப்பட்ட B<wrap-po> மதிப்புடன் தொடர்புடைய C<--no-wrap>/C<--width> "
 "உரைபெறு utilities' விருப்பங்களுடன் சரத்தை வழங்கும் சிறிய பயன்பாட்டு "
 "செயல்பாடு."
+
+#. type: =item
+#: lib/Locale/Po4a/Po.pm:92
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid "each_message"
+msgstr "ஒவ்வொரு_செய்தி"
+
+#. type: textblock
+#: lib/Locale/Po4a/Po.pm:93
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"This method iterates over each message in the PO file and processes it.  It "
+"takes a subroutine reference and executes it with two arguments: 1) the "
+"C<msgid> and 2) a hash reference containing the message content, which "
+"includes fields such as C<msgstr>."
+msgstr ""
+"இந்த முறை PO கோப்பில் உள்ள ஒவ்வொரு செய்தியையும் மீண்டும் செயல்படுத்துகிறது "
+"மற்றும் அதை செயலாக்குகிறது. இது ஒரு subroutine குறிப்பை எடுத்து அதை இரண்டு "
+"வாதங்களுடன் செயல்படுத்துகிறது: 1) C<msgid> மற்றும் 2) C<msgstr> போன்ற "
+"புலங்களை உள்ளடக்கிய செய்தி உள்ளடக்கம் கொண்ட ஆச் குறிப்பு."
+
+#. type: =item
+#: lib/Locale/Po4a/Po.pm:94
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid "replant"
+msgstr "மீண்டும் நடவு"
+
+#. type: textblock
+#: lib/Locale/Po4a/Po.pm:95
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"This method takes two parameters: the current C<msgid> and the new C<msgid>."
+"  It removes the entry with the current C<msgid> from the PO instance and "
+"reinserts it under the new C<msgid> value."
+msgstr ""
+"இந்த முறை இரண்டு அளவுருக்களை எடுக்கும்: தற்போதைய C<msgid> மற்றும் புதிய "
+"C<msgid>. இது PO நிகழ்விலிருந்து தற்போதைய C<msgid> உள்ளீட்டை நீக்கி புதிய "
+"C<msgid> மதிப்பின் கீழ் மீண்டும் சேர்க்கிறது."
+
+#. type: =item
+#: lib/Locale/Po4a/Po.pm:96
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid "message_by_document_position"
+msgstr "செய்தி_ஆவணம்_நிலை"
+
+#. type: textblock
+#: lib/Locale/Po4a/Po.pm:97
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"This method takes a document position and returns the matching message as a "
+"list containing three elements: the C<msgid>, the C<msgctxt>, and the "
+"message content (which includes fields such as C<msgstr>)."
+msgstr ""
+"இந்த முறை ஒரு ஆவண நிலையை எடுத்து, மூன்று கூறுகளைக் கொண்ட பட்டியலாக "
+"பொருந்தும் செய்தியை வழங்குகிறது: C<msgid>, C<msgctxt> மற்றும் செய்தி "
+"உள்ளடக்கம் (இதில் C<msgstr> போன்ற புலங்கள் அடங்கும்)."
+
+#. type: =item
+#: lib/Locale/Po4a/Po.pm:98
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid "message_by_msgid"
+msgstr "message_by_msgstr"
+
+#. type: textblock
+#: lib/Locale/Po4a/Po.pm:99
+#, placeholders:r"(B|C)<<(?:(?!>>).)*>>":r"(B|C|F|L|S)<[^>]+>":r"PO4A-HEADER:":position=:r"(\s*;\s*)?mode=\w+;?":r"(begin|end)boundary=.*"
+msgid ""
+"This method takes a C<msgid> and an optional C<msgctxt>, and returns the "
+"first matching message content, which includes fields such as C<msgstr>.  If"
+" no C<msgctxt> is provided, an empty string value is used.  If no message "
+"entry is found with the given context, the method falls back to searching "
+"for a message without context."
+msgstr ""
+"இந்த முறை C<msgstr> மற்றும் விருப்பமான C<msgctxt>ஐ எடுத்து, C<msgstr> போன்ற "
+"புலங்களை உள்ளடக்கிய முதல் பொருந்தும் செய்தி உள்ளடக்கத்தை வழங்குகிறது. "
+"C<msgctxt> வழங்கப்படவில்லை எனில், வெற்று சர மதிப்பு பயன்படுத்தப்படும். "
+"கொடுக்கப்பட்ட சூழலுடன் செய்தி உள்ளீடு எதுவும் காணப்படவில்லை எனில், சூழல் "
+"இல்லாமல் ஒரு செய்தியைத் தேடும் முறை திரும்பும்."
 
 #. type: textblock
 #: lib/Locale/Po4a/Pod.pm:2

@@ -1,19 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2007-2025, the Sphinx developers
+# Copyright (C) 2007-2026, the Sphinx developers
 # This file is distributed under the same license as the Sphinx package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# தமிழ் நேரம் <tamilneram247@gmail.com>, 2023
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2025
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Sphinx 8.3.0\n"
+"Project-Id-Version: Sphinx 9.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-24 00:54+0000\n"
-"PO-Revision-Date: 2025-11-16 13:13\n"
-"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2023\n"
+"POT-Creation-Date: 2026-01-30 02:35+0000\n"
+"PO-Revision-Date: 2026-01-30 09:07\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2025\n"
 "Language-Team: Tamil (https://app.transifex.com/sphinx-doc/teams/15434/ta/)\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
@@ -138,27 +138,18 @@ msgstr "**விண்ணப்பம்**"
 #: ../../sphinx/doc/extdev/index.rst:51
 msgid ""
 "The application object (usually called ``app``) is an instance of "
-":class:`.Sphinx`.  It controls most high-level functionality, such as the "
-"setup of extensions, event dispatching and producing output (logging)."
+":class:`.Sphinx`. It controls most high-level functionality, such as loading"
+" config, initialising the environment, and the setup of extensions."
 msgstr ""
-"பயன்பாட்டு பொருள் (வழக்கமாக `` app`` என்று அழைக்கப்படுகிறது) இதன் ஒரு "
-"நிகழ்வு: வகுப்பு: `.sphinx`. இது நீட்டிப்புகளை அமைத்தல், நிகழ்வு அனுப்புதல் "
-"மற்றும் வெளியீட்டை உருவாக்குதல் (பதிவு செய்தல்) போன்ற மிக உயர் மட்ட "
-"செயல்பாட்டைக் கட்டுப்படுத்துகிறது."
+"பயன்பாட்டுப் பொருள் (பொதுவாக ``ஆப்``` என அழைக்கப்படுகிறது) :class:`.Sphinx` "
+"இன் நிகழ்வாகும். கட்டமைப்பை ஏற்றுதல், சூழலை துவக்குதல் மற்றும் நீட்டிப்புகளை"
+" அமைத்தல் போன்ற உயர்நிலை செயல்பாடுகளை இது கட்டுப்படுத்துகிறது."
 
-#: ../../sphinx/doc/extdev/index.rst:55
-msgid ""
-"If you have the environment object, the application is available as "
-"``env.app``."
-msgstr ""
-"உங்களிடம் சுற்றுச்சூழல் பொருள் இருந்தால், பயன்பாடு `` env.app`` ஆகக் "
-"கிடைக்கிறது."
-
-#: ../../sphinx/doc/extdev/index.rst:58
+#: ../../sphinx/doc/extdev/index.rst:56
 msgid "**Environment**"
 msgstr "** சூழல் **"
 
-#: ../../sphinx/doc/extdev/index.rst:59
+#: ../../sphinx/doc/extdev/index.rst:57
 msgid ""
 "The build environment object (usually called ``env``) is an instance of "
 ":class:`.BuildEnvironment`.  It is responsible for parsing the source "
@@ -171,7 +162,7 @@ msgstr ""
 "மெட்டாடேட்டாவையும் சேமிக்கிறது மற்றும் ஒவ்வொரு கட்டமைப்பிற்கும் பிறகு "
 "வட்டுக்கு வரிசைப்படுத்தப்படுகிறது."
 
-#: ../../sphinx/doc/extdev/index.rst:64
+#: ../../sphinx/doc/extdev/index.rst:62
 msgid ""
 "Its API provides methods to do with access to metadata, resolving "
 "references, etc.  It can also be used by extensions to cache information "
@@ -182,13 +173,17 @@ msgstr ""
 "தொடர்ந்து இருக்க வேண்டிய தகவல்களை கேச் செய்ய நீட்டிப்புகளால் இதைப் "
 "பயன்படுத்தலாம்."
 
-#: ../../sphinx/doc/extdev/index.rst:68
+#: ../../sphinx/doc/extdev/index.rst:66
 msgid ""
 "If you have the application or builder object, the environment is available "
-"as ``app.env`` or ``builder.env``."
+"as ``app.env`` or ``builder.env``. In :class:`.SphinxDirective`, "
+":class:`.SphinxRole`, or :class:`.SphinxTransform` subclasses, the "
+"environment is available as ``self.env``."
 msgstr ""
-"உங்களிடம் பயன்பாடு அல்லது பில்டர் பொருள் இருந்தால், சூழல் `` app.env`` "
-"அல்லது `` பில்டர்.இன்வி`` எனக் கிடைக்கிறது."
+"உங்களிடம் பயன்பாடு அல்லது பில்டர் பொருள் இருந்தால், சூழல் ``app.env` அல்லது "
+"``builder.env`` ஆகக் கிடைக்கும். :class:`.SphinxDirective`, "
+":class:`.SphinxRole`, அல்லது :class:`.SphinxTransform` துணைப்பிரிவுகளில், "
+"சூழல் ``self.env`` என கிடைக்கிறது."
 
 #: ../../sphinx/doc/extdev/index.rst:71
 msgid "**Builder**"
@@ -230,11 +225,39 @@ msgstr ""
 "நிகழ்வு: வகுப்பு: `.கான்ஃபிக்`."
 
 #: ../../sphinx/doc/extdev/index.rst:85
-msgid "The config is available as ``app.config`` or ``env.config``."
+msgid ""
+"The config is available as ``env.config``, ``builder.config``, or "
+"``app.config``. In :class:`.SphinxDirective`, :class:`.SphinxRole`, or "
+":class:`.SphinxTransform` subclasses, the environment is available as "
+"``self.config``."
 msgstr ""
-"இந்த கட்டமைப்பு `` app.config`` அல்லது `` env.config`` எனக் கிடைக்கிறது."
+"கட்டமைப்பு ``env.config``, ``builder.config`` அல்லது ``app.config`` என "
+"கிடைக்கிறது. :class:`.SphinxDirective`, :class:`.SphinxRole`, அல்லது "
+":class:`.SphinxTransform` துணைப்பிரிவுகளில், சூழல் ``self.config`` என "
+"கிடைக்கிறது."
 
-#: ../../sphinx/doc/extdev/index.rst:87
+#: ../../sphinx/doc/extdev/index.rst:89
+msgid "**Events**"
+msgstr "**நிகழ்வுகள்**"
+
+#: ../../sphinx/doc/extdev/index.rst:90
+msgid ""
+"The event manager object (usually called ``events``) manages and dispatches "
+"Sphinx's events system. It is an instance of :class:`.EventManager`."
+msgstr ""
+"நிகழ்வு மேலாளர் பொருள் (பொதுவாக ``நிகழ்வுகள்`` என அழைக்கப்படுகிறது) "
+"ச்பிங்க்சின் நிகழ்வுகள் அமைப்பை நிர்வகிக்கிறது மற்றும் அனுப்புகிறது. இது "
+":class:`.EventManager` இன் சான்று."
+
+#: ../../sphinx/doc/extdev/index.rst:94
+msgid ""
+"The event manager is available as ``env.events``, ``builder.events``, or "
+"``app.events``."
+msgstr ""
+"நிகழ்வு மேலாளர் ``env.events``, ``builder.events`` அல்லது ``app.events`` என "
+"கிடைக்கும்."
+
+#: ../../sphinx/doc/extdev/index.rst:97
 msgid ""
 "To see an example of use of these objects, refer to :ref:`the tutorials "
 "<extension-tutorials-index>`."
@@ -242,11 +265,11 @@ msgstr ""
 "இந்த பொருட்களைப் பயன்படுத்துவதற்கான உதாரணத்தைப் பார்க்க, :ref:`the tutorials"
 " <extension-tutorials-index>` ஐப் பார்க்கவும்."
 
-#: ../../sphinx/doc/extdev/index.rst:93 ../../sphinx/doc/extdev/index.rst:98
+#: ../../sphinx/doc/extdev/index.rst:103 ../../sphinx/doc/extdev/index.rst:108
 msgid "Build phases"
 msgstr "கட்டங்களை உருவாக்குங்கள்"
 
-#: ../../sphinx/doc/extdev/index.rst:95
+#: ../../sphinx/doc/extdev/index.rst:105
 msgid ""
 "One thing that is vital in order to understand extension mechanisms is the "
 "way in which a Sphinx project is built: this works in several phases."
@@ -254,11 +277,11 @@ msgstr ""
 "நீட்டிப்பு வழிமுறைகளைப் புரிந்துகொள்வதற்கு இன்றியமையாத ஒரு விஷயம், ஒரு "
 "ஸ்பிங்க்ஸ் திட்டம் கட்டமைக்கப்பட்ட வழி: இது பல கட்டங்களில் செயல்படுகிறது."
 
-#: ../../sphinx/doc/extdev/index.rst:101
+#: ../../sphinx/doc/extdev/index.rst:111
 msgid "**Phase 0: Initialization**"
 msgstr "** கட்டம் 0: துவக்கம் **"
 
-#: ../../sphinx/doc/extdev/index.rst:103
+#: ../../sphinx/doc/extdev/index.rst:113
 msgid ""
 "In this phase, almost nothing of interest to us happens.  The source "
 "directory is searched for source files, and extensions are initialized. "
@@ -270,11 +293,11 @@ msgstr ""
 "சேமிக்கப்பட்ட உருவாக்க சூழல் இருந்தால், அது ஏற்றப்படுகிறது, இல்லையெனில் "
 "புதியது உருவாக்கப்படுகிறது."
 
-#: ../../sphinx/doc/extdev/index.rst:108
+#: ../../sphinx/doc/extdev/index.rst:118
 msgid "**Phase 1: Reading**"
 msgstr "** கட்டம் 1: படித்தல் **"
 
-#: ../../sphinx/doc/extdev/index.rst:110
+#: ../../sphinx/doc/extdev/index.rst:120
 msgid ""
 "In Phase 1, all source files (and on subsequent builds, those that are new "
 "or changed) are read and parsed.  This is the phase where directives and "
@@ -291,7 +314,7 @@ msgstr ""
 "தற்போதுள்ள அனைத்து கோப்புகளும் படிக்கும் வரை முழுமையாக அறியப்படாத ஆவண "
 "கூறுகளுக்கு, தற்காலிக முனைகள் உருவாக்கப்படுகின்றன."
 
-#: ../../sphinx/doc/extdev/index.rst:117
+#: ../../sphinx/doc/extdev/index.rst:127
 msgid ""
 "There are nodes provided by docutils, which are documented `in the docutils "
 "documentation <https://docutils.sourceforge.io/docs/ref/doctree.html>`__. "
@@ -301,7 +324,7 @@ msgstr ""
 " <https://docutils.sourceforge.io/docs/ref/doctree.html> __. கூடுதல் முனைகள்"
 " SPHINX ஆல் வழங்கப்படுகின்றன: ref: `இங்கே ஆவணப்படுத்தப்பட்டுள்ளது <Nodes>."
 
-#: ../../sphinx/doc/extdev/index.rst:121
+#: ../../sphinx/doc/extdev/index.rst:131
 msgid ""
 "During reading, the build environment is updated with all meta- and cross "
 "reference data of the read documents, such as labels, the names of headings,"
@@ -313,7 +336,7 @@ msgstr ""
 "மெட்டா மற்றும் குறுக்கு குறிப்பு தரவுகளுடன் உருவாக்க சூழல் "
 "புதுப்பிக்கப்படுகிறது. இது பின்னர் தற்காலிக முனைகளை மாற்ற பயன்படுகிறது."
 
-#: ../../sphinx/doc/extdev/index.rst:126
+#: ../../sphinx/doc/extdev/index.rst:136
 msgid ""
 "The parsed doctrees are stored on the disk, because it is not possible to "
 "hold all of them in memory."
@@ -321,21 +344,21 @@ msgstr ""
 "பாகுபடுத்தப்பட்ட கோட்பாடுகள் வட்டில் சேமிக்கப்படுகின்றன, ஏனென்றால் அவை "
 "அனைத்தையும் நினைவகத்தில் வைத்திருக்க முடியாது."
 
-#: ../../sphinx/doc/extdev/index.rst:129
+#: ../../sphinx/doc/extdev/index.rst:139
 msgid "**Phase 2: Consistency checks**"
 msgstr "** கட்டம் 2: நிலைத்தன்மை காசோலைகள் **"
 
-#: ../../sphinx/doc/extdev/index.rst:131
+#: ../../sphinx/doc/extdev/index.rst:141
 msgid "Some checking is done to ensure no surprises in the built documents."
 msgstr ""
 "கட்டப்பட்ட ஆவணங்களில் எந்த ஆச்சரியமும் இல்லை என்பதை உறுதிப்படுத்த சில சோதனை "
 "செய்யப்படுகிறது."
 
-#: ../../sphinx/doc/extdev/index.rst:133
+#: ../../sphinx/doc/extdev/index.rst:143
 msgid "**Phase 3: Resolving**"
 msgstr "** கட்டம் 3: தீர்க்கும் **"
 
-#: ../../sphinx/doc/extdev/index.rst:135
+#: ../../sphinx/doc/extdev/index.rst:145
 msgid ""
 "Now that the metadata and cross-reference data of all existing documents is "
 "known, all temporary nodes are replaced by nodes that can be converted into "
@@ -350,11 +373,11 @@ msgstr ""
 "உருவாக்கப்படுகின்றன, மேலும் இல்லாதவர்களுக்கு எளிய நேரடி முனைகள் "
 "உருவாக்கப்படுகின்றன."
 
-#: ../../sphinx/doc/extdev/index.rst:141
+#: ../../sphinx/doc/extdev/index.rst:151
 msgid "**Phase 4: Writing**"
 msgstr "** கட்டம் 4: எழுதுதல் **"
 
-#: ../../sphinx/doc/extdev/index.rst:143
+#: ../../sphinx/doc/extdev/index.rst:153
 msgid ""
 "This phase converts the resolved doctrees to the desired output format, such"
 " as HTML or LaTeX.  This happens via a so-called docutils writer that visits"
@@ -366,7 +389,7 @@ msgstr ""
 "முனைகளுக்குச் சென்று, செயல்பாட்டில் சில வெளியீட்டை உருவாக்கும் ஆவண "
 "எழுத்தாளர் என்று அழைக்கப்படுபவர் வழியாக இது நிகழ்கிறது."
 
-#: ../../sphinx/doc/extdev/index.rst:149
+#: ../../sphinx/doc/extdev/index.rst:159
 msgid ""
 "Some builders deviate from this general build plan, for example, the builder"
 " that checks external links does not need anything more than the parsed "
@@ -377,18 +400,18 @@ msgstr ""
 "பாகுபடுத்தப்பட்ட கோட்பாட்டாளர்களைத் தவிர வேறு எதுவும் தேவையில்லை, எனவே "
 "கட்டங்கள் 2--4 இல்லை."
 
-#: ../../sphinx/doc/extdev/index.rst:153
+#: ../../sphinx/doc/extdev/index.rst:163
 msgid ""
 "To see an example of application, refer to :ref:`tutorial-extend-build`."
 msgstr ""
 "பயன்பாட்டின் உதாரணத்தைப் பார்க்க, :ref:`tutorial-extend-build` ஐப் "
 "பார்க்கவும்."
 
-#: ../../sphinx/doc/extdev/index.rst:158
+#: ../../sphinx/doc/extdev/index.rst:168
 msgid "Extension metadata"
 msgstr "நீட்டிப்பு மெட்டாடேட்டா"
 
-#: ../../sphinx/doc/extdev/index.rst:162
+#: ../../sphinx/doc/extdev/index.rst:172
 msgid ""
 "The ``setup()`` function should return a dictionary. This is treated by "
 "Sphinx as metadata of the extension. Metadata keys currently recognized are:"
@@ -397,11 +420,11 @@ msgstr ""
 "மெட்டாடேட்டாவாகக் கருதப்படுகிறது. தற்போது அங்கீகரிக்கப்பட்ட மேனிலை தரவு "
 "விசைகள்:"
 
-#: ../../sphinx/doc/extdev/index.rst:166
+#: ../../sphinx/doc/extdev/index.rst:176
 msgid "``'version'``"
 msgstr "``பதிப்பு''`"
 
-#: ../../sphinx/doc/extdev/index.rst:167
+#: ../../sphinx/doc/extdev/index.rst:177
 msgid ""
 "A string that identifies the extension version. It is used for extension "
 "version requirement checking (see :confval:`needs_extensions`) and "
@@ -413,11 +436,11 @@ msgstr ""
 "நோக்கங்களுக்காக பயன்படுத்தப்படுகிறது. பதிப்பு சரம் எதுவும் வழங்கப்படவில்லை "
 "எனில், இயல்புநிலையாக ``'தெரியாத பதிப்பு''` பயன்படுத்தப்படும்."
 
-#: ../../sphinx/doc/extdev/index.rst:172
+#: ../../sphinx/doc/extdev/index.rst:182
 msgid "``'env_version'``"
 msgstr "``'env_version''`"
 
-#: ../../sphinx/doc/extdev/index.rst:173
+#: ../../sphinx/doc/extdev/index.rst:183
 msgid ""
 "A non-zero positive integer integer that records the version of data stored "
 "in the environment by the extension."
@@ -425,7 +448,7 @@ msgstr ""
 "பூச்சியமற்ற நேர்மறை முழு எண், இது நீட்டிப்பு மூலம் சூழலில் சேமிக்கப்பட்ட "
 "தரவின் பதிப்பைப் பதிவு செய்கிறது."
 
-#: ../../sphinx/doc/extdev/index.rst:177
+#: ../../sphinx/doc/extdev/index.rst:187
 msgid ""
 "If ``'env_version'`` is not set, the extension **must not** store any data "
 "or state directly on the environment object  (``env``)."
@@ -433,7 +456,7 @@ msgstr ""
 "``'env_version'`` அமைக்கப்படவில்லை எனில், நீட்டிப்பு **** எந்தத் தரவையும் "
 "நேரடியாகச் சூழல் பொருளில் (``env``) சேமிக்கக் கூடாது."
 
-#: ../../sphinx/doc/extdev/index.rst:180
+#: ../../sphinx/doc/extdev/index.rst:190
 msgid ""
 "This key must be defined if the extension uses the ``env`` object to store "
 "data. The version number must be incremented whenever the type, structure,  "
@@ -446,11 +469,11 @@ msgstr ""
 "கட்டமைப்பு அல்லது பொருள் மாறும்போதெல்லாம் பதிப்பு எண் அதிகரிக்கப்பட "
 "வேண்டும்."
 
-#: ../../sphinx/doc/extdev/index.rst:187
+#: ../../sphinx/doc/extdev/index.rst:197
 msgid "``'parallel_read_safe'``"
 msgstr "``'இணை_வாசிப்பு_பாதுகாப்பானது''`"
 
-#: ../../sphinx/doc/extdev/index.rst:188
+#: ../../sphinx/doc/extdev/index.rst:198
 msgid ""
 "A boolean that specifies if parallel reading of source files can be used "
 "when the extension is loaded. It defaults to ``False``, meaning that you "
@@ -462,7 +485,7 @@ msgstr ""
 " ஆகும், அதாவது உங்கள் நீட்டிப்பை இணையான வாசிப்புக்கு பாதுகாப்பாக உள்ளதா "
 "என்பதைச் சரிபார்த்த பிறகு நீங்கள் வெளிப்படையாகக் குறிப்பிட வேண்டும்."
 
-#: ../../sphinx/doc/extdev/index.rst:195
+#: ../../sphinx/doc/extdev/index.rst:205
 msgid ""
 "When *parallel-read-safe* is ``True``, the extension must satisfy the "
 "following conditions:"
@@ -470,14 +493,14 @@ msgstr ""
 "*parallel-read-safe* ``True`` ஆக இருக்கும் போது, ​​நீட்டிப்பு பின்வரும் "
 "நிபந்தனைகளை நிறைவு செய்ய வேண்டும்:"
 
-#: ../../sphinx/doc/extdev/index.rst:198
+#: ../../sphinx/doc/extdev/index.rst:208
 msgid ""
 "The core logic of the extension is parallelly executable during the reading "
 "phase."
 msgstr ""
 "நீட்டிப்பின் முக்கிய தர்க்கம் வாசிப்பு கட்டத்தில் இணையாக இயங்கக்கூடியது."
 
-#: ../../sphinx/doc/extdev/index.rst:200
+#: ../../sphinx/doc/extdev/index.rst:210
 msgid ""
 "It has event handlers for :event:`env-merge-info` and :event:`env-purge-doc`"
 " events if it stores data to the build environment object (``env``) during "
@@ -487,11 +510,11 @@ msgstr ""
 "நிகழ்வு ஏண்ட்லர்களைக் கொண்டுள்ளது, இது வாசிப்பு கட்டத்தின் போது உருவாக்க "
 "சூழல் பொருளில் (``env``) தரவைச் சேமித்தால்."
 
-#: ../../sphinx/doc/extdev/index.rst:204
+#: ../../sphinx/doc/extdev/index.rst:214
 msgid "``'parallel_write_safe'``"
 msgstr "``'இணை_எழுது_பாதுகாப்பானது''`"
 
-#: ../../sphinx/doc/extdev/index.rst:205
+#: ../../sphinx/doc/extdev/index.rst:215
 msgid ""
 "A boolean that specifies if parallel writing of output files can be used "
 "when the extension is loaded. Since extensions usually don't negatively "
@@ -501,7 +524,7 @@ msgstr ""
 "என்பதைக் குறிப்பிடும் பூலியன். நீட்டிப்புகள் பொதுவாக செயல்முறையை எதிர்மறையாக"
 " பாதிக்காது என்பதால், இது இயல்புநிலையாக ``உண்மை``."
 
-#: ../../sphinx/doc/extdev/index.rst:212
+#: ../../sphinx/doc/extdev/index.rst:222
 msgid ""
 "When *parallel-write-safe* is ``True``, the extension must satisfy the "
 "following conditions:"
@@ -509,18 +532,18 @@ msgstr ""
 "*பேரலல்-ரைட்-பாதுகாப்பானது* ``உண்மை`` என்றால், நீட்டிப்பு பின்வரும் "
 "நிபந்தனைகளை நிறைவு செய்ய வேண்டும்:"
 
-#: ../../sphinx/doc/extdev/index.rst:215
+#: ../../sphinx/doc/extdev/index.rst:225
 msgid ""
 "The core logic of the extension is parallelly executable during the writing "
 "phase."
 msgstr ""
 "நீட்டிப்பின் முக்கிய தர்க்கம் எழுதும் கட்டத்தின் போது இணையாக இயங்கக்கூடியது."
 
-#: ../../sphinx/doc/extdev/index.rst:220
+#: ../../sphinx/doc/extdev/index.rst:230
 msgid "APIs used for writing extensions"
 msgstr "நீட்டிப்புகளை எழுதுவதற்கு API கள் பயன்படுத்தப்படுகின்றன"
 
-#: ../../sphinx/doc/extdev/index.rst:222
+#: ../../sphinx/doc/extdev/index.rst:232
 msgid ""
 "These sections provide a more complete description of the tools at your "
 "disposal when developing Sphinx extensions. Some are core to Sphinx (such as"
