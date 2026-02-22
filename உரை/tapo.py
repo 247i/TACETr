@@ -8,7 +8,6 @@ import glob
 import polib
 import json
 import datetime
-import random
 import threading
 import translators as ts
 from collections import OrderedDict
@@ -477,49 +476,45 @@ def எடுபொருள்மொழிபெயர்(அனைத்து
         அ = அகராதி_திற(கோப்பு)
         முன் = அ.percent_translated()
         print(கோப்பு, "முன் : ", முன், "%")
+        சேவையகம் = 0
         if முன் != 100:
             tr_entries = அ.untranslated_entries()
             for பதிவு in tr_entries:
-                src = பதிவு.msgid
-                if src == "":
-                    src = பதிவு.msgctxt
-                இ, _ = பொருள்_பெறு(src)
-                if பதிவு.msgid_plural:
-                    பதிவு.msgstr_plural[0] = இ
-                    ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural)
-                    பதிவு.msgstr_plural[1] = ஈ
-                    # பதிவு.msgstr_plural = {0: இ, 1: ஈ}
-                    if 2 in பதிவு.msgstr_plural:
-                        பதிவு.msgstr_plural[2] = ஈ
-                        # பதிவு.msgstr_plural = {0: இ, 1: ஈ, 2: ஈ}
-                    print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
-                else:
-                    பதிவு.msgstr = இ
-                    print(பதிவு.msgid, பதிவு.msgstr)
-                அகராதி_சேமி(அ, இருமம்)
+                t = threading.Thread(target=ஒரு_பொருள்_பெறு, args=(பதிவு, அ, இருமம்))
+                t.start()
+                t.join(5)
+                if t.is_alive():
+                    சேவையகம் += 1   
+
         else:
             tr_entries = அ.translated_entries()
             for பதிவு in tr_entries:
-                src = பதிவு.msgid
-                if src == "":
-                    src = பதிவு.msgctxt
-                if src == பதிவு.msgstr:
-                    if src == ", ":
-                        pass
-                    இ, _ = பொருள்_பெறு(src)
-                    if பதிவு.msgid_plural:
-                        பதிவு.msgstr_plural[0] = இ
-                        ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural)
-                        பதிவு.msgstr_plural[1] = ஈ
-                        # பதிவு.msgstr_plural = {0: இ, 1: ஈ}
-                        if 2 in பதிவு.msgstr_plural:
-                            பதிவு.msgstr_plural[2] = ஈ
-                            # பதிவு.msgstr_plural = {0: இ, 1: ஈ, 2: ஈ}
-                        print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
-                    else:
-                        பதிவு.msgstr = இ
-                        print(பதிவு.msgid, பதிவு.msgstr)
-                    அகராதி_சேமி(அ, இருமம்)
+                t = threading.Thread(target=ஒரு_பொருள்_பெறு, args=(பதிவு, அ, இருமம்))
+                t.start()
+                t.join(5)
+                if t.is_alive():
+                    சேவையகம் += 1   
+
+
+def ஒரு_பொருள்_பெறு(பதிவு, அ, இருமம்=False, சேவையகம்=0):
+    src = பதிவு.msgid
+    if src == "":
+        src = பதிவு.msgctxt
+    if (பதிவு.msgstr == "" or பதிவு.msgstr == src):
+        இ, _ = பொருள்_பெறு(src, சேவையகம்)
+        if பதிவு.msgid_plural:
+            பதிவு.msgstr_plural[0] = இ
+            ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural, சேவையகம்)
+            பதிவு.msgstr_plural[1] = ஈ
+            # பதிவு.msgstr_plural = {0: இ, 1: ஈ}
+            if 2 in பதிவு.msgstr_plural:
+                பதிவு.msgstr_plural[2] = ஈ
+                # பதிவு.msgstr_plural = {0: இ, 1: ஈ, 2: ஈ}
+            print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
+        else:
+            பதிவு.msgstr = இ
+            print(பதிவு.msgid, பதிவு.msgstr)
+        அகராதி_சேமி(அ, இருமம்)
 
 
 def சரங்கள்மொழிபெயர்(பாதை="./வெறுமை/*.strings"):
@@ -755,14 +750,20 @@ def எடுபொருள்மொழி(அனைத்தும்=False, �
             tr_entries = அ.untranslated_entries()
             if அனைத்தும்:
                 tr_entries.add(அ.translated_entries())
-            threads = []            
             for பதிவு in tr_entries:
-                # one_entry(பதிவு, a)
-                thread = threading.Thread(target=one_entry, args=(பதிவு, a))
-                thread.start()
-                sleep(0.1*random(0,1))
-                threads.append(thread)
-            # wait for all threads to complete before main program exits 
-            for thread in threads:
-                thread.join()
+                இ = a.தேடு(பதிவு.msgid)
+                if பதிவு.msgid_plural:
+                    பதிவு.msgstr_plural[0] = இ
+                    ஈ = a.தேடு(பதிவு.msgid_plural)
+                    பதிவு.msgstr_plural[1] = ஈ
+                    # பதிவு.msgstr_plural = {0: இ, 1: ஈ}
+                    if 2 in பதிவு.msgstr_plural:
+                        பதிவு.msgstr_plural[2] = ஈ
+                        # பதிவு.msgstr_plural = {0: இ, 1: ஈ, 2: ஈ}
+                    print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
+                else:
+                    பதிவு.msgstr = இ
+                    print(பதிவு.msgid, பதிவு.msgstr)
+                அகராதி_சேமி(அ, இருமம்)                 
+            sleep(5) # wait for 5s before main program exits
             print("பின் : ", அ.percent_translated(), "%")
