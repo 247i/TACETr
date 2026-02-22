@@ -1,0 +1,141 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib"
+                    xml:space="preserve">
+
+    <!--To use a new line: &#x0d; or CarriageReturn + NewLine: &#x0d;&#x0a; or &#10;-->
+    <!--You can use the zero-width-divider to suggest where the word should be divided when there's no space &#8203;-->
+    <!--Special texts like {0}, are place holders for dynamic values, such as numbers.-->
+    
+    <!--General-->
+   <s:String x:Key="S.Title">திரையிலிருந்துவபவ நிறுவி</s:String>
+   <s:String x:Key="S.Initializing">தொடங்குகிறது...</s:String>
+   <s:String x:Key="S.Back">பின்</s:String>
+   <s:String x:Key="S.Ignore">புறக்கணி</s:String>
+   <s:String x:Key="S.Next">அடுத்து</s:String>
+   <s:String x:Key="S.Install">நிறுவு</s:String>
+   <s:String x:Key="S.Repair">பழுதுபார்</s:String>
+   <s:String x:Key="S.Uninstall">நிறுவல் நீக்கு</s:String>
+   <s:String x:Key="S.Cancel">கைவிடு</s:String>
+   <s:String x:Key="S.Download">பதிவிறக்கம் தேவை</s:String>
+   <s:String x:Key="S.Required">தேவையான புலம்.</s:String>
+    
+    <!--Install-->
+    <s:String x:Key="S.Install.Version">பதிப்பு</s:String>
+    <s:String x:Key="S.Install.Type">அமைப்பு</s:String>
+    <s:String x:Key="S.Install.Select">நிறுவ வேண்டிய நற்பண்புகளைத் தேர்ந்தெடு:</s:String>
+    <s:String x:Key="S.Install.CurrentVersion">தற்போது இந்த பதிப்பு உங்களிடம் நிறுவப்பட்டுள்ளது.</s:String>
+    <s:String x:Key="S.Install.Gifski">Gifski நூலகம்</s:String>
+    <s:String x:Key="S.Install.Gifski.Info">அசைவூட்டங்களை GIF ஆக ஏற்றுமதி செய்யப் பயன்படுத்தலாம்.</s:String>
+    <s:String x:Key="S.Install.Ffmpeg">FFmpeg இயக்கக்கூடிய கோப்பு</s:String>
+    <s:String x:Key="S.Install.Ffmpeg.Info">அசைவூட்டத்தை GIF, APNG மற்றும் வீடியோ ஆக ஏற்றுமதி செய்யப் பயன்படுத்தலாம்.</s:String>
+    <s:String x:Key="S.Install.Settings">ஒரு வெற்று உள்ளூர் அமைப்புகள் கோப்பை உருவாக்கு</s:String>
+    <s:String x:Key="S.Install.Settings.NoOverwrite">இது மேலெழுதப்படாது</s:String>
+    <s:String x:Key="S.Install.Settings.Info">வெற்று அமைப்புகள் கோப்பு, செயலி நிறுவப்பட்ட அதே கோப்புறையில் உருவாக்கப்படும், &#x0d; ஆனால் அந்தக் கோப்புறையில் வேறு Settings.xaml கோப்பு எதுவும் இல்லாத போது மட்டுமே.</s:String>
+    <s:String x:Key="S.Install.License">உரிமம்</s:String>
+    <s:String x:Key="S.Install.License.Others">மூன்றாம் தரப்பு</s:String>
+    <s:String x:Key="S.Install.Language">நிறுவிக்கான மொழியைத் தேர்ந்தெடு.</s:String>
+    <s:String x:Key="S.Install.Portable">கையடக்க முறை</s:String>
+    <s:String x:Key="S.Install.Portable.Info">குறுக்குவழிகளைச் சேர்க்காமலும் &#10; மற்றும் பதிவேட்டை மாற்றாமலும் கோப்புகளை மட்டும் நகலெடுக்கும்.</s:String>
+    <s:String x:Key="S.Install.Agree">'அடுத்து' என்பதைக் சொடுக்குவதன் மூலம், தேர்ந்தெடுக்கப்பட்ட அனைத்து நற்பண்புகளின் உரிம விதிமுறைகளையும் நீங்கள் ஒப்புக்கொள்கிறீர்கள்.</s:String>
+
+    <!--Architecture-->
+    <s:String x:Key="S.Architecture.Type">கட்டமைப்பு</s:String>
+    <s:String x:Key="S.Architecture.Proper">உங்கள் இமு கட்டமைப்புக்கு மிகவும் பொருத்தமான ஒரு தொகுப்பு உள்ளது:</s:String>
+    <s:String x:Key="S.Architecture.Instruction">சரியான தொகுப்பைப் பதிவிறக்கி நிறுவ 'அடுத்து' என்பதைக் சொடுக்கவும்.</s:String>
+    
+    <!--Prerequisites-->
+    <s:String x:Key="S.Framework.Type">முன்நிபந்தனைகள்</s:String>
+    <s:String x:Key="S.Framework.Missing">சில சார்புநிலைகளையும் நிறுவ வேண்டும்:</s:String>
+    <s:String x:Key="S.Framework.Size">பதிவிறக்க அளவு.</s:String>
+    <s:String x:Key="S.Framework.Terms">பயன்பாட்டு விதிமுறைகள்</s:String>
+    <s:String x:Key="S.Framework.Agree">'அடுத்து' என்பதைக் சொடுக்கவதன் மூலம் நீங்கள் உரிம விதிமுறைகளை ஒப்புக்கொள்கிறீர்கள்.</s:String>
+    <s:String x:Key="S.Framework.Current">நீங்கள் தற்போது பதிப்பு {0} ஐ நிறுவியுள்ளீர்கள்.</s:String>
+    
+    <!--Destination-->
+    <s:String x:Key="S.Output.Type">வெளியீடு</s:String>
+    <s:String x:Key="S.Output.Access">இந்த செயலியை யார் அணுக வேண்டும்?</s:String>
+    <s:String x:Key="S.Output.Access.JustMe">நான் மட்டும்</s:String>
+    <s:String x:Key="S.Output.Access.Everyone">அனைவரும்</s:String>
+    <s:String x:Key="S.Output.Duplicate">நகல் கண்டறியப்பட்டது</s:String>
+    <s:String x:Key="S.Output.Select">நிறுவ வேண்டிய இடத்தைத் தேர்ந்தெடு:</s:String>
+    <s:String x:Key="S.Output.Folder">தேர்ந்தெடு</s:String>
+    <s:String x:Key="S.Output.Navigate">சாளரங்கள் உலாவியைப் பயன்படுத்தி தேர்ந்தெடுக்கப்பட்ட கோப்புறைக்குச் செல்ல Enter விசையை அழுத்தவும்.</s:String>
+    <s:String x:Key="S.Output.Shortcuts">குறுக்குவழிகள்:</s:String>
+    <s:String x:Key="S.Output.Shortcuts.Desktop">பணிமேடை</s:String>
+    <s:String x:Key="S.Output.Shortcuts.StartMenu">துவக்கு பட்டியல்</s:String>
+    <s:String x:Key="S.Output.Shortcuts.Navigate">இந்த கோப்புறைக்குச் செல்ல சொடுக்கவும்.</s:String>
+    <s:String x:Key="S.Output.Shortcuts.AllUsers">அனைத்து பயனர்களுக்கும் குறுக்குவழியைச் சேர்</s:String>
+    <s:String x:Key="S.Output.Popup">தேர்ந்தெடுக்கப்பட்ட கோப்புறையில் நிறுவ உங்களிடம் அனுமதி கேட்க பஅக உரையாடல் பெட்டி தோன்றும்.</s:String>
+    <s:String x:Key="S.Output.MissingPermission">'நான் மட்டும்' அணுகல் பயன்முறையில் அந்தக் கோப்புறையில் நிறுவ உங்களுக்கு அனுமதி இல்லாமல் இருக்கலாம்.</s:String>
+    <s:String x:Key="S.Output.AnotherContext">அதே கோப்புறை, ஆனால் வேறு அணுகல் முறையுடன் திரையிலிருந்துவபவ ஏற்கனவே நிறுவப்பட்டுள்ளது.இந்த பதிப்பை நிறுவும் முன் மற்ற பதிப்பு நிறுவல் நீக்கப்படும்.</s:String>
+
+    <!--Maintenance-->
+    <s:String x:Key="S.Maintenance.Type">பராமரிப்பு</s:String>
+    <s:String x:Key="S.Maintenance.Choose">என்ன செய்ய வேண்டும் என்பதைத் தேர்ந்தெடு:</s:String>
+    <s:String x:Key="S.Maintenance.Change">நற்பண்புகளை மாற்று.</s:String>
+    <s:String x:Key="S.Maintenance.Repair">நிறுவலைச் சரிசெய்.</s:String>
+    <s:String x:Key="S.Maintenance.Repair.Info">பயன்பாட்டைச் சரிசெய்வதற்கான உரிமைகளைக் கேட்க, பஅக உரையாடல் பெட்டி தோன்ற வேண்டும்.</s:String>
+    <s:String x:Key="S.Maintenance.Uninstall">அனைத்து அம்சங்களையும் நிறுவல் நீக்கவும்.</s:String>
+    <s:String x:Key="S.Maintenance.Uninstall.Info">பயன்பாட்டை நிறுவல் நீக்குவதற்கான உரிமைகளைக் கேட்க, பஅக உரையாடல் பெட்டி தோன்ற வேண்டும்.</s:String>
+
+    <!--Progress-->
+    <s:String x:Key="S.Progress.Type">முன்னேற்றம்</s:String>
+    <s:String x:Key="S.Progress.Downloading">பதிவிறக்குகிறது...</s:String>
+    <s:String x:Key="S.Progress.Installing">நிறுவுகிறது...</s:String>
+    <s:String x:Key="S.Progress.Uninstalling">நிறுவல் நீக்குகிறது...</s:String>
+    <s:String x:Key="S.Progress.Repairing">சரிசெய்கிறது...</s:String>
+    <s:String x:Key="S.Progress.Download.Status">{0} இல் {1}</s:String>
+    <s:String x:Key="S.Progress.Install.Blocked">மற்றொரு செயலி இந்த நிறுவி தொடர்வதைத் தடுக்கிறது.</s:String>
+    <s:String x:Key="S.Progress.Install.BlockedReason">{0} ஒன்று அல்லது அதற்கு மேற்பட்ட கோப்புகளைத் தடுப்பதாகத் தெரிகிறது.</s:String>
+    <s:String x:Key="S.Progress.Uac">பஅக உரையாடல் பெட்டி எந்த நேரத்திலும் தோன்றும்... தோன்றவில்லை என்றால், உங்கள் பணிப்பட்டியைப் பார்க்கவும்.</s:String>
+    <s:String x:Key="S.Progress.Uac.Switching">பஅக உரையாடல் கண்டறியப்பட்டது, அதை உங்களுக்காகக் காட்ட முயற்சிக்கிறது...</s:String>
+   
+    <!--End-->
+    <s:String x:Key="S.End.Type.Success">முடிந்தது</s:String>
+    <s:String x:Key="S.End.Type.Canceled">கைவிடப்பட்டது</s:String>
+    <s:String x:Key="S.End.Type.Fail">தோல்வி</s:String>
+    
+     <s:String x:Key="S.End.Install.Success">நிறுவல் வெற்றிகரமாக முடிந்தது.</s:String>
+    <s:String x:Key="S.End.Install.Half">நிறுவல் பகுதி அளவு வெற்றிகரமாக முடிந்தது.</s:String>
+    <s:String x:Key="S.End.Install.Canceled">நிறுவல் கைவிடப்பட்டது.</s:String>
+    <s:String x:Key="S.End.Install.Fail">நிறுவல் தோல்வியடைந்தது.</s:String>
+    
+     <s:String x:Key="S.End.Repair.Success">பயன்பாடு சரிசெய்யப்பட்டது.</s:String>
+    <s:String x:Key="S.End.Repair.Canceled">சரிசெய்தல் கைவிடப்பட்டது.</s:String>
+    <s:String x:Key="S.End.Repair.Fail">சரிசெய்யும் செயல்முறை தோல்வியடைந்தது.</s:String>
+
+    <s:String x:Key="S.End.Change.Success">பயன்பாடு வெற்றிகரமாக மீண்டும் நிறுவப்பட்டது.</s:String>
+    <s:String x:Key="S.End.Change.Half">பயன்பாடு பகுதி அளவு மீண்டும் நிறுவப்பட்டது.</s:String>
+    <s:String x:Key="S.End.Change.Fail">மீண்டும் நிறுவும் செயல்முறை தோல்வியடைந்தது.</s:String>
+
+    <s:String x:Key="S.End.Uninstall.Success">பயன்பாடு நீக்கப்பட்டது.</s:String>
+    <s:String x:Key="S.End.Uninstall.Half">பயன்பாடு முழுமையாக நீக்கப்படவில்லை.</s:String>
+    <s:String x:Key="S.End.Uninstall.Canceled">நிறுவல் நீக்கம் கைவிடப்பட்டது.</s:String>
+    <s:String x:Key="S.End.Uninstall.Fail">நிறுவல் நீக்கம் தோல்வியடைந்தது.</s:String>
+
+    <s:String x:Key="S.End.Ffmpeg.Downloaded">FFmpeg வெற்றிகரமாகப் பதிவிறக்கம் செய்யப்பட்டது.</s:String>
+    <s:String x:Key="S.End.Ffmpeg.NotDownloaded">FFmpeg-ஐ பதிவிறக்கம் செய்ய முடியவில்லை.</s:String>
+    <s:String x:Key="S.End.Ffmpeg.Ignored">FFmpeg பதிவிறக்கம் செய்யத் தேர்ந்தெடுக்கப்படவில்லை.</s:String>
+    <s:String x:Key="S.End.Ffmpeg.ErrorDownload">FFmpeg பதிவிறக்கம் செய்யப்படுவதில் அல்லது வெளியீட்டு கோப்புறைக்கு நகர்த்துவதில் தோல்வியடைந்தது.</s:String>
+
+    <s:String x:Key="S.End.Ffmpeg.Removed">FFmpeg வெற்றிகரமாக அகற்றப்பட்டது.</s:String>
+    <s:String x:Key="S.End.Ffmpeg.AlreadyRemoved">FFmpeg நிறுவப்படவில்லை அல்லது ஏற்கனவே அகற்றப்பட்டுவிட்டது.</s:String>
+    <s:String x:Key="S.End.Ffmpeg.NotRemoved">FFmpeg-ஐ அகற்ற முடியவில்லை.</s:String>
+
+    <s:String x:Key="S.End.Prerequisites.Downloaded">முன்நிபந்தனைகள் வெற்றிகரமாகப் பதிவிறக்கம் செய்யப்பட்டு நிறுவப்பட்டன.</s:String>
+    <s:String x:Key="S.End.Prerequisites.SomeDownloaded">சில முன்நிபந்தனைகள் வெற்றிகரமாகப் பதிவிறக்கம் செய்யப்பட்டு நிறுவப்பட்டன.</s:String>
+    <s:String x:Key="S.End.Prerequisites.NotDownloaded">முன்நிபந்தனைகள் பதிவிறக்கம் செய்யப்படவோ அல்லது நிறுவப்படவோ இல்லை.</s:String>
+    <s:String x:Key="S.End.Prerequisites.NotNeeded">நிறுவப்படுவதற்கு எந்த முன்நிபந்தனைகளும் தேவையில்லை.</s:String>
+
+    <s:String x:Key="S.End.Framework.Downloaded">.NET 6 வெற்றிகரமாகப் பதிவிறக்கம் செய்யப்பட்டு நிறுவப்பட்டது.</s:String>
+    <s:String x:Key="S.End.Framework.NotDownloaded">.NET 6 நிறுவப்படவில்லை.</s:String>
+    <s:String x:Key="S.End.Framework.Already">.NET 6 ஏற்கனவே நிறுவப்பட்டுள்ளது.</s:String>
+   
+    <s:String x:Key="S.End.Closing">நிறுவி {0} {1} நேரத்தில் மூடப்படும்.</s:String>
+    <s:String x:Key="S.End.Closing.Second">வினாடி</s:String>
+    <s:String x:Key="S.End.Closing.Seconds">வினாடிகள்</s:String>
+    
+    <s:String x:Key="S.End.Finish">முடிந்தது</s:String>
+    <s:String x:Key="S.End.Log">பதிவைப் பார்</s:String>
+</ResourceDictionary>
