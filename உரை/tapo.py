@@ -482,7 +482,7 @@ def எடுபொருள்மொழிபெயர்(அனைத்து
             for பதிவு in tr_entries:
                 t = threading.Thread(target=ஒரு_பொருள்_பெறு, args=(பதிவு, அ, இருமம்))
                 t.start()
-                t.join(5)
+                t.join(15)
                 if t.is_alive():
                     சேவையகம் += 1   
 
@@ -491,7 +491,7 @@ def எடுபொருள்மொழிபெயர்(அனைத்து
             for பதிவு in tr_entries:
                 t = threading.Thread(target=ஒரு_பொருள்_பெறு, args=(பதிவு, அ, இருமம்))
                 t.start()
-                t.join(5)
+                t.join(15)
                 if t.is_alive():
                     சேவையகம் += 1   
 
