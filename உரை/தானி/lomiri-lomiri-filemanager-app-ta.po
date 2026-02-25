@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Lomiri)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-12 03:44+0200\n"
-"PO-Revision-Date: 2025-01-12 18:50+0530\n"
+"POT-Creation-Date: 2026-02-23 15:57+0200\n"
+"PO-Revision-Date: 2026-02-25 00:00\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/lomiri/lomiri-filemanager-app/ta/>\n"
 "Language: ta\n"
@@ -12,11 +12,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 #: lomiri-filemanager-app.desktop.in:7
-msgid "/usr/share/lomiri-filemanager-app/filemanager.svg"
-msgstr "/usr/share/lomiri-filemanager-app/filemanager.svg"
+msgid "filemanager.svg"
+msgstr "கோப்புமேலாளர்.svg"
 
 #: lomiri-filemanager-app.desktop.in:8
 msgid "File Manager"
@@ -39,7 +39,7 @@ msgstr "காப்பகத்தை பிரித்தெடுக்க�
 #: src/app/qml/actions/Cancel.qml:6
 #: src/app/qml/authentication/FingerprintDialog.qml:68
 #: src/app/qml/authentication/PasswordDialog.qml:80
-#: src/app/qml/dialogs/CreateItemDialog.qml:64
+#: src/app/qml/dialogs/CreateItemDialog.qml:67
 #: src/app/qml/dialogs/ExtractingDialog.qml:44
 #: src/app/qml/dialogs/FileActionDialog.qml:46
 #: src/app/qml/dialogs/FileOperationProgressDialog.qml:44
@@ -48,13 +48,11 @@ msgstr "காப்பகத்தை பிரித்தெடுக்க�
 #: src/app/qml/dialogs/OpenWithDialog.qml:67
 #: src/app/qml/dialogs/templates/ConfirmDialog.qml:45
 #: src/app/qml/dialogs/templates/ConfirmDialogWithInput.qml:60
-#: src/app/qml/ui/FolderListPagePickModeHeader.qml:185
-#: src/app/qml/ui/FolderListPageSelectionHeader.qml:44
 msgid "Cancel"
 msgstr "தவிர்க்க"
 
 #: src/app/qml/actions/Delete.qml:5
-#: src/app/qml/dialogs/ConfirmMultipleDeleteDialog.qml:16
+#: src/app/qml/dialogs/ConfirmMultipleDeleteDialog.qml:17
 #: src/app/qml/dialogs/ConfirmSingleDeleteDialog.qml:17
 msgid "Delete"
 msgstr "நீக்குக"
@@ -75,8 +73,8 @@ msgstr "வெட்டுக"
 #, qt-format
 msgid "Paste %1 file"
 msgid_plural "Paste %1 files"
-msgstr[0] "%1 கோப்பை ஒட்டவும்"
-msgstr[1] "%1 கோப்புகளை ஒட்டவும்"
+msgstr[0] "% 1 கோப்பை ஒட்டவும்"
+msgstr[1] "% 1 கோப்புகளை ஒட்டவும்"
 
 #: src/app/qml/actions/GoBack.qml:5
 msgid "Go back"
@@ -112,7 +110,7 @@ msgstr "பண்புகள்"
 msgid "Rename"
 msgstr "மறுபெயரிடுங்கள்"
 
-#: src/app/qml/actions/Search.qml:6
+#: src/app/qml/actions/Search.qml:7
 msgid "Search"
 msgstr "தேடல்"
 
@@ -120,11 +118,19 @@ msgstr "தேடல்"
 msgid "Select"
 msgstr "தேர்ந்தெடு"
 
+#: src/app/qml/actions/SelectUnselectAll.qml:6
+msgid "Deselect all"
+msgstr "அனைத்தையும் தேர்வு நீக்கு"
+
+#: src/app/qml/actions/SelectUnselectAll.qml:6
+msgid "Select all"
+msgstr "அனைத்தையும் தேர்ந்தெடு"
+
 #: src/app/qml/actions/Settings.qml:6
 msgid "Settings"
 msgstr "அமைவுகள்"
 
-#: src/app/qml/actions/Share.qml:5
+#: src/app/qml/actions/Share.qml:5 src/app/qml/ui/MediaViewer.qml:94
 msgid "Share"
 msgstr "பகிர்க"
 
@@ -203,17 +209,21 @@ msgstr "ஏற்பு தோல்வியடைந்தது. மீண்
 msgid "Authenticate"
 msgstr "உறுதிப்படுத்து"
 
-#: src/app/qml/backend/FolderListModel.qml:122 src/app/qml/filemanager.qml:185
-#: src/app/qml/filemanager.qml:188
+#: src/app/qml/backend/FolderListModel.qml:137 src/app/qml/filemanager.qml:200
+#: src/app/qml/filemanager.qml:203
 #, qt-format
 msgid "%1 file"
 msgid_plural "%1 files"
-msgstr[0] "%1 கோப்பு"
-msgstr[1] "%1 கோப்புகள்"
+msgstr[0] "% 1 கோப்பு"
+msgstr[1] "% 1 கோப்புகள்"
 
-#: src/app/qml/backend/FolderListModel.qml:133
+#: src/app/qml/backend/FolderListModel.qml:148
 msgid "Folder"
 msgstr "கோப்புறை"
+
+#: src/app/qml/components/SingleMediaViewer.qml:317
+msgid "An error has occurred attempting to load media"
+msgstr "மீடியாவை ஏற்றும் முயற்சியில் பிழை ஏற்பட்டது"
 
 #: src/app/qml/components/TextualButtonStyle.qml:48
 #: src/app/qml/components/TextualButtonStyle.qml:56
@@ -234,17 +244,17 @@ msgstr "காப்பகத்தை பிரித்தெடுக்க�
 msgid "Are you sure you want to extract '%1' here?"
 msgstr "இங்கே '%1' ஐ இங்கே பிரித்தெடுக்க விரும்புகிறீர்களா?"
 
-#: src/app/qml/dialogs/ConfirmMultipleDeleteDialog.qml:17
+#: src/app/qml/dialogs/ConfirmMultipleDeleteDialog.qml:18
 #: src/app/qml/dialogs/ConfirmSingleDeleteDialog.qml:18
 #, qt-format
 msgid "Are you sure you want to permanently delete '%1'?"
 msgstr "'%1' ஐ நிரந்தரமாக நீக்க விரும்புகிறீர்களா?"
 
-#: src/app/qml/dialogs/ConfirmMultipleDeleteDialog.qml:17
+#: src/app/qml/dialogs/ConfirmMultipleDeleteDialog.qml:18
 msgid "these files"
 msgstr "இந்த கோப்புகள்"
 
-#: src/app/qml/dialogs/ConfirmMultipleDeleteDialog.qml:20
+#: src/app/qml/dialogs/ConfirmMultipleDeleteDialog.qml:21
 #: src/app/qml/dialogs/ConfirmSingleDeleteDialog.qml:23
 msgid "Deleting files"
 msgstr "கோப்புகளை நீக்குதல்"
@@ -253,32 +263,32 @@ msgstr "கோப்புகளை நீக்குதல்"
 msgid "Enter a new name"
 msgstr "புதிய பெயரை உள்ளிடவும்"
 
-#: src/app/qml/dialogs/CreateItemDialog.qml:14
+#: src/app/qml/dialogs/CreateItemDialog.qml:15
 msgid "Create Item"
 msgstr "உருப்படியை உருவாக்கவும்"
 
-#: src/app/qml/dialogs/CreateItemDialog.qml:15
+#: src/app/qml/dialogs/CreateItemDialog.qml:16
 msgid "Enter name for new item"
 msgstr "புதிய உருப்படிக்கு பெயரை உள்ளிடவும்"
 
-#: src/app/qml/dialogs/CreateItemDialog.qml:19
+#: src/app/qml/dialogs/CreateItemDialog.qml:20
 msgid "Item name"
 msgstr "உருப்படி பெயர்"
 
-#: src/app/qml/dialogs/CreateItemDialog.qml:25
+#: src/app/qml/dialogs/CreateItemDialog.qml:26
 msgid "Create file"
 msgstr "கோப்பை உருவாக்கவும்"
 
-#: src/app/qml/dialogs/CreateItemDialog.qml:34
+#: src/app/qml/dialogs/CreateItemDialog.qml:36
 #, qt-format
 msgid "Created file '%1'"
 msgstr "'%1' கோப்பு உருவாக்கப்பட்டது"
 
-#: src/app/qml/dialogs/CreateItemDialog.qml:46
+#: src/app/qml/dialogs/CreateItemDialog.qml:48
 msgid "Create Folder"
 msgstr "கோப்புறையை உருவாக்கவும்"
 
-#: src/app/qml/dialogs/CreateItemDialog.qml:53
+#: src/app/qml/dialogs/CreateItemDialog.qml:56
 #, qt-format
 msgid "Created folder '%1'"
 msgstr "'%1' கோப்புறையை உருவாக்கியது"
@@ -319,7 +329,7 @@ msgstr "திற"
 
 #: src/app/qml/dialogs/FileOperationProgressDialog.qml:27
 msgid "Operation in progress"
-msgstr "செயல்பாட்டில் செயல்பாட்டில்"
+msgstr "செயல்பாடு முன்னேற்றத்தில்"
 
 #: src/app/qml/dialogs/FileOperationProgressDialog.qml:29
 msgid "File operation"
@@ -350,7 +360,7 @@ msgid "Do you want to extract the archive here?"
 msgstr "காப்பகத்தை இங்கே பிரித்தெடுக்க விரும்புகிறீர்களா?"
 
 #: src/app/qml/dialogs/OpenArchiveDialog.qml:28
-#: src/app/qml/dialogs/OpenWithDialog.qml:44
+#: src/app/qml/dialogs/OpenWithDialog.qml:44 src/app/qml/ui/MediaViewer.qml:87
 msgid "Open with another app"
 msgstr "மற்றொரு பயன்பாட்டுடன் திறக்கவும்"
 
@@ -366,20 +376,20 @@ msgstr "சொடுக்கு செய்யப்பட்ட கோப்�
 msgid "Preview"
 msgstr "முன்பார்வை"
 
-#: src/app/qml/filemanager.qml:185
+#: src/app/qml/filemanager.qml:200
 msgid "successfully saved: "
-msgstr "வெற்றிகரமாக சேமிக்கப்பட்டது:"
+msgstr "வெற்றிகரமாக சேமிக்கப்பட்டது: "
 
-#: src/app/qml/filemanager.qml:188
+#: src/app/qml/filemanager.qml:203
 msgid "failed to save: "
-msgstr "சேமிக்கத் தவறிவிட்டது:"
+msgstr "சேமிக்கத் தவறிவிட்டது: "
 
-#: src/app/qml/filemanager.qml:190
+#: src/app/qml/filemanager.qml:205
 #, qt-format
 msgid "into: %1"
 msgstr "உள்ளே: %1"
 
-#: src/app/qml/filemanager.qml:194
+#: src/app/qml/filemanager.qml:209
 msgid ""
 "Warning: Content-Hub does not overwrite existing files. The following were "
 "detected:"
@@ -387,7 +397,7 @@ msgstr ""
 "எச்சரிக்கை: உள்ளடக்க-அப் ஏற்கனவே உள்ள கோப்புகளை மேலெழுதாது. பின்வருபவை "
 "கண்டறியப்பட்டன:"
 
-#: src/app/qml/filemanager.qml:205
+#: src/app/qml/filemanager.qml:219
 msgid "Import Results"
 msgstr "முடிவுகளை இறக்குமதி செய்யுங்கள்"
 
@@ -427,112 +437,93 @@ msgstr "அனுமதிகள்:"
 msgid "Close"
 msgstr "மூடு"
 
-#: src/app/qml/ui/FolderListPage.qml:249 src/app/qml/ui/FolderListPage.qml:304
+#: src/app/qml/ui/FolderListPage.qml:268 src/app/qml/ui/FolderListPage.qml:324
 msgid "Restricted access"
 msgstr "தடைசெய்யப்பட்ட அணுகல்"
 
-#: src/app/qml/ui/FolderListPage.qml:253
+#: src/app/qml/ui/FolderListPage.qml:272
 msgid ""
 "Authentication is required in order to see all the content of this folder."
 msgstr "இந்த கோப்புறையின் அனைத்து உள்ளடக்கங்களையும் காண ஏற்பு தேவை."
 
-#: src/app/qml/ui/FolderListPage.qml:290
+#: src/app/qml/ui/FolderListPage.qml:310
 msgid "No files"
 msgstr "கோப்புகள் இல்லை"
 
-#: src/app/qml/ui/FolderListPage.qml:291
+#: src/app/qml/ui/FolderListPage.qml:311
 msgid "This folder is empty."
 msgstr "இந்த கோப்புறை காலியாக உள்ளது."
 
-#: src/app/qml/ui/FolderListPage.qml:305
+#: src/app/qml/ui/FolderListPage.qml:325
 msgid "Authentication is required in order to see the content of this folder."
 msgstr "இந்த கோப்புறையின் உள்ளடக்கத்தைக் காண ஏற்பு தேவை."
 
-#: src/app/qml/ui/FolderListPage.qml:320
+#: src/app/qml/ui/FolderListPage.qml:340
 msgid "File operation error"
 msgstr "கோப்பு செயல்பாட்டு பிழை"
 
-#: src/app/qml/ui/FolderListPageDefaultHeader.qml:32
-#: src/app/qml/ui/FolderListPagePickModeHeader.qml:31
+#: src/app/qml/ui/FolderListPageDefaultHeader.qml:64
 #, qt-format
-msgid "%1 item"
-msgid_plural "%1 items"
-msgstr[0] "%1 உருப்படி"
-msgstr[1] "%1 உருப்படிகள்"
+msgid "%1 item selected"
+msgid_plural "%1 items selected"
+msgstr[0] "% 1 உருப்படி தேர்ந்தெடுக்கப்பட்டது"
+msgstr[1] "%1 உருப்படிகள் தேர்ந்தெடுக்கப்பட்டன"
 
-#: src/app/qml/ui/FolderListPageDefaultHeader.qml:41
-#: src/app/qml/ui/FolderListPagePickModeHeader.qml:46
+#: src/app/qml/ui/FolderListPageDefaultHeader.qml:76
 msgid "Search Results"
 msgstr "தேடல் முடிவுகள்"
 
-#: src/app/qml/ui/FolderListPageDefaultHeader.qml:68
-#: src/app/qml/ui/FolderListPagePickModeHeader.qml:73
-msgid "Search..."
-msgstr "தேடுங்கள் ..."
-
-#: src/app/qml/ui/FolderListPageDefaultHeader.qml:118
-#: src/app/qml/ui/FolderListPagePickModeHeader.qml:125
-msgid "File Contents"
-msgstr "கோப்பு உள்ளடக்கங்கள்"
-
-#: src/app/qml/ui/FolderListPageDefaultHeader.qml:134
-#: src/app/qml/ui/FolderListPagePickModeHeader.qml:141
-msgid "Recursive"
-msgstr "சுழல்நிலை"
-
-#: src/app/qml/ui/FolderListPageDefaultHeader.qml:135
-#: src/app/qml/ui/FolderListPagePickModeHeader.qml:142
-msgid "Note: Slow in large directories"
-msgstr "குறிப்பு: பெரிய கோப்பகங்களில் மெதுவாக"
-
-#: src/app/qml/ui/FolderListPageDefaultHeader.qml:208
-msgid "Cleared clipboard"
-msgstr "இடைநிலைப்பலகை அழிக்கப்பட்டது"
-
-#: src/app/qml/ui/FolderListPageDefaultHeader.qml:217
-msgid "Paste files"
-msgstr "கோப்புகளை ஒட்டவும்"
-
-#: src/app/qml/ui/FolderListPageDefaultHeader.qml:219
-msgid "Pasted item"
-msgid_plural "Pasted items"
-msgstr[0] "ஒட்டப்பட்ட உருப்படி"
-msgstr[1] "ஒட்டப்பட்ட உருப்படிகள்"
-
-#: src/app/qml/ui/FolderListPageDefaultHeader.qml:230
-#, qt-format
-msgid "Added '%1' to Places"
-msgstr "இடங்களுக்கு '%1' சேர்க்கப்பட்டது"
-
-#: src/app/qml/ui/FolderListPagePickModeHeader.qml:33
+#: src/app/qml/ui/FolderListPageDefaultHeader.qml:90
 msgid "Save here"
 msgstr "இங்கே சேமிக்கவும்"
 
-#: src/app/qml/ui/FolderListPagePickModeHeader.qml:35
+#: src/app/qml/ui/FolderListPageDefaultHeader.qml:92
 #, qt-format
 msgid "Select files (%1 selected)"
 msgstr "கோப்புகளைத் தேர்ந்தெடுக்கவும் (%1 தேர்ந்தெடுக்கப்பட்டது)"
 
-#: src/app/qml/ui/FolderListPageSelectionHeader.qml:36
+#: src/app/qml/ui/FolderListPageDefaultHeader.qml:95
 #, qt-format
-msgid "%1 item selected"
-msgid_plural "%1 items selected"
-msgstr[0] "%1 உருப்படி தேர்ந்தெடுக்கப்பட்டது"
-msgstr[1] "%1 உருப்படிகள் தேர்ந்தெடுக்கப்பட்டன"
+msgid "%1 item"
+msgid_plural "%1 items"
+msgstr[0] "% 1 உருப்படி"
+msgstr[1] "% 1 உருப்படிகள்"
 
-#: src/app/qml/ui/FolderListPageSelectionHeader.qml:119
-#: src/app/qml/views/FolderDelegateActions.qml:183
-msgid "Could not rename"
-msgstr "மறுபெயரிட முடியவில்லை"
+#: src/app/qml/ui/FolderListPageDefaultHeader.qml:121
+msgid "Search..."
+msgstr "தேடுங்கள் ..."
 
-#: src/app/qml/ui/FolderListPageSelectionHeader.qml:120
-#: src/app/qml/views/FolderDelegateActions.qml:184
-msgid ""
-"Insufficient permissions, name contains special chars (e.g. '/'), or already"
-" exists"
-msgstr ""
-"போதிய அனுமதிகள், பெயரில் சிறப்பு எழுத்துக்கள் (எ.கா. '/') உள்ளன, அல்லது "
-"ஏற்கனவே உள்ளன"
+#: src/app/qml/ui/FolderListPageDefaultHeader.qml:195
+msgid "File Contents"
+msgstr "கோப்பு உள்ளடக்கங்கள்"
+
+#: src/app/qml/ui/FolderListPageDefaultHeader.qml:211
+msgid "Recursive"
+msgstr "சுழல்நிலை"
+
+#: src/app/qml/ui/FolderListPageDefaultHeader.qml:212
+msgid "Note: Slow in large directories"
+msgstr "குறிப்பு: பெரிய கோப்பகங்களில் மெதுவாக"
+
+#: src/app/qml/ui/MediaViewer.qml:70
+msgid "No media"
+msgstr "சராசரி இல்லை"
+
+#: src/app/qml/ui/MediaViewer.qml:76
+msgid "Play"
+msgstr "விளையாடு"
+
+#: src/app/qml/ui/MediaViewer.qml:76
+msgid "Pause"
+msgstr "இடைநிறுத்தம்"
+
+#: src/app/qml/ui/MediaViewer.qml:101
+msgid "Media Info"
+msgstr "மீடியா செய்தி"
+
+#: src/app/qml/ui/MediaViewer.qml:211
+msgid "No media files in current folder"
+msgstr "தற்போதைய கோப்புறையில் மீடியா கோப்புகள் இல்லை"
 
 #: src/app/qml/ui/ViewPopover.qml:24
 msgid "Show Hidden Files"
@@ -614,6 +605,10 @@ msgstr "ஒளி"
 msgid "Dark"
 msgstr "இருண்ட"
 
+#: src/app/qml/ui/ViewPopover.qml:104
+msgid "Full access authentication"
+msgstr "முழு ஏற்பு தேவை"
+
 #: src/app/qml/views/FolderDelegateActions.qml:41
 msgid "Folder not accessible"
 msgstr "கோப்புறை அணுக முடியாது"
@@ -624,6 +619,18 @@ msgstr "கோப்புறை அணுக முடியாது"
 msgid "Can not access %1"
 msgstr "%1 ஐ அணுக முடியாது"
 
+#: src/app/qml/views/FolderDelegateActions.qml:187
+msgid "Could not rename"
+msgstr "மறுபெயரிட முடியவில்லை"
+
+#: src/app/qml/views/FolderDelegateActions.qml:188
+msgid ""
+"Insufficient permissions, name contains special chars (e.g. '/'), or already"
+" exists"
+msgstr ""
+"போதிய அனுமதிகள், பெயரில் சிறப்பு எழுத்துக்கள் (எ.கா. '/') உள்ளன, அல்லது "
+"ஏற்கனவே உள்ளன"
+
 #: src/app/qml/views/FolderListView.qml:87
 msgid "Directories"
 msgstr "கோப்பகங்கள்"
@@ -632,7 +639,7 @@ msgstr "கோப்பகங்கள்"
 msgid "Files"
 msgstr "கோப்புகள்"
 
-#: src/plugin/folderlistmodel/dirmodel.cpp:384
+#: src/plugin/folderlistmodel/dirmodel.cpp:385
 msgid "Unknown"
 msgstr "தெரியாதவை"
 
@@ -640,19 +647,19 @@ msgstr "தெரியாதவை"
 msgid "path or url may not exist or cannot be read"
 msgstr "பாதை அல்லது முகவரி இருக்கலாம் அல்லது படிக்க முடியாது"
 
-#: src/plugin/folderlistmodel/dirmodel.cpp:751
+#: src/plugin/folderlistmodel/dirmodel.cpp:778
 msgid "Rename error"
 msgstr "பிழையை மறுபெயரிடுங்கள்"
 
-#: src/plugin/folderlistmodel/dirmodel.cpp:774
+#: src/plugin/folderlistmodel/dirmodel.cpp:801
 msgid "Error creating new folder"
 msgstr "புதிய கோப்புறையை உருவாக்கும் பிழை"
 
-#: src/plugin/folderlistmodel/dirmodel.cpp:801
+#: src/plugin/folderlistmodel/dirmodel.cpp:828
 msgid "Touch file error"
 msgstr "கோப்பு பிழையைத் தொடவும்"
 
-#: src/plugin/folderlistmodel/dirmodel.cpp:1414
+#: src/plugin/folderlistmodel/dirmodel.cpp:1451
 msgid "items"
 msgstr "உருப்படிகள்"
 
@@ -662,7 +669,7 @@ msgstr "கோப்பு அல்லது அடைவு இல்லை"
 
 #: src/plugin/folderlistmodel/filesystemaction.cpp:321
 msgid " does not exist"
-msgstr "இல்லை"
+msgstr " இல்லை"
 
 #: src/plugin/folderlistmodel/filesystemaction.cpp:326
 msgid "Cannot access File or Directory"
@@ -670,7 +677,7 @@ msgstr "கோப்பு அல்லது கோப்பகத்தை அ
 
 #: src/plugin/folderlistmodel/filesystemaction.cpp:327
 msgid " it needs Authentication"
-msgstr "இதற்கு ஏற்பு தேவை"
+msgstr " இதற்கு ஏற்பு தேவை"
 
 #: src/plugin/folderlistmodel/filesystemaction.cpp:361
 msgid "Cannot copy/move items"
@@ -679,11 +686,11 @@ msgstr "உருப்படிகளை நகலெடுக்க/நகர�
 #: src/plugin/folderlistmodel/filesystemaction.cpp:362
 #: src/plugin/folderlistmodel/filesystemaction.cpp:1487
 msgid "no write permission on folder "
-msgstr "கோப்புறையில் எழுத இசைவு இல்லை"
+msgstr "கோப்புறையில் எழுத இசைவு இல்லை "
 
 #: src/plugin/folderlistmodel/filesystemaction.cpp:642
 msgid "Could not remove the item "
-msgstr "உருப்படியை அகற்ற முடியவில்லை"
+msgstr "உருப்படியை அகற்ற முடியவில்லை "
 
 #: src/plugin/folderlistmodel/filesystemaction.cpp:680
 msgid "Could not find a suitable name to backup"
@@ -715,27 +722,27 @@ msgstr "கோப்பை உருவாக்க முடியவில்�
 
 #: src/plugin/folderlistmodel/filesystemaction.cpp:837
 msgid "Could not remove the directory/file "
-msgstr "அடைவு/கோப்பை அகற்ற முடியவில்லை"
+msgstr "அடைவு/கோப்பை அகற்ற முடியவில்லை "
 
 #: src/plugin/folderlistmodel/filesystemaction.cpp:850
 msgid "Could not move the directory/file "
-msgstr "அடைவு/கோப்பை நகர்த்த முடியவில்லை"
+msgstr "அடைவு/கோப்பை நகர்த்த முடியவில்லை "
 
 #: src/plugin/folderlistmodel/filesystemaction.cpp:1089
 msgid "Write error in "
-msgstr "பிழையை எழுதுங்கள்"
+msgstr "பிழையை எழுதுங்கள் "
 
 #: src/plugin/folderlistmodel/filesystemaction.cpp:1101
 msgid "Read error in "
-msgstr "பிழையைப் படியுங்கள்"
+msgstr "பிழையைப் படியுங்கள் "
 
 #: src/plugin/folderlistmodel/filesystemaction.cpp:1318
 msgid " Copy"
-msgstr "நகலெடு"
+msgstr " நகலெடு"
 
 #: src/plugin/folderlistmodel/filesystemaction.cpp:1371
 msgid "Set permissions error in "
-msgstr "அனுமதிகள் பிழையை அமைக்கவும்"
+msgstr "அனுமதிகள் பிழையை அமைக்கவும் "
 
 #: src/plugin/folderlistmodel/filesystemaction.cpp:1437
 msgid "Could not create trash info file"
@@ -764,4 +771,4 @@ msgstr "நிகர கருவி கிடைக்கவில்லை, �
 
 #: src/plugin/folderlistmodel/smb/qsambaclient/src/smbusershare.cpp:80
 msgid "cannot write in "
-msgstr "எழுத முடியாது"
+msgstr "எழுத முடியாது "
