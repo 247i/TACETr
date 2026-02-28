@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Lomiri)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-12 03:44+0200\n"
-"PO-Revision-Date: 2025-01-12 18:50+0530\n"
+"POT-Creation-Date: 2026-02-25 01:48+0200\n"
+"PO-Revision-Date: 2026-02-28 09:21\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/lomiri/lomiri-calendar-app/ta/>\n"
 "Language: ta\n"
@@ -12,38 +12,46 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
-#: lomiri-calendar-app.desktop.in:8 src/qml/EventDetails.qml:358
-#: src/qml/NewEvent.qml:682
+#: lomiri-calendar-app.desktop.in:7 src/qml/EventDetails.qml:422
+#: src/qml/NewEvent.qml:667
 msgid "Calendar"
 msgstr "நாட்காட்டி"
 
-#: lomiri-calendar-app.desktop.in:9
+#: lomiri-calendar-app.desktop.in:8
 msgid "A calendar for Lomiri which syncs with online accounts."
 msgstr "நிகழ்நிலை கணக்குகளுடன் ஒத்திசைக்கும் லோமிரிக்கான காலெண்டர்."
 
-#: lomiri-calendar-app.desktop.in:10
+#: lomiri-calendar-app.desktop.in:9
 msgid "calendar;event;day;week;year;appointment;meeting;"
 msgstr "நாட்காட்டி;நிகழ்வு;நாள்;வாரம்;ஆண்டு;சந்திப்புத்திட்டம்;சந்திப்பு;"
 
-#: src/qml/AgendaView.qml:50 src/qml/calendar.qml:386 src/qml/calendar.qml:567
+#: src/qml/AgendaEventDelegate.qml:85
+msgid "no event name set"
+msgstr "நிகழ்வுக்கு பெயரிடவில்லை"
+
+#: src/qml/AgendaEventDelegate.qml:87
+msgid "no location"
+msgstr "இருப்பிடம் இல்லை"
+
+#: src/qml/AgendaView.qml:42 src/qml/calendar.qml:342
 msgid "Agenda"
 msgstr "நிகழ்ச்சி நிரல்"
 
-#: src/qml/AgendaView.qml:100
+#: src/qml/AgendaView.qml:91
 msgid "You have no calendars enabled"
 msgstr "நீங்கள் எந்த நாட்காட்டியையும் இயக்கவில்லை"
 
-#: src/qml/AgendaView.qml:100
+#: src/qml/AgendaView.qml:91
 msgid "No upcoming events"
 msgstr "எதிர்கால நிகழ்வுகள் எதுவுமில்லை"
 
-#: src/qml/AgendaView.qml:112
+#: src/qml/AgendaView.qml:103
 msgid "Enable calendars"
 msgstr "நாட்காட்டியை இயக்குக"
 
-#: src/qml/AllDayEventComponent.qml:89 src/qml/TimeLineBase.qml:50
+#: src/qml/AllDayEventComponent.qml:89 src/qml/TimeLineBase.qml:53
 msgid "New event"
 msgstr "புதிய நிகழ்வு"
 
@@ -52,79 +60,92 @@ msgstr "புதிய நிகழ்வு"
 #: src/qml/AllDayEventComponent.qml:148
 msgid "%1 event"
 msgid_plural "%1 events"
-msgstr[0] "%1 நிகழ்வு"
-msgstr[1] "%1 நிகழ்வுகள்"
+msgstr[0] "% 1 நிகழ்வு"
+msgstr[1] "% 1 நிகழ்வுகள்"
 
 #. TRANSLATORS: the argument refers to the number of all day events
 #: src/qml/AllDayEventComponent.qml:152
 msgid "%1 all day event"
 msgid_plural "%1 all day events"
-msgstr[0] "இந்தநாளில் %1 நிகழ்வு"
-msgstr[1] "இந்தநாளில் %1 நிகழ்வுகள்"
+msgstr[0] "% 1 நாள் முழுவதும் நிகழ்வு"
+msgstr[1] "% 1 அனைத்து நாள் நிகழ்வுகள்"
 
-#: src/qml/CalendarChoicePopup.qml:47 src/qml/EventActions.qml:103
+#: src/qml/CalendarChoicePopup.qml:71 src/qml/EventActions.qml:103
 msgid "Calendars"
 msgstr "நாட்காட்டி"
 
-#: src/qml/CalendarChoicePopup.qml:49 src/qml/SettingsPage.qml:51
+#: src/qml/CalendarChoicePopup.qml:73 src/qml/SettingsPage.qml:51
 msgid "Back"
 msgstr "பின்செல்"
 
 #. TRANSLATORS: Please translate this string  to 15 characters only.
 #. Currently ,there is no way we can increase width of action menu currently.
-#: src/qml/CalendarChoicePopup.qml:61 src/qml/EventActions.qml:79
+#: src/qml/CalendarChoicePopup.qml:85 src/qml/EventActions.qml:79
 msgid "Sync"
 msgstr "ஒத்திசை"
 
-#: src/qml/CalendarChoicePopup.qml:61 src/qml/EventActions.qml:127
+#: src/qml/CalendarChoicePopup.qml:85 src/qml/EventActions.qml:127
 msgid "Syncing"
 msgstr "ஒத்திசைக்கிறது"
 
-#: src/qml/CalendarChoicePopup.qml:103
-msgid "Add online Calendar"
-msgstr "நிகழ்நிலை நாட்காட்டியைச் சேர்க்க"
-
-#: src/qml/CalendarChoicePopup.qml:217
+#: src/qml/CalendarChoicePopup.qml:121 src/qml/ImportEventsDialog.qml:98
 msgid "Import events"
 msgstr "நிகழ்வுகள் இறக்குமதி"
 
-#: src/qml/CalendarChoicePopup.qml:230
+#: src/qml/CalendarChoicePopup.qml:134
 msgid "Export calendar"
 msgstr "ஏற்றுமதி காலண்டர்"
 
-#: src/qml/CalendarChoicePopup.qml:248
+#: src/qml/CalendarChoicePopup.qml:154
+msgid "Add online Calendar"
+msgstr "நிகழ்நிலை நாட்காட்டியைச் சேர்க்க"
+
+# Suggested in Weblate: ஒரு நாட்காட்டி உண்டாக்கு
+#: src/qml/CalendarChoicePopup.qml:176 src/qml/CalendarCreatePage.qml:33
+msgid "Create a calendar"
+msgstr "ஒரு காலெண்டரை உருவாக்கவும்"
+
+#: src/qml/CalendarChoicePopup.qml:229
+msgid "Local calendars"
+msgstr "உள்ளக நாட்காட்டி"
+
+#: src/qml/CalendarChoicePopup.qml:260
+msgid "default"
+msgstr "இயல்பு"
+
+#: src/qml/CalendarChoicePopup.qml:325
 msgid "Choose from"
 msgstr "இருந்து தேர்வு செய்யவும்"
 
-#: src/qml/CalendarChoicePopup.qml:283
+#: src/qml/CalendarChoicePopup.qml:360
 msgid "Calendar export"
 msgstr "காலண்டர் ஏற்றுமதி"
 
-#: src/qml/CalendarChoicePopup.qml:301
+#: src/qml/CalendarChoicePopup.qml:378
 msgid "Select your calendar"
 msgstr "உங்கள் காலெண்டரைத் தேர்ந்தெடுக்கவும்"
 
-#: src/qml/CalendarChoicePopup.qml:344
+#: src/qml/CalendarChoicePopup.qml:421
 msgid "Select all"
 msgstr "அனைத்தையும் தெரிவுசெய்"
 
-#: src/qml/CalendarChoicePopup.qml:361 src/qml/ColorPickerDialog.qml:55
-#: src/qml/DeleteConfirmationDialog.qml:63
+#: src/qml/CalendarChoicePopup.qml:438 src/qml/CalendarChoicePopup.qml:526
+#: src/qml/ColorPickerDialog.qml:55 src/qml/DeleteConfirmationDialog.qml:63
 #: src/qml/EditEventConfirmationDialog.qml:52 src/qml/EventActions.qml:175
-#: src/qml/NewEvent.qml:399 src/qml/OnlineAccountsHelper.qml:73
-#: src/qml/RemindersPage.qml:88
+#: src/qml/ImportEventsDialog.qml:103 src/qml/NewEvent.qml:384
+#: src/qml/OnlineAccountsHelper.qml:73 src/qml/RemindersPage.qml:88
 msgid "Cancel"
 msgstr "தவிர்க்க"
 
-#: src/qml/CalendarChoicePopup.qml:368
+#: src/qml/CalendarChoicePopup.qml:445
 msgid "Proceed"
 msgstr "தொடரவும்"
 
-#: src/qml/CalendarChoicePopup.qml:403
+#: src/qml/CalendarChoicePopup.qml:480
 msgid "Unable to deselect"
 msgstr "தேர்ந்தெடுத்தை நீராகரிக்க முடியவில்லை"
 
-#: src/qml/CalendarChoicePopup.qml:404
+#: src/qml/CalendarChoicePopup.qml:481
 msgid ""
 "In order to create new events you must have at least one writable calendar "
 "selected"
@@ -132,15 +153,16 @@ msgstr ""
 "புதிய நிகழ்வுகளை உருவாக்க, நீங்கள் குறைந்தது ஒரு எழுத்தகுந்த நாட்காட்டியை "
 "தேர்வுசெய்திருக்க வேண்டும்"
 
-#: src/qml/CalendarChoicePopup.qml:406 src/qml/CalendarChoicePopup.qml:419
+#: src/qml/CalendarChoicePopup.qml:483 src/qml/CalendarChoicePopup.qml:496
+#: src/qml/CalendarCreatePage.qml:61
 msgid "Ok"
 msgstr "சரி"
 
-#: src/qml/CalendarChoicePopup.qml:416
+#: src/qml/CalendarChoicePopup.qml:493
 msgid "Network required"
 msgstr "பிணையம் தேவை"
 
-#: src/qml/CalendarChoicePopup.qml:417
+#: src/qml/CalendarChoicePopup.qml:494
 msgid ""
 "You are currently offline. In order to add online accounts you must have "
 "network connection available."
@@ -148,30 +170,61 @@ msgstr ""
 "நீங்கள் தற்போது ஆஃப்லைனில் இருக்கிறீர்கள். நிகழ்நிலை கணக்குகளைச் சேர்க்க "
 "உங்களுக்கு பிணைய இணைப்பு கிடைக்க வேண்டும்."
 
+#: src/qml/CalendarChoicePopup.qml:512
+msgid "Delete Calendar"
+msgstr "காலெண்டரை நீக்கு"
+
+#: src/qml/CalendarChoicePopup.qml:514
+msgid "Are you sure you want to delete the calendar \"%1\"?"
+msgstr "\"% 1\" காலெண்டரை நிச்சயமாக நீக்க விரும்புகிறீர்களா?"
+
+#: src/qml/CalendarChoicePopup.qml:517 src/qml/DeleteConfirmationDialog.qml:51
+#: src/qml/NewEvent.qml:391
+msgid "Delete"
+msgstr "நீக்குக"
+
+#: src/qml/CalendarCreatePage.qml:36 src/qml/ImportEventsDialog.qml:111
+#: src/qml/NewEvent.qml:409
+msgid "Save"
+msgstr "சேமி"
+
+#: src/qml/CalendarCreatePage.qml:58
+msgid "Creation failed"
+msgstr "உருவாக்கம் தோல்வியடைந்தது"
+
+#: src/qml/CalendarCreatePage.qml:59
+msgid "There were an issue on collection creation, please check the logs"
+msgstr "சேகரிப்பை உருவாக்குவதில் சிக்கல் உள்ளது, பதிவுகளைச் சரிபார்க்கவும்"
+
+#: src/qml/CalendarCreatePage.qml:96 src/qml/CalendarCreatePage.qml:102
+msgid "Name"
+msgstr "பெயர்"
+
+#: src/qml/CalendarCreatePage.qml:108
+msgid "Color"
+msgstr "நிறம்"
+
+#: src/qml/CalendarCreatePage.qml:137 src/qml/EventDetails.qml:511
+#: src/qml/NewEvent.qml:622
+msgid "Description"
+msgstr "விரிவுரை"
+
 #: src/qml/ColorPickerDialog.qml:25
 msgid "Select Color"
 msgstr "நிரத்தை தேர்வுசெய்க"
 
-#: src/qml/ContactChoicePopup.qml:37
+#: src/qml/ContactChoicePopup.qml:38
 msgid "No contact"
 msgstr "தொடர்பு இல்லை"
 
-#: src/qml/ContactChoicePopup.qml:96
+#: src/qml/ContactChoicePopup.qml:60
 msgid "Search contact"
 msgstr "தொடர்பைத் தேடு"
 
-#: src/qml/DayView.qml:76 src/qml/MonthView.qml:51 src/qml/WeekView.qml:60
+#: src/qml/DayView.qml:75 src/qml/MonthView.qml:51 src/qml/WeekView.qml:60
 #: src/qml/YearView.qml:57
 msgid "Today"
 msgstr "இன்று"
-
-#. TRANSLATORS: this is a time formatting string,
-#. see http://qt-project.org/doc/qt-5/qml-qtqml-date.html#details for valid
-#. expressions.
-#. It's used in the header of the month and week views
-#: src/qml/DayView.qml:129 src/qml/MonthView.qml:84 src/qml/WeekView.qml:159
-msgid "MMMM yyyy"
-msgstr "மமமம வவவவ"
 
 #: src/qml/DeleteConfirmationDialog.qml:31
 msgid "Delete Recurring Event"
@@ -198,11 +251,7 @@ msgstr "தொடரை நீக்கு"
 msgid "Delete this"
 msgstr "இதை நீக்கு"
 
-#: src/qml/DeleteConfirmationDialog.qml:51 src/qml/NewEvent.qml:406
-msgid "Delete"
-msgstr "நீக்குக"
-
-#: src/qml/EditEventConfirmationDialog.qml:29 src/qml/NewEvent.qml:394
+#: src/qml/EditEventConfirmationDialog.qml:29 src/qml/NewEvent.qml:379
 msgid "Edit Event"
 msgstr "நிகழ்வினைத் திருத்து"
 
@@ -243,51 +292,47 @@ msgstr "நிகழ்நிலை கணக்கைத் திருத்�
 #. while the second one (%2) refers to the end time
 #: src/qml/EventBubble.qml:139
 msgid "%1 - %2"
-msgstr "%1 - %2"
+msgstr "% 1 - % 2"
 
-#: src/qml/EventDetails.qml:37 src/qml/NewEvent.qml:601
+#: src/qml/EventDetails.qml:38 src/qml/NewEvent.qml:586
 msgid "Event Details"
 msgstr "நிகழ்ச்சியின் விவரம்"
 
-#: src/qml/EventDetails.qml:41
+#: src/qml/EventDetails.qml:42
 msgid "Share"
 msgstr "பங்கு"
 
-#: src/qml/EventDetails.qml:49
+#: src/qml/EventDetails.qml:50
 msgid "Edit"
 msgstr "திருத்துக"
 
-#: src/qml/EventDetails.qml:183 src/qml/TimeLineHeader.qml:66
-#: src/qml/calendar.qml:723
+#: src/qml/EventDetails.qml:184 src/qml/TimeLineHeader.qml:66
+#: src/qml/calendar.qml:420
 msgid "All Day"
 msgstr "நாள் முழுவதும்"
 
-#: src/qml/EventDetails.qml:402
+#: src/qml/EventDetails.qml:466
 msgid "Attending"
 msgstr "வருபவர்கள்"
 
-#: src/qml/EventDetails.qml:404
+#: src/qml/EventDetails.qml:468
 msgid "Not Attending"
 msgstr "வராதவர்கள்"
 
-#: src/qml/EventDetails.qml:406
+#: src/qml/EventDetails.qml:470
 msgid "Maybe"
 msgstr "ஒருவேளை வரலாம்"
 
-#: src/qml/EventDetails.qml:408
+#: src/qml/EventDetails.qml:472
 msgid "No Reply"
 msgstr "பதிலழிக்கவில்லை"
 
-#: src/qml/EventDetails.qml:447 src/qml/NewEvent.qml:637
-msgid "Description"
-msgstr "விரிவுரை"
-
-#: src/qml/EventDetails.qml:474 src/qml/NewEvent.qml:872
-#: src/qml/NewEvent.qml:889
+#: src/qml/EventDetails.qml:541 src/qml/NewEvent.qml:857
+#: src/qml/NewEvent.qml:874
 msgid "Reminder"
 msgstr "நினைவூட்டல்"
 
-#: src/qml/EventListModel.qml:99
+#: src/qml/EventListModel.qml:85
 msgid "Birthdays & Anniversaries"
 msgstr "பிறந்த நாள் மற்றும் ஆண்டுவிழாக்கள்"
 
@@ -295,30 +340,30 @@ msgstr "பிறந்த நாள் மற்றும் ஆண்டுவ
 #. and it is shown as the header of the page to choose repetition
 #. and as the header of the list item that shows the repetition
 #. summary in the page that displays the event details
-#: src/qml/EventRepetition.qml:40 src/qml/EventRepetition.qml:179
+#: src/qml/EventRepetition.qml:40 src/qml/EventRepetition.qml:177
 msgid "Repeat"
 msgstr "எத்துனைமுறை"
 
-#: src/qml/EventRepetition.qml:199
+#: src/qml/EventRepetition.qml:197
 msgid "Repeats On:"
 msgstr "மீண்டும் இயக்கு:"
 
-#: src/qml/EventRepetition.qml:245
+#: src/qml/EventRepetition.qml:243
 msgid "Interval of recurrence"
 msgstr "மீண்டும் நிகழ்வதற்கான இடைவெளி"
 
-#: src/qml/EventRepetition.qml:270
+#: src/qml/EventRepetition.qml:268
 msgid "Recurring event ends"
 msgstr "மறுபயன்பாட்டு நிகழ்வு முடிவுற்றது"
 
 #. TRANSLATORS: this refers to how often a recurrent event repeats
 #. and it is shown as the header of the option selector to choose
 #. its repetition
-#: src/qml/EventRepetition.qml:294 src/qml/NewEvent.qml:845
+#: src/qml/EventRepetition.qml:292 src/qml/NewEvent.qml:830
 msgid "Repeats"
 msgstr "மீண்டும் நடக்கும்"
 
-#: src/qml/EventRepetition.qml:320 src/qml/NewEvent.qml:499
+#: src/qml/EventRepetition.qml:318 src/qml/NewEvent.qml:484
 msgid "Date"
 msgstr "தேதி"
 
@@ -328,8 +373,8 @@ msgstr "தேதி"
 #: src/qml/EventUtils.qml:75
 msgid "%1; %2 time"
 msgid_plural "%1; %2 times"
-msgstr[0] "%1; %2 முறை"
-msgstr[1] "%1; %2 முறை"
+msgstr[0] "% 1; % 2 முறை"
+msgstr[1] "% 1; % 2 முறை"
 
 #. TRANSLATORS: the argument refers to recurrence until user selected date.
 #. E.g. "Daily; until 12/12/2014."
@@ -359,6 +404,55 @@ msgstr "; ஒவ்வொரு %1 ஆண்டுகளுக்கும்
 msgid "Weekly on %1"
 msgstr "வாரந்தோறும் %1 நாட்களில்"
 
+#: src/qml/ExportPageCommon.qml:38
+msgid "Export to"
+msgstr "ஏற்றுமதி"
+
+#: src/qml/ExportPageCommon.qml:74
+msgid "no events found!"
+msgstr "நிகழ்வுகள் எதுவும் இல்லை!"
+
+#: src/qml/ExportPageCommon.qml:127
+msgid "Oops, something went wrong during export, please check the logs"
+msgstr ""
+"அச்சச்சோ, ஏற்றுமதி செய்யும் போது ஏதோ தவறு ஏற்பட்டது, பதிவுகளைச் "
+"சரிபார்க்கவும்"
+
+#: src/qml/ImportEventsDialog.qml:45
+msgid "Successfully imported %1 event"
+msgid_plural "Successfully imported %1 events"
+msgstr[0] "% 1 நிகழ்வு வெற்றிகரமாக இறக்குமதி செய்யப்பட்டது"
+msgstr[1] "% 1 நிகழ்வுகள் வெற்றிகரமாக இறக்குமதி செய்யப்பட்டன"
+
+#: src/qml/ImportEventsDialog.qml:144
+msgid "Error during import, is it an iCalendar file ?"
+msgstr "இறக்குமதி செய்யும் போது பிழை, இது iCalendar கோப்பாகுமா?"
+
+#: src/qml/ImportEventsDialog.qml:147
+msgid "No events found!"
+msgstr "நிகழ்வுகள் எதுவும் இல்லை!"
+
+#: src/qml/ImportEventsDialog.qml:150
+msgid "No events found!, could not import events"
+msgstr "நிகழ்வுகள் எதுவும் இல்லை!, நிகழ்வுகளை இறக்குமதி செய்ய முடியவில்லை"
+
+#: src/qml/ImportEventsDialog.qml:178
+msgid "To calendar:"
+msgstr "காலெண்டருக்கு:"
+
+#: src/qml/ImportEventsDialog.qml:255
+msgid "Import error"
+msgstr "இறக்குமதி பிழை"
+
+#: src/qml/ImportEventsDialog.qml:259 src/qml/ImportEventsDialog.qml:278
+#: src/qml/NewEvent.qml:422
+msgid "OK"
+msgstr "சரி"
+
+#: src/qml/ImportEventsDialog.qml:274
+msgid "Import completed"
+msgstr "இறக்குமதி முடிந்தது"
+
 #: src/qml/LimitLabelModel.qml:25
 msgid "Never"
 msgstr "எப்போதுமில்லை"
@@ -379,59 +473,55 @@ msgstr "வா"
 
 #: src/qml/MonthView.qml:79 src/qml/WeekView.qml:140
 msgid "%1 %2"
-msgstr "%1 %2"
+msgstr "% 1 % 2"
 
-#: src/qml/NewEvent.qml:206
+#: src/qml/NewEvent.qml:212
 msgid "End time can't be before start time"
 msgstr "முடியும் நேரம், தொடங்கும் நேரத்திற்கு முன்னதாக இருக்க கூடாது"
 
-#: src/qml/NewEvent.qml:394 src/qml/NewEventBottomEdge.qml:54
+#: src/qml/NewEvent.qml:379 src/qml/NewEventBottomEdge.qml:54
 msgid "New Event"
 msgstr "புதிய நிகழ்வு"
 
-#: src/qml/NewEvent.qml:424
-msgid "Save"
-msgstr "சேமி"
-
-#: src/qml/NewEvent.qml:435
+#: src/qml/NewEvent.qml:420
 msgid "Error"
 msgstr "பிழை"
 
-#: src/qml/NewEvent.qml:437
-msgid "OK"
-msgstr "சரி"
-
-#: src/qml/NewEvent.qml:499
+#: src/qml/NewEvent.qml:484
 msgid "From"
 msgstr "தொடங்கும் நேரம்"
 
-#: src/qml/NewEvent.qml:524
+#: src/qml/NewEvent.qml:509
 msgid "To"
 msgstr "முடியும் நேரம்"
 
-#: src/qml/NewEvent.qml:553
+#: src/qml/NewEvent.qml:538
 msgid "All day event"
 msgstr "முழு நாளுக்கான நிகழ்வு"
 
-#: src/qml/NewEvent.qml:590
+#: src/qml/NewEvent.qml:575
 msgid "Event Name"
 msgstr "நிகழ்ச்சியின் பெயர்"
 
-#: src/qml/NewEvent.qml:610
+#: src/qml/NewEvent.qml:595
 msgid "More details"
 msgstr "மேலும் விவரங்கள்"
 
-#: src/qml/NewEvent.qml:661
+#: src/qml/NewEvent.qml:646
 msgid "Location"
 msgstr "இடம்"
 
-#: src/qml/NewEvent.qml:749
+#: src/qml/NewEvent.qml:734
 msgid "Guests"
 msgstr "விருந்தினர்கள்"
 
-#: src/qml/NewEvent.qml:759
+#: src/qml/NewEvent.qml:744
 msgid "Add Guest"
 msgstr "விருந்தினரைச் சேர்"
+
+#: src/qml/OnlineAccountsHelper.qml:38
+msgid "Online Accounts"
+msgstr "நிகழ்நிலை கணக்குகள்"
 
 #: src/qml/OnlineAccountsHelper.qml:39
 msgid "Pick an account to create."
@@ -488,33 +578,33 @@ msgstr "நிகழ்ச்சி நடக்கிறது"
 #: src/qml/RemindersModel.qml:43 src/qml/RemindersModel.qml:112
 msgid "%1 week"
 msgid_plural "%1 weeks"
-msgstr[0] "%1 வாரம்"
-msgstr[1] "%1 வாரங்கள்"
+msgstr[0] "% 1 வாரம்"
+msgstr[1] "% 1 வாரங்கள்"
 
 #: src/qml/RemindersModel.qml:54 src/qml/RemindersModel.qml:110
 msgid "%1 day"
 msgid_plural "%1 days"
-msgstr[0] "%1 நாள்"
-msgstr[1] "%1 நாட்கள்"
+msgstr[0] "% 1 நாள்"
+msgstr[1] "% 1 நாட்கள்"
 
 #: src/qml/RemindersModel.qml:65 src/qml/RemindersModel.qml:108
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 மணி நேரம்"
-msgstr[1] "%1 மணி நேரங்கள்"
+msgstr[0] "% 1 மணிநேரம்"
+msgstr[1] "% 1 மணிநேரம்"
 
 #: src/qml/RemindersModel.qml:74
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "%1 நிமிடம்"
-msgstr[1] "%1 நிமிடங்கள்"
+msgstr[0] "% 1 மணித்துளி"
+msgstr[1] "% 1 நிமிடங்கள்"
 
 #: src/qml/RemindersModel.qml:104 src/qml/RemindersModel.qml:105
 #: src/qml/RemindersModel.qml:106 src/qml/RemindersModel.qml:107
-#: src/qml/SettingsPage.qml:304 src/qml/SettingsPage.qml:305
 #: src/qml/SettingsPage.qml:306 src/qml/SettingsPage.qml:307
 #: src/qml/SettingsPage.qml:308 src/qml/SettingsPage.qml:309
 #: src/qml/SettingsPage.qml:310 src/qml/SettingsPage.qml:311
+#: src/qml/SettingsPage.qml:312 src/qml/SettingsPage.qml:313
 msgid "%1 minutes"
 msgstr "%1 நிமிடங்கள்"
 
@@ -554,33 +644,37 @@ msgstr "சீன நாட்காட்டியைக் காண்பி�
 msgid "Business hours"
 msgstr "வேலை நேரங்கள்"
 
-#: src/qml/SettingsPage.qml:235
+#: src/qml/SettingsPage.qml:237
 msgid "Default reminder"
 msgstr "முன்னிருப்பு நினைவூட்டல்"
 
-#: src/qml/SettingsPage.qml:282
+#: src/qml/SettingsPage.qml:284
 msgid "Default length of new event"
 msgstr "புதிய நிகழ்வின் இயல்புநிலை நீளம்"
 
-#: src/qml/SettingsPage.qml:345
+#: src/qml/SettingsPage.qml:347
 msgid "Default calendar"
 msgstr "முன்னிருப்பு நாட்காட்டி"
 
-#: src/qml/SettingsPage.qml:414
+#: src/qml/SettingsPage.qml:416
 msgid "Theme"
 msgstr "கருப்பொருள்"
 
-#: src/qml/SettingsPage.qml:437
+#: src/qml/SettingsPage.qml:439
 msgid "System theme"
 msgstr "கணினி கருப்பொருள்"
 
-#: src/qml/SettingsPage.qml:438
+#: src/qml/SettingsPage.qml:440
 msgid "SuruDark theme"
 msgstr "சுருடார்க் கருப்பொருள்"
 
-#: src/qml/SettingsPage.qml:439
+#: src/qml/SettingsPage.qml:441
 msgid "Ambiance theme"
 msgstr "சுற்றுப்புற கருப்பொருள்"
+
+#: src/qml/SettingsPage.qml:449
+msgid "Reminder alert sound"
+msgstr "எச்சரிக்கை ஒலி"
 
 #. TRANSLATORS: W refers to Week, followed by the actual week number (%1)
 #: src/qml/TimeLineHeader.qml:54
@@ -605,18 +699,18 @@ msgstr ""
 "--newevent மற்றும் --eventid. அவை அமைவுகளால் நிர்வகிக்கப்படும். அவற்றைப் "
 "பற்றிய முழுக்கருத்தினைக் காண மூலக்குறியீட்டைப் பார்கவும்"
 
-#: src/qml/calendar.qml:394 src/qml/calendar.qml:580
+#: src/qml/calendar.qml:350
 msgid "Day"
 msgstr "நாள்"
 
-#: src/qml/calendar.qml:402 src/qml/calendar.qml:593
+#: src/qml/calendar.qml:358
 msgid "Week"
 msgstr "வாரம்"
 
-#: src/qml/calendar.qml:410 src/qml/calendar.qml:606
+#: src/qml/calendar.qml:366
 msgid "Month"
 msgstr "மாதம்"
 
-#: src/qml/calendar.qml:418 src/qml/calendar.qml:619
+#: src/qml/calendar.qml:374
 msgid "Year"
 msgstr "ஆண்டு"
