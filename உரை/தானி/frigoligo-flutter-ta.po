@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Frigoligo)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-29 10:45+0200\n"
-"PO-Revision-Date: 2025-07-10 22:02\n"
+"POT-Creation-Date: 2026-03-01 10:08+0200\n"
+"PO-Revision-Date: 2026-03-02 03:23\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/frigoligo/flutter/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 #. A piece of content fetched from the web. This is one of the main concepts
 #. of the app.
@@ -102,7 +102,7 @@ msgstr "பதிப்பு"
 #, case-insensitive, icu-message-format, placeholders:$N$
 msgctxt "humanize_days"
 msgid "{n, plural, =1{1 day} other{{n} days}}"
-msgstr "{n, plural, =1{1 day} other{{n} நாட்கள்}}"
+msgstr "{n, plural, =1{1 நாள்} other{{n} நாட்கள்}}"
 
 #. Describe a duration until a moment in the future.
 #, case-insensitive, icu-message-format, placeholders:$DURATION$
@@ -113,12 +113,12 @@ msgstr "{duration} இல்"
 #, case-insensitive, icu-message-format, placeholders:$N$
 msgctxt "humanize_hours"
 msgid "{n, plural, =1{1 hour} other{{n} hours}}"
-msgstr "{n, plural, =1{1 hour} other{{n} மணிநேரம்}}"
+msgstr "{n, plural, =1{1 மணி நேரம்} other{{n} மணிநேரம்}}"
 
 #, case-insensitive, icu-message-format, placeholders:$N$
 msgctxt "humanize_minutes"
 msgid "{n, plural, =1{1 minute} other{{n} minutes}}"
-msgstr "{n, plural, =1{1 minute} other{{n} நிமிடங்கள்}}"
+msgstr "{n, plural, =1{1 நிமிடம்} other{{n} நிமிடங்கள்}}"
 
 #. Describe a duration since a moment in the past.
 #, case-insensitive, icu-message-format, placeholders:$DURATION$
@@ -129,7 +129,7 @@ msgstr "{duration} முன்பு"
 #, case-insensitive, icu-message-format, placeholders:$N$
 msgctxt "humanize_seconds"
 msgid "{n, plural, =1{1 second} other{{n} seconds}}"
-msgstr "{n, plural, =1{1 second} other{{n} வினாடிகள்}}"
+msgstr "{n, plural, =1{1 வினாடி} other{{n} வினாடிகள்}}"
 
 #. The action to add tags to an article.
 #, icu-message-format
@@ -255,7 +255,7 @@ msgstr "களங்கள்"
 #, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "filters_articleDomainsCount"
 msgid "{count, plural, =1{1 domain} other{{count} domains}}"
-msgstr "{count, plural, =1 {1 domain} other{{count} களங்கள்}}"
+msgstr "{count, plural, =1 {1 டொமைன்} other{{count} களங்கள்}}"
 
 #. Filter starred articles.
 #, icu-message-format
@@ -297,7 +297,7 @@ msgstr "குறிச்சொற்கள்"
 #, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "filters_articleTagsCount"
 msgid "{count, plural, =1{1 tag} other{{count} tags}}"
-msgstr "{count, plural, =1{1 tag} other{{count} குறிச்சொற்கள்}}"
+msgstr "{count, plural, =1{1 குறிச்சொல்} other{{count} குறிச்சொற்கள்}}"
 
 #. Search bar hint in the home screen.
 #, icu-message-format
@@ -335,6 +335,31 @@ msgctxt "logconsole_title"
 msgid "Log Console"
 msgstr "பதிவு கன்சோல்"
 
+#. The action to clear the logs.
+#, icu-message-format
+msgctxt "logconsole_clear_logs"
+msgid "Clear logs"
+msgstr "பதிவுகளை அழிக்கவும்"
+
+#. The title of the export as file dialog.
+#, icu-message-format
+msgctxt "logconsole_export_title"
+msgid "Export as file"
+msgstr "கோப்பாக ஏற்றுமதி செய்யவும்"
+
+#. Label for exporting only the current session logs.
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
+msgctxt "logconsole_export_current_session"
+msgid "Current session ({count, plural, =1{1 line} other{{count} lines}})"
+msgstr "தற்போதைய அமர்வு ({count, plural, =1{1 line} மற்ற{{count} வரிகள்}})"
+
+#. Label for exporting all available logs.
+#, case-insensitive, icu-message-format, placeholders:$COUNT$
+msgctxt "logconsole_export_all_logs"
+msgid "All logs ({count, plural, =1{1 line} other{{count} lines}})"
+msgstr ""
+"அனைத்து பதிவுகளும் ({count, plural, =1{1 line} மற்ற {{count} வரிகள்}})"
+
 #. Placeholder for when there are no articles to display.
 #, icu-message-format
 msgctxt "listing_noArticles"
@@ -371,6 +396,12 @@ msgstr "தன்வய கையொப்பமிடப்பட்ட சா�
 msgctxt "login_actionLogin"
 msgid "Log in"
 msgstr "புகுபதிகை"
+
+#. The action to put the app in demo mode instead of connecting to a server.
+#, icu-message-format
+msgctxt "login_demoMode"
+msgid "Try in demo mode"
+msgstr "டெமோ பயன்முறையில் முயற்சிக்கவும்"
 
 #. The action to log out from the existing session.
 #, icu-message-format
@@ -490,6 +521,18 @@ msgstr "கட்டுரையை சேமிக்கவும்"
 msgctxt "save_viewArticle"
 msgid "View article"
 msgstr "கட்டுரையைக் காண்க"
+
+#. Error message shown when trying to save an article in local mode.
+#, icu-message-format
+msgctxt "save_localModeError"
+msgid "A server connection is required to save new articles."
+msgstr "புதிய கட்டுரைகளைச் சேமிக்க சர்வர் இணைப்பு தேவை."
+
+#. Error message shown when the URL to save is malformed.
+#, case-insensitive, icu-message-format, placeholders:$URL$
+msgctxt "save_malformedUrlError"
+msgid "Malformed URL: {url}"
+msgstr "தவறான URL: {url}"
 
 #. The label of the select button in a selector screen.
 #, case-insensitive, icu-message-format, placeholders:$NUMBEROFITEMS$
@@ -734,4 +777,4 @@ msgstr "ஒளி"
 #, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "syncer_pendingActions"
 msgid "{count, plural, =1{1 action} other{{count} actions}}"
-msgstr "{count, plural, =1{1 action} other{{count} செயல்கள்}}"
+msgstr "{count, plural, =1{1 செயல்} other{{count} செயல்கள்}}"
