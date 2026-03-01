@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Luanti)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-22 04:46+0200\n"
-"PO-Revision-Date: 2025-06-22 13:22\n"
+"POT-Creation-Date: 2026-03-01 16:49+0200\n"
+"PO-Revision-Date: 2026-03-01 21:28\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/minetest/minetest/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 #: builtin/client/chatcommands.lua
 msgid "Clear the out chat queue"
@@ -76,7 +76,11 @@ msgstr ""
 
 #: builtin/common/chatcommands.lua
 msgid "[all | <cmd>] [-t]"
-msgstr "[அனைத்தும் | <CMD>] [-t]"
+msgstr "[all | <CMD>] [-t]"
+
+#: builtin/common/settings/components.lua
+msgid "Add keybinding"
+msgstr "விசை பிணைப்பைச் சேர்க்கவும்"
 
 #: builtin/common/settings/components.lua
 msgid "Browse"
@@ -107,6 +111,10 @@ msgid "Set"
 msgstr "கணம்"
 
 #: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid "$1 spread"
+msgstr "$1 பரவியது"
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
 msgid "(No description of setting given)"
 msgstr "(கொடுக்கப்பட்ட அமைப்பின் விளக்கம் இல்லை)"
 
@@ -115,9 +123,25 @@ msgid "2D Noise"
 msgstr "2 டி ஒலி"
 
 #: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid ""
+"2D noise: flag on.\n"
+"3D noise: flag off."
+msgstr ""
+"2டி சத்தம்: கொடி இயக்கப்பட்டது. \n"
+"3டி சத்தம்: ஃபிளாக் ஆஃப்."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid ""
+"Amplifies every octave by (amplitude of the previous octave * Persistence)."
+msgstr ""
+"ஒவ்வொரு ஆக்டேவையும் (முந்தைய ஆக்டேவின் வீச்சு * நிலைத்தன்மை) மூலம் "
+"பெருக்கும்."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
 #: builtin/mainmenu/content/dlg_install.lua
 #: builtin/mainmenu/content/dlg_overwrite.lua
-#: builtin/mainmenu/dlg_config_world.lua builtin/mainmenu/dlg_create_world.lua
+#: builtin/mainmenu/dlg_config_world.lua builtin/mainmenu/dlg_confirm_exit.lua
+#: builtin/mainmenu/dlg_create_world.lua
 #: builtin/mainmenu/dlg_delete_content.lua
 #: builtin/mainmenu/dlg_delete_world.lua builtin/mainmenu/dlg_register.lua
 #: builtin/mainmenu/dlg_rename_modpack.lua src/gui/guiOpenURL.cpp
@@ -126,8 +150,74 @@ msgid "Cancel"
 msgstr "ரத்துசெய்"
 
 #: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid "Controls how many octaves (layers) the noise will have."
+msgstr ""
+"ஒலி எத்தனை ஆக்டேவ்கள் (அடுக்குகள்) கொண்டிருக்கும் என்பதைக் "
+"கட்டுப்படுத்துகிறது."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid ""
+"Each octave is a simple noise generator. Each one also adds more detail to "
+"the noise."
+msgstr ""
+"ஒவ்வொரு ஆக்டேவும் ஒரு எளிய இரைச்சல் செனரேட்டர். ஒவ்வொன்றும் சத்தத்திற்கு "
+"கூடுதல் விவரங்களைச் சேர்க்கிறது."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid "Finally, all of the octaves will be combined to generate the noise."
+msgstr "இறுதியாக, சத்தத்தை உருவாக்க அனைத்து ஆக்டேவ்களும் இணைக்கப்படும்."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid ""
+"Having lots of octaves is not recommended because it increases terrain "
+"generation time."
+msgstr ""
+"நிலப்பரப்பு உருவாக்கும் நேரத்தை அதிகப்படுத்துவதால், ஏராளமான எண்மங்கள் "
+"இருப்பது பரிந்துரைக்கப்படவில்லை."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
 msgid "Lacunarity"
 msgstr "லாகுனாரிட்டி"
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid ""
+"Lower values make the terrain simple and higher values make the terrain "
+"rough."
+msgstr ""
+"குறைந்த மதிப்புகள் நிலப்பரப்பை எளிமையாக்கும் மற்றும் அதிக மதிப்புகள் "
+"நிலப்பரப்பை கரடுமுரடாக்கும்."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid ""
+"Lower values make the terrain smooth and higher values make the terrain have"
+" fine detail."
+msgstr ""
+"குறைந்த மதிப்புகள் நிலப்பரப்பை மென்மையாக்குகின்றன மற்றும் அதிக மதிப்புகள் "
+"நிலப்பரப்பை நேர்த்தியான விவரங்களைக் கொண்டிருக்கும்."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid ""
+"Lower values will result in smoother noise and higher values will result in "
+"rougher noise."
+msgstr ""
+"குறைந்த மதிப்புகள் மென்மையான இரைச்சலை ஏற்படுத்தும் மற்றும் அதிக மதிப்புகள் "
+"கடுமையான இரைச்சலை ஏற்படுத்தும்."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid ""
+"Making 3D noise eased is not recommended because it significantly increases "
+"the load."
+msgstr ""
+"3D இரைச்சலை எளிதாக்குவது பரிந்துரைக்கப்படவில்லை, ஏனெனில் இது சுமையை கணிசமாக "
+"அதிகரிக்கிறது."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid ""
+"Maps noise gradient values onto a quintic S-curve before performing "
+"interpolation."
+msgstr ""
+"இடைக்கணிப்பைச் செய்வதற்கு முன் ஒலி சாய்வு மதிப்புகளை ஒரு குவிண்டிக் "
+"S-வளைவில் வரைபடமாக்குகிறது."
 
 #: builtin/common/settings/dlg_change_mapgen_flags.lua
 msgid "Octaves"
@@ -137,6 +227,14 @@ msgstr "ஆக்டேவ்ச்"
 #: src/settings_translation_file.cpp
 msgid "Offset"
 msgstr "ஈடுசெய்யும்"
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid "Offsets the final noise by this value."
+msgstr "இந்த மதிப்பின் மூலம் இறுதி இரைச்சலை ஈடுசெய்கிறது."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid "Overrides the 'eased' flag based on the noise type."
+msgstr "இரைச்சல் வகையின் அடிப்படையில் 'எளிமைப்படுத்தப்பட்ட' கொடியை மீறுகிறது."
 
 #: builtin/common/settings/dlg_change_mapgen_flags.lua
 msgid "Persistence"
@@ -153,21 +251,56 @@ msgid "Scale"
 msgstr "அளவு"
 
 #: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid "Scales every octave by (scale of the previous octave / Lacunarity)."
+msgstr ""
+"ஒவ்வொரு ஆக்டேவையும் அளவிடுகிறது (முந்தைய ஆக்டேவ் / லாகுனாரிட்டியின் அளவு)."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid "Scales the noise in the $1 axis by this value."
+msgstr "இந்த மதிப்பின் மூலம் $1 அச்சில் சத்தத்தை அளவிடுகிறது."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
 #: builtin/mainmenu/dlg_create_world.lua
 msgid "Seed"
 msgstr "விதை"
 
 #: builtin/common/settings/dlg_change_mapgen_flags.lua
-msgid "X spread"
-msgstr "ஃச் பரவல்"
+msgid "Takes the absolute value of each octave while adding them together."
+msgstr ""
+"ஒவ்வொரு ஆக்டேவையும் ஒன்றாகச் சேர்க்கும் போது அதன் முழுமையான மதிப்பை "
+"எடுக்கும்."
 
 #: builtin/common/settings/dlg_change_mapgen_flags.lua
-msgid "Y spread"
-msgstr "ஒய் பரவல்"
+msgid "The first octave is amplified by 1."
+msgstr "முதல் எண்கோணம் 1 ஆல் பெருக்கப்படுகிறது."
 
 #: builtin/common/settings/dlg_change_mapgen_flags.lua
-msgid "Z spread"
-msgstr "சட் பரவல்"
+msgid "The first octave is scaled by 1."
+msgstr "முதல் எண்கோணம் 1 ஆல் அளவிடப்படுகிறது."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid "The multiplier for the noise before the offset is added."
+msgstr "ஆஃப்செட்டிற்கு முன் இரைச்சலுக்கான பெருக்கி சேர்க்கப்பட்டது."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid ""
+"The random seed for the noise. The same seed results in the same noise."
+msgstr "சத்தத்திற்கான சீரற்ற விதை. அதே விதை ஒரே சத்தத்தில் விளைகிறது."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid ""
+"This is also the scale of the largest structures in the $1 direction of the "
+"noise."
+msgstr "இது சத்தத்தின் $1 திசையில் உள்ள மிகப்பெரிய கட்டமைப்புகளின் அளவாகும்."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid "This results in smooth noise instead of gridlike noise."
+msgstr ""
+"இது கட்டம் போன்ற சத்தத்திற்கு பதிலாக மென்மையான சத்தத்தை விளைவிக்கிறது."
+
+#: builtin/common/settings/dlg_change_mapgen_flags.lua
+msgid "This results in spiky noise."
+msgstr "இதன் விளைவாக கூர்மையான ஒலி ஏற்படுகிறது."
 
 #. ~ "absvalue" is a noise parameter flag.
 #. It is short for "absolute value".
@@ -265,6 +398,11 @@ msgstr "இயக்கம்"
 msgid "No results"
 msgstr "முடிவுகள் இல்லை"
 
+#. ~ Indicates that the action does not have a corresponding keybinding.
+#: builtin/common/settings/dlg_settings.lua
+msgid "Not bound"
+msgstr "கட்டுப்படவில்லை"
+
 #: builtin/common/settings/dlg_settings.lua
 msgid "Reset setting to default"
 msgstr "அமைப்பை இயல்புநிலைக்கு மீட்டமைக்கவும்"
@@ -298,8 +436,20 @@ msgid "Tap with crosshair"
 msgstr "குறுக்குவழியுடன் தட்டவும்"
 
 #: builtin/common/settings/dlg_settings.lua
+msgid ""
+"These settings are unavailable due to your platform, hardware or in "
+"combination with the current settings."
+msgstr ""
+"உங்கள் இயங்குதளம், வன்பொருள் அல்லது தற்போதைய அமைப்புகளுடன் இணைந்து இந்த "
+"அமைப்புகள் கிடைக்காது."
+
+#: builtin/common/settings/dlg_settings.lua
 msgid "Touchscreen layout"
 msgstr "தொடுதிரை தளவமைப்பு"
+
+#: builtin/common/settings/dlg_settings.lua
+msgid "Unavailable"
+msgstr "கிடைக்கவில்லை"
 
 #: builtin/common/settings/settingtypes.lua
 msgid "Client Mods"
@@ -322,11 +472,6 @@ msgid "Custom"
 msgstr "தனிப்பயன்"
 
 #: builtin/common/settings/shadows_component.lua
-#: src/settings_translation_file.cpp
-msgid "Dynamic shadows"
-msgstr "மாறும் நிழல்கள்"
-
-#: builtin/common/settings/shadows_component.lua
 msgid "High"
 msgstr "உயர்ந்த"
 
@@ -337,6 +482,10 @@ msgstr "குறைந்த"
 #: builtin/common/settings/shadows_component.lua
 msgid "Medium"
 msgstr "சராசரி"
+
+#: builtin/common/settings/shadows_component.lua
+msgid "Quality preset"
+msgstr "தர முன்னமைவு"
 
 #: builtin/common/settings/shadows_component.lua
 msgid "Very High"
@@ -517,6 +666,7 @@ msgid "Error getting dependencies for package $1"
 msgstr "தொகுப்பு $ 1 க்கான சார்புகளைப் பெறுவது பிழை"
 
 #: builtin/mainmenu/content/dlg_install.lua
+#: builtin/mainmenu/content/dlg_package.lua
 msgid "Install"
 msgstr "நிறுவவும்"
 
@@ -609,6 +759,10 @@ msgid "Website"
 msgstr "வலைத்தளம்"
 
 #: builtin/mainmenu/content/dlg_package.lua
+msgid "by $1"
+msgstr "$1 மூலம்"
+
+#: builtin/mainmenu/content/dlg_package.lua
 msgid "by $1  —  $2 downloads  —  +$3 / $4 / -$5"
 msgstr "$ 1 -$ 2 பதிவிறக்கங்கள் - +$ 3 / $ 4 / -$ 5"
 
@@ -640,6 +794,10 @@ msgstr "$ 1 ஐ $ 2 ஆக நிறுவ முடியவில்லை"
 #: builtin/mainmenu/content/pkgmgr.lua
 msgid "Unable to install a $1 as a texture pack"
 msgstr "ஒரு அமைப்பு பொதியாக $ 1 ஐ நிறுவ முடியவில்லை"
+
+#: builtin/mainmenu/content/pkgmgr.lua
+msgid "World mods"
+msgstr "உலக மோட்ச்"
 
 #: builtin/mainmenu/dlg_clients_list.lua
 msgid ""
@@ -691,6 +849,10 @@ msgid "Mod:"
 msgstr "மோட்:"
 
 #: builtin/mainmenu/dlg_config_world.lua
+msgid "Mods located inside the world folder."
+msgstr "உலக கோப்புறையின் உள்ளே அமைந்துள்ள மோட்ச்."
+
+#: builtin/mainmenu/dlg_config_world.lua
 msgid "No (optional) dependencies"
 msgstr "இல்லை (விரும்பினால்) சார்புகள்"
 
@@ -721,6 +883,18 @@ msgstr "உலகம்:"
 #: builtin/mainmenu/dlg_config_world.lua
 msgid "enabled"
 msgstr "இயக்கப்பட்டது"
+
+#: builtin/mainmenu/dlg_confirm_exit.lua
+msgid "Always show this dialog."
+msgstr "இந்த உரையாடலை எப்போதும் காட்டு."
+
+#: builtin/mainmenu/dlg_confirm_exit.lua
+msgid "Are you sure you want to quit?"
+msgstr "நீங்கள் நிச்சயமாக வெளியேற விரும்புகிறீர்களா?"
+
+#: builtin/mainmenu/dlg_confirm_exit.lua
+msgid "Quit"
+msgstr "வெளியேறு"
 
 #: builtin/mainmenu/dlg_create_world.lua
 msgid "A world named \"$1\" already exists"
@@ -1083,6 +1257,10 @@ msgstr "ஒருபோதும்"
 msgid "Visit website"
 msgstr "வலைத்தளத்தைப் பார்வையிடவும்"
 
+#: builtin/mainmenu/init.lua
+msgid "Debug build, expect worse performance"
+msgstr "பிழைத்திருத்த உருவாக்கம், மோசமான செயல்திறனை எதிர்பார்க்கலாம்"
+
 #: builtin/mainmenu/init.lua src/client/game_formspec.cpp
 msgid "Settings"
 msgstr "அமைப்புகள்"
@@ -1234,10 +1412,6 @@ msgid "New"
 msgstr "புதிய"
 
 #: builtin/mainmenu/tab_local.lua
-msgid "No world created or selected!"
-msgstr "எந்த உலகமும் உருவாக்கப்படவில்லை அல்லது தேர்ந்தெடுக்கப்படவில்லை!"
-
-#: builtin/mainmenu/tab_local.lua
 msgid "Play Game"
 msgstr "விளையாட்டு விளையாடுங்கள்"
 
@@ -1281,7 +1455,7 @@ msgstr "படைப்பு முறை"
 #. ~ PvP = Player versus Player
 #: builtin/mainmenu/tab_online.lua
 msgid "Damage / PvP"
-msgstr "சேதம் / பி.வி.பி."
+msgstr "சேதம் / பி.வி.பி"
 
 #: builtin/mainmenu/tab_online.lua
 msgid "Favorites"
@@ -1331,9 +1505,9 @@ msgid ""
 "player:<name>"
 msgstr ""
 "சாத்தியமான வடிப்பான்கள் \n"
-"விளையாட்டு: <பெயர்> \n"
-"மோட்: <பெயர்> \n"
-"பிளேயர்: <பெயர்>"
+"game:<பெயர்> \n"
+"mod:<பெயர்> \n"
+"player:<பெயர்>"
 
 #: builtin/mainmenu/tab_online.lua
 msgid "Public Servers"
@@ -1379,6 +1553,11 @@ msgstr "அமைப்புகளை ஏற்றுகிறது ..."
 msgid "Rebuilding shaders..."
 msgstr "சேடர்களை மீண்டும் உருவாக்குதல் ..."
 
+#: src/client/client.cpp src/util/screenshot.cpp
+#, c-format
+msgid "Saved screenshot to \"%s\""
+msgstr "திரைக்காட்சி \"%s\" இல் சேமிக்கப்பட்டது"
+
 #: src/client/clientlauncher.cpp
 msgid "Could not find or load game: "
 msgstr "விளையாட்டைக் கண்டுபிடிக்கவோ ஏற்றவோ முடியவில்லை: "
@@ -1406,14 +1585,17 @@ msgid "Provided password file failed to open: "
 msgstr "வழங்கப்பட்ட கடவுச்சொல் கோப்பு திறக்கத் தவறிவிட்டது: "
 
 #: src/client/clientlauncher.cpp
-msgid "Provided world path doesn't exist: "
-msgstr "வழங்கப்பட்ட உலக பாதை இல்லை: "
+msgid "World does not exist and no game selected to create one."
+msgstr ""
+"உலகம் இல்லை மற்றும் ஒன்றை உருவாக்க எந்த விளையாட்டும் "
+"தேர்ந்தெடுக்கப்படவில்லை."
 
 #: src/client/clientmedia.cpp src/client/game.cpp
 msgid "Media..."
 msgstr "ஊடகங்கள் ..."
 
-#: src/client/game.cpp src/client/shader.cpp src/server.cpp
+#: src/client/game.cpp src/client/render/pipeline.cpp src/client/shader.cpp
+#: src/server.cpp
 msgid ""
 "\n"
 "Check debug.txt for details."
@@ -1840,10 +2022,6 @@ msgid "Profiler shown (page %d of %d)"
 msgstr "சுயவிவரக் காட்டப்பட்டுள்ளது ( %d இன் பக்கம் %d)"
 
 #: src/client/keycode.cpp
-msgid "Apps"
-msgstr "பயன்பாடுகள்"
-
-#: src/client/keycode.cpp
 msgid "Backspace"
 msgstr "பேக்ச்பேச்"
 
@@ -1873,44 +2051,16 @@ msgid "Down Arrow"
 msgstr "கீழ் அம்பு"
 
 #: src/client/keycode.cpp
-msgid "End"
-msgstr "முடிவு"
+msgid "End Key"
+msgstr "இறுதி விசை"
 
 #: src/client/keycode.cpp
-msgid "Erase EOF"
-msgstr "EOF ஐ அழிக்கவும்"
+msgid "Help Key"
+msgstr "உதவி விசை"
 
 #: src/client/keycode.cpp
-msgid "Execute"
-msgstr "செயல்படுத்தவும்"
-
-#: src/client/keycode.cpp
-msgid "Help"
-msgstr "உதவி"
-
-#: src/client/keycode.cpp
-msgid "Home"
-msgstr "வீடு"
-
-#: src/client/keycode.cpp
-msgid "IME Accept"
-msgstr "Ime ஏற்றுக்கொள்ளுங்கள்"
-
-#: src/client/keycode.cpp
-msgid "IME Convert"
-msgstr "IME மாற்ற"
-
-#: src/client/keycode.cpp
-msgid "IME Escape"
-msgstr "எச்பேப் செய்ய"
-
-#: src/client/keycode.cpp
-msgid "IME Mode Change"
-msgstr "IME பயன்முறை மாற்றம்"
-
-#: src/client/keycode.cpp
-msgid "IME Nonconvert"
-msgstr "Ime non convert"
+msgid "Home Key"
+msgstr "வீட்டு திறவுகோல்"
 
 #: src/client/keycode.cpp
 msgid "Insert"
@@ -1921,8 +2071,8 @@ msgid "Left Arrow"
 msgstr "இடது அம்பு"
 
 #: src/client/keycode.cpp
-msgid "Left Button"
-msgstr "இடது பொத்தான்"
+msgid "Left Click"
+msgstr "இடது சொடுக்கு செய்யவும்"
 
 #: src/client/keycode.cpp
 msgid "Left Control"
@@ -1936,18 +2086,26 @@ msgstr "இடது பட்டியல்"
 msgid "Left Shift"
 msgstr "இடது மாற்றம்"
 
+#. ~ Name of key
 #: src/client/keycode.cpp
 msgid "Left Windows"
 msgstr "இடது சன்னல்கள்"
 
-#. ~ Key name, common on Windows keyboards
 #: src/client/keycode.cpp
 msgid "Menu Key"
 msgstr "பட்டி விசை"
 
 #: src/client/keycode.cpp
-msgid "Middle Button"
-msgstr "நடுத்தர பொத்தான்"
+msgid "Middle Click"
+msgstr "மிடில் சொடுக்கு"
+
+#: src/client/keycode.cpp
+msgid "Mouse X1"
+msgstr "சுட்டி X1"
+
+#: src/client/keycode.cpp
+msgid "Mouse X2"
+msgstr "சுட்டி X2"
 
 #: src/client/keycode.cpp
 msgid "Num Lock"
@@ -2014,10 +2172,6 @@ msgid "Numpad 9"
 msgstr "நம்பட் 9"
 
 #: src/client/keycode.cpp
-msgid "OEM Clear"
-msgstr "ஒஇஎம் தெளிவாக"
-
-#: src/client/keycode.cpp
 msgid "Page Down"
 msgstr "பக்கம் கீழே"
 
@@ -2048,8 +2202,8 @@ msgid "Right Arrow"
 msgstr "வலது அம்பு"
 
 #: src/client/keycode.cpp
-msgid "Right Button"
-msgstr "வலது பொத்தான்"
+msgid "Right Click"
+msgstr "வலது சொடுக்கு செய்யவும்"
 
 #: src/client/keycode.cpp
 msgid "Right Control"
@@ -2063,54 +2217,39 @@ msgstr "வலது பட்டியல்"
 msgid "Right Shift"
 msgstr "சரியான மாற்றம்"
 
+#. ~ Name of key
 #: src/client/keycode.cpp
 msgid "Right Windows"
 msgstr "வலது சாளரங்கள்"
 
 #: src/client/keycode.cpp
+#, c-format
+msgid "Scancode: %d"
+msgstr "ச்கேன்கோட்: %d"
+
+#: src/client/keycode.cpp
 msgid "Scroll Lock"
 msgstr "உருள் பூட்டு"
 
-#. ~ Key name
 #: src/client/keycode.cpp
-msgid "Select"
-msgstr "தேர்ந்தெடு"
+msgid "Select Key"
+msgstr "விசையைத் தேர்ந்தெடுக்கவும்"
 
 #: src/client/keycode.cpp
 msgid "Shift Key"
 msgstr "சிப்ட் விசை"
 
 #: src/client/keycode.cpp
-msgid "Sleep"
-msgstr "தூங்கு"
-
-#: src/client/keycode.cpp
-msgid "Snapshot"
-msgstr "ச்னாப்சாட்"
-
-#: src/client/keycode.cpp
 msgid "Space"
 msgstr "இடைவெளி"
 
 #: src/client/keycode.cpp
-msgid "Tab"
-msgstr "தாவல்"
+msgid "Tab Key"
+msgstr "தாவல் விசை"
 
 #: src/client/keycode.cpp
 msgid "Up Arrow"
 msgstr "அம்பு"
-
-#: src/client/keycode.cpp
-msgid "X Button 1"
-msgstr "ஃச் பொத்தான் 1"
-
-#: src/client/keycode.cpp
-msgid "X Button 2"
-msgstr "ஃச் பொத்தான் 2"
-
-#: src/client/keycode.cpp
-msgid "Zoom Key"
-msgstr "பெரிதாக்க விசை"
 
 #: src/client/minimap.cpp
 msgid "Minimap hidden"
@@ -2130,10 +2269,20 @@ msgstr "மேற்பரப்பு பயன்முறையில் ம�
 msgid "Minimap in texture mode"
 msgstr "அமைப்பு பயன்முறையில் மினிமாப்"
 
+#: src/client/render/pipeline.cpp
+#, c-format
+msgid "Failed to create the texture \"%s\" for the rendering pipeline."
+msgstr "வழங்குதல் பைப்லைனுக்கான \"%s\" அமைப்பை உருவாக்குவதில் தோல்வி."
+
 #: src/client/shader.cpp
 #, c-format
 msgid "Failed to compile the \"%s\" shader."
 msgstr "\"%s\" சேடரை தொகுக்கத் தவறிவிட்டது."
+
+#: src/client/shader.cpp
+#, c-format
+msgid "Failed to find \"%s\" shader files."
+msgstr "\"%s\" சேடர் கோப்புகளைக் கண்டறிய முடியவில்லை."
 
 #: src/client/shader.cpp
 msgid "GLSL is not supported by the driver"
@@ -2289,7 +2438,7 @@ msgstr "வழிதல் பட்டியல்"
 msgid "Place/use"
 msgstr "இடம்/பயன்பாடு"
 
-#: src/gui/touchscreenlayout.cpp src/settings_translation_file.cpp
+#: src/gui/touchscreenlayout.cpp
 msgid "Range select"
 msgstr "வரம்பு தேர்ந்தெடுக்கவும்"
 
@@ -2354,7 +2503,7 @@ msgstr "தவறான கடவுச்சொல்"
 #: src/network/clientpackethandler.cpp src/script/lua_api/l_client.cpp
 #: src/script/lua_api/l_mainmenu.cpp
 msgid "LANG_CODE"
-msgstr "Lang_code"
+msgstr "ta"
 
 #: src/network/clientpackethandler.cpp
 msgid ""
@@ -2551,21 +2700,19 @@ msgstr "3 டி ஒலி ஒரு மேப்சங்கிற்கு ந
 msgid ""
 "3D support.\n"
 "Currently supported:\n"
-"-    none: no 3d output.\n"
-"-    anaglyph: cyan/magenta color 3d.\n"
-"-    interlaced: odd/even line based polarization screen support.\n"
-"-    topbottom: split screen top/bottom.\n"
-"-    sidebyside: split screen side by side.\n"
-"-    crossview: Cross-eyed 3d"
+"-    none: no 3D output\n"
+"-    anaglyph: cyan/magenta color 3D\n"
+"-    topbottom: split screen top/bottom\n"
+"-    sidebyside: split screen side-by-side\n"
+"-    crossview: cross-eyed 3D"
 msgstr ""
 "3D உதவி. \n"
 "தற்போது ஆதரிக்கப்படுகிறது: \n"
-"- எதுவுமில்லை: 3D வெளியீடு இல்லை. \n"
-"- அனக்லிஃப்: சியான்/மெசந்தா கலர் 3 டி. \n"
-"- ஒன்றோடொன்று: ஒற்றைப்படை/கூட வரி அடிப்படையிலான துருவமுனைப்பு திரை உதவி. \n"
-"- டாப் பாட்டம்: திரை டாப்/கீழே. \n"
-"- சைட்பைடு: திரையை அருகருகே பிரிக்கவும். \n"
-"- குறுக்குவெட்டு: குறுக்கு கண்கள் 3D"
+"- எதுவும் இல்லை: 3D வெளியீடு இல்லை \n"
+"- அனாக்லிஃப்: சியான்/மெசந்தா நிறம் 3D \n"
+"- topbottom: பிளவு திரை மேல்/கீழ் \n"
+"- பக்கவாட்டு: திரையை பக்கவாட்டில் பிரிக்கவும் \n"
+"- குறுக்கு பார்வை: குறுக்கு கண்கள் கொண்ட 3D"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -2630,7 +2777,7 @@ msgstr ""
 "அளவிடுவதற்குப் பயன்படுத்தப்படுகிறது."
 
 #: src/settings_translation_file.cpp
-#, c-format
+#, no-c-format
 msgid ""
 "Adjusts the density of the floatland layer.\n"
 "Increase value to increase density. Can be positive or negative.\n"
@@ -2667,6 +2814,14 @@ msgstr "பிளாட்டுக்கு பதிலாக 3D ஐப் ப
 #: src/settings_translation_file.cpp
 msgid "Allows liquids to be translucent."
 msgstr "திரவங்கள் ஒளிஊடுருவக்கூடியதாக இருக்க அனுமதிக்கிறது."
+
+#: src/settings_translation_file.cpp
+msgid ""
+"Also used for climbing down and descending in water if aux1_descends is "
+"disabled."
+msgstr ""
+"aux1_descends முடக்கப்பட்டிருந்தால் கீழே ஏறுவதற்கும் தண்ணீரில் "
+"இறங்குவதற்கும் பயன்படுத்தப்படுகிறது."
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -2736,6 +2891,16 @@ msgstr "ஆப்பிள் மரங்கள் ஒலி"
 
 #: src/settings_translation_file.cpp
 msgid ""
+"Applies a post-processing filter to detect and smoothen high-contrast edges.\n"
+"Provides balance between speed and image quality.\n"
+"fxaa can used in combination with the other anti-aliasing methods"
+msgstr ""
+"உயர்-மாறுபட்ட விளிம்புகளைக் கண்டறிந்து மென்மையாக்க பிந்தைய செயலாக்க வடிப்பானைப் பயன்படுத்துகிறது. \n"
+"விரைவு மற்றும் படத்தின் தகுதி இடையே சமநிலையை வழங்குகிறது. \n"
+"fxaa மற்ற மாற்று மாற்று முறைகளுடன் இணைந்து பயன்படுத்தலாம்"
+
+#: src/settings_translation_file.cpp
+msgid ""
 "Apply dithering to reduce color banding artifacts.\n"
 "Dithering significantly increases the size of losslessly-compressed\n"
 "screenshots and it works incorrectly if the display or operating system\n"
@@ -2753,10 +2918,6 @@ msgstr ""
 " மிதக்கும்-புள்ளி துல்லியம் மற்றும் இது அதிக செயல்திறன் தாக்கத்தை ஏற்படுத்தக்கூடும்."
 
 #: src/settings_translation_file.cpp
-msgid "Apply specular shading to nodes."
-msgstr "முனைகளுக்கு ஏகப்பட்ட நிழலைப் பயன்படுத்துங்கள்."
-
-#: src/settings_translation_file.cpp
 msgid "Arm inertia"
 msgstr "கை மந்தநிலை"
 
@@ -2767,6 +2928,10 @@ msgid ""
 msgstr ""
 "கை மந்தநிலை, மிகவும் யதார்த்தமான இயக்கத்தை அளிக்கிறது\n"
 " கேமரா நகரும் போது கை."
+
+#: src/settings_translation_file.cpp
+msgid "Array texture max layers"
+msgstr "வரிசை அமைப்பு அதிகபட்ச அடுக்குகள்"
 
 #: src/settings_translation_file.cpp
 msgid "Ask to reconnect after crash"
@@ -2921,6 +3086,28 @@ msgid "Camera smoothing in cinematic mode"
 msgstr "சினிமா பயன்முறையில் கேமரா மென்மையாக்குகிறது"
 
 #: src/settings_translation_file.cpp
+msgid ""
+"Caps the maximum number of layers used with array textures (if supported).\n"
+"This is only useful for debugging."
+msgstr ""
+"வரிசை அமைப்புகளுடன் (ஆதரிக்கப்பட்டால்) பயன்படுத்தப்படும் அடுக்குகளின் அதிகபட்ச எண்ணிக்கையை மூடுகிறது. \n"
+"இது பிழைத்திருத்தத்திற்கு மட்டுமே பயனுள்ளதாக இருக்கும்."
+
+#: src/settings_translation_file.cpp
+msgid "Capture Tracy zones"
+msgstr "ட்ரேசி மண்டலங்களைப் பிடிக்கவும்"
+
+#: src/settings_translation_file.cpp
+msgid ""
+"Capture Tracy zones with the profiler's instrumentation.\n"
+"You need to build with Tracy to use this, see doc/developing/profiling.md\n"
+"for details."
+msgstr ""
+"விவரக்குறிப்பாளரின் கருவி மூலம் ட்ரேசி மண்டலங்களைப் பிடிக்கவும். \n"
+"இதைப் பயன்படுத்த நீங்கள் ட்ரேசியுடன் உருவாக்க வேண்டும், doc/developing/profiling.md ஐப் பார்க்கவும் \n"
+"விவரங்களுக்கு."
+
+#: src/settings_translation_file.cpp
 msgid "Cave noise"
 msgstr "குகை ஒலி"
 
@@ -2950,7 +3137,7 @@ msgstr "குகை வரம்பு"
 
 #: src/settings_translation_file.cpp
 msgid "Cavern noise"
-msgstr "குகை ஒலி"
+msgstr "அடிநிலகுகை ஒலி"
 
 #: src/settings_translation_file.cpp
 msgid "Cavern taper"
@@ -3007,6 +3194,11 @@ msgstr "அரட்டை செய்தி அதிகபட்ச நீள
 #: src/settings_translation_file.cpp
 msgid "Chat weblinks"
 msgstr "வெப்லிங்க்ச் அரட்டை"
+
+#: src/settings_translation_file.cpp
+msgid "Choose theme colors for the main menu background."
+msgstr ""
+"முதன்மையான பட்டியல் பின்னணிக்கான கருப்பொருள் வண்ணங்களைத் தேர்ந்தெடுக்கவும்."
 
 #: src/settings_translation_file.cpp
 msgid "Chunk size"
@@ -3147,6 +3339,10 @@ msgstr ""
 " -1 - இயல்புநிலை சுருக்க அளவைப் பயன்படுத்தவும்\n"
 " 0 - குறைந்த சுருக்க, வேகமாக\n"
 " 9 - சிறந்த சுருக்க, மெதுவானது"
+
+#: src/settings_translation_file.cpp
+msgid "Confirmation dialog before closing"
+msgstr "மூடும் முன் உறுதிப்படுத்தல் உரையாடல்"
 
 #: src/settings_translation_file.cpp
 msgid "Connect glass"
@@ -3412,10 +3608,10 @@ msgstr "மூன்று பகுதிகள் மற்றும் மர
 #: src/settings_translation_file.cpp
 msgid ""
 "Delay between mesh updates on the client in ms. Increasing this will slow\n"
-"down the rate of mesh updates, thus reducing jitter on slower clients."
+"down the rate of mesh updates, which can help reduce jitter."
 msgstr ""
-"எம்.எச்சில் கிளையண்டில் கண்ணி புதுப்பிப்புகளுக்கு இடையில் நேரந்தவறுகை. இதை அதிகரிப்பது மெதுவாக இருக்கும்\n"
-" கண்ணி புதுப்பிப்புகளின் வீதத்தைக் குறைக்கும், இதனால் மெதுவான வாடிக்கையாளர்கள் மீது நடுக்கத்தை குறைக்கிறது."
+"ms இல் கிளையண்டில் மெச் புதுப்பிப்புகளுக்கு இடையில் நேரந்தவறுகை. இதை அதிகரிப்பது மெதுவாக இருக்கும் \n"
+"மெச் புதுப்பிப்புகளின் வீதத்தைக் குறைக்கிறது, இது நடுக்கத்தைக் குறைக்க உதவும்."
 
 #: src/settings_translation_file.cpp
 msgid "Delay in sending blocks after building"
@@ -3462,6 +3658,10 @@ msgstr ""
 #: src/settings_translation_file.cpp
 msgid "Developer Options"
 msgstr "உருவாக்குபவர் விருப்பங்கள்"
+
+#: src/settings_translation_file.cpp
+msgid "Disable if you only want to instrument with Tracy."
+msgstr "ட்ரேசியுடன் கருவியை மட்டும் பயன்படுத்த விரும்பினால் முடக்கவும்."
 
 #: src/settings_translation_file.cpp
 msgid "Disallow empty passwords"
@@ -3522,6 +3722,10 @@ msgstr "நிலவறை குறைந்தபட்ச ஒய்"
 #: src/settings_translation_file.cpp
 msgid "Dungeon noise"
 msgstr "நிலவறை ஒலி"
+
+#: src/settings_translation_file.cpp
+msgid "Dynamic shadows"
+msgstr "மாறும் நிழல்கள்"
 
 #: src/settings_translation_file.cpp
 msgid "Effects"
@@ -3586,6 +3790,10 @@ msgid "Enable Raytraced Culling"
 msgstr "ரேச்ட்ரேச் கலிங்கை இயக்கவும்"
 
 #: src/settings_translation_file.cpp
+msgid "Enable a confirmation dialog before closing."
+msgstr "மூடுவதற்கு முன் உறுதிப்படுத்தல் உரையாடலை இயக்கவும்."
+
+#: src/settings_translation_file.cpp
 msgid ""
 "Enable automatic exposure correction\n"
 "When enabled, the post-processing engine will\n"
@@ -3608,6 +3816,10 @@ msgstr ""
 #: src/settings_translation_file.cpp
 msgid "Enable console window"
 msgstr "கன்சோல் சாளரத்தை இயக்கவும்"
+
+#: src/settings_translation_file.cpp
+msgid "Enable dynamic shadows"
+msgstr "மாறும் நிழல்களை இயக்கு"
 
 #: src/settings_translation_file.cpp
 msgid "Enable joysticks"
@@ -3773,6 +3985,10 @@ msgstr "காரணி ஒலி"
 #: src/settings_translation_file.cpp
 msgid "Fallback font path"
 msgstr "குறைவடையும் எழுத்துரு பாதை"
+
+#: src/settings_translation_file.cpp
+msgid "Fast approximate antialiasing"
+msgstr "வேகமான தோராயமான ஆன்டிலியாசிங்"
 
 #: src/settings_translation_file.cpp
 msgid "Fast mode acceleration"
@@ -4416,19 +4632,21 @@ msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
-"If enabled, actions are recorded for rollback.\n"
-"This option is only read when server starts."
-msgstr ""
-"இயக்கப்பட்டிருந்தால், ரோல்பேக்குக்கு நடவடிக்கைகள் பதிவு செய்யப்படுகின்றன.\n"
-" சேவையகம் தொடங்கும் போது மட்டுமே இந்த விருப்பம் படிக்கப்படுகிறது."
-
-#: src/settings_translation_file.cpp
-msgid ""
 "If enabled, invalid world data won't cause the server to shut down.\n"
 "Only enable this if you know what you are doing."
 msgstr ""
 "இயக்கப்பட்டால், தவறான உலக தரவு சேவையகம் மூடப்படாது.\n"
 " நீங்கள் என்ன செய்கிறீர்கள் என்று உங்களுக்குத் தெரிந்தால் மட்டுமே இதை இயக்கவும்."
+
+#: src/settings_translation_file.cpp
+msgid ""
+"If enabled, node and inventory actions are recorded for rollback.\n"
+"This option is only read on server start. Note that the engine will not\n"
+"automatically clean old entries from the rollback database."
+msgstr ""
+"இயக்கப்பட்டால், நோட் மற்றும் சரக்கு செயல்கள் திரும்பப் பெறுவதற்காக பதிவு செய்யப்படும். \n"
+"இந்த விருப்பம் சர்வர் தொடக்கத்தில் மட்டுமே படிக்கப்படும். இயந்திரம் இருக்காது என்பதை நினைவில் கொள்க \n"
+"ரோல்பேக் தரவுத்தளத்திலிருந்து பழைய உள்ளீடுகளை தானாகவே தூய்மை செய்யும்."
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4459,6 +4677,7 @@ msgstr ""
 "ஈ இயக்கப்பட்டால் இந்த செயல்பாடு புறக்கணிக்கப்படுகிறது."
 
 #: src/settings_translation_file.cpp
+#, no-c-format
 msgid ""
 "If enabled, the server will perform map block occlusion culling based on\n"
 "on the eye position of the player. This can reduce the number of blocks\n"
@@ -4527,6 +4746,7 @@ msgid "In-game chat console background color (R,G,B)."
 msgstr "விளையாட்டு அரட்டை கன்சோல் பின்னணி நிறம் (ஆர், சி, பி)."
 
 #: src/settings_translation_file.cpp
+#, no-c-format
 msgid "In-game chat console height, between 0.1 (10%) and 1.0 (100%)."
 msgstr "விளையாட்டு அரட்டை கன்சோல் உயரம், 0.1 (10%) முதல் 1.0 (100%) வரை."
 
@@ -4628,7 +4848,7 @@ msgstr ""
 "சுழல்நிலை செயல்பாட்டின் மறு செய்கைகள்.\n"
 " இதை அதிகரிப்பது சிறந்த விவரங்களின் அளவை அதிகரிக்கிறது, ஆனால்\n"
 " செயலாக்க சுமை அதிகரிக்கிறது.\n"
-" மறு செய்கைகளில் = 20 இந்த மேப்சென் மேப்சென் வி 7 க்கு ஒத்த சுமை உள்ளது."
+" மறு செய்கைகளில் = 20 இந்த மேப்சென் வி 7 க்கு ஒத்த சுமை உள்ளது."
 
 #: src/settings_translation_file.cpp
 msgid "Joystick ID"
@@ -4721,14 +4941,6 @@ msgid "Jumping speed"
 msgstr "சம்பிங் விரைவு"
 
 #: src/settings_translation_file.cpp
-msgid "Key for decreasing the viewing range."
-msgstr "பார்க்கும் வரம்பைக் குறைப்பதற்கான விசை."
-
-#: src/settings_translation_file.cpp
-msgid "Key for decreasing the volume."
-msgstr "அளவைக் குறைப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
 msgid "Key for decrementing the selected value in Quicktune."
 msgstr "குவிக்டூனில் தேர்ந்தெடுக்கப்பட்ட மதிப்பைக் குறைப்பதற்கான விசை."
 
@@ -4741,52 +4953,12 @@ msgstr ""
 "(குறிப்பு: உண்மையான பொருள் ஒரு விளையாட்டு அடிப்படையில் மாறுபடலாம்.)"
 
 #: src/settings_translation_file.cpp
-msgid "Key for dropping the currently selected item."
-msgstr "தற்போது தேர்ந்தெடுக்கப்பட்ட உருப்படியைக் கைவிடுவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for increasing the viewing range."
-msgstr "பார்க்கும் வரம்பை அதிகரிப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for increasing the volume."
-msgstr "அளவை அதிகரிப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
 msgid "Key for incrementing the selected value in Quicktune."
 msgstr "குவிக்டூனில் தேர்ந்தெடுக்கப்பட்ட மதிப்பை அதிகரிப்பதற்கான விசை."
 
 #: src/settings_translation_file.cpp
-msgid "Key for jumping."
-msgstr "குதிப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
 msgid "Key for moving fast in fast mode."
 msgstr "வேகமான பயன்முறையில் வேகமாக நகர்த்துவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid ""
-"Key for moving the player backward.\n"
-"Will also disable autoforward, when active."
-msgstr ""
-"வீரரை பின்னோக்கி நகர்த்துவதற்கான திறவுகோல். \n"
-"செயலில் இருக்கும்போது ஆட்டோஃபார்வார்ட்டை முடக்கும்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for moving the player forward."
-msgstr "பிளேயரை முன்னோக்கி நகர்த்துவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for moving the player left."
-msgstr "வீரரை இடதுபுறமாக நகர்த்துவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for moving the player right."
-msgstr "பிளேயரை சரியாக நகர்த்துவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for muting the game."
-msgstr "விளையாட்டை முடக்குவதற்கான திறவுகோல்."
 
 #: src/settings_translation_file.cpp
 msgid "Key for opening the chat window to type commands."
@@ -4797,169 +4969,12 @@ msgid "Key for opening the chat window to type local commands."
 msgstr "உள்ளக கட்டளைகளைத் தட்டச்சு செய்ய அரட்டை சாளரத்தைத் திறப்பதற்கான விசை."
 
 #: src/settings_translation_file.cpp
-msgid "Key for opening the chat window."
-msgstr "அரட்டை சாளரத்தைத் திறப்பதற்கான விசை."
-
-#: src/settings_translation_file.cpp
-msgid "Key for opening the inventory."
-msgstr "சரக்குகளைத் திறப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
 msgid ""
 "Key for placing an item/block or for using something.\n"
 "(Note: The actual meaning might vary on a per-game basis.)"
 msgstr ""
 "ஒரு உருப்படி/தொகுதியை வைப்பதற்கான விசை அல்லது ஏதாவது பயன்படுத்துவதற்கு. \n"
 "(குறிப்பு: உண்மையான பொருள் ஒரு விளையாட்டு அடிப்படையில் மாறுபடலாம்.)"
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 11th hotbar slot."
-msgstr "11 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 12th hotbar slot."
-msgstr "12 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 13th hotbar slot."
-msgstr "13 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 14th hotbar slot."
-msgstr "14 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 15th hotbar slot."
-msgstr "15 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 16th hotbar slot."
-msgstr "16 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 17th hotbar slot."
-msgstr "17 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 18th hotbar slot."
-msgstr "18 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 19th hotbar slot."
-msgstr "19 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 20th hotbar slot."
-msgstr "20 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 21st hotbar slot."
-msgstr "21 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 22nd hotbar slot."
-msgstr "22 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 23rd hotbar slot."
-msgstr "23 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 24th hotbar slot."
-msgstr "24 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 25th hotbar slot."
-msgstr "25 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 26th hotbar slot."
-msgstr "26 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 27th hotbar slot."
-msgstr "27 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 28th hotbar slot."
-msgstr "28 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 29th hotbar slot."
-msgstr "29 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 30th hotbar slot."
-msgstr "30 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 31st hotbar slot."
-msgstr "31 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the 32nd hotbar slot."
-msgstr "32 வது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the eighth hotbar slot."
-msgstr "எட்டாவது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the fifth hotbar slot."
-msgstr "ஐந்தாவது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the first hotbar slot."
-msgstr "முதல் ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the fourth hotbar slot."
-msgstr "நான்காவது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the next item in the hotbar."
-msgstr "ஆட்பாரில் அடுத்த உருப்படியைத் தேர்ந்தெடுப்பதற்கான விசை."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the ninth hotbar slot."
-msgstr "ஒன்பதாவது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the previous item in the hotbar."
-msgstr "ஆட்பாரில் முந்தைய உருப்படியைத் தேர்ந்தெடுப்பதற்கான விசை."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the second hotbar slot."
-msgstr "இரண்டாவது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the seventh hotbar slot."
-msgstr "ஏழாவது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the sixth hotbar slot."
-msgstr "ஆறாவது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the tenth hotbar slot."
-msgstr "பத்தாவது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for selecting the third hotbar slot."
-msgstr "மூன்றாவது ஆட்பார் ச்லாட்டைத் தேர்ந்தெடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid ""
-"Key for sneaking.\n"
-"Also used for climbing down and descending in water if aux1_descends is disabled."
-msgstr ""
-"பதுங்குவதற்கான திறவுகோல். \n"
-"Aux1_descends முடக்கப்பட்டிருந்தால், கீழே ஏறி தண்ணீரில் இறங்கவும் பயன்படுத்தப்படுகிறது."
-
-#: src/settings_translation_file.cpp
-msgid "Key for switching between first- and third-person camera."
-msgstr ""
-"முதல் மற்றும் மூன்றாம் நபர் கேமராவுக்கு இடையில் மாறுவதற்கான திறவுகோல்."
 
 #: src/settings_translation_file.cpp
 msgid "Key for switching to the next entry in Quicktune."
@@ -4970,42 +4985,6 @@ msgid "Key for switching to the previous entry in Quicktune."
 msgstr "குவிக்டூனில் முந்தைய நுழைவுக்கு மாறுவதற்கான விசை."
 
 #: src/settings_translation_file.cpp
-msgid "Key for taking screenshots."
-msgstr "திரை சாட்களை எடுப்பதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for toggling autoforward."
-msgstr "ஆட்டோஃபார்வார்ட்டை மாற்றுவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for toggling cinematic mode."
-msgstr "சினிமா பயன்முறையை மாற்றுவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for toggling display of minimap."
-msgstr "மினிமேப்பின் காட்சியை மாற்றுவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for toggling fast mode."
-msgstr "வேகமான பயன்முறையை மாற்றுவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for toggling flying."
-msgstr "பறப்பதை மாற்றுவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for toggling fullscreen mode."
-msgstr "முழுத்திரை பயன்முறையை மாற்றுவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for toggling noclip mode."
-msgstr "NOCLIP பயன்முறையை மாற்றுவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for toggling pitch move mode."
-msgstr "பிட்ச் மூவ் பயன்முறையை மாற்றுவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
 msgid ""
 "Key for toggling the camera update. Only usable with 'debug' privilege."
 msgstr ""
@@ -5013,42 +4992,14 @@ msgstr ""
 "மட்டுமே பயன்படுத்தக்கூடியது."
 
 #: src/settings_translation_file.cpp
-msgid "Key for toggling the display of chat."
-msgstr "அரட்டையின் காட்சியை மாற்றுவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for toggling the display of debug info."
-msgstr "பிழைத்திருத்த தகவலின் காட்சியை மாற்றுவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for toggling the display of fog."
-msgstr "மூடுபனியின் காட்சியை மாற்றுவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
 msgid "Key for toggling the display of mapblock boundaries."
 msgstr "மேப் பிளாக் எல்லைகளின் காட்சியை மாற்றுவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for toggling the display of the HUD."
-msgstr "HUD இன் காட்சியை மாற்றுவதற்கான திறவுகோல்."
-
-#: src/settings_translation_file.cpp
-msgid "Key for toggling the display of the large chat console."
-msgstr "பெரிய அரட்டை கன்சோலின் காட்சியை மாற்றுவதற்கான திறவுகோல்."
 
 #: src/settings_translation_file.cpp
 msgid "Key for toggling the display of the profiler. Used for development."
 msgstr ""
 "சுயவிவரத்தின் காட்சியை மாற்றுவதற்கான திறவுகோல். வளர்ச்சிக்கு "
 "பயன்படுத்தப்படுகிறது."
-
-#: src/settings_translation_file.cpp
-msgid "Key for toggling unlimited view range."
-msgstr "வரம்பற்ற பார்வை வரம்பை மாற்றுவதற்கான விசை."
-
-#: src/settings_translation_file.cpp
-msgid "Key to use view zoom when possible."
-msgstr "பார்வை பெரிதாக்க முடிந்தவரை பயன்படுத்த விசை."
 
 #: src/settings_translation_file.cpp
 msgid "Keybindings"
@@ -5090,10 +5041,6 @@ msgstr "பெரிய குகை குறைந்தபட்ச எண்
 #: src/settings_translation_file.cpp
 msgid "Large cave proportion flooded"
 msgstr "பெரிய குகை விகிதம் வெள்ளத்தில் மூழ்கியது"
-
-#: src/settings_translation_file.cpp
-msgid "Large chat console"
-msgstr "பெரிய அரட்டை கன்சோல்"
 
 #: src/settings_translation_file.cpp
 msgid "Leaves style"
@@ -5423,7 +5370,7 @@ msgstr "Mapgen தட்டையான குறிப்பிட்ட கொ
 
 #: src/settings_translation_file.cpp
 msgid "Mapgen Fractal"
-msgstr "Mapgen Fractal"
+msgstr "மேப்சென் பின்னம்"
 
 #: src/settings_translation_file.cpp
 msgid "Mapgen Fractal specific flags"
@@ -5646,6 +5593,14 @@ msgid "Maximum users"
 msgstr "அதிகபட்ச பயனர்கள்"
 
 #: src/settings_translation_file.cpp
+msgid "Measure time samples"
+msgstr "நேர மாதிரிகளை அளவிடவும்"
+
+#: src/settings_translation_file.cpp
+msgid "Menu theme"
+msgstr "பட்டியல் கருப்பொருள்"
+
+#: src/settings_translation_file.cpp
 msgid "Message of the day"
 msgstr "அன்றைய செய்தி"
 
@@ -5702,6 +5657,14 @@ msgstr "மோட் பாதுகாப்பு"
 #: src/settings_translation_file.cpp
 msgid "Mod channels"
 msgstr "மோட் சேனல்கள்"
+
+#: src/settings_translation_file.cpp
+msgid ""
+"Modifier key bind for closing your world.\n"
+"Requires ESC + the selected key to work."
+msgstr ""
+"உங்கள் உலகத்தை மூடுவதற்கு மாற்றியமைக்கும் விசை பிணைப்பு. \n"
+"வேலை செய்ய தப்பி + தேர்ந்தெடுக்கப்பட்ட விசை தேவை."
 
 #: src/settings_translation_file.cpp
 msgid "Modifies the size of the HUD elements."
@@ -5794,8 +5757,8 @@ msgid ""
 "When starting from the main menu, this is overridden."
 msgstr ""
 "வீரரின் பெயர். \n"
-"சேவையகத்தை இயக்கும் போது, ​​இந்த பெயருடன் இணைக்கும் கிளையன்ட் நிர்வாகி. \n"
-"முதன்மையான மெனுவிலிருந்து தொடங்கும் போது, ​​இது மேலெழுதப்பட்டுள்ளது."
+"சேவையகத்தை இயக்கும் போது, இந்த பெயருடன் இணைக்கும் கிளையன்ட் நிர்வாகி. \n"
+"முதன்மையான மெனுவிலிருந்து தொடங்கும் போது, இது மேலெழுதப்பட்டுள்ளது."
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5829,10 +5792,6 @@ msgid "Node highlighting"
 msgstr "முனை சிறப்பம்சமாக"
 
 #: src/settings_translation_file.cpp
-msgid "Node specular"
-msgstr "முனை ஏகப்பட்ட"
-
-#: src/settings_translation_file.cpp
 msgid "NodeTimer interval"
 msgstr "நோடிமர் இடைவெளி"
 
@@ -5846,27 +5805,17 @@ msgstr "வெளிப்படும் நூல்களின் எண்�
 
 #: src/settings_translation_file.cpp
 msgid ""
-"Number of emerge threads to use.\n"
-"Value 0:\n"
-"-    Automatic selection. The number of emerge threads will be\n"
-"-    'number of processors - 2', with a lower limit of 1.\n"
-"Any other value:\n"
-"-    Specifies the number of emerge threads, with a lower limit of 1.\n"
-"WARNING: Increasing the number of emerge threads increases engine mapgen\n"
-"speed, but this may harm game performance by interfering with other\n"
-"processes, especially in singleplayer and/or when running Lua code in\n"
-"'on_generated'. For many users the optimum setting may be '1'."
+"Number of emerge threads (responsible for map generation and loading) to use.\n"
+"If 0 then the engine will automatically choose a suitable value depending\n"
+"on the hardware and type of map generator.\n"
+"WARNING: There are known bugs in the default map generators (v6, v7, ...)\n"
+"when using more than 1 thread. The automatic choice will avoid this."
 msgstr ""
-"பயன்படுத்த வெளிப்படையான நூல்களின் எண்ணிக்கை.\n"
-" மதிப்பு 0:\n"
-" - தானியங்கி தேர்வு. வெளிப்படும் நூல்களின் எண்ணிக்கை இருக்கும்\n"
-" - 'செயலிகளின் எண்ணிக்கை - 2', குறைந்த வரம்புடன் 1.\n"
-" வேறு எந்த மதிப்பு:\n"
-" - குறைந்த வரம்புடன் 1 இன் எமர்ச் நூல்களின் எண்ணிக்கையைக் குறிப்பிடுகிறது.\n"
-" எச்சரிக்கை: வெளிப்படையான நூல்களின் எண்ணிக்கையை அதிகரிப்பது என்சின் மேப்சென் அதிகரிக்கிறது\n"
-" விரைவு, ஆனால் இது மற்றவர்களுடன் தலையிடுவதன் மூலம் விளையாட்டு செயல்திறனுக்கு தீங்கு விளைவிக்கும்\n"
-" செயல்முறைகள், குறிப்பாக சிங்கிள் பிளேயர் மற்றும்/அல்லது லுவா குறியீட்டை இயக்கும் போது\n"
-" 'on_generated'. பல பயனர்களுக்கு உகந்த அமைப்பு '1' ஆக இருக்கலாம்."
+"பயன்படுத்த வெளிவரும் நூல்களின் எண்ணிக்கை (வரைபட உருவாக்கம் மற்றும் ஏற்றுதலுக்கான பொறுப்பு). \n"
+"0 என்றால், இயந்திரம் தானாகவே பொருத்தமான மதிப்பைப் பொறுத்து தேர்ந்தெடுக்கும் \n"
+"வன்பொருள் மற்றும் வரைபட செனரேட்டரின் வகை. \n"
+"எச்சரிக்கை: இயல்புநிலை வரைபட செனரேட்டர்களில் அறியப்பட்ட பிழைகள் உள்ளன (v6, v7, ...) \n"
+"1 க்கும் மேற்பட்ட நூல்களைப் பயன்படுத்தும் போது. தானியங்கி தேர்வு இதை தவிர்க்கும்."
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5885,10 +5834,10 @@ msgstr "ஒரு வீரர் 10 வினாடிகளுக்கு அ
 #: src/settings_translation_file.cpp
 msgid ""
 "Number of threads to use for mesh generation.\n"
-"Value of 0 (default) will let Luanti autodetect the number of available threads."
+"Value of 0 (default) will let Luanti automatically choose the number of threads."
 msgstr ""
-"கண்ணி தலைமுறைக்கு பயன்படுத்த நூல்களின் எண்ணிக்கை.\n"
-" 0 (இயல்புநிலை) மதிப்பு லுவாண்டி கிடைக்கக்கூடிய நூல்களின் எண்ணிக்கையை தன்னியக்கமாக்க அனுமதிக்கும்."
+"கண்ணி உருவாக்கத்திற்கு பயன்படுத்த வேண்டிய நூல்களின் எண்ணிக்கை. \n"
+"0 இன் மதிப்பு (இயல்புநிலை) நூல்களின் எண்ணிக்கையைத் தானாகத் தேர்ந்தெடுக்க லுவான்டியை அனுமதிக்கும்."
 
 #: src/settings_translation_file.cpp
 msgid "Occlusion Culler"
@@ -5899,11 +5848,8 @@ msgid "Occlusion Culling"
 msgstr "மறைவு குறைத்தல்"
 
 #: src/settings_translation_file.cpp
-msgid ""
-"Opaqueness (alpha) of the shadow behind the default font, between 0 and 255."
-msgstr ""
-"இயல்புநிலை எழுத்துருவின் பின்னால் உள்ள நிழலின் ஒளிபுகா (ஆல்பா), 0 முதல் 255 "
-"வரை."
+msgid "Opaqueness (alpha) of the shadow behind the font."
+msgstr "எழுத்துருவின் பின்னால் உள்ள நிழலின் ஒளிபுகாநிலை (ஆல்பா)."
 
 #: src/settings_translation_file.cpp
 msgid "Open chat"
@@ -6016,8 +5962,8 @@ msgid ""
 "Enable this when you dig or place too often by accident.\n"
 "On touchscreens, this only affects digging."
 msgstr ""
-"அந்தந்த பொத்தான்களை வைத்திருக்கும்போது தோண்டுவதையும் மறுநிகழ்வு வருவதையும் தடுக்கவும்.\n"
-" தற்செயலாக நீங்கள் அடிக்கடி தோண்டும்போது அல்லது வைக்கும்போது இதை இயக்கவும்.\n"
+"அந்தந்த பொத்தான்களை வைத்திருக்கும்போது தோண்டுவதையும் மறுநிகழ்வை தடு.\n"
+" தற்செயலாக நீங்கள் அடிக்கடி தோண்டும்போது அல்லது வைக்கும்போது இதை இயக்கு.\n"
 " தொடுதிரைகளில், இது தோண்டுவதை மட்டுமே பாதிக்கிறது."
 
 #: src/settings_translation_file.cpp
@@ -6171,6 +6117,10 @@ msgstr ""
 " Read_playerinfo: 32 (Get_Player_names ஐ முடக்கு கிளையன்ட்-சைட்)"
 
 #: src/settings_translation_file.cpp
+msgid "Return to Main Menu"
+msgstr "முதன்மை மெனுவுக்குத் திரும்பு"
+
+#: src/settings_translation_file.cpp
 msgid "Ridge mountain spread noise"
 msgstr "ரிட்ச் மலை பரவல் ஒலி"
 
@@ -6238,13 +6188,11 @@ msgstr "கிளையன்ட் பெறப்பட்ட வரைபட�
 msgid ""
 "Save window size automatically when modified.\n"
 "If true, screen size is saved in screen_w and screen_h, and whether the window\n"
-"is maximized is stored in window_maximized.\n"
-"(Autosaving window_maximized only works if compiled with SDL.)"
+"is maximized is stored in window_maximized."
 msgstr ""
-"மாற்றியமைக்கும்போது சாளர அளவை தானாக சேமிக்கவும்.\n"
-" உண்மை என்றால், திரை அளவு ச்கிரீன்_டபிள்யூ மற்றும் ச்கிரீன்_எச் ஆகியவற்றில் சேமிக்கப்படுகிறது, மேலும் சாளரம் உள்ளதா\n"
-" அதிகபட்சம் சாளரம்_மாக்சிமிசில் சேமிக்கப்படுகிறது.\n"
-" (SDL உடன் தொகுக்கப்பட்டால் மட்டுமே ஆட்டோசேவிங் சாளரம்_மாக்சிமிச் வேலை செய்யும்.)"
+"சாளரத்தின் அளவை மாற்றியமைக்கும் போது தானாகவே சேமிக்கவும். \n"
+"சரி எனில், திரையின் அளவு screen_w மற்றும் screen_h மற்றும் சாளரத்தில் சேமிக்கப்படும் \n"
+"பெரிதாக்கப்பட்டது window_maximized இல் சேமிக்கப்படுகிறது."
 
 #: src/settings_translation_file.cpp
 msgid "Saving map received from server"
@@ -6337,10 +6285,6 @@ msgid ""
 "Also, if Post Processing is disabled, FSAA will not work together with\n"
 "undersampling or a non-default \"3d_mode\" setting.\n"
 "\n"
-"* FXAA - Fast approximate antialiasing\n"
-"Applies a post-processing filter to detect and smoothen high-contrast edges.\n"
-"Provides balance between speed and image quality.\n"
-"\n"
 "* SSAA - Super-sampling antialiasing\n"
 "Renders higher-resolution image of the scene, then scales down to reduce\n"
 "the aliasing effects. This is the slowest and the most accurate method."
@@ -6349,21 +6293,17 @@ msgstr ""
 "\n"
 "* எதுவுமில்லை - ஆன்டிலியாசிங் இல்லை (இயல்புநிலை) \n"
 "\n"
-"* FSAA-வன்பொருள் வழங்கிய முழு திரை ஆண்டியலிசிங் \n"
-"A.k.a மல்டி-மாதிரி ஆன்டியாலியாசிங் (MSAA) \n"
+"* எஃப்எச்ஏஏ - ஆர்டுவேர்-வழங்கப்பட்ட முழுத்திரை ஆன்டிலியாசிங் \n"
+"ஏ.கே.ஏ பல மாதிரி ஆன்டிலியாசிங் (எம்எச்ஏஏ) \n"
 "தொகுதி விளிம்புகளை மென்மையாக்குகிறது, ஆனால் அமைப்புகளின் உட்புறங்களை பாதிக்காது. \n"
 "\n"
-"இடுகை செயலாக்கம் முடக்கப்பட்டிருந்தால், FSAA ஐ மாற்ற மறுதொடக்கம் தேவை. \n"
-"மேலும், பிந்தைய செயலாக்கம் முடக்கப்பட்டிருந்தால், FSAA உடன் இணைந்து செயல்படாது \n"
-"அடிக்கோடிட்டு அல்லது தாக்கல் செய்யப்படாத \"3D_MODE\" அமைப்பு. \n"
+"பிந்தைய செயலாக்கம் முடக்கப்பட்டிருந்தால், FSAA ஐ மாற்ற மறுதொடக்கம் தேவை. \n"
+"மேலும், பிந்தைய செயலாக்கம் முடக்கப்பட்டால், FSAA உடன் இணைந்து செயல்படாது \n"
+"undersampling அல்லது இயல்புநிலை அல்லாத \"3d_mode\" அமைப்பு. \n"
 "\n"
-"* FXAA - வேகமாக தோராயமான ஆன்டிலியாசிங் \n"
-"உயர்-மாறுபட்ட விளிம்புகளைக் கண்டறிந்து மென்மையாக்க ஒரு பிந்தைய செயலாக்க வடிப்பானைப் பயன்படுத்துகிறது. \n"
-"விரைவு மற்றும் பட தரத்திற்கு இடையில் சமநிலையை வழங்குகிறது. \n"
-"\n"
-"* SSAA - சூப்பர் -மாதிரி ஆன்டிலியாசிங் \n"
-"காட்சியின் உயர்-தெளிவுத்திறன் படத்தை வழங்குகிறது, பின்னர் குறைக்க செதில்கள் \n"
-"மாற்றுப்பெயர் விளைவுகள். இது மெதுவான மற்றும் மிகவும் துல்லியமான முறையாகும்."
+"* SSAA - சூப்பர்-சாம்பிளிங் ஆன்டிலியாசிங் \n"
+"காட்சியின் உயர் தெளிவுத்திறன் படத்தை வழங்கவும், பின்னர் குறைக்க அளவிடவும் \n"
+"மாற்று விளைவுகள். இது மிகவும் மெதுவான மற்றும் மிகவும் துல்லியமான முறையாகும்."
 
 #: src/settings_translation_file.cpp
 msgid "Selection box border color (R,G,B)."
@@ -6607,8 +6547,8 @@ msgid "Shadow filter quality"
 msgstr "நிழல் வடிகட்டி தகுதி"
 
 #: src/settings_translation_file.cpp
-msgid "Shadow map max distance in nodes to render shadows"
-msgstr "நிழல்களை வழங்க முனைகளில் நிழல் வரைபடம் அதிகபட்ச தூரம்"
+msgid "Shadow map render distance"
+msgstr "நிழல் வரைபடம் தூரத்தை வழங்குகிறது"
 
 #: src/settings_translation_file.cpp
 msgid "Shadow map texture in 32 bits"
@@ -6620,11 +6560,10 @@ msgstr "நிழல் வரைபட அமைப்பு அளவு"
 
 #: src/settings_translation_file.cpp
 msgid ""
-"Shadow offset (in pixels) of the default font. If 0, then shadow will not be"
-" drawn."
+"Shadow offset (in pixels) for all fonts. If 0, then no shadow will be drawn."
 msgstr ""
-"இயல்புநிலை எழுத்துருவின் நிழல் ஆஃப்செட் (பிக்சல்களில்). 0 என்றால், நிழல் "
-"வரையப்படாது."
+"அனைத்து எழுத்துருக்களுக்கும் நிழல் ஆஃப்செட் (பிக்சல்களில்). 0 எனில், எந்த "
+"நிழலும் வரையப்படாது."
 
 #: src/settings_translation_file.cpp
 msgid "Shadow strength gamma"
@@ -7090,11 +7029,11 @@ msgstr ""
 msgid ""
 "The rendering back-end.\n"
 "Note: A restart is required after changing this!\n"
-"OpenGL is the default for desktop, and OGLES2 for Android."
+"By default OpenGL3 is preferred on desktop, or OGLES2 on Android."
 msgstr ""
-"வழங்குதல் பின்-இறுதி.\n"
-" குறிப்பு: இதை மாற்றிய பின் மறுதொடக்கம் தேவை!\n"
-" OpenGL என்பது டெச்க்டாப்பின் இயல்புநிலை, மற்றும் ஆண்ட்ராய்டு க்கான OGLES2."
+"வழங்குதல் பின்-இறுதி. \n"
+"குறிப்பு: இதை மாற்றிய பின் மறுதொடக்கம் தேவை! \n"
+"இயல்பாக, டெச்க்டாப்பில் OpenGL3 அல்லது ஆண்ட்ராய்டு இல் OGLES2 விரும்பப்படுகிறது."
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -7139,16 +7078,16 @@ msgid ""
 "The time in seconds it takes between repeated events\n"
 "when holding down a joystick button combination."
 msgstr ""
-"மறுநிகழ்வு நிகழ்வுகளுக்கு இடையில் எடுக்கும் விநாடிகளில் நேரம்\n"
-" சாய்ச்டிக் பொத்தான் கலவையை வைத்திருக்கும் போது."
+"மறுநிகழ்வுகளுக்கு இடையில் எடுக்கும் விநாடிகளில் நேரம்\n"
+" சாய்ச்டிக் பொத்தான் கலவையை வைத்திருக்கும்போது."
 
 #: src/settings_translation_file.cpp
 msgid ""
 "The time in seconds it takes between repeated node placements when holding\n"
 "the place button."
 msgstr ""
-"நொடிகளில் நேரம் எடுக்கும் போது மறுநிகழ்வு முனை வேலைவாய்ப்புகளுக்கு இடையில் எடுக்கும் நேரம்\n"
-" இட பொத்தானை."
+"நொடிகளில் நேரம் எடுக்கும்போது மறுநிகழ்வு முனை வேலைவாய்ப்புகளுக்கு இடையில் எடுக்கும் நேரம்\n"
+" இடப் பொத்தானை."
 
 #: src/settings_translation_file.cpp
 msgid "The type of joystick"
@@ -7197,11 +7136,11 @@ msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
-"To reduce lag, block transfers are slowed down when a player is building something.\n"
-"This determines how long they are slowed down after placing or removing a node."
+"To save bandwidth, block transfers are slowed down when a player is building something.\n"
+"This determines how long the throttling lasts after placing a node."
 msgstr ""
-"பின்னடைவைக் குறைக்க, ஒரு வீரர் எதையாவது உருவாக்கும்போது தொகுதி இடமாற்றங்கள் குறைகின்றன.\n"
-" இது ஒரு முனையை வைத்த பிறகு அல்லது அகற்றிய பின் அவை எவ்வளவு நேரம் குறைகின்றன என்பதை இது தீர்மானிக்கிறது."
+"அலைவரிசையைச் சேமிக்க, ஒரு பிளேயர் எதையாவது உருவாக்கும்போது, ​​பிளாக் இடமாற்றங்கள் குறையும். \n"
+"ஒரு முனையை வைத்த பிறகு த்ரோட்லிங் எவ்வளவு காலம் நீடிக்கும் என்பதை இது தீர்மானிக்கிறது."
 
 #: src/settings_translation_file.cpp
 msgid "Toggle Aux1 key"
@@ -7248,12 +7187,20 @@ msgid "Toggle fullscreen"
 msgstr "மாற்று முழுத்திரை"
 
 #: src/settings_translation_file.cpp
+msgid "Toggle large chat console"
+msgstr "பெரிய அரட்டை கன்சோலை நிலைமாற்று"
+
+#: src/settings_translation_file.cpp
 msgid "Toggle pitchmove"
 msgstr "பிட்ச்மோவை மாற்றவும்"
 
 #: src/settings_translation_file.cpp
 msgid "Toggle profiler"
 msgstr "சுயவிவரத்தை மாற்றவும்"
+
+#: src/settings_translation_file.cpp
+msgid "Toggle unlimited view range"
+msgstr "வரம்பற்ற பார்வை வரம்பை நிலைமாற்று"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -7517,11 +7464,13 @@ msgstr "செங்குத்து ஏறும் விரைவு, ந�
 
 #: src/settings_translation_file.cpp
 msgid ""
-"Vertical screen synchronization. Your system may still force VSync on even "
-"if this is disabled."
+"Vertical screen synchronization.\n"
+"Note: A restart is required after changing this!\n"
+"Your system may still force VSync and ignore this setting."
 msgstr ""
-"செங்குத்து திரை ஒத்திசைவு. இது முடக்கப்பட்டிருந்தாலும் உங்கள் கணினி VSYNC ஐ "
-"கட்டாயப்படுத்தக்கூடும்."
+"Vertical screen synchronization.\n"
+"Note: A மறுதொடக்கம் is required after changing this!\n"
+"Your மண்டலம் சி-வைகாசி still force VSync and ignore this setting."
 
 #: src/settings_translation_file.cpp
 msgid "Video driver"
@@ -7667,7 +7616,7 @@ msgid ""
 "This is also used as the base node texture size for world-aligned\n"
 "texture autoscaling."
 msgstr ""
-"பிலினியர்/ட்ரிலினியர் வடிகட்டலைப் பயன்படுத்தும் போது, ​​குறைந்த தெளிவுத்திறன் கொண்ட அமைப்புகள் \n"
+"பிலினியர்/ட்ரிலினியர் வடிகட்டலைப் பயன்படுத்தும் போது, குறைந்த தெளிவுத்திறன் கொண்ட அமைப்புகள் \n"
 "மங்கலாக இருக்க முடியும், எனவே இந்த விருப்பம் தானாகவே அவற்றைப் பாதுகாக்க உயர்த்துகிறது \n"
 "மிருதுவான படப்புள்ளிகள். இது உயர்த்தப்பட்ட அமைப்புகளுக்கான குறைந்தபட்ச அமைப்பு அளவை வரையறுக்கிறது; \n"
 "அதிக மதிப்புகள் கூர்மையாகத் தெரிகின்றன, ஆனால் அதிக நினைவகம் தேவை. \n"
@@ -7731,6 +7680,10 @@ msgstr "ஆரம்ப சாளர அளவின் அகல கூறு."
 #: src/settings_translation_file.cpp
 msgid "Width of the selection box lines around nodes."
 msgstr "முனைகளைச் சுற்றியுள்ள தேர்வு பெட்டி வரிகளின் அகலம்."
+
+#: src/settings_translation_file.cpp
+msgid "Will also disable autoforward, when active."
+msgstr "செயலில் இருக்கும்போது ஆட்டோஃபார்வர்டையும் முடக்கும்."
 
 #: src/settings_translation_file.cpp
 msgid "Window maximized"
@@ -7842,3 +7795,8 @@ msgstr "ஊடாடும் காலக்கெடுவை சுருட�
 #: src/settings_translation_file.cpp
 msgid "cURL parallel limit"
 msgstr "இணையான வரம்பை சுருட்டுங்கள்"
+
+#: src/util/screenshot.cpp
+#, c-format
+msgid "Failed to save screenshot to \"%s\""
+msgstr "ச்கிரீன்சாட்டை \"%s\" இல் சேமிக்க முடியவில்லை"

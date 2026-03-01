@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (mGBA)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-22 09:10+0200\n"
-"PO-Revision-Date: 2025-06-22 12:51\n"
+"POT-Creation-Date: 2026-02-28 07:34+0200\n"
+"PO-Revision-Date: 2026-02-28 18:05\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/mgba/mgba-qt/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 #: ../library/LibraryModel.cpp:427
 msgctxt "LibraryTree"
@@ -72,9 +72,10 @@ msgid ""
 "href=\"https://patreon.com/mgba\">Donate</a> • <a "
 "href=\"https://github.com/mgba-emu/mgba/tree/{gitBranch}\">Source</a>"
 msgstr ""
-"<a href = \"http:/pt </a>\" <a href = \"https.2\" >>> <a href = "
-"\"https://paton.com/peration> • <a href =\" httpthub.com /gitbranch} \"> மூல"
-" /</a>"
+"<a href=\"http://mgba.io/\">Website</a> • <a "
+"href=\"https://forums.mgba.io/\">மன்றங்கள் / ஆதரவு</a> • <a "
+"href=\"https://patreon.com/mgba\">நன்கொடை</a> • <a "
+"href=\"https://github.com/mgba-emu/mgba/tree/{gitBranch}\">மூலம்</a>"
 
 #: ../AboutScreen.ui:41
 msgctxt "QGBA::AboutScreen"
@@ -174,7 +175,7 @@ msgctxt "QGBA::ApplicationUpdater"
 msgid "Unknown"
 msgstr "தெரியவில்லை"
 
-#: ../ApplicationUpdater.cpp:236
+#: ../ApplicationUpdater.cpp:239
 msgctxt "QGBA::ApplicationUpdater"
 msgid "(None)"
 msgstr "(எதுவுமில்லை)"
@@ -224,17 +225,17 @@ msgctxt "QGBA::AssetTile"
 msgid "0x%0 (%1)"
 msgstr "0x% 0 (% 1)"
 
-#: ../AudioDevice.cpp:34
+#: ../AudioDevice.cpp:35
 msgctxt "QGBA::AudioDevice"
 msgid "Can't set format of context-less audio device"
 msgstr "சூழல்-குறைவான ஆடியோ சாதனத்தின் வடிவமைப்பை அமைக்க முடியாது"
 
-#: ../AudioDevice.cpp:55
+#: ../AudioDevice.cpp:56
 msgctxt "QGBA::AudioDevice"
 msgid "Audio device is missing its core"
 msgstr "ஆடியோ சாதனம் அதன் மையத்தைக் காணவில்லை"
 
-#: ../AudioDevice.cpp:83
+#: ../AudioDevice.cpp:84
 msgctxt "QGBA::AudioDevice"
 msgid "Writing data to read-only audio device"
 msgstr "படிக்க மட்டும் ஆடியோ சாதனத்திற்கு தரவை எழுதுதல்"
@@ -244,17 +245,22 @@ msgctxt "QGBA::AudioProcessorQt"
 msgid "Can't start an audio processor without input"
 msgstr "உள்ளீடு இல்லாமல் ஆடியோ செயலியைத் தொடங்க முடியாது"
 
+#: ../AudioProcessorQt.cpp:81
+msgctxt "QGBA::AudioProcessorQt"
+msgid "Audio outputting to %1"
+msgstr "% 1 க்கு ஆடியோ வெளியீடு"
+
 #: ../AudioProcessorSDL.cpp:34
 msgctxt "QGBA::AudioProcessorSDL"
 msgid "Can't start an audio processor without input"
 msgstr "உள்ளீடு இல்லாமல் ஆடியோ செயலியைத் தொடங்க முடியாது"
 
-#: ../scripting/AutorunScriptModel.cpp:98
+#: ../scripting/AutorunScriptModel.cpp:29
 msgctxt "QGBA::AutorunScriptModel"
-msgid "Moving more than one row at once is not yet supported"
+msgid "Could not load autorun script settings: unknown script info format %1"
 msgstr ""
-"ஒரே நேரத்தில் ஒன்றுக்கு மேற்பட்ட வரிசையில் நகர்த்துவது இன்னும் "
-"ஆதரிக்கப்படவில்லை"
+"தானியங்கு ச்கிரிப்ட் அமைப்புகளை ஏற்ற முடியவில்லை: அறியப்படாத ச்கிரிப்ட் "
+"செய்தி வடிவம் %1"
 
 #: ../scripting/AutorunScriptView.ui:14
 msgctxt "QGBA::AutorunScriptView"
@@ -286,7 +292,7 @@ msgctxt "QGBA::AutorunScriptView"
 msgid "Run scripts when starting a game"
 msgstr "ஒரு விளையாட்டைத் தொடங்கும்போது ச்கிரிப்ட்களை இயக்கவும்"
 
-#: ../scripting/AutorunScriptView.cpp:24
+#: ../scripting/AutorunScriptView.cpp:28
 msgctxt "QGBA::AutorunScriptView"
 msgid "Select a script"
 msgstr "ச்கிரிப்டைத் தேர்ந்தெடுக்கவும்"
@@ -505,14 +511,28 @@ msgctxt "QGBA::CoreManager"
 msgid "Failed to open game file: %1"
 msgstr "விளையாட்டு கோப்பைத் திறக்கத் தவறிவிட்டது: %1"
 
-#: ../CoreManager.cpp:90
+#: ../CoreManager.cpp:77
+msgctxt "QGBA::CoreManager"
+msgid ""
+"The ROM appears to be loaded from a temporary directory. This will likely "
+"lead to data loss (e.g. saves, screenshots, etc.) if you continue. Please "
+"put the ROM in a more suitable location and then re-open it. If you are "
+"loading the ROM from an archive, please extract the archive first."
+msgstr ""
+"ROM ஒரு தற்காலிக கோப்பகத்தில் இருந்து ஏற்றப்பட்டதாகத் தெரிகிறது. நீங்கள் "
+"தொடர்ந்தால், இது தரவு இழப்புக்கு வழிவகுக்கும் (எ.கா. சேமிப்புகள், "
+"ச்கிரீன்சாட்கள் போன்றவை). ROM ஐ மிகவும் பொருத்தமான இடத்தில் வைத்து, அதை "
+"மீண்டும் திறக்கவும். நீங்கள் ஒரு காப்பகத்திலிருந்து ROM ஐ ஏற்றினால், முதலில்"
+" காப்பகத்தைப் பிரித்தெடுக்கவும்."
+
+#: ../CoreManager.cpp:95
 msgctxt "QGBA::CoreManager"
 msgid "Could not load game. Are you sure it's in the correct format?"
 msgstr ""
 "விளையாட்டை ஏற்ற முடியவில்லை. இது சரியான வடிவத்தில் உள்ளது என்பதில் உறுதியாக "
 "இருக்கிறீர்களா?"
 
-#: ../CoreManager.cpp:117
+#: ../CoreManager.cpp:122
 msgctxt "QGBA::CoreManager"
 msgid ""
 "Failed to open save file; in-game saves cannot be updated. Please ensure the"
@@ -847,7 +867,7 @@ msgstr "ச்பிரிட்"
 #: ../FrameView.cpp:638
 msgctxt "QGBA::FrameView"
 msgid "Backdrop"
-msgstr "பின்னணி"
+msgstr "பின்விடு"
 
 #: ../FrameView.cpp:641
 msgctxt "QGBA::FrameView"
@@ -857,7 +877,7 @@ msgstr "சட்டகம்"
 #: ../FrameView.cpp:647
 msgctxt "QGBA::FrameView"
 msgid "%1 %2"
-msgstr "%1 %2"
+msgstr "% 1 % 2"
 
 #: ../GBAApp.cpp:78
 msgctxt "QGBA::GBAApp"
@@ -907,7 +927,7 @@ msgstr "கண்காணிப்பு புள்ளிகள் நடத�
 #: ../GDBWindow.cpp:63
 msgctxt "QGBA::GDBWindow"
 msgid "Standard GDB"
-msgstr "நிலையான சி.டி.பி."
+msgstr "நிலையான சி.டி.பி"
 
 #: ../GDBWindow.cpp:68
 msgctxt "QGBA::GDBWindow"
@@ -1008,77 +1028,77 @@ msgstr ""
 "கிராபிக்ச் இன்டர்சேஞ்ச் வடிவம் ( *.GIF) ;; Webp ( *.Webp) ;; அனிமேசன் "
 "செய்யப்பட்ட போர்ட்டபிள் பிணையம் கிராபிக்ச் ( *.png *.apng)"
 
-#: ../GameBoy.cpp:61 ../GameBoy.cpp:80
+#: ../GameBoy.cpp:62 ../GameBoy.cpp:81
 msgctxt "QGBA::GameBoy"
 msgid "Autodetect"
 msgstr "ஆட்டோடெடெக்ட்"
 
-#: ../GameBoy.cpp:62
+#: ../GameBoy.cpp:63
 msgctxt "QGBA::GameBoy"
 msgid "Game Boy (DMG)"
 msgstr "கேம் பாய் (டி.எம்.சி)"
 
-#: ../GameBoy.cpp:63
+#: ../GameBoy.cpp:64
 msgctxt "QGBA::GameBoy"
 msgid "Game Boy Pocket (MGB)"
 msgstr "கேம் பாய் பாக்கெட் (எம்சிபி)"
 
-#: ../GameBoy.cpp:64
+#: ../GameBoy.cpp:65
 msgctxt "QGBA::GameBoy"
 msgid "Super Game Boy (SGB)"
 msgstr "சூப்பர் கேம் பாய் (எச்சிபி)"
 
-#: ../GameBoy.cpp:65
+#: ../GameBoy.cpp:66
 msgctxt "QGBA::GameBoy"
 msgid "Super Game Boy 2 (SGB)"
 msgstr "சூப்பர் கேம் பாய் 2 (எச்சிபி)"
 
-#: ../GameBoy.cpp:66
+#: ../GameBoy.cpp:67
 msgctxt "QGBA::GameBoy"
 msgid "Game Boy Color (CGB)"
 msgstr "கேம் பாய் கலர் (சிசிபி)"
 
-#: ../GameBoy.cpp:67
+#: ../GameBoy.cpp:68
 msgctxt "QGBA::GameBoy"
 msgid "Game Boy Advance (AGB)"
 msgstr "கேம் பாய் அட்வான்ச் (ஏசிபி)"
 
-#: ../GameBoy.cpp:68
+#: ../GameBoy.cpp:69
 msgctxt "QGBA::GameBoy"
 msgid "Super Game Boy Color (SGB + CGB)"
 msgstr "சூப்பர் கேம் பாய் கலர் (எச்சிபி + சிசிபி)"
 
-#: ../GameBoy.cpp:81
+#: ../GameBoy.cpp:82
 msgctxt "QGBA::GameBoy"
 msgid "ROM Only"
 msgstr "ரோம் மட்டும்"
 
-#: ../GameBoy.cpp:85
+#: ../GameBoy.cpp:86
 msgctxt "QGBA::GameBoy"
 msgid "%1 + RTC"
-msgstr "%1 + RTC"
+msgstr "% 1 + RTC"
 
-#: ../GameBoy.cpp:87
+#: ../GameBoy.cpp:88
 msgctxt "QGBA::GameBoy"
 msgid "%1 + Rumble"
 msgstr "%1 + ரம்பிள்"
 
-#: ../GameBoy.cpp:89
+#: ../GameBoy.cpp:90
 msgctxt "QGBA::GameBoy"
 msgid "%1 (Tilt)"
 msgstr "%1 (சாய்)"
 
-#: ../GameBoy.cpp:96
+#: ../GameBoy.cpp:98
 msgctxt "QGBA::GameBoy"
 msgid "%1 (old 1)"
 msgstr "%1 (பழைய 1)"
 
-#: ../GameBoy.cpp:97
+#: ../GameBoy.cpp:99
 msgctxt "QGBA::GameBoy"
 msgid "%1 (old 2)"
 msgstr "%1 (பழைய 2)"
 
-#: ../GameBoy.cpp:98
+#: ../GameBoy.cpp:100
 msgctxt "QGBA::GameBoy"
 msgid "%1 (new)"
 msgstr "%1 (புதியது)"
@@ -1096,7 +1116,7 @@ msgstr "0x0000"
 #: ../IOViewer.ui:367 ../IOViewer.cpp:870 ../IOViewer.cpp:883
 msgctxt "QGBA::IOViewer"
 msgid "B"
-msgstr "B"
+msgstr "பி"
 
 #: ../IOViewer.cpp:39
 msgctxt "QGBA::IOViewer"
@@ -2077,7 +2097,7 @@ msgstr "மதிப்பு"
 #: ../IOViewer.cpp:825
 msgctxt "QGBA::IOViewer"
 msgid "Scale"
-msgstr "அளவு"
+msgstr "அளவுகோல்"
 
 #: ../IOViewer.cpp:780 ../IOViewer.cpp:795 ../IOViewer.cpp:811
 #: ../IOViewer.cpp:827 ../IOViewer.cpp:1070
@@ -2105,7 +2125,7 @@ msgstr "ஓடையிணைப்பு"
 #: ../IOViewer.cpp:869 ../IOViewer.cpp:882
 msgctxt "QGBA::IOViewer"
 msgid "A"
-msgstr "A"
+msgstr "ஏ"
 
 #: ../IOViewer.cpp:871 ../IOViewer.cpp:884
 msgctxt "QGBA::IOViewer"
@@ -2140,7 +2160,7 @@ msgstr "கீழே"
 #: ../IOViewer.cpp:877 ../IOViewer.cpp:890
 msgctxt "QGBA::IOViewer"
 msgid "R"
-msgstr "R"
+msgstr "ஆர்"
 
 #: ../IOViewer.cpp:878 ../IOViewer.cpp:891
 msgctxt "QGBA::IOViewer"
@@ -2646,6 +2666,16 @@ msgctxt "QGBA::IOViewer"
 msgid "WRAM bank"
 msgstr "ராம் வங்கி"
 
+#: ../InputController.cpp:727 ../InputController.cpp:748
+msgctxt "QGBA::InputController"
+msgid "Could not find a valid camera format!"
+msgstr "சரியான கேமரா வடிவமைப்பைக் கண்டுபிடிக்க முடியவில்லை!"
+
+#: ../InputController.cpp:729
+msgctxt "QGBA::InputController"
+msgid "Camera supported format: %1"
+msgstr "கேமரா உதவி வடிவம்:% 1"
+
 #: ../KeyEditor.cpp:45 ../KeyEditor.cpp:206
 msgctxt "QGBA::KeyEditor"
 msgid "---"
@@ -2778,47 +2808,47 @@ msgctxt "QGBA::LogConfigModel"
 msgid "Game Error"
 msgstr "விளையாட்டு பிழை"
 
-#: ../LogController.cpp:72
+#: ../LogController.cpp:97
 msgctxt "QGBA::LogController"
 msgid "[%1] %2: %3"
 msgstr "[ %1] %2: %3"
 
-#: ../LogController.cpp:83
+#: ../LogController.cpp:108
 msgctxt "QGBA::LogController"
 msgid "An error occurred"
 msgstr "பிழை ஏற்பட்டது"
 
-#: ../LogController.cpp:155
+#: ../LogController.cpp:180
 msgctxt "QGBA::LogController"
 msgid "DEBUG"
 msgstr "பிழைத்திருத்தம்"
 
-#: ../LogController.cpp:157
+#: ../LogController.cpp:182
 msgctxt "QGBA::LogController"
 msgid "STUB"
 msgstr "முளை"
 
-#: ../LogController.cpp:159
+#: ../LogController.cpp:184
 msgctxt "QGBA::LogController"
 msgid "INFO"
 msgstr "தகவல்"
 
-#: ../LogController.cpp:161
+#: ../LogController.cpp:186
 msgctxt "QGBA::LogController"
 msgid "WARN"
 msgstr "எச்சரிக்கை"
 
-#: ../LogController.cpp:163
+#: ../LogController.cpp:188
 msgctxt "QGBA::LogController"
 msgid "ERROR"
 msgstr "பிழை"
 
-#: ../LogController.cpp:165
+#: ../LogController.cpp:190
 msgctxt "QGBA::LogController"
 msgid "FATAL"
 msgstr "அபாயகரமான"
 
-#: ../LogController.cpp:167
+#: ../LogController.cpp:192
 msgctxt "QGBA::LogController"
 msgid "GAME ERROR"
 msgstr "விளையாட்டு பிழை"
@@ -3031,7 +3061,7 @@ msgstr "அறிவுறுத்தலால் அணுகப்பட்�
 #: ../MemoryAccessLogModel.cpp:97
 msgctxt "QGBA::MemoryAccessLogModel"
 msgid "Accessed by DMA"
-msgstr "டி.எம்.ஏ."
+msgstr "டி.எம்.ஏ. மூலம் அனுகப்பட்டது"
 
 #: ../MemoryAccessLogModel.cpp:99
 msgctxt "QGBA::MemoryAccessLogModel"
@@ -3223,62 +3253,57 @@ msgctxt "QGBA::MemoryDump"
 msgid "Failed to open output file: %1"
 msgstr "வெளியீட்டு கோப்பைத் திறக்கத் தவறிவிட்டது: %1"
 
-#: ../MemoryModel.cpp:44
+#: ../MemoryModel.cpp:45
 msgctxt "QGBA::MemoryModel"
 msgid "Copy selection"
 msgstr "தேர்வு நகல்"
 
-#: ../MemoryModel.cpp:49
+#: ../MemoryModel.cpp:50
 msgctxt "QGBA::MemoryModel"
 msgid "Save selection"
 msgstr "தேர்வைச் சேமிக்கவும்"
 
-#: ../MemoryModel.cpp:54
+#: ../MemoryModel.cpp:55
 msgctxt "QGBA::MemoryModel"
 msgid "Paste"
 msgstr "ஒட்டு"
 
-#: ../MemoryModel.cpp:59
+#: ../MemoryModel.cpp:60
 msgctxt "QGBA::MemoryModel"
 msgid "Load"
 msgstr "சுமை"
 
-#: ../MemoryModel.cpp:117
+#: ../MemoryModel.cpp:118
 msgctxt "QGBA::MemoryModel"
 msgid "All"
 msgstr "அனைத்தும்"
 
-#: ../MemoryModel.cpp:162
+#: ../MemoryModel.cpp:168
 msgctxt "QGBA::MemoryModel"
 msgid "Load TBL"
 msgstr "TBL ஐ ஏற்றவும்"
 
-#: ../MemoryModel.cpp:216
+#: ../MemoryModel.cpp:222
 msgctxt "QGBA::MemoryModel"
 msgid "Save selected memory"
 msgstr "தேர்ந்தெடுக்கப்பட்ட நினைவகத்தை சேமிக்கவும்"
 
-#: ../MemoryModel.cpp:222
+#: ../MemoryModel.cpp:228
 msgctxt "QGBA::MemoryModel"
 msgid "Failed to open output file: %1"
 msgstr "வெளியீட்டு கோப்பைத் திறக்கத் தவறிவிட்டது: %1"
 
-#: ../MemoryModel.cpp:230
+#: ../MemoryModel.cpp:236
 msgctxt "QGBA::MemoryModel"
 msgid "Load memory"
 msgstr "நினைவகத்தை ஏற்றவும்"
 
-#: ../MemoryModel.cpp:236
+#: ../MemoryModel.cpp:242
 msgctxt "QGBA::MemoryModel"
 msgid "Failed to open input file: %1"
 msgstr "உள்ளீட்டு கோப்பைத் திறக்கத் தவறிவிட்டது: %1"
 
-#: ../MemoryModel.cpp:351
-msgctxt "QGBA::MemoryModel"
-msgid "TBL"
-msgstr "Tbl"
-
-#: ../MemoryModel.cpp:351
+#: ../MemoryModel.cpp:357
 msgctxt "QGBA::MemoryModel"
 msgid "ISO-8859-1"
 msgstr "ஐஎச்ஓ -8859-1"
@@ -3538,6 +3563,11 @@ msgctxt "QGBA::MessagePainter"
 msgid "Frame %1"
 msgstr "பிரேம் %1"
 
+#: ../MultiplayerController.cpp:313
+msgctxt "QGBA::MultiplayerController"
+msgid "Couldn't find available save ID"
+msgstr "சேமிக்கப்பட்ட ஐடியைக் கண்டுபிடிக்க முடியவில்லை"
+
 #: ../MultiplayerController.cpp:367
 msgctxt "QGBA::MultiplayerController"
 msgid "Trying to detach a multiplayer player that's not attached"
@@ -3654,7 +3684,7 @@ msgstr "ம"
 #: ../ObjView.ui:558
 msgctxt "QGBA::ObjView"
 msgid "V"
-msgstr "V"
+msgstr "வி"
 
 #: ../ObjView.ui:572
 msgctxt "QGBA::ObjView"
@@ -3926,7 +3956,7 @@ msgstr "தட்டு அட்டவணை"
 #: ../PaletteView.ui:340
 msgctxt "QGBA::PaletteView"
 msgid "Export BG"
-msgstr "ஏற்றுமதி பி.சி."
+msgstr "ஏற்றுமதி பி.சி"
 
 #: ../PaletteView.ui:360
 msgctxt "QGBA::PaletteView"
@@ -4105,12 +4135,12 @@ msgctxt "QGBA::ROMInfo"
 msgid "Save file:"
 msgstr "கோப்பைச் சேமி:"
 
-#: ../ReportView.cpp:351
+#: ../ReportView.cpp:360
 msgctxt "QGBA::ReportView"
 msgid "Bug report archive"
 msgstr "பிழை அறிக்கை காப்பகம்"
 
-#: ../ReportView.cpp:351
+#: ../ReportView.cpp:360
 msgctxt "QGBA::ReportView"
 msgid "ZIP archive (*.zip)"
 msgstr "சிப் காப்பகம் (*.zip)"
@@ -4138,22 +4168,22 @@ msgid ""
 " report on GitHub. Make sure to attach the report you "
 "generated!</p></body></html>"
 msgstr ""
-"<html> <head/> <body> <p> பிழை அறிக்கையை தாக்கல் செய்ய, முதலில் நீங்கள் "
+"<html> <head/> <body> <p> பிழை அறிக்கையைத் தாக்கல் செய்ய, முதலில் நீங்கள் "
 "தாக்கல் செய்யவிருக்கும் பிழை அறிக்கையுடன் இணைக்க ஒரு அறிக்கை கோப்பை "
 "உருவாக்கவும். சேமி கோப்புகளை நீங்கள் சேர்க்க பரிந்துரைக்கப்படுகிறது, ஏனெனில்"
 " இவை பெரும்பாலும் பிழைத்திருத்த சிக்கல்களுக்கு உதவுகின்றன. நீங்கள் இயங்கும் "
 "{projectName} இன் பதிப்பு, உங்கள் உள்ளமைவு, உங்கள் கணினி மற்றும் நீங்கள் "
 "தற்போது திறந்த விளையாட்டு (ஏதேனும் இருந்தால்) பற்றிய சில தகவல்களை இது "
-"சேகரிக்கும். இந்த சேகரிப்பு முடிந்ததும் கீழே சேகரிக்கப்பட்ட அனைத்து "
+"சேகரிக்கும். இந்தச் சேகரிப்பு முடிந்ததும் கீழே சேகரிக்கப்பட்ட அனைத்து "
 "தகவல்களையும் மதிப்பாய்வு செய்து அதை ஒரு சிப் கோப்பில் சேமிக்கலாம். "
 "சேகரிக்கப்பட்ட எந்தவொரு பாதையிலும் இருந்தால், உங்கள் பயனர்பெயர் போன்ற "
 "எந்தவொரு தனிப்பட்ட தகவல்களையும் மாற்றியமைக்க சேகரிப்பு தானாகவே "
-"முயற்சிக்கும், ஆனால் நீங்கள் அதைத் திருத்தினால். நீங்கள் அதை உருவாக்கி "
-"சேமித்த பிறகு, தயவுசெய்து கீழேயுள்ள பொத்தானைக் சொடுக்கு செய்க அல்லது <a href"
-" = \"https://mgba.io/i/\"> <ச்பான் பாணி = \"உரை-தேடு: அடிக்கோடிட்டு; வண்ணம்:"
-" வண்ணம்:#2980 பி 9;\" > mgba.io/i </span> </a> கிட்அப்பில் பிழை அறிக்கையை "
-"தாக்கல் செய்ய. நீங்கள் உருவாக்கிய அறிக்கையை இணைப்பதை உறுதிப்படுத்திக் "
-"கொள்ளுங்கள்! </P> </body> </html>"
+"முயற்சிக்கும், ஆனால் நீங்கள் அதைத் திருத்தினால். நீங்கள் அதை உருவாக்கிச் "
+"சேமித்த பிறகு, தயவுசெய்து கீழேயுள்ள பொத்தானைக் சொடுக்கு செய்க அல்லது <a "
+"href=\"https://mgba.io/i/\"><span style=\" text-decoration: underline; "
+"color:#2980b9;\">mgba.io/i </span> </a> கிட்அப்பில் பிழை அறிக்கையைத் தாக்கல்"
+" செய்ய. நீங்கள் உருவாக்கிய அறிக்கையை இணைப்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்! "
+"</p></body> </html>"
 
 #: ../ReportView.ui:85
 msgctxt "QGBA::ReportView"
@@ -4295,17 +4325,17 @@ msgstr "%1 eeprom"
 #: ../SaveConverter.cpp:486
 msgctxt "QGBA::SaveConverter"
 msgid " + RTC"
-msgstr " + RTC"
+msgstr "+ ஆர்டிசி"
 
 #: ../SaveConverter.cpp:495
 msgctxt "QGBA::SaveConverter"
 msgid "%1 SRAM + RTC"
-msgstr "%1 SRAM + RTC"
+msgstr "% 1 SRAM + RTC"
 
 #: ../SaveConverter.cpp:497
 msgctxt "QGBA::SaveConverter"
 msgid "%1 SRAM"
-msgstr "%1 SRAM"
+msgstr "% 1 SRAM"
 
 #: ../SaveConverter.cpp:502
 msgctxt "QGBA::SaveConverter"
@@ -4340,7 +4370,7 @@ msgstr "சிதைவு"
 #: ../SaveConverter.cpp:529
 msgctxt "QGBA::SaveConverter"
 msgid "%1 (%2)"
-msgstr "%1 (%2)"
+msgstr "% 1 (% 2)"
 
 #: ../SaveConverter.cpp:533
 msgctxt "QGBA::SaveConverter"
@@ -4357,12 +4387,12 @@ msgctxt "QGBA::SaveConverter"
 msgid "%1 GameShark Advance SP %2 save game"
 msgstr "%1 கேம்சார்க் அட்வான்ச் எச்பி %2 சேமி விளையாட்டு"
 
-#: ../scripting/ScriptingController.cpp:271
+#: ../scripting/ScriptingController.cpp:277
 msgctxt "QGBA::ScriptingController"
 msgid "Lua scripts (*.lua)"
 msgstr "ச்கிரிப்ட்களை எடுத்துக் கொள்ளுங்கள் (*.லுவா)"
 
-#: ../scripting/ScriptingController.cpp:273
+#: ../scripting/ScriptingController.cpp:279
 msgctxt "QGBA::ScriptingController"
 msgid "All files (*.*)"
 msgstr "எல்லா கோப்புகளும் (*.*)"
@@ -4613,14 +4643,14 @@ msgstr "ஒரு மணி நேரத்திற்கு முன்பு
 msgctxt "QGBA::SettingsView"
 msgid "%n hour ago"
 msgid_plural "%n hours ago"
-msgstr[0] "%n மணி நேரத்திற்கு முன்பு"
-msgstr[1] "%n மணி நேரத்திற்கு முன்பு"
+msgstr[0] "%n மணிநேரத்திற்கு முன்பு"
+msgstr[1] "%n மணிநேரத்திற்கு முன்பு"
 
 #: ../SettingsView.cpp:913
 msgctxt "QGBA::SettingsView"
 msgid "%n day ago"
 msgid_plural "%n days ago"
-msgstr[0] "%n நாள் முன்பு"
+msgstr[0] "%n நாளுக்கு முன்பு"
 msgstr[1] "%n நாட்களுக்கு முன்பு"
 
 #: ../SettingsView.ui:20
@@ -4756,7 +4786,7 @@ msgstr "48000"
 #: ../SettingsView.ui:236
 msgctxt "QGBA::SettingsView"
 msgid "Hz"
-msgstr "Hz"
+msgstr "எர்ட்ச்"
 
 #: ../SettingsView.ui:245
 msgctxt "QGBA::SettingsView"
@@ -4767,7 +4797,7 @@ msgstr "தொகுதி:"
 #: ../SettingsView.ui:836
 msgctxt "QGBA::SettingsView"
 msgid "Mute"
-msgstr "முடக்கு"
+msgstr "ஒலிமுடக்கு"
 
 #: ../SettingsView.ui:285
 msgctxt "QGBA::SettingsView"
@@ -5663,77 +5693,77 @@ msgctxt "QGBA::VideoView"
 msgid "Show advanced"
 msgstr "மேம்பட்டதைக் காட்டு"
 
-#: ../Window.cpp:347
+#: ../Window.cpp:351
 msgctxt "QGBA::Window"
 msgid "Archives (%1)"
 msgstr "காப்பகங்கள் (%1)"
 
-#: ../Window.cpp:352 ../Window.cpp:368 ../Window.cpp:395
+#: ../Window.cpp:356 ../Window.cpp:372 ../Window.cpp:399
 msgctxt "QGBA::Window"
 msgid "Select ROM"
 msgstr "ராம் தேர்ந்தெடுக்கவும்"
 
-#: ../Window.cpp:386
+#: ../Window.cpp:390
 msgctxt "QGBA::Window"
 msgid "Select folder"
 msgstr "கோப்புறையைத் தேர்ந்தெடு"
 
-#: ../Window.cpp:523 ../Window.cpp:530
+#: ../Window.cpp:534 ../Window.cpp:541
 msgctxt "QGBA::Window"
 msgid "Select save"
 msgstr "சேமி என்பதைத் தேர்ந்தெடுக்கவும்"
 
-#: ../Window.cpp:442
+#: ../Window.cpp:446
 msgctxt "QGBA::Window"
 msgid "Select patch"
 msgstr "ஒட்டு தேர்ந்தெடுக்கவும்"
 
-#: ../Window.cpp:442
+#: ../Window.cpp:446
 msgctxt "QGBA::Window"
 msgid "Patches (*.ips *.ups *.bps)"
 msgstr "திட்டுகள் ( *.ips *.ups *.bps)"
 
-#: ../Window.cpp:453
+#: ../Window.cpp:457
 msgctxt "QGBA::Window"
 msgid "Select e-Reader dotcode"
 msgstr "மின்-ரீடர் டாட் கோட் என்பதைத் தேர்ந்தெடுக்கவும்"
 
-#: ../Window.cpp:453
+#: ../Window.cpp:457
 msgctxt "QGBA::Window"
 msgid "e-Reader card (*.raw *.bin *.bmp)"
 msgstr "மின்-வாசகர் அட்டை ( *.raw *.bin *.bmp)"
 
-#: ../Window.cpp:516
+#: ../Window.cpp:527
 msgctxt "QGBA::Window"
 msgid "Select image"
 msgstr "படத்தைத் தேர்ந்தெடுக்கவும்"
 
-#: ../Window.cpp:516
+#: ../Window.cpp:527
 msgctxt "QGBA::Window"
 msgid "Image file (*.png *.gif *.jpg *.jpeg);;All files (*)"
 msgstr "பட கோப்பு ( *.png *.gif *.jpg *.jpeg) ;; அனைத்து கோப்புகளும் ( *)"
 
-#: ../Window.cpp:530
+#: ../Window.cpp:541
 msgctxt "QGBA::Window"
 msgid "GameShark saves (*.sps *.xps)"
 msgstr "கேம்சார்க் சேமிக்கிறது ( *.sps *.xps)"
 
-#: ../Window.cpp:567
+#: ../Window.cpp:580
 msgctxt "QGBA::Window"
 msgid "Select video log"
 msgstr "வீடியோ பதிவைத் தேர்ந்தெடுக்கவும்"
 
-#: ../Window.cpp:567
+#: ../Window.cpp:580
 msgctxt "QGBA::Window"
 msgid "Video logs (*.mvl)"
 msgstr "வீடியோ பதிவுகள் (*.mvl)"
 
-#: ../Window.cpp:1010
+#: ../Window.cpp:1023
 msgctxt "QGBA::Window"
 msgid "Crash"
 msgstr "செயலிழப்பு"
 
-#: ../Window.cpp:1011
+#: ../Window.cpp:1024
 msgctxt "QGBA::Window"
 msgid ""
 "The game has crashed with the following error:\n"
@@ -5744,22 +5774,22 @@ msgstr ""
 "\n"
 " %1"
 
-#: ../Window.cpp:1018
+#: ../Window.cpp:1031
 msgctxt "QGBA::Window"
 msgid "Couldn't Start"
 msgstr "தொடங்க முடியவில்லை"
 
-#: ../Window.cpp:1019
+#: ../Window.cpp:1032
 msgctxt "QGBA::Window"
 msgid "Could not start game."
 msgstr "விளையாட்டைத் தொடங்க முடியவில்லை."
 
-#: ../Window.cpp:1033
+#: ../Window.cpp:1046
 msgctxt "QGBA::Window"
 msgid "Unimplemented BIOS call"
 msgstr "சாத்தியமற்ற பயாச் அழைப்பு"
 
-#: ../Window.cpp:1034
+#: ../Window.cpp:1047
 msgctxt "QGBA::Window"
 msgid ""
 "This game uses a BIOS call that is not implemented. Please use the official "
@@ -5768,7 +5798,7 @@ msgstr ""
 "இந்த விளையாட்டு செயல்படுத்தப்படாத பயாச் அழைப்பைப் பயன்படுத்துகிறது. சிறந்த "
 "அனுபவத்திற்கு அதிகாரப்பூர்வ பயாசைப் பயன்படுத்தவும்."
 
-#: ../Window.cpp:1056
+#: ../Window.cpp:1069
 msgctxt "QGBA::Window"
 msgid ""
 "Failed to create an appropriate display device, falling back to software "
@@ -5778,12 +5808,12 @@ msgstr ""
 "மீண்டும் விழுகிறது. விளையாட்டுகள் மெதுவாக இயங்கக்கூடும், குறிப்பாக பெரிய "
 "சாளரங்களுடன்."
 
-#: ../Window.cpp:1154
+#: ../Window.cpp:1167
 msgctxt "QGBA::Window"
 msgid "Really make portable?"
 msgstr "உண்மையில் சிறியதா?"
 
-#: ../Window.cpp:1155
+#: ../Window.cpp:1168
 msgctxt "QGBA::Window"
 msgid ""
 "This will make the emulator load its configuration from the same directory "
@@ -5792,673 +5822,683 @@ msgstr ""
 "இது எமுலேட்டரை அதன் உள்ளமைவை இயங்கக்கூடிய அதே கோப்பகத்திலிருந்து ஏற்றும். "
 "நீங்கள் தொடர விரும்புகிறீர்களா?"
 
-#: ../Window.cpp:1167
+#: ../Window.cpp:1180
 msgctxt "QGBA::Window"
 msgid "Restart needed"
 msgstr "மறுதொடக்கம் தேவை"
 
-#: ../Window.cpp:1168
+#: ../Window.cpp:1181
 msgctxt "QGBA::Window"
 msgid "Some changes will not take effect until the emulator is restarted."
 msgstr ""
 "முன்மாதிரி மறுதொடக்கம் செய்யப்படும் வரை சில மாற்றங்கள் நடைமுறைக்கு வராது."
 
-#: ../Window.cpp:1219
+#: ../Window.cpp:1232
 msgctxt "QGBA::Window"
 msgid " -  Player %1 of %2"
 msgstr " - %2 இல் %1"
 
-#: ../Window.cpp:1230
+#: ../Window.cpp:1243
 msgctxt "QGBA::Window"
 msgid "%1 - %2"
-msgstr "%1 - %2"
+msgstr "% 1 - % 2"
 
-#: ../Window.cpp:1232
+#: ../Window.cpp:1245
 msgctxt "QGBA::Window"
 msgid "%1 - %2 - %3"
-msgstr "%1 - %2 - %3"
+msgstr "% 1 - % 2 - % 3"
 
-#: ../Window.cpp:1234
+#: ../Window.cpp:1247
 msgctxt "QGBA::Window"
 msgid "%1 - %2 (%3 fps) - %4"
 msgstr "%1 - %2 ( %3 FPS) - %4"
 
-#: ../Window.cpp:1298
+#: ../Window.cpp:1311
 msgctxt "QGBA::Window"
 msgid "&File"
 msgstr "கோப்பு (&f)"
 
-#: ../Window.cpp:1300
+#: ../Window.cpp:1313
 msgctxt "QGBA::Window"
 msgid "Load &ROM..."
 msgstr "சுமை & ரோம் ..."
 
-#: ../Window.cpp:1303
+#: ../Window.cpp:1316
 msgctxt "QGBA::Window"
 msgid "Load ROM in archive..."
 msgstr "காப்பகத்தில் ரோம் ஏற்றவும் ..."
 
-#: ../Window.cpp:1304
+#: ../Window.cpp:1317
 msgctxt "QGBA::Window"
 msgid "Add folder to library..."
 msgstr "நூலகத்தில் கோப்புறையைச் சேர்க்கவும் ..."
 
-#: ../Window.cpp:403
+#: ../Window.cpp:407
 msgctxt "QGBA::Window"
 msgid "Save games (%1)"
 msgstr "விளையாட்டுகளைச் சேமிக்கவும் (%1)"
 
-#: ../Window.cpp:404
+#: ../Window.cpp:408
 msgctxt "QGBA::Window"
 msgid "Select save game"
 msgstr "சேமி விளையாட்டைத் தேர்ந்தெடுக்கவும்"
 
-#: ../Window.cpp:412
+#: ../Window.cpp:416
 msgctxt "QGBA::Window"
 msgid "mGBA save state files (%1)"
 msgstr "மாநில கோப்புகளை சேமிக்கவும் (% 1)"
 
-#: ../Window.cpp:414 ../Window.cpp:419
+#: ../Window.cpp:418 ../Window.cpp:423
 msgctxt "QGBA::Window"
 msgid "Select save state"
 msgstr "சேமி நிலையைத் தேர்ந்தெடுக்கவும்"
 
-#: ../Window.cpp:461
+#: ../Window.cpp:465
 msgctxt "QGBA::Window"
 msgid "Select e-Reader card images"
 msgstr "ஈ-ரீடர் அட்டை படங்களைத் தேர்ந்தெடுக்கவும்"
 
-#: ../Window.cpp:461
+#: ../Window.cpp:465
 msgctxt "QGBA::Window"
 msgid "Image file (*.png *.jpg *.jpeg)"
 msgstr "பட கோப்பு ( *.png *.jpg *.jpeg)"
 
-#: ../Window.cpp:462
+#: ../Window.cpp:466
 msgctxt "QGBA::Window"
 msgid "Conversion finished"
 msgstr "மாற்றம் முடிந்தது"
 
-#: ../Window.cpp:503
+#: ../Window.cpp:507
 msgctxt "QGBA::Window"
 msgid "%1 of %2 e-Reader cards converted successfully."
 msgstr "%2 இ-ரீடர் கார்டுகளில் 1 வெற்றிகரமாக மாற்றப்பட்டது."
 
-#: ../Window.cpp:1308
+#: ../Window.cpp:1321
 msgctxt "QGBA::Window"
 msgid "Load alternate save game..."
 msgstr "மாற்று சேமி விளையாட்டை ஏற்றவும் ..."
 
-#: ../Window.cpp:1311
+#: ../Window.cpp:1324
 msgctxt "QGBA::Window"
 msgid "Load temporary save game..."
 msgstr "தற்காலிக சேமிப்பு விளையாட்டை ஏற்றவும் ..."
 
-#: ../Window.cpp:1344
+#: ../Window.cpp:1357
 msgctxt "QGBA::Window"
 msgid "Load &patch..."
 msgstr "சுமை & இணைப்பு ..."
 
-#: ../Window.cpp:1347
+#: ../Window.cpp:1360
 msgctxt "QGBA::Window"
 msgid "Boot BIOS"
 msgstr "துவக்க பயாச்"
 
-#: ../Window.cpp:1441
+#: ../Window.cpp:1454
 msgctxt "QGBA::Window"
 msgid "Replace ROM..."
 msgstr "ரோம் மாற்றவும் ..."
 
-#: ../Window.cpp:1351
+#: ../Window.cpp:1364
 msgctxt "QGBA::Window"
 msgid "Scan e-Reader dotcodes..."
 msgstr "ஈ-ரீடர் டாட்கோட்களை ச்கேன் செய்யுங்கள் ..."
 
-#: ../Window.cpp:1785
+#: ../Window.cpp:1805
 msgctxt "QGBA::Window"
 msgid "Convert e-Reader card image to raw..."
 msgstr "மின்-ரீடர் அட்டை படத்தை மூலமாக மாற்றவும் ..."
 
-#: ../Window.cpp:1355
+#: ../Window.cpp:1368
 msgctxt "QGBA::Window"
 msgid "ROM &info..."
 msgstr "ரோமர் & செய்தி ..."
 
-#: ../Window.cpp:1357
+#: ../Window.cpp:1370
 msgctxt "QGBA::Window"
 msgid "Recent"
 msgstr "அண்மைக் கால"
 
-#: ../Window.cpp:1750
+#: ../Window.cpp:1770
 msgctxt "QGBA::Window"
 msgid "Make portable"
 msgstr "சிறியதாக ஆக்குங்கள்"
 
-#: ../Window.cpp:1360
+#: ../Window.cpp:1373
 msgctxt "QGBA::Window"
 msgid "&Load state"
 msgstr "& சுமை நிலை"
 
-#: ../Window.cpp:1365
+#: ../Window.cpp:1378
 msgctxt "QGBA::Window"
 msgid "Load state file..."
 msgstr "மாநில கோப்பை ஏற்றவும் ..."
 
-#: ../Window.cpp:1370
+#: ../Window.cpp:1383
 msgctxt "QGBA::Window"
 msgid "&Save state"
 msgstr "& மாநிலத்தை சேமிக்கவும்"
 
-#: ../Window.cpp:1375
+#: ../Window.cpp:1388
 msgctxt "QGBA::Window"
 msgid "Save state file..."
 msgstr "மாநில கோப்பை சேமிக்கவும் ..."
 
-#: ../Window.cpp:1380
+#: ../Window.cpp:1393
 msgctxt "QGBA::Window"
 msgid "Quick load"
 msgstr "விரைவான சுமை"
 
-#: ../Window.cpp:1381
+#: ../Window.cpp:1394
 msgctxt "QGBA::Window"
 msgid "Quick save"
 msgstr "விரைவாக சேமிக்கவும்"
 
-#: ../Window.cpp:1383
+#: ../Window.cpp:1396
 msgctxt "QGBA::Window"
 msgid "Load recent"
 msgstr "அண்மைக் காலத்தில் ஏற்றவும்"
 
-#: ../Window.cpp:1388
+#: ../Window.cpp:1401
 msgctxt "QGBA::Window"
 msgid "Save recent"
 msgstr "அண்மையில் சேமிக்கவும்"
 
-#: ../Window.cpp:1396
+#: ../Window.cpp:1409
 msgctxt "QGBA::Window"
 msgid "Undo load state"
 msgstr "சுமை நிலையை செயல்தவிர்க்கவும்"
 
-#: ../Window.cpp:1399
+#: ../Window.cpp:1412
 msgctxt "QGBA::Window"
 msgid "Undo save state"
 msgstr "சேமிப்பதை செயல்தவிர்க்கவும்"
 
-#: ../Window.cpp:1406 ../Window.cpp:1411
+#: ../Window.cpp:1419 ../Window.cpp:1424
 msgctxt "QGBA::Window"
 msgid "State &%1"
 msgstr "மாநிலம் &%1"
 
-#: ../Window.cpp:1537
+#: ../Window.cpp:1550
 msgctxt "QGBA::Window"
 msgid "Load camera image..."
 msgstr "கேமரா படத்தை ஏற்றவும் ..."
 
-#: ../Window.cpp:1317
+#: ../Window.cpp:1330
 msgctxt "QGBA::Window"
 msgid "Convert save game..."
 msgstr "சேமி விளையாட்டை மாற்றவும் ..."
 
-#: ../Window.cpp:523
+#: ../Window.cpp:534
 msgctxt "QGBA::Window"
 msgid "GameShark saves (*.gsv *.sps *.xps)"
 msgstr "கேம்சார்க் சேமிக்கிறது ( *.gsv *.sps *.xps)"
 
-#: ../Window.cpp:1179
+#: ../Window.cpp:1142
+msgctxt "QGBA::Window"
+msgid "Failed to start audio processor"
+msgstr "ஆடியோ செயலியைத் தொடங்குவதில் தோல்வி"
+
+#: ../Window.cpp:1192
 msgctxt "QGBA::Window"
 msgid "Reset needed"
 msgstr "மீட்டமை தேவை"
 
-#: ../Window.cpp:1180
+#: ../Window.cpp:1193
 msgctxt "QGBA::Window"
 msgid "Some changes will not take effect until the game is reset."
 msgstr "விளையாட்டு மீட்டமைக்கப்படும் வரை சில மாற்றங்கள் நடைமுறைக்கு வராது."
 
-#: ../Window.cpp:1307
+#: ../Window.cpp:1320
 msgctxt "QGBA::Window"
 msgid "Save games"
 msgstr "விளையாட்டுகளைச் சேமிக்கவும்"
 
-#: ../Window.cpp:1320
+#: ../Window.cpp:1333
 msgctxt "QGBA::Window"
 msgid "Import GameShark Save..."
 msgstr "இறக்குமதி கேம்சார்க் சேமி ..."
 
-#: ../Window.cpp:1323
+#: ../Window.cpp:1336
 msgctxt "QGBA::Window"
 msgid "Export GameShark Save..."
 msgstr "ஏற்றுமதி கேம்சார்க் சேமி ..."
 
-#: ../Window.cpp:1330
+#: ../Window.cpp:1343
 msgctxt "QGBA::Window"
 msgid "Automatically determine"
 msgstr "தானாக தீர்மானிக்கவும்"
 
-#: ../Window.cpp:1334
+#: ../Window.cpp:1347
 msgctxt "QGBA::Window"
 msgid "Use player %0 save game"
 msgstr "பிளேயரைப் பயன்படுத்தவும் %0 சேமி விளையாட்டைச் சேமிக்கவும்"
 
-#: ../Window.cpp:1418
+#: ../Window.cpp:1431
 msgctxt "QGBA::Window"
 msgid "New multiplayer window"
 msgstr "புதிய மல்டிபிளேயர் சாளரம்"
 
-#: ../Window.cpp:1421
+#: ../Window.cpp:1434
 msgctxt "QGBA::Window"
 msgid "Connect to Dolphin..."
 msgstr "டால்பினுடன் இணைக்கவும் ..."
 
-#: ../Window.cpp:1427
+#: ../Window.cpp:1440
 msgctxt "QGBA::Window"
 msgid "Report bug..."
 msgstr "பிழையைப் புகாரளிக்கவும் ..."
 
-#: ../Window.cpp:1433
+#: ../Window.cpp:1446
 msgctxt "QGBA::Window"
 msgid "About..."
 msgstr "பற்றி ..."
 
-#: ../Window.cpp:1434
+#: ../Window.cpp:1447
 msgctxt "QGBA::Window"
 msgid "E&xit"
 msgstr "வெளியேறு (&x)"
 
-#: ../Window.cpp:1436
+#: ../Window.cpp:1449
 msgctxt "QGBA::Window"
 msgid "&Emulation"
 msgstr "& போன்மம்"
 
-#: ../Window.cpp:1437
+#: ../Window.cpp:1450
 msgctxt "QGBA::Window"
 msgid "&Reset"
 msgstr "& மீட்டமை"
 
-#: ../Window.cpp:1438
+#: ../Window.cpp:1451
 msgctxt "QGBA::Window"
 msgid "Sh&utdown"
 msgstr "Sh & Utdown"
 
-#: ../Window.cpp:1442
+#: ../Window.cpp:1455
 msgctxt "QGBA::Window"
 msgid "Yank game pak"
 msgstr "யாங்க் கேம் பாக்"
 
-#: ../Window.cpp:1445
+#: ../Window.cpp:1458
 msgctxt "QGBA::Window"
 msgid "&Pause"
 msgstr "& இடைநிறுத்தம்"
 
-#: ../Window.cpp:1454
+#: ../Window.cpp:1467
 msgctxt "QGBA::Window"
 msgid "&Next frame"
 msgstr "& அடுத்த சட்டகம்"
 
-#: ../Window.cpp:1458
+#: ../Window.cpp:1471
 msgctxt "QGBA::Window"
 msgid "Fast forward (held)"
 msgstr "வேகமாக முன்னோக்கி (நடைபெற்றது)"
 
-#: ../Window.cpp:1464
+#: ../Window.cpp:1477
 msgctxt "QGBA::Window"
 msgid "&Fast forward"
 msgstr "& வேகமாக முன்னோக்கி"
 
-#: ../Window.cpp:1468
+#: ../Window.cpp:1481
 msgctxt "QGBA::Window"
 msgid "Fast forward speed"
 msgstr "வேகமாக முன்னோக்கி விரைவு"
 
-#: ../Window.cpp:1473
+#: ../Window.cpp:1486
 msgctxt "QGBA::Window"
 msgid "Unbounded"
 msgstr "எல்லையற்ற"
 
-#: ../Window.cpp:1477
+#: ../Window.cpp:1490
 msgctxt "QGBA::Window"
 msgid "%0x"
 msgstr "% 0x"
 
-#: ../Window.cpp:1481
+#: ../Window.cpp:1494
 msgctxt "QGBA::Window"
 msgid "Increase fast forward speed"
 msgstr "வேகமாக முன்னோக்கி வேகத்தை அதிகரிக்கவும்"
 
-#: ../Window.cpp:1488
+#: ../Window.cpp:1501
 msgctxt "QGBA::Window"
 msgid "Decrease fast forward speed"
 msgstr "வேகமாக முன்னோக்கி வேகத்தைக் குறைக்கவும்"
 
-#: ../Window.cpp:1495
+#: ../Window.cpp:1508
 msgctxt "QGBA::Window"
 msgid "Rewind (held)"
 msgstr "முன்னாடி (நடைபெற்றது)"
 
-#: ../Window.cpp:1507
+#: ../Window.cpp:1520
 msgctxt "QGBA::Window"
 msgid "Re&wind"
 msgstr "மறு & காற்று"
 
-#: ../Window.cpp:1512
+#: ../Window.cpp:1525
 msgctxt "QGBA::Window"
 msgid "Step backwards"
 msgstr "பின்னோக்கி செல்லுங்கள்"
 
-#: ../Window.cpp:1519
+#: ../Window.cpp:1532
 msgctxt "QGBA::Window"
 msgid "Solar sensor"
 msgstr "சூரிய சென்சார்"
 
-#: ../Window.cpp:1520
+#: ../Window.cpp:1533
 msgctxt "QGBA::Window"
 msgid "Increase solar level"
 msgstr "சூரிய அளவை அதிகரிக்கவும்"
 
-#: ../Window.cpp:1521
+#: ../Window.cpp:1534
 msgctxt "QGBA::Window"
 msgid "Decrease solar level"
 msgstr "சூரிய அளவைக் குறைக்கவும்"
 
-#: ../Window.cpp:1522
+#: ../Window.cpp:1535
 msgctxt "QGBA::Window"
 msgid "Brightest solar level"
 msgstr "பிரகாசமான சூரிய நிலை"
 
-#: ../Window.cpp:1525
+#: ../Window.cpp:1538
 msgctxt "QGBA::Window"
 msgid "Darkest solar level"
 msgstr "இருண்ட சூரிய நிலை"
 
-#: ../Window.cpp:1531
+#: ../Window.cpp:1544
 msgctxt "QGBA::Window"
 msgid "Brightness %1"
 msgstr "ஒளி %1"
 
-#: ../Window.cpp:1539
+#: ../Window.cpp:1552
 msgctxt "QGBA::Window"
 msgid "Game Boy Printer..."
 msgstr "கேம் பாய் பிரிண்டர் ..."
 
-#: ../Window.cpp:1548
+#: ../Window.cpp:1561
 msgctxt "QGBA::Window"
 msgid "BattleChip Gate..."
 msgstr "BATLECHIP வாயில் ..."
 
-#: ../Window.cpp:1552
+#: ../Window.cpp:1565
 msgctxt "QGBA::Window"
 msgid "Audio/&Video"
 msgstr "ஆடியோ/& வீடியோ"
 
-#: ../Window.cpp:1553
+#: ../Window.cpp:1566
 msgctxt "QGBA::Window"
 msgid "Frame size"
 msgstr "சட்ட அளவு"
 
-#: ../Window.cpp:1555
+#: ../Window.cpp:1568
 msgctxt "QGBA::Window"
 msgid "%1×"
 msgstr "%1 ×"
 
-#: ../Window.cpp:1596
+#: ../Window.cpp:1609
 msgctxt "QGBA::Window"
 msgid "Toggle fullscreen"
 msgstr "மாற்று முழுத்திரை"
 
-#: ../Window.cpp:1599
+#: ../Window.cpp:1612
 msgctxt "QGBA::Window"
 msgid "&Lock frame size"
 msgstr "& லாக் பிரேம் அளவு"
 
-#: ../Window.cpp:1612
+#: ../Window.cpp:1625
 msgctxt "QGBA::Window"
 msgid "Lock aspect ratio"
 msgstr "பூட்டு விகித விகிதம்"
 
-#: ../Window.cpp:1624
+#: ../Window.cpp:1637
 msgctxt "QGBA::Window"
 msgid "Force integer scaling"
 msgstr "முழு எண் அளவிடுதல்"
 
-#: ../Window.cpp:1636
+#: ../Window.cpp:1649
 msgctxt "QGBA::Window"
 msgid "Interframe blending"
 msgstr "இடைக்கால கலப்பு"
 
-#: ../Window.cpp:1645
+#: ../Window.cpp:1658
 msgctxt "QGBA::Window"
 msgid "Bilinear filtering"
 msgstr "பிலினியர் வடிகட்டுதல்"
 
-#: ../Window.cpp:1653
+#: ../Window.cpp:1666
 msgctxt "QGBA::Window"
 msgid "Frame&skip"
 msgstr "சட்டகம் & தவிர்க்கவும்"
 
-#: ../Window.cpp:1666
+#: ../Window.cpp:1679
 msgctxt "QGBA::Window"
 msgid "Mute"
-msgstr "முடக்கு"
+msgstr "ஒலிமுடக்கு"
 
-#: ../Window.cpp:1673
+#: ../Window.cpp:1686
 msgctxt "QGBA::Window"
 msgid "FPS target"
 msgstr "FPS இலக்கு"
 
-#: ../Window.cpp:1681
+#: ../Window.cpp:1694
 msgctxt "QGBA::Window"
 msgid "Native (59.7275)"
 msgstr "சொந்த (59.7275)"
 
-#: ../Window.cpp:1696
+#: ../Window.cpp:1709
 msgctxt "QGBA::Window"
 msgid "Take &screenshot"
 msgstr "திரைக்காட்சி எடுத்துக் கொள்ளுங்கள்"
 
-#: ../Window.cpp:1698
+#: ../Window.cpp:1711
 msgctxt "QGBA::Window"
 msgid "F12"
 msgstr "எஃப் 12"
 
-#: ../Window.cpp:1702
+#: ../Window.cpp:1715
 msgctxt "QGBA::Window"
 msgid "Record A/V..."
 msgstr "பதிவு a/v ..."
 
-#: ../Window.cpp:1703
+#: ../Window.cpp:1716
 msgctxt "QGBA::Window"
 msgid "Record GIF/WebP/APNG..."
 msgstr "Gif/webp/apng ஐ பதிவு செய்யுங்கள் ..."
 
-#: ../Window.cpp:1707
+#: ../Window.cpp:1720
 msgctxt "QGBA::Window"
 msgid "Video layers"
 msgstr "வீடியோ அடுக்குகள்"
 
-#: ../Window.cpp:1708
+#: ../Window.cpp:1721
 msgctxt "QGBA::Window"
 msgid "Audio channels"
 msgstr "ஆடியோ சேனல்கள்"
 
-#: ../Window.cpp:1710
+#: ../Window.cpp:1723
 msgctxt "QGBA::Window"
 msgid "Adjust layer placement..."
 msgstr "அடுக்கு வேலைவாய்ப்பை சரிசெய்யவும் ..."
 
-#: ../Window.cpp:1712
+#: ../Window.cpp:1727
+msgctxt "QGBA::Window"
+msgid "Hide &menu"
+msgstr "&மெனுவை மறை"
+
+#: ../Window.cpp:1732
 msgctxt "QGBA::Window"
 msgid "&Tools"
 msgstr "கருவிகள் (&t)"
 
-#: ../Window.cpp:1713
+#: ../Window.cpp:1733
 msgctxt "QGBA::Window"
 msgid "View &logs..."
 msgstr "பார்வை & பதிவுகள் ..."
 
-#: ../Window.cpp:1715
+#: ../Window.cpp:1735
 msgctxt "QGBA::Window"
 msgid "Game &overrides..."
 msgstr "விளையாட்டு & மேலெழுதும் ..."
 
-#: ../Window.cpp:1728
+#: ../Window.cpp:1748
 msgctxt "QGBA::Window"
 msgid "Game Pak sensors..."
 msgstr "கேம் பாக் சென்சார்கள் ..."
 
-#: ../Window.cpp:1741
+#: ../Window.cpp:1761
 msgctxt "QGBA::Window"
 msgid "&Cheats..."
 msgstr "& ஏமாற்றுக்காரர்கள் ..."
 
-#: ../Window.cpp:1746
+#: ../Window.cpp:1766
 msgctxt "QGBA::Window"
 msgid "Create forwarder..."
 msgstr "முன்னோக்கி உருவாக்கு ..."
 
-#: ../Window.cpp:1749
+#: ../Window.cpp:1769
 msgctxt "QGBA::Window"
 msgid "Settings..."
 msgstr "அமைப்புகள் ..."
 
-#: ../Window.cpp:1754
+#: ../Window.cpp:1774
 msgctxt "QGBA::Window"
 msgid "Open debugger console..."
 msgstr "திறந்த பிழைத்திருத்த கன்சோல் ..."
 
-#: ../Window.cpp:1756
+#: ../Window.cpp:1776
 msgctxt "QGBA::Window"
 msgid "Start &GDB server..."
 msgstr "தொடக்க & GDB சேவையகம் ..."
 
-#: ../Window.cpp:1743
+#: ../Window.cpp:1763
 msgctxt "QGBA::Window"
 msgid "Scripting..."
 msgstr "ச்கிரிப்டிங் ..."
 
-#: ../Window.cpp:1764
+#: ../Window.cpp:1784
 msgctxt "QGBA::Window"
 msgid "Game state views"
 msgstr "விளையாட்டு நிலை காட்சிகள்"
 
-#: ../Window.cpp:1765
+#: ../Window.cpp:1785
 msgctxt "QGBA::Window"
 msgid "View &palette..."
 msgstr "பார்வை & தட்டு ..."
 
-#: ../Window.cpp:1766
+#: ../Window.cpp:1786
 msgctxt "QGBA::Window"
 msgid "View &sprites..."
 msgstr "பார்வை & உருவங்கள் ..."
 
-#: ../Window.cpp:1767
+#: ../Window.cpp:1787
 msgctxt "QGBA::Window"
 msgid "View &tiles..."
 msgstr "பார்வை & ஓடுகள் ..."
 
-#: ../Window.cpp:1768
+#: ../Window.cpp:1788
 msgctxt "QGBA::Window"
 msgid "View &map..."
 msgstr "பார்வை & வரைபடம் ..."
 
-#: ../Window.cpp:1769
+#: ../Window.cpp:1789
 msgctxt "QGBA::Window"
 msgid "&Frame inspector..."
 msgstr "& பிரேம் இன்ச்பெக்டர் ..."
 
-#: ../Window.cpp:1770
+#: ../Window.cpp:1790
 msgctxt "QGBA::Window"
 msgid "View memory..."
 msgstr "நினைவகத்தைக் காண்க ..."
 
-#: ../Window.cpp:1771
+#: ../Window.cpp:1791
 msgctxt "QGBA::Window"
 msgid "Search memory..."
 msgstr "தேடல் நினைவகம் ..."
 
-#: ../Window.cpp:1772
+#: ../Window.cpp:1792
 msgctxt "QGBA::Window"
 msgid "View &I/O registers..."
 msgstr "காண்க & i/o பதிவேடுகள் ..."
 
-#: ../Window.cpp:1775
+#: ../Window.cpp:1795
 msgctxt "QGBA::Window"
 msgid "Log memory &accesses..."
 msgstr "பதிவு நினைவகம் & அணுகல்கள் ..."
 
-#: ../Window.cpp:1789
+#: ../Window.cpp:1809
 msgctxt "QGBA::Window"
 msgid "Record debug video log..."
 msgstr "பிழைத்திருத்த வீடியோ பதிவைப் பதிவுசெய்க ..."
 
-#: ../Window.cpp:1790
+#: ../Window.cpp:1810
 msgctxt "QGBA::Window"
 msgid "Stop debug video log"
 msgstr "பிழைத்திருத்த வீடியோ பதிவை நிறுத்துங்கள்"
 
-#: ../Window.cpp:1794
+#: ../Window.cpp:1814
 msgctxt "QGBA::Window"
 msgid "Exit fullscreen"
 msgstr "முழுத்திரை வெளியேறவும்"
 
-#: ../Window.cpp:1796
+#: ../Window.cpp:1816
 msgctxt "QGBA::Window"
 msgid "GameShark Button (held)"
 msgstr "கேம்சார்க் பொத்தான் (நடைபெற்றது)"
 
-#: ../Window.cpp:1802
+#: ../Window.cpp:1822
 msgctxt "QGBA::Window"
 msgid "Autofire"
 msgstr "ஆட்டோஃபயர்"
 
-#: ../Window.cpp:1803
+#: ../Window.cpp:1823
 msgctxt "QGBA::Window"
 msgid "Autofire A"
 msgstr "ஆட்டோஃபயர் a"
 
-#: ../Window.cpp:1808
+#: ../Window.cpp:1828
 msgctxt "QGBA::Window"
 msgid "Autofire B"
 msgstr "ஆட்டோஃபயர் ஆ"
 
-#: ../Window.cpp:1813
+#: ../Window.cpp:1833
 msgctxt "QGBA::Window"
 msgid "Autofire L"
 msgstr "ஆட்டோஃபைர் எல்"
 
-#: ../Window.cpp:1818
+#: ../Window.cpp:1838
 msgctxt "QGBA::Window"
 msgid "Autofire R"
 msgstr "தன்னியக்க ஆர்"
 
-#: ../Window.cpp:1823
+#: ../Window.cpp:1843
 msgctxt "QGBA::Window"
 msgid "Autofire Start"
 msgstr "தன்னியக்க தொடக்க"
 
-#: ../Window.cpp:1828
+#: ../Window.cpp:1848
 msgctxt "QGBA::Window"
 msgid "Autofire Select"
 msgstr "ஆட்டோஃபயர் தேர்ந்தெடுக்கவும்"
 
-#: ../Window.cpp:1833
+#: ../Window.cpp:1853
 msgctxt "QGBA::Window"
 msgid "Autofire Up"
 msgstr "ஆட்டோஃபைர் அப்"
 
-#: ../Window.cpp:1838
+#: ../Window.cpp:1858
 msgctxt "QGBA::Window"
 msgid "Autofire Right"
 msgstr "தன்னியக்க சரியானது"
 
-#: ../Window.cpp:1843
+#: ../Window.cpp:1863
 msgctxt "QGBA::Window"
 msgid "Autofire Down"
 msgstr "ஆட்டோஃபயர் கீழே"
 
-#: ../Window.cpp:1848
+#: ../Window.cpp:1868
 msgctxt "QGBA::Window"
 msgid "Autofire Left"
 msgstr "ஆட்டோஃபயர் இடது"
 
-#: ../Window.cpp:2053
+#: ../Window.cpp:2073
 msgctxt "QGBA::Window"
 msgid "Clear"
 msgstr "தெளிவான"

@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (NeoStumbler)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-20 18:13+0200\n"
-"PO-Revision-Date: 2025-06-20 23:08\n"
+"POT-Creation-Date: 2026-03-01 06:02+0200\n"
+"PO-Revision-Date: 2026-03-01 10:34\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/neostumbler/neostumbler/ta/>\n"
 "Language: ta\n"
@@ -12,17 +12,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 #, java-printf-format
 msgctxt "app_name"
 msgid "NeoStumbler"
-msgstr "நெட்ச்டம்ப்ளர்"
+msgstr "NetStumbler"
 
 #, java-printf-format
 msgctxt "author"
 msgid "Jaakko Malkki"
-msgstr "சாக்கோ மல்கி"
+msgstr "சாக்கோ மல்க்கி"
 
 #, java-printf-format
 msgctxt "ok"
@@ -217,12 +217,12 @@ msgstr "ச்கேன் செய்வதை நிறுத்துங்�
 #, java-printf-format
 msgctxt "scanning_status_active"
 msgid "Scanning <annotation style=\"status\">active</annotation>"
-msgstr "ச்கேனிங் <சிறுகுறிப்பு பாணி = \"நிலை\"> செயலில் </சிறுகுறிப்பு>"
+msgstr "ச்கேனிங் <annotation style=\"status\">செயலில்</annotation>"
 
 #, java-printf-format
 msgctxt "scanning_status_not_active"
 msgid "Scanning <annotation style=\"status\">not active</annotation>"
-msgstr "ச்கேனிங் <சிறுகுறிப்பு பாணி = \"நிலை\"> செயலில் இல்லை </சிறுகுறிப்பு>"
+msgstr "ச்கேனிங் <annotation style=\"status\">செயலில் இல்லை </annotation>"
 
 #, java-printf-format
 msgctxt "delete_report"
@@ -252,6 +252,11 @@ msgid "Failed to upload reports, because no endpoint has been configured"
 msgstr ""
 "அறிக்கைகளை பதிவேற்றுவதில் தோல்வி, ஏனெனில் எந்த இறுதிப் புள்ளியும் "
 "கட்டமைக்கப்படவில்லை"
+
+#, java-printf-format
+msgctxt "distance_to_estimated_location"
+msgid "Distance to the estimated location: %d m"
+msgstr "மதிப்பிடப்பட்ட இடத்திற்கான தூரம்: %d மீ"
 
 #, java-printf-format
 msgctxt "speed_metres_per_second"
@@ -302,6 +307,16 @@ msgstr "பெக்கான் வகை: %s"
 msgctxt "beacon_id"
 msgid "ID%d: %s"
 msgstr "அடையாளம் %d: %s"
+
+#, java-printf-format
+msgctxt "beacon_type_ibeacon"
+msgid "iBeacon"
+msgstr "iBeacon"
+
+#, java-printf-format
+msgctxt "beacon_type_altbeacon"
+msgid "AltBeacon"
+msgstr "AltBeacon"
 
 #, java-printf-format
 msgctxt "report_upload_notification_channel_name"
@@ -384,7 +399,7 @@ msgstr "தரவு ஏற்றுமதி…"
 #, java-printf-format
 msgctxt "export_data"
 msgid "Export data"
-msgstr "தரவு ஏற்றுமதி"
+msgstr "தரவை ஏற்றுமதி"
 
 #, java-printf-format
 msgctxt "export_no_file_chosen"
@@ -481,7 +496,7 @@ msgid ""
 msgstr ""
 "மொசில்லா இருப்பிட பணி மூடப்பட்டு தரவு சமர்ப்பிப்புகளை இனி ஏற்காது. எம்.எல்.எச் -க்கு மாற்றாக, நீங்கள் MLS உடன் இணக்கமான சேவையை வழங்கும் BEACONDB க்கு தரவை அனுப்பலாம் \n"
 "\n"
-"BEACONDB இன்னும் வளர்ச்சியில் உள்ளது என்பதை நினைவில் கொள்க, இது உங்கள் தரவு எவ்வாறு கையாளப்படுகிறது என்பதை பாதிக்கிறது. மேலும் தகவலுக்கு நீங்கள் <சிறுகுறிப்பு இணைப்பு = \"தனியுரிமை_போலிசி\"> தனியுரிமைக் கொள்கை </சிறுகுறிப்பு> ஐப் படிக்கலாம் \n"
+"BEACONDB இன்னும் வளர்ச்சியில் உள்ளது என்பதை நினைவில் கொள்க, இது உங்கள் தரவு எவ்வாறு கையாளப்படுகிறது என்பதை பாதிக்கிறது. மேலும் தகவலுக்கு நீங்கள் <annotation link=\"privacy_policy\">தனியுரிமைக் கொள்கை</annotation> ஐப் படிக்கலாம் \n"
 "\n"
 "நீங்கள் பீக்காண்ட்பை இறுதிப் புள்ளியாக அமைக்க விரும்புகிறீர்களா? இது பின்னர் அமைப்புகளில் கட்டமைக்கப்படலாம்"
 
@@ -715,15 +730,11 @@ msgid ""
 "\n"
 "The effectiveness of passive data collection will depend on your device type, the other apps you're using, and whether you have fused location provider available. \n"
 "\n"
-"Note that passive data collection does not work with Bluetooth beacons. \n"
-"\n"
 "Do you want to enable passive data collection?"
 msgstr ""
 "செயலற்ற தரவு சேகரிப்பு பிற பயன்பாடுகளால் கோரப்பட்ட தரவைப் பயன்படுத்தி குறைந்தபட்ச பேட்டரி தாக்கத்துடன் பின்னணியில் அறிக்கைகளை உருவாக்குகிறது. \n"
 "\n"
 "செயலற்ற தரவு சேகரிப்பின் செயல்திறன் உங்கள் சாதன வகை, நீங்கள் பயன்படுத்தும் பிற பயன்பாடுகள் மற்றும் இருப்பிட வழங்குநரை இணைத்துள்ளீர்களா என்பதைப் பொறுத்தது. \n"
-"\n"
-"செயலற்ற தரவு சேகரிப்பு ஊடலை பீக்கான்களுடன் வேலை செய்யாது என்பதை நினைவில் கொள்க. \n"
 "\n"
 "செயலற்ற தரவு சேகரிப்பை இயக்க விரும்புகிறீர்களா?"
 
@@ -790,9 +801,29 @@ msgid "System default language"
 msgstr "கணினி இயல்புநிலை மொழி"
 
 #, java-printf-format
+msgctxt "map_data_sources"
+msgid "Map data sources"
+msgstr "வரைபட தரவு ஆதாரங்கள்"
+
+#, java-printf-format
 msgctxt "map_tile_source"
 msgid "Map tile source"
 msgstr "வரைபட ஓடு மூல"
+
+#, java-printf-format
+msgctxt "map_tile_source_custom_title"
+msgid "Custom"
+msgstr "தனிப்பயன்"
+
+#, java-printf-format
+msgctxt "map_tile_source_custom_style_url"
+msgid "Custom map style URL"
+msgstr "தனிப்பயன் வரைபட நடை முகவரி"
+
+#, java-printf-format
+msgctxt "map_show_coverage_layer"
+msgid "Show coverage layer"
+msgstr "கவரேச் லேயரைக் காட்டு"
 
 #, java-printf-format
 msgctxt "show_my_location"
@@ -826,20 +857,22 @@ msgstr "நிலை அறிவிப்பைக் காண்பிப்�
 #, java-printf-format
 msgctxt "permission_rationale_background_location_quick_settings"
 msgid ""
-"Starting scanning from the quick settings needs access to location in the "
-"background"
+"Starting scanning from the quick settings needs access to location in the background.\n"
+"\n"
+"Note that this is a restriction imposed by the Android operating system. Your location is not accessed in the background if you do not enable passive or automatic scanning"
 msgstr ""
-"விரைவான அமைப்புகளிலிருந்து ச்கேன் செய்யத் தொடங்குவது பின்னணியில் "
-"இருப்பிடத்தை அணுக வேண்டும்"
+"விரைவு அமைப்புகளில் இருந்து வருடு செய்வதைத் தொடங்க, பின்னணியில் உள்ள இருப்பிடத்திற்கான அணுகல் தேவை. \n"
+"\n"
+"இது ஆண்ட்ராய்டு இயங்குதளத்தால் விதிக்கப்பட்ட கட்டுப்பாடு என்பதை நினைவில் கொள்ளவும். செயலற்ற அல்லது தானியங்கி ச்கேனிங்கை நீங்கள் இயக்கவில்லை என்றால், பின்னணியில் உங்கள் இருப்பிடம் அணுகப்படாது"
 
 #, java-printf-format
 msgctxt "permission_rationale_background_location_passive_scan"
 msgid ""
-"Receiving location updates when the app is not active requires access to "
-"location in the background"
+"Passive data collection requires access to location in the background to "
+"create reports when the app is not active"
 msgstr ""
-"பயன்பாடு செயலில் இல்லாதபோது இருப்பிட புதுப்பிப்புகளைப் பெறுவதற்கு "
-"பின்னணியில் இருப்பிடத்தை அணுக வேண்டும்"
+"செயலற்ற தரவு சேகரிப்புக்கு, ஆப்ச் செயலில் இல்லாதபோது அறிக்கைகளை உருவாக்க, "
+"பின்னணியில் உள்ள இருப்பிடத்திற்கான அணுகல் தேவை"
 
 #, java-printf-format
 msgctxt "permission_rationale_location_map"
@@ -891,6 +924,21 @@ msgstr "சரி"
 msgctxt "troubleshooting_not_ok"
 msgid "Not ok"
 msgstr "சரி இல்லை"
+
+#, java-printf-format
+msgctxt "geocoder_settings_title"
+msgid "Geocoder"
+msgstr "புவிசார் குறியீடு"
+
+#, java-printf-format
+msgctxt "geocoder_default_title"
+msgid "Default"
+msgstr "இயல்புநிலை"
+
+#, java-printf-format
+msgctxt "geocoder_disabled_title"
+msgid "Disabled"
+msgstr "முடக்கப்பட்டது"
 
 #, java-printf-format
 msgctxt "use_dynamic_color_ui"
@@ -1018,3 +1066,13 @@ msgstr "ஒரு பிழையைப் புகாரளிக்கவு�
 msgctxt "update_translations_button"
 msgid "Update translations"
 msgstr "மொழிபெயர்ப்புகளைப் புதுப்பிக்கவும்"
+
+#, java-printf-format
+msgctxt "third_party_licenses"
+msgid "Third-party licenses"
+msgstr "மூன்றாம் தரப்பு உரிமங்கள்"
+
+#, java-printf-format
+msgctxt "privacy_policy"
+msgid "Privacy policy"
+msgstr "தனியுரிமைக் கொள்கை"
