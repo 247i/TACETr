@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Finamp)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-31 21:47+0200\n"
-"PO-Revision-Date: 2025-09-04 23:12\n"
+"POT-Creation-Date: 2026-03-01 09:54+0200\n"
+"PO-Revision-Date: 2026-03-08 22:06\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/finamp/finamp/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 #. App name, possibly translated
 #, icu-message-format
@@ -424,11 +424,11 @@ msgstr ""
 #, icu-message-format
 msgctxt "startMixNoTracksGenre"
 msgid ""
-"Long-press an genre to add or remove it from the mix builder before starting"
-" a mix"
+"Long-press a genre to add or remove it from the mix builder before starting "
+"a mix"
 msgstr ""
-"கலவையைத் தொடங்குவதற்கு முன் அதை மிக்ச் பில்டரிலிருந்து சேர்க்க அல்லது அகற்ற "
-"ஒரு வகையை நீண்ட அழுத்தவும்"
+"கலவையைத் தொடங்கும் முன், மிக்ச் பில்டரில் இருந்து அதைச் சேர்க்க அல்லது "
+"அகற்ற, ஒரு வகையை நீண்ட நேரம் அழுத்தவும்"
 
 #, icu-message-format
 msgctxt "music"
@@ -449,6 +449,11 @@ msgstr "பிடித்த"
 msgctxt "favorites"
 msgid "Favorites"
 msgstr "பிடித்தவை"
+
+#, icu-message-format
+msgctxt "shuffleSome"
+msgid "Shuffle some"
+msgstr "சிலவற்றை கலக்கவும்"
 
 #, icu-message-format
 msgctxt "shuffleAll"
@@ -600,9 +605,9 @@ msgid ""
 "ago} yesterday{yesterday} days{{value, plural, =1{1 day ago} other{{value} "
 "days ago}}} other{value}}"
 msgstr ""
-"{type, select, just_now{just now} minutes{{value} நிமையம் முன்பு} "
-"hours{{value} ம முன்பு} yesterday{yesterday} days{{value, plural, =1{1 day "
-"ago} other{{value} நாள்கள் முன்பு}}} other{value}}"
+"{type, select, just_now{இப்போது} minutes{{value} நிமையம் முன்பு} "
+"hours{{value} ம முன்பு} yesterday{நேற்று} days{{value, plural, =1{1 நாள் "
+"முன்பு} other{{value} நாள்கள் முன்பு}}} other{value}}"
 
 #, icu-message-format
 msgctxt "syncDownloadedPlaylists"
@@ -700,9 +705,9 @@ msgid ""
 "playlist{playlist} artist{artist} genre{genre} track{track} library{library}"
 " other{item}} '{itemName}' from this device?"
 msgstr ""
-"இந்த சாதனத்தில் இருந்து {itemType, select,album {album}playlist {playlist} "
-"artist {artist}genre {genre}track {track} library {library} other {item}} "
-"'{itemName}'ஐ நீக்க விரும்புகிறீர்களா?"
+"இந்த சாதனத்தில் இருந்து {itemType, select,album {ஆல்பம்}playlist "
+"{பிளேலிஸ்ட்} artist {கலைஞர்}genre {இன வகை}track {பாடல்} library {நூலகம்} "
+"other {உருப்படி}} '{itemName}'ஐ நீக்க விரும்புகிறீர்களா?"
 
 #. Shown in the confirmation dialog for deleting downloaded media from the
 #. local device.
@@ -752,29 +757,50 @@ msgstr "கலக்கு"
 #, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "shuffleCountButton"
 msgid "Shuffle ({count,plural,=1{{count} Track} other{{count} Tracks}})"
-msgstr ""
-"கலக்கு ({எண்ணிக்கை, பன்மை, = 1 {{count} டிராக்} பிற {{count} தடங்கள்}})"
+msgstr "கலக்கு ({count,plural,=1{{count} டிராக்} other{{count} தடங்கள்}})"
 
 #. Label for the playback action page that contains all actions related to
-#. playing in order
+#. moving tracks within the queue
 #, icu-message-format
-msgctxt "playbackActionPagePlay"
+msgctxt "playbackActionPageMoveWithinQueue"
+msgid "Move Within Queue"
+msgstr "வரிசைக்குள் நகர்த்தவும்"
+
+#. Label for the playback action page that contains all actions of the normal
+#. track menu, like starting a new queue or duplicating the track within the
+#. existing queue
+#, icu-message-format
+msgctxt "playbackActionPageRegularTrackOptions"
 msgid "Play"
-msgstr "விளையாடுங்கள்"
+msgstr "விளையாடு"
 
 #. Label for the playback action page that contains all actions related to
-#. playing shuffled
+#. starting a new queue
 #, icu-message-format
-msgctxt "playbackActionPageShuffle"
-msgid "Shuffle"
-msgstr "கலக்கு"
+msgctxt "playbackActionPageNewQueue"
+msgid "New Queue"
+msgstr "புதிய வரிசை"
 
 #. Label for the playback action page that contains all actions related to
-#. playing shuffled albums
+#. playing tracks directly after the current one
 #, icu-message-format
-msgctxt "playbackActionPageShuffleAlbums"
-msgid "Shuffle Albums"
-msgstr "கலக்கு ஆல்பங்கள்"
+msgctxt "playbackActionPageNext"
+msgid "Play Next"
+msgstr "அடுத்து விளையாடு"
+
+#. Label for the playback action page that contains all actions related to
+#. appending tracks to Next Up
+#, icu-message-format
+msgctxt "playbackActionPageNextUp"
+msgid "Append Next"
+msgstr "அடுத்து இணைக்கவும்"
+
+#. Label for the playback action page that contains all actions related to
+#. appending tracks at the end of the queue
+#, icu-message-format
+msgctxt "playbackActionPageAppendToQueue"
+msgid "Play Last"
+msgstr "கடைசியாக விளையாடு"
 
 #, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "trackCount"
@@ -800,7 +826,8 @@ msgstr ""
 #, case-insensitive, icu-message-format, placeholders:$ITEMTYPE$
 msgctxt "editItemTitle"
 msgid "Edit {itemType, select, playlist{Playlist} other{}}"
-msgstr "{itemType, select, playlist{Playlist} other{உருப்படி}} ஐ திருத்தவும்"
+msgstr ""
+"{itemType, select, playlist{பிளேலிஸ்ட்} other{உருப்படி}} ஐ திருத்தவும்"
 
 #, icu-message-format
 msgctxt "required"
@@ -811,6 +838,18 @@ msgstr "தேவை"
 msgctxt "updateButtonLabel"
 msgid "Update"
 msgstr "புதுப்பிப்பு"
+
+#. Label for the button that updates the playlist on the edit playlist screen
+#, icu-message-format
+msgctxt "updatePlaylistButtonLabel"
+msgid "Update Playlist"
+msgstr "பிளேலிச்ட்டைப் புதுப்பிக்கவும்"
+
+#. Text shown while the changes to a playlist are being saved
+#, icu-message-format
+msgctxt "savingChanges"
+msgid "Saving changes…"
+msgstr "மாற்றங்களைச் சேமிக்கிறது…"
 
 #, icu-message-format
 msgctxt "playlistUpdated"
@@ -1224,7 +1263,7 @@ msgid ""
 "album artists."
 msgstr ""
 "ஆல்பம் கலைஞர்களிடமிருந்து வேறுபடாவிட்டால் ஆல்பம் திரையில் டிராக் கலைஞர்களைக்"
-" காண்பிக்கலாமா?"
+" காண்பிக்கலாமா."
 
 #, icu-message-format
 msgctxt "autoSwitchItemCurationTypeTitle"
@@ -1294,6 +1333,84 @@ msgctxt "dark"
 msgid "Dark"
 msgstr "இருண்ட"
 
+#. Title of the accent color setting
+#, icu-message-format
+msgctxt "accentColor"
+msgid "Accent Color"
+msgstr "உச்சரிப்பு நிறம்"
+
+#. Title for the accent color picker sheet
+#, icu-message-format
+msgctxt "accentColorTitle"
+msgid "Pick an Accent Color"
+msgstr "உச்சரிப்பு நிறத்தைத் தேர்ந்தெடுக்கவும்"
+
+#. Title of the System Accent Color setting.
+#, icu-message-format
+msgctxt "systemAccentColor"
+msgid "Use System Accent"
+msgstr "கணினி உச்சரிப்பைப் பயன்படுத்தவும்"
+
+#. Text under the AccentColorTitle which is only visible when the system color
+#. is enabled since the system color will be prioritized over custom accent
+#. color
+#, icu-message-format
+msgctxt "systemAccentColorHasPriorityInfo"
+msgid "Custom Accent Color disabled because System Accent is currently in use"
+msgstr ""
+"கணினி உச்சரிப்பு தற்போது பயன்பாட்டில் இருப்பதால் தனிப்பயன் உச்சரிப்பு வண்ணம்"
+" முடக்கப்பட்டுள்ளது"
+
+#. Toggles the Finamp icon between classic and it being monochromic. This does
+#. not change the outside-app-icon
+#, icu-message-format
+msgctxt "useMonochromeIcon"
+msgid "Use Monochrome Logo"
+msgstr "மோனோக்ரோம் லோகோவைப் பயன்படுத்தவும்"
+
+#. Subtitle for the toggle that switches the Finamp icon between classic and
+#. it being monochromic.
+#, icu-message-format
+msgctxt "useMonochromeIconSubtitle"
+msgid "This only affect the icon within the app, not the launcher icon."
+msgstr "இது பயன்பாட்டில் உள்ள ஐகானை மட்டுமே பாதிக்கும், துவக்கி ஐகானை அல்ல."
+
+#, icu-message-format
+msgctxt "defaultWord"
+msgid "Default"
+msgstr "இயல்புநிலை"
+
+#, icu-message-format
+msgctxt "useDefaultButton"
+msgid "Reset to Default Accent Color"
+msgstr "இயல்புநிலை உச்சரிப்பு நிறத்திற்கு மீட்டமைக்கவும்"
+
+#. Label for a text field where the user can manually enter a color in
+#. hexadecimal format
+#, icu-message-format
+msgctxt "colorCode"
+msgid "Color Code (Hex)"
+msgstr "வண்ணக் குறியீடு (எக்ச்)"
+
+#. Hint text for the color code input field. Don't translate 'coffee', unless
+#. the translation is also a valid hex color code.
+#, icu-message-format
+msgctxt "colorCodeHint"
+msgid "e.g. #FFFFFF or #coffee"
+msgstr "எ.கா. #FFFFFF அல்லது #காபி"
+
+#, icu-message-format
+msgctxt "save"
+msgid "Save"
+msgstr "சேமி"
+
+#. Snackbar message shown when the user tries to save an invalid hex color
+#. code
+#, icu-message-format
+msgctxt "invalidColorCode"
+msgid "Invalid color code"
+msgstr "தவறான வண்ணக் குறியீடு"
+
 #, icu-message-format
 msgctxt "tabs"
 msgid "Tabs"
@@ -1319,11 +1436,6 @@ msgstr "ஆம்"
 msgctxt "noButtonLabel"
 msgid "No"
 msgstr "இல்லை"
-
-#, icu-message-format
-msgctxt "setSleepTimer"
-msgid "Pause Playback After"
-msgstr "பின்னணி பின்னணி"
 
 #, icu-message-format
 msgctxt "hours"
@@ -1370,13 +1482,14 @@ msgstr "தூக்க நேரங்குறிகருவி"
 #, case-insensitive, icu-message-format, placeholders:$TIME$
 msgctxt "sleepTimerRemainingTime"
 msgid "Sleeping in {time,plural,=1{<1 minute} other{{time} minutes}}"
-msgstr "{நேரம், பன்மை, = 1 {<1 நிமிடம்} பிற {{time} நிமிடங்கள்}}"
+msgstr "உறக்கம் {time,plural,=1{<1 நிமையம்} other{{time} நிமையங்கள்}}"
 
 #. Button label for sleep timer. {time} is the amount of minutes left.
 #, case-insensitive, icu-message-format, placeholders:$TIME$
 msgctxt "sleepTimerRemainingTracks"
 msgid "Sleeping {time,plural,=1{after this track} other{in {time} tracks}}"
-msgstr "தூக்கம் {time, plural, =1{after this track} other{{time} தடங்கள்}}"
+msgstr ""
+"தூக்கம் {time, plural, =1{இந்தப் பாடலுக்குப் பிறகு} other{{time} தடங்கள்}}"
 
 #, icu-message-format
 msgctxt "addToPlaylistTooltip"
@@ -1627,12 +1740,18 @@ msgctxt "addToMix"
 msgid "Add To Mix"
 msgstr "கலக்க சேர்க்கவும்"
 
+#. Menu label for starting a radio from a playlist, album, etc.
+#, icu-message-format
+msgctxt "startRadio"
+msgid "Start Radio"
+msgstr "வானொலியைத் தொடங்கு"
+
 #, case-insensitive, icu-message-format, placeholders:$COUNT$
 msgctxt "redownloadedItems"
 msgid ""
 "{count,plural, =0{No redownloads needed.} =1{Redownloaded {count} item} "
 "other{Redownloaded {count} items}}"
-msgstr "{count, plural, =0 {No redownloads needed.} other {count}}"
+msgstr "{count, plural, =0 {Redownloads தேவையில்லை} other {Redownloads தேவை}}"
 
 #, icu-message-format
 msgctxt "bufferDuration"
@@ -1641,11 +1760,8 @@ msgstr "இடையக காலம்"
 
 #, icu-message-format
 msgctxt "bufferDurationSubtitle"
-msgid ""
-"The maximum duration that should be buffered, in seconds. Requires a "
-"restart."
-msgstr ""
-"சில நொடிகளில் இடையகப்படுத்தப்பட வேண்டிய அதிகபட்ச காலம். மறுதொடக்கம் தேவை."
+msgid "The duration that should be buffered, in seconds. Requires a restart."
+msgstr "பஃபர் செய்யப்பட வேண்டிய கால அளவு, நொடிகளில். மறுதொடக்கம் தேவை."
 
 #, icu-message-format
 msgctxt "bufferDisableSizeConstraintsTitle"
@@ -1670,8 +1786,8 @@ msgstr "இடையக அளவு"
 
 #, icu-message-format
 msgctxt "bufferSizeSubtitle"
-msgid "The maximum size of the buffer in MB. Requires a restart"
-msgstr "MB இல் இடையகத்தின் அதிகபட்ச அளவு. மறுதொடக்கம் தேவை"
+msgid "The size of the buffer in MB. Requires a restart"
+msgstr "MB இல் இடையகத்தின் அளவு. மறுதொடக்கம் தேவை"
 
 #, icu-message-format
 msgctxt "language"
@@ -1726,11 +1842,13 @@ msgctxt "stopAndClearQueue"
 msgid "Stop playback and clear queue"
 msgstr "பிளேபேக் மற்றும் தெளிவான வரிசையை நிறுத்துங்கள்"
 
+#. Label for a button that adds the current queue to an existing or new
+#. playlist.
 #. Label for a button that creates a new playlist from the current queue.
 #, icu-message-format
 msgctxt "createPlaylistFromCurrentQueue"
-msgid "Save Queue as Playlist"
-msgstr "வரிசையை பிளேலிச்ட்டாக சேமிக்கவும்"
+msgid "Save Queue to Playlist"
+msgstr "வரிசையை பிளேலிச்ட்டில் சேமிக்கவும்"
 
 #. Prefix shown before the name of the main queue source, like the album or
 #. playlist that was used to start playback. Example: "Playing from {My Nice
@@ -1761,6 +1879,13 @@ msgctxt "shuffleNext"
 msgid "Shuffle next"
 msgstr "அடுத்து கலக்கவும்"
 
+#. Used for shuffling some tracks to the "Next Up" queue at the first
+#. position, to play right after the current track finishes playing
+#, icu-message-format
+msgctxt "shuffleSomeNext"
+msgid "Shuffle some next"
+msgstr "அடுத்து சிலவற்றை கலக்கவும்"
+
 #. Used for shuffling a list (album, playlist, etc.) to the end of the "Next
 #. Up" queue, to play after all prior tracks from Next Up have played
 #, icu-message-format
@@ -1768,12 +1893,47 @@ msgctxt "shuffleToNextUp"
 msgid "Shuffle to Next Up"
 msgstr "அடுத்ததாக கலக்கவும்"
 
+#. Used for shuffling some tracks to the end of the "Next Up" queue, to play
+#. after all prior tracks from Next Up have played
+#, icu-message-format
+msgctxt "shuffleSomeToNextUp"
+msgid "Shuffle some to Next Up"
+msgstr "சிலவற்றை அடுத்ததாக மாற்றவும்"
+
 #. Used for shuffling a list (album, playlist, etc.) to the end of the regular
 #. queue, to play after all prior tracks from the queue have played
 #, icu-message-format
 msgctxt "shuffleToQueue"
-msgid "Shuffle to queue"
-msgstr "வரிசையில் கலக்கவும்"
+msgid "Shuffle to Queue"
+msgstr "வரிசைக்கு மாற்றவும்"
+
+#. Used for shuffling some tracks to the end of the regular queue, to play
+#. after all prior tracks from the queue have played
+#, icu-message-format
+msgctxt "shuffleSomeToQueue"
+msgid "Shuffle some to Queue"
+msgstr "சிலவற்றை வரிசைக்கு மாற்றவும்"
+
+#. Used for moving a track to the "Next Up" queue at the first position, to
+#. play right after the current track finishes playing
+#, icu-message-format
+msgctxt "movePlayNext"
+msgid "Play next"
+msgstr "அடுத்து விளையாடு"
+
+#. Used for moving a track to the "Next Up" queue at the end, to play after
+#. all prior tracks from Next Up have played
+#, icu-message-format
+msgctxt "moveAddToNextUp"
+msgid "Move to Next Up"
+msgstr "அடுத்ததாக நகர்த்தவும்"
+
+#. Used for moving a track to the end of the queue, to play after all prior
+#. tracks from the queue have played
+#, icu-message-format
+msgctxt "moveAddToQueue"
+msgid "Move to end"
+msgstr "முடிவுக்கு நகர்த்தவும்"
 
 #. A confirmation message that is shown after successfully adding a track to
 #. the front of the "Next Up" queue
@@ -1783,8 +1943,8 @@ msgid ""
 "{type, select, track{Track} album{Album} artist{Artist} playlist{Playlist} "
 "genre{Genre} other{Item}} will play next"
 msgstr ""
-"{type, select, track{Track} album{Album} artist{Artist} playlist{Playlist} "
-"genre{Genre} other{Item}} அடுத்ததாக இயக்கப்படும்"
+"{type, select, track{பாடல்} album{ஆல்பம்} artist{கலைஞர்} "
+"playlist{பாடல்பட்டி} genre{வரைபாடு} other{உருப்படி}} அடுத்ததாக இயக்கப்படும்"
 
 #. A confirmation message that is shown after successfully adding a track to
 #. the end of the "Next Up" queue
@@ -1792,10 +1952,11 @@ msgstr ""
 msgctxt "confirmAddToNextUp"
 msgid ""
 "Added {type, select, track{Track} album{album} artist{artist} "
-"playlist{playlist} genre{genre} other{item}} to Next Up"
+"playlist{playlist} genre{genre} disc{disc} other{item}} to Next Up"
 msgstr ""
-"சேர்க்கப்பட்டது {type, select, track{Track} album{album} artist{artist} "
-"playlist{playlist} genre{genre} other {item}}"
+"{வகை, தேர்ந்தெடு, ட்ராக்{Track} ஆல்பம்{album} கலைஞர்{artist} "
+"பிளேலிச்ட்{playlist} வகை{genre} டிச்க்{disc} வேறு{item}} அடுத்ததாக "
+"சேர்க்கப்பட்டது"
 
 #. A confirmation message that is shown after successfully adding a track to
 #. the end of the regular queue
@@ -1803,10 +1964,10 @@ msgstr ""
 msgctxt "confirmAddToQueue"
 msgid ""
 "Added {type, select, track{track} album{album} artist{artist} "
-"playlist{playlist} genre{genre} other{item}} to queue"
+"playlist{playlist} genre{genre} disc{disc} other{item}} to queue"
 msgstr ""
-"{type, select, track{track} album{album} artist{artist} playlist{playlist} "
-"genre{genre} other{item}} வரிசையில் சேர்க்கப்பட்டது"
+"வரிசையில் {வகை, தேர்ந்தெடு, தட{track} ஆல்பம்{album} கலைஞர்{artist} "
+"பிளேலிச்ட்{playlist} வகை{genre} டிச்க்{disc} மற்ற{item}} சேர்க்கப்பட்டது"
 
 #. A confirmation message that is shown after successfully shuffling a list
 #. (album, playlist, etc.) to the front of the "Next Up" queue
@@ -1870,6 +2031,19 @@ msgctxt "tracksFormerNextUp"
 msgid "Tracks added via Next Up"
 msgstr "தடங்கள் அடுத்தது வழியாக சேர்க்கப்பட்டுள்ளன"
 
+#. Title for the queue source when the user is playing a track added via radio
+#, icu-message-format
+msgctxt "radio"
+msgid "Radio"
+msgstr "வானொலி"
+
+#. Suffix added to a queue source when playing a radio track. Example: "Never
+#. Gonna Give You Up - Radio"
+#, case-insensitive, icu-message-format, placeholders:$RADIOSOURCE$
+msgctxt "radioForItem"
+msgid "{radioSource} - Radio"
+msgstr "{radioSource} - வானொலி"
+
 #. Title for the queue source for tracks were previously in the queue before
 #. an app restart and have been reloaded
 #, icu-message-format
@@ -1887,15 +2061,12 @@ msgid ""
 "favorites{Favorites} allTracks{All Tracks} filteredList{Tracks} genre{Genre}"
 " artist{Artist} track{Track} nextUpAlbum{Album in Next Up} "
 "nextUpPlaylist{Playlist in Next Up} nextUpArtist{Artist in Next Up} "
-"nextUpGenre{Genre in Next Up} remoteClient{a Remote Client} other{}}"
+"nextUpGenre{Genre in Next Up} remoteClient{a Remote Client} radio{Radio} "
+"other{}}"
 msgstr ""
-"{source, select, album{Album} playlist{Playlist} trackMix{Track Mix} "
-"artistMix{Artist Mix} albumMix{Album Mix} genreMix{Genre Mix} "
-"favorites{Favorites} allTracks{All Tracks} filteredList{Tracks} genre{Genre}"
-" artist{Artist} track{Track} nextUpAlbum{அடுத்தது - ஆல்பம்} "
-"nextUpPlaylist{அடுத்தது - பாடல்பட்டி} nextUpArtist{அடுத்தது - கலைஞர்} "
-"nextUpGenre{அடுத்தது - வகை} remoteClient{Album in Next Up} other{}} "
-"இலிருந்து இயக்கப்படுகிறது"
+"{source, தேர்ந்தெடுத்து, ஆல்பம் nextUpAlbum{Album} nextUpPlaylist{Playlist} "
+"nextUpArtist{Track Mix} nextUpGenre{Artist Mix} remoteClient{Album Mix} "
+"radio{Genre Mix} மற்றொன்று{}}"
 
 #. Title for the queue source when the user is shuffling all tracks. Should be
 #. capitalized (if applicable) to be more recognizable throughout the UI
@@ -2417,9 +2588,9 @@ msgid ""
 "this artist in this genre} artist{ by this artist} genre{ in this genre} "
 "other{}}."
 msgstr ""
-"இந்த {itemType, select, artistGenreFilter{ by this artist in this genre} "
-"artist{ by this artist} genre{ in this genre} other{}} எந்த பாடலையும் "
-"நீங்கள் கேட்டிருக்கவில்லை."
+"இந்த {itemType, select, artistGenreFilter{கலைஞர் மற்றும் வகையில்} "
+"artist{கலைஞரின்} genre{வகையில்} other{}} எந்த பாடலையும் நீங்கள் "
+"கேட்டிருக்கவில்லை."
 
 #. Tooltip for Favorites on Curated Items in Online Mode when no favorites
 #. yet.
@@ -2430,9 +2601,9 @@ msgid ""
 "artist in this genre} artist{ for this artist} genre{ for this genre} "
 "other{}}."
 msgstr ""
-"இந்த {itemType, select, artistGenreFilter{ for this artist in this genre} "
-"artist{ for this artist} genre{ for this genre} other{}} நீங்கள் எந்த "
-"பிடித்தவையும் வைத்திருக்கவில்லை."
+"இந்த {itemType, select, artistGenreFilter{கலைஞர் மற்றும் வகைக்கு} "
+"artist{கலைஞருக்கு} genre{வகைக்கு} other{}} நீங்கள் எந்த பிடித்தவையும் "
+"வைத்திருக்கவில்லை."
 
 #. Message for empty See All lists for a genre.
 #, case-insensitive, icu-message-format, placeholders:$ITEMTYPE$
@@ -2441,8 +2612,8 @@ msgid ""
 "You don't have any {itemType, select, playlists{playlists} artists{artists} "
 "albums{albums} tracks{tracks} other{items}} for this genre."
 msgstr ""
-"இந்த வகைக்கு நீங்கள் எந்த {itemType, select, playlists{playlists} "
-"artists{artists} albums{albums} tracks{tracks} other{items}} "
+"இந்த வகைக்கு நீங்கள் எந்த {itemType, select, playlists{பாடல்பட்டிகள்} "
+"artists{கலைஞர்கள்} albums{ஆல்பங்கள்} tracks{பாடல்கள்} other{உருப்படிகள்}} "
 "வைத்திருக்கவில்லை."
 
 #, case-insensitive, icu-message-format, placeholders:$COUNT$
@@ -2450,12 +2621,21 @@ msgctxt "albumCount"
 msgid "{count,plural,=1{{count} Album} other{{count} Albums}}"
 msgstr "{count, plural, one {{count} ஆல்பம்} other {{count} ஆல்பங்கள்}}"
 
+#. Label for action that shuffles all albums of an artist
 #. Label for action that shuffles all albums of an artist or genre
 #, icu-message-format
 msgctxt "shuffleAlbums"
 msgid "Shuffle Albums"
 msgstr "கலக்கு ஆல்பங்கள்"
 
+#. Label for action that shuffles some albums of a genre
+#, icu-message-format
+msgctxt "shuffleSomeAlbums"
+msgid "Shuffle some Albums"
+msgstr "சில ஆல்பங்களை கலக்கவும்"
+
+#. Label for action that shuffles all albums of an artist and adds them at the
+#. start of Next Up
 #. Label for action that shuffles all albums of an artist or genre and adds
 #. them at the start of Next Up
 #, icu-message-format
@@ -2463,19 +2643,44 @@ msgctxt "shuffleAlbumsNext"
 msgid "Shuffle Albums Next"
 msgstr "அடுத்து கலக்கு ஆல்பங்கள்"
 
+#. Label for action that shuffles some albums of a genre and adds them at the
+#. start of Next Up
+#, icu-message-format
+msgctxt "shuffleSomeAlbumsNext"
+msgid "Shuffle some Albums Next"
+msgstr "அடுத்து சில ஆல்பங்களை கலக்கவும்"
+
+#. Label for action that shuffles all albums of an artist and adds them at the
+#. end of Next Up
 #. Label for action that shuffles all albums of an artist or genre and adds
 #. them at the end of Next Up
 #, icu-message-format
 msgctxt "shuffleAlbumsToNextUp"
-msgid "Shuffle Albums To Next Up"
+msgid "Shuffle Albums to Next Up"
 msgstr "ஆல்பங்களை அடுத்ததாக மாற்றவும்"
 
+#. Label for action that shuffles all albums of a genre and adds them at the
+#. end of Next Up
+#, icu-message-format
+msgctxt "shuffleSomeAlbumsToNextUp"
+msgid "Shuffle some Albums to Next Up"
+msgstr "சில ஆல்பங்களை அடுத்ததாக மாற்றவும்"
+
+#. Label for action that shuffles all albums of an artist and adds them at the
+#. end of the regular queue
 #. Label for action that shuffles all albums of an artist or genre and adds
 #. them at the end of the regular queue
 #, icu-message-format
 msgctxt "shuffleAlbumsToQueue"
-msgid "Shuffle Albums To Queue"
-msgstr "வரிசையில் ஆல்பங்களை மாற்றவும்"
+msgid "Shuffle Albums to Queue"
+msgstr "ஆல்பங்களை வரிசையாக மாற்றவும்"
+
+#. Label for action that shuffles all albums of a genre and adds them at the
+#. end of the regular queue
+#, icu-message-format
+msgctxt "shuffleSomeAlbumsToQueue"
+msgid "Shuffle some Albums to Queue"
+msgstr "சில ஆல்பங்களை வரிசையாக மாற்றவும்"
 
 #, case-insensitive, icu-message-format, placeholders:$PLAYCOUNT$
 msgctxt "playCountValue"
@@ -2494,12 +2699,12 @@ msgid ""
 "nextUpPlaylist{playlist in next up} nextUpArtist{artist in next up} "
 "nextUpGenre{genre in next up} other{}}"
 msgstr ""
-"{source, select, album{album} playlist{playlist} trackMix{track mix} "
-"artistMix{artist mix} albumMix{album mix} genreMix{genre mix} "
-"favorites{favorites} allTracks{all tracks} filteredList{tracks} genre{genre}"
-" artist{artist} track{track} nextUpAlbum{அடுத்தது - ஆல்பம்} "
+"{source, select, album{ஆல்பம்} playlist{பாடல்பட்டி} trackMix{பாடல் கலவை} "
+"artistMix{கலைஞர் கலவை} albumMix{ஆல்பம் கலவை} genreMix{வகை கலவை} "
+"favorites{பிடித்தவை} allTracks{அனைத்து பாடல்கள்} filteredList{பாடல்கள்} "
+"genre{வகை} artist{கலைஞர்} track{பாடல்} nextUpAlbum{அடுத்தது - ஆல்பம்} "
 "nextUpPlaylist{அடுத்தது - பாடல்பட்டி} nextUpArtist{அடுத்தது - கலைஞர்} "
-"nextUpGenre{அடுத்தது - வகை} other{album in next up}}ஐ ஏற்ற முடியவில்லை"
+"nextUpGenre{அடுத்தது - வகை} other{உருப்படி}}ஐ ஏற்ற முடியவில்லை"
 
 #, icu-message-format
 msgctxt "confirm"
@@ -2596,32 +2801,43 @@ msgstr "தொகுதி இயல்பாக்கத்தை எப்ப�
 #, icu-message-format
 msgctxt "volumeNormalizationModeSelectorDescription"
 msgid ""
-"Hybrid (Track + Album):\n"
-"Track gain is used for regular playback, but if an album is playing (either because it''s the main playback queue source, or because it was added to the queue at some point), the album gain is used instead.\n"
+"Dynamic:\n"
+"When playing multiple tracks from the same album in a row, album gain is used (i.e. when playing an album, or tracks from the same album in a playlist). Otherwise, track gain is used.\n"
 "\n"
 "Track-based:\n"
 "Track gain is always used, regardless of whether an album is playing or not.\n"
 "\n"
+"Album-based:\n"
+"Album gain is always used, but if it's not available (i.e. for singles), track gain is used instead.\n"
+"\n"
 "Albums Only:\n"
-"Volume Normalization is only applied while playing albums (using the album gain), but not for individual tracks."
+"Volume normalization is only applied while playing albums (using the album gain), but not for individual tracks."
 msgstr ""
-"கலப்பின (டிராக் + ஆல்பம்):\n"
-" ட்ராக் ஆதாயம் வழக்கமான பிளேபேக்கிற்குப் பயன்படுத்தப்படுகிறது, ஆனால் ஒரு ஆல்பம் இயங்குகிறது என்றால் (இது முக்கிய பின்னணி வரிசை மூலமாக இருப்பதால், அல்லது ஒரு கட்டத்தில் வரிசையில் சேர்க்கப்பட்டதால்), அதற்கு பதிலாக ஆல்பம் பயன்படுத்தப்படுகிறது.\n"
+"டைனமிக்:\n"
+"ஒரே ஆல்பத்திலிருந்து பல டிராக்குகளை தொடர்ச்சியாக இயக்கும்போது, ஆல்பம் ஆதாயம் பயன்படுத்தப்படுகிறது (அதாவது ஒரு ஆல்பத்தை இயக்கும்போது அல்லது ஒரு பிளேலிஸ்ட்டில் ஒரே ஆல்பத்திலிருந்து டிராக்குகள்). இல்லையெனில், டிராக் ஆதாயம் பயன்படுத்தப்படுகிறது.\n"
 "\n"
-" டிராக் அடிப்படையிலான:\n"
-" ஒரு ஆல்பம் விளையாடுகிறதா இல்லையா என்பதைப் பொருட்படுத்தாமல், ட்ராக் ஆதாயம் எப்போதும் பயன்படுத்தப்படுகிறது.\n"
+"டிராக் அடிப்படையிலானது:\n"
+"ஒரு ஆல்பம் இயங்குகிறதா இல்லையா என்பதைப் பொருட்படுத்தாமல், டிராக் ஆதாயம் எப்போதும் பயன்படுத்தப்படுகிறது.\n"
 "\n"
-" ஆல்பங்கள் மட்டுமே:\n"
-" ஆல்பங்களை இயக்கும் போது மட்டுமே தொகுதி இயல்பாக்கம் பயன்படுத்தப்படுகிறது (ஆல்பத்தை ஆதாயத்தைப் பயன்படுத்தி), ஆனால் தனிப்பட்ட தடங்களுக்கு அல்ல."
+"ஆல்பம் அடிப்படையிலானது:\n"
+"ஆல்பம் ஆதாயம் எப்போதும் பயன்படுத்தப்படுகிறது, ஆனால் அது கிடைக்கவில்லை என்றால் (அதாவது தனிப்பாடல்களுக்கு), அதற்குப் பதிலாக டிராக் ஆதாயம் பயன்படுத்தப்படுகிறது.\n"
+"\n"
+"ஆல்பங்கள் மட்டும்:\n"
+"ஆல்பங்களை இயக்கும்போது (ஆல்பம் ஆதாயத்தைப் பயன்படுத்தி) ஒலியளவு இயல்பாக்கம் பயன்படுத்தப்படுகிறது, ஆனால் தனிப்பட்ட டிராக்குகளுக்கு அல்ல."
 
+#. 'Dynamic' option for the replay gain mode dropdown. In dynamic mode, the
+#. track gain is used for regular playback, but if an album is playing (either
+#. because it's the main playback queue source, or because it was added to the
+#. queue at some point), or successive tracks from a same album are in the
+#. queue, the album gain is used instead.
 #. 'Hybrid' option for the replay gain mode dropdown. In hybrid mode, the
 #. track gain is used for regular playback, but if an album is playing (either
 #. because it's the main playback queue source, or because it was added to the
 #. queue at some point), the album gain is used instead.
 #, icu-message-format
 msgctxt "volumeNormalizationModeHybrid"
-msgid "Hybrid (Track + Album)"
-msgstr "கலப்பின (டிராக் + ஆல்பம்)"
+msgid "Dynamic"
+msgstr "இயங்கி"
 
 #. 'Track-based' option for the replay gain mode dropdown. In track-based
 #. mode, the track gain is always used, regardless of whether an album is
@@ -2658,18 +2874,27 @@ msgstr "அடிப்படை ஆதாயம்"
 #. non-Android platforms
 #, icu-message-format
 msgctxt "volumeNormalizationIOSBaseGainEditorSubtitle"
+msgid "Choose a volume gain offset (in dB)"
+msgstr "வால்யூம் ஆதாய ஆஃப்செட்டைத் தேர்ந்தெடுக்கவும் (dB இல்)"
+
+#. Description for the input that sets the replay gain base gain on iOS and
+#. other non-Android platforms
+#, icu-message-format
+msgctxt "volumeNormalizationIOSBaseGainEditorDescription"
 msgid ""
-"Currently, Volume Normalization on iOS requires changing the playback volume"
-" to emulate the gain change. Since we can''t increase the volume above 100%,"
-" we need to decrease the volume by default so that we can boost the volume "
-"of quiet tracks. The value is in decibels (dB), where -10 dB is ~30% volume,"
-" -4.5 dB is ~60% volume and -2 dB is ~80% volume."
+"Currently, Volume Normalization on platforms other than Android requires changing the playback volume to emulate the gain change. Since we can't increase the volume above 100%, we need to decrease the volume by default so that we can boost the volume of quiet tracks.\n"
+"\n"
+"The value is in decibels (dB), where -10 dB is ~30% volume, -4.5 dB is ~60% volume and -2 dB is ~80% volume.\n"
+"Positive values mean that no volume reduction is applied up until the threshold (i.e. -6.4 dB gain (and more positive) for a +6.4 dB offset), but prevents quieter tracks from being boosted.\n"
+"\n"
+"You should set this to the inverse of the highest (most positive) gain in your library, i.e., set it to +3 dB if the highest gain in your library is -3 dB (and all other tracks have gains like -5 dB, -8 dB, -10 dB, etc.)."
 msgstr ""
-"தற்போது, IOS இல் தொகுதி இயல்பாக்கத்திற்கு ஆதாய மாற்றத்தைப் பின்பற்ற பிளேபேக்"
-" அளவை மாற்ற வேண்டும். 100%க்கு மேல் அளவை நாம் அதிகரிக்க முடியாது என்பதால், "
-"இயல்புநிலையாக அளவைக் குறைக்க வேண்டும், இதனால் அமைதியான தடங்களின் அளவை "
-"அதிகரிக்க முடியும். மதிப்பு டெசிபல்களில் (டி.பி.) உள்ளது, அங்கு -10 டிபி ~ "
-"30% தொகுதி, -4.5 டி.பி. ~ 60% தொகுதி மற்றும் -2 டி.பி."
+"தற்போது, ​​ஆன்ட்ராய்டு அல்லாத பிற இயங்குதளங்களில் ஒலியளவை இயல்பாக்குவதற்கு, ஆதாய மாற்றத்தைப் பின்பற்ற, பிளேபேக் ஒலியளவை மாற்ற வேண்டும். ஒலியளவை 100%க்கு மேல் அதிகரிக்க முடியாது என்பதால், ஒலியளவை இயல்பாகக் குறைக்க வேண்டும், இதனால் அமைதியான டிராக்குகளின் ஒலியளவை அதிகரிக்க முடியும். \n"
+"\n"
+"மதிப்பு டெசிபல்களில் (dB), -10 dB என்பது ~30% தொகுதி, -4.5 dB என்பது ~60% தொகுதி மற்றும் -2 dB என்பது ~80% தொகுதி. \n"
+"நேர்மறை மதிப்புகள் என்பது த்ரெசோல்ட் (அதாவது +6.4 dB ஆஃப்செட்டிற்கு -6.4 dB ஆதாயம் (மேலும் நேர்மறை) வரை) எந்த அளவு குறைப்பும் பயன்படுத்தப்படாது, ஆனால் அமைதியான டிராக்குகள் அதிகரிக்கப்படுவதைத் தடுக்கிறது. \n"
+"\n"
+"இதை உங்கள் லைப்ரரியில் உள்ள அதிகபட்ச (மிக நேர்மறை) ஆதாயத்தின் தலைகீழாக அமைக்க வேண்டும், அதாவது, உங்கள் லைப்ரரியில் அதிகபட்ச லாபம் -3 dB எனில் அதை +3 dB ஆக அமைக்கவும் (மற்றும் மற்ற எல்லா டிராக்குகளும் -5 dB, -8 dB, -10 dB, போன்ற பலன்களைக் கொண்டுள்ளன)."
 
 #. Label for a number that represents a decibel value. The value will be the
 #. decibel value.
@@ -2789,9 +3014,9 @@ msgid ""
 "syncFailed{Repeatedly Unsynced} enqueued{Queued} other{}} {itemCount, "
 "plural, =1{Download} other{Downloads}}"
 msgstr ""
-"{itemCount} {typeName, select, downloading{Running} failed{Failed} "
-"syncFailed{Repeatedly Unsynced} enqueued{Queued} other{}} {itemCount, "
-"plural, =1{Download} other{Downloads}}"
+"{itemCount} {typeName, select, downloading{இயங்குகிறது} failed{தோல்வி} "
+"syncFailed{மீண்டும் ஒத்திசைக்கப்படவில்லை} enqueued{வரிசைப்படுத்தப்பட்டது} "
+"other{}} {itemCount, plural, =1{பதிவிறக்கம்} other{பதிவிறக்கங்கள்}}"
 
 #. Confirmation prompt before downloading entire library, which may be large.
 #, case-insensitive, icu-message-format, placeholders:$LIBRARYNAME$
@@ -2987,9 +3212,9 @@ msgid ""
 "genre{Genre} track{Track} library{Library} unknown{Item} other{{itemType}}} "
 "{itemName}"
 msgstr ""
-"{itemType, select, album{Album} playlist{Playlist} artist{Artist} "
-"genre{Genre} track{Track} library{Library} unknown{Item} other{{itemType}}} "
-"{itemName}"
+"{itemType, select, album{ஆல்பம்} playlist{பிளேலிச்ட்} artist{கலைஞர்} "
+"genre{வகை} track{நூலகம்} library{அறியப்படாத} unknown{Item} "
+"other{{itemType}}} {itemName}"
 
 #. Tooltip shown when a download button is disabled because of an active genre
 #. filter.
@@ -3033,9 +3258,9 @@ msgid ""
 "collectionWithLibraryFilter{Collection with Library Filter} "
 "other{{itemType}} }"
 msgstr ""
-"{itemType, select, favorites{Favorites} allPlaylists{All Playlists} "
-"fiveLatestAlbums{5 Latest Albums} allPlaylistsMetadata{Playlist Metadata} "
-"collectionWithLibraryFilter{Collection with Library Filter} "
+"{itemType, select, favorites{பிடித்தவை} allPlaylists{அனைத்து பாடல்பட்டிகள்} "
+"fiveLatestAlbums{கடைசி 5 ஆல்பங்கள்} allPlaylistsMetadata{பாடல்பட்டி "
+"மெட்டாடேட்டா} collectionWithLibraryFilter{நூலகம் வடிகட்டிய தொகுப்பு} "
 "other{{itemType}}}"
 
 #. Localized names of special downloadable collection representing cached
@@ -3079,7 +3304,8 @@ msgctxt "downloadTranscodeEnableOption"
 msgid ""
 "{option, select, always{Always} never{Never} ask{Ask} other{{option}} }"
 msgstr ""
-"{option, select, always{Always} never{Never} ask{Ask} other{{option}}}"
+"{option, select, always{எப்போதும்} never{ஒருபோதும்} ask{கேளுங்கள்} "
+"other{{option}}}"
 
 #. Title for Download Bitrate settings slider
 #, icu-message-format
@@ -3192,8 +3418,8 @@ msgid ""
 "{size, select, small{Small} medium{Medium} large{Large} veryLarge{Very "
 "Large} other{???}}"
 msgstr ""
-"{size, select, small {Small} medium {Medium} large {Large} veryLarge {Very "
-"Large} other {}}"
+"{size, select, small {சிறிய} medium {நடுத்தர} large {பெரிய} veryLarge {மிகப்"
+" பெரிய} other {}}"
 
 #, icu-message-format
 msgctxt "allowSplitScreenTitle"
@@ -3330,7 +3556,7 @@ msgstr "ஆட்டோ-ச்க்ரோலை இயக்கவும்"
 #, case-insensitive, icu-message-format, placeholders:$KILOHERTZ$
 msgctxt "numberAsKiloHertz"
 msgid "{kiloHertz} kHz"
-msgstr "{kiloHertz} kHz"
+msgstr "{kiloHertz} கிஎட்சு"
 
 #. Value for the bit depth of a track, as amount of bit used
 #, case-insensitive, icu-message-format, placeholders:$BIT$
@@ -3387,8 +3613,8 @@ msgstr "பிளேலிச்ட்களிலிருந்து சே�
 #. menu
 #, icu-message-format
 msgctxt "addPlaylistSubheader"
-msgid "Add track to a playlist"
-msgstr "பிளேலிச்ட்டில் தடத்தைச் சேர்க்கவும்"
+msgid "Add items to a playlist"
+msgstr "பிளேலிச்ட்டில் உருப்படிகளைச் சேர்க்கவும்"
 
 #, icu-message-format
 msgctxt "trackOfflineFavorites"
@@ -3425,6 +3651,15 @@ msgstr "அனைத்து பிடித்தவைகளையும் �
 msgctxt "downloadAllPlaylistsSetting"
 msgid "Download all playlists"
 msgstr "அனைத்து பிளேலிச்ட்களையும் பதிவிறக்கவும்"
+
+#, icu-message-format
+msgctxt "downloadAllPlaylistsSettingWarning"
+msgid ""
+"Note: This will download all items in all playlists, no matter which library"
+" they're from."
+msgstr ""
+"குறிப்பு: இது எந்த லைப்ரரியில் இருந்து வந்தாலும், எல்லா பிளேலிச்ட்டுகளிலும் "
+"உள்ள அனைத்து பொருட்களையும் பதிவிறக்கும்."
 
 #, icu-message-format
 msgctxt "fiveLatestAlbumsSetting"
@@ -3582,6 +3817,30 @@ msgstr ""
 "ஊடக அறிவிப்புக்கு தேடக்கூடிய முன்னேற்றப் பட்டி இருந்தால் "
 "கட்டுப்படுத்துகிறது. பயன்பாட்டைத் திறக்காமல் பிளேபேக் நிலையை மாற்ற இது "
 "உங்களை அனுமதிக்கிறது."
+
+#. Message shown while lyrics are being loaded
+#, icu-message-format
+msgctxt "lyricsEmptyStateLoading"
+msgid "Loading lyrics..."
+msgstr "பாடல் வரிகளை ஏற்றுகிறது..."
+
+#. Message shown when lyrics failed to load
+#, icu-message-format
+msgctxt "lyricsEmptyStateFailed"
+msgid "Couldn't load lyrics"
+msgstr "பாடல் வரிகளை ஏற்ற முடியவில்லை"
+
+#. Message shown when no lyrics are available for the current track
+#, icu-message-format
+msgctxt "lyricsEmptyStateNoLyrics"
+msgid "No lyrics available"
+msgstr "பாடல் வரிகள் எதுவும் கிடைக்கவில்லை"
+
+#. Placeholder text for missing lyric lines in synchronized lyrics
+#, icu-message-format
+msgctxt "lyricsMissingLyricLinePlaceholder"
+msgid "missing lyric line"
+msgstr "பாடல் வரி இல்லை"
 
 #. Alignment option for things like the lyrics view. Start means left-aligned
 #. in LTR languages and right-aligned in RTL languages.
@@ -3894,6 +4153,12 @@ msgctxt "emptyTopTracksList"
 msgid "You haven't listened to any track by this artist yet."
 msgstr "இந்த கலைஞரால் நீங்கள் இதுவரை எந்த தடத்தையும் கேட்கவில்லை."
 
+#. Message shown as a placeholder when an album or playlist is empty.
+#, icu-message-format
+msgctxt "emptyAlbum"
+msgid "No tracks."
+msgstr "தடங்கள் இல்லை."
+
 #. Message shown when a list of items is filtered and no items match the
 #. filter
 #, icu-message-format
@@ -3957,9 +4222,10 @@ msgid ""
 "genre{Genre} track{Track} library{Library} other{Item}} got deleted from "
 "{deviceType, select, device{Device} server{Server} other{unknown}}"
 msgstr ""
-"{itemType, select, album{Album} playlist{Playlist} artist{Artist} "
-"genre{Genre} track{Track} library{Library} other{Item}} {deviceType, select,"
-" device{Device} server{Server} other{unknown}} நீக்கப்பட்டது"
+"{itemType, select, album{ஆல்பம்} playlist{பாடல்பட்டி} artist{கலைஞர்} "
+"genre{வகை} track{பாடல்} library{நூலகம்} other{உருப்படி}} {deviceType, "
+"select, device{சாதனத்திலிருந்து} server{சர்வரில் இருந்து} other{அறியப்படாத "
+"இடத்தில் இருந்து}} நீக்கப்பட்டது"
 
 #. Title for the setting that controls if items can be deleted from the server
 #, icu-message-format
@@ -4002,7 +4268,8 @@ msgctxt "deleteFromTargetConfirmButton"
 msgid ""
 "Delete{target, select, device{ from Device} server{ from Server} other{}}"
 msgstr ""
-"{target, select, device{ from Device} server{ from Server} other{நீக்கு}}"
+"{target, select, device{சாதனத்திலிருந்து நீக்கு} server{சர்வரில் இருந்து "
+"நீக்கு} other{நீக்கு}}"
 
 #. A line of warning text on the download dialog when large numbers of tracks
 #. are downloaded at once.
@@ -4027,20 +4294,32 @@ msgstr ""
 "A முன்னறிவிப்பு செய்தி will be displayed when downloading more than this "
 "many tracks at once."
 
-#. Warning dialog for adding an album, artist, or similar to a playlist,
-#. clarifying that this cannot be undone without removing all tracks
-#. individually.
+#. Warning dialog for adding an album, artist, etc. or multiple tracks to a
+#. playlist, clarifying that this cannot be undone without removing all tracks
+#. individually and manually.
 #, case-insensitive, icu-message-format, placeholders:$ITEMTYPE$:$ITEMNAME$
-msgctxt "confirmAddAlbumToPlaylist"
+msgctxt "confirmAddCollectionItemToPlaylist"
 msgid ""
 "Are you sure you want add all tracks from {itemType, select, album{album} "
 "playlist{playlist} artist{artist} genre{genre} other{item}} '{itemName}' to "
-"this playlist?  They can only be removed individually."
+"this playlist? They can only be removed individually."
 msgstr ""
-"நீங்கள் {itemType, select, album{album} playlist{playlist} artist{artist} "
-"genre{genre} other{item}} '{itemName}' இல் இருந்து அனைத்து பாடல்களையும் இந்த"
-" பாடல்பட்டியில் சேர்க்க விரும்புகிறீர்களா? அவற்றை தனித்தனியாக மட்டுமே நீக்க "
-"முடியும்."
+"இந்த பிளேலிச்ட்டில் {itemType, தேர்ந்தெடுக்கப்பட்ட, ஆல்பம்{album} "
+"பிளேலிச்ட்{playlist} கலைஞர்{artist} வகை{genre} மற்ற{item}} '{itemName}' "
+"இலிருந்து எல்லா டிராக்குகளையும் நிச்சயமாகச் சேர்க்க விரும்புகிறீர்களா? அவை "
+"தனித்தனியாக மட்டுமே அகற்றப்படும்."
+
+#. Warning dialog for adding multiple tracks to a playlist, clarifying that
+#. this cannot be undone without removing all tracks individually and
+#. manually.
+#, case-insensitive, icu-message-format, placeholders:$TRACKCOUNT$
+msgctxt "confirmAddMultipleTracksToPlaylist"
+msgid ""
+"Are you sure you want add {trackCount} tracks to this playlist? They can "
+"only be removed individually."
+msgstr ""
+"இந்த பிளேலிச்ட்டில் {trackCount} டிராக்குகளைச் சேர்க்க விரும்புகிறீர்களா? "
+"அவை தனித்தனியாக மட்டுமே அகற்றப்படும்."
 
 #. Toggle for playlist creation where true means the playlist is publicly
 #. visible, false means only the creator can see it.
@@ -4185,23 +4464,47 @@ msgctxt "autoOfflineOptionUnreachable"
 msgid "Unreachable"
 msgstr "அணுக முடியாதது"
 
-#. Setting description. Make sure the Mode names match the translations.
+#. Subtitle for the automated offline mode setting.
 #, icu-message-format
+msgctxt "autoOfflineSettingSubtitle"
+msgid ""
+"Automatically enable Offline Mode based on network connectivity or server "
+"reachability."
+msgstr ""
+"பிணையம் இணைப்பு அல்லது சேவையக அணுகல் அடிப்படையில் இணைப்பில்லாத பயன்முறையை "
+"தானாக இயக்கவும்."
+
+#. Setting description. Make sure the Mode names match the translations.
+#, case-insensitive, icu-message-format, placeholders:$DISABLEDMODENAME$:$LOCALNETWORKMODENAME$:$DISCONNECTEDMODENAME$:$UNREACHABLEMODENAME$
 msgctxt "autoOfflineSettingDescription"
 msgid ""
-"Automatically enable Offline Mode.\n"
-"Disabled: Wont Automatically turn on Offline Mode. May save battery.\n"
-"Local Network: Turn Offline Mode on when not being connected to wifi or ethernet.\n"
-"Disconnected: Turn Offline Mode on when not being connected to anything.\n"
-"Unreachable: Turn Offline Mode on when the server cant be pinged after changing networks.\n"
-"You can always manually turn on offline mode which pauses automation until you turn offline mode off again"
+"{disabledModeName}:\n"
+"Wont Automatically turn on Offline Mode. May save battery.\n"
+"\n"
+"{localNetworkModeName}:\n"
+"Turn Offline Mode on when not being connected to WiFi or ethernet.\n"
+"\n"
+"{disconnectedModeName}:\n"
+"Turn Offline Mode on when not being connected to anything.\n"
+"\n"
+"{unreachableModeName}:\n"
+"Turn Offline Mode on when the server cant be pinged after changing networks.\n"
+"\n"
+"You can always manually toggle offline mode which pauses the automation until you reenable it."
 msgstr ""
-"இணைப்பில்லாத பயன்முறையை தானாக இயக்கவும். \n"
-"முடக்கப்பட்டது: இணைப்பில்லாத பயன்முறையை தானாக இயக்காது. பேட்டரியைச் சேமிக்கலாம். \n"
-"உள்ளக நெட்வொர்க்: வைஃபை அல்லது ஈதர்நெட்டுடன் இணைக்கப்படாதபோது இணைப்பில்லாத பயன்முறையை இயக்கவும். \n"
-"துண்டிக்கப்பட்டது: எதையும் இணைக்காதபோது இணைப்பில்லாத பயன்முறையை இயக்கவும். \n"
-"அணுக முடியாதது: நெட்வொர்க்குகளை மாற்றிய பின் சேவையகம் பிங் செய்யப்படும்போது இணைப்பில்லாத பயன்முறையை இயக்கவும். \n"
-"நீங்கள் எப்போதும் இணைப்பில்லாத பயன்முறையை கைமுறையாக இயக்கலாம், இது இணைப்பில்லாத பயன்முறையை மீண்டும் அணைக்கும் வரை ஆட்டோமேசனை இடைநிறுத்துகிறது"
+"{disabledModeName}: \n"
+"இணைப்பில்லாத பயன்முறையை தானாகவே இயக்காது. பேட்டரியைச் சேமிக்கலாம். \n"
+"\n"
+"{localNetworkModeName}: \n"
+"வைஃபை அல்லது ஈதர்நெட்டுடன் இணைக்கப்படாத போது இணைப்பில்லாத பயன்முறையை இயக்கவும். \n"
+"\n"
+"{disconnectedModeName}: \n"
+"எதனுடனும் இணைக்கப்படாதபோது இணைப்பில்லாத பயன்முறையை இயக்கவும். \n"
+"\n"
+"{unreachableModeName}: \n"
+"நெட்வொர்க்குகளை மாற்றிய பின் சேவையகத்தை பிங் செய்ய முடியாதபோது இணைப்பில்லாத பயன்முறையை இயக்கவும். \n"
+"\n"
+"நீங்கள் எப்போதும் இணைப்பில்லாத பயன்முறையை கைமுறையாக மாற்றலாம், இது நீங்கள் மீண்டும் இயக்கும் வரை ஆட்டோமேசனை இடைநிறுத்துகிறது."
 
 #, icu-message-format
 msgctxt "autoOfflineSettingTitle"
@@ -4216,8 +4519,8 @@ msgid ""
 "Automatically {state, select, enabled{enabled} disabled{disabled} other{set "
 "quantum position for}} Offline Mode"
 msgstr ""
-"தானாகவே ஆஃப்லைன் நிலை {state, select, enabled{enabled} disabled{disabled} "
-"other{set quantum position for}}"
+"தானாகவே ஆஃப்லைன் நிலை {state, select, enabled{இயக்கப்பட்டது} "
+"disabled{இடைநிறுத்தப்பட்டது} other{அளவிடப்பட்ட நிலைக்கு அமைக்கப்பட்டது}}"
 
 #. Title for the audio fade-out duration setting.
 #, icu-message-format
@@ -4286,15 +4589,8 @@ msgid ""
 "{type, select, speaker{Device Speaker} tv{TV} bluetooth{Bluetooth} "
 "other{Unknown}}"
 msgstr ""
-"{type, select, speaker{Device Speaker} tv{TV} bluetooth{Bluetooth} "
-"other{Unknown}}"
-
-#. Warning message when trying to shuffle queue on desktop saying it is not
-#. implemented.
-#, icu-message-format
-msgctxt "desktopShuffleWarning"
-msgid "Changing shuffle mode is not currently available on desktop."
-msgstr "சஃபிள் பயன்முறையை மாற்றுவது தற்போது டெச்க்டாப்பில் கிடைக்கவில்லை."
+"{type, select, speaker{சாதன ஸ்பீக்கர்} tv{டிவி} bluetooth{புளூடூத்} "
+"other{அறியப்படாதது}}"
 
 #. Amount of various child item, like artist albums, performing artist tracks,
 #. or genre albums. Shown for example in the menu headers.
@@ -4305,15 +4601,16 @@ msgid ""
 "tracks}}} album{{amount, plural, =1{1 album} other{{amount} albums}}} "
 "other{{amount, plural, =1{1 item} other{{amount} items}}}}"
 msgstr ""
-"{childType, select, track{{amount, plural, =1{1 track} other{{amount} "
-"பாடல்கள்}}} album{{amount, plural, =1{1 album} other{{amount} ஆல்பங்கள்}}} "
-"other{{amount, plural, =1{1 item} other{{amount} உருப்படிகள்}}}}"
+"{childType, select, track{{amount, plural, =1{1 பாடல்} other{{amount} "
+"பாடல்கள்}}} album{{amount, plural, =1{1 ஆல்பம்} other{{amount} ஆல்பங்கள்}}} "
+"other{{amount, plural, =1{1 உருப்படி} other{{amount} உருப்படிகள்}}}}"
 
 #. Shown while the item count is being calculated.
 #, case-insensitive, icu-message-format, placeholders:$CHILDTYPE$
 msgctxt "itemCountLoading"
 msgid "{childType, select, track{tracks} album{albums} other{items}}"
-msgstr "{childType, select, track{tracks} album{albums} other{items}}"
+msgstr ""
+"{childType, select, track{பாடல்கள்} album{ஆல்பங்கள்} other{உருப்படிகள்}}"
 
 #. Shown to screen readers while the item count is being calculated.
 #, icu-message-format
@@ -4350,7 +4647,7 @@ msgid ""
 "of your jellyfin server"
 msgstr ""
 "உங்கள் செலிஃபின் சேவையகத்தின் உள்ளக நெட்வொர்க்கில் இருக்கும்போது வேறு "
-"முகவரியைப் பயன்படுத்தலாமா வேண்டாமா?"
+"முகவரியைப் பயன்படுத்தலாமா வேண்டாமா"
 
 #, icu-message-format
 msgctxt "preferLocalNetworkPublicAddressSettingTitle"
@@ -4410,9 +4707,9 @@ msgid ""
 "address} false_true{FAILED to reach public address} false_false{FAILED to "
 "reach both} other{unknown}}"
 msgstr ""
-"{status, select, true_true{இரண்டும் қолைச்சக்கூடியது} true_false{Both "
-"reachable} false_true{FAILED to reach local address} false_false{FAILED to "
-"reach public address} other{FAILED to reach both}}"
+"{status, select, true_true{இரண்டும் қолைச்சக்கூடியது} true_false{உள்ளூர் "
+"முகவரியை அணுக முடியவில்லை} false_true{பொது முகவரியை அணுக முடியவில்லை} "
+"false_false{இரண்டையும் அணுக முடியவில்லை} other{அறியப்படாதது}}"
 
 #. Title for the setting that controls if the queue is automatically reloaded
 #. when the source changes
@@ -4451,6 +4748,231 @@ msgstr ""
 "OS இலிருந்து ஒரு 'நிறுத்த' கட்டளை பெறப்பட்டால் வரிசையை அழித்து வீரரை மூடு. "
 "பயன்பாட்டு நிறுத்த செயல்கள் எப்போதும் வீரரை மூடி வரிசையை அழிக்கும்."
 
+#. Title for the setting that controls the radio mode/algorithm.
+#, icu-message-format
+msgctxt "radioModeSettingsTitle"
+msgid "Radio Mode"
+msgstr "ரேடியோ பயன்முறை"
+
+#. Subtitle for the setting that controls the radio mode/algorithm.
+#, icu-message-format
+msgctxt "radioModeSettingsSubtitle"
+msgid "Sets the method that the radio feature uses to pick songs to add."
+msgstr ""
+"ரேடியோ நற்பொருத்தம் பாடல்களைச் சேர்ப்பதற்குப் பயன்படுத்தும் முறையை "
+"அமைக்கிறது."
+
+#. Title for menu that allows users to choose the radio mode.
+#, icu-message-format
+msgctxt "radioModeMenuTitle"
+msgid "Choose Radio Mode"
+msgstr "ரேடியோ பயன்முறையைத் தேர்ந்தெடுக்கவும்"
+
+#. Subtitle displayed in the radio menu to show that queue looping is disabled
+#. while radio mode is enabled.
+#, icu-message-format
+msgctxt "loopingOverriddenByRadioSubtitle"
+msgid "Queue looping is disabled while radio is enabled"
+msgstr "ரேடியோ இயக்கப்பட்டிருக்கும் போது வரிசை வளையம் முடக்கப்பட்டுள்ளது"
+
+#. Subtitle displayed in the radio menu to show that no radio tracks could be
+#. generated.
+#, icu-message-format
+msgctxt "radioFailedSubtitle"
+msgid "No more radio tracks found. Try changing the mode."
+msgstr "ரேடியோ டிராக்குகள் எதுவும் இல்லை. பயன்முறையை மாற்ற முயற்சிக்கவும்."
+
+#. Radio mode names in radio mode/algorithm dropdown
+#, case-insensitive, icu-message-format, placeholders:$OPTION$
+msgctxt "radioModeOptionName"
+msgid ""
+"{option, select, reshuffle{Reshuffle} random{Random} similar{Similar} "
+"continuous{Continuous} albumMix{Album Mix} other{{option}}}"
+msgstr ""
+"{option, தேர்ந்தெடு, மறுசீரமைப்பு{Reshuffle} சீரற்ற{Random} ஒத்த{Similar} "
+"தொடர்ச்சியான{Continuous} albumMix{Album Mix} மற்றவை{{option}}}"
+
+#. Title displayed in the queue, showing which radio mode/algorithm is
+#. currently being used.
+#, case-insensitive, icu-message-format, placeholders:$OPTION$
+msgctxt "radioModeOptionTitle"
+msgid ""
+"{option, select, reshuffle{Reshuffle Mode} random{Random Mode} "
+"similar{Similar Mode} continuous{Continuous Mode} albumMix{Album Mix} "
+"other{{option}}} Enabled"
+msgstr "{option, தேர்ந்தெடுக்கவும், மாற்றியமை"
+
+#. Title displayed in the queue to show that radio mode is enabled and active.
+#, icu-message-format
+msgctxt "radioModeActiveTitle"
+msgid "Radio Active"
+msgstr "ரேடியோ ஆக்டிவ்"
+
+#. Title displayed in the queue to show that radio mode is disabled.
+#, icu-message-format
+msgctxt "radioModeDisabledTitle"
+msgid "Radio Disabled"
+msgstr "ரேடியோ முடக்கப்பட்டது"
+
+#. Title displayed in the queue to show that the radio is enabled but not
+#. active.
+#, icu-message-format
+msgctxt "radioModeInactiveTitle"
+msgid "Radio Paused"
+msgstr "வானொலி இடைநிறுத்தப்பட்டது"
+
+#. Title for the option that enables radio mode.
+#, icu-message-format
+msgctxt "radioModeEnableButtonTitle"
+msgid "Enable Radio"
+msgstr "ரேடியோவை இயக்கு"
+
+#. Title for the option that disables radio mode.
+#, icu-message-format
+msgctxt "radioModeDisableButtonTitle"
+msgid "Disable Radio"
+msgstr "வானொலியை முடக்கு"
+
+#. Subtitle for the option that disables radio mode.
+#, icu-message-format
+msgctxt "radioModeDisableButtonSubtitle"
+msgid "Switches back to the previous loop mode"
+msgstr "முந்தைய லூப் பயன்முறைக்கு மாறுகிறது"
+
+#. Confirmation displayed when the radio mode is changed.
+#, case-insensitive, icu-message-format, placeholders:$OPTION$
+msgctxt "radioModeOptionConfirmation"
+msgid ""
+"Switched to {option, select, reshuffle{reshuffle mode} random{random mode} "
+"similar{similar mode} continuous{continuous mode} albumMix{album mix} "
+"other{{option}}}"
+msgstr ""
+"{option, தேர்ந்தெடு, மறுசீரமைப்பு{reshuffle mode} ரேண்டம்{random mode} "
+"ஒத்த{similar mode} தொடர்ச்சியான{continuous mode} albumMix{album mix} "
+"மற்றொன்று{{option}}}க்கு மாறியது"
+
+#. Subtitle displayed in the queue to show when radio mode is enabled.
+#, icu-message-format
+msgctxt "radioModeEnabledSubtitle"
+msgid "Tap to configure"
+msgstr "கட்டமைக்க தட்டவும்"
+
+#. Subtitle displayed in the queue to show that radio mode is disabled.
+#, icu-message-format
+msgctxt "radioModeDisabledSubtitle"
+msgid "Tap to enable"
+msgstr "இயக்க தட்டவும்"
+
+#. Subtitle displayed in the queue to show that radio mode is disabled because
+#. the current mode is not available offline.
+#, icu-message-format
+msgctxt "radioModeDisabledBecauseNotAvailableOfflineSubtitle"
+msgid "Current mode not available offline."
+msgstr "தற்போதைய பயன்முறை ஆஃப்லைனில் இல்லை."
+
+#. Subtitle displayed in the queue to describe what the radio is doing if
+#. enabled
+#, case-insensitive, icu-message-format, placeholders:$MODE$
+msgctxt "radioModeDescription"
+msgid ""
+"{mode, select, reshuffle{Continuously reshuffle queue} random{Append tracks "
+"randomly from the initial selection} similar{Append based on the original "
+"queue} continuous{Append based on the current track} albumMix{Append similar"
+" albums} other{}}"
+msgstr ""
+"{mode, select, resuffle{Continuously reshuffle queue} random{ஆரம்பத் "
+"தேர்விலிருந்து ரேண்டம் டிராக்குகளைச் சேர்"
+
+#. Shown as the subtitle for radio modes when the user is offline and the
+#. radio mode requires the user to be online to function.
+#, icu-message-format
+msgctxt "radioModeUnavailableWhileOfflineDescription"
+msgid "Unavailable while offline"
+msgstr "ஆஃப்லைனில் இருக்கும்போது கிடைக்காது"
+
+#. Shown as the subtitle for radio modes when the user is offline and the
+#. radio mode requires the user to be online to function.
+#, case-insensitive, icu-message-format, placeholders:$MODENAME$
+msgctxt "radioModeUnavailableWhileOfflineSubtitle"
+msgid "{modeName} unavailable while offline"
+msgstr "ஆஃப்லைனில் இருக்கும்போது {modeName} கிடைக்காது"
+
+#. Shown as the subtitle for radio modes when the queue source item type is
+#. not supported.
+#, icu-message-format
+msgctxt "radioModeUnavailableForSourceItemDescription"
+msgid "Unavailable for this queue source"
+msgstr "இந்த வரிசை ஆதாரத்திற்கு கிடைக்கவில்லை"
+
+#. Shown as the subtitle for radio modes when the queue source item type is
+#. not supported.
+#, case-insensitive, icu-message-format, placeholders:$MODENAME$
+msgctxt "radioModeUnavailableForSourceItemSubtitle"
+msgid "{modeName} unavailable for this queue source"
+msgstr "இந்த வரிசை மூலத்திற்கு {modeName} கிடைக்கவில்லை"
+
+#. Shown as the subtitle for radio modes when the queue is empty.
+#, icu-message-format
+msgctxt "radioModeUnavailableQueueEmptyDescription"
+msgid "Unavailable because the queue is empty"
+msgstr "வரிசை காலியாக இருப்பதால் கிடைக்கவில்லை"
+
+#. Shown as the subtitle for radio modes when the queue is empty.
+#, case-insensitive, icu-message-format, placeholders:$MODENAME$
+msgctxt "radioModeUnavailableQueueEmptySubtitle"
+msgid "{modeName} unavailable because the queue is empty"
+msgstr "வரிசை காலியாக இருப்பதால் {modeName} கிடைக்கவில்லை"
+
+#. Shown as the subtitle for radio modes when the user is offline and the
+#. random radio mode can't be used since the queue source hasn't been
+#. downloaded.
+#, case-insensitive, icu-message-format, placeholders:$SOURCENAME$
+msgctxt "radioModeRandomUnavailableNotDownloadedDescription"
+msgid "Unavailable because '{sourceName}' isn't downloaded"
+msgstr "'{sourceName}' பதிவிறக்கம் செய்யப்படாததால் கிடைக்கவில்லை"
+
+#. Shown as the subtitle for radio modes when the user is offline and the
+#. random radio mode can't be used since the queue source hasn't been
+#. downloaded.
+#, case-insensitive, icu-message-format, placeholders:$MODENAME$:$SOURCENAME$
+msgctxt "radioModeRandomUnavailableNotDownloadedSubtitle"
+msgid "{modeName} unavailable because '{sourceName}' isn't downloaded"
+msgstr "'{sourceName}' பதிவிறக்கம் செய்யப்படாததால் {modeName} கிடைக்கவில்லை"
+
+#. Shown as the generic subtitle for radio modes when the user is offline and
+#. the random radio mode can't be used since the queue source hasn't been
+#. downloaded, when the queue source has no name.
+#, icu-message-format
+msgctxt "radioModeRandomUnavailableNotDownloadedGenericDescription"
+msgid "Unavailable because source is not downloaded"
+msgstr "சான்று பதிவிறக்கம் செய்யப்படாததால் கிடைக்கவில்லை"
+
+#. Shown as the generic subtitle for radio modes when the user is offline and
+#. the random radio mode can't be used since the queue source hasn't been
+#. downloaded, when the queue source has no name.
+#, case-insensitive, icu-message-format, placeholders:$MODENAME$
+msgctxt "radioModeRandomUnavailableNotDownloadedGenericSubtitle"
+msgid "{modeName} unavailable because source is not downloaded"
+msgstr "சான்று பதிவிறக்கம் செய்யப்படாததால் {modeName} கிடைக்கவில்லை"
+
+#. Shown when the user tries to start radio mode but no suitable tracks were
+#. found to start the radio with.
+#, icu-message-format
+msgctxt "radioNoTracksFound"
+msgid "Couldn't start radio because no suitable tracks were found."
+msgstr ""
+"பொருத்தமான தடங்கள் எதுவும் கிடைக்காததால் ரேடியோவைத் தொடங்க முடியவில்லை."
+
+#. Warning message when trying to change the loop mode while radio is active.
+#, icu-message-format
+msgctxt "loopingUnavailableWhileRadioActiveWarning"
+msgid ""
+"Changing the loop mode is not available while radio is active, as the queue "
+"will continue endlessly."
+msgstr ""
+"ரேடியோ செயலில் இருக்கும்போது லூப் பயன்முறையை மாற்ற முடியாது, ஏனெனில் வரிசை "
+"முடிவில்லாமல் தொடரும்."
+
 #. Prompt shown when the queue needs to be reloaded after changing network
 #. settings
 #, case-insensitive, icu-message-format, placeholders:$TYPE$
@@ -4459,8 +4981,8 @@ msgid ""
 "Reload queue to apply new {type, select, network{network settings} "
 "transcoding{transcoding settings} other{settings}}"
 msgstr ""
-"புதிய {type, select, network{network settings} transcoding{transcoding "
-"settings} other{settings}} பயன்படுத்த வரிசையை மீண்டும் ஏற்று"
+"புதிய {type, select, network{நெட்வொர்க் அமைப்புகளை} transcoding{மாற்றி "
+"அமைக்கும் அமைப்புகளை} other{அமைப்புகளை}} பயன்படுத்த வரிசையை மீண்டும் ஏற்று"
 
 #. Additional prompt text shown when the queue needs to be reloaded after
 #. changing network settings and some undownloaded tracks are in the queue
@@ -4717,6 +5239,23 @@ msgid "Use high contrast dynamic colors for better visibility."
 msgstr ""
 "சிறந்த தெரிவுநிலைக்கு உயர் மாறுபட்ட மாறும் வண்ணங்களைப் பயன்படுத்தவும்."
 
+#. Title for the setting that controls if the player screen is opened directly
+#. after starting a new queue
+#, icu-message-format
+msgctxt "autoExpandPlayerScreenTitle"
+msgid "Open Player Screen on Playback Start"
+msgstr "பிளேபேக் தொடக்கத்தில் பிளேயர் திரையைத் திறக்கவும்"
+
+#. Subtitle for the setting that controls if the player screen is opened
+#. directly after starting a new queue
+#, icu-message-format
+msgctxt "autoExpandPlayerScreenSubtitle"
+msgid ""
+"This will open the now playing screen when starting playback of a new queue"
+msgstr ""
+"புதிய வரிசையின் பிளேபேக்கைத் தொடங்கும்போது இது இப்போது இயங்கும் திரையைத் "
+"திறக்கும்"
+
 #. Title for the setting that controls if the Discord RPC (Rich Presence)
 #. feature is enabled
 #, icu-message-format
@@ -4799,3 +5338,283 @@ msgstr "பொருள் - வெளிப்படையானது"
 msgctxt "discordRPCIconWhiteTransparent"
 msgid "White Finamp - Transparent"
 msgstr "வெள்ளை பொருள் - வெளிப்படையானது"
+
+#. Title for the setting that swaps the default behavior of short- vs. long-
+#. press on the heart/favorite icon
+#, icu-message-format
+msgctxt "preferAddingToFavoritesOverPlaylistsTitle"
+msgid "Add to Favorites When Tapping Heart Icon"
+msgstr "இதய ஐகானைத் தட்டும்போது பிடித்தவைகளில் சேர்க்கவும்"
+
+#. Subtitle for the setting that swaps the default behavior of short- vs.
+#. long-press on the heart/favorite icon
+#, icu-message-format
+msgctxt "preferAddingToFavoritesOverPlaylistsSubtitle"
+msgid ""
+"When enabled, a short tap will add to favorites, and a long press will open "
+"the 'Add to Playlist' menu. Default is the inverse."
+msgstr ""
+"இயக்கப்பட்டால், ஒரு சிறிய தட்டினால் பிடித்தவை சேர்க்கப்படும், மேலும் நீண்ட "
+"நேரம் அழுத்தினால் 'பிளேலிச்ட்டில் சேர்' பட்டியல் திறக்கும். இயல்புநிலை "
+"தலைகீழ்."
+
+#. Title for the setting to prefer prepending to Next Up over appending
+#, icu-message-format
+msgctxt "preferNextUpPrependingTitle"
+msgid "Prefer Prepending to Next Up"
+msgstr "அடுத்து வருவதற்கு முன்வருவதை விரும்புங்கள்"
+
+#. Subtitle for the setting that swaps the default behavior of short- vs.
+#. long-press on the heart/favorite icon
+#, icu-message-format
+msgctxt "preferNextUpPrependingSubtitle"
+msgid ""
+"When enabled, the \"Play Next\" buttons will be shown when Next Up is empty."
+" Otherwise, \"Add to Next Up\" will be the default."
+msgstr ""
+"இயக்கப்பட்டால், அடுத்தது காலியாக இருக்கும்போது \"அடுத்து விளையாடு\" "
+"பொத்தான்கள் காண்பிக்கப்படும். இல்லையெனில், \"அடுத்ததில் சேர்\" என்பது "
+"இயல்புநிலையாக இருக்கும்."
+
+#. Title for the setting to remember the last used playback mode.
+#, icu-message-format
+msgctxt "rememberLastUsedPlaybackActionRowPageTitle"
+msgid "Remember Last Playback Mode"
+msgstr "கடைசி பின்னணி பயன்முறையை நினைவில் கொள்க"
+
+#. Subtitle for the setting to remember the last used playback mode.
+#, icu-message-format
+msgctxt "rememberLastUsedPlaybackActionRowPageSubtitle"
+msgid ""
+"When enabled, your last used playback mode (e.g., Next Up) will be "
+"remembered."
+msgstr ""
+"இயக்கப்பட்டால், நீங்கள் கடைசியாகப் பயன்படுத்திய பிளேபேக் பயன்முறை (எ.கா., "
+"அடுத்தது) நினைவில் வைக்கப்படும்."
+
+#. Used when a single disc of album is opened, then album name is replaced
+#. with this string
+#, case-insensitive, icu-message-format, placeholders:$NUMBER$:$ALBUMNAME$
+msgctxt "discOfAlbum"
+msgid "[Disc {number}] {albumName}"
+msgstr "[வட்டு {number}] {albumName}"
+
+#. Label for the disc header menu button.
+#, icu-message-format
+msgctxt "moreActionsOnAlbumDisc"
+msgid "More actions on album disc"
+msgstr "ஆல்பம் வட்டில் மேலும் செயல்கள்"
+
+#. Label shown on drag handles of track list  tiles in the queue list
+#, icu-message-format
+msgctxt "dragToReorder"
+msgid "Drag to Reorder"
+msgstr "மறுவரிசைப்படுத்த இழுக்கவும்"
+
+#. Title of popup dialog when adding a download location fails
+#, icu-message-format
+msgctxt "addDownloadLocationsErrorTitle"
+msgid "Could not write to download location"
+msgstr "இருப்பிடத்தைப் பதிவிறக்க எழுத முடியவில்லை"
+
+#. Label shown on popup dialog when adding a download location when writing
+#. songs fails
+#, icu-message-format
+msgctxt "addDownloadLocationsErrorPrompt"
+msgid ""
+"Writing to selected directory failed.  You should modify permissions or "
+"choose another location."
+msgstr ""
+"தேர்ந்தெடுக்கப்பட்ட கோப்பகத்தில் எழுதுவது தோல்வியடைந்தது. நீங்கள் அனுமதிகளை "
+"மாற்ற வேண்டும் அல்லது வேறு இடத்தை தேர்வு செய்ய வேண்டும்."
+
+#. Label shown on popup dialog when adding a download location when writing
+#. songs succeeds but writing images fails, which can occur on android.
+#, icu-message-format
+msgctxt "androidImageErrorPrompt"
+msgid ""
+"We are unable to write images to the android Music folder due to OS "
+"restrictions.  You should choose another location."
+msgstr ""
+"OS கட்டுப்பாடுகள் காரணமாக எங்களால் ஆண்ட்ராய்டு மியூசிக் கோப்புறையில் படங்களை"
+" எழுத முடியவில்லை. நீங்கள் மற்றொரு இடத்தை தேர்வு செய்ய வேண்டும்."
+
+#. Label shown on button for adding a download location we suspect to be buggy
+#, icu-message-format
+msgctxt "addDownloadLocationsErrorButton"
+msgid "Add anyway"
+msgstr "எப்படியும் சேர்"
+
+#. Simple warning message for when download sync fails due to items being
+#. deleted from the server.
+#, icu-message-format
+msgctxt "syncFailedWarningShort"
+msgid "Warning: Failed to synchronize some downloads with server."
+msgstr "எச்சரிக்கை: சில பதிவிறக்கங்களை சர்வருடன் ஒத்திசைப்பதில் தோல்வி."
+
+#. Expanded warning message for when download sync fails due to items being
+#. deleted from the server.
+#, icu-message-format
+msgctxt "syncFailedWarningLong"
+msgid ""
+"Some downloads failed to synchronize with the server.  The matching server "
+"item was likely deleted.  The failed download should be deleted to clean up "
+"the outdated files."
+msgstr ""
+"சில பதிவிறக்கங்கள் சேவையகத்துடன் ஒத்திசைக்க முடியவில்லை. பொருந்தக்கூடிய "
+"சர்வர் உருப்படி நீக்கப்பட்டிருக்கலாம். காலாவதியான கோப்புகளை தூய்மை செய்ய "
+"தோல்வியுற்ற பதிவிறக்கம் நீக்கப்பட வேண்டும்."
+
+#. Label on a button to open the downloads screen after a sync fails.
+#, icu-message-format
+msgctxt "openDownloads"
+msgid "Open Downloads"
+msgstr "பதிவிறக்கங்களைத் திறக்கவும்"
+
+#. Message shown for downloads with the sync failed status, which is generally
+#. caused by the server-side item being removed.
+#, icu-message-format
+msgctxt "syncingFailed"
+msgid ""
+"Sync failed.  This download has likely been removed from the server, and "
+"should be deleted."
+msgstr ""
+"ஒத்திசைவு தோல்வியடைந்தது. இந்த பதிவிறக்கம் சர்வரில் இருந்து "
+"அகற்றப்பட்டிருக்கலாம், மேலும் நீக்கப்பட வேண்டும்."
+
+#. Title for the setting that controls if restored queues automatically play.
+#, icu-message-format
+msgctxt "autoplayRestoredQueueTitle"
+msgid "Automatically Play Restored Queues"
+msgstr "மீட்டமைக்கப்பட்ட வரிசைகளை தானாக இயக்கவும்"
+
+#. Subtitle for the setting that controls if restored queues automatically
+#. play.
+#, icu-message-format
+msgctxt "autoplayRestoredQueueSubtitle"
+msgid ""
+"Queues restored automatically on startup or via the queue restore screen "
+"will begin playing automatically.  Queues which fail to restore all tracks "
+"will never autoplay, regardless of this setting."
+msgstr ""
+"தொடக்கத்தில் தானாக மீட்டமைக்கப்பட்ட வரிசைகள் அல்லது வரிசை மீட்டெடுப்புத் "
+"திரை வழியாக தானாகவே இயங்கத் தொடங்கும். இந்த அமைப்பைப் பொருட்படுத்தாமல், "
+"எல்லா டிராக்குகளையும் மீட்டெடுக்கத் தவறிய வரிசைகள் தானாக இயங்காது."
+
+#. A warning message displayed on the downloads screen if the jellyfin server
+#. is missing blurhashes.
+#, icu-message-format
+msgctxt "missingBlurhashWarning"
+msgid ""
+"Warning: The Jellyfin server appears to be misconfigured and is not "
+"calculating blurhashes.  This prevents Finamp from de-duplicating image "
+"downloads.  Please correct the server and run a downloads repair."
+msgstr ""
+"எச்சரிக்கை: செல்லிஃபின் சேவையகம் தவறாக உள்ளமைக்கப்பட்டதாகத் தெரிகிறது "
+"மற்றும் மங்கலானதைக் கணக்கிடவில்லை. இது படப் பதிவிறக்கங்களை நகலெடுப்பதில் "
+"இருந்து Finamp ஐத் தடுக்கிறது. தயவு செய்து சர்வரை சரிசெய்து பதிவிறக்கம் "
+"பழுதுபார்க்கவும்."
+
+#. Error message shown when the user tries to edit metadata but doesn't have
+#. permission to do so, i.e. because they are not an admin
+#, icu-message-format
+msgctxt "noPermissionToEditMetadata"
+msgid "You need to be an administrator to edit metadata images."
+msgstr "மேனிலை தரவு படங்களைத் திருத்த நீங்கள் நிர்வாகியாக இருக்க வேண்டும்."
+
+#. Section header for the list of removed tracks on the playlist edit screen
+#, icu-message-format
+msgctxt "removedTracks"
+msgid "Removed Tracks"
+msgstr "நீக்கப்பட்ட தடங்கள்"
+
+#. Placeholder text shown when there are no removed tracks
+#, icu-message-format
+msgctxt "removedTracksEmptyListPlaceholder"
+msgid "Removed tracks will appear here"
+msgstr "அகற்றப்பட்ட தடங்கள் இங்கே தோன்றும்"
+
+#. Button title for restoring a track that was marked to be removed
+#, icu-message-format
+msgctxt "restoreTrack"
+msgid "Restore Track"
+msgstr "தடத்தை மீட்டமை"
+
+#. Title for the dialog shown when the user tries to leave the playlist edit
+#. screen with unsaved changes
+#, icu-message-format
+msgctxt "discardChangesTitle"
+msgid "Discard Changes?"
+msgstr "மாற்றங்களை நிராகரிக்கவா?"
+
+#. Description for the dialog shown when the user tries to leave the playlist
+#. edit screen with unsaved changes
+#, icu-message-format
+msgctxt "discardChangesDescription"
+msgid "You have unsaved changes. Discard them and go back?"
+msgstr ""
+"உங்களிடம் சேமிக்கப்படாத மாற்றங்கள் உள்ளன. அவற்றை நிராகரித்துவிட்டு "
+"திரும்பிச் செல்லவா?"
+
+#. Positive action button for the dialog shown when the user tries to leave
+#. the playlist edit screen with unsaved changes
+#, icu-message-format
+msgctxt "discardChangesConfirmButton"
+msgid "Discard Changes"
+msgstr "மாற்றங்களை நிராகரிக்கவும்"
+
+#. Title for the snackbar options menu that allows the user to manage snackbar
+#. messages
+#, icu-message-format
+msgctxt "snackbarOptionsMenuTitle"
+msgid "Manage Messages"
+msgstr "செய்திகளை நிர்வகிக்கவும்"
+
+#. Button title for clearing all snackbar messages
+#, icu-message-format
+msgctxt "snackbarOptionsMenuClearAllButton"
+msgid "Clear All Messages"
+msgstr "அனைத்து செய்திகளையும் அழிக்கவும்"
+
+#. Button title for opening the logs screen from the snackbar options menu
+#, icu-message-format
+msgctxt "snackbarOptionsMenuViewLogsButton"
+msgid "View Logs"
+msgstr "பதிவுகளைப் பார்க்கவும்"
+
+#. Title for the setting that controls ducking.
+#, icu-message-format
+msgctxt "duckOnAudioInterruptionTitle"
+msgid "Reduce Volume on Interruptions"
+msgstr "குறுக்கீடுகளில் ஒலியளவைக் குறைக்கவும்"
+
+#. Subtitle for the setting that controls ducking.
+#, icu-message-format
+msgctxt "duckOnAudioInterruptionSubtitle"
+msgid ""
+"Lower the volume (duck) when another app briefly plays audio. Requires a "
+"restart."
+msgstr ""
+"மற்றொரு ஆப்ச் சுருக்கமாக ஆடியோவை இயக்கும் போது ஒலியளவைக் (டக்) குறைக்கவும். "
+"மறுதொடக்கம் தேவை."
+
+#. Title for the setting that controls audio offloading on Android.
+#, icu-message-format
+msgctxt "forceAudioOffloadingOnAndroidTitle"
+msgid "Force Audio Offloading"
+msgstr "கட்டாய ஆடியோ ஆஃப்லோடிங்"
+
+#. Subtitle for the setting that controls audio offloading on Android.
+#, icu-message-format
+msgctxt "forceAudioOffloadingOnAndroidSubtitle"
+msgid "Offload audio processing to hardware, if supported by the device."
+msgstr ""
+"சாதனம் ஆதரிக்கும் பட்சத்தில், வன்பொருளில் ஆடியோ செயலாக்கத்தை ஆஃப்லோட் "
+"செய்யவும்."
+
+#. Label for content that is considered explicit, usually marked by an 'E' in
+#. music apps
+#, icu-message-format
+msgctxt "explicit"
+msgid "Explicit"
+msgstr "வெளிப்படையானது"
