@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (LibreTube)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-27 01:45+0200\n"
-"PO-Revision-Date: 2025-06-27 22:08\n"
+"POT-Creation-Date: 2026-03-20 01:58+0200\n"
+"PO-Revision-Date: 2026-03-20 09:24\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/libretube/libretube/ta/>\n"
 "Language: ta\n"
@@ -12,12 +12,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #, java-printf-format
 msgctxt "app_name"
 msgid "LibreTube"
-msgstr "லிப்ரெட்யூப்"
+msgstr "லிப்ரேடியூப்"
 
 #, java-printf-format
 msgctxt "startpage"
@@ -150,11 +150,6 @@ msgid "Subscribed"
 msgstr "சந்தா"
 
 #, java-printf-format
-msgctxt "cannotDownload"
-msgid "Can't download this stream."
-msgstr "இந்த ச்ட்ரீமை பதிவிறக்கம் செய்ய முடியாது."
-
-#, java-printf-format
 msgctxt "downloadfailed"
 msgid "Download failed."
 msgstr "பதிவிறக்கம் தோல்வியடைந்தது."
@@ -236,6 +231,11 @@ msgstr "பிளேலிச்ட்டை நீக்கவா?"
 msgctxt "createPlaylist"
 msgid "Create playlist"
 msgstr "பிளேலிச்ட்டை உருவாக்கவும்"
+
+#, java-printf-format
+msgctxt "createNewPlaylist"
+msgid "Create new playlist"
+msgstr "புதிய ஒளிச்சரம்"
 
 #, java-printf-format
 msgctxt "playlistCreated"
@@ -604,6 +604,22 @@ msgid "Exclusive Access"
 msgstr "பிரத்யேக அணுகல்"
 
 #, java-printf-format
+msgctxt "category_hook"
+msgid "Hook/Greetings"
+msgstr "ஊக்/வாழ்த்துக்கள்"
+
+#, java-printf-format
+msgctxt "category_hook_summary"
+msgid ""
+"For narrative hooks that grab the viewer's attention (often as the first "
+"scene) by teasing or describing events from later in the same video or "
+"future episodes in a series"
+msgstr ""
+"ஒரு தொடரின் அதே வீடியோ அல்லது எதிர்கால எபிசோட்களில் நடக்கும் நிகழ்வுகளை "
+"கிண்டல் செய்வதன் மூலம் அல்லது விவரிப்பதன் மூலம் பார்வையாளரின் கவனத்தை "
+"(பெரும்பாலும் முதல் காட்சியாக) ஈர்க்கும் கதை கொக்கிகளுக்காக"
+
+#, java-printf-format
 msgctxt "license"
 msgid "License"
 msgstr "உரிமம்"
@@ -684,13 +700,6 @@ msgid "Update available"
 msgstr "புதுப்பிப்பு கிடைக்கிறது"
 
 #, java-printf-format
-msgctxt "update_available_text"
-msgid "New update available. Click to open the GitHub releases page."
-msgstr ""
-"புதிய புதுப்பிப்பு கிடைக்கிறது. அறிவிலிமையம் வெளியீடுகள் பக்கத்தைத் திறக்க "
-"சொடுக்கு செய்க."
-
-#, java-printf-format
 msgctxt "appearance"
 msgid "Appearance"
 msgstr "தோற்றம்"
@@ -729,11 +738,6 @@ msgstr "வீரர்"
 msgctxt "appearance_summary"
 msgid "Adjust the app to your liking"
 msgstr "உங்கள் விருப்பப்படி பயன்பாட்டை சரிசெய்யவும்"
-
-#, java-printf-format
-msgctxt "advanced_summary"
-msgid "Downloads, and reset"
-msgstr "பதிவிறக்கங்கள், மீட்டமை"
 
 #, java-printf-format
 msgctxt "live"
@@ -826,11 +830,6 @@ msgid "Fill in the name and the API URL."
 msgstr "பெயர் மற்றும் பநிஇ முகவரி ஐ நிரப்பவும்."
 
 #, java-printf-format
-msgctxt "clear_customInstances"
-msgid "Clear added"
-msgstr "கூடுதல் சேர்க்கப்பட்டது"
-
-#, java-printf-format
 msgctxt "invalid_url"
 msgid "Please enter a URL that works"
 msgstr "வேலை செய்யும் முகவரி ஐ உள்ளிடவும்"
@@ -844,6 +843,12 @@ msgstr "பதிப்பு %1$s"
 msgctxt "show_updates"
 msgid "Check updates automatically"
 msgstr "புதுப்பிப்புகளை தானாக சரிபார்க்கவும்"
+
+#, java-printf-format
+msgctxt "show_updates_summary"
+msgid "Check for updates automatically every time the app is started."
+msgstr ""
+"ஆப்ச் தொடங்கும் ஒவ்வொரு முறையும் தானாகவே புதுப்பிப்புகளைச் சரிபார்க்கவும்."
 
 #, java-printf-format
 msgctxt "related_streams"
@@ -864,11 +869,6 @@ msgstr "முன்பே ஏற்றுதல்"
 msgctxt "buffering_goal_summary"
 msgid "Max. amount of seconds of video to buffer"
 msgstr "அதிகபட்சம். இடையகத்திற்கு வீடியோவின் விநாடிகளின் அளவு"
-
-#, java-printf-format
-msgctxt "playerVideoFormat"
-msgid "Video format for player"
-msgstr "பிளேயருக்கான வீடியோ வடிவம்"
 
 #, java-printf-format
 msgctxt "no_audio"
@@ -1006,11 +1006,6 @@ msgid "Delete your Piped account"
 msgstr "உங்கள் குழாய் கணக்கை நீக்கவும்"
 
 #, java-printf-format
-msgctxt "account"
-msgid "Account"
-msgstr "கணக்கு"
-
-#, java-printf-format
 msgctxt "restore"
 msgid "Restore"
 msgstr "மீட்டெடு"
@@ -1141,13 +1136,6 @@ msgid "Pure white/black theme"
 msgstr "தூய வெள்ளை/கருப்பு கருப்பொருள்"
 
 #, java-printf-format
-msgctxt "no_player_found"
-msgid "No external player found. Please make sure you have one installed."
-msgstr ""
-"வெளிப்புற பிளேயர் எதுவும் கிடைக்கவில்லை. நீங்கள் ஒன்றை நிறுவியுள்ளீர்கள் "
-"என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்."
-
-#, java-printf-format
 msgctxt "data_saver_mode"
 msgid "Data-saver mode"
 msgstr "தரவு-சேவர் பயன்முறை"
@@ -1216,23 +1204,13 @@ msgstr "பொது"
 
 #, java-printf-format
 msgctxt "general_summary"
-msgid "Language, and region"
-msgstr "மொழி, மற்றும் பகுதி"
-
-#, java-printf-format
-msgctxt "playingOnBackground"
-msgid "Playing in the background…"
-msgstr "பின்னணியில் விளையாடுவது…"
+msgid "Downloads and data-saver"
+msgstr "பதிவிறக்கங்கள் மற்றும் தரவு சேமிப்பான்"
 
 #, java-printf-format
 msgctxt "caption_settings"
 msgid "Captions"
 msgstr "தலைப்புகள்"
-
-#, java-printf-format
-msgctxt "playerAudioFormat"
-msgid "Audio format for player"
-msgstr "பிளேயருக்கான ஆடியோ வடிவம்"
 
 #, java-printf-format
 msgctxt "playerAudioQuality"
@@ -1291,6 +1269,41 @@ msgid "Checking every …"
 msgstr "ஒவ்வொன்றையும் சரிபார்க்கிறது…"
 
 #, java-printf-format
+msgctxt "checking_frequency_15_minutes"
+msgid "15 minutes"
+msgstr "15 நிமிடங்கள்"
+
+#, java-printf-format
+msgctxt "checking_frequency_30_minutes"
+msgid "30 minutes"
+msgstr "30 நிமிடங்கள்"
+
+#, java-printf-format
+msgctxt "checking_frequency_60_minutes"
+msgid "60 minutes"
+msgstr "60 நிமிடங்கள்"
+
+#, java-printf-format
+msgctxt "checking_frequency_2_hours"
+msgid "2 hours"
+msgstr "2 மணி நேரம்"
+
+#, java-printf-format
+msgctxt "checking_frequency_6_hours"
+msgid "6 hours"
+msgstr "6 மணி நேரம்"
+
+#, java-printf-format
+msgctxt "checking_frequency_12_hours"
+msgid "12 hours"
+msgstr "12 மணி நேரம்"
+
+#, java-printf-format
+msgctxt "checking_frequency_1_day"
+msgid "1 day"
+msgstr "1 நாள்"
+
+#, java-printf-format
 msgctxt "irreversible"
 msgid "Are you sure? This can't be undone!"
 msgstr "நீங்கள் உறுதியாக இருக்கிறீர்களா? இதை செயல்தவிர்க்க முடியாது!"
@@ -1314,6 +1327,16 @@ msgstr "பழமையானது"
 msgctxt "most_views"
 msgid "Most views"
 msgstr "பெரும்பாலான பார்வைகள்"
+
+#, java-printf-format
+msgctxt "sort_channel"
+msgid "Channel name"
+msgstr "சேனல் பெயர்"
+
+#, java-printf-format
+msgctxt "sort_size"
+msgid "Size"
+msgstr "அளவு"
 
 #, java-printf-format
 msgctxt "least_views"
@@ -1466,6 +1489,16 @@ msgid "Backup"
 msgstr "காப்புப்பிரதி"
 
 #, java-printf-format
+msgctxt "backup_creation_success"
+msgid "Backup completed successfully"
+msgstr "காப்புப்பிரதி வெற்றிகரமாக முடிந்தது"
+
+#, java-printf-format
+msgctxt "backup_creation_failed"
+msgid "Failed to create backup"
+msgstr "காப்புப்பிரதியை உருவாக்க முடியவில்லை"
+
+#, java-printf-format
 msgctxt "picture_in_picture"
 msgid "Picture-in-Picture"
 msgstr "படம்-படம்"
@@ -1499,14 +1532,9 @@ msgid "Open"
 msgstr "திற"
 
 #, java-printf-format
-msgctxt "legacy_subscriptions"
-msgid "Legacy subscriptions view"
-msgstr "மரபு சந்தாக்கள் பார்வை"
-
-#, java-printf-format
 msgctxt "device_info"
-msgid "Device info"
-msgstr "கருவி செய்தி"
+msgid "Device Info"
+msgstr "சாதனத் செய்தி"
 
 #, java-printf-format
 msgctxt "audio_video_summary"
@@ -1604,14 +1632,9 @@ msgid "Pitch"
 msgstr "குனிவு"
 
 #, java-printf-format
-msgctxt "filename"
-msgid "Filename"
-msgstr "கோப்புப்பெயர்"
-
-#, java-printf-format
-msgctxt "invalid_filename"
-msgid "Invalid filename!"
-msgstr "தவறான கோப்பு பெயர்!"
+msgctxt "playback_pitch_semitone_error_input"
+msgid "Value must be between -%1$.1f (minimum) and %1$.1f (maximum)"
+msgstr "மதிப்பு -%1$.1f மற்றும் %1$.1f க்கு இடையில் இருக்க வேண்டும்"
 
 #, java-printf-format
 msgctxt "time_code"
@@ -1655,11 +1678,6 @@ msgid "Livestreams"
 msgstr "லைவ்ச்ட்ரீம்கள்"
 
 #, java-printf-format
-msgctxt "alternative_videos_layout"
-msgid "Alternative videos layout"
-msgstr "மாற்று வீடியோக்கள் தளவமைப்பு"
-
-#, java-printf-format
 msgctxt "defaultIconLight"
 msgid "Default light"
 msgstr "இயல்புநிலை ஒளி"
@@ -1670,19 +1688,9 @@ msgid "Playlist cloned"
 msgstr "பிளேலிச்ட் நகலி"
 
 #, java-printf-format
-msgctxt "confirm_unsubscribe"
-msgid "Are you sure you want to unsubscribe %1$s?"
-msgstr "%1$s குழுவிலக நீங்கள் நிச்சயமாக விரும்புகிறீர்களா?"
-
-#, java-printf-format
-msgctxt "confirm_unsubscribing"
-msgid "Confirm unsubscribing"
-msgstr "குழுவிலகுவதை உறுதிப்படுத்தவும்"
-
-#, java-printf-format
-msgctxt "confirm_unsubscribing_summary"
-msgid "Show a confirmation dialog before unsubscribing"
-msgstr "குழுவிலகும் முன் உறுதிப்படுத்தல் உரையாடலைக் காட்டு"
+msgctxt "unsubscribe_snackbar_message"
+msgid "Successfully unsubscribed from %1$s"
+msgstr "%1$s இலிருந்து வெற்றிகரமாக குழுவிலகப்பட்டது"
 
 #, java-printf-format
 msgctxt "play_all"
@@ -1733,20 +1741,6 @@ msgstr "ஆடியோ டிராக்"
 msgctxt "unsupported_file_format"
 msgid "Unsupported file format: %1$s"
 msgstr "ஆதரிக்கப்படாத கோப்பு வடிவம்: %1$s"
-
-#, java-printf-format
-msgctxt "hls_instead_of_dash"
-msgid "Use HLS"
-msgstr "HLS ஐப் பயன்படுத்தவும்"
-
-#, java-printf-format
-msgctxt "hls_instead_of_dash_summary"
-msgid ""
-"Use HLS instead of DASH for streaming media. Try toggling this option if "
-"video playback doesn't work."
-msgstr ""
-"கோடுக்கு பதிலாக HLS ஐப் பயன்படுத்தவும். வீடியோ பிளேபேக் வேலை செய்யாவிட்டால் "
-"இந்த விருப்பத்தை மாற்ற முயற்சிக்கவும்."
 
 #, java-printf-format
 msgctxt "auto_quality"
@@ -1918,15 +1912,6 @@ msgid "Import watch history"
 msgstr "கண்காணிப்பு வரலாற்றை இறக்குமதி செய்யுங்கள்"
 
 #, java-printf-format
-msgctxt "import_watch_history_desc"
-msgid ""
-"Please note that not everything will be imported due to YouTube's limited "
-"export data."
-msgstr ""
-"யூடியூப்பின் வரையறுக்கப்பட்ட ஏற்றுமதி தரவு காரணமாக அனைத்தும் இறக்குமதி "
-"செய்யப்படாது என்பதை நினைவில் கொள்க."
-
-#, java-printf-format
 msgctxt "app_backup"
 msgid "App backup"
 msgstr "பயன்பாட்டு காப்புப்பிரதி"
@@ -2072,16 +2057,6 @@ msgid "Mark as watched"
 msgstr "பார்த்தபடி குறி"
 
 #, java-printf-format
-msgctxt "custom_playback_speed"
-msgid "Custom speed"
-msgstr "தனிப்பயன் விரைவு"
-
-#, java-printf-format
-msgctxt "custom_playback_speed_summary"
-msgid "Use a different playback speed than for the normal player"
-msgstr "சாதாரண பிளேயரை விட வேறு பின்னணி வேகத்தைப் பயன்படுத்தவும்"
-
-#, java-printf-format
 msgctxt "category"
 msgid "Category"
 msgstr "வகை"
@@ -2115,21 +2090,6 @@ msgstr "அடுத்த வீடியோவை தானாக விளை
 msgctxt "playing_next"
 msgid "Playing next in %1$s"
 msgstr "%1$s இல் அடுத்து விளையாடுவது"
-
-#, java-printf-format
-msgctxt "lbry_hls"
-msgid "LBRY HLS"
-msgstr "Lbry hls"
-
-#, java-printf-format
-msgctxt "lbry_hls_summary"
-msgid "Use LBRY HLS for streaming if available"
-msgstr "கிடைத்தால் ச்ட்ரீமிங்கிற்கு LBRY HLS ஐப் பயன்படுத்தவும்"
-
-#, java-printf-format
-msgctxt "proxy"
-msgid "Proxy"
-msgstr "பதிலாள்"
 
 #, java-printf-format
 msgctxt "disable_proxy"
@@ -2296,27 +2256,6 @@ msgstr "தானியங்கி"
 msgctxt "automatic_once"
 msgid "Automatic once"
 msgstr "ஒரு முறை தானியங்கி"
-
-#, java-printf-format
-msgctxt "visible"
-msgid "Show in seek bar"
-msgstr "சீக் பட்டியில் காட்டு"
-
-#, java-printf-format
-msgctxt "fallback_piped_proxy"
-msgid "Fallback to Piped proxy"
-msgstr "குழாய் பதிக்கப்பட்ட ப்ராக்சிக்கு குறைவு"
-
-#, java-printf-format
-msgctxt "fallback_piped_proxy_summary"
-msgid ""
-"Load videos via the proxy if connecting to YouTube directly doesn't work for"
-" the current video (increases the initial loading times). If disabled, "
-"YouTube music content likely won't play due to YT restrictions"
-msgstr ""
-"தற்போதைய வீடியோவுக்கு யூடியூப்போடு நேரடியாக வேலை செய்யாவிட்டால் (ஆரம்ப "
-"ஏற்றுதல் நேரங்களை அதிகரிக்கிறது) பதிலாள் வழியாக வீடியோக்களை ஏற்றவும். "
-"முடக்கப்பட்டால், YouTube இசை உள்ளடக்கம் YT கட்டுப்பாடுகள் காரணமாக இயங்காது"
 
 #, java-printf-format
 msgctxt "dearrow"
@@ -2489,6 +2428,11 @@ msgid "Screenshot"
 msgstr "திரைக்காட்சி"
 
 #, java-printf-format
+msgctxt "screenshot_saved"
+msgid "Screenshot saved"
+msgstr "திரைக்காட்சி சேமிக்கப்பட்டது"
+
+#, java-printf-format
 msgctxt "crashlog"
 msgid "Crashlog"
 msgstr "ரெட்லாக்"
@@ -2507,6 +2451,11 @@ msgstr "தகவலைப் புதுப்பிக்கவும்"
 msgctxt "mode_of_operation"
 msgid "Mode of operation"
 msgstr "செயல்பாட்டு முறை"
+
+#, java-printf-format
+msgctxt "delete_playlist_include_vidoes"
+msgid "Also delete all videos from the playlist?"
+msgstr "பிளேலிச்ட்டில் இருந்து எல்லா வீடியோக்களையும் நீக்கவா?"
 
 #.  Backup & Restore Settings
 #, java-printf-format
@@ -2542,17 +2491,12 @@ msgstr "புதிய குழாய்"
 #, java-printf-format
 msgctxt "import_format_freetube"
 msgid "FreeTube"
-msgstr "ஃப்ரீட்யூப்"
+msgstr "FreeTube"
 
 #, java-printf-format
 msgctxt "import_format_youtube_csv"
 msgid "YouTube (CSV)"
 msgstr "YouTube (CSV)"
-
-#, java-printf-format
-msgctxt "import_format_youtube_json"
-msgid "YouTube (JSON)"
-msgstr "YouTube (JSON)"
 
 #, java-printf-format
 msgctxt "import_format_list_of_urls"
@@ -2615,11 +2559,6 @@ msgid "Continue watching"
 msgstr "தொடர்ந்து பார்த்துக் கொள்ளுங்கள்"
 
 #, java-printf-format
-msgctxt "no_chapter"
-msgid "No chapter"
-msgstr "அத்தியாயம் இல்லை"
-
-#, java-printf-format
 msgctxt "screen_orientation"
 msgid "Screen orientation"
 msgstr "திரை நோக்குநிலை"
@@ -2665,11 +2604,6 @@ msgid "SponsorBlock UserID"
 msgstr "ஒப்புரவாளர் பிளாக் USERID"
 
 #, java-printf-format
-msgctxt "filename_too_long"
-msgid "Filename too long!"
-msgstr "கோப்பு பெயர் மிக நீண்டது!"
-
-#, java-printf-format
 msgctxt "remember_playback_speed"
 msgid "Remember playback speed"
 msgstr "பிளேபேக் வேகத்தை நினைவில் கொள்ளுங்கள்"
@@ -2700,6 +2634,13 @@ msgid "Disable sleep timer"
 msgstr "தூக்க டைமரை முடக்கு"
 
 #, java-printf-format
+msgctxt "minutes_left"
+msgid "%d min left"
+msgid_plural "%d min left"
+msgstr[0] "%d மணித்துளி மீதமுள்ளது"
+msgstr[1] "%d மணித்துளி மீதமுள்ளது"
+
+#, java-printf-format
 msgctxt "time_in_minutes"
 msgid "Time in minutes"
 msgstr "நிமிடங்களில் நேரம்"
@@ -2708,6 +2649,13 @@ msgstr "நிமிடங்களில் நேரம்"
 msgctxt "invalid_input"
 msgid "Invalid input"
 msgstr "தவறான உள்ளீடு"
+
+#, java-printf-format
+msgctxt "sleep_timer_chip_minutes"
+msgid ""
+msgid_plural "%d min"
+msgstr[0] "தூக்க_டைமர்_சிப்_நிமிடங்கள்"
+msgstr[1] "%dmin"
 
 #, java-printf-format
 msgctxt "add_to_group"
@@ -2830,6 +2778,41 @@ msgctxt "authentication"
 msgid "Authentication"
 msgstr "ஏற்பு"
 
+#, java-printf-format
+msgctxt "gaming"
+msgid "Gaming"
+msgstr "கேமிங்"
+
+#, java-printf-format
+msgctxt "podcasts"
+msgid "Podcasts"
+msgstr "பாட்காஸ்டுகள்"
+
+#, java-printf-format
+msgctxt "trailers"
+msgid "Trailers"
+msgstr "டிரெய்லர்கள்"
+
+#, java-printf-format
+msgctxt "music"
+msgid "Music"
+msgstr "இசை"
+
+#, java-printf-format
+msgctxt "include_timestamp_in_filename"
+msgid "Include timestamp in filename"
+msgstr "கோப்பு பெயரில் நேர முத்திரையைச் சேர்க்கவும்"
+
+#, java-printf-format
+msgctxt "did_you_mean"
+msgid "Did you mean:"
+msgstr "நீங்கள் கூறுவது:"
+
+#, java-printf-format
+msgctxt "showing_results_for"
+msgid "Showing results for:"
+msgstr "இதற்கான முடிவுகளைக் காட்டுகிறது:"
+
 #.  Notification channel strings
 #, java-printf-format
 msgctxt "download_channel_name"
@@ -2876,7 +2859,7 @@ msgctxt "channel_new_streams"
 msgid "%d new stream"
 msgid_plural "%d new streams"
 msgstr[0] "%d புதிய ச்ட்ரீம்"
-msgstr[1] "%d புதிய நீரோடைகள்"
+msgstr[1] "%d புதிய ச்ட்ரீம்கள்"
 
 #. Tooltips
 #, java-printf-format

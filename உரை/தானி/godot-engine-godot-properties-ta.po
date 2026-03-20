@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Godot Engine)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-21 06:06+0200\n"
-"PO-Revision-Date: 2025-09-21 11:08\n"
+"POT-Creation-Date: 2026-03-15 04:28+0200\n"
+"PO-Revision-Date: 2026-03-15 10:21\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/godot-engine/godot-properties/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #: core/config/project_settings.cpp
 #: editor/export/editor_export_platform_apple_embedded.cpp main/main.cpp
@@ -113,6 +113,11 @@ msgstr "திட்ட அமைப்புகள் மேலெழுது�
 
 #: core/config/project_settings.cpp
 #, c-format
+msgid "Disable Project Settings Override"
+msgstr "திட்ட அமைப்புகளை மீறுவதை முடக்கு"
+
+#: core/config/project_settings.cpp
+#, c-format
 msgid "Main Loop Type"
 msgstr "முதன்மை வளைய வகை"
 
@@ -174,7 +179,7 @@ msgstr "சாளரம்"
 #: scene/resources/3d/box_shape_3d.cpp scene/resources/3d/primitive_meshes.cpp
 #: scene/resources/external_texture.cpp scene/resources/label_settings.cpp
 #: scene/resources/placeholder_textures.cpp scene/resources/style_box_flat.cpp
-#: scene/resources/visual_shader.cpp servers/rendering_server.cpp
+#: scene/resources/visual_shader.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Size"
 msgstr "அளவு"
@@ -207,7 +212,7 @@ msgstr "வியூபோர்ட் உயரம்"
 #: scene/resources/visual_shader.cpp
 #: scene/resources/visual_shader_particle_nodes.cpp
 #: servers/audio/effects/audio_effect_distortion.cpp
-#: servers/rendering_server.cpp
+#: servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Mode"
 msgstr "பயன்முறை"
@@ -307,7 +312,7 @@ msgid "Animation"
 msgstr "அனிமேசன்"
 
 #: core/config/project_settings.cpp modules/gdscript/gdscript.cpp
-#: servers/rendering_server.cpp
+#: servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Warnings"
 msgstr "எச்சரிக்கைகள்"
@@ -322,13 +327,23 @@ msgstr "தவறான தட பாதைகளை சரிபார்க்
 msgid "Check Angle Interpolation Type Conflicting"
 msgstr "கோண இடைக்கணிப்பு வகை முரண்பாடாக சரிபார்க்கவும்"
 
+#: core/config/project_settings.cpp core/input/input.cpp
+#, c-format
+msgid "Compatibility"
+msgstr "பொருந்தக்கூடிய தன்மை"
+
+#: core/config/project_settings.cpp
+#, c-format
+msgid "Default Parent Skeleton in Mesh Instance 3D"
+msgstr "மெச் நிகழ்வு 3D இல் இயல்புநிலை பெற்றோர் எலும்புக்கூடு"
+
 #: core/config/project_settings.cpp main/main.cpp main/performance.cpp
-#: scene/animation/animation_mixer.cpp servers/audio_server.cpp
+#: scene/animation/animation_mixer.cpp servers/audio/audio_server.cpp
 #, c-format
 msgid "Audio"
 msgstr "ஆடியோ"
 
-#: core/config/project_settings.cpp servers/audio_server.cpp
+#: core/config/project_settings.cpp servers/audio/audio_server.cpp
 #, c-format
 msgid "Buses"
 msgstr "பேருந்துகள்"
@@ -371,7 +386,7 @@ msgstr "அமர்வு வகை"
 
 #: core/config/project_settings.cpp
 #, c-format
-msgid "Mix With Others"
+msgid "Mix with Others"
 msgstr "மற்றவர்களுடன் கலக்கவும்"
 
 #: core/config/project_settings.cpp
@@ -409,14 +424,16 @@ msgstr "ச்வாப்பி பயன்முறை"
 #: modules/jolt_physics/jolt_project_settings.cpp scene/2d/tile_map_layer.cpp
 #: scene/main/scene_tree.cpp scene/main/scene_tree_fti.cpp
 #: scene/main/viewport.cpp scene/resources/2d/tile_set.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Physics"
 msgstr "இயற்பியல்"
 
 #: core/config/project_settings.cpp editor/settings/editor_settings.cpp
-#: scene/main/scene_tree.cpp servers/navigation_server_2d.cpp
-#: servers/physics_server_2d.cpp servers/rendering_server.cpp
+#: scene/main/scene_tree.cpp servers/navigation_2d/navigation_server_2d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/rendering/rendering_server.cpp
 #, c-format
 msgid "2D"
 msgstr "மே"
@@ -427,8 +444,9 @@ msgid "Run on Separate Thread"
 msgstr "தனி நூலில் இயக்கவும்"
 
 #: core/config/project_settings.cpp editor/settings/editor_settings.cpp
-#: scene/main/scene_tree_fti.cpp servers/navigation_server_3d.cpp
-#: servers/physics_server_3d.cpp
+#: scene/main/scene_tree_fti.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "3D"
 msgstr "ZD"
@@ -457,7 +475,7 @@ msgstr "நற்பொருத்தம்"
 #: scene/main/canvas_layer.cpp scene/main/scene_tree.cpp
 #: scene/main/viewport.cpp scene/resources/camera_attributes.cpp
 #: scene/resources/material.cpp scene/resources/particle_process_material.cpp
-#: servers/rendering_server.cpp
+#: servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Scale"
 msgstr "அளவு"
@@ -476,8 +494,10 @@ msgstr "அளவிலான பயன்முறை"
 #: platform/web/export/export_plugin.cpp
 #: scene/2d/navigation/navigation_agent_2d.cpp
 #: scene/3d/navigation/navigation_agent_3d.cpp scene/main/scene_tree.cpp
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
-#: servers/rendering/renderer_canvas_cull.cpp servers/rendering_server.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
+#: servers/rendering/renderer_canvas_cull.cpp
+#: servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Debug"
 msgstr "பிழைத்திருத்தம்"
@@ -485,9 +505,11 @@ msgstr "பிழைத்திருத்தம்"
 #: core/config/project_settings.cpp
 #: editor/import/3d/resource_importer_scene.cpp main/main.cpp
 #: modules/gdscript/gdscript.cpp scene/3d/aim_modifier_3d.cpp
+#: scene/3d/bone_twist_disperser_3d.cpp
 #: scene/3d/convert_transform_modifier_3d.cpp
-#: scene/3d/copy_transform_modifier_3d.cpp
-#: scene/3d/spring_bone_simulator_3d.cpp
+#: scene/3d/copy_transform_modifier_3d.cpp scene/3d/iterate_ik_3d.cpp
+#: scene/3d/spline_ik_3d.cpp scene/3d/spring_bone_simulator_3d.cpp
+#: scene/3d/two_bone_ik_3d.cpp
 #, c-format
 msgid "Settings"
 msgstr "அமைப்புகள்"
@@ -547,7 +569,7 @@ msgstr "ச்லிப்"
 #: core/config/project_settings.cpp
 #, c-format
 msgid "Gzip"
-msgstr "Gzip"
+msgstr "சிசிப்"
 
 #: core/config/project_settings.cpp
 #, c-format
@@ -566,13 +588,13 @@ msgstr "செய்தி"
 #: modules/lightmapper_rd/register_types.cpp scene/2d/tile_map_layer.cpp
 #: scene/main/scene_tree.cpp scene/main/viewport.cpp
 #: scene/resources/2d/tile_set.cpp servers/rendering/renderer_scene_cull.cpp
-#: servers/rendering_server.cpp
+#: servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Rendering"
 msgstr "வழங்குதல்"
 
 #: core/config/project_settings.cpp scene/main/scene_tree.cpp
-#: servers/rendering_server.cpp
+#: servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Occlusion Culling"
 msgstr "மறைவு குறைத்தல்"
@@ -588,7 +610,7 @@ msgid "Jitter Projection"
 msgstr "நடிகர் திட்டம்"
 
 #: core/config/project_settings.cpp core/string/translation_server.cpp
-#: main/main.cpp servers/text_server.cpp
+#: main/main.cpp servers/text/text_server.cpp
 #, c-format
 msgid "Internationalization"
 msgstr "பன்னாட்டுமயமாக்கல்"
@@ -611,7 +633,7 @@ msgstr "ரூட் முனை ஆட்டோ மொழிபெயர்ப
 #: core/config/project_settings.cpp scene/gui/base_button.cpp
 #: scene/gui/scroll_container.cpp scene/gui/text_edit.cpp
 #: scene/main/viewport.cpp scene/register_scene_types.cpp
-#: scene/theme/theme_db.cpp servers/text_server.cpp
+#: scene/theme/theme_db.cpp servers/text/text_server.cpp
 #, c-format
 msgid "GUI"
 msgstr "குய்"
@@ -641,8 +663,18 @@ msgstr "பொது"
 
 #: core/config/project_settings.cpp scene/main/viewport.cpp
 #, c-format
+msgid "Drag Threshold"
+msgstr "வாசல் இழுக்கவும்"
+
+#: core/config/project_settings.cpp scene/main/viewport.cpp
+#, c-format
 msgid "Snap Controls to Pixels"
 msgstr "பிக்சல்களுக்கு ச்னாப் கட்டுப்பாடுகள்"
+
+#: core/config/project_settings.cpp
+#, c-format
+msgid "Show Focus State on Pointer Event"
+msgstr "பாயிண்டர் நிகழ்வில் கவனம் ச்டேட்டைக் காட்டு"
 
 #: core/config/project_settings.cpp scene/gui/control.cpp
 #: scene/main/window.cpp
@@ -716,7 +748,7 @@ msgstr "பைப்லைன் கேச்"
 #: platform/android/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp
 #: scene/3d/physics/joints/hinge_joint_3d.cpp
-#: scene/3d/retarget_modifier_3d.cpp servers/rendering_server.cpp
+#: scene/3d/retarget_modifier_3d.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Enable"
 msgstr "இயக்கு"
@@ -743,18 +775,13 @@ msgstr "தாத் 12"
 
 #: core/config/project_settings.cpp
 #, c-format
-msgid "Max Resource Descriptors per Frame"
-msgstr "ஒரு சட்டத்திற்கு அதிகபட்ச வள விளக்கங்கள்"
+msgid "Max Resource Descriptors"
+msgstr "அதிகபட்ச வள விளக்கங்கள்"
 
 #: core/config/project_settings.cpp
 #, c-format
-msgid "Max Sampler Descriptors per Frame"
-msgstr "ஒரு சட்டத்திற்கு அதிகபட்ச மாதிரி விளக்கங்கள்"
-
-#: core/config/project_settings.cpp
-#, c-format
-msgid "Max Misc Descriptors per Frame"
-msgstr "ஒரு சட்டத்திற்கு அதிகபட்சம் விளக்கங்கள்"
+msgid "Max Sampler Descriptors"
+msgstr "அதிகபட்ச மாதிரி விளக்கங்கள்"
 
 #: core/config/project_settings.cpp
 #, c-format
@@ -763,7 +790,7 @@ msgstr "சுறுசுறுப்பு SDK பதிப்பு"
 
 #: core/config/project_settings.cpp modules/basis_universal/register_types.cpp
 #: modules/gltf/gltf_state.cpp scene/3d/decal.cpp scene/gui/texture_button.cpp
-#: scene/gui/texture_progress_bar.cpp servers/rendering_server.cpp
+#: scene/gui/texture_progress_bar.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Textures"
 msgstr "கட்டமைப்புகள்"
@@ -831,7 +858,8 @@ msgstr "சுருள் டெட்சோனை முடக்கு"
 #: core/config/project_settings.cpp editor/settings/editor_settings.cpp
 #: main/performance.cpp modules/gridmap/grid_map.cpp
 #: scene/2d/tile_map_layer.cpp scene/resources/2d/tile_set.cpp
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Navigation"
 msgstr "வானோடல்"
@@ -856,8 +884,9 @@ msgstr "பிராந்திய பயன்பாடு ஒத்திச�
 #: scene/2d/navigation/navigation_obstacle_2d.cpp
 #: scene/3d/navigation/navigation_agent_3d.cpp
 #: scene/3d/navigation/navigation_obstacle_3d.cpp
-#: scene/register_scene_types.cpp servers/navigation_server_2d.cpp
-#: servers/navigation_server_3d.cpp
+#: scene/register_scene_types.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Avoidance"
 msgstr "தவிர்ப்பு"
@@ -908,6 +937,21 @@ msgstr "பேக்கிங் பல நூல்களைப் பயன்
 #, c-format
 msgid "Baking Use High Priority Threads"
 msgstr "பேக்கிங் அதிக முன்னுரிமை நூல்களைப் பயன்படுத்துங்கள்"
+
+#: core/config/project_settings.cpp
+#, c-format
+msgid "NavMesh Edge Merge Errors"
+msgstr "NavMesh எட்ச் மெர்ச் பிழைகள்"
+
+#: core/config/project_settings.cpp
+#, c-format
+msgid "NavMesh Cell Size Mismatch"
+msgstr "NavMesh செல் அளவு பொருந்தவில்லை"
+
+#: core/config/project_settings.h
+#, c-format
+msgid "Editor Overrides"
+msgstr "எடிட்டர் மீறுகிறது"
 
 #: core/core_bind.cpp
 #, c-format
@@ -978,11 +1022,6 @@ msgstr "தொடுதலில் இருந்து சுட்டிய�
 #, c-format
 msgid "Emulate Touch From Mouse"
 msgstr "சுட்டியில் இருந்து தொடுதலைப் பின்பற்றுங்கள்"
-
-#: core/input/input.cpp
-#, c-format
-msgid "Compatibility"
-msgstr "பொருந்தக்கூடிய தன்மை"
 
 #: core/input/input.cpp
 #, c-format
@@ -1095,7 +1134,8 @@ msgstr "பொத்தான் முகமூடி"
 #: scene/2d/remote_transform_2d.cpp scene/3d/node_3d.cpp
 #: scene/3d/remote_transform_3d.cpp scene/gui/control.cpp
 #: scene/main/window.cpp scene/resources/particle_process_material.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Position"
 msgstr "நிலை"
@@ -1140,7 +1180,7 @@ msgstr "அழுத்தம்"
 msgid "Pen Inverted"
 msgstr "பேனா தலைகீழ்"
 
-#: core/input/input_event.cpp
+#: core/input/input_event.cpp scene/3d/look_at_modifier_3d.cpp
 #, c-format
 msgid "Relative"
 msgstr "உறவினர்"
@@ -1304,8 +1344,9 @@ msgid "Local to Scene"
 msgstr "உள்ளக காட்சிக்கு"
 
 #: core/io/resource.cpp editor/import/3d/resource_importer_scene.cpp
-#: servers/navigation/navigation_path_query_result_2d.cpp
-#: servers/navigation/navigation_path_query_result_3d.cpp
+#: platform/android/export/export.cpp
+#: servers/navigation_2d/navigation_path_query_result_2d.cpp
+#: servers/navigation_3d/navigation_path_query_result_3d.cpp
 #, c-format
 msgid "Path"
 msgstr "பாதை"
@@ -1338,11 +1379,10 @@ msgstr "பகுதி"
 #: scene/3d/label_3d.cpp scene/3d/look_at_modifier_3d.cpp
 #: scene/3d/physics/physical_bone_3d.cpp scene/3d/physics/soft_body_3d.cpp
 #: scene/3d/spring_bone_collision_3d.cpp scene/3d/sprite_3d.cpp
-#: scene/3d/visual_instance_3d.cpp scene/gui/rich_text_effect.cpp
-#: scene/gui/split_container.cpp scene/main/canvas_layer.cpp
-#: scene/resources/3d/primitive_meshes.cpp scene/resources/font.cpp
-#: scene/resources/label_settings.cpp scene/resources/material.cpp
-#: scene/resources/style_box_flat.cpp
+#: scene/gui/rich_text_effect.cpp scene/gui/split_container.cpp
+#: scene/main/canvas_layer.cpp scene/resources/3d/primitive_meshes.cpp
+#: scene/resources/font.cpp scene/resources/label_settings.cpp
+#: scene/resources/material.cpp scene/resources/style_box_flat.cpp
 #, c-format
 msgid "Offset"
 msgstr "ஈடுசெய்யும்"
@@ -1399,7 +1439,7 @@ msgstr "நினைவகம்"
 #: core/object/message_queue.cpp core/register_core_types.cpp main/main.cpp
 #: modules/jolt_physics/jolt_project_settings.cpp
 #: modules/webrtc/register_types.cpp scene/main/window.cpp
-#: servers/rendering_server.cpp
+#: servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Limits"
 msgstr "வரம்புகள்"
@@ -1432,6 +1472,11 @@ msgstr "டி.சி.பி."
 #, c-format
 msgid "Connect Timeout Seconds"
 msgstr "கால அவகாசங்களை இணைக்கவும்"
+
+#: core/register_core_types.cpp
+#, c-format
+msgid "Unix"
+msgstr "யுனிக்ச்"
 
 #: core/register_core_types.cpp
 #, c-format
@@ -1470,10 +1515,15 @@ msgid "Low Priority Thread Ratio"
 msgstr "குறைந்த முன்னுரிமை நூல் விகிதம்"
 
 #: core/string/translation.cpp core/string/translation_server.cpp
-#: servers/text_server.cpp
+#: servers/text/text_server.cpp
 #, c-format
 msgid "Locale"
 msgstr "மொழி"
+
+#: core/string/translation.cpp
+#, c-format
+msgid "Plural Rules Override"
+msgstr "பன்மை விதிகள் மேலெழுதப்படுகின்றன"
 
 #: core/string/translation_server.cpp
 #, c-format
@@ -1497,7 +1547,7 @@ msgstr "சூடோலோகலைசேசன் பயன்படுத்�
 
 #: core/string/translation_server.cpp
 #, c-format
-msgid "Replace With Accents"
+msgid "Replace with Accents"
 msgstr "உச்சரிப்புகளுடன் மாற்றவும்"
 
 #: core/string/translation_server.cpp
@@ -1565,8 +1615,9 @@ msgstr "ஆர்க்ச்"
 
 #: editor/animation/animation_track_editor.cpp
 #: editor/settings/editor_settings.cpp modules/noise/fastnoise_lite.cpp
-#: scene/3d/physics/physical_bone_3d.cpp scene/gui/text_edit.cpp
-#: scene/resources/visual_shader_nodes.cpp servers/xr/xr_tracker.cpp
+#: scene/3d/physics/physical_bone_3d.cpp scene/gui/line_edit.cpp
+#: scene/gui/text_edit.cpp scene/resources/visual_shader_nodes.cpp
+#: servers/xr/xr_tracker.cpp
 #, c-format
 msgid "Type"
 msgstr "வகை"
@@ -1641,6 +1692,68 @@ msgstr "நேரம் முடிந்தது"
 #, c-format
 msgid "Sync Breakpoints"
 msgstr "பிரேக் பாயிண்ட்சை ஒத்திசைக்கவும்"
+
+#: editor/docks/editor_dock.cpp scene/gui/foldable_container.cpp
+#: scene/gui/graph_frame.cpp scene/gui/graph_node.cpp scene/main/window.cpp
+#: scene/resources/visual_shader.cpp
+#, c-format
+msgid "Title"
+msgstr "தலைப்பு"
+
+#: editor/docks/editor_dock.cpp
+#, c-format
+msgid "Layout Key"
+msgstr "தளவமைப்பு விசை"
+
+#: editor/docks/editor_dock.cpp
+#, c-format
+msgid "Global"
+msgstr "உலகளாவிய"
+
+#: editor/docks/editor_dock.cpp scene/main/window.cpp
+#, c-format
+msgid "Transient"
+msgstr "மாறுநிலை"
+
+#: editor/docks/editor_dock.cpp
+#, c-format
+msgid "Closable"
+msgstr "மூடக்கூடியது"
+
+#: editor/docks/editor_dock.cpp
+#, c-format
+msgid "Icon Name"
+msgstr "படவுரு பெயர்"
+
+#: editor/docks/editor_dock.cpp
+#, c-format
+msgid "Dock Icon"
+msgstr "கப்பல்துறை படவுரு"
+
+#: editor/docks/editor_dock.cpp
+#, c-format
+msgid "Force Show Icon"
+msgstr "ஃபோர்ச் சோ படவுரு"
+
+#: editor/docks/editor_dock.cpp scene/theme/default_theme.cpp
+#, c-format
+msgid "Title Color"
+msgstr "தலைப்பு நிறம்"
+
+#: editor/docks/editor_dock.cpp
+#, c-format
+msgid "Dock Shortcut"
+msgstr "கப்பல்துறை குறுக்குவழி"
+
+#: editor/docks/editor_dock.cpp
+#, c-format
+msgid "Default Slot"
+msgstr "இயல்புநிலை ச்லாட்"
+
+#: editor/docks/editor_dock.cpp
+#, c-format
+msgid "Available Layouts"
+msgstr "கிடைக்கும் தளவமைப்புகள்"
 
 #: editor/editor_interface.cpp
 #, c-format
@@ -1828,29 +1941,25 @@ msgstr "சேடர் பேக்கர்"
 #: editor/export/editor_export_platform_pc.cpp
 #: editor/import/3d/resource_importer_scene.cpp main/main.cpp
 #: modules/fbx/register_types.cpp modules/gltf/register_types.cpp
-#: modules/noise/fastnoise_lite.cpp platform/android/export/export_plugin.cpp
+#: modules/openxr/extensions/openxr_frame_synthesis_extension.cpp
+#: platform/android/export/export_plugin.cpp
 #: platform/linuxbsd/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
 #: platform/web/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp scene/2d/camera_2d.cpp
-#: scene/2d/light_2d.cpp scene/2d/navigation/navigation_agent_2d.cpp
-#: scene/2d/navigation/navigation_link_2d.cpp
+#: scene/2d/light_2d.cpp scene/2d/navigation/navigation_link_2d.cpp
 #: scene/2d/navigation/navigation_region_2d.cpp
-#: scene/2d/physics/joints/pin_joint_2d.cpp scene/2d/physics/ray_cast_2d.cpp
-#: scene/2d/physics/shape_cast_2d.cpp scene/2d/tile_map_layer.cpp
-#: scene/3d/audio_stream_player_3d.cpp scene/3d/decal.cpp
-#: scene/3d/navigation/navigation_agent_3d.cpp
-#: scene/3d/navigation/navigation_link_3d.cpp
-#: scene/3d/navigation/navigation_region_3d.cpp scene/3d/physics/area_3d.cpp
+#: scene/2d/physics/ray_cast_2d.cpp scene/2d/physics/shape_cast_2d.cpp
+#: scene/2d/tile_map_layer.cpp scene/3d/navigation/navigation_link_3d.cpp
+#: scene/3d/navigation/navigation_region_3d.cpp
 #: scene/3d/physics/joints/generic_6dof_joint_3d.cpp
 #: scene/3d/physics/ray_cast_3d.cpp scene/3d/physics/shape_cast_3d.cpp
-#: scene/3d/sprite_3d.cpp scene/gui/code_edit.cpp scene/gui/graph_edit.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_2d.cpp
 #: scene/resources/2d/skeleton/skeleton_modification_stack_2d.cpp
-#: scene/resources/camera_attributes.cpp scene/resources/compositor.cpp
-#: scene/resources/curve.cpp scene/resources/environment.cpp
-#: scene/resources/material.cpp scene/resources/particle_process_material.cpp
-#: scene/resources/visual_shader.cpp servers/rendering_server.cpp
+#: scene/resources/compositor.cpp scene/resources/curve.cpp
+#: scene/resources/environment.cpp scene/resources/material.cpp
+#: scene/resources/particle_process_material.cpp
+#: scene/resources/visual_shader.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Enabled"
 msgstr "இயக்கப்பட்டது"
@@ -1960,7 +2069,7 @@ msgstr "பைனரி வடிவம்"
 #: editor/export/editor_export_platform_pc.cpp
 #, c-format
 msgid "Embed PCK"
-msgstr "பி.சி.கே."
+msgstr "பிசிகே ஐ உட்பொதிக்கவும்"
 
 #: editor/export/editor_export_platform_pc.cpp
 #, c-format
@@ -1982,45 +2091,6 @@ msgstr "முதலியன ASTC"
 msgid "Export Path"
 msgstr "ஏற்றுமதி பாதை"
 
-#: editor/gui/editor_file_dialog.cpp scene/gui/file_dialog.cpp
-#, c-format
-msgid "Access"
-msgstr "அணுகல்"
-
-#: editor/gui/editor_file_dialog.cpp editor/settings/editor_settings.cpp
-#: scene/gui/file_dialog.cpp
-#, c-format
-msgid "Display Mode"
-msgstr "காட்சி முறை"
-
-#: editor/gui/editor_file_dialog.cpp scene/gui/file_dialog.cpp
-#, c-format
-msgid "File Mode"
-msgstr "கோப்பு முறை"
-
-#: editor/gui/editor_file_dialog.cpp scene/gui/file_dialog.cpp
-#: scene/resources/2d/navigation_polygon.cpp
-#: scene/resources/navigation_mesh.cpp
-#, c-format
-msgid "Filters"
-msgstr "வடிப்பான்கள்"
-
-#: editor/gui/editor_file_dialog.cpp scene/gui/file_dialog.cpp
-#, c-format
-msgid "Options"
-msgstr "விருப்பங்கள்"
-
-#: editor/gui/editor_file_dialog.cpp editor/settings/editor_settings.cpp
-#: scene/gui/file_dialog.cpp
-#, c-format
-msgid "Show Hidden Files"
-msgstr "மறைக்கப்பட்ட கோப்புகளைக் காட்டு"
-
-#: editor/gui/editor_file_dialog.cpp
-#, c-format
-msgid "Disable Overwrite Warning"
-msgstr "மேலெழுதும் எச்சரிக்கையை முடக்கு"
-
 #: editor/gui/editor_spin_slider.cpp editor/inspector/editor_inspector.cpp
 #, c-format
 msgid "Label"
@@ -2037,6 +2107,11 @@ msgstr "படிக்கவும்"
 #, c-format
 msgid "Flat"
 msgstr "கிடைவளைவு"
+
+#: editor/gui/editor_spin_slider.cpp
+#, c-format
+msgid "Control State"
+msgstr "கட்டுப்பாட்டு நிலை"
 
 #: editor/gui/editor_spin_slider.cpp
 #, c-format
@@ -2136,7 +2211,7 @@ msgstr "நிழல் சரிசெய்யவும்"
 #: editor/import/3d/post_import_plugin_skeleton_rest_fixer.cpp
 #: scene/2d/light_2d.cpp scene/gui/control.cpp scene/main/canvas_item.cpp
 #: scene/resources/3d/sky_material.cpp scene/resources/material.cpp
-#: servers/rendering_server.cpp
+#: servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Filter"
 msgstr "வடிப்பி"
@@ -2524,7 +2599,7 @@ msgstr "துண்டுகள்"
 #: scene/3d/cpu_particles_3d.cpp scene/3d/gpu_particles_3d.cpp
 #: scene/3d/physics/area_3d.cpp scene/resources/camera_attributes.cpp
 #: scene/resources/environment.cpp scene/resources/material.cpp
-#: servers/rendering_server.cpp
+#: servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Amount"
 msgstr "தொகை"
@@ -2837,7 +2912,8 @@ msgstr "குறைவடைகள்"
 #: editor/import/resource_importer_layered_texture.cpp
 #: editor/import/resource_importer_svg.cpp
 #: editor/import/resource_importer_texture.cpp
-#: editor/import/resource_importer_wav.cpp servers/rendering_server.cpp
+#: editor/import/resource_importer_wav.cpp
+#: servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Compress"
 msgstr "சுருக்க"
@@ -2882,8 +2958,8 @@ msgstr "முகம் அட்டவணை"
 #: scene/3d/node_3d.cpp scene/gui/control.cpp scene/gui/rich_text_effect.cpp
 #: scene/main/canvas_layer.cpp scene/resources/font.cpp
 #: scene/resources/material.cpp servers/camera/camera_feed.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
-#: servers/xr/xr_pose.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp servers/xr/xr_pose.cpp
 #, c-format
 msgid "Transform"
 msgstr "உருமாற்று, உருமாற்றம்"
@@ -2903,6 +2979,16 @@ msgstr "அளவிடுதல் முறை"
 #, c-format
 msgid "Delimiter"
 msgstr "பிரிப்பான்"
+
+#: editor/import/resource_importer_csv_translation.cpp
+#, c-format
+msgid "Unescape Keys"
+msgstr "Unescape விசைகள்"
+
+#: editor/import/resource_importer_csv_translation.cpp
+#, c-format
+msgid "Unescape Translations"
+msgstr "Unescape மொழிபெயர்ப்புகள்"
 
 #: editor/import/resource_importer_imagefont.cpp
 #, c-format
@@ -2990,15 +3076,15 @@ msgstr "மிப்மாப்ச்"
 
 #: editor/import/resource_importer_layered_texture.cpp
 #: editor/import/resource_importer_texture.cpp scene/2d/camera_2d.cpp
-#: scene/2d/parallax_2d.cpp servers/rendering_server.cpp
+#: scene/2d/parallax_2d.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Limit"
 msgstr "வரம்பு"
 
 #: editor/import/resource_importer_layered_texture.cpp
 #: scene/gui/aspect_ratio_container.cpp scene/gui/control.cpp
-#: scene/gui/nine_patch_rect.cpp scene/gui/scroll_container.cpp
-#: scene/gui/text_edit.cpp scene/resources/style_box_texture.cpp
+#: scene/gui/nine_patch_rect.cpp scene/gui/text_edit.cpp
+#: scene/resources/style_box_texture.cpp
 #, c-format
 msgid "Horizontal"
 msgstr "கிடைமட்டமாக"
@@ -3006,9 +3092,9 @@ msgstr "கிடைமட்டமாக"
 #: editor/import/resource_importer_layered_texture.cpp
 #: scene/gui/aspect_ratio_container.cpp scene/gui/box_container.cpp
 #: scene/gui/control.cpp scene/gui/flow_container.cpp
-#: scene/gui/nine_patch_rect.cpp scene/gui/scroll_container.cpp
-#: scene/gui/split_container.cpp scene/gui/text_edit.cpp
-#: scene/resources/style_box_line.cpp scene/resources/style_box_texture.cpp
+#: scene/gui/nine_patch_rect.cpp scene/gui/split_container.cpp
+#: scene/gui/text_edit.cpp scene/resources/style_box_line.cpp
+#: scene/resources/style_box_texture.cpp
 #, c-format
 msgid "Vertical"
 msgstr "செங்குத்து"
@@ -3143,13 +3229,13 @@ msgstr "திருத்தி"
 
 #: editor/import/resource_importer_texture.cpp
 #, c-format
-msgid "Scale With Editor Scale"
-msgstr "எடிட்டர் அளவோடு அளவுகோல்"
+msgid "Scale with Editor Scale"
+msgstr "எடிட்டர் அளவுகோலுடன் அளவிடவும்"
 
 #: editor/import/resource_importer_texture.cpp
 #, c-format
-msgid "Convert Colors With Editor Theme"
-msgstr "எடிட்டர் கருப்பொருளுடன் வண்ணங்களை மாற்றவும்"
+msgid "Convert Colors with Editor Theme"
+msgstr "எடிட்டர் கருப்பொருள் மூலம் வண்ணங்களை மாற்றவும்"
 
 #: editor/import/resource_importer_texture_atlas.cpp
 #, c-format
@@ -3503,6 +3589,11 @@ msgstr "கப்பல்துறை தாவல் பாணி"
 
 #: editor/settings/editor_settings.cpp
 #, c-format
+msgid "Bottom Dock Tab Style"
+msgstr "பாட்டம் டாக் டேப் பாணி"
+
+#: editor/settings/editor_settings.cpp
+#, c-format
 msgid "UI Layout Direction"
 msgstr "இடைமுகம் தளவமைப்பு திசை"
 
@@ -3568,6 +3659,11 @@ msgstr "குறியீடு எழுத்துரு அளவு"
 
 #: editor/settings/editor_settings.cpp
 #, c-format
+msgid "Main Font Custom OpenType Features"
+msgstr "முதன்மை எழுத்துரு தனிப்பயன் OpenType நற்பொருத்தங்கள்"
+
+#: editor/settings/editor_settings.cpp
+#, c-format
 msgid "Code Font Contextual Ligatures"
 msgstr "குறியீடு எழுத்துரு சூழல் தசைநார்"
 
@@ -3620,6 +3716,11 @@ msgstr "முதன்மையான எழுத்துரு தைரி�
 #, c-format
 msgid "Code Font"
 msgstr "குறியீடு எழுத்துரு"
+
+#: editor/settings/editor_settings.cpp
+#, c-format
+msgid "Dragging Hover Wait Seconds"
+msgstr "இழுத்தல் ஓவர் வினாடிகள் காத்திருக்கவும்"
 
 #: editor/settings/editor_settings.cpp
 #, c-format
@@ -3743,6 +3844,11 @@ msgstr "மிதவை இழுவை விரைவு"
 
 #: editor/settings/editor_settings.cpp
 #, c-format
+msgid "Integer Drag Speed"
+msgstr "முழு எண் இழுக்கும் விரைவு"
+
+#: editor/settings/editor_settings.cpp
+#, c-format
 msgid "Nested Color Mode"
 msgstr "உள்ளமைக்கப்பட்ட வண்ண பயன்முறை"
 
@@ -3807,7 +3913,7 @@ msgid "Color Picker Show Intensity"
 msgstr "கலர் பிக்கர் தீவிரத்தைக் காட்டுகிறது"
 
 #: editor/settings/editor_settings.cpp scene/gui/control.cpp
-#: scene/main/window.cpp scene/theme/theme_db.cpp servers/text_server.cpp
+#: scene/main/window.cpp scene/theme/theme_db.cpp servers/text/text_server.cpp
 #, c-format
 msgid "Theme"
 msgstr "கருப்பொருள்"
@@ -3819,8 +3925,13 @@ msgstr "கணினி கருப்பொருள் பின்பற்�
 
 #: editor/settings/editor_settings.cpp
 #, c-format
-msgid "Preset"
-msgstr "முன்னமைவு"
+msgid "Style"
+msgstr "சூல் தண்டு"
+
+#: editor/settings/editor_settings.cpp
+#, c-format
+msgid "Color Preset"
+msgstr "வண்ண முன்னமைவு"
 
 #: editor/settings/editor_settings.cpp
 #, c-format
@@ -3861,6 +3972,11 @@ msgstr "கூடுதல் எல்லைகளை வரையவும்"
 #, c-format
 msgid "Icon Saturation"
 msgstr "படவுரு செறிவு"
+
+#: editor/settings/editor_settings.cpp scene/theme/default_theme.cpp
+#, c-format
+msgid "Draw Relationship Lines"
+msgstr "உறவு கோடுகளை வரையவும்"
 
 #: editor/settings/editor_settings.cpp
 #, c-format
@@ -3943,6 +4059,11 @@ msgstr "ச்கிரிப்ட் பொத்தானைக் காட�
 #, c-format
 msgid "Restore Scenes on Load"
 msgstr "சுமைகளில் காட்சிகளை மீட்டெடுக்கவும்"
+
+#: editor/settings/editor_settings.cpp
+#, c-format
+msgid "Auto Select Current Scene File"
+msgstr "தற்போதைய காட்சி கோப்பை தானாகத் தேர்ந்தெடுக்கவும்"
 
 #: editor/settings/editor_settings.cpp
 #, c-format
@@ -4032,6 +4153,11 @@ msgstr "காப்புப்பிரதியில் பாதுகா�
 
 #: editor/settings/editor_settings.cpp
 #, c-format
+msgid "Warn on Saving Large Text Resources"
+msgstr "பெரிய உரை ஆதாரங்களை சேமிப்பது குறித்து எச்சரிக்கவும்"
+
+#: editor/settings/editor_settings.cpp
+#, c-format
 msgid "File Server"
 msgstr "கோப்பு சேவையகம்"
 
@@ -4054,6 +4180,16 @@ msgstr "கடவுச்சொல்"
 msgid "File Dialog"
 msgstr "கோப்பு உரையாடல்"
 
+#: editor/settings/editor_settings.cpp scene/gui/file_dialog.cpp
+#, c-format
+msgid "Show Hidden Files"
+msgstr "மறைக்கப்பட்ட கோப்புகளைக் காட்டு"
+
+#: editor/settings/editor_settings.cpp scene/gui/file_dialog.cpp
+#, c-format
+msgid "Display Mode"
+msgstr "காட்சி முறை"
+
 #: editor/settings/editor_settings.cpp scene/theme/default_theme.cpp
 #, c-format
 msgid "Thumbnail Size"
@@ -4069,6 +4205,11 @@ msgstr "விரைவான திறந்த உரையாடல்"
 #, c-format
 msgid "Max Results"
 msgstr "அதிகபட்ச முடிவுகள்"
+
+#: editor/settings/editor_settings.cpp
+#, c-format
+msgid "Instant Preview"
+msgstr "உடனடி முன்னோட்டம்"
 
 #: editor/settings/editor_settings.cpp
 #, c-format
@@ -4584,8 +4725,8 @@ msgstr "செயலற்ற பாகுபடுத்தல் நேரந�
 
 #: editor/settings/editor_settings.cpp
 #, c-format
-msgid "Idle Parse Delay With Errors Found"
-msgstr "பிழைகள் காணப்படும் செயலற்ற பாகுபடுத்தல் நேரந்தவறுகை"
+msgid "Idle Parse Delay with Errors Found"
+msgstr "பிழைகளுடன் செயலற்ற அலசல் நேரந்தவறுகை கண்டறியப்பட்டது"
 
 #: editor/settings/editor_settings.cpp
 #, c-format
@@ -4689,11 +4830,6 @@ msgstr "தூரத்தைத் தேர்ந்தெடுங்கள�
 
 #: editor/settings/editor_settings.cpp
 #, c-format
-msgid "Palette Min Width"
-msgstr "தட்டு குறைந்தபட்ச அகலம்"
-
-#: editor/settings/editor_settings.cpp
-#, c-format
 msgid "Preview Size"
 msgstr "முன்னோட்டம் அளவு"
 
@@ -4740,7 +4876,7 @@ msgstr "ச்ட்ரீம் பிளேயர் 3D"
 
 #: editor/settings/editor_settings.cpp modules/gltf/structures/gltf_node.cpp
 #: platform/macos/export/export_plugin.cpp scene/theme/default_theme.cpp
-#: servers/rendering_server.cpp
+#: servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Camera"
 msgstr "கேமரா"
@@ -4800,7 +4936,7 @@ msgstr "பிரதிபலிப்பு ஆய்வு"
 msgid "Visibility Notifier"
 msgstr "தெரிவுநிலை அறிவிப்பாளர்"
 
-#: editor/settings/editor_settings.cpp servers/rendering_server.cpp
+#: editor/settings/editor_settings.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Voxel GI"
 msgstr "வோக்சல் ஐயா"
@@ -4849,6 +4985,11 @@ msgstr "மோதலுக்குள் வசந்த எலும்பு"
 
 #: editor/settings/editor_settings.cpp
 #, c-format
+msgid "IK Chain"
+msgstr "இக் சங்கிலி"
+
+#: editor/settings/editor_settings.cpp
+#, c-format
 msgid "Gizmo Settings"
 msgstr "கிச்மோ அமைப்புகள்"
 
@@ -4864,8 +5005,8 @@ msgstr "எலும்பு வடிவம்"
 
 #: editor/settings/editor_settings.cpp
 #, c-format
-msgid "Path 3D Tilt Disk Size"
-msgstr "பாதை 3D டில்ட் வட்டு அளவு"
+msgid "Path3D Tilt Disk Size"
+msgstr "Path3D டில்ட் டிச்க் அளவு"
 
 #: editor/settings/editor_settings.cpp
 #, c-format
@@ -5009,6 +5150,11 @@ msgstr "பெரிதாக்க மந்தநிலை"
 
 #: editor/settings/editor_settings.cpp
 #, c-format
+msgid "Angle Snap Threshold"
+msgstr "ஆங்கிள் ச்னாப் த்ரெசோல்ட்"
+
+#: editor/settings/editor_settings.cpp
+#, c-format
 msgid "Show Viewport Rotation Gizmo"
 msgstr "வியூபோர்ட் சுழற்சி கிச்மோவைக் காட்டு"
 
@@ -5061,6 +5207,11 @@ msgstr "கையாளுபவர் கிச்மோ அளவு"
 #, c-format
 msgid "Manipulator Gizmo Opacity"
 msgstr "கையாளுபவர் கிச்மோ ஒளிபுகாநிலை"
+
+#: editor/settings/editor_settings.cpp
+#, c-format
+msgid "Show Gizmo During Rotation"
+msgstr "சுழற்சியின் போது கிச்மோவைக் காட்டு"
 
 #: editor/settings/editor_settings.cpp
 #, c-format
@@ -5131,6 +5282,11 @@ msgstr "சூம் வேக காரணி"
 #, c-format
 msgid "Ruler Width"
 msgstr "ஆட்சியாளர் அகலம்"
+
+#: editor/settings/editor_settings.cpp
+#, c-format
+msgid "Auto Resample Delay"
+msgstr "தானியங்கு மறு மாதிரி நேரந்தவறுகை"
 
 #: editor/settings/editor_settings.cpp
 #, c-format
@@ -5261,6 +5417,11 @@ msgstr "இயல்புநிலை பெசியர் தடங்கள�
 #, c-format
 msgid "Default Create Reset Tracks"
 msgstr "இயல்புநிலை மீட்டமை தடங்களை உருவாக்கு"
+
+#: editor/settings/editor_settings.cpp
+#, c-format
+msgid "Insert at Current Time"
+msgstr "தற்போதைய நேரத்தில் செருகவும்"
 
 #: editor/settings/editor_settings.cpp
 #, c-format
@@ -5659,7 +5820,7 @@ msgstr "குறைந்த செயலி பயன்முறை"
 #: main/main.cpp
 #, c-format
 msgid "stdout"
-msgstr "stdout"
+msgstr "நிலைவெளி"
 
 #: main/main.cpp
 #, c-format
@@ -5727,8 +5888,8 @@ msgstr "பதிவு பாதை"
 msgid "Max Log Files"
 msgstr "அதிகபட்ச பதிவு கோப்புகள்"
 
-#: main/main.cpp main/performance.cpp servers/audio_server.cpp
-#: servers/rendering_server.cpp
+#: main/main.cpp main/performance.cpp servers/audio/audio_server.cpp
+#: servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Driver"
 msgstr "இயக்கி"
@@ -5748,7 +5909,7 @@ msgstr "D3D12 க்கு குறைவானது"
 msgid "Fallback to OpenGL 3"
 msgstr "ஓபன்சிஎல் 3 க்கு குறைவானது"
 
-#: main/main.cpp servers/rendering_server.cpp
+#: main/main.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "GL Compatibility"
 msgstr "GL பொருந்தக்கூடிய தன்மை"
@@ -5866,7 +6027,7 @@ msgid "Suppress UI Gesture"
 msgstr "இடைமுகம் சைகை அடக்கவும்"
 
 #: main/main.cpp modules/openxr/editor/openxr_select_runtime.cpp
-#: servers/rendering_server.cpp servers/xr/xr_interface.cpp
+#: servers/rendering/rendering_server.cpp servers/xr/xr_interface.cpp
 #, c-format
 msgid "XR"
 msgstr "எக்ச்ஆர்"
@@ -5875,6 +6036,11 @@ msgstr "எக்ச்ஆர்"
 #, c-format, ignore-same
 msgid "OpenXR"
 msgstr "Openxr"
+
+#: main/main.cpp
+#, c-format
+msgid "Target API Version"
+msgstr "இலக்கு பநிஇ பதிப்பு"
 
 #: main/main.cpp
 #, c-format
@@ -5938,6 +6104,11 @@ msgstr "செய்தி வகைகளை பிழைத்திருத�
 
 #: main/main.cpp
 #, c-format
+msgid "Frame Synthesis"
+msgstr "சட்ட தொகுப்பு"
+
+#: main/main.cpp
+#, c-format
 msgid "Hand Tracking"
 msgstr "கை கண்காணிப்பு"
 
@@ -5955,6 +6126,57 @@ msgstr "கை கண்காணிப்பு கட்டுப்பாட�
 #, c-format
 msgid "Hand Interaction Profile"
 msgstr "கை தொடர்பு சுயவிவரம்"
+
+#: main/main.cpp
+#, c-format
+msgid "Spatial Entity"
+msgstr "இடஞ்சார்ந்த நிறுவனம்"
+
+#: main/main.cpp
+#, c-format
+msgid "Enable Spatial Anchors"
+msgstr "ச்பேசியல் ஆங்கர்களை இயக்கு"
+
+#: main/main.cpp
+#, c-format
+msgid "Enable Persistent Anchors"
+msgstr "நிரந்தர ஆங்கர்களை இயக்கு"
+
+#: main/main.cpp
+#, c-format
+msgid "Enable Builtin Anchor Detection"
+msgstr "பில்டின் ஆங்கர் கண்டறிதலை இயக்கு"
+
+#: main/main.cpp
+#, c-format
+msgid "Enable Plane Tracking"
+msgstr "விமான கண்காணிப்பை இயக்கு"
+
+#: main/main.cpp
+#, c-format
+msgid "Enable Builtin Plane Detection"
+msgstr "பில்டின் பிளேன் கண்டறிதலை இயக்கவும்"
+
+#: main/main.cpp
+#, c-format
+msgid "Enable Marker Tracking"
+msgstr "மார்க்கர் கண்காணிப்பை இயக்கு"
+
+#: main/main.cpp
+#, c-format
+msgid "Enable Builtin Marker Tracking"
+msgstr "பில்டின் மார்க்கர் கண்காணிப்பை இயக்கவும்"
+
+#: main/main.cpp
+#: modules/openxr/extensions/spatial_entities/openxr_spatial_marker_tracking.cpp
+#, c-format
+msgid "Aruco Dict"
+msgstr "அருகோ டிக்ட்"
+
+#: main/main.cpp
+#, c-format
+msgid "April Tag Dict"
+msgstr "ஏப்ரல் டேக் டிக்ட்"
 
 #: main/main.cpp
 #, c-format
@@ -5998,7 +6220,7 @@ msgstr "பென் டேப்லெட்"
 
 #: main/main.cpp scene/3d/camera_3d.cpp scene/3d/lightmap_gi.cpp
 #: scene/3d/world_environment.cpp scene/main/scene_tree.cpp
-#: scene/resources/3d/world_3d.cpp servers/rendering_server.cpp
+#: scene/resources/3d/world_3d.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Environment"
 msgstr "சூழல்"
@@ -6015,7 +6237,8 @@ msgstr "இயல்புநிலை தெளிவான நிறம்"
 
 #: main/main.cpp platform/macos/export/export_plugin.cpp
 #: platform/windows/export/export_plugin.cpp scene/gui/button.cpp
-#: scene/gui/item_list.cpp scene/main/status_indicator.cpp
+#: scene/gui/item_list.cpp scene/gui/line_edit.cpp
+#: scene/main/status_indicator.cpp
 #, c-format
 msgid "Icon"
 msgstr "படவுரு"
@@ -6065,17 +6288,18 @@ msgstr "உதவிக்குறிப்பு நிலை ஆஃப்ச�
 msgid "Show Image"
 msgstr "படத்தைக் காட்டு"
 
-#: main/main.cpp
+#: main/main.cpp scene/gui/aspect_ratio_container.cpp
+#: scene/gui/texture_button.cpp scene/gui/texture_rect.cpp
 #, c-format
-msgid "Fullsize"
-msgstr "ஃபுல்ச்"
+msgid "Stretch Mode"
+msgstr "நீட்டிப்பு பயன்முறை"
 
-#: main/main.cpp servers/rendering_server.cpp
+#: main/main.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Use Filter"
 msgstr "வடிகட்டியைப் பயன்படுத்தவும்"
 
-#: main/main.cpp scene/resources/image_texture.cpp
+#: main/main.cpp
 #, c-format
 msgid "Image"
 msgstr "படம்"
@@ -6112,7 +6336,7 @@ msgstr "பேரவை மறுஏற்றம் முயற்சிகள�
 
 #: main/performance.cpp scene/2d/cpu_particles_2d.cpp
 #: scene/2d/gpu_particles_2d.cpp scene/3d/cpu_particles_3d.cpp
-#: scene/3d/gpu_particles_3d.cpp servers/rendering_server.cpp
+#: scene/3d/gpu_particles_3d.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Time"
 msgstr "நேரம்"
@@ -6182,7 +6406,7 @@ msgstr "மொத்த ஆதிமனிதர்கள் வரையப்�
 msgid "Total Draw Calls"
 msgstr "மொத்த டிரா அழைப்புகள்"
 
-#: main/performance.cpp servers/audio_server.cpp
+#: main/performance.cpp servers/audio/audio_server.cpp
 #, c-format
 msgid "Video"
 msgstr "ஒளிதோற்றம்"
@@ -6364,8 +6588,8 @@ msgstr "மோதுகை"
 msgid "Use Collision"
 msgstr "மோதல் பயன்படுத்தவும்"
 
-#: modules/csg/csg_shape.cpp servers/physics_server_2d.cpp
-#: servers/physics_server_3d.cpp
+#: modules/csg/csg_shape.cpp servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Collision Layer"
 msgstr "மோதல் அடுக்கு"
@@ -6373,8 +6597,9 @@ msgstr "மோதல் அடுக்கு"
 #: modules/csg/csg_shape.cpp scene/2d/physics/ray_cast_2d.cpp
 #: scene/2d/physics/shape_cast_2d.cpp scene/3d/physics/ray_cast_3d.cpp
 #: scene/3d/physics/shape_cast_3d.cpp scene/3d/physics/spring_arm_3d.cpp
-#: scene/resources/navigation_mesh.cpp servers/physics_server_2d.cpp
-#: servers/physics_server_3d.cpp
+#: scene/resources/navigation_mesh.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Collision Mask"
 msgstr "மோதல் முகமூடி"
@@ -6573,11 +6798,6 @@ msgstr "உள்ளக மாறிகள் எப்போதும் கண
 
 #: modules/gdscript/gdscript.cpp
 #, c-format
-msgid "Exclude Addons"
-msgstr "துணை நிரல்களை விலக்கு"
-
-#: modules/gdscript/gdscript.cpp
-#, c-format
 msgid "Renamed in Godot 4 Hint"
 msgstr "கோடோட் 4 குறிப்பில் மறுபெயரிடப்பட்டது"
 
@@ -6715,6 +6935,11 @@ msgstr "தேவையற்ற நிலையான இறக்குதல�
 #, c-format
 msgid "Redundant Await"
 msgstr "தேவையற்ற காத்திருப்பு"
+
+#: modules/gdscript/gdscript_warning.cpp
+#, c-format
+msgid "Missing Await"
+msgstr "காத்திருக்கவில்லை"
 
 #: modules/gdscript/gdscript_warning.cpp
 #, c-format
@@ -6910,7 +7135,7 @@ msgstr "ஏகப்பட்ட காரணி"
 #: modules/gltf/extensions/gltf_spec_gloss.cpp
 #, c-format
 msgid "Spec Gloss Img"
-msgstr "ச்பெக் பளபளப்பான ஐ.எம்.சி."
+msgstr "விவரக்குறிப்பு பளபளப்பு படம்"
 
 #: modules/gltf/extensions/physics/gltf_physics_body.cpp
 #: scene/2d/physics/rigid_body_2d.cpp scene/3d/physics/physical_bone_3d.cpp
@@ -6922,8 +7147,8 @@ msgstr "நிறை"
 
 #: modules/gltf/extensions/physics/gltf_physics_body.cpp
 #: scene/3d/physics/physical_bone_3d.cpp scene/resources/2d/tile_set.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
-#: servers/xr/xr_pose.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp servers/xr/xr_pose.cpp
 #, c-format
 msgid "Linear Velocity"
 msgstr "நேரியல் விரைவு"
@@ -6931,15 +7156,17 @@ msgstr "நேரியல் விரைவு"
 #: modules/gltf/extensions/physics/gltf_physics_body.cpp
 #: scene/2d/cpu_particles_2d.cpp scene/3d/cpu_particles_3d.cpp
 #: scene/3d/physics/physical_bone_3d.cpp scene/resources/2d/tile_set.cpp
-#: scene/resources/particle_process_material.cpp servers/physics_server_2d.cpp
-#: servers/physics_server_3d.cpp servers/xr/xr_pose.cpp
+#: scene/resources/particle_process_material.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp servers/xr/xr_pose.cpp
 #, c-format
 msgid "Angular Velocity"
 msgstr "கோணத் திசைவேகம்"
 
 #: modules/gltf/extensions/physics/gltf_physics_body.cpp
 #: scene/2d/physics/rigid_body_2d.cpp scene/3d/physics/rigid_body_3d.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Center of Mass"
 msgstr "வெகுசன நடுவண்"
@@ -7107,8 +7334,8 @@ msgstr "அனிமேசன்கள்"
 
 #: modules/gltf/gltf_state.cpp
 #, c-format
-msgid "Handle Binary Image"
-msgstr "பைனரி படத்தைக் கையாளவும்"
+msgid "Handle Binary Image Mode"
+msgstr "பைனரி பட பயன்முறையைக் கையாளவும்"
 
 #: modules/gltf/structures/gltf_accessor.cpp
 #, c-format
@@ -7191,8 +7418,7 @@ msgstr "அசல் பெயர்"
 
 #: modules/gltf/structures/gltf_animation.cpp
 #: modules/interactive_music/audio_stream_playlist.cpp
-#: modules/minimp3/audio_stream_mp3.cpp
-#: modules/minimp3/resource_importer_mp3.cpp
+#: modules/mp3/audio_stream_mp3.cpp modules/mp3/resource_importer_mp3.cpp
 #: modules/vorbis/audio_stream_ogg_vorbis.cpp
 #: modules/vorbis/resource_importer_ogg_vorbis.cpp scene/2d/path_2d.cpp
 #: scene/3d/path_3d.cpp scene/gui/video_stream_player.cpp
@@ -7328,6 +7554,7 @@ msgstr "மாறுபாடு வகை"
 #: modules/gltf/structures/gltf_skeleton.cpp
 #: modules/gltf/structures/gltf_skin.cpp
 #: modules/jolt_physics/jolt_project_settings.cpp
+#: scene/3d/limit_angular_velocity_modifier_3d.cpp
 #, c-format
 msgid "Joints"
 msgstr "மூட்டுகள்"
@@ -7626,6 +7853,7 @@ msgid "Max Linear Velocity"
 msgstr "அதிகபட்ச நேரியல் விரைவு"
 
 #: modules/jolt_physics/jolt_project_settings.cpp
+#: scene/3d/limit_angular_velocity_modifier_3d.cpp
 #, c-format
 msgid "Max Angular Velocity"
 msgstr "அதிகபட்ச கோண விரைவு"
@@ -7645,7 +7873,8 @@ msgstr "அதிகபட்ச உடல் சோடிகள்"
 msgid "Max Contact Constraints"
 msgstr "அதிகபட்ச தொடர்பு கட்டுப்பாடுகள்"
 
-#: modules/lightmapper_rd/register_types.cpp servers/rendering_server.cpp
+#: modules/lightmapper_rd/register_types.cpp
+#: servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Lightmapping"
 msgstr "லைட்மாப்பிங்"
@@ -7730,38 +7959,6 @@ msgstr "டெனோயிங்"
 msgid "Denoiser"
 msgstr "டெனோவர்"
 
-#: modules/minimp3/audio_stream_mp3.cpp
-#: modules/minimp3/resource_importer_mp3.cpp
-#: modules/vorbis/audio_stream_ogg_vorbis.cpp
-#: modules/vorbis/resource_importer_ogg_vorbis.cpp
-#, c-format
-msgid "BPM"
-msgstr "பிபிஎம்"
-
-#: modules/minimp3/audio_stream_mp3.cpp
-#: modules/minimp3/resource_importer_mp3.cpp
-#: modules/vorbis/audio_stream_ogg_vorbis.cpp
-#: modules/vorbis/resource_importer_ogg_vorbis.cpp
-#, c-format
-msgid "Beat Count"
-msgstr "பீட் எண்ணிக்கை"
-
-#: modules/minimp3/audio_stream_mp3.cpp
-#: modules/minimp3/resource_importer_mp3.cpp
-#: modules/vorbis/audio_stream_ogg_vorbis.cpp
-#: modules/vorbis/resource_importer_ogg_vorbis.cpp
-#, c-format
-msgid "Bar Beats"
-msgstr "பார் துடிக்கிறது"
-
-#: modules/minimp3/audio_stream_mp3.cpp
-#: modules/minimp3/resource_importer_mp3.cpp
-#: modules/vorbis/audio_stream_ogg_vorbis.cpp
-#: modules/vorbis/resource_importer_ogg_vorbis.cpp
-#, c-format
-msgid "Loop Offset"
-msgstr "லூப் ஆஃப்செட்"
-
 #: modules/mobile_vr/mobile_vr_interface.cpp
 #, c-format
 msgid "Eye Height"
@@ -7813,6 +8010,34 @@ msgstr "எரிமலை Vs"
 #, c-format
 msgid "Min Radius"
 msgstr "குறைந்தபட்ச ஆரம்"
+
+#: modules/mp3/audio_stream_mp3.cpp modules/mp3/resource_importer_mp3.cpp
+#: modules/vorbis/audio_stream_ogg_vorbis.cpp
+#: modules/vorbis/resource_importer_ogg_vorbis.cpp
+#, c-format
+msgid "BPM"
+msgstr "பிபிஎம்"
+
+#: modules/mp3/audio_stream_mp3.cpp modules/mp3/resource_importer_mp3.cpp
+#: modules/vorbis/audio_stream_ogg_vorbis.cpp
+#: modules/vorbis/resource_importer_ogg_vorbis.cpp
+#, c-format
+msgid "Beat Count"
+msgstr "பீட் எண்ணிக்கை"
+
+#: modules/mp3/audio_stream_mp3.cpp modules/mp3/resource_importer_mp3.cpp
+#: modules/vorbis/audio_stream_ogg_vorbis.cpp
+#: modules/vorbis/resource_importer_ogg_vorbis.cpp
+#, c-format
+msgid "Bar Beats"
+msgstr "பார் துடிக்கிறது"
+
+#: modules/mp3/audio_stream_mp3.cpp modules/mp3/resource_importer_mp3.cpp
+#: modules/vorbis/audio_stream_ogg_vorbis.cpp
+#: modules/vorbis/resource_importer_ogg_vorbis.cpp
+#, c-format
+msgid "Loop Offset"
+msgstr "லூப் ஆஃப்செட்"
 
 #: modules/multiplayer/multiplayer_spawner.cpp
 #, c-format
@@ -8105,6 +8330,11 @@ msgstr "ஆப்டிக் மீது"
 msgid "Off Haptic"
 msgstr "ஆஃப் ஆப்டிக்"
 
+#: modules/openxr/extensions/openxr_frame_synthesis_extension.cpp
+#, c-format
+msgid "Relax Frame Interval"
+msgstr "ரிலாக்ச் ஃப்ரேம் இடைவெளி"
+
 #: modules/openxr/extensions/openxr_valve_analog_threshold_extension.cpp
 #, c-format
 msgid "On Threshold"
@@ -8114,6 +8344,52 @@ msgstr "வாசலில்"
 #, c-format
 msgid "Off Threshold"
 msgstr "வாசல் ஆஃப்"
+
+#: modules/openxr/extensions/spatial_entities/openxr_spatial_anchor.cpp
+#, c-format
+msgid "UUID"
+msgstr "UUID"
+
+#: modules/openxr/extensions/spatial_entities/openxr_spatial_entities.cpp
+#, c-format
+msgid "Entity"
+msgstr "உருபொருள்"
+
+#: modules/openxr/extensions/spatial_entities/openxr_spatial_entities.cpp
+#, c-format
+msgid "Spatial Tracking State"
+msgstr "இடஞ்சார்ந்த கண்காணிப்பு நிலை"
+
+#: modules/openxr/extensions/spatial_entities/openxr_spatial_marker_tracking.cpp
+#, c-format
+msgid "April Dict"
+msgstr "ஏப்ரல் டிக்ட்"
+
+#: modules/openxr/extensions/spatial_entities/openxr_spatial_marker_tracking.cpp
+#: modules/openxr/extensions/spatial_entities/openxr_spatial_plane_tracking.cpp
+#, c-format
+msgid "Bounds Size"
+msgstr "எல்லை அளவு"
+
+#: modules/openxr/extensions/spatial_entities/openxr_spatial_marker_tracking.cpp
+#, c-format
+msgid "Marker Type"
+msgstr "குறிப்பான் வகை"
+
+#: modules/openxr/extensions/spatial_entities/openxr_spatial_marker_tracking.cpp
+#, c-format
+msgid "Marker ID"
+msgstr "மார்க்கர் அடையாளம்"
+
+#: modules/openxr/extensions/spatial_entities/openxr_spatial_plane_tracking.cpp
+#, c-format
+msgid "Plane Alignment"
+msgstr "வானூர்தி சீரமைப்பு"
+
+#: modules/openxr/extensions/spatial_entities/openxr_spatial_plane_tracking.cpp
+#, c-format
+msgid "Plane Label"
+msgstr "விமான சிட்டை"
 
 #: modules/openxr/openxr_interface.cpp
 #, c-format
@@ -8125,6 +8401,11 @@ msgstr "புதுப்பிப்பு வீதத்தைக் கா�
 msgid "Render Target Size Multiplier"
 msgstr "இலக்கு அளவு பெருக்கி வழங்கவும்"
 
+#: modules/openxr/openxr_structure.cpp scene/gui/control.cpp
+#, c-format
+msgid "Next"
+msgstr "அடுத்தது"
+
 #: modules/openxr/scene/openxr_composition_layer.cpp
 #, c-format
 msgid "Layer Viewport"
@@ -8134,6 +8415,11 @@ msgstr "அடுக்கு வியாபோர்ட்"
 #, c-format
 msgid "Use Android Surface"
 msgstr "ஆண்ட்ராய்டு மேற்பரப்பைப் பயன்படுத்தவும்"
+
+#: modules/openxr/scene/openxr_composition_layer.cpp
+#, c-format
+msgid "Protected Content"
+msgstr "பாதுகாக்கப்பட்ட உள்ளடக்கம்"
 
 #: modules/openxr/scene/openxr_composition_layer.cpp
 #, c-format
@@ -8461,6 +8747,31 @@ msgstr "ஆண்ட்ராய்டு SDK பாதை"
 
 #: platform/android/export/export.cpp
 #, c-format
+msgid "scrcpy"
+msgstr "scrcpy"
+
+#: platform/android/export/export.cpp
+#, c-format
+msgid "Virtual Display"
+msgstr "மெய்நிகர் காட்சி"
+
+#: platform/android/export/export.cpp
+#, c-format
+msgid "No Decorations"
+msgstr "அலங்காரங்கள் இல்லை"
+
+#: platform/android/export/export.cpp
+#, c-format
+msgid "Local IME"
+msgstr "உள்ளக IME"
+
+#: platform/android/export/export.cpp
+#, c-format
+msgid "Screen Size"
+msgstr "திரை அளவு"
+
+#: platform/android/export/export.cpp
+#, c-format
 msgid "Force System User"
 msgstr "படை கணினி பயனர்"
 
@@ -8668,7 +8979,7 @@ msgstr "அதிவேக முறை"
 #: platform/android/export/export_plugin.cpp
 #, c-format
 msgid "Edge to Edge"
-msgstr "விளிம்பில் விளிம்பில்"
+msgstr "விளிம்புமுதல் விளிம்பு"
 
 #: platform/android/export/export_plugin.cpp
 #, c-format
@@ -8891,7 +9202,7 @@ msgstr "கூடுதல் args பாஓடு"
 #: platform/windows/export/export_plugin.cpp
 #, c-format
 msgid "Extra Args SCP"
-msgstr "கூடுதல் ஆர்க்ச் எச்.சி.பி."
+msgstr "கூடுதல் வாதங்கள் எச்சிபி"
 
 #: platform/linuxbsd/export/export_plugin.cpp
 #: platform/macos/export/export_plugin.cpp
@@ -8917,10 +9228,20 @@ msgstr "மேகோச்"
 msgid "rcodesign"
 msgstr "rcodesign"
 
+#: platform/macos/export/export.cpp
+#, c-format
+msgid "actool"
+msgstr "ஆக்டூல்"
+
 #: platform/macos/export/export_plugin.cpp
 #, c-format
 msgid "Distribution Type"
 msgstr "விநியோக வகை"
+
+#: platform/macos/export/export_plugin.cpp
+#, c-format
+msgid "Liquid Glass Icon"
+msgstr "திரவ கண்ணாடி படவுரு"
 
 #: platform/macos/export/export_plugin.cpp
 #, c-format
@@ -8951,7 +9272,7 @@ msgstr "உயர் ரெச்"
 #: platform/macos/export/export_plugin.cpp
 #, c-format
 msgid "Xcode"
-msgstr "Xcode"
+msgstr "எக்சுகோடு"
 
 #: platform/macos/export/export_plugin.cpp
 #, c-format
@@ -9409,7 +9730,7 @@ msgstr "சிக்ன்டூல்"
 #: platform/windows/export/export.cpp
 #, c-format, ignore-same
 msgid "osslsigncode"
-msgstr "osslsigncode"
+msgstr "osssigncode"
 
 #: platform/windows/export/export_plugin.cpp
 #, c-format
@@ -9532,7 +9853,7 @@ msgstr "மின்னோட்ட்ம், ஓட்டம்"
 #: servers/audio/effects/audio_effect_amplify.cpp
 #, c-format
 msgid "Volume dB"
-msgstr "தொகுதி டி.பி."
+msgstr "ஒலியளவு டிபி"
 
 #: scene/2d/audio_stream_player_2d.cpp scene/3d/audio_stream_player_3d.cpp
 #: scene/audio/audio_stream_player.cpp
@@ -9836,7 +10157,8 @@ msgstr "உமிழ்வு வடிவம்"
 #: scene/3d/cpu_particles_3d.cpp scene/3d/fog_volume.cpp
 #: scene/3d/physics/collision_shape_3d.cpp scene/3d/physics/shape_cast_3d.cpp
 #: scene/3d/physics/spring_arm_3d.cpp scene/resources/3d/primitive_meshes.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Shape"
 msgstr "வடிவம்"
@@ -9871,6 +10193,16 @@ msgstr "நார்மர்ச்"
 #, c-format
 msgid "Colors"
 msgstr "நிறங்கள்"
+
+#: scene/2d/cpu_particles_2d.cpp scene/3d/cpu_particles_3d.cpp
+#, c-format
+msgid "Ring Inner Radius"
+msgstr "வளைய உள் ஆரம்"
+
+#: scene/2d/cpu_particles_2d.cpp scene/3d/cpu_particles_3d.cpp
+#, c-format
+msgid "Ring Radius"
+msgstr "வளைய ஆரம்"
 
 #: scene/2d/cpu_particles_2d.cpp scene/3d/cpu_particles_3d.cpp
 #: scene/resources/particle_process_material.cpp
@@ -9999,7 +10331,8 @@ msgid "Damping Curve"
 msgstr "அடர்த்தியான வளைவு"
 
 #: scene/2d/cpu_particles_2d.cpp scene/3d/cpu_particles_3d.cpp
-#: scene/3d/light_3d.cpp scene/resources/particle_process_material.cpp
+#: scene/3d/light_3d.cpp scene/resources/3d/joint_limitation_cone_3d.cpp
+#: scene/resources/particle_process_material.cpp
 #, c-format
 msgid "Angle"
 msgstr "கோணம்"
@@ -10343,24 +10676,24 @@ msgstr "பாதை அதிகபட்ச தூரம்"
 #: scene/3d/navigation/navigation_link_3d.cpp
 #: scene/3d/navigation/navigation_region_3d.cpp
 #: scene/resources/2d/tile_set.cpp scene/resources/3d/mesh_library.cpp
-#: servers/navigation/navigation_path_query_parameters_2d.cpp
-#: servers/navigation/navigation_path_query_parameters_3d.cpp
+#: servers/navigation_2d/navigation_path_query_parameters_2d.cpp
+#: servers/navigation_3d/navigation_path_query_parameters_3d.cpp
 #, c-format
 msgid "Navigation Layers"
 msgstr "வழிசெலுத்தல் அடுக்குகள்"
 
 #: scene/2d/navigation/navigation_agent_2d.cpp
 #: scene/3d/navigation/navigation_agent_3d.cpp
-#: servers/navigation/navigation_path_query_parameters_2d.cpp
-#: servers/navigation/navigation_path_query_parameters_3d.cpp
+#: servers/navigation_2d/navigation_path_query_parameters_2d.cpp
+#: servers/navigation_3d/navigation_path_query_parameters_3d.cpp
 #, c-format
 msgid "Pathfinding Algorithm"
 msgstr "பாத்ஃபைண்டிங் அல்காரிதம்"
 
 #: scene/2d/navigation/navigation_agent_2d.cpp
 #: scene/3d/navigation/navigation_agent_3d.cpp
-#: servers/navigation/navigation_path_query_parameters_2d.cpp
-#: servers/navigation/navigation_path_query_parameters_3d.cpp
+#: servers/navigation_2d/navigation_path_query_parameters_2d.cpp
+#: servers/navigation_3d/navigation_path_query_parameters_3d.cpp
 #, c-format
 msgid "Path Postprocessing"
 msgstr "பாதை போச்ட்ரோசெசிங்"
@@ -10373,59 +10706,51 @@ msgstr "பாதை மேனிலை தரவு கொடிகள்"
 
 #: scene/2d/navigation/navigation_agent_2d.cpp
 #: scene/3d/navigation/navigation_agent_3d.cpp
-#: servers/navigation/navigation_path_query_parameters_2d.cpp
-#: servers/navigation/navigation_path_query_parameters_3d.cpp
+#: servers/navigation_2d/navigation_path_query_parameters_2d.cpp
+#: servers/navigation_3d/navigation_path_query_parameters_3d.cpp
 #, c-format
 msgid "Simplify Path"
 msgstr "பாதையை எளிதாக்குங்கள்"
 
 #: scene/2d/navigation/navigation_agent_2d.cpp
 #: scene/3d/navigation/navigation_agent_3d.cpp
-#: servers/navigation/navigation_path_query_parameters_2d.cpp
-#: servers/navigation/navigation_path_query_parameters_3d.cpp
+#: servers/navigation_2d/navigation_path_query_parameters_2d.cpp
+#: servers/navigation_3d/navigation_path_query_parameters_3d.cpp
 #, c-format
 msgid "Simplify Epsilon"
 msgstr "எப்சிலனை எளிதாக்குங்கள்"
 
 #: scene/2d/navigation/navigation_agent_2d.cpp
 #: scene/3d/navigation/navigation_agent_3d.cpp
-#: servers/navigation/navigation_path_query_parameters_2d.cpp
-#: servers/navigation/navigation_path_query_parameters_3d.cpp
+#: servers/navigation_2d/navigation_path_query_parameters_2d.cpp
+#: servers/navigation_3d/navigation_path_query_parameters_3d.cpp
 #, c-format
 msgid "Path Return Max Length"
 msgstr "பாதை வருவாய் அதிகபட்ச நீளம்"
 
 #: scene/2d/navigation/navigation_agent_2d.cpp
 #: scene/3d/navigation/navigation_agent_3d.cpp
-#: servers/navigation/navigation_path_query_parameters_2d.cpp
-#: servers/navigation/navigation_path_query_parameters_3d.cpp
+#: servers/navigation_2d/navigation_path_query_parameters_2d.cpp
+#: servers/navigation_3d/navigation_path_query_parameters_3d.cpp
 #, c-format
 msgid "Path Return Max Radius"
 msgstr "பாதை திரும்ப அதிகபட்ச ஆரம்"
 
 #: scene/2d/navigation/navigation_agent_2d.cpp
 #: scene/3d/navigation/navigation_agent_3d.cpp
-#: servers/navigation/navigation_path_query_parameters_2d.cpp
-#: servers/navigation/navigation_path_query_parameters_3d.cpp
+#: servers/navigation_2d/navigation_path_query_parameters_2d.cpp
+#: servers/navigation_3d/navigation_path_query_parameters_3d.cpp
 #, c-format
 msgid "Path Search Max Polygons"
 msgstr "பாதை தேடல் அதிகபட்ச பலகோணங்கள்"
 
 #: scene/2d/navigation/navigation_agent_2d.cpp
 #: scene/3d/navigation/navigation_agent_3d.cpp
-#: servers/navigation/navigation_path_query_parameters_2d.cpp
-#: servers/navigation/navigation_path_query_parameters_3d.cpp
+#: servers/navigation_2d/navigation_path_query_parameters_2d.cpp
+#: servers/navigation_3d/navigation_path_query_parameters_3d.cpp
 #, c-format
 msgid "Path Search Max Distance"
 msgstr "பாதை தேடல் அதிகபட்ச தூரம்"
-
-#: scene/2d/navigation/navigation_agent_2d.cpp
-#: scene/2d/navigation/navigation_obstacle_2d.cpp
-#: scene/3d/navigation/navigation_agent_3d.cpp
-#: scene/3d/navigation/navigation_obstacle_3d.cpp
-#, c-format
-msgid "Avoidance Enabled"
-msgstr "தவிர்ப்பு இயக்கப்பட்டது"
 
 #: scene/2d/navigation/navigation_agent_2d.cpp
 #: scene/3d/navigation/navigation_agent_3d.cpp
@@ -10508,8 +10833,8 @@ msgstr "இருதரப்பு"
 
 #: scene/2d/navigation/navigation_link_2d.cpp
 #: scene/3d/navigation/navigation_link_3d.cpp
-#: servers/navigation/navigation_path_query_parameters_2d.cpp
-#: servers/navigation/navigation_path_query_parameters_3d.cpp
+#: servers/navigation_2d/navigation_path_query_parameters_2d.cpp
+#: servers/navigation_3d/navigation_path_query_parameters_3d.cpp
 #, c-format
 msgid "Start Position"
 msgstr "தொடக்க நிலை"
@@ -10543,10 +10868,9 @@ msgid "Vertices"
 msgstr "செங்குத்துகள்"
 
 #: scene/2d/navigation/navigation_obstacle_2d.cpp
-#: scene/3d/navigation/navigation_obstacle_3d.cpp
-#, c-format, ignore-same
-msgid "NavigationMesh"
-msgstr "நேவிகேசன்மேச்"
+#, c-format
+msgid "NavigationPolygon"
+msgstr "வழிசெலுத்தல் பலகோணம்"
 
 #: scene/2d/navigation/navigation_obstacle_2d.cpp
 #: scene/3d/navigation/navigation_obstacle_3d.cpp
@@ -10567,7 +10891,8 @@ msgstr "வழிசெலுத்தல் பலகோணம்"
 
 #: scene/2d/navigation/navigation_region_2d.cpp
 #: scene/3d/navigation/navigation_region_3d.cpp
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Use Edge Connections"
 msgstr "விளிம்பு இணைப்புகளைப் பயன்படுத்தவும்"
@@ -10636,8 +10961,8 @@ msgstr "கேமரா சுருளை புறக்கணிக்கவ�
 msgid "Screen Offset"
 msgstr "திரை ஆஃப்செட்"
 
-#: scene/2d/parallax_background.cpp scene/gui/scroll_container.cpp
-#: scene/gui/text_edit.cpp scene/theme/default_theme.cpp
+#: scene/2d/parallax_background.cpp scene/gui/text_edit.cpp scene/gui/tree.cpp
+#: scene/theme/default_theme.cpp
 #, c-format
 msgid "Scroll"
 msgstr "சுருள்"
@@ -10663,7 +10988,8 @@ msgid "Ignore Camera Zoom"
 msgstr "கேமரா சூம் புறக்கணிக்கவும்"
 
 #: scene/2d/parallax_layer.cpp scene/3d/physics/vehicle_body_3d.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Motion"
 msgstr "இயக்கம்"
@@ -10890,8 +11216,8 @@ msgstr "ஒரு வழி மோதல்"
 #: scene/3d/physics/collision_polygon_3d.cpp
 #: scene/3d/physics/shape_cast_3d.cpp scene/3d/physics/spring_arm_3d.cpp
 #: scene/resources/3d/shape_3d.cpp scene/resources/atlas_texture.cpp
-#: scene/theme/default_theme.cpp servers/physics_server_2d.cpp
-#: servers/physics_server_3d.cpp
+#: scene/theme/default_theme.cpp servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Margin"
 msgstr "விளிம்பு"
@@ -11032,14 +11358,15 @@ msgstr "பெற்றோரை விலக்கு"
 
 #: scene/2d/physics/ray_cast_2d.cpp scene/2d/physics/shape_cast_2d.cpp
 #: scene/3d/physics/ray_cast_3d.cpp scene/3d/physics/shape_cast_3d.cpp
-#: servers/navigation/navigation_path_query_parameters_2d.cpp
-#: servers/navigation/navigation_path_query_parameters_3d.cpp
+#: servers/navigation_2d/navigation_path_query_parameters_2d.cpp
+#: servers/navigation_3d/navigation_path_query_parameters_3d.cpp
 #, c-format
 msgid "Target Position"
 msgstr "இலக்கு நிலை"
 
 #: scene/2d/physics/ray_cast_2d.cpp scene/3d/physics/ray_cast_3d.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Hit From Inside"
 msgstr "உள்ளே இருந்து அடியுங்கள்"
@@ -11089,7 +11416,8 @@ msgid "Deactivation"
 msgstr "செயலிழக்கச் செய்தல்"
 
 #: scene/2d/physics/rigid_body_2d.cpp scene/3d/physics/rigid_body_3d.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Sleeping"
 msgstr "தூக்கம்"
@@ -11116,7 +11444,8 @@ msgid "Freeze Mode"
 msgstr "முடக்கம் பயன்முறை"
 
 #: scene/2d/physics/rigid_body_2d.cpp scene/3d/physics/rigid_body_3d.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Solver"
 msgstr "தீர்வி"
@@ -11281,12 +11610,12 @@ msgstr "மாற்றியமைக்கும் அடுக்கு"
 #: scene/2d/sprite_2d.cpp scene/3d/sprite_3d.cpp
 #, c-format
 msgid "Hframes"
-msgstr "Hframes"
+msgstr "கிசட்டங்கள்"
 
 #: scene/2d/sprite_2d.cpp scene/3d/sprite_3d.cpp
 #, c-format
 msgid "Vframes"
-msgstr "Vframes"
+msgstr "செசட்டங்கள்"
 
 #: scene/2d/sprite_2d.cpp scene/3d/sprite_3d.cpp
 #, c-format
@@ -11388,7 +11717,7 @@ msgstr "அலகு அளவு"
 #: scene/3d/audio_stream_player_3d.cpp
 #, c-format
 msgid "Max dB"
-msgstr "அதிகபட்ச டி.பி."
+msgstr "மிகையளவு டிபி"
 
 #: scene/3d/audio_stream_player_3d.cpp
 #, c-format
@@ -11460,6 +11789,12 @@ msgstr "வெளிப்புற எலும்புக்கூட்ட�
 msgid "External Skeleton"
 msgstr "வெளிப்புற எலும்புக்கூடு"
 
+#: scene/3d/bone_twist_disperser_3d.cpp scene/3d/ik_modifier_3d.cpp
+#: scene/3d/spring_bone_simulator_3d.cpp
+#, c-format
+msgid "Mutable Bone Axes"
+msgstr "மாறக்கூடிய எலும்பு அச்சுகள்"
+
 #: scene/3d/camera_3d.cpp
 #, c-format
 msgid "Keep Aspect"
@@ -11521,16 +11856,6 @@ msgstr "வளைய அச்சு"
 #, c-format
 msgid "Ring Height"
 msgstr "வளைய உயரம்"
-
-#: scene/3d/cpu_particles_3d.cpp
-#, c-format
-msgid "Ring Radius"
-msgstr "வளைய ஆரம்"
-
-#: scene/3d/cpu_particles_3d.cpp
-#, c-format
-msgid "Ring Inner Radius"
-msgstr "வளைய உள் ஆரம்"
 
 #: scene/3d/cpu_particles_3d.cpp
 #, c-format
@@ -11704,6 +12029,27 @@ msgstr "இறுதி விளிம்பு"
 #, c-format
 msgid "Fade Mode"
 msgstr "மங்கல் பயன்முறை"
+
+#: scene/3d/iterate_ik_3d.cpp scene/3d/skeleton_ik_3d.cpp
+#, c-format
+msgid "Max Iterations"
+msgstr "அதிகபட்ச மறு செய்கைகள்"
+
+#: scene/3d/iterate_ik_3d.cpp scene/3d/skeleton_ik_3d.cpp
+#: scene/resources/material.cpp
+#, c-format
+msgid "Min Distance"
+msgstr "மணித்துளி தூரம்"
+
+#: scene/3d/iterate_ik_3d.cpp
+#, c-format
+msgid "Angular Delta Limit"
+msgstr "கோண டெல்டா வரம்பு"
+
+#: scene/3d/iterate_ik_3d.cpp scene/animation/animation_mixer.cpp
+#, c-format
+msgid "Deterministic"
+msgstr "உறுதிப்ப‌டு நிலை"
 
 #: scene/3d/label_3d.cpp scene/3d/sprite_3d.cpp
 #: scene/resources/3d/primitive_meshes.cpp
@@ -11945,7 +12291,7 @@ msgstr "மங்கலானது"
 msgid "Caster Mask"
 msgstr "காச்டர் மாச்க்"
 
-#: scene/3d/light_3d.cpp servers/rendering_server.cpp
+#: scene/3d/light_3d.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Directional Shadow"
 msgstr "திசை நிழல்"
@@ -12016,7 +12362,7 @@ msgid "Shadowmask Textures"
 msgstr "சேடோமாச்க் இழைமங்கள்"
 
 #: scene/3d/lightmap_gi.cpp scene/main/scene_tree.cpp
-#: scene/resources/multimesh.cpp servers/rendering_server.cpp
+#: scene/resources/multimesh.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Quality"
 msgstr "தகுதி"
@@ -12124,6 +12470,18 @@ msgstr "துணைப்பிரிவு"
 msgid "Light Data"
 msgstr "ஒளி தரவு"
 
+#: scene/3d/limit_angular_velocity_modifier_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
+#, c-format
+msgid "Exclude"
+msgstr "விலக்கு"
+
+#: scene/3d/limit_angular_velocity_modifier_3d.cpp
+#, c-format
+msgid "Chains"
+msgstr "சங்கிலிகள்"
+
 #: scene/3d/look_at_modifier_3d.cpp scene/3d/skeleton_ik_3d.cpp
 #, c-format
 msgid "Target Node"
@@ -12150,7 +12508,8 @@ msgid "Origin Settings"
 msgstr "தோற்றம் அமைப்புகள்"
 
 #: scene/3d/look_at_modifier_3d.cpp scene/resources/gradient_texture.cpp
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "From"
 msgstr "இருந்து"
@@ -12270,6 +12629,11 @@ msgstr "3D தவிர்ப்பதைப் பயன்படுத்த�
 #, c-format
 msgid "Keep Y Velocity"
 msgstr "ஒய் வேகத்தை வைத்திருங்கள்"
+
+#: scene/3d/navigation/navigation_obstacle_3d.cpp
+#, c-format, ignore-same
+msgid "NavigationMesh"
+msgstr "நேவிகேசன்மேச்"
 
 #: scene/3d/navigation/navigation_region_3d.cpp
 #: scene/resources/3d/mesh_library.cpp
@@ -12739,7 +13103,7 @@ msgstr "கோண மற்றும்"
 msgid "Angular Z"
 msgstr "கோண சட்"
 
-#: scene/3d/physics/ray_cast_3d.cpp servers/physics_server_3d.cpp
+#: scene/3d/physics/ray_cast_3d.cpp servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Hit Back Faces"
 msgstr "முகங்களை மீண்டும் அடியுங்கள்"
@@ -12981,16 +13345,6 @@ msgstr "காந்தத்தைப் பயன்படுத்துங�
 msgid "Magnet"
 msgstr "காந்தம்"
 
-#: scene/3d/skeleton_ik_3d.cpp scene/resources/material.cpp
-#, c-format
-msgid "Min Distance"
-msgstr "மணித்துளி தூரம்"
-
-#: scene/3d/skeleton_ik_3d.cpp
-#, c-format
-msgid "Max Iterations"
-msgstr "அதிகபட்ச மறு செய்கைகள்"
-
 #: scene/3d/skeleton_modifier_3d.cpp scene/animation/animation_blend_tree.h
 #: scene/animation/animation_mixer.cpp
 #: servers/audio/effects/audio_effect_delay.cpp
@@ -13034,11 +13388,6 @@ msgstr "ட்ராக் இயற்பியல் படி"
 msgid "Sorting"
 msgstr "வரிசைப்படுத்துதல்"
 
-#: scene/3d/visual_instance_3d.cpp
-#, c-format
-msgid "Use AABB Center"
-msgstr "AABB மையத்தைப் பயன்படுத்தவும்"
-
 #: scene/3d/visual_instance_3d.cpp scene/resources/2d/navigation_polygon.cpp
 #: scene/resources/navigation_mesh.cpp
 #, c-format
@@ -13081,7 +13430,7 @@ msgstr "லாட் சார்பு"
 msgid "Ignore Occlusion Culling"
 msgstr "மறைவை புறக்கணிக்கவும்"
 
-#: scene/3d/visual_instance_3d.cpp servers/rendering_server.cpp
+#: scene/3d/visual_instance_3d.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Global Illumination"
 msgstr "உலகளாவிய வெளிச்சம்"
@@ -13141,7 +13490,7 @@ msgstr "போச்"
 msgid "Show When Tracked"
 msgstr "கண்காணிக்கும்போது காட்டு"
 
-#: scene/3d/xr/xr_nodes.cpp servers/xr_server.cpp
+#: scene/3d/xr/xr_nodes.cpp servers/xr/xr_server.cpp
 #, c-format
 msgid "World Scale"
 msgstr "உலக அளவு"
@@ -13206,6 +13555,11 @@ msgstr "மங்கலான வளைவு"
 #, c-format
 msgid "Break Loop at End"
 msgstr "முடிவில் வளையத்தை உடைக்கவும்"
+
+#: scene/animation/animation_blend_tree.cpp
+#, c-format
+msgid "Abort on Reset"
+msgstr "மீட்டமைப்பில் நிறுத்தவும்"
 
 #: scene/animation/animation_blend_tree.cpp
 #, c-format
@@ -13299,16 +13653,6 @@ msgstr "தற்போதைய நிலை"
 #, c-format
 msgid "Transition Request"
 msgstr "மாற்றம் கோரிக்கை"
-
-#: scene/animation/animation_mixer.cpp
-#, c-format
-msgid "Libraries"
-msgstr "நூலகங்கள்"
-
-#: scene/animation/animation_mixer.cpp
-#, c-format
-msgid "Deterministic"
-msgstr "உறுதிப்ப‌டு நிலை"
 
 #: scene/animation/animation_mixer.cpp
 #, c-format
@@ -13468,12 +13812,6 @@ msgstr "இலக்கு கலக்கவும்"
 msgid "Ratio"
 msgstr "விகிதம்"
 
-#: scene/gui/aspect_ratio_container.cpp scene/gui/texture_button.cpp
-#: scene/gui/texture_rect.cpp
-#, c-format
-msgid "Stretch Mode"
-msgstr "நீட்டிப்பு பயன்முறை"
-
 #: scene/gui/aspect_ratio_container.cpp scene/gui/box_container.cpp
 #: scene/gui/button.cpp scene/gui/flow_container.cpp scene/gui/line_edit.cpp
 #: scene/gui/spin_box.cpp scene/resources/text_line.cpp
@@ -13522,13 +13860,14 @@ msgstr "பொத்தான் குறுக்குவழி பின்�
 msgid "Allow Unpress"
 msgstr "அவிழ்க்க அனுமதிக்கவும்"
 
-#: scene/gui/button.cpp
+#: scene/gui/button.cpp scene/gui/link_button.cpp
 #, c-format
 msgid "Text Behavior"
 msgstr "உரை நடத்தை"
 
 #: scene/gui/button.cpp scene/gui/item_list.cpp scene/gui/label.cpp
-#: scene/resources/text_line.cpp scene/resources/text_paragraph.cpp
+#: scene/gui/link_button.cpp scene/resources/text_line.cpp
+#: scene/resources/text_paragraph.cpp
 #, c-format
 msgid "Text Overrun Behavior"
 msgstr "உரை மீறுதல் நடத்தை"
@@ -13607,6 +13946,11 @@ msgstr "வரி எண்களை வரையவும்"
 #, c-format
 msgid "Zero Pad Line Numbers"
 msgstr "சுழிய பேட் வரி எண்கள்"
+
+#: scene/gui/code_edit.cpp
+#, c-format
+msgid "Line Numbers Min Digits"
+msgstr "வரி எண்கள் இலக்கங்களில்"
 
 #: scene/gui/code_edit.cpp
 #, c-format
@@ -13795,6 +14139,11 @@ msgstr "பிவோட் ஆஃப்செட்"
 
 #: scene/gui/control.cpp
 #, c-format
+msgid "Pivot Offset Ratio"
+msgstr "பிவோட் ஆஃப்செட் விகிதம்"
+
+#: scene/gui/control.cpp
+#, c-format
 msgid "Container Sizing"
 msgstr "கொள்கலன் அளவு"
 
@@ -13847,11 +14196,6 @@ msgstr "அண்டை உரிமை"
 #, c-format
 msgid "Neighbor Bottom"
 msgstr "அண்டை கீழே"
-
-#: scene/gui/control.cpp
-#, c-format
-msgid "Next"
-msgstr "அடுத்தது"
 
 #: scene/gui/control.cpp
 #, c-format
@@ -13950,8 +14294,24 @@ msgstr "பயன்முறை தலைப்பை மீறுகிறத�
 
 #: scene/gui/file_dialog.cpp
 #, c-format
+msgid "File Mode"
+msgstr "கோப்பு முறை"
+
+#: scene/gui/file_dialog.cpp
+#, c-format
+msgid "Access"
+msgstr "அணுகல்"
+
+#: scene/gui/file_dialog.cpp
+#, c-format
 msgid "Root Subfolder"
 msgstr "ரூட் சப் ஃபோல்டர்"
+
+#: scene/gui/file_dialog.cpp scene/resources/2d/navigation_polygon.cpp
+#: scene/resources/navigation_mesh.cpp
+#, c-format
+msgid "Filters"
+msgstr "வடிப்பான்கள்"
 
 #: scene/gui/file_dialog.cpp
 #, c-format
@@ -13962,6 +14322,11 @@ msgstr "கோப்பு பெயர் வடிகட்டி"
 #, c-format
 msgid "Use Native Dialog"
 msgstr "சொந்த உரையாடலைப் பயன்படுத்தவும்"
+
+#: scene/gui/file_dialog.cpp
+#, c-format
+msgid "Options"
+msgstr "விருப்பங்கள்"
 
 #: scene/gui/file_dialog.cpp
 #, c-format
@@ -13998,6 +14363,16 @@ msgstr "அண்மைக் கால பட்டியல் இயக்க
 msgid "Layout Toggle Enabled"
 msgstr "தளவமைப்பு மாற்று இயக்கப்பட்டது"
 
+#: scene/gui/file_dialog.cpp
+#, c-format
+msgid "Overwrite Warning Enabled"
+msgstr "மேலெழுத முன்னறிவிப்பு இயக்கப்பட்டது"
+
+#: scene/gui/file_dialog.cpp
+#, c-format
+msgid "Deleting Enabled"
+msgstr "நீக்குதல் இயக்கப்பட்டது"
+
 #: scene/gui/flow_container.cpp
 #, c-format
 msgid "Last Wrap Alignment"
@@ -14012,13 +14387,6 @@ msgstr "தலைகீழ் நிரப்பு"
 #, c-format
 msgid "Folded"
 msgstr "மடிந்தது"
-
-#: scene/gui/foldable_container.cpp scene/gui/graph_frame.cpp
-#: scene/gui/graph_node.cpp scene/main/window.cpp
-#: scene/resources/visual_shader.cpp
-#, c-format
-msgid "Title"
-msgstr "தலைப்பு"
 
 #: scene/gui/foldable_container.cpp
 #, c-format
@@ -14156,6 +14524,11 @@ msgstr "இழுக்கக்கூடிய"
 msgid "Selected"
 msgstr "தேர்ந்தெடுக்கப்பட்டது"
 
+#: scene/gui/graph_element.cpp
+#, c-format
+msgid "Scaling Menus"
+msgstr "அளவிடுதல் மெனுக்கள்"
+
 #: scene/gui/graph_frame.cpp
 #, c-format
 msgid "Autoshrink Enabled"
@@ -14231,6 +14604,16 @@ msgstr "வாகன உயரம்"
 msgid "Wraparound Items"
 msgstr "மடக்கு உருப்படிகள்"
 
+#: scene/gui/item_list.cpp scene/gui/scroll_container.cpp scene/gui/tree.cpp
+#, c-format
+msgid "Scroll Hint Mode"
+msgstr "ச்க்ரோல் குறிப்பு பயன்முறை"
+
+#: scene/gui/item_list.cpp scene/gui/scroll_container.cpp scene/gui/tree.cpp
+#, c-format
+msgid "Tile Scroll Hint"
+msgstr "டைல் ச்க்ரோல் குறிப்பு"
+
 #: scene/gui/item_list.cpp scene/gui/menu_button.cpp
 #: scene/gui/option_button.cpp scene/gui/popup_menu.cpp
 #, c-format
@@ -14277,7 +14660,7 @@ msgstr "சிட்டை அமைப்புகள்"
 msgid "Paragraph Separator"
 msgstr "பத்தி பிரிப்பான்"
 
-#: scene/gui/label.cpp scene/resources/text_line.cpp
+#: scene/gui/label.cpp scene/gui/link_button.cpp scene/resources/text_line.cpp
 #: scene/resources/text_paragraph.cpp
 #, c-format
 msgid "Ellipsis Char"
@@ -14354,21 +14737,6 @@ msgstr "ஈமோசி பட்டியல் இயக்கப்பட்�
 msgid "Backspace Deletes Composite Character Enabled"
 msgstr "பேக்ச்பேச் கலப்பு எழுத்துக்குறி இயக்கப்பட்டது"
 
-#: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
-#, c-format
-msgid "Virtual Keyboard Enabled"
-msgstr "மெய்நிகர் விசைப்பலகை இயக்கப்பட்டது"
-
-#: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
-#, c-format
-msgid "Virtual Keyboard Show on Focus"
-msgstr "மெய்நிகர் விசைப்பலகை கவனம் செலுத்துகிறது"
-
-#: scene/gui/line_edit.cpp
-#, c-format
-msgid "Virtual Keyboard Type"
-msgstr "மெய்நிகர் விசைப்பலகை வகை"
-
 #: scene/gui/line_edit.cpp
 #, c-format
 msgid "Clear Button Enabled"
@@ -14404,11 +14772,6 @@ msgstr "தேர்வை இழுத்து விடுங்கள்"
 
 #: scene/gui/line_edit.cpp
 #, c-format
-msgid "Right Icon"
-msgstr "சரியான படவுரு"
-
-#: scene/gui/line_edit.cpp
-#, c-format
 msgid "Draw Control Chars"
 msgstr "கட்டுப்பாட்டு விளக்கப்படங்களை வரையவும்"
 
@@ -14416,6 +14779,16 @@ msgstr "கட்டுப்பாட்டு விளக்கப்பட�
 #, c-format
 msgid "Select All on Focus"
 msgstr "அனைத்தையும் கவனம் செலுத்துங்கள்"
+
+#: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
+#, c-format
+msgid "Virtual Keyboard"
+msgstr "மெய்நிகர் விசைப்பலகை"
+
+#: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
+#, c-format
+msgid "Show on Focus"
+msgstr "ஃபோகசில் காட்டு"
 
 #: scene/gui/line_edit.cpp scene/gui/text_edit.cpp
 #, c-format
@@ -14451,6 +14824,21 @@ msgstr "மறைபொருள்"
 #, c-format
 msgid "Character"
 msgstr "எழுத்து"
+
+#: scene/gui/line_edit.cpp
+#, c-format
+msgid "Right Icon"
+msgstr "சரியான படவுரு"
+
+#: scene/gui/line_edit.cpp
+#, c-format
+msgid "Icon Expand Mode"
+msgstr "படவுரு விரிவாக்க பயன்முறை"
+
+#: scene/gui/line_edit.cpp
+#, c-format
+msgid "Right Icon Scale"
+msgstr "வலது படவுரு அளவுகோல்"
 
 #: scene/gui/link_button.cpp
 #, c-format
@@ -14533,6 +14921,16 @@ msgstr "கணினி பட்டியல் ஐடி"
 msgid "Prefer Native Menu"
 msgstr "சொந்த மெனுவை விரும்புங்கள்"
 
+#: scene/gui/popup_menu.cpp
+#, c-format
+msgid "Shrink Height"
+msgstr "சுருக்க உயரம்"
+
+#: scene/gui/popup_menu.cpp
+#, c-format
+msgid "Shrink Width"
+msgstr "அகலம் சுருக்கவும்"
+
 #: scene/gui/progress_bar.cpp scene/gui/texture_progress_bar.cpp
 #, c-format
 msgid "Fill Mode"
@@ -14564,8 +14962,9 @@ msgid "Max Value"
 msgstr "அதிகபட்ச மதிப்பு"
 
 #: scene/gui/range.cpp scene/resources/animation.cpp
-#: scene/resources/visual_shader_nodes.cpp servers/physics_server_2d.cpp
-#: servers/physics_server_3d.cpp
+#: scene/resources/visual_shader_nodes.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Step"
 msgstr "படி"
@@ -14613,7 +15012,7 @@ msgstr "அவுட்லைன்"
 #: scene/gui/rich_text_effect.cpp
 #, c-format
 msgid "Env"
-msgstr "Env"
+msgstr "சூழல்"
 
 #: scene/gui/rich_text_effect.cpp
 #, c-format
@@ -14700,11 +15099,6 @@ msgstr "முன்னேற்றப் பட்டை நேரந்தவ�
 msgid "Text Selection"
 msgstr "உரை தேர்வு"
 
-#: scene/gui/rich_text_label.cpp
-#, c-format
-msgid "Selection Enabled"
-msgstr "தேர்வு இயக்கப்பட்டது"
-
 #: scene/gui/scroll_bar.cpp
 #, c-format
 msgid "Custom Step"
@@ -14722,13 +15116,28 @@ msgstr "கவனம் எல்லையை வரையவும்"
 
 #: scene/gui/scroll_container.cpp
 #, c-format
-msgid "Horizontal Custom Step"
-msgstr "கிடைமட்ட தனிப்பயன் படி"
+msgid "Scrollbar"
+msgstr "சுருள் பட்டை"
 
 #: scene/gui/scroll_container.cpp
 #, c-format
-msgid "Vertical Custom Step"
-msgstr "செங்குத்து தனிப்பயன் படி"
+msgid "Scroll Horizontal"
+msgstr "கிடைமட்டமாக உருட்டவும்"
+
+#: scene/gui/scroll_container.cpp
+#, c-format
+msgid "Scroll Vertical"
+msgstr "செங்குத்தாக உருட்டவும்"
+
+#: scene/gui/scroll_container.cpp
+#, c-format
+msgid "Scroll Horizontal Custom Step"
+msgstr "ச்க்ரோல் கிடைமட்ட தனிப்பயன் படி"
+
+#: scene/gui/scroll_container.cpp
+#, c-format
+msgid "Scroll Vertical Custom Step"
+msgstr "ச்க்ரோல் செங்குத்து தனிப்பயன் படி"
 
 #: scene/gui/scroll_container.cpp
 #, c-format
@@ -14744,6 +15153,11 @@ msgstr "செங்குத்து உருள் பயன்முறை"
 #, c-format
 msgid "Scroll Deadzone"
 msgstr "சுருள் டெட்சோன்"
+
+#: scene/gui/scroll_container.cpp scene/theme/default_theme.cpp
+#, c-format
+msgid "Scroll Hint"
+msgstr "ச்க்ரோல் குறிப்பு"
 
 #: scene/gui/scroll_container.cpp
 #, c-format
@@ -14780,10 +15194,15 @@ msgstr "உரையில் புதுப்பிப்பு மாற்�
 msgid "Custom Arrow Step"
 msgstr "தனிப்பயன் அம்பு படி"
 
+#: scene/gui/spin_box.cpp
+#, c-format
+msgid "Custom Arrow Round"
+msgstr "தனிப்பயன் அம்பு சுற்று"
+
 #: scene/gui/split_container.cpp
 #, c-format
-msgid "Split Offset"
-msgstr "பிளவு ஆஃப்செட்"
+msgid "Split Offsets"
+msgstr "பிரிப்பு ஆஃப்செட்டுகள்"
 
 #: scene/gui/split_container.cpp scene/gui/tree.cpp
 #, c-format
@@ -14825,6 +15244,11 @@ msgstr "விளிம்பு முடிவு"
 msgid "Highlight in Editor"
 msgstr "எடிட்டரில் சிறப்பம்சமாக"
 
+#: scene/gui/split_container.cpp
+#, c-format
+msgid "Split Offset"
+msgstr "பிளவு ஆஃப்செட்"
+
 #: scene/gui/subviewport_container.cpp
 #, c-format
 msgid "Stretch Shrink"
@@ -14852,8 +15276,8 @@ msgstr "கிளிப் தாவல்கள்"
 
 #: scene/gui/tab_bar.cpp
 #, c-format
-msgid "Close With Middle Mouse"
-msgstr "நடுத்தர சுட்டியுடன் மூடு"
+msgid "Close with Middle Mouse"
+msgstr "மிடில் மவுசுடன் மூடு"
 
 #: scene/gui/tab_bar.cpp
 #, c-format
@@ -14877,6 +15301,11 @@ msgstr "இயக்கப்பட்டதை மறுசீரமைக்�
 
 #: scene/gui/tab_bar.cpp scene/gui/tab_container.cpp
 #, c-format
+msgid "Switch on Drag Hover"
+msgstr "இழுவை ஓவரை இயக்கவும்"
+
+#: scene/gui/tab_bar.cpp scene/gui/tab_container.cpp
+#, c-format
 msgid "Tabs Rearrange Group"
 msgstr "தாவல்கள் குழுவை மறுசீரமைத்தல்"
 
@@ -14887,7 +15316,7 @@ msgstr "தேர்ந்தெடுக்கப்பட்டவருக்
 
 #: scene/gui/tab_bar.cpp
 #, c-format
-msgid "Select With RMB"
+msgid "Select with RMB"
 msgstr "RMB உடன் தேர்ந்தெடுக்கவும்"
 
 #: scene/gui/tab_bar.cpp scene/gui/tab_container.cpp
@@ -14962,11 +15391,6 @@ msgstr "உள்ளடக்க அகலத்திற்கு பொரு�
 
 #: scene/gui/text_edit.cpp
 #, c-format
-msgid "Draw"
-msgstr "டிரா"
-
-#: scene/gui/text_edit.cpp
-#, c-format
 msgid "Draw When Editable Disabled"
 msgstr "திருத்தக்கூடிய முடக்கப்பட்டபோது வரையவும்"
 
@@ -14979,6 +15403,11 @@ msgstr "வலது கிளிக்கில் நகர்த்தவு�
 #, c-format
 msgid "Multiple"
 msgstr "நான்கு"
+
+#: scene/gui/text_edit.cpp
+#, c-format
+msgid "Word Separators"
+msgstr "சொல் பிரிப்பான்கள்"
 
 #: scene/gui/text_edit.cpp
 #, c-format
@@ -15113,6 +15542,11 @@ msgstr "சுழல்நிலை மடிப்புகளை இயக்�
 
 #: scene/gui/tree.cpp
 #, c-format
+msgid "Enable Drag Unfolding"
+msgstr "இழுவை அன்ஃபோல்டிங்கை இயக்கு"
+
+#: scene/gui/tree.cpp
+#, c-format
 msgid "Hide Root"
 msgstr "வேரை மறைக்க"
 
@@ -15123,6 +15557,11 @@ msgstr "பயன்முறை கொடிகளை கைவிடுங்�
 
 #: scene/gui/tree.cpp
 #, c-format
+msgid "Auto Tooltip"
+msgstr "ஆட்டோ உதவிக்குறிப்பு"
+
+#: scene/gui/tree.cpp
+#, c-format
 msgid "Scroll Horizontal Enabled"
 msgstr "உருட்டல் கிடைமட்ட இயக்கப்பட்டது"
 
@@ -15130,11 +15569,6 @@ msgstr "உருட்டல் கிடைமட்ட இயக்கப்�
 #, c-format
 msgid "Scroll Vertical Enabled"
 msgstr "உருட்டல் செங்குத்து இயக்கப்பட்டது"
-
-#: scene/gui/tree.cpp
-#, c-format
-msgid "Auto Tooltip"
-msgstr "ஆட்டோ உதவிக்குறிப்பு"
 
 #: scene/gui/video_stream_player.cpp
 #, c-format
@@ -15332,7 +15766,8 @@ msgid "Multiplayer Poll"
 msgstr "மல்டிபிளேயர் வாக்கெடுப்பு"
 
 #: scene/main/scene_tree.cpp scene/resources/3d/mesh_library.cpp
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Shapes"
 msgstr "வடிவங்கள்"
@@ -15372,7 +15807,7 @@ msgstr "அதிகபட்ச தொடர்புகள் காட்ட�
 msgid "Draw 2D Outlines"
 msgstr "2 டி திட்டவட்டங்களை வரையவும்"
 
-#: scene/main/scene_tree.cpp servers/rendering_server.cpp
+#: scene/main/scene_tree.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Viewport"
 msgstr "வியூபோர்ட்"
@@ -15383,7 +15818,7 @@ msgid "Transparent Background"
 msgstr "வெளிப்படையான பின்னணி"
 
 #: scene/main/scene_tree.cpp scene/resources/style_box_flat.cpp
-#: servers/rendering_server.cpp
+#: servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Anti Aliasing"
 msgstr "எதிர்ப்பு மாற்றுப்பெயர்"
@@ -15398,12 +15833,6 @@ msgstr "திரை இடம் AA"
 #, c-format
 msgid "Use TAA"
 msgstr "இதற்கு"
-
-#: scene/main/scene_tree.cpp scene/main/viewport.cpp
-#: scene/resources/3d/sky_material.cpp servers/rendering/shader_types.cpp
-#, c-format
-msgid "Use Debanding"
-msgstr "பற்றாக்குறையைப் பயன்படுத்துங்கள்"
 
 #: scene/main/scene_tree.cpp scene/main/viewport.cpp
 #, c-format
@@ -15446,12 +15875,12 @@ msgid "VRS"
 msgstr "வி.ஆர்.எச்"
 
 #: scene/main/scene_tree.cpp servers/rendering/renderer_scene_cull.cpp
-#: servers/rendering_server.cpp
+#: servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Lights and Shadows"
 msgstr "விளக்குகள் மற்றும் நிழல்கள்"
 
-#: scene/main/scene_tree.cpp servers/rendering_server.cpp
+#: scene/main/scene_tree.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Positional Shadow"
 msgstr "நிலை நிழல்"
@@ -15554,23 +15983,29 @@ msgstr "உலக 3 டி"
 #: scene/main/viewport.cpp
 #, c-format
 msgid "Transparent BG"
-msgstr "வெளிப்படையான பி.சி."
+msgstr "வெளிப்படையான பின்னணி"
 
 #: scene/main/viewport.cpp
 #, c-format
 msgid "Handle Input Locally"
 msgstr "உள்ளீட்டை உள்ளீட்டைக் கையாளவும்"
 
-#: scene/main/viewport.cpp servers/rendering_server.cpp
+#: scene/main/viewport.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "MSAA 2D"
 msgstr "மாலை"
 
-#: scene/main/viewport.cpp servers/rendering/storage/render_scene_buffers.cpp
-#: servers/rendering_server.cpp
+#: scene/main/viewport.cpp servers/rendering/rendering_server.cpp
+#: servers/rendering/storage/render_scene_buffers.cpp
 #, c-format
 msgid "MSAA 3D"
 msgstr "மாலை எண்ணிக்கை"
+
+#: scene/main/viewport.cpp scene/resources/3d/sky_material.cpp
+#: servers/rendering/rendering_server.cpp servers/rendering/shader_types.cpp
+#, c-format
+msgid "Use Debanding"
+msgstr "பற்றாக்குறையைப் பயன்படுத்துங்கள்"
 
 #: scene/main/viewport.cpp
 #, c-format
@@ -15582,7 +16017,7 @@ msgstr "பிழைத்திருத்த டிரா"
 msgid "Use HDR 2D"
 msgstr "HDR 2D ஐப் பயன்படுத்தவும்"
 
-#: scene/main/viewport.cpp servers/rendering_server.cpp
+#: scene/main/viewport.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Scaling 3D"
 msgstr "அளவிடுதல் 3D"
@@ -15597,20 +16032,20 @@ msgstr "3D பயன்முறையை அளவிடுதல்"
 msgid "Scaling 3D Scale"
 msgstr "3D அளவை அளவிடுதல்"
 
-#: scene/main/viewport.cpp servers/rendering/storage/render_scene_buffers.cpp
-#: servers/rendering_server.cpp
+#: scene/main/viewport.cpp servers/rendering/rendering_server.cpp
+#: servers/rendering/storage/render_scene_buffers.cpp
 #, c-format
 msgid "Texture Mipmap Bias"
 msgstr "அமைப்பு MIPMAP சார்பு"
 
-#: scene/main/viewport.cpp servers/rendering/storage/render_scene_buffers.cpp
-#: servers/rendering_server.cpp
+#: scene/main/viewport.cpp servers/rendering/rendering_server.cpp
+#: servers/rendering/storage/render_scene_buffers.cpp
 #, c-format
 msgid "Anisotropic Filtering Level"
 msgstr "அனிசோட்ரோபிக் வடிகட்டுதல் நிலை"
 
-#: scene/main/viewport.cpp servers/rendering/storage/render_scene_buffers.cpp
-#: servers/rendering_server.cpp
+#: scene/main/viewport.cpp servers/rendering/rendering_server.cpp
+#: servers/rendering/storage/render_scene_buffers.cpp
 #, c-format
 msgid "FSR Sharpness"
 msgstr "FSR கூர்மை"
@@ -15665,7 +16100,7 @@ msgstr "உள்ளீட்டை முடக்கு"
 msgid "Positional Shadow Atlas"
 msgstr "நிலை நிழல் அட்லச்"
 
-#: scene/main/viewport.cpp servers/rendering_server.cpp
+#: scene/main/viewport.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "16 Bits"
 msgstr "16 பிட்கள்"
@@ -15698,7 +16133,7 @@ msgstr "கேன்வாச் குல் மாச்க்"
 #: scene/main/viewport.cpp
 #, c-format
 msgid "Oversampling Override"
-msgstr "மேலெழுதும் மேலெழுதும்"
+msgstr "மிகைமாதிரி மேலெழுது"
 
 #: scene/main/viewport.cpp
 #, c-format
@@ -15727,6 +16162,11 @@ msgstr "தற்போதைய திரை"
 
 #: scene/main/window.cpp
 #, c-format
+msgid "Nonclient Area"
+msgstr "வாடிக்கையாளர் அல்லாத பகுதி"
+
+#: scene/main/window.cpp
+#, c-format
 msgid "Mouse Passthrough Polygon"
 msgstr "மவுச் பாச்ட்ரூ பல்கான்"
 
@@ -15734,11 +16174,6 @@ msgstr "மவுச் பாச்ட்ரூ பல்கான்"
 #, c-format
 msgid "Wrap Controls"
 msgstr "மடக்கு கட்டுப்பாடுகள்"
-
-#: scene/main/window.cpp
-#, c-format
-msgid "Transient"
-msgstr "மாறுநிலை"
 
 #: scene/main/window.cpp
 #, c-format
@@ -15903,12 +16338,12 @@ msgstr "பேக்கிங் ரெக்ட் ஆஃப்செட்"
 #: scene/resources/2d/segment_shape_2d.cpp
 #, c-format
 msgid "A"
-msgstr "A"
+msgstr "ஏ"
 
 #: scene/resources/2d/segment_shape_2d.cpp
 #, c-format
 msgid "B"
-msgstr "B"
+msgstr "பி"
 
 #: scene/resources/2d/separation_ray_shape_2d.cpp
 #: scene/resources/3d/separation_ray_shape_3d.cpp
@@ -16502,8 +16937,8 @@ msgstr "பாலிஃபோனி"
 msgid "Format"
 msgstr "வடிவம்"
 
-#: scene/resources/audio_stream_wav.cpp
-#: servers/audio/effects/audio_stream_generator.cpp servers/audio_server.cpp
+#: scene/resources/audio_stream_wav.cpp servers/audio/audio_server.cpp
+#: servers/audio/effects/audio_stream_generator.cpp
 #: servers/movie_writer/movie_writer.cpp
 #, c-format
 msgid "Mix Rate"
@@ -16787,6 +17222,16 @@ msgstr "வெள்ளை"
 
 #: scene/resources/environment.cpp
 #, c-format
+msgid "Agx White"
+msgstr "அக்க்ச் ஒயிட்"
+
+#: scene/resources/environment.cpp
+#, c-format
+msgid "Agx Contrast"
+msgstr "Agx கான்ட்ராச்ட்"
+
+#: scene/resources/environment.cpp
+#, c-format
 msgid "SSR"
 msgstr "எச்.எச்.ஆர்"
 
@@ -16805,7 +17250,7 @@ msgstr "மங்கிவிடும்"
 msgid "Depth Tolerance"
 msgstr "ஆழ சகிப்புத்தன்மை"
 
-#: scene/resources/environment.cpp servers/rendering_server.cpp
+#: scene/resources/environment.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "SSAO"
 msgstr "SSAO"
@@ -16840,7 +17285,7 @@ msgstr "ஒளி பாதிப்பு"
 msgid "AO Channel Affect"
 msgstr "AO சேனல் பாதிப்பு"
 
-#: scene/resources/environment.cpp servers/rendering_server.cpp
+#: scene/resources/environment.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "SSIL"
 msgstr "Ssil"
@@ -16850,7 +17295,7 @@ msgstr "Ssil"
 msgid "Normal Rejection"
 msgstr "சாதாரண நிராகரிப்பு"
 
-#: scene/resources/environment.cpp servers/rendering_server.cpp
+#: scene/resources/environment.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "SDFGI"
 msgstr "SDFGI"
@@ -16895,7 +17340,7 @@ msgstr "ஒய் அளவு"
 msgid "Probe Bias"
 msgstr "ஆய்வு சார்பு"
 
-#: scene/resources/environment.cpp servers/rendering_server.cpp
+#: scene/resources/environment.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Glow"
 msgstr "பளபளப்பு"
@@ -16976,8 +17421,8 @@ msgid "Map Strength"
 msgstr "வரைபட வலிமை"
 
 #: scene/resources/environment.cpp
-#: servers/navigation/navigation_path_query_parameters_2d.cpp
-#: servers/navigation/navigation_path_query_parameters_3d.cpp
+#: servers/navigation_2d/navigation_path_query_parameters_2d.cpp
+#: servers/navigation_3d/navigation_path_query_parameters_3d.cpp
 #, c-format
 msgid "Map"
 msgstr "வரைபடம்"
@@ -17032,7 +17477,7 @@ msgstr "ஆழம் தொடங்குகிறது"
 msgid "Depth End"
 msgstr "ஆழ இறுதியில்"
 
-#: scene/resources/environment.cpp servers/rendering_server.cpp
+#: scene/resources/environment.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Volumetric Fog"
 msgstr "அளவீட்டு மூடுபனி"
@@ -17152,8 +17597,9 @@ msgstr "ஆஃப்செட்டுகள்"
 msgid "Use HDR"
 msgstr "HDR ஐப் பயன்படுத்தவும்"
 
-#: scene/resources/gradient_texture.cpp servers/physics_server_2d.cpp
-#: servers/physics_server_3d.cpp
+#: scene/resources/gradient_texture.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "To"
 msgstr "பெறுநர்"
@@ -17198,7 +17644,7 @@ msgstr "ஆழம் டிரா பயன்முறை"
 msgid "Depth Test"
 msgstr "ஆழ சோதனை"
 
-#: scene/resources/material.cpp servers/rendering_server.cpp
+#: scene/resources/material.cpp servers/rendering/rendering_server.cpp
 #, c-format
 msgid "Shading"
 msgstr "நிழல்"
@@ -18075,6 +18521,11 @@ msgstr "தகுதி"
 
 #: scene/resources/visual_shader.cpp
 #, c-format
+msgid "Instance Index"
+msgstr "உதாரணக் குறியீடு"
+
+#: scene/resources/visual_shader.cpp
+#, c-format
 msgid "Autoshrink"
 msgstr "ஆட்டோசிங்க்"
 
@@ -18486,6 +18937,11 @@ msgstr "முடிவு எல்லை வண்ணத்தைத் தே
 
 #: scene/theme/default_theme.cpp
 #, c-format
+msgid "Wrap Offset"
+msgstr "மடக்கு ஆஃப்செட்"
+
+#: scene/theme/default_theme.cpp
+#, c-format
 msgid "Breakpoint"
 msgstr "பிரேக் பாயிண்ட்"
 
@@ -18522,7 +18978,7 @@ msgstr "மடிந்த EOL படவுரு"
 #: scene/theme/default_theme.cpp
 #, c-format
 msgid "Completion Color BG"
-msgstr "நிறைவு வண்ணம் பி.சி."
+msgstr "நிறைவு வண்ணம் பின்னணி"
 
 #: scene/theme/default_theme.cpp
 #, c-format
@@ -18851,6 +19307,26 @@ msgstr "ஐகான்களிலிருந்து குறைந்த�
 
 #: scene/theme/default_theme.cpp
 #, c-format
+msgid "Scroll Hint Vertical"
+msgstr "குறிப்பை செங்குத்தாக உருட்டவும்"
+
+#: scene/theme/default_theme.cpp
+#, c-format
+msgid "Scroll Hint Horizontal"
+msgstr "குறிப்பை கிடைமட்டமாக உருட்டவும்"
+
+#: scene/theme/default_theme.cpp
+#, c-format
+msgid "Scroll Hint Vertical Color"
+msgstr "ச்க்ரோல் குறிப்பு செங்குத்து நிறம்"
+
+#: scene/theme/default_theme.cpp
+#, c-format
+msgid "Scroll Hint Horizontal Color"
+msgstr "ச்க்ரோல் குறிப்பு கிடைமட்ட வண்ணம்"
+
+#: scene/theme/default_theme.cpp
+#, c-format
 msgid "Embedded Border"
 msgstr "உட்பொதிக்கப்பட்ட எல்லை"
 
@@ -18868,11 +19344,6 @@ msgstr "தலைப்பு எழுத்துரு"
 #, c-format
 msgid "Title Font Size"
 msgstr "தலைப்பு எழுத்துரு அளவு"
-
-#: scene/theme/default_theme.cpp
-#, c-format
-msgid "Title Color"
-msgstr "தலைப்பு நிறம்"
 
 #: scene/theme/default_theme.cpp
 #, c-format
@@ -19096,6 +19567,11 @@ msgstr "உருப்படி முடிவு திணிப்பு"
 
 #: scene/theme/default_theme.cpp
 #, c-format
+msgid "Gutter Compact"
+msgstr "குட்டர் சிறிய"
+
+#: scene/theme/default_theme.cpp
+#, c-format
 msgid "Panel Selected"
 msgstr "குழு தேர்ந்தெடுக்கப்பட்டது"
 
@@ -19291,6 +19767,11 @@ msgstr "தனிப்பயன் பொத்தான் எழுத்த�
 
 #: scene/theme/default_theme.cpp
 #, c-format
+msgid "Scroll Hint Color"
+msgstr "ச்க்ரோல் குறிப்பு நிறம்"
+
+#: scene/theme/default_theme.cpp
+#, c-format
 msgid "Item Margin"
 msgstr "பொருள் விளிம்பு"
 
@@ -19316,13 +19797,18 @@ msgstr "உள் உருப்படி விளிம்பு மேல்
 
 #: scene/theme/default_theme.cpp
 #, c-format
-msgid "Button Margin"
-msgstr "பொத்தான் விளிம்பு"
+msgid "Check H Separation"
+msgstr "எச் பிரிவை சரிபார்க்கவும்"
 
 #: scene/theme/default_theme.cpp
 #, c-format
-msgid "Draw Relationship Lines"
-msgstr "உறவு கோடுகளை வரையவும்"
+msgid "Icon H Separation"
+msgstr "படவுரு எச் பிரிப்பு"
+
+#: scene/theme/default_theme.cpp
+#, c-format
+msgid "Button Margin"
+msgstr "பொத்தான் விளிம்பு"
 
 #: scene/theme/default_theme.cpp
 #, c-format
@@ -19348,6 +19834,11 @@ msgstr "பெற்றோர் எச்.எல் வரி விளிம�
 #, c-format
 msgid "Draw Guides"
 msgstr "வழிகாட்டிகளை வரையவும்"
+
+#: scene/theme/default_theme.cpp
+#, c-format
+msgid "Dragging Unfold Wait Msec"
+msgstr "இழுத்தல் அன்ஃபோல்டு காத்திரு Msec"
 
 #: scene/theme/default_theme.cpp
 #, c-format
@@ -19446,6 +19937,21 @@ msgstr "குறி நிறத்தை கைவிடுங்கள்"
 
 #: scene/theme/default_theme.cpp
 #, c-format
+msgid "Icon Selected Color"
+msgstr "படவுரு தேர்ந்தெடுக்கப்பட்ட வண்ணம்"
+
+#: scene/theme/default_theme.cpp
+#, c-format
+msgid "Icon Hovered Color"
+msgstr "படவுரு ஓவர் கலர்"
+
+#: scene/theme/default_theme.cpp
+#, c-format
+msgid "Icon Unselected Color"
+msgstr "படவுரு தேர்ந்தெடுக்கப்படாத வண்ணம்"
+
+#: scene/theme/default_theme.cpp
+#, c-format
 msgid "Side Margin"
 msgstr "பக்க விளிம்பு"
 
@@ -19458,6 +19964,11 @@ msgstr "படவுரு பிரிப்பு"
 #, c-format
 msgid "Button Highlight"
 msgstr "பொத்தான் சிறப்பம்சமாக"
+
+#: scene/theme/default_theme.cpp
+#, c-format
+msgid "Hover Switch Wait Msec"
+msgstr "ஓவர் ச்விட்ச் வெயிட் Msec"
 
 #: scene/theme/default_theme.cpp
 #, c-format
@@ -19547,7 +20058,7 @@ msgstr "முன்னமைவு சேர்க்கவும்"
 #: scene/theme/default_theme.cpp
 #, c-format
 msgid "Sample BG"
-msgstr "மாதிரி பி.சி."
+msgstr "மாதிரி பின்னணி"
 
 #: scene/theme/default_theme.cpp
 #, c-format
@@ -19572,7 +20083,7 @@ msgstr "பிக்கர் கர்சர்"
 #: scene/theme/default_theme.cpp
 #, c-format
 msgid "Picker Cursor BG"
-msgstr "பிக்கர் கர்சர் பி.சி."
+msgstr "சுட்டி பின்னணி தேர்வி"
 
 #: scene/theme/default_theme.cpp
 #, c-format
@@ -19602,7 +20113,7 @@ msgstr "முன்னமைக்கப்பட்ட கவனம்"
 #: scene/theme/default_theme.cpp
 #, c-format
 msgid "Preset BG"
-msgstr "முன்னமைக்கப்பட்ட பி.சி."
+msgstr "முன்னமைக்கப்பட்ட பின்னணி"
 
 #: scene/theme/default_theme.cpp
 #, c-format
@@ -19672,12 +20183,12 @@ msgstr "அட்டவணை V பிரிப்பு"
 #: scene/theme/default_theme.cpp
 #, c-format
 msgid "Table Odd Row BG"
-msgstr "அட்டவணை ஒற்றைப்படை வரிசை பி.சி."
+msgstr "அட்டவணை ஒற்றைப்படை வரிசை பின்னணி"
 
 #: scene/theme/default_theme.cpp
 #, c-format
 msgid "Table Even Row BG"
-msgstr "அட்டவணை கூட வரிசை பி.சி."
+msgstr "அட்டவணை இரட்டை வரிசை பின்னணி"
 
 #: scene/theme/default_theme.cpp
 #, c-format
@@ -19929,6 +20440,46 @@ msgstr "தனிப்பயன் எழுத்துரு"
 msgid "Fallback values"
 msgstr "குறைவு மதிப்புகள்"
 
+#: servers/audio/audio_server.cpp
+#, c-format
+msgid "Enable Input"
+msgstr "உள்ளீட்டை இயக்கவும்"
+
+#: servers/audio/audio_server.cpp
+#, c-format
+msgid "Channel Disable Threshold dB"
+msgstr "அலைவரிசை முடக்கு வரம்பு டிபி"
+
+#: servers/audio/audio_server.cpp
+#, c-format
+msgid "Channel Disable Time"
+msgstr "சேனல் நேரத்தை முடக்கு"
+
+#: servers/audio/audio_server.cpp
+#, c-format
+msgid "Video Delay Compensation (ms)"
+msgstr "வீடியோ தாமத இழப்பீடு (எம்.எச்)"
+
+#: servers/audio/audio_server.cpp
+#, c-format
+msgid "Bus Count"
+msgstr "பச் எண்ணிக்கை"
+
+#: servers/audio/audio_server.cpp
+#, c-format
+msgid "Output Device"
+msgstr "வெளியீட்டு சாதனம்"
+
+#: servers/audio/audio_server.cpp
+#, c-format
+msgid "Input Device"
+msgstr "உள்ளீட்டு சாதனம்"
+
+#: servers/audio/audio_server.cpp
+#, c-format
+msgid "Playback Speed Scale"
+msgstr "பிளேபேக் வேக அளவு"
+
 #: servers/audio/audio_stream.cpp
 #, c-format
 msgid "Playback Mode"
@@ -19936,13 +20487,13 @@ msgstr "பிளேபேக் பயன்முறை"
 
 #: servers/audio/audio_stream.cpp
 #, c-format
-msgid "Random Pitch"
-msgstr "சீரற்ற சுருதி"
+msgid "Random Pitch Semitones"
+msgstr "சீரற்ற பிட்ச் செமிடோன்கள்"
 
 #: servers/audio/audio_stream.cpp
 #, c-format
 msgid "Random Volume Offset dB"
-msgstr "சீரற்ற தொகுதி ஆஃப்செட் டி.பி."
+msgstr "சீரற்ற ஒலி ஈடுசெய் டிபி"
 
 #: servers/audio/audio_stream.cpp
 #, c-format
@@ -20000,7 +20551,7 @@ msgstr "ஆழம் (எம்.எச்)"
 #: servers/audio/effects/audio_effect_delay.cpp
 #, c-format
 msgid "Level dB"
-msgstr "நிலை டி.பி."
+msgstr "நிலை டிபி"
 
 #: servers/audio/effects/audio_effect_chorus.cpp
 #: servers/audio/effects/audio_effect_delay.cpp
@@ -20074,23 +20625,23 @@ msgstr "ஒத்திசை"
 #: servers/audio/effects/audio_effect_hard_limiter.cpp
 #, c-format
 msgid "Pre Gain dB"
-msgstr "முன் ஆதாய டி.பி."
+msgstr "முன் ஆதாய டிபி"
 
 #: servers/audio/effects/audio_effect_hard_limiter.cpp
 #: servers/audio/effects/audio_effect_limiter.cpp
 #, c-format
 msgid "Ceiling dB"
-msgstr "உச்சவரம்பு டி.பி."
+msgstr "உச்சவரம்பு டிபி"
 
 #: servers/audio/effects/audio_effect_limiter.cpp
 #, c-format
 msgid "Threshold dB"
-msgstr "த்ரெசோல்ட் டி.பி."
+msgstr "வரம்பு டிபி"
 
 #: servers/audio/effects/audio_effect_limiter.cpp
 #, c-format
 msgid "Soft Clip dB"
-msgstr "மென்மையான கிளிப் டி.பி."
+msgstr "மென்மையான கிளிப் டிபி"
 
 #: servers/audio/effects/audio_effect_limiter.cpp
 #, c-format
@@ -20121,7 +20672,7 @@ msgstr "வரம்புகள்"
 #: servers/audio/effects/audio_effect_reverb.cpp
 #, c-format
 msgid "Msec"
-msgstr "Msec"
+msgstr "எம்நொடி"
 
 #: servers/audio/effects/audio_effect_reverb.cpp
 #, c-format
@@ -20158,46 +20709,6 @@ msgstr "சுற்று"
 msgid "Mix Rate Mode"
 msgstr "வீத முறை கலப்பு"
 
-#: servers/audio_server.cpp
-#, c-format
-msgid "Enable Input"
-msgstr "உள்ளீட்டை இயக்கவும்"
-
-#: servers/audio_server.cpp
-#, c-format
-msgid "Channel Disable Threshold dB"
-msgstr "சேனல் த்ரெசோல்ட் டி.பி."
-
-#: servers/audio_server.cpp
-#, c-format
-msgid "Channel Disable Time"
-msgstr "சேனல் நேரத்தை முடக்கு"
-
-#: servers/audio_server.cpp
-#, c-format
-msgid "Video Delay Compensation (ms)"
-msgstr "வீடியோ தாமத இழப்பீடு (எம்.எச்)"
-
-#: servers/audio_server.cpp
-#, c-format
-msgid "Bus Count"
-msgstr "பச் எண்ணிக்கை"
-
-#: servers/audio_server.cpp
-#, c-format
-msgid "Output Device"
-msgstr "வெளியீட்டு சாதனம்"
-
-#: servers/audio_server.cpp
-#, c-format
-msgid "Input Device"
-msgstr "உள்ளீட்டு சாதனம்"
-
-#: servers/audio_server.cpp
-#, c-format
-msgid "Playback Speed Scale"
-msgstr "பிளேபேக் வேக அளவு"
-
 #: servers/camera/camera_feed.cpp
 #, c-format
 msgid "Feed"
@@ -20208,7 +20719,7 @@ msgstr "தீவனம்"
 msgid "Is Active"
 msgstr "செயலில் உள்ளது"
 
-#: servers/camera_server.cpp
+#: servers/camera/camera_server.cpp
 #, c-format
 msgid "Monitoring Feeds"
 msgstr "கண்காணிப்பு ஊட்டங்கள்"
@@ -20227,6 +20738,11 @@ msgstr "அவைத்தலைவர் பயன்முறை"
 #, c-format
 msgid "Video Quality"
 msgstr "வீடியோ தகுதி"
+
+#: servers/movie_writer/movie_writer.cpp
+#, c-format
+msgid "Audio Bit Depth"
+msgstr "ஆடியோ பிட் ஆழம்"
 
 #: servers/movie_writer/movie_writer.cpp
 #, c-format
@@ -20258,369 +20774,423 @@ msgstr "திரைப்பட கோப்பு"
 msgid "Disable V-Sync"
 msgstr "வி-ஒத்திசைவை முடக்கு"
 
-#: servers/navigation/navigation_path_query_parameters_2d.cpp
-#: servers/navigation/navigation_path_query_parameters_3d.cpp
+#: servers/navigation_2d/navigation_path_query_parameters_2d.cpp
+#: servers/navigation_3d/navigation_path_query_parameters_3d.cpp
 #, c-format
 msgid "Metadata Flags"
 msgstr "மேனிலை தரவு கொடிகள்"
 
-#: servers/navigation/navigation_path_query_parameters_2d.cpp
-#: servers/navigation/navigation_path_query_parameters_3d.cpp
+#: servers/navigation_2d/navigation_path_query_parameters_2d.cpp
+#: servers/navigation_3d/navigation_path_query_parameters_3d.cpp
 #, c-format
 msgid "Excluded Regions"
 msgstr "விலக்கப்பட்ட பகுதிகள்"
 
-#: servers/navigation/navigation_path_query_parameters_2d.cpp
-#: servers/navigation/navigation_path_query_parameters_3d.cpp
+#: servers/navigation_2d/navigation_path_query_parameters_2d.cpp
+#: servers/navigation_3d/navigation_path_query_parameters_3d.cpp
 #, c-format
 msgid "Included Regions"
 msgstr "பகுதிகள் சேர்க்கப்பட்டுள்ளன"
 
-#: servers/navigation/navigation_path_query_result_2d.cpp
-#: servers/navigation/navigation_path_query_result_3d.cpp
+#: servers/navigation_2d/navigation_path_query_result_2d.cpp
+#: servers/navigation_3d/navigation_path_query_result_3d.cpp
 #, c-format
 msgid "Path Types"
 msgstr "பாதை வகைகள்"
 
-#: servers/navigation/navigation_path_query_result_2d.cpp
-#: servers/navigation/navigation_path_query_result_3d.cpp
+#: servers/navigation_2d/navigation_path_query_result_2d.cpp
+#: servers/navigation_3d/navigation_path_query_result_3d.cpp
 #, c-format
 msgid "Path Rids"
 msgstr "பாதை இடது"
 
-#: servers/navigation/navigation_path_query_result_2d.cpp
-#: servers/navigation/navigation_path_query_result_3d.cpp
+#: servers/navigation_2d/navigation_path_query_result_2d.cpp
+#: servers/navigation_3d/navigation_path_query_result_3d.cpp
 #, c-format
 msgid "Path Owner IDs"
 msgstr "பாதை உரிமையாளர் ஐடிஎச்"
 
-#: servers/navigation/navigation_path_query_result_2d.cpp
-#: servers/navigation/navigation_path_query_result_3d.cpp
+#: servers/navigation_2d/navigation_path_query_result_2d.cpp
+#: servers/navigation_3d/navigation_path_query_result_3d.cpp
 #, c-format
 msgid "Path Length"
 msgstr "பாதை நீளம்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Default Cell Size"
 msgstr "இயல்புநிலை செல் அளவு"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Merge Rasterizer Cell Scale"
 msgstr "ராச்டரைசர் செல் அளவை ஒன்றிணைக்கவும்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Default Edge Connection Margin"
 msgstr "இயல்புநிலை விளிம்பு இணைப்பு விளிம்பு"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Default Link Connection Radius"
-msgstr "இயல்புநிலை இணைப்பு இணைப்பு ஆரம்"
+msgstr "இயல்புநிலை இணை இணைப்பு ஆரம்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Edge Connection Color"
 msgstr "விளிம்பு இணைப்பு நிறம்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Geometry Edge Color"
 msgstr "வடிவியல் விளிம்பு நிறம்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Geometry Face Color"
 msgstr "வடிவியல் முகம் நிறம்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Geometry Edge Disabled Color"
 msgstr "வடிவியல் விளிம்பு முடக்கப்பட்ட நிறம்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Geometry Face Disabled Color"
 msgstr "வடிவியல் முகம் முடக்கப்பட்ட நிறம்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Link Connection Color"
-msgstr "இணைப்பு இணைப்பு நிறம்"
+msgstr "இணை இணைப்பு நிறம்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Link Connection Disabled Color"
-msgstr "இணைப்பு இணைப்பு முடக்கப்பட்ட வண்ணம்"
+msgstr "இணை இணைப்பு முடக்கப்பட்ட வண்ணம்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Agent Path Color"
 msgstr "முகவர் பாதை நிறம்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Enable Edge Connections"
 msgstr "விளிம்பு இணைப்புகளை இயக்கவும்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Enable Edge Lines"
 msgstr "விளிம்பு கோடுகளை இயக்கவும்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Enable Geometry Face Random Color"
 msgstr "வடிவியல் முகம் சீரற்ற நிறத்தை இயக்கவும்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Enable Link Connections"
 msgstr "இணைப்பு இணைப்புகளை இயக்கவும்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Enable Agent Paths"
 msgstr "முகவர் பாதைகளை இயக்கவும்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Agent Path Point Size"
 msgstr "முகவர் பாதை புள்ளி அளவு"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Agents Radius Color"
 msgstr "முகவர்கள் ஆரம் நிறம்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Obstacles Radius Color"
 msgstr "தடைகள் ஆரம் நிறம்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Obstacles Static Face Pushin Color"
 msgstr "தடைகள் நிலையான முகம் புசின் நிறம்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Obstacles Static Edge Pushin Color"
 msgstr "தடைகள் நிலையான விளிம்பு புசின் நிறம்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Obstacles Static Face Pushout Color"
 msgstr "தடைகள் நிலையான முகம் புச்அவுட் நிறம்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Obstacles Static Edge Pushout Color"
 msgstr "தடைகள் நிலையான விளிம்பு புச்அவுட் நிறம்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Enable Agents Radius"
 msgstr "முகவர்களின் ஆரம் இயக்கவும்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Enable Obstacles Radius"
 msgstr "தடைகள் ஆரம் இயக்கவும்"
 
-#: servers/navigation_server_2d.cpp servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Enable Obstacles Static"
 msgstr "தடைகளை நிலையானது"
 
-#: servers/navigation_server_3d.cpp
+#: servers/navigation_2d/navigation_server_2d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
+#, c-format
+msgid "Navigation Engine"
+msgstr "வழிசெலுத்தல் இயந்திரம்"
+
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Default Cell Height"
 msgstr "இயல்புநிலை செல் உயரம்"
 
-#: servers/navigation_server_3d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Default Up"
 msgstr "இயல்புநிலை"
 
-#: servers/navigation_server_3d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Enable Edge Connections X-Ray"
 msgstr "எக்ச்-ரே எட்ச் இணைப்புகளை இயக்கவும்"
 
-#: servers/navigation_server_3d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Enable Edge Lines X-Ray"
 msgstr "எக்ச்-ரே எட்ச் கோடுகளை இயக்கவும்"
 
-#: servers/navigation_server_3d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Enable Link Connections X-Ray"
 msgstr "இணைப்பு இணைப்புகளை இயக்கவும் எக்ச்ரே"
 
-#: servers/navigation_server_3d.cpp
+#: servers/navigation_3d/navigation_server_3d.cpp
 #, c-format
 msgid "Enable Agent Paths X-Ray"
 msgstr "முகவர் பாதைகளை எக்ச்ரே இயக்கவும்"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Inverse Mass"
 msgstr "தலைகீழ் நிறை"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Inverse Inertia"
 msgstr "மந்தநிலையை கண்டுபிடி"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Total Angular Damp"
 msgstr "மொத்த கோண ஈரமான"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Total Linear Damp"
 msgstr "மொத்த நேரியல் ஈரமான"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Total Gravity"
 msgstr "மொத்த ஈர்ப்பு"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Center of Mass Local"
 msgstr "வெகுசன உள்ளக நடுவண்"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
-msgid "Exclude"
-msgstr "விலக்கு"
+msgid "Collide with Bodies"
+msgstr "உடல்களுடன் மோதுகின்றன"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
-msgid "Collide With Bodies"
-msgstr "உடல்களுடன் மோதுங்கள்"
+msgid "Collide with Areas"
+msgstr "பகுதிகளுடன் மோதுகின்றன"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
-#, c-format
-msgid "Collide With Areas"
-msgstr "பகுதிகளுடன் மோதுங்கள்"
-
-#: servers/physics_server_2d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
 #, c-format
 msgid "Canvas Instance ID"
 msgstr "கேன்வாச் நிகழ்வு ஐடி"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Shape RID"
 msgstr "வடிவத்தை அகற்றவும்"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Collide Separation Ray"
 msgstr "மோதல் பிரிப்பு கதிர்"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Exclude Bodies"
 msgstr "உடல்களை விலக்கு"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Exclude Objects"
 msgstr "பொருட்களை விலக்கு"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Recovery as Collision"
 msgstr "மோதலாக மீட்பு"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Default Gravity"
 msgstr "இயல்புநிலை ஈர்ப்பு"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Default Gravity Vector"
 msgstr "இயல்புநிலை ஈர்ப்பு திசையன்"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Default Linear Damp"
 msgstr "இயல்புநிலை நேரியல் ஈரமான"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Default Angular Damp"
 msgstr "இயல்புநிலை கோண ஈடு"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Sleep Threshold Linear"
 msgstr "தூக்க வாசல் நேரியல்"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Sleep Threshold Angular"
 msgstr "தூக்க வாசல் கோண"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Time Before Sleep"
 msgstr "தூக்கத்திற்கு முன் நேரம்"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Solver Iterations"
 msgstr "தீர்வு மறு செய்கைகள்"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Contact Recycle Radius"
 msgstr "மறுசுழற்சி ஆரம் தொடர்பு கொள்ளுங்கள்"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Contact Max Separation"
 msgstr "அதிகபட்ச பிரிப்பைத் தொடர்பு கொள்ளுங்கள்"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Contact Max Allowed Penetration"
 msgstr "மேக்ச் அனுமதிக்கப்பட்ட ஊடுருவலை தொடர்பு கொள்ளவும்"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Default Contact Bias"
 msgstr "இயல்புநிலை தொடர்பு சார்பு"
 
-#: servers/physics_server_2d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
 #, c-format
 msgid "Default Constraint Bias"
 msgstr "இயல்புநிலை கட்டுப்பாட்டு சார்பு"
 
-#: servers/physics_server_2d.cpp servers/physics_server_3d.cpp
+#: servers/physics_2d/physics_server_2d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Physics Engine"
 msgstr "இயற்பியல் இயந்திரம்"
 
-#: servers/physics_server_3d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Inverse Inertia Tensor"
 msgstr "டென்சர் மந்தநிலையை கண்டுபிடி"
 
-#: servers/physics_server_3d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Principal Inertia Axes"
 msgstr "முதன்மை மந்தநிலை அச்சுகள்"
 
-#: servers/physics_server_3d.cpp
+#: servers/physics_3d/physics_server_3d.cpp
 #, c-format
 msgid "Max Collisions"
 msgstr "அதிகபட்ச மோதல்கள்"
@@ -20699,6 +21269,446 @@ msgstr "மாறிலி ஐடி"
 #, c-format
 msgid "Sample Masks"
 msgstr "மாதிரி முகமூடிகள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Render Loop Enabled"
+msgstr "வழங்குதல் லூப் இயக்கப்பட்டது"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "VRAM Compression"
+msgstr "Vram சுருக்க"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Import S3TC BPTC"
+msgstr "S3TC BPTC ஐ இறக்குமதி செய்க"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Import ETC2 ASTC"
+msgstr "இறக்குமதி ETC2 ASTC"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Compress with GPU"
+msgstr "GPU உடன் சுருக்கவும்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Cache GPU Compressor"
+msgstr "கேச் சி.பீ.யூ அமுக்கி"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Lossless Compression"
+msgstr "இழப்பற்ற சுருக்க"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Force PNG"
+msgstr "Prow png"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "WebP Compression"
+msgstr "வலை சுருக்க"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Compression Method"
+msgstr "சுருக்க முறை"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Lossless Compression Factor"
+msgstr "இழப்பற்ற சுருக்க காரணி"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Time Rollover Secs"
+msgstr "நேர சுழற்சி நொடிகள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Use Physical Light Units"
+msgstr "உடல் ஒளி அலகுகளைப் பயன்படுத்துங்கள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Soft Shadow Filter Quality"
+msgstr "மென்மையான நிழல் வடிகட்டி தகுதி"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Atlas 16 Bits"
+msgstr "அட்லச் 16 பிட்கள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Shadow Atlas"
+msgstr "நிழல் அட்லச்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Batching"
+msgstr "தொகுதி"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Item Buffer Size"
+msgstr "பொருள் இடையக அளவு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Uniform Set Cache Size"
+msgstr "சீரான தொகுப்பு கேச் அளவு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Shader Compiler"
+msgstr "சேடர் கம்பைலர்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Shader Cache"
+msgstr "சேடர் கேச்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Use Zstd Compression"
+msgstr "ZSTD சுருக்கத்தைப் பயன்படுத்தவும்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Strip Debug"
+msgstr "துண்டு பிழைத்திருத்தம்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Reflections"
+msgstr "பிரதிபலிப்புகள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Sky Reflections"
+msgstr "வான பிரதிபலிப்புகள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Roughness Layers"
+msgstr "கரடுமுரடான அடுக்குகள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Texture Array Reflections"
+msgstr "அமைப்பு வரிசை பிரதிபலிப்புகள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "GGX Samples"
+msgstr "சிசிஎக்ச் மாதிரிகள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Fast Filter High Quality"
+msgstr "வேகமாக வடிகட்டி உயர் தகுதி"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Reflection Atlas"
+msgstr "பிரதிபலிப்பு அட்லச்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Reflection Size"
+msgstr "பிரதிபலிப்பு அளவு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Reflection Count"
+msgstr "பிரதிபலிப்பு எண்ணிக்கை"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Specular Occlusion"
+msgstr "ஏகப்பட்ட மறைவு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "GI"
+msgstr "ஐயா"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Use Half Resolution"
+msgstr "அரை தெளிவுத்திறனைப் பயன்படுத்தவும்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Overrides"
+msgstr "மீறுகிறது"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Force Vertex Shading"
+msgstr "ஃபோர்ச் வெர்டெக்ச் நிழல்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Force Lambert over Burley"
+msgstr "பர்லி மீது லம்பேர்ட்டை கட்டாயப்படுத்துங்கள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Depth Prepass"
+msgstr "ஆழமான தயாரிப்பு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Disable for Vendors"
+msgstr "விற்பனையாளர்களுக்கு முடக்கு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Default Filters"
+msgstr "இயல்புநிலை வடிப்பான்கள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Use Nearest Mipmap Filter"
+msgstr "அருகிலுள்ள MIPMAP வடிகட்டியைப் பயன்படுத்தவும்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Depth of Field"
+msgstr "புலத்தின் ஆழம்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Depth of Field Bokeh Shape"
+msgstr "புலம் பொக்கே வடிவத்தின் ஆழம்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Depth of Field Bokeh Quality"
+msgstr "புலம் பொக்கே தரத்தின் ஆழம்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Depth of Field Use Jitter"
+msgstr "புலத்தின் ஆழம் நடுக்கம் பயன்படுத்தவும்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Half Size"
+msgstr "அரை அளவு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Adaptive Target"
+msgstr "தகவமைப்பு இலக்கு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Blur Passes"
+msgstr "மங்கலானது"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Fadeout From"
+msgstr "இருந்து மங்கலானது"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Fadeout To"
+msgstr "Fadeout க்கு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "HDR 2D"
+msgstr "எச்டிஆர் 2 டி"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Screen Space Roughness Limiter"
+msgstr "திரை விண்வெளி கடினத்தன்மை வரம்பு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "SMAA Edge Detection Threshold"
+msgstr "SMAA எட்ச் கண்டறிதல் வாசல்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Decals"
+msgstr "டெக்கல்கள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Light Projectors"
+msgstr "ஒளி ப்ரொசெக்டர்கள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Occlusion Rays per Thread"
+msgstr "ஒரு நூலுக்கு மறைவு கதிர்கள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Upscale Mode"
+msgstr "மேல்தட்டு பயன்முறை"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Screen Space Reflection"
+msgstr "திரை விண்வெளி பிரதிபலிப்பு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Subsurface Scattering"
+msgstr "மேற்பரப்பு சிதறல்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Subsurface Scattering Quality"
+msgstr "மேற்பரப்பு சிதறல் தகுதி"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Subsurface Scattering Scale"
+msgstr "மேற்பரப்பு சிதறல் அளவு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Subsurface Scattering Depth Scale"
+msgstr "மேற்பரப்பு சிதறல் ஆழம்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Global Shader Variables"
+msgstr "உலகளாவிய சேடர் மாறிகள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Buffer Size"
+msgstr "இடையக அளவு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Probe Capture"
+msgstr "ஆய்வு பிடிப்பு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Update Speed"
+msgstr "புதுப்பிப்பு விரைவு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Primitive Meshes"
+msgstr "பழமையான மெச்கள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Texel Size"
+msgstr "டெக்செல் அளவு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Lightmap GI"
+msgstr "லைட்மேப் ஐயா"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Use Bicubic Filter"
+msgstr "பிக்யூபிக் வடிகட்டியைப் பயன்படுத்தவும்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Probe Ray Count"
+msgstr "கதிர் எண்ணிக்கை ஆய்வு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Frames to Converge"
+msgstr "ஒன்றிணைக்க பிரேம்கள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Frames to Update Lights"
+msgstr "விளக்குகளைப் புதுப்பிக்க பிரேம்கள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Volume Size"
+msgstr "தொகுதி அளவு"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Volume Depth"
+msgstr "தொகுதி ஆழம்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Spatial Indexer"
+msgstr "இடஞ்சார்ந்த குறியீட்டாளர்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Update Iterations per Frame"
+msgstr "ஒரு சட்டகத்திற்கு மறு செய்கைகளைப் புதுப்பிக்கவும்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Threaded Cull Minimum Instances"
+msgstr "திரிக்கப்பட்ட குல் குறைந்தபட்ச நிகழ்வுகள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Cluster Builder"
+msgstr "கிளச்டர் பில்டர்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Max Clustered Elements"
+msgstr "அதிகபட்ச கொத்து கூறுகள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format, ignore-same
+msgid "OpenGL"
+msgstr "Opengl"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Max Renderable Elements"
+msgstr "அதிகபட்சம் வழங்கக்கூடிய கூறுகள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Max Renderable Lights"
+msgstr "அதிகபட்ச ரெண்டரபிள் விளக்குகள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Max Lights per Object"
+msgstr "ஒரு பொருளுக்கு அதிகபட்ச விளக்குகள்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Shaders"
+msgstr "சேடர்ச்"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Shader Language"
+msgstr "சேடர் மொழி"
+
+#: servers/rendering/rendering_server.cpp
+#, c-format
+msgid "Treat Warnings as Errors"
+msgstr "எச்சரிக்கைகளை பிழைகளாகக் கருதுங்கள்"
 
 #: servers/rendering/shader_types.cpp
 #, c-format
@@ -20905,487 +21915,42 @@ msgstr "இலக்கு அளவு"
 msgid "View Count"
 msgstr "எண்ணிக்கை காண்க"
 
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Render Loop Enabled"
-msgstr "வழங்குதல் லூப் இயக்கப்பட்டது"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "VRAM Compression"
-msgstr "Vram சுருக்க"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Import S3TC BPTC"
-msgstr "S3TC BPTC ஐ இறக்குமதி செய்க"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Import ETC2 ASTC"
-msgstr "இறக்குமதி ETC2 ASTC"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Compress With GPU"
-msgstr "சி.பீ.யுடன் சுருக்கவும்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Cache GPU Compressor"
-msgstr "கேச் சி.பீ.யூ அமுக்கி"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Lossless Compression"
-msgstr "இழப்பற்ற சுருக்க"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Force PNG"
-msgstr "Prow png"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "WebP Compression"
-msgstr "வலை சுருக்க"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Compression Method"
-msgstr "சுருக்க முறை"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Lossless Compression Factor"
-msgstr "இழப்பற்ற சுருக்க காரணி"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Time Rollover Secs"
-msgstr "டைம் ரோல்ஓவர் எச்.இ.சி."
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Use Physical Light Units"
-msgstr "உடல் ஒளி அலகுகளைப் பயன்படுத்துங்கள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Soft Shadow Filter Quality"
-msgstr "மென்மையான நிழல் வடிகட்டி தகுதி"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Atlas 16 Bits"
-msgstr "அட்லச் 16 பிட்கள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Shadow Atlas"
-msgstr "நிழல் அட்லச்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Batching"
-msgstr "தொகுதி"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Item Buffer Size"
-msgstr "பொருள் இடையக அளவு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Uniform Set Cache Size"
-msgstr "சீரான தொகுப்பு கேச் அளவு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Shader Compiler"
-msgstr "சேடர் கம்பைலர்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Shader Cache"
-msgstr "சேடர் கேச்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Use Zstd Compression"
-msgstr "ZSTD சுருக்கத்தைப் பயன்படுத்தவும்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Strip Debug"
-msgstr "துண்டு பிழைத்திருத்தம்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Reflections"
-msgstr "பிரதிபலிப்புகள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Sky Reflections"
-msgstr "வான பிரதிபலிப்புகள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Roughness Layers"
-msgstr "கரடுமுரடான அடுக்குகள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Texture Array Reflections"
-msgstr "அமைப்பு வரிசை பிரதிபலிப்புகள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "GGX Samples"
-msgstr "சிசிஎக்ச் மாதிரிகள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Fast Filter High Quality"
-msgstr "வேகமாக வடிகட்டி உயர் தகுதி"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Reflection Atlas"
-msgstr "பிரதிபலிப்பு அட்லச்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Reflection Size"
-msgstr "பிரதிபலிப்பு அளவு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Reflection Count"
-msgstr "பிரதிபலிப்பு எண்ணிக்கை"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Specular Occlusion"
-msgstr "ஏகப்பட்ட மறைவு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "GI"
-msgstr "ஐயா"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Use Half Resolution"
-msgstr "அரை தெளிவுத்திறனைப் பயன்படுத்தவும்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Overrides"
-msgstr "மீறுகிறது"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Force Vertex Shading"
-msgstr "ஃபோர்ச் வெர்டெக்ச் நிழல்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Force Lambert over Burley"
-msgstr "பர்லி மீது லம்பேர்ட்டை கட்டாயப்படுத்துங்கள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Depth Prepass"
-msgstr "ஆழமான தயாரிப்பு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Disable for Vendors"
-msgstr "விற்பனையாளர்களுக்கு முடக்கு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Default Filters"
-msgstr "இயல்புநிலை வடிப்பான்கள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Use Nearest Mipmap Filter"
-msgstr "அருகிலுள்ள MIPMAP வடிகட்டியைப் பயன்படுத்தவும்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Depth of Field"
-msgstr "புலத்தின் ஆழம்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Depth of Field Bokeh Shape"
-msgstr "புலம் பொக்கே வடிவத்தின் ஆழம்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Depth of Field Bokeh Quality"
-msgstr "புலம் பொக்கே தரத்தின் ஆழம்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Depth of Field Use Jitter"
-msgstr "புலத்தின் ஆழம் நடுக்கம் பயன்படுத்தவும்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Half Size"
-msgstr "அரை அளவு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Adaptive Target"
-msgstr "தகவமைப்பு இலக்கு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Blur Passes"
-msgstr "மங்கலானது"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Fadeout From"
-msgstr "இருந்து மங்கலானது"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Fadeout To"
-msgstr "Fadeout க்கு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "HDR 2D"
-msgstr "எச்டிஆர் 2 டி"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Screen Space Roughness Limiter"
-msgstr "திரை விண்வெளி கடினத்தன்மை வரம்பு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "SMAA Edge Detection Threshold"
-msgstr "SMAA எட்ச் கண்டறிதல் வாசல்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Decals"
-msgstr "டெக்கல்கள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Light Projectors"
-msgstr "ஒளி ப்ரொசெக்டர்கள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Occlusion Rays per Thread"
-msgstr "ஒரு நூலுக்கு மறைவு கதிர்கள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Upscale Mode"
-msgstr "மேல்தட்டு பயன்முறை"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Screen Space Reflection"
-msgstr "திரை விண்வெளி பிரதிபலிப்பு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Roughness Quality"
-msgstr "கடினத்தன்மை தகுதி"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Subsurface Scattering"
-msgstr "மேற்பரப்பு சிதறல்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Subsurface Scattering Quality"
-msgstr "மேற்பரப்பு சிதறல் தகுதி"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Subsurface Scattering Scale"
-msgstr "மேற்பரப்பு சிதறல் அளவு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Subsurface Scattering Depth Scale"
-msgstr "மேற்பரப்பு சிதறல் ஆழம்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Global Shader Variables"
-msgstr "உலகளாவிய சேடர் மாறிகள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Buffer Size"
-msgstr "இடையக அளவு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Probe Capture"
-msgstr "ஆய்வு பிடிப்பு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Update Speed"
-msgstr "புதுப்பிப்பு விரைவு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Primitive Meshes"
-msgstr "பழமையான மெச்கள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Texel Size"
-msgstr "டெக்செல் அளவு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Lightmap GI"
-msgstr "லைட்மேப் ஐயா"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Use Bicubic Filter"
-msgstr "பிக்யூபிக் வடிகட்டியைப் பயன்படுத்தவும்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Probe Ray Count"
-msgstr "கதிர் எண்ணிக்கை ஆய்வு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Frames to Converge"
-msgstr "ஒன்றிணைக்க பிரேம்கள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Frames to Update Lights"
-msgstr "விளக்குகளைப் புதுப்பிக்க பிரேம்கள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Volume Size"
-msgstr "தொகுதி அளவு"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Volume Depth"
-msgstr "தொகுதி ஆழம்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Spatial Indexer"
-msgstr "இடஞ்சார்ந்த குறியீட்டாளர்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Update Iterations per Frame"
-msgstr "ஒரு சட்டகத்திற்கு மறு செய்கைகளைப் புதுப்பிக்கவும்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Threaded Cull Minimum Instances"
-msgstr "திரிக்கப்பட்ட குல் குறைந்தபட்ச நிகழ்வுகள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Cluster Builder"
-msgstr "கிளச்டர் பில்டர்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Max Clustered Elements"
-msgstr "அதிகபட்ச கொத்து கூறுகள்"
-
-#: servers/rendering_server.cpp
-#, c-format, ignore-same
-msgid "OpenGL"
-msgstr "Opengl"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Max Renderable Elements"
-msgstr "அதிகபட்சம் வழங்கக்கூடிய கூறுகள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Max Renderable Lights"
-msgstr "அதிகபட்ச ரெண்டரபிள் விளக்குகள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Max Lights per Object"
-msgstr "ஒரு பொருளுக்கு அதிகபட்ச விளக்குகள்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Shaders"
-msgstr "சேடர்ச்"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Shader Language"
-msgstr "சேடர் மொழி"
-
-#: servers/rendering_server.cpp
-#, c-format
-msgid "Treat Warnings as Errors"
-msgstr "எச்சரிக்கைகளை பிழைகளாகக் கருதுங்கள்"
-
-#: servers/text_server.cpp
+#: servers/text/text_server.cpp
 #, c-format
 msgid "Default Font Antialiasing"
 msgstr "இயல்புநிலை எழுத்துரு ஆன்டிலியாசிங்"
 
-#: servers/text_server.cpp
+#: servers/text/text_server.cpp
 #, c-format
 msgid "Default Font Hinting"
 msgstr "இயல்புநிலை எழுத்துரு குறிப்பு"
 
-#: servers/text_server.cpp
+#: servers/text/text_server.cpp
 #, c-format
 msgid "Default Font Subpixel Positioning"
 msgstr "இயல்புநிலை எழுத்துரு சப் படப்புள்ளி பொருத்துதல்"
 
-#: servers/text_server.cpp
+#: servers/text/text_server.cpp
 #, c-format
 msgid "Default Font Multichannel Signed Distance Field"
 msgstr "இயல்புநிலை எழுத்துரு மல்டிசனல் கையொப்பமிடப்பட்ட தூர புலம்"
 
-#: servers/text_server.cpp
+#: servers/text/text_server.cpp
 #, c-format
 msgid "Default Font Generate Mipmaps"
 msgstr "இயல்புநிலை எழுத்துரு MIPMAPS ஐ உருவாக்குகிறது"
 
-#: servers/text_server.cpp
+#: servers/text/text_server.cpp
 #, c-format
 msgid "LCD Subpixel Layout"
 msgstr "எல்சிடி சப் படப்புள்ளி தளவமைப்பு"
 
-#: servers/text_server.cpp
+#: servers/text/text_server.cpp
 #, c-format
 msgid "Include Text Server Data"
 msgstr "உரை சேவையக தரவைச் சேர்க்கவும்"
 
-#: servers/text_server.cpp
+#: servers/text/text_server.cpp
 #, c-format
 msgid "Line Breaking Strictness"
 msgstr "வரி உடைக்கும் கண்டிப்பு"
@@ -21436,6 +22001,21 @@ msgstr "நங்கூரம் கண்டறிதல் இயக்கப�
 msgid "Tracking Confidence"
 msgstr "நம்பிக்கையை கண்காணித்தல்"
 
+#: servers/xr/xr_server.cpp
+#, c-format
+msgid "World Origin"
+msgstr "உலக தோற்றம்"
+
+#: servers/xr/xr_server.cpp
+#, c-format
+msgid "Camera Locked to Origin"
+msgstr "கேமரா தோற்றத்திற்கு பூட்டப்பட்டுள்ளது"
+
+#: servers/xr/xr_server.cpp
+#, c-format
+msgid "Primary Interface"
+msgstr "முதன்மை இடைமுகம்"
+
 #: servers/xr/xr_vrs.cpp
 #, c-format
 msgid "VRS Min Radius"
@@ -21450,18 +22030,3 @@ msgstr "வி.ஆர்.எச் வலிமை"
 #, c-format
 msgid "VRS Render Region"
 msgstr "வி.ஆர்.எச் பிராந்தியத்தை வழங்குகிறது"
-
-#: servers/xr_server.cpp
-#, c-format
-msgid "World Origin"
-msgstr "உலக தோற்றம்"
-
-#: servers/xr_server.cpp
-#, c-format
-msgid "Camera Locked to Origin"
-msgstr "கேமரா தோற்றத்திற்கு பூட்டப்பட்டுள்ளது"
-
-#: servers/xr_server.cpp
-#, c-format
-msgid "Primary Interface"
-msgstr "முதன்மை இடைமுகம்"

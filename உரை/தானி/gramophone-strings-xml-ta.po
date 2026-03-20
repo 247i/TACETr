@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Gramophone)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-29 01:02+0200\n"
-"PO-Revision-Date: 2025-07-09 09:36\n"
+"POT-Creation-Date: 2026-03-15 09:00+0200\n"
+"PO-Revision-Date: 2026-03-15 23:26\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/gramophone/strings-xml/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #, java-printf-format
 msgctxt "default_time"
@@ -20,15 +20,22 @@ msgid "0:00"
 msgstr "0:00"
 
 #, java-printf-format
-msgctxt "settings_contributors_detail"
-msgid "nift4, 123Duo3, AkaneTan, imjyotiraditya, WSTxda"
-msgstr "Nift4, 123DO3, ஒனேசன், இம்சிராடுட்ச் உடைகள், WSTXDA"
-
-#, java-printf-format
 msgctxt "upper_folder"
 msgid ".."
 msgstr ".."
 
+#, java-printf-format
+msgctxt "artist_time"
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#.  If your language uses a latin script: use "Gramophone", please do not
+#. translate. If your language uses a different script: translate "Gramophone"
+#. into your language.
+#. If your language uses a latin script: use "Gramophone", please do not
+#. translate.
+#. If your language uses a different script: translate "Gramophone" into your
+#. language.
 #, java-printf-format
 msgctxt "app_name"
 msgid "Gramophone"
@@ -62,7 +69,7 @@ msgstr "பாடல்கள்"
 #, java-printf-format
 msgctxt "category_albums"
 msgid "Albums"
-msgstr "ஆல்பம்"
+msgstr "தொகுப்புகள்"
 
 #, java-printf-format
 msgctxt "category_artists"
@@ -115,7 +122,14 @@ msgctxt "items"
 msgid "%d Item"
 msgid_plural "%d Items"
 msgstr[0] "%d உருப்படி"
-msgstr[1] "%d உருப்படிகள்"
+msgstr[1] "%d பொருட்கள்"
+
+#, java-printf-format
+msgctxt "folders_plural"
+msgid "%d Folder"
+msgid_plural "%d Folders"
+msgstr[0] "%d கோப்புறை"
+msgstr[1] "%d கோப்புறைகள்"
 
 #, java-printf-format
 msgctxt "follow_system"
@@ -150,12 +164,12 @@ msgstr "கலைஞர்"
 #, java-printf-format
 msgctxt "sort_by_album"
 msgid "Album"
-msgstr "ஆல்பம்"
+msgstr "தொகுப்பு"
 
 #, java-printf-format
 msgctxt "sort_by_album_artist"
-msgid "Album artist"
-msgstr "ஆல்பம் கலைஞர்"
+msgid "Album artist -> title"
+msgstr "ஆல்பம் கலைஞர் -> தலைப்பு"
 
 #, java-printf-format
 msgctxt "dismiss"
@@ -174,8 +188,8 @@ msgstr "தெரியாத ஆண்டு"
 
 #, java-printf-format
 msgctxt "refreshed_songs"
-msgid "Refreshed %1$s songs"
-msgstr "புத்துணர்ச்சியற்ற %1$s பாடல்கள்"
+msgid "Refreshed %1$d songs"
+msgstr "புத்துணர்ச்சியற்ற %1$d பாடல்கள்"
 
 #, java-printf-format
 msgctxt "search"
@@ -255,7 +269,7 @@ msgstr "சூட்டுக்குறி"
 #, java-printf-format
 msgctxt "crash_sdk_level"
 msgid "SDK Level"
-msgstr "எச்.டி.கே நிலை"
+msgstr "SDK நிலை"
 
 #, java-printf-format
 msgctxt "crash_time"
@@ -315,7 +329,7 @@ msgstr "களஞ்சியம்"
 #, java-printf-format
 msgctxt "dialog_album"
 msgid "Album"
-msgstr "ஆல்பம்"
+msgstr "தொகுப்பு"
 
 #, java-printf-format
 msgctxt "dialog_genre"
@@ -689,11 +703,6 @@ msgid "Basic info"
 msgstr "அடிப்படை செய்தி"
 
 #, java-printf-format
-msgctxt "preference_category_quality"
-msgid "Quality"
-msgstr "தகுதி"
-
-#, java-printf-format
 msgctxt "settings_category_misc"
 msgid "Misc"
 msgstr "இதர"
@@ -740,13 +749,13 @@ msgstr "பாடல்"
 
 #, java-printf-format
 msgctxt "delete_failed"
-msgid "Deleting song failed"
-msgstr "பாடல் நீக்குவது தோல்வியடைந்தது"
+msgid "Deleting song failed: %s"
+msgstr "பாடலை நீக்குவதில் தோல்வி: %s"
 
 #, java-printf-format
 msgctxt "delete_failed_playlist"
-msgid "Deleting playlist failed"
-msgstr "பிளேலிச்ட்டை நீக்குவது தோல்வியடைந்தது"
+msgid "Deleting playlist failed: %s"
+msgstr "பிளேலிச்ட்டை நீக்குவதில் தோல்வி: %s"
 
 #, java-printf-format
 msgctxt "album_covers_enhance"
@@ -802,6 +811,36 @@ msgid "Sleep timer"
 msgstr "தூக்க நேரங்குறிகருவி"
 
 #, java-printf-format
+msgctxt "playback_speed"
+msgid "Playback speed"
+msgstr "பின்னணி விரைவு"
+
+#, java-printf-format
+msgctxt "tempo"
+msgid "Tempo"
+msgstr "டெம்போ"
+
+#, java-printf-format
+msgctxt "pitch"
+msgid "Pitch"
+msgstr "குனிவு"
+
+#, java-printf-format
+msgctxt "tempo_pitch_value"
+msgid "%s: %.2fx"
+msgstr "%s: %.2fx"
+
+#, java-printf-format
+msgctxt "lock_tempo_pitch"
+msgid "Lock tempo and pitch"
+msgstr "லாக் டெம்போ மற்றும் பிட்ச்"
+
+#, java-printf-format
+msgctxt "reset"
+msgid "Reset"
+msgstr "மீட்டமை"
+
+#, java-printf-format
 msgctxt "current_playlist"
 msgid "Current playlist"
 msgstr "தற்போதைய பிளேலிச்ட்"
@@ -832,9 +871,14 @@ msgid "Sleep timer will pause music at %s"
 msgstr "ச்லீப் நேரங்குறிகருவி %s இல் இசையை இடைநிறுத்தும்"
 
 #, java-printf-format
-msgctxt "separator_dot"
-msgid "•"
-msgstr "•"
+msgctxt "timer_expiry_eos"
+msgid "Sleep timer will pause music when song playing at %s ends"
+msgstr "%s இல் பாடல் ஒலிக்கும் போது ச்லீப் நேரங்குறிகருவி இசையை இடைநிறுத்தும்"
+
+#, java-printf-format
+msgctxt "timer_expiry_end_of_this_song"
+msgid "Sleep timer will pause music at the end of this song"
+msgstr "இந்த பாடலின் முடிவில் ச்லீப் நேரங்குறிகருவி இசையை இடைநிறுத்தும்"
 
 #, java-printf-format
 msgctxt "settings_preference_category_home"
@@ -929,20 +973,6 @@ msgstr "முந்தையதைத் தவிர்க்கவும்"
 msgctxt "position_slider"
 msgid "Position slider"
 msgstr "நிலை ச்லைடர்"
-
-#, java-printf-format
-msgctxt "settings_lyrics_parser"
-msgid "New lyric parser"
-msgstr "புதிய பாடல் பாகுபடுத்தி"
-
-#, java-printf-format
-msgctxt "settings_lyrics_parser_summary"
-msgid ""
-"Enable new lyric parser that supports word-by-word synchronisation, speaker "
-"indicator, offset and more"
-msgstr ""
-"சொல்-மூலம்-வார்த்தை ஒத்திசைவு, பேச்சாளர் காட்டி, ஆஃப்செட் மற்றும் பலவற்றை "
-"ஆதரிக்கும் புதிய பாடல் பாகுபடுத்தலை இயக்கவும்"
 
 #, java-printf-format
 msgctxt "settings_lyrics_ui"
@@ -1432,28 +1462,6 @@ msgid "Bluetooth LE Broadcast"
 msgstr "ஊடலை லே ஒளிபரப்பு"
 
 #, java-printf-format
-msgctxt "settings_pixel_perfect_measurement_legacy_title"
-msgid "Pixel perfect text measurement"
-msgstr "படப்புள்ளி சரியான உரை அளவீட்டு"
-
-#, java-printf-format
-msgctxt "settings_pixel_perfect_measurement_legacy_summary"
-msgid ""
-"Before Android 15, text measurements are based on advances instead of "
-"bounding box. To avoid gradient clipping in lyrics, we add a few pixels to "
-"the sides. This however may cause unintended artifacts if kerning is "
-"enabled, which are mitigated if this toggle is enabled by rendering text to "
-"a bitmap and analysing it to extract proper spacing data."
-msgstr ""
-"ஆண்ட்ராய்டு 15 க்கு முன், உரை அளவீடுகள் எல்லை பெட்டிக்கு பதிலாக "
-"முன்னேற்றங்களை அடிப்படையாகக் கொண்டவை. பாடல் வரிகளில் சாய்வு கிளிப்பிங்கைத் "
-"தவிர்க்க, நாங்கள் சில பிக்சல்களை பக்கங்களில் சேர்க்கிறோம். எவ்வாறாயினும், "
-"கெர்னிங் இயக்கப்பட்டிருந்தால் இது திட்டமிடப்படாத கலைப்பொருட்களை "
-"ஏற்படுத்தக்கூடும், இது உரையை ஒரு பிட்மேப்பிற்கு வழங்குவதன் மூலமும், சரியான "
-"இடைவெளி தரவைப் பிரித்தெடுக்க பகுப்பாய்வு செய்வதன் மூலமும் இந்த மாற்று "
-"இயக்கப்பட்டிருந்தால் குறைக்கப்படும்."
-
-#, java-printf-format
 msgctxt "open_in_gramophone"
 msgid "Open in Gramophone"
 msgstr "கிராமபோனில் திறக்கவும்"
@@ -1461,13 +1469,13 @@ msgstr "கிராமபோனில் திறக்கவும்"
 #, java-printf-format
 msgctxt "settings_trim_lyrics_summary"
 msgid ""
-"Spaces before or after the first letter in a lyric line may have artistic "
-"value. If you disagree, you can turn on this toggle to remove these spaces "
-"automatically."
+"Spaces before the first letter or after the end of a lyric line may have "
+"artistic value. If you disagree, you can turn on this toggle to remove these"
+" spaces automatically."
 msgstr ""
-"ஒரு பாடல் வரியில் முதல் கடிதத்திற்கு முன் அல்லது அதற்குப் பின் உள்ள இடங்கள் "
-"கலை மதிப்பைக் கொண்டிருக்கலாம். நீங்கள் உடன்படவில்லை என்றால், இந்த இடங்களை "
-"தானாக அகற்ற இந்த மாற்றத்தை இயக்கலாம்."
+"முதல் எழுத்துக்கு முன் அல்லது பாடல் வரியின் முடிவிற்குப் பின் உள்ள "
+"இடைவெளிகள் கலை மதிப்பைக் கொண்டிருக்கலாம். நீங்கள் உடன்படவில்லை என்றால், இந்த"
+" இடங்களை தானாக அகற்ற, இந்த நிலைமாற்றத்தை இயக்கலாம்."
 
 #, java-printf-format
 msgctxt "cannot_play_file"
@@ -1483,22 +1491,6 @@ msgstr "அனிமேசன்களை முடக்கு"
 msgctxt "settings_lyrics_no_animation_summary"
 msgid "Disable all line transition lyric animations"
 msgstr "அனைத்து வரி மாற்றம் பாடல் அனிமேசன்களையும் முடக்கு"
-
-#, java-printf-format
-msgctxt "settings_lyrics_char_scaling_summary"
-msgid ""
-"Calculate lyric gradient velocity in characters per second instead of pixels"
-" per second. Might cause speed to look irregular due to differing character "
-"length in pixels."
-msgstr ""
-"நொடிக்கு பிக்சல்களுக்கு பதிலாக நொடிக்கு எழுத்துக்களில் பாடல் சாய்வு வேகத்தை "
-"கணக்கிடுங்கள். பிக்சல்களில் மாறுபட்ட எழுத்து நீளம் காரணமாக விரைவு "
-"ஒழுங்கற்றதாக இருக்கும்."
-
-#, java-printf-format
-msgctxt "settings_lyrics_char_scaling"
-msgid "Character-based scaling for lyric gradient"
-msgstr "பாடல் சாய்வுக்கான எழுத்து அடிப்படையிலான அளவிடுதல்"
 
 #, java-printf-format
 msgctxt "dialog_bitrate"
@@ -1616,7 +1608,7 @@ msgstr "உள்ளீட்டு இசை"
 #, java-printf-format
 msgctxt "mix_port_flag_voip_rx"
 msgid "VoIP RX"
-msgstr "VoIP RX"
+msgstr "வாய்ப் பெறு"
 
 #, java-printf-format
 msgctxt "mix_port_flag_mmap_noirq"
@@ -2080,11 +2072,6 @@ msgid "24-bit (8.24) PCM offload"
 msgstr "24-பிட் (8.24) பிசிஎம் ஆஃப்லோட்"
 
 #, java-printf-format
-msgctxt "spk_encoding_dts_lbr"
-msgid "DTS Express"
-msgstr "டி.டி.எச் எக்ச்பிரச்"
-
-#, java-printf-format
 msgctxt "settings_translation_auto_word"
 msgid "Auto-animate translations"
 msgstr "ஆட்டோ-மோச்ட் மொழிபெயர்ப்புகள்"
@@ -2177,14 +2164,14 @@ msgid ""
 "\n"
 "Missing some songs? Make sure to check Settings > Behaviour for the minimum length filter and folder blacklist, and confirm these settings are set to an expected value. For more possible reasons, please check our FAQ."
 msgstr ""
-"ஒவ்வொரு பயன்பாட்டு தொடக்கத்திலும் புதுப்பிக்கப்பட்ட பாடல் பட்டியலை கிராமபோன் கேட்கிறது, மேலும் கிராமபோன் இயங்கும்போது, ​​அது புதிய ஊடகத்தையும் தானாகவே கண்டறியும். இந்த \"புதுப்பிப்பு\" பொத்தானை கிராமபோனில் ஊடகங்களை மீண்டும் ஏற்றாது, அதற்கு பதிலாக, இணைக்கப்பட்ட அனைத்து நிரந்தர சேமிப்பக சாதனங்களிலிருந்தும் அனைத்து கோப்புகளையும் மீண்டும் வருடு செய்ய உங்கள் கணினியைக் கேட்கும் (இதனால்தான் சிறிது நேரம் ஆகும்). இதன் பொருள் என்னவென்றால், உங்கள் கணினி அல்லது பிற பயன்பாடுகள் செயலிழக்காவிட்டால், இந்த அம்சத்தை நீங்கள் ஒருபோதும் பயன்படுத்த வேண்டியதில்லை. \n"
+"ஒவ்வொரு பயன்பாட்டு தொடக்கத்திலும் புதுப்பிக்கப்பட்ட பாடல் பட்டியலை கிராமபோன் கேட்கிறது, மேலும் கிராமபோன் இயங்கும்போது, அது புதிய ஊடகத்தையும் தானாகவே கண்டறியும். இந்த \"புதுப்பிப்பு\" பொத்தானை கிராமபோனில் ஊடகங்களை மீண்டும் ஏற்றாது, அதற்கு பதிலாக, இணைக்கப்பட்ட அனைத்து நிரந்தர சேமிப்பக சாதனங்களிலிருந்தும் அனைத்து கோப்புகளையும் மீண்டும் வருடு செய்ய உங்கள் கணினியைக் கேட்கும் (இதனால்தான் சிறிது நேரம் ஆகும்). இதன் பொருள் என்னவென்றால், உங்கள் கணினி அல்லது பிற பயன்பாடுகள் செயலிழக்காவிட்டால், இந்த அம்சத்தை நீங்கள் ஒருபோதும் பயன்படுத்த வேண்டியதில்லை. \n"
 "\n"
 "சில பாடல்களைக் காணவில்லை? குறைந்தபட்ச நீள வடிகட்டி மற்றும் கோப்புறை தடுப்புப்பட்டியலுக்கான அமைப்புகள்> நடத்தை சரிபார்க்கவும், இந்த அமைப்புகள் எதிர்பார்க்கப்படும் மதிப்புக்கு அமைக்கப்பட்டிருப்பதை உறுதிப்படுத்தவும். மேலும் சாத்தியமான காரணங்களுக்காக, தயவுசெய்து எங்கள் கேள்விகளை சரிபார்க்கவும்."
 
 #, java-printf-format
 msgctxt "rename_failed_playlist"
-msgid "Failed to rename playlist"
-msgstr "பிளேலிச்ட்டை மறுபெயரிடுவதில் தோல்வி"
+msgid "Failed to rename playlist: %s"
+msgstr "பிளேலிச்ட்டின் பெயரை மாற்றுவதில் தோல்வி: %s"
 
 #, java-printf-format
 msgctxt "playlist_name"
@@ -2193,8 +2180,8 @@ msgstr "பிளேலிச்ட்டின் பெயர்"
 
 #, java-printf-format
 msgctxt "create_failed_playlist"
-msgid "Failed to create playlist"
-msgstr "பிளேலிச்ட்டை உருவாக்கத் தவறிவிட்டது"
+msgid "Failed to create playlist: %s"
+msgstr "பிளேலிச்ட்டை உருவாக்குவதில் தோல்வி: %s"
 
 #, java-printf-format
 msgctxt "rename_playlist"
@@ -2203,25 +2190,13 @@ msgstr "பிளேலிச்ட்டை மறுபெயரிடுங�
 
 #, java-printf-format
 msgctxt "edit_playlist_failed"
-msgid "Editing playlist failed"
-msgstr "பிளேலிச்ட் திருத்துதல் தோல்வியடைந்தது"
+msgid "Editing playlist failed: %s"
+msgstr "பிளேலிச்ட்டைத் திருத்த முடியவில்லை: %s"
 
 #, java-printf-format
 msgctxt "add_to_playlist"
 msgid "Add to playlist"
 msgstr "பிளேலிச்ட்டில் சேர்க்கவும்"
-
-#, java-printf-format
-msgctxt "settings_hq_output"
-msgid "High-quality output"
-msgstr "உயர்தர வெளியீடு"
-
-#, java-printf-format
-msgctxt "settings_hq_output_summary"
-msgid "Allow using any sample format instead of restricting to 16-bit int"
-msgstr ""
-"16-பிட் இன்டுக்கு கட்டுப்படுத்துவதற்கு பதிலாக எந்த மாதிரி வடிவமைப்பையும் "
-"பயன்படுத்த அனுமதிக்கவும்"
 
 #, java-printf-format
 msgctxt "playlist_editing_pref_desc"
@@ -2283,5 +2258,298 @@ msgstr "மோசமான முன்னேற்றப் பட்டி"
 
 #, java-printf-format
 msgctxt "contributors_ghhccghk"
-msgid "Status Bar lyrics"
-msgstr "நிலை பட்டை பாடல்"
+msgid "Status Bar lyrics & other improvements"
+msgstr "ச்டேட்டச் பார் பாடல் வரிகள் மற்றும் பிற மேம்பாடுகள்"
+
+#, java-printf-format
+msgctxt "contributors_saladnoober"
+msgid "Quality assurance"
+msgstr "தர பொறுப்பு"
+
+#, java-printf-format
+msgctxt "home_menu_quick_refresh"
+msgid "Quick refresh"
+msgstr "விரைவான புதுப்பிப்பு"
+
+#, java-printf-format
+msgctxt "add_to_queue"
+msgid "Add to queue"
+msgstr "வரிசையில் சேர்க்கவும்"
+
+#, java-printf-format
+msgctxt "disabled"
+msgid "Disabled"
+msgstr "முடக்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "offload_enabled_if_supported"
+msgid "Always enabled"
+msgstr "எப்போதும் இயக்கப்பட்டிருக்கும்"
+
+#, java-printf-format
+msgctxt "offload_enabled_if_gapless"
+msgid "Enabled if gapless playback possible"
+msgstr "இடைவெளியில்லாமல் பிளேபேக் முடிந்தால் இயக்கப்படும்"
+
+#, java-printf-format
+msgctxt "offload_enabled_no_gapless"
+msgid "Always enabled, but without gapless offload"
+msgstr "எப்போதும் இயக்கப்படும், ஆனால் இடைவெளியற்ற ஆஃப்லோடு இல்லாமல்"
+
+#, java-printf-format
+msgctxt "settings_audio_offload"
+msgid "Audio offload (saves battery)"
+msgstr "ஆடியோ ஆஃப்லோட் (பேட்டரியைச் சேமிக்கிறது)"
+
+#, java-printf-format
+msgctxt "settings_telegram"
+msgid "Telegram"
+msgstr "தந்தி"
+
+#, java-printf-format
+msgctxt "spk_encoding_pcm_20bit"
+msgid "20-bit PCM"
+msgstr "20-பிட் பிசிஎம்"
+
+#, java-printf-format
+msgctxt "spk_encoding_pcm_20bit_big_endian"
+msgid "20-bit PCM (big endian)"
+msgstr "20-பிட் பிசிஎம் (பெரிய எண்டியன்)"
+
+#, java-printf-format
+msgctxt "settings_cookie_summary"
+msgid "Make album cover cookie shaped"
+msgstr "ஆல்பம் கவர் குக்கீ வடிவத்தை உருவாக்கவும்"
+
+#, java-printf-format
+msgctxt "settings_cookie_info"
+msgid "Cookie cover"
+msgstr "குக்கீ கவர்"
+
+#, java-printf-format
+msgctxt "settings_pure_dark"
+msgid "Pure dark theme"
+msgstr "தூய இருண்ட கருப்பொருள்"
+
+#, java-printf-format
+msgctxt "settings_pure_dark_summary"
+msgid ""
+"A theme where all surfaces in the app are pure black (may cause black crush "
+"on OLED displays)"
+msgstr ""
+"பயன்பாட்டில் உள்ள அனைத்து மேற்பரப்புகளும் தூய கருப்பு நிறத்தில் இருக்கும் "
+"கருப்பொருள் (OLED டிச்ப்ளேக்களில் கறுப்பு க்ரச் ஏற்படலாம்)"
+
+#, java-printf-format
+msgctxt "settings_stop_on_dismiss"
+msgid "Stop on dismiss"
+msgstr "டிச்மிச் செய்வதை நிறுத்துங்கள்"
+
+#, java-printf-format
+msgctxt "settings_stop_on_dismiss_summary"
+msgid "Stop playback when app task is dismissed from recents"
+msgstr ""
+"ஆப்ச் டாச்க் சமீபத்தியவற்றிலிருந்து நிராகரிக்கப்படும்போது பிளேபேக்கை "
+"நிறுத்தவும்"
+
+#, java-printf-format
+msgctxt "compact_grid"
+msgid "Grid (compact)"
+msgstr "கட்டம் (கச்சிதமான)"
+
+#, java-printf-format
+msgctxt "sort_by_album_year"
+msgid "Album year"
+msgstr "ஆல்பம் ஆண்டு"
+
+#, java-printf-format
+msgctxt "sort_by_album_artist_year"
+msgid "<![CDATA[Album artist -> year]]>"
+msgstr "<![CDATA[ஆல்பம் கலைஞர் -> ஆண்டு]]>"
+
+#, java-printf-format
+msgctxt "forbidden_symbol_error"
+msgid "Invalid character in the name"
+msgstr "பெயரில் தவறான எழுத்து"
+
+#, java-printf-format
+msgctxt "translators"
+msgid "Translators"
+msgstr "மொழிபெயர்ப்பாளர்கள்"
+
+#, java-printf-format
+msgctxt "settings_replaygain"
+msgid "ReplayGain"
+msgstr "மீண்டும் விளையாடு"
+
+#, java-printf-format
+msgctxt "settings_replaygain_mode"
+msgid "Mode"
+msgstr "பயன்முறை"
+
+#, java-printf-format
+msgctxt "settings_replaygain_preamp"
+msgid "Pre amp"
+msgstr "முன் ஆம்ப்"
+
+#, java-printf-format
+msgctxt "settings_replaygain_no_rg_amp"
+msgid "Attenuation (no RG)"
+msgstr "குறைதல் (ஆர்சி இல்லை)"
+
+#, java-printf-format
+msgctxt "settings_replaygain_boost"
+msgid "Boost"
+msgstr "பூச்ட்"
+
+#, java-printf-format
+msgctxt "settings_replaygain_drc"
+msgid "Enable DRC"
+msgstr "DRC ஐ இயக்கு"
+
+#, java-printf-format
+msgctxt "settings_replaygain_drc_desc"
+msgid ""
+"Use \"Dynamic Range Compression\" as clipping protection (recommended). If "
+"disabled, volume will be reduced instead (volume will not be at the same "
+"level, destroying normalization effect)."
+msgstr ""
+"கிளிப்பிங் பாதுகாப்பாக \"மாறும் ரேஞ்ச் சுருக்கத்தை\" பயன்படுத்தவும் "
+"(பரிந்துரைக்கப்படுகிறது). முடக்கப்பட்டிருந்தால், அதற்குப் பதிலாக ஒலியளவு "
+"குறைக்கப்படும் (ஒழுங்கு அதே அளவில் இருக்காது, சாதாரணமயமாக்கல் விளைவை "
+"அழிக்கும்)."
+
+#, java-printf-format
+msgctxt "track_gain"
+msgid "All tracks equal loudness"
+msgstr "அனைத்து ட்ராக்குகளும் சமமான ஒலி"
+
+#, java-printf-format
+msgctxt "album_gain"
+msgid "Preserve album dynamics"
+msgstr "ஆல்பத்தின் இயக்கவியலைப் பாதுகாக்கவும்"
+
+#, java-printf-format
+msgctxt "smart"
+msgid "Smart"
+msgstr "அறிவாளி"
+
+#, java-printf-format
+msgctxt "scroll_to_playing"
+msgid "Scroll to playing song"
+msgstr "விளையாடும் பாடலுக்கு உருட்டவும்"
+
+#, java-printf-format
+msgctxt "duration_queue"
+msgid "%s remaining, %s total"
+msgstr "%s மீதமுள்ளது, மொத்தம் %s"
+
+#, java-printf-format
+msgctxt "d_db"
+msgid "%d dB"
+msgstr "%d dB"
+
+#, java-printf-format
+msgctxt "settings_replaygain_boost_desc"
+msgid ""
+"\"Boost\" will output both ReplayGain and other music at a higher volume "
+"than what is set in your device. (If your device volume is set close to "
+"100%, Boost will not increase the volume). With Boost, you can enjoy music "
+"that has similar loudness to other apps, such as games. Please note that "
+"this feature is experimental and may interfere with external equalizer apps."
+" Boost does not work with Bluetooth headphones. In case of any volume-"
+"related issues, please disable Boost by setting it to 0 dB. "
+msgstr ""
+"\"பூச்ட்\" ஆனது உங்கள் சாதனத்தில் அமைக்கப்பட்டுள்ளதை விட அதிக ஒலியளவில் "
+"ReplayGain மற்றும் பிற இசை இரண்டையும் வெளியிடும். (உங்கள் சாதனத்தின் அளவு "
+"100%க்கு அருகில் அமைக்கப்பட்டால், பூச்ட் ஒலியளவை அதிகரிக்காது). பூச்ட் "
+"மூலம், கேம்கள் போன்ற பிற ஆப்சைப் போலவே ஒலி எழுப்பும் இசையை நீங்கள் "
+"ரசிக்கலாம். இந்த நற்பொருத்தம் சோதனையானது மற்றும் வெளிப்புற சமநிலைப்படுத்தும்"
+" பயன்பாடுகளில் குறுக்கிடலாம் என்பதை நினைவில் கொள்ளவும். ஊடலை எட்ஃபோன்களுடன் "
+"பூச்ட் வேலை செய்யாது. வால்யூம் தொடர்பான ஏதேனும் சிக்கல்கள் ஏற்பட்டால், 0 dB "
+"என அமைப்பதன் மூலம் பூச்டை முடக்கவும்."
+
+#, java-printf-format
+msgctxt "settings_replaygain_no_rg_amp_desc"
+msgid "Reduce volume for loud songs that do not have ReplayGain tags"
+msgstr ""
+"ReplayGain குறிச்சொற்கள் இல்லாத உரத்த பாடல்களுக்கு ஒலியளவைக் குறைக்கவும்"
+
+#, java-printf-format
+msgctxt "settings_replaygain_preamp_desc"
+msgid ""
+"Increase or decrease the volume of songs with ReplayGain tags. Higher values"
+" may cause loss of dynamics due to clipping prevention."
+msgstr ""
+"ReplayGain குறிச்சொற்கள் மூலம் பாடல்களின் அளவை அதிகரிக்கவும் அல்லது "
+"குறைக்கவும். கிளிப்பிங் தடுப்பு காரணமாக அதிக மதிப்புகள் இயக்கவியல் இழப்பை "
+"ஏற்படுத்தலாம்."
+
+#, java-printf-format
+msgctxt "settings_replaygain_mode_desc"
+msgid ""
+"\"Smart\" automatically preserves album dynamics only when playing songs "
+"from an album consecutively."
+msgstr ""
+"\"அறிவுள்ள\" ஒரு ஆல்பத்தில் இருந்து தொடர்ச்சியாக பாடல்களை இயக்கும் போது "
+"மட்டுமே ஆல்பத்தின் இயக்கவியலை தானாகவே பாதுகாக்கிறது."
+
+#, java-printf-format
+msgctxt "sort_by_artist_year"
+msgid "<![CDATA[Artist -> year]]>"
+msgstr "<![CDATA[கலைஞர் -> ஆண்டு]]>"
+
+#, java-printf-format
+msgctxt "clear_queue"
+msgid "Clear queue"
+msgstr "தெளிவான வரிசை"
+
+#, java-printf-format
+msgctxt "actions_query_shuffle_all_songs"
+msgid "shuffle all songs"
+msgstr "அனைத்து பாடல்களையும் கலக்கவும்"
+
+#, java-printf-format
+msgctxt "actions_query_shuffle_everything"
+msgid "shuffle everything"
+msgstr "எல்லாவற்றையும் கலக்கவும்"
+
+#, java-printf-format
+msgctxt "actions_query_play_random_songs"
+msgid "play random songs"
+msgstr "சீரற்ற பாடல்களை இசைக்கவும்"
+
+#, java-printf-format
+msgctxt "actions_query_play_random_stuff"
+msgid "play random stuff"
+msgstr "சீரற்ற விசயங்களை விளையாடு"
+
+#, java-printf-format
+msgctxt "actions_query_play_randomly"
+msgid "play randomly"
+msgstr "சீரற்ற முறையில் விளையாடு"
+
+#, java-printf-format
+msgctxt "actions_query_start_random_music"
+msgid "start random music"
+msgstr "சீரற்ற இசையைத் தொடங்குங்கள்"
+
+#, java-printf-format
+msgctxt "actions_query_start_random_songs"
+msgid "start random songs"
+msgstr "சீரற்ற பாடல்களைத் தொடங்குங்கள்"
+
+#, java-printf-format
+msgctxt "actions_query_shuffle_specific"
+msgid "shuffle $item_name"
+msgstr "$item_name ஐ கலக்கவும்"
+
+#, java-printf-format
+msgctxt "please_allow_to_delete"
+msgid "Press allow to delete files"
+msgstr "கோப்புகளை நீக்க அனுமதியை அழுத்தவும்"
+
+#, java-printf-format
+msgctxt "choose_sd"
+msgid "Choose %s"
+msgstr "%sஐத் தேர்ந்தெடுக்கவும்"

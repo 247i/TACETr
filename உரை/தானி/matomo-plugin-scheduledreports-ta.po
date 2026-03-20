@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Matomo)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-13 04:55+0200\n"
-"PO-Revision-Date: 2025-01-14 03:03+0530\n"
+"POT-Creation-Date: 2026-03-19 10:51+0200\n"
+"PO-Revision-Date: 2026-03-20 09:01\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/matomo/plugin-scheduledreports/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "ScheduledReports.AggregateReportsFormat"
@@ -50,7 +50,7 @@ msgstr "இந்த அறிக்கையையும் அதன் அட
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "ScheduledReports.CancelAndReturnToReports"
 msgid "Cancel and %1$sreturn to the list of reports%2$s"
-msgstr "ரத்துசெய் மற்றும் %1 $ %2$s அறிக்கைகளின் பட்டியலுக்குத் திரும்பு"
+msgstr "ரத்து செய்து %1$sஅறிக்கைகளின் பட்டியலுக்கு திரும்புங்கள்%2$s"
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "ScheduledReports.CreateAndScheduleReport"
@@ -68,13 +68,13 @@ msgid "Custom Visitor Segment:"
 msgstr "தனிப்பயன் பார்வையாளர் பிரிவு:"
 
 #, ignore-optional-plural, php-format, safe-html
-msgctxt "ScheduledReports.DescriptionOnFirstPage"
+msgctxt "ScheduledReports.DescriptionOnFirstPageScheduledReport"
 msgid ""
-"The report description will be displayed in the email message, as well as on"
-" the first page of the report."
+"The report description will be displayed in the scheduled report message, as"
+" well as on the first page of the report."
 msgstr ""
-"அறிக்கை விளக்கம் மின்னஞ்சல் செய்தியிலும், அறிக்கையின் முதல் பக்கத்திலும் "
-"காண்பிக்கப்படும்."
+"அறிக்கை விவரம் திட்டமிடப்பட்ட அறிக்கை செய்தியிலும், அறிக்கையின் முதல் "
+"பக்கத்திலும் காட்டப்படும்."
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "ScheduledReports.DisplayFormat_TablesOnly"
@@ -87,16 +87,6 @@ msgid "Hello,"
 msgstr "வணக்கம்,"
 
 #, ignore-optional-plural, php-format, safe-html
-msgctxt "ScheduledReports.EmailReports"
-msgid "Email Reports"
-msgstr "மின்னஞ்சல் அறிக்கைகள்"
-
-#, ignore-optional-plural, php-format, safe-html
-msgctxt "ScheduledReports.EmailSchedule"
-msgid "Email Schedule"
-msgstr "மின்னஞ்சல் பட்டி"
-
-#, ignore-optional-plural, php-format, safe-html
 msgctxt "ScheduledReports.EvolutionGraph"
 msgid "Show Historical Graphs for the top %s values"
 msgstr "சிறந்த %s மதிப்புகளுக்கு வரலாற்று வரைபடங்களைக் காட்டு"
@@ -105,11 +95,6 @@ msgstr "சிறந்த %s மதிப்புகளுக்கு வர�
 msgctxt "ScheduledReports.FrontPage"
 msgid "Front Page"
 msgstr "முன் பக்கம்"
-
-#, ignore-optional-plural, php-format, safe-html
-msgctxt "ScheduledReports.PersonalEmailReports"
-msgid "Personal Email Reports"
-msgstr "தனிப்பட்ட மின்னஞ்சல் அறிக்கைகள்"
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "ScheduledReports.MonthlyScheduleHelp"
@@ -169,14 +154,14 @@ msgid "Report Format"
 msgstr "அறிக்கை வடிவமைப்பு"
 
 #, ignore-optional-plural, php-format, safe-html
-msgctxt "ScheduledReports.ReportHour"
-msgid "Send report at %s o'clock"
-msgstr "அறிக்கையை %s o'clock இல் அனுப்பவும்"
+msgctxt "ScheduledReports.ReportHourLocal"
+msgid "Send report at (local time)"
+msgstr "(உள்ளூர் நேரம்) மணிக்கு அறிக்கை அனுப்பவும்"
 
 #, ignore-optional-plural, php-format, safe-html
-msgctxt "ScheduledReports.ReportHourWithUTC"
-msgid "%s o'clock UTC"
-msgstr "%s o'Clock UTC"
+msgctxt "ScheduledReports.ReportHourWithUtcOnly"
+msgid "%s UTC"
+msgstr "%s UTC"
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "ScheduledReports.ReportIncludeNWebsites"
@@ -184,9 +169,8 @@ msgid ""
 "The report will include main metrics for all websites that have at least one"
 " visit (from the %s websites currently available)."
 msgstr ""
-"இந்த அறிக்கையில் குறைந்தது ஒரு வருகை (தற்போது கிடைக்கக்கூடிய "
-"%வலைத்தளங்களிலிருந்து) அனைத்து வலைத்தளங்களுக்கும் முக்கிய அளவீடுகள் "
-"அடங்கும்."
+"இந்த அறிக்கையில் குறைந்தது ஒரு வருகை (தற்போது கிடைக்கக்கூடிய %s "
+"வலைத்தளங்களிலிருந்து) அனைத்து வலைத்தளங்களுக்கும் முக்கிய அளவீடுகள் அடங்கும்."
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "ScheduledReports.ReportSent"
@@ -195,8 +179,18 @@ msgstr "அறிக்கை அனுப்பப்பட்டது"
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "ScheduledReports.ReportsIncluded"
-msgid "Statistics included"
-msgstr "புள்ளிவிவரங்கள் சேர்க்கப்பட்டுள்ளன"
+msgid "Select the reports to include"
+msgstr "சேர்க்க வேண்டிய அறிக்கைகளைத் தேர்ந்தெடுக்கவும்"
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.SelectedReports"
+msgid "Preview of your report"
+msgstr "உங்கள் அறிக்கையின் முன்னோட்டம்"
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.SelectedReportsHelp"
+msgid "Drag and drop to re-order the report sections."
+msgstr "அறிக்கைப் பிரிவுகளை மீண்டும் ஆர்டர் செய்ய இழுத்து விடுங்கள்."
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "ScheduledReports.ReportType"
@@ -209,28 +203,33 @@ msgid "Report updated"
 msgstr "அறிக்கை புதுப்பிக்கப்பட்டது"
 
 #, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.ReportAdded"
+msgid "Report added"
+msgstr "அறிக்கை சேர்க்கப்பட்டது"
+
+#, ignore-optional-plural, php-format, safe-html
 msgctxt "ScheduledReports.Segment_Deletion_Error"
 msgid ""
 "This segment cannot be deleted or made invisible to other users because it "
 "is used to generate email report(s) %s. Please retry after removing this "
 "segment from this report(s)."
 msgstr ""
-"இந்த பிரிவை நீக்கவோ அல்லது பிற பயனர்களுக்கு கண்ணுக்கு தெரியாததாகவோ செய்ய "
-"முடியாது, ஏனெனில் இது மின்னஞ்சல் அறிக்கை (கள்) %களை உருவாக்க பயன்படுகிறது. "
-"இந்த அறிக்கையிலிருந்து (கள்) இந்த பகுதியை அகற்றிய பின் மீண்டும் "
-"முயற்சிக்கவும்."
+"இந்தப் பிரிவை நீக்கவோ அல்லது பிற பயனர்களுக்குக் கண்ணுக்குத் தெரியாததாகவோ "
+"செய்ய முடியாது, ஏனெனில் இது மின்னஞ்சல் அறிக்கை (கள்) %s களை உருவாக்கப் "
+"பயன்படுகிறது. இந்த அறிக்கையிலிருந்து (கள்) இந்தப் பகுதியை அகற்றிய பின் "
+"மீண்டும் முயற்சிக்கவும்."
 
 #, ignore-optional-plural, php-format, safe-html
-msgctxt "ScheduledReports.Segment_Help"
+msgctxt "ScheduledReports.HelpSegmentManagement"
 msgid ""
-"You can select an existing custom segment to apply to data in this email "
-"report. You may create and edit custom segments in your dashboard %1$s(click"
-" here to open)%2$s, then click on the \"%3$s\" box, then \"%4$s\"."
+"You can select an existing custom segment to apply to data in this scheduled"
+" report. You may create and edit custom segments in the dedicated segments "
+"management page %1$s(click here to open)%2$s."
 msgstr ""
-"இந்த மின்னஞ்சல் அறிக்கையில் தரவுக்கு விண்ணப்பிக்க ஏற்கனவே உள்ள தனிப்பயன் "
-"பிரிவைத் தேர்ந்தெடுக்கலாம். உங்கள் டாச்போர்டு%1$s இல் தனிப்பயன் பிரிவுகளை "
-"உருவாக்கி திருத்தலாம் (திறக்க இங்கே சொடுக்கு செய்க)%2$s, பின்னர் \"%3$s\" "
-"பெட்டியைக் சொடுக்கு செய்க, பின்னர் \"%4 $ s\"."
+"இந்த திட்டமிடப்பட்ட அறிக்கையில் தரவுக்கு விண்ணப்பிக்க, ஏற்கனவே உள்ள "
+"தனிப்பயன் பிரிவை நீங்கள் தேர்ந்தெடுக்கலாம். %1$s (திறக்க இங்கே சொடுக்கு "
+"செய்யவும்)%2$s என்ற பிரத்யேக பிரிவு மேலாண்மைப் பக்கத்தில் தனிப்பயன் "
+"பிரிவுகளை உருவாக்கி திருத்தலாம்."
 
 #, ignore-optional-plural, php-format, safe-html
 msgctxt "ScheduledReports.SegmentAppliedToReports"
@@ -336,7 +335,7 @@ msgctxt "ScheduledReports.EvolutionGraphsShowForEachInPeriod"
 msgid ""
 "Evolution graphs show the evolution for %1$seach day%2$s in the last %3$s"
 msgstr ""
-"படிமலர்ச்சி வரைபடங்கள் கடைசி %3$s இல் %1 $ சீச் நாள் %2 $ க்கான பரிணாமத்தைக்"
+"படிமலர்ச்சி வரைபடங்கள் கடைசி %3$s இல் %1$s சீச் நாள் %2$s க்கான பரிணாமத்தைக்"
 " காட்டுகின்றன"
 
 #, ignore-optional-plural, php-format, safe-html
@@ -350,25 +349,145 @@ msgid "Report Period"
 msgstr "அறிக்கை காலம்"
 
 #, ignore-optional-plural, php-format, safe-html
-msgctxt "ScheduledReports.ReportPeriodHelp"
+msgctxt "ScheduledReports.ScheduleReportPeriodHelp"
 msgid ""
 "The period of data covered by this report. By default this is the same as "
-"the email schedule, so if the report is sent weekly, it will contain "
+"the report schedule, so if the report is sent weekly, it will contain "
 "information regarding the last week."
 msgstr ""
-"இந்த அறிக்கையால் மூடப்பட்ட தரவுகளின் காலம். இயல்பாக இது மின்னஞ்சல் "
-"அட்டவணைக்கு சமம், எனவே அறிக்கை வாரந்தோறும் அனுப்பப்பட்டால், அதில் கடந்த "
-"வாரம் தொடர்பான தகவல்கள் இருக்கும்."
+"இந்த அறிக்கையின் தரவுகளின் காலம். முன்னிருப்பாக இது அறிக்கை அட்டவணையைப் "
+"போலவே இருக்கும், எனவே அறிக்கை வாரந்தோறும் அனுப்பப்பட்டால், அது கடந்த வாரம் "
+"தொடர்பான தகவலைக் கொண்டிருக்கும்."
 
 #, ignore-optional-plural, php-format, safe-html
-msgctxt "ScheduledReports.ReportPeriodHelp2"
+msgctxt "ScheduledReports.ScheduleReportPeriodHelp2"
 msgid ""
 "You can change this, however, if you want to see different information and "
-"still retain the email schedule. For example, if the email schedule is "
+"still retain the report schedule. For example, if the report schedule is "
 "weekly, and the report period is 'day', you will get information for the "
 "last day, every week."
 msgstr ""
-"எவ்வாறாயினும், நீங்கள் வெவ்வேறு தகவல்களைக் காண விரும்பினால், மின்னஞ்சல் "
-"அட்டவணையைத் தக்க வைத்துக் கொள்ள விரும்பினால் இதை மாற்றலாம். "
-"எடுத்துக்காட்டாக, மின்னஞ்சல் அட்டவணை வாரந்தோறும், அறிக்கை காலம் 'நாள்' "
-"என்றால், ஒவ்வொரு வாரமும் கடைசி நாளுக்கான தகவல்களைப் பெறுவீர்கள்."
+"இருப்பினும், நீங்கள் வெவ்வேறு தகவல்களைப் பார்க்க விரும்பினால், அறிக்கை "
+"அட்டவணையைத் தக்க வைத்துக் கொள்ள விரும்பினால், இதை மாற்றலாம். "
+"எடுத்துக்காட்டாக, அறிக்கை அட்டவணை வாரந்தோறும் மற்றும் அறிக்கை காலம் 'நாள்' "
+"எனில், ஒவ்வொரு வாரமும் கடைசி நாளுக்கான தகவலைப் பெறுவீர்கள்."
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.ScheduleReports"
+msgid "Schedule Reports"
+msgstr "அட்டவணை அறிக்கைகள்"
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.PersonalScheduledReports"
+msgid "Personal Scheduled Reports"
+msgstr "தனிப்பட்ட திட்டமிடப்பட்ட அறிக்கைகள்"
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.ReportSchedule"
+msgid "Report Schedule"
+msgstr "அறிக்கை அட்டவணை"
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.SendingReport"
+msgid "Sending report…"
+msgstr "அறிக்கையை அனுப்புகிறது…"
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.ManageTooltip"
+msgid ""
+"Stay informed wherever you work. Send reports directly to Email, SMS, Slack,"
+" or Microsoft Teams by selecting your preferred channel when creating or "
+"editing a scheduled report."
+msgstr ""
+"நீங்கள் எங்கு வேலை செய்தாலும் தகவலுடன் இருங்கள். திட்டமிடப்பட்ட அறிக்கையை "
+"உருவாக்கும்போது அல்லது திருத்தும்போது உங்களுக்கு விருப்பமான சேனலைத் "
+"தேர்ந்தெடுப்பதன் மூலம் மின்னஞ்சல், எச்எம்எச், ச்லாக் அல்லது நுண்மென் "
+"குழுக்களுக்கு நேரடியாக அறிக்கைகளை அனுப்பவும்."
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.CreateTooltip"
+msgid ""
+"You can send scheduled reports via Email, SMS, Slack, or Microsoft Teams. "
+"Choose your preferred delivery method when creating or updating a report."
+msgstr ""
+"மின்னஞ்சல், எச்எம்எச், ச்லாக் அல்லது நுண்மென் குழுக்கள் மூலம் திட்டமிடப்பட்ட"
+" அறிக்கைகளை நீங்கள் அனுப்பலாம். அறிக்கையை உருவாக்கும் போது அல்லது "
+"புதுப்பிக்கும் போது உங்களுக்கு விருப்பமான டெலிவரி முறையைத் தேர்வு செய்யவும்."
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.ReportWillBeSentAt"
+msgid "The report will be sent at the selected hour in your local time zone."
+msgstr ""
+"உங்கள் உள்ளக நேர மண்டலத்தில் தேர்ந்தெடுக்கப்பட்ட மணிநேரத்தில் அறிக்கை "
+"அனுப்பப்படும்."
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.ReportHourEqualsUtc"
+msgid "This corresponds to %s."
+msgstr "இது %s உடன் ஒத்துள்ளது."
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.NoteDeliveryTime"
+msgid "Note: The exact delivery time may vary depending on report generation."
+msgstr ""
+"குறிப்பு: அறிக்கை உருவாக்கத்தைப் பொறுத்து சரியான டெலிவரி நேரம் மாறுபடலாம்."
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.WidgetsNotMappedToReports"
+msgid ""
+"Some dashboard widgets could not be mapped to scheduled report items: %s."
+msgstr ""
+"சில டாச்போர்டு விட்செட்களை திட்டமிடப்பட்ட அறிக்கை உருப்படிகளுக்கு மேப் செய்ய"
+" முடியவில்லை: %s."
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.ExportDashboardTitle"
+msgid "<b>Exporting your dashboard</b>"
+msgstr "<b>உங்கள் டாச்போர்டை ஏற்றுமதி செய்கிறது</b>"
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.ExportDashboardPrepare"
+msgid "This report is being prepared from your dashboard \"<b>%s</b>\"."
+msgstr ""
+"இந்த அறிக்கை உங்கள் \"<b>%s</b>\" டாச்போர்டில் இருந்து தயாரிக்கப்படுகிறது."
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.ExportDashboardWidgetsConvertedAutomatically"
+msgid ""
+"The widgets from your dashboard have been converted into report sections "
+"automatically."
+msgstr ""
+"உங்கள் டாச்போர்டில் உள்ள விட்செட்டுகள் தானாகவே அறிக்கைப் பிரிவுகளாக "
+"மாற்றப்பட்டுள்ளன."
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.ExportDashboardEmailEnabledByDefault"
+msgid ""
+"Email delivery is enabled by default. To turn it off, change <b>\"%1$s\"</b>"
+" to <b>\"%2$s\"</b>."
+msgstr ""
+"மின்னஞ்சல் டெலிவரி இயல்பாகவே இயக்கப்பட்டது. அதை முடக்க, <b>\"%1$s\"</b> "
+"என்பதை <b>\"%2$s\"</b> ஆக மாற்றவும்."
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.ExportDashboardDownload"
+msgid "Once you create the report, you will be able to download it."
+msgstr "நீங்கள் அறிக்கையை உருவாக்கியதும், அதை நீங்கள் பதிவிறக்க முடியும்."
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.ExportDashboardReportDescription"
+msgid ""
+"This report was automatically generated from the dashboard \"%1$s\" on %2$s"
+msgstr ""
+"இந்த அறிக்கை %2$s இல் உள்ள \"%1$s\" டாச்போர்டிலிருந்து தானாக "
+"உருவாக்கப்பட்டது"
+
+#, ignore-optional-plural, php-format, safe-html
+msgctxt "ScheduledReports.ExportDashboardInvalidDashboard"
+msgid ""
+"This dashboard could not be exported. It may not exist anymore, or it has no"
+" widgets that can be converted into scheduled report items."
+msgstr ""
+"இந்த டாச்போர்டை ஏற்றுமதி செய்ய முடியவில்லை. இது இனி இல்லாமல் இருக்கலாம் "
+"அல்லது திட்டமிடப்பட்ட அறிக்கை உருப்படிகளாக மாற்றக்கூடிய விட்செட்கள் இதில் "
+"இல்லை."

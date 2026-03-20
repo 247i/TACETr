@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Mihon)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-22 06:54+0200\n"
-"PO-Revision-Date: 2025-07-10 22:00\n"
+"POT-Creation-Date: 2026-03-15 03:54+0200\n"
+"PO-Revision-Date: 2026-03-15 08:26\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/mihon/tachiyomisy/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #.  Actions
 #, java-printf-format
@@ -552,15 +552,15 @@ msgid ""
 "- year: %8$d"
 msgstr ""
 "\n"
-"கடைசியாக சரிபார்க்கப்பட்ட காட்சியகங்கள்:\n"
+"கடைசியாகச் சரிபார்க்கப்பட்ட காட்சியகங்கள்:\n"
 " - மணி: %1$d\n"
 " - 6 மணி நேரம்: %2$d\n"
 " - 12 மணி நேரம்: %3$d\n"
-" - நாள்: %4 $ d\n"
-" - 2 நாட்கள்: %5 $ டி\n"
-" - வாரம்: %6 $ டி\n"
-" - மாதம்: %7 $ டி\n"
-" - ஆண்டு: %8 $ டி"
+" - நாள்: %4$d\n"
+" - 2 நாட்கள்: %5$d\n"
+" - வாரம்: %6$d\n"
+" - மாதம்: %7$d\n"
+" - ஆண்டு: %8$d"
 
 #.  EH Settings Upload Dialogs
 #, java-printf-format
@@ -672,7 +672,7 @@ msgctxt "toggle_delegated_sources_summary"
 msgid ""
 "Apply %1$s enhancements to the following sources if they are installed: %2$s"
 msgstr ""
-"பின்வரும் ஆதாரங்கள் நிறுவப்பட்டால் அவற்றை 1 $ s மேம்பாடுகளைப் "
+"பின்வரும் ஆதாரங்கள் நிறுவப்பட்டால் அவற்றை %1$s மேம்பாடுகளைப் "
 "பயன்படுத்துங்கள்: %2$s"
 
 #, java-printf-format
@@ -714,9 +714,9 @@ msgid ""
 "<![CDATA[DO NOT TOUCH THIS MENU UNLESS YOU KNOW WHAT YOU ARE DOING! <font "
 "color=\\'red\\'>IT CAN CORRUPT YOUR LIBRARY!</font>]]>"
 msgstr ""
-"<! [சி.டி.ஏ.டி.ஏ [நீங்கள் என்ன செய்கிறீர்கள் என்று உங்களுக்குத் "
-"தெரியாவிட்டால் இந்த மெனுவைத் தொட வேண்டாம்! <font color = \\ 'சிவப்பு \\'> "
-"இது உங்கள் நூலகத்தை சிதைக்கக்கூடும்! </font>]]"
+"<![CDATA[நீங்கள் என்ன செய்கிறீர்கள் என்று உங்களுக்குத் தெரியாவிட்டால் இந்த "
+"மெனுவைத் தொட வேண்டாம்! <font color=\\'red\\'>இது உங்கள் நூலகத்தைச் "
+"சிதைக்கக்கூடும்!</font>]]>"
 
 #, java-printf-format
 msgctxt "starting_cleanup"
@@ -847,6 +847,20 @@ msgstr "அலைவரிசை ஈரோ பதிலாள் சேவைய
 msgctxt "clear_db_exclude_read"
 msgid "Keep entries with read chapters"
 msgstr "வாசிப்பு அத்தியாயங்களுடன் உள்ளீடுகளை வைத்திருங்கள்"
+
+#, java-printf-format
+msgctxt "pref_include_chapter_url_hash"
+msgid "Include chapter URL hash"
+msgstr "அத்தியாய முகவரி ஆசைச் சேர்க்கவும்"
+
+#, java-printf-format
+msgctxt "pref_include_chapter_url_hash_desc"
+msgid ""
+"Append the first six characters of the chapter URL's MD5 hash to the chapter"
+" file or folder name."
+msgstr ""
+"அத்தியாயம் முகவரி இன் MD5 ஆசின் முதல் ஆறு எழுத்துக்களை அத்தியாயக் கோப்பு "
+"அல்லது கோப்புறை பெயரில் இணைக்கவும்."
 
 #.  Log Level
 #, java-printf-format
@@ -1761,7 +1775,7 @@ msgstr "இந்த பக்கத்தை உயர்த்த முடி
 msgctxt "eh_boost_page_errored"
 msgid "Page failed to load, press the retry button instead!"
 msgstr ""
-"பக்கம் ஏற்றத் தவறிவிட்டது, அதற்கு பதிலாக மறுநிகழ்வு பொத்தானை அழுத்தவும்!"
+"பக்கம் ஏற்றத் தவறிவிட்டது, அதற்குப் பதிலாக மீண்டும் பொத்தானை அழுத்தவும்!"
 
 #, java-printf-format
 msgctxt "eh_boost_page_downloading"
@@ -2141,7 +2155,7 @@ msgstr "சேமித்த தேடல் வினவலை நீக்க
 #, java-printf-format
 msgctxt "save_search_delete_message"
 msgid "Are you sure you wish to delete your saved search query: '%1$s'?"
-msgstr "உங்கள் சேமித்த தேடல் வினவலை நீக்க விரும்புகிறீர்களா?"
+msgstr "உங்கள் சேமித்த தேடல் வினவலை நீக்க விரும்புகிறீர்களா: '%1$s'?"
 
 #, java-printf-format
 msgctxt "save_search_invalid"
@@ -2699,24 +2713,24 @@ msgid ""
 "again by going to \\'Settings > E-Hentai > Show favorites sync notes\\'.]]>"
 msgstr ""
 "<![CDATA[1. பயன்பாட்டில் உள்ள வகை பெயர்களில் மாற்றங்கள் <b> இல்லை </b> "
-"ஒத்திசைக்கப்படுகின்றன! தயவுசெய்து <i> அதற்கு பதிலாக exentai இல் உள்ள வகை "
+"ஒத்திசைக்கப்படுகின்றன! தயவுசெய்து <i> அதற்குப் பதிலாக exentai இல் உள்ள வகை "
 "பெயர்களை மாற்றவும் </i>. வகை பெயர்கள் ஒவ்வொரு ஒத்திசைவையும் EXENTAI "
-"சேவையகங்களிலிருந்து நகலெடுக்கப்படும். <br> <br> 2. Exentai இல் பிடித்த "
-"வகைகள் பயன்பாட்டின் </b> இல் உள்ள <b> முதல் 10 வகைகளுடன் ஒத்திருக்கும் ( "
-"'இயல்புநிலை ' வகையைத் தவிர). <i> பிற வகைகளில் உள்ள காட்சியகங்கள் <b> இல்லை "
-"</b> ஒத்திசைக்கப்படும்! </i> <br> <br> 3. <font color =  'சிவப்பு '> <b> "
+"சேவையகங்களிலிருந்து நகலெடுக்கப்படும். <br><br> 2. Exentai இல் பிடித்த வகைகள்"
+" பயன்பாட்டின் </b> இல் உள்ள <b> முதல் 10 வகைகளுடன் ஒத்திருக்கும் "
+"('இயல்புநிலை' வகையைத் தவிர). <i> பிற வகைகளில் உள்ள காட்சியகங்கள் <b> இல்லை "
+"</b> ஒத்திசைக்கப்படும்! </i> <br><br> 3. <font color = 'சிவப்பு '> <b> "
 "ஒத்திசைவு நடந்து கொண்டிருக்கும்போது உங்களிடம் நிலையான இணைய இணைப்பு இருப்பதை "
 "உறுதிசெய்க! </b> </font> பயன்பாடு ஒத்திசைக்கும்போது இணையம் "
-"துண்டிக்கப்பட்டால், உங்களுக்கு பிடித்தவை விடப்படலாம் ஒரு <i> ஓரளவு "
-"ஒத்திசைக்கப்பட்ட நிலை </i>. <br> <br> 4. பிடித்தவை ஒத்திசைக்கும்போது "
+"துண்டிக்கப்பட்டால், உங்களுக்குப் பிடித்தவை விடப்படலாம் ஒரு <i> ஓரளவு "
+"ஒத்திசைக்கப்பட்ட நிலை </i>. <br><br> 4. பிடித்தவை ஒத்திசைக்கும்போது "
 "பயன்பாட்டைத் திறந்து வைக்கவும். ஆண்ட்ராய்டு சில நேரங்களில் பின்னணியில் "
 "இருக்கும் பயன்பாடுகளை மூடிவிடும், பயன்பாடு ஒத்திசைக்கும்போது அது நடந்தால் "
-"அது மோசமாக இருக்கும். <br> <br> 5. <b> பல வகைகளில் பிடித்தவைகளை வைக்க "
-"வேண்டாம் </b> (பயன்பாடு இதை ஆதரிக்கிறது). இது SYNC வழிமுறையை குழப்பமடையச் "
+"அது மோசமாக இருக்கும். <br><br> 5. <b> பல வகைகளில் பிடித்தவைகளை வைக்க "
+"வேண்டாம் </b> (பயன்பாடு இதை ஆதரிக்கிறது). இது SYNC வழிமுறையைக் குழப்பமடையச் "
 "செய்யலாம், ஏனெனில் EXENTAI ஒவ்வொரு விருப்பத்தையும் ஒரு பிரிவில் இருக்க "
-"அனுமதிக்கிறது. <br> <br> இந்த உரையாடல் ஒரு முறை மட்டுமே பாப்அப் செய்யும்.  "
-"'அமைப்புகள்> ஈ-எண்டாய்> பிடித்தவை ஒத்திசைவு குறிப்புகள் ' க்குச் சென்று இந்த"
-" குறிப்புகளை மீண்டும் படிக்கலாம்.]]>"
+"அனுமதிக்கிறது. <br><br> இந்த உரையாடல் ஒரு முறை மட்டுமே பாப்அப் செய்யும். "
+"'அமைப்புகள்> ஈ-எண்டாய்> பிடித்தவை ஒத்திசைவு குறிப்புகள் ' க்குச் சென்று "
+"இந்தக் குறிப்புகளை மீண்டும் படிக்கலாம்.]]>"
 
 #, java-printf-format
 msgctxt "favorites_sync_reset"
@@ -3000,12 +3014,12 @@ msgstr "டசின்சி"
 #, java-printf-format
 msgctxt "artist_cg"
 msgid "Artist CG"
-msgstr "கலைஞர் சி.சி."
+msgstr "கலைஞர் சி.சி"
 
 #, java-printf-format
 msgctxt "game_cg"
 msgid "Game CG"
-msgstr "விளையாட்டு சி.சி."
+msgstr "விளையாட்டு சி.சி"
 
 #, java-printf-format
 msgctxt "western"
@@ -3263,6 +3277,21 @@ msgctxt "translated"
 msgid "Translated"
 msgstr "மொழிபெயர்க்கப்பட்டுள்ளது"
 
+#, java-printf-format
+msgctxt "filename"
+msgid "File name"
+msgstr "கோப்பு பெயர்"
+
+#, java-printf-format
+msgctxt "file_extension"
+msgid "File extension"
+msgstr "கோப்பு நீட்டிப்பு"
+
+#, java-printf-format
+msgctxt "base_url"
+msgid "Base url"
+msgstr "அடிப்படை முகவரி"
+
 #.  Extra gallery info
 #, java-printf-format
 msgctxt "is_visible"
@@ -3272,7 +3301,7 @@ msgstr "தெரியும்: %1$s"
 #, java-printf-format
 msgctxt "language_translated"
 msgid "%1$s TR"
-msgstr "Tr உடன் %$ 1"
+msgstr "%1$s மொழி"
 
 #.  Merged entry
 #, java-printf-format
@@ -3448,8 +3477,13 @@ msgstr "ஒத்த தலைப்புகள்"
 
 #, java-printf-format
 msgctxt "alt_titles"
-msgid "Alternative Titles"
+msgid "Alternative titles"
 msgstr "மாற்று தலைப்புகள்"
+
+#, java-printf-format
+msgctxt "final_chapter"
+msgid "Final chapter"
+msgstr "இறுதி அத்தியாயம்"
 
 #.  Scanlator filters
 #, java-printf-format
