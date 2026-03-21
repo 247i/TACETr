@@ -88,12 +88,14 @@ The FreeCAD Contribution Process is expressed here with the following specific g
 10. To accept or reject a Pull Request, a Maintainer SHALL use GitHub's interface.
 
 11. Maintainers SHOULD NOT merge their own PRs except:
+    
     1. in exceptional cases, such as non-responsiveness from other Maintainers for an extended period.
     2. If the Maintainer is also the primary developer of the workbench or subsystem.
 
 12. Maintainers SHALL merge valid PRs from other Contributors rapidly.
 
 13. Maintainers MAY, at their discretion merge PRs that have not met all criteria to be considered valid to:
+    
     1. end fruitless discussions
     2. capture toxic contributions in the historical record
     3. engage with the Contributor on improving their contribution quality.
