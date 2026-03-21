@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (kitshn (for Tandoor))\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-28 11:58+0200\n"
-"PO-Revision-Date: 2025-06-28 17:40\n"
+"POT-Creation-Date: 2026-03-21 03:27+0200\n"
+"PO-Revision-Date: 2026-03-21 13:33\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/kitshn/app/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #, java-printf-format
 msgctxt "acra_comment_helper"
@@ -110,6 +110,11 @@ msgstr "இடு"
 msgctxt "action_back"
 msgid "Back"
 msgstr "பின்"
+
+#, java-printf-format
+msgctxt "action_choose_existing_photo"
+msgid "Choose an existing photo"
+msgstr "ஏற்கனவே உள்ள படத்தைத் தேர்ந்தெடுக்கவும்"
 
 #, java-printf-format
 msgctxt "action_clear"
@@ -218,6 +223,11 @@ msgstr "படி திருத்து"
 msgctxt "action_expand_less"
 msgid "Expand less"
 msgstr "குறைவாக விரிவாக்குங்கள்"
+
+#, java-printf-format
+msgctxt "action_ignore"
+msgid "Ignore"
+msgstr "புறக்கணிக்கவும்"
 
 #, java-printf-format
 msgctxt "action_import"
@@ -335,7 +345,7 @@ msgstr "அனைத்து சமையல் குறிப்புகள�
 #, java-printf-format
 msgctxt "action_sign_in"
 msgid "Sign in"
-msgstr "விடுபதிகை"
+msgstr "உள்நுழை"
 
 #, java-printf-format
 msgctxt "action_sign_out"
@@ -378,6 +388,11 @@ msgctxt "action_take_photo"
 msgid "Take photo"
 msgstr "புகைப்படம் எடுக்கவும்"
 
+#, java-printf-format
+msgctxt "action_take_new_photo"
+msgid "Take new photo"
+msgstr "புதிய புகைப்படம் எடுங்கள்"
+
 #. Content description for icon when uploading images/files, for example as
 #. cover image (accessibility)
 #, java-printf-format
@@ -407,9 +422,9 @@ msgid ""
 "\n"
 "Have fun while cooking with kitshn! 😄"
 msgstr ""
-"கிட்ச்ன் பீட்டாவை முயற்சித்ததற்கு நன்றி. இந்த பதிப்பில் இன்னும் பொருந்தக்கூடிய சிக்கல்கள் இருக்கலாம். »அமைப்புகள் / பற்றி பட்டியலிடப்பட்ட எந்தவொரு தொடர்பு விருப்பங்களையும் பயன்படுத்தி பிழைகள் மற்றும் பிழைகள் புகாரளிக்கலாம். \n"
+"கிட்ச்ன் பீட்டாவை முயற்சித்ததற்கு நன்றி. இந்தப் பதிப்பில் இன்னும் பொருந்தக்கூடிய சிக்கல்கள் இருக்கலாம். »அமைப்புகள் / பற்றிப் பட்டியலிடப்பட்ட எந்தவொரு தொடர்பு விருப்பங்களையும் பயன்படுத்தி பிழைகள் மற்றும் பிழைகள் புகாரளிக்கலாம். \n"
 "\n"
-"கிட்ச்னுடன் சமைக்கும்போது வேடிக்கையாக இருங்கள்! ."
+"கிட்ச்னுடன் சமைக்கும்போது வேடிக்கையாக இருங்கள்! 😄"
 
 #, java-printf-format
 msgctxt "bugsnag_dialog_button_negative"
@@ -443,9 +458,19 @@ msgid "Account"
 msgstr "கணக்கு"
 
 #, java-printf-format
+msgctxt "common_activity"
+msgid "Activity"
+msgstr "செய்கைப்பாடு"
+
+#, java-printf-format
 msgctxt "common_add_to_shopping_list"
 msgid "Add to shopping list"
 msgstr "சாப்பிங் பட்டியலில் சேர்க்கவும்"
+
+#, java-printf-format
+msgctxt "common_ai_provider"
+msgid "AI Provider"
+msgstr "AI வழங்குநர்"
 
 #, java-printf-format
 msgctxt "common_allocate_ingredients"
@@ -461,6 +486,11 @@ msgstr "தொகை"
 msgctxt "common_api_token"
 msgid "API token"
 msgstr "பநிஇ கிள்ளாக்கு"
+
+#, java-printf-format
+msgctxt "common_by"
+msgid "by"
+msgstr "மூலம்"
 
 #, java-printf-format
 msgctxt "common_category"
@@ -508,15 +538,25 @@ msgctxt "common_custom_headers"
 msgid "Custom headers"
 msgstr "தனிப்பயன் தலைப்புகள்"
 
+#. Used  in meal plan for example.
+#. German has a word for it ("Übermorgen"), other languages like English might
+#. not have a commonly used word for it.
+#. Please put "null", if you think that the name of the weekday should be
+#. displayed instead.
 #, java-printf-format
 msgctxt "common_day_after_tomorrow"
-msgid "Day after tomorrow"
-msgstr "நாளை அடுத்த நாள்"
+msgid "null"
+msgstr "சுழிய"
 
+#. Used  in meal plan for example.
+#. German has a word for it ("Übermorgen"), other languages like English might
+#. not have a commonly used word for it.
+#. Please put "null", if you think that the name of the weekday should be
+#. displayed instead.
 #, java-printf-format
 msgctxt "common_day_before_yesterday"
-msgid "Day before yesterday"
-msgstr "நேற்று முந்தைய நாள்"
+msgid "null"
+msgstr "சுழிய"
 
 #, java-printf-format
 msgctxt "common_delete_permanently"
@@ -829,6 +869,11 @@ msgid "Supermarket"
 msgstr "சூப்பர் மார்க்கெட்"
 
 #, java-printf-format
+msgctxt "common_shopping_list"
+msgid "Shopping list"
+msgstr "சாப்பிங் பட்டியல்"
+
+#, java-printf-format
 msgctxt "common_tags"
 msgid "Tags"
 msgstr "குறிச்சொற்கள்"
@@ -1043,6 +1088,16 @@ msgid "The title may contain a maximum of 64 characters."
 msgstr "தலைப்பில் அதிகபட்சம் 64 எழுத்துக்கள் இருக்கலாம்."
 
 #, java-printf-format
+msgctxt "funding_banner_text_year"
+msgid "**%1$d €** needed to cover costs for **%2$s**."
+msgstr "**%2$s**க்கான செலவுகளை ஈடுகட்ட **%1$d €** தேவை."
+
+#, java-printf-format
+msgctxt "funding_banner_text_current_year"
+msgid "**%1$d €** needed to cover costs for **this year**."
+msgstr "**இந்த ஆண்டுக்கான செலவுகளை ஈடுகட்ட **%1$d €** தேவை."
+
+#, java-printf-format
 msgctxt "greeting_christmas"
 msgid "Merry Christmas 🎅🎄🦌"
 msgstr "மெர்ரி கிறிச்துமச்"
@@ -1235,6 +1290,33 @@ msgstr ""
 "பங்களிப்பு உதவுகிறது."
 
 #, java-printf-format
+msgctxt "ios_timer_dialog_action_install_shortcut"
+msgid "Install shortcut"
+msgstr "குறுக்குவழியை நிறுவவும்"
+
+#, java-printf-format
+msgctxt "ios_timer_dialog_body"
+msgid ""
+"Apple does not allow third-party apps to start timers directly on iOS. "
+"kitshn uses a workaround involving the Shortcuts app. You'll need to install"
+" the » %1$s « shortcut to get started."
+msgstr ""
+"மூன்றாம் தரப்பு பயன்பாடுகளை நேரடியாக ஐஇமு இல் டைமர்களைத் தொடங்க "
+"அரத்திப்பழம், குமளிப்பழம் அனுமதிப்பதில்லை. kitshn குறுக்குவழிகள் பயன்பாட்டை "
+"உள்ளடக்கிய ஒரு தீர்வைப் பயன்படுத்துகிறது. தொடங்குவதற்கு » %1$s « "
+"குறுக்குவழியை நிறுவ வேண்டும்."
+
+#, java-printf-format
+msgctxt "ios_timer_dialog_shortcut_installed_switch"
+msgid "Shortcut installed?"
+msgstr "சார்ட்கட் நிறுவப்பட்டுள்ளதா?"
+
+#, java-printf-format
+msgctxt "ios_timer_dialog_title"
+msgid "Shortcut required"
+msgstr "குறுக்குவழி தேவை"
+
+#, java-printf-format
 msgctxt "kofi_support_description"
 msgid "You can support kitshn's development on Ko-Fi"
 msgstr "KO-Fi இல் கிட்ச்னின் வளர்ச்சியை நீங்கள் ஆதரிக்கலாம்"
@@ -1342,6 +1424,15 @@ msgid "The specified instance URL cannot be reached."
 msgstr "குறிப்பிட்ட நிகழ்வு முகவரி ஐ அடைய முடியாது."
 
 #, java-printf-format
+msgctxt "onboarding_sign_in_error_instance_not_reachable_local_network_hint"
+msgid ""
+"Enable » Local Network « permission for kitshn in system settings when "
+"connecting to a local server."
+msgstr ""
+"உள்ளக சேவையகத்துடன் இணைக்கும்போது கணினி அமைப்புகளில் »உள்ளூர் பிணையம் « "
+"kitshnக்கான அனுமதியை இயக்கவும்."
+
+#, java-printf-format
 msgctxt "onboarding_sign_in_error_instance_not_reachable_sso_hint"
 msgid "You can try » Log in using web browser «, if you are using SSO."
 msgstr ""
@@ -1428,6 +1519,16 @@ msgid "No steps have been added to this recipe yet."
 msgstr "இந்த செய்முறையில் இதுவரை எந்த நடவடிக்கையும் சேர்க்கப்படவில்லை."
 
 #, java-printf-format
+msgctxt "recipe_import_auto_sort_ingredients"
+msgid "Auto sort ingredients"
+msgstr "பொருட்களை தானாக வரிசைப்படுத்துங்கள்"
+
+#, java-printf-format
+msgctxt "recipe_import_auto_sort_ingredients_description"
+msgid "Assign ingredient if step text includes ingredient name"
+msgstr "படி உரையில் மூலப்பொருளின் பெயர் இருந்தால் மூலப்பொருளை ஒதுக்கவும்"
+
+#, java-printf-format
 msgctxt "recipe_import_divide_steps"
 msgid "Divide steps"
 msgstr "படிகளை பிரிக்கவும்"
@@ -1446,6 +1547,27 @@ msgstr "AI உடன் இறக்குமதி செய்யுங்க�
 msgctxt "recipe_import_type_ai_description"
 msgid "Upload images or enter a recipe in text form"
 msgstr "படங்களை பதிவேற்றவும் அல்லது உரை வடிவத்தில் செய்முறையை உள்ளிடவும்"
+
+#, java-printf-format
+msgctxt "recipe_import_type_social_media_label"
+msgid "Import from Social Media"
+msgstr "சமூக ஊடகத்திலிருந்து இறக்குமதி"
+
+#, java-printf-format
+msgctxt "recipe_import_type_social_media_description"
+msgid "Add recipes from Instagram or TikTok using AI"
+msgstr ""
+"AI ஐப் பயன்படுத்தி Instagram அல்லது TikTok இலிருந்து சமையல் குறிப்புகளைச் "
+"சேர்க்கவும்"
+
+#, java-printf-format
+msgctxt "recipe_import_type_social_media_disclaimer"
+msgid ""
+"Currently, only Instagram and TikTok are actively supported. Other platforms"
+" may be supported as well."
+msgstr ""
+"தற்போது, ​​இன்ச்டாகிராம் மற்றும் டிக்டோக் மட்டுமே தீவிரமாக "
+"ஆதரிக்கப்படுகின்றன. மற்ற தளங்களும் ஆதரிக்கப்படலாம்."
 
 #, java-printf-format
 msgctxt "recipe_import_type_url_label"
@@ -1540,6 +1662,11 @@ msgstr "சமையல் குறிப்புகளில் அனைத�
 msgctxt "search_keyword_including_all_label"
 msgid "All keywords included"
 msgstr "அனைத்து முக்கிய வார்த்தைகளும் சேர்க்கப்பட்டுள்ளன"
+
+#, java-printf-format
+msgctxt "search_providers"
+msgid "Search providers"
+msgstr "தேடல் வழங்குநர்கள்"
 
 #, java-printf-format
 msgctxt "search_rating_filter"
@@ -1695,6 +1822,16 @@ msgid "Follow system"
 msgstr "அமைப்பைப் பின்தொடரவும்"
 
 #, java-printf-format
+msgctxt "settings_section_appearance_hide_activity_label"
+msgid "Hide activity section"
+msgstr "செயல்பாட்டுப் பகுதியை மறை"
+
+#, java-printf-format
+msgctxt "settings_section_appearance_hide_activity_description"
+msgid "Hides the activity section in the recipe details view"
+msgstr "செய்முறை விவரக் காட்சியில் செயல்பாட்டுப் பகுதியை மறைக்கிறது"
+
+#, java-printf-format
 msgctxt "settings_section_appearance_label"
 msgid "Appearance"
 msgstr "தோற்றம்"
@@ -1708,6 +1845,16 @@ msgstr "கிட்ச்னின் நடத்தையை மாற்ற�
 msgctxt "settings_section_behavior_enable_crash_reporting"
 msgid "Enable crash reporting"
 msgstr "செயலிழப்பு அறிக்கையை இயக்கவும்"
+
+#, java-printf-format
+msgctxt "settings_section_behavior_enable_compact_home_screen_description"
+msgid "Show list view instead of big cards"
+msgstr "பெரிய அட்டைகளுக்குப் பதிலாக பட்டியல் காட்சியைக் காட்டு"
+
+#, java-printf-format
+msgctxt "settings_section_behavior_enable_compact_home_screen_label"
+msgid "Enable compact home screen"
+msgstr "சிறிய முகப்புத் திரையை இயக்கவும்"
 
 #, java-printf-format
 msgctxt "settings_section_behavior_enable_dynamic_home_screen_description"
@@ -1761,6 +1908,31 @@ msgstr "படிக்க எளிதாக இருக்கலாம், �
 msgctxt "settings_section_behavior_ingredients_show_fractional_values_label"
 msgid "Fractional values for ingredients"
 msgstr "பொருட்களுக்கான பகுதியளவு மதிப்புகள்"
+
+#, java-printf-format
+msgctxt "settings_section_behavior_ios_install_timer_shortcut_description"
+msgid "Needed to directly start timers from within the kitshn app"
+msgstr "சமையலறை பயன்பாட்டிலிருந்து நேரடியாக டைமரைத் தொடங்க வேண்டும்"
+
+#, java-printf-format
+msgctxt "settings_section_behavior_ios_install_timer_shortcut_label"
+msgid "Install iOS timer shortcut"
+msgstr "ஐஇமு நேரங்குறிகருவி சார்ட்கட்டை நிறுவவும்"
+
+#, java-printf-format
+msgctxt ""
+"settings_section_behavior_keep_screen_on_in_recipe_details_description"
+msgid ""
+"Prevent the screen from sleeping while viewing recipe details, just like in "
+"Cooking Mode"
+msgstr ""
+"சமையல் பயன்முறையைப் போலவே, செய்முறை விவரங்களைப் பார்க்கும்போது திரை "
+"தூங்குவதைத் தடுக்கவும்"
+
+#, java-printf-format
+msgctxt "settings_section_behavior_keep_screen_on_in_recipe_details_label"
+msgid "Keep screen on in recipe overview"
+msgstr "செய்முறை மேலோட்டத்தில் திரையை வைத்திருங்கள்"
 
 #, java-printf-format
 msgctxt "settings_section_behavior_label"

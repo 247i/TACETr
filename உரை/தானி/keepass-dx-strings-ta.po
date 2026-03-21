@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (KeePassDX)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-04 16:43+0200\n"
-"PO-Revision-Date: 2025-06-14 06:58\n"
+"POT-Creation-Date: 2026-03-21 03:21+0200\n"
+"PO-Revision-Date: 2026-03-21 13:34\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/keepass-dx/strings/ta/>\n"
 "Language: ta\n"
@@ -12,14 +12,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #, java-printf-format
 msgctxt "contact"
 msgid "Contact"
 msgstr "தொடர்பு கொள்ளுங்கள்"
 
-# Suggested in Weblate: தெரிவிப்பு
 #, java-printf-format
 msgctxt "info"
 msgid "Info"
@@ -42,8 +41,8 @@ msgstr "வலைமனை"
 
 #, java-printf-format
 msgctxt "about_description"
-msgid "Android implementation of the KeePass password manager"
-msgstr "KeePass கடவுச்சொல் நிர்வாகியின் Android செயல்படுத்தல்"
+msgid "Android implementation of the KeePass password manager."
+msgstr "கீபாச் கடவுச்சொல் நிர்வாகியின் ஆண்ட்ராய்டு செயல்படுத்தல்."
 
 #, java-printf-format
 msgctxt "accept"
@@ -85,28 +84,25 @@ msgctxt "encryption_algorithm"
 msgid "Encryption algorithm"
 msgstr "குறியாக்க வழிமுறை"
 
-# Suggested in Weblate: சாவி உருவாக்கும் முறை
 #, java-printf-format
 msgctxt "key_derivation_function"
 msgid "Key derivation function"
 msgstr "முக்கிய வழித்தோன்றல் செயல்பாடு"
 
-# Suggested in Weblate: முடிவு நேரம்
 #, java-printf-format
 msgctxt "app_timeout"
 msgid "Timeout"
-msgstr "நேரம் முடிந்தது"
+msgstr "முடிவு நேரம்"
 
 #, java-printf-format
 msgctxt "app_timeout_summary"
 msgid "Idle time before locking the database"
 msgstr "தரவுத்தளத்தை பூட்டுவதற்கு முன் செயலற்ற நேரம்"
 
-# Suggested in Weblate: செயலி
 #, java-printf-format
 msgctxt "application"
 msgid "App"
-msgstr "பயன்பாடு"
+msgstr "செயலி"
 
 #, java-printf-format
 msgctxt "brackets"
@@ -163,6 +159,20 @@ msgstr "இடைநிலைப்பலகை நேரம் முடிந�
 msgctxt "clipboard_timeout_summary"
 msgid "Duration of storage in the clipboard (if supported by your device)"
 msgstr "கிளிப்போர்டில் சேமிப்பக காலம் (உங்கள் சாதனத்தால் ஆதரிக்கப்பட்டால்)"
+
+#, java-printf-format
+msgctxt "clipboard_otp_notifications_title"
+msgid "OTP notification"
+msgstr "OTP அறிவிப்பு"
+
+#, java-printf-format
+msgctxt "clipboard_otp_notifications_summary"
+msgid ""
+"Open a notification to copy the OTP from entries populated with autofill or "
+"magikeyboard"
+msgstr ""
+"ஆட்டோஃபில் அல்லது மேசிக்போர்டு உள்ள உள்ளீடுகளிலிருந்து OTP ஐ நகலெடுக்க "
+"அறிவிப்பைத் திறக்கவும்"
 
 #, java-printf-format
 msgctxt "content_description_background"
@@ -501,6 +511,11 @@ msgid "Password"
 msgstr "கடவுச்சொல்"
 
 #, java-printf-format
+msgctxt "entry_application_id"
+msgid "App Id"
+msgstr "பயன்பாட்டு அடையாளம்"
+
+#, java-printf-format
 msgctxt "tags"
 msgid "Tags"
 msgstr "குறிச்சொற்கள்"
@@ -747,8 +762,8 @@ msgstr "இந்த யூரி ஐ கீப்அச்ட்சில் �
 
 #, java-printf-format
 msgctxt "error_file_not_create"
-msgid "Could not create file"
-msgstr "கோப்பை உருவாக்க முடியவில்லை"
+msgid "Could not create file."
+msgstr "கோப்பை உருவாக்க முடியவில்லை."
 
 #, java-printf-format
 msgctxt "error_invalid_db"
@@ -888,6 +903,11 @@ msgid "Secret key must be in Base32 format."
 msgstr "ரகசிய விசை BASE32 வடிவத்தில் இருக்க வேண்டும்."
 
 #, java-printf-format
+msgctxt "error_otp_secret_length"
+msgid "Secret key must be at least %1$d characters."
+msgstr "ரகசிய விசை குறைந்தது %1$d எழுத்துகள் இருக்க வேண்டும்."
+
+#, java-printf-format
 msgctxt "error_otp_counter"
 msgid "Counter must be between %1$d and %2$d."
 msgstr "கவுண்டர் %1$d மற்றும் %2$d க்கு இடையில் இருக்க வேண்டும்."
@@ -905,11 +925,11 @@ msgstr "டோக்கனில் %1$d முதல் %2$d இலக்கங
 #, java-printf-format
 msgctxt "error_otp_type"
 msgid ""
-"The existing OTP type is not recognized by this form, its validation may no "
-"longer correctly generate the token."
+"The existing OTP type is not recognized by this form, and its validation may"
+" no longer correctly generate the token."
 msgstr ""
-"தற்போதுள்ள OTP வகை இந்த படிவத்தால் அங்கீகரிக்கப்படவில்லை, அதன் சரிபார்ப்பு "
-"இனி கிள்ளாக்கை சரியாக உருவாக்காது."
+"தற்போதுள்ள OTP வகை இந்தப் படிவத்தால் அங்கீகரிக்கப்படவில்லை, மேலும் அதன் "
+"சரிபார்ப்பு இனி டோக்கனைச் சரியாக உருவாக்காது."
 
 #, java-printf-format
 msgctxt "error_string_type"
@@ -918,9 +938,9 @@ msgstr "இந்த உரை கோரப்பட்ட உருப்பட
 
 #, java-printf-format
 msgctxt "error_registration_read_only"
-msgid "Saving a new item is not allowed in a read-only database"
+msgid "Saving a new item is not allowed in a read-only database."
 msgstr ""
-"புதிய உருப்படியைச் சேமிப்பது படிக்க மட்டுமே தரவுத்தளத்தில் அனுமதிக்கப்படாது"
+"புதிய உருப்படியைச் சேமிப்பது படிக்க மட்டுமே தரவுத்தளத்தில் அனுமதிக்கப்படாது."
 
 #, java-printf-format
 msgctxt "error_field_name_already_exists"
@@ -964,8 +984,8 @@ msgstr "தரவுத்தளத்தில் ஒரு செயலைச�
 
 #, java-printf-format
 msgctxt "error_challenge_already_requested"
-msgid "Challenge already requested"
-msgstr "அறைகூவல் ஏற்கனவே கோரப்பட்டது"
+msgid "Challenge already requested."
+msgstr "அறைகூவல் ஏற்கனவே கோரப்பட்டது."
 
 #, java-printf-format
 msgctxt "error_response_already_provided"
@@ -989,8 +1009,8 @@ msgstr "%1$s க்கான இயக்கி தேவை."
 
 #, java-printf-format
 msgctxt "error_unable_merge_database_kdb"
-msgid "Unable to merge with a kdb database file"
-msgstr "KDB தரவுத்தள கோப்புடன் ஒன்றிணைக்க முடியவில்லை"
+msgid "Unable to merge with a kdb database file."
+msgstr "KDB தரவுத்தள கோப்புடன் ஒன்றிணைக்க முடியவில்லை."
 
 #, java-printf-format
 msgctxt "error_location_unknown"
@@ -1019,10 +1039,8 @@ msgstr "புல மதிப்பு"
 
 #, java-printf-format
 msgctxt "file_not_found_content"
-msgid "Could not find file. Try reopening it from your file browser."
-msgstr ""
-"கோப்பைக் கண்டுபிடிக்க முடியவில்லை. உங்கள் கோப்பு உலாவியில் இருந்து அதை "
-"மீண்டும் திறக்க முயற்சிக்கவும்."
+msgid "Could not find file"
+msgstr "கோப்பை கண்டுபிடிக்க முடியவில்லை"
 
 #, java-printf-format
 msgctxt "corrupted_file"
@@ -1123,16 +1141,6 @@ msgstr "நீளம்"
 msgctxt "nodes"
 msgid "Nodes"
 msgstr "முனைகள்"
-
-#, java-printf-format
-msgctxt "hide_password_title"
-msgid "Hide passwords"
-msgstr "கடவுச்சொற்களை மறைக்கவும்"
-
-#, java-printf-format
-msgctxt "hide_password_summary"
-msgid "Mask passwords (***) by default"
-msgstr "இயல்புநிலையாக கடவுச்சொற்களை (***) மறைக்கவும்"
 
 #, java-printf-format
 msgctxt "colorize_password_title"
@@ -1260,12 +1268,12 @@ msgid "Keyboard, autofill, clipboard"
 msgstr "விசைப்பலகை, ஆட்டோஃபில், இடைநிலைப்பலகை"
 
 #, java-printf-format
-msgctxt "menu_advanced_unlock_settings"
+msgctxt "menu_device_unlock_settings"
 msgid "Device unlocking"
 msgstr "சாதனம் திறத்தல்"
 
 #, java-printf-format
-msgctxt "menu_advanced_unlock_settings_summary"
+msgctxt "menu_device_unlock_settings_summary"
 msgid "Biometry, device credential"
 msgstr "பயோமெட்ரி, சாதன நற்சான்றிதழ்"
 
@@ -1333,11 +1341,6 @@ msgstr "நீக்கு"
 msgctxt "menu_cancel"
 msgid "Cancel"
 msgstr "ரத்துசெய்"
-
-#, java-printf-format
-msgctxt "menu_hide_password"
-msgid "Hide password"
-msgstr "கடவுச்சொல்லை மறைக்கவும்"
 
 #, java-printf-format
 msgctxt "menu_lock"
@@ -1529,11 +1532,6 @@ msgid "Selection mode"
 msgstr "தேர்வு முறை"
 
 #, java-printf-format
-msgctxt "registration_mode"
-msgid "Registration mode"
-msgstr "பதிவு முறை"
-
-#, java-printf-format
 msgctxt "remember_database_locations_title"
 msgid "Remember databases locations"
 msgstr "தரவுத்தள இடங்களை நினைவில் கொள்ளுங்கள்"
@@ -1615,8 +1613,8 @@ msgstr "பயன்பாட்டு அமைப்புகள் இறக�
 
 #, java-printf-format
 msgctxt "error_import_app_properties"
-msgid "Error during app settings import"
-msgstr "பயன்பாட்டு அமைப்புகள் இறக்குமதி செய்யும் போது பிழை"
+msgid "Error during app settings import."
+msgstr "பயன்பாட்டு அமைப்புகள் இறக்குமதி செய்யும்போது பிழை."
 
 #, java-printf-format
 msgctxt "success_export_app_properties"
@@ -1625,8 +1623,8 @@ msgstr "பயன்பாட்டு அமைப்புகள் ஏற்�
 
 #, java-printf-format
 msgctxt "error_export_app_properties"
-msgid "Error during app settings export"
-msgstr "பயன்பாட்டு அமைப்புகள் ஏற்றுமதியின் போது பிழை"
+msgid "Error during app settings export."
+msgstr "பயன்பாட்டு அமைப்புகள் ஏற்றுமதியின்போது பிழை."
 
 #, java-printf-format
 msgctxt "root"
@@ -1965,11 +1963,23 @@ msgstr ""
 " இந்த அனுமதியை நீங்கள் செயல்படுத்தவில்லை என்றால், மற்றொரு பயன்பாடு முன்னணியில் இருந்தால் பின்னணியில் திறக்கப்படும் தரவுத்தளம் தெரியாது."
 
 #, java-printf-format
-msgctxt "warning_copy_permission"
+msgctxt "warning_permission"
+msgid "The permission is needed to show the notification"
+msgstr "அறிவிப்பைக் காட்ட இசைவு தேவை"
+
+#, java-printf-format
+msgctxt "warning_overwrite_data_title"
+msgid "Overwrite existing data?"
+msgstr "இருக்கும் தரவை மேலெழுத வேண்டுமா?"
+
+#, java-printf-format
+msgctxt "warning_overwrite_data_description"
 msgid ""
-"The notification permission is needed to use the clipboard notification "
-"feature."
-msgstr "இடைநிலைப்பலகை அறிவிப்பு அம்சத்தைப் பயன்படுத்த அறிவிப்பு இசைவு தேவை."
+"This action will replace the existing data in the entry, you can retrieve "
+"the old data if the history is enabled."
+msgstr ""
+"இந்த செயல் உள்ளீட்டில் இருக்கும் தரவை மாற்றிவிடும், இதன் வரலாறு இயக்கத்தில் "
+"இருந்தால் அந்தப் பழைய தரவை மீட்க முடியும்"
 
 #, java-printf-format
 msgctxt "later"
@@ -2027,28 +2037,26 @@ msgid "Device unlock link"
 msgstr "சாதனம் திறத்தல் இணைப்பு"
 
 #, java-printf-format
-msgctxt "advanced_unlock_prompt_store_credential_title"
+msgctxt "device_unlock_prompt_store_credential_title"
 msgid "Link to device unlocking"
 msgstr "சாதனம் திறப்பதற்கான இணைப்பு"
 
 #, java-printf-format
-msgctxt "advanced_unlock_prompt_store_credential_message"
-msgid ""
-"You still need to remember your vault main credential if you use device "
-"unlock recognition."
+msgctxt "device_unlock_prompt_store_credential_message"
+msgid "WARNING: You still need to remember your vault main credential"
 msgstr ""
-"சாதன திறத்தல் அங்கீகாரத்தைப் பயன்படுத்தினால், உங்கள் பெட்டக முக்கிய "
-"நற்சான்றிதழை நீங்கள் இன்னும் நினைவில் கொள்ள வேண்டும்."
+"எச்சரிக்கை: உங்கள் பெட்டக முதன்மைச் சான்றுகளை நீங்கள் இன்னும் நினைவில் "
+"வைத்திருக்க வேண்டும்"
 
 #, java-printf-format
-msgctxt "advanced_unlock_prompt_extract_credential_title"
-msgid "Device unlock recognition"
-msgstr "சாதனம் திறத்தல் ஏற்பு"
+msgctxt "device_unlock_prompt_extract_credential_title"
+msgid "Device unlocking"
+msgstr "சாதனத்தைத் திறக்கிறது"
 
 #, java-printf-format
-msgctxt "advanced_unlock_prompt_extract_credential_message"
-msgid "Extract database credential with device unlock data"
-msgstr "சாதன திறத்தல் தரவுடன் தரவுத்தள நற்சான்றிதழைப் பிரித்தெடுக்கவும்"
+msgctxt "device_unlock_prompt_extract_credential_message"
+msgid "Open database with device credential"
+msgstr "சாதன நற்சான்றிதழுடன் தரவுத்தளத்தைத் திறக்கவும்"
 
 #, java-printf-format
 msgctxt "encrypted_value_stored"
@@ -2056,7 +2064,7 @@ msgid "Encrypted password stored"
 msgstr "மறைகுறியாக்கப்பட்ட கடவுச்சொல் சேமிக்கப்பட்டது"
 
 #, java-printf-format
-msgctxt "advanced_unlock_invalid_key"
+msgctxt "device_unlock_invalid_key"
 msgid ""
 "Cannot read the device unlock key. Please delete it and repeat the unlock "
 "recognition procedure."
@@ -2065,14 +2073,9 @@ msgstr ""
 "அங்கீகார நடைமுறையை மீண்டும் செய்யவும்."
 
 #, java-printf-format
-msgctxt "advanced_unlock_not_recognized"
+msgctxt "device_unlock_not_recognized"
 msgid "Could not recognize device unlock print"
 msgstr "சாதன திறத்தல் அச்சிடலை அடையாளம் காண முடியவில்லை"
-
-#, java-printf-format
-msgctxt "advanced_unlock_scanning_error"
-msgid "Device unlock error: %1$s"
-msgstr "சாதனம் திறத்தல் பிழை: %1$s"
 
 #, java-printf-format
 msgctxt "unavailable"
@@ -2080,12 +2083,12 @@ msgid "Unavailable"
 msgstr "கிடைக்கவில்லை"
 
 #, java-printf-format
-msgctxt "advanced_unlock_prompt_not_initialized"
+msgctxt "device_unlock_prompt_not_initialized"
 msgid "Unable to initialize device unlock prompt."
 msgstr "சாதன திறத்தல் வரியில் துவக்க முடியவில்லை."
 
 #, java-printf-format
-msgctxt "credential_before_click_advanced_unlock_button"
+msgctxt "credential_before_click_device_unlock_button"
 msgid "Type in the password, and then click this button."
 msgstr "கடவுச்சொல்லை தட்டச்சு செய்து, பின்னர் இந்த பொத்தானைக் சொடுக்கு செய்க."
 
@@ -2106,18 +2109,18 @@ msgstr "தோற்றம்"
 
 #, java-printf-format
 msgctxt "menu_appearance_settings_summary"
-msgid "Themes, colors, attributes"
-msgstr "கருப்பொருள்கள், வண்ணங்கள், பண்புக்கூறுகள்"
+msgid "Themes, colors, icons, fonts, attributes"
+msgstr "தீம்கள், வண்ணங்கள், சின்னங்கள், எழுத்துருக்கள், பண்புக்கூறுகள்"
 
 #, java-printf-format
 msgctxt "biometric"
 msgid "Biometric"
-msgstr "பயோமெட்ரிக்"
+msgstr "உயிரியளவியல்"
 
 #, java-printf-format
 msgctxt "device_credential"
 msgid "Device credential"
-msgstr "சாதன நற்சான்றிதழ்"
+msgstr "சாதன நுழைவுச்சான்றிதழ்"
 
 #, java-printf-format
 msgctxt "general"
@@ -2125,14 +2128,154 @@ msgid "General"
 msgstr "பொது"
 
 #, java-printf-format
+msgctxt "credential_provider"
+msgid "Credential provider"
+msgstr "அறிமுகச்சான்று வழங்குபவர்"
+
+#, java-printf-format
+msgctxt "set_credential_provider_service_title"
+msgid "Credential provider service"
+msgstr "நுழைவுச்சான்றிதழ் வழங்கும் சேவை"
+
+#, java-printf-format
+msgctxt "passkeys"
+msgid "Passkeys"
+msgstr "கடவுத்திறவுகோல்கள்"
+
+#, java-printf-format
+msgctxt "passkeys_explanation_summary"
+msgid "Configure Passkeys for fast and secure passwordless login"
+msgstr "கடவுச்சொற்கள் அல்லாத உள்நுழைவிற்கு கடவுத்திறவுகோல்களை உள்ளமைக்கவும்"
+
+#, java-printf-format
+msgctxt "passkeys_preference_title"
+msgid "Passkeys settings"
+msgstr "கடவுத்திறவுகோல்களின் அமைப்புகள்"
+
+#, java-printf-format
+msgctxt "passkeys_close_database_title"
+msgid "Close database"
+msgstr "தரவுத்தளத்தை மூடு"
+
+#, java-printf-format
+msgctxt "passkeys_close_database_summary"
+msgid "Close the database after a passkey selection"
+msgstr "கடவுத்திறவுகோலை தேர்ந்தெடுத்த பின்பு தரவுத்தளத்தை மூடவும்"
+
+#, java-printf-format
+msgctxt "passkeys_privileged_apps_title"
+msgid "Privileged apps"
+msgstr "சலுகை பெற்ற செயலிகள்"
+
+#, java-printf-format
+msgctxt "passkeys_privileged_apps_summary"
+msgid "Manage browsers in the custom list of privileged apps"
+msgstr ""
+"சலுகை பெற்ற பயன்பாடுகளின் தனிப்பயன் பட்டியலில் உலாவிகளை நிர்வகிக்கவும்"
+
+#, java-printf-format
+msgctxt "passkeys_privileged_apps_explanation"
+msgid ""
+"WARNING: A privileged app acts as a gateway to retrieve the origin of an "
+"authentication. Ensure its legitimacy to avoid security issues."
+msgstr ""
+"ஒரு சலுகைபெற்ற செயலியானது உறுதிப்பாட்டின் தோற்றத்தை மீட்டெடுக்கும் "
+"நுழைவாயிலாக செயல்படும்."
+
+#, java-printf-format
+msgctxt "passkeys_privileged_apps_ask_title"
+msgid "App not recognized"
+msgstr "ஏற்பு அற்ற செயலி"
+
+#, java-printf-format
+msgctxt "passkeys_privileged_apps_ask_message"
+msgid ""
+"%1$s attempts to perform a Passkey action.\n"
+"\n"
+"Add it to the list of privileged apps?"
+msgstr ""
+"ஒரு கடவுத்திறவுகோலின் செயலை நிகழ்த்த %1$s முயல்கிறது.\n"
+"\n"
+"இதைச் சலுகைபெற்ற செயலிகள் பட்டியலில் சேர்க்க வேண்டுமா?"
+
+#, java-printf-format
+msgctxt "passkeys_missing_signature_app_ask_title"
+msgid "Signature missing"
+msgstr "ஒப்பம் காணவில்லை"
+
+#, java-printf-format
+msgctxt "passkeys_missing_signature_app_ask_explanation"
+msgid ""
+"WARNING: The passkey was created from another client or the signature has been deleted. Ensure the app you want to authenticate is part of the same service and is legitimate to avoid security issues.\n"
+"If the app is a browser, do not add its signature to the entry, but to the list of privileged apps in the settings."
+msgstr ""
+"எச்சரிக்கை: கடவுச் திறவுகோல் மற்றொரு கிளையண்டிலிருந்து உருவாக்கப்பட்டது அல்லது கையொப்பம் நீக்கப்பட்டது. நீங்கள் அங்கீகரிக்க விரும்பும் பயன்பாடு அதே சேவையின் ஒரு பகுதியாக இருப்பதையும், பாதுகாப்புச் சிக்கல்களைத் தவிர்க்க சட்டபூர்வமானது என்பதையும் உறுதிப்படுத்திக் கொள்ளுங்கள். \n"
+"பயன்பாடு உலாவியாக இருந்தால், அதன் கையொப்பத்தை உள்ளீட்டில் சேர்க்க வேண்டாம், ஆனால் அமைப்புகளில் உள்ள சலுகை பெற்ற பயன்பாடுகளின் பட்டியலில்."
+
+#, java-printf-format
+msgctxt "passkeys_missing_signature_app_ask_message"
+msgid ""
+"%1$s is unrecognised and attempts to authenticate with an existing passkey."
+msgstr ""
+"%1$s அடையாளம் காணப்படவில்லை மற்றும் ஏற்கனவே உள்ள கடவுச் சாவியைக் கொண்டு "
+"அங்கீகரிக்க முயற்சிக்கிறது."
+
+#, java-printf-format
+msgctxt "passkeys_missing_signature_app_ask_question"
+msgid "Add app signature to passkey entry?"
+msgstr "பாச்கீ உள்ளீட்டில் ஆப் கையொப்பத்தைச் சேர்க்கவா?"
+
+#, java-printf-format
+msgctxt "passkeys_auto_select_title"
+msgid "Auto select"
+msgstr "தானாக தேர்வு"
+
+#, java-printf-format
+msgctxt "passkeys_auto_select_summary"
+msgid ""
+"Auto select if only one entry and the database is open, only if the "
+"requesting app is compatible"
+msgstr ""
+"ஒரே ஒரு உள்ளீடு மற்றும் தரவுத்தளம் திறந்திருந்தால், கோரும் பயன்பாடு இணக்கமாக"
+" இருந்தால் மட்டுமே தானாகத் தேர்ந்தெடுக்கவும்"
+
+#, java-printf-format
+msgctxt "passkeys_backup_eligibility_title"
+msgid "Backup Eligibility"
+msgstr "காப்புப் பிரதி தகுதி"
+
+#, java-printf-format
+msgctxt "passkeys_backup_eligibility_summary"
+msgid ""
+"Determine at creation time whether the public key credential source is "
+"allowed to be backed up"
+msgstr ""
+"பொது விசை நற்சான்றிதழ் மூலத்தை காப்புப் பிரதி எடுக்க அனுமதிக்கப்படுகிறதா "
+"என்பதை உருவாக்கும் நேரத்தில் தீர்மானிக்கவும்"
+
+#, java-printf-format
+msgctxt "passkeys_backup_state_title"
+msgid "Backup State"
+msgstr "காப்பு நிலை"
+
+#, java-printf-format
+msgctxt "passkeys_backup_state_summary"
+msgid ""
+"Indicate that credentials are backed up and protected against the loss of a "
+"single device"
+msgstr ""
+"நற்சான்றிதழ்கள் காப்புப் பிரதி எடுக்கப்பட்டு, ஒரு சாதனத்தின் இழப்பிலிருந்து "
+"பாதுகாக்கப்படுவதைக் குறிக்கவும்"
+
+#, java-printf-format
 msgctxt "autofill"
 msgid "Autofill"
 msgstr "ஆட்டோஃபில்"
 
 #, java-printf-format
-msgctxt "autofill_service_name"
-msgid "KeePassDX form autofilling"
-msgstr "கீப்அச்.டி.எக்ச் படிவம் ஆட்டோஃபில்லிங்"
+msgctxt "credential_provider_service_subtitle"
+msgid "Passkeys, Autofill credential provider"
+msgstr "கடவுச் சாவிகள், தானியங்கு நிரப்பு நற்சான்றிதழ் வழங்குநர்"
 
 #, java-printf-format
 msgctxt "autofill_sign_in_prompt"
@@ -2141,9 +2284,10 @@ msgstr "கீப்ஆச்டிசுடன் உள்நுழைக"
 
 #, java-printf-format
 msgctxt "autofill_explanation_summary"
-msgid "Enable autofilling to quickly fill out forms in other apps"
+msgid "Configure autofilling to quickly fill out forms in other apps"
 msgstr ""
-"மற்ற பயன்பாடுகளில் படிவங்களை விரைவாக நிரப்ப ஆட்டோஃபில்லிங்கை இயக்கவும்"
+"பிற பயன்பாடுகளில் படிவங்களை விரைவாக நிரப்ப தன்னியக்க நிரப்புதலை "
+"உள்ளமைக்கவும்"
 
 #, java-printf-format
 msgctxt "autofill_select_entry"
@@ -2151,14 +2295,58 @@ msgid "Select entry…"
 msgstr "உள்ளீட்டைத் தேர்ந்தெடுக்கவும்…"
 
 #, java-printf-format
-msgctxt "set_autofill_service_title"
-msgid "Set default autofill service"
-msgstr "இயல்புநிலை ஆட்டோஃபில் சேவையை அமைக்கவும்"
-
-#, java-printf-format
 msgctxt "autofill_preference_title"
 msgid "Autofill settings"
 msgstr "ஆட்டோஃபில் அமைப்புகள்"
+
+#, java-printf-format
+msgctxt "user_verification"
+msgid "User Verification"
+msgstr "பயனர் சரிபார்ப்பு"
+
+#, java-printf-format
+msgctxt "user_verification_device_credential_title"
+msgid "User Verification credential"
+msgstr "பயனர் சரிபார்ப்புச் சான்று"
+
+#, java-printf-format
+msgctxt "user_verification_device_credential_summary"
+msgid "Use the device credential as user verification if available"
+msgstr "சாதன நற்சான்றிதழ் இருந்தால், பயனர் சரிபார்ப்பாக பயன்படுத்தவும்"
+
+#, java-printf-format
+msgctxt "user_verification_mode_title"
+msgid "User Verification Mode"
+msgstr "பயனர் சரிபார்ப்பு முறை"
+
+#, java-printf-format
+msgctxt "user_verification_mode_summary"
+msgid "Enables User Verification mode by default when opening a database"
+msgstr ""
+"தரவுத்தளத்தைத் திறக்கும்போது இயல்பாக பயனர் சரிபார்ப்பு பயன்முறையை "
+"இயக்குகிறது"
+
+#, java-printf-format
+msgctxt "menu_user_verification_enabled"
+msgid "User Verification enabled"
+msgstr "பயனர் சரிபார்ப்பு இயக்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "menu_user_verification_disabled"
+msgid "User Verification disabled"
+msgstr "பயனர் சரிபார்ப்பு முடக்கப்பட்டுள்ளது"
+
+#, java-printf-format
+msgctxt "user_verification_preferred_title"
+msgid "Preferred User Verification"
+msgstr "விருப்பமான பயனர் சரிபார்ப்பு"
+
+#, java-printf-format
+msgctxt "user_verification_preferred_summary"
+msgid "Perform a user verification when the relying party requests \"preferred\""
+msgstr ""
+"நம்பியிருக்கும் தரப்பினர் \"விருப்பம்\" என்று கோரும்போது பயனர் சரிபார்ப்பைச்"
+" செய்யவும்"
 
 #, java-printf-format
 msgctxt "password_size_title"
@@ -2197,18 +2385,6 @@ msgstr ""
 "உங்கள் சாதனத்தின் கிளிப்போர்டைப் பயன்படுத்தி நுழைவு புலங்களை நகலெடுக்கவும்"
 
 #, java-printf-format
-msgctxt "clipboard_notifications_title"
-msgid "Clipboard notifications"
-msgstr "இடைநிலைப்பலகை அறிவிப்புகள்"
-
-#, java-printf-format
-msgctxt "clipboard_notifications_summary"
-msgid "Show clipboard notifications to copy fields when viewing an entry"
-msgstr ""
-"உள்ளீட்டைப் பார்க்கும்போது புலங்களை நகலெடுக்க இடைநிலைப்பலகை அறிவிப்புகளைக் "
-"காட்டு"
-
-#, java-printf-format
 msgctxt "clipboard_warning"
 msgid "If automatic deletion of clipboard fails, delete its history manually."
 msgstr ""
@@ -2239,10 +2415,11 @@ msgstr "பூட்ட 'பின்' அழுத்தவும்"
 #, java-printf-format
 msgctxt "lock_database_back_root_summary"
 msgid ""
-"Lock the database when the user clicks the back button on the root screen"
+"Press 'Back' to lock the database if you're at the root screen of the "
+"database"
 msgstr ""
-"ரூட் திரையில் பயனர் பின் பொத்தானைக் சொடுக்கு செய்யும் போது தரவுத்தளத்தைப் "
-"பூட்டுங்கள்"
+"நீங்கள் தரவுத்தளத்தின் ரூட் திரையில் இருந்தால் தரவுத்தளத்தை பூட்ட 'Back' ஐ "
+"அழுத்தவும்"
 
 #, java-printf-format
 msgctxt "lock_database_show_button_title"
@@ -2265,17 +2442,17 @@ msgid "Unlock"
 msgstr "திறக்க"
 
 #, java-printf-format
-msgctxt "advanced_unlock"
+msgctxt "device_unlock"
 msgid "Device unlock"
 msgstr "சாதனம் திறத்தல்"
 
 #, java-printf-format
-msgctxt "advanced_unlock_tap_delete"
+msgctxt "device_unlock_tap_delete"
 msgid "Tap to delete device unlocking keys"
 msgstr "சாதன திறக்கும் விசைகளை நீக்க தட்டவும்"
 
 #, java-printf-format
-msgctxt "advanced_unlock_explanation_summary"
+msgctxt "device_unlock_explanation_summary"
 msgid "Use device unlocking to open a database more easily"
 msgstr "ஒரு தரவுத்தளத்தை எளிதாக திறக்க சாதன திறப்பைப் பயன்படுத்தவும்"
 
@@ -2314,29 +2491,29 @@ msgstr ""
 "கோருங்கள்"
 
 #, java-printf-format
-msgctxt "temp_advanced_unlock_enable_title"
+msgctxt "temp_device_unlock_enable_title"
 msgid "Temp device unlocking"
 msgstr "தற்காலிக சாதனம் திறத்தல்"
 
 #, java-printf-format
-msgctxt "temp_advanced_unlock_enable_summary"
+msgctxt "temp_device_unlock_enable_summary"
 msgid "Do not store any encrypted content to use device unlocking"
 msgstr ""
 "சாதனத்தைத் திறப்பதைப் பயன்படுத்த எந்த மறைகுறியாக்கப்பட்ட உள்ளடக்கத்தையும் "
 "சேமிக்க வேண்டாம்"
 
 #, java-printf-format
-msgctxt "temp_advanced_unlock_timeout_title"
+msgctxt "temp_device_unlock_timeout_title"
 msgid "Device unlocking expiration"
 msgstr "சாதனம் திறத்தல் காலாவதி"
 
 #, java-printf-format
-msgctxt "temp_advanced_unlock_timeout_summary"
+msgctxt "temp_device_unlock_timeout_summary"
 msgid "Duration of device unlocking usage before deleting its content"
 msgstr "சாதனத்தைத் திறக்கும் காலம் அதன் உள்ளடக்கத்தை நீக்குவதற்கு முன்"
 
 #, java-printf-format
-msgctxt "advanced_unlock_timeout"
+msgctxt "device_unlock_timeout"
 msgid "Device unlocking timeout"
 msgstr "சாதனம் திறத்தல் நேரம் முடிந்தது"
 
@@ -2351,12 +2528,12 @@ msgid "Delete all encryption keys related to device unlock recognition"
 msgstr "சாதன திறத்தல் ஏற்பு தொடர்பான அனைத்து குறியாக்க விசைகளையும் நீக்கு"
 
 #, java-printf-format
-msgctxt "advanced_unlock_delete_all_key_warning"
+msgctxt "device_unlock_delete_all_key_warning"
 msgid "Delete all encryption keys related to device unlock recognition?"
 msgstr "சாதன திறத்தல் ஏற்பு தொடர்பான அனைத்து குறியாக்க விசைகளையும் நீக்கவா?"
 
 #, java-printf-format
-msgctxt "advanced_unlock_keystore_warning"
+msgctxt "device_unlock_keystore_warning"
 msgid ""
 "This feature will store encrypted credential data in the secure KeyStore of your device.\n"
 "\n"
@@ -2561,20 +2738,6 @@ msgid "Notification"
 msgstr "அறிவிப்பு"
 
 #, java-printf-format
-msgctxt "clear_clipboard_notification_title"
-msgid "Clear at closing"
-msgstr "மூடுவதில் தெளிவாக உள்ளது"
-
-#, java-printf-format
-msgctxt "clear_clipboard_notification_summary"
-msgid ""
-"Lock the database when the clipboard duration expires or the notification is"
-" closed after you start using it"
-msgstr ""
-"இடைநிலைப்பலகை காலம் காலாவதியாகும்போது அல்லது நீங்கள் அதைப் பயன்படுத்தத் "
-"தொடங்கிய பின் அறிவிப்பு மூடப்படும் போது தரவுத்தளத்தைப் பூட்டுங்கள்"
-
-#, java-printf-format
 msgctxt "database_name_title"
 msgid "Database name"
 msgstr "தரவுத்தள பெயர்"
@@ -2627,7 +2790,7 @@ msgstr "எதுவுமில்லை"
 #, java-printf-format
 msgctxt "compression_gzip"
 msgid "Gzip"
-msgstr "Gzip"
+msgstr "சிசிப்"
 
 #, java-printf-format
 msgctxt "recycle_bin"
@@ -2647,7 +2810,7 @@ msgstr "விசைப்பலகை"
 #, java-printf-format
 msgctxt "magic_keyboard_title"
 msgid "Magikeyboard"
-msgstr "Magikeyboard"
+msgstr "மாயவிசைப்பலகை"
 
 #, java-printf-format
 msgctxt "magic_keyboard_explanation_summary"
@@ -2665,7 +2828,7 @@ msgstr "சாதன விசைப்பலகை அமைப்புகள�
 #, java-printf-format
 msgctxt "keyboard_name"
 msgid "Magikeyboard"
-msgstr "Magikeyboard"
+msgstr "மாயவிசைப்பலகை"
 
 #, java-printf-format
 msgctxt "keyboard_label"
@@ -2692,7 +2855,7 @@ msgctxt "keyboard_selection_entry_summary"
 msgid ""
 "When viewing an entry in KeePassDX, populate Magikeyboard with that entry"
 msgstr ""
-"கீப்அச்ட்எக்சில் ஒரு நுழைவைப் பார்க்கும்போது, ​​அந்த நுழைவுடன் மாகிகிபோர்டை "
+"கீப்அச்ட்எக்சில் ஒரு நுழைவைப் பார்க்கும்போது, அந்த நுழைவுடன் மாகிகிபோர்டை "
 "விரிவுபடுத்துங்கள்"
 
 #, java-printf-format
@@ -2750,11 +2913,6 @@ msgid "%1$s available on Magikeyboard"
 msgstr "Magikeyboard இல் %1$s கிடைக்கிறது"
 
 #, java-printf-format
-msgctxt "keyboard_notification_entry_content_text"
-msgid "%1$s"
-msgstr "%1$s"
-
-#, java-printf-format
 msgctxt "keyboard_appearance_category"
 msgid "Appearance"
 msgstr "தோற்றம்"
@@ -2793,6 +2951,18 @@ msgstr "கேட்கக்கூடிய விசைப் பிரச்"
 msgctxt "keyboard_change"
 msgid "Switch keyboard"
 msgstr "விசைப்பலகை மாற்றவும்"
+
+#, java-printf-format
+msgctxt "keyboard_auto_switch_title"
+msgid "Auto Magikeyboard switch"
+msgstr "ஆட்டோ மேசிக்போர்டு சுவிட்ச்"
+
+#, java-printf-format
+msgctxt "keyboard_auto_switch_summary"
+msgid ""
+"Try to automatically switch to the Magikeyboard when entries are populated"
+msgstr ""
+"உள்ளீடுகள் நிரப்பப்படும்போது தானாகவே Magikeyboard க்கு மாற முயற்சிக்கவும்"
 
 #, java-printf-format
 msgctxt "keyboard_previous_database_credentials_title"
@@ -2903,6 +3073,18 @@ msgid "Display option to let the user select database entry"
 msgstr "தரவுத்தள உள்ளீட்டைத் தேர்ந்தெடுக்க பயனரை அனுமதிக்க விருப்பம்"
 
 #, java-printf-format
+msgctxt "autofill_share_magikeyboard_title"
+msgid "Share to Magikeyboard"
+msgstr "Magkeyboard இல் பகிரவும்"
+
+#, java-printf-format
+msgctxt "autofill_share_magikeyboard_summary"
+msgid "Share entries retrieved from autofill to Magikeyboard"
+msgstr ""
+"பகிர்வு உள்ளீடுகள் தானியங்கு நிரப்பலில் இருந்து Magikeyboard க்கு "
+"மீட்டெடுக்கப்பட்டது"
+
+#, java-printf-format
 msgctxt "autofill_save_search_info_title"
 msgid "Save search info"
 msgstr "தேடல் தகவலைச் சேமிக்கவும்"
@@ -2957,7 +3139,7 @@ msgid "Restart the app containing the form to activate the blocking."
 msgstr "தடுப்பதை செயல்படுத்த படிவம் கொண்ட பயன்பாட்டை மறுதொடக்கம் செய்யுங்கள்."
 
 #, java-printf-format
-msgctxt "autofill_read_only_save"
+msgctxt "error_save_read_only"
 msgid "Data save is not allowed for a database opened as read-only."
 msgstr ""
 "படிக்க மட்டும் திறக்கப்பட்ட தரவுத்தளத்திற்கு தரவு சேமிப்பு "
@@ -2991,16 +3173,6 @@ msgid "Deletes the password entered after a connection attempt to a database"
 msgstr ""
 "ஒரு தரவுத்தளத்திற்கான இணைப்பு முயற்சிக்குப் பிறகு உள்ளிடப்பட்ட கடவுச்சொல்லை "
 "நீக்குகிறது"
-
-#, java-printf-format
-msgctxt "enable_read_only_title"
-msgid "Write-protected"
-msgstr "எழுது பாதுகாக்கப்பட்ட"
-
-#, java-printf-format
-msgctxt "enable_read_only_summary"
-msgid "Open the database read-only by default"
-msgstr "இயல்பாகவே தரவுத்தளத்தை படிக்க மட்டுமே திறக்கவும்"
 
 #, java-printf-format
 msgctxt "enable_auto_save_database_title"
@@ -3115,12 +3287,12 @@ msgstr ""
 "உள்ளடக்கத்தை உள்ளிடவும்."
 
 #, java-printf-format
-msgctxt "education_advanced_unlock_title"
+msgctxt "education_device_unlock_title"
 msgid "Device database unlocking"
 msgstr "சாதன தரவுத்தள திறத்தல்"
 
 #, java-printf-format
-msgctxt "education_advanced_unlock_summary"
+msgctxt "education_device_unlock_summary"
 msgid ""
 "Link your password to your scanned biometric or device credential to quickly"
 " unlock your database."
@@ -3246,6 +3418,24 @@ msgstr ""
 " \"மாற்றியமைக்கக்கூடியது\" நீங்கள் விரும்பியபடி அனைத்து கூறுகளையும் சேர்க்க, நீக்க அல்லது மாற்ற உங்களை அனுமதிக்கிறது."
 
 #, java-printf-format
+msgctxt "education_user_verification_title"
+msgid "Verification for sensitive actions"
+msgstr "முக்கிய செயல்களுக்கான சரிபார்ப்பு"
+
+#, java-printf-format
+msgctxt "education_user_verification_summary"
+msgid ""
+"Change user verification mode for the session. \n"
+" \n"
+"\"User Verification Enabled\" verifies action on protected fields and database settings. \n"
+"\"User Verification Disabled\" lets you change any data in your database without verification."
+msgstr ""
+"அமர்வுக்கான பயனர் சரிபார்ப்பு பயன்முறையை மாற்றவும். \n"
+"\n"
+"\"பயனர் சரிபார்ப்பு இயக்கப்பட்டது\" பாதுகாக்கப்பட்ட புலங்கள் மற்றும் தரவுத்தள அமைப்புகளில் செயல்பாட்டைச் சரிபார்க்கிறது. \n"
+"\"பயனர் சரிபார்ப்பு முடக்கப்பட்டது\" என்பது உங்கள் தரவுத்தளத்தில் உள்ள எந்தத் தரவையும் சரிபார்ப்பு இல்லாமல் மாற்ற உங்களை அனுமதிக்கிறது."
+
+#, java-printf-format
 msgctxt "education_field_copy_title"
 msgid "Copy a field"
 msgstr "ஒரு புலத்தை நகலெடுக்கவும்"
@@ -3318,16 +3508,16 @@ msgid ""
 "style</strong> and you will especially help <strong>the realization of "
 "community projects.</strong>"
 msgstr ""
-"புரோ பதிப்பை வாங்குவதன் மூலம், இந்த <strong> விசுவல் பாணி ​​</strong> க்கான "
+"புரோ பதிப்பை வாங்குவதன் மூலம், இந்த <strong> விசுவல் பாணி </strong> க்கான "
 "அணுகலை நீங்கள் பெறுவீர்கள், மேலும் நீங்கள் குறிப்பாக <strong> சமூக "
-"திட்டங்களை உணர உதவுவீர்கள். </Strong>"
+"திட்டங்களை உணர உதவுவீர்கள்.</strong>"
 
 #, java-printf-format
 msgctxt "html_text_feature_generosity"
 msgid ""
 "This <strong>visual style</strong> is available thanks to your generosity."
 msgstr ""
-"இந்த <strong> விசுவல் பாணி ​​</strong> உங்கள் தாராள மனப்பான்மைக்கு நன்றி."
+"இந்த <strong> விசுவல் பாணி </strong> உங்கள் தாராள மனப்பான்மைக்கு நன்றி."
 
 #, java-printf-format
 msgctxt "html_text_donation"
@@ -3336,10 +3526,10 @@ msgid ""
 "translation)</i>, you will help it to continue to live and thrive, and you "
 "will also be eligible for the <strong>theme</strong> unlocking procedure."
 msgstr ""
-"திட்டத்திற்கு <i> (பண ரீதியாக, குறியீடு, மொழிபெயர்ப்பு) </i> க்கு <strong> "
-"பங்களிப்பு </strong> மூலம், நீங்கள் தொடர்ந்து வாழவும் வளரவும் உதவுவீர்கள், "
-"மேலும் நீங்கள் <strong> கருப்பொருளுக்கும் தகுதி பெறுவீர்கள் </strong> "
-"திறத்தல் செயல்முறை."
+"திட்டத்திற்கு <strong>பங்களிப்பு</strong> மூலம் <i>(பண ரீதியாக, குறியீடு, "
+"மொழிபெயர்ப்பு)</i>, நீங்கள் தொடர்ந்து வாழவும் வளரவும் உதவுவீர்கள், மேலும் "
+"நீங்கள் <strong>கருப்பொருளுக்கும்</strong> தகுதி பெறுவீர்கள்திறத்தல் "
+"செயல்முறை."
 
 #, java-printf-format
 msgctxt "html_text_dev_feature"
@@ -3434,7 +3624,7 @@ msgstr "ரத்து செய்யப்பட்டது!"
 #, java-printf-format
 msgctxt "unit_byte"
 msgid "B"
-msgstr "B"
+msgstr "பி"
 
 #, java-printf-format
 msgctxt "unit_kibibyte"
@@ -3561,7 +3751,7 @@ msgctxt "style_name_reply"
 msgid "Reply"
 msgstr "பதில்"
 
-#, java-printf-format
+#, ignore-same, java-printf-format
 msgctxt "style_name_kunzite"
 msgid "Kunzite"
 msgstr "குன்சைட்"
@@ -3640,3 +3830,140 @@ msgstr "வார்ப்புருக்கள் மறைக்க"
 msgctxt "hide_templates_summary"
 msgid "Templates are not shown"
 msgstr "வார்ப்புருக்கள் காட்டப்படவில்லை"
+
+#, ignore-reused, java-printf-format
+msgctxt "passkey"
+msgid "Passkey"
+msgstr "பாச்கீ"
+
+#, java-printf-format
+msgctxt "credential_provider_service_name"
+msgid "KeePassDX Credential Provider"
+msgstr "KeePassDX நற்சான்றிதழ் வழங்குநர்"
+
+#, java-printf-format
+msgctxt "credential_provider_database_username"
+msgid "KeePassDX Database"
+msgstr "KeePassDX தரவுத்தளம்"
+
+#, java-printf-format
+msgctxt "credential_provider_locked_database_description"
+msgid "Select to unlock"
+msgstr "திறக்க தேர்ந்தெடுக்கவும்"
+
+#, java-printf-format
+msgctxt "passkey_creation_description"
+msgid "Save passkey in new entry"
+msgstr "புதிய நுழைவில் கடவுச்சொல்லை சேமிக்கவும்"
+
+#, java-printf-format
+msgctxt "passkey_update_description"
+msgid "Update passkey in %1$s"
+msgstr "கடவுச்சொல்லை %1$s இல் புதுப்பிக்கவும்"
+
+#, java-printf-format
+msgctxt "passkey_selection_username"
+msgid "No passkey found"
+msgstr "கடவுச்சொல் எதுவும் கிடைக்கவில்லை"
+
+#, java-printf-format
+msgctxt "passkey_selection_description"
+msgid "Select an existing passkey"
+msgstr "ஏற்கனவே உள்ள கடவுச் சாவியைத் தேர்ந்தெடுக்கவும்"
+
+#, java-printf-format
+msgctxt "passkey_username"
+msgid "Passkey Username"
+msgstr "கடவுச்சொல் பயனர்பெயர்"
+
+#, java-printf-format
+msgctxt "passkey_private_key"
+msgid "Passkey Private Key"
+msgstr "பாச்கீ தனிப்பட்ட விசை"
+
+#, java-printf-format
+msgctxt "passkey_credential_id"
+msgid "Passkey Credential Id"
+msgstr "பாச்கி நற்சான்றிதழ் அடையாளம்"
+
+#, java-printf-format
+msgctxt "passkey_user_handle"
+msgid "Passkey User Handle"
+msgstr "பாச்கீ பயனர் கைப்பிடி"
+
+#, java-printf-format
+msgctxt "passkey_relying_party"
+msgid "Passkey Relying Party"
+msgstr "பாச்கி நம்பி பார்ட்டி"
+
+#, java-printf-format
+msgctxt "passkey_backup_eligibility"
+msgid "Passkey Backup Eligibility"
+msgstr "பாச்கி காப்புப் பிரதி தகுதி"
+
+#, java-printf-format
+msgctxt "passkey_backup_state"
+msgid "Passkey Backup State"
+msgstr "பாச்கி காப்பு நிலை"
+
+#, java-printf-format
+msgctxt "error_passkey_result"
+msgid "Unable to return the passkey"
+msgstr "கடவுச் சாவியைத் திருப்பித் தர முடியவில்லை"
+
+#, java-printf-format
+msgctxt "error_passkey_credential_id"
+msgid "No passkey found with relying party %1$s and credentialIds %2$s"
+msgstr ""
+"நம்பியிருக்கும் கட்சி %1$s மற்றும் நற்சான்றிதழ் ஐடிகள் %2$s உடன் எந்த கடவுச்"
+" சாவியும் இல்லை"
+
+#, java-printf-format
+msgctxt "password_creation_description"
+msgid "Save password in new entry"
+msgstr "புதிய பதிவில் கடவுச்சொல்லை சேமிக்கவும்"
+
+#, java-printf-format
+msgctxt "password_selection_description"
+msgid "Select an existing password"
+msgstr "ஏற்கனவே உள்ள கடவுச்சொல்லைத் தேர்ந்தெடுக்கவும்"
+
+#, java-printf-format
+msgctxt "error_password_result"
+msgid "Unable to return the password"
+msgstr "கடவுச்சொல்லை திருப்பி அனுப்ப முடியவில்லை"
+
+#, java-printf-format
+msgctxt "content_description_user_verification_information"
+msgid "User verification info"
+msgstr "பயனர் சரிபார்ப்பு செய்தி"
+
+#, java-printf-format
+msgctxt "user_verification_required_title"
+msgid "User Verification"
+msgstr "பயனர் சரிபார்ப்பு"
+
+#, java-printf-format
+msgctxt "user_verification_required_description"
+msgid "Access to this data requires verification that it is indeed you."
+msgstr "இந்தத் தரவை அணுக, அது நீங்கள்தான் என்பதைச் சரிபார்க்க வேண்டும்."
+
+#, java-printf-format
+msgctxt "user_verification_required_description_precise"
+msgid "%1$s requires verification that it is indeed you."
+msgstr "%1$s க்கு அது நீங்கள்தானா என்பதைச் சரிபார்க்க வேண்டும்."
+
+#, java-printf-format
+msgctxt "user_verification_database_credential"
+msgid "Enter the first four characters of your database password"
+msgstr "உங்கள் தரவுத்தள கடவுச்சொல்லின் முதல் நான்கு எழுத்துக்களை உள்ளிடவும்"
+
+#, java-printf-format
+msgctxt "first_chars"
+msgid "First chars"
+msgstr "முதல் எழுத்துகள்"
+
+#, java-printf-format
+msgctxt "check"
+msgid "Check"
+msgstr "சரிபார்"

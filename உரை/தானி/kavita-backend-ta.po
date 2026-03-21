@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Kavita)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-28 12:18+0200\n"
-"PO-Revision-Date: 2025-06-28 17:40\n"
+"POT-Creation-Date: 2026-03-21 03:20+0200\n"
+"PO-Revision-Date: 2026-03-21 13:34\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/kavita/backend/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgctxt "confirm-email"
 msgid "You must confirm your email first"
@@ -30,6 +30,10 @@ msgctxt "disabled-account"
 msgid "Your account is disabled. Contact the server admin."
 msgstr ""
 "உங்கள் கணக்கு முடக்கப்பட்டுள்ளது. சேவையக நிர்வாகியைத் தொடர்பு கொள்ளுங்கள்."
+
+msgctxt "password-authentication-disabled"
+msgid "Password authentication has been disabled, login via OpenID Connect"
+msgstr "கடவுச்சொல் ஏற்பு முடக்கப்பட்டுள்ளது, OpenID இணைப்பு வழியாக உள்நுழைக"
 
 msgctxt "register-user"
 msgid "Something went wrong when registering user"
@@ -96,6 +100,14 @@ msgstr "அகவை கட்டுப்பாட்டை புதுப்�
 msgctxt "no-user"
 msgid "User does not exist"
 msgstr "பயனர் இல்லை"
+
+msgctxt "oidc-managed"
+msgid "Users managed by OIDC cannot be edited."
+msgstr "OIDC ஆல் நிர்வகிக்கப்படும் பயனர்களைத் திருத்த முடியாது."
+
+msgctxt "cannot-change-identity-provider-original-user"
+msgid "Identity Provider of the original admin account cannot be changed"
+msgstr "அசல் நிர்வாகி கணக்கின் அடையாள வழங்குநரை மாற்ற முடியாது"
 
 msgctxt "username-taken"
 msgid "Username already taken"
@@ -225,6 +237,10 @@ msgstr ""
 "மின்னஞ்சல் அமைப்புகள் காணவில்லை. அனைத்து மின்னஞ்சல் அமைப்புகளும் "
 "சேமிக்கப்படுவதை உறுதிசெய்க."
 
+msgctxt "oidc-invalid-authority"
+msgid "OIDC authority is invalid"
+msgstr "OIDC அதிகாரம் தவறானது"
+
 msgctxt "chapter-doesnt-exist"
 msgid "Chapter does not exist"
 msgstr "அத்தியாயம் இல்லை"
@@ -319,6 +335,10 @@ msgstr "சாதனத்திற்கு கோப்பு (களை) அ�
 msgctxt "series-doesnt-exist"
 msgid "Series does not exist"
 msgstr "தொடர் இல்லை"
+
+msgctxt "client-device-doesnt-exist"
+msgid "Client Device does not exist"
+msgstr "கிளையன்ட் சாதனம் இல்லை"
 
 msgctxt "volume-doesnt-exist"
 msgid "Volume does not exist"
@@ -481,6 +501,14 @@ msgctxt "reading-list-doesnt-exist"
 msgid "Reading list does not exist"
 msgstr "வாசிப்பு பட்டியல் இல்லை"
 
+msgctxt "annotation-failed-create"
+msgid "Failed to create annotation, try again"
+msgstr "சிறுகுறிப்பை உருவாக்க முடியவில்லை, மீண்டும் முயலவும்"
+
+msgctxt "annotation-delete"
+msgid "Couldn't delete annotation"
+msgstr "சிறுகுறிப்பை நீக்க முடியவில்லை"
+
 msgctxt "series-restricted"
 msgid "User does not have access to this Series"
 msgstr "பயனருக்கு இந்த தொடருக்கான அணுகல் இல்லை"
@@ -614,6 +642,10 @@ msgstr "விருப்பங்களை சேமிக்கும் ச�
 msgctxt "opds-disabled"
 msgid "OPDS is not enabled on this server"
 msgstr "இந்த சேவையகத்தில் OPDS இயக்கப்படவில்லை"
+
+msgctxt "opds-continue-reading-title"
+msgid "Continue Reading from: {0}"
+msgstr "இதிலிருந்து தொடர்ந்து படிக்கவும்: {0}"
 
 msgctxt "on-deck"
 msgid "On Deck"
@@ -929,3 +961,34 @@ msgstr "ஆண்டு புள்ளிவிவரங்களைப் ப�
 msgctxt "generated-reading-profile-name"
 msgid "Generated from {0}"
 msgstr "{0 இருந்து இலிருந்து உருவாக்கப்பட்டது"
+
+msgctxt "genre-doesnt-exist"
+msgid "Genre doesn't exist"
+msgstr "வகை இல்லை"
+
+msgctxt "font-url-not-allowed"
+msgid "Uploading a Font by url is only allowed from Google Fonts"
+msgstr ""
+"முகவரி மூலம் எழுத்துருவைப் பதிவேற்றுவது Google எழுத்துருக்களிலிருந்து "
+"மட்டுமே அனுமதிக்கப்படுகிறது"
+
+msgctxt "annotation-export-failed"
+msgid "Unable to export Annotations, check logs"
+msgstr "சிறுகுறிப்புகளை ஏற்றுமதி செய்ய முடியவில்லை, பதிவுகளை சரிபார்க்கவும்"
+
+msgctxt "cbl-export-failed"
+msgid "Unable to export CBL file, check logs"
+msgstr "CBL கோப்பை ஏற்றுமதி செய்ய முடியவில்லை, பதிவுகளை சரிபார்க்கவும்"
+
+msgctxt "download-not-allowed"
+msgid "User does not have download permissions"
+msgstr "பயனருக்கு பதிவிறக்க அனுமதிகள் இல்லை"
+
+msgctxt "auth-key-unique"
+msgid "The Auth Key name must be unique to your account"
+msgstr ""
+"அங்கீகாரச் சாவியின் பெயர் உங்கள் கணக்கில் தனிப்பட்டதாக இருக்க வேண்டும்"
+
+msgctxt "role-restricted"
+msgid "Access forbidden: Your role does not permit this action"
+msgstr "அணுகல் தடைசெய்யப்பட்டுள்ளது: உங்கள் பங்கு இந்த செயலை அனுமதிக்காது"
