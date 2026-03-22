@@ -1,131 +1,151 @@
 # கட்டற்றகேட் பங்களிப்பு செயல்முறை (FCP)
 
-FreeCAD's contribution process is inspired by the Collective Code Construction Contract which itself is an evolution of the github.com Fork and Pull Model.
+கட்டற்றகேட்-இன் பங்களிப்பு செயல்முறையானது, github.com ஃபோர்க் அண்ட் புல் மாடலின் (Fork and Pull Model) ஒரு பரிணாம வளர்ச்சியாக விளங்கும் கூட்டு குறியீடு கட்டுமான ஒப்பந்தத்தால் (Collective Code Construction Contract) ஈர்க்கப்பட்டுள்ளது.
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
+இந்த ஆவணத்தில் உள்ள "கட்டாயம்" (MUST), "கட்டாயம் கூடாது" (MUST NOT), "தேவைப்படும்" (REQUIRED), "வேண்டும்" (SHALL), "வேண்டாம்" (SHALL NOT), "வேண்டும்" (SHOULD), "வேண்டாம்" (SHOULD NOT), "பரிந்துரைக்கப்படுகிறது" (RECOMMENDED), "கூடும்" (MAY), மற்றும் "விருப்பத்தேர்வு" (OPTIONAL) ஆகிய முக்கிய வார்த்தைகள், RFC 2119-இல் விவரிக்கப்பட்டுள்ளபடி பொருள் கொள்ளப்பட வேண்டும்.
 
 ## 0. நிலை
 
-FreeCAD is in a transition period. The following are to be regarded as GUIDELINES for contribution submission and acceptance. For historical reasons, the actual process MAY diverge from this process during the transition.  Such deviations SHOULD be noted and discussed whenever possible.
+கட்டற்றகேட் ஒரு மாற்றக் காலகட்டத்தில் உள்ளது. பங்களிப்பு சமர்ப்பிப்பு மற்றும் ஏற்புக்கான வழிகாட்டுதல்களாகப் பின்வருபவை கருதப்பட வேண்டும். வரலாற்று காரணங்களுக்காக, இந்த மாற்றத்தின் போது உண்மையான செயல்முறை இதிலிருந்து வேறுபடலாம். அத்தகைய வேறுபாடுகள் முடிந்தவரை கவனிக்கப்பட்டு விவாதிக்கப்பட வேண்டும்.
 
-## 1. Goals
+## 1. இலக்குகள்
 
-The FreeCAD Contribution Process is expressed here with the following specific goals in mind:
+கட்டற்றகேட் பங்களிப்பு செயல்முறை பின்வரும் குறிப்பிட்ட இலக்குகளை மனதில் கொண்டு இங்கு வெளிப்படுத்தப்பட்டுள்ளது:
 
-1. To provide transparency and fairness in the contribution process.
-2. To allow contributions to be included as quickly as possible.
-3. To preserve and improve the code quality while encouraging appropriate experimentation and risk-taking.
-4. To minimize dependence on individual Contributors by encouraging a large pool of active Contributors.
-5. To be inclusive of many viewpoints and to harness a diverse set of skills.
-6. To provide an encouraging environment where Contributors learn and improve their skills.
-7. To protect the free and open nature of the FreeCAD project.
+1. பங்களிப்பு செயல்முறையில் வெளிப்படைத்தன்மை மற்றும் நேர்மையை வழங்குதல்.
+2. பங்களிப்புகளை முடிந்தவரை விரைவாகச் சேர்க்க அனுமதித்தல்.
+3. பொருத்தமான பரிசோதனைகளையும் இடர் ஏற்பதையும் ஊக்குவிக்கும் அதே வேளையில், குறியீட்டின் தரத்தைப் பாதுகாத்து மேம்படுத்துதல்.
+4. அதிக எண்ணிக்கையிலான தீவிர பங்களிப்பாளர்களை ஊக்குவிப்பதன் மூலம், தனிப்பட்ட பங்களிப்பாளர்களைச் சார்ந்திருப்பதைக் குறைத்தல்.
+5. பலதரப்பட்ட கண்ணோட்டங்களை உள்ளடக்கி, பல்வேறுபட்ட திறன்களைப் பயன்படுத்துதல்.
+6. பங்களிப்பாளர்கள் தங்கள் திறன்களைக் கற்று மேம்படுத்திக்கொள்ள ஒரு ஊக்கமளிக்கும் சூழலை வழங்குதல்.
+7. கட்டற்றகேட் திட்டத்தின் இலவச மற்றும் திறந்த தன்மையைப் பாதுகாத்தல்.
 
-## 2) Fundamentals
+## 2) அடிப்படைகள்
 
-1. FreeCAD uses the git distributed revision control system.
-2. Source code for the main application and related subprojects is hosted on github.com in the FreeCAD organization.
-3. Problems are discrete, well-defined limitations or bugs.
-4. FreeCAD uses GitHub's issue-tracking system to track problems and contributions. For help requests and general discussions, use the project forum.
-5. Contributions are sets of code changes that resolve a single problem.
-6. FreeCAD uses the Pull Request workflow for evaluating and accepting contributions.
+1. கட்டற்றகேட், git பரவலாக்கப்பட்ட திருத்தக் கட்டுப்பாட்டு அமைப்பைப் பயன்படுத்துகிறது.
+2. பிரதான பயன்பாடு மற்றும் தொடர்புடைய துணைத் திட்டங்களுக்கான மூலக் குறியீடு, கட்டற்றகேட் அமைப்பில் உள்ள github.com-இல் வழங்கப்படுகிறது.
+3. சிக்கல்கள் என்பவை தனித்த, நன்கு வரையறுக்கப்பட்ட வரம்புகள் அல்லது பிழைகள் ஆகும்.
+4. கட்டற்றகேட், சிக்கல்களையும் பங்களிப்புகளையும் கண்காணிக்க GitHub-இன் சிக்கல்-கண்காணிப்பு அமைப்பைப் பயன்படுத்துகிறது. உதவி கோரிக்கைகளுக்கும் பொதுவான விவாதங்களுக்கும், திட்ட மன்றத்தைப் பயன்படுத்தவும்.
+5. பங்களிப்புகள் என்பவை ஒரு குறிப்பிட்ட சிக்கலைத் தீர்க்கும் குறியீடு மாற்றங்களின் தொகுப்புகளாகும்.
+6. பங்களிப்புகளை மதிப்பிடுவதற்கும் ஏற்றுக்கொள்வதற்கும் கட்டற்றகேட், புல் ரிக்வெஸ்ட் (Pull Request) பணிப்பாய்வைப் பயன்படுத்துகிறது.
 
-## 3) Roles
+## 3) பங்குகள்
 
-1. "User": A member of the wider FreeCAD community who uses the software.
-2. "Contributor": A person who submits a contribution that resolves a previously identified problem. Contributors do not have commit access to the repository unless they are also Maintainers. Everyone, without distinction or discrimination, SHALL have an equal right to become a Contributor.
-3. "Maintainer": A person who merges contributions. Maintainers may or may not be Contributors. Their role is to enforce the process. Maintainers have commit access to the repository.
-4. "Administrator": Administrators have additional authority to maintain the list of designated Maintainers.
+1. "பயனர்": மென்பொருளைப் பயன்படுத்தும் பரந்த கட்டற்றகேட் சமூகத்தின் உறுப்பினர்.
+2. "பங்களிப்பாளர்": முன்னர் அடையாளம் காணப்பட்ட ஒரு சிக்கலைத் தீர்க்கும் 
+பங்களிப்பைச் சமர்ப்பிக்கும் நபர். பங்களிப்பாளர்கள் பராமரிப்பாளர்களாகவும்  இருந்தால் தவிர, அவர்களுக்கு ரெபாசிட்டரியில் (repository) கமிட் 
+அணுகல் (commit access) இல்லை. வேறுபாடு அல்லது பாகுபாடு இல்லாமல், 
+ஒவ்வொருவருக்கும் பங்களிப்பாளராக ஆவதற்கு சம உரிமை உண்டு.
+3. "பராமரிப்பாளர்": பங்களிப்புகளை ஒன்றிணைக்கும் நபர். பராமரிப்பாளர்கள் 
+பங்களிப்பாளர்களாக இருக்கலாம் அல்லது இல்லாமலும் இருக்கலாம். செயல்முறையை 
+அமல்படுத்துவதே அவர்களின் பங்கு. பராமரிப்பாளர்களுக்கு ரெபாசிட்டரியில் கமிட் 
+அணுகல் உண்டு.
+4. "நிர்வாகி": நியமிக்கப்பட்ட பராமரிப்பாளர்களின் பட்டியலைப் பராமரிக்க 
+நிர்வாகிகளுக்குக் கூடுதல் அதிகாரம் உண்டு.
 
-## 4) Licensing, Ownership, and Credit
+## 4) உரிமம், உரிமை மற்றும் நன்றி
 
-1. FreeCAD is distributed under the Lesser General Public License, version 2, or superior (LGPL2+).  Additional details can be found in the LICENSE file.
-2. All contributions to FreeCAD MUST use a compatible license.
-3. All contributions are owned by their authors unless assigned to another.
-4. FreeCAD does not have a mandatory copyright assignment policy.
-5. A Contributor who wishes to be identified in the Credits section of the application "About" dialog is responsible for identifying themselves. They should modify the Contributors file and submit a PR with a single commit for this modification only. The contributors file is found at https://github.com/FreeCAD/FreeCAD/blob/main/src/Doc/CONTRIBUTORS
-6. A contributor who does not wish to assume the copyright of their contribution MAY choose to assign it to the [FreeCAD project association](https://fpa.freecad.org) by mentioning **Copyright (c) 2022 The FreeCAD project association <fpa@freecad.org>** in the file's license code block.
+1. கட்டற்றகேட், லெஸ்ஸர் ஜெனரல் பப்ளிக் லைசென்ஸ், பதிப்பு 2, அல்லது அதற்கு 
+மேற்பட்ட (LGPL2+) உரிமத்தின் கீழ் விநியோகிக்கப்படுகிறது. கூடுதல் விவரங்களை 
+LICENSE கோப்பில் காணலாம்.
+2. கட்டற்றகேட்-க்கான அனைத்துப் பங்களிப்புகளும் இணக்கமான உரிமத்தைப் 
+பயன்படுத்த வேண்டும்.
+3. மற்றொருவருக்கு ஒதுக்கப்படாவிட்டால், அனைத்துப் பங்களிப்புகளும் அவற்றின் 
+ஆசிரியர்களுக்கே சொந்தமானவை.
+4. கட்டற்றகேட்-க்கு கட்டாய பதிப்புரிமை ஒதுக்கீட்டுக் கொள்கை இல்லை.
+5. பயன்பாட்டின் "பற்றி" உரையாடல் பெட்டியின் நன்றிப் பிரிவில் தங்களை 
+அடையாளம் காட்ட விரும்பும் ஒரு பங்களிப்பாளர், தங்களை அடையாளம் 
+காட்டுவதற்குப் பொறுப்பாவார். அவர்கள் பங்களிப்பாளர்கள் கோப்பைத் திருத்தி, 
+இந்தத் திருத்தத்திற்காக மட்டும் ஒரே ஒரு கமிட்டுடன் ஒரு PR-ஐ சமர்ப்பிக்க வேண்டும். 
+பங்களிப்பாளர் கோப்பு https://github.com/கட்டற்றகேட்/கட்டற்றகேட்/blob/main/src/Doc/CONTRIBUTORS 
+என்ற முகவரியில் உள்ளது.
+6. தங்கள் பங்களிப்பின் பதிப்புரிமையை ஏற்க விரும்பாத ஒரு பங்களிப்பாளர், 
+கோப்பின் உரிமக் குறியீட்டுப் பகுதியில் **பதிப்புரிமை (c) 2022 தி ஃப்ரீகேட் 
+ப்ராஜெக்ட் அசோசியேஷன் <fpa@கட்டற்றகேட்.org>** என்று குறிப்பிடுவதன் மூலம், அதை 
+[ஃப்ரீகேட் ப்ராஜெக்ட் அசோசியேஷனுக்கு](https://fpa.கட்டற்றகேட்.org) ஒதுக்கலாம்.
 
-## 5) Contribution Requirements
+## 5) பங்களிப்புத் தேவைகள்
 
-1. Contributions are submitted in the form of Pull Requests (PR).
-2. Maintainers and Contributors MUST have a GitHub account and SHOULD use their real names or a well-known alias.
-3. If the GitHub username differs from the username on the FreeCAD Forum, effort SHOULD be taken to avoid confusion.
-4. A PR SHOULD be a minimal and accurate answer to exactly one identified and agreed-on problem.
-5. A PR SHOULD refrain from adding additional dependencies to the FreeCAD project unless no other option is available.
-6. Code submissions MUST adhere to the code style guidelines of the project if these are defined.
-7. If a PR contains multiple commits, each commit MUST compile cleanly when merged with all previous commits of the same PR. Each commit SHOULD add value to the history of the project. Checkpoint commits SHOULD be squashed.
-8. A PR SHALL NOT include non-trivial code from other projects unless the Contributor is the original author of that code.
-9. A PR MUST compile cleanly and pass project self-tests on all target platforms.
-10. Changes that break python API used by extensions SHALL be avoided. If it is not possible to avoid breaking changes, the amount of them MUST be minimized and PR MUST clearly describe all breaking changes with clear description on how to replace no longer working solution with newer one. Contributor SHOULD search for addons that will be broken and list them in the PR.
-11. Each commit message in a PR MUST succinctly explain what the commit achieves. The commit message SHALL follow the suggestions in the `git commit --help` documentation, section DISCUSSION.
-12. The PR message MUST consist of a single short line, the PR Title, summarizing the problem being solved, followed by a blank line and then the proposed solution in the Body. If a PR consists of more than one commit, the PR Title MUST succinctly explain what the PR achieves. The Body MAY be as detailed as needed. If a PR changes the user interface (UI), the body of the text MUST include a presentation of these UI changes, preferably with screenshots of the previous and revised state.
-13. If a PR contains the work of another author (for example, if it is cherry-picked from a fork by someone other than the PR-submitter):
-    1. the PR description MUST contain proper attribution as the first line, for example: "This is work of XYZ cherry-picked from <link>";
-    2. all commits MUST have proper authorship, i.e. be authored by the original author and committed by the author of the PR;
-    3. if changes to cherry-picked commits are necessary they SHOULD be done as follow-up commits. If it is not possible to do so, then the modified commits MUST contain a `Co-Authored-By` trailer in their commit message.
-14. A “Valid PR” is one which satisfies the above requirements.
+1. பங்களிப்புகள் புல் ரிக்வெஸ்ட்கள் (PR) வடிவில் சமர்ப்பிக்கப்பட வேண்டும்.
+2. பராமரிப்பாளர்கள் மற்றும் பங்களிப்பாளர்கள் கட்டாயம் ஒரு கிட்ஹப் கணக்கைக் கொண்டிருக்க வேண்டும், மேலும் அவர்கள் தங்கள் உண்மையான பெயர்களையோ அல்லது நன்கு அறியப்பட்ட புனைப்பெயரையோ பயன்படுத்த வேண்டும்.
+3. கிட்ஹப் பயனர்பெயர் ஃப்ரீகேட் மன்றத்தில் உள்ள பயனர்பெயரிலிருந்து வேறுபட்டால், குழப்பத்தைத் தவிர்க்க முயற்சி எடுக்கப்பட வேண்டும்.
+4. ஒரு புல் ரிக்வெஸ்ட் என்பது, அடையாளம் காணப்பட்டு ஒப்புக்கொள்ளப்பட்ட ஒரே ஒரு பிரச்சனைக்கு, குறைந்தபட்ச மற்றும் துல்லியமான பதிலாக இருக்க வேண்டும்.
+5. வேறு வழியே இல்லாத பட்சத்தில் தவிர, ஒரு PR ஆனது கட்டற்றகேட் திட்டத்தில் கூடுதல் சார்புகளைச் சேர்ப்பதைத் தவிர்க்க வேண்டும்.
+6. திட்டத்தின் குறியீட்டுப் பாணி வழிகாட்டுதல்கள் வரையறுக்கப்பட்டிருந்தால், குறியீடு சமர்ப்பிப்புகள் அவற்றைக் கண்டிப்பாகப் பின்பற்ற வேண்டும்.
+7. ஒரு PR பல கமிட்களைக் கொண்டிருந்தால், ஒவ்வொரு கமிட்டும் அதே PR-இன் முந்தைய அனைத்து கமிட்களுடன் இணைக்கப்படும்போது பிழையின்றித் தொகுக்கப்பட வேண்டும். ஒவ்வொரு கமிட்டும் திட்டத்தின் வரலாற்றுக்கு மதிப்பைச் சேர்க்க வேண்டும். செக்பாயிண்ட் கமிட்கள் ஒன்றிணைக்கப்பட வேண்டும்.
+8. பங்களிப்பாளர் அந்தக் குறியீட்டின் அசல் ஆசிரியராக இருந்தால் தவிர, ஒரு PR மற்ற திட்டங்களிலிருந்து முக்கியத்துவம் வாய்ந்த குறியீட்டை உள்ளடக்கக் கூடாது.
+9. ஒரு PR பிழையின்றித் தொகுக்கப்பட்டு, அனைத்து இலக்குத் தளங்களிலும் திட்டத்தின் சுய-சோதனைகளில் தேர்ச்சி பெற வேண்டும்.
+10. நீட்டிப்புகளால் பயன்படுத்தப்படும் பைதான் API-ஐ உடைக்கும் மாற்றங்கள் தவிர்க்கப்பட வேண்டும். உடைக்கும் மாற்றங்களைத் தவிர்க்க முடியாவிட்டால், அவற்றின் எண்ணிக்கை குறைக்கப்பட வேண்டும், மேலும் PR ஆனது அனைத்து உடைக்கும் மாற்றங்களையும், இனி செயல்படாதவற்றை எவ்வாறு மாற்றுவது என்பது குறித்த தெளிவான விளக்கத்துடன் விவரிக்க வேண்டும்.புதிய ஒன்றைக் கொண்டு தீர்வு காண வேண்டும். பங்களிப்பாளர், செயலிழக்கக்கூடிய துணை நிரல்களைத் தேடி, அவற்றை PR-இல் பட்டியலிட வேண்டும்.
+11. ஒரு PR-இல் உள்ள ஒவ்வொரு கமிட் செய்தியும், அந்தக் கமிட் எதைச் சாதிக்கிறது என்பதைச் சுருக்கமாக விளக்க வேண்டும். கமிட் செய்தியானது, `git commit --help` ஆவணத்தின் 'விவாதம்' (DISCUSSION) பிரிவில் உள்ள பரிந்துரைகளைப் பின்பற்ற வேண்டும்.
+12. PR செய்தியானது, தீர்க்கப்படும் சிக்கலைச் சுருக்கமாகக் கூறும் PR தலைப்பு என்ற ஒற்றைச் சிறிய வரியையும், அதைத் தொடர்ந்து ஒரு வெற்று வரியையும், பின்னர் முன்மொழியப்பட்ட தீர்வையும் உள்ளடக்கப் பகுதியில் (Body) கொண்டிருக்க வேண்டும். ஒரு PR ஒன்றுக்கு மேற்பட்ட கமிட்களைக் கொண்டிருந்தால், PR தலைப்பு அந்த PR எதைச் சாதிக்கிறது என்பதைச் சுருக்கமாக விளக்க வேண்டும். உள்ளடக்கப் பகுதி தேவைக்கேற்ப விரிவாக இருக்கலாம். ஒரு PR பயனர் இடைமுகத்தை (UI) மாற்றினால், உரையின் உள்ளடக்கப் பகுதியில் இந்த UI மாற்றங்களின் விளக்கக்காட்சி, முன்னுரிமையாக முந்தைய மற்றும் திருத்தப்பட்ட நிலையின் ஸ்கிரீன்ஷாட்களுடன் இடம்பெற வேண்டும். 13. ஒரு PR-இல் வேறொரு ஆசிரியரின் படைப்பு இருந்தால் (எடுத்துக்காட்டாக, PR-ஐ சமர்ப்பித்தவரைத் தவிர வேறு ஒருவரால் ஒரு ஃபோர்க்கிலிருந்து செர்ரி-பிக் செய்யப்பட்டிருந்தால்):
+    1. PR விளக்கத்தின் முதல் வரியில் முறையான உரிமை கோரல் கட்டாயம் இருக்க வேண்டும், எடுத்துக்காட்டாக: "இது XYZ-இன் படைப்பு, <link>-இலிருந்து செர்ரி-பிக் செய்யப்பட்டது";
+    2. அனைத்து கமிட்களும் முறையான ஆசிரியர் உரிமையைக் கொண்டிருக்க வேண்டும், அதாவது, அசல் ஆசிரியரால் எழுதப்பட்டு, PR-ஐ எழுதியவரால் கமிட் செய்யப்பட்டிருக்க வேண்டும்;
+    3. செர்ரி-பிக் செய்யப்பட்ட கமிட்களில் மாற்றங்கள் தேவைப்பட்டால், அவை ஃபாலோ-அப் கமிட்களாகச் செய்யப்பட வேண்டும். அவ்வாறு செய்ய முடியாவிட்டால், மாற்றியமைக்கப்பட்ட கமிட்கள் அவற்றின் கமிட் செய்தியில் `Co-Authored-By` என்ற துணை வரியைக் கட்டாயம் கொண்டிருக்க வேண்டும்.
+14. மேலே உள்ள தேவைகளைப் பூர்த்தி செய்யும் PR ஒரு "செல்லுபடியாகும் PR" ஆகும்.
 
-## 6) Process
+## 6) செயல்முறை
 
-1. Change on the project follows the pattern of accurately identifying problems and applying minimal, accurate solutions to these problems.
+1. திட்டத்தில் ஏற்படும் மாற்றம், சிக்கல்களைத் துல்லியமாகக் கண்டறிந்து, அந்தச் சிக்கல்களுக்குக் குறைந்தபட்ச, துல்லியமான தீர்வுகளைப் பயன்படுத்தும் முறையைப் பின்பற்றுகிறது.
 
-2. To request changes, a User logs an issue on the project GitHub issue tracker.
+2. மாற்றங்களைக் கோருவதற்கு, ஒரு பயனர் திட்டத்தின் GitHub சிக்கல் கண்காணிப்பானில் (issue tracker) ஒரு சிக்கலைப் பதிவு செய்ய வேண்டும்.
 
-3. The User or Contributor SHOULD write the issue by describing the problem they face or observe. Links to the forum or other resources are permitted but the issue SHOULD be complete and accurate and SHOULD NOT require the reader to visit the forum or any other platform to understand what is being described.
+3. பயனர் அல்லது பங்களிப்பாளர், தாங்கள் எதிர்கொள்ளும் அல்லது கவனிக்கும் சிக்கலை விவரித்து அந்தச் சிக்கலை எழுத வேண்டும். மன்றம் அல்லது பிற ஆதாரங்களுக்கான இணைப்புகள் அனுமதிக்கப்படுகின்றன, ஆனால் அந்தச் சிக்கல் முழுமையானதாகவும் துல்லியமானதாகவும் இருக்க வேண்டும், மேலும் விவரிக்கப்படுவதைப் புரிந்துகொள்வதற்காக, படிப்பவர் மன்றத்திற்கோ அல்லது வேறு எந்தத் தளத்திற்கோ செல்ல வேண்டிய அவசியத்தை அது கொண்டிருக்கக் கூடாது.
 
-4. Issue authors SHOULD strive to describe the minimum acceptable condition.
+4. சிக்கலை உருவாக்குபவர்கள் குறைந்தபட்ச ஏற்றுக்கொள்ளக்கூடிய நிலையை விவரிக்க முயல வேண்டும்.
 
-5. Issue authors SHOULD focus on User tasks and avoid comparisons to other software solutions.
+5. சிக்கலை உருவாக்குபவர்கள் பயனரின் பணிகளில் கவனம் செலுத்த வேண்டும் மற்றும் பிற மென்பொருள் தீர்வுகளுடன் ஒப்பிடுவதைத் தவிர்க்க வேண்டும்.
 
-6. The User or Contributor SHOULD seek consensus on the accuracy of their observation and the value of solving the problem.
+6. பயனர் அல்லது பங்களிப்பாளர், தங்கள் அவதானிப்பின் துல்லியம் மற்றும் சிக்கலைத் தீர்ப்பதன் மதிப்பு குறித்து ஒருமித்த கருத்தை நாட வேண்டும்.
 
-7. To submit a solution to a problem, a Contributor SHALL create a pull request back to the project.
+7. ஒரு சிக்கலுக்கான தீர்வைச் சமர்ப்பிக்க, ஒரு பங்களிப்பாளர் திட்டத்திற்கு ஒரு புல் கோரிக்கையை (pull request) உருவாக்க வேண்டும்.
 
-8. Contributors and Maintainers SHALL NOT commit changes directly to the target branch.
+8. பங்களிப்பாளர்களும் பராமரிப்பாளர்களும் இலக்குக் கிளைக்கு (target branch) நேரடியாக மாற்றங்களைச் சமர்ப்பிக்கக் கூடாது.
 
-9. To discuss a proposed solution, Users MAY comment on the Pull Request in GitHub. Forum conversations regarding the solution SHOULD be discouraged and conversation redirected to the Pull Request or the related issue.
+9. முன்மொழியப்பட்ட தீர்வு குறித்து விவாதிக்க, பயனர்கள் GitHub-இல் உள்ள புல் கோரிக்கையில் கருத்துத் தெரிவிக்கலாம். தீர்வு தொடர்பான மன்ற உரையாடல்கள் தவிர்க்கப்பட வேண்டும், மேலும் உரையாடல் புல் ரிக்வெஸ்ட் (Pull Request) அல்லது அது தொடர்பான சிக்கலுக்குத் திருப்பி விடப்பட வேண்டும்.
 
-10. To accept or reject a Pull Request, a Maintainer SHALL use GitHub's interface.
+10. ஒரு புல் ரிக்வெஸ்ட்டை ஏற்க அல்லது நிராகரிக்க, ஒரு பராமரிப்பாளர் (Maintainer) GitHub-இன் இடைமுகத்தைப் பயன்படுத்த வேண்டும்.
 
-11. Maintainers SHOULD NOT merge their own PRs except:
+11. பராமரிப்பாளர்கள் தங்கள் சொந்த புல் ரிக்வெஸ்ட்டுகளை இணைக்கக் கூடாது, பின்வரும் சந்தர்ப்பங்களைத் தவிர:
     
-    1. in exceptional cases, such as non-responsiveness from other Maintainers for an extended period.
-    2. If the Maintainer is also the primary developer of the workbench or subsystem.
+    1. மற்ற பராமரிப்பாளர்களிடமிருந்து நீண்ட காலத்திற்குப் பதில் வராதது போன்ற விதிவிலக்கான சந்தர்ப்பங்களில்.
+    2. அந்தப் பராமரிப்பாளர், வொர்க்பென்ச் (workbench) அல்லது துணை அமைப்பின் முதன்மை உருவாக்குநராகவும் இருந்தால்.
 
-12. Maintainers SHALL merge valid PRs from other Contributors rapidly.
+12. பராமரிப்பாளர்கள் மற்ற பங்களிப்பாளர்களிடமிருந்து வரும் சரியான புல் ரிக்வெஸ்ட்டுகளை விரைவாக இணைக்க வேண்டும்.
 
-13. Maintainers MAY, at their discretion merge PRs that have not met all criteria to be considered valid to:
+13. சரியானதாகக் கருதப்படுவதற்கான அனைத்து நிபந்தனைகளையும் பூர்த்தி செய்யாத புல் ரிக்வெஸ்ட்டுகளை, பராமரிப்பாளர்கள் தங்கள் விருப்பப்படி பின்வரும் காரணங்களுக்காக இணைக்கலாம்:
     
-    1. end fruitless discussions
-    2. capture toxic contributions in the historical record
-    3. engage with the Contributor on improving their contribution quality.
+    1. பயனற்ற விவாதங்களை முடிவுக்குக் கொண்டுவர
+    2. நச்சுத்தன்மையுள்ள பங்களிப்புகளை வரலாற்றுப் பதிவேட்டில் பதிவு செய்ய
+    3. பங்களிப்பாளரின் பங்களிப்பின் தரத்தை மேம்படுத்துவது குறித்து அவருடன் கலந்துரையாட.
 
-14. Maintainers SHALL NOT make value judgments on correct contributions.
+14. பராமரிப்பாளர்கள் சரியான பங்களிப்புகள் குறித்து மதிப்புத் தீர்ப்புகளை வழங்கக் கூடாது.
 
-15. If a PR requires significant further work before merging, the PR SHOULD be moved to draft status.
+15. ஒரு PR-ஐ இணைப்பதற்கு முன் அதற்கு கணிசமான கூடுதல் வேலை தேவைப்பட்டால், அந்த PR வரைவு நிலைக்கு மாற்றப்பட வேண்டும்.
 
-16. If a PR is complete, but should not be merged yet (for example, because it depends on another in-process PR), the "On hold" label SHOULD be applied.
+16. ஒரு PR முழுமையாக முடிந்திருந்தும், அதை இன்னும் இணைக்கக் கூடாது என்றால் (உதாரணமாக, அது செயல்பாட்டில் உள்ள மற்றொரு PR-ஐச் சார்ந்திருப்பதால்), "நிறுத்தி வைக்கப்பட்டுள்ளது" என்ற குறியீடு பயன்படுத்தப்பட வேண்டும்.
 
-17. Any Contributor who has value judgments on a PR SHOULD express these via their own PR.
+17. ஒரு PR குறித்து மதிப்புத் தீர்ப்புகளைக் கொண்டிருக்கும் எந்தவொரு பங்களிப்பாளரும், அவற்றைத் தனது சொந்த PR மூலமாகவே வெளிப்படுத்த வேண்டும்.
 
-18. The User who created an issue SHOULD close the issue after checking the PR is successful.
+18. ஒரு சிக்கலை உருவாக்கிய பயனர், PR வெற்றிகரமாக உள்ளதா எனச் சரிபார்த்த பிறகு அந்தச் சிக்கலை மூட வேண்டும்.
 
-19. Maintainers SHOULD close issues that are left open without action or update for an unreasonable period.
+19. நியாயமற்ற காலத்திற்கு எந்த நடவடிக்கையோ அல்லது புதுப்பிப்போ இன்றித் திறந்தே விடப்பட்டிருக்கும் சிக்கல்களைப் பராமரிப்பாளர்கள் மூட வேண்டும்.
 
-## 7) Branches and Releases
+## 7)  கிளைகள் மற்றும் வெளியீடுகள்
 
-1. The project SHALL have one branch (“main”) that always holds the latest in-progress version and SHOULD always build.
-2. The project SHALL NOT use topic branches for any reason. Personal forks MAY use topic branches.
-3. To make a stable release a Maintainer SHALL tag the repository. Stable releases SHALL always be released from the repository main branch.
+1. இந்தத் திட்டத்தில், செயல்பாட்டில் உள்ள சமீபத்திய பதிப்பை எப்போதும் கொண்டிருக்கும் ஒரு கிளை ("main") இருக்க வேண்டும், மேலும் அது எப்போதும் உருவாக்கப்பட வேண்டும்.
+2. இந்தத் திட்டம் எந்தக் காரணத்திற்காகவும் தலைப்புக் கிளைகளைப் பயன்படுத்தக் கூடாது. தனிப்பட்ட ஃபோர்க்குகள் தலைப்புக் கிளைகளைப் பயன்படுத்தலாம்.
+3. ஒரு நிலையான வெளியீட்டை உருவாக்க, ஒரு பராமரிப்பாளர் களஞ்சியத்தைக் குறியிட வேண்டும். நிலையான வெளியீடுகள் எப்போதும் களஞ்சியத்தின் முதன்மைக் கிளையிலிருந்து வெளியிடப்பட வேண்டும்.
 
-## 8) Project Administration
 
-1. Project Administrators are those individuals who are members of the FreeCAD Github organization and have the role of 'owner'.  They have the task of administering the organization including adding and removing individuals from various teams.
-2. Project Administrator is a technical role necessitated by the GitHub platform. Except for the specific exceptions listed below, the Project Administrators do not make the decision about individual team members. Rather, they carry out the collective wishes of the Maintainers team. Project Administrators will be selected from the Maintainers team by the Maintainers themselves.
-3. To ensure continuity there SHALL be at least four Project Administrators at all times.
-4. The project Administrators will manage the set of project Maintainers.  They SHALL maintain a sufficiently large pool of Maintainers to ensure their succession and permit timely review of contributions. If the pool of Maintainers is insufficient, the Project Administrators will request that the Maintainers select additional individuals to add.
-5. Contributors who have a history of successful PRs and have demonstrated continued professionalism should be invited to be Maintainers.
-6. Administrators SHOULD remove Maintainers who are inactive for an extended period, or who repeatedly fail to apply this process accurately.
-7. The list of Maintainers SHALL be publicly accessible and reflective of current activity on the project.
-8. Administrators SHALL act expediently to protect the FreeCAD infrastructure and resources.
-9. Administrators SHOULD block or ban “bad actors” who cause stress, animosity, or confusion to others in the project. This SHOULD be done after public discussion, with a chance for all parties to speak. A bad actor is someone who repeatedly ignores the rules and culture of the project, who is hostile or offensive, who impedes the productive exchange of information, and who is unable to self-correct their behavior when asked to do so by others.
+## 8) திட்ட நிர்வாகம்
+
+1. திட்ட நிர்வாகிகள் என்பவர்கள் கட்டற்றகேட் Github அமைப்பின் உறுப்பினர்களாக இருந்து, 'உரிமையாளர்'  என்ற பாத்திரத்தைக் கொண்டிருப்பவர்கள் ஆவர். பல்வேறு குழுக்களிலிருந்து தனிநபர்களைச் சேர்ப்பது மற்றும் நீக்குவது உட்பட, அமைப்பை நிர்வகிக்கும் பணி அவர்களுக்கு உண்டு.
+2. திட்ட நிர்வாகி என்பது GitHub தளத்தால் அவசியமான ஒரு தொழில்நுட்பப் பாத்திரமாகும். கீழே பட்டியலிடப்பட்டுள்ள குறிப்பிட்ட விதிவிலக்குகளைத் தவிர, திட்ட நிர்வாகிகள் தனிப்பட்ட குழு உறுப்பினர்களைப் பற்றி முடிவெடுப்பதில்லை. மாறாக, அவர்கள் பராமரிப்பாளர்களின் கூட்டு விருப்பங்களைச் செயல்படுத்துகிறார்கள்.திட்ட நிர்வாகிகள், பராமரிப்பாளர்கள் குழுவிலிருந்து அவர்களாலேயே தேர்ந்தெடுக்கப்படுவார்கள்.
+3. தொடர்ச்சியை உறுதி செய்வதற்காக, எல்லா நேரங்களிலும் குறைந்தது நான்கு திட்ட நிர்வாகிகள் இருக்க வேண்டும்.
+4. திட்ட நிர்வாகிகள், திட்டப் பராமரிப்பாளர்கள் குழுவை நிர்வகிப்பார்கள். அவர்கள், தங்களின் வாரிசுரிமையை உறுதி செய்வதற்கும், பங்களிப்புகளை உரிய நேரத்தில் மதிப்பாய்வு செய்வதற்கும் போதுமான அளவு பெரிய பராமரிப்பாளர்கள் குழுவைப் பராமரிக்க வேண்டும். பராமரிப்பாளர்கள் குழு போதுமானதாக இல்லாவிட்டால், கூடுதல் நபர்களைச் சேர்ப்பதற்காகத் தேர்ந்தெடுக்குமாறு திட்ட நிர்வாகிகள் பராமரிப்பாளர்களிடம் கோருவார்கள்.
+5. வெற்றிகரமான PR-களின் வரலாற்றைக் கொண்ட மற்றும் தொடர்ச்சியான தொழில்முறையை வெளிப்படுத்திய பங்களிப்பாளர்கள் பராமரிப்பாளர்களாக அழைக்கப்பட வேண்டும்.
+6. நீண்ட காலமாகச் செயலற்ற நிலையில் இருக்கும் அல்லது இந்தச் செயல்முறையைத் துல்லியமாகப் பயன்படுத்தத் தவறும் பராமரிப்பாளர்களை நிர்வாகிகள் நீக்க வேண்டும்.
+7. பராமரிப்பாளர்களின் பட்டியல் பொதுமக்களுக்குக் கிடைக்கக்கூடியதாகவும், திட்டத்தின் தற்போதைய செயல்பாட்டைப் பிரதிபலிப்பதாகவும் இருக்க வேண்டும்.
+8. கட்டற்றகேட் உள்கட்டமைப்பு மற்றும் வளங்களைப் பாதுகாக்க நிர்வாகிகள் விரைவாகச் செயல்பட வேண்டும். 
+9. திட்டத்தில் உள்ள மற்றவர்களுக்கு மன அழுத்தம், பகைமை அல்லது குழப்பத்தை ஏற்படுத்தும் "தீய செயல்களில் ஈடுபடுவோரை" நிர்வாகிகள் தடுக்கவோ அல்லது தடை செய்யவோ வேண்டும். இது, சம்பந்தப்பட்ட அனைத்துத் தரப்பினருக்கும் பேச வாய்ப்பளித்து, ஒரு பொது விவாதத்திற்குப் பிறகு செய்யப்பட வேண்டும். ஒரு தீய செயல்களில் ஈடுபடுவோர் என்பவர், திட்டத்தின் விதிகள் மற்றும் கலாச்சாரத்தை மீண்டும் மீண்டும் புறக்கணிப்பவர், விரோதப் போக்குடையவராக அல்லது புண்படுத்தும் விதமாக நடந்துகொள்பவராக, ஆக்கப்பூர்வமான தகவல் பரிமாற்றத்தைத் தடுப்பவராக, மற்றும் மற்றவர்கள் கேட்கும்போது தனது நடத்தையைத் தானே திருத்திக்கொள்ள இயலாதவராக இருப்பார்.
+
