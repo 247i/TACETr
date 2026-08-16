@@ -7,18 +7,15 @@ import re
 import glob
 import polib
 import json
-import datetime
+from time import sleep
 import threading
 import translators as ts
-from collections import OrderedDict
-
 # from google_trans_new import google_translator
 
+# g_tr = google_translator()
 ஃ = None
 ஔ = None
 நினைவில் = ""
-# g_tr = google_translator()
-
 
 def அகராதி_இருமபொருள்(பாதை):
     """
@@ -138,7 +135,7 @@ def கோப்புமொழி(ஆங்கிலம், பாதை):
         நினைவில் = பாதை
         ஔ = அகராதி_திற(பாதை)
     ஆ = ஔ.find(ஆங்கிலம்.lower())
-    if ஆ:
+    if ஆ is not None:
         தமிழ் = ஆ.msgstr
         குழப்பமானது = ஆ.flags != []
     return தமிழ், குழப்பமானது
@@ -195,7 +192,7 @@ def பிறமொழி_தவிர்(கலவை):
             பிற_சொல் = பிற_சொல்[: -len(பு)]
         சொல் = பிற_சொல்
         ஆ = ஃ.find(பிற_சொல்.lower())
-        if ஆ:
+        if ஆ is not None:
             சொல் = ஆ.msgstr
         சொல் = முதல் + சொல் + முடிவு
         சொற்கள்.append(சொல்)
@@ -406,7 +403,7 @@ def பொருள்_சேர்(பொருள்கள், ஆங்கி
     ஆங்கிலம் = ஆங்கிலம்.strip()
     ஆங்கிலம் = ஆங்கிலம்.lower()
     பதிவு = பொருள்கள்.find(ஆங்கிலம்)
-    if not பதிவு:
+    if பதிவு is None:
         if குழப்பமானது:
             பதிவு = polib.POEntry(msgid=ஆங்கிலம், msgstr=தமிழ், flags=["fuzzy"])
         else:
@@ -480,7 +477,7 @@ def எடுபொருள்மொழிபெயர்(அனைத்து
         if முன் != 100:
             tr_entries = அ.untranslated_entries()
             for பதிவு in tr_entries:
-                t = threading.Thread(target=ஒரு_பொருள்_பெறு, args=(பதிவு, அ, இருமம்))
+                t = threading.Thread(target=ஒரு_பொருள்_பெறு, args=(பதிவு, அ, இருமம், சேவையகம்), daemon=True)
                 t.start()
                 t.join(15)
                 if t.is_alive():
@@ -489,7 +486,7 @@ def எடுபொருள்மொழிபெயர்(அனைத்து
         else:
             tr_entries = அ.translated_entries()
             for பதிவு in tr_entries:
-                t = threading.Thread(target=ஒரு_பொருள்_பெறு, args=(பதிவு, அ, இருமம்))
+                t = threading.Thread(target=ஒரு_பொருள்_பெறு, args=(பதிவு, அ, இருமம், சேவையகம்), daemon=True)
                 t.start()
                 t.join(15)
                 if t.is_alive():
@@ -531,7 +528,7 @@ def சரங்கள்மொழிபெயர்(பாதை="./வெற�
                     try:
                         # /* "sUQ-Yx-bHF.title" = "Mount Location"; */
                         வ = வரி[3:-3]
-                        ப, வ = வ.split(" = ")
+                        ப, வ = வ.split(" = ", 1)
                         வ = வ[1:-3]
                         இ, _ = பொருள்_பெறு(வ)
                         இ = '"' + இ + '";'
@@ -558,7 +555,7 @@ def பண்புகள்மொழிபெயர்_பழைய(பாத�
                 try:
                     # general.error						= Error
                     வ = வரி[2:-1]
-                    ப, வ = வ.split("= ")
+                    ப, வ = வ.split("= ", 1)
                     வ = வ.strip()
                     இ, _ = பொருள்_பெறு(வ)
                     உ = "= ".join((ப, இ))
@@ -583,7 +580,7 @@ def பண்புகள்மொழிபெயர்(பாதை="./வெ�
             if வரி.find("=") != 0:
                 try:
                     # Save=
-                    ப, வ = வரி.split("=")
+                    ப, வ = வரி.split("=", 1)
                     வ = வ.strip()
                     if வ == "":
                         இ, _ = பொருள்_பெறு(ப)
@@ -689,12 +686,12 @@ def இனிமொழிபெயர்(பாதை="./வெறுமை/*.in
             if வரி.find("=") != 0:
                 try:
                     # Save=
-                    ப, வ = வரி.split("=")
+                    ப, வ = வரி.split("=", 1)
                     வ = வ.strip()
                     if வ != "":
                         இ, _ = பொருள்_பெறு(வ)
                         உ = "=".join((ப, இ))
-                        ஆ.write(வ, இ)
+                        ஆ.write(உ)
                         ஆ.write("\n")
                         print(உ)
                     else:
@@ -733,7 +730,7 @@ def one_entry(பதிவு, a):
     else:
         பதிவு.msgstr = இ
         print(பதிவு.msgid, பதிவு.msgstr)
-    அகராதி_சேமி(அ, இருமம்)
+    அகராதி_சேமி(a.தரவு)
                 
 
 
