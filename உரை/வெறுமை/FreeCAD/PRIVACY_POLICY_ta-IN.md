@@ -1,6 +1,6 @@
-# FreeCAD Privacy Policy
+# கட்டற்றகேட் தனியுரிமைக் கொள்கை
 
-The FreeCAD application does not collect, transmit, share or use any Personal Data.
+கட்டற்றகேட் செயலி எந்தவொரு தனிப்பட்ட தரவையும் சேகரிப்பதில்லை, அனுப்புவதில்லை, பகிர்வதில்லை அல்லது பயன்படுத்துவதில்லை.
 
 FreeCAD is community-developed Free Software. The community does not condone the unauthorized usage of private data, so our software does not gather or send personal data.
 
@@ -18,10 +18,11 @@ FreeCAD is meant to manipulate CAD files which may contain metadata. It is your 
 
 FreeCAD can also be used to create and run macros. These are Python scripts that can perform any action that the user can perform on a system. When running a macro from an outside source, it is your responsibility to ensure you trust the author.
 
-While running and for subsequent runs, FreeCAD uses local persistent storage for logs, configuration files, cache, thumbnails, recently accessed files and other information which may contain private data. This stays on local storage.
+இயங்கும்போதும், அடுத்தடுத்த இயக்கங்களின்போதும், கட்டற்றகேட் பதிவுகள், உள்ளமைவு கோப்புகள், தற்காலிக நினைவகம், சிறுபடங்கள், சமீபத்தில் அணுகப்பட்ட கோப்புகள் மற்றும் தனிப்பட்ட தரவுகளைக் கொண்டிருக்கக்கூடிய பிற தகவல்களுக்காக உள்ளக நிலைத்த சேமிப்பகத்தைப் பயன்படுத்துகிறது. இவை உள்ளூர் சேமிப்பகத்திலேயே தங்கியிருக்கும்.
 
-When reading the online version of the User Manual within FreeCAD, manual contents is requested through HTTPS connections.
+கட்டற்றகேட் ஒரு இலவச மென்பொருள் என்பதால், இது மற்றவர்களால் தொகுக்கப்படலாம்; அவர்கள் கூடுதல் மென்பொருளைச் சேர்க்கலாம் அல்லது மூலக் குறியீட்டை மாற்றியமைக்கலாம்.
 
-FreeCAD is Free Software and therefore may be packaged by other people, who may include additional software or modify the source code. We do not vouch for these third-party packages and cannot tell you what they contain and what they do regarding your privacy. The official packages are explicitly listed in our download page.
+கட்டற்றகேட் ஒரு இலவச மென்பொருள் என்பதால், இது மற்றவர்களால் தொகுக்கப்படலாம்; அவர்கள் கூடுதல் மென்பொருளைச் சேர்க்கலாம் அல்லது மூலக் குறியீட்டை (source code) மாற்றியமைக்கலாம். இந்த மூன்றாம் தரப்புத் தொகுப்புகளுக்கு நாங்கள் உத்தரவாதம் அளிக்கவில்லை, மேலும் அவை எதைக் கொண்டிருக்கின்றன, உங்கள் தனியுரிமை தொடர்பாக அவை என்ன செய்கின்றன என்பதை எங்களால் கூற முடியாது. அதிகாரப்பூர்வத் தொகுப்புகள் எங்கள் பதிவிறக்கப் பக்கத்தில் தெளிவாகப் பட்டியலிடப்பட்டுள்ளன.
 
-_The above privacy policy is based on the [GIMP privacy policy](https://www.gimp.org/about/privacy.html)._
+
+_மேற்கண்ட தனியுரிமைக் கொள்கையானது [GIMP தனியுரிமைக் கொள்கையை](https://www.gimp.org/about/privacy.html) அடிப்படையாகக் கொண்டது._

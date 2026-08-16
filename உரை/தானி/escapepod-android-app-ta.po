@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Escapepod)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-21 07:00+0200\n"
-"PO-Revision-Date: 2024-12-21 16:43+0530\n"
+"POT-Creation-Date: 2026-06-24 12:29+0200\n"
+"PO-Revision-Date: 2026-06-25 02:41\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/escapepod/android-app/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 #.  App Name
 #, java-printf-format
@@ -24,8 +24,8 @@ msgstr "எச்கேப் பேட்"
 #. types is fine though
 #, java-printf-format
 msgctxt "app_version_name"
-msgid "n Höchsten Höhen\\"
-msgstr "மிக உயர்ந்த உயரத்தில் \\"
+msgid "\"Es ist einfach Rockmusik\""
+msgstr "\"இது வெறும் ராக் இசை\""
 
 #.  Fragments
 #, java-printf-format
@@ -421,8 +421,8 @@ msgstr "பதிவிறக்கத்தை செயலாக்க மு�
 
 #, java-printf-format
 msgctxt "toast_message_error_missing_storage_permission"
-msgid "Grant ead Storage permission to open this file."
-msgstr "இந்த கோப்பைத் திறக்க EAD சேமிப்பக இசைவு வழங்கவும்."
+msgid "Grant \"Read Storage\" permission to open this file."
+msgstr "இந்தக் கோப்பைத் திறக்க \"சேமிப்பகத்தைப் படி\" இசைவு வழங்கவும்."
 
 #, java-printf-format
 msgctxt "toast_message_error_no_internet_connection"
@@ -465,6 +465,16 @@ msgstr "பிழைத்திருத்தம்: உள்ளக பதி
 msgctxt "toast_message_debug_logging_to_file_stopped"
 msgid "Debug: Stop writing to a local log file."
 msgstr "பிழைத்திருத்தம்: உள்ளக பதிவு கோப்பில் எழுதுவதை நிறுத்துங்கள்."
+
+#, java-printf-format
+msgctxt "toast_message_episode_list_filter_all"
+msgid "All Episodes"
+msgstr "அனைத்து அத்தியாயங்களும்"
+
+#, java-printf-format
+msgctxt "toast_message_episode_list_filter_downloaded"
+msgid "Downloaded Episodes"
+msgstr "பதிவிறக்கம் செய்யப்பட்ட அத்தியாயங்கள்"
 
 #, java-printf-format
 msgctxt "toast_message_install_file_helper"
@@ -560,19 +570,14 @@ msgstr "பழைய அத்தியாயங்கள்"
 
 #, java-printf-format
 msgctxt "podcast_list_button_all_episodes"
-msgid "All episodes"
+msgid "All Episodes"
 msgstr "அனைத்து அத்தியாயங்களும்"
 
 #.  Episode List
 #, java-printf-format
-msgctxt "episode_list_filter_all"
-msgid "All Episodes"
-msgstr "அனைத்து அத்தியாயங்களும்"
-
-#, java-printf-format
-msgctxt "episode_list_filter_downloaded"
-msgid "Downloaded Episodes"
-msgstr "பதிவிறக்கம் செய்யப்பட்ட அத்தியாயங்கள்"
+msgctxt "episode_list_search_hint"
+msgid "Filter episode titles"
+msgstr "எபிசோட் தலைப்புகளை வடிகட்டவும்"
 
 #.  Notification
 #, java-printf-format
@@ -674,6 +679,39 @@ msgstr "பயன்படுத்தப்பட்டது"
 msgctxt "pref_delete_all_title"
 msgid "Delete Downloads"
 msgstr "பதிவிறக்கங்களை நீக்கு"
+
+#, java-printf-format
+msgctxt "pref_download_auto_cleanup_enabled"
+msgid "Latest episodes are kept. Older downloads are deleted periodically."
+msgstr ""
+"அண்மைகால அத்தியாயங்கள் வைக்கப்படும். பழைய பதிவிறக்கங்கள் அவ்வப்போது "
+"நீக்கப்படும்."
+
+#, java-printf-format
+msgctxt "pref_download_auto_cleanup_disabled"
+msgid "All unfinished episodes are kept."
+msgstr "முடிக்கப்படாத அனைத்து அத்தியாயங்களும் வைக்கப்பட்டுள்ளன."
+
+#, java-printf-format
+msgctxt "pref_download_auto_cleanup_title"
+msgid "Auto Cleanup"
+msgstr "தானி சுத்தம்"
+
+#, java-printf-format
+msgctxt "pref_dynamic_colors_title"
+msgid "Dynamic Colors"
+msgstr "மாறும் நிறங்கள்"
+
+#, java-printf-format
+msgctxt "pref_dynamic_colors_summary_enabled"
+msgid "Using system accent colors for UI elements."
+msgstr "இடைமுகம் உறுப்புகளுக்கு கணினி உச்சரிப்பு வண்ணங்களைப் பயன்படுத்துதல்."
+
+#, java-printf-format
+msgctxt "pref_dynamic_colors_summary_disabled"
+msgid "Using app's default colors for UI elements."
+msgstr ""
+"இடைமுகம் உறுப்புகளுக்கு ஆப்சின் இயல்புநிலை வண்ணங்களைப் பயன்படுத்துதல்."
 
 #, java-printf-format
 msgctxt "pref_episode_download_over_mobile_summary_enabled"
@@ -810,6 +848,23 @@ msgctxt "pref_update_covers_title"
 msgid "Update Covers"
 msgstr "கவர்கள் புதுப்பித்தல்"
 
+#, java-printf-format
+msgctxt "pref_user_interface_transparency_effect_summary_enabled"
+msgid "Playback controls become transparent as you scroll."
+msgstr ""
+"நீங்கள் உருட்டும் போது பிளேபேக் கட்டுப்பாடுகள் வெளிப்படையானதாக மாறும்."
+
+#, java-printf-format
+msgctxt "pref_user_interface_transparency_effect_summary_disabled"
+msgid "Playback controls stay opaque during scrolling."
+msgstr ""
+"ச்க்ரோலிங் செய்யும் போது பிளேபேக் கட்டுப்பாடுகள் ஒளிபுகா நிலையில் இருக்கும்."
+
+#, java-printf-format
+msgctxt "pref_user_interface_transparency_effect_title"
+msgid "User interface transparency effect"
+msgstr "பயனர் இடைமுகத்தின் வெளிப்படைத்தன்மை விளைவு"
+
 #.  Accessibility Descriptions
 #, java-printf-format
 msgctxt "descr_app_icon"
@@ -855,6 +910,11 @@ msgstr "விளையாடு/இடைநிறுத்தம்"
 msgctxt "descr_episode_list_filter_button"
 msgid "Filter symbol"
 msgstr "வடிகட்டி அடையாளம்"
+
+#, java-printf-format
+msgctxt "descr_episode_list_search_button"
+msgid "Search symbol"
+msgstr "தேடல் அடையாளம்"
 
 #, java-printf-format
 msgctxt "descr_expanded_episode_length"
@@ -965,12 +1025,12 @@ msgstr "தொடங்கவும்"
 #, java-printf-format
 msgctxt "onboarding_app_hypercritical_quote_1"
 msgid "Nothing is so perfect"
-msgstr "எதுவும் சரியாக இல்லை"
+msgstr "எதுவும் அவ்வளவு சரியானது இல்லை"
 
 #, java-printf-format
 msgctxt "onboarding_app_hypercritical_quote_2"
 msgid "that it can't be complained about."
-msgstr "அதைப் பற்றி குற்றச்சாட்டு செய்ய முடியாது."
+msgstr "அது பற்றி குற்றச்சாட்டு செய்ய முடியாது."
 
 #, java-printf-format
 msgctxt "player_sheet_p_no_data"
@@ -986,15 +1046,15 @@ msgid ""
 "Internet worms in three days. What does this mean for the future of Internet"
 " security?"
 msgstr ""
-"ஒருபோதும் வெளிப்படுத்தப்படாத சன்னல்கள் பாதிப்பு அதை சரிசெய்ய "
-"திட்டுகளிலிருந்து எவ்வாறு விரைவாக மாற்றியமைக்கப்பட்டது மற்றும் மூன்று "
-"நாட்களில் 12 க்கும் மேற்பட்ட சக்திவாய்ந்த மற்றும் சேதப்படுத்தும் இணைய "
-"புழுக்களாக மாறியது. இணைய பாதுகாப்பின் எதிர்காலத்திற்கு இது என்ன அர்த்தம்?"
+"ஒருபோதும் வெளிப்படுத்தப்படாத சாளரங்கள் பாதிப்பை எவ்வாறு சரிசெய்வதற்காக "
+"இணைப்புகளில் இருந்து விரைவாக மாற்றியமைக்கப்பட்டது மற்றும் மூன்று நாட்களில் "
+"12 க்கும் மேற்பட்ட சக்திவாய்ந்த மற்றும் சேதப்படுத்தும் இணையப் புழுக்களாக "
+"மாறியது. இணைய பாதுகாப்பின் எதிர்காலத்திற்கு இது என்ன அர்த்தம்?"
 
 #, java-printf-format
 msgctxt "sample_text_episode_0_chapter"
 msgid "The first Internet worms of 2005"
-msgstr "2005 ஆம் ஆண்டின் முதல் இணைய புழுக்கள்"
+msgstr "2005 இன் முதல் இணையப் புழுக்கள்"
 
 #, java-printf-format
 msgctxt "sample_text_episode_0_date"
@@ -1004,12 +1064,12 @@ msgstr "19 ஆகச்ட் 2005"
 #, java-printf-format
 msgctxt "sample_text_episode_0_length"
 msgid "-18:00"
-msgstr "-18: 00"
+msgstr "-18:00"
 
 #, java-printf-format
 msgctxt "sample_text_episode_0_title"
 msgid "As the Worm Turns"
-msgstr "புழு திரும்பும்போது"
+msgstr "வார்ம் டர்ன்ச்"
 
 #, java-printf-format
 msgctxt "sample_text_episode_0_played_time"
@@ -1034,16 +1094,21 @@ msgid ""
 " anti-spyware program, joins Leo Laporte every week to guide us through the "
 "minefield of ransomware, viruses, cyber espionage, hacking, etc."
 msgstr ""
-"பாதுகாப்பு இப்போது நீங்கள் வாரம் முழுவதும் பார்க்கும் மிக முக்கியமான "
-"நிகழ்ச்சியாக இருக்கலாம். பாதுகாப்பு குரு ச்டீவ் கிப்சன், ச்பைவேர் என்ற "
-"வார்த்தையை உருவாக்கி, ச்பைவேர் எதிர்ப்பு திட்டத்தை உருவாக்கியவர், ஒவ்வொரு "
-"வாரமும் லியோ லாபோர்ட்டுடன் இணைகிறார், ransomware, வைரச்கள், சைபர் உளவு, "
-"ஏக்கிங் போன்றவற்றின் கண்ணிவெடி மூலம் எங்களுக்கு வழிகாட்டுகிறார்."
+"பாதுகாப்பு நவ் வாரம் முழுவதும் நீங்கள் பார்க்கும் மிக முக்கியமான "
+"நிகழ்ச்சியாக இருக்கலாம். ச்பைவேர் என்ற சொல்லை உருவாக்கி, முதல் ச்பைவேர் "
+"எதிர்ப்பு திட்டத்தை உருவாக்கியவர், பாதுகாப்பு குரு ச்டீவ் கிப்சன், "
+"ransomware, வைரச்கள், சைபர் உளவு, ஏக்கிங் போன்றவற்றின் கண்ணிவெடி மூலம் நம்மை"
+" வழிநடத்த ஒவ்வொரு வாரமும் லியோ லபோர்ட்டுடன் இணைகிறார்."
 
 #, java-printf-format
 msgctxt "sample_text_podcast_xml"
 msgid "https://feeds.twit.tv/sn.xml"
 msgstr "https://feeds.twit.tv/sn.xml"
+
+#, java-printf-format
+msgctxt "sample_text_search_term"
+msgid "Foo"
+msgstr "ஃபூ"
 
 #, java-printf-format
 msgctxt "sample_text_sleep_timer_remaining_time"
@@ -1053,4 +1118,4 @@ msgstr "00:00"
 #, java-printf-format
 msgctxt "sample_text_up_next_name"
 msgid "Spieleveteranen - Jetzt labern die auch noch!"
-msgstr "விளையாட்டு வீரர்கள் - இப்போது அவர்களும் எரிகிறார்கள்!"
+msgstr "விளையாட்டு வீரர்கள் - இப்போது அவர்களும் அரட்டை அடிக்கிறார்கள்!"

@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Baresip)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-30 20:10+0200\n"
-"PO-Revision-Date: 2025-05-31 06:42\n"
+"POT-Creation-Date: 2026-06-20 12:16+0200\n"
+"PO-Revision-Date: 2026-06-21 15:46\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/baresip/baresip-app/ta/>\n"
 "Language: ta\n"
@@ -12,17 +12,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 #, ignore-multiple-failures, java-printf-format
 msgctxt "app_name"
 msgid "baresip"
-msgstr "Paresip"
+msgstr "பாரேசிப்"
 
 #, java-printf-format
 msgctxt "app_name_plus"
 msgid "baresip+"
-msgstr "Paresip+"
+msgstr "baresip+"
 
 #.  About Activity
 #, java-printf-format
@@ -35,11 +35,12 @@ msgctxt "about_title_plus"
 msgid "About baresip+"
 msgstr "Paresip+ பற்றி"
 
-#, java-printf-format
+#, auto-safe-html, java-printf-format
 msgctxt "about_text"
 msgid ""
 "<![CDATA[\n"
-"        <h1>Baresip library based SIP User Agent</h1>\n"
+"        <h1>SIP and mobile calling User Agent based on\n"
+"            <a href=\"https://github.com/baresip/baresip\">baresip</a> library</h1>\n"
 "        <br>\n"
 "        <p>Juha Heinanen &lt;jh@tutpro.com&gt;</p>\n"
 "        <p>Version %1$s</p>\n"
@@ -48,10 +49,12 @@ msgid ""
 "        <ul>\n"
 "            <li>Check that default values in baresip\\'s Settings meet your needs\n"
 "                (touch item titles for help).</li>\n"
-"            <li>Then in Accounts, create one or more accounts (again touch item titles for help).</li>\n"
+"            <li>If you want use baresip for mobile calling, turn on Default Phone App setting. It will\n"
+"                 create Mobile account for mobile calling.</li>\n"
+"            <li>Then in Accounts, create one or more SIP accounts (again touch item titles for help).</li>\n"
 "            <li>Registration status of an account is shown with a colored dot: green (registration\n"
-"                succeeded), yellow (registration is in progress), red (registration failed), white (registration\n"
-"                has not been activated).</li>\n"
+"                succeeded), yellow (registration is in progress), red (registration failed),\n"
+"                white (registration has not been activated).</li>\n"
 "            <li>Touch on the status dot leads directly to account configuration.</li>\n"
 "            <li>Long touch on baresip bar icons shows information about the icons.</li>\n"
 "            <li>Swipe down gesture causes re-registration of the currently shown account.</li>\n"
@@ -67,22 +70,27 @@ msgid ""
 "        <h2>Privacy Policy</h2>\n"
 "            <p>Privacy policy is available <a href=\"https://raw.githubusercontent.com/juha-h/baresip-studio/master/PrivacyPolicy.txt\">here</a>.</p>\n"
 "        <br>\n"
-"        <h2>Source code</h2>\n"
+"        <h2>Source Code</h2>\n"
 "            <p>Source code is available at <a href=\"https://github.com/juha-h/baresip-studio\">GitHub</a>,\n"
 "            where also issues can be reported.</p>\n"
+"        <br>\n"
+"        <h2>Language Translations</h2>\n"
+"            <p>Language translations are managed via baresip\n"
+"                <a href=\"https://hosted.weblate.org/projects/baresip/\">Weblate</a> project.</p>\n"
 "        <br>\n"
 "        <h2>Licenses</h2>\n"
 "        <ul>\n"
 "            <li><b>BSD-3-Clause</b> except the following:</li>\n"
 "            <li><b>Apache 2.0</b> AMR codecs and TLS security</li>\n"
 "            <li><b>AGPLv4</b> ZRTP media encryption</li>\n"
-"            <li><b>GNU LGPL 2.1</b> G.722, G.726, and Codec2 codecs</li>\n"
+"            <li><b>GNU LGPL 2.1</b> Codec2 codec</li>\n"
+"            <li><b>Free</b> G.722 codec</li>\n"
 "            <li><b>GNU GPLv3</b> G.729 codec</li>\n"
 "        </ul>\n"
 "        ]]>"
 msgstr ""
-"<! [சி.டி.ஏ.டி.ஏ [ \n"
-"<H1> PARESIP நூலக அடிப்படையிலான SIP பயனர் முகவர் </H1> \n"
+"\n"
+"        <h1>PARESIP நூலக அடிப்படையிலான SIP பயனர் முகவர் </h1> \n"
 "<br> \n"
 "<p> சுஆ எய்னனென் & lt; jh@tutpro.com&gt; </p> \n"
 "<p> பதிப்பு %1$s </p> \n"
@@ -110,7 +118,7 @@ msgstr ""
 "<H2> தனியுரிமைக் கொள்கை </H2> \n"
 "<p> தனியுரிமைக் கொள்கை <a href = \"https://raw.githubusercontent.com/juha-p-studio/master/privacypolicy.txt\"> இங்கே </a>. </p> \n"
 "<br> \n"
-"<H2> மூலக் குறியீடு </H2> \n"
+"<h2> மூலக் குறியீடு </h2> \n"
 "<p> மூலக் குறியீடு <a href = \"https://github.com/juha-h/baresip-studio\"> github </a>, \n"
 "சிக்கல்களைப் புகாரளிக்கலாம். </p> \n"
 "<br> \n"
@@ -122,13 +130,12 @@ msgstr ""
 "<li> <b> குனு எல்சிபிஎல் 2.1 </b> ஐயா .722, ஐயா .726, மற்றும் கோடெக் 2 கோடெக்ச் </li> \n"
 "<li> <b> gnu gplv3 </b> G.729 கோடெக் </li> \n"
 "</ul> \n"
-"]]>"
 
-#, java-printf-format
+#, auto-safe-html, java-printf-format
 msgctxt "about_text_plus"
 msgid ""
 "<![CDATA[\n"
-"        <h1>Baresip library based SIP User Agent with video calls</h1>\n"
+"        <h1>SIP User Agent with video calls based on <a href=\"https://github.com/baresip/baresip\">baresip</a> library</h1>\n"
 "        <br>\n"
 "        <p>Juha Heinanen &lt;jh@tutpro.com&gt;</p>\n"
 "        <p>Version %1$s</p>\n"
@@ -137,7 +144,9 @@ msgid ""
 "        <ul>\n"
 "            <li>Check that default values in baresip+\\'s Settings meet your needs\n"
 "                (touch item titles for help).</li>\n"
-"            <li>Then in Accounts, create one or more accounts (again touch item titles for help).</li>\n"
+"            <li>If you want use baresip+ for mobile calling, turn on Default Phone App setting. It will\n"
+"                create Mobile account for mobile calling.</li>\n"
+"            <li>Then in Accounts, create one or more SIP accounts (again touch item titles for help).</li>\n"
 "            <li>Registration status of an account is shown with a colored dot: green (registration\n"
 "                succeeded), yellow (registration is in progress), red (registration failed), white (registration\n"
 "                has not been activated).</li>\n"
@@ -156,38 +165,42 @@ msgid ""
 "        </ul>\n"
 "        <h2>Known Issues</h2>\n"
 "        <ul>\n"
-"            <li>In video calls, the device needs to be held in landscape\n"
-"            mode rotated 90 degrees left from portrait orientation.</li>\n"
 "            <li>Selfview is not properly shown when video stream is sendonly.</li>\n"
 "        </ul>\n"
 "        <h2>Privacy Policy</h2>\n"
-"        <p>Privacy policy is available <a href=\"https://raw.githubusercontent.com/juha-h/baresip-studio/video/PrivacyPolicy.txt\">here</a>.</p>\n"
+"        <p>Privacy policy is available\n"
+"            <a href=\"https://raw.githubusercontent.com/juha-h/baresip-studio/video/PrivacyPolicy.txt\">here</a>.</p>\n"
 "        <br>\n"
 "        <h2>Source code</h2>\n"
 "        <p>Source code is available at <a href=\"https://github.com/juha-h/baresip-studio\">GitHub</a>,\n"
-"        where also issues can be reported.</p>\n"
+"            where also issues can be reported.</p>\n"
+"        <br>\n"
+"        <h2>Language translations</h2>\n"
+"        <p>Language translations are managed via baresip\n"
+"            <a href=\"https://hosted.weblate.org/projects/baresip/\">Weblate</a> project.</p>\n"
 "        <br>\n"
 "        <h2>Licenses</h2>\n"
 "        <ul>\n"
 "            <li><b>BSD-3-Clause</b> except the following:</li>\n"
 "            <li><b>Apache 2.0</b> AMR codecs and TLS security</li>\n"
 "            <li><b>AGPLv4</b> ZRTP media encryption</li>\n"
-"            <li><b>GNU LGPL 2.1</b> G.722, G.726, and Codec2 codecs</li>\n"
+"            <li><b>GNU LGPL 2.1</b> Codec2 codec</li>\n"
+"            <li><b>Free</b> G.722 codec</li>\n"
 "            <li><b>GNU GPLv3</b> G.729 codec</li>\n"
 "            <li><b>GNU GPLv2</b> H.264 and H.265 codecs</li>\n"
 "            <li><b>AOMedia</b> AV1 codec</li>\n"
 "        </ul>\n"
 "        ]]>"
 msgstr ""
-"<! [சி.டி.ஏ.டி.ஏ [ \n"
-"<H1> வீடியோ அழைப்புகள் </H1> உடன் PARESIP நூலக அடிப்படையிலான SIP பயனர் முகவர் \n"
+"\"\n"
+"        <h1>வீடியோ அழைப்புகள் </h1> உடன் PARESIP நூலக அடிப்படையிலான SIP பயனர் முகவர் \n"
 "<br> \n"
 "<p> சுஆ எய்னனென் & lt; jh@tutpro.com&gt; </p> \n"
 "<p> பதிப்பு %1$s </p> \n"
 "<br> \n"
 "<H2> பயன்பாட்டு குறிப்புகள் </H2> \n"
 "<ul> \n"
-"<li> paresip+\\ இன் அமைப்புகளில் இயல்புநிலை மதிப்புகள் உங்கள் தேவைகளைப் நிறைவு செய்யுங்கள் \n"
+"<li> paresip+ இன் அமைப்புகளில் இயல்புநிலை மதிப்புகள் உங்கள் தேவைகளைப் நிறைவு செய்யுங்கள் \n"
 "(உதவிக்கு உருப்படி தலைப்புகளைத் தொடவும்). </li> \n"
 "<li> பின்னர் கணக்குகளில், ஒன்று அல்லது அதற்கு மேற்பட்ட கணக்குகளை உருவாக்கவும் (மீண்டும் உதவிக்கு உருப்படி தலைப்புகளைத் தொடவும்). </li> \n"
 "<li> ஒரு கணக்கின் பதிவு நிலை வண்ண புள்ளியுடன் காட்டப்பட்டுள்ளது: பச்சை (பதிவு \n"
@@ -219,7 +232,7 @@ msgstr ""
 "<p> மூலக் குறியீடு <a href = \"https://github.com/juha-h/baresip-studio\"> github </a>, \n"
 "சிக்கல்களைப் புகாரளிக்கலாம். </p> \n"
 "<br> \n"
-"<H2> உரிமங்கள் </H2> \n"
+"<h2> உரிமங்கள் </h2> \n"
 "<ul> \n"
 "<li> <b> BSD-3- அடைப்பு </b> பின்வருவதைத் தவிர: </li> \n"
 "<li> <b> அப்பாச்சி 2.0 </b> AMR கோடெக்குகள் மற்றும் TLS பாதுகாப்பு </li> \n"
@@ -229,7 +242,7 @@ msgstr ""
 "<li> <b> குனு சி.பி.எல்.வி 2 </b> எச் .264 மற்றும் எச் .265 கோடெக்ச் </li> \n"
 "<li> <b> aomedia </b> av1 கோடெக் </li> \n"
 "</ul> \n"
-"]]>"
+"\""
 
 #.  Account Activity
 #, java-printf-format
@@ -238,9 +251,29 @@ msgid "Account"
 msgstr "கணக்கு"
 
 #, java-printf-format
-msgctxt "account_nickname"
-msgid "Account Nickname"
-msgstr "கணக்கு புனைப்பெயர்"
+msgctxt "sip_uri"
+msgid "SIP URI"
+msgstr "SIP யூரி"
+
+#, java-printf-format
+msgctxt "tel_uri"
+msgid "TEL URI"
+msgstr "TEL யூரி"
+
+#, java-printf-format
+msgctxt "tel_uri_calls"
+msgid "TEL URI for Calls"
+msgstr "அழைப்புகளுக்கு TEL யூரி"
+
+#, java-printf-format
+msgctxt "tel_uri_messages"
+msgid "TEL URI for Messages"
+msgstr "செய்திகளுக்கான TEL யூரி"
+
+#, java-printf-format
+msgctxt "not_available"
+msgid "Not available"
+msgstr "கிடைக்கவில்லை"
 
 #, java-printf-format
 msgctxt "account_nickname_help"
@@ -268,11 +301,6 @@ msgstr "'%1$s' என்ற புனைப்பெயர் ஏற்கனவ
 msgctxt "display_name"
 msgid "Display Name"
 msgstr "காட்சி பெயர்"
-
-#, java-printf-format
-msgctxt "your_name"
-msgid "Your Name"
-msgstr "உங்கள் பெயர்"
 
 #, java-printf-format
 msgctxt "display_name_help"
@@ -390,8 +418,22 @@ msgstr ""
 
 #, java-printf-format
 msgctxt "invalid_reg_int"
-msgid "Invalid Registration Interval'%1$s'"
+msgid "Invalid Registration Interval '%1$s'"
 msgstr "தவறான பதிவு இடைவெளி '%1$s'"
+
+#, java-printf-format
+msgctxt "check_origin"
+msgid "Check Origin"
+msgstr "தோற்றத்தை சரிபார்க்கவும்"
+
+#, java-printf-format
+msgctxt "check_origin_help"
+msgid ""
+"If checked, inbound requests are allowed only from IP addresses where "
+"register requests were sent."
+msgstr ""
+"சரிபார்க்கப்பட்டால், பதிவுக் கோரிக்கைகள் அனுப்பப்பட்ட IP முகவரிகளிலிருந்து "
+"மட்டுமே உள்வரும் கோரிக்கைகள் அனுமதிக்கப்படும்."
 
 #, java-printf-format
 msgctxt "media_nat"
@@ -430,19 +472,14 @@ msgstr ""
 " இல்லை."
 
 #, java-printf-format
-msgctxt "stun_server_uri"
-msgid "STUN/TURN Server URI"
-msgstr "STUN/TURN சேவையகம் யூரி"
-
-#, java-printf-format
 msgctxt "invalid_stun_server"
 msgid "Invalid STUN/TURN Server URI '%1$s'"
-msgstr "தவறான ச்டன்/டர்ன் சர்வர் யூரி '%1$s' '"
+msgstr "தவறான ச்டன்/டர்ன் சர்வர் யூரி '%1$s'"
 
 #, java-printf-format
 msgctxt "stun_server_default"
 msgid "stun:stun.l.google.com:19302"
-msgstr "ச்டன்: stun.l.google.com: 19302"
+msgstr "stun:stun.l.google.com:19302"
 
 #, java-printf-format
 msgctxt "stun_username"
@@ -495,20 +532,6 @@ msgstr ""
 " • SRTP-MANDF என்றால், RTP/SAVPF வெளிச்செல்லும் அழைப்பில் வழங்கப்படுகிறது மற்றும் உள்வரும் அழைப்பில் தேவைப்படுகிறது.\n"
 " • SRTP-MAND என்பது RTP/SAVP வெளிச்செல்லும் அழைப்பில் வழங்கப்படுகிறது மற்றும் உள்வரும் அழைப்பில் தேவைப்படுகிறது.\n"
 " • SRTP என்றால், வெளிச்செல்லும் அழைப்பில் RTP/AVP வழங்கப்படுகிறது மற்றும் உள்வரும் அழைப்பில் வழங்கப்பட்டால் RTP/SAVP அல்லது RTP/SAVPF பயன்படுத்தப்படுகிறது."
-
-#, java-printf-format
-msgctxt "prefer_ipv6_media"
-msgid "Prefer IPv6 Media"
-msgstr "ஐபிவி 6 மீடியாவை விரும்புங்கள்"
-
-#, java-printf-format
-msgctxt "prefer_ipv6_media_help"
-msgid ""
-"If checked, offer to use IPv6 media protocol (if available) when media "
-"protocol of peer cannot be automatically determined."
-msgstr ""
-"சரிபார்க்கப்பட்டால், பியரின் மீடியா நெறிமுறையை தானாகவே தீர்மானிக்க "
-"முடியாதபோது ஐபிவி 6 மீடியா நெறிமுறையை (கிடைத்தால்) பயன்படுத்த சலுகை."
 
 #, java-printf-format
 msgctxt "rtcp_mux"
@@ -601,6 +624,29 @@ msgid "Automatic"
 msgstr "தானியங்கி"
 
 #, java-printf-format
+msgctxt "block_unknown"
+msgid "Block Strangers"
+msgstr "பிளாக் அந்நியர்கள்"
+
+#, java-printf-format
+msgctxt "block_unknown_help"
+msgid "Block calls and messages from peers that are not found in contacts."
+msgstr ""
+"தொடர்புகளில் இல்லாத சகாக்களின் அழைப்புகள் மற்றும் செய்திகளைத் தடுக்கவும்."
+
+#, java-printf-format
+msgctxt "block_hidden"
+msgid "Block Hidden"
+msgstr "பிளாக் மறைக்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "block_hidden_help"
+msgid "Block calls and messages from peers with hidden identification."
+msgstr ""
+"மறைக்கப்பட்ட அடையாளத்துடன் சகாக்களிடமிருந்து வரும் அழைப்புகள் மற்றும் "
+"செய்திகளைத் தடுக்கவும்."
+
+#, java-printf-format
 msgctxt "voicemail_uri"
 msgid "Voicemail URI"
 msgstr "குரல் அஞ்சல் யூரி"
@@ -616,9 +662,9 @@ msgstr ""
 "செலுத்தப்படவில்லை."
 
 #, java-printf-format
-msgctxt "invalid_voicemail_uri"
-msgid "Invalid Voicemail URI '%1$s'"
-msgstr "தவறான குரல் அஞ்சல் யூரி '%1$s'"
+msgctxt "voicemain_tel_uri_help"
+msgid "TEL URI for checking of voicemail messages."
+msgstr "குரல் அஞ்சல் செய்திகளைச் சரிபார்க்க TEL URI."
 
 #, java-printf-format
 msgctxt "country_code"
@@ -628,23 +674,17 @@ msgstr "நாட்டின் குறியீடு"
 #, java-printf-format
 msgctxt "country_code_help"
 msgid ""
-"E.164 country code of this account. If From URI userpart of incoming call or"
-" message contains a telephone number that does not start with '+' sign and "
-"if contact lookup fails, the number is prefixed with this country code and "
-"contact lookup is tried again. If the telephone number starts with a single "
-"digit '0', digit '0' is removed before the number is prefixed."
+"E.164 country code of this account. If peer URI userpart of call or message "
+"contains a telephone number that does not start with '+' sign and if contact"
+" lookup fails, the number is prefixed with this country code and contact "
+"lookup is tried again. If the number starts with a single '0' digit, it is "
+"removed before the number is prefixed."
 msgstr ""
-"E.164 இந்த கணக்கின் நாடு குறியீடு. உள்வரும் அழைப்பு அல்லது செய்தியின் யூரி "
-"USERPART இலிருந்து '+' அடையாளத்துடன் தொடங்காத ஒரு தொலைபேசி எண்ணைக் "
-"கொண்டிருந்தால், தொடர்பு தேடல் தோல்வியுற்றால், இந்த நாட்டின் குறியீட்டில் எண்"
-" முன்னொட்டு மற்றும் தொடர்பு தேடல் மீண்டும் முயற்சிக்கப்படுகிறது. தொலைபேசி "
-"எண் '0' ஒற்றை இலக்கத்துடன் தொடங்கினால், எண் முன்னொட்டப்படுவதற்கு முன்பு '0' "
-"இலக்கத்தை அகற்றும்."
-
-#, java-printf-format
-msgctxt "country_code_hint"
-msgid "+code"
-msgstr "+குறியீடு"
+"E.164 இந்தக் கணக்கின் நாட்டின் குறியீடு. அழைப்பு அல்லது செய்தியின் பியர் "
+"யூஆர்ஐ பயனர் பகுதியில் '+' அடையாளத்துடன் தொடங்காத தொலைபேசி எண் இருந்தால், "
+"தொடர்புத் தேடல் தோல்வியுற்றால், அந்த எண் இந்த நாட்டின் குறியீட்டுடன் "
+"முன்னொட்டப்பட்டு, தொடர்புத் தேடல் மீண்டும் முயற்சிக்கப்படும். எண் ஒற்றை '0' "
+"இலக்கத்துடன் தொடங்கினால், எண்ணின் முன்னொட்டுக்கு முன் அது அகற்றப்படும்."
 
 #, java-printf-format
 msgctxt "invalid_country_code"
@@ -666,11 +706,6 @@ msgstr ""
 "தொலைபேசி எண்களுக்கான அழைப்புகளில் பயன்படுத்தப்படும் SIP யூரி புரவலன் பகுதி. "
 "தொழிற்சாலை இயல்புநிலை என்பது கணக்கின் களமாகும். வழங்கப்படாவிட்டால், தொலைபேசி"
 " எண்களை அழைக்க இந்த கணக்கைப் பயன்படுத்த முடியாது."
-
-#, java-printf-format
-msgctxt "telephony_provider_hint"
-msgid "SIP URI host part"
-msgstr "சிப் யூரி புரவலன் பகுதி"
 
 #, java-printf-format
 msgctxt "numeric_keypad"
@@ -700,6 +735,16 @@ msgid "If checked, this account is selected when baresip is started."
 msgstr ""
 "சரிபார்க்கப்பட்டால், பரெசிப் தொடங்கும்போது இந்த கணக்கு "
 "தேர்ந்தெடுக்கப்படுகிறது."
+
+#, java-printf-format
+msgctxt "custom_parameters"
+msgid "Custom Parameters"
+msgstr "தனிப்பயன் அளவுருக்கள்"
+
+#, java-printf-format
+msgctxt "custom_parameters_help"
+msgid "Semicolor separeted list of custom account parameters"
+msgstr "தனிப்பயன் கணக்கு அளவுருக்களின் அரைப்புள்ளி பிரிக்கப்பட்ட பட்டியல்"
 
 #.  Accounts Activity
 #, java-printf-format
@@ -733,16 +778,11 @@ msgstr ""
 "அடிப்படையாகக் கொண்டது."
 
 #, java-printf-format
-msgctxt "user_domain"
-msgid "user@domain"
-msgstr "பயனர்@டொமைன்"
-
-#, java-printf-format
 msgctxt "invalid_aor"
 msgid "Invalid user@domain[:port][;transport=udp|tcp|tls] '%1$s'"
 msgstr ""
 "தவறான பயனர்@டொமைன் [: போர்ட்] [; போக்குவரத்து = யுடிபி | டி.சி.பி | "
-"டி.எல்.எச்] '%1$s' '"
+"டி.எல்.எச்] '%1$s'"
 
 #, java-printf-format
 msgctxt "account_exists"
@@ -771,29 +811,9 @@ msgstr "'%1$s' கணக்கை நீக்க விரும்புகி
 
 #.  Baresip Service
 #, java-printf-format
-msgctxt "answer"
-msgid "Answer"
-msgstr "பதில்"
-
-#, java-printf-format
-msgctxt "reject"
-msgid "Reject"
-msgstr "நிராகரிக்கவும்"
-
-#, java-printf-format
-msgctxt "reply"
-msgid "Reply"
-msgstr "பதில்"
-
-#, java-printf-format
-msgctxt "save"
-msgid "Save"
-msgstr "சேமி"
-
-#, java-printf-format
-msgctxt "incoming_call_from"
-msgid "Incoming call from"
-msgstr "இருந்து உள்வரும் அழைப்பு"
+msgctxt "is_calling"
+msgid "is calling"
+msgstr "அழைக்கிறது"
 
 #, java-printf-format
 msgctxt "missed_call_from"
@@ -816,14 +836,55 @@ msgid "Call transfer request to"
 msgstr "அழைப்பு பரிமாற்ற கோரிக்கை"
 
 #, java-printf-format
-msgctxt "message_from"
-msgid "Message from"
-msgstr "இருந்து செய்தி"
-
-#, java-printf-format
 msgctxt "call_auto_rejected"
 msgid "Auto-rejected call from %1$s"
 msgstr "%1$s இலிருந்து தானாக நிராகரிக்கப்பட்ட அழைப்பு"
+
+#, java-printf-format
+msgctxt "call_blocked"
+msgid "Auto-rejected blocked call from %1$s"
+msgstr "%1$s இடமிருந்து தடுக்கப்பட்ட அழைப்பு தானாகவே நிராகரிக்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "hidden_call_blocked"
+msgid "Auto-rejected call from hidden caller"
+msgstr "மறைக்கப்பட்ட அழைப்பாளரிடமிருந்து தானாக நிராகரிக்கப்பட்ட அழைப்பு"
+
+#, java-printf-format
+msgctxt "message_blocked"
+msgid "Auto-rejected blocked message from %1$s"
+msgstr "%1$s இலிருந்து தானாக நிராகரிக்கப்பட்ட தடுக்கப்பட்ட செய்தி"
+
+#, java-printf-format
+msgctxt "hidden_message_blocked"
+msgid "Auto-rejected message from hidden sender"
+msgstr "மறைக்கப்பட்ட அனுப்புநரிடமிருந்து தானாக நிராகரிக்கப்பட்ட செய்தி"
+
+#.  Blocked Activity
+#, java-printf-format
+msgctxt "blocked"
+msgid "Blocked"
+msgstr "தடுக்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "blocked_calls"
+msgid "Blocked Calls"
+msgstr "தடுக்கப்பட்ட அழைப்புகள்"
+
+#, java-printf-format
+msgctxt "blocked_messages"
+msgid "Blocked Messages"
+msgstr "தடுக்கப்பட்ட செய்திகள்"
+
+#, java-printf-format
+msgctxt "blocked_delete_alert"
+msgid "Do you want to delete blocked requests of '%1$s'?"
+msgstr "'%1$s' இன் தடுக்கப்பட்ட கோரிக்கைகளை நீக்க விரும்புகிறீர்களா?"
+
+#, java-printf-format
+msgctxt "blocked_contact_question"
+msgid "Do you want to add peer '%1$s' to contacts?"
+msgstr "தொடர்புகளில் தம '%1$s' ஐச் சேர்க்க விரும்புகிறீர்களா?"
 
 #.  Calls Activity
 #, java-printf-format
@@ -872,32 +933,22 @@ msgid "Duration"
 msgstr "காலம்"
 
 #, java-printf-format
-msgctxt "playing_recording"
-msgid "Playing recording …"
-msgstr "பதிவு விளையாடுவது…"
-
-#, java-printf-format
-msgctxt "calls_call_message_question"
-msgid "Do you want to call or send message to '%1$s'?"
-msgstr "'%1$s' க்கு அழைக்க அல்லது செய்தியை அனுப்ப விரும்புகிறீர்களா?"
-
-#, java-printf-format
 msgctxt "calls_add_delete_question"
 msgid ""
-"Do you want to add '%1$s' to contacts or delete %2$s from call history?"
+"Do you want to add '%1$s' to contacts, copy its URI, or delete this %2$s "
+"from call history?"
 msgstr ""
-"நீங்கள் தொடர்புகளுக்கு '%1$s' ஐ சேர்க்க விரும்புகிறீர்களா அல்லது அழைப்பு "
-"வரலாற்றிலிருந்து %2$s ஐ நீக்க விரும்புகிறீர்களா?"
+"தொடர்புகளில் '%1$s' ஐச் சேர்க்க விரும்புகிறீர்களா, அதன் யூரி ஐ நகலெடுக்க "
+"விரும்புகிறீர்களா அல்லது அழைப்பு வரலாற்றிலிருந்து இந்த %2$s ஐ நீக்க "
+"விரும்புகிறீர்களா?"
 
 #, java-printf-format
 msgctxt "calls_delete_question"
-msgid "Do you want to delete '%1$s' %2$s from call history?"
-msgstr "அழைப்பு வரலாற்றிலிருந்து ' %1$s' %2$s ஐ நீக்க விரும்புகிறீர்களா?"
-
-#, java-printf-format
-msgctxt "delete_history"
-msgid "Delete"
-msgstr "நீக்கு"
+msgid ""
+"Do you want to copy URI of '%1$s' or delete this %2$s from call history?"
+msgstr ""
+"'%1$s' இன் யூரி ஐ நகலெடுக்க விரும்புகிறீர்களா அல்லது அழைப்பு "
+"வரலாற்றிலிருந்து இந்த %2$s ஐ நீக்க விரும்புகிறீர்களா?"
 
 #, java-printf-format
 msgctxt "disable_history"
@@ -914,12 +965,53 @@ msgctxt "delete_history_alert"
 msgid "Do you want to delete call history of account '%1$s'?"
 msgstr "கணக்கின் அழைப்பு வரலாற்றை '%1$s' ஐ நீக்க விரும்புகிறீர்களா?"
 
-#.  Chat Activity
 #, java-printf-format
-msgctxt "chat"
-msgid "Chat Messages"
-msgstr "அரட்டை செய்திகள்"
+msgctxt "call_answered"
+msgid "Call answered"
+msgstr "அழைப்பு பதிலளித்தது"
 
+#, java-printf-format
+msgctxt "call_answered_elsewhere"
+msgid "Call answered elsewhere"
+msgstr "வேறொரு இடத்தில் அழைப்பு வந்தது"
+
+#, java-printf-format
+msgctxt "call_missed"
+msgid "Call missed"
+msgstr "அழைப்பு தவறிவிட்டது"
+
+#, java-printf-format
+msgctxt "call_rejected"
+msgid "Call rejected"
+msgstr "அழைப்பு நிராகரிக்கப்பட்டது"
+
+#.  Call Details Activity
+#, java-printf-format
+msgctxt "playing_recording"
+msgid "Playing recording …"
+msgstr "பதிவு விளையாடுவது…"
+
+#, java-printf-format
+msgctxt "save_recording"
+msgid "Save Recording"
+msgstr "பதிவைச் சேமிக்கவும்"
+
+#, java-printf-format
+msgctxt "save_recording_question"
+msgid "Do you want to save this recording?"
+msgstr "இந்தப் பதிவைச் சேமிக்க விரும்புகிறீர்களா?"
+
+#, java-printf-format
+msgctxt "recording_saved"
+msgid "Recording saved"
+msgstr "பதிவு சேமிக்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "delete_call_alert"
+msgid "Do you want to delete this call from history?"
+msgstr "இந்த அழைப்பை வரலாற்றிலிருந்து நீக்க விரும்புகிறீர்களா?"
+
+#.  Chat Activity
 #, java-printf-format
 msgctxt "chat_with"
 msgid "Chat with %1$s"
@@ -979,11 +1071,6 @@ msgid "New Chat Peer"
 msgstr "புதிய அரட்டை பியர்"
 
 #, java-printf-format
-msgctxt "invalid_chat_peer_uri"
-msgid "Invalid chat peer URI"
-msgstr "தவறான அரட்டை பியர் யூரி"
-
-#, java-printf-format
 msgctxt "long_chat_question"
 msgid "Do you want to delete chat with peer '%1$s' or add peer to contacts?"
 msgstr ""
@@ -994,11 +1081,6 @@ msgstr ""
 msgctxt "short_chat_question"
 msgid "Do you want to delete chat with '%1$s'?"
 msgstr "'%1$s' உடன் அரட்டையை நீக்க விரும்புகிறீர்களா?"
-
-#, java-printf-format
-msgctxt "delete_chats"
-msgid "Delete"
-msgstr "நீக்கு"
 
 #, java-printf-format
 msgctxt "delete_chats_alert"
@@ -1012,34 +1094,11 @@ msgid "Audio Codecs"
 msgstr "ஆடியோ கோடெக்குகள்"
 
 #, java-printf-format
-msgctxt "audio_codecs_help"
-msgid ""
-"List of audio codecs in priority order. Drag to reorder, long click to "
-"enable or disable."
-msgstr ""
-"முன்னுரிமை வரிசையில் ஆடியோ கோடெக்குகளின் பட்டியல். மறுதொடக்கம் செய்ய "
-"இழுக்கவும், இயக்க அல்லது முடக்க நீண்ட சொடுக்கவும்."
-
-#, java-printf-format
 msgctxt "video_codecs"
 msgid "Video Codecs"
 msgstr "வீடியோ கோடெக்குகள்"
 
-#, java-printf-format
-msgctxt "video_codecs_help"
-msgid ""
-"List of video codecs in priority order. Drag to reorder, long click to "
-"enable or disable."
-msgstr ""
-"முன்னுரிமை வரிசையில் வீடியோ கோடெக்குகளின் பட்டியல். மறுதொடக்கம் செய்ய "
-"இழுக்கவும், இயக்க அல்லது முடக்க நீண்ட சொடுக்கவும்."
-
-#, java-printf-format
-msgctxt "codec_action"
-msgid "Reorder"
-msgstr "மறுவரிசை"
-
-#.  Config Activity
+#.  Settings Activity
 #, java-printf-format
 msgctxt "configuration"
 msgid "Settings"
@@ -1052,10 +1111,13 @@ msgstr "தானாகத் தொடங்குங்கள்"
 
 #, java-printf-format
 msgctxt "start_automatically_help"
-msgid "If checked, baresip starts automatically after device (re)start."
+msgid ""
+"If checked, baresip starts automatically after device boots or after a new "
+"version of baresip is installed. Start is delayed until device is unlocked."
 msgstr ""
-"சரிபார்க்கப்பட்டால், சாதனம் (மறு) தொடங்கிய பின் PARESIP தானாகத் "
-"தொடங்குகிறது."
+"சரிபார்க்கப்பட்டால், சாதனம் துவங்கிய பிறகு அல்லது baresip இன் புதிய பதிப்பு "
+"நிறுவப்பட்ட பிறகு baresip தானாகவே தொடங்கும். சாதனம் திறக்கப்படும் வரை "
+"தொடங்குவது தாமதமாகும்."
 
 #, java-printf-format
 msgctxt "appear_on_top_permission"
@@ -1070,13 +1132,12 @@ msgstr "பேட்டரி மேம்படுத்தல்கள்"
 #, java-printf-format
 msgctxt "battery_optimizations_help"
 msgid ""
-"Disable battery optimizations (recommended) if you want to reduce likelihood"
-" that Android restricts baresip's access to network or enters baresip to "
-"standby state."
+"Disable battery optimizations if you want to reduce likelihood that Android "
+"restricts baresip's access to network or enters baresip to standby state."
 msgstr ""
-"பேட்டரி மேம்படுத்தல்களை முடக்கு (பரிந்துரைக்கப்படுகிறது) ஆண்ட்ராய்டு "
-"ப்ரெசிப்பின் நெட்வொர்க்கிற்கான அணுகலை கட்டுப்படுத்தும் அல்லது காத்திருப்பு "
-"நிலைக்கு பெரெசிப்பில் நுழைகிறது என்ற வாய்ப்பைக் குறைக்க விரும்பினால்."
+"ஆண்ட்ராய்டு baresip இன் நெட்வொர்க்குக்கான அணுகலைக் கட்டுப்படுத்தும் அல்லது "
+"காத்திருப்பு நிலைக்கு baresip நுழையும் வாய்ப்பைக் குறைக்க விரும்பினால், "
+"பேட்டரி மேம்படுத்தல்களை முடக்கவும்."
 
 #, java-printf-format
 msgctxt "default_phone_app"
@@ -1085,18 +1146,35 @@ msgstr "இயல்புநிலை தொலைபேசி பயன்ப�
 
 #, java-printf-format
 msgctxt "dialer_role_not_available"
-msgid "Dialer role is not available"
-msgstr "டயலர் பங்கு கிடைக்கவில்லை"
+msgid "Default phone app role is not available"
+msgstr "இயல்புநிலை ஃபோன் ஆப்ச் பங்கு கிடைக்கவில்லை"
 
 #, java-printf-format
 msgctxt "default_phone_app_help"
-msgid ""
-"If checked, baresip is the default phone app. Do not check if your device "
-"may need to handle also other than SIP calls or messages."
+msgid "If checked, baresip is the default phone app."
+msgstr "சரிபார்க்கப்பட்டால், baresip என்பது இயல்புநிலை ஃபோன் பயன்பாடாகும்."
+
+#, java-printf-format
+msgctxt "default_messaging_app"
+msgid "Default Messaging App"
+msgstr "இயல்புநிலை செய்தியிடல் பயன்பாடு"
+
+#, java-printf-format
+msgctxt "default_messaging_app_help"
+msgid "If checked, baresip is the default messaging app for SMS/MMS."
 msgstr ""
-"சரிபார்க்கப்பட்டால், PARESIP இயல்புநிலை தொலைபேசி பயன்பாடாகும். SIP "
-"அழைப்புகள் அல்லது செய்திகளைத் தவிர உங்கள் சாதனம் கையாள வேண்டுமா என்று "
-"சரிபார்க்க வேண்டாம்."
+"சரிபார்த்தால், SMS/MMSக்கான இயல்புநிலை செய்தியிடல் பயன்பாடானது baresip "
+"ஆகும்."
+
+#, java-printf-format
+msgctxt "messaging_role_not_available"
+msgid "Default messaging app role is not available"
+msgstr "இயல்புநிலை messaging பயன்பாடு role is not available"
+
+#, java-printf-format
+msgctxt "enable_default_messaging"
+msgid "Please enable Default Messaging App in Settings"
+msgstr "அமைப்புகளில் இயல்புநிலை செய்தியிடல் பயன்பாட்டை இயக்கவும்"
 
 #, java-printf-format
 msgctxt "listen_address"
@@ -1145,6 +1223,31 @@ msgstr ""
 " அல்லது IPv6 தேர்ந்தெடுக்கப்பட்டால், PARESIP IPv4 அல்லது IPv6 முகவரிகளை "
 "மட்டுமே பயன்படுத்துகிறது. இரண்டுமே தேர்வு செய்யப்படாவிட்டால், பரெசிப் ஐபிவி "
 "4 மற்றும் ஐபிவி 6 முகவரிகளைப் பயன்படுத்துகிறது."
+
+#, java-printf-format
+msgctxt "transport_protocols"
+msgid "Transport Protocols"
+msgstr "போக்குவரத்து நெறிமுறைகள்"
+
+#, java-printf-format
+msgctxt "transport_protocols_help"
+msgid ""
+"Comma separated list of supported SIP request/response transport protocols. "
+"If left empty, default value is 'udp,tcp,tls,ws,wss' that includes all "
+"supported transport protocols. List only the ones you need. Use of UDP is "
+"not recommended for security and other reasons."
+msgstr ""
+"ஆதரிக்கப்படும் SIP கோரிக்கை/பதில் போக்குவரத்து நெறிமுறைகளின் கமாவால் "
+"பிரிக்கப்பட்ட பட்டியல். காலியாக விட்டால், இயல்புநிலை மதிப்பு "
+"'udp,tcp,tls,ws,wss' ஆகும், இதில் ஆதரிக்கப்படும் அனைத்து போக்குவரத்து "
+"நெறிமுறைகளும் அடங்கும். உங்களுக்கு தேவையானவற்றை மட்டும் பட்டியலிடுங்கள். "
+"பாதுகாப்பு மற்றும் பிற காரணங்களுக்காக UDPஐப் பயன்படுத்துவது "
+"பரிந்துரைக்கப்படவில்லை."
+
+#, java-printf-format
+msgctxt "invalid_transport_protocols"
+msgid "Invalid Transport Protocols list"
+msgstr "தவறான போக்குவரத்து நெறிமுறைகள் பட்டியல்"
 
 #, java-printf-format
 msgctxt "dns_servers"
@@ -1238,6 +1341,23 @@ msgid "No External Storage read permission"
 msgstr "வெளிப்புற சேமிப்பு வாசிப்பு இசைவு இல்லை"
 
 #, java-printf-format
+msgctxt "unique_contact_uri"
+msgid "Unique Contact URI"
+msgstr "தனிப்பட்ட தொடர்பு யூரி"
+
+#, java-printf-format
+msgctxt "unique_contact_uri_help"
+msgid ""
+"If checked, Contact URI is guaranteed to be unique. Needs to be checked if "
+"there is more than one account with the same SIP URI userpart, but also "
+"improves protection of the accounts from attacks."
+msgstr ""
+"சரிபார்க்கப்பட்டால், தொடர்பு யூரி தனித்துவமானது என்பது உறுதி. ஒரே SIP யூரி "
+"பயனர் பகுதியுடன் ஒன்றுக்கும் மேற்பட்ட கணக்குகள் இருந்தால் சரிபார்க்கப்பட "
+"வேண்டும், ஆனால் தாக்குதல்களில் இருந்து கணக்குகளின் பாதுகாப்பையும் "
+"மேம்படுத்துகிறது."
+
+#, java-printf-format
 msgctxt "audio_settings"
 msgid "Audio Settings"
 msgstr "ஆடியோ அமைப்புகள்"
@@ -1274,11 +1394,6 @@ msgid "Failed to load module."
 msgstr "தொகுதி ஏற்றுவதில் தோல்வி."
 
 #, java-printf-format
-msgctxt "aec"
-msgid "Acoustic Echo Cancellation"
-msgstr "ஒலி எதிரொலி ரத்து"
-
-#, java-printf-format
 msgctxt "microphone_gain"
 msgid "Microphone Gain"
 msgstr "மைக்ரோஃபோன் ஆதாயம்"
@@ -1300,11 +1415,6 @@ msgid "Invalid Microphone Gain value"
 msgstr "தவறான மைக்ரோஃபோன் ஆதாய மதிப்பு"
 
 #, java-printf-format
-msgctxt "_1.0"
-msgid "1.0"
-msgstr "1.0"
-
-#, java-printf-format
 msgctxt "opus_bit_rate"
 msgid "Opus Bit Rate"
 msgstr "ஓபச் பிட் வீதம்"
@@ -1317,11 +1427,6 @@ msgid ""
 msgstr ""
 "ஓபச் ஆடியோ ச்ட்ரீம் பயன்படுத்தும் சராசரி அதிகபட்ச பிட் வீதம். "
 "செல்லுபடியாகும் மதிப்புகள் 6000-510000. தொழிற்சாலை இயல்புநிலை 28000 ஆகும்."
-
-#, java-printf-format
-msgctxt "_28000"
-msgid "28000"
-msgstr "28000"
 
 #, java-printf-format
 msgctxt "opus_packet_loss"
@@ -1338,11 +1443,6 @@ msgstr ""
 "எதிர்பார்க்கப்படும் ஓபச் ஆடியோ ச்ட்ரீம் பாக்கெட் இழப்பு விழுக்காடு, 0–100 "
 "முதல். தொழிற்சாலை இயல்புநிலை மதிப்பு 1. மதிப்பு 0 மேலும் ஓபச் முன்னோக்கி "
 "பிழை திருத்தம் (FEC) ஐ முடக்குகிறது."
-
-#, java-printf-format
-msgctxt "_0"
-msgid "0"
-msgstr "0"
 
 #, java-printf-format
 msgctxt "invalid_opus_bitrate"
@@ -1406,6 +1506,40 @@ msgstr "இருண்ட கருப்பொருள்"
 msgctxt "dark_theme_help"
 msgid "Force dark display theme"
 msgstr "இருண்ட காட்சி கருப்பொருள் கட்டாயப்படுத்துங்கள்"
+
+#, java-printf-format
+msgctxt "dynamic_colors"
+msgid "Dynamic Colors"
+msgstr "மாறும் நிறங்கள்"
+
+#, java-printf-format
+msgctxt "dynamic_colors_help"
+msgid "Use dynamic colors if enabled in Android Settings"
+msgstr ""
+"ஆண்ட்ராய்டு அமைப்புகளில் இயக்கப்பட்டிருந்தால் மாறும் வண்ணங்களைப் "
+"பயன்படுத்தவும்"
+
+#, java-printf-format
+msgctxt "colorblind"
+msgid "Colorblind"
+msgstr "நிறக்குருடு"
+
+#, java-printf-format
+msgctxt "colorblind_help"
+msgid "Use colorblind friendly registration status icons"
+msgstr "வண்ணக்குருடு நட்பு பதிவு நிலை சின்னங்களைப் பயன்படுத்தவும்"
+
+#, java-printf-format
+msgctxt "proximity_sensing"
+msgid "Proximity Sensing"
+msgstr "ப்ராக்சிமிட்டி சென்சிங்"
+
+#, java-printf-format
+msgctxt "proximity_sensing_help"
+msgid "If checked, proximity sensing is active during calls."
+msgstr ""
+"சரிபார்க்கப்பட்டால், அழைப்புகளின் போது ப்ராக்சிமிட்டி சென்சிங் செயலில் "
+"இருக்கும்."
 
 #, java-printf-format
 msgctxt "video_size"
@@ -1553,7 +1687,7 @@ msgctxt "consent_request"
 msgid "Consent Request"
 msgstr "ஒப்புதல் கோரிக்கை"
 
-#, java-printf-format
+#, java-printf-format, xml-text
 msgctxt "contacts_consent"
 msgid ""
 "If Android contacts is chosen, they can be used in calling and messaging as "
@@ -1573,11 +1707,6 @@ msgstr ""
 
 #.  Contact Activity
 #, java-printf-format
-msgctxt "contact"
-msgid "Contact"
-msgstr "தொடர்பு"
-
-#, java-printf-format
 msgctxt "new_contact"
 msgid "New Contact"
 msgstr "புதிய தொடர்பு"
@@ -1586,6 +1715,16 @@ msgstr "புதிய தொடர்பு"
 msgctxt "contact_name"
 msgid "Name"
 msgstr "பெயர்"
+
+#, java-printf-format
+msgctxt "label"
+msgid "Label"
+msgstr "சிட்டை"
+
+#, java-printf-format
+msgctxt "email"
+msgid "Email"
+msgstr "மின்னஞ்சல்"
 
 #, java-printf-format
 msgctxt "sip_or_tel_uri"
@@ -1621,9 +1760,14 @@ msgid "Contact '%1$s' already exists."
 msgstr "'%1$s' ஐ தொடர்பு கொள்ளுங்கள்."
 
 #, java-printf-format
-msgctxt "invalid_contact_uri"
-msgid "Invalid SIP URI"
-msgstr "தவறான SIP யூரி"
+msgctxt "contact_no_sip_or_tel_uri"
+msgid "Contact '%1$s' has no SIP or TEL URI"
+msgstr "தொடர்பு '%1$s' இல் SIP அல்லது TEL யூரி இல்லை"
+
+#, java-printf-format
+msgctxt "contact_no_tel_uri"
+msgid "Contact '%1$s' has no TEL URI"
+msgstr "தொடர்பு '%1$s' இல் TEL யூரி இல்லை"
 
 #, java-printf-format
 msgctxt "android_contact_help"
@@ -1648,9 +1792,20 @@ msgid "Do you want to call or send message to '%1$s'?"
 msgstr "'%1$s' க்கு அழைக்க அல்லது செய்தியை அனுப்ப விரும்புகிறீர்களா?"
 
 #, java-printf-format
+msgctxt "contact_email_action_question"
+msgid "Do you want to call, send message, or email to '%1$s'?"
+msgstr ""
+"'%1$s'க்கு அழைக்க, செய்தி அனுப்ப அல்லது மின்னஞ்சல் செய்ய விரும்புகிறீர்களா?"
+
+#, java-printf-format
 msgctxt "send_message"
 msgid "Send Message"
 msgstr "செய்தி அனுப்பவும்"
+
+#, java-printf-format
+msgctxt "send_email"
+msgid "Send Email"
+msgstr "மின்னஞ்சல் அனுப்பவும்"
 
 #, java-printf-format
 msgctxt "contact_delete_question"
@@ -1658,9 +1813,44 @@ msgid "Do you want to delete contact '%1$s'?"
 msgstr "'%1$s' என்ற தொடர்பை நீக்க விரும்புகிறீர்களா?"
 
 #, java-printf-format
-msgctxt "contacts_exceeded"
-msgid "Your maximum number of contacts %1$d has been exceeded."
-msgstr "உங்கள் அதிகபட்ச தொடர்புகள் %1$d ஐ மீறிவிட்டது."
+msgctxt "contacts_delete_question"
+msgid "Do you want to delete all contacts?"
+msgstr "எல்லா தொடர்புகளையும் நீக்க வேண்டுமா?"
+
+#, java-printf-format
+msgctxt "search"
+msgid "Search"
+msgstr "தேடல்"
+
+#, java-printf-format
+msgctxt "import_contacts"
+msgid "Import"
+msgstr "இறக்குமதி"
+
+#, java-printf-format
+msgctxt "export_contacts"
+msgid "Export"
+msgstr "ஏற்றுமதி"
+
+#, java-printf-format
+msgctxt "contact_import_success"
+msgid "Contacts imported successfully"
+msgstr "தொடர்புகள் வெற்றிகரமாக இறக்குமதி செய்யப்பட்டன"
+
+#, java-printf-format
+msgctxt "contact_import_failure"
+msgid "Failed to import contacts"
+msgstr "தொடர்புகளை இறக்குமதி செய்ய முடியவில்லை"
+
+#, java-printf-format
+msgctxt "contact_export_success"
+msgid "Contacts exported successfully"
+msgstr "தொடர்புகள் வெற்றிகரமாக ஏற்றுமதி செய்யப்பட்டன"
+
+#, java-printf-format
+msgctxt "contact_export_failure"
+msgid "Failed to export contacts"
+msgstr "தொடர்புகளை ஏற்றுமதி செய்ய முடியவில்லை"
 
 #.  Generic
 #, java-printf-format
@@ -1682,6 +1872,21 @@ msgstr "அறிவிப்பு"
 msgctxt "cancel"
 msgid "Cancel"
 msgstr "ரத்துசெய்"
+
+#, java-printf-format
+msgctxt "stop"
+msgid "Stop"
+msgstr "நிறுத்து"
+
+#, java-printf-format
+msgctxt "reply"
+msgid "Reply"
+msgstr "பதில்"
+
+#, java-printf-format
+msgctxt "save"
+msgid "Save"
+msgstr "சேமி"
 
 #, java-printf-format
 msgctxt "ok"
@@ -1709,21 +1914,6 @@ msgid "Deny"
 msgstr "மறுக்கவும்"
 
 #, java-printf-format
-msgctxt "user_id"
-msgid "User ID"
-msgstr "பயனர் ஐடி"
-
-#, java-printf-format
-msgctxt "password"
-msgid "Password"
-msgstr "கடவுச்சொல்"
-
-#, java-printf-format
-msgctxt "sip_uri"
-msgid "SIP URI"
-msgstr "சிப்"
-
-#, java-printf-format
 msgctxt "add"
 msgid "Add"
 msgstr "கூட்டு"
@@ -1739,9 +1929,14 @@ msgid "Edit"
 msgstr "தொகு"
 
 #, java-printf-format
-msgctxt "send"
-msgid "Send"
-msgstr "அனுப்பு"
+msgctxt "copy_uri"
+msgid "Copy URI"
+msgstr "யூரி ஐ நகலெடுக்கவும்"
+
+#, java-printf-format
+msgctxt "copied_to_clipboard"
+msgid "Copied to clipboard"
+msgstr "இடைநிலைப்பலகைக்கு நகலெடுக்கப்பட்டது"
 
 #, java-printf-format
 msgctxt "status"
@@ -1752,11 +1947,6 @@ msgstr "நிலை"
 msgctxt "error"
 msgid "Error"
 msgstr "பிழை"
-
-#, java-printf-format
-msgctxt "help"
-msgid "Help"
-msgstr "உதவி"
 
 #, java-printf-format
 msgctxt "confirmation"
@@ -1791,7 +1981,7 @@ msgstr "தவறான SIP அல்லது TEL யூரி '%1$s'"
 #, java-printf-format
 msgctxt "baresip"
 msgid "baresip"
-msgstr "Paresip"
+msgstr "பாரேசிப்"
 
 #, java-printf-format
 msgctxt "android"
@@ -1812,7 +2002,7 @@ msgstr "மீட்டெடு"
 #, java-printf-format
 msgctxt "logcat"
 msgid "Logcat"
-msgstr "Logcat"
+msgstr "லாக்கேட்"
 
 #, java-printf-format
 msgctxt "about"
@@ -1845,14 +2035,9 @@ msgid "Diverted by …"
 msgstr "திருப்பி விடப்பட்டது…"
 
 #, java-printf-format
-msgctxt "transferring_call_to_dots"
-msgid "Transferring call to …"
-msgstr "அழைப்பை மாற்றுவது…"
-
-#, java-printf-format
-msgctxt "invalid_sip_uri"
-msgid "Invalid SIP URI '%1$s'"
-msgstr "தவறான SIP யூரி '%1$s'"
+msgctxt "diverted_by"
+msgid "diverted by"
+msgstr "மூலம் திசை திருப்பப்பட்டது"
 
 #, java-printf-format
 msgctxt "no_telephony_provider"
@@ -1860,14 +2045,9 @@ msgid "Account '%1$s' has no Telephony Provider"
 msgstr "கணக்கு '%1$s' தொலைபேசி வழங்குநர் இல்லை"
 
 #, java-printf-format
-msgctxt "callee"
-msgid "Callee"
-msgstr "அழைப்படுபவர்"
-
-#, java-printf-format
-msgctxt "hangup"
-msgid "Hangup"
-msgstr "ஏங்கப்"
+msgctxt "no_telephone_number"
+msgid "Mobile call only be made to telephone number"
+msgstr "அலைபேசி எண்ணுக்கு மட்டுமே மொபைல் அழைப்பு செய்ய வேண்டும்"
 
 #, java-printf-format
 msgctxt "video_call"
@@ -1895,9 +2075,9 @@ msgid "Accept receiving video from '%1$s'?"
 msgstr "'%1$s' இலிருந்து வீடியோவைப் பெறுவதை ஏற்றுக்கொள்கிறீர்களா?"
 
 #, java-printf-format
-msgctxt "hold"
-msgid "Call Hold/Unhold"
-msgstr "ஓல்ட்/அவிழ்த்து விடுங்கள்"
+msgctxt "call_is_ringing"
+msgid "Call is ringing"
+msgstr "அழைப்பு ஒலிக்கிறது"
 
 #, java-printf-format
 msgctxt "call_is_on_hold"
@@ -1905,9 +2085,9 @@ msgid "Call is on hold"
 msgstr "அழைப்பு நிறுத்தி வைக்கப்பட்டுள்ளது"
 
 #, java-printf-format
-msgctxt "mic"
-msgid "Microphone On/Off"
-msgstr "மைக்ரோஃபோன் ஆன்/ஆஃப்"
+msgctxt "call_is_connected"
+msgid "Call is connected"
+msgstr "அழைப்பு இணைக்கப்பட்டுள்ளது"
 
 #, java-printf-format
 msgctxt "rec_in_call"
@@ -1948,6 +2128,11 @@ msgstr "இடமாற்றம்"
 msgctxt "transfer_failed"
 msgid "Transfer failed"
 msgstr "இடமாற்றம் தோல்வியுற்றது"
+
+#, java-printf-format
+msgctxt "replaces_not_supported"
+msgid "Peer does not support REPLACES feature"
+msgstr "ஒப்பி does not support REPLACES feature"
 
 #, java-printf-format
 msgctxt "dtmf"
@@ -2000,11 +2185,6 @@ msgid "Jitter: %1$s (ms)"
 msgstr "நடுக்கம்: %1$s (எம்.எச்)"
 
 #, java-printf-format
-msgctxt "voicemail"
-msgid "Voicemail"
-msgstr "குரல் அஞ்சல்"
-
-#, java-printf-format
 msgctxt "voicemail_messages"
 msgid "Voicemail Messages"
 msgstr "குரல் அஞ்சல் செய்திகள்"
@@ -2048,16 +2228,6 @@ msgstr "உங்களிடம் செய்திகள் இல்லை"
 msgctxt "listen"
 msgid "Listen"
 msgstr "கேளுங்கள்"
-
-#, java-printf-format
-msgctxt "messages"
-msgid "Messages"
-msgstr "செய்திகள்"
-
-#, java-printf-format
-msgctxt "dialpad"
-msgid "Dialpad"
-msgstr "டயல்பேட்"
 
 #, java-printf-format
 msgctxt "call_already_active"
@@ -2112,8 +2282,8 @@ msgstr "'%1$s' என்று அழைப்பதற்கான கோரி
 
 #, java-printf-format
 msgctxt "redirect_notice"
-msgid "Automatic redirection to '%1$s'\\"
-msgstr "'%1$s' \\ க்கு தானியங்கி திருப்பிவிடுதல் \\"
+msgid "Automatic redirection to '%1$s'"
+msgstr "'%1$s' க்கு தானியங்கி திருப்பிவிடுதல்"
 
 #, java-printf-format
 msgctxt "redirect_request"
@@ -2221,18 +2391,16 @@ msgstr ""
 "\"அறிவிப்புகள்\" இசைவு இல்லாமல் இந்த பயன்பாட்டை நீங்கள் பயன்படுத்த முடியாது."
 
 #, java-printf-format
+msgctxt "airplane_mode"
+msgid "Airplane mode is ON. Turn it OFF to use mobile account."
+msgstr ""
+"விமானப் பயன்முறை இயக்கத்தில் உள்ளது. மொபைல் கணக்கைப் பயன்படுத்த, அதை "
+"அணைக்கவும்."
+
+#, java-printf-format
 msgctxt "no_calls"
 msgid "baresip needs \"Microphone\" permission for voice calls."
 msgstr "குரல் அழைப்புகளுக்கு BARESIP க்கு \"மைக்ரோஃபோன்\" இசைவு தேவை."
-
-#, java-printf-format
-msgctxt "no_bluetooth"
-msgid ""
-"baresip is not able to detect Bluetooth connectivity without \"Nearby "
-"devices\" permission."
-msgstr ""
-"\"அருகிலுள்ள சாதனங்கள்\" இசைவு இல்லாமல் ஊடலை இணைப்பைக் கண்டறிய பாரெசிப்பால் "
-"முடியவில்லை."
 
 #, java-printf-format
 msgctxt "no_video_calls"
@@ -2258,12 +2426,7 @@ msgstr "\"தொடர்புகள்\" அனுமதியின்றி 
 #, java-printf-format
 msgctxt "no_cameras"
 msgid "No supported video cameras!"
-msgstr "காணொளி நிழற்படபதிப்பான்கள் எதுவும் இல்லை."
-
-#, java-printf-format
-msgctxt "show_password"
-msgid "Show Password"
-msgstr "கடவுச்சொல்லைக் காட்டு"
+msgstr "காணொளி நிழற்படபதிப்பான்கள் எதுவும் இல்லை!"
 
 #, java-printf-format
 msgctxt "no_network"
@@ -2322,10 +2485,10 @@ msgstr "அழைப்பு பதிவு"
 msgctxt "call_recording_tip"
 msgid ""
 "If activated, new incoming and outgoing calls will be recorded. Recordings "
-"can be played on Call Details page"
+"can be played on Call Details page."
 msgstr ""
-"செயல்படுத்தப்பட்டால், புதிய உள்வரும் மற்றும் வெளிச்செல்லும் அழைப்புகள் பதிவு"
-" செய்யப்படும். அழைப்பு விவரங்கள் பக்கத்தில் பதிவுகளை இயக்கலாம்"
+"செயல்படுத்தப்பட்டால், புதிய உள்வரும் மற்றும் வெளிச்செல்லும் அழைப்புகள் "
+"பதிவுசெய்யப்படும். அழைப்பு விவரங்கள் பக்கத்தில் பதிவுகளை இயக்கலாம்."
 
 #, java-printf-format
 msgctxt "microphone_title"

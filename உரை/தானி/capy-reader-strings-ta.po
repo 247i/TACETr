@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Capy Reader)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-27 09:47+0200\n"
-"PO-Revision-Date: 2025-04-27 14:13\n"
+"POT-Creation-Date: 2026-06-24 16:51+0200\n"
+"PO-Revision-Date: 2026-06-25 02:44\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/capy-reader/strings/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 #, java-printf-format
 msgctxt "app_name"
@@ -31,8 +31,8 @@ msgstr "பெயர்"
 
 #, java-printf-format
 msgctxt "add_feed_new_folder_title"
-msgid "New Tag"
-msgstr "புதிய குறிச்சொல்"
+msgid "New Folder"
+msgstr "புதிய கோப்புறை"
 
 #, java-printf-format
 msgctxt "add_feed_submit"
@@ -55,6 +55,21 @@ msgid "Starred"
 msgstr "நடித்தார்"
 
 #, java-printf-format
+msgctxt "filter_read_later"
+msgid "Saved for Later"
+msgstr "பிறகு சேமிக்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "article_actions_save_for_later"
+msgid "Save for Later"
+msgstr "பின்னர் சேமிக்கவும்"
+
+#, java-printf-format
+msgctxt "saved_for_later_success"
+msgid "Saved for Later"
+msgstr "பிறகு சேமிக்கப்பட்டது"
+
+#, java-printf-format
 msgctxt "filter_unread"
 msgid "Unread"
 msgstr "படிக்காதது"
@@ -63,6 +78,11 @@ msgstr "படிக்காதது"
 msgctxt "filter_all"
 msgid "All"
 msgstr "அனைத்தும்"
+
+#, java-printf-format
+msgctxt "filter_today"
+msgid "Today"
+msgstr "இன்று"
 
 #, java-printf-format
 msgctxt "feed_action_unsubscribe"
@@ -78,6 +98,11 @@ msgstr "தொகு"
 msgctxt "feed_action_edit"
 msgid "Edit Feed"
 msgstr "ஊட்டத்தைத் திருத்து"
+
+#, java-printf-format
+msgctxt "feed_action_reload_icon"
+msgid "Reload Icon"
+msgstr "சின்னத்தை மீண்டும் ஏற்று"
 
 #, java-printf-format
 msgctxt "feed_action_unsubscribe_message"
@@ -101,23 +126,43 @@ msgstr "ரத்துசெய்"
 
 #, java-printf-format
 msgctxt "folder_action_delete_title"
-msgid "Delete Tag"
-msgstr "குறிச்சொல்லை நீக்கு"
+msgid "Delete Folder"
+msgstr "நீக்கு"
+
+#, java-printf-format
+msgctxt "folder_action_delete_message"
+msgid "Are you sure you want to delete tag \"%1$s\"?"
+msgstr "\"%1$s\" குறிச்சொல்லை நிச்சயமாக நீக்க விரும்புகிறீர்களா?"
+
+#, java-printf-format
+msgctxt "folder_action_delete_confirm"
+msgid "Delete"
+msgstr "நீக்கு"
 
 #, java-printf-format
 msgctxt "folder_action_edit"
 msgid "Rename"
-msgstr "மறுபெயரிடுங்கள்"
+msgstr "குறிச்சொல்லைத் திருத்து"
+
+#, java-printf-format
+msgctxt "folder_action_edit_success"
+msgid "Tag updated"
+msgstr "குறிச்சொல் புதுப்பிக்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "folder_action_edit_error"
+msgid "Error updating tag"
+msgstr "குறிச்சொல்லைப் புதுப்பிப்பதில் பிழை"
+
+#, java-printf-format
+msgctxt "folder_name_title"
+msgid "Name"
+msgstr "பெயர்"
 
 #, java-printf-format
 msgctxt "feed_action_unsubscribe_title"
 msgid "Unsubscribe"
 msgstr "குழுவிலகவும்"
-
-#, java-printf-format
-msgctxt "feed_action_edit_success"
-msgid "Feed updated"
-msgstr "ஊட்டம் புதுப்பிக்கப்பட்டது"
 
 #, java-printf-format
 msgctxt "settings"
@@ -213,14 +258,19 @@ msgid "Refresh Feeds"
 msgstr "ஊட்டங்களைப் புதுப்பிக்கவும்"
 
 #, java-printf-format
-msgctxt "nav_headline_tags"
-msgid "Tags"
+msgctxt "nav_headline_folders"
+msgid "Folders"
 msgstr "குறிச்சொற்கள்"
 
 #, java-printf-format
 msgctxt "nav_headline_saved_searches"
 msgid "Searches"
 msgstr "தேடல்கள்"
+
+#, java-printf-format
+msgctxt "freshrss_nav_headline_my_labels"
+msgid "My Labels"
+msgstr "எனது லேபிள்கள்"
 
 #, java-printf-format
 msgctxt "nav_headline_feeds"
@@ -248,18 +298,63 @@ msgid "Couldn't find feed. Check your connection."
 msgstr "ஊட்டத்தைக் கண்டுபிடிக்க முடியவில்லை. உங்கள் இணைப்பைச் சரிபார்க்கவும்."
 
 #, java-printf-format
-msgctxt "edit_feed_error"
-msgid "Error saving feed"
-msgstr "பிழை சேமிப்பு ஊட்டம்"
+msgctxt "add_link_title"
+msgid "Add Link"
+msgstr "இணைப்பைச் சேர்க்கவும்"
 
 #, java-printf-format
-msgctxt "unsubscribe_error"
-msgid "Error unsubscribing from feed"
-msgstr "ஊட்டத்திலிருந்து குழுவிலகும் பிழை"
+msgctxt "tab_add_feed"
+msgid "Add Feed"
+msgstr "ஊட்டத்தைச் சேர்க்கவும்"
 
 #, java-printf-format
-msgctxt "delete_tag_error"
-msgid "Error deleting tag"
+msgctxt "tab_save_page"
+msgid "Save Page"
+msgstr "பக்கத்தைச் சேமிக்கவும்"
+
+#, java-printf-format
+msgctxt "save_page_success"
+msgid "Page saved"
+msgstr "பக்கம் சேமிக்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "save_page_error"
+msgid "Couldn't save page"
+msgstr "பக்கத்தைச் சேமிக்க முடியவில்லை"
+
+#, java-printf-format
+msgctxt "save_page_network_error"
+msgid "Couldn't save page. Check your connection."
+msgstr "பக்கத்தைச் சேமிக்க முடியவில்லை. உங்கள் இணைப்பைச் சரிபார்க்கவும்."
+
+#, java-printf-format
+msgctxt "save_page_submit"
+msgid "Save"
+msgstr "சேமி"
+
+#, java-printf-format
+msgctxt "add_link_searching"
+msgid "Searching for feeds…"
+msgstr "ஊட்டங்களைத் தேடுகிறது…"
+
+#, java-printf-format
+msgctxt "add_link_subscribe"
+msgid "Subscribe"
+msgstr "குழுசேர்"
+
+#, java-printf-format
+msgctxt "add_link_feed_added"
+msgid "Feed added"
+msgstr "ஊட்டம் சேர்க்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "add_link_page_saved"
+msgid "Page saved"
+msgstr "பக்கம் சேமிக்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "delete_folder_error"
+msgid "Error deleting folder"
 msgstr "குறிச்சொல்லை நீக்குவதில் பிழை"
 
 #, java-printf-format
@@ -284,8 +379,8 @@ msgstr "%1$dd"
 
 #, java-printf-format
 msgctxt "article_share"
-msgid "Share Article"
-msgstr "கட்டுரை பகிர்ந்து கொள்ளுங்கள்"
+msgid "Share article"
+msgstr "கட்டுரையைப் பகிரவும்"
 
 #, java-printf-format
 msgctxt "extract_full_content"
@@ -328,6 +423,41 @@ msgid "Copy link"
 msgstr "இணைப்பை நகலெடுக்கவும்"
 
 #, java-printf-format
+msgctxt "freshrss_article_actions_label"
+msgid "Label"
+msgstr "லேபிள்"
+
+#, java-printf-format
+msgctxt "freshrss_nav_headline_categories"
+msgid "Categories"
+msgstr "வகைகள்"
+
+#, java-printf-format
+msgctxt "freshrss_labels_sheet_title"
+msgid "Labels"
+msgstr "லேபிள்கள்"
+
+#, java-printf-format
+msgctxt "freshrss_labels_new_label"
+msgid "New Label"
+msgstr "புதிய லேபிள்"
+
+#, java-printf-format
+msgctxt "freshrss_labels_create_dialog_title"
+msgid "New Label"
+msgstr "புதிய லேபிள்"
+
+#, java-printf-format
+msgctxt "freshrss_labels_create_dialog_label_name"
+msgid "Label name"
+msgstr "லேபிள் பெயர்"
+
+#, java-printf-format
+msgctxt "freshrss_labels_create_dialog_save"
+msgid "Save"
+msgstr "சேமி"
+
+#, java-printf-format
 msgctxt "unauthorized_dialog_title"
 msgid "You're logged out"
 msgstr "நீங்கள் வெளியேறினீர்கள்"
@@ -368,9 +498,14 @@ msgid "Server"
 msgstr "சேவையகம்"
 
 #, java-printf-format
-msgctxt "auth_fields_api_url_freshrss_placeholder"
+msgctxt "auth_fields_api_url_placeholder"
 msgid "https://example.com/"
 msgstr "https://example.com/"
+
+#, java-printf-format
+msgctxt "auth_fields_client_certificate"
+msgid "Client certificate (optional)"
+msgstr "வாடிக்கையாளர் சான்றிதழ் (விரும்பினால்)"
 
 #, java-printf-format
 msgctxt "auth_fields_hide_password"
@@ -386,6 +521,11 @@ msgstr "கடவுச்சொல்லைக் காட்டு"
 msgctxt "auth_fields_log_in_button"
 msgid "Log In"
 msgstr "புகுபதிகை"
+
+#, java-printf-format
+msgctxt "auth_fields_remove_client_cert"
+msgid "Remove client certificate"
+msgstr "வாடிக்கையாளர் சான்றிதழை அகற்று"
 
 #, java-printf-format
 msgctxt "settings_top_bar_title"
@@ -411,6 +551,11 @@ msgstr "ஃபீட்பின்"
 msgctxt "account_source_freshrss"
 msgid "FreshRSS"
 msgstr "ஃப்ரெச்ச்"
+
+#, java-printf-format
+msgctxt "account_source_miniflux"
+msgid "Miniflux"
+msgstr "மினிஃப்ளக்ச்"
 
 #, java-printf-format
 msgctxt "account_source_reader"
@@ -443,6 +588,11 @@ msgid "freshrss.org"
 msgstr "freshrss.org"
 
 #, java-printf-format
+msgctxt "add_account_miniflux_subtitle"
+msgid "miniflux.app"
+msgstr "miniflux.app"
+
+#, java-printf-format
 msgctxt "add_account_reader_subtitle"
 msgid "Self-hosted Google Reader API"
 msgstr "சுய-ஓச்ட் கூகிள் ரீடர் பநிஇ"
@@ -468,6 +618,16 @@ msgid "Find out more."
 msgstr "மேலும் கண்டுபிடிக்கவும்."
 
 #, java-printf-format
+msgctxt "add_account_miniflux_signup_prompt"
+msgid "Don't have a Miniflux instance?"
+msgstr "Miniflux சான்று இல்லையா?"
+
+#, java-printf-format
+msgctxt "add_account_miniflux_signup_link_text"
+msgid "Find out more."
+msgstr "மேலும் அறியவும்."
+
+#, java-printf-format
 msgctxt "transfers_export_subscriptions"
 msgid "Export Subscriptions"
 msgstr "ஏற்றுமதி சந்தாக்கள்"
@@ -481,6 +641,21 @@ msgstr "கணக்கு"
 msgctxt "settings_section_account_server"
 msgid "Server"
 msgstr "சேவையகம்"
+
+#, java-printf-format
+msgctxt "settings_account_refresh_value"
+msgid "%1$s at %2$s"
+msgstr "%2$s இல் %1$s"
+
+#, java-printf-format
+msgctxt "settings_account_refresh_value_today"
+msgid "Today at %1$s"
+msgstr "இன்று %1$s"
+
+#, java-printf-format
+msgctxt "settings_account_never_refreshed"
+msgid "Never"
+msgstr "ஒருபோதும்"
 
 #, java-printf-format
 msgctxt "settings_section_import"
@@ -519,8 +694,18 @@ msgstr "தனியுரிமை"
 
 #, java-printf-format
 msgctxt "settings_section_refresh"
-msgid "Refresh"
-msgstr "புதுப்பிப்பு"
+msgid "Last Updated"
+msgstr "கடைசியாக புதுப்பிக்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "settings_refresh_on_wifi_only"
+msgid "Refresh on Wi-Fi only"
+msgstr "Wi-Fi இல் மட்டும் புதுப்பிக்கவும்"
+
+#, java-printf-format
+msgctxt "refresh_skipped_mobile"
+msgid "Refresh skipped on mobile network"
+msgstr "மொபைல் நெட்வொர்க்கில் புதுப்பிக்கப்பட்டது"
 
 #, java-printf-format
 msgctxt "opml_import_button_text"
@@ -563,6 +748,61 @@ msgid "Theme"
 msgstr "கருப்பொருள்"
 
 #, java-printf-format
+msgctxt "theme_mode_system"
+msgid "System"
+msgstr "மண்டலம்"
+
+#, java-printf-format
+msgctxt "theme_mode_light"
+msgid "Light"
+msgstr "ஒளி"
+
+#, java-printf-format
+msgctxt "theme_mode_dark"
+msgid "Dark"
+msgstr "இருள்"
+
+#, java-printf-format
+msgctxt "theme_mode_label"
+msgid "Mode"
+msgstr "பயன்முறை"
+
+#, java-printf-format
+msgctxt "theme_default"
+msgid "Default"
+msgstr "இயல்புநிலை"
+
+#, java-printf-format
+msgctxt "theme_dynamic"
+msgid "Dynamic"
+msgstr "மாறும்"
+
+#, java-printf-format
+msgctxt "theme_newsprint"
+msgid "Newsprint"
+msgstr "செய்தித்தாள்"
+
+#, java-printf-format
+msgctxt "theme_monochrome"
+msgid "Monochrome"
+msgstr "ஒரே வண்ணமுடையது"
+
+#, java-printf-format
+msgctxt "theme_sunset"
+msgid "Sunset"
+msgstr "சூரிய மறைவு"
+
+#, java-printf-format
+msgctxt "settings_pure_black_dark_mode"
+msgid "Pure black dark mode"
+msgstr "தூய கருப்பு இருண்ட பயன்முறை"
+
+#, java-printf-format
+msgctxt "settings_accent_colors"
+msgid "Accent colors"
+msgstr "உச்சரிப்பு நிறங்கள்"
+
+#, java-printf-format
 msgctxt "theme_menu_option_light"
 msgid "Light"
 msgstr "ஒளி"
@@ -578,8 +818,8 @@ msgid "System default"
 msgstr "கணினி இயல்புநிலை"
 
 #, java-printf-format
-msgctxt "edit_feed_tags"
-msgid "Tags"
+msgctxt "edit_feed_folders"
+msgid "Folders"
 msgstr "குறிச்சொற்கள்"
 
 #, java-printf-format
@@ -633,6 +873,11 @@ msgid "Summary"
 msgstr "சுருக்கம்"
 
 #, java-printf-format
+msgctxt "settings_article_list_shorten_titles"
+msgid "Shorten titles"
+msgstr "தலைப்புகளை சுருக்கவும்"
+
+#, java-printf-format
 msgctxt "settings_section_version"
 msgid "Version"
 msgstr "பதிப்பு"
@@ -653,11 +898,6 @@ msgid "Remember choice to load full article content"
 msgstr "முழு கட்டுரை உள்ளடக்கத்தை ஏற்றுவதற்கான தேர்வை நினைவில் கொள்ளுங்கள்"
 
 #, java-printf-format
-msgctxt "refresh_on_start"
-msgid "On start"
-msgstr "தொடக்கத்தில்"
-
-#, java-printf-format
 msgctxt "empty_onboarding_title"
 msgid "No feeds yet"
 msgstr "இன்னும் ஊட்டங்கள் இல்லை"
@@ -668,6 +908,11 @@ msgid "Start by adding a feed"
 msgstr "ஊட்டத்தைச் சேர்ப்பதன் மூலம் தொடங்கவும்"
 
 #, java-printf-format
+msgctxt "article_list_empty"
+msgid "Nothing here"
+msgstr "இங்கே எதுவும் இல்லை"
+
+#, java-printf-format
 msgctxt "article_style_options"
 msgid "Font style options"
 msgstr "எழுத்துரு நடை விருப்பங்கள்"
@@ -675,17 +920,17 @@ msgstr "எழுத்துரு நடை விருப்பங்கள�
 #, ignore-same, java-printf-format
 msgctxt "font_option_vollkorn"
 msgid "Vollkorn"
-msgstr "முழு தானியங்கள்"
+msgstr "முழு தானியம்"
 
 #, ignore-same, java-printf-format
 msgctxt "font_option_atkinson_hyperlegible"
 msgid "Atkinson Hyperlegible"
-msgstr "அட்கின்சன் ஐப்பர் பிளேசிபிள்"
+msgstr "அட்கின்சன் ஐப்பர்லெசிபிள்"
 
 #, ignore-same, java-printf-format
 msgctxt "font_option_poppins"
 msgid "Poppins"
-msgstr "பாப்பின்ச்"
+msgstr "பாபின்ச்"
 
 #, java-printf-format
 msgctxt "font_option_system_default"
@@ -700,12 +945,12 @@ msgstr "இடை"
 #, java-printf-format
 msgctxt "font_option_jost"
 msgid "Jost"
-msgstr "நகைச்சுவையானது"
+msgstr "சோச்ட்"
 
 #, java-printf-format
 msgctxt "font_option_literata"
 msgid "Literata"
-msgstr "வீதிகள்"
+msgstr "தெருக்கள்"
 
 #, java-printf-format
 msgctxt "article_font_menu_label"
@@ -714,7 +959,37 @@ msgstr "எழுத்துரு"
 
 #, java-printf-format
 msgctxt "article_font_scale_label"
-msgid "Font scale"
+msgid "Font size"
+msgstr "எழுத்துரு அளவு"
+
+#, java-printf-format
+msgctxt "article_style_title_section"
+msgid "Title"
+msgstr "தலைப்பு"
+
+#, java-printf-format
+msgctxt "article_style_text_section"
+msgid "Text"
+msgstr "உரை"
+
+#, java-printf-format
+msgctxt "article_style_title_follow_body_font"
+msgid "Use body font for title"
+msgstr "தலைப்புக்கு உரை எழுத்துருவைப் பயன்படுத்து"
+
+#, java-printf-format
+msgctxt "title_alignment_left"
+msgid "Align left"
+msgstr "இடது சீரமை"
+
+#, java-printf-format
+msgctxt "title_alignment_center"
+msgid "Align center"
+msgstr "நடுவில்"
+
+#, java-printf-format
+msgctxt "article_title_font_scale_label"
+msgid "Font size"
 msgstr "எழுத்துரு அளவு"
 
 #, java-printf-format
@@ -838,6 +1113,16 @@ msgid "Advanced"
 msgstr "மேம்பட்ட"
 
 #, java-printf-format
+msgctxt "settings_section_experimental"
+msgid "Experimental"
+msgstr "ஆய்வு"
+
+#, java-printf-format
+msgctxt "settings_option_enable_audio_player"
+msgid "Audio player"
+msgstr "ஆடியோ பிளேயர்"
+
+#, java-printf-format
 msgctxt "settings_clear_all_articles_confirm"
 msgid "Confirm"
 msgstr "உறுதிப்படுத்தவும்"
@@ -882,19 +1167,29 @@ msgid "Export failed"
 msgstr "ஏற்றுமதி தோல்வியடைந்தது"
 
 #, java-printf-format
+msgctxt "starred_export_button_text"
+msgid "Export Starred Articles"
+msgstr "நட்சத்திரமிட்ட கட்டுரைகளை ஏற்றுமதி செய்யவும்"
+
+#, java-printf-format
+msgctxt "starred_exporter_success"
+msgid "Export complete"
+msgstr "ஏற்றுமதி முடிந்தது"
+
+#, java-printf-format
+msgctxt "starred_exporter_failure"
+msgid "Export failed"
+msgstr "ஏற்றுமதி தோல்வியடைந்தது"
+
+#, java-printf-format
 msgctxt "settings_reader_title"
 msgid "Reader"
 msgstr "வாசகர்"
 
 #, java-printf-format
 msgctxt "settings_options_reader_pin_top_toolbar"
-msgid "Pin Top Toolbar"
-msgstr "மேல் கருவிப்பட்டியை முள்"
-
-#, java-printf-format
-msgctxt "settings_options_reader_show_bottom_toolbar"
-msgid "Show Actions on Bottom Toolbar"
-msgstr "கீழ் கருவிப்பட்டியில் செயல்களைக் காட்டு"
+msgid "Pin Toolbars"
+msgstr "கருவிப்பட்டிகளை பின் செய்யவும்"
 
 #, java-printf-format
 msgctxt "article_bottom_bar_next_article"
@@ -972,22 +1267,27 @@ msgid "Go to next feed"
 msgstr "அடுத்த ஊட்டத்திற்குச் செல்லுங்கள்"
 
 #, java-printf-format
+msgctxt "article_list_swipe_mark_all_read"
+msgid "Mark all as read"
+msgstr "அனைத்தையும் படித்ததாகக் குறிக்கவும்"
+
+#, java-printf-format
 msgctxt "article_list_swipe_disabled"
 msgid "Disabled"
 msgstr "முடக்கப்பட்டது"
 
 #, java-printf-format
-msgctxt "article_list_unread_sort_title"
-msgid "Unread Sort"
-msgstr "படிக்காத வரிசை"
+msgctxt "article_list_sort_title"
+msgid "Article Sort"
+msgstr "கட்டுரை வரிசை"
 
 #, java-printf-format
-msgctxt "article_list_unread_sort_newest_first"
+msgctxt "article_list_sort_newest_first"
 msgid "Newest First"
 msgstr "புதிய முதல்"
 
 #, java-printf-format
-msgctxt "article_list_unread_sort_oldest_first"
+msgctxt "article_list_sort_oldest_first"
 msgid "Oldest First"
 msgstr "முதலில் பழமையானது"
 
@@ -1028,14 +1328,9 @@ msgstr ""
 "டெவலப்பருடன் பகிர்ந்து கொள்ள ஒரு கோப்பில் செயலிழப்பு பதிவுகளை சேமிக்கிறது"
 
 #, java-printf-format
-msgctxt "edit_feed_tags_section"
-msgid "Tags"
+msgctxt "edit_feed_folders_section"
+msgid "Folders"
 msgstr "குறிச்சொற்கள்"
-
-#, java-printf-format
-msgctxt "edit_feed_tag_section"
-msgid "Add or Select Tag"
-msgstr "குறிச்சொல் சேர் அல்லது தேர்வுசெய்"
 
 #, java-printf-format
 msgctxt "edit_feed_notifications_title"
@@ -1058,12 +1353,12 @@ msgid "Periodic refresh must be enabled first"
 msgstr "அவ்வப்போது புதுப்பிப்பு முதலில் இயக்கப்பட வேண்டும்"
 
 #, java-printf-format
-msgctxt "settings_notifications_select_none"
+msgctxt "settings_select_none"
 msgid "Select None"
 msgstr "எதுவுமில்லை என்பதைத் தேர்ந்தெடுக்கவும்"
 
 #, java-printf-format
-msgctxt "settings_notifications_select_all"
+msgctxt "settings_select_all"
 msgid "Select All"
 msgstr "அனைத்தையும் தெரிவுசெய்"
 
@@ -1086,6 +1381,11 @@ msgstr "அனைத்தையும் படித்ததாகக் க�
 msgctxt "settings_mark_read_on_scroll"
 msgid "Mark as read on scroll"
 msgstr "சுருளில் படிக்க மார்க்"
+
+#, java-printf-format
+msgctxt "article_list_new_articles_pill"
+msgid "New articles"
+msgstr "புதிய கட்டுரைகள்"
 
 #, java-printf-format
 msgctxt "settings_gestures_reader_tap_to_page_title"
@@ -1123,6 +1423,11 @@ msgid "Browser"
 msgstr "உலாவி"
 
 #, java-printf-format
+msgctxt "settings_option_show_today_filter"
+msgid "Today"
+msgstr "இன்று"
+
+#, java-printf-format
 msgctxt "reader_image_visibility_show_on_wifi"
 msgid "Only show images on Wi-Fi"
 msgstr "வைஃபை படங்களை மட்டுமே காண்பி"
@@ -1141,21 +1446,6 @@ msgstr "எப்போதும் படங்களைக் காட்ட�
 msgctxt "reader_image_visibility_label"
 msgid "Images"
 msgstr "படங்கள்"
-
-#, java-printf-format
-msgctxt "layout_preference_responsive"
-msgid "Responsive"
-msgstr "பதிலளிக்கக்கூடிய"
-
-#, java-printf-format
-msgctxt "layout_preference_single"
-msgid "Single Column"
-msgstr "ஒற்றை நெடுவரிசை"
-
-#, java-printf-format
-msgctxt "layout_preference_label"
-msgid "Preferred Layout"
-msgstr "விருப்பமான தளவமைப்பு"
 
 #, java-printf-format
 msgctxt "end_of_feed_text"
@@ -1191,6 +1481,11 @@ msgstr "கட்டுரையைப் பெறுவதில் தோல�
 msgctxt "full_content_error_generic"
 msgid "Failed to parse article"
 msgstr "கட்டுரையை அலசத் தவறிவிட்டது"
+
+#, java-printf-format
+msgctxt "full_content_error_forbidden"
+msgid "Fetch blocked by site"
+msgstr "தளத்தால் பெறுதல் தடுக்கப்பட்டது"
 
 #, java-printf-format
 msgctxt "feed_nav_drawer_title"
@@ -1233,22 +1528,22 @@ msgid "Refresh all"
 msgstr "அனைத்தையும் புதுப்பிக்கவும்"
 
 #, java-printf-format
-msgctxt "blocked_keywords"
-msgid "Blocklist"
+msgctxt "filters_title"
+msgid "Filters"
 msgstr "பிளாக்லிச்ட்"
 
 #, java-printf-format
-msgctxt "blocked_keywords_supporting_text"
+msgctxt "filters_supporting_text"
 msgid "Remove articles with title or content keyword matches"
 msgstr "தலைப்பு அல்லது உள்ளடக்க முக்கிய பொருத்தங்களுடன் கட்டுரைகளை அகற்று"
 
 #, java-printf-format
-msgctxt "blocked_keywords_remove_keyword"
+msgctxt "filters_remove_keyword"
 msgid "Remove keyword"
 msgstr "முக்கிய சொல்லை அகற்று"
 
 #, java-printf-format
-msgctxt "blocked_keywords_add_keyword"
+msgctxt "filters_add_keyword"
 msgid "Add keyword"
 msgstr "முக்கிய சொல்லைச் சேர்க்கவும்"
 
@@ -1275,7 +1570,7 @@ msgstr "பெயர்"
 #, java-printf-format
 msgctxt "tag_action_edit_success"
 msgid "Tag updated"
-msgstr "குறிச்சொல் புதுப்பிக்கப்பட்டது"
+msgstr "Tag updated"
 
 #, java-printf-format
 msgctxt "tag_action_edit_error"
@@ -1285,7 +1580,7 @@ msgstr "குறிச்சொல்லைப் புதுப்பிப�
 #, java-printf-format
 msgctxt "tag_action_edit"
 msgid "Edit Tag"
-msgstr "குறிச்சொல்லைத் திருத்து"
+msgstr "தொகு Tag"
 
 #, java-printf-format
 msgctxt "actions_copy_link"
@@ -1296,6 +1591,11 @@ msgstr "இணைப்பை நகலெடுக்கவும்"
 msgctxt "actions_share_link"
 msgid "Share link"
 msgstr "இணைப்பைப் பகிரவும்"
+
+#, java-printf-format
+msgctxt "actions_share_link_with_title"
+msgid "Share text and link"
+msgstr "உரை மற்றும் இணைப்பைப் பகிரவும்"
 
 #, java-printf-format
 msgctxt "widget_receiver_headlines_title"
@@ -1318,6 +1618,31 @@ msgid "Add an account first"
 msgstr "முதலில் ஒரு கணக்கைச் சேர்க்கவும்"
 
 #, java-printf-format
+msgctxt "widget_receiver_spotlight_title"
+msgid "Spotlight"
+msgstr "Spotlight"
+
+#, java-printf-format
+msgctxt "widget_spotlight_empty"
+msgid "No unread articles"
+msgstr "இல்லை unread கட்டுரைகள்"
+
+#, java-printf-format
+msgctxt "widget_spotlight_see_all"
+msgid "See all"
+msgstr "அனைத்தையும் பார்க்கவும்"
+
+#, java-printf-format
+msgctxt "widget_spotlight_previous"
+msgid "Previous"
+msgstr "முந்தைய"
+
+#, java-printf-format
+msgctxt "widget_spotlight_next"
+msgid "Next"
+msgstr "அடுத்தது"
+
+#, java-printf-format
 msgctxt "settings_gestures_improve_talkback_title"
 msgid "Improve TalkBack"
 msgstr "டாக் பேக்கை மேம்படுத்தவும்"
@@ -1326,3 +1651,173 @@ msgstr "டாக் பேக்கை மேம்படுத்தவும�
 msgctxt "settings_gestures_improve_talkback_subtitle"
 msgid "Disables some settings to improve TalkBack text-to-speech"
 msgstr "டாக் பேக் உரை-க்கு-பேச்சை மேம்படுத்த சில அமைப்புகளை முடக்குகிறது"
+
+#, java-printf-format
+msgctxt "mark_read_position_toolbar"
+msgid "Toolbar"
+msgstr "கருவிப்பட்டி"
+
+#, java-printf-format
+msgctxt "mark_read_position_floating_action_button"
+msgid "Floating Action Button"
+msgstr "Floating செயல் Button"
+
+#, java-printf-format
+msgctxt "mark_all_read_button_position"
+msgid "Mark All Read Button Position"
+msgstr "அனைத்தையும் படிக்கும் பொத்தான் நிலையைக் குறிக்கவும்"
+
+#, java-printf-format
+msgctxt "settings_display_miscellaneous_title"
+msgid "Miscellaneous"
+msgstr "மற்றவை"
+
+#, java-printf-format
+msgctxt "open_articles_in_browser"
+msgid "Open Articles In Browser"
+msgstr "உலாவியில் கட்டுரைகளைத் திறக்கவும்"
+
+#, java-printf-format
+msgctxt "selected"
+msgid "Selected"
+msgstr "தேர்ந்தெடுக்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "auth_fields_freshrss_api_password"
+msgid "API Password"
+msgstr "பநிஇ கடவுச்சொல்"
+
+#, java-printf-format
+msgctxt "auth_fields_miniflux_api_token"
+msgid "API Token"
+msgstr "பநிஇ கிள்ளாக்கு"
+
+#, java-printf-format
+msgctxt "auth_fields_miniflux_use_api_token"
+msgid "Use API Token instead"
+msgstr "அதற்குப் பதிலாக பநிஇ கிள்ளாக்கைப் பயன்படுத்தவும்"
+
+#, java-printf-format
+msgctxt "auth_fields_miniflux_use_password"
+msgid "Use Password instead"
+msgstr "அதற்கு பதிலாக கடவுச்சொல்லை பயன்படுத்தவும்"
+
+#, java-printf-format
+msgctxt "auth_fields_show_advanced"
+msgid "Advanced options"
+msgstr "மேம்பட்ட விருப்பங்கள்"
+
+#, java-printf-format
+msgctxt "auth_fields_hide_advanced"
+msgid "Hide advanced options"
+msgstr "மேம்பட்ட விருப்பங்களை மறை"
+
+#, java-printf-format
+msgctxt "freshrss_visibility"
+msgid "Visibility"
+msgstr "விழிமை"
+
+#, java-printf-format
+msgctxt "freshrss_visibility_option_main"
+msgid "Main Stream"
+msgstr "Main Stream"
+
+#, java-printf-format
+msgctxt "freshrss_visibility_option_important"
+msgid "Important"
+msgstr "முக்கியமானது"
+
+#, java-printf-format
+msgctxt "freshrss_visibility_option_folder"
+msgid "Folder"
+msgstr "Folder"
+
+#, java-printf-format
+msgctxt "freshrss_visibility_option_feed"
+msgid "Feed"
+msgstr "தீவனம்"
+
+#, java-printf-format
+msgctxt "audio_player_play"
+msgid "Play"
+msgstr "விளையாடு"
+
+#, java-printf-format
+msgctxt "audio_player_pause"
+msgid "Pause"
+msgstr "இடைநிறுத்தம்"
+
+#, java-printf-format
+msgctxt "audio_player_close"
+msgid "Close player"
+msgstr "மூடு player"
+
+#, java-printf-format
+msgctxt "audio_player_skip_back"
+msgid "Skip back 30 seconds"
+msgstr "தவிர் பின் 30 நொடிகள்"
+
+#, java-printf-format
+msgctxt "audio_player_skip_forward"
+msgid "Skip forward 30 seconds"
+msgstr "30 வினாடிகள் முன்னோக்கி செல்லவும்"
+
+#, java-printf-format
+msgctxt "settings_panel_unread_counts_title"
+msgid "Unread Badges"
+msgstr "படிக்காத பேட்ச்கள்"
+
+#, java-printf-format
+msgctxt "settings_option_badge_style"
+msgid "Badge style"
+msgstr "Badge சூல் தண்டு"
+
+#, java-printf-format
+msgctxt "badge_style_simple"
+msgid "Simple"
+msgstr "Simple"
+
+#, java-printf-format
+msgctxt "badge_style_exact"
+msgid "Exact"
+msgstr "Exact"
+
+#, java-printf-format
+msgctxt "show_unread_badge"
+msgid "Show Unread Badge"
+msgstr "காட்டு Unread Badge"
+
+#, java-printf-format
+msgctxt "article_actions_save_externally"
+msgid "Save"
+msgstr "சேமி"
+
+#, java-printf-format
+msgctxt "article_actions_save_externally_success"
+msgid "Saved"
+msgstr "Saved"
+
+#, java-printf-format
+msgctxt "article_actions_save_externally_failure"
+msgid "Failed to save"
+msgstr "சேமிக்க முடியவில்லை"
+
+#, java-printf-format
+msgctxt "article_actions_delete_page"
+msgid "Delete page"
+msgstr "நீக்கு page"
+
+#, java-printf-format
+msgctxt "article_actions_delete_page_title"
+msgid "Delete"
+msgstr "நீக்கு"
+
+#, java-printf-format
+msgctxt "article_actions_delete_page_message"
+msgid "Are you sure you want to delete this page?"
+msgstr "இந்தப் பக்கத்தை நிச்சயமாக நீக்க விரும்புகிறீர்களா?"
+
+#, java-printf-format
+msgctxt "article_actions_delete_page_confirm"
+msgid "Delete"
+msgstr "நீக்கு"

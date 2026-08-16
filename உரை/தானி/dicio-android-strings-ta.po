@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Dicio)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 11:50+0200\n"
-"PO-Revision-Date: 2025-05-04 16:30\n"
+"POT-Creation-Date: 2026-06-24 14:24+0200\n"
+"PO-Revision-Date: 2026-06-28 21:28\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/dicio-android/strings/ta/>\n"
 "Language: ta\n"
@@ -12,12 +12,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 #, java-printf-format
 msgctxt "app_name"
 msgid "Dicio"
-msgstr "குறிப்பு"
+msgstr "நான் சொல்கிறேன்"
 
 #, java-printf-format
 msgctxt "drawer_open"
@@ -584,7 +584,7 @@ msgstr "தேடுபொறி"
 #, java-printf-format
 msgctxt "pref_search_engine_duckduckgo"
 msgid "DuckDuckGo"
-msgstr "டக்டக்கோ"
+msgstr "டக் டக் கோ"
 
 #, java-printf-format
 msgctxt "pref_weather_default_city"
@@ -599,6 +599,16 @@ msgid ""
 msgstr ""
 "நீங்கள் ஒன்றை வெளிப்படையாகச் சொல்லாதபோது வானிலைக்கு பயன்படுத்த நகரத்தை "
 "அமைக்கவும். தற்போதைய நடத்தை ஐபி தகவலிலிருந்து இருப்பிடத்தைப் பெறுவதாகும்."
+
+#, java-printf-format
+msgctxt "pref_stt_silence_duration_title"
+msgid "Maximum silence before start of speech"
+msgstr "பேச்சைத் தொடங்கும் முன் அதிகபட்ச அமைதி"
+
+#, java-printf-format
+msgctxt "pref_stt_silence_duration_description"
+msgid "Give up listening after %1$d silent intervals"
+msgstr "%1$d அமைதியான இடைவெளிகளுக்குப் பிறகு கேட்பதை நிறுத்துங்கள்"
 
 #, java-printf-format
 msgctxt "pref_stt_auto_finish_title"
@@ -775,6 +785,16 @@ msgstr "ஊடக கட்டுப்பாடு"
 msgctxt "skill_sentence_example_media"
 msgid "Next song"
 msgstr "அடுத்த பாடல்"
+
+#, java-printf-format
+msgctxt "skill_name_joke"
+msgid "Joke"
+msgstr "நகைச்சுவை"
+
+#, java-printf-format
+msgctxt "skill_sentence_example_joke"
+msgid "Tell me a joke"
+msgstr "ஒரு சோக் சொல்லுங்க"
 
 #, java-printf-format
 msgctxt "skill_name_calculator"
@@ -1057,11 +1077,6 @@ msgid "Dicio offline speech recognition"
 msgstr "இணைப்பில்லாத பாப் அங்கீகாரத்தைத் தேர்ந்தெடுங்கள்"
 
 #, java-printf-format
-msgctxt "notification_listener_label"
-msgid "Dicio notification event listener"
-msgstr "டிசியோ அறிவிப்பு நிகழ்வு கேட்பவர்"
-
-#, java-printf-format
 msgctxt "wake_service_label"
 msgid "Dicio wake word service"
 msgstr "டிசியோ வேக் வேர்ட் பணி"
@@ -1170,6 +1185,83 @@ msgid "Grant permissions"
 msgstr "அனுமதிகள் வழங்கவும்"
 
 #, java-printf-format
+msgctxt "skill_listening_already_listening"
+msgid "I am already listening for the wake word"
+msgstr "நான் ஏற்கனவே எழுப்பும் வார்த்தையைக் கேட்டுக் கொண்டிருக்கிறேன்"
+
+#, java-printf-format
+msgctxt "skill_listening_started_listening"
+msgid "OK, I'll listen for the wake word"
+msgstr "சரி, நான் எழுப்பும் வார்த்தையைக் கேட்கிறேன்"
+
+#, java-printf-format
+msgctxt "skill_listening_not_listening"
+msgid "I wasn't listening"
+msgstr "நான் கேட்கவில்லை"
+
+#, java-printf-format
+msgctxt "skill_listening_stop_listening"
+msgid "OK"
+msgstr "சரி"
+
+#, java-printf-format
+msgctxt "skill_listening_disabled"
+msgid "The wake word service is disabled in settings"
+msgstr "அமைப்புகளில் வேக் வேர்ட் பணி முடக்கப்பட்டுள்ளது"
+
+#, java-printf-format
+msgctxt "skill_name_listening"
+msgid "Control wake word listening"
+msgstr "விழித்தெழுந்த சொல் கேட்பதைக் கட்டுப்படுத்தவும்"
+
+#, java-printf-format
+msgctxt "skill_sentence_example_listening"
+msgid "Stop listening"
+msgstr "கேட்பதை நிறுத்து"
+
+#, java-printf-format
+msgctxt "skill_translation_success"
+msgid "Translated to %1$s"
+msgstr "%1$sக்கு மொழிபெயர்க்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "skill_translation_unknown_language"
+msgid "I don't recognize language %1$s"
+msgstr "%1$s மொழியை என்னால் அடையாளம் காண முடியவில்லை"
+
+#, java-printf-format
+msgctxt "skill_translation_unsupported_language"
+msgid "Language %1$s (%2$s) is not supported"
+msgstr "%1$s (%2$s) மொழி ஆதரிக்கப்படவில்லை"
+
+#, java-printf-format
+msgctxt "skill_translation_failed"
+msgid "Unable to translate your query into %1$s"
+msgstr "உங்கள் வினவலை %1$sக்கு மொழிபெயர்க்க முடியவில்லை"
+
+#, java-printf-format
+msgctxt "skill_translation_failed_no_query"
+msgid "I didn't understand, could you repeat what you want to translate?"
+msgstr ""
+"எனக்கு புரியவில்லை, நீங்கள் மொழிபெயர்க்க விரும்புவதை மீண்டும் சொல்ல "
+"முடியுமா?"
+
+#, java-printf-format
+msgctxt "skill_translation_to"
+msgid "to"
+msgstr "பெறுநர்"
+
+#, java-printf-format
+msgctxt "skill_name_translation"
+msgid "Translate"
+msgstr "மொழிபெயர்"
+
+#, java-printf-format
+msgctxt "skill_sentence_example_translation"
+msgid "Translate Hola from Spanish to English"
+msgstr "ஒலாவை ச்பானிச் மொழியிலிருந்து ஆங்கிலத்திற்கு மொழிபெயர்"
+
+#, java-printf-format
 msgctxt "pref_weather_temperature_unit"
 msgid "Temperature unit"
 msgstr "வெப்பநிலை அலகு"
@@ -1242,3 +1334,184 @@ msgstr "எம்/கள்"
 msgctxt "skill_weather_miles_per_hour"
 msgid "mph"
 msgstr "எம்.பி.எச்"
+
+#, java-printf-format
+msgctxt "failed_to_copy"
+msgid "Failed to copy to clipboard"
+msgstr "இடைநிலைப்பலகைக்கு நகலெடுக்க முடியவில்லை"
+
+#, java-printf-format
+msgctxt "skill_translation_auto"
+msgid "Auto"
+msgstr "தானி"
+
+#, java-printf-format
+msgctxt "skill_search_duckduckgo_recaptcha"
+msgid "DuckDuckGo did not provide results, asking for a Captcha to be solved"
+msgstr "DuckDuckGo கேப்ட்சாவைத் தீர்க்கும்படி கேட்டு முடிவுகளை வழங்கவில்லை"
+
+#, java-printf-format
+msgctxt "skill_notify_message_no_app"
+msgid "The notification says %1$s."
+msgstr "அறிவிப்பு %1$s எனக் கூறுகிறது."
+
+#, java-printf-format
+msgctxt "skill_notify_message_app"
+msgid "The %1$s notification says %2$s."
+msgstr "%1$s அறிவிப்பு %2$s எனக் கூறுகிறது."
+
+#, java-printf-format
+msgctxt "skill_notify_messages_separator"
+msgid ","
+msgstr ","
+
+#, java-printf-format
+msgctxt "skill_sentence_example_notify"
+msgid "What's my notification?"
+msgstr "எனது அறிவிப்பு என்ன?"
+
+#, java-printf-format
+msgctxt "skill_name_notify"
+msgid "Notify"
+msgstr "அறிவிக்கவும்"
+
+#, java-printf-format
+msgctxt "skill_notify_failed"
+msgid "Couldn't connect the notification listener service"
+msgstr "அறிவிப்பு கேட்பவர் சேவையை இணைக்க முடியவில்லை"
+
+#, java-printf-format
+msgctxt "skill_notify_no_notifications"
+msgid "You have no notifications"
+msgstr "உங்களிடம் எந்த அறிவிப்பும் இல்லை"
+
+#, java-printf-format
+msgctxt "perm_notification_listener"
+msgid "read all notifications"
+msgstr "அனைத்து அறிவிப்புகளையும் படிக்கவும்"
+
+#, java-printf-format
+msgctxt "skill_notify_handler_label"
+msgid "Notify skill in Dicio assistant"
+msgstr "டிசியோ அசிச்டென்ட்டில் உள்ள திறமையை தெரிவிக்கவும்"
+
+#, java-printf-format
+msgctxt "skill_name_flashlight"
+msgid "Flashlight"
+msgstr "ஒளிரும் விளக்கு"
+
+#, java-printf-format
+msgctxt "skill_sentence_example_flashlight"
+msgid "Turn on the flashlight"
+msgstr "ஒளிரும் விளக்கை இயக்கவும்"
+
+#, java-printf-format
+msgctxt "skill_flashlight_turned_on"
+msgid "Flashlight turned on"
+msgstr "ஒளிரும் விளக்கு இயக்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "skill_flashlight_turned_off"
+msgid "Flashlight turned off"
+msgstr "மின்விளக்கு அணைக்கப்பட்டது"
+
+#, java-printf-format
+msgctxt "skill_flashlight_error"
+msgid "Unable to control the flashlight"
+msgstr "மின்விளக்கைக் கட்டுப்படுத்த முடியவில்லை"
+
+#, java-printf-format
+msgctxt "about"
+msgid "About"
+msgstr "பற்றி"
+
+#, java-printf-format
+msgctxt "about_version"
+msgid "%1$s (%2$d)"
+msgstr "%1$s (%2$d)"
+
+#, java-printf-format
+msgctxt "about_version_copy"
+msgid "Copy version info"
+msgstr "பதிப்பு தகவலை நகலெடுக்கவும்"
+
+#, java-printf-format
+msgctxt "about_description"
+msgid "Multilanguage, local and libre voice assistant"
+msgstr "பல மொழி, உள்ளக மற்றும் சுதந்திர குரல் உதவியாளர்"
+
+#, java-printf-format
+msgctxt "about_repository_title"
+msgid "Source code repository"
+msgstr "மூல குறியீடு களஞ்சியம்"
+
+#, java-printf-format
+msgctxt "about_repository_description"
+msgid "Dicio is free and open source, licensed under GPLv3"
+msgstr "டிசியோ இலவசம் மற்றும் திறந்த மூலமானது, GPLv3 இன் கீழ் உரிமம் பெற்றது"
+
+#, java-printf-format
+msgctxt "about_repository_link"
+msgid "https://github.com/Stypox/dicio-android"
+msgstr "https://github.com/Stypox/dicio-android"
+
+#, java-printf-format
+msgctxt "about_issues_title"
+msgid "Found a bug?"
+msgstr "பிழை கண்டுபிடிக்கப்பட்டதா?"
+
+#, java-printf-format
+msgctxt "about_issues_description"
+msgid ""
+"Feel free to request new features or report broken things (remember to "
+"attach logs)"
+msgstr ""
+"புதிய அம்சங்களைக் கோரவும் அல்லது உடைந்த விசயங்களைப் புகாரளிக்கவும் (பதிவுகளை"
+" இணைக்க நினைவில் கொள்ளவும்)"
+
+#, java-printf-format
+msgctxt "about_issues_link"
+msgid "https://github.com/Stypox/dicio-android/issues"
+msgstr "https://github.com/Stypox/dicio-android/issues"
+
+#, java-printf-format
+msgctxt "about_contributing_title"
+msgid "Contributing"
+msgstr "பங்களிக்கிறது"
+
+#, java-printf-format
+msgctxt "about_contributing_description"
+msgid ""
+"Dicio is developed by volunteers around the world. You can help out too by "
+"contributing code improvements, translations and even new skills!"
+msgstr ""
+"டிசியோ உலகெங்கிலும் உள்ள தன்னார்வலர்களால் உருவாக்கப்பட்டது. குறியீடு "
+"மேம்பாடுகள், மொழிபெயர்ப்புகள் மற்றும் புதிய திறன்களை வழங்குவதன் மூலம் "
+"நீங்கள் உதவலாம்!"
+
+#, java-printf-format
+msgctxt "about_contributing_link"
+msgid "https://github.com/Stypox/dicio-android#contributing"
+msgstr "https://github.com/Stypox/dicio-android#contributing"
+
+#, java-printf-format
+msgctxt "about_privacy_title"
+msgid "Privacy policy"
+msgstr "தனியுரிமைக் கொள்கை"
+
+#, java-printf-format
+msgctxt "about_privacy_description"
+msgid ""
+"Dicio connects to external services only when a skill is expected to do so, "
+"or to download machine learning models during setup. All speech processing "
+"is performed locally on-device, and most skills can be used offline."
+msgstr ""
+"ஒரு திறன் எதிர்பார்க்கப்படும் போது அல்லது அமைப்பின் போது இயந்திர கற்றல் "
+"மாதிரிகளை பதிவிறக்கம் செய்யும் போது மட்டுமே டிசியோ வெளிப்புற சேவைகளுடன் "
+"இணைகிறது. அனைத்து பேச்சு செயலாக்கங்களும் சாதனத்தில் உள்நாட்டில் "
+"செய்யப்படுகின்றன, மேலும் பெரும்பாலான திறன்களை ஆஃப்லைனில் பயன்படுத்தலாம்."
+
+#, java-printf-format
+msgctxt "about_privacy_link"
+msgid "https://stypox.org/dicio-privacy-policy.html"
+msgstr "https://stypox.org/dicio-privacy-policy.html"

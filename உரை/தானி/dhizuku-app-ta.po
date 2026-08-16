@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Dhizuku)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-19 00:19+0200\n"
-"PO-Revision-Date: 2024-12-19 07:25+0530\n"
+"POT-Creation-Date: 2026-06-24 14:26+0200\n"
+"PO-Revision-Date: 2026-06-25 02:45\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/dhizuku/app/ta/>\n"
 "Language: ta\n"
@@ -12,12 +12,40 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9.2-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 #, ignore-reused, java-printf-format
 msgctxt "app_name"
 msgid "Dhizuku"
-msgstr "டிட்"
+msgstr "டிசுகு"
+
+#, java-printf-format
+msgctxt "agreement_title"
+msgid "Policy"
+msgstr "கொள்கை"
+
+#, ignore-multiple-failures, java-printf-format, safe-html
+msgctxt "agreement_text"
+msgid ""
+"Here is our user policy, Please read and agree to it. <a "
+"href=https://iamr0s.github.io/Dhizuku/TERMS.html>Terms of Use</a>, <a "
+"href=https://iamr0s.github.io/Dhizuku/PRIVACY.html>Privacy Policy</a> This "
+"message won't show up again after you agree."
+msgstr ""
+"இது எங்கள் பயனர் கொள்கை. தயவுசெய்து அதைப் படித்து ஒப்புக்கொள்ளவும். <a "
+"href=https://iamr0s.github.io/Dhizuku/TERMS.html>பயன்பாட்டு விதிமுறைகள்</a>,"
+" <a href=https://iamr0s.github.io/Dhizuku/PRIVACY.html>தனியுரிமைக் "
+"கொள்கை</a> நீங்கள் ஒப்புக்கொண்ட பிறகு இந்தச் செய்தி மீண்டும் காட்டப்படாது."
+
+#, java-printf-format
+msgctxt "agree_text"
+msgid "Agree"
+msgstr "ஒப்புக்கொள்கிறேன்"
+
+#, java-printf-format
+msgctxt "permission_description"
+msgid "Use Dhizuku's API"
+msgstr "Dhizku இன் API ஐப் பயன்படுத்தவும்"
 
 #.  Commonly  used characters
 #, java-printf-format
@@ -36,10 +64,15 @@ msgid "Retry"
 msgstr "மீண்டும் முயற்சிக்கவும்"
 
 #.  Home - Status
-#, java-printf-format
+#, ignore-long-untranslated, ignore-multiple-failures, java-printf-format
 msgctxt "home_status_owner_granted"
-msgid "You are Owner!!!"
-msgstr "நீங்கள் உரிமையாளர் !!!"
+msgid "You are %1$s!!!"
+msgstr "நீங்கள் %1$s!!!"
+
+#, java-printf-format
+msgctxt "home_status_owner_transferred"
+msgid "%1$s has been transferred!!!"
+msgstr "%1$s மாற்றப்பட்டது!!!"
 
 #, java-printf-format
 msgctxt "home_status_owner_denied"
@@ -63,7 +96,7 @@ msgctxt "home_dhizuku_title"
 msgid "Activation by Dhizuku"
 msgstr "திசுகுவால் செயல்படுத்தல்"
 
-#, java-printf-format
+#, ignore-multiple-failures, java-printf-format, safe-html
 msgctxt "home_dhizuku_dsp"
 msgid ""
 "If you have other Dhizuku implementations installed, you can switch between "
@@ -79,7 +112,7 @@ msgctxt "home_shizuku_title"
 msgid "Activation by Shizuku"
 msgstr "சிசுகு எழுதிய ஒரு அசி வி.ஏ.வின் வெப்பநிலை"
 
-#, java-printf-format
+#, ignore-multiple-failures, java-printf-format, safe-html
 msgctxt "home_shizuku_dsp"
 msgid ""
 "With Shizuku, you have the ability to run ADB commands without the need for "
@@ -94,7 +127,7 @@ msgctxt "home_adb_title"
 msgid "Activation by ADB"
 msgstr "ADB ஆல் செயல்படுத்தல்"
 
-#, java-printf-format
+#, ignore-multiple-failures, java-printf-format, safe-html
 msgctxt "home_adb_dsp"
 msgid ""
 "Through the ADB (Android Debug Bridge) connection, you can execute some "
@@ -108,6 +141,7 @@ msgctxt "home_adb_btn_view_command"
 msgid "View command"
 msgstr "கட்டளையைக் காண்க"
 
+#.  Home - PvsD
 #.  Home - Shutdown
 #, java-printf-format
 msgctxt "home_shutdown_title"
@@ -140,6 +174,32 @@ msgid "OK"
 msgstr "சரி"
 
 #, java-printf-format
+msgctxt "confirm_device_owner"
+msgid "Device Owner"
+msgstr "சாதன உரிமையாளர்"
+
+#, java-printf-format
+msgctxt "confirm_profile_owner"
+msgid "Profile Owner"
+msgstr "சுயவிவர உரிமையாளர்"
+
+#, java-printf-format
+msgctxt "profile_owner_warning_title"
+msgid "Warning"
+msgstr "எச்சரிக்கை"
+
+#, java-printf-format
+msgctxt "profile_owner_warning_dsp"
+msgid ""
+"This is a change that should only be made by users who understand its "
+"implications. The developers of Dhizuku cannot guarantee anything about "
+"unexpected behavior caused by this mode change."
+msgstr ""
+"இது, அதன் தாக்கங்களை புரிந்து கொள்ளும் பயனர்களால் மட்டுமே செய்யப்பட வேண்டிய "
+"மாற்றமாகும். இந்த பயன்முறை மாற்றத்தால் ஏற்படும் எதிர்பாராத நடத்தை குறித்து "
+"திசுகுவின் உருவாக்குபவர்கள் எதற்கும் பொறுப்பு அளிக்க முடியாது."
+
+#, java-printf-format
 msgctxt "finish"
 msgid "Finish"
 msgstr "முடிக்க"
@@ -149,27 +209,29 @@ msgctxt "donate"
 msgid "Donate"
 msgstr "நன்கொடை"
 
-#, ignore-multiple-failures, ignore-same, java-printf-format
-msgctxt "alipay"
-msgid "Alipay"
-msgstr "அலிபே"
-
-#, ignore-same, java-printf-format
-msgctxt "wechat"
-msgid "Wechat"
-msgstr "வெச்சாட்"
-
-#, ignore-multiple-failures, ignore-same, java-printf-format
-msgctxt "binance"
-msgid "Binance"
-msgstr "பைன்ச்"
+#, java-printf-format
+msgctxt "donate_hide_action"
+msgid "Hide"
+msgstr "மறை"
 
 #, java-printf-format
-msgctxt "request_permission_text"
-msgid "<![CDATA[Agree to the Dhizuku permission request of <b>%1$s</b>\\?]]>"
+msgctxt "donate_hide_confirm_title"
+msgid "Hide Donate Button"
+msgstr "நன்கொடை பட்டனை மறை"
+
+#, java-printf-format
+msgctxt "donate_hide_confirm_dsp"
+msgid ""
+"This cannot be undone from within the app. Are you sure you want to "
+"permanently hide the donate button?"
 msgstr ""
-"<! [சி.டி.ஏ.டி.ஏ [<b>%1$s </b> \\?]] இன் திசுகு இசைவு கோரிக்கையை "
-"ஒப்புக்கொள்கிறேன்]>"
+"பயன்பாட்டிற்குள் இருந்து இதைச் செயல்தவிர்க்க முடியாது. அரே you sure you want"
+" பெறுநர் permanently மறை the நன்கொடை button?"
+
+#, ignore-multiple-failures, java-printf-format, xml-text
+msgctxt "request_permission_text"
+msgid "Allow <b>%1$s</b> to access Dhizuku?"
+msgstr "Allow <b>%1$s</b> பெறுநர் access Dhizuku?"
 
 #, java-printf-format
 msgctxt "agree"
@@ -190,3 +252,89 @@ msgstr "பின்னணி பணி"
 msgctxt "service_running"
 msgid "Dhizuku is running"
 msgstr "திசுகு இயங்குகிறது"
+
+#, java-printf-format
+msgctxt "settings"
+msgid "Settings"
+msgstr "அமைப்புகள்"
+
+#, java-printf-format
+msgctxt "settings_desc"
+msgid "Configure Dhizuku behavior"
+msgstr "Dhizuku இன் செயல்பாட்டை உள்ளமைக்கவும்"
+
+#, java-printf-format
+msgctxt "enable_dhizuku"
+msgid "Enable Dhizuku"
+msgstr "Dhizuku ஐ இயக்கு"
+
+#, java-printf-format
+msgctxt "enable_dhizuku_desc"
+msgid "Allow apps to use Dhizuku services"
+msgstr "Dhizuku சேவைகளைப் பயன்படுத்த பயன்பாடுகளை அனுமதிக்கவும்"
+
+#, java-printf-format
+msgctxt "whitelist_mode"
+msgid "Whitelist Mode"
+msgstr "அனுமதிப் பட்டியல் முறை"
+
+#, java-printf-format
+msgctxt "whitelist_mode_desc"
+msgid "Only allow pre-approved apps to use Dhizuku"
+msgstr ""
+"முன்கூட்டியே அங்கீகரிக்கப்பட்ட பயன்பாடுகள் மட்டுமே Dhizuku ஐப் பயன்படுத்த "
+"அனுமதிக்கவும்"
+
+#, java-printf-format
+msgctxt "block_app"
+msgid "Block App"
+msgstr "பயன்பாட்டைத் தடு"
+
+#, java-printf-format
+msgctxt "auto_deny_in"
+msgid "Auto-deny in"
+msgstr "தானாக மறுப்பதற்கான நேரம்"
+
+#, java-printf-format
+msgctxt "block_app_desc"
+msgid "Completely deny access to Dhizuku"
+msgstr "Dhizuku அணுகலை முழுமையாக மறுக்கவும்"
+
+#, java-printf-format
+msgctxt "app_blocked_notice"
+msgid "This app is blocked and cannot access Dhizuku"
+msgstr "இந்த பயன்பாடு தடுக்கப்பட்டுள்ளது மற்றும் Dhizuku ஐ அணுக முடியாது"
+
+#, java-printf-format
+msgctxt "allow_dhizuku_access"
+msgid "Allow Dhizuku Access"
+msgstr "Dhizuku அணுகலை அனுமதிக்கவும்"
+
+#, java-printf-format
+msgctxt "unblock_app"
+msgid "Unblock App"
+msgstr "பயன்பாட்டின் தடையை நீக்கு"
+
+#, ignore-multiple-failures, java-printf-format
+msgctxt "auto_deny_in_seconds"
+msgid "Auto-deny in %d seconds"
+msgstr "%d வினாடிகளில் தானாக மறுக்கப்படும்"
+
+#, java-printf-format
+msgctxt "denying_access"
+msgid "Denying access…"
+msgstr "அணுகல் மறுக்கப்படுகிறது…"
+
+#, ignore-multiple-failures, java-printf-format
+msgctxt "daemon_service_notification_title"
+msgid "Dhizuku Daemon"
+msgstr "Dhizuku டீமன்"
+
+#, java-printf-format
+msgctxt "daemon_service_notification_text"
+msgid ""
+"This is a Dhizuku notification to ensure service availability at any time. "
+"You can long press to hide this notification."
+msgstr ""
+"இது சேவை எப்போதும் கிடைக்கும் என்பதை உறுதிசெய்ய Dhizuku அனுப்பும் அறிவிப்பு."
+" இந்த அறிவிப்பை மறைக்க அழுத்திப் பிடிக்கலாம்."

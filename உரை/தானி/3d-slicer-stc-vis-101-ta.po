@@ -1,0 +1,856 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tamil (3D Slicer)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-14 15:26+0200\n"
+"PO-Revision-Date: 2026-06-15 09:17\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/3d-slicer/stc-vis-101/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 2026.7.dev0\n"
+
+#. 0_TextBox_0
+#: text_dict_default.json:8
+msgctxt "TutorialMaker"
+msgid "Basics of Data Loading and 3D Visualization in 3D Slicer"
+msgstr "3D ச்லைசரில் தரவு ஏற்றுதல் மற்றும் 3D காட்சிப்படுத்தலின் அடிப்படைகள்"
+
+#. 0_TextBox_1
+#: text_dict_default.json:10
+msgctxt "TutorialMaker"
+msgid "Author: Sonia Pujol, Ph.D."
+msgstr "ஆசிரியர்: சோனியா புசோல், Ph.D."
+
+#. 0_TextBox_2
+#: text_dict_default.json:12
+msgctxt "TutorialMaker"
+msgid "24/11/2024"
+msgstr "24/11/2024"
+
+#. 0_TextBox_3
+#: text_dict_default.json:14
+msgctxt "TutorialMaker"
+msgid ""
+"Assistant Professor of Radiology Brigham and Women’s Hospital Harvard "
+"Medical School"
+msgstr ""
+"கதிரியக்கவியல் உதவிப் பேராசிரியர் பிரிகாம் மற்றும் மகளிர் மருத்துவமனை "
+"ஆர்வர்ட் மருத்துவப் பள்ளி"
+
+#. 1_TextBox_0
+#: text_dict_default.json:16
+msgctxt "TutorialMaker"
+msgid "Overall Goal"
+msgstr "ஒட்டுமொத்த இலக்கு"
+
+#. 1_TextBox_1
+#: text_dict_default.json:18
+msgctxt "TutorialMaker"
+msgid ""
+"This tutorial is an introduction to the basics of loading and viewing DICOM "
+"images and 3D models in 3D Slicer."
+msgstr ""
+"இந்த பயிற்சியானது 3D ச்லைசரில் DICOM படங்கள் மற்றும் 3D மாடல்களை ஏற்றுதல் "
+"மற்றும் பார்ப்பதற்கான அடிப்படைகள் பற்றிய அறிமுகமாகும்."
+
+#. 2_TextBox_0
+#: text_dict_default.json:20
+msgctxt "TutorialMaker"
+msgid "Learning Objectives"
+msgstr "கற்றல் நோக்கங்கள்"
+
+#. 2_TextBox_1
+#: text_dict_default.json:22
+msgctxt "TutorialMaker"
+msgid ""
+" • Following this tutorial, you will be able\n"
+"\n"
+"• to load and visualize DICOM images in Slicer\n"
+"\n"
+"• to perform volume rendering of CT data\n"
+"\n"
+"• to load and visualize 3D models reconstructed from MRI data"
+msgstr ""
+"• இந்தப் பயிற்சியைத் தொடர்ந்து, உங்களால் முடியும் \n"
+"\n"
+"• ச்லைசரில் DICOM படங்களை ஏற்ற மற்றும் காட்சிப்படுத்த \n"
+"\n"
+"• CT தரவின் வால்யூம் வழங்குதல் செய்ய \n"
+"\n"
+"எம்ஆர்ஐ தரவிலிருந்து புனரமைக்கப்பட்ட 3டி மாடல்களை ஏற்றுவதற்கும் காட்சிப்படுத்துவதற்கும்"
+
+#. 3_TextBox_0
+#: text_dict_default.json:24
+msgctxt "TutorialMaker"
+msgid "Tutorial materials"
+msgstr "பயிற்சி பொருட்கள்"
+
+#. 3_TextBox_1
+#: text_dict_default.json:26
+msgctxt "TutorialMaker"
+msgid ""
+"• 3D Slicer version 5.10\n"
+"\n"
+"•  3D VisualizationDataSet.zip"
+msgstr ""
+"• 3D ச்லைசர் பதிப்பு 5.10 \n"
+"\n"
+"• 3D VisualizationDataSet.zip"
+
+#. 4_TextBox_0
+#. ----------
+#. 33_TextBox_0
+#: text_dict_default.json:28 text_dict_default.json:142
+msgctxt "TutorialMaker"
+msgid "Tutorial dataset"
+msgstr "பயிற்சி தரவுத்தொகுப்பு"
+
+#. 4_TextBox_1
+#: text_dict_default.json:30
+msgctxt "TutorialMaker"
+msgid ""
+"The file 3DVisualizationDataset.zip contains two directories:\n"
+"\n"
+"- dataset1_Thorax_Abdomen \n"
+"- dataset2_Head\n"
+"\n"
+"Unzip the file 3DVisualizationDataset.zip on your computer to access the datasets"
+msgstr ""
+"3DVisualizationDataset.zip கோப்பு இரண்டு கோப்பகங்களைக் கொண்டுள்ளது: \n"
+"\n"
+"- தரவுத்தொகுப்பு1_Thorax_Abdomen \n"
+"- தரவுத்தொகுப்பு2_தலை \n"
+"\n"
+"தரவுத்தொகுப்புகளை அணுக உங்கள் கணினியில் 3DVisualizationDataset.zip கோப்பை அன்சிப் செய்யவும்"
+
+#. 5_TextBox_0
+#: text_dict_default.json:32
+msgctxt "TutorialMaker"
+msgid "Disclaimer"
+msgstr "மறுப்பு"
+
+#. 5_TextBox_1
+#: text_dict_default.json:34
+msgctxt "TutorialMaker"
+msgid ""
+"• 3D Slicer is a free open source software application distributed under a BSD style license. \n"
+"\n"
+"\n"
+"• The software is not FDA approved or CE-Marked, and is for research use only.\n"
+msgstr ""
+"• 3D ச்லைசர் என்பது BSD பாணி உரிமத்தின் கீழ் விநியோகிக்கப்படும் இலவச திறந்த மூல மென்பொருள் பயன்பாடாகும். \n"
+"\n"
+"\n"
+"• மென்பொருள் FDA அங்கீகரிக்கப்படவில்லை அல்லது CE-குறியீடு செய்யப்படவில்லை, மேலும் இது ஆராய்ச்சி பயன்பாட்டிற்கு மட்டுமே.\n"
+
+#. 6_TextBox_0
+#: text_dict_default.json:36
+msgctxt "TutorialMaker"
+msgid "Tutorial Outline"
+msgstr "டுடோரியல் அவுட்லைன்"
+
+#. 6_TextBox_1
+#: text_dict_default.json:38
+msgctxt "TutorialMaker"
+msgid ""
+"•  Part 1: Loading and Viewing DICOM data\n"
+"\n"
+"•  Part 2: Volume Rendering\n"
+"\n"
+"\n"
+"• Part 3: Loading and Viewing 3D models"
+msgstr ""
+"• பகுதி 1: DICOM தரவை ஏற்றுதல் மற்றும் பார்த்தல் \n"
+"\n"
+"• பகுதி 2: வால்யூம் வழங்குதல் \n"
+"\n"
+"\n"
+"• பகுதி 3: 3D மாடல்களை ஏற்றுதல் மற்றும் பார்ப்பது"
+
+#. 7_TextBox_0
+#: text_dict_default.json:40
+msgctxt "TutorialMaker"
+msgid "Part 1: DICOM Data Loading"
+msgstr "பகுதி 1: DICOM தரவு ஏற்றுதல்"
+
+#. 8_LoadingaDICOMvolume_title
+#. ----------
+#. 9_LoadingaDICOMvolume_title
+#: text_dict_default.json:42 text_dict_default.json:48
+msgctxt "TutorialMaker"
+msgid "Loading a DICOM volume"
+msgstr "DICOM தொகுதியை ஏற்றுகிறது"
+
+#. 8_TextBox_0
+#: text_dict_default.json:44
+msgctxt "TutorialMaker"
+msgid "Slicer displays the user interface of the DICOM module"
+msgstr "ச்லைசர் DICOM தொகுதியின் பயனர் இடைமுகத்தைக் காட்டுகிறது"
+
+#. 8_TextBox_1
+#: text_dict_default.json:46
+msgctxt "TutorialMaker"
+msgid "The patient1 study contains a CT Thorax Abdomen dataset"
+msgstr "நோயாளி1 ஆய்வில் CT தோராக்ச் அடிவயிற்று தரவுத்தொகுப்பு உள்ளது"
+
+#. 9_ArrowText_1
+#: text_dict_default.json:50
+msgctxt "TutorialMaker"
+msgid ""
+"Select patient1 and click on Load \n"
+"to load the dataset in Slicer"
+msgstr ""
+"நோயாளி1 என்பதைத் தேர்ந்தெடுத்து, சுமை என்பதைக் சொடுக்கு செய்யவும் \n"
+"ச்லைசரில் தரவுத்தொகுப்பை ஏற்றுவதற்கு"
+
+#. 10_VisualizingDICOMimages_title
+#. ----------
+#. 11_VisualizingDICOMimages_title
+#. ----------
+#. 12_VisualizingDICOMimages_title
+#. ----------
+#. 13_VisualizingDICOMimages_title
+#. ----------
+#. 14_VisualizingDICOMimages_title
+#. ----------
+#. 15_VisualizingDICOMimages_title
+#. ----------
+#. 16_VisualizingDICOMimages_title
+#. ----------
+#. 17_VisualizingDICOMimages_title
+#. ----------
+#. 18_VisualizingDICOMimages_title
+#: text_dict_default.json:52 text_dict_default.json:56
+#: text_dict_default.json:62 text_dict_default.json:66
+#: text_dict_default.json:70 text_dict_default.json:74
+#: text_dict_default.json:78 text_dict_default.json:82
+#: text_dict_default.json:86
+msgctxt "TutorialMaker"
+msgid "Visualizing DICOM images"
+msgstr "DICOM படங்களை காட்சிப்படுத்துதல்"
+
+#. 10_TextBox_0
+#: text_dict_default.json:54
+msgctxt "TutorialMaker"
+msgid ""
+"Slicer displays the axial, coronal \n"
+"and sagittal images of the CT \n"
+"Thorax Abdomen dataset "
+msgstr ""
+"ச்லைசர் அச்சு, கரோனலைக் காட்டுகிறது \n"
+"மற்றும் CT இன் சாகிட்டல் படங்கள் \n"
+"மார்பு வயிறு தரவுத்தொகுப்பு"
+
+#. 11_ArrowText_1
+#: text_dict_default.json:58
+msgctxt "TutorialMaker"
+msgid ""
+"Left click on DICOM to display \n"
+"the list of modules of Slicer"
+msgstr ""
+"காட்ட DICOM மீது இடது சொடுக்கு செய்யவும் \n"
+"ச்லைசரின் தொகுதிகளின் பட்டியல்"
+
+#. 11_ArrowText_2
+#: text_dict_default.json:60
+msgctxt "TutorialMaker"
+msgid ""
+"Select the module \n"
+"Volumes"
+msgstr ""
+"தொகுதியைத் தேர்ந்தெடுக்கவும் \n"
+"தொகுதிகள்"
+
+#. 12_ArrowText_0
+#: text_dict_default.json:64
+msgctxt "TutorialMaker"
+msgid ""
+"Click on the CT-abdomen \n"
+"preset to automatically adjust \n"
+"the window/level display of the \n"
+"CT dataset"
+msgstr ""
+"CT-வயிற்றில் சொடுக்கு செய்யவும் \n"
+"தானாக சரிசெய்ய முன்னமைக்கப்பட்ட \n"
+"சாளரம்/நிலை காட்சி \n"
+"CT தரவுத்தொகுப்பு"
+
+#. 13_TextBox_1
+#: text_dict_default.json:68
+msgctxt "TutorialMaker"
+msgid ""
+"Position the mouse cursor \n"
+"over the red banner in the \n"
+"Red Viewer to display the slice \n"
+"menu.\n"
+"\n"
+"\n"
+"Click on the Links icon to link \n"
+"the slice controls across all \n"
+"Slice Viewers. \n"
+"\n"
+"\n"
+"Click on the Eye icon to\n"
+"display the three anatomical \n"
+"slices in the 3D Viewer"
+msgstr ""
+"மவுச் கர்சரை வைக்கவும் \n"
+"சிவப்பு பேனருக்கு மேல் \n"
+"ச்லைசைக் காட்ட சிவப்பு பார்வையாளர் \n"
+"பட்டியல். \n"
+"\n"
+"\n"
+"இணைக்க இணைப்புகள் ஐகானைக் சொடுக்கு செய்யவும் \n"
+"ச்லைச் அனைத்தையும் கட்டுப்படுத்துகிறது \n"
+"ச்லைச் பார்வையாளர்கள். \n"
+"\n"
+"\n"
+"கண் ஐகானைக் சொடுக்கு செய்யவும் \n"
+"மூன்று உடற்கூறியல் காட்சி \n"
+"3D வியூவரில் உள்ள துண்டுகள்"
+
+#. 14_TextBox_0
+#: text_dict_default.json:72
+msgctxt "TutorialMaker"
+msgid ""
+"The three anatomical slices \n"
+"appear in the 3D viewer."
+msgstr ""
+"மூன்று உடற்கூறியல் துண்டுகள் \n"
+"3D வியூவரில் தோன்றும்."
+
+#. 15_ArrowText_0
+#: text_dict_default.json:76
+msgctxt "TutorialMaker"
+msgid ""
+"Click on the Slicer layout menu \n"
+"icon, and select the \n"
+"Conventional Widescreen layout"
+msgstr ""
+"ச்லைசர் லேஅவுட் மெனுவை சொடுக்கு செய்யவும் \n"
+"படவுரு, மற்றும் தேர்ந்தெடுக்கவும் \n"
+"வழக்கமான அகலத்திரை அமைப்பு"
+
+#. 16_TextBox_0
+#: text_dict_default.json:80
+msgctxt "TutorialMaker"
+msgid ""
+"Slicer switches the layout \n"
+"to Conventional \n"
+"Widescreen layout"
+msgstr ""
+"ச்லைசர் தளவமைப்பை மாற்றுகிறது \n"
+"மரபுக்கு \n"
+"அகலத்திரை அமைப்பு"
+
+#. 17_TextBox_0
+#: text_dict_default.json:84
+msgctxt "TutorialMaker"
+msgid ""
+"Use the right mouse button in the \n"
+"3D Viewer to zoom in and out"
+msgstr ""
+"வலது சுட்டி பொத்தானைப் பயன்படுத்தவும் \n"
+"பெரிதாக்க மற்றும் வெளியேற 3D பார்வையாளர்"
+
+#. 18_TextBox_0
+#: text_dict_default.json:88
+msgctxt "TutorialMaker"
+msgid ""
+"Use the left mouse button in the \n"
+"3D Viewer to rotate the images"
+msgstr ""
+"இடது சுட்டி பொத்தானைப் பயன்படுத்தவும் \n"
+"படங்களை சுழற்ற 3D வியூவர்"
+
+#. 19_3DViewerController_title
+#. ----------
+#. 20_3DViewerController_title
+#: text_dict_default.json:90 text_dict_default.json:94
+msgctxt "TutorialMaker"
+msgid "3D Viewer Controller"
+msgstr "3டி வியூவர் கன்ட்ரோலர்"
+
+#. 19_TextBox_1
+#: text_dict_default.json:92
+msgctxt "TutorialMaker"
+msgid ""
+"Position the mouse cursor over \n"
+"the pin icon in the blue banner \n"
+"of the 3D viewer window to \n"
+"display the 3DView controller\n"
+"\n"
+"Click on the second icon on the \n"
+"top row of the 3DView \n"
+"controller to center the 3D view \n"
+"on the scene"
+msgstr ""
+"மவுச் கர்சரை மேலே வைக்கவும் \n"
+"நீல பேனரில் முள் படவுரு \n"
+"3D பார்வையாளர் சாளரத்தின் \n"
+"3DView கட்டுப்படுத்தியைக் காட்டவும் \n"
+"\n"
+"இரண்டாவது ஐகானில் சொடுக்கு செய்யவும் \n"
+"3DView இன் மேல் வரிசை \n"
+"3D காட்சியை மையப்படுத்த கட்டுப்படுத்தி \n"
+"காட்சியில்"
+
+#. 20_ArrowText_1
+#: text_dict_default.json:96
+msgctxt "TutorialMaker"
+msgid ""
+"Select the Volume Rendering \n"
+"module in the list of modules "
+msgstr ""
+"வால்யூம் ரெண்டரிங்கைத் தேர்ந்தெடுக்கவும் \n"
+"தொகுதிகள் பட்டியலில் தொகுதி"
+
+#. 21_TextBox_0
+#: text_dict_default.json:98
+msgctxt "TutorialMaker"
+msgid "Part 2: Volume Rendering"
+msgstr "பகுதி 2: வால்யூம் வழங்குதல்"
+
+#. 22_TextBox_0
+#. ----------
+#. 23_VolumeRendering_title
+#. ----------
+#. 24_VolumeRendering_title
+#. ----------
+#. 25_VolumeRendering_title
+#. ----------
+#. 26_VolumeRendering_title
+#. ----------
+#. 27_VolumeRendering_title
+#. ----------
+#. 28_VolumeRendering_title
+#. ----------
+#. 29_VolumeRendering_title
+#. ----------
+#. 30_VolumeRendering_title
+#. ----------
+#. 31_VolumeRendering_title
+#: text_dict_default.json:100 text_dict_default.json:104
+#: text_dict_default.json:108 text_dict_default.json:112
+#: text_dict_default.json:116 text_dict_default.json:120
+#: text_dict_default.json:124 text_dict_default.json:128
+#: text_dict_default.json:132 text_dict_default.json:136
+msgctxt "TutorialMaker"
+msgid "Volume Rendering"
+msgstr "வால்யூம் வழங்குதல்"
+
+#. 22_TextBox_1
+#: text_dict_default.json:102
+msgctxt "TutorialMaker"
+msgid ""
+"• Volume rendering \n"
+"techniques enable 3D \n"
+"visualization of 3D \n"
+"datasets\n"
+"\n"
+"• The Volume Rendering \n"
+"module in Slicer enables \n"
+"interactive 3D visualization \n"
+"of DICOM images"
+msgstr ""
+"• வால்யூம் வழங்குதல் \n"
+"நுட்பங்கள் 3D ஐ செயல்படுத்துகின்றன \n"
+"3D காட்சிப்படுத்தல் \n"
+"தரவுத்தொகுப்புகள் \n"
+"\n"
+"• வால்யூம் வழங்குதல் \n"
+"ச்லைசரில் உள்ள தொகுதி செயல்படுத்துகிறது \n"
+"ஊடாடும் 3D காட்சிப்படுத்தல் \n"
+"DICOM படங்கள்"
+
+#. 23_ArrowText_0
+#: text_dict_default.json:106
+msgctxt "TutorialMaker"
+msgid ""
+"Click on Preset in the Display tab \n"
+"and select the preset CT-Cardiac3 "
+msgstr ""
+"காட்சி தாவலில் முன்னமைவைக் சொடுக்கு செய்யவும் \n"
+"மற்றும் முன்னமைக்கப்பட்ட CT-Cardiac3 ஐ தேர்ந்தெடுக்கவும்"
+
+#. 24_TextBox_2
+#: text_dict_default.json:110
+msgctxt "TutorialMaker"
+msgid ""
+"Select VTK GPU Ray Casting Rendering\n"
+"Click on the eye icon in the Volume tab to display \n"
+"the volume rendered image in the 3D viewer"
+msgstr ""
+"VTK GPU ரே காச்டிங் ரெண்டரிங்கைத் தேர்ந்தெடுக்கவும் \n"
+"காண்பிக்க, வால்யூம் டேப்பில் உள்ள கண் ஐகானைக் சொடுக்கு செய்யவும் \n"
+"3D வியூவரில் வால்யூம் வழங்குதல் செய்யப்பட்ட படம்"
+
+#. 25_ArrowText_0
+#: text_dict_default.json:114
+msgctxt "TutorialMaker"
+msgid ""
+"Use the shift slider to \n"
+"change the transfer \n"
+"function and display the\n"
+"aorta"
+msgstr ""
+"சிப்ட் ச்லைடரைப் பயன்படுத்தவும் \n"
+"பரிமாற்றத்தை மாற்றவும் \n"
+"செயல்பாடு மற்றும் காட்சி \n"
+"பெருநாடி"
+
+#. 26_ArrowText_0
+#: text_dict_default.json:118
+msgctxt "TutorialMaker"
+msgid ""
+"Click on Display ROI to \n"
+"display a region of interest \n"
+"(ROI) in the 3D viewer and \n"
+"check the option Enable"
+msgstr ""
+"காட்சி ROI ஐ சொடுக்கு செய்யவும் \n"
+"ஆர்வமுள்ள பகுதியைக் காட்டவும் \n"
+"(ROI) 3D வியூவரில் மற்றும் \n"
+"இயக்கு விருப்பத்தை சரிபார்க்கவும்"
+
+#. 27_TextBox_0
+#: text_dict_default.json:122
+msgctxt "TutorialMaker"
+msgid ""
+"Turn off the visibility of the \n"
+"axial, sagittal and coronal \n"
+"slices in the 2D viewer \n"
+"\n"
+"\n"
+"Position the ROI around the \n"
+"left kidney using the color \n"
+"handles"
+msgstr ""
+"இன் தெரிவுநிலையை அணைக்கவும் \n"
+"அச்சு, சாகிட்டல் மற்றும் கரோனல் \n"
+"2D வியூவரில் துண்டுகள் \n"
+"\n"
+"\n"
+"ROI ஐ சுற்றி வைக்கவும் \n"
+"நிறத்தைப் பயன்படுத்தி இடது சிறுநீரகம் \n"
+"கையாளுகிறது"
+
+#. 28_ArrowText_0
+#: text_dict_default.json:126
+msgctxt "TutorialMaker"
+msgid ""
+"Click on the eye icon to \n"
+"display the volume rendered \n"
+"image"
+msgstr ""
+"கண் ஐகானைக் சொடுக்கு செய்யவும் \n"
+"கொடுக்கப்பட்ட அளவைக் காட்டவும் \n"
+"படம்"
+
+#. 29_TextBox_0
+#: text_dict_default.json:130
+msgctxt "TutorialMaker"
+msgid ""
+"Slicer displays the \n"
+"volume rendered \n"
+"image of the left kidney "
+msgstr ""
+"ச்லைசர் காட்டுகிறது \n"
+"தொகுதி வழங்கப்பட்டது \n"
+"இடது சிறுநீரகத்தின் படம்"
+
+#. 30_TextBox_0
+#: text_dict_default.json:134
+msgctxt "TutorialMaker"
+msgid ""
+"Extend the ROI to generate \n"
+"a volume rendered image of \n"
+"the right kidney"
+msgstr ""
+"உருவாக்க ROIஐ நீட்டிக்கவும் \n"
+"ஒரு தொகுதி அளிக்கப்பட்ட படம் \n"
+"வலது சிறுநீரகம்"
+
+#. 31_ArrowText_1
+#: text_dict_default.json:138
+msgctxt "TutorialMaker"
+msgid ""
+"Click on File, then Close Scene\n"
+"in the main menu"
+msgstr ""
+"கோப்பில் சொடுக்கு செய்து, பின்னர் காட்சியை மூடு \n"
+"முக்கிய பட்டியலில்"
+
+#. 32_TextBox_0
+#: text_dict_default.json:140
+msgctxt "TutorialMaker"
+msgid ""
+"Part 3: Loading and \n"
+"viewing 3D models\n"
+msgstr ""
+"பகுதி 3: ஏற்றுதல் மற்றும் \n"
+"3D மாதிரிகளைப் பார்க்கிறது\n"
+
+#. 33_TextBox_1
+#: text_dict_default.json:144
+msgctxt "TutorialMaker"
+msgid ""
+"• The directory dataset2_Head contains the Slicer scene called Head_scene.mrb\n"
+"\n"
+"• The scene contains 3D models from the SPL brain atlas developed by the department of Radiology at Brigham and Women’s Hospital, Harvard Medical School (NIH P41 RR013218, NIH R01 MH05074)"
+msgstr ""
+"• அடைவு தரவுத்தொகுப்பு2_Head Head_scene.mrb எனப்படும் ச்லைசர் காட்சியைக் கொண்டுள்ளது \n"
+"\n"
+"ஆர்வர்ட் மருத்துவப் பள்ளியின் ப்ரிகாம் மற்றும் மகளிர் மருத்துவமனை (NIH P41 RR013218, NIH R01 MH05074) கதிரியக்கவியல் துறையால் உருவாக்கப்பட்ட SPL மூளை அட்லசிலிருந்து 3D மாதிரிகள் காட்சியில் உள்ளன."
+
+#. 34_TextBox_0
+#: text_dict_default.json:146
+msgctxt "TutorialMaker"
+msgid "Slicer Scene"
+msgstr "ச்லைசர் காட்சி"
+
+#. 34_TextBox_1
+#: text_dict_default.json:148
+msgctxt "TutorialMaker"
+msgid ""
+"Slicer stores all loaded data in a repository called a scene\n"
+"\n"
+"\n"
+"Each data set, such as an image volume, surface model, or point set, is represented as a node in a Slicer scene.\n"
+"\n"
+"\n"
+"All Slicer modules operate on the data stored in a Slicer scene."
+msgstr ""
+"ச்லைசர் அனைத்து ஏற்றப்பட்ட தரவையும் காட்சி எனப்படும் களஞ்சியத்தில் சேமிக்கிறது \n"
+"\n"
+"\n"
+"பட அளவு, மேற்பரப்பு மாதிரி அல்லது புள்ளி தொகுப்பு போன்ற ஒவ்வொரு தரவுத் தொகுப்பும் ஒரு ச்லைசர் காட்சியில் ஒரு முனையாகக் குறிப்பிடப்படுகிறது. \n"
+"\n"
+"\n"
+"அனைத்து ச்லைசர் தொகுதிகளும் ச்லைசர் காட்சியில் சேமிக்கப்பட்ட தரவுகளில் இயங்குகின்றன."
+
+#. 35_LoadingaScene_title
+#: text_dict_default.json:150
+msgctxt "TutorialMaker"
+msgid "Loading a Scene"
+msgstr "ஒரு காட்சியை ஏற்றுகிறது"
+
+#. 35_TextBox_0
+#: text_dict_default.json:152
+msgctxt "TutorialMaker"
+msgid ""
+"Slicer displays a 3D \n"
+"surface model of the \n"
+"head and 2D MRI slices"
+msgstr ""
+"ச்லைசர் ஒரு 3D ஐக் காட்டுகிறது \n"
+"மேற்பரப்பு மாதிரி \n"
+"தலை மற்றும் 2D MRI துண்டுகள்"
+
+#. 36_Viewing3Dmodels_title
+#. ----------
+#. 37_Viewing3Dmodels_title
+#. ----------
+#. 38_Viewing3Dmodels_title
+#. ----------
+#. 39_Viewing3Dmodels_title
+#. ----------
+#. 40_Viewing3Dmodels_title
+#: text_dict_default.json:154 text_dict_default.json:158
+#: text_dict_default.json:162 text_dict_default.json:166
+#: text_dict_default.json:172
+msgctxt "TutorialMaker"
+msgid "Viewing 3D models"
+msgstr "3D மாடல்களைப் பார்க்கிறது"
+
+#. 36_ArrowText_0
+#: text_dict_default.json:156
+msgctxt "TutorialMaker"
+msgid ""
+"Position the cursor over \n"
+"the pin icon to reveal the \n"
+"slice menu and click on \n"
+"the eye icon to display the \n"
+"axial slice in the 3D viewer"
+msgstr ""
+"கர்சரை மேலே வைக்கவும் \n"
+"வெளிப்படுத்த முள் படவுரு \n"
+"ச்லைச் பட்டியல் மற்றும் சொடுக்கு செய்யவும் \n"
+"காட்ட கண் படவுரு \n"
+"3D வியூவரில் அச்சு துண்டு"
+
+#. 37_ArrowText_1
+#: text_dict_default.json:160
+msgctxt "TutorialMaker"
+msgid ""
+"Select the Models module \n"
+"in the list of models"
+msgstr ""
+"மாதிரிகள் தொகுதியைத் தேர்ந்தெடுக்கவும் \n"
+"மாதிரிகள் பட்டியலில்"
+
+#. 38_ArrowText_0
+#: text_dict_default.json:164
+msgctxt "TutorialMaker"
+msgid ""
+"Slicer displays the list of \n"
+"3D models loaded in the \n"
+"scene\n"
+"\n"
+"Select the model Skin.vtk"
+msgstr ""
+"ச்லைசர் பட்டியலைக் காட்டுகிறது \n"
+"3D மாதிரிகள் ஏற்றப்பட்டுள்ளன \n"
+"காட்சி \n"
+"\n"
+"Skin.vtk மாதிரியைத் தேர்ந்தெடுக்கவும்"
+
+#. 39_ArrowText_0
+#: text_dict_default.json:168
+msgctxt "TutorialMaker"
+msgid ""
+"Lower the opacity of \n"
+"the Skin model using \n"
+"the visibility slider"
+msgstr ""
+"ஒளிபுகாநிலையை குறைக்கவும் \n"
+"பயன்படுத்தி தோல் மாதிரி \n"
+"தெரிவுநிலை ச்லைடர்"
+
+#. 39_TextBox_1
+#: text_dict_default.json:170
+msgctxt "TutorialMaker"
+msgid ""
+"The skull bone and \n"
+"eyeballs models appear \n"
+"through the skin"
+msgstr ""
+"மண்டை எலும்பு மற்றும் \n"
+"கண் இமைகள் மாதிரிகள் தோன்றும் \n"
+"தோல் வழியாக"
+
+#. 40_ArrowText_1
+#: text_dict_default.json:174
+msgctxt "TutorialMaker"
+msgid ""
+"Select the skull bone \n"
+"model and click on the \n"
+"eye icon to turn off its \n"
+"visibility"
+msgstr ""
+"மண்டை ஓடு எலும்பைத் தேர்ந்தெடுக்கவும் \n"
+"மாதிரி மற்றும் சொடுக்கு செய்யவும் \n"
+"அதை அணைக்க கண் படவுரு \n"
+"தெரிவுநிலை"
+
+#. 40_TextBox_2
+#: text_dict_default.json:176
+msgctxt "TutorialMaker"
+msgid ""
+"The white matter and \n"
+"optic nerve models \n"
+"appear through the skin"
+msgstr ""
+"வெள்ளை சேதி மற்றும் \n"
+"பார்வை நரம்பு மாதிரிகள் \n"
+"தோல் வழியாக தோன்றும்"
+
+#. 41_Interactingwith3Dmodels_title
+#. ----------
+#. 42_Interactingwith3Dmodels_title
+#. ----------
+#. 43_Interactingwith3Dmodels_title
+#. ----------
+#. 44_Interactingwith3Dmodels_title
+#: text_dict_default.json:178 text_dict_default.json:182
+#: text_dict_default.json:186 text_dict_default.json:190
+msgctxt "TutorialMaker"
+msgid "Interacting with 3D models"
+msgstr "3D மாதிரிகளுடன் தொடர்பு கொள்கிறது"
+
+#. 41_ArrowText_0
+#: text_dict_default.json:180
+msgctxt "TutorialMaker"
+msgid ""
+"Click on the eye icon to \n"
+"display the coronal slice \n"
+"in the 3D viewer"
+msgstr ""
+"கண் ஐகானைக் சொடுக்கு செய்யவும் \n"
+"கரோனல் ச்லைசைக் காட்டவும் \n"
+"3D வியூவரில்"
+
+#. 42_ArrowText_2
+#: text_dict_default.json:184
+msgctxt "TutorialMaker"
+msgid ""
+"Select the hemispheric \n"
+"white matter model and \n"
+"select the option Clipping"
+msgstr ""
+"அரைக்கோளத்தைத் தேர்ந்தெடுக்கவும் \n"
+"வெள்ளை பொருள் மாதிரி மற்றும் \n"
+"கிளிப்பிங் விருப்பத்தைத் தேர்ந்தெடுக்கவும்"
+
+#. 43_TextBox_0
+#: text_dict_default.json:188
+msgctxt "TutorialMaker"
+msgid ""
+"Move the coronal slice \n"
+"posteriorily to display the \n"
+"optic chiasm"
+msgstr ""
+"கரோனல் ச்லைசை நகர்த்தவும் \n"
+"பின்னால் காட்ட \n"
+"ஒளியியல் chiasm"
+
+#. 44_TextBox_0
+#: text_dict_default.json:192
+msgctxt "TutorialMaker"
+msgid ""
+"Slicer displays a 3D view of \n"
+"the optic chiasm"
+msgstr ""
+"ச்லைசர் ஒரு 3D காட்சியைக் காட்டுகிறது \n"
+"ஆப்டிக் கியாசம்"
+
+#. 45_TextBox_0
+#: text_dict_default.json:194
+msgctxt "TutorialMaker"
+msgid "Conclusion"
+msgstr "முடிவுரை"
+
+#. 45_TextBox_1
+#: text_dict_default.json:196
+msgctxt "TutorialMaker"
+msgid ""
+"• 3D Slicer provides advanced functionalities for loading and viewing 3D medical imaging data\n"
+"\n"
+"• The tutorial demonstrates how to use volume rendering and 3D surface modeling for interactive visualization of CT and MRI data\n"
+"\n"
+"\n"
+"Contact: spujol@bwh.harvard.edu"
+msgstr ""
+"• 3D ச்லைசர் 3D மருத்துவ இமேசிங் தரவை ஏற்றுவதற்கும் பார்ப்பதற்கும் மேம்பட்ட செயல்பாடுகளை வழங்குகிறது \n"
+"\n"
+"• CT மற்றும் MRI தரவுகளின் ஊடாடும் காட்சிப்படுத்தலுக்கு வால்யூம் வழங்குதல் மற்றும் 3D மேற்பரப்பு மாடலிங் ஆகியவற்றை எவ்வாறு பயன்படுத்துவது என்பதை டுடோரியல் விளக்குகிறது. \n"
+"\n"
+"\n"
+"தொடர்புக்கு: spujol@bwh.harvard.edu"
+
+#. 46_TextBox_0
+#: text_dict_default.json:198
+msgctxt "TutorialMaker"
+msgid "Acknowledgements"
+msgstr "அங்கீகாரங்கள்"
+
+#. 46_TextBox_1
+#: text_dict_default.json:200
+msgctxt "TutorialMaker"
+msgid "Neuroimage Analysis Center (NIBIB P41 EB015902)"
+msgstr "நியூரோஇமேச் பகுப்பாய்வு நடுவண் (NIBIB P41 EB015902)"

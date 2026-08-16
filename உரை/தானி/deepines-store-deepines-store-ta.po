@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tamil (Deepines Store)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-19 00:17+0200\n"
-"PO-Revision-Date: 2024-12-19 07:25+0530\n"
+"POT-Creation-Date: 2026-06-24 14:27+0200\n"
+"PO-Revision-Date: 2026-06-25 02:46\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/deepines-store/deepines-store/ta/>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.9.2-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 #: ../deepinesStore/about.py:65
 #, safe-html
@@ -32,219 +32,271 @@ msgctxt "AboutDialog"
 msgid "The App Store of Deepin en Español"
 msgstr "ச்பானிச் மொழியில் டீப்பினின் ஆப் கடை"
 
-#: ../deepinesStore/store.py:1105
+#: ../deepinesStore/install_progress.py:56
+#, safe-html
+msgctxt "InstallProgressHandler"
+msgid "Installing"
+msgstr "நிறுவுதல்"
+
+#: ../deepinesStore/install_progress.py:58
+#, safe-html
+msgctxt "InstallProgressHandler"
+msgid "Uninstalling"
+msgstr "நிறுவல் நீக்குகிறது"
+
+#: ../deepinesStore/install_progress.py:59
+#, safe-html
+msgctxt "InstallProgressHandler"
+msgid "{process}: {status} - {percent}%"
+msgstr "{process}: {status} - {percent}%"
+
+#: ../deepinesStore/install_progress.py:85
+#, safe-html
+msgctxt "InstallThread"
+msgid "Updating package list..."
+msgstr "Updating தொகுப்பு list..."
+
+#: ../deepinesStore/install_progress.py:89
+#, safe-html
+msgctxt "InstallThread"
+msgid "Error during cache update: {error}"
+msgstr "கேச் புதுப்பிப்பின் போது பிழை: {error}"
+
+#: ../deepinesStore/install_progress.py:118
+#, safe-html
+msgctxt "InstallThread"
+msgid ""
+"Error: {error}\n"
+"{traceback}"
+msgstr ""
+"பிழை: {error} \n"
+"{traceback}"
+
+#: ../deepinesStore/install_progress.py:127
+#, safe-html
+msgctxt "InstallThread"
+msgid "Installing: {package} from Deepines repository"
+msgstr "நிறுவுகிறது: Deepines களஞ்சியத்திலிருந்து {package}"
+
+#: ../deepinesStore/install_progress.py:192
+#, safe-html
+msgctxt "InstallThread"
+msgid "Searching for package {package}..."
+msgstr "தொகுப்பு {package}ஐத் தேடுகிறது..."
+
+#: ../deepinesStore/install_progress.py:194
+#, safe-html
+msgctxt "InstallThread"
+msgid "Package {package} not found"
+msgstr "Package {package} not found"
+
+#: ../deepinesStore/install_progress.py:137
+#, safe-html
+msgctxt "InstallThread"
+msgid "{package} is already installed."
+msgstr "{package} is already installed."
+
+#: ../deepinesStore/install_progress.py:140
+#, safe-html
+msgctxt "InstallThread"
+msgid "Marking {package} for installation..."
+msgstr "Marking {package} க்கு installation..."
+
+#: ../deepinesStore/install_progress.py:143
+#, safe-html
+msgctxt "InstallThread"
+msgid "Dependency error for {package}: {error}"
+msgstr "Dependency பிழை க்கு {package}: {error}"
+
+#: ../deepinesStore/install_progress.py:148
+#, safe-html
+msgctxt "InstallThread"
+msgid "Downloading and installing {package}..."
+msgstr "பதிவிறக்கி நிறுவுகிறது {package}..."
+
+#: ../deepinesStore/install_progress.py:156
+#, safe-html
+msgctxt "InstallThread"
+msgid "{package} has been installed successfully."
+msgstr "{package} has been installed successfully."
+
+#: ../deepinesStore/install_progress.py:158
+#, safe-html
+msgctxt "InstallThread"
+msgid ""
+"{package} could not be installed correctly, possibly due to dependency "
+"errors."
+msgstr ""
+"{package} could not be installed correctly, possibly due பெறுநர் dependency "
+"errors."
+
+#: ../deepinesStore/install_progress.py:163
+#, safe-html
+msgctxt "InstallThread"
+msgid "Lock error during installation: {error}"
+msgstr "Lock பிழை during installation: {error}"
+
+#: ../deepinesStore/install_progress.py:168
+#, safe-html
+msgctxt "InstallThread"
+msgid "Download error during installation: {error}"
+msgstr "பதிவிறக்கம் பிழை during installation: {error}"
+
+#: ../deepinesStore/install_progress.py:173
+#, safe-html
+msgctxt "InstallThread"
+msgid "Download cancelled: {error}"
+msgstr "பதிவிறக்கம் ரத்து செய்யப்பட்டது: {error}"
+
+#: ../deepinesStore/install_progress.py:178
+#, safe-html
+msgctxt "InstallThread"
+msgid "System error during installation: {error}"
+msgstr "மண்டலம் பிழை during installation: {error}"
+
+#: ../deepinesStore/install_progress.py:236
+#, safe-html
+msgctxt "InstallThread"
+msgid "Unexpected error: {error}"
+msgstr "எதிர்பாராத பிழை: {error}"
+
+#: ../deepinesStore/install_progress.py:191
+#, safe-html
+msgctxt "InstallThread"
+msgid "Uninstalling: {package}."
+msgstr "நிறுவல் நீக்குகிறது: {package}."
+
+#: ../deepinesStore/install_progress.py:201
+#, safe-html
+msgctxt "InstallThread"
+msgid "{package} is not installed."
+msgstr "{package} நிறுவப்படவில்லை."
+
+#: ../deepinesStore/install_progress.py:203
+#, safe-html
+msgctxt "InstallThread"
+msgid "Marking {package} for removal..."
+msgstr "அகற்றுவதற்காக {package} குறிக்கப்படுகிறது..."
+
+#: ../deepinesStore/install_progress.py:206
+#, safe-html
+msgctxt "InstallThread"
+msgid "Uninstalling {package}..."
+msgstr "{package}ஐ நிறுவல் நீக்குகிறது..."
+
+#: ../deepinesStore/install_progress.py:214
+#, safe-html
+msgctxt "InstallThread"
+msgid "{package} has been uninstalled successfully."
+msgstr "{package} வெற்றிகரமாக நிறுவல் நீக்கப்பட்டது."
+
+#: ../deepinesStore/install_progress.py:216
+#, safe-html
+msgctxt "InstallThread"
+msgid "{package} could not be uninstalled correctly."
+msgstr "{package} ஐ சரியாக நிறுவல் நீக்க முடியவில்லை."
+
+#: ../deepinesStore/install_progress.py:221
+#, safe-html
+msgctxt "InstallThread"
+msgid "Lock error during uninstallation: {error}"
+msgstr "நிறுவல் நீக்கும் போது பூட்டுப் பிழை: {error}"
+
+#: ../deepinesStore/install_progress.py:226
+#, safe-html
+msgctxt "InstallThread"
+msgid "Download error during uninstallation: {error}"
+msgstr "நிறுவல் நீக்கும் போது பதிவிறக்கப் பிழை: {error}"
+
+#: ../deepinesStore/install_progress.py:231
+#, safe-html
+msgctxt "InstallThread"
+msgid "System error during uninstallation: {error}"
+msgstr "நிறுவல் நீக்கும் போது கணினி பிழை: {error}"
+
+#: ../deepinesStore/install_progress.py:244
+#, safe-html
+msgctxt "InstallThread"
+msgid "Installing {app} from Flathub..."
+msgstr "Flathub இலிருந்து {app} ஐ நிறுவுகிறது..."
+
+#: ../deepinesStore/install_progress.py:275
+#, safe-html
+msgctxt "InstallThread"
+msgid "{app} has been installed successfully."
+msgstr "{app} வெற்றிகரமாக நிறுவப்பட்டது."
+
+#: ../deepinesStore/install_progress.py:278
+#, safe-html
+msgctxt "InstallThread"
+msgid "Error installing {app}: {error}"
+msgstr "{app} ஐ நிறுவுவதில் பிழை: {error}"
+
+#: ../deepinesStore/install_progress.py:286
+#, safe-html
+msgctxt "InstallThread"
+msgid "Uninstalling {app} from Flathub..."
+msgstr "Flathub இலிருந்து {app}ஐ நிறுவல் நீக்குகிறது..."
+
+#: ../deepinesStore/install_progress.py:316
+#, safe-html
+msgctxt "InstallThread"
+msgid "{app} has been uninstalled successfully."
+msgstr "{app} has been uninstalled successfully."
+
+#: ../deepinesStore/install_progress.py:319
+#, safe-html
+msgctxt "InstallThread"
+msgid "Error uninstalling {app}: {error}"
+msgstr "{app}ஐ நிறுவல் நீக்குவதில் பிழை: {error}"
+
+#: ../deepinesStore/store.py:1097
 #, safe-html
 msgctxt "LoadingScreen"
 msgid "Starting..."
 msgstr "தொடங்குகிறது ..."
 
-#: ../deepinesStore/store.py:1107
+#: ../deepinesStore/store.py:1099
 #, safe-html
 msgctxt "LoadingScreen"
 msgid "Fetching files..."
 msgstr "கோப்புகளைப் பெறுதல் ..."
 
-#: ../deepinesStore/store.py:1108
+#: ../deepinesStore/store.py:1100
 #, safe-html
 msgctxt "LoadingScreen"
 msgid "Initializing components..."
 msgstr "கூறுகளைத் தொடங்குதல் ..."
 
-#: ../deepinesStore/store.py:1109
+#: ../deepinesStore/store.py:1101
 #, safe-html
 msgctxt "LoadingScreen"
 msgid "Finalizing setup..."
 msgstr "அமைப்பை இறுதி செய்தல் ..."
 
-#: ../deepinesStore/store.py:1103
+#: ../deepinesStore/store.py:1095
 #, safe-html
 msgctxt "LoadingScreen"
 msgid "Loading..."
 msgstr "ஏற்றுகிறது ..."
 
-#: ../deepinesStore/dialog_install.py:170
+#: ../deepinesStore/install_progress.py:22
 #, safe-html
-msgctxt "Ui_DialogInstall"
-msgid ""
-"\n"
-"Installing {item}\n"
-msgstr ""
-"\n"
-"{item} நிறுவுகிறது\n"
+msgctxt "ProgressHandler"
+msgid "Downloading... {percent}% ({current:.2f}/{total:.2f} MB)"
+msgstr "பதிவிறக்குகிறது... {percent}% ({current:.2f}/{total:.2f} MB)"
 
-#: ../deepinesStore/dialog_install.py:167
+#: ../deepinesStore/install_progress.py:26
 #, safe-html
-msgctxt "Ui_DialogInstall"
-msgid "Close"
-msgstr "மூடு"
+msgctxt "ProgressHandler"
+msgid "Starting download..."
+msgstr "பதிவிறக்கம் தொடங்குகிறது..."
 
-#: ../deepinesStore/dialog_install.py:166
+#: ../deepinesStore/install_progress.py:29
 #, safe-html
-msgctxt "Ui_DialogInstall"
-msgid "Retry"
-msgstr "மீண்டும் முயற்சிக்கவும்"
-
-#: ../deepinesStore/dialog_install.py:183
-#, safe-html
-msgctxt "Ui_DialogInstall"
-msgid ""
-"\n"
-"\n"
-"The installation system is locked by \n"
-"another installation or upgrade process, \n"
-"wait until it finishes and click Retry. \n"
-"If you use Synaptic, make sure it is closed."
-msgstr ""
-"\n"
-"நிறுவல் அமைப்பு பூட்டப்பட்டுள்ளது\n"
-" மற்றொரு நிறுவல் அல்லது மேம்படுத்தல் செயல்முறை,\n"
-" அது முடிவடையும் வரை காத்திருந்து மீண்டும் முயற்சிக்கவும்.\n"
-" நீங்கள் சினாப்டிக் பயன்படுத்தினால், அது மூடப்பட்டிருப்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்."
-
-#: ../deepinesStore/dialog_install.py:165
-#, safe-html
-msgctxt "Ui_DialogInstall"
-msgid "Install"
-msgstr "நிறுவவும்"
-
-#: ../deepinesStore/dialog_install.py:169
-#, safe-html
-msgctxt "Ui_DialogInstall"
-msgid ""
-"\n"
-"All processes have been completed.\n"
-msgstr ""
-"\n"
-"அனைத்து செயல்முறைகளும் முடிக்கப்பட்டுள்ளன.\n"
-
-#: ../deepinesStore/dialog_install.py:160
-#, safe-html
-msgctxt "Ui_DialogInstall"
-msgid "Installation process - Deepines Store"
-msgstr "நிறுவல் செயல்முறை - டீபைன்ச் கடை"
-
-#: ../deepinesStore/dialog_install.py:187
-#, safe-html
-msgctxt "Ui_DialogInstall"
-msgid ""
-"\n"
-"The database is being updated.\n"
-"\n"
-msgstr ""
-"\n"
-"தரவுத்தளம் புதுப்பிக்கப்படுகிறது.\n"
-
-#: ../deepinesStore/dialog_install.py:172
-#, safe-html
-msgctxt "Ui_DialogInstall"
-msgid ""
-"\n"
-"The installation of {item} is finished.\n"
-msgstr ""
-"\n"
-"{உருப்படி of இன் நிறுவல் முடிந்தது.\n"
-
-#: ../deepinesStore/dialog_install.py:176
-#, safe-html
-msgctxt "Ui_DialogInstall"
-msgid ""
-"\n"
-"\n"
-"The network connection has failed and the installation has not been completed.\n"
-"Check that your computer is connected to the Internet and click Retry.\n"
-"If the problem persists, send a report to t.me/deepinenespanol.\n"
-msgstr ""
-"\n"
-"பிணைய இணைப்பு தோல்வியடைந்துள்ளது மற்றும் நிறுவல் முடிக்கப்படவில்லை.\n"
-" உங்கள் கணினி இணையத்துடன் இணைக்கப்பட்டுள்ளதா என்பதைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும் என்பதைக் சொடுக்கு செய்யவும்.\n"
-" சிக்கல் தொடர்ந்தால், ஒரு அறிக்கையை t.me/deepinenespanol க்கு அனுப்பவும்.\n"
-
-#: ../deepinesStore/dialog_install.py:161
-#, safe-html
-msgctxt "Ui_DialogInstall"
-msgid "{app_count} app has been selected for installation:\n"
-msgstr "நிறுவலுக்கு {app_count} பயன்பாடு தேர்ந்தெடுக்கப்பட்டுள்ளது:\n"
-
-#: ../deepinesStore/dialog_install.py:162
-#, safe-html
-msgctxt "Ui_DialogInstall"
-msgid "{app_count} apps have been selected for installation:\n"
-msgstr "நிறுவலுக்கு {app_count} பயன்பாடுகள் தேர்ந்தெடுக்கப்பட்டுள்ளன:\n"
-
-#: ../deepinesStore/dialog_install.py:174
-#, safe-html
-msgctxt "Ui_DialogInstall"
-msgid ""
-"\n"
-"\n"
-"An error has occurred, please try again.\n"
-"If the problem persists, contact the administrator.\n"
-msgstr ""
-"\n"
-"பிழை ஏற்பட்டது, தயவுசெய்து மீண்டும் முயற்சிக்கவும்.\n"
-" சிக்கல் தொடர்ந்தால், நிர்வாகியை தொடர்பு கொள்ளவும்.\n"
-
-#: ../deepinesStore/dialog_install.py:179
-#, safe-html
-msgctxt "Ui_DialogInstall"
-msgid ""
-"\n"
-"\n"
-"One or more apps could not be installed because\n"
-"they depend on other packages that cannot be installed.\n"
-"\n"
-"You can look for help in our forum at deepinenespanol.org/comunidad\n"
-"or in our Telegram group t.me/deepinenespanol."
-msgstr ""
-"\n"
-"ஒன்று அல்லது அதற்கு மேற்பட்ட பயன்பாடுகளை நிறுவ முடியவில்லை\n"
-" அவை நிறுவ முடியாத பிற தொகுப்புகளை சார்ந்துள்ளது.\n"
-"\n"
-" Deatinenespanol.org/comunidad இல் எங்கள் மன்றத்தில் நீங்கள் உதவியைக் காணலாம்\n"
-" அல்லது எங்கள் தந்தி குழுவில் t.me/deepinenespanol."
-
-#: ../deepinesStore/dialog_install.py:163
-#, safe-html
-msgctxt "Ui_DialogInstall"
-msgid "App to uninstall: {item}"
-msgstr "நிறுவல் நீக்க பயன்பாடு: {item}"
-
-#: ../deepinesStore/dialog_install.py:164
-#, safe-html
-msgctxt "Ui_DialogInstall"
-msgid "Uninstall"
-msgstr "நிறுவல் நீக்க"
-
-#: ../deepinesStore/dialog_install.py:168
-#, safe-html
-msgctxt "Ui_DialogInstall"
-msgid ""
-"\n"
-"\n"
-"Warning: do not close the window, interrupting the process may damage your system.\n"
-msgstr ""
-"\n"
-"எச்சரிக்கை: சாளரத்தை மூட வேண்டாம், செயல்முறையை குறுக்கிடுவது உங்கள் கணினியை சேதப்படுத்தும்.\n"
-
-#: ../deepinesStore/dialog_install.py:171
-#, safe-html
-msgctxt "Ui_DialogInstall"
-msgid ""
-"\n"
-"Uninstalling {item}\n"
-msgstr ""
-"\n"
-"{item} நிறுவல் நீக்குதல்\n"
-
-#: ../deepinesStore/dialog_install.py:173
-#, safe-html
-msgctxt "Ui_DialogInstall"
-msgid ""
-"\n"
-"The uninstallation of {item} is finished.\n"
-msgstr ""
-"\n"
-"{உருப்படி of இன் நிறுவல் நீக்குதல் முடிந்தது.\n"
+msgctxt "ProgressHandler"
+msgid "Download completed"
+msgstr "பதிவிறக்கம் முடிந்தது"
 
 #: ../deepinesStore/cardg.py:76
 #, safe-html
@@ -334,7 +386,7 @@ msgctxt "Ui_MainWindow"
 msgid "Office automation"
 msgstr "அலுவலக ஆட்டோமேசன்"
 
-#: ../deepinesStore/store.py:1104
+#: ../deepinesStore/store.py:1096
 #, safe-html
 msgctxt "Ui_MainWindow"
 msgid "Deepines Store"
@@ -457,7 +509,7 @@ msgid ""
 msgstr ""
 "சேவையகத்துடன் இணைப்பை நிறுவ முடியவில்லை, <br> தயவுசெய்து உங்கள் இணைய "
 "இணைப்பைச் சரிபார்க்கவும். <br> சிக்கல் தொடர்ந்தால், தயவுசெய்து எங்களை "
-"டெலிகிராம் வழியாக தொடர்பு கொள்ளவும் <br> {atTlURL}. <br> <br> மேலும் மேலும் "
+"டெலிகிராம் வழியாகத் தொடர்பு கொள்ளவும் <br> {atTlURL}. <br> <br> மேலும் "
 "தகவல்: {siteURL}"
 
 #: ../deepinesStore/maing.py:380
@@ -489,3 +541,15 @@ msgstr "நிறுவ தயாராக உள்ளது"
 msgctxt "Ui_MainWindow"
 msgid "Starting installation..."
 msgstr "நிறுவலைத் தொடங்குகிறது ..."
+
+#: ../deepinesStore/install_progress.py:41
+#, safe-html
+msgctxt "UpdateProgress"
+msgid "Updating cache... {percent:.2f}%"
+msgstr "தற்காலிக சேமிப்பைப் புதுப்பிக்கிறது... {percent:.2f}%"
+
+#: ../deepinesStore/install_progress.py:43
+#, safe-html
+msgctxt "UpdateProgress"
+msgid "Updating cache..."
+msgstr "தற்காலிக சேமிப்பை புதுப்பிக்கிறது..."
