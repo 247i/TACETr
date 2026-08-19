@@ -403,7 +403,7 @@ def பொருள்_சேர்(பொருள்கள், ஆங்கி
     ஆங்கிலம் = ஆங்கிலம்.strip()
     ஆங்கிலம் = ஆங்கிலம்.lower()
     பதிவு = பொருள்கள்.find(ஆங்கிலம்)
-    if பதிவு is None:
+    if not பதிவு:
         if குழப்பமானது:
             பதிவு = polib.POEntry(msgid=ஆங்கிலம், msgstr=தமிழ், flags=["fuzzy"])
         else:
@@ -477,20 +477,24 @@ def எடுபொருள்மொழிபெயர்(அனைத்து
         if முன் != 100:
             tr_entries = அ.untranslated_entries()
             for பதிவு in tr_entries:
-                t = threading.Thread(target=ஒரு_பொருள்_பெறு, args=(பதிவு, அ, இருமம், சேவையகம்), daemon=True)
+                t = threading.Thread(target=ஒரு_பொருள்_பெறு, args=(பதிவு, அ, இருமம், சேவையகம்))
                 t.start()
                 t.join(15)
                 if t.is_alive():
-                    சேவையகம் += 1   
+                    சேவையகம் += 1
+                else:
+                    அகராதி_சேமி(அ, இருமம்)
 
         else:
             tr_entries = அ.translated_entries()
             for பதிவு in tr_entries:
-                t = threading.Thread(target=ஒரு_பொருள்_பெறு, args=(பதிவு, அ, இருமம், சேவையகம்), daemon=True)
+                t = threading.Thread(target=ஒரு_பொருள்_பெறு, args=(பதிவு, அ, இருமம், சேவையகம்))
                 t.start()
                 t.join(15)
                 if t.is_alive():
-                    சேவையகம் += 1   
+                    சேவையகம் += 1
+                else:
+                    அகராதி_சேமி(அ, இருமம்)
 
 
 def ஒரு_பொருள்_பெறு(பதிவு, அ, இருமம்=False, சேவையகம்=0):
@@ -511,7 +515,9 @@ def ஒரு_பொருள்_பெறு(பதிவு, அ, இரும
         else:
             பதிவு.msgstr = இ
             print(பதிவு.msgid, பதிவு.msgstr)
-        அகராதி_சேமி(அ, இருமம்)
+        # அகராதியை worker thread-ல் சேமிக்க வேண்டாம்.
+        # Timeout ஆன worker பின்னணியில் தொடர்ந்து இயங்கலாம்; அதே PO கோப்பை
+        # பல worker-கள் ஒரே நேரத்தில் எழுதுவதைத் தவிர்க்கிறோம்.
 
 
 def சரங்கள்மொழிபெயர்(பாதை="./வெறுமை/*.strings"):
