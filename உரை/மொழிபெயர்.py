@@ -1,4 +1,4 @@
-import tapolib as tapo
+import tapo as tapo
 
 பாதை = "./"
 # பாதை = "/Users/apt/Documents/அறிவிலி/பயன்/மொழி/தமிழாக்கம்/உரை/"
