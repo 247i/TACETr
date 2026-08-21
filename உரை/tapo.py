@@ -7,6 +7,7 @@ import re
 import glob
 import polib
 import json
+import datetime
 from time import sleep
 import threading
 import translators as ts
