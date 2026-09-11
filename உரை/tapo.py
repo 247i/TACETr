@@ -5,18 +5,383 @@
 import os
 import re
 import glob
-import polib
 import json
 import datetime
 from time import sleep
 import threading
-import translators as ts
+
+from deep_translator import GoogleTranslator
+
+translator = GoogleTranslator(source="en", target="ta")
+
 # from google_trans_new import google_translator
 
 # g_tr = google_translator()
 ஃ = None
 ஔ = None
 நினைவில் = ""
+
+
+def எடுபொருள்மொழிபெயர்(அனைத்தும்=True, இருமம்=False, பாதை="./வெறுமை/*.po"):
+    கோப்புகள் = glob.glob(பாதை)
+    for கோப்பு in கோப்புகள்:
+        if அனைத்தும்:
+            அகராதி_குழப்பம்நீக்கு(கோப்பு, True)
+        அ = அகராதி_திற(கோப்பு)
+        முன் = அ.percent_translated()
+        print(கோப்பு, "முன் : ", முன், "%")
+        சேவையகம் = 0
+        if முன் != 100:
+            tr_entries = அ.untranslated_entries()
+            for பதிவு in tr_entries:
+                t = threading.Thread(
+                    target=ஒரு_பொருள்_பெறு, args=(பதிவு, அ, இருமம், சேவையகம்)
+                )
+                t.start()
+                t.join(15)
+                if t.is_alive():
+                    pass
+                    # சேவையகம் += 1
+                else:
+                    அகராதி_சேமி(அ, இருமம்)
+
+        else:
+            tr_entries = அ.translated_entries()
+            for பதிவு in tr_entries:
+                t = threading.Thread(
+                    target=ஒரு_பொருள்_பெறு, args=(பதிவு, அ, இருமம், சேவையகம்)
+                )
+                t.start()
+                t.join(15)
+                if t.is_alive():
+                    சேவையகம் += 1
+                else:
+                    அகராதி_சேமி(அ, இருமம்)
+
+
+def அகராதி_குழப்பம்நீக்கு(அகராதி, பதிவுநீக்கு=False):
+    """
+    போ கோப்பில் உள்ள அனைத்து தெளிவற்ற கொடி உள்ளீடுகளையும் அகற்றி,
+    பதிவுநீக்கு உண்மையாக இருக்கும் போது, அது மொழிபெயர்ப்பு செய்தியையும்
+    நீக்குகிறது.
+    """
+    அ = அகராதி_திற(அகராதி)
+    for பதிவு in அ.fuzzy_entries():
+        if பதிவுநீக்கு:
+            if பதிவு.msgid_plural:
+                பதிவு.msgstr_plural[0] = ""
+                if 1 in பதிவு.msgstr_plural:
+                    பதிவு.msgstr_plural[1] = ""
+                if 2 in பதிவு.msgstr_plural:
+                    பதிவு.msgstr_plural[2] = ""
+            else:
+                பதிவு.msgstr = ""
+        பதிவு.flags.remove("fuzzy")
+    அகராதி_சேமி(அ)
+
+
+def சரங்கள்மொழிபெயர்(பாதை="./வெறுமை/*.strings"):
+    கோப்புகள் = glob.glob(பாதை)
+    for கோப்பு in கோப்புகள்:
+        அ = open(கோப்பு, "r", encoding="utf-16")
+        வரிகள் = அ.readlines()
+        ஆ = open(கோப்பு + ".சரங்கள்", "w", encoding="utf-16")
+        for வரி in வரிகள்:
+            if வரி.startswith("/*"):
+                if வரி.startswith("/* Class"):
+                    ஆ.write(வரி)
+                else:
+                    try:
+                        # /* "sUQ-Yx-bHF.title" = "Mount Location"; */
+                        வ = வரி[3:-3]
+                        ப, வ = வ.split(" = ", 1)
+                        வ = வ[1:-3]
+                        இ, _ = பொருள்_பெறு(வ)
+                        இ = '"' + இ + '";'
+                        உ = " = ".join((ப, இ))
+                        ஆ.write(உ)
+                        ஆ.write("\n")
+                        print(வரி, உ)
+                    except Exception:
+                        ஆ.write(வரி)
+            else:
+                ஆ.write(வரி)
+        அ.close()
+        ஆ.close()
+
+
+def பண்புகள்மொழிபெயர்_பழைய(பாதை="./வெறுமை/*.properties"):
+    கோப்புகள் = glob.glob(பாதை)
+    for கோப்பு in கோப்புகள்:
+        அ = open(கோப்பு, "r", encoding="utf-8")
+        வரிகள் = அ.readlines()
+        ஆ = open(கோப்பு + ".பண்புகள்", "w", encoding="utf-8")
+        for வரி in வரிகள்:
+            if வரி.startswith("# "):
+                try:
+                    # general.error						= Error
+                    வ = வரி[2:-1]
+                    ப, வ = வ.split("= ", 1)
+                    வ = வ.strip()
+                    இ, _ = பொருள்_பெறு(வ)
+                    உ = "= ".join((ப, இ))
+                    ஆ.write(உ)
+                    ஆ.write("\n")
+                    print(வரி, உ)
+                except Exception:
+                    ஆ.write(வரி)
+            else:
+                ஆ.write(வரி)
+        அ.close()
+        ஆ.close()
+
+
+def பண்புகள்மொழிபெயர்(பாதை="./வெறுமை/*.properties"):
+    கோப்புகள் = glob.glob(பாதை)
+    for கோப்பு in கோப்புகள்:
+        அ = open(கோப்பு, "r", encoding="utf-8")
+        வரிகள் = அ.readlines()
+        ஆ = open(கோப்பு + ".ப", "w", encoding="utf-8")
+        for வரி in வரிகள்:
+            if வரி.find("=") != 0:
+                try:
+                    # Save=
+                    ப, வ = வரி.split("=", 1)
+                    வ = வ.strip()
+                    if வ == "":
+                        இ, _ = பொருள்_பெறு(ப)
+                        உ = "=".join((ப, இ))
+                        ஆ.write(உ)
+                        ஆ.write("\n")
+                        print(உ)
+                except Exception:
+                    ஆ.write(வரி)
+            else:
+                ஆ.write(வரி)
+        அ.close()
+        ஆ.close()
+
+
+def டீடிடீமொழிபெயர்(பாதை="./வெறுமை/*en.dtd"):
+    கோப்புகள் = glob.glob(பாதை)
+    for கோப்பு in கோப்புகள்:
+        அ = open(கோப்பு, "r")
+        வரிகள் = அ.readlines()
+        ஆ = open(கோப்பு + ".தமிழ்", "w")
+        for வரி in வரிகள்:
+            if வரி.startswith("<!ENTITY ") and வரி.endswith('">\n'):
+                try:
+                    # <!ENTITY zotero.version		"version">
+                    # <!ENTITY zotero.whatsNew "What’s new">
+                    வ = வரி[0:-3]
+                    ப = வ.split('"')
+                    print(ப)
+                    ச = ப[-1]
+                    ஊ = ப[0]
+                    இ, _ = பொருள்_பெறு(ச)
+                    உ = ஊ + '"' + இ + '">\n'
+                    ஆ.write(உ)
+                    print(வரி, உ)
+                except Exception:
+                    ஆ.write(வரி)
+            else:
+                ஆ.write(வரி)
+        அ.close()
+        ஆ.close()
+
+
+def சேசன்மொழிபெயர்(பாதை="./வெறுமை/*.json"):
+    கோப்புகள் = glob.glob(பாதை)
+    for கோப்பு in கோப்புகள்:
+        அ = open(கோப்பு, "r")
+        வரிகள் = அ.readlines()
+        ஆ = open(கோப்பு + ".சேசன்", "w")
+        for வரி in வரிகள்:
+            if வரி.startswith('        "message":') and வரி.endswith('",\n'):
+                try:
+                    #         "message": "Done",
+                    #         "message": "ஆம்",
+                    வ = வரி[0:-3]
+                    ப, வி = வ.split(': "')
+                    இ, _ = பொருள்_பெறு(வி)
+                    ஊ = ': "'.join((ப, இ))
+                    உ = ஊ + '",\n'
+                    ஆ.write(உ)
+                    print(வரி, உ)
+                except Exception:
+                    ஆ.write(வரி)
+            else:
+                ஆ.write(வரி)
+        அ.close()
+        ஆ.close()
+
+
+def சாதொபொகுமொழிபெயர்(பாதை="./வெறுமை/*.json"):
+    கோப்புகள் = glob.glob(பாதை)
+    for கோப்பு in கோப்புகள்:
+        with open(கோப்பு) as அ:
+            தரவுகள் = json.load(அ)
+            with open(கோப்பு + ".சன்", "w") as ஆ:
+                அகராதி = சாதொபொகுசரம்(தரவுகள்)
+                test = json.dumps(அகராதி, ensure_ascii=False)
+                ஆ.seek(0)
+                ஆ.write(test)
+
+
+def சாதொபொகுசரம்(அகராதி: dict):
+    அகர = {}
+    for தரவு, மதிப்பு in அகராதி.items():
+        if isinstance(மதிப்பு, dict):
+            அகர[தரவு] = சாதொபொகுசரம்(மதிப்பு)
+        elif isinstance(மதிப்பு, int):
+            அகர[தரவு] = மதிப்பு
+        else:
+            இ, _ = பொருள்_பெறு(மதிப்பு)
+            print(மதிப்பு, இ)
+            அகர[தரவு] = இ
+    return அகர
+
+
+def குடல்மொழிபெயர்(பாதை="/home/ta/g/TACETr/உரை/வெறுமை/*"):
+    கோப்புகள் = glob.glob(பாதை)
+    for கோப்பு in கோப்புகள்:
+        அ = open(கோப்பு, "r", encoding="utf-8")
+        வரிகள் = அ.readlines()
+        ஆ = open(கோப்பு + ".இனி", "w", encoding="utf-8")
+        for வரி in வரிகள்:
+            if வரி.find(":") != 0:
+                try:
+                    # Save=
+                    ப, வ = வரி.split(":", 1)
+                    வ = வ.strip()
+                    if வ != "":
+                        # இ, _ = பொருள்_பெறு(வ)
+                        இ = translator.translate(வ)
+                        உ = ":".join((ப, இ))
+                        ஆ.write(உ)
+                        ஆ.write("\n")
+                        print(உ)
+                    else:
+                        ஆ.write(வரி)
+                except Exception:
+                    ஆ.write(வரி)
+            else:
+                ஆ.write(வரி)
+        அ.close()
+        ஆ.close()
+
+
+def இனிமொழிபெயர்(பாதை="./வெறுமை/*.ini"):
+    கோப்புகள் = glob.glob(பாதை)
+    for கோப்பு in கோப்புகள்:
+        அ = open(கோப்பு, "r", encoding="utf-8")
+        வரிகள் = அ.readlines()
+        ஆ = open(கோப்பு + ".இனி", "w", encoding="utf-8")
+        for வரி in வரிகள்:
+            if வரி.find("=") != 0:
+                try:
+                    # Save=
+                    ப, வ = வரி.split("=", 1)
+                    வ = வ.strip()
+                    if வ != "":
+                        இ, _ = பொருள்_பெறு(வ)
+                        உ = "=".join((ப, இ))
+                        ஆ.write(உ)
+                        ஆ.write("\n")
+                        print(உ)
+                    else:
+                        ஆ.write(வரி)
+                except Exception:
+                    ஆ.write(வரி)
+            else:
+                ஆ.write(வரி)
+        அ.close()
+        ஆ.close()
+
+
+def எடுபொருள்மொழி(அனைத்தும்=False, இருமம்=False, பாதை="./வெறுமை/*.po"):
+    a = அகராதிஏற்று()
+    கோப்புகள் = glob.glob(பாதை)
+    for கோப்பு in கோப்புகள்:
+        if அனைத்தும்:
+            அகராதி_குழப்பம்நீக்கு(கோப்பு, True)
+        அ = அகராதி_திற(கோப்பு)
+        முன் = அ.percent_translated()
+        print(கோப்பு, "முன் : ", முன், "%")
+        if முன் != 100:
+            tr_entries = அ.untranslated_entries()
+            if அனைத்தும்:
+                tr_entries.add(அ.translated_entries())
+            for பதிவு in tr_entries:
+                இ = a.தேடு(பதிவு.msgid)
+                if பதிவு.msgid_plural:
+                    பதிவு.msgstr_plural[0] = இ
+                    ஈ = a.தேடு(பதிவு.msgid_plural)
+                    பதிவு.msgstr_plural[1] = ஈ
+                    # பதிவு.msgstr_plural = {0: இ, 1: ஈ}
+                    if 2 in பதிவு.msgstr_plural:
+                        பதிவு.msgstr_plural[2] = ஈ
+                        # பதிவு.msgstr_plural = {0: இ, 1: ஈ, 2: ஈ}
+                    print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
+                else:
+                    பதிவு.msgstr = இ
+                    print(பதிவு.msgid, பதிவு.msgstr)
+                அகராதி_சேமி(அ, இருமம்)
+            sleep(5)  # wait for 5s before main program exits
+            print("பின் : ", அ.percent_translated(), "%")
+
+
+def ஒரு_பொருள்_பெறு(பதிவு, அ, இருமம்=False, சேவையகம்=0):
+    src = பதிவு.msgid
+    if src == "":
+        src = பதிவு.msgctxt
+    if பதிவு.msgstr == "" or பதிவு.msgstr == src:
+        இ, _ = பொருள்_பெறு(src, சேவையகம்)
+        if பதிவு.msgid_plural:
+            பதிவு.msgstr_plural[0] = இ
+            ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural, சேவையகம்)
+            பதிவு.msgstr_plural[1] = ஈ
+            # பதிவு.msgstr_plural = {0: இ, 1: ஈ}
+            if 2 in பதிவு.msgstr_plural:
+                பதிவு.msgstr_plural[2] = ஈ
+                # பதிவு.msgstr_plural = {0: இ, 1: ஈ, 2: ஈ}
+            print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
+        else:
+            பதிவு.msgstr = இ
+            print(பதிவு.msgid, பதிவு.msgstr)
+        # அகராதியை worker thread-ல் சேமிக்க வேண்டாம்.
+        # Timeout ஆன worker பின்னணியில் தொடர்ந்து இயங்கலாம்; அதே PO கோப்பை
+        # பல worker-கள் ஒரே நேரத்தில் எழுதுவதைத் தவிர்க்கிறோம்.
+
+
+class அகராதிஏற்று:
+    def __init__(ஐ, பாதை="./நினைவு/முடிந்தது.po"):
+        ஐ.தரவு = அகராதி_திற(பாதை)
+
+    def தேடு(ஐ, வாக்கியம்):
+        print(வாக்கியம்)
+        for a in ஐ.தரவு:
+            if a.msgid == வாக்கியம்:
+                return a.msgstr
+        return ""
+
+
+def one_entry(பதிவு, a):
+    இ = a.தேடு(பதிவு.msgid)
+    if பதிவு.msgid_plural:
+        பதிவு.msgstr_plural[0] = இ
+        ஈ = a.தேடு(பதிவு.msgid_plural)
+        பதிவு.msgstr_plural[1] = ஈ
+        # பதிவு.msgstr_plural = {0: இ, 1: ஈ}
+        if 2 in பதிவு.msgstr_plural:
+            பதிவு.msgstr_plural[2] = ஈ
+            # பதிவு.msgstr_plural = {0: இ, 1: ஈ, 2: ஈ}
+        print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
+    else:
+        பதிவு.msgstr = இ
+        print(பதிவு.msgid, பதிவு.msgstr)
+    அகராதி_சேமி(a.தரவு)
+
 
 def அகராதி_இருமபொருள்(பாதை):
     """
@@ -358,7 +723,7 @@ def சரிபார்_கோப்புகள்(பாதை="./வெற�
 
 def பொருள்_பெறு(ஆங்கிலம், சேவையகம்=0):
     """
-    கோப்பிலிருந்து அல்லது இணையத்திலிருந்து ஆங்கிலம் தமிழ் மொழிபெயர்ப்பு பெறு
+    கோப்பிலிருந்து அல்லது இணையத்திலிருந்து தமிழ் மொழிபெயர்ப்பு பெறு
 
     Returns:
         தமிழாக்கம்: ஆங்கில உரையின் தமிழாக்கம்
@@ -443,332 +808,3 @@ def எடுபொருள்இடம்மாற்று(பாதை="./�
             பதிவு.msgid = இ
             பதிவு.msgstr = ஈ
             அகராதி_சேமி(அ, இருமம்)
-
-
-def அகராதி_குழப்பம்நீக்கு(அகராதி, பதிவுநீக்கு=False):
-    """
-    போ கோப்பில் உள்ள அனைத்து தெளிவற்ற கொடி உள்ளீடுகளையும் அகற்றி,
-    பதிவுநீக்கு உண்மையாக இருக்கும் போது, அது மொழிபெயர்ப்பு செய்தியையும்
-    நீக்குகிறது.
-    """
-    அ = அகராதி_திற(அகராதி)
-    for பதிவு in அ.fuzzy_entries():
-        if பதிவுநீக்கு:
-            if பதிவு.msgid_plural:
-                பதிவு.msgstr_plural[0] = ""
-                if 1 in பதிவு.msgstr_plural:
-                    பதிவு.msgstr_plural[1] = ""
-                if 2 in பதிவு.msgstr_plural:
-                    பதிவு.msgstr_plural[2] = ""
-            else:
-                பதிவு.msgstr = ""
-        பதிவு.flags.remove("fuzzy")
-    அகராதி_சேமி(அ)
-
-
-def எடுபொருள்மொழிபெயர்(அனைத்தும்=True, இருமம்=False, பாதை="./வெறுமை/*.po"):
-    கோப்புகள் = glob.glob(பாதை)
-    for கோப்பு in கோப்புகள்:
-        if அனைத்தும்:
-            அகராதி_குழப்பம்நீக்கு(கோப்பு, True)
-        அ = அகராதி_திற(கோப்பு)
-        முன் = அ.percent_translated()
-        print(கோப்பு, "முன் : ", முன், "%")
-        சேவையகம் = 0
-        if முன் != 100:
-            tr_entries = அ.untranslated_entries()
-            for பதிவு in tr_entries:
-                t = threading.Thread(target=ஒரு_பொருள்_பெறு, args=(பதிவு, அ, இருமம், சேவையகம்))
-                t.start()
-                t.join(15)
-                if t.is_alive():
-                    pass
-                    # சேவையகம் += 1
-                else:
-                    அகராதி_சேமி(அ, இருமம்)
-
-        else:
-            tr_entries = அ.translated_entries()
-            for பதிவு in tr_entries:
-                t = threading.Thread(target=ஒரு_பொருள்_பெறு, args=(பதிவு, அ, இருமம், சேவையகம்))
-                t.start()
-                t.join(15)
-                if t.is_alive():
-                    சேவையகம் += 1
-                else:
-                    அகராதி_சேமி(அ, இருமம்)
-
-
-def ஒரு_பொருள்_பெறு(பதிவு, அ, இருமம்=False, சேவையகம்=0):
-    src = பதிவு.msgid
-    if src == "":
-        src = பதிவு.msgctxt
-    if (பதிவு.msgstr == "" or பதிவு.msgstr == src):
-        இ, _ = பொருள்_பெறு(src, சேவையகம்)
-        if பதிவு.msgid_plural:
-            பதிவு.msgstr_plural[0] = இ
-            ஈ, _ = பொருள்_பெறு(பதிவு.msgid_plural, சேவையகம்)
-            பதிவு.msgstr_plural[1] = ஈ
-            # பதிவு.msgstr_plural = {0: இ, 1: ஈ}
-            if 2 in பதிவு.msgstr_plural:
-                பதிவு.msgstr_plural[2] = ஈ
-                # பதிவு.msgstr_plural = {0: இ, 1: ஈ, 2: ஈ}
-            print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
-        else:
-            பதிவு.msgstr = இ
-            print(பதிவு.msgid, பதிவு.msgstr)
-        # அகராதியை worker thread-ல் சேமிக்க வேண்டாம்.
-        # Timeout ஆன worker பின்னணியில் தொடர்ந்து இயங்கலாம்; அதே PO கோப்பை
-        # பல worker-கள் ஒரே நேரத்தில் எழுதுவதைத் தவிர்க்கிறோம்.
-
-
-def சரங்கள்மொழிபெயர்(பாதை="./வெறுமை/*.strings"):
-    கோப்புகள் = glob.glob(பாதை)
-    for கோப்பு in கோப்புகள்:
-        அ = open(கோப்பு, "r", encoding="utf-16")
-        வரிகள் = அ.readlines()
-        ஆ = open(கோப்பு + ".சரங்கள்", "w", encoding="utf-16")
-        for வரி in வரிகள்:
-            if வரி.startswith("/*"):
-                if வரி.startswith("/* Class"):
-                    ஆ.write(வரி)
-                else:
-                    try:
-                        # /* "sUQ-Yx-bHF.title" = "Mount Location"; */
-                        வ = வரி[3:-3]
-                        ப, வ = வ.split(" = ", 1)
-                        வ = வ[1:-3]
-                        இ, _ = பொருள்_பெறு(வ)
-                        இ = '"' + இ + '";'
-                        உ = " = ".join((ப, இ))
-                        ஆ.write(உ)
-                        ஆ.write("\n")
-                        print(வரி, உ)
-                    except Exception:
-                        ஆ.write(வரி)
-            else:
-                ஆ.write(வரி)
-        அ.close()
-        ஆ.close()
-
-
-def பண்புகள்மொழிபெயர்_பழைய(பாதை="./வெறுமை/*.properties"):
-    கோப்புகள் = glob.glob(பாதை)
-    for கோப்பு in கோப்புகள்:
-        அ = open(கோப்பு, "r", encoding="utf-8")
-        வரிகள் = அ.readlines()
-        ஆ = open(கோப்பு + ".பண்புகள்", "w", encoding="utf-8")
-        for வரி in வரிகள்:
-            if வரி.startswith("# "):
-                try:
-                    # general.error						= Error
-                    வ = வரி[2:-1]
-                    ப, வ = வ.split("= ", 1)
-                    வ = வ.strip()
-                    இ, _ = பொருள்_பெறு(வ)
-                    உ = "= ".join((ப, இ))
-                    ஆ.write(உ)
-                    ஆ.write("\n")
-                    print(வரி, உ)
-                except Exception:
-                    ஆ.write(வரி)
-            else:
-                ஆ.write(வரி)
-        அ.close()
-        ஆ.close()
-
-
-def பண்புகள்மொழிபெயர்(பாதை="./வெறுமை/*.properties"):
-    கோப்புகள் = glob.glob(பாதை)
-    for கோப்பு in கோப்புகள்:
-        அ = open(கோப்பு, "r", encoding="utf-8")
-        வரிகள் = அ.readlines()
-        ஆ = open(கோப்பு + ".ப", "w", encoding="utf-8")
-        for வரி in வரிகள்:
-            if வரி.find("=") != 0:
-                try:
-                    # Save=
-                    ப, வ = வரி.split("=", 1)
-                    வ = வ.strip()
-                    if வ == "":
-                        இ, _ = பொருள்_பெறு(ப)
-                        உ = "=".join((ப, இ))
-                        ஆ.write(உ)
-                        ஆ.write("\n")
-                        print(உ)
-                except Exception:
-                    ஆ.write(வரி)
-            else:
-                ஆ.write(வரி)
-        அ.close()
-        ஆ.close()
-
-
-def டீடிடீமொழிபெயர்(பாதை="./வெறுமை/*en.dtd"):
-    கோப்புகள் = glob.glob(பாதை)
-    for கோப்பு in கோப்புகள்:
-        அ = open(கோப்பு, "r")
-        வரிகள் = அ.readlines()
-        ஆ = open(கோப்பு + ".தமிழ்", "w")
-        for வரி in வரிகள்:
-            if வரி.startswith("<!ENTITY ") and வரி.endswith('">\n'):
-                try:
-                    # <!ENTITY zotero.version		"version">
-                    # <!ENTITY zotero.whatsNew "What’s new">
-                    வ = வரி[0:-3]
-                    ப = வ.split('"')
-                    print(ப)
-                    ச = ப[-1]
-                    ஊ = ப[0]
-                    இ, _ = பொருள்_பெறு(ச)
-                    உ = ஊ + '"' + இ + '">\n'
-                    ஆ.write(உ)
-                    print(வரி, உ)
-                except Exception:
-                    ஆ.write(வரி)
-            else:
-                ஆ.write(வரி)
-        அ.close()
-        ஆ.close()
-
-
-def சேசன்மொழிபெயர்(பாதை="./வெறுமை/*.json"):
-    கோப்புகள் = glob.glob(பாதை)
-    for கோப்பு in கோப்புகள்:
-        அ = open(கோப்பு, "r")
-        வரிகள் = அ.readlines()
-        ஆ = open(கோப்பு + ".சேசன்", "w")
-        for வரி in வரிகள்:
-            if வரி.startswith('        "message":') and வரி.endswith('",\n'):
-                try:
-                    #         "message": "Done",
-                    #         "message": "ஆம்",
-                    வ = வரி[0:-3]
-                    ப, வி = வ.split(': "')
-                    இ, _ = பொருள்_பெறு(வி)
-                    ஊ = ': "'.join((ப, இ))
-                    உ = ஊ + '",\n'
-                    ஆ.write(உ)
-                    print(வரி, உ)
-                except Exception:
-                    ஆ.write(வரி)
-            else:
-                ஆ.write(வரி)
-        அ.close()
-        ஆ.close()
-
-
-def சாதொபொகுசரம்(அகராதி: dict):
-    அகர = {}
-    for தரவு, மதிப்பு in அகராதி.items():
-        if isinstance(மதிப்பு, dict):
-            அகர[தரவு] = சாதொபொகுசரம்(மதிப்பு)
-        elif isinstance(மதிப்பு, int):
-            அகர[தரவு] = மதிப்பு
-        else:
-            இ, _ = பொருள்_பெறு(மதிப்பு)
-            print(மதிப்பு, இ)
-            அகர[தரவு] = இ
-    return அகர
-
-
-def சாதொபொகுமொழிபெயர்(பாதை="./வெறுமை/*.json"):
-    கோப்புகள் = glob.glob(பாதை)
-    for கோப்பு in கோப்புகள்:
-        with open(கோப்பு) as அ:
-            தரவுகள் = json.load(அ)
-            with open(கோப்பு + ".சன்", "w") as ஆ:
-                அகராதி = சாதொபொகுசரம்(தரவுகள்)
-                test = json.dumps(அகராதி, ensure_ascii=False)
-                ஆ.seek(0)
-                ஆ.write(test)
-
-
-def இனிமொழிபெயர்(பாதை="./வெறுமை/*.ini"):
-    கோப்புகள் = glob.glob(பாதை)
-    for கோப்பு in கோப்புகள்:
-        அ = open(கோப்பு, "r", encoding="utf-8")
-        வரிகள் = அ.readlines()
-        ஆ = open(கோப்பு + ".இனி", "w", encoding="utf-8")
-        for வரி in வரிகள்:
-            if வரி.find("=") != 0:
-                try:
-                    # Save=
-                    ப, வ = வரி.split("=", 1)
-                    வ = வ.strip()
-                    if வ != "":
-                        இ, _ = பொருள்_பெறு(வ)
-                        உ = "=".join((ப, இ))
-                        ஆ.write(உ)
-                        ஆ.write("\n")
-                        print(உ)
-                    else:
-                        ஆ.write(வரி)
-                except Exception:
-                    ஆ.write(வரி)
-            else:
-                ஆ.write(வரி)
-        அ.close()
-        ஆ.close()
-
-
-class அகராதிஏற்று:
-    def __init__(ஐ, பாதை="./நினைவு/முடிந்தது.po"):
-        ஐ.தரவு = அகராதி_திற(பாதை)
-
-    def தேடு(ஐ, வாக்கியம்):
-        print(வாக்கியம்)
-        for a in ஐ.தரவு:
-            if a.msgid == வாக்கியம்:
-                return a.msgstr
-        return ""
-
-
-def one_entry(பதிவு, a):
-    இ = a.தேடு(பதிவு.msgid)
-    if பதிவு.msgid_plural:
-        பதிவு.msgstr_plural[0] = இ
-        ஈ = a.தேடு(பதிவு.msgid_plural)
-        பதிவு.msgstr_plural[1] = ஈ
-        # பதிவு.msgstr_plural = {0: இ, 1: ஈ}
-        if 2 in பதிவு.msgstr_plural:
-            பதிவு.msgstr_plural[2] = ஈ
-            # பதிவு.msgstr_plural = {0: இ, 1: ஈ, 2: ஈ}
-        print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
-    else:
-        பதிவு.msgstr = இ
-        print(பதிவு.msgid, பதிவு.msgstr)
-    அகராதி_சேமி(a.தரவு)
-                
-
-
-def எடுபொருள்மொழி(அனைத்தும்=False, இருமம்=False, பாதை="./வெறுமை/*.po"):
-    a = அகராதிஏற்று()
-    கோப்புகள் = glob.glob(பாதை)
-    for கோப்பு in கோப்புகள்:
-        if அனைத்தும்:
-            அகராதி_குழப்பம்நீக்கு(கோப்பு, True)
-        அ = அகராதி_திற(கோப்பு)
-        முன் = அ.percent_translated()
-        print(கோப்பு, "முன் : ", முன், "%")
-        if முன் != 100:
-            tr_entries = அ.untranslated_entries()
-            if அனைத்தும்:
-                tr_entries.add(அ.translated_entries())
-            for பதிவு in tr_entries:
-                இ = a.தேடு(பதிவு.msgid)
-                if பதிவு.msgid_plural:
-                    பதிவு.msgstr_plural[0] = இ
-                    ஈ = a.தேடு(பதிவு.msgid_plural)
-                    பதிவு.msgstr_plural[1] = ஈ
-                    # பதிவு.msgstr_plural = {0: இ, 1: ஈ}
-                    if 2 in பதிவு.msgstr_plural:
-                        பதிவு.msgstr_plural[2] = ஈ
-                        # பதிவு.msgstr_plural = {0: இ, 1: ஈ, 2: ஈ}
-                    print(பதிவு.msgid, பதிவு.msgid_plural, பதிவு.msgstr_plural)
-                else:
-                    பதிவு.msgstr = இ
-                    print(பதிவு.msgid, பதிவு.msgstr)
-                அகராதி_சேமி(அ, இருமம்)                 
-            sleep(5) # wait for 5s before main program exits
-            print("பின் : ", அ.percent_translated(), "%")
