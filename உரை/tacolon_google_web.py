@@ -33,7 +33,7 @@ import sys
 import time
 from pathlib import Path
 
-from deep_translator import GoogleTranslator
+import requests
 
 
 # ----------------------------------------------------------------------
@@ -48,16 +48,19 @@ REQUEST_DELAY = 0.2
 RETRY_DELAY = 2.0
 
 
-translator = GoogleTranslator(
-    source=SOURCE_LANGUAGE,
-    target=TARGET_LANGUAGE,
-)
+GOOGLE_TRANSLATE_URL = "https://translate.google.com/m"
+HTTP_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140.0 Safari/537.36",
+    "Accept-Language": "en-US,en;q=0.9",
+}
+HTTP_TIMEOUT = 30
+session = requests.Session()
+session.headers.update(HTTP_HEADERS)
 
 
 # ----------------------------------------------------------------------
 # Character / placeholder helpers
 # ----------------------------------------------------------------------
-
 
 def contains_tamil(text):
     """Return True if text contains at least one Tamil Unicode character."""
@@ -114,7 +117,6 @@ def restore_tokens(text, tokens):
 # Translation
 # ----------------------------------------------------------------------
 
-
 def translate_text(text, line_number=None):
     """
     Translate one text value.
@@ -131,14 +133,38 @@ def translate_text(text, line_number=None):
 
     for attempt in range(1, MAX_RETRIES + 1):
         try:
-            translated = translator.translate(protected_text)
+            response = session.get(
+                GOOGLE_TRANSLATE_URL,
+                params={"sl": SOURCE_LANGUAGE, "tl": TARGET_LANGUAGE, "q": protected_text},
+                timeout=HTTP_TIMEOUT,
+            )
+            response.raise_for_status()
 
-            if translated and translated.strip():
+            from html import unescape
+
+            match = re.search(
+                r'class="(?:result-container|t0)"[^>]*>(.*?)</',
+                response.text,
+                flags=re.DOTALL,
+            )
+            if not match:
+                match = re.search(
+                    r'<textarea[^>]*>(.*?)</textarea>',
+                    response.text,
+                    flags=re.DOTALL,
+                )
+            if not match:
+                raise RuntimeError("Google Translate returned no translation result")
+
+            translated = unescape(match.group(1))
+            translated = re.sub(r"<[^>]+>", "", translated).strip()
+
+            if translated:
                 translated = restore_tokens(translated, tokens)
                 time.sleep(REQUEST_DELAY)
                 return translated
 
-            raise RuntimeError("Translator returned an empty result")
+            raise RuntimeError("Google Translate returned an empty result")
 
         except Exception as exc:
             location = f"line {line_number}" if line_number else "text"
@@ -267,7 +293,9 @@ def translate_about_line(line, line_number):
 def translate_col_file(input_file, output_file):
     """Read, translate and write a PeaZip .col file."""
     try:
-        lines = input_file.read_text(encoding="utf-8-sig").splitlines(keepends=True)
+        lines = input_file.read_text(encoding="utf-8-sig").splitlines(
+            keepends=True
+        )
     except UnicodeDecodeError:
         print("ERROR: Input file is not valid UTF-8.")
         sys.exit(1)
@@ -376,13 +404,13 @@ def translate_col_file(input_file, output_file):
 # Main
 # ----------------------------------------------------------------------
 
-
 def main():
     if len(sys.argv) != 2:
         print("Usage:")
         print("    python tacolon.py peazip.col")
+        sys.exit(1)
 
-    input_file = Path("/home/ta/g/TACETr/உரை/peazip.col")
+    input_file = Path(sys.argv[1])
 
     if not input_file.exists():
         print(f"ERROR: File not found: {input_file}")
@@ -392,7 +420,9 @@ def main():
         print("ERROR: Input file must have a .col extension.")
         sys.exit(1)
 
-    output_file = input_file.with_name(input_file.stem + "_ta.col")
+    output_file = input_file.with_name(
+        input_file.stem + "_ta.col"
+    )
 
     translate_col_file(input_file, output_file)
 
