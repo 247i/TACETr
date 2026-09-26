@@ -2,21 +2,21 @@
 
 கட்டற்றகேட் செயலி எந்தவொரு தனிப்பட்ட தரவையும் சேகரிப்பதில்லை, அனுப்புவதில்லை, பகிர்வதில்லை அல்லது பயன்படுத்துவதில்லை.
 
-FreeCAD is community-developed Free Software. The community does not condone the unauthorized usage of private data, so our software does not gather or send personal data.
+கட்டற்றகேட் என்பது சமூகத்தால் உருவாக்கப்பட்ட ஒரு இலவச மென்பொருளாகும். தனிப்பட்ட தரவுகளின் அங்கீகரிக்கப்படாத பயன்பாட்டை சமூகம் ஆதரிப்பதில்லை, எனவே எங்கள் மென்பொருள் தனிப்பட்ட தரவுகளைச் சேகரிப்பதில்லை அல்லது அனுப்புவதில்லை.
 
-The FreeCAD website is mostly static, it does not contain any trackers, neither ours nor third-party. The website uses cookies to remember logged in status, timezone and other data related to navigating the site. The website does not contain advertisements.
+கட்டற்றகேட் இணையதளம் பெரும்பாலும் நிலையானது; அதில் எங்களுடையதோ அல்லது மூன்றாம் தரப்பினருடையதோ ஆன எந்த டிராக்கர்களும் இல்லை. உள்நுழைந்த நிலை, நேர மண்டலம் மற்றும் தளத்தை உலாவுவது தொடர்பான பிற தரவுகளை நினைவில் வைத்துக்கொள்ள இந்த இணையதளம் குக்கீகளைப் பயன்படுத்துகிறது. இந்த இணையதளத்தில் விளம்பரங்கள் இல்லை.
 
-The software does not contain advertisements or trackers either.
+இந்த மென்பொருளிலும் விளம்பரங்களோ டிராக்கர்களோ இல்லை.
 
-## Caveats
+## முன்னறிவிப்புகள்
 
-FreeCAD is able to load or save files to/from remote servers (for some protocols and platforms). If you choose to load or save a remote file, your IP or other private data might be shared as part of the normal connection flow for the given protocol. This is out of our control and it is up to you to decide whether you trust a remote host.
+கட்டற்றகேட் ஆனது தொலைநிலை சேவையகங்களில் இருந்து கோப்புகளை ஏற்றவோ அல்லது சேமிக்கவோ (சில நெறிமுறைகள் மற்றும் தளங்களுக்கு) திறன் கொண்டது. நீங்கள் ஒரு தொலைநிலைக் கோப்பை ஏற்றவோ அல்லது சேமிக்கவோ தேர்வுசெய்தால், கொடுக்கப்பட்ட நெறிமுறையின் இயல்பான இணைப்பு ஓட்டத்தின் ஒரு பகுதியாக உங்கள் IP அல்லது பிற தனிப்பட்ட தரவுகள் பகிரப்படலாம். இது எங்கள் கட்டுப்பாட்டிற்கு அப்பாற்பட்டது, மேலும் ஒரு தொலைநிலை ஹோஸ்டை நீங்கள் நம்புவதா வேண்டாமா என்பதை முடிவு செய்வது உங்களைப் பொறுத்தது.
 
-The FreeCAD eco system includes user developed workbenches. These workbenches can be installed/updated using the Add-on Manager. The Add-on Manager retrieves workbenches from remote servers across the internet. Add-on workbenches are not checked for malicious content. It is your responsibility to decide whether you trust an add-on workbench.
+கட்டற்றகேட் சூழல் அமைப்பில் பயனரால் உருவாக்கப்பட்ட பணித்தளங்கள் அடங்கும். இந்த வொர்க்பெஞ்சுகளை மேல்-கூட்டு நிர்வாகியைப் பயன்படுத்தி நிறுவலாம்/புதுப்பிக்கலாம். மேல்-கூட்டு நிர்வாகி, இணையம் முழுவதும் உள்ள ரிமோட் சர்வர்களில் இருந்து வொர்க்பெஞ்சுகளைப் பெறுகிறது. மேல்-கூட்டு வொர்க்பெஞ்சுகள் தீங்கிழைக்கும் உள்ளடக்கத்திற்காகச் சரிபார்க்கப்படுவதில்லை. ஒரு மேல்-கூட்டு வொர்க்பெஞ்சை நீங்கள் நம்புவதா வேண்டாமா என்பதை முடிவு செய்வது உங்கள் பொறுப்பாகும்.These workbenches can be installed/updated using the Add-on Manager. The Add-on Manager retrieves workbenches from remote servers across the internet. Add-on workbenches are not checked for malicious content. It is your responsibility to decide whether you trust an add-on workbench.
 
-FreeCAD is meant to manipulate CAD files which may contain metadata. It is your responsibility to verify the metadata contained in your files before you share them with others. These files may contain local directory paths which could reveal user names if the user name forms part of the path - as in “C:\MrsCAD\Documents\myFreeCADFile.FCstd”.
+கட்டற்றகேட் என்பது மெட்டாடேட்டாவைக் கொண்டிருக்கக்கூடிய CAD கோப்புகளைக் கையாளுவதற்காக உருவாக்கப்பட்டது. உங்கள் கோப்புகளை மற்றவர்களுடன் பகிர்வதற்கு முன்பு, அவற்றில் உள்ள மெட்டாடேட்டாவைச் சரிபார்ப்பது உங்கள் பொறுப்பாகும். இந்தக் கோப்புகளில் உள்ளூர் டைரக்டரி பாதைகள் இருக்கலாம், அவை பாதையின் ஒரு பகுதியாகப் பயனர்பெயர் இருந்தால் பயனர்பெயர்களை வெளிப்படுத்தக்கூடும் - உதாரணமாக “C:\MrsCAD\Documents\என்கட்டற்றகேட்File.FCstd” என்பதில் உள்ளது போல.
 
-FreeCAD can also be used to create and run macros. These are Python scripts that can perform any action that the user can perform on a system. When running a macro from an outside source, it is your responsibility to ensure you trust the author.
+கட்டற்றகேட்-ஐ மேக்ரோக்களை உருவாக்கவும் இயக்கவும் பயன்படுத்தலாம். இவை ஒரு கணினியில் பயனர் செய்யக்கூடிய எந்தவொரு செயலையும் செய்யக்கூடிய பைதான் ஸ்கிரிப்டுகள் ஆகும். வெளிப்புற மூலத்திலிருந்து ஒரு மேக்ரோவை இயக்கும்போது, ​​அதன் ஆசிரியரை நீங்கள் நம்புகிறீர்கள் என்பதை உறுதி செய்வது உங்கள் பொறுப்பாகும்.
 
 இயங்கும்போதும், அடுத்தடுத்த இயக்கங்களின்போதும், கட்டற்றகேட் பதிவுகள், உள்ளமைவு கோப்புகள், தற்காலிக நினைவகம், சிறுபடங்கள், சமீபத்தில் அணுகப்பட்ட கோப்புகள் மற்றும் தனிப்பட்ட தரவுகளைக் கொண்டிருக்கக்கூடிய பிற தகவல்களுக்காக உள்ளக நிலைத்த சேமிப்பகத்தைப் பயன்படுத்துகிறது. இவை உள்ளூர் சேமிப்பகத்திலேயே தங்கியிருக்கும்.
 
